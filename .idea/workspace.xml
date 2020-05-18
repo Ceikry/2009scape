@@ -22,6 +22,10 @@
   <component name="ChangeListManager">
     <list default="true" id="dfca1f7e-8542-4720-8cd4-dc28d3685749" name="Default Changelist" comment="closes #359">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/org/runite/jagex/ItemDefinition.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/org/runite/jagex/ItemDefinition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/data/eco/grand_exchange_db.emp" beforeDir="false" afterPath="$PROJECT_DIR$/Server/data/eco/grand_exchange_db.emp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/org/crandor/game/node/entity/combat/equipment/WeaponInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/org/crandor/game/node/entity/combat/equipment/WeaponInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/org/crandor/game/node/entity/npc/drop/DropTables.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/org/crandor/game/node/entity/npc/drop/DropTables.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,12 +82,12 @@
     </key>
   </component>
   <component name="RunManager" selected="Application.GameLaunch">
-    <configuration name="GameLaunch (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.keldagrim.GameLaunch" />
-      <module name="Arios Client" />
+    <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.runite.Client" />
+      <module name="RS-2009" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.keldagrim.*" />
+          <option name="PATTERN" value="org.runite.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -145,19 +149,18 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.GameLaunch (1)" />
       <item itemvalue="Application.GameLaunch" />
       <item itemvalue="Application.Management" />
       <item itemvalue="Application.Server" />
-      <item itemvalue="Application.XTEAKeyPacker" />
+      <item itemvalue="Application.Client" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.GameLaunch" />
+        <item itemvalue="Application.Client" />
         <item itemvalue="Application.Server" />
         <item itemvalue="Application.Management" />
-        <item itemvalue="Application.XTEAKeyPacker" />
-        <item itemvalue="Application.GameLaunch (1)" />
+        <item itemvalue="Application.Runner" />
       </list>
     </recent_temporary>
   </component>
@@ -200,14 +203,84 @@
       <option name="project" value="LOCAL" />
       <updated>1588841514432</updated>
     </task>
-    <task id="LOCAL-00005" summary="Removed Perks + Everything related to Donating&#10;Removed Swiftkit Dependencies in Client">
-      <created>1589781067063</created>
+    <task id="LOCAL-00005" summary="Added the start of the drop rewrite">
+      <created>1589602621676</created>
       <option name="number" value="00005" />
       <option name="presentableId" value="LOCAL-00005" />
       <option name="project" value="LOCAL" />
-      <updated>1589781067063</updated>
+      <updated>1589602621677</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Added Farmer, Guard, and Barbarian drops.">
+      <created>1589606476966</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1589606476966</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Fixed the broken silver ore">
+      <created>1589610630948</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1589610630948</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Added drops for slayer monsters up to Banshees">
+      <created>1589615527005</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1589615527005</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Fixed nonfunctional cooking gauntlets :) &lt;3">
+      <created>1589656116231</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1589656116231</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Added basilisk, bat, and bear.">
+      <created>1589657824333</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1589657824333</updated>
+    </task>
+    <task id="LOCAL-00011" summary="RDT now actually rolls">
+      <created>1589700119059</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1589700119059</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Should roll RDT now">
+      <created>1589700746144</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1589700746144</updated>
+    </task>
+    <task id="LOCAL-00013" summary="re-added canoe stuff">
+      <created>1589701080704</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1589701080704</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Fixed some error spew with RDT, and improved the port phasmatys bone grinding">
+      <created>1589775110245</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1589775110245</updated>
+    </task>
+    <task id="LOCAL-00015" summary="removed a very dumb and pointless print-out...">
+      <created>1589776066795</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1589776066795</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -283,6 +356,10 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="168" y="120" width="1324" height="730" key="dock-window-1/0.0.1366.768@0.0.1366.768" timestamp="1588905613919" />
+    <state x="786" y="41" width="579" height="488" key="find.popup" timestamp="1589777398639">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="786" y="41" width="579" height="488" key="find.popup/0.0.1366.768@0.0.1366.768" timestamp="1589777398639" />
     <state x="117" y="8" width="1123" height="755" key="new project wizard" timestamp="1588904115910">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
@@ -291,10 +368,104 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="346" y="168" key="run.anything.popup/0.0.1366.768@0.0.1366.768" timestamp="1588838705397" />
-    <state x="3208" y="167" width="1260" height="1272" key="search.everywhere.popup" timestamp="1589775174423">
-      <screen x="2560" y="0" width="2560" height="1440" />
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1589777702219">
+      <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.0.1366.768@0.0.1366.768" timestamp="1588917312368" />
-    <state x="3208" y="167" width="1260" height="1272" key="search.everywhere.popup/0.0.2560.1440/2560.0.2560.1440@2560.0.2560.1440" timestamp="1589775174423" />
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.0.1366.768@0.0.1366.768" timestamp="1589777702219" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Server/src/org/crandor/game/node/entity/npc/drop/DropTables.java</url>
+          <line>159</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>Arios Client</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>

@@ -15,6 +15,7 @@ import org.crandor.game.node.entity.player.info.portal.Perks;
 import org.crandor.game.node.item.ChanceItem;
 import org.crandor.game.node.item.GroundItemManager;
 import org.crandor.game.node.item.Item;
+import org.crandor.game.system.SystemLogger;
 import org.crandor.game.system.mysql.impl.ItemConfigSQLHandler;
 import org.crandor.game.system.mysql.impl.NPCConfigSQLHandler;
 import org.crandor.game.world.map.Location;
@@ -89,6 +90,13 @@ public final class NPCDropTables {
 	public void drop(NPC npc, Entity looter) {
 		Player p = looter instanceof Player ? (Player) looter : null;
 
+		DropTables table = DropTables.forId(npc.getId());
+		if(table != null){
+			System.out.println("Testing " + npc.getName());
+			table.getDrops().forEach(drop -> createDrop(drop,p,npc,npc.getDropLocation()));
+			return;
+		}
+
 		if (!charmTable.isEmpty()) {
 			boolean rollCharms = RandomFunction.random(5) == 3;
 			if(rollCharms) {
@@ -129,6 +137,10 @@ public final class NPCDropTables {
 		}
 		if (handleBoneCrusher(player, item)) {
 			return;
+		}
+		if (item.getId() == RareDropTable.SLOT_ITEM_ID){
+			item = RareDropTable.retrieve();
+			SystemLogger.log("Rare Drop Table Roll: "  + item.getName());
 		}
 		if (item.getId() == 995 && player.getBank().hasSpaceFor(item) && ( player.getGlobalData().isEnableCoinMachine() )) {
 			item = new Item(995, (int) (item.getAmount() + (item.getAmount() * 0.25)));
