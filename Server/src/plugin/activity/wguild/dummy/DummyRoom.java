@@ -111,12 +111,12 @@ public final class DummyRoom extends OptionHandler {
 					setDelay(10);
 					timeStamp = GameWorld.getTicks();
 					dummy = RandomFunction.getRandomElement(Dummy.values());
-					ObjectBuilder.replace(RegionManager.getObject(dummy.getObject().getLocation()), dummy.getObject(), 11);
+					//ObjectBuilder.replace(RegionManager.getObject(dummy.getObject().getLocation()), dummy.getObject(), 11);
 					activeDummy = true;
 					if (dummy == Dummy.CONTROLLED && controlled == null) {
 						Location l = Location.create(2860, 3551, 0);
 						controlled = new GameObject(dummy.getObject().getId(), l, 10, 1);
-						ObjectBuilder.replace(RegionManager.getObject(l), controlled, 11);
+						//ObjectBuilder.replace(RegionManager.getObject(l), controlled, 11);
 					}
 					return false;
 				}

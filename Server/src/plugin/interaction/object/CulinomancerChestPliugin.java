@@ -1,4 +1,4 @@
-package plugin.interaction.object;
+/*package plugin.interaction.object;
 
 import org.crandor.cache.def.impl.ObjectDefinition;
 import org.crandor.game.interaction.OptionHandler;
@@ -12,10 +12,7 @@ import org.crandor.game.world.map.RegionManager;
 import org.crandor.plugin.InitializablePlugin;
 import org.crandor.plugin.Plugin;
 
-/**
- * Handles the culinomancer chest.
- * @author Vexia
- */
+
 @InitializablePlugin
 public final class CulinomancerChestPliugin extends OptionHandler {
 
@@ -46,3 +43,4 @@ public final class CulinomancerChestPliugin extends OptionHandler {
 	}
 
 }
+*/

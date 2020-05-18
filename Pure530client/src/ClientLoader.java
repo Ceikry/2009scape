@@ -13,8 +13,10 @@ import java.util.Properties;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-public class ClientLoader extends Applet
-{
+public class ClientLoader extends Applet {
+
+
+	private static final long serialVersionUID = -4744673981053459832L;
 	public static final boolean useRsa = false;
 	public static final boolean USEISAAC = false;
 	public static Properties props = new Properties();
@@ -30,7 +32,7 @@ public class ClientLoader extends Applet
 	public ClientLoader(String wld) {
 		try {
 			this.world = wld;
-			this.frame = new JFrame("Flamable's 530 hd Client.");
+			this.frame = new JFrame("2009Scape");
 			this.frame.setLayout(new BorderLayout());
 			this.frame.setResizable(true);
 			this.jp.setLayout(new BorderLayout());
@@ -39,15 +41,16 @@ public class ClientLoader extends Applet
 			this.frame.getContentPane().add(this.jp, "Center");
 			this.frame.pack();
 			this.frame.setVisible(true);
-			props.put("worldid", wld);
+			props.put("worldid", (wld));
 			props.put("members", "1");
-			props.put("modewhat", "0");
+			props.put("modewhat", "1");
 			props.put("modewhere", "0");
 			props.put("safemode", "0");
 			props.put("game", "0");
 			props.put("js", "1");
 			props.put("lang", "0");
 			props.put("affid", "0");
+			props.put("advertsuppressed", "1");
 			props.put("lowmem", "0");
 			props.put("settings", "kKmok3kJqOeN6D3mDdihco3oPeYN2KFy6W5--vZUbNA");
 			Class87 sn = new Class87(this, 32, "runescape", 28);

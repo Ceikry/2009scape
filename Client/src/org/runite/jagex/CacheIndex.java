@@ -423,7 +423,7 @@ final class CacheIndex {
                try {
                   var23 = Class3_Sub28_Sub13.method623((byte)-125, var21);
                } catch (Throwable var19) {
-                  throw Class44.method1067(var19, "T3 - " + (xteaKeys != null) + "," + archive + "," + var21.length + "," + Class38.method1026(var21, var21.length, false) + "," + Class38.method1026(var21, var21.length - 2, false) + "," + this.aClass62_1949.archiveCRCs[archive] + "," + this.aClass62_1949.anInt964);
+                  throw Class44.method1067(var19, "T3 - " + (xteaKeys != null) + "," + archive + "," + var21.length + "," + Class38.method1026(var21, var21.length, false) + "," + Class38.method1026(var21, var21.length - 2, false) + "," + this.aClass62_1949.archiveCRCs[archive] + "," + this.aClass62_1949.anInt964);//this.aClass62_1949.archiveCRCs[archive] + "," + this.aClass62_1949.anInt964
                }
 
                if(this.aBoolean1945) {

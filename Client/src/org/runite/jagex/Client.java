@@ -1761,7 +1761,7 @@ public final class Client extends GameShell {
 							Class3_Sub4.aClass153_2258 = Class8.getCacheIndex(false, true, true, 25, true);
 							Class97.aClass153_1376 = Class8.getCacheIndex(true, true, true, 26, true);
 							Class132.aClass153_1735 = Class8.getCacheIndex(false, true, true, 27, true);
-							Class132.libIndex = Class8.getCacheIndex(false, true, true, 28, true);
+							//Class132.libIndex = Class8.getCacheIndex(false, true, true, 28, true);//New cache only has 27 IDX FILES DUMMY
 							Class3_Sub28_Sub15.anInt3684 = 15;
 							Class3_Sub17.aClass94_2464 = Class106.aClass94_1445;
 							Class96.anInt1354 = 40;
@@ -1932,8 +1932,8 @@ public final class Client extends GameShell {
 										var2 = var7 + Class164.aClass153_2052.method2136((byte)-124);
 										Class168.aClass153_2097.method2113((byte)120);
 										var2 += Class168.aClass153_2097.method2136((byte)-128);
-										Class132.libIndex.method2113((byte)126);
-										var2 += Class132.libIndex.method2136((byte)-124);
+										//Class132.libIndex.method2113((byte)126);
+										//var2 += Class132.libIndex.method2136((byte)-124); //I think these are related to the *imaginary* 28th IDX
 										NPC.aClass153_3993.method2113((byte)70);
 										var2 += NPC.aClass153_3993.method2136((byte)-123);
 										Class101.aClass153_1428.method2113((byte)32);
@@ -2016,8 +2016,8 @@ public final class Client extends GameShell {
 						}
 					} else {
 						var2 = 0;
-
-						for(var3 = 0; var3 < 29; ++var3) { //TODO
+															//LOL IT SAYS TODO LORD
+						for(var3 = 0; var3 < 28; ++var3) { //TODO
 							var2 += RSByteBuffer.aClass151_Sub1Array2601[var3].method2111(-61) * Class3_Sub13_Sub23.anIntArray3288[var3] / 100;
 						}
 
@@ -2080,7 +2080,7 @@ public final class Client extends GameShell {
 	                  Class40.method1046(-117);
 	               }
 	            } else {
-	               this.method52(48);
+	               this.method52(48);//This one is wrong
 	               Class75_Sub4.method1355(true);
 	            }
 

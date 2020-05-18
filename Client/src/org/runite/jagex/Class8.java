@@ -274,9 +274,11 @@ final class Class8 {
                   return this.aClass151_Sub1Array107[var3];
                }
             } else {
-               throw new RuntimeException();
+               //System.out.println("This one!");
+               throw new RuntimeException();//Throws Runtime Exception
             }
          } else {
+            //System.out.println("No I caused it!");
             throw new RuntimeException();
          }
       } catch (RuntimeException var9) {

@@ -440,6 +440,7 @@ final class Class151_Sub1 extends Class151 {
       }
    }
 
+
    private final Class3_Sub28_Sub10 method2109(int var1, int var2, int var3) {
       try {
          Object var4 = (Class3_Sub28_Sub10)this.aClass130_2946.method1780((long)var2, 0);
@@ -501,7 +502,7 @@ final class Class151_Sub1 extends Class151 {
                      Class3_Sub13_Sub12.aCRC32_3143.reset();
                      Class3_Sub13_Sub12.aCRC32_3143.update(var5, 0, -2 + var5.length);
                      var7 = (int)Class3_Sub13_Sub12.aCRC32_3143.getValue();
-                     if(this.aClass62_2944.archiveCRCs[var2] != var7) {
+                     if(this.aClass62_2944.archiveCRCs[var2] != var7) {//var2
                        	 System.err.println("CRC mismatch - [entry=" + this.aClass62_2944.archiveCRCs[var2] + ", pass=" + var7 + "]!");
                          throw new RuntimeException();
                      } else {
@@ -536,7 +537,7 @@ final class Class151_Sub1 extends Class151 {
 //                       }
 
 //                       return null;
-                     throw new RuntimeException("Missing CRC for request " + ((var2 >> 16) & 0xFF) + ", " + (var2 & 0xFFFF));
+                    throw new RuntimeException("Missing CRC for request " + ((var2 >> 16) & 0xFF) + ", " + (var2 & 0xFFFF));
                   }
                } catch (Exception var9) {
 //            	   var9.printStackTrace();

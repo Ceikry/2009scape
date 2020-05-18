@@ -8,6 +8,7 @@ import java.util.GregorianCalendar;
 
 public final class client extends Applet_Sub1 {
 
+   private static final long serialVersionUID = 8336806252605101745L;//TODO: Added after the fact
    static Class130 aClass130_2194 = new Class130(16);
    static int anInt2195;
    private static Class94 aClass94_2198 = Class3_Sub4.method108("cyan:", (byte)-124);
@@ -383,12 +384,13 @@ public final class client extends Applet_Sub1 {
                Class3_Sub28_Sub19.anInt3773 = 40000 + Class111.anInt1514;
             } else if(Class44.anInt718 == 2) {
                RuntimeException_Sub1.aString2121 = "127.0.0.1";
+               System.out.println("Setting worldListHost to 127.0.0.1, port = " + Class53.anInt867);//TODO: Added after the fact
                Class53.anInt867 = Class111.anInt1514 + '\uc350';
                Class3_Sub28_Sub19.anInt3773 = Class111.anInt1514 + '\u9c40';
             }
          } else {
             RuntimeException_Sub1.aString2121 = this.getCodeBase().getHost();
-            Class53.anInt867 = 443;
+            Class53.anInt867 = 43595;//TODO: PORT HANDLER
             Class3_Sub28_Sub19.anInt3773 = '\uaa4a';
          }
 
