@@ -4,10 +4,6 @@
     <expand>
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
       </path>
       <path>
@@ -16,16 +12,16 @@
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
-    <select />
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dfca1f7e-8542-4720-8cd4-dc28d3685749" name="Default Changelist" comment="closes #359">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/data/eco/grand_exchange_db.emp" beforeDir="false" afterPath="$PROJECT_DIR$/Server/data/eco/grand_exchange_db.emp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/org/crandor/game/content/skill/member/slayer/Equipment.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/org/crandor/game/content/skill/member/slayer/Equipment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/org/crandor/game/content/skill/member/slayer/Master.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/org/crandor/game/content/skill/member/slayer/Master.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/org/crandor/game/content/skill/member/slayer/Tasks.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/org/crandor/game/content/skill/member/slayer/Tasks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/plugin/skill/slayer/SlayerMasterDialogue.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/plugin/skill/slayer/SlayerMasterDialogue.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +44,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="development" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -64,9 +60,11 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop/Client592" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.1646489" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="application.passwordSafe" />
@@ -79,7 +77,7 @@
       <recent name="C:\Users\split\Documents\GitHub\2009Scape\Tools\Arios Editor\data" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Server">
+  <component name="RunManager" selected="Application.GameLaunch">
     <configuration name="GameLaunch (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.keldagrim.GameLaunch" />
       <module name="Arios Client" />
@@ -119,19 +117,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Runner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.arios.Runner" />
-      <module name="Arios Editor" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.arios.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Server" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.crandor.Server" />
       <module name="RS-2009" />
@@ -146,20 +131,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="XTEAKeyPacker" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.crandor.tools.XTEAKeyPacker" />
+      <module name="RS-2009" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.crandor.tools.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.GameLaunch (1)" />
       <item itemvalue="Application.GameLaunch" />
       <item itemvalue="Application.Management" />
-      <item itemvalue="Application.Runner" />
       <item itemvalue="Application.Server" />
+      <item itemvalue="Application.XTEAKeyPacker" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Server" />
         <item itemvalue="Application.GameLaunch" />
+        <item itemvalue="Application.Server" />
         <item itemvalue="Application.Management" />
+        <item itemvalue="Application.XTEAKeyPacker" />
         <item itemvalue="Application.GameLaunch (1)" />
-        <item itemvalue="Application.Runner" />
       </list>
     </recent_temporary>
   </component>
@@ -202,17 +200,18 @@
       <option name="project" value="LOCAL" />
       <updated>1588841514432</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Removed Perks + Everything related to Donating&#10;Removed Swiftkit Dependencies in Client">
+      <created>1589781067063</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1589781067063</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.facetType" implementationName="JRebel" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -233,41 +232,53 @@
     <MESSAGE value="Fixed kelda error" />
     <MESSAGE value="closes #370" />
     <MESSAGE value="closes #359" />
-    <option name="LAST_COMMIT_MESSAGE" value="closes #359" />
+    <MESSAGE value="Removed Perks + Everything related to Donating&#10;Removed Swiftkit Dependencies in Client" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed Perks + Everything related to Donating&#10;Removed Swiftkit Dependencies in Client" />
   </component>
   <component name="WindowStateProjectService">
     <state x="431" y="190" width="496" height="390" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1588905208285">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="431" y="190" width="496" height="390" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.768@0.0.1366.768" timestamp="1588905208285" />
-    <state width="639" height="171" key="GridCell.Tab.0.bottom" timestamp="1588898041866">
-      <screen x="0" y="0" width="1366" height="768" />
+    <state x="3604" y="465" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1589765614859">
+      <screen x="2560" y="0" width="2560" height="1440" />
+    </state>
+    <state x="3604" y="465" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2560.1440/2560.0.2560.1440@2560.0.2560.1440" timestamp="1589765614859" />
+    <state width="2365" height="318" key="GridCell.Tab.0.bottom" timestamp="1589781099452">
+      <screen x="2560" y="0" width="2560" height="1440" />
     </state>
     <state width="639" height="171" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1588898041866" />
-    <state width="639" height="171" key="GridCell.Tab.0.center" timestamp="1588898041865">
-      <screen x="0" y="0" width="1366" height="768" />
+    <state width="2365" height="318" key="GridCell.Tab.0.bottom/0.0.2560.1440/2560.0.2560.1440@2560.0.2560.1440" timestamp="1589781099452" />
+    <state width="2365" height="318" key="GridCell.Tab.0.center" timestamp="1589781099452">
+      <screen x="2560" y="0" width="2560" height="1440" />
     </state>
     <state width="639" height="171" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1588898041865" />
-    <state width="639" height="171" key="GridCell.Tab.0.left" timestamp="1588898041865">
-      <screen x="0" y="0" width="1366" height="768" />
+    <state width="2365" height="318" key="GridCell.Tab.0.center/0.0.2560.1440/2560.0.2560.1440@2560.0.2560.1440" timestamp="1589781099452" />
+    <state width="2365" height="318" key="GridCell.Tab.0.left" timestamp="1589781099452">
+      <screen x="2560" y="0" width="2560" height="1440" />
     </state>
     <state width="639" height="171" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1588898041865" />
-    <state width="639" height="171" key="GridCell.Tab.0.right" timestamp="1588898041865">
-      <screen x="0" y="0" width="1366" height="768" />
+    <state width="2365" height="318" key="GridCell.Tab.0.left/0.0.2560.1440/2560.0.2560.1440@2560.0.2560.1440" timestamp="1589781099452" />
+    <state width="2365" height="318" key="GridCell.Tab.0.right" timestamp="1589781099452">
+      <screen x="2560" y="0" width="2560" height="1440" />
     </state>
     <state width="639" height="171" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1588898041865" />
-    <state x="187" y="19" width="992" height="733" key="SettingsEditor" timestamp="1588840363035">
-      <screen x="0" y="0" width="1366" height="768" />
+    <state width="2365" height="318" key="GridCell.Tab.0.right/0.0.2560.1440/2560.0.2560.1440@2560.0.2560.1440" timestamp="1589781099452" />
+    <state x="2910" y="36" width="992" height="733" key="SettingsEditor" timestamp="1589781797505">
+      <screen x="2560" y="0" width="2560" height="1440" />
     </state>
     <state x="187" y="19" width="992" height="733" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1588840363035" />
-    <state x="278" y="120" width="802" height="531" key="Vcs.Push.Dialog.v2" timestamp="1588841517915">
-      <screen x="0" y="0" width="1366" height="768" />
+    <state x="2910" y="36" key="SettingsEditor/0.0.2560.1440/2560.0.2560.1440@2560.0.2560.1440" timestamp="1589781797505" />
+    <state x="2758" y="262" width="802" height="531" key="Vcs.Push.Dialog.v2" timestamp="1589781159950">
+      <screen x="2560" y="0" width="2560" height="1440" />
     </state>
     <state x="278" y="120" width="802" height="531" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1588841517915" />
-    <state x="492" y="302" width="381" height="167" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588840284694">
-      <screen x="0" y="0" width="1366" height="768" />
+    <state x="2758" y="262" key="Vcs.Push.Dialog.v2/0.0.2560.1440/2560.0.2560.1440@2560.0.2560.1440" timestamp="1589781159950" />
+    <state x="3482" y="566" width="381" height="167" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1589780987581">
+      <screen x="2560" y="0" width="2560" height="1440" />
     </state>
     <state x="492" y="302" width="381" height="167" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.768@0.0.1366.768" timestamp="1588840284694" />
+    <state x="3482" y="566" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.2560.1440/2560.0.2560.1440@2560.0.2560.1440" timestamp="1589780987581" />
     <state x="168" y="120" width="1324" height="730" key="dock-window-1" timestamp="1588905613919">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
@@ -280,93 +291,10 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="346" y="168" key="run.anything.popup/0.0.1366.768@0.0.1366.768" timestamp="1588838705397" />
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1588917312368">
-      <screen x="0" y="0" width="1366" height="768" />
+    <state x="3208" y="167" width="1260" height="1272" key="search.everywhere.popup" timestamp="1589775174423">
+      <screen x="2560" y="0" width="2560" height="1440" />
     </state>
     <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.0.1366.768@0.0.1366.768" timestamp="1588917312368" />
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <last-edited>Arios Client</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectJDKs.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
+    <state x="3208" y="167" width="1260" height="1272" key="search.everywhere.popup/0.0.2560.1440/2560.0.2560.1440@2560.0.2560.1440" timestamp="1589775174423" />
   </component>
 </project>
