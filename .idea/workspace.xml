@@ -21,80 +21,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dfca1f7e-8542-4720-8cd4-dc28d3685749" name="Default Changelist" comment="closes #359">
-      <change afterPath="$PROJECT_DIR$/Pure530client/530 hd.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Pure530client/rscache/main_file_cache.dat2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Pure530client/rscache/main_file_cache.idx0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Pure530client/rscache/main_file_cache.idx1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Pure530client/rscache/main_file_cache.idx10" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Pure530client/rscache/main_file_cache.idx11" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Pure530client/rscache/main_file_cache.idx12" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Pure530client/rscache/main_file_cache.idx13" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Pure530client/rscache/main_file_cache.idx14" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Pure530client/rscache/main_file_cache.idx15" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Pure530client/rscache/main_file_cache.idx16" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Pure530client/rscache/main_file_cache.idx17" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Pure530client/rscache/main_file_cache.idx18" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Pure530client/rscache/main_file_cache.idx19" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Pure530client/rscache/main_file_cache.idx2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Pure530client/rscache/main_file_cache.idx20" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Pure530client/rscache/main_file_cache.idx21" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Pure530client/rscache/main_file_cache.idx22" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Pure530client/rscache/main_file_cache.idx23" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Pure530client/rscache/main_file_cache.idx24" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Pure530client/rscache/main_file_cache.idx25" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Pure530client/rscache/main_file_cache.idx255" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Pure530client/rscache/main_file_cache.idx26" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Pure530client/rscache/main_file_cache.idx27" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Pure530client/rscache/main_file_cache.idx3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Pure530client/rscache/main_file_cache.idx4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Pure530client/rscache/main_file_cache.idx5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Pure530client/rscache/main_file_cache.idx6" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Pure530client/rscache/main_file_cache.idx7" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Pure530client/rscache/main_file_cache.idx8" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Pure530client/rscache/main_file_cache.idx9" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/data/cache/jogl.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/data/cache/jogl_awt.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/org/runite/jagex/CacheIndex.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/org/runite/jagex/CacheIndex.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/org/runite/jagex/Class151_Sub1.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/org/runite/jagex/Class151_Sub1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/org/runite/jagex/Class62.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/org/runite/jagex/Class62.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/org/runite/jagex/Class8.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/org/runite/jagex/Class8.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/org/runite/jagex/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/org/runite/jagex/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/org/runite/jagex/GameShell.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/org/runite/jagex/GameShell.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/ClientLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/Pure530client/src/ClientLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/client.java" beforeDir="false" afterPath="$PROJECT_DIR$/Pure530client/src/client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/data/cache begin.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/data/cache.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/data/cacheback up.rar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/data/kratoscache.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/data/kratoscache/cache/OneNote Table Of Contents.onetoc2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/data/kratoscache/cache/gluegen-rt.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/data/kratoscache/cache/jogl.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/data/kratoscache/cache/jogl_awt.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/data/kratoscache/cache/main_file_cache.dat0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/data/kratoscache/cache/main_file_cache.dat2" beforeDir="false" afterPath="$PROJECT_DIR$/Server/data/kratoscache/cache/main_file_cache.dat2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/data/kratoscache/cache/main_file_cache.idx0" beforeDir="false" afterPath="$PROJECT_DIR$/Server/data/kratoscache/cache/main_file_cache.idx0" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/data/kratoscache/cache/main_file_cache.idx1" beforeDir="false" afterPath="$PROJECT_DIR$/Server/data/kratoscache/cache/main_file_cache.idx1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/data/kratoscache/cache/main_file_cache.idx14" beforeDir="false" afterPath="$PROJECT_DIR$/Server/data/kratoscache/cache/main_file_cache.idx14" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/data/kratoscache/cache/main_file_cache.idx15" beforeDir="false" afterPath="$PROJECT_DIR$/Server/data/kratoscache/cache/main_file_cache.idx15" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/data/kratoscache/cache/main_file_cache.idx16" beforeDir="false" afterPath="$PROJECT_DIR$/Server/data/kratoscache/cache/main_file_cache.idx16" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/data/kratoscache/cache/main_file_cache.idx18" beforeDir="false" afterPath="$PROJECT_DIR$/Server/data/kratoscache/cache/main_file_cache.idx18" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/data/kratoscache/cache/main_file_cache.idx19" beforeDir="false" afterPath="$PROJECT_DIR$/Server/data/kratoscache/cache/main_file_cache.idx19" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/data/kratoscache/cache/main_file_cache.idx2" beforeDir="false" afterPath="$PROJECT_DIR$/Server/data/kratoscache/cache/main_file_cache.idx2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/data/kratoscache/cache/main_file_cache.idx20" beforeDir="false" afterPath="$PROJECT_DIR$/Server/data/kratoscache/cache/main_file_cache.idx20" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/data/kratoscache/cache/main_file_cache.idx21" beforeDir="false" afterPath="$PROJECT_DIR$/Server/data/kratoscache/cache/main_file_cache.idx21" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/data/kratoscache/cache/main_file_cache.idx255" beforeDir="false" afterPath="$PROJECT_DIR$/Server/data/kratoscache/cache/main_file_cache.idx255" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/data/kratoscache/cache/main_file_cache.idx27" beforeDir="false" afterPath="$PROJECT_DIR$/Server/data/kratoscache/cache/main_file_cache.idx27" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/data/kratoscache/cache/main_file_cache.idx28" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/data/kratoscache/cache/main_file_cache.idx3" beforeDir="false" afterPath="$PROJECT_DIR$/Server/data/kratoscache/cache/main_file_cache.idx3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/data/kratoscache/cache/main_file_cache.idx5" beforeDir="false" afterPath="$PROJECT_DIR$/Server/data/kratoscache/cache/main_file_cache.idx5" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/data/kratoscache/cache/main_file_cache.idx6" beforeDir="false" afterPath="$PROJECT_DIR$/Server/data/kratoscache/cache/main_file_cache.idx6" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/data/kratoscache/cache/main_file_cache.idx7" beforeDir="false" afterPath="$PROJECT_DIR$/Server/data/kratoscache/cache/main_file_cache.idx7" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/data/kratoscache/cache/main_file_cache.idx8" beforeDir="false" afterPath="$PROJECT_DIR$/Server/data/kratoscache/cache/main_file_cache.idx8" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/data/kratoscache/main_file_cache.dat0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/plugin/activity/wguild/dummy/DummyRoom.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/plugin/activity/wguild/dummy/DummyRoom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/plugin/interaction/object/CulinomancerChestPliugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/plugin/interaction/object/CulinomancerChestPliugin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/org/runite/jagex/ItemDefinition.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/org/runite/jagex/ItemDefinition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/data/eco/grand_exchange_db.emp" beforeDir="false" afterPath="$PROJECT_DIR$/Server/data/eco/grand_exchange_db.emp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/org/crandor/game/node/entity/combat/equipment/WeaponInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/org/crandor/game/node/entity/combat/equipment/WeaponInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/org/crandor/game/node/entity/npc/drop/DropTables.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/org/crandor/game/node/entity/npc/drop/DropTables.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,9 +34,6 @@
   </component>
   <component name="CompilerWorkspaceConfiguration">
     <option name="MAKE_PROJECT_ON_SAVE" value="true" />
-  </component>
-  <component name="CoverageOptionsProvider">
-    <option name="myAddOrReplace" value="0" />
   </component>
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
@@ -130,19 +58,16 @@
     <option name="jrebelEnabledAutocompile" value="true" />
   </component>
   <component name="ProjectId" id="1bYCm5V4l5tzxWNF9qvLwLE4J3D" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Pure530client/clientlibs.jar!/" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/Client592" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.1646489" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -158,12 +83,11 @@
   </component>
   <component name="RunManager" selected="Application.GameLaunch">
     <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.runite.jagex.Client" />
+      <option name="MAIN_CLASS_NAME" value="org.runite.Client" />
       <module name="RS-2009" />
-      <option name="PROGRAM_PARAMETERS" value="1 live english game0" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.runite.jagex.*" />
+          <option name="PATTERN" value="org.runite.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -211,28 +135,32 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="client" />
-      <module name="530 hd" />
-      <option name="PROGRAM_PARAMETERS" value="1 live english game0" />
+    <configuration name="XTEAKeyPacker" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.crandor.tools.XTEAKeyPacker" />
+      <module name="RS-2009" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.crandor.tools.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Server" />
-      <item itemvalue="Application.client" />
-      <item itemvalue="Application.Client" />
       <item itemvalue="Application.GameLaunch" />
       <item itemvalue="Application.Management" />
+      <item itemvalue="Application.Server" />
+      <item itemvalue="Application.Client" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.GameLaunch" />
+        <item itemvalue="Application.Client" />
         <item itemvalue="Application.Server" />
         <item itemvalue="Application.Management" />
-        <item itemvalue="Application.Client" />
-        <item itemvalue="Application.client" />
+        <item itemvalue="Application.Runner" />
       </list>
     </recent_temporary>
   </component>
@@ -275,21 +203,84 @@
       <option name="project" value="LOCAL" />
       <updated>1588841514432</updated>
     </task>
-    <task id="LOCAL-00005" summary="Removed Perks + Everything related to Donating&#10;Removed Swiftkit Dependencies in Client">
-      <created>1589781067063</created>
+    <task id="LOCAL-00005" summary="Added the start of the drop rewrite">
+      <created>1589602621676</created>
       <option name="number" value="00005" />
       <option name="presentableId" value="LOCAL-00005" />
       <option name="project" value="LOCAL" />
-      <updated>1589781067063</updated>
+      <updated>1589602621677</updated>
     </task>
-    <task id="LOCAL-00006" summary="Pure 530 Client added -Pure530client-&#10;Pure 530 Cache added -server/data/cache-">
-      <created>1589782139353</created>
+    <task id="LOCAL-00006" summary="Added Farmer, Guard, and Barbarian drops.">
+      <created>1589606476966</created>
       <option name="number" value="00006" />
       <option name="presentableId" value="LOCAL-00006" />
       <option name="project" value="LOCAL" />
-      <updated>1589782139353</updated>
+      <updated>1589606476966</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Fixed the broken silver ore">
+      <created>1589610630948</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1589610630948</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Added drops for slayer monsters up to Banshees">
+      <created>1589615527005</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1589615527005</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Fixed nonfunctional cooking gauntlets :) &lt;3">
+      <created>1589656116231</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1589656116231</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Added basilisk, bat, and bear.">
+      <created>1589657824333</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1589657824333</updated>
+    </task>
+    <task id="LOCAL-00011" summary="RDT now actually rolls">
+      <created>1589700119059</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1589700119059</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Should roll RDT now">
+      <created>1589700746144</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1589700746144</updated>
+    </task>
+    <task id="LOCAL-00013" summary="re-added canoe stuff">
+      <created>1589701080704</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1589701080704</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Fixed some error spew with RDT, and improved the port phasmatys bone grinding">
+      <created>1589775110245</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1589775110245</updated>
+    </task>
+    <task id="LOCAL-00015" summary="removed a very dumb and pointless print-out...">
+      <created>1589776066795</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1589776066795</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -309,71 +300,53 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Working on debug of client shift drop" />
     <MESSAGE value="More Witch's house" />
     <MESSAGE value="Fixed kelda error" />
     <MESSAGE value="closes #370" />
     <MESSAGE value="closes #359" />
     <MESSAGE value="Removed Perks + Everything related to Donating&#10;Removed Swiftkit Dependencies in Client" />
-    <MESSAGE value="Pure 530 Client added -Pure530client-&#10;Pure 530 Cache added -server/data/cache-" />
-    <option name="LAST_COMMIT_MESSAGE" value="Pure 530 Client added -Pure530client-&#10;Pure 530 Cache added -server/data/cache-" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed Perks + Everything related to Donating&#10;Removed Swiftkit Dependencies in Client" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="3106" y="266" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1589788163614">
-      <screen x="2560" y="0" width="2560" height="1440" />
-    </state>
-    <state x="3106" y="266" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2560.1440/2560.0.2560.1440@2560.0.2560.1440" timestamp="1589788163614" />
     <state x="431" y="190" width="496" height="390" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1588905208285">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="431" y="190" width="496" height="390" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.768@0.0.1366.768" timestamp="1588905208285" />
-    <state x="3596" y="608" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1589793540081">
-      <screen x="2560" y="0" width="2560" height="1440" />
-    </state>
-    <state x="3596" y="608" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.2560.1440/2560.0.2560.1440@2560.0.2560.1440" timestamp="1589793540081" />
     <state x="3604" y="465" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1589765614859">
       <screen x="2560" y="0" width="2560" height="1440" />
     </state>
     <state x="3604" y="465" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2560.1440/2560.0.2560.1440@2560.0.2560.1440" timestamp="1589765614859" />
-    <state x="3038" y="481" key="FileChooserDialogImpl" timestamp="1589783720631">
-      <screen x="2560" y="0" width="2560" height="1440" />
-    </state>
-    <state x="3038" y="481" key="FileChooserDialogImpl/0.0.2560.1440/2560.0.2560.1440@2560.0.2560.1440" timestamp="1589783720631" />
-    <state width="2397" height="318" key="GridCell.Tab.0.bottom" timestamp="1589798264015">
+    <state width="2365" height="318" key="GridCell.Tab.0.bottom" timestamp="1589781099452">
       <screen x="2560" y="0" width="2560" height="1440" />
     </state>
     <state width="639" height="171" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1588898041866" />
-    <state width="2397" height="318" key="GridCell.Tab.0.bottom/0.0.2560.1440/2560.0.2560.1440@2560.0.2560.1440" timestamp="1589798264015" />
-    <state width="2397" height="318" key="GridCell.Tab.0.center" timestamp="1589798264015">
+    <state width="2365" height="318" key="GridCell.Tab.0.bottom/0.0.2560.1440/2560.0.2560.1440@2560.0.2560.1440" timestamp="1589781099452" />
+    <state width="2365" height="318" key="GridCell.Tab.0.center" timestamp="1589781099452">
       <screen x="2560" y="0" width="2560" height="1440" />
     </state>
     <state width="639" height="171" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1588898041865" />
-    <state width="2397" height="318" key="GridCell.Tab.0.center/0.0.2560.1440/2560.0.2560.1440@2560.0.2560.1440" timestamp="1589798264015" />
-    <state width="2397" height="318" key="GridCell.Tab.0.left" timestamp="1589798264015">
+    <state width="2365" height="318" key="GridCell.Tab.0.center/0.0.2560.1440/2560.0.2560.1440@2560.0.2560.1440" timestamp="1589781099452" />
+    <state width="2365" height="318" key="GridCell.Tab.0.left" timestamp="1589781099452">
       <screen x="2560" y="0" width="2560" height="1440" />
     </state>
     <state width="639" height="171" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1588898041865" />
-    <state width="2397" height="318" key="GridCell.Tab.0.left/0.0.2560.1440/2560.0.2560.1440@2560.0.2560.1440" timestamp="1589798264015" />
-    <state width="2397" height="318" key="GridCell.Tab.0.right" timestamp="1589798264015">
+    <state width="2365" height="318" key="GridCell.Tab.0.left/0.0.2560.1440/2560.0.2560.1440@2560.0.2560.1440" timestamp="1589781099452" />
+    <state width="2365" height="318" key="GridCell.Tab.0.right" timestamp="1589781099452">
       <screen x="2560" y="0" width="2560" height="1440" />
     </state>
     <state width="639" height="171" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1588898041865" />
-    <state width="2397" height="318" key="GridCell.Tab.0.right/0.0.2560.1440/2560.0.2560.1440@2560.0.2560.1440" timestamp="1589798264015" />
-    <state x="2923" y="476" key="NewModule_or_Project.wizard" timestamp="1589783707171">
-      <screen x="2560" y="0" width="2560" height="1440" />
-    </state>
-    <state x="2923" y="476" key="NewModule_or_Project.wizard/0.0.2560.1440/2560.0.2560.1440@2560.0.2560.1440" timestamp="1589783707171" />
-    <state x="2738" y="346" width="992" height="733" key="SettingsEditor" timestamp="1589785011735">
+    <state width="2365" height="318" key="GridCell.Tab.0.right/0.0.2560.1440/2560.0.2560.1440@2560.0.2560.1440" timestamp="1589781099452" />
+    <state x="2910" y="36" width="992" height="733" key="SettingsEditor" timestamp="1589781797505">
       <screen x="2560" y="0" width="2560" height="1440" />
     </state>
     <state x="187" y="19" width="992" height="733" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1588840363035" />
-    <state x="2738" y="346" key="SettingsEditor/0.0.2560.1440/2560.0.2560.1440@2560.0.2560.1440" timestamp="1589785011735" />
-    <state x="2758" y="262" width="802" height="531" key="Vcs.Push.Dialog.v2" timestamp="1589782171275">
+    <state x="2910" y="36" key="SettingsEditor/0.0.2560.1440/2560.0.2560.1440@2560.0.2560.1440" timestamp="1589781797505" />
+    <state x="2758" y="262" width="802" height="531" key="Vcs.Push.Dialog.v2" timestamp="1589781159950">
       <screen x="2560" y="0" width="2560" height="1440" />
     </state>
     <state x="278" y="120" width="802" height="531" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1588841517915" />
-    <state x="2758" y="262" key="Vcs.Push.Dialog.v2/0.0.2560.1440/2560.0.2560.1440@2560.0.2560.1440" timestamp="1589782171275" />
+    <state x="2758" y="262" key="Vcs.Push.Dialog.v2/0.0.2560.1440/2560.0.2560.1440@2560.0.2560.1440" timestamp="1589781159950" />
     <state x="3482" y="566" width="381" height="167" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1589780987581">
       <screen x="2560" y="0" width="2560" height="1440" />
     </state>
@@ -383,6 +356,10 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="168" y="120" width="1324" height="730" key="dock-window-1/0.0.1366.768@0.0.1366.768" timestamp="1588905613919" />
+    <state x="786" y="41" width="579" height="488" key="find.popup" timestamp="1589777398639">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="786" y="41" width="579" height="488" key="find.popup/0.0.1366.768@0.0.1366.768" timestamp="1589777398639" />
     <state x="117" y="8" width="1123" height="755" key="new project wizard" timestamp="1588904115910">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
@@ -391,17 +368,104 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="346" y="168" key="run.anything.popup/0.0.1366.768@0.0.1366.768" timestamp="1588838705397" />
-    <state x="3259" y="165" width="1260" height="1272" key="search.everywhere.popup" timestamp="1589798374700">
-      <screen x="2560" y="0" width="2560" height="1440" />
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1589777702219">
+      <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.0.1366.768@0.0.1366.768" timestamp="1588917312368" />
-    <state x="3259" y="165" width="1260" height="1272" key="search.everywhere.popup/0.0.2560.1440/2560.0.2560.1440@2560.0.2560.1440" timestamp="1589798374700" />
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.0.1366.768@0.0.1366.768" timestamp="1589777702219" />
   </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/2009scape$GameLaunch.ic" NAME="GameLaunch Coverage Results" MODIFIED="1589794032855" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>org.runite.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/2009scape$client.ic" NAME="client Coverage Results" MODIFIED="1589786865923" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/2009scape$ClientLoader.ic" NAME="ClientLoader Coverage Results" MODIFIED="1589787233772" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Server/src/org/crandor/game/node/entity/npc/drop/DropTables.java</url>
+          <line>159</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>Arios Client</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>

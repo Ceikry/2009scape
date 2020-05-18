@@ -119,7 +119,6 @@ public final class ShoppingPlugin extends ComponentPlugin {
 			public boolean handle() {
 				switch (componentId){
 				case 620:
-					System.out.println("hmmm");
 					viewer.getShop().buy(viewer.getPlayer(), slot, (int) getValue(), viewer.getTabIndex());
 					break;
 				case 621:

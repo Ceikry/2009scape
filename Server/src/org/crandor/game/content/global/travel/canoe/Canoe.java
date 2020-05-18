@@ -6,72 +6,74 @@ package org.crandor.game.content.global.travel.canoe;
  * @date 09/11/2013
  */
 public enum Canoe {
-	LOG(12, 30, new int[] { 30 }), DUGOUT(27, 60, new int[] { 31 }), STABLE_DUGOUT(42, 90, new int[] { 32 }), WAKA(57, 150, new int[] { 33 });
+    LOG(12, 30, 30),
+    DUGOUT(27, 60, 31),
+    STABLE_DUGOUT(42, 90, 32),
+    WAKA(57, 150, 33);
 
-	/**
-	 * Constructs a new {@code Canoe.java} {@code Object}.
-	 * @param level the level.
-	 * @param experience the experience.
-	 * @param configs the configs.
-	 */
-	Canoe(final int level, final double experience, final int... childs) {
-		this.level = level;
-		this.experience = experience;
-		this.childs = childs;
-	}
+    /**
+     * Constructs a new {@code Canoe.java} {@code Object}.
+     * @param level the woodcutting level requirement.
+     * @param experience the experience.
+     * @param child the child.
+     */
+    Canoe(final int level, final double experience, final int child) {
+        this.level = level;
+        this.experience = experience;
+        this.child = child;
+    }
 
-	/**
-	 * Represents the level of the canoe.
-	 */
-	private final int level;
+    /**
+     * Represents the woodcutting level requirement to craft the canoe.
+     */
+    private final int level;
 
-	/**
-	 * Represents the experience receive.d
-	 */
-	private final double experience;
+    /**
+     * Represents the experience received for crafting the canoe.
+     */
+    private final double experience;
 
-	/**
-	 * Represents the child id on the interface.
-	 */
-	private final int childs[];
+    /**
+     * Represents the child's id on the interface.
+     */
+    private final int child;
 
-	/**
-	 * Gets the level.
-	 * @return The level.
-	 */
-	public int getLevel() {
-		return level;
-	}
+    /**
+     * Gets the woodcutting level requirement.
+     * @return The required level.
+     */
+    public int getRequiredLevel() {
+        return level;
+    }
 
-	/**
-	 * Gets the experience.
-	 * @return The experience.
-	 */
-	public double getExperience() {
-		return experience;
-	}
+    /**
+     * Gets the experience received.
+     * @return The experience amount.
+     */
+    public double getExperience() {
+        return experience;
+    }
 
-	/**
-	 * Gets the child.
-	 * @return The child.
-	 */
-	public int[] getChilds() {
-		return childs;
-	}
+    /**
+     * Gets the child.
+     * @return The child.
+     */
+    public int getChild() {
+        return child;
+    }
 
-	/**
-	 * Method used to get the canoe for the child.
-	 * @param child the child.
-	 * @return <code>True</code> if so
-	 */
-	public static Canoe forChild(final int child) {
-		for (Canoe canoe : values()) {
-			for (int childd : canoe.getChilds()) {
-				if (childd == child) {
-					return canoe;
-				}
-			}
-		}
-		return null;
-	}
+    /**
+     * Method used to get the canoe from the child.
+     * @param child the child.
+     * @return <code>True</code> if so
+     */
+    public static Canoe getCanoeFromChild(final int child) {
+        for (Canoe canoe : values()) {
+            if(canoe.getChild() == child)
+            {
+                return canoe;
+            }
+        }
+        return null;
+    }
 }
