@@ -443,7 +443,7 @@ public final class Client extends GameShell {
 				if(Class38.aClass87_665.aClass122_1198 != null) {
 					Class101.aClass30_1422 = new Class30(Class38.aClass87_665.aClass122_1198, 5200, 0);
 
-					for(int var2 = 0; ~var2 > -30; ++var2) {
+					for(int var2 = 0; var2 < 29; ++var2) {
 						Class163_Sub2.aClass30Array2998[var2] = new Class30(Class38.aClass87_665.aClass122Array1197[var2], 6000, 0);
 					}
 
@@ -1761,7 +1761,7 @@ public final class Client extends GameShell {
 							Class3_Sub4.aClass153_2258 = Class8.getCacheIndex(false, true, true, 25, true);
 							Class97.aClass153_1376 = Class8.getCacheIndex(true, true, true, 26, true);
 							Class132.aClass153_1735 = Class8.getCacheIndex(false, true, true, 27, true);
-							//Class132.libIndex = Class8.getCacheIndex(false, true, true, 28, true);//New cache only has 27 IDX FILES DUMMY
+							Class132.libIndex = Class8.getCacheIndex(false, true, true, 28, true);//New cache only has 27 IDX FILES DUMMY
 							Class3_Sub28_Sub15.anInt3684 = 15;
 							Class3_Sub17.aClass94_2464 = Class106.aClass94_1445;
 							Class96.anInt1354 = 40;
@@ -1932,8 +1932,8 @@ public final class Client extends GameShell {
 										var2 = var7 + Class164.aClass153_2052.method2136((byte)-124);
 										Class168.aClass153_2097.method2113((byte)120);
 										var2 += Class168.aClass153_2097.method2136((byte)-128);
-										//Class132.libIndex.method2113((byte)126);
-										//var2 += Class132.libIndex.method2136((byte)-124); //I think these are related to the *imaginary* 28th IDX
+										Class132.libIndex.method2113((byte)126);
+										var2 += Class132.libIndex.method2136((byte)-124); //I think these are related to the *imaginary* 28th IDX
 										NPC.aClass153_3993.method2113((byte)70);
 										var2 += NPC.aClass153_3993.method2136((byte)-123);
 										Class101.aClass153_1428.method2113((byte)32);
@@ -2017,7 +2017,7 @@ public final class Client extends GameShell {
 					} else {
 						var2 = 0;
 															//LOL IT SAYS TODO LORD
-						for(var3 = 0; var3 < 28; ++var3) { //TODO
+						for(var3 = 0; var3 < 29; ++var3) { //TODO
 							var2 += RSByteBuffer.aClass151_Sub1Array2601[var3].method2111(-61) * Class3_Sub13_Sub23.anIntArray3288[var3] / 100;
 						}
 

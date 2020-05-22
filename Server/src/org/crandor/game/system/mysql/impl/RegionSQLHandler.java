@@ -80,13 +80,13 @@ public class RegionSQLHandler extends SQLEntryHandler<Object> {
 	 * @param regionId The region's id.
 	 * @return The region XTEA keys.
 	 */
-	public static int[] getRegionXTEA(int regionId) {
-//		int[] keys = REGION_XTEA.get(regionId);
-//		if (keys == null) {
-//			return DEFAULT_REGION_KEYS;
-//		}
-//		return keys;
-		return DEFAULT_REGION_KEYS;
+	public static int[] getRegionXTEA(int regionId) { //Someone had this edited out.
+		int[] keys = REGION_XTEA.get(regionId);
+		if (keys == null) {
+			return DEFAULT_REGION_KEYS;
+		}
+		return keys;
+//		return DEFAULT_REGION_KEYS;
 	}
 
 	@Override
