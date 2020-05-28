@@ -84,7 +84,7 @@ final class Class45 {
 			//Ordinal: 2 Animation
 			if((var0 & 8) != 0) {
 				var4 = GraphicDefinition.incomingBuffer.getShort(1);
-				if(-65536 == ~var4) {
+				if(var4 == 65535) {
 					var4 = -1;
 				}
 
@@ -105,13 +105,13 @@ final class Class45 {
 			//Ordinal: 4 Face entity
 			if((2 & var0) != 0) {
 				var3.anInt2772 = GraphicDefinition.incomingBuffer.getShortA(-114);
-				if(-65536 == ~var3.anInt2772) {
+				if(var3.anInt2772 == 65535) {
 					var3.anInt2772 = -1;
 				}
 			}
 
 			//Ordinal: 5 Force movement
-			if(~(1024 & var0) != -1) {
+			if((1024 & var0) != 0) {
 				var3.anInt2784 = GraphicDefinition.incomingBuffer.getByteC(true);
 				var3.anInt2835 = GraphicDefinition.incomingBuffer.getByte((byte)-24);
 				var3.anInt2823 = GraphicDefinition.incomingBuffer.getByteA((byte)-106);
@@ -124,9 +124,9 @@ final class Class45 {
 			}
 
 			//Ordinal: 6 Force chat
-			if(~(var0 & 32) != -1) {
+			if((var0 & 32) != 0) {
 				var3.textSpoken = GraphicDefinition.incomingBuffer.getString();
-				if(~var3.textSpoken.charAt(0, (byte)-45) == -127) {
+				if(var3.textSpoken.charAt(0, (byte) -45) == 126) {
 					var3.textSpoken = var3.textSpoken.method1556(1, (byte)-74);
 					Class3_Sub30_Sub1.sendMessage(var3.getName(0), 2, var3.textSpoken, var2 ^ 78);
 				} else if(var3 == Class102.player) {
@@ -139,14 +139,14 @@ final class Class45 {
 			}
 
 			//Ordinal: 7 Hit 2
-			if(~(var0 & 512) != -1) {
+			if((var0 & 512) != 0) {
 				var4 = GraphicDefinition.incomingBuffer.getSmart(true);
 				chatIcon = GraphicDefinition.incomingBuffer.getByteS(true);
 				var3.method1970(chatIcon, var2 + 71, Class44.anInt719, var4);
 			}
 
 			//Ordinal: 8
-			if(~(2048 & var0) != -1) {
+			if((2048 & var0) != 0) {
 				var4 = GraphicDefinition.incomingBuffer.getByteC(true);
 				int[] var18 = new int[var4];
 				int[] var17 = new int[var4];
@@ -175,7 +175,7 @@ final class Class45 {
 
 				chatIcon = GraphicDefinition.incomingBuffer.getIntB((byte)-73);
 				boolean var21 = true;
-				if(~var4 != 0 && 0 != ~var3.anInt2842 && Client.getAnimationDefinition(RenderAnimationDefinition.getGraphicDefinition((byte)42, var4).anInt542, (byte)-20).anInt1857 < Client.getAnimationDefinition(RenderAnimationDefinition.getGraphicDefinition((byte)42, var3.anInt2842).anInt542, (byte)-20).anInt1857) {
+				if(var4 != -1 && var3.anInt2842 != -1 && Client.getAnimationDefinition(RenderAnimationDefinition.getGraphicDefinition((byte)42, var4).anInt542, (byte)-20).anInt1857 < Client.getAnimationDefinition(RenderAnimationDefinition.getGraphicDefinition((byte)42, var3.anInt2842).anInt542, (byte)-20).anInt1857) {
 					var21 = false;
 				}
 
@@ -184,15 +184,15 @@ final class Class45 {
 					var3.anInt2761 = 0;
 					var3.anInt2805 = 0;
 					var3.anInt2842 = var4;
-					if(~var3.anInt2759 < ~Class44.anInt719) {
+					if(Class44.anInt719 < var3.anInt2759) {
 						var3.anInt2805 = -1;
 					}
 
 					var3.anInt2799 = chatIcon >> 16;
 					var3.anInt2826 = 1;
-					if(~var3.anInt2842 != 0 && Class44.anInt719 == var3.anInt2759) {
+					if(var3.anInt2842 != -1 && Class44.anInt719 == var3.anInt2759) {
 						var7 = RenderAnimationDefinition.getGraphicDefinition((byte)42, var3.anInt2842).anInt542;
-						if(0 != ~var7) {
+						if(var7 != -1) {
 							AnimationDefinition var24 = Client.getAnimationDefinition(var7, (byte)-20);
 							if(null != var24 && var24.frames != null) {
 								IOHandler.method1470(var3.anInt2829, var24, 183921384, var3.anInt2819, var3 == Class102.player, 0);

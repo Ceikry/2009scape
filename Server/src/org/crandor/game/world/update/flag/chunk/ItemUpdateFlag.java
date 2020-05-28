@@ -71,9 +71,6 @@ public final class ItemUpdateFlag extends UpdateFlag<Object> {
 		if (!isRemove() && item.droppedBy((Player) e)) {
 			return;
 		}
-		if (e.getName().equals("ethan")) {
-			// System.out.println("Updating... " + type);
-		}
 		write(buffer);
 	}
 

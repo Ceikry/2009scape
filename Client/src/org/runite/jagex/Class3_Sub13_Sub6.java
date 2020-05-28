@@ -16,7 +16,7 @@ final class Class3_Sub13_Sub6 extends Class3_Sub13 {
    static int anInt3084;
 
 
-   static final void method195(int var0) {
+   static final void method195(int var0) {//I am more certain now more than ever this contains the login screen information.
       try {
          int var1 = (NPC.anInt3995 >> 10) - -(Class131.anInt1716 >> 3);
          int var2 = (Class77.anInt1111 >> 10) - -(Class82.anInt1152 >> 3);
@@ -30,7 +30,7 @@ final class Class3_Sub13_Sub6 extends Class3_Sub13 {
             Client.anIntArray2200 = new int[var6];
             Class3_Sub9.regionXteaKeys = new int[var6][4];
             for (int var5 = 0; var5 < var6; var5++) {
-            	 Class3_Sub9.regionXteaKeys[var5] = new int[] { 14881828, -6662814, 58238456, 146761213 };
+            	 //Class3_Sub9.regionXteaKeys[var5] = new int[] { 14881828, -6662814, 58238456, 146761213 };//These are the same keys that are in RegionSQLHandler.java
             }
             Class3_Sub28_Sub14.aByteArrayArray3669 = new byte[var6][];
             Class3_Sub24_Sub3.anIntArray3494 = new int[var6];
@@ -52,7 +52,7 @@ final class Class3_Sub13_Sub6 extends Class3_Sub13 {
                   Class3_Sub13_Sub24.npcSpawnCacheIndices[var11] = aClass153_3077.getArchiveForName(RenderAnimationDefinition.method903(new RSString[]{Canvas_Sub1.aClass94_26, Class72.method1298((byte)9, var7), Class3_Sub13_Sub14.aClass94_3161, Class72.method1298((byte)9, var8)}, (byte)-82), (byte)-30);
                   Class3_Sub13_Sub15.anIntArray3181[var11] = aClass153_3077.getArchiveForName(RenderAnimationDefinition.method903(new RSString[]{Class95.aClass94_1333, Class72.method1298((byte)9, var7), Class3_Sub13_Sub14.aClass94_3161, Class72.method1298((byte)9, var8)}, (byte)-104), (byte)-30);
                   Class3_Sub28_Sub5.anIntArray3587[var11] = aClass153_3077.getArchiveForName(RenderAnimationDefinition.method903(new RSString[]{Class167.aClass94_2084, Class72.method1298((byte)9, var7), Class3_Sub13_Sub14.aClass94_3161, Class72.method1298((byte)9, var8)}, (byte)-114), (byte)-30);
-                  if(~Class3_Sub13_Sub24.npcSpawnCacheIndices[var11] == 0) {
+                  if(Class3_Sub13_Sub24.npcSpawnCacheIndices[var11] == -1) {
                      Client.anIntArray2200[var11] = -1;
                      Class101.anIntArray1426[var11] = -1;
                      Class3_Sub13_Sub15.anIntArray3181[var11] = -1;
@@ -63,7 +63,7 @@ final class Class3_Sub13_Sub6 extends Class3_Sub13 {
                }
             }
 
-            for(var7 = var11; ~var7 > ~Class3_Sub13_Sub24.npcSpawnCacheIndices.length; ++var7) {
+            for(var7 = var11; Class3_Sub13_Sub24.npcSpawnCacheIndices.length > var7; ++var7) {
                Class3_Sub13_Sub24.npcSpawnCacheIndices[var7] = -1;
                Client.anIntArray2200[var7] = -1;
                Class101.anIntArray1426[var7] = -1;

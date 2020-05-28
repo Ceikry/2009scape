@@ -80,13 +80,16 @@ public class RegionSQLHandler extends SQLEntryHandler<Object> {
 	 * @param regionId The region's id.
 	 * @return The region XTEA keys.
 	 */
-	public static int[] getRegionXTEA(int regionId) { //Someone had this edited out.
+	public static int[] getRegionXTEA(int regionId) { //Uses the xtea's from the sql to unlock regions
 		int[] keys = REGION_XTEA.get(regionId);
 		if (keys == null) {
-			return DEFAULT_REGION_KEYS;
+//			System.out.println("USING DEFAULT REGION KEYS FOR REGION " + regionId);//Used to check for missing regions
+			return DEFAULT_REGION_KEYS;//Used to return default values for regions we don't have.
+
 		}
-		return keys;
-//		return DEFAULT_REGION_KEYS;
+//		System.out.println("USING SQL REGION KEYS");//Confirms we have unlocked those regions
+		return keys;//This one grabs the keys from the SQL
+//		return DEFAULT_REGION_KEYS;//This one only uses the default keys at the top,{ 14881828, -6662814, 58238456, 146761213 }. Unsure why they chose these numbers.
 	}
 
 	@Override

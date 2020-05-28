@@ -65,7 +65,7 @@ final class Class117 {
                }
             }
 
-            if(HDToolKit.highDetail && (25 == var0 || var0 == 28 || -41 == ~var0)) {
+            if(HDToolKit.highDetail && (25 == var0 || var0 == 28 || var0 == 40)) {
                HDToolKit.method1833();
             }
 

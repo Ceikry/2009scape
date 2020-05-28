@@ -89,7 +89,7 @@ final class Class67 implements Runnable {
 
                if(var4.type == 6) {
                   int var6;
-                  if(0 != ~var4.animationId || ~var4.secondAnimationId != 0) {
+                  if(var4.animationId != -1 || var4.secondAnimationId != -1) {
                      boolean var9 = Class3_Sub28_Sub12.method609(var4, var0 + -23173);
                      if(var9) {
                         var6 = var4.secondAnimationId;
@@ -99,23 +99,21 @@ final class Class67 implements Runnable {
 
                      if(var6 != -1) {
                         AnimationDefinition var7 = Client.getAnimationDefinition(var6, (byte)-20);
-                        if(null != var7) {
-                           for(var4.anInt267 += Class106.anInt1446; ~var4.anInt267 < ~var7.duration[var4.anInt283]; Class20.method909(115, var4)) {
-                              var4.anInt267 -= var7.duration[var4.anInt283];
-                              ++var4.anInt283;
-                              if(var7.frames.length <= var4.anInt283) {
-                                 var4.anInt283 -= var7.anInt1865;
-                                 if(~var4.anInt283 > -1 || var7.frames.length <= var4.anInt283) {
-                                    var4.anInt283 = 0;
-                                 }
+                        for(var4.anInt267 += Class106.anInt1446; var7.duration[var4.anInt283] < var4.anInt267; Class20.method909(115, var4)) {
+                           var4.anInt267 -= var7.duration[var4.anInt283];
+                           ++var4.anInt283;
+                           if(var7.frames.length <= var4.anInt283) {
+                              var4.anInt283 -= var7.anInt1865;
+                              if(~var4.anInt283 > -1 || var7.frames.length <= var4.anInt283) {
+                                 var4.anInt283 = 0;
                               }
+                           }
 
-                              var4.anInt260 = var4.anInt283 + 1;
-                              if(var7.frames.length <= var4.anInt260) {
-                                 var4.anInt260 -= var7.anInt1865;
-                                 if(~var4.anInt260 > -1 || var7.frames.length <= var4.anInt260) {
-                                    var4.anInt260 = -1;
-                                 }
+                           var4.anInt260 = var4.anInt283 + 1;
+                           if(var7.frames.length <= var4.anInt260) {
+                              var4.anInt260 -= var7.anInt1865;
+                              if(~var4.anInt260 > -1 || var7.frames.length <= var4.anInt260) {
+                                 var4.anInt260 = -1;
                               }
                            }
                         }

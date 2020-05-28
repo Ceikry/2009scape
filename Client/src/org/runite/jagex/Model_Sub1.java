@@ -321,20 +321,20 @@ final class Model_Sub1 extends GameObject {
       if((var1 == 1 || var1 == 2 || var1 == 3 || var1 == 5) && (var10 < 0 || var11 + 128 >> 7 >= var3.length || var12 < 0 || var13 + 128 >> 7 >= var3[0].length)) {
          return this;
       } else {
-         if(var1 != 4 && var1 != 5) {
-            var10 >>= 7;
-            var11 = var11 + 127 >> 7;
-            var12 >>= 7;
-            var13 = var13 + 127 >> 7;
-            if(var3[var10][var12] == var6 && var3[var11][var12] == var6 && var3[var10][var13] == var6 && var3[var11][var13] == var6) {
-               return this;
-            }
-         } else {
+         if(var1 == 4 || var1 == 5) {
             if(var4 == null) {
                return this;
             }
 
             if(var10 < 0 || var11 + 128 >> 7 >= var4.length || var12 < 0 || var13 + 128 >> 7 >= var4[0].length) {
+               return this;
+            }
+         } else {
+            var10 >>= 7;
+            var11 = var11 + 127 >> 7;
+            var12 >>= 7;
+            var13 = var13 + 127 >> 7;
+            if(var3[var10][var12] == var6 && var3[var11][var12] == var6 && var3[var10][var13] == var6 && var3[var11][var13] == var6) {
                return this;
             }
          }
@@ -756,10 +756,10 @@ final class Model_Sub1 extends GameObject {
          }
 
          if(this.aByteArray2866 != null) {
-            if(this.aShortArray2858[var53] != -1) {
-               this.aByteArray2866[var53] = (byte)(var8.getByte((byte)-28) - 1);
-            } else {
+            if(this.aShortArray2858[var53] == -1) {
                this.aByteArray2866[var53] = -1;
+            } else {
+               this.aByteArray2866[var53] = (byte)(var8.getByte((byte)-28) - 1);
             }
          }
       }
@@ -1574,9 +1574,7 @@ final class Model_Sub1 extends GameObject {
             this.anInt2887 += var12.anInt2887;
             this.anInt2849 += var12.anInt2849;
             this.anInt2862 += var12.anInt2862;
-            if(var12.aByteArray2889 != null) {
-               var4 = true;
-            } else {
+            if(var12.aByteArray2889 == null) {
                if(this.aByte2848 == -1) {
                   this.aByte2848 = var12.aByte2848;
                }
@@ -1584,6 +1582,8 @@ final class Model_Sub1 extends GameObject {
                if(this.aByte2848 != var12.aByte2848) {
                   var4 = true;
                }
+            } else {
+               var4 = true;
             }
 
             var3 |= var12.aByteArray2859 != null;
@@ -1668,10 +1668,10 @@ final class Model_Sub1 extends GameObject {
                }
 
                if(var4) {
-                  if(var13.aByteArray2889 != null) {
-                     this.aByteArray2889[this.anInt2849] = var13.aByteArray2889[var14];
-                  } else {
+                  if(var13.aByteArray2889 == null) {
                      this.aByteArray2889[this.anInt2849] = var13.aByte2848;
+                  } else {
+                     this.aByteArray2889[this.anInt2849] = var13.aByteArray2889[var14];
                   }
                }
 
@@ -1684,18 +1684,18 @@ final class Model_Sub1 extends GameObject {
                }
 
                if(var7) {
-                  if(var13.aShortArray2858 != null) {
-                     this.aShortArray2858[this.anInt2849] = var13.aShortArray2858[var14];
-                  } else {
+                  if(var13.aShortArray2858 == null) {
                      this.aShortArray2858[this.anInt2849] = -1;
+                  } else {
+                     this.aShortArray2858[this.anInt2849] = var13.aShortArray2858[var14];
                   }
                }
 
                if(var8) {
-                  if(var13.aByteArray2866 != null && var13.aByteArray2866[var14] != -1) {
-                     this.aByteArray2866[this.anInt2849] = (byte)(var13.aByteArray2866[var14] + this.anInt2862);
-                  } else {
+                  if(var13.aByteArray2866 == null || var13.aByteArray2866[var14] == -1) {
                      this.aByteArray2866[this.anInt2849] = -1;
+                  } else {
+                     this.aByteArray2866[this.anInt2849] = (byte)(var13.aByteArray2866[var14] + this.anInt2862);
                   }
                }
 
@@ -1770,14 +1770,14 @@ final class Model_Sub1 extends GameObject {
          }
       }
 
-      if(!var4 && var1.aShortArray2858 != null) {
+      if(var4 || var1.aShortArray2858 == null) {
+         this.aShortArray2858 = var1.aShortArray2858;
+      } else {
          this.aShortArray2858 = new short[this.anInt2849];
 
          for(var6 = 0; var6 < this.anInt2849; ++var6) {
             this.aShortArray2858[var6] = var1.aShortArray2858[var6];
          }
-      } else {
-         this.aShortArray2858 = var1.aShortArray2858;
       }
 
       if(var5) {

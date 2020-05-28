@@ -5,7 +5,7 @@ final class Class62 {
    static int anInt942;
    int[][] fileNameHashes;
    static int anInt944 = 0;
-   int[] archiveCRCs; //CRC Mismatch error;; int[] archiveCRCs;
+   int[] archiveCRCs;
    static RSString aClass94_946 = RSString.createRSString(")2");
    int validArchiveAmount;
    private static RSString aClass94_948 = RSString.createRSString("You can(Wt add yourself to your own friend list)3");
@@ -156,7 +156,7 @@ final class Class62 {
             this.archiveAmount = var7 - -1;
             this.archiveRevisions = new int[this.archiveAmount];
             this.validFileIds = new int[this.archiveAmount][];
-            this.archiveCRCs = new int[this.archiveAmount]; //CRC MISMATCH ERROR;; this.archiveCRCs = new int[this.archiveAmount][];
+            this.archiveCRCs = new int[this.archiveAmount];
             this.archiveLengths = new int[this.archiveAmount];
             this.archiveFileLengths = new int[this.archiveAmount];
             if(~info != -1) {
@@ -173,7 +173,7 @@ final class Class62 {
                this.aClass69_949 = new Class69(this.archiveNameHash);
             }
 
-            for(var8 = 0; ~this.validArchiveAmount < ~var8; ++var8) { //CRC MISMATCH ERROR
+            for(var8 = 0; ~this.validArchiveAmount < ~var8; ++var8) {
                this.archiveCRCs[this.validArchiveIds[var8]] = buffer.getInt();
             }
 

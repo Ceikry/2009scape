@@ -17,7 +17,7 @@ static RSString aClass94_2481 = aClass94_2486;
 
    static final void method388(byte var0) {
       try {
-         //int var1 = 44 / ((-2 - var0) / 52);
+         //int var1 = 44 / ((-2 - var0) / 52);//edited out
          if(Class3_Sub13_Sub19.aClass94_3220 != null) {
             Class3_Sub10.method138(Class3_Sub13_Sub19.aClass94_3220, 0);
             Class3_Sub13_Sub19.aClass94_3220 = null;
@@ -94,7 +94,7 @@ static RSString aClass94_2481 = aClass94_2486;
             Class7.anInt2162 = Class121.method1736(WorldListCountry.localPlane, 1, NPC.anInt3995, Class77.anInt1111) + -Class3_Sub13_Sub34.anInt3414;
          }
 
-        // int var7 = 76 % ((-79 - var4) / 35);
+         //int var7 = 76 % ((-79 - var4) / 35);//edited out
          Class133.anInt1753 = 2;
       } catch (RuntimeException var8) {
          throw Class44.method1067(var8, "lb.D(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ',' + var5 + ',' + var6 + ')');
@@ -129,7 +129,7 @@ static RSString aClass94_2481 = aClass94_2486;
    static final void method392(CacheIndex var0, CacheIndex var1, int var2, CacheIndex var3) {
       try {
          AnimationDefinition.aClass153_1860 = var1;
-        // int var4 = -110 / ((-7 - var2) / 43);
+         //int var4 = -110 / ((-7 - var2) / 43);//edited out
          Class7.aClass153_2160 = var0;
          Class131.aClass153_1723 = var3;
       } catch (RuntimeException var5) {

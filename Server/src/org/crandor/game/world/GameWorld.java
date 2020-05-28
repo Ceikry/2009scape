@@ -178,7 +178,7 @@ public final class GameWorld {
 
     //39956
     private static void parseObjects() {
-        LandscapeParser.removeGameObject(new GameObject(1113, 2854, 2954, 0));//Table
+/*        LandscapeParser.removeGameObject(new GameObject(1113, 2854, 2954, 0));//Table
         LandscapeParser.removeGameObject(new GameObject(620, 2854, 2953, 0));//Stool
         LandscapeParser.removeGameObject(new GameObject(1113, 2854, 2952, 0));//Stool
         LandscapeParser.removeGameObject(new GameObject(1160, 2857, 2954, 0));//Potted plant
@@ -193,7 +193,7 @@ public final class GameWorld {
         LandscapeParser.removeGameObject(new GameObject(620, 2852, 2956, 1));//Table
         LandscapeParser.removeGameObject(new GameObject(1113, 2851, 2956, 1));//Stool
 		
-		/*Piscatoris Home*/
+		*//*Piscatoris Home*//*
         LandscapeParser.removeGameObject(new GameObject(14965, 2327, 3686, 0));//Large barrel
         LandscapeParser.removeGameObject(new GameObject(14969, 2327, 3687, 0));//Barrow
         LandscapeParser.removeGameObject(new GameObject(14964, 2327, 3689, 0));//Barrel
@@ -274,7 +274,7 @@ public final class GameWorld {
         LandscapeParser.addGameObject(new GameObject(37304, new Location(3292,3299,0),10,0));
 
         NPC[] npcs = new NPC[]{new NPC(494, new Location(2327, 3687, 0))};
-        Arrays.stream(npcs).forEach(npc -> npc.setDirection(Direction.EAST));
+        Arrays.stream(npcs).forEach(npc -> npc.setDirection(Direction.EAST));*/
     }
 
 

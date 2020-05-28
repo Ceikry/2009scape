@@ -711,7 +711,13 @@ final class Class1 {
       }
 
       aBooleanArray54 = new boolean[8];
-      aClass94_53 = RSString.createRSString("scape main");
+      /**
+       * aClass94_53 Sets the music that starts on the login screen
+//Line1784 * KeyboardListener.anInt1912 = Class75_Sub2.aClass153_2645.getArchiveForName(Class1.aClass94_53, (byte)-30);//This is located in client.java, converts music name from string to int
+//Line456  * Class3_Sub13_Sub1.outgoingBuffer.putOpcode(137);//Opcode that gets sent
+//Line457  * Class3_Sub13_Sub1.outgoingBuffer.putInt(-127, Class129.anInt1691);//Class129.anInt1691 = aClass94_53(as an int)
+       **/
+      aClass94_53 = RSString.createRSString("scape main");//Sets login music
       anInt57 = 0;
       aClass94_58 = RSString.createRSString("<col=ffffff> )4 ");
    }

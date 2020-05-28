@@ -108,7 +108,6 @@ public final class NPCDefinition extends Definition<NPC> {
 	public int anInt901;
 	public int standAnimation;
 	public int walkAnimation;
-	
 	private int renderAnimationId;
 
 	/**

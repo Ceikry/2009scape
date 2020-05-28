@@ -29,7 +29,7 @@ final class Class75_Sub4 extends Class75 {
             int var5;
             int var6;
             //Ordinal: 0 Hit
-            if(-1 != ~(64 & var4)) {
+            if((64 & var4) != 0) {
                var5 = GraphicDefinition.incomingBuffer.getByte((byte)-57);
                var6 = GraphicDefinition.incomingBuffer.getByteC(true);
                npc.method1970(var6, -8, Class44.anInt719, var5);
@@ -72,7 +72,7 @@ final class Class75_Sub4 extends Class75 {
 
                var6 = GraphicDefinition.incomingBuffer.getLEInt(-46);
                boolean var7 = true;
-               if(0 != ~var5 && 0 != ~npc.anInt2842 && Client.getAnimationDefinition(RenderAnimationDefinition.getGraphicDefinition((byte)42, var5).anInt542, (byte)-20).anInt1857 < Client.getAnimationDefinition(RenderAnimationDefinition.getGraphicDefinition((byte)42, npc.anInt2842).anInt542, (byte)-20).anInt1857) {
+               if(var5 != -1 && npc.anInt2842 != -1 && Client.getAnimationDefinition(RenderAnimationDefinition.getGraphicDefinition((byte)42, var5).anInt542, (byte)-20).anInt1857 < Client.getAnimationDefinition(RenderAnimationDefinition.getGraphicDefinition((byte)42, npc.anInt2842).anInt542, (byte)-20).anInt1857) {
                   var7 = false;
                }
 

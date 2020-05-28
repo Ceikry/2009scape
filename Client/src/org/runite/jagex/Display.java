@@ -33,10 +33,10 @@ public class Display {
       try {
          var5 = true;
          this.aGraphicsDevice445.setFullScreenWindow(var1);
-         if(var2 != -63) {
-            this.method918(90, -112, -67, 27, (Frame)null, -49);
+         if(var2 == -63) {
             var5 = false;
          } else {
+            this.method918(90, -112, -67, 27, (Frame)null, -49);
             var5 = false;
          }
       } finally {
@@ -79,10 +79,10 @@ public class Display {
             DisplayMode[] var8 = this.aGraphicsDevice445.getDisplayModes();
             boolean var9 = false;
 
-            for(int var10 = 0; ~var8.length < ~var10; ++var10) {
+            for(int var10 = 0; var10 < var8.length; ++var10) {
                if(var8[var10].getWidth() == var6 && var8[var10].getHeight() == var4 && var3 == var8[var10].getBitDepth()) {
                   int var11 = var8[var10].getRefreshRate();
-                  if(!var9 || ~Math.abs(var11 - var7) > ~Math.abs(var2 - var7)) {
+                  if(!var9 || Math.abs(var2 - var7) > Math.abs(var11 - var7)) {
                      var9 = true;
                      var2 = var11;
                   }
@@ -99,13 +99,11 @@ public class Display {
    }
 
    public int[] method919(boolean var1) {
-      if(!var1) {
-         return null;
-      } else {
+      if(var1) {
          DisplayMode[] var2 = this.aGraphicsDevice445.getDisplayModes();
          int[] var3 = new int[var2.length << 2];
 
-         for(int var4 = 0; ~var2.length < ~var4; ++var4) {
+         for(int var4 = 0; var4 < var2.length; ++var4) {
             var3[var4 << 2] = var2[var4].getWidth();
             var3[1 + (var4 << 2)] = var2[var4].getHeight();
             var3[(var4 << 2) - -2] = var2[var4].getBitDepth();
@@ -113,6 +111,8 @@ public class Display {
          }
 
          return var3;
+      } else {
+         return null;
       }
    }
 

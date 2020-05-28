@@ -30,7 +30,7 @@ final class AnimationHeader {
 		aByteArray1389 = null;
 	}
 
-//	AnimationHeader(byte[] bs, Class3_Sub17 skin) {
+//	AnimationHeader(byte[] bs, Class3_Sub17 skin) { //Unsure why this is edited out. TODO: Test
 //		this.skins = skin;
 //		RSByteBuffer buffer = new RSByteBuffer(bs);
 //		RSByteBuffer parent = new RSByteBuffer(bs);

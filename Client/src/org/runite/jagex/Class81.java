@@ -52,7 +52,7 @@ final class Class81 {
 
          int var2 = var1.anInt3963;
          RenderAnimationDefinition var3 = var1.method1965(false);
-         if(~var3.anInt368 == ~var1.anInt2764) {
+         if(var1.anInt2764 == var3.anInt368) {
             var2 = var1.anInt3952;
          } else if(var3.anInt393 != var1.anInt2764 && var1.anInt2764 != var3.anInt386 && var1.anInt2764 != var3.anInt375 && var3.anInt373 != var1.anInt2764) {
             if(~var1.anInt2764 == ~var3.anInt398 || ~var1.anInt2764 == ~var3.anInt372 || var1.anInt2764 == var3.anInt379 || ~var1.anInt2764 == ~var3.anInt406) {
@@ -133,9 +133,7 @@ final class Class81 {
    static final Class57 method1401(int var0, int var1) {
       try {
          Class57 var2 = (Class57)Class128.aClass93_1683.get((long)var1, (byte)121);
-         if(var2 != null) {
-            return var2;
-         } else {
+         if(var2 == null) {
             if(var0 != 1001) {
                aClass94_1143 = (RSString)null;
             }
@@ -147,6 +145,8 @@ final class Class81 {
             }
 
             Class128.aClass93_1683.put((byte)-75, var2, (long)var1);
+            return var2;
+         } else {
             return var2;
          }
       } catch (RuntimeException var4) {
@@ -180,7 +180,7 @@ final class Class81 {
             int[] var4 = var2.getFileIds((byte)-128, var3);
             Class131 var5 = new Class131(var4.length);
 
-            for(int var6 = 0; ~var6 > ~var5.anInt1720; ++var6) {
+            for(int var6 = 0; var5.anInt1720 > var6; ++var6) {
                RSByteBuffer var7 = new RSByteBuffer(var2.getFile(var3, (byte)-122, var4[var6]));
                var5.aClass94Array1721[var6] = var7.getString();
                var5.aByteArray1730[var6] = var7.getByte();

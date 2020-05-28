@@ -9,7 +9,7 @@ final class Class8 {
    private Class73 aClass73_103;
    static int anInt104 = 0;
    static CacheIndex aClass153_105;
-   static RSString aClass94_106 = RSString.createRSString("showVideoAd");
+   static RSString aClass94_106 = RSString.createRSString("showVideoAd");//showVideoAd
    private Class151_Sub1[] aClass151_Sub1Array107;
 
 
@@ -103,17 +103,17 @@ final class Class8 {
 
          int var10;
          int var11;
-         if(-2 != ~var9 && -4 != ~var9) {
-            var11 = var0.anInt1485;
-            var10 = var0.anInt1480;
-         } else {
+         if(var9 == 1 || var9 == 3) {
             var10 = var0.anInt1485;
             var11 = var0.anInt1480;
+         } else {
+            var11 = var0.anInt1485;
+            var10 = var0.anInt1480;
          }
 
          int var14;
          int var15;
-         if(-105 > ~(var7 - -var11)) {
+         if(var7 - -var11 > 104) {
             var15 = 1 + var7;
             var14 = var7;
          } else {
@@ -137,7 +137,7 @@ final class Class8 {
          int var20 = 0;
          int var19 = var18[var12][var15] + var18[var12][var14] + var18[var13][var14] + var18[var13][var15] >> 2;
          int[][] var21;
-         if(~var8 != -1) {
+         if(var8 != 0) {
             var21 = Class44.anIntArrayArrayArray723[0];
             var20 = -(var21[var12][var15] + var21[var13][var14] + (var21[var12][var14] - -var21[var13][var15]) >> 2) + var19;
          }
@@ -174,9 +174,7 @@ final class Class8 {
 
    static final CacheIndex getCacheIndex(boolean var0, boolean var1, boolean var2, int var3, boolean var4) {
       try {
-         if(!var4) {
-            return (CacheIndex)null;
-         } else {
+         if(var4) {
             Class41 var5 = null;
             if(null != Class101.aClass30_1422) {
                var5 = new Class41(var3, Class101.aClass30_1422, Class163_Sub2.aClass30Array2998[var3], 1000000);
@@ -187,6 +185,8 @@ final class Class8 {
                RSByteBuffer.aClass151_Sub1Array2601[var3].method2101(true);
             }
             return new CacheIndex(RSByteBuffer.aClass151_Sub1Array2601[var3], var0, var2);
+         } else {
+            return (CacheIndex)null;
          }
       } catch (RuntimeException var6) {
          throw Class44.method1067(var6, "al.B(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ')');

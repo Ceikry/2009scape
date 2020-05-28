@@ -35,9 +35,9 @@ final class Class3_Sub29 extends Class3 {
          try {
             if(Class10.anInt154 == 1) {
                int var1 = Class101.aClass3_Sub24_Sub4_1421.method499(var0);
-               if(-1 > ~var1 && Class101.aClass3_Sub24_Sub4_1421.method473(-124)) {
+               if(var1 > 0 && Class101.aClass3_Sub24_Sub4_1421.method473(-124)) {
                   var1 -= GraphicDefinition.anInt546;
-                  if(-1 < ~var1) {
+                  if(var1 < 0) {
                      var1 = 0;
                   }
 
@@ -49,10 +49,10 @@ final class Class3_Sub29 extends Class3 {
                Class101.aClass3_Sub24_Sub4_1421.method485(-110);
                Class83.aClass3_Sub27_1154 = null;
                Class3_Sub28_Sub4.aClass83_3579 = null;
-               if(Class101.aClass153_1423 != null) {
-                  Class10.anInt154 = 2;
-               } else {
+               if(Class101.aClass153_1423 == null) {
                   Class10.anInt154 = 0;
+               } else {
+                  Class10.anInt154 = 2;
                }
             }
          } catch (Exception var2) {
@@ -75,10 +75,10 @@ final class Class3_Sub29 extends Class3 {
             return 88;
          } else if(var1 == -2) {
             return 12345678;
-         } else if(~var1 == 0) {
+         } else if(var1 == -1) {
             if(2 > var2) {
                var2 = 2;
-            } else if(~var2 < -127) {
+            } else if(var2 > 126) {
                var2 = 126;
             }
 
@@ -101,7 +101,7 @@ final class Class3_Sub29 extends Class3 {
    static final void method730(int var0, int var1, byte var2, int var3, int var4, int var5) {
       try {
          int var6 = 19 % ((var2 - -44) / 47);
-         if(~var0 <= ~Class101.anInt1425 && var4 <= Class3_Sub28_Sub18.anInt3765 && Class159.anInt2020 <= var5 && Class57.anInt902 >= var3) {
+         if(Class101.anInt1425 <= var0 && var4 <= Class3_Sub28_Sub18.anInt3765 && Class159.anInt2020 <= var5 && Class57.anInt902 >= var3) {
             Class104.method1632(95, var3, var4, var5, var0, var1);
          } else {
             Class93.method1525(3074, var1, var4, var5, var0, var3);
@@ -142,7 +142,7 @@ final class Class3_Sub29 extends Class3 {
          var3.length = 0;
 
          for(int var4 = 0; var4 < var2.length; ++var4) {
-            if(-1 != ~var2[var4]) {
+            if(var2[var4] != 0) {
                var2[var3.length++] = var2[var4];
             }
          }
@@ -158,7 +158,7 @@ final class Class3_Sub29 extends Class3 {
          Class3_Sub28_Sub4 var2 = (Class3_Sub28_Sub4)Class3_Sub28_Sub19.aClass47_3776.method1092((long)var1, 1400);
          if(null == var2) {
             byte[] var3;
-            if(-32769 < ~var1) {
+            if(var1 < 32768) {
                var3 = Class3_Sub24_Sub3.aClass153_3490.getFile(1, (byte)-122, var1);
             } else {
                var3 = Class154.aClass153_1967.getFile(1, (byte)-122, 32767 & var1);
@@ -233,10 +233,10 @@ final class Class3_Sub29 extends Class3 {
             method736(-60, -93);
          }
 
-         if(-1 != ~Class10.anInt154) {
-            Class3_Sub13_Sub36.anInt3423 = var0;
-         } else {
+         if(Class10.anInt154 == 0) {
             Class101.aClass3_Sub24_Sub4_1421.method506(128, var0);
+         } else {
+            Class3_Sub13_Sub36.anInt3423 = var0;
          }
 
       } catch (RuntimeException var3) {

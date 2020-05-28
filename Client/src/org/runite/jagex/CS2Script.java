@@ -99,19 +99,19 @@ final class CS2Script extends Class3 {
          } else {
             if(NPC.anInt3995 < var1) {
                NPC.anInt3995 += Class163_Sub2_Sub1.anInt4021 + Class3_Sub28_Sub10.anInt3631 * (-NPC.anInt3995 + var1) / 1000;
-               if(~NPC.anInt3995 < ~var1) {
+               if(var1 < NPC.anInt3995) {
                   NPC.anInt3995 = var1;
                }
             }
 
-            if(~Class7.anInt2162 > ~var3) {
+            if(var3 > Class7.anInt2162) {
                Class7.anInt2162 += (-Class7.anInt2162 + var3) * Class3_Sub28_Sub10.anInt3631 / 1000 + Class163_Sub2_Sub1.anInt4021;
                if(Class7.anInt2162 > var3) {
                   Class7.anInt2162 = var3;
                }
             }
 
-            if(~NPC.anInt3995 < ~var1) {
+            if(var1 < NPC.anInt3995) {
                NPC.anInt3995 -= Class163_Sub2_Sub1.anInt4021 + (NPC.anInt3995 + -var1) * Class3_Sub28_Sub10.anInt3631 / 1000;
                if(NPC.anInt3995 < var1) {
                   NPC.anInt3995 = var1;
@@ -120,21 +120,21 @@ final class CS2Script extends Class3 {
 
             if(Class77.anInt1111 < var2) {
                Class77.anInt1111 += Class163_Sub2_Sub1.anInt4021 + Class3_Sub28_Sub10.anInt3631 * (var2 - Class77.anInt1111) / 1000;
-               if(~var2 > ~Class77.anInt1111) {
+               if(Class77.anInt1111 > var2) {
                   Class77.anInt1111 = var2;
                }
             }
 
             if(var3 < Class7.anInt2162) {
                Class7.anInt2162 -= (Class7.anInt2162 - var3) * Class3_Sub28_Sub10.anInt3631 / 1000 + Class163_Sub2_Sub1.anInt4021;
-               if(~var3 < ~Class7.anInt2162) {
+               if(Class7.anInt2162 < var3) {
                   Class7.anInt2162 = var3;
                }
             }
 
-            if(~Class77.anInt1111 < ~var2) {
+            if(var2 < Class77.anInt1111) {
                Class77.anInt1111 -= Class163_Sub2_Sub1.anInt4021 - -((-var2 + Class77.anInt1111) * Class3_Sub28_Sub10.anInt3631 / 1000);
-               if(~var2 < ~Class77.anInt1111) {
+               if(Class77.anInt1111 < var2) {
                   Class77.anInt1111 = var2;
                }
             }
@@ -152,12 +152,12 @@ final class CS2Script extends Class3 {
             var8 = 128;
          }
 
-         if(~var8 < -384) {
+         if(var8 > 383) {
             var8 = 383;
          }
 
          int var9 = (int)(-325.949D * Math.atan2((double)var4, (double)var6)) & 2047;
-         if(~Class139.anInt1823 > ~var8) {
+         if(var8 > Class139.anInt1823) {
             Class139.anInt1823 += Class75.anInt1105 + Class163_Sub2_Sub1.anInt4014 * (-Class139.anInt1823 + var8) / 1000;
             if(Class139.anInt1823 > var8) {
                Class139.anInt1823 = var8;
@@ -166,7 +166,7 @@ final class CS2Script extends Class3 {
 
          if(Class139.anInt1823 > var8) {
             Class139.anInt1823 -= (Class139.anInt1823 - var8) * Class163_Sub2_Sub1.anInt4014 / 1000 + Class75.anInt1105;
-            if(~Class139.anInt1823 > ~var8) {
+            if(var8 > Class139.anInt1823) {
                Class139.anInt1823 = var8;
             }
          }
@@ -180,12 +180,12 @@ final class CS2Script extends Class3 {
             var10 += 2048;
          }
 
-         if(~var10 < -1) {
+         if(var10 > 0) {
             Class3_Sub13_Sub25.anInt3315 += var10 * Class163_Sub2_Sub1.anInt4014 / 1000 + Class75.anInt1105;
             Class3_Sub13_Sub25.anInt3315 &= 2047;
          }
 
-         if(-1 < ~var10) {
+         if(var10 < 0) {
             Class3_Sub13_Sub25.anInt3315 -= Class163_Sub2_Sub1.anInt4014 * -var10 / 1000 + Class75.anInt1105;
             Class3_Sub13_Sub25.anInt3315 &= 2047;
          }
@@ -195,11 +195,11 @@ final class CS2Script extends Class3 {
             var11 -= 2048;
          }
 
-         if(~var11 > 1023) {
+         if(var11 < -1024) {
             var11 += 2048;
          }
 
-         if(var11 < 0 && -1 > ~var10 || var11 > 0 && ~var10 > -1) {
+         if(var11 < 0 && var10 > 0 || var11 > 0 && var10 < 0) {
             Class3_Sub13_Sub25.anInt3315 = var9;
          }
 

@@ -376,7 +376,7 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
 
    public final void windowActivated(WindowEvent var1) {}
    
-   private final void method36(boolean var1) {//Hi my name is method36 and I'm trash!
+   private final void method36(boolean var1) {
 	      try {
 	         long var2 = Class5.method830((byte)-55);
 	         long var4 = Class134.aLongArray1766[CacheIndex.anInt1953];
@@ -390,7 +390,7 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
 	            Class3_Sub13_Sub6.aBoolean3078 = Class163_Sub2_Sub1.aBoolean4013;
 	         }
 
-	         this.method25((byte)107);//This method 25 is becoming a pain
+	         this.method25((byte)107);
 	         if(0L != var4 && var2 <= var4) {
 	            ;
 	         }
@@ -520,7 +520,7 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
 	               Class133.anInt1754 = Class3_Sub25.aClass129_2552.method1767(-1, Class132.anInt1737, WorldListEntry.anInt2626);
 
 	               for(var7 = 0; var7 < Class133.anInt1754; ++var7) {
-	                  this.method36(true);//I trigger people
+	                  this.method36(true);
 	               }
 
 	               this.method37(0);
@@ -533,7 +533,7 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
 
 	         this.method35(107, true);
 	      } catch (RuntimeException var6) {
-	         throw Class44.method1067(var6, "rc.run()");//THAT METHOD TRIGGERED ME REEEEE *THROWS*
+	         throw Class44.method1067(var6, "rc.run()");
 	      }
 	   }
 

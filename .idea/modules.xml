@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Pure530client/530 hd.iml" filepath="$PROJECT_DIR$/Pure530client/530 hd.iml" />
       <module fileurl="file://$PROJECT_DIR$/RS-2009.iml" filepath="$PROJECT_DIR$/RS-2009.iml" />
     </modules>
   </component>

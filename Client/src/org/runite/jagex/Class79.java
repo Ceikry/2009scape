@@ -90,46 +90,40 @@ final class Class79 {
 
    static final void method1390(RSByteBuffer var0, int var1) {
       try {
-         if(-2 >= ~(-var0.index + var0.buffer.length)) {
+         if(-var0.index + var0.buffer.length >= 1) {
             int var2 = var0.getByte((byte)-23);
-            if(var2 >= 0 && ~var2 >= -12) {
+            if(var2 >= 0 && var2 <= 11) {
                byte var3;
                if(var2 == 11) {
                   var3 = 33;
-               } else if(var2 != 10) {
-                  if(var2 == 9) {
-                     var3 = 31;
-                  } else if(~var2 == -9) {
-                     var3 = 30;
-                  } else if(~var2 == -8) {
-                     var3 = 29;
-                  } else if(-7 != ~var2) {
-                     if(~var2 == -6) {
-                        var3 = 28;
-                     } else if(-5 != ~var2) {
-                        if(-4 == ~var2) {
-                           var3 = 23;
-                        } else if(-3 == ~var2) {
-                           var3 = 22;
-                        } else if(1 == var2) {
-                           var3 = 23;
-                        } else {
-                           var3 = 19;
-                        }
-                     } else {
-                        var3 = 24;
-                     }
-                  } else {
-                     var3 = 28;
-                  }
-               } else {
+               } else if(var2 == 10) {
                   var3 = 32;
+               } else if (var2 == 9) {
+                  var3 = 31;
+               } else if (var2 == 8) {
+                  var3 = 30;
+               } else if (var2 == 7) {
+                  var3 = 29;
+               } else if (var2 == 6) {
+                  var3 = 28;
+               } else if (var2 == 5) {
+                  var3 = 28;
+               } else if (var2 == 4) {
+                  var3 = 24;
+               } else if (var2 == 3) {
+                  var3 = 23;
+               } else if (var2 == 2) {
+                  var3 = 22;
+               } else if (1 == var2) {
+                  var3 = 23;
+               } else {
+                  var3 = 19;
                }
 
-               if(~(var0.buffer.length - var0.index) <= ~var3) {
+               if(var3 <= var0.buffer.length - var0.index) {
                   Class3_Sub28_Sub10.anInt3625 = var0.getByte((byte)-113);
-                  if(-2 >= ~Class3_Sub28_Sub10.anInt3625) {
-                     if(-5 > ~Class3_Sub28_Sub10.anInt3625) {
+                  if(Class3_Sub28_Sub10.anInt3625 >= 1) {
+                     if(Class3_Sub28_Sub10.anInt3625 > 4) {
                         Class3_Sub28_Sub10.anInt3625 = 4;
                      }
                   } else {
@@ -141,8 +135,8 @@ final class Class79 {
                   KeyboardListener.aBoolean1905 = 1 == var0.getByte((byte)-39);
                   Class25.aBoolean488 = 1 == var0.getByte((byte)-85);
                   RSInterface.aBoolean236 = var0.getByte((byte)-126) == 1;
-                  WorldListEntry.aBoolean2623 = ~var0.getByte((byte)-107) == -2;
-                  Class3_Sub13_Sub22.aBoolean3275 = -2 == ~var0.getByte((byte)-86);
+                  WorldListEntry.aBoolean2623 = var0.getByte((byte) -107) == 1;
+                  Class3_Sub13_Sub22.aBoolean3275 = var0.getByte((byte) -86) == 1;
                   Class140_Sub6.aBoolean2910 = 1 == var0.getByte((byte)-48);
                   Class80.anInt1137 = var0.getByte((byte)-107);
                   if(2 < Class80.anInt1137) {
@@ -150,51 +144,51 @@ final class Class79 {
                   }
 
                   if(var2 < 2) {
-                     Class106.aBoolean1441 = ~var0.getByte((byte)-81) == -2;
+                     Class106.aBoolean1441 = var0.getByte((byte) -81) == 1;
                      var0.getByte((byte)-67);
                   } else {
-                     Class106.aBoolean1441 = -2 == ~var0.getByte((byte)-35);
+                     Class106.aBoolean1441 = var0.getByte((byte) -35) == 1;
                   }
 
                   Class128.aBoolean1685 = 1 == var0.getByte((byte)-56);
-                  Class38.aBoolean661 = ~var0.getByte((byte)-98) == -2;
+                  Class38.aBoolean661 = var0.getByte((byte) -98) == 1;
                   Class3_Sub28_Sub9.anInt3622 = var0.getByte((byte)-62);
-                  if(~Class3_Sub28_Sub9.anInt3622 < -3) {
+                  if(Class3_Sub28_Sub9.anInt3622 > 2) {
                      Class3_Sub28_Sub9.anInt3622 = 2;
                   }
 
                   Class3_Sub28_Sub14.anInt3671 = Class3_Sub28_Sub9.anInt3622;
-                  Class3_Sub13_Sub15.aBoolean3184 = ~var0.getByte((byte)-59) == -2;
+                  Class3_Sub13_Sub15.aBoolean3184 = var0.getByte((byte) -59) == 1;
                   CS2Script.anInt2453 = var0.getByte((byte)-25);
-                  if(~CS2Script.anInt2453 < -128) {
+                  if(CS2Script.anInt2453 > 127) {
                      CS2Script.anInt2453 = 127;
                   }
 
                   Class9.anInt120 = var0.getByte((byte)-82);
                   Class14.anInt340 = var0.getByte((byte)-58);
-                  if(-128 > ~Class14.anInt340) {
+                  if(Class14.anInt340 > 127) {
                      Class14.anInt340 = 127;
                   }
 
-                  if(~var2 <= -2) {
+                  if(var2 >= 1) {
                      Class3_Sub13.anInt2378 = var0.getShort(1);
                      Class3_Sub13_Sub5.anInt3071 = var0.getShort(1);
                   }
 
-                  if(-4 >= ~var2 && ~var2 > -7) {
+                  if(var2 >= 3 && var2 < 6) {
                      var0.getByte((byte)-87);
                   }
 
-                  if(~var2 <= -5) {
+                  if(var2 >= 4) {
                      int var4 = var0.getByte((byte)-88);
-                     if(-97 < ~Class3_Sub24_Sub3.anInt3492) {
+                     if(Class3_Sub24_Sub3.anInt3492 < 96) {
                         var4 = 0;
                      }
 
                      Class127_Sub1.method1758(var4);
                   }
 
-                  if(~var2 <= -6) {
+                  if(var2 >= 5) {
                      RSString.anInt2148 = var0.getInt();
                   }
 
@@ -206,12 +200,12 @@ final class Class79 {
                      Node.anInt2577 = var0.getByte((byte)-100);
                   }
 
-                  if(~var2 <= -8) {
+                  if(var2 >= 7) {
                      RSString.aBoolean2146 = 1 == var0.getByte((byte)-24);
                   }
 
                   if(8 <= var2) {
-                     Class15.aBoolean346 = ~var0.getByte((byte)-96) == -2;
+                     Class15.aBoolean346 = var0.getByte((byte) -96) == 1;
                   }
 
                   if(9 <= var2) {
@@ -222,8 +216,8 @@ final class Class79 {
                      Class73.aBoolean1080 = 0 != var0.getByte((byte)-94);
                   }
 
-                  if(-12 >= ~var2) {
-                     Class163_Sub3.aBoolean3004 = ~var0.getByte((byte)-44) != -1;
+                  if(var2 >= 11) {
+                     Class163_Sub3.aBoolean3004 = var0.getByte((byte) -44) != 0;
                   }
 
                }
@@ -236,7 +230,7 @@ final class Class79 {
 
    static final boolean method1391(int var0) {
       try {
-         return var0 == ~Class10.anInt154?Class101.aClass3_Sub24_Sub4_1421.method473(-128):true;
+         return var0 != ~Class10.anInt154 || Class101.aClass3_Sub24_Sub4_1421.method473(-128);
       } catch (RuntimeException var2) {
          throw Class44.method1067(var2, "kk.A(" + var0 + ')');
       }

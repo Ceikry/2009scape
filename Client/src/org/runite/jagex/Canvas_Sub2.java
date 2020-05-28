@@ -85,7 +85,7 @@ final class Canvas_Sub2 extends Canvas {
             int var2 = Class21.maskUpdateIndexes[var1];
             Player var3 = Class3_Sub13_Sub22.players[var2];
             int var4 = GraphicDefinition.incomingBuffer.getByte((byte)-43);
-            if(-1 != ~(16 & var4)) {
+            if((16 & var4) != 0) {
                var4 += GraphicDefinition.incomingBuffer.getByte((byte)-43) << 8;
             }
 
@@ -126,9 +126,9 @@ final class Canvas_Sub2 extends Canvas {
       try {
          int var13;
          if(!var10) {
-            for(int var12 = 0; -9 < ~var12; ++var12) {
+            for(int var12 = 0; var12 < 8; ++var12) {
                for(var13 = 0; 8 > var13; ++var13) {
-                  if(0 < var1 - -var12 && var12 + var1 < 103 && -1 > ~(var13 + var4) && -104 < ~(var4 + var13)) {
+                  if(0 < var1 - -var12 && var12 + var1 < 103 && var13 + var4 > 0 && var4 + var13 < 103) {
                      var3[var2].anIntArrayArray1304[var12 + var1][var13 + var4] = Class3_Sub28_Sub15.method633(var3[var2].anIntArrayArray1304[var12 + var1][var13 + var4], -16777217);
                   }
                }
@@ -167,9 +167,9 @@ final class Canvas_Sub2 extends Canvas {
          int var20;
          int var22;
          int var29;
-         while(~var25.buffer.length < ~var25.index) {
+         while(var25.index < var25.buffer.length) {
             var14 = var25.getByte((byte)-74);
-            if(-130 != ~var14) {
+            if(var14 != 129) {
                --var25.index;
                break;
             }

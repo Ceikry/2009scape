@@ -28,14 +28,14 @@ final class HDIndexedSprite extends AbstractIndexedSprite {
         		return;
         	}
             byte var8 = var1[var5++];
-            if(var8 != 0) {
+            if(var8 == 0) {
+               var4 += 4;
+            } else {
                int var9 = var2[var8];
                var3[var4++] = (byte)(var9 >> 16);
                var3[var4++] = (byte)(var9 >> 8);
                var3[var4++] = (byte)var9;
                var3[var4++] = -1;
-            } else {
-               var4 += 4;
             }
          }
          var4 += (this.anInt2681 - this.anInt1461) * 4;

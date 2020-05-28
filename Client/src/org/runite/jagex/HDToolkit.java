@@ -105,15 +105,15 @@ final class HDToolKit {
          if(var0 != aFloat1797 || var1 != aFloat1794) {
             aFloat1797 = var0;
             aFloat1794 = var1;
-            if(var1 != 0.0F) {
+            if(var1 == 0.0F) {
+               aFloatArray1808[10] = aFloat1787;
+               aFloatArray1808[14] = aFloat1795;
+            } else {
                float var2 = var0 / (var1 + var0);
                float var3 = var2 * var2;
                float var4 = -aFloat1795 * (1.0F - var2) * (1.0F - var2) / var1;
                aFloatArray1808[10] = aFloat1787 + var4;
                aFloatArray1808[14] = aFloat1795 * var3;
-            } else {
-               aFloatArray1808[10] = aFloat1787;
-               aFloatArray1808[14] = aFloat1795;
             }
 
             gl.glMatrixMode(5889);

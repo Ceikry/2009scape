@@ -56,11 +56,7 @@ final class Class163_Sub3 extends Class163 {
                }
             }
 
-            if(~Class130.incomingPacketLength != ~GraphicDefinition.incomingBuffer.index) {
-            	System.err.println("Player rendering packet size mismatch - size log: self=" + PLAYER_RENDER_LOG[0] + ", local=" + PLAYER_RENDER_LOG[1] + ", add global=" + PLAYER_RENDER_LOG[2] + ", masks=" + PLAYER_RENDER_LOG[3] + ".");
-//               System.err.println("gpp1 pos:" + GraphicDefinition.incomingBuffer.index + " psize:" + Class130.incomingPacketLength);
-//                throw new RuntimeException("gpp1 pos:" + Class28.incomingBuffer.index + " psize:" + Class130.incomingPacketLength);
-            } else {
+            if(GraphicDefinition.incomingBuffer.index == Class130.incomingPacketLength) {
                for(var1 = 0; var1 < Class159.localPlayerCount; ++var1) {
                   if(null == Class3_Sub13_Sub22.players[Class56.localPlayerIndexes[var1]]) {
 //                     throw new RuntimeException("gpp2 pos:" + var1 + " size:" + Class159.anInt2022);
@@ -69,6 +65,10 @@ final class Class163_Sub3 extends Class163 {
                   }
                }
 
+            } else {
+            	System.err.println("Player rendering packet size mismatch - size log: self=" + PLAYER_RENDER_LOG[0] + ", local=" + PLAYER_RENDER_LOG[1] + ", add global=" + PLAYER_RENDER_LOG[2] + ", masks=" + PLAYER_RENDER_LOG[3] + ".");
+//               System.err.println("gpp1 pos:" + GraphicDefinition.incomingBuffer.index + " psize:" + Class130.incomingPacketLength);
+//                throw new RuntimeException("gpp1 pos:" + Class28.incomingBuffer.index + " psize:" + Class130.incomingPacketLength);
             }
          }
       } catch (RuntimeException var3) {

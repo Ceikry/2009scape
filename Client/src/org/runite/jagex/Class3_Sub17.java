@@ -131,7 +131,7 @@ final class Class3_Sub17 extends Class3 {
 			this.anIntArray2466[var4] = var3.getByte((byte)-70);
 		}
 
-//		for(var4 = 0; ~this.anInt2462 < ~var4; ++var4) {
+//		for(var4 = 0; ~this.anInt2462 < ~var4; ++var4) {//TODO find out what this does
 //			this.aBooleanArray2463[var4] = ~var3.getByte((byte)-35) == -2;
 //		}
 //

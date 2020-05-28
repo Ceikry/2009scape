@@ -147,7 +147,9 @@ abstract class GameObject {
                Class3_Sub13_Sub16.method244(2, var3, var5, var2, var1);
             }
 
-         } else if(0 != var6) {
+         } else if(0 == var6) {
+            Class3_Sub13_Sub32.method320(var1, var3, var4, (byte)-107, var5);
+         } else {
             if(0 > var6) {
                var6 = -var6;
             }
@@ -183,12 +185,21 @@ abstract class GameObject {
             int var12 = var2 + -var3;
             int var13 = -(var11 >> 1);
             int var14 = var2 <= var3?-1:1;
-            if(~var12 > -1) {
+            if(var12 < 0) {
                var12 = -var12;
             }
 
             int var15;
-            if(!var9) {
+            if(var9) {
+               for(var15 = var5; var4 >= var15; ++var15) {
+                  Class38.anIntArrayArray663[var15][var10] = var1;
+                  var13 += var12;
+                  if(var13 > 0) {
+                     var10 += var14;
+                     var13 -= var11;
+                  }
+               }
+            } else {
                for(var15 = var5; var15 <= var4; ++var15) {
                   var13 += var12;
                   Class38.anIntArrayArray663[var10][var15] = var1;
@@ -197,19 +208,8 @@ abstract class GameObject {
                      var13 -= var11;
                   }
                }
-            } else {
-               for(var15 = var5; var4 >= var15; ++var15) {
-                  Class38.anIntArrayArray663[var15][var10] = var1;
-                  var13 += var12;
-                  if(-1 > ~var13) {
-                     var10 += var14;
-                     var13 -= var11;
-                  }
-               }
             }
 
-         } else {
-            Class3_Sub13_Sub32.method320(var1, var3, var4, (byte)-107, var5);
          }
       } catch (RuntimeException var16) {
          throw Class44.method1067(var16, "th.IC(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ',' + var5 + ')');

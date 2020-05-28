@@ -249,11 +249,11 @@ final class MouseListeningClass implements MouseListener, MouseMotionListener, F
 	        
 
 
-	          ((0x4 & var2 ^ 0xFFFFFFFF) != -1) && 
+	          ((0x4 & var2) != 0) &&
 	          
 
 
-	          (-1 == (var2 & 0x8 ^ 0xFFFFFFFF)))) {}
+	          ((var2 & 0x8) == 0))) {}
 	      }
 	      if (var1.isPopupTrigger()) {
 	        var1.consume();

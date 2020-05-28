@@ -264,7 +264,7 @@ class Class127 {
                   Class3_Sub28_Sub19.anInt3775 = GraphicDefinition.incomingBuffer.getByte((byte)-86);
                   Class3_Sub15.aBoolean2433 = GraphicDefinition.incomingBuffer.getByte((byte)-67) == 1;
                   Class121.aBoolean1641 = 1 == GraphicDefinition.incomingBuffer.getByte((byte)-25);
-                  Class3_Sub28_Sub10_Sub1.aBoolean4063 = ~GraphicDefinition.incomingBuffer.getByte((byte)-39) == -2;
+                  Class3_Sub28_Sub10_Sub1.aBoolean4063 = GraphicDefinition.incomingBuffer.getByte((byte) -39) == 1;
                   Class3_Sub13_Sub14.aBoolean3166 = 1 == GraphicDefinition.incomingBuffer.getByte((byte)-28);
                   Canvas_Sub2.aBoolean29 = GraphicDefinition.incomingBuffer.getByte((byte)-120) == 1;
                   Class3_Sub1.localIndex = GraphicDefinition.incomingBuffer.getShort(var0 + 10);
