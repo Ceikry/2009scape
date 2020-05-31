@@ -1001,12 +1001,25 @@ public final class NPCDefinition extends Definition<NPC> {
 	}
 
 	/**
+	 * Sets the standAnimation.
+	 * @return The standAnimation.
+	 */
+	public int setStandAnimation() { return standAnimation; }
+
+	/**
 	 * Gets the walkAnimation.
 	 * @return The walkAnimation.
 	 */
 	public int getWalkAnimation() {
 		return walkAnimation;
 	}
+
+
+	/**
+	 * Sets the walkAnimation.
+	 * @return The walkAnimation.
+	 */
+	public int setWalkAnimation(){ return walkAnimation; }
 
 	/**
 	 * Gets the turnAnimation.

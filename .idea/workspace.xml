@@ -21,481 +21,41 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dfca1f7e-8542-4720-8cd4-dc28d3685749" name="Default Changelist" comment="closes #359">
-      <change afterPath="$PROJECT_DIR$/Server/data/cache/main_file_cache.idx28" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/data/kratoscache/cache/main_file_cache.idx28" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/server.sql.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dumps/498/498_clothing_dump.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dumps/498/498_hidden_child_dump.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dumps/498/498_interface_configs.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dumps/498/498_interface_containers.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dumps/498/498_interface_dump.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dumps/498/498_interface_scripts.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dumps/498/498_item_dump.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dumps/498/498_npc_configs.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dumps/498/498_npc_dump.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dumps/498/498_object_configs.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dumps/498/498_object_dump.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dumps/530/530_interface_names.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dumps/530/condata.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dumps/530/falador_npc_scripts.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dumps/530/gfxs.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dumps/530/music_location_unlocks.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dumps/530/quest_configs_script.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dumps/scripts/cs2mapping.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/org/runite/jagex/AnimationHeader.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/org/runite/jagex/AnimationHeader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/org/runite/jagex/CS2Script.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/org/runite/jagex/CS2Script.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/org/runite/jagex/CacheIndex.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/org/runite/jagex/CacheIndex.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/org/runite/jagex/Canvas_Sub2.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/org/runite/jagex/Canvas_Sub2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/org/runite/jagex/Class1.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/org/runite/jagex/Class1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/org/runite/jagex/Class117.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/org/runite/jagex/Class117.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/org/runite/jagex/Class127.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/org/runite/jagex/Class127.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/org/runite/jagex/Class140_Sub4.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/org/runite/jagex/Class140_Sub4.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/org/runite/jagex/Class163_Sub2.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/org/runite/jagex/Class163_Sub2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/org/runite/jagex/Class163_Sub3.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/org/runite/jagex/Class163_Sub3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/org/runite/jagex/Class39.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/org/runite/jagex/Class39.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/org/runite/jagex/Class3_Sub13_Sub6.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/org/runite/jagex/Class3_Sub13_Sub6.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/org/runite/jagex/Class3_Sub17.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/org/runite/jagex/Class3_Sub17.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/org/runite/jagex/Class3_Sub20.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/org/runite/jagex/Class3_Sub20.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/org/runite/jagex/Class3_Sub29.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/org/runite/jagex/Class3_Sub29.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/org/runite/jagex/Class45.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/org/runite/jagex/Class45.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/org/runite/jagex/Class47.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/org/runite/jagex/Class47.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/org/runite/jagex/Class62.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/org/runite/jagex/Class62.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/org/runite/jagex/Class67.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/org/runite/jagex/Class67.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/org/runite/jagex/Class75_Sub4.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/org/runite/jagex/Class75_Sub4.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/org/runite/jagex/Class79.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/org/runite/jagex/Class79.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/org/runite/jagex/Class8.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/org/runite/jagex/Class8.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/org/runite/jagex/Class81.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/org/runite/jagex/Class81.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/org/runite/jagex/Class93.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/org/runite/jagex/Class93.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/org/runite/jagex/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/org/runite/jagex/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/org/runite/jagex/Display.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/org/runite/jagex/Display.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/org/runite/jagex/GameObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/org/runite/jagex/GameObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/org/runite/jagex/GameShell.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/org/runite/jagex/GameShell.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/org/runite/jagex/GraphicDefinition.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/org/runite/jagex/GraphicDefinition.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/org/runite/jagex/HDIndexedSprite.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/org/runite/jagex/HDIndexedSprite.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/org/runite/jagex/HDToolkit.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/org/runite/jagex/HDToolkit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/org/runite/jagex/Model_Sub1.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/org/runite/jagex/Model_Sub1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/org/runite/jagex/MouseListeningClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/org/runite/jagex/MouseListeningClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/org/runite/jagex/ObjectDefinition.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/org/runite/jagex/ObjectDefinition.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/org/runite/jagex/PacketParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/org/runite/jagex/PacketParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/org/runite/jagex/RenderAnimationDefinition.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/org/runite/jagex/RenderAnimationDefinition.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/org/runite/jagex/Signlink.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/org/runite/jagex/Signlink.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/.classpath" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/.project" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/530 hd.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/clientlibs.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/dlls need to add to where client saves cache/game_unpacker.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/dlls need to add to where client saves cache/jogl.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/dlls need to add to where client saves cache/jogl_awt.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/rscache/main_file_cache.dat2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/rscache/main_file_cache.idx0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/rscache/main_file_cache.idx1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/rscache/main_file_cache.idx10" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/rscache/main_file_cache.idx11" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/rscache/main_file_cache.idx12" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/rscache/main_file_cache.idx13" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/rscache/main_file_cache.idx14" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/rscache/main_file_cache.idx15" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/rscache/main_file_cache.idx16" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/rscache/main_file_cache.idx17" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/rscache/main_file_cache.idx18" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/rscache/main_file_cache.idx19" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/rscache/main_file_cache.idx2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/rscache/main_file_cache.idx20" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/rscache/main_file_cache.idx21" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/rscache/main_file_cache.idx22" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/rscache/main_file_cache.idx23" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/rscache/main_file_cache.idx24" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/rscache/main_file_cache.idx25" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/rscache/main_file_cache.idx255" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/rscache/main_file_cache.idx26" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/rscache/main_file_cache.idx27" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/rscache/main_file_cache.idx3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/rscache/main_file_cache.idx4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/rscache/main_file_cache.idx5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/rscache/main_file_cache.idx6" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/rscache/main_file_cache.idx7" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/rscache/main_file_cache.idx8" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/rscache/main_file_cache.idx9" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Applet_Sub1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Canvas_Sub1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Canvas_Sub2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class10.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class100.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class101.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class102.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class103.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class104.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class105.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class106.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class107.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class108.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class109.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class109_Sub1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class109_Sub2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class11.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class110.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class111.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class112.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class113.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class114.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class115.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class116.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class117.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class118.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class118_Sub1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class119.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class12.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class120.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class121.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class122.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class123.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class124.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class125.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class126.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class127.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class127_Sub1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class128.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class129.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class129_Sub1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class129_Sub2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class13.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class130.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class131.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class132.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class133.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class134.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class135.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class136.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class137.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class138.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class139.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class14.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class140.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class140_Sub1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class140_Sub1_Sub1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class140_Sub1_Sub2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class140_Sub2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class140_Sub3.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class140_Sub4.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class140_Sub4_Sub1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class140_Sub4_Sub2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class140_Sub5.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class140_Sub6.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class140_Sub7.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class141.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class142.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class143.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class144.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class144_Sub1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class145.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class146.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class146_Sub1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class147.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class148.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class149.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class15.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class150.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class151.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class151_Sub1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class152.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class153.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class154.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class155.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class155_Sub1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class155_Sub2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class156.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class157.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class158.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class158_Sub1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class158_Sub2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class159.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class16.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class160.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class161.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class162.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class163.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class163_Sub1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class163_Sub1_Sub1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class163_Sub2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class163_Sub2_Sub1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class163_Sub3.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class164.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class164_Sub1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class164_Sub1_Sub1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class164_Sub2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class164_Sub2_Sub1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class165.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class166.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class167.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class168.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class169.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class17.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class18.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class19.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class20.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class21.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class22.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class23.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class24.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class25.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class26.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class27.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class28.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class29.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class30.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class31.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class32.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class33.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class34.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class35.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class36.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class37.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class38.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class38_Sub1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class39.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub10.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub11.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub12.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub12_Sub1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub13.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub13_Sub1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub13_Sub10.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub13_Sub11.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub13_Sub12.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub13_Sub13.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub13_Sub14.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub13_Sub15.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub13_Sub16.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub13_Sub17.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub13_Sub18.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub13_Sub19.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub13_Sub2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub13_Sub20.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub13_Sub21.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub13_Sub22.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub13_Sub23.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub13_Sub23_Sub1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub13_Sub24.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub13_Sub25.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub13_Sub26.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub13_Sub27.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub13_Sub28.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub13_Sub29.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub13_Sub3.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub13_Sub30.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub13_Sub31.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub13_Sub32.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub13_Sub33.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub13_Sub34.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub13_Sub35.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub13_Sub36.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub13_Sub37.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub13_Sub38.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub13_Sub39.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub13_Sub4.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub13_Sub5.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub13_Sub6.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub13_Sub7.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub13_Sub8.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub13_Sub9.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub14.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub15.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub16.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub17.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub18.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub19.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub20.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub21.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub22.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub23.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub24.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub24_Sub1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub24_Sub2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub24_Sub3.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub24_Sub4.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub25.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub26.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub27.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub28.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub28_Sub1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub28_Sub10.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub28_Sub10_Sub1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub28_Sub10_Sub2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub28_Sub11.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub28_Sub12.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub28_Sub13.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub28_Sub14.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub28_Sub15.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub28_Sub16.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub28_Sub16_Sub1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub28_Sub16_Sub1_Sub1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub28_Sub16_Sub2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub28_Sub16_Sub2_Sub1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub28_Sub17.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub28_Sub17_Sub1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub28_Sub17_Sub2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub28_Sub18.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub28_Sub19.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub28_Sub2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub28_Sub20.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub28_Sub21.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub28_Sub3.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub28_Sub4.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub28_Sub5.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub28_Sub6.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub28_Sub7.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub28_Sub7_Sub1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub28_Sub7_Sub2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub28_Sub8.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub28_Sub9.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub29.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub3.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub30.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub30_Sub1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub31.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub4.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub5.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub6.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub7.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub8.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class3_Sub9.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class4.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class40.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class41.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class42.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class43.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class44.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class44_Sub1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class45.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class46.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class47.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class48.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class49.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class5.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class50.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class51.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class52.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class53.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class54.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class55.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class56.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class57.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class58.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class59.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class6.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class60.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class61.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class62.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class63.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class64.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class65.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class66.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class67.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class68.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class69.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class7.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class70.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class71.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class72.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class73.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class74.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class75.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class75_Sub1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class75_Sub2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class75_Sub3.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class75_Sub4.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class76.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class77.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class78.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class79.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class8.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class80.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class81.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class82.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class83.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class84.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class85.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class86.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class87.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class88.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class89.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class9.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class90.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class91.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class92.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class93.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class94.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class95.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class96.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class97.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class98.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Class99.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/ClientLoader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Display.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/InputStream_Sub1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Interface1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Interface2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Interface3.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Interface4.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Interface5.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/OutputStream_Sub1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/RuntimeException_Sub1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/Sensor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pure530client/src/client.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/.settings/org.eclipse.jdt.ui.prefs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/data/cache/main_file_cache.dat2" beforeDir="false" afterPath="$PROJECT_DIR$/Server/data/cache/main_file_cache.dat2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/data/cache/main_file_cache.idx0" beforeDir="false" afterPath="$PROJECT_DIR$/Server/data/cache/main_file_cache.idx0" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/data/cache/main_file_cache.idx1" beforeDir="false" afterPath="$PROJECT_DIR$/Server/data/cache/main_file_cache.idx1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/data/cache/main_file_cache.idx10" beforeDir="false" afterPath="$PROJECT_DIR$/Server/data/cache/main_file_cache.idx10" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/data/cache/main_file_cache.idx11" beforeDir="false" afterPath="$PROJECT_DIR$/Server/data/cache/main_file_cache.idx11" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/data/cache/main_file_cache.idx12" beforeDir="false" afterPath="$PROJECT_DIR$/Server/data/cache/main_file_cache.idx12" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/data/cache/main_file_cache.idx13" beforeDir="false" afterPath="$PROJECT_DIR$/Server/data/cache/main_file_cache.idx13" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/data/cache/main_file_cache.idx14" beforeDir="false" afterPath="$PROJECT_DIR$/Server/data/cache/main_file_cache.idx14" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/data/cache/main_file_cache.idx15" beforeDir="false" afterPath="$PROJECT_DIR$/Server/data/cache/main_file_cache.idx15" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/data/cache/main_file_cache.idx16" beforeDir="false" afterPath="$PROJECT_DIR$/Server/data/cache/main_file_cache.idx16" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/data/cache/main_file_cache.idx17" beforeDir="false" afterPath="$PROJECT_DIR$/Server/data/cache/main_file_cache.idx17" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/data/cache/main_file_cache.idx18" beforeDir="false" afterPath="$PROJECT_DIR$/Server/data/cache/main_file_cache.idx18" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/data/cache/main_file_cache.idx19" beforeDir="false" afterPath="$PROJECT_DIR$/Server/data/cache/main_file_cache.idx19" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/data/cache/main_file_cache.idx20" beforeDir="false" afterPath="$PROJECT_DIR$/Server/data/cache/main_file_cache.idx20" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/data/cache/main_file_cache.idx21" beforeDir="false" afterPath="$PROJECT_DIR$/Server/data/cache/main_file_cache.idx21" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/data/cache/main_file_cache.idx22" beforeDir="false" afterPath="$PROJECT_DIR$/Server/data/cache/main_file_cache.idx22" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/data/cache/main_file_cache.idx23" beforeDir="false" afterPath="$PROJECT_DIR$/Server/data/cache/main_file_cache.idx23" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/data/cache/main_file_cache.idx24" beforeDir="false" afterPath="$PROJECT_DIR$/Server/data/cache/main_file_cache.idx24" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/data/cache/main_file_cache.idx25" beforeDir="false" afterPath="$PROJECT_DIR$/Server/data/cache/main_file_cache.idx25" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/data/cache/main_file_cache.idx255" beforeDir="false" afterPath="$PROJECT_DIR$/Server/data/cache/main_file_cache.idx255" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/data/cache/main_file_cache.idx26" beforeDir="false" afterPath="$PROJECT_DIR$/Server/data/cache/main_file_cache.idx26" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/data/cache/main_file_cache.idx3" beforeDir="false" afterPath="$PROJECT_DIR$/Server/data/cache/main_file_cache.idx3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/data/cache/main_file_cache.idx4" beforeDir="false" afterPath="$PROJECT_DIR$/Server/data/cache/main_file_cache.idx4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/data/cache/main_file_cache.idx5" beforeDir="false" afterPath="$PROJECT_DIR$/Server/data/cache/main_file_cache.idx5" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/data/cache/main_file_cache.idx6" beforeDir="false" afterPath="$PROJECT_DIR$/Server/data/cache/main_file_cache.idx6" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/data/cache/main_file_cache.idx7" beforeDir="false" afterPath="$PROJECT_DIR$/Server/data/cache/main_file_cache.idx7" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/data/cache/main_file_cache.idx8" beforeDir="false" afterPath="$PROJECT_DIR$/Server/data/cache/main_file_cache.idx8" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/data/cache/main_file_cache.idx9" beforeDir="false" afterPath="$PROJECT_DIR$/Server/data/cache/main_file_cache.idx9" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/data/cachemain_file_cache.dat2" beforeDir="false" afterPath="$PROJECT_DIR$/Server/data/cachemain_file_cache.dat2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/data/cachemain_file_cache.idx255" beforeDir="false" afterPath="$PROJECT_DIR$/Server/data/cachemain_file_cache.idx255" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/data/kratoscache/cache/main_file_cache.dat2" beforeDir="false" afterPath="$PROJECT_DIR$/Server/data/kratoscache/cache/main_file_cache.dat2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/data/kratoscache/cache/main_file_cache.idx0" beforeDir="false" afterPath="$PROJECT_DIR$/Server/data/kratoscache/cache/main_file_cache.idx0" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/data/kratoscache/cache/main_file_cache.idx1" beforeDir="false" afterPath="$PROJECT_DIR$/Server/data/kratoscache/cache/main_file_cache.idx1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/data/kratoscache/cache/main_file_cache.idx10" beforeDir="false" afterPath="$PROJECT_DIR$/Server/data/kratoscache/cache/main_file_cache.idx10" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/data/kratoscache/cache/main_file_cache.idx11" beforeDir="false" afterPath="$PROJECT_DIR$/Server/data/kratoscache/cache/main_file_cache.idx11" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/data/kratoscache/cache/main_file_cache.idx12" beforeDir="false" afterPath="$PROJECT_DIR$/Server/data/kratoscache/cache/main_file_cache.idx12" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/data/kratoscache/cache/main_file_cache.idx13" beforeDir="false" afterPath="$PROJECT_DIR$/Server/data/kratoscache/cache/main_file_cache.idx13" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/data/kratoscache/cache/main_file_cache.idx14" beforeDir="false" afterPath="$PROJECT_DIR$/Server/data/kratoscache/cache/main_file_cache.idx14" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/data/kratoscache/cache/main_file_cache.idx15" beforeDir="false" afterPath="$PROJECT_DIR$/Server/data/kratoscache/cache/main_file_cache.idx15" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/data/kratoscache/cache/main_file_cache.idx16" beforeDir="false" afterPath="$PROJECT_DIR$/Server/data/kratoscache/cache/main_file_cache.idx16" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/data/kratoscache/cache/main_file_cache.idx17" beforeDir="false" afterPath="$PROJECT_DIR$/Server/data/kratoscache/cache/main_file_cache.idx17" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/data/kratoscache/cache/main_file_cache.idx18" beforeDir="false" afterPath="$PROJECT_DIR$/Server/data/kratoscache/cache/main_file_cache.idx18" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/data/kratoscache/cache/main_file_cache.idx19" beforeDir="false" afterPath="$PROJECT_DIR$/Server/data/kratoscache/cache/main_file_cache.idx19" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/data/kratoscache/cache/main_file_cache.idx20" beforeDir="false" afterPath="$PROJECT_DIR$/Server/data/kratoscache/cache/main_file_cache.idx20" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/data/kratoscache/cache/main_file_cache.idx21" beforeDir="false" afterPath="$PROJECT_DIR$/Server/data/kratoscache/cache/main_file_cache.idx21" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/data/kratoscache/cache/main_file_cache.idx22" beforeDir="false" afterPath="$PROJECT_DIR$/Server/data/kratoscache/cache/main_file_cache.idx22" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/data/kratoscache/cache/main_file_cache.idx23" beforeDir="false" afterPath="$PROJECT_DIR$/Server/data/kratoscache/cache/main_file_cache.idx23" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/data/kratoscache/cache/main_file_cache.idx24" beforeDir="false" afterPath="$PROJECT_DIR$/Server/data/kratoscache/cache/main_file_cache.idx24" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/data/kratoscache/cache/main_file_cache.idx25" beforeDir="false" afterPath="$PROJECT_DIR$/Server/data/kratoscache/cache/main_file_cache.idx25" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/data/kratoscache/cache/main_file_cache.idx255" beforeDir="false" afterPath="$PROJECT_DIR$/Server/data/kratoscache/cache/main_file_cache.idx255" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/data/kratoscache/cache/main_file_cache.idx26" beforeDir="false" afterPath="$PROJECT_DIR$/Server/data/kratoscache/cache/main_file_cache.idx26" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/data/kratoscache/cache/main_file_cache.idx27" beforeDir="false" afterPath="$PROJECT_DIR$/Server/data/kratoscache/cache/main_file_cache.idx27" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/data/kratoscache/cache/main_file_cache.idx3" beforeDir="false" afterPath="$PROJECT_DIR$/Server/data/kratoscache/cache/main_file_cache.idx3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/data/kratoscache/cache/main_file_cache.idx4" beforeDir="false" afterPath="$PROJECT_DIR$/Server/data/kratoscache/cache/main_file_cache.idx4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/data/kratoscache/cache/main_file_cache.idx5" beforeDir="false" afterPath="$PROJECT_DIR$/Server/data/kratoscache/cache/main_file_cache.idx5" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/data/kratoscache/cache/main_file_cache.idx6" beforeDir="false" afterPath="$PROJECT_DIR$/Server/data/kratoscache/cache/main_file_cache.idx6" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/data/kratoscache/cache/main_file_cache.idx7" beforeDir="false" afterPath="$PROJECT_DIR$/Server/data/kratoscache/cache/main_file_cache.idx7" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/data/kratoscache/cache/main_file_cache.idx8" beforeDir="false" afterPath="$PROJECT_DIR$/Server/data/kratoscache/cache/main_file_cache.idx8" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/data/kratoscache/cache/main_file_cache.idx9" beforeDir="false" afterPath="$PROJECT_DIR$/Server/data/kratoscache/cache/main_file_cache.idx9" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Server/src/org/crandor/cache/def/impl/NPCDefinition.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/org/crandor/cache/def/impl/NPCDefinition.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/org/crandor/game/system/mysql/impl/RegionSQLHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/org/crandor/game/system/mysql/impl/RegionSQLHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/org/crandor/game/world/GameWorld.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/org/crandor/game/world/GameWorld.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/org/crandor/game/world/update/flag/chunk/ItemUpdateFlag.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/org/crandor/game/world/update/flag/chunk/ItemUpdateFlag.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/plugin/combat/special/DragonPickaxeSpecialHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dumps/498_clothing_dump.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dumps/498_hidden_child_dump.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dumps/498_interface_configs.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dumps/498_interface_containers.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dumps/498_interface_dump.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dumps/498_interface_scripts.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dumps/498_item_dump.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dumps/498_npc_configs.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dumps/498_npc_dump.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dumps/498_object_configs.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dumps/498_object_dump.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dumps/condata.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dumps/cs2mapping.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dumps/gfxs.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -536,6 +96,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -767,7 +328,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590142917797</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Removed 530HD Client that was less refractored than our current one.&#10;Commented where the client music can be changed at.&#10;Login screen now works properly, No models missing.&#10;All missing objects were replaced with working ones.&#10;Currently, There is only (1) missing region that will have to get fixed.&#10;REGION# 10075 (area right before Tormented Demons)&#10;Some client class files were fixed to make them more understandable.&#10;(No more double negatives)&#10;Make sure you're using the most up to date server.sql that is included in this package.&#10;Make sure you have replaced with">
+      <created>1590706476515</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1590706476515</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -787,6 +355,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Working on debug of client shift drop" />
     <MESSAGE value="More Witch's house" />
     <MESSAGE value="Fixed kelda error" />
@@ -796,13 +365,18 @@
     <MESSAGE value="Pure 530 Cache loaded, login screen still missing models.&#10;TO USE: delete cache where client saves cache. Replace with one from server" />
     <MESSAGE value="added updated server sql containing xteas needed for maps" />
     <MESSAGE value="Removed 530HD Client that was less refractored than our current one.&#10;Commented where the client music can be changed at.&#10;Login screen now works properly, No models missing.&#10;All missing objects were replaced with working ones.&#10;Currently, There is only (1) missing region that will have to get fixed.&#10;REGION# 10075 (area right before Tormented Demons)&#10;Some client class files were fixed to make them more understandable.&#10;(No more double negatives)&#10;Make sure you're using the most up to date server.sql that is included in this package." />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed 530HD Client that was less refractored than our current one.&#10;Commented where the client music can be changed at.&#10;Login screen now works properly, No models missing.&#10;All missing objects were replaced with working ones.&#10;Currently, There is only (1) missing region that will have to get fixed.&#10;REGION# 10075 (area right before Tormented Demons)&#10;Some client class files were fixed to make them more understandable.&#10;(No more double negatives)&#10;Make sure you're using the most up to date server.sql that is included in this package." />
+    <MESSAGE value="Removed 530HD Client that was less refractored than our current one.&#10;Commented where the client music can be changed at.&#10;Login screen now works properly, No models missing.&#10;All missing objects were replaced with working ones.&#10;Currently, There is only (1) missing region that will have to get fixed.&#10;REGION# 10075 (area right before Tormented Demons)&#10;Some client class files were fixed to make them more understandable.&#10;(No more double negatives)&#10;Make sure you're using the most up to date server.sql that is included in this package.&#10;Make sure you have replaced with" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed 530HD Client that was less refractored than our current one.&#10;Commented where the client music can be changed at.&#10;Login screen now works properly, No models missing.&#10;All missing objects were replaced with working ones.&#10;Currently, There is only (1) missing region that will have to get fixed.&#10;REGION# 10075 (area right before Tormented Demons)&#10;Some client class files were fixed to make them more understandable.&#10;(No more double negatives)&#10;Make sure you're using the most up to date server.sql that is included in this package.&#10;Make sure you have replaced with" />
   </component>
   <component name="WindowStateProjectService">
     <state x="431" y="190" width="496" height="390" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1588905208285">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="431" y="190" width="496" height="390" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.768@0.0.1366.768" timestamp="1588905208285" />
+    <state x="3272" y="475" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1590728591251">
+      <screen x="2560" y="0" width="2560" height="1440" />
+    </state>
+    <state x="3272" y="475" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.2560.1440/2560.0.2560.1440@2560.0.2560.1440" timestamp="1590728591251" />
     <state x="3604" y="465" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1589765614859">
       <screen x="2560" y="0" width="2560" height="1440" />
     </state>
@@ -812,30 +386,34 @@
     </state>
     <state x="1846" y="322" key="FileChooserDialogImpl/0.0.2560.1440/2560.0.2560.1440@0.0.2560.1440" timestamp="1590643294195" />
     <state x="2888" y="475" key="FileChooserDialogImpl/0.0.2560.1440/2560.0.2560.1440@2560.0.2560.1440" timestamp="1590700603618" />
-    <state width="1065" height="220" key="GridCell.Tab.0.bottom" timestamp="1590706168864">
+    <state width="1976" height="220" key="GridCell.Tab.0.bottom" timestamp="1590892389531">
       <screen x="2560" y="0" width="2560" height="1440" />
     </state>
     <state width="639" height="171" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1588898041866" />
     <state width="1230" height="364" key="GridCell.Tab.0.bottom/0.0.2560.1440/2560.0.2560.1440@0.0.2560.1440" timestamp="1590453498536" />
-    <state width="1065" height="220" key="GridCell.Tab.0.bottom/0.0.2560.1440/2560.0.2560.1440@2560.0.2560.1440" timestamp="1590706168864" />
-    <state width="1065" height="220" key="GridCell.Tab.0.center" timestamp="1590706168864">
+    <state width="1976" height="220" key="GridCell.Tab.0.bottom/0.0.2560.1440/2560.0.2560.1440@2560.0.2560.1440" timestamp="1590892389531" />
+    <state width="1976" height="220" key="GridCell.Tab.0.center" timestamp="1590892389531">
       <screen x="2560" y="0" width="2560" height="1440" />
     </state>
     <state width="639" height="171" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1588898041865" />
     <state width="1230" height="364" key="GridCell.Tab.0.center/0.0.2560.1440/2560.0.2560.1440@0.0.2560.1440" timestamp="1590453498536" />
-    <state width="1065" height="220" key="GridCell.Tab.0.center/0.0.2560.1440/2560.0.2560.1440@2560.0.2560.1440" timestamp="1590706168864" />
-    <state width="1065" height="220" key="GridCell.Tab.0.left" timestamp="1590706168863">
+    <state width="1976" height="220" key="GridCell.Tab.0.center/0.0.2560.1440/2560.0.2560.1440@2560.0.2560.1440" timestamp="1590892389531" />
+    <state width="1976" height="220" key="GridCell.Tab.0.left" timestamp="1590892389531">
       <screen x="2560" y="0" width="2560" height="1440" />
     </state>
     <state width="639" height="171" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1588898041865" />
     <state width="1230" height="364" key="GridCell.Tab.0.left/0.0.2560.1440/2560.0.2560.1440@0.0.2560.1440" timestamp="1590453498535" />
-    <state width="1065" height="220" key="GridCell.Tab.0.left/0.0.2560.1440/2560.0.2560.1440@2560.0.2560.1440" timestamp="1590706168863" />
-    <state width="1065" height="220" key="GridCell.Tab.0.right" timestamp="1590706168864">
+    <state width="1976" height="220" key="GridCell.Tab.0.left/0.0.2560.1440/2560.0.2560.1440@2560.0.2560.1440" timestamp="1590892389531" />
+    <state width="1976" height="220" key="GridCell.Tab.0.right" timestamp="1590892389531">
       <screen x="2560" y="0" width="2560" height="1440" />
     </state>
     <state width="639" height="171" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1588898041865" />
     <state width="1230" height="364" key="GridCell.Tab.0.right/0.0.2560.1440/2560.0.2560.1440@0.0.2560.1440" timestamp="1590453498536" />
-    <state width="1065" height="220" key="GridCell.Tab.0.right/0.0.2560.1440/2560.0.2560.1440@2560.0.2560.1440" timestamp="1590706168864" />
+    <state width="1976" height="220" key="GridCell.Tab.0.right/0.0.2560.1440/2560.0.2560.1440@2560.0.2560.1440" timestamp="1590892389531" />
+    <state x="3377" y="253" key="RollbackChangesDialog" timestamp="1590728754156">
+      <screen x="2560" y="0" width="2560" height="1440" />
+    </state>
+    <state x="3377" y="253" key="RollbackChangesDialog/0.0.2560.1440/2560.0.2560.1440@2560.0.2560.1440" timestamp="1590728754156" />
     <state x="2910" y="36" width="992" height="733" key="SettingsEditor" timestamp="1590185506628">
       <screen x="2560" y="0" width="2560" height="1440" />
     </state>
@@ -845,11 +423,11 @@
       <screen x="2560" y="0" width="2560" height="1440" />
     </state>
     <state x="3590" y="417" key="VCS.ChangeListViewerDialog/0.0.2560.1440/2560.0.2560.1440@2560.0.2560.1440" timestamp="1590185484704" />
-    <state x="2758" y="262" width="802" height="531" key="Vcs.Push.Dialog.v2" timestamp="1590705722334">
+    <state x="2758" y="262" width="802" height="531" key="Vcs.Push.Dialog.v2" timestamp="1590706535957">
       <screen x="2560" y="0" width="2560" height="1440" />
     </state>
     <state x="278" y="120" width="802" height="531" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1588841517915" />
-    <state x="2758" y="262" key="Vcs.Push.Dialog.v2/0.0.2560.1440/2560.0.2560.1440@2560.0.2560.1440" timestamp="1590705722334" />
+    <state x="2758" y="262" key="Vcs.Push.Dialog.v2/0.0.2560.1440/2560.0.2560.1440@2560.0.2560.1440" timestamp="1590706535957" />
     <state x="3482" y="566" width="381" height="167" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1589780987581">
       <screen x="2560" y="0" width="2560" height="1440" />
     </state>
@@ -867,16 +445,17 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="117" y="8" width="1123" height="755" key="new project wizard/0.0.1366.768@0.0.1366.768" timestamp="1588904115910" />
-    <state x="346" y="168" key="run.anything.popup" timestamp="1588838705397">
-      <screen x="0" y="0" width="1366" height="768" />
+    <state x="3208" y="315" key="run.anything.popup" timestamp="1590892288372">
+      <screen x="2560" y="0" width="2560" height="1440" />
     </state>
     <state x="346" y="168" key="run.anything.popup/0.0.1366.768@0.0.1366.768" timestamp="1588838705397" />
-    <state x="3435" y="24" width="1260" height="1272" key="search.everywhere.popup" timestamp="1590703637875">
+    <state x="3208" y="315" key="run.anything.popup/0.0.2560.1440/2560.0.2560.1440@2560.0.2560.1440" timestamp="1590892288372" />
+    <state x="3435" y="24" width="1260" height="1272" key="search.everywhere.popup" timestamp="1590892355335">
       <screen x="2560" y="0" width="2560" height="1440" />
     </state>
     <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.0.1366.768@0.0.1366.768" timestamp="1589777702219" />
     <state x="854" y="116" width="1260" height="1272" key="search.everywhere.popup/0.0.2560.1440/2560.0.2560.1440@0.0.2560.1440" timestamp="1590643249784" />
-    <state x="3435" y="24" width="1260" height="1272" key="search.everywhere.popup/0.0.2560.1440/2560.0.2560.1440@2560.0.2560.1440" timestamp="1590703637875" />
+    <state x="3435" y="24" width="1260" height="1272" key="search.everywhere.popup/0.0.2560.1440/2560.0.2560.1440@2560.0.2560.1440" timestamp="1590892355335" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
