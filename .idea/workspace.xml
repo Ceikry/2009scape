@@ -16,46 +16,103 @@
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:origin/cache-swap" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </select>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dfca1f7e-8542-4720-8cd4-dc28d3685749" name="Default Changelist" comment="closes #359">
-      <change afterPath="$PROJECT_DIR$/dumps/498/498_clothing_dump.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dumps/498/498_hidden_child_dump.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dumps/498/498_interface_configs.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dumps/498/498_interface_containers.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dumps/498/498_interface_dump.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dumps/498/498_interface_scripts.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dumps/498/498_item_dump.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dumps/498/498_npc_configs.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dumps/498/498_npc_dump.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dumps/498/498_object_configs.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dumps/498/498_object_dump.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dumps/530/530_interface_names.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dumps/530/condata.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dumps/530/falador_npc_scripts.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dumps/530/gfxs.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dumps/530/music_location_unlocks.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dumps/530/quest_configs_script.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dumps/scripts/cs2mapping.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/org/crandor/cache/def/impl/NPCDefinition.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/org/crandor/cache/def/impl/NPCDefinition.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/plugin/combat/special/DragonPickaxeSpecialHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dumps/498_clothing_dump.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dumps/498_hidden_child_dump.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dumps/498_interface_configs.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dumps/498_interface_containers.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dumps/498_interface_dump.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dumps/498_interface_scripts.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dumps/498_item_dump.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dumps/498_npc_configs.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dumps/498_npc_dump.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dumps/498_object_configs.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dumps/498_object_dump.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dumps/condata.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dumps/cs2mapping.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dumps/gfxs.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/org/runite/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/org/runite/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/org/runite/GameLaunch.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/org/runite/GameLaunch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/org/runite/GameSetting.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/org/runite/GameSetting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/org/runite/jagex/ClientLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/org/runite/jagex/ClientLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/org/runite/jagex/GameShell.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/org/runite/jagex/GameShell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/data/eco/grand_exchange_db.emp" beforeDir="false" afterPath="$PROJECT_DIR$/Server/data/eco/grand_exchange_db.emp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/org/crandor/game/content/global/BossKillCounter.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/org/crandor/game/content/global/BossKillCounter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/org/crandor/game/content/global/EnchantedJewellery.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/org/crandor/game/content/global/EnchantedJewellery.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/org/crandor/game/content/global/SkillingPets.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/org/crandor/game/content/global/SkillingPets.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/org/crandor/game/content/global/shop/Shop.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/org/crandor/game/content/global/shop/Shop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/org/crandor/game/content/global/ttrail/ClueLevel.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/org/crandor/game/content/global/ttrail/ClueLevel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/org/crandor/game/content/skill/free/crafting/armour/DragonCraftPulse.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/org/crandor/game/content/skill/free/crafting/armour/DragonCraftPulse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/org/crandor/game/content/skill/free/crafting/armour/HardCraftPulse.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/org/crandor/game/content/skill/free/crafting/armour/HardCraftPulse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/org/crandor/game/content/skill/free/crafting/armour/SnakeSkinPulse.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/org/crandor/game/content/skill/free/crafting/armour/SnakeSkinPulse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/org/crandor/game/content/skill/free/crafting/armour/SoftCraftPulse.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/org/crandor/game/content/skill/free/crafting/armour/SoftCraftPulse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/org/crandor/game/content/skill/free/crafting/gem/GemCutPulse.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/org/crandor/game/content/skill/free/crafting/gem/GemCutPulse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/org/crandor/game/content/skill/free/crafting/jewellery/JewelleryPulse.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/org/crandor/game/content/skill/free/crafting/jewellery/JewelleryPulse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/org/crandor/game/content/skill/free/crafting/pottery/FirePotteryPulse.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/org/crandor/game/content/skill/free/crafting/pottery/FirePotteryPulse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/org/crandor/game/content/skill/free/crafting/pottery/PotteryPulse.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/org/crandor/game/content/skill/free/crafting/pottery/PotteryPulse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/org/crandor/game/content/skill/free/crafting/spinning/SpinningPulse.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/org/crandor/game/content/skill/free/crafting/spinning/SpinningPulse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/org/crandor/game/content/skill/free/fishing/FishingPulse.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/org/crandor/game/content/skill/free/fishing/FishingPulse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/org/crandor/game/content/skill/free/gather/GatheringSkillPulse.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/org/crandor/game/content/skill/free/gather/GatheringSkillPulse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/org/crandor/game/content/skill/free/runecrafting/RuneCraftPulse.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/org/crandor/game/content/skill/free/runecrafting/RuneCraftPulse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/org/crandor/game/content/skill/free/runecrafting/RunePouch.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/org/crandor/game/content/skill/free/runecrafting/RunePouch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/org/crandor/game/content/skill/free/smithing/SmithingPulse.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/org/crandor/game/content/skill/free/smithing/SmithingPulse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/org/crandor/game/content/skill/free/smithing/smelting/SmeltingPulse.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/org/crandor/game/content/skill/free/smithing/smelting/SmeltingPulse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/org/crandor/game/content/skill/member/farming/FarmingNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/org/crandor/game/content/skill/member/farming/FarmingNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/org/crandor/game/content/skill/member/farming/tool/RakePulse.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/org/crandor/game/content/skill/member/farming/tool/RakePulse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/org/crandor/game/content/skill/member/farming/tool/SpadePulse.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/org/crandor/game/content/skill/member/farming/tool/SpadePulse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/org/crandor/game/content/skill/member/farming/tool/WateringPulse.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/org/crandor/game/content/skill/member/farming/tool/WateringPulse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/org/crandor/game/content/skill/member/fletching/FletchingPulse.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/org/crandor/game/content/skill/member/fletching/FletchingPulse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/org/crandor/game/content/skill/member/herblore/HerbTarPulse.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/org/crandor/game/content/skill/member/herblore/HerbTarPulse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/org/crandor/game/content/skill/member/herblore/HerblorePulse.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/org/crandor/game/content/skill/member/herblore/HerblorePulse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/org/crandor/game/content/skill/member/hunter/bnet/BNetNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/org/crandor/game/content/skill/member/hunter/bnet/BNetNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/org/crandor/game/content/skill/member/summoning/SummoningCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/org/crandor/game/content/skill/member/summoning/SummoningCreator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/org/crandor/game/content/skill/member/summoning/familiar/Familiar.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/org/crandor/game/content/skill/member/summoning/familiar/Familiar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/org/crandor/game/content/skill/member/summoning/pet/Pet.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/org/crandor/game/content/skill/member/summoning/pet/Pet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/org/crandor/game/content/skill/member/thieving/PickpocketPulse.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/org/crandor/game/content/skill/member/thieving/PickpocketPulse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/org/crandor/game/content/skill/member/thieving/StallThiefPulse.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/org/crandor/game/content/skill/member/thieving/StallThiefPulse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/org/crandor/game/node/entity/combat/equipment/DegradableEquipment.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/org/crandor/game/node/entity/combat/equipment/DegradableEquipment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/org/crandor/game/node/entity/combat/handlers/RangeSwingHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/org/crandor/game/node/entity/combat/handlers/RangeSwingHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/org/crandor/game/node/entity/impl/WalkingQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/org/crandor/game/node/entity/impl/WalkingQueue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/org/crandor/game/node/entity/npc/drop/NPCDropTables.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/org/crandor/game/node/entity/npc/drop/NPCDropTables.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/org/crandor/game/node/entity/player/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/org/crandor/game/node/entity/player/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/org/crandor/game/node/entity/player/info/PlayerDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/org/crandor/game/node/entity/player/info/PlayerDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/org/crandor/game/node/entity/player/info/Rights.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/org/crandor/game/node/entity/player/info/Rights.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/org/crandor/game/node/entity/player/info/login/LoginConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/org/crandor/game/node/entity/player/info/login/LoginConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/org/crandor/game/node/entity/player/info/portal/DonatorType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/org/crandor/game/node/entity/player/info/portal/Perks.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/org/crandor/game/node/entity/player/info/portal/PlayerSQLManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/org/crandor/game/node/entity/player/info/portal/PlayerSQLManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/org/crandor/game/node/entity/player/info/portal/PortalShop.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/org/crandor/game/node/entity/player/link/TeleportManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/org/crandor/game/node/entity/player/link/TeleportManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/org/crandor/game/node/entity/player/link/prayer/DrainTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/org/crandor/game/node/entity/player/link/prayer/DrainTask.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/org/crandor/game/node/entity/player/link/spawn/SpawnData.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/org/crandor/game/node/entity/player/link/spawn/SpawnData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/org/crandor/game/world/map/zone/MapZone.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/org/crandor/game/world/map/zone/MapZone.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/org/crandor/game/world/map/zone/ZoneBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/org/crandor/game/world/map/zone/ZoneBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/org/crandor/game/world/map/zone/impl/DonatorZone.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/org/crandor/net/amsc/MSPacketRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/org/crandor/net/amsc/MSPacketRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/plugin/activity/barrows/BarrowsActivityPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/plugin/activity/barrows/BarrowsActivityPlugin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/plugin/activity/gwd/GodwarsMapzone.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/plugin/activity/gwd/GodwarsMapzone.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/plugin/activity/mta/MTAZone.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/plugin/activity/mta/MTAZone.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/plugin/activity/pestcontrol/PestControlActivityPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/plugin/activity/pestcontrol/PestControlActivityPlugin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/plugin/activity/tzhaar/TzhaarFightCavesPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/plugin/activity/tzhaar/TzhaarFightCavesPlugin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/plugin/activity/tzhaar/TzhaarFightPitsPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/plugin/activity/tzhaar/TzhaarFightPitsPlugin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/plugin/activity/wguild/WarriorsGuild.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/plugin/activity/wguild/WarriorsGuild.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/plugin/activity/wguild/animator/AnimatedArmour.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/plugin/activity/wguild/animator/AnimatedArmour.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/plugin/command/BetaCommandPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/plugin/command/BetaCommandPlugin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/plugin/command/PerkCommandPlugin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/plugin/command/PlayerCommandPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/plugin/command/PlayerCommandPlugin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/plugin/dialogue/GrandpaJackPlguin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/plugin/dialogue/LumbridgeGuideDialogue.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/plugin/dialogue/LumbridgeGuideDialogue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/plugin/interaction/item/DragonfireShieldPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/plugin/interaction/item/DragonfireShieldPlugin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/plugin/interaction/item/EnchantedGemPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/plugin/interaction/item/EnchantedGemPlugin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/plugin/interaction/item/EnchantedJewelleryPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/plugin/interaction/item/EnchantedJewelleryPlugin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/plugin/interaction/item/PharoahSceptre.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/plugin/interaction/item/PharoahSceptre.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/plugin/interaction/item/TeleportCrystalPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/plugin/interaction/item/TeleportCrystalPlugin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/plugin/interaction/item/withobject/WaterSourcePlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/plugin/interaction/item/withobject/WaterSourcePlugin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/plugin/interaction/object/ThievingGuidePlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/plugin/interaction/object/ThievingGuidePlugin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/plugin/interaction/object/dmc/DMCHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/plugin/interaction/object/dmc/DMCHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/plugin/interaction/object/dmc/DwarfMultiCannonPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/plugin/interaction/object/dmc/DwarfMultiCannonPlugin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/plugin/npc/other/GraveStoneNPC.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/plugin/npc/other/GraveStoneNPC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/plugin/skill/herblore/PotionDecantingPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/plugin/skill/herblore/PotionDecantingPlugin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/plugin/skill/prayer/BoneBuryingOptionPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/plugin/skill/prayer/BoneBuryingOptionPlugin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/plugin/ttrail/TreasureTrailPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/plugin/ttrail/TreasureTrailPlugin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/plugin/zone/DesertZone.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/plugin/zone/DesertZone.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/plugin/zone/GrandExchangeZone.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/plugin/zone/HomeZone.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/plugin/zone/WildernessAreaZone.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/plugin/zone/WildernessAreaZone.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/plugin/zone/neitiznot/YakArmourPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/plugin/zone/neitiznot/YakArmourPlugin.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +135,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="development" />
+        <entry key="$PROJECT_DIR$" value="cache-swap" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -346,7 +403,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/cache-swap" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -386,30 +455,38 @@
     </state>
     <state x="1846" y="322" key="FileChooserDialogImpl/0.0.2560.1440/2560.0.2560.1440@0.0.2560.1440" timestamp="1590643294195" />
     <state x="2888" y="475" key="FileChooserDialogImpl/0.0.2560.1440/2560.0.2560.1440@2560.0.2560.1440" timestamp="1590700603618" />
-    <state width="1976" height="220" key="GridCell.Tab.0.bottom" timestamp="1590892389531">
+    <state x="2560" y="0" key="FileDocumentManager.FileCacheConflict" timestamp="1590894001407">
+      <screen x="2560" y="0" width="2560" height="1440" />
+    </state>
+    <state x="2560" y="0" key="FileDocumentManager.FileCacheConflict/0.0.2560.1440/2560.0.2560.1440@2560.0.2560.1440" timestamp="1590894001407" />
+    <state width="1976" height="220" key="GridCell.Tab.0.bottom" timestamp="1590894108264">
       <screen x="2560" y="0" width="2560" height="1440" />
     </state>
     <state width="639" height="171" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1588898041866" />
     <state width="1230" height="364" key="GridCell.Tab.0.bottom/0.0.2560.1440/2560.0.2560.1440@0.0.2560.1440" timestamp="1590453498536" />
-    <state width="1976" height="220" key="GridCell.Tab.0.bottom/0.0.2560.1440/2560.0.2560.1440@2560.0.2560.1440" timestamp="1590892389531" />
-    <state width="1976" height="220" key="GridCell.Tab.0.center" timestamp="1590892389531">
+    <state width="1976" height="220" key="GridCell.Tab.0.bottom/0.0.2560.1440/2560.0.2560.1440@2560.0.2560.1440" timestamp="1590894108264" />
+    <state width="1976" height="220" key="GridCell.Tab.0.center" timestamp="1590894108264">
       <screen x="2560" y="0" width="2560" height="1440" />
     </state>
     <state width="639" height="171" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1588898041865" />
     <state width="1230" height="364" key="GridCell.Tab.0.center/0.0.2560.1440/2560.0.2560.1440@0.0.2560.1440" timestamp="1590453498536" />
-    <state width="1976" height="220" key="GridCell.Tab.0.center/0.0.2560.1440/2560.0.2560.1440@2560.0.2560.1440" timestamp="1590892389531" />
-    <state width="1976" height="220" key="GridCell.Tab.0.left" timestamp="1590892389531">
+    <state width="1976" height="220" key="GridCell.Tab.0.center/0.0.2560.1440/2560.0.2560.1440@2560.0.2560.1440" timestamp="1590894108264" />
+    <state width="1976" height="220" key="GridCell.Tab.0.left" timestamp="1590894108264">
       <screen x="2560" y="0" width="2560" height="1440" />
     </state>
     <state width="639" height="171" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1588898041865" />
     <state width="1230" height="364" key="GridCell.Tab.0.left/0.0.2560.1440/2560.0.2560.1440@0.0.2560.1440" timestamp="1590453498535" />
-    <state width="1976" height="220" key="GridCell.Tab.0.left/0.0.2560.1440/2560.0.2560.1440@2560.0.2560.1440" timestamp="1590892389531" />
-    <state width="1976" height="220" key="GridCell.Tab.0.right" timestamp="1590892389531">
+    <state width="1976" height="220" key="GridCell.Tab.0.left/0.0.2560.1440/2560.0.2560.1440@2560.0.2560.1440" timestamp="1590894108264" />
+    <state width="1976" height="220" key="GridCell.Tab.0.right" timestamp="1590894108264">
       <screen x="2560" y="0" width="2560" height="1440" />
     </state>
     <state width="639" height="171" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1588898041865" />
     <state width="1230" height="364" key="GridCell.Tab.0.right/0.0.2560.1440/2560.0.2560.1440@0.0.2560.1440" timestamp="1590453498536" />
-    <state width="1976" height="220" key="GridCell.Tab.0.right/0.0.2560.1440/2560.0.2560.1440@2560.0.2560.1440" timestamp="1590892389531" />
+    <state width="1976" height="220" key="GridCell.Tab.0.right/0.0.2560.1440/2560.0.2560.1440@2560.0.2560.1440" timestamp="1590894108264" />
+    <state x="2995" y="332" width="1177" height="607" key="MultipleFileMergeDialog" timestamp="1590893904703">
+      <screen x="2560" y="0" width="2560" height="1440" />
+    </state>
+    <state x="2995" y="332" width="1177" height="607" key="MultipleFileMergeDialog/0.0.2560.1440/2560.0.2560.1440@2560.0.2560.1440" timestamp="1590893904703" />
     <state x="3377" y="253" key="RollbackChangesDialog" timestamp="1590728754156">
       <screen x="2560" y="0" width="2560" height="1440" />
     </state>
