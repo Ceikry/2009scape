@@ -119,7 +119,7 @@ class CombatPulse(
         combatTimeOut = 0
         entity.face(victim)
         if (nextAttack <= GameWorld.getTicks()) {
-            val v: Entity = victim!!
+            val v: Entity = victim ?: return false
             var handler = temporaryHandler
             if (handler == null) {
                 handler = entity.getSwingHandler(true)

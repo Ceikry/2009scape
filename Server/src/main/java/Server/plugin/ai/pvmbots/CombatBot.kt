@@ -14,7 +14,7 @@ import plugin.consumable.Food
 import plugin.skill.Skills
 import java.util.*
 
-class CombatBot(location: Location) : AIPlayer(location) {
+open class CombatBot(location: Location) : AIPlayer(location) {
     var tick = 0
 
     override fun updateRandomValues() {

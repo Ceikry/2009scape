@@ -1,6 +1,7 @@
 package plugin.ai.pvmbots
 
 import core.game.node.item.Item
+import core.game.system.SystemLogger
 import core.game.world.map.Location
 import core.tools.ItemNames
 import core.tools.RandomFunction
@@ -42,12 +43,12 @@ class CombatBotAssembler {
             return bot
         }
 
-        fun gearRangedBot(bot: AIPlayer) {
+        fun gearRangedBot(bot: AIPlayer, crossbow: Boolean? = false) {
             equipHighest(bot, RANGE_HELMS)
             equipHighest(bot, RANGE_TOPS)
             equipHighest(bot, RANGE_LEGS)
-            equipHighest(bot, BOWS)
-            bot.equipment.add(Item(ItemNames.BRONZE_ARROW,Integer.MAX_VALUE),13,false,false)
+            if(crossbow == true) { equipHighest(bot,CROSSBOWS); equipHighest(bot,MELEE_SHIELD); bot.equipment.add(Item(ItemNames.BRONZE_BOLTS,Integer.MAX_VALUE),13,false,false) }
+            else {equipHighest(bot, BOWS); bot.equipment.add(Item(ItemNames.BRONZE_ARROW,Integer.MAX_VALUE),13,false,false) }
             bot.equipment.refresh()
         }
 
@@ -83,11 +84,15 @@ class CombatBotAssembler {
                     level = 1
                 if(level > max)
                     level = max
-                bot.skills.setLevel(skills[skill], level).also { totalXPAdd += bot.skills.getExperience(skills[skill]) }
+                bot.skills.setLevel(skills[skill], level)
                 bot.skills.setStaticLevel(skills[skill], level)
+                totalXPAdd += bot.skills.getExperience(skills[skill])
                 skillAmt++
             }
             bot.skills.addExperience(Skills.HITPOINTS, (totalXPAdd / skillAmt) * 0.2)
+            SystemLogger.log("hp: ${(totalXPAdd / skillAmt) * 0.2}")
+            val new_hp = bot.skills.levelFromXP((totalXPAdd / skillAmt) * 0.2)
+            bot.skills.setStaticLevel(Skills.HITPOINTS,10 + new_hp)
             bot.skills.updateCombatLevel()
             bot.fullRestore()
         }
@@ -139,6 +144,7 @@ class CombatBotAssembler {
         val RANGE_TOPS = arrayOf(1129, 1131)
         val RANGE_LEGS = arrayOf(1095, 1097, 1099)
         val BOWS = arrayOf(841, 843, 847, 853)
+        val CROSSBOWS  = arrayOf(9185,9174,9177,9176,9179,9181,9183)
 
         val MELEE_HELMS = arrayOf(1137,1139, 1141, 6621, 1143,1145,1147,1149,1151,1153, 6623, 1159,1163,1165,3748, 3751, 10828, 11335, 3753, 4716,4724, 4745, 4753)
         val MELEE_TOP = arrayOf(1101,1103,1105,1107,1109,1111,1113,2513,1115,1117,1119,1121,1123,1125,1127,4720,4728)

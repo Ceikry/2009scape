@@ -2,6 +2,7 @@ package plugin.command
 
 import core.game.container.impl.EquipmentContainer
 import core.game.interaction.Interaction
+import core.game.node.entity.combat.CombatStyle
 import core.game.node.entity.player.Player
 import core.game.node.entity.player.link.appearance.Gender
 import core.game.system.command.CommandPlugin
@@ -19,6 +20,7 @@ import core.tools.RandomFunction
 import plugin.ai.AIPBuilder
 import plugin.ai.AIPlayer
 import plugin.ai.general.GeneralBotCreator
+import plugin.ai.general.scriptrepository.GreenDragonKiller
 import plugin.ai.general.scriptrepository.LobsterCatcher
 //import plugin.ai.general.scriptrepository.ManThiever
 import plugin.ai.pvmbots.CombatBotAssembler
@@ -133,11 +135,7 @@ class AIPCommandPlugin : CommandPlugin() {
                 return true
             }
             "banktest" -> {
-                val bot = AIPlayer(player.location)
-                //Location.create(2719, 3431, 0)
-                //Location.create(2726, 3477, 0)
-                //Location.create(2726, 3491, 0)
-                Pathfinder.find(bot,Location.create(2726, 3491, 0)).walk(bot)
+                GeneralBotCreator(GreenDragonKiller(CombatStyle.MELEE),CombatBotAssembler().produce(CombatBotAssembler.Type.MELEE,CombatBotAssembler.Tier.HIGH,player.location))
                 return true
             }
             "pvplegion" -> {

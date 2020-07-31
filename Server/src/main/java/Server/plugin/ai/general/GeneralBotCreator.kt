@@ -7,6 +7,7 @@ import core.game.world.map.Location
 import core.tools.RandomFunction
 import plugin.ai.AIPBuilder
 import plugin.ai.AIPlayer
+import plugin.ai.general.scriptrepository.GreenDragonKiller
 import plugin.ai.general.scriptrepository.Idler
 import plugin.ai.general.scriptrepository.Script
 
@@ -48,6 +49,15 @@ class GeneralBotCreator {
                 }
                 botScript.tick()
             }
+            /*if(botScript is GreenDragonKiller){
+                if(botScript.bot.skills.lifepoints <= 0 && botScript.bot.){
+                    AIPlayer.deregister(botScript.bot.uid)
+                    ticks = 0
+                    GameWorld.Pulser.submit(TransitionPulse(botScript))
+                    return true
+                }
+            }*/
+
             return false
         }
 

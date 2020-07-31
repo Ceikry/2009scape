@@ -13,6 +13,7 @@ class AIRepository {
                 val list = ArrayList<GroundItem>()
                 list.add(item)
                 groundItems[item.dropper] = list
+                return
             }
             groundItems[item.dropper]!!.add(item)
         }
