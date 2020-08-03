@@ -78,7 +78,6 @@ public final class ModernTeleportPlugin extends MagicSpell {
 	@Override
 	public Plugin<SpellType> newInstance(SpellType arg) throws Throwable {
 		// home
-		SpellBook.MODERN.register(0, new ModernTeleportPlugin(0, 0, ServerConstants.HOME_LOCATION));
 		// varrock
 		SpellBook.MODERN.register(15, new ModernTeleportPlugin(25, 35, Location.create(3213, 3424, 0), new Item(Runes.FIRE_RUNE.getId()), new Item(Runes.AIR_RUNE.getId(), 3), new Item(Runes.LAW_RUNE.getId(), 1)));
 		// lumby
