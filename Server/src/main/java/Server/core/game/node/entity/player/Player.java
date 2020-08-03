@@ -121,6 +121,7 @@ public class Player extends Entity {
 
 	public EquipmentDegrader degrader = new EquipmentDegrader();
 
+
 	/**
 	 * The inventory.
 	 */
@@ -305,12 +306,12 @@ public class Player extends Entity {
 	 * The Ironman manager.
 	 */
 	private final IronmanManager ironmanManager = new IronmanManager(this);
-	
+
 	/**
 	 * The jobs minigame manager.
 	 */
 	private final JobsMinigameManager jobsManager = new JobsMinigameManager(this);
-	
+
 	/**
 	 * The statistics manager.
 	 */
@@ -324,7 +325,7 @@ public class Player extends Entity {
 	 * The logout plugins.
 	 */
 	private List<Plugin<Player>> logoutPlugins;
-	
+
 	/**
 	 * The crest of a player.
 	 */
@@ -354,12 +355,12 @@ public class Player extends Entity {
 	 * A custom state for bot debugging
 	 */
 	private String customState = "";
-	
+
 	/**
 	 * The amount of targets that the player can shoot left for the archery minigame.
 	 */
 	private int archeryTargets = 0;
-	
+
 	private int archeryTotal = 0;
 
 	/**
@@ -535,16 +536,11 @@ public class Player extends Entity {
 		if (!k.isActive()) {
 			k = this;
 		}
-		if (this.isArtificial() && killer instanceof Player){
-			setAttribute("dead", true);
-			k.sendMessage("You did not gain any loot as the player you killed was artificial.");
-			return;
-		}
 		if (this.isArtificial() && killer instanceof NPC) {
 			return;
 		}
 		getPacketDispatch().sendMessage("Oh dear, you are dead!");
-		
+
 		if (!isArtificial()) {
 			getStatisticsManager().getDEATHS().incrementAmount();
 		}
