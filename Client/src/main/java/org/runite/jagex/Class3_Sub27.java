@@ -179,9 +179,7 @@ final class Class3_Sub27 extends Class3 {
       int var29;
       for(var29 = 0; var29 < var6; ++var29) {
          var28 = var28 + var1.getByte((byte)-80) & 127;
-         if(var28 == 0 || var28 == 32) {
-            ++var12;
-         } else {
+         if(var28 != 0 && var28 != 32) {
             if(var28 == 1) {
                ++var16;
             } else if(var28 == 33) {
@@ -207,6 +205,8 @@ final class Class3_Sub27 extends Class3 {
             } else {
                ++var26;
             }
+         } else {
+            ++var12;
          }
       }
 
@@ -334,9 +334,7 @@ final class Class3_Sub27 extends Class3 {
                   var28 = var28 + var1.buffer[var15++] & 127;
                   var51.putByte((byte)-17, var28);
                   byte var66;
-                  if(var28 == 0 || var28 == 32) {
-                     var66 = var1.buffer[var44++];
-                  } else {
+                  if(var28 != 0 && var28 != 32) {
                      if(var28 == 1) {
                         var66 = var1.buffer[var34++];
                      } else if(var28 == 33) {
@@ -362,9 +360,11 @@ final class Class3_Sub27 extends Class3 {
                      } else {
                         var66 = var1.buffer[var30++];
                      }
+                  } else {
+                     var66 = var1.buffer[var44++];
                   }
 
-                   int var67 = var66 + var59[var28];
+                  int var67 = var66 + var59[var28];
                   var59[var28] = var67;
                   var51.putByte((byte)-13, var67 & 127);
                } else if(var62 == 3) {

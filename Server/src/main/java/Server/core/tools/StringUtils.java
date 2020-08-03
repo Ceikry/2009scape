@@ -3,6 +3,9 @@ package core.tools;
 import java.text.DecimalFormat;
 import java.util.StringTokenizer;
 
+import core.game.node.entity.player.Player;
+import core.game.node.entity.player.info.PlayerDetails;
+import core.game.world.repository.Repository;
 import core.net.packet.IoBuffer;
 
 /**
@@ -155,6 +158,12 @@ public final class StringUtils {
 			}
 			if (name.charAt(i) == ' ') {
 				wasSpace = true;
+			}
+		}
+		if(Repository.PLAYER_NAMES.get(newName.toString()) != null){
+			Player p = Repository.PLAYER_NAMES.get(newName.toString());
+			if(p.getDetails().isDonator){
+				return "[$]" + newName.toString();
 			}
 		}
 		return newName.toString();

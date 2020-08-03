@@ -20,11 +20,11 @@ final class Class3_Sub28_Sub8 extends Node {
    static final Class3_Sub28_Sub15 method572(int var0, byte var1) {
       try {
          Class3_Sub28_Sub15 var2 = (Class3_Sub28_Sub15)Class56.aClass47_885.method1092((long)var0, 1400);
-         if(var2 == null) {
+         if(var2 != null) {
+            return var2;
+         } else {
             byte[] var3 = Class3_Sub1.interfaceScriptsIndex.getFile(var0, (byte)-122, 0);
-            if(var3 == null) {
-               return null;
-            } else {
+            if(var3 != null) {
                var2 = new Class3_Sub28_Sub15();
                if(var1 != -91) {
                   aClass113Array3610 = (Class113[])null;
@@ -51,7 +51,7 @@ final class Class3_Sub28_Sub8 extends Node {
                      Class130 var11 = new Class130(Class95.method1585((byte)119, var10));
                      var2.aClass130Array3685[var9] = var11;
 
-                     while(var10-- > 0) {
+                     while(-1 > ~(var10--)) {
                         int var12 = var4.getInt();
                         int var13 = var4.getInt();
                         var11.method1779(1, new Class3_Sub18(var13), (long)var12);
@@ -65,24 +65,24 @@ final class Class3_Sub28_Sub8 extends Node {
                var2.aClass94Array3688 = new RSString[var7];
                var9 = 0;
 
-               for(var2.anIntArray3690 = new int[var7]; var4.index < var6; var2.anIntArray3683[var9++] = var10) {
+               for(var2.anIntArray3690 = new int[var7]; ~var6 < ~var4.index; var2.anIntArray3683[var9++] = var10) {
                   var10 = var4.getShort(var1 ^ -92);
-                  if(var10 == 3) {
-                     var2.aClass94Array3688[var9] = var4.getString();
-                  } else {
-                     if(var10 < 100 && 21 != var10 && var10 != 38 && 39 != var10) {
+                  if(var10 != 3) {
+                     if(var10 < 100 && 21 != var10 && -39 != ~var10 && 39 != var10) {
                         var2.anIntArray3690[var9] = var4.getInt();
                      } else {
                         var2.anIntArray3690[var9] = var4.getByte((byte)-67);
                      }
+                  } else {
+                     var2.aClass94Array3688[var9] = var4.getString();
                   }
                }
 
                Class56.aClass47_885.method1097(var2, (long)var0, (byte)-87);
                return var2;
+            } else {
+               return null;
             }
-         } else {
-            return var2;
          }
       } catch (RuntimeException var14) {
          throw Class44.method1067(var14, "hc.O(" + var0 + ',' + var1 + ')');
@@ -136,9 +136,7 @@ final class Class3_Sub28_Sub8 extends Node {
 
    static final int method576(RSString var0, boolean var1) {
       try {
-         if(Class119.aClass131_1624 == null || var0.length(-65) == 0) {
-            return -1;
-         } else {
+         if(Class119.aClass131_1624 != null && var0.length(-65) != 0) {
             if(var1) {
                return -117;
             } else {
@@ -150,6 +148,8 @@ final class Class3_Sub28_Sub8 extends Node {
 
                return -1;
             }
+         } else {
+            return -1;
          }
       } catch (RuntimeException var3) {
          throw Class44.method1067(var3, "hc.F(" + (var0 != null?"{...}":"null") + ',' + var1 + ')');

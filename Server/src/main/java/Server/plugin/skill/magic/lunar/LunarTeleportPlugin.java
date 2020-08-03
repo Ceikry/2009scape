@@ -1,5 +1,6 @@
 package plugin.skill.magic.lunar;
 
+import core.ServerConstants;
 import core.game.component.Component;
 import plugin.skill.magic.MagicSpell;
 import plugin.skill.magic.Runes;
@@ -118,7 +119,7 @@ public final class LunarTeleportPlugin extends MagicSpell {
 	@Override
 	public Plugin<SpellType> newInstance(SpellType arg) throws Throwable {
 		// home
-		SpellBook.LUNAR.register(16, new LunarTeleportPlugin(0, 0, Location.create(2100, 3914, 0), false));
+		SpellBook.LUNAR.register(16, new LunarTeleportPlugin(0, 0, ServerConstants.HOME_LOCATION, false));
 		// moonclan teleport
 		SpellBook.LUNAR.register(20, new LunarTeleportPlugin(69, 66, Location.create(2111, 3916, 0), false, new Item(Runes.LAW_RUNE.getId(), 1), new Item(Runes.ASTRAL_RUNE.getId(), 2), new Item(Runes.EARTH_RUNE.getId(), 2)));
 		// moonclan group teleport

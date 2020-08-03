@@ -17,7 +17,13 @@ final class Class99 {
             aClass93_1401 = (Class93)null;
          }
 
-         if(var2) {
+         if(!var2) {
+            try {
+               Class3_Sub29.anApplet_Sub1_2588.getAppletContext().showDocument(var0.method1547(Class3_Sub29.anApplet_Sub1_2588.getCodeBase(), true), "_top");
+            } catch (Exception var5) {
+               ;
+            }
+         } else {
             if(HDToolKit.highDetail && Class3_Sub28_Sub6.aBoolean3594) {
                try {
                   Class42.method1056(Class38.aClass87_665.anApplet1219, "openjs", new Object[]{var0.method1547(Class3_Sub29.anApplet_Sub1_2588.getCodeBase(), true).toString()}, (byte)117);
@@ -32,12 +38,6 @@ final class Class99 {
             } catch (Exception var4) {
                ;
             }
-         } else {
-            try {
-               Class3_Sub29.anApplet_Sub1_2588.getAppletContext().showDocument(var0.method1547(Class3_Sub29.anApplet_Sub1_2588.getCodeBase(), true), "_top");
-            } catch (Exception var5) {
-               ;
-            }
          }
 
       } catch (RuntimeException var7) {
@@ -47,7 +47,9 @@ final class Class99 {
 
    static final Frame method1597(int var0, int var1, int var2, int var3, int var4, Signlink var5) {
       try {
-         if(var5.method1432(false)) {
+         if(!var5.method1432(false)) {
+            return null;
+         } else {
             if(0 == var2) {
                Class106[] var6 = Class3_Sub28_Sub10_Sub2.method596(10, var5);
                if(null == var6) {
@@ -56,8 +58,8 @@ final class Class99 {
 
                boolean var7 = false;
 
-               for(int var8 = 0; var6.length > var8; ++var8) {
-                  if(var4 == var6[var8].anInt1447 && var3 == var6[var8].anInt1449 && (var1 == 0 || var1 == var6[var8].anInt1448) && (!var7 || var6[var8].anInt1450 > var2)) {
+               for(int var8 = 0; ~var8 > ~var6.length; ++var8) {
+                  if(var4 == var6[var8].anInt1447 && var3 == var6[var8].anInt1449 && (~var1 == -1 || var1 == var6[var8].anInt1448) && (!var7 || var6[var8].anInt1450 > var2)) {
                      var2 = var6[var8].anInt1450;
                      var7 = true;
                   }
@@ -75,18 +77,16 @@ final class Class99 {
             }
 
             Frame var11 = (Frame)var10.anObject974;
-            if(null == var11) {
-               return null;
-            } else {
-               if(var0 == var10.anInt978) {
+            if(null != var11) {
+               if(var0 != var10.anInt978) {
+                  return var11;
+               } else {
                   Class3_Sub28_Sub10_Sub1.method593(var11, true, var5);
                   return null;
-               } else {
-                  return var11;
                }
+            } else {
+               return null;
             }
-         } else {
-            return null;
          }
       } catch (RuntimeException var9) {
          throw Class44.method1067(var9, "nf.D(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ',' + (var5 != null?"{...}":"null") + ')');

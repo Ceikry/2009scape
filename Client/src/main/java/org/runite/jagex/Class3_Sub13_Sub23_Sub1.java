@@ -1,18 +1,21 @@
 package org.runite.jagex;
-import org.runite.Configurations;
+import java.awt.Component;
 
-import java.awt.*;
+import org.runite.Configurations;
 
 final class Class3_Sub13_Sub23_Sub1 extends Class3_Sub13_Sub23 {
 
+   private static RSString aClass94_4030 = RSString.createRSString("Allocating memory");
    static Class3_Sub28_Sub5[] aClass3_Sub28_Sub5Array4031 = new Class3_Sub28_Sub5[14];
    static int anInt4032 = 0;
    static int anInt4033;
    static int anInt4034 = -8 + (int)(17.0D * Math.random());
    static int[] anIntArray4035 = new int[]{1, 1, 0, 0, 0, 8, 0, 0, 8};
+   static RSString aClass94_4036 = RSString.createRSString("Connect-B au serveur de mise -9 jour");
    static int anInt4037;
    static short aShort4038 = 32767;
    static int anInt4039 = 0;
+   static RSString aClass94_4040 = aClass94_4030;
    static int anInt4041 = -1;
    static int hitMarkIndex;
 
@@ -96,39 +99,39 @@ final class Class3_Sub13_Sub23_Sub1 extends Class3_Sub13_Sub23 {
          int[] var11 = new int[var5.length / 2];
 
          int var12;
-         for(var12 = 0; var11.length > var12; ++var12) {
+         for(var12 = 0; ~var12 > ~var11.length; ++var12) {
             int var13 = var5[var12 + var12];
             int var14 = var5[var12 + var12 + 1];
             int var15;
-            if(var10 == 1) {
-               var15 = var13;
-               var13 = var14;
-               var14 = -var15 + 128;
-            } else {
-               if(var10 == 2) {
-                  var14 = -var14 + 128;
-                  var13 = -var13 + 128;
-               } else {
-                  if(var10 == 3) {
+            if(-2 != ~var10) {
+               if(-3 != ~var10) {
+                  if(~var10 == -4) {
                      var15 = var13;
                      var13 = 128 - var14;
                      var14 = var15;
                   }
+               } else {
+                  var14 = -var14 + 128;
+                  var13 = -var13 + 128;
                }
+            } else {
+               var15 = var13;
+               var13 = var14;
+               var14 = -var15 + 128;
             }
 
             float var17;
             float var16;
             float var24;
-            if(var13 == 0 && var14 == 0) {
+            if(-1 == ~var13 && var14 == 0) {
                var16 = var3[var2][var4];
                var24 = var9[var2][var4];
                var17 = var0[var2][var4];
-            } else if(var13 == 128 && var14 == 0) {
+            } else if(~var13 == -129 && -1 == ~var14) {
                var17 = var0[var2 - -1][var4];
                var24 = var9[1 + var2][var4];
                var16 = var3[var2 - -1][var4];
-            } else if(128 == var13 && var14 == 128) {
+            } else if(128 == var13 && ~var14 == -129) {
                var16 = var3[var2 + 1][var4 + 1];
                var24 = var9[var2 + 1][var4 + 1];
                var17 = var0[var2 - -1][var4 + 1];
@@ -171,7 +174,9 @@ final class Class3_Sub13_Sub23_Sub1 extends Class3_Sub13_Sub23 {
 
    static final Class158 method285(int var0, int var1, boolean var2, Component var3) {
       try {
-         if(var2) {
+         if(!var2) {
+            return (Class158)null;
+         } else {
             try {
                Class var4 = Class.forName(Configurations.PACKAGE_JAGEX + ".Class158_Sub2");
                Class158 var8 = (Class158)var4.newInstance();
@@ -182,8 +187,6 @@ final class Class3_Sub13_Sub23_Sub1 extends Class3_Sub13_Sub23 {
                var5.method2185(var0, false, var1, var3);
                return var5;
             }
-         } else {
-            return (Class158)null;
          }
       } catch (RuntimeException var7) {
          throw Class44.method1067(var7, "kd.C(" + var0 + ',' + var1 + ',' + var2 + ',' + (var3 != null?"{...}":"null") + ')');
@@ -204,6 +207,9 @@ final class Class3_Sub13_Sub23_Sub1 extends Class3_Sub13_Sub23 {
 
    public static void method287(boolean var0) {
       try {
+         aClass94_4030 = null;
+         aClass94_4036 = null;
+         aClass94_4040 = null;
          anIntArray4035 = null;
          aClass3_Sub28_Sub5Array4031 = null;
          if(var0) {

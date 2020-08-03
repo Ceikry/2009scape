@@ -4,11 +4,9 @@ import core.cache.def.impl.ItemDefinition;
 import core.game.content.eco.EcoStatus;
 import core.game.content.eco.EconomyManagement;
 import core.game.node.entity.player.Player;
-import core.game.node.entity.player.info.PlayerDetails;
 import core.game.node.entity.player.link.audio.Audio;
 import core.game.node.item.Item;
 import core.game.system.task.Pulse;
-import core.game.system.task.TaskExecutor;
 import core.game.world.GameWorld;
 import core.game.world.callback.CallBack;
 import core.game.world.repository.Repository;
@@ -22,10 +20,6 @@ import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 import java.io.File;
-import java.io.RandomAccessFile;
-import java.nio.ByteBuffer;
-import java.nio.channels.FileChannel;
-import java.nio.channels.FileChannel.MapMode;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -55,11 +49,6 @@ public final class GEOfferDispatch extends Pulse implements CallBack {
 	 * The mapping of all current offers.
 	 */
 	private static final Map<Long, GrandExchangeOffer> OFFER_MAPPING = new HashMap<>();
-
-	/**
-	 * If the database should be dumped.
-	 */
-	private static boolean dumpDatabase;
 
 	/**
 	 * Initializes the Grand Exchange.
@@ -126,7 +115,7 @@ public final class GEOfferDispatch extends Pulse implements CallBack {
 
 	/**
 	 * Dumps the grand exchange offers.
-	 * @param directory The directory to save to.
+	 * directory The directory to save to.
 	 */
 	public static void dump() {
 		File file = new File(DB_PATH);
@@ -267,10 +256,9 @@ public final class GEOfferDispatch extends Pulse implements CallBack {
 		OFFER_MAPPING.put(offer.getUid(), offer);
 		offer.setTimeStamp(System.currentTimeMillis());
 		player.getGrandExchange().update(offer);
-		if(offer.isSell()) {
-			Repository.sendNews(player.getUsername() + " just offered " + offer.getAmount() + " " + ItemDefinition.forId(offer.getItemId()).getName().toLowerCase() + " on the GE.");
-		}
-		dumpDatabase = true;
+		/*if(offer.isSell()) {
+			Repository.sendNews(offer.getAmount() + " " + ItemDefinition.forId(offer.getItemId()).getName().toLowerCase() + " were just offered for sale on the GE.");
+		}*/
 		return true;
 	}
 
@@ -353,7 +341,6 @@ public final class GEOfferDispatch extends Pulse implements CallBack {
 		offer.getEntry().influenceValue(offer.getOfferedValue());
 		offer.notify(UPDATE_NOTIFICATION);
 		o.notify(UPDATE_NOTIFICATION);
-		dumpDatabase = true;
 	}
 
 	/**
@@ -406,13 +393,5 @@ public final class GEOfferDispatch extends Pulse implements CallBack {
 	 */
 	public static Map<Long, GrandExchangeOffer> getOfferMapping() {
 		return OFFER_MAPPING;
-	}
-
-	/**
-	 * Sets the dumping flag.
-	 * @param dump The dump to set.
-	 */
-	public static void setDumpDatabase(boolean dump) {
-		GEOfferDispatch.dumpDatabase = dump;
 	}
 }

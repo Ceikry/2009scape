@@ -754,7 +754,22 @@ final class Class3_Sub24_Sub1 extends Class3_Sub24 {
 
       this.anInt3474 += this.anInt3470 * var1;
       if(this.anInt3479 < 0) {
-         if(this.aBoolean3477) {
+         if(!this.aBoolean3477) {
+            if(this.anInt3470 < 0) {
+               if(this.anInt3474 >= var3) {
+                  return;
+               }
+
+               this.anInt3474 = var4 - 1 - (var4 - 1 - this.anInt3474) % var6;
+            } else {
+               if(this.anInt3474 < var4) {
+                  return;
+               }
+
+               this.anInt3474 = var3 + (this.anInt3474 - var3) % var6;
+            }
+
+         } else {
             if(this.anInt3470 < 0) {
                if(this.anInt3474 >= var3) {
                   return;
@@ -773,21 +788,6 @@ final class Class3_Sub24_Sub1 extends Class3_Sub24 {
 
                this.anInt3474 = var3 + var3 - 1 - this.anInt3474;
                this.anInt3470 = -this.anInt3470;
-            }
-
-         } else {
-            if(this.anInt3470 < 0) {
-               if(this.anInt3474 >= var3) {
-                  return;
-               }
-
-               this.anInt3474 = var4 - 1 - (var4 - 1 - this.anInt3474) % var6;
-            } else {
-               if(this.anInt3474 < var4) {
-                  return;
-               }
-
-               this.anInt3474 = var3 + (this.anInt3474 - var3) % var6;
             }
 
          }

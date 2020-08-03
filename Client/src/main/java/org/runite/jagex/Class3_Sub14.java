@@ -162,12 +162,12 @@ final class Class3_Sub14 extends Class3 {
    }
 
    static final Class3_Sub14 method363(CacheIndex var0, int var1, int var2) {
-      if(method362(var0)) {
-         byte[] var3 = var0.getFile(var1, (byte)-122, var2);
-         return var3 == null?null:new Class3_Sub14(var3);
-      } else {
+      if(!method362(var0)) {
          var0.method2129((byte)95, var2, var1);
          return null;
+      } else {
+         byte[] var3 = var0.getFile(var1, (byte)-122, var2);
+         return var3 == null?null:new Class3_Sub14(var3);
       }
    }
 
@@ -479,16 +479,16 @@ final class Class3_Sub14 extends Class3 {
             var15[var11] = Class3_Sub28_Sub3.method540(var10, -14314, var11);
          }
 
-         if(var1 == 0) {
-            aFloatArray2400 = var6;
-            aFloatArray2413 = var13;
-            aFloatArray2416 = var14;
-            anIntArray2391 = var15;
-         } else {
+         if(var1 != 0) {
             aFloatArray2399 = var6;
             aFloatArray2387 = var13;
             aFloatArray2388 = var14;
             anIntArray2409 = var15;
+         } else {
+            aFloatArray2400 = var6;
+            aFloatArray2413 = var13;
+            aFloatArray2416 = var14;
+            anIntArray2391 = var15;
          }
       }
 

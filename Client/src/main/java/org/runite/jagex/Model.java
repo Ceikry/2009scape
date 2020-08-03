@@ -15,31 +15,7 @@ abstract class Model extends GameObject {
 
    private final void method1875(Class3_Sub17 var1, AnimationHeader var2, AnimationHeader var3, int var4, int var5, boolean[] var6, boolean var7, boolean var8, int var9, int[] var10) {
       int var11;
-      if(var3 == null || var4 == 0) {
-         for(var11 = 0; var11 < var2.anInt1383; ++var11) {
-            short var12 = var2.aShortArray1385[var11];
-            if(var6 == null || var6[var12] == var7 || var1.anIntArray2466[var12] == 0) {
-               short var13 = var2.aShortArray1387[var11];
-               int var14;
-               if(var13 != -1) {
-                  var14 = var9 & var1.anIntArray2455[var13];
-                  if(var14 == '\uffff') {
-                     this.method1891(0, var1.anIntArrayArray2460[var13], 0, 0, 0, var8);
-                  } else {
-                     this.method1899(0, var1.anIntArrayArray2460[var13], 0, 0, 0, var8, var14, var10);
-                  }
-               }
-
-               var14 = var9 & var1.anIntArray2455[var12];
-               if(var14 == '\uffff') {
-                  this.method1891(var1.anIntArray2466[var12], var1.anIntArrayArray2460[var12], var2.aShortArray1388[var11], var2.aShortArray1396[var11], var2.aShortArray1395[var11], var8);
-               } else {
-                  this.method1899(var1.anIntArray2466[var12], var1.anIntArrayArray2460[var12], var2.aShortArray1388[var11], var2.aShortArray1396[var11], var2.aShortArray1395[var11], var8, var14, var10);
-               }
-            }
-         }
-
-      } else {
+      if(var3 != null && var4 != 0) {
          var11 = 0;
          int var34 = 0;
 
@@ -156,26 +132,50 @@ abstract class Model extends GameObject {
 
                   if(var21 != -1) {
                      var31 = var9 & var1.anIntArray2455[var21];
-                     if(var31 == '\uffff') {
-                        this.method1891(0, var1.anIntArrayArray2460[var21], 0, 0, 0, var8);
-                     } else {
+                     if(var31 != '\uffff') {
                         this.method1899(0, var1.anIntArrayArray2460[var21], 0, 0, 0, var8, var31, var10);
+                     } else {
+                        this.method1891(0, var1.anIntArrayArray2460[var21], 0, 0, 0, var8);
                      }
                   } else if(var26 != -1) {
                      var31 = var9 & var1.anIntArray2455[var26];
-                     if(var31 == '\uffff') {
-                        this.method1891(0, var1.anIntArrayArray2460[var26], 0, 0, 0, var8);
-                     } else {
+                     if(var31 != '\uffff') {
                         this.method1899(0, var1.anIntArrayArray2460[var26], 0, 0, 0, var8, var31, var10);
+                     } else {
+                        this.method1891(0, var1.anIntArrayArray2460[var26], 0, 0, 0, var8);
                      }
                   }
 
                   var31 = var9 & var1.anIntArray2455[var35];
-                  if(var31 == '\uffff') {
-                     this.method1891(var17, var1.anIntArrayArray2460[var35], var28, var29, var30, var8);
-                  } else {
+                  if(var31 != '\uffff') {
                      this.method1899(var17, var1.anIntArrayArray2460[var35], var28, var29, var30, var8, var31, var10);
+                  } else {
+                     this.method1891(var17, var1.anIntArrayArray2460[var35], var28, var29, var30, var8);
                   }
+               }
+            }
+         }
+
+      } else {
+         for(var11 = 0; var11 < var2.anInt1383; ++var11) {
+            short var12 = var2.aShortArray1385[var11];
+            if(var6 == null || var6[var12] == var7 || var1.anIntArray2466[var12] == 0) {
+               short var13 = var2.aShortArray1387[var11];
+               int var14;
+               if(var13 != -1) {
+                  var14 = var9 & var1.anIntArray2455[var13];
+                  if(var14 != '\uffff') {
+                     this.method1899(0, var1.anIntArrayArray2460[var13], 0, 0, 0, var8, var14, var10);
+                  } else {
+                     this.method1891(0, var1.anIntArrayArray2460[var13], 0, 0, 0, var8);
+                  }
+               }
+
+               var14 = var9 & var1.anIntArray2455[var12];
+               if(var14 != '\uffff') {
+                  this.method1899(var1.anIntArray2466[var12], var1.anIntArrayArray2460[var12], var2.aShortArray1388[var11], var2.aShortArray1396[var11], var2.aShortArray1395[var11], var8, var14, var10);
+               } else {
+                  this.method1891(var1.anIntArray2466[var12], var1.anIntArrayArray2460[var12], var2.aShortArray1388[var11], var2.aShortArray1396[var11], var2.aShortArray1395[var11], var8);
                }
             }
          }
@@ -283,9 +283,7 @@ abstract class Model extends GameObject {
 
    final void method1892(Class3_Sub28_Sub5 var1, int var2, Class3_Sub28_Sub5 var3, int var4, int var5, int var6, Class3_Sub28_Sub5 var7, int var8, Class3_Sub28_Sub5 var9, int var10, int var11, int var12, boolean[] debugArray530, boolean var14) {
       if(var2 != -1) {
-         if(debugArray530 == null || var8 == -1) {
-            this.method1880(var1, var2, var3, var4, var5, var6, var14);
-         } else {
+         if(debugArray530 != null && var8 != -1) {
             if(this.method1873()) {
                AnimationHeader var15 = var1.animations[var2];
                Class3_Sub17 var16 = var15.skins;
@@ -311,6 +309,8 @@ abstract class Model extends GameObject {
                this.method1875(var16, var18, var19, var11, var12, debugArray530, true, var14, '\uffff', (int[])null);
                this.method1879();
             }
+         } else {
+            this.method1880(var1, var2, var3, var4, var5, var6, var14);
          }
       }
    }

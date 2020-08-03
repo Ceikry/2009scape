@@ -6,12 +6,19 @@ final class Class3_Sub13_Sub36 extends Class3_Sub13 {
    static int anInt3423;
    static float aFloat3424;
    private int[] anIntArray3425;
+   
+   private static RSString aClass94_3428 = RSString.createRSString(" more options");
    static CacheIndex aClass153_3429;
    static byte[][][] aByteArrayArrayArray3430;
    private int anInt3431;
+   static RSString aClass94_3432 = RSString.createRSString("Schrifts-=tze geladen)3");
    private int anInt3433;
    private int anInt3434 = -1;
    static float aFloat3435;
+   static RSString aClass94_3436 = RSString.createRSString("jaune:");
+   private static RSString aClass94_3437 = RSString.createRSString("Attack");
+static RSString aClass94_3426 = aClass94_3428;
+   static RSString aClass94_3427 = aClass94_3437;
 
    static final void method338(int var0, int var1, boolean var2, int var3, int var4, int var5) {
       try {
@@ -42,7 +49,7 @@ final class Class3_Sub13_Sub36 extends Class3_Sub13 {
          if(1 == Class133.anInt1753) {
             var7 = 2047 & Class3_Sub29.anInt2589 + GraphicDefinition.CAMERA_DIRECTION;
             var6 = Class3_Sub9.anInt2309;
-            if(Class75_Sub4.anInt2670 / 256 > var6) {
+            if(~var6 > ~(Class75_Sub4.anInt2670 / 256)) {
                var6 = Class75_Sub4.anInt2670 / 256;
             }
 
@@ -69,18 +76,18 @@ final class Class3_Sub13_Sub36 extends Class3_Sub13 {
                      Class3_Sub13_Sub25.anInt3315 = var12 + Class3_Sub13_Sub25.anInt3315 & 2047;
                   }
 
-                  if(var11 == 4) {
+                  if(~var11 == -5) {
                      Class139.anInt1823 += var12;
                      if(128 > Class139.anInt1823) {
                         Class139.anInt1823 = 128;
                      }
 
-                     if(Class139.anInt1823 > 383) {
+                     if(~Class139.anInt1823 < -384) {
                         Class139.anInt1823 = 383;
                      }
                   }
 
-                  if(var11 == 2) {
+                  if(-3 == ~var11) {
                      Class77.anInt1111 += var12;
                   }
 
@@ -110,7 +117,7 @@ final class Class3_Sub13_Sub36 extends Class3_Sub13 {
                Class51.method1134();
             }
 
-            if(!Class38_Sub1.aBoolean2615 && var3 <= NPCDefinition.anInt1297 && var4 + var3 > NPCDefinition.anInt1297 && var5 <= Class38_Sub1.anInt2612 && Class38_Sub1.anInt2612 < var1 + var5) {
+            if(!Class38_Sub1.aBoolean2615 && ~NPCDefinition.anInt1297 <= ~var3 && ~NPCDefinition.anInt1297 > ~(var4 + var3) && var5 <= Class38_Sub1.anInt2612 && ~(var1 + var5) < ~Class38_Sub1.anInt2612) {
                Class3_Sub13_Sub7.aBoolean3094 = true;
                Class2.anInt59 = 0;
                var12 = Class145.anInt1898;
@@ -125,13 +132,13 @@ final class Class3_Sub13_Sub36 extends Class3_Sub13 {
             }
 
             Class58.method1194(-16385);
-            byte var19 = Class137.method1817((byte) 70) != 2 ?1:(byte)Class79.anInt1127;
+            byte var19 = -3 != ~Class137.method1817((byte)70)?1:(byte)Class79.anInt1127;
             if(HDToolKit.highDetail) {
                HDToolKit.method1846();
                HDToolKit.method1831(true);
                boolean var18 = false;
                HDToolKit.method1827(true);
-               if(Class143.loadingStage == 10) {
+               if(~Class143.loadingStage == -11) {
                   var12 = Class3_Sub30_Sub1.method809(Class106.anInt1446, Class77.anInt1111 >> 10, Class3_Sub28_Sub10.anInt3625, NPC.anInt3995 >> 10, var0 + 6404);
                } else {
                   var12 = Class3_Sub30_Sub1.method809(Class106.anInt1446, Class102.player.anIntArray2755[0] >> 3, Class3_Sub28_Sub10.anInt3625, Class102.player.anIntArray2767[0] >> 3, 1);
@@ -176,10 +183,10 @@ final class Class3_Sub13_Sub36 extends Class3_Sub13 {
                   Class74.method1323(var3, var5, var4, var1, 0);
                }
 
-               Class3_Sub13.method164((byte)-52, false, TextCore.LoadingPleaseWait2);
+               Class3_Sub13.method164((byte)-52, false, Class3_Sub13_Sub23.aClass94_3282);
             }
 
-            if(!var2 && !Class3_Sub13_Sub4.aBoolean3064 && !Class38_Sub1.aBoolean2615 && var3 <= NPCDefinition.anInt1297 && var4 + var3 > NPCDefinition.anInt1297 && Class38_Sub1.anInt2612 >= var5 && var1 + var5 > Class38_Sub1.anInt2612) {
+            if(!var2 && !Class3_Sub13_Sub4.aBoolean3064 && !Class38_Sub1.aBoolean2615 && var3 <= NPCDefinition.anInt1297 && var4 + var3 > NPCDefinition.anInt1297 && ~var5 >= ~Class38_Sub1.anInt2612 && var1 + var5 > Class38_Sub1.anInt2612) {
                Class104.method1628(var5, var4, var1, var3, Class38_Sub1.anInt2612, NPCDefinition.anInt1297, (byte)97);
             }
 
@@ -203,7 +210,7 @@ final class Class3_Sub13_Sub36 extends Class3_Sub13 {
             int[] var7 = var3[2];
             int var8;
             int var9;
-            if(this.anInt3431 == Class113.anInt1559) {
+            if(~Class113.anInt1559 == ~this.anInt3431) {
                for(var8 = 0; var8 < Class113.anInt1559; ++var8) {
                   var9 = this.anIntArray3425[var4++];
                   var7[var8] = Class3_Sub28_Sub15.method633(var9 << 4, 4080);
@@ -232,7 +239,7 @@ final class Class3_Sub13_Sub36 extends Class3_Sub13 {
          if(var1) {
             return true;
          } else if(this.anIntArray3425 == null) {
-            if(this.anInt3434 < 0) {
+            if(~this.anInt3434 > -1) {
                return false;
             } else {
                int var2 = Class113.anInt1559;
@@ -291,9 +298,15 @@ final class Class3_Sub13_Sub36 extends Class3_Sub13 {
 
    public static void method341(byte var0) {
       try {
+         aClass94_3428 = null;
+         aClass94_3437 = null;
+         aClass94_3427 = null;
+         aClass94_3426 = null;
+         aClass94_3432 = null;
          if(var0 > 66) {
             aClass153_3429 = null;
             aByteArrayArrayArray3430 = (byte[][][])null;
+            aClass94_3436 = null;
          }
       } catch (RuntimeException var2) {
          throw Class44.method1067(var2, "ui.MA(" + var0 + ')');
@@ -303,7 +316,9 @@ final class Class3_Sub13_Sub36 extends Class3_Sub13 {
    static final Class3_Sub28_Sub13 method342(int var0, boolean var1) {
       try {
          Class3_Sub28_Sub13 var2 = (Class3_Sub28_Sub13)Class129_Sub1.aClass47_2686.method1092((long)var0, 1400);
-         if(var2 == null) {
+         if(var2 != null) {
+            return var2;
+         } else {
             byte[] var3 = Class45.aClass153_731.getFile(Class53.method1170((byte)44, var0), (byte)-122, Class3_Sub30_Sub1.method810((byte)3, var0));
             var2 = new Class3_Sub28_Sub13();
             if(!var1) {
@@ -316,8 +331,6 @@ final class Class3_Sub13_Sub36 extends Class3_Sub13 {
 
             Class129_Sub1.aClass47_2686.method1097(var2, (long)var0, (byte)-115);
             return var2;
-         } else {
-            return var2;
          }
       } catch (RuntimeException var4) {
          throw Class44.method1067(var4, "ui.IA(" + var0 + ',' + var1 + ')');
@@ -328,13 +341,18 @@ final class Class3_Sub13_Sub36 extends Class3_Sub13 {
 	      try {
 	         AbstractIndexedSprite[] var1 = new AbstractIndexedSprite[Class95.anInt1338];
 
-	         for(int var2 = 0; var2 < Class95.anInt1338; ++var2) {
-	            if(HDToolKit.highDetail) {
-	               var1[var2] = new HDIndexedSprite(Class3_Sub15.anInt2426, Class133.anInt1748, Class164.anIntArray2048[var2], RSByteBuffer.anIntArray2591[var2], Class140_Sub7.anIntArray2931[var2], Class3_Sub13_Sub6.anIntArray3076[var2], Class163_Sub1.aByteArrayArray2987[var2], Class3_Sub13_Sub38.spritePalette);
-	            } else {
+	         for(int var2 = 0; ~Class95.anInt1338 < ~var2; ++var2) {
+	            if(!HDToolKit.highDetail) {
 	               var1[var2] = new LDIndexedSprite(Class3_Sub15.anInt2426, Class133.anInt1748, Class164.anIntArray2048[var2], RSByteBuffer.anIntArray2591[var2], Class140_Sub7.anIntArray2931[var2], Class3_Sub13_Sub6.anIntArray3076[var2], Class163_Sub1.aByteArrayArray2987[var2], Class3_Sub13_Sub38.spritePalette);
+	            } else {
+	               var1[var2] = new HDIndexedSprite(Class3_Sub15.anInt2426, Class133.anInt1748, Class164.anIntArray2048[var2], RSByteBuffer.anIntArray2591[var2], Class140_Sub7.anIntArray2931[var2], Class3_Sub13_Sub6.anIntArray3076[var2], Class163_Sub1.aByteArrayArray2987[var2], Class3_Sub13_Sub38.spritePalette);
 	            }
-             }
+	         }
+
+	         if(var0 != 1854847236) {
+	            aClass94_3428 = (RSString)null;
+	         }
+
 	         Class39.method1035((byte)113);
 	         return var1;
 	      } catch (RuntimeException var3) {

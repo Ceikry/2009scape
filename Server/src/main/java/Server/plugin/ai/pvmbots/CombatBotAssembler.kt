@@ -7,6 +7,9 @@ import core.tools.ItemNames
 import core.tools.RandomFunction
 import plugin.ai.AIPlayer
 import plugin.skill.Skills
+import java.util.*
+import kotlin.collections.ArrayList
+import kotlin.collections.HashMap
 
 class CombatBotAssembler {
     enum class Type{
@@ -27,11 +30,11 @@ class CombatBotAssembler {
             }
         }
 
-        fun assembleRangedBot(tier: Tier, location: Location): CombatBot {
+        fun assembleRangedBot(tier: Tier, location: Location, crossbow: Boolean? = null): CombatBot {
             val bot = CombatBot(location)
 
             generateStats(bot, tier, Skills.RANGE, Skills.DEFENCE)
-            gearRangedBot(bot)
+            gearRangedBot(bot, crossbow ?: Random().nextInt() % 2 == 0)
             return bot
         }
 
@@ -40,6 +43,27 @@ class CombatBotAssembler {
 
             generateStats(bot, tier, Skills.ATTACK, Skills.STRENGTH, Skills.DEFENCE)
             gearMeleeBot(bot)
+            return bot
+        }
+
+        fun assembleMeleeDragonBot(tier: Tier, location: Location): CombatBot{
+            val bot = CombatBot(location)
+            generateStats(bot,tier,Skills.ATTACK, Skills.STRENGTH, Skills.DEFENCE)
+            equipHighest(bot, MELEE_HELMS, 50)
+            equipHighest(bot, MELEE_TOP, 40)
+            equipHighest(bot, MELEE_LEG, 40)
+            equipHighest(bot, MELEE_WEP, 60)
+            return bot
+        }
+
+        fun assembleRangeDragonBot(tier: Tier, location: Location): CombatBot{
+            val bot = CombatBot(location)
+            generateStats(bot,tier,Skills.RANGE,Skills.DEFENCE)
+            equipHighest(bot,RANGE_HELMS,50)
+            equipHighest(bot,RANGE_TOPS,50)
+            equipHighest(bot,RANGE_LEGS,50)
+            equipHighest(bot,CROSSBOWS,50)
+            bot.equipment.add(Item(ItemNames.BRONZE_BOLTS,100000),13,false,false)
             return bot
         }
 
@@ -97,17 +121,22 @@ class CombatBotAssembler {
             bot.fullRestore()
         }
 
-        private fun equipHighest(bot: AIPlayer, set: Array<Int>) {
+        private fun equipHighest(bot: AIPlayer, set: Array<Int>, levelcap: Int? = null) {
             val highestItems = ArrayList<Item>()
             var highest: Item? = null
             for (i in set.indices) {
                 val item = Item(set[i])
                 var canEquip = true
                 (item.definition.configurations.getOrDefault("requirements",null) as HashMap<Int,Int>?)?.let { map ->
-                    map.map {
-                        if (bot.skills.getLevel(it.key) < it.value)
-                            canEquip = false
-                    }
+                    levelcap?.let {levelcap ->
+                        map.map {
+                            if (bot.skills.getLevel(it.key) < it.value || it.value > levelcap)
+                                canEquip = false
+                        }
+                    } ?: map.map {
+                            if (bot.skills.getLevel(it.key) < it.value)
+                                canEquip = false
+                        }
                 }
                 if (canEquip) {
                     if (highest == null) {

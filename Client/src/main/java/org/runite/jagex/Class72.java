@@ -5,6 +5,7 @@ final class Class72 {
    GameObject aClass140_1067;
    int anInt1068;
    GameObject aClass140_1069;
+   static RSString aClass94_1070 = RSString.createRSString("headicons_pk");
    static int anInt1071 = 0;
    static RSString LEFT_PARENTHESES = RSString.createRSString(" (X");
    GameObject aClass140_1073;
@@ -19,7 +20,12 @@ final class Class72 {
    static final Class3_Sub28_Sub11 method1292(byte var0, int var1) {
       try {
          Class3_Sub28_Sub11 var2 = (Class3_Sub28_Sub11)Class3_Sub13_Sub34.aClass47_3407.method1092((long)var1, 1400);
-         if(var2 == null) {
+         if(var2 != null) {
+            return var2;
+         } else {
+            if(var0 <= 23) {
+               aClass94_1070 = (RSString)null;
+            }
 
             byte[] var3 = Class12.aClass153_322.getFile(26, (byte)-122, var1);
             var2 = new Class3_Sub28_Sub11();
@@ -29,8 +35,6 @@ final class Class72 {
 
             Class3_Sub13_Sub34.aClass47_3407.method1097(var2, (long)var1, (byte)59);
             return var2;
-         } else {
-            return var2;
          }
       } catch (RuntimeException var4) {
          throw Class44.method1067(var4, "jj.D(" + var0 + ',' + var1 + ')');
@@ -39,7 +43,7 @@ final class Class72 {
 
    static final void method1293(boolean var0) {
       try {
-         if(!Class3_Sub28_Sub19.aBoolean3779 && Class44.anInt718 != 2) {
+         if(!Class3_Sub28_Sub19.aBoolean3779 && ~Class44.anInt718 != -3) {
             try {
                InputStream_Sub1.aClass94_38.method1577(-1857, Class126.aClient1671);
                if(!var0) {
@@ -209,32 +213,12 @@ final class Class72 {
 
    }
 
-   static final RSString combatLevelColor(int otherPlayer, byte levelByte, int yourPlayer) {
+   static final RSString method1295(int var0, byte var1, int var2) {
       try {
-         int playerLevelDiff = -otherPlayer + yourPlayer;
-         if (levelByte > -52)
-            return (RSString)null;
-         if (playerLevelDiff < -9)
-            return ColorCore.LvlDiffN9;//Solid Red
-         if (playerLevelDiff < -6)
-            return ColorCore.LvlDiffN6;//Dark Orange
-         if (playerLevelDiff < -3)
-            return ColorCore.LvlDiffN3;//Orange
-         if (playerLevelDiff < 0)
-            return ColorCore.LvlDiffN0;//Yellow-Orange
-         if (playerLevelDiff > 9)
-            return ColorCore.LvlDiffP9;//Bright Green
-         if (playerLevelDiff > 6)
-            return ColorCore.LvlDiffP6;//Green
-         if (playerLevelDiff > 3)
-            return ColorCore.LvlDiffP3;//Yellow-Green
-         if (playerLevelDiff > 0)
-            return ColorCore.LvlDiffP0;//Yellow
-
-         return ColorCore.LvlDiffDefault;//Yellow
-
+         int var3 = -var0 + var2;
+         return 8 >= ~var3?(5 >= ~var3?(~var3 <= 2?(0 > var3?Class3_Sub13_Sub33.aClass94_3394:(var1 > -52?(RSString)null:(var3 <= 9?(var3 > 6?Class3_Sub13_Sub1.aClass94_3040:(~var3 >= -4?(0 < var3?Class140_Sub3.aClass94_2723:Class132.aClass94_1738):OutputStream_Sub1.aClass94_50)):Class19.aClass94_431))):Class130.aClass94_1714):Class163_Sub3.aClass94_3006):Class3_Sub13_Sub24.aClass94_3298;
       } catch (RuntimeException var4) {
-         throw Class44.method1067(var4, "jj.E(" + otherPlayer + ',' + levelByte + ',' + yourPlayer + ')');
+         throw Class44.method1067(var4, "jj.E(" + var0 + ',' + var1 + ',' + var2 + ')');
       }
    }
 
@@ -243,6 +227,7 @@ final class Class72 {
          aClass94_1076 = null;
          if(var0 == 1) {
         	LEFT_PARENTHESES = null;
+            aClass94_1070 = null;
          }
       } catch (RuntimeException var2) {
          throw Class44.method1067(var2, "jj.F(" + var0 + ')');
@@ -255,7 +240,9 @@ final class Class72 {
          int var2 = Class92.screenColorRgb();
          float var3 = (float)(255 & var2 >> 16) / 255.0F;
          MouseListeningClass.aFloatArray1919[3] = 1.0F;
-         if(var0 == -50) {
+         if(var0 != -50) {
+            return (float[])null;
+         } else {
             float var4 = (float)(('\uff59' & var2) >> 8) / 255.0F;
             float var6 = 0.58823526F;
             float var5 = (float)(255 & var2) / 255.0F;
@@ -263,8 +250,6 @@ final class Class72 {
             MouseListeningClass.aFloatArray1919[0] = Class151.aFloatArray1934[0] * var3 * var6 * var1;
             MouseListeningClass.aFloatArray1919[1] = var1 * var6 * var4 * Class151.aFloatArray1934[1];
             return MouseListeningClass.aFloatArray1919;
-         } else {
-            return (float[])null;
          }
       } catch (RuntimeException var7) {
          throw Class44.method1067(var7, "jj.A(" + var0 + ')');

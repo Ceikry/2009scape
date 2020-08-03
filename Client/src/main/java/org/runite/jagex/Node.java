@@ -4,6 +4,7 @@ class Node extends Class3 {
 
    static RSString[] aClass94Array2566 = new RSString[200];
    static int anInt2567 = -1;
+   private static RSString aClass94_2568 = RSString.createRSString("Started 3d Library");
    long aLong2569;
    Node aClass3_Sub28_2570;
    static int anInt2571;
@@ -11,6 +12,7 @@ class Node extends Class3 {
    static CacheIndex aClass153_2573;
    static int[] anIntArray2574 = new int[14];
    static int anInt2575;
+   static RSString aClass94_2576 = aClass94_2568;
    static int anInt2577 = 0;
    Node aClass3_Sub28_2578;
 
@@ -22,10 +24,10 @@ class Node extends Class3 {
             method523(40, -17, -52, -32, 9, -51, -85, -84, -19);
          }
 
-         if(var2 == null) {
-            Class70.method1286(var0.anIntArray2755[0], false, (ObjectDefinition)null, 0, (NPC)null, var0.anIntArray2767[0], WorldListCountry.localPlane, var0);
-         } else {
+         if(var2 != null) {
             var2.method134(1);
+         } else {
+            Class70.method1286(var0.anIntArray2755[0], false, (ObjectDefinition)null, 0, (NPC)null, var0.anIntArray2767[0], WorldListCountry.localPlane, var0);
          }
 
       } catch (RuntimeException var3) {
@@ -40,7 +42,7 @@ class Node extends Class3 {
             method520((byte)-89);
          }
 
-         return 0 != var0?(var0 != 1 ?(var0 == 2 ?-var3 + 7:-var2 + 7):var2):var3;
+         return 0 != var0?(~var0 != -2?(~var0 == -3?-var3 + 7:-var2 + 7):var2):var3;
       } catch (RuntimeException var5) {
          throw Class44.method1067(var5, "rg.RA(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ')');
       }
@@ -60,7 +62,9 @@ class Node extends Class3 {
          aClass153_2573 = null;
          if(var0 == -3) {
             aClass94Array2566 = null;
+            aClass94_2568 = null;
             anIntArray2574 = null;
+            aClass94_2576 = null;
          }
       } catch (RuntimeException var2) {
          throw Class44.method1067(var2, "rg.QA(" + var0 + ')');

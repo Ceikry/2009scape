@@ -162,6 +162,8 @@ class ItemConfigParser {
          */
         const val REQUIREMENTS = "requirements"
 
+        const val VALUE = "value"
+
         /**
          * The grand exchange buying limit attribute key.
          */
@@ -276,6 +278,7 @@ class ItemConfigParser {
                         "low_alchemy",
                         "high_alchemy",
                         "grand_exchange_price",
+                        "value",
                         "id" -> configs.put(it.key.toString(),it.value.toString().toInt())
 
                         //Strings

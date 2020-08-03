@@ -11,4 +11,35 @@
 
     <ObjectAction mode="remove" id="356" x="2804" y="3428" z="0"/>
     <ObjectAction mode="add" id="356" x="2804" y="3428" z="0"/>
+    <ObjectAction mode="remove" id="8770" x="2354" y="3174" z="0"/>
+    <ObjectAction mode="remove" id="8770" x="2355" y="3174" z="0"/>
+    <ObjectAction mode="remove" id="8770" x="2355" y="3172" z="0"/>
+    <ObjectAction mode="remove" id="8770" x="2354" y="3172" z="0"/>
+    <ObjectAction mode="remove" id="8770" x="2355" y="3171" z="0"/>
+    <ObjectAction mode="remove" id="8770" x="2354" y="3171" z="0"/>
+    <ObjectAction mode="remove" id="8770" x="2355" y="3169" z="0"/>
+    <ObjectAction mode="remove" id="8770" x="2354" y="3169" z="0"/>
+    <ObjectAction mode="remove" id="8770" x="2351" y="3168" z="0"/>
+    <ObjectAction mode="remove" id="8770" x="2351" y="3170" z="0"/>
+    <ObjectAction mode="remove" id="8770" x="2350" y="3169" z="0"/>
+    <ObjectAction mode="remove" id="8770" x="2350" y="3174" z="0"/>
+    <ObjectAction mode="remove" id="8770" x="2352" y="3175" z="0"/>
+    <ObjectAction mode="remove" id="8772" x="2357" y="3172" z="0"/>
+    <ObjectAction mode="remove" id="8772" x="2357" y="3170" z="0"/>
+
+    <ObjectAction mode="remove" id="8768" x="2351" y="3169" z="0"/>
+    <ObjectAction mode="remove" id="8768" x="2351" y="3174" z="0"/>
+    <ObjectAction mode="remove" id="8751" x="2354" y="3173" z="0"/>
+    <ObjectAction mode="remove" id="8751" x="2354" y="3170" z="0"/>
+
+    <ObjectAction mode="add" id="2213" x="2357" y="3173" z="0"/>
+    <ObjectAction mode="add" id="2213" x="2357" y="3172" z="0"/>
+    <ObjectAction mode="add" id="2213" x="2357" y="3171" z="0"/>
+    <ObjectAction mode="add" id="2213" x="2357" y="3170" z="0"/>
+    <ObjectAction mode="add" id="6552" x="2354" y="3167" z="0" direction="e"/>
+    <ObjectAction mode="add" id="36972" x="2351" y="3167" z="0" direction="e"/>
+    <ObjectAction mode="add" id="17010" x="2345" y="3180" z="0" />
+
+
+
 </parsing>

@@ -28,14 +28,14 @@ final class Class49 {
             var2 = 4;
          }
 
-         for(int var4 = 0; var2 > var4; ++var4) {
+         for(int var4 = 0; ~var4 > ~var2; ++var4) {
             Class58.method1194(-16385);
 
-            for(int var5 = 0; var5 < 13; ++var5) {
-               for(int var6 = 0; var6 < 13; ++var6) {
+            for(int var5 = 0; -14 < ~var5; ++var5) {
+               for(int var6 = 0; -14 < ~var6; ++var6) {
                   int var8 = ObjectDefinition.anIntArrayArrayArray1497[var4][var5][var6];
                   boolean var7 = false;
-                  if(var8 != -1) {
+                  if(~var8 != 0) {
                      int var9 = var8 >> 24 & 3;
                      if(!var0 || 0 == var9) {
                         int var12 = 2047 & var8 >> 3;
@@ -43,8 +43,8 @@ final class Class49 {
                         int var11 = 1023 & var8 >> 14;
                         int var13 = (var11 / 8 << 8) + var12 / 8;
 
-                        for(int var14 = 0; var14 < Class3_Sub24_Sub3.anIntArray3494.length; ++var14) {
-                           if(var13 == Class3_Sub24_Sub3.anIntArray3494[var14] && null != var3[var14]) {
+                        for(int var14 = 0; ~Class3_Sub24_Sub3.anIntArray3494.length < ~var14; ++var14) {
+                           if(~Class3_Sub24_Sub3.anIntArray3494[var14] == ~var13 && null != var3[var14]) {
                               Canvas_Sub2.method60(var10, 8 * var5, var4, Class86.aClass91Array1182, var6 * 8, (byte)-100, var3[var14], var9, (var12 & 7) * 8, 8 * (var11 & 7), var0);
                               var7 = true;
                               break;
@@ -94,11 +94,11 @@ final class Class49 {
             byte[] var3 = new byte[512];
 
             int var5;
-            for(var5 = 0; var5 < 255; ++var5) {
+            for(var5 = 0; -256 < ~var5; ++var5) {
                var3[var5] = (byte)var5;
             }
 
-            for(var5 = 0; var5 < 255; ++var5) {
+            for(var5 = 0; ~var5 > -256; ++var5) {
                int var6 = 255 - var5;
                int var7 = Class100.method1603((byte)125, var6, var4);
                byte var8 = var3[var7];
@@ -169,7 +169,7 @@ final class Class49 {
             Class3_Sub13_Sub34.method331(1L, 64);
          }
 
-         if(var4.anInt978 == 1) {
+         if(~var4.anInt978 == -2) {
             DataInputStream var5 = (DataInputStream)var4.anObject974;
             var5.read();
             var5.close();
@@ -205,13 +205,13 @@ final class Class49 {
             }
 
             Class3_Sub13_Sub34.anInt3415 = 1;
-            Class140_Sub7.aClass94Array2935[0] = TextCore.HasCancel;
+            Class140_Sub7.aClass94Array2935[0] = Class161.aClass94_2031;
             Class163_Sub2_Sub1.aClass94Array4016[0] = Class3_Sub28_Sub14.aClass94_3672;
             Class3_Sub13_Sub7.aShortArray3095[0] = 1005;
             Class114.anIntArray1578[0] = Class3_Sub28_Sub5.anInt3590;
          }
 
-         if(Class3_Sub28_Sub12.anInt3655 != -1) {
+         if(0 != ~Class3_Sub28_Sub12.anInt3655) {
             Class52.method1160(-113, Class3_Sub28_Sub12.anInt3655);
          }
 
@@ -235,7 +235,7 @@ final class Class49 {
             }
 
             Class3_Sub23.anInt2535 = Class44.anInt719;
-            if(Class3_Sub28_Sub12.anInt3655 != -1) {
+            if(~Class3_Sub28_Sub12.anInt3655 != 0) {
                Class3_Sub28_Sub3.anInt3557 = 0;
                Class8.method841(true);
             }
@@ -254,7 +254,7 @@ final class Class49 {
                   Class84.method1419(-117);
                }
             } else if(null == Class3_Sub28_Sub16.aClass11_3708) {
-               if(Class53.anInt865 != -1) {
+               if(0 != ~Class53.anInt865) {
                   Class24.method950((RSInterface)null, -86, Node.anInt2567, Class53.anInt865);
                }
             } else {
@@ -267,7 +267,7 @@ final class Class49 {
             }
 
             Class3_Sub13_Sub13.method229(var1, 20827);
-            if(CS2Script.anInt2440 == 1) {
+            if(-2 == ~CS2Script.anInt2440) {
                CS2Script.anInt2440 = 2;
             }
 
@@ -275,20 +275,20 @@ final class Class49 {
                ObjectDefinition.anInt1521 = 2;
             }
 
-            if(Class3_Sub28_Sub15.anInt3689 == 3) {
-               for(int var2 = 0; Class3_Sub28_Sub3.anInt3557 > var2; ++var2) {
+            if(~Class3_Sub28_Sub15.anInt3689 == -4) {
+               for(int var2 = 0; ~var2 > ~Class3_Sub28_Sub3.anInt3557; ++var2) {
                   if(!Class130.aBooleanArray1712[var2]) {
                      if(Class163_Sub1_Sub1.aBooleanArray4008[var2]) {
-                        if(HDToolKit.highDetail) {
-                           Class22.method930(Class155.anIntArray1969[var2], Player.anIntArray3954[var2], Class3_Sub28_Sub18.anIntArray3768[var2], Class140_Sub4.anIntArray2794[var2], 16711680, 128);
-                        } else {
+                        if(!HDToolKit.highDetail) {
                            Class74.method1312(Class155.anIntArray1969[var2], Player.anIntArray3954[var2], Class3_Sub28_Sub18.anIntArray3768[var2], Class140_Sub4.anIntArray2794[var2], 16711680, 128);
+                        } else {
+                           Class22.method930(Class155.anIntArray1969[var2], Player.anIntArray3954[var2], Class3_Sub28_Sub18.anIntArray3768[var2], Class140_Sub4.anIntArray2794[var2], 16711680, 128);
                         }
                      }
-                  } else if(HDToolKit.highDetail) {
-                     Class22.method930(Class155.anIntArray1969[var2], Player.anIntArray3954[var2], Class3_Sub28_Sub18.anIntArray3768[var2], Class140_Sub4.anIntArray2794[var2], 16711935, 128);
-                  } else {
+                  } else if(!HDToolKit.highDetail) {
                      Class74.method1312(Class155.anIntArray1969[var2], Player.anIntArray3954[var2], Class3_Sub28_Sub18.anIntArray3768[var2], Class140_Sub4.anIntArray2794[var2], 16711935, 128);
+                  } else {
+                     Class22.method930(Class155.anIntArray1969[var2], Player.anIntArray3954[var2], Class3_Sub28_Sub18.anIntArray3768[var2], Class140_Sub4.anIntArray2794[var2], 16711935, 128);
                   }
                }
             }
@@ -344,7 +344,7 @@ final class Class49 {
          int var10 = Class40.method1040(Class3_Sub28_Sub18.anInt3765, var4 - var2, (byte)0, Class101.anInt1425);
          Class3_Sub13_Sub23_Sub1.method282(Class38.anIntArrayArray663[var1], var10, -98, var9, var0);
 
-         while(var6 > var5) {
+         while(~var5 > ~var6) {
             var8 += 2;
             var7 += var8;
             int var11;
@@ -372,7 +372,7 @@ final class Class49 {
             ++var5;
             var11 = -var5 + var1;
             var12 = var5 + var1;
-            if(var12 >= Class159.anInt2020 && var11 <= Class57.anInt902) {
+            if(var12 >= Class159.anInt2020 && ~Class57.anInt902 <= ~var11) {
                var13 = Class40.method1040(Class3_Sub28_Sub18.anInt3765, var4 - -var6, (byte)0, Class101.anInt1425);
                var14 = Class40.method1040(Class3_Sub28_Sub18.anInt3765, -var6 + var4, (byte)0, Class101.anInt1425);
                if(var12 <= Class57.anInt902) {

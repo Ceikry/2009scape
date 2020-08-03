@@ -60,7 +60,7 @@ final class Class8 {
       try {
          if(null != this.aClass151_Sub1Array107) {
             int var2;
-            for(var2 = 0; var2 < this.aClass151_Sub1Array107.length; ++var2) {
+            for(var2 = 0; ~this.aClass151_Sub1Array107.length < ~var2; ++var2) {
                if(this.aClass151_Sub1Array107[var2] != null) {
                   this.aClass151_Sub1Array107[var2].method2110(0);
                }
@@ -103,17 +103,17 @@ final class Class8 {
 
          int var10;
          int var11;
-         if(var9 == 1 || var9 == 3) {
-            var10 = var0.SizeY;
-            var11 = var0.SizeX;
+         if(-2 != ~var9 && -4 != ~var9) {
+            var11 = var0.anInt1485;
+            var10 = var0.anInt1480;
          } else {
-            var11 = var0.SizeY;
-            var10 = var0.SizeX;
+            var10 = var0.anInt1485;
+            var11 = var0.anInt1480;
          }
 
          int var14;
          int var15;
-         if(var7 - -var11 > 104) {
+         if(-105 > ~(var7 - -var11)) {
             var15 = 1 + var7;
             var14 = var7;
          } else {
@@ -137,7 +137,7 @@ final class Class8 {
          int var20 = 0;
          int var19 = var18[var12][var15] + var18[var12][var14] + var18[var13][var14] + var18[var13][var15] >> 2;
          int[][] var21;
-         if(var8 != 0) {
+         if(~var8 != -1) {
             var21 = Class44.anIntArrayArrayArray723[0];
             var20 = -(var21[var12][var15] + var21[var13][var14] + (var21[var12][var14] - -var21[var13][var15]) >> 2) + var19;
          }
@@ -174,7 +174,9 @@ final class Class8 {
 
    static final CacheIndex getCacheIndex(boolean var0, boolean var1, boolean var2, int var3, boolean var4) {
       try {
-         if(var4) {
+         if(!var4) {
+            return (CacheIndex)null;
+         } else {
             Class41 var5 = null;
             if(null != Class101.aClass30_1422) {
                var5 = new Class41(var3, Class101.aClass30_1422, Class163_Sub2.aClass30Array2998[var3], 1000000);
@@ -185,8 +187,6 @@ final class Class8 {
                RSByteBuffer.aClass151_Sub1Array2601[var3].method2101(true);
             }
             return new CacheIndex(RSByteBuffer.aClass151_Sub1Array2601[var3], var0, var2);
-         } else {
-            return (CacheIndex)null;
          }
       } catch (RuntimeException var6) {
          throw Class44.method1067(var6, "al.B(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ')');
@@ -259,9 +259,7 @@ final class Class8 {
 
    private final Class151_Sub1 method847(Class41 var1, int var2, int var3, boolean var4, Class41 var5) {
       try {
-         if(null == this.aClass3_Sub30_99) {
-            throw new RuntimeException();
-         } else {
+         if(null != this.aClass3_Sub30_99) {
             this.aClass3_Sub30_99.index = 5 + var3 * 8;
             if(var2 >= -1) {
                return (Class151_Sub1)null;
@@ -278,6 +276,8 @@ final class Class8 {
             } else {
                throw new RuntimeException();
             }
+         } else {
+            throw new RuntimeException();
          }
       } catch (RuntimeException var9) {
          throw Class44.method1067(var9, "al.A(" + (var1 != null?"{...}":"null") + ',' + var2 + ',' + var3 + ',' + var4 + ',' + (var5 != null?"{...}":"null") + ')');

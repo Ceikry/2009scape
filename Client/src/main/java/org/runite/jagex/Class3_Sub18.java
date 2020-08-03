@@ -33,7 +33,7 @@ final class Class3_Sub18 extends Class3 {
 
    static final void method383(int var0, int var1) {
       try {
-         if(var1 == Class23.anInt453 && var1 != 0) {
+         if(var1 == Class23.anInt453 && ~var1 != -1) {
             Interface5 var2 = Class2.anInterface5Array70[var1];
             var2.method23(Class3_Sub13_Sub21.anInt3263);
          }

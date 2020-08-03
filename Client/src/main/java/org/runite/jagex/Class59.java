@@ -114,10 +114,7 @@ final class Class59 {
          var9 = anIntArray927[var5];
          int var10 = var4 - var8;
          int var12 = (var10 < var8?var10:var8) << 1;
-         if(var9 == 0) {
-            aBooleanArray919[var5] = false;
-            anIntArray927[var5] = var8;
-         } else {
+         if(var9 != 0) {
             aBooleanArray919[var6] = aBooleanArray919[var7] = true;
             aBooleanArray919[var5] = true;
             if(var9 >= var12) {
@@ -125,6 +122,9 @@ final class Class59 {
             } else {
                anIntArray927[var5] = (var9 & 1) != 0?var8 - (var9 + 1) / 2:var8 + var9 / 2;
             }
+         } else {
+            aBooleanArray919[var5] = false;
+            anIntArray927[var5] = var8;
          }
       }
 
@@ -172,7 +172,9 @@ final class Class59 {
 
    Class59() {
       int var1 = Class3_Sub14.method368(16);
-      if(var1 == 1) {
+      if(var1 != 1) {
+         throw new RuntimeException();
+      } else {
          int var2 = Class3_Sub14.method368(5);
          int var3 = 0;
          this.anIntArray922 = new int[var2];
@@ -237,8 +239,6 @@ final class Class59 {
             aBooleanArray919 = new boolean[var5];
          }
 
-      } else {
-         throw new RuntimeException();
       }
    }
 
@@ -252,7 +252,9 @@ final class Class59 {
 
    final boolean method1205() {
       boolean var1 = Class3_Sub14.method364() != 0;
-      if(var1) {
+      if(!var1) {
+         return false;
+      } else {
          int var2 = this.anIntArray921.length;
 
          int var3;
@@ -284,8 +286,6 @@ final class Class59 {
          }
 
          return true;
-      } else {
-         return false;
       }
    }
 

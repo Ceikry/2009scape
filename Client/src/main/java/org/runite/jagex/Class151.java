@@ -5,7 +5,7 @@ abstract class Class151 {
    static RSString aClass94_1932 = RSString.createRSString(")4a=");
    static RSInterface aClass11_1933;
    static float[] aFloatArray1934 = new float[]{0.073F, 0.169F, 0.24F, 1.0F};
-   static RSString COMMAND_BREAK_CLIENT_CONNECTION = RSString.createRSString("::clientdrop");
+   static RSString aClass94_1935 = RSString.createRSString("::clientdrop");
    static Class8 aClass8_1936;
 
 
@@ -14,7 +14,7 @@ abstract class Class151 {
          aClass8_1936 = null;
          aClass94_1932 = null;
          aFloatArray1934 = null;
-         COMMAND_BREAK_CLIENT_CONNECTION = null;
+         aClass94_1935 = null;
          aClass11_1933 = null;
          if(var0 != 1) {
             method2096(-83, 44, -77, 121L);

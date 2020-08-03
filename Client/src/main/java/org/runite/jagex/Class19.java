@@ -13,6 +13,7 @@ final class Class19 {
    long aLong428 = 0L;
    GameObject aClass140_429;
    int anInt430;
+   static RSString aClass94_431 = RSString.createRSString("<col=00ff00>");
    int anInt432;
    static int anInt433 = 0;
 
@@ -23,6 +24,8 @@ final class Class19 {
          if(var0 != 112) {
             method906((byte)-42);
          }
+
+         aClass94_431 = null;
       } catch (RuntimeException var2) {
          throw Class44.method1067(var2, "df.A(" + var0 + ')');
       }

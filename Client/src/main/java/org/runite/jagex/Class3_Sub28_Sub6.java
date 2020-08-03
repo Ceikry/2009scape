@@ -26,16 +26,16 @@ final class Class3_Sub28_Sub6 extends Node {
 
    static final void d(int var0) {
       try {
-         if(NPCDefinition.anInt1252 != -1 && Class3_Sub7.anInt2293 != -1) {
+         if(0 != ~NPCDefinition.anInt1252 && 0 != ~Class3_Sub7.anInt2293) {
             int var1 = (Class163_Sub2_Sub1.anInt4020 * (-Class134.anInt1759 + Class3_Sub13.anInt2383) >> 16) + Class134.anInt1759;
             float[] var3 = new float[3];
             Class163_Sub2_Sub1.anInt4020 += var1;
-            if(Class163_Sub2_Sub1.anInt4020 >= 65535) {
+            if(~Class163_Sub2_Sub1.anInt4020 <= -65536) {
                Class163_Sub2_Sub1.anInt4020 = '\uffff';
-               if(Class3_Sub28_Sub14.aBoolean3668) {
-                  Class3_Sub28_Sub1.aBoolean3531 = false;
-               } else {
+               if(!Class3_Sub28_Sub14.aBoolean3668) {
                   Class3_Sub28_Sub1.aBoolean3531 = true;
+               } else {
+                  Class3_Sub28_Sub1.aBoolean3531 = false;
                }
 
                Class3_Sub28_Sub14.aBoolean3668 = true;
@@ -55,7 +55,7 @@ final class Class3_Sub28_Sub6 extends Node {
                int var10;
                int var11;
                int var12;
-               for(int var5 = 0; var5 < 3; ++var5) {
+               for(int var5 = 0; -4 < ~var5; ++var5) {
                   var8 = (Class58.anIntArrayArrayArray911[NPCDefinition.anInt1252][var4 - -2][var5] + -Class58.anIntArrayArrayArray911[NPCDefinition.anInt1252][var4 - -3][var5] - -Class58.anIntArrayArrayArray911[NPCDefinition.anInt1252][var4 - -2][var5]) * 3;
                   var9 = Class58.anIntArrayArrayArray911[NPCDefinition.anInt1252][var4][var5];
                   var7 = 3 * Class58.anIntArrayArrayArray911[NPCDefinition.anInt1252][var4 + 1][var5];
@@ -72,7 +72,7 @@ final class Class3_Sub28_Sub6 extends Node {
                float[] var16 = new float[3];
                var6 = Class39.anInt670 * 2;
 
-               for(var7 = 0; var7 < 3; ++var7) {
+               for(var7 = 0; ~var7 > -4; ++var7) {
                   var8 = Class58.anIntArrayArrayArray911[Class3_Sub7.anInt2293][var6][var7] * 3;
                   var10 = (Class58.anIntArrayArrayArray911[Class3_Sub7.anInt2293][2 + var6][var7] - Class58.anIntArrayArrayArray911[Class3_Sub7.anInt2293][3 + var6][var7] + Class58.anIntArrayArrayArray911[Class3_Sub7.anInt2293][var6 - -2][var7]) * 3;
                   var11 = Class58.anIntArrayArrayArray911[Class3_Sub7.anInt2293][var6][var7];
@@ -142,7 +142,9 @@ final class Class3_Sub28_Sub6 extends Node {
    static final Class2 c(int var0, int var1) {
       try {
          Class2 var2 = (Class2)Class3_Sub13_Sub34.aClass93_3412.get((long)var0, (byte)121);
-         if(var2 == null) {
+         if(var2 != null) {
+            return var2;
+         } else {
             byte[] var3 = Class54.aClass153_878.getFile(34, (byte)-122, var0);
             if(var1 != 0) {
                aClass94_3595 = (RSString)null;
@@ -155,8 +157,6 @@ final class Class3_Sub28_Sub6 extends Node {
 
             Class3_Sub13_Sub34.aClass93_3412.put((byte)-86, var2, (long)var0);
             return var2;
-         } else {
-            return var2;
          }
       } catch (RuntimeException var4) {
          throw Class44.method1067(var4, "da.R(" + var0 + ',' + var1 + ')');
@@ -164,7 +164,7 @@ final class Class3_Sub28_Sub6 extends Node {
    }
 
    static final String a(String var0, String var1, int var2, String var3) {
-      for(int var4 = var3.indexOf(var0); var4 != -1; var4 = var3.indexOf(var0, var4 + var1.length())) {
+      for(int var4 = var3.indexOf(var0); 0 != ~var4; var4 = var3.indexOf(var0, var4 + var1.length())) {
          var3 = var3.substring(0, var4) + var1 + var3.substring(var0.length() + var4);
       }
 
@@ -231,7 +231,7 @@ final class Class3_Sub28_Sub6 extends Node {
    final void g(byte var1) {
       try {
          this.aLong2569 |= Long.MIN_VALUE;
-         if(this.b(true) == 0) {
+         if(~this.b(true) == -1L) {
             Class126.aClass13_1666.method879(this, (byte)-128);
          }
 

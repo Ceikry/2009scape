@@ -26,18 +26,18 @@ final class Class97 {
 
    final int[][][] method1589(byte var1) {
       try {
-         if(this.anInt1367 == this.anInt1369) {
+         if(~this.anInt1369 != ~this.anInt1367) {
+            throw new RuntimeException("Can only retrieve a full image cache");
+         } else {
             if(var1 > -12) {
                this.anInt1365 = -104;
             }
 
-            for(int var2 = 0; var2 < this.anInt1367; ++var2) {
+            for(int var2 = 0; ~this.anInt1367 < ~var2; ++var2) {
                this.aClass3_Sub20Array1371[var2] = Class3_Sub28_Sub1.aClass3_Sub20_3532;
             }
 
             return this.anIntArrayArrayArray1362;
-         } else {
-            throw new RuntimeException("Can only retrieve a full image cache");
          }
       } catch (RuntimeException var3) {
          throw Class44.method1067(var3, "nd.F(" + var1 + ')');
@@ -47,7 +47,7 @@ final class Class97 {
    final void method1590(byte var1) {
       try {
          if(var1 < -1) {
-            for(int var2 = 0; var2 < this.anInt1367; ++var2) {
+            for(int var2 = 0; ~this.anInt1367 < ~var2; ++var2) {
                this.anIntArrayArrayArray1362[var2][0] = null;
                this.anIntArrayArrayArray1362[var2][1] = null;
                this.anIntArrayArrayArray1362[var2][2] = null;
@@ -121,11 +121,7 @@ final class Class97 {
    final int[][] method1594(byte var1, int var2) {
       try {
          int var3 = -50 % ((var1 - -57) / 57);
-         if(this.anInt1367 == this.anInt1369) {
-            this.aBoolean1379 = null == this.aClass3_Sub20Array1371[var2];
-            this.aClass3_Sub20Array1371[var2] = Class3_Sub28_Sub1.aClass3_Sub20_3532;
-            return this.anIntArrayArrayArray1362[var2];
-         } else {
+         if(this.anInt1367 != this.anInt1369) {
             if(1 == this.anInt1367) {
                this.aBoolean1379 = this.anInt1365 != var2;
                this.anInt1365 = var2;
@@ -134,7 +130,7 @@ final class Class97 {
                Class3_Sub20 var4 = this.aClass3_Sub20Array1371[var2];
                if(null == var4) {
                   this.aBoolean1379 = true;
-                  if(this.anInt1367 > this.anInt1368) {
+                  if(~this.anInt1368 > ~this.anInt1367) {
                      var4 = new Class3_Sub20(var2, this.anInt1368);
                      ++this.anInt1368;
                   } else {
@@ -152,6 +148,10 @@ final class Class97 {
                this.aClass61_1366.method1216(64, var4);
                return this.anIntArrayArrayArray1362[var4.anInt2483];
             }
+         } else {
+            this.aBoolean1379 = null == this.aClass3_Sub20Array1371[var2];
+            this.aClass3_Sub20Array1371[var2] = Class3_Sub28_Sub1.aClass3_Sub20_3532;
+            return this.anIntArrayArrayArray1362[var2];
          }
       } catch (RuntimeException var6) {
          throw Class44.method1067(var6, "nd.D(" + var1 + ',' + var2 + ')');
@@ -179,6 +179,7 @@ final class Class97 {
       }
 
       aClass94_1374 = RSString.createRSString("zap");
+      aClass94_1377 = RSString.createRSString("Abbrechen");
       anIntArrayArray1373 = new int[104][104];
       aClass94_1380 = RSString.createRSString(")4p=");
    }

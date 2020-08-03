@@ -53,14 +53,14 @@ final class Class3_Sub28_Sub9 extends Node {
 
    private final void method579(int var1, RSByteBuffer var2, int var3) {
       try {
-         if(var1 == 1) {
-            this.anInt3617 = var2.getByte((byte)-71);
-         } else {
+         if(~var1 != -2) {
             if(var1 == 2) {
                this.anInt3614 = var2.getInt();
-            } else if(var1 == 5) {
+            } else if(-6 == ~var1) {
                this.aClass94_3619 = var2.getString();
             }
+         } else {
+            this.anInt3617 = var2.getByte((byte)-71);
          }
 
          if(var3 != 0) {
@@ -87,10 +87,10 @@ final class Class3_Sub28_Sub9 extends Node {
    static final void method581(CacheIndex var0, int var1, CacheIndex var2) {
       try {
          Class3_Sub13.aClass3_Sub28_Sub17_2379 = Class73.method1300(0, Class96.anInt1352, (byte)124, var2, var0);
-         if(HDToolKit.highDetail) {
-            Class157.aClass3_Sub28_Sub17_Sub1_2000 = Class70.method1287(Class96.anInt1352, 0, var0, var2, -1);
-         } else {
+         if(!HDToolKit.highDetail) {
             Class157.aClass3_Sub28_Sub17_Sub1_2000 = (Class3_Sub28_Sub17_Sub1)Class3_Sub13.aClass3_Sub28_Sub17_2379;
+         } else {
+            Class157.aClass3_Sub28_Sub17_Sub1_2000 = Class70.method1287(Class96.anInt1352, 0, var0, var2, -1);
          }
 
          Class126.aClass3_Sub28_Sub17_1669 = Class73.method1300(var1, Class75_Sub2.anInt2643, (byte)125, var2, var0);

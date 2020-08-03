@@ -5,23 +5,61 @@ final class NPC extends Class140_Sub4 {
 	static boolean aBoolean3975 = false;
 	NPCDefinition definition;
 	static Class3_Sub28_Sub16[] aClass3_Sub28_Sub16Array3977;
+	private static RSString aClass94_3978 = RSString.createRSString("Dec");
 	static float aFloat3979;
+	private static RSString aClass94_3980 = RSString.createRSString("Jul");
+	private static RSString aClass94_3982 = RSString.createRSString("May");
+	private static RSString aClass94_3983 = RSString.createRSString("Nov");
+	private static RSString aClass94_3984 = RSString.createRSString("Mar");
 	static int[] anIntArray3986 = new int[32];
+	private static RSString aClass94_3987 = RSString.createRSString("flash3:");
+	static RSString aClass94_3988 = aClass94_3987;
+	static RSString aClass94_3981 = aClass94_3987;
+	private static RSString aClass94_3989 = RSString.createRSString("Jan");
+	private static RSString aClass94_3990 = RSString.createRSString("Feb");
+	static RSString aClass94_3991 = RSString.createRSString("ondulation:");
+	static RSString aClass94_3992 = RSString.createRSString("loginscreen");
 	static CacheIndex aClass153_3993;
 	static CacheIndex aClass153_3994;
 	static int anInt3995;
+	private static RSString aClass94_3996 = RSString.createRSString("Aug");
 	static int[] anIntArray3997 = new int[]{19, 55, 38, 155, 255, 110, 137, 205, 76};
+	static RSString aClass94_3998 = RSString.createRSString(":trade:");
+	private static RSString aClass94_3999 = RSString.createRSString("Apr");
+	private static RSString aClass94_4000 = RSString.createRSString("Jun");
 	static int anInt4001;
 	static int anInt4002 = 0;
+	private static RSString aClass94_4003 = RSString.createRSString("Sep");
+	private static RSString aClass94_4004 = RSString.createRSString("Oct");
+	static RSString[] aClass94Array3985 = new RSString[]{aClass94_3989, aClass94_3990, aClass94_3984, aClass94_3999, aClass94_3982, aClass94_4000, aClass94_3980, aClass94_3996, aClass94_4003, aClass94_4004, aClass94_3983, aClass94_3978};
 
 	public static void method1983(int var0) {
 		try {
 			anIntArray3986 = null;
+			aClass94_3984 = null;
+			aClass94_3983 = null;
+			aClass94_3989 = null;
 			if(var0 == -3) {
 				aClass153_3994 = null;
 				anIntArray3997 = null;
+				aClass94_4004 = null;
+				aClass94_3991 = null;
+				aClass94_3998 = null;
+				aClass94_3999 = null;
 				aClass3_Sub28_Sub16Array3977 = null;
+				aClass94_3978 = null;
+				aClass94_3992 = null;
+				aClass94_3990 = null;
+				aClass94_3996 = null;
+				aClass94_3981 = null;
 				aClass153_3993 = null;
+				aClass94_3987 = null;
+				aClass94Array3985 = null;
+				aClass94_3982 = null;
+				aClass94_3988 = null;
+				aClass94_3980 = null;
+				aClass94_4003 = null;
+				aClass94_4000 = null;
 			}
 		} catch (RuntimeException var2) {
 			throw Class44.method1067(var2, "km.N(" + var0 + ')');
@@ -30,13 +68,13 @@ final class NPC extends Class140_Sub4 {
 
 	static final int method1984(int var0, int var1, int var2) {
 		try {
-			if(var1 == 38) {
+			if(var1 != 38) {
+				return 88;
+			} else {
 				int var3 = 57 * var2 + var0;
 				var3 ^= var3 << 13;
 				int var4 = Integer.MAX_VALUE & 1376312589 + (var3 * var3 * 15731 - -789221) * var3;
 				return (var4 & 133802063) >> 19;
-			} else {
-				return 88;
 			}
 		} catch (RuntimeException var5) {
 			throw Class44.method1067(var5, "km.S(" + var0 + ',' + var1 + ',' + var2 + ')');
@@ -65,11 +103,11 @@ final class NPC extends Class140_Sub4 {
 					method1983(19);
 				}
 
-				if(var1 instanceof Class144) {
+				if(!(var1 instanceof Class144)) {
+					throw new IllegalArgumentException();
+				} else {
 					Class144 var3 = (Class144)var1;
 					return var3.method2064(26);
-				} else {
-					throw new IllegalArgumentException();
 				}
 			}
 		} catch (RuntimeException var4) {
@@ -80,8 +118,8 @@ final class NPC extends Class140_Sub4 {
 	final void animate(int var1, int var2, int var3, int var4, int var5, int var6, int var7, int var8, long var9, int var11, Class127_Sub1 var12) {
 		try {
 			if(this.definition != null) {
-				AnimationDefinition var13 = this.anInt2771 != -1 && this.anInt2828 == 0 ?Client.getAnimationDefinition(this.anInt2771, (byte)-20):null;
-				AnimationDefinition var14 = -1 != this.anInt2764 && (this.method1965(false).anInt368 != this.anInt2764 || var13 == null)?Client.getAnimationDefinition(this.anInt2764, (byte)-20):null;
+				AnimationDefinition var13 = 0 != ~this.anInt2771 && -1 == ~this.anInt2828?Client.getAnimationDefinition(this.anInt2771, (byte)-20):null;
+				AnimationDefinition var14 = -1 != this.anInt2764 && (~this.anInt2764 != ~this.method1965(false).anInt368 || var13 == null)?Client.getAnimationDefinition(this.anInt2764, (byte)-20):null;
 				Model var15 = this.definition.method1476(this.aClass145Array2809, this.anInt2793, (byte)-116, this.anInt2813, this.anInt2776, this.anInt2760, this.anInt2832, var14, this.anInt2802, var13);
 				if(var15 != null) {
 					this.anInt2820 = var15.method1871();
@@ -109,17 +147,17 @@ final class NPC extends Class140_Sub4 {
 					this.method1971(var15, (byte)-111);
 					this.method1969((byte)115, var15, var1);
 					var17 = null;
-					if(this.anInt2842 != -1 && -1 != this.anInt2805) {
+					if(~this.anInt2842 != 0 && -1 != this.anInt2805) {
 						GraphicDefinition var21 = RenderAnimationDefinition.getGraphicDefinition((byte)42, this.anInt2842);
 						var17 = var21.method966(this.anInt2826, (byte)-30, this.anInt2805, this.anInt2761);
 						if(var17 != null) {
 							var17.method1897(0, -this.anInt2799, 0);
 							if(var21.aBoolean536) {
-								if(Class3_Sub13_Sub16.anInt3198 != 0) {
+								if(-1 != ~Class3_Sub13_Sub16.anInt3198) {
 									var17.method1896(Class3_Sub13_Sub16.anInt3198);
 								}
 
-								if(Class3_Sub28_Sub9.anInt3623 != 0) {
+								if(~Class3_Sub28_Sub9.anInt3623 != -1) {
 									var17.method1886(Class3_Sub28_Sub9.anInt3623);
 								}
 
@@ -130,20 +168,7 @@ final class NPC extends Class140_Sub4 {
 						}
 					}
 
-					if(HDToolKit.highDetail) {
-						if(this.definition.size == 1) {
-							var15.aBoolean2699 = true;
-						}
-
-						var15.animate(var1, var2, var3, var4, var5, var6, var7, var8, var9, var11, this.aClass127_Sub1_2801);
-						if(var17 != null) {
-							if(this.definition.size == 1) {
-								var17.aBoolean2699 = true;
-							}
-
-							var17.animate(var1, var2, var3, var4, var5, var6, var7, var8, var9, var11, this.aClass127_Sub1_2801);
-						}
-					} else {
+					if(!HDToolKit.highDetail) {
 						if(null != var17) {
 							var15 = ((Class140_Sub1_Sub2)var15).method1943(var17);
 						}
@@ -153,6 +178,19 @@ final class NPC extends Class140_Sub4 {
 						}
 
 						var15.animate(var1, var2, var3, var4, var5, var6, var7, var8, var9, var11, this.aClass127_Sub1_2801);
+					} else {
+						if(-2 == ~this.definition.size) {
+							var15.aBoolean2699 = true;
+						}
+
+						var15.animate(var1, var2, var3, var4, var5, var6, var7, var8, var9, var11, this.aClass127_Sub1_2801);
+						if(var17 != null) {
+							if(-2 == ~this.definition.size) {
+								var17.aBoolean2699 = true;
+							}
+
+							var17.animate(var1, var2, var3, var4, var5, var6, var7, var8, var9, var11, this.aClass127_Sub1_2801);
+						}
 					}
 
 				}
@@ -166,7 +204,7 @@ final class NPC extends Class140_Sub4 {
 		try {
 			if(~Class158.anInt2014 != var1 && this.definition.childNPCs != null) {
 				NPCDefinition var2 = this.definition.method1471((byte)21);
-				if(var2 != null && var2.renderAnimationId != -1) {
+				if(var2 != null && 0 != ~var2.renderAnimationId) {
 					return var2.renderAnimationId;
 				}
 			}
@@ -227,8 +265,12 @@ final class NPC extends Class140_Sub4 {
 
 	static final boolean method1988(boolean var0) {
 		try {
+			if(var0) {
+				aClass94_3980 = (RSString)null;
+			}
+
 			try {
-				if(Class10.anInt154 == 2) {
+				if(~Class10.anInt154 == -3) {
 					if(Class83.aClass3_Sub27_1154 == null) {
 						Class83.aClass3_Sub27_1154 = Class3_Sub27.method517(Class101.aClass153_1423, Class3_Sub13_Sub39.anInt3463, Class132.anInt1741);
 						if(null == Class83.aClass3_Sub27_1154) {

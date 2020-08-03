@@ -1,12 +1,12 @@
 package org.runite.jagex;
-import org.runite.Configurations;
+import java.awt.Component;
 
-import java.awt.*;
+import org.runite.Configurations;
 
 final class Class58 {
 
    static int anInt909 = -1;
-   static RSString COMMAND_TOGGLE_FPSON = RSString.createRSString("::fpson");
+   static RSString aClass94_910 = RSString.createRSString("::fpson");
    static int[][][] anIntArrayArrayArray911 = new int[2][][];
    static int[] anIntArray912 = new int[14];
    static boolean aBoolean913 = false;
@@ -27,7 +27,7 @@ final class Class58 {
             anIntArrayArrayArray914 = (int[][][])((int[][][])null);
          }
 
-         COMMAND_TOGGLE_FPSON = null;
+         aClass94_910 = null;
       } catch (RuntimeException var2) {
          throw Class44.method1067(var2, "id.C(" + var0 + ')');
       }
@@ -55,7 +55,7 @@ final class Class58 {
          if(Class21.anInt443 == 0) {
             throw new IllegalStateException();
          } else if(0 <= var3 && 2 > var3) {
-            if(var0 < 256) {
+            if(-257 < ~var0) {
                var0 = 256;
             }
 
@@ -65,7 +65,7 @@ final class Class58 {
                var9.anIntArray1975 = new int[(!RSString.aBoolean2150?1:2) * 256];
                var9.method2164(var2);
                var9.anInt1990 = (var0 & -1024) - -1024;
-               if(var9.anInt1990 > 16384) {
+               if(-16385 > ~var9.anInt1990) {
                   var9.anInt1990 = 16384;
                }
 
@@ -97,7 +97,7 @@ final class Class58 {
                   var5.method2164(var2);
                   var5.anInt1990 = 16384;
                   var5.method2150(var5.anInt1990);
-                  if(Class3_Sub24_Sub4.anInt3507 > 0 && null == Class38_Sub1.aClass15_2613) {
+                  if(~Class3_Sub24_Sub4.anInt3507 < -1 && null == Class38_Sub1.aClass15_2613) {
                      Class38_Sub1.aClass15_2613 = new Class15();
                      Class38_Sub1.aClass15_2613.aClass87_350 = var1;
                      var1.method1451(var4 ^ 14, Class3_Sub24_Sub4.anInt3507, Class38_Sub1.aClass15_2613);

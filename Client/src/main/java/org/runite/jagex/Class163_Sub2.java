@@ -3,6 +3,7 @@ package org.runite.jagex;
 class Class163_Sub2 extends Class163 {
 
    static RSString aClass94_2996 = null;
+   static RSString aClass94_2997 = RSString.createRSString("blinken1:");
    static Class30[] aClass30Array2998 = new Class30[29]; //TODO
 
 
@@ -26,6 +27,7 @@ class Class163_Sub2 extends Class163 {
    public static void method2218(byte var0) {
       try {
          aClass94_2996 = null;
+         aClass94_2997 = null;
          if(var0 != -83) {
             method2218((byte)-9);
          }

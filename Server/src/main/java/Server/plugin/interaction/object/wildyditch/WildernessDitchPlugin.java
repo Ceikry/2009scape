@@ -53,7 +53,10 @@ public final class WildernessDitchPlugin extends OptionHandler {
 		player.setAttribute("wildy_ditch", ditch);
 		if (ditch.getRotation() % 2 == 0) {
 			if (player.getLocation().getY() <= node.getLocation().getY()) {
-				player.getInterfaceManager().open(new Component(382));
+				if(!player.isArtificial())
+					player.getInterfaceManager().open(new Component(382));
+				else
+					WildernessInterfacePlugin.handleDitch(player);
 				return;
 			}
 		} else {

@@ -68,9 +68,7 @@ final class Class135 {
          var1 = this.anInt1769 / 20;
       }
 
-      if(var1 == 9999999 || var1 == 0) {
-         return 0;
-      } else {
+      if(var1 != 9999999 && var1 != 0) {
          for(var2 = 0; var2 < 10; ++var2) {
             if(this.aClass116Array1768[var2] != null) {
                this.aClass116Array1768[var2].anInt1593 -= var1 * 20;
@@ -83,6 +81,8 @@ final class Class135 {
          }
 
          return var1;
+      } else {
+         return 0;
       }
    }
 

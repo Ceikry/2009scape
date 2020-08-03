@@ -6,11 +6,15 @@ final class Class3_Sub13_Sub33 extends Class3_Sub13 {
    static RSString[] aClass94Array3391;
    private Class75[] aClass75Array3392;
    static Class133[] aClass133Array3393 = new Class133[6];
+   static RSString aClass94_3394 = RSString.createRSString("<col=ffb000>");
    static int anInt3395;
    static byte[] aByteArray3396;
    
    static volatile int anInt3398 = 0;
    static RSString aClass94_3399 = RSString.createRSString("<br>(X");
+   private static RSString aClass94_3400 = RSString.createRSString("Take");
+   static RSString aClass94_3401 = RSString.createRSString("Weiter");
+static RSString aClass94_3397 = aClass94_3400;
 
    final int[] method154(int var1, byte var2) {
       try {
@@ -46,12 +50,12 @@ final class Class3_Sub13_Sub33 extends Class3_Sub13 {
                int var7 = var6.anInt1101;
                int var8 = var6.anInt1104;
                if(var7 >= 0) {
-                  if(var8 < 0) {
+                  if(~var8 > -1) {
                      var6.method1341(2, var3, var4);
                   } else {
                      var6.method1335(var4, var3, 4898);
                   }
-               } else if(var8 >= 0) {
+               } else if(~var8 <= -1) {
                   var6.method1337(var4, true, var3);
                }
             }
@@ -71,18 +75,18 @@ final class Class3_Sub13_Sub33 extends Class3_Sub13 {
          if(var1 == 0) {
             this.aClass75Array3392 = new Class75[var2.getByte((byte)-77)];
 
-            for(int var4 = 0; var4 < this.aClass75Array3392.length; ++var4) {
+            for(int var4 = 0; ~this.aClass75Array3392.length < ~var4; ++var4) {
                int var5 = var2.getByte((byte)-44);
                if(var5 == 0) {
                   this.aClass75Array3392[var4] = Class8.method843(-5232, var2);
-               } else if(var5 == 1) {
+               } else if(-2 == ~var5) {
                   this.aClass75Array3392[var4] = Class3_Sub28_Sub2.method536((byte)54, var2);
-               } else if(var5 == 2) {
-                  this.aClass75Array3392[var4] = Class3_Sub22.method404((byte)-110, var2);
-               } else {
+               } else if(var5 != 2) {
                   if(3 == var5) {
                      this.aClass75Array3392[var4] = Class3_Sub19.method384(var2, (byte)80);
                   }
+               } else {
+                  this.aClass75Array3392[var4] = Class3_Sub22.method404((byte)-110, var2);
                }
             }
          } else if(1 == var1) {
@@ -115,12 +119,16 @@ final class Class3_Sub13_Sub33 extends Class3_Sub13 {
 
    public static void method325(int var0) {
       try {
+         aClass94_3401 = null;
          aByteArrayArrayArray3390 = (byte[][][])null;
          if(var0 == 0) {
             aByteArray3396 = null;
             aClass133Array3393 = null;
+            aClass94_3400 = null;
             aClass94Array3391 = null;
+            aClass94_3397 = null;
             aClass94_3399 = null;
+            aClass94_3394 = null;
          }
       } catch (RuntimeException var2) {
          throw Class44.method1067(var2, "si.E(" + var0 + ')');
@@ -141,7 +149,9 @@ final class Class3_Sub13_Sub33 extends Class3_Sub13 {
 
    final int[][] method166(int var1, int var2) {
       try {
-         if(var1 == -1) {
+         if(var1 != -1) {
+            return (int[][])((int[][])null);
+         } else {
             int[][] var3 = this.aClass97_2376.method1594((byte)-117, var2);
             if(this.aClass97_2376.aBoolean1379) {
                int var4 = Class113.anInt1559;
@@ -157,7 +167,7 @@ final class Class3_Sub13_Sub33 extends Class3_Sub13 {
                   int[] var12 = var10[1];
                   int[] var13 = var10[2];
 
-                  for(int var14 = 0; Class113.anInt1559 > var14; ++var14) {
+                  for(int var14 = 0; ~var14 > ~Class113.anInt1559; ++var14) {
                      int var15 = var9[var14];
                      var13[var14] = Class3_Sub28_Sub15.method633(255, var15) << 4;
                      var12[var14] = Class3_Sub28_Sub15.method633(4080, var15 >> 4);
@@ -167,8 +177,6 @@ final class Class3_Sub13_Sub33 extends Class3_Sub13 {
             }
 
             return var3;
-         } else {
-            return (int[][])((int[][])null);
          }
       } catch (RuntimeException var16) {
          throw Class44.method1067(var16, "si.T(" + var1 + ',' + var2 + ')');
@@ -181,6 +189,10 @@ final class Class3_Sub13_Sub33 extends Class3_Sub13 {
 
    static final void method327(int var0, int var1, byte var2) {
       try {
+         if(var2 != 68) {
+            aClass94_3397 = (RSString)null;
+         }
+
          Class3_Sub28_Sub6 var3 = Class3_Sub24_Sub3.method466(var2 + -64, 12, var1);
          var3.g((byte)33);
          var3.anInt3598 = var0;

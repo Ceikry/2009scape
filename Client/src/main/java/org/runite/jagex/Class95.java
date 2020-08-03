@@ -3,8 +3,10 @@ package org.runite.jagex;
 final class Class95 {
 
    static RSString aClass94_1333 = RSString.createRSString("um");
+   private static RSString aClass94_1334 = RSString.createRSString("You can(Wt add yourself to your own ignore list)3");
+   static RSString aClass94_1335 = aClass94_1334;
    static int anInt1336 = 0;
-   static RSString COMMAND_BREAK_CONNECTION = RSString.createRSString("::breakcon");
+   static RSString aClass94_1337 = RSString.createRSString("::breakcon");
    static int anInt1338;
    static Class3_Sub28_Sub16 aClass3_Sub28_Sub16_1339;
    static volatile int anInt1340 = -1;
@@ -16,6 +18,7 @@ final class Class95 {
 
    public static void method1582(int var0) {
       try {
+         aClass94_1335 = null;
          aClass3_Sub28_Sub16_1339 = null;
          aClass94_1342 = null;
          aClass94_1333 = null;
@@ -23,7 +26,9 @@ final class Class95 {
          if(var0 != 3) {
             anInt1340 = -18;
          }
-         COMMAND_BREAK_CONNECTION = null;
+
+         aClass94_1334 = null;
+         aClass94_1337 = null;
       } catch (RuntimeException var2) {
          throw Class44.method1067(var2, "nb.D(" + var0 + ')');
       }
@@ -35,7 +40,7 @@ final class Class95 {
             method1582(45);
          }
 
-         if(var1 == var0 && var2 == var9 && var8 == var7 && var5 == var6) {
+         if(~var0 == ~var1 && ~var9 == ~var2 && var8 == var7 && var5 == var6) {
             Class3_Sub13_Sub34.method330(var4, var3 + -111, var5, var0, var9, var7);
          } else {
             int var10 = var0;
@@ -53,7 +58,7 @@ final class Class95 {
             int var22 = var14 + -var12;
             int var23 = -var13 + var15;
 
-            for(int var24 = 128; var24 <= 4096; var24 += 128) {
+            for(int var24 = 128; -4097 <= ~var24; var24 += 128) {
                int var25 = var24 * var24 >> 12;
                int var26 = var24 * var25 >> 12;
                int var30 = var21 * var25;
@@ -81,10 +86,10 @@ final class Class95 {
             method1586(92, 25);
          }
 
-         if(var5 == var1) {
+         if(~var1 == ~var5) {
             Class43.method1058(var5, var2, var0, var3, (byte)-47);
          } else {
-            if(Class101.anInt1425 <= var2 - var5 && var2 + var5 <= Class3_Sub28_Sub18.anInt3765 && -var1 + var3 >= Class159.anInt2020 && Class57.anInt902 >= var3 - -var1) {
+            if(Class101.anInt1425 <= var2 - var5 && var2 + var5 <= Class3_Sub28_Sub18.anInt3765 && -var1 + var3 >= Class159.anInt2020 && ~(var3 - -var1) >= ~Class57.anInt902) {
                Class3_Sub9.method135(var3, var2, var5, -111, var1, var0);
             } else {
                Class3_Sub28_Sub5.method556(var0, var1, var5, (byte)-123, var2, var3);
@@ -100,6 +105,10 @@ final class Class95 {
       try {
          --var1;
          var1 |= var1 >>> 1;
+         if(var0 < 51) {
+            aClass94_1335 = (RSString)null;
+         }
+
          var1 |= var1 >>> 2;
          var1 |= var1 >>> 4;
          var1 |= var1 >>> 8;
@@ -112,7 +121,7 @@ final class Class95 {
 
    static final RSString method1586(int var0, int var1) {
       try {
-         if(var1 > 0 && var1 <= 255) {
+         if(-1 > ~var1 && -256 <= ~var1) {
             RSString var2 = new RSString();
             if(var0 != 23161) {
                aClass3_Sub28_Sub16_1339 = (Class3_Sub28_Sub16)null;

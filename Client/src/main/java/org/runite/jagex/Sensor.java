@@ -13,12 +13,12 @@ class Sensor {
 
    void method1795(byte var1, Point var2, int var3, Component var4, int var5, int[] var6) {
       if(var1 > 108) {
-         if(var6 == null) {
-            var4.setCursor((Cursor)null);
-         } else {
+         if(var6 != null) {
             BufferedImage var7 = new BufferedImage(var3, var5, 2);
             var7.setRGB(0, 0, var3, var5, var6, 0, var3);
             var4.setCursor(var4.getToolkit().createCustomCursor(var7, var2, (String)null));
+         } else {
+            var4.setCursor((Cursor)null);
          }
       }
 
@@ -32,15 +32,15 @@ class Sensor {
    }
 
    void method1797(Component var1, int var2, boolean var3) {
-      if(var3) {
-         var1 = null;
-      } else {
+      if(!var3) {
          if(var1 == null) {
             throw new NullPointerException();
          }
+      } else {
+         var1 = null;
       }
 
-       if(var1 != this.aComponent1733) {
+      if(var1 != this.aComponent1733) {
          if(var2 != 1) {
             this.method1795((byte)-12, (Point)null, -10, (Component)null, -51, (int[])null);
          }

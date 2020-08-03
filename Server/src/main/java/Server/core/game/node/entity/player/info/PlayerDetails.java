@@ -40,6 +40,9 @@ public class PlayerDetails {
 	 */
 	private String password;
 
+	public int credits = 0;
+
+	public boolean isDonator = false;
 	/**
 	 * The unique id of the account.
 	 */

@@ -20,7 +20,7 @@ final class Class3_Sub30_Sub1 extends RSByteBuffer {
 
 	static final void method806(int var0, int var1) {
 		try {
-			if(var1 >= 0) {
+			if(-1 >= ~var1) {
 				int var2 = Class117.anIntArray1613[var1];
 				int var3 = Class27.anIntArray512[var1];
 				int var4 = Class3_Sub13_Sub7.aShortArray3095[var1];
@@ -45,7 +45,7 @@ final class Class3_Sub30_Sub1 extends RSByteBuffer {
 					}
 				}
 
-				if(var4 == 46) {
+				if(-47 == ~var4) {
 					++Class3_Sub23.anInt2534;
 					Class163_Sub2_Sub1.method2224((byte)39, var6, var3, var2);
 					Class3_Sub13_Sub1.outgoingBuffer.putOpcode(247);
@@ -54,7 +54,7 @@ final class Class3_Sub30_Sub1 extends RSByteBuffer {
 					Class3_Sub13_Sub1.outgoingBuffer.putShort(Integer.MAX_VALUE & (int)(var6 >>> 32));
 				}
 
-				if(var4 == 40) {
+				if(~var4 == -41) {
 					Class3_Sub13_Sub1.outgoingBuffer.putOpcode(27);
 					Class3_Sub13_Sub1.outgoingBuffer.putShort(Class110.anInt1473);
 					++Class136.anInt1776;
@@ -70,7 +70,7 @@ final class Class3_Sub30_Sub1 extends RSByteBuffer {
 				}
 
 				NPC var11;
-				if(var4 == 19) {
+				if(-20 == ~var4) {
 					var11 = Class3_Sub13_Sub24.npcs[var5];
 					if(null != var11) {
 						Class3_Sub28_Sub9.method582(Class102.player.anIntArray2755[0], 0, 1, false, 0, 2, var11.anIntArray2767[0], 1, 0, 2, var11.anIntArray2755[0], Class102.player.anIntArray2767[0]);
@@ -112,7 +112,7 @@ final class Class3_Sub30_Sub1 extends RSByteBuffer {
 					}
 				}
 
-				if(var4 == 58) {
+				if(-59 == ~var4) {
 					Class3_Sub13_Sub1.outgoingBuffer.putOpcode(135);
 					Class3_Sub13_Sub1.outgoingBuffer.putShortA(var5, -268435456);
 					++Class3_Sub13_Sub21.anInt3255;
@@ -123,7 +123,7 @@ final class Class3_Sub30_Sub1 extends RSByteBuffer {
 					KeyboardListener.anInt1918 = var2;
 				}
 
-				if(var4 == 42) {
+				if(-43 == ~var4) {
 					Class163_Sub2_Sub1.method2224((byte)39, var6, var3, var2);
 					Class3_Sub13_Sub1.outgoingBuffer.putOpcode(254);
 					Class3_Sub13_Sub1.outgoingBuffer.putLEShort(-1, var2 + Class131.anInt1716);
@@ -136,7 +136,7 @@ final class Class3_Sub30_Sub1 extends RSByteBuffer {
 					Class3_Sub13_Sub19.method264((byte)122);
 				}
 
-				if(var4 == 45) {
+				if(~var4 == -46) {
 					var11 = Class3_Sub13_Sub24.npcs[var5];
 					if(var11 != null) {
 						Class3_Sub28_Sub9.method582(Class102.player.anIntArray2755[0], 0, 1, false, 0, 2, var11.anIntArray2767[0], 1, 0, 2, var11.anIntArray2755[0], Class102.player.anIntArray2767[0]);
@@ -183,7 +183,7 @@ final class Class3_Sub30_Sub1 extends RSByteBuffer {
 					Class3_Sub13_Sub1.outgoingBuffer.putLEShortA(var3 - -Class82.anInt1152);
 				}
 
-				if(var4 == 1002) {
+				if(~var4 == -1003) {
 					Class36.anInt638 = 2;
 					Class70.anInt1053 = Class163_Sub1.anInt2993;
 					Class3_Sub28_Sub10_Sub1.anInt4062 = Class38_Sub1.anInt2614;
@@ -194,9 +194,9 @@ final class Class3_Sub30_Sub1 extends RSByteBuffer {
 				}
 
 				RSInterface var13;
-				if(var4 == 1006) {
+				if(~var4 == -1007) {
 					var13 = Class7.getRSInterface((byte)119, var3);
-					if(null != var13 && var13.itemIds[var2] >= 100000) {
+					if(null != var13 && ~var13.itemIds[var2] <= -100001) {
 						addChatMessage(Class3_Sub28_Sub14.aClass94_3672, 0, RenderAnimationDefinition.method903(new RSString[]{Class72.method1298((byte)9, var13.itemIds[var2]), Class3_Sub28_Sub19.aClass94_3777, Class38.getItemDefinition(var5, (byte)125).name}, (byte)-84), -1);
 					} else {
 						Class3_Sub13_Sub1.outgoingBuffer.putOpcode(92);
@@ -210,10 +210,8 @@ final class Class3_Sub30_Sub1 extends RSByteBuffer {
 				}
 
 				if(var4 == 60) {
-					if(var5 == 0) {
-						Class3_Sub28_Sub10.method589(WorldListCountry.localPlane, var2, var3);
-					} else {
-						if(var5 == 1) {
+					if(-1 != ~var5) {
+						if(-2 == ~var5) {
 							if(0 < Class3_Sub13_Sub26.rights && ObjectDefinition.aBooleanArray1490[82] && ObjectDefinition.aBooleanArray1490[81]) {
 								Class30.method979(Class131.anInt1716 + var2, Class82.anInt1152 + var3, WorldListCountry.localPlane, (byte)-4);
 							} else if(Class3_Sub28_Sub9.method582(Class102.player.anIntArray2755[0], 0, 0, true, 0, 2, var2, 0, 0, 1, var3, Class102.player.anIntArray2767[0])) {
@@ -230,6 +228,8 @@ final class Class3_Sub30_Sub1 extends RSByteBuffer {
 								Class3_Sub13_Sub1.outgoingBuffer.putByte((byte)-59, 63);
 							}
 						}
+					} else {
+						Class3_Sub28_Sub10.method589(WorldListCountry.localPlane, var2, var3);
 					}
 				}
 
@@ -253,7 +253,7 @@ final class Class3_Sub30_Sub1 extends RSByteBuffer {
 					}
 				}
 
-				if(var4 == 47) {
+				if(~var4 == -48) {
 					if (MouseWheel.shiftDown) {
 					
 							Class3_Sub13_Sub1.outgoingBuffer.putOpcode(135);
@@ -277,7 +277,7 @@ final class Class3_Sub30_Sub1 extends RSByteBuffer {
 					}
 				}
 
-				if(var4 == 3) {
+				if(-4 == ~var4) {
 					Class3_Sub13_Sub1.outgoingBuffer.putOpcode(253);
 					++Class29.anInt555;
 					Class3_Sub13_Sub1.outgoingBuffer.putLEInt(Class54.anInt872, (byte)-126);
@@ -290,7 +290,7 @@ final class Class3_Sub30_Sub1 extends RSByteBuffer {
 					KeyboardListener.anInt1918 = var2;
 				}
 
-				if(var4 == 10) {
+				if(~var4 == -11) {
 					var8 = Class3_Sub13_Sub22.players[var5];
 					if(var8 != null) {
 						++IOHandler.anInt1240;
@@ -319,7 +319,7 @@ final class Class3_Sub30_Sub1 extends RSByteBuffer {
 					Class3_Sub13_Sub1.outgoingBuffer.putLEShort(var0 + -2598, var2 - -Class131.anInt1716);
 				}
 
-				if(var4 == 23) {
+				if(-24 == ~var4) {
 					++Class144.anInt1886;
 					Class3_Sub13_Sub1.outgoingBuffer.putOpcode(206);
 					Class3_Sub13_Sub1.outgoingBuffer.putShortA(var5, -268435456);//itemId
@@ -330,7 +330,7 @@ final class Class3_Sub30_Sub1 extends RSByteBuffer {
 					KeyboardListener.anInt1918 = var2;
 				}
 
-				if(var4 == 14 && Class163_Sub2_Sub1.method2224((byte)39, var6, var3, var2)) {
+				if(-15 == ~var4 && Class163_Sub2_Sub1.method2224((byte)39, var6, var3, var2)) {
 					++Class3_Sub28_Sub10_Sub2.anInt4065;
 					Class3_Sub13_Sub1.outgoingBuffer.putOpcode(134);
 					Class3_Sub13_Sub1.outgoingBuffer.putShortA(Class131.anInt1716 + var2, var0 ^ -268432859);
@@ -359,7 +359,7 @@ final class Class3_Sub30_Sub1 extends RSByteBuffer {
 					OutputStream_Sub1.method66(Class163_Sub2_Sub1.aClass94Array4016[var1], var2, var5, (byte)-19, var3);
 				}
 
-				if(var4 == 5) {
+				if(-6 == ~var4) {
 					if (MouseWheel.shiftDown) {
 							Class3_Sub13_Sub1.outgoingBuffer.putOpcode(135);
 							Class3_Sub13_Sub1.outgoingBuffer.putShortA(var5, -268435456);
@@ -383,14 +383,14 @@ final class Class3_Sub30_Sub1 extends RSByteBuffer {
 					}
 				}
 
-				if(var4 == 21) {
-					if(Class158.anInt2014 == 1) {
-						Class3_Sub28_Sub9.method582(Class102.player.anIntArray2755[0], 0, 1, false, 0, var0 + -2595, var2, 1, 0, 2, var3, Class102.player.anIntArray2767[0]);
-					} else {
+				if(-22 == ~var4) {
+					if(~Class158.anInt2014 != -2) {
 						var14 = Class3_Sub28_Sub9.method582(Class102.player.anIntArray2755[0], 0, 0, false, 0, var0 + -2595, var2, 0, 0, 2, var3, Class102.player.anIntArray2767[0]);
 						if(!var14) {
 							Class3_Sub28_Sub9.method582(Class102.player.anIntArray2755[0], 0, 1, false, 0, var0 + -2595, var2, 1, 0, 2, var3, Class102.player.anIntArray2767[0]);
 						}
+					} else {
+						Class3_Sub28_Sub9.method582(Class102.player.anIntArray2755[0], 0, 1, false, 0, var0 + -2595, var2, 1, 0, 2, var3, Class102.player.anIntArray2767[0]);
 					}
 
 					Class36.anInt638 = 2;
@@ -431,9 +431,9 @@ final class Class3_Sub30_Sub1 extends RSByteBuffer {
 						}
 
 						if(var13.usingScripts) {
-							Class40.aClass94_676 = RenderAnimationDefinition.method903(new RSString[]{var13.aClass94_277, ColorCore.ContextColor }, (byte)-83);
+							Class40.aClass94_676 = RenderAnimationDefinition.method903(new RSString[]{var13.aClass94_277, Class3_Sub26.CONTEXT_MENU_COLOR }, (byte)-83);
 						} else {
-							Class40.aClass94_676 = RenderAnimationDefinition.method903(new RSString[]{RSString.createRSString("<col=00ff00>"), var13.aClass94_243, ColorCore.ContextColor }, (byte)-94);
+							Class40.aClass94_676 = RenderAnimationDefinition.method903(new RSString[]{Class19.aClass94_431, var13.aClass94_243, Class3_Sub26.CONTEXT_MENU_COLOR }, (byte)-94);
 						}
 					}
 
@@ -480,13 +480,13 @@ final class Class3_Sub30_Sub1 extends RSByteBuffer {
 					}
 
 					if(34 == var4) {
-						if(Class158.anInt2014 == 1) {
-							Class3_Sub28_Sub9.method582(Class102.player.anIntArray2755[0], 0, 1, false, 0, 2, var2, 1, 0, 2, var3, Class102.player.anIntArray2767[0]);
-						} else {
+						if(Class158.anInt2014 != 1) {
 							var14 = Class3_Sub28_Sub9.method582(Class102.player.anIntArray2755[0], 0, 0, false, 0, var0 ^ 2599, var2, 0, 0, 2, var3, Class102.player.anIntArray2767[0]);
 							if(!var14) {
 								Class3_Sub28_Sub9.method582(Class102.player.anIntArray2755[0], 0, 1, false, 0, 2, var2, 1, 0, 2, var3, Class102.player.anIntArray2767[0]);
 							}
+						} else {
+							Class3_Sub28_Sub9.method582(Class102.player.anIntArray2755[0], 0, 1, false, 0, 2, var2, 1, 0, 2, var3, Class102.player.anIntArray2767[0]);
 						}
 
 						Class70.anInt1053 = Class163_Sub1.anInt2993;
@@ -500,7 +500,7 @@ final class Class3_Sub30_Sub1 extends RSByteBuffer {
 						Class3_Sub13_Sub1.outgoingBuffer.putLEShortA(var5);
 					}
 
-					if(var4 == 25) {
+					if(-26 == ~var4) {
 						++Class17.anInt411;
 						Class3_Sub13_Sub1.outgoingBuffer.putOpcode(81);
 						Class3_Sub13_Sub1.outgoingBuffer.putShortA(var2, -268435456);
@@ -511,7 +511,7 @@ final class Class3_Sub30_Sub1 extends RSByteBuffer {
 						KeyboardListener.anInt1918 = var2;
 					}
 
-					if(var4 == 2) {
+					if(~var4 == -3) {
 						var11 = Class3_Sub13_Sub24.npcs[var5];
 						if(var11 != null) {
 							Class3_Sub28_Sub9.method582(Class102.player.anIntArray2755[0], 0, 1, false, 0, var0 + -2595, var11.anIntArray2767[0], 1, 0, 2, var11.anIntArray2755[0], Class102.player.anIntArray2767[0]);
@@ -526,12 +526,12 @@ final class Class3_Sub30_Sub1 extends RSByteBuffer {
 					}
 
 					int var12;
-					if(var4 == 51) {
+					if(-52 == ~var4) {
 						Class3_Sub13_Sub1.outgoingBuffer.putOpcode(10);
 						++Class3_Sub28_Sub15.anInt3681;
 						Class3_Sub13_Sub1.outgoingBuffer.putInt(var0 + -2725, var3);
 						var13 = Class7.getRSInterface((byte)117, var3);
-						if(var13.childDataBuffers != null && var13.childDataBuffers[0][0] == 5) {
+						if(var13.childDataBuffers != null && -6 == ~var13.childDataBuffers[0][0]) {
 							var12 = var13.childDataBuffers[0][1];
 							if(Class163_Sub1.anIntArray2985[var12] != var13.anIntArray307[0]) {
 								Class163_Sub1.anIntArray2985[var12] = var13.anIntArray307[0];
@@ -540,7 +540,7 @@ final class Class3_Sub30_Sub1 extends RSByteBuffer {
 						}
 					}
 
-					if(var4 == 26) {
+					if(-27 == ~var4) {
 						var11 = Class3_Sub13_Sub24.npcs[var5];
 						if(var11 != null) {
 							++Class3_Sub13_Sub37.anInt3439;
@@ -563,14 +563,14 @@ final class Class3_Sub30_Sub1 extends RSByteBuffer {
 						++Class3_Sub28_Sub15.anInt3681;
 						Class3_Sub13_Sub1.outgoingBuffer.putInt(-121, var3);
 						var13 = Class7.getRSInterface((byte)122, var3);
-						if(var13.childDataBuffers != null && var13.childDataBuffers[0][0] == 5) {
+						if(var13.childDataBuffers != null && -6 == ~var13.childDataBuffers[0][0]) {
 							var12 = var13.childDataBuffers[0][1];
 							Class163_Sub1.anIntArray2985[var12] = -Class163_Sub1.anIntArray2985[var12] + 1;
 							Class46.method1087(68, var12);
 						}
 					}
 
-					if(var4 == 33) {
+					if(~var4 == -34) {
 						var14 = Class3_Sub28_Sub9.method582(Class102.player.anIntArray2755[0], 0, 0, false, 0, 2, var2, 0, 0, 2, var3, Class102.player.anIntArray2767[0]);
 						++Class61.anInt938;
 						if(!var14) {
@@ -590,7 +590,7 @@ final class Class3_Sub30_Sub1 extends RSByteBuffer {
 						Class3_Sub13_Sub1.outgoingBuffer.putIntB(-118, Class3_Sub28_Sub18.anInt3764);
 					}
 
-					if(var4 == 1004) {
+					if(-1005 == ~var4) {
 						Class151_Sub1.anInt2958 = 0;
 						Class70.anInt1053 = Class163_Sub1.anInt2993;
 						Class36.anInt638 = 2;
@@ -601,10 +601,7 @@ final class Class3_Sub30_Sub1 extends RSByteBuffer {
 					}
 
 					if(11 == var4) {
-						if(var5 == 0) {
-							CS2Script.anInt2440 = 1;
-							Class3_Sub28_Sub10.method589(WorldListCountry.localPlane, var2, var3);
-						} else {
+						if(-1 != ~var5) {
 							if(1 == var5) {
 								Class3_Sub13_Sub1.outgoingBuffer.putOpcode(131);
 								++Class66.anInt994;
@@ -613,6 +610,9 @@ final class Class3_Sub30_Sub1 extends RSByteBuffer {
 								Class3_Sub13_Sub1.outgoingBuffer.putLEShortA(RSInterface.anInt278);
 								Class3_Sub13_Sub1.outgoingBuffer.putShortA(var3 + Class82.anInt1152, -268435456);
 							}
+						} else {
+							CS2Script.anInt2440 = 1;
+							Class3_Sub28_Sub10.method589(WorldListCountry.localPlane, var2, var3);
 						}
 					}
 
@@ -630,7 +630,7 @@ final class Class3_Sub30_Sub1 extends RSByteBuffer {
 						}
 					}
 
-					if(var4 == 1) {
+					if(~var4 == -2) {
 						var8 = Class3_Sub13_Sub22.players[var5];
 						if(var8 != null) {
 							++ISAACCipher.anInt969;
@@ -658,14 +658,14 @@ final class Class3_Sub30_Sub1 extends RSByteBuffer {
 						KeyboardListener.anInt1918 = var2;
 					}
 
-					if(var4 == 24) {
-						if(Class158.anInt2014 == 1) {
-							Class3_Sub28_Sub9.method582(Class102.player.anIntArray2755[0], 0, 1, false, 0, var0 + -2595, var2, 1, 0, 2, var3, Class102.player.anIntArray2767[0]);
-						} else {
+					if(~var4 == -25) {
+						if(-2 != ~Class158.anInt2014) {
 							var14 = Class3_Sub28_Sub9.method582(Class102.player.anIntArray2755[0], 0, 0, false, 0, 2, var2, 0, 0, 2, var3, Class102.player.anIntArray2767[0]);
 							if(!var14) {
 								Class3_Sub28_Sub9.method582(Class102.player.anIntArray2755[0], 0, 1, false, 0, 2, var2, 1, 0, 2, var3, Class102.player.anIntArray2767[0]);
 							}
+						} else {
+							Class3_Sub28_Sub9.method582(Class102.player.anIntArray2755[0], 0, 1, false, 0, var0 + -2595, var2, 1, 0, 2, var3, Class102.player.anIntArray2767[0]);
 						}
 
 						Class36.anInt638 = 2;
@@ -689,7 +689,7 @@ final class Class3_Sub30_Sub1 extends RSByteBuffer {
 						Class3_Sub13_Sub1.outgoingBuffer.putShortA((int)(var6 >>> 32) & Integer.MAX_VALUE, var0 ^ -268432859);
 					}
 
-					if(var4 == 13) {
+					if(~var4 == -14) {
 						Class3_Sub13_Sub1.outgoingBuffer.putOpcode(6);
 						Class3_Sub13_Sub1.outgoingBuffer.putInt(var0 + -2720, var3);
 						Class3_Sub13_Sub1.outgoingBuffer.putShortA(var2, -268435456);
@@ -714,38 +714,8 @@ final class Class3_Sub30_Sub1 extends RSByteBuffer {
 						}
 					}
 
-					if(var4 == 22) {
-
-						if (MouseWheel.shiftDown) {
-							Class3_Sub13_Sub1.outgoingBuffer.putOpcode(135);
-							Class3_Sub13_Sub1.outgoingBuffer.putShortA(var5, -268435456);
-							++Class3_Sub13_Sub21.anInt3255;
-							Class3_Sub13_Sub1.outgoingBuffer.putShortA(var2, -268435456);
-							Class3_Sub13_Sub1.outgoingBuffer.putIntB(-68, var3);
-							Class3_Sub9.anInt2330 = 0;
-							Class151.aClass11_1933 = Class7.getRSInterface((byte)117, var3);
-							KeyboardListener.anInt1918 = var2;
-
-						} else {
-
-							Class25.method958((byte)-86);
-							var13 = Class7.getRSInterface((byte)123, var3);
-							Class3_Sub28_Sub18.anInt3764 = var3;
-							Class110.anInt1473 = var2;
-							Class164_Sub1.anInt3012 = 1;
-							Class164.anInt2050 = var5;
-							Class20.method909(var0 ^ -2612, var13);
-							RenderAnimationDefinition.aClass94_378 = RenderAnimationDefinition.method903(new RSString[]{
-									ColorCore.ContextColor2, Class38.getItemDefinition(var5, (byte)109).name, ColorCore.ContextColor
-							}, (byte)-113);
-							if(RenderAnimationDefinition.aClass94_378 == null) {
-								RenderAnimationDefinition.aClass94_378 = TextCore.HasNull;
-//								System.out.println(Class38.getItemDefinition(var5, (byte)109).name);
-							}
-
-						}
-					} else {
-						if(var4 == 50) {
+					if(var4 != 22) {
+						if(-51 == ~var4) {
 							++AnimationDefinition.anInt1858;
 							Class163_Sub2_Sub1.method2224((byte)39, var6, var3, var2);
 							Class3_Sub13_Sub1.outgoingBuffer.putOpcode(194);
@@ -754,7 +724,7 @@ final class Class3_Sub30_Sub1 extends RSByteBuffer {
 							Class3_Sub13_Sub1.outgoingBuffer.putShort((int)(var6 >>> 32) & Integer.MAX_VALUE);
 						}
 
-						if(var4 == 48) {
+						if(-49 == ~var4) {
 							++Class126.anInt1677;
 							Class3_Sub13_Sub1.outgoingBuffer.putOpcode(154);
 							Class3_Sub13_Sub1.outgoingBuffer.putLEShort(-1, var2);
@@ -765,7 +735,7 @@ final class Class3_Sub30_Sub1 extends RSByteBuffer {
 							KeyboardListener.anInt1918 = var2;
 						}
 
-						if(var4 == 30) {
+						if(~var4 == -31) {
 							var8 = Class3_Sub13_Sub22.players[var5];
 							if(null != var8) {
 								++ItemDefinition.anInt759;
@@ -790,7 +760,7 @@ final class Class3_Sub30_Sub1 extends RSByteBuffer {
 							KeyboardListener.anInt1918 = var2;
 						}
 
-						if(var4 == 39) {
+						if(-40 == ~var4) {
 							++Class144.anInt1883;
 							var14 = Class3_Sub28_Sub9.method582(Class102.player.anIntArray2755[0], 0, 0, false, 0, 2, var2, 0, 0, 2, var3, Class102.player.anIntArray2767[0]);
 							if(!var14) {
@@ -810,7 +780,7 @@ final class Class3_Sub30_Sub1 extends RSByteBuffer {
 						}
 
 						if(var0 == 2597) {
-							if(var4 == 12) {
+							if(~var4 == -13) {
 								++PacketParser.anInt79;
 								Class3_Sub13_Sub1.outgoingBuffer.putOpcode(82);
 								Class3_Sub13_Sub1.outgoingBuffer.putShort(RSInterface.anInt278);
@@ -820,11 +790,8 @@ final class Class3_Sub30_Sub1 extends RSByteBuffer {
 							}
 
 							if(var4 == 36) {
-								if(var5 == 0) {
-									ObjectDefinition.anInt1521 = 1;
-									Class3_Sub28_Sub10.method589(WorldListCountry.localPlane, var2, var3);
-								} else {
-									if(Class3_Sub13_Sub26.rights > 0 && ObjectDefinition.aBooleanArray1490[82] && ObjectDefinition.aBooleanArray1490[81]) {
+								if(~var5 != -1) {
+									if(-1 > ~Class3_Sub13_Sub26.rights && ObjectDefinition.aBooleanArray1490[82] && ObjectDefinition.aBooleanArray1490[81]) {
 										Class30.method979(var2 + Class131.anInt1716, Class82.anInt1152 - -var3, WorldListCountry.localPlane, (byte)-4);
 									} else {
 										++Class3_Sub19.anInt2479;
@@ -832,6 +799,9 @@ final class Class3_Sub30_Sub1 extends RSByteBuffer {
 										Class3_Sub13_Sub1.outgoingBuffer.putShort(var3 + Class82.anInt1152);
 										Class3_Sub13_Sub1.outgoingBuffer.putShort(var2 + Class131.anInt1716);
 									}
+								} else {
+									ObjectDefinition.anInt1521 = 1;
+									Class3_Sub28_Sub10.method589(WorldListCountry.localPlane, var2, var3);
 								}
 							}
 
@@ -884,7 +854,7 @@ final class Class3_Sub30_Sub1 extends RSByteBuffer {
 								}
 							}
 
-							if(Class164_Sub1.anInt3012 != 0) {
+							if(~Class164_Sub1.anInt3012 != -1) {
 								Class164_Sub1.anInt3012 = 0;
 								Class20.method909(120, Class7.getRSInterface((byte)121, Class3_Sub28_Sub18.anInt3764));
 							}
@@ -893,8 +863,38 @@ final class Class3_Sub30_Sub1 extends RSByteBuffer {
 								Class25.method958((byte)-36);
 							}
 
-							if(Class151.aClass11_1933 != null && Class3_Sub9.anInt2330 == 0) {
+							if(Class151.aClass11_1933 != null && -1 == ~Class3_Sub9.anInt2330) {
 								Class20.method909(-106, Class151.aClass11_1933);
+							}
+
+						}
+					} else {
+
+						if (MouseWheel.shiftDown) {
+							Class3_Sub13_Sub1.outgoingBuffer.putOpcode(135);
+							Class3_Sub13_Sub1.outgoingBuffer.putShortA(var5, -268435456);
+							++Class3_Sub13_Sub21.anInt3255;
+							Class3_Sub13_Sub1.outgoingBuffer.putShortA(var2, -268435456);
+							Class3_Sub13_Sub1.outgoingBuffer.putIntB(-68, var3);
+							Class3_Sub9.anInt2330 = 0;
+							Class151.aClass11_1933 = Class7.getRSInterface((byte)117, var3);
+							KeyboardListener.anInt1918 = var2;
+
+						} else {
+
+							Class25.method958((byte)-86);
+							var13 = Class7.getRSInterface((byte)123, var3);
+							Class3_Sub28_Sub18.anInt3764 = var3;
+							Class110.anInt1473 = var2;
+							Class164_Sub1.anInt3012 = 1;
+							Class164.anInt2050 = var5;
+							Class20.method909(var0 ^ -2612, var13);
+							RenderAnimationDefinition.aClass94_378 = RenderAnimationDefinition.method903(new RSString[]{
+									Class3_Sub13_Sub2.aClass94_3042, Class38.getItemDefinition(var5, (byte)109).name, Class3_Sub26.CONTEXT_MENU_COLOR
+							}, (byte)-113);
+							if(RenderAnimationDefinition.aClass94_378 == null) {
+								RenderAnimationDefinition.aClass94_378 = Class50.aClass94_829;
+//								System.out.println(Class38.getItemDefinition(var5, (byte)109).name);
 							}
 
 						}
@@ -970,7 +970,7 @@ final class Class3_Sub30_Sub1 extends RSByteBuffer {
 
 			if(65536 > Class3.anInt72) {
 				Class3.anInt72 += 250 * var0;
-				if(Class3.anInt72 >= 65536) {
+				if(-65537 >= ~Class3.anInt72) {
 					Class3.anInt72 = 65536;
 				}
 
@@ -1029,22 +1029,22 @@ final class Class3_Sub30_Sub1 extends RSByteBuffer {
 			int var4 = 8 + -(7 & this.anInt3806);
 			int var5 = 0;
 			this.anInt3806 += var2;
-			if(var1 == -11) {
-				while(var2 > var4) {
+			if(var1 != -11) {
+				return -10;
+			} else {
+				while(~var4 > ~var2) {
 					var5 += (Class140_Sub2.anIntArray2709[var4] & this.buffer[var3++]) << -var4 + var2;
 					var2 -= var4;
 					var4 = 8;
 				}
 
-				if(var2 == var4) {
+				if(~var4 == ~var2) {
 					var5 += this.buffer[var3] & Class140_Sub2.anIntArray2709[var4];
 				} else {
 					var5 += this.buffer[var3] >> var4 - var2 & Class140_Sub2.anIntArray2709[var2];
 				}
 
 				return var5;
-			} else {
-				return -10;
 			}
 		} catch (RuntimeException var6) {
 			throw Class44.method1067(var6, "i.C(" + var1 + ',' + var2 + ')');
@@ -1126,7 +1126,7 @@ final class Class3_Sub30_Sub1 extends RSByteBuffer {
 						RSInterface[] var4 = GameObject.aClass11ArrayArray1834[var2];
 
 						int var5;
-						for(var5 = 0; var5 < var4.length; ++var5) {
+						for(var5 = 0; ~var4.length < ~var5; ++var5) {
 							if(var4[var5] != null) {
 								var3 = var4[var5].usingScripts;
 								break;

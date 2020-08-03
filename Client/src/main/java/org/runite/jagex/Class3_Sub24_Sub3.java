@@ -52,19 +52,19 @@ final class Class3_Sub24_Sub3 extends Class3_Sub24 {
 
    private final void method464(Class3_Sub22 var1, int var2, int var3) {
       try {
-         if((this.aClass3_Sub24_Sub4_3493.anIntArray3518[var1.anInt2514] & 4) != 0 && var1.anInt2506 < 0) {
+         if(-1 != ~(this.aClass3_Sub24_Sub4_3493.anIntArray3518[var1.anInt2514] & 4) && -1 < ~var1.anInt2506) {
             int var4 = this.aClass3_Sub24_Sub4_3493.anIntArray3509[var1.anInt2514] / Class21.anInt443;
             int var5 = (var4 + 1048575 + -var1.anInt2516) / var4;
             var1.anInt2516 = 1048575 & var4 * var3 + var1.anInt2516;
-            if(var5 <= var3) {
-               if(0 == this.aClass3_Sub24_Sub4_3493.anIntArray3519[var1.anInt2514]) {
-                  var1.aClass3_Sub24_Sub1_2507 = Class3_Sub24_Sub1.method432(var1.aClass3_Sub12_Sub1_2509, var1.aClass3_Sub24_Sub1_2507.method438(), var1.aClass3_Sub24_Sub1_2507.method425(), var1.aClass3_Sub24_Sub1_2507.method451());
-               } else {
+            if(~var3 <= ~var5) {
+               if(0 != this.aClass3_Sub24_Sub4_3493.anIntArray3519[var1.anInt2514]) {
                   var1.aClass3_Sub24_Sub1_2507 = Class3_Sub24_Sub1.method432(var1.aClass3_Sub12_Sub1_2509, var1.aClass3_Sub24_Sub1_2507.method438(), 0, var1.aClass3_Sub24_Sub1_2507.method451());
                   this.aClass3_Sub24_Sub4_3493.method501(var1, var1.aClass3_Sub15_2527.aShortArray2434[var1.anInt2520] < 0, (byte)-101);
+               } else {
+                  var1.aClass3_Sub24_Sub1_2507 = Class3_Sub24_Sub1.method432(var1.aClass3_Sub12_Sub1_2509, var1.aClass3_Sub24_Sub1_2507.method438(), var1.aClass3_Sub24_Sub1_2507.method425(), var1.aClass3_Sub24_Sub1_2507.method451());
                }
 
-               if(var1.aClass3_Sub15_2527.aShortArray2434[var1.anInt2520] < 0) {
+               if(~var1.aClass3_Sub15_2527.aShortArray2434[var1.anInt2520] > -1) {
                   var1.aClass3_Sub24_Sub1_2507.method429(-1);
                }
 
@@ -121,7 +121,7 @@ final class Class3_Sub24_Sub3 extends Class3_Sub24 {
          if(var0 == null) {
             return false;
          } else {
-            for(int var2 = var1; var2 < Class3_Sub28_Sub5.anInt3591; ++var2) {
+            for(int var2 = var1; ~Class3_Sub28_Sub5.anInt3591 < ~var2; ++var2) {
                if(var0.equals(63, Class3_Sub13_Sub27.aClass94Array3341[var2])) {
                   return true;
                }
@@ -213,7 +213,7 @@ final class Class3_Sub24_Sub3 extends Class3_Sub24 {
 
    private final void method469(int[] var1, Class3_Sub22 var2, int var3, int var4, int var5, byte var6) {
       try {
-         if((4 & this.aClass3_Sub24_Sub4_3493.anIntArray3518[var2.anInt2514]) != 0 && var2.anInt2506 < 0) {
+         if((4 & this.aClass3_Sub24_Sub4_3493.anIntArray3518[var2.anInt2514]) != 0 && -1 < ~var2.anInt2506) {
             int var7 = this.aClass3_Sub24_Sub4_3493.anIntArray3509[var2.anInt2514] / Class21.anInt443;
 
             while(true) {
@@ -233,12 +233,12 @@ final class Class3_Sub24_Sub3 extends Class3_Sub24 {
                }
 
                var2.anInt2516 += var7 * var8 + -1048576;
-               if(this.aClass3_Sub24_Sub4_3493.anIntArray3519[var2.anInt2514] == 0) {
-                  var2.aClass3_Sub24_Sub1_2507 = Class3_Sub24_Sub1.method432(var2.aClass3_Sub12_Sub1_2509, var11.method438(), var11.method425(), var11.method451());
-               } else {
+               if(-1 != ~this.aClass3_Sub24_Sub4_3493.anIntArray3519[var2.anInt2514]) {
                   var2.aClass3_Sub24_Sub1_2507 = Class3_Sub24_Sub1.method432(var2.aClass3_Sub12_Sub1_2509, var11.method438(), 0, var11.method451());
                   this.aClass3_Sub24_Sub4_3493.method501(var2, var2.aClass3_Sub15_2527.aShortArray2434[var2.anInt2520] < 0, (byte)-88);
                   var2.aClass3_Sub24_Sub1_2507.method431(var9, var11.method425());
+               } else {
+                  var2.aClass3_Sub24_Sub1_2507 = Class3_Sub24_Sub1.method432(var2.aClass3_Sub12_Sub1_2509, var11.method438(), var11.method425(), var11.method451());
                }
 
                if(var2.aClass3_Sub15_2527.aShortArray2434[var2.anInt2520] < 0) {

@@ -2,7 +2,9 @@ package org.runite.jagex;
 
 final class Class140_Sub2 extends GameObject {
 
+   static RSString aClass94_2700 = RSString.createRSString("p11_full");
    static int anInt2701 = 0;
+   static RSString aClass94_2702 = RSString.createRSString("floorshadows");
    int anInt2703;
    private Class127_Sub1 aClass127_Sub1_2704;
    static boolean aBoolean2705 = true;
@@ -30,10 +32,10 @@ final class Class140_Sub2 extends GameObject {
          }
 
          Model var3;
-         if(this.aBoolean2718) {
-            var3 = var2.method966(-1, (byte)-30, -1, 0);
-         } else {
+         if(!this.aBoolean2718) {
             var3 = var2.method966(this.anInt2714, (byte)-30, this.anInt2706, this.anInt2719);
+         } else {
+            var3 = var2.method966(-1, (byte)-30, -1, 0);
          }
 
          return var3 == null?null:var3;
@@ -59,11 +61,11 @@ final class Class140_Sub2 extends GameObject {
             }
 
             var0.anInt2824 = 0;
-            if(var0.anInt2840 == 2) {
+            if(~var0.anInt2840 == -3) {
                var0.anInt2806 = 0;
             }
 
-            if(var0.anInt2840 == 3) {
+            if(~var0.anInt2840 == -4) {
                var0.anInt2806 = 512;
             }
 
@@ -92,7 +94,7 @@ final class Class140_Sub2 extends GameObject {
          if(HDToolKit.highDetail) {
             var8 = -334 + var2;
             if(var8 >= 0) {
-               if(var8 > 100) {
+               if(-101 > ~var8) {
                   var8 = 100;
                }
             } else {
@@ -110,7 +112,7 @@ final class Class140_Sub2 extends GameObject {
          int var11 = 0;
          int var13;
          int var14;
-         if(var8 != 0) {
+         if(~var8 != -1) {
             var14 = Class51.anIntArray851[var8];
             var13 = Class51.anIntArray840[var8];
             var11 = var13 * -var4 >> 16;
@@ -162,6 +164,8 @@ final class Class140_Sub2 extends GameObject {
    public static void method1954(int var0) {
       try {
          if(var0 == 0) {
+            aClass94_2702 = null;
+            aClass94_2700 = null;
             anIntArray2709 = null;
             aClass94_2707 = null;
          }
@@ -191,10 +195,10 @@ final class Class140_Sub2 extends GameObject {
 
             this.anInt2719 += var2;
 
-            while(this.aClass142_2711.duration[this.anInt2706] < this.anInt2719) {
+            while(~this.anInt2719 < ~this.aClass142_2711.duration[this.anInt2706]) {
                this.anInt2719 -= this.aClass142_2711.duration[this.anInt2706];
                ++this.anInt2706;
-               if(this.anInt2706 >= this.aClass142_2711.frames.length) {
+               if(~this.aClass142_2711.frames.length >= ~this.anInt2706) {
                   this.aBoolean2718 = true;
                   break;
                }

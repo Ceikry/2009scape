@@ -21,6 +21,7 @@ final class AnimationDefinition {
 	static CacheIndex aClass153_1860;
 	int anInt1861 = 99;
 	static int anInt1862 = 0;
+	static RSString aClass94_1863 = RSString.createRSString(" steht bereits auf Ihrer Freunde)2Liste(Q");
 	int animId;
 	int anInt1865 = -1;
 	int anInt1866 = -1;
@@ -35,6 +36,10 @@ final class AnimationDefinition {
 	static final Class3_Sub11 method2052(Class130 var0, boolean var1, Class168 var2) {
 		try {
 			long var3 = (long)((var2.anInt2095 - -1 << 16) + var2.anInt2090) + (((long)var2.anInt2100 << 56) - -((long)var2.anInt2094 << 32));
+			if(var1) {
+				aClass94_1863 = (RSString)null;
+			}
+
 			Class3_Sub11 var5 = (Class3_Sub11)var0.method1780(var3, 0);
 			if(null == var5) {
 				var5 = new Class3_Sub11(var2.anInt2095, (float)var2.anInt2090, true, false, var2.anInt2094);
@@ -82,50 +87,64 @@ final class AnimationDefinition {
 					this.method2053((RSByteBuffer)null, (byte)-126);
 				}
 
-				if((this.aBoolean1846 || Class3_Sub26.aBoolean2558) && var3 != -1 && this.frames.length > var3) {
+				if((this.aBoolean1846 || Class3_Sub26.aBoolean2558) && ~var3 != 0 && this.frames.length > var3) {
 					var3 = this.frames[var3];
 					var9 = Class3_Sub9.method133(var3 >> 16, 0);
 					var3 &= '\uffff';
 				}
 
 				Model var10;
-				if(var9 == null) {
-					var10 = var4.method1890(!var8.method559(1317095745, var2), !var8.method561(var2, (byte)121), !this.aBoolean1848);
-				} else {
+				if(var9 != null) {
 					var10 = var4.method1890(!var8.method559(1317095745, var2) & !var9.method559(1317095745, var3), !var8.method561(var2, (byte)125) & !var9.method561(var3, (byte)118), !this.aBoolean1848);
+				} else {
+					var10 = var4.method1890(!var8.method559(1317095745, var2), !var8.method561(var2, (byte)121), !this.aBoolean1848);
 				}
 
 				if(HDToolKit.highDetail && this.aBoolean1848) {
-					if(var5 == 1) {
+					if(-2 != ~var5) {
+						if(2 != var5) {
+							if(~var5 == -4) {
+								((Class140_Sub1_Sub1)var10).method1925();
+							}
+						} else {
+							((Class140_Sub1_Sub1)var10).method1911();
+						}
+					} else {
 						((Class140_Sub1_Sub1)var10).method1902();
-					} else if (2 == var5) {
-						((Class140_Sub1_Sub1) var10).method1911();
-					} else if (var5 == 3) {
-						((Class140_Sub1_Sub1) var10).method1925();
 					}
-				} else if(var5 == 1) {
+				} else if(var5 != 1) {
+					if(2 != var5) {
+						if(3 == var5) {
+							var10.method1885();
+						}
+					} else {
+						var10.method1874();
+					}
+				} else {
 					var10.method1900();
-				} else if (2 == var5) {
-					var10.method1874();
-				} else if (3 == var5) {
-					var10.method1885();
 				}
 
 				var10.method1880(var8, var2, var9, var3, -1 + var6, var7, this.aBoolean1848);
 				if(HDToolKit.highDetail && this.aBoolean1848) {
-					if(1 == var5) {
+					if(1 != var5) {
+						if(var5 == 2) {
+							((Class140_Sub1_Sub1)var10).method1911();
+						} else if(var5 == 3) {
+							((Class140_Sub1_Sub1)var10).method1902();
+						}
+					} else {
 						((Class140_Sub1_Sub1)var10).method1925();
-					} else if (var5 == 2) {
-						((Class140_Sub1_Sub1) var10).method1911();
-					} else if (var5 == 3) {
-						((Class140_Sub1_Sub1) var10).method1902();
 					}
-				} else if(var5 == 1) {
+				} else if(~var5 != -2) {
+					if(-3 != ~var5) {
+						if(var5 == 3) {
+							var10.method1900();
+						}
+					} else {
+						var10.method1874();
+					}
+				} else {
 					var10.method1885();
-				} else if (var5 == 2) {
-					var10.method1874();
-				} else if (var5 == 3) {
-					var10.method1900();
 				}
 
 				return var10;
@@ -145,7 +164,7 @@ final class AnimationDefinition {
 				return var1.method1894(true, true, true);
 			} else {
 				Class3_Sub28_Sub5 var9 = null;
-				if((this.aBoolean1846 || Class3_Sub26.aBoolean2558) && var3 != -1 && this.frames.length > var3) {
+				if((this.aBoolean1846 || Class3_Sub26.aBoolean2558) && 0 != ~var3 && ~var3 > ~this.frames.length) {
 					var3 = this.frames[var3];
 					var9 = Class3_Sub9.method133(var3 >> 16, 0);
 					var3 &= '\uffff';
@@ -157,9 +176,9 @@ final class AnimationDefinition {
 				int var13 = 0;
 				int var14 = 0;
 				if(null != this.anIntArray1870) {
-					if(var5 < this.anIntArray1870.length) {
+					if(~this.anIntArray1870.length < ~var5) {
 						var13 = this.anIntArray1870[var5];
-						if(var13 != 65535) {
+						if(~var13 != -65536) {
 							var10 = Class3_Sub9.method133(var13 >> 16, 0);
 							var13 &= '\uffff';
 						}
@@ -167,7 +186,7 @@ final class AnimationDefinition {
 
 					if((this.aBoolean1846 || Class3_Sub26.aBoolean2558) && -1 != var3 && this.anIntArray1870.length > var3) {
 						var14 = this.anIntArray1870[var3];
-						if(var14 != 65535) {
+						if(~var14 != -65536) {
 							var11 = Class3_Sub9.method133(var14 >> 16, 0);
 							var14 &= '\uffff';
 						}
@@ -215,7 +234,7 @@ final class AnimationDefinition {
 			} else {
 				var4 &= var6;
 				Class3_Sub28_Sub5 var9 = null;
-				if((this.aBoolean1846 || Class3_Sub26.aBoolean2558) && var1 != -1 && this.frames.length > var1) {
+				if((this.aBoolean1846 || Class3_Sub26.aBoolean2558) && ~var1 != 0 && ~var1 > ~this.frames.length) {
 					var1 = this.frames[var1];
 					var9 = Class3_Sub9.method133(var1 >> 16, var6 + -3);
 					var1 &= '\uffff';
@@ -229,14 +248,14 @@ final class AnimationDefinition {
 				}
 
 				if(this.aBoolean1848 && HDToolKit.highDetail) {
-					if(1 == var4) {
-						((Class140_Sub1_Sub1)var10).method1902();
-					} else {
-						if(var4 == 2) {
+					if(1 != var4) {
+						if(-3 == ~var4) {
 							((Class140_Sub1_Sub1)var10).method1911();
-						} else if(var4 == 3) {
+						} else if(-4 == ~var4) {
 							((Class140_Sub1_Sub1)var10).method1925();
 						}
+					} else {
+						((Class140_Sub1_Sub1)var10).method1902();
 					}
 				} else if(var4 == 1) {
 					var10.method1900();
@@ -248,21 +267,21 @@ final class AnimationDefinition {
 
 				var10.method1880(var8, var2, var9, var1, var3 + -1, var7, this.aBoolean1848);
 				if(this.aBoolean1848 && HDToolKit.highDetail) {
-					if(var4 == 1) {
+					if(~var4 == -2) {
 						((Class140_Sub1_Sub1)var10).method1925();
-					} else if(var4 == 2) {
+					} else if(-3 == ~var4) {
 						((Class140_Sub1_Sub1)var10).method1911();
-					} else if(var4 == 3) {
+					} else if(~var4 == -4) {
 						((Class140_Sub1_Sub1)var10).method1902();
 					}
-				} else if(1 == var4) {
-					var10.method1885();
-				} else {
+				} else if(1 != var4) {
 					if(var4 == 2) {
 						var10.method1874();
 					} else if(3 == var4) {
 						var10.method1900();
 					}
+				} else {
+					var10.method1885();
 				}
 
 				return var10;
@@ -281,6 +300,8 @@ final class AnimationDefinition {
 			if(var0 != -108) {
 				aClass153_1852 = (CacheIndex)null;
 			}
+
+			aClass94_1863 = null;
 			anIntArray1871 = null;
 		} catch (RuntimeException var2) {
 			throw Class44.method1067(var2, "tk.F(" + var0 + ')');
@@ -290,7 +311,7 @@ final class AnimationDefinition {
 	final void method2058(byte var1) {
 		try {
 			if(var1 == -41) {
-				if(this.anInt1866 == -1) {
+				if(0 == ~this.anInt1866) {
 					if(null == this.aBooleanArray1855) {
 						this.anInt1866 = 0;
 					} else {
@@ -299,10 +320,10 @@ final class AnimationDefinition {
 				}
 
 				if(-1 == this.anInt1850) {
-					if(null == this.aBooleanArray1855) {
-						this.anInt1850 = 0;
-					} else {
+					if(null != this.aBooleanArray1855) {
 						this.anInt1850 = 2;
+					} else {
+						this.anInt1850 = 0;
 					}
 				}
 
@@ -323,7 +344,7 @@ final class AnimationDefinition {
 				return var5.method1882(true, true, true);
 			} else {
 				Class3_Sub28_Sub5 var9 = null;
-				if((this.aBoolean1846 || Class3_Sub26.aBoolean2558) && var1 != -1 && var1 < this.frames.length) {
+				if((this.aBoolean1846 || Class3_Sub26.aBoolean2558) && ~var1 != 0 && ~this.frames.length < ~var1) {
 					var1 = this.frames[var1];
 					var9 = Class3_Sub9.method133(var1 >> 16, 0);
 					var1 &= '\uffff';
@@ -348,7 +369,7 @@ final class AnimationDefinition {
 		try {
 			int var4;
 			int var5;
-			if(var1 == 1) {
+			if(~var1 == -2) {
 				var4 = var3.getShort(1);
 				this.duration = new int[var4];
 
@@ -358,7 +379,7 @@ final class AnimationDefinition {
 
 				this.frames = new int[var4];
 
-				for(var5 = 0; var4 > var5; ++var5) {
+				for(var5 = 0; ~var5 > ~var4; ++var5) {
 					this.frames[var5] = var3.getShort(1);
 				}
 
@@ -367,61 +388,77 @@ final class AnimationDefinition {
 				}
 			} else if(var1 == 2) {
 				this.anInt1865 = var3.getShort(1);
-			} else if(var1 == 3) {
+			} else if(-4 != ~var1) {
+				if(var1 == 4) {
+					this.aBoolean1859 = true;
+				} else if(-6 != ~var1) {
+					if(6 != var1) {
+						if(-8 == ~var1) {
+							this.anInt1849 = var3.getShort(1);
+						} else if(8 == var1) {
+							this.anInt1861 = var3.getByte((byte)-127);
+						} else if(9 == var1) {
+							this.anInt1866 = var3.getByte((byte)-56);
+						} else if(10 != var1) {
+							if(-12 != ~var1) {
+								if(12 != var1) {
+									if(13 == var1) {
+										var4 = var3.getShort(1);
+										this.anIntArrayArray1867 = new int[var4][];
+
+										for(var5 = 0; ~var4 < ~var5; ++var5) {
+											int var6 = var3.getByte((byte)-96);
+											if(var6 > 0) {
+												this.anIntArrayArray1867[var5] = new int[var6];
+												this.anIntArrayArray1867[var5][0] = var3.getTriByte((byte)102);
+
+												for(int var7 = 1; ~var6 < ~var7; ++var7) {
+													this.anIntArrayArray1867[var5][var7] = var3.getShort(1);
+												}
+											}
+										}
+									} else if(~var1 != -15) {
+										if(15 != var1) {
+											if(16 == var1) {
+												this.aBoolean1872 = true;
+											}
+										} else {
+											this.aBoolean1846 = true;
+										}
+									} else {
+										this.aBoolean1848 = true;
+									}
+								} else {
+									var4 = var3.getByte((byte)-117);
+									this.anIntArray1870 = new int[var4];
+
+									for(var5 = 0; ~var4 < ~var5; ++var5) {
+										this.anIntArray1870[var5] = var3.getShort(1);
+									}
+
+									for(var5 = 0; ~var4 < ~var5; ++var5) {
+										this.anIntArray1870[var5] += var3.getShort(1) << 16;
+									}
+								}
+							} else {
+								this.anInt1845 = var3.getByte((byte)-119);
+							}
+						} else {
+							this.anInt1850 = var3.getByte((byte)-43);
+						}
+					} else {
+						this.anInt1854 = var3.getShort(1);
+					}
+				} else {
+					this.anInt1857 = var3.getByte((byte)-72);
+				}
+			} else {
 				this.aBooleanArray1855 = new boolean[256];
 				var4 = var3.getByte((byte)-126);
 
 				for(var5 = 0; var5 < var4; ++var5) {
 					this.aBooleanArray1855[var3.getByte((byte)-81)] = true;
 				}
-			} else if (var1 == 4) {
-				this.aBoolean1859 = true;
-			} else if (var1 == 5) {
-				this.anInt1857 = var3.getByte((byte) -72);
-			} else if (6 == var1) {
-				this.anInt1854 = var3.getShort(1);
-			} else if (var1 == 7) {
-				this.anInt1849 = var3.getShort(1);
-			} else if (8 == var1) {
-				this.anInt1861 = var3.getByte((byte) -127);
-			} else if (9 == var1) {
-				this.anInt1866 = var3.getByte((byte) -56);
-			} else if (10 == var1) {
-				this.anInt1850 = var3.getByte((byte) -43);
-			} else if (var1 == 11) {
-				this.anInt1845 = var3.getByte((byte) -119);
-			} else if (12 == var1) {
-				var4 = var3.getByte((byte) -117);
-				this.anIntArray1870 = new int[var4];
-
-				for (var5 = 0; var5 < var4; ++var5) {
-					this.anIntArray1870[var5] = var3.getShort(1);
-				}
-
-				for (var5 = 0; var5 < var4; ++var5) {
-					this.anIntArray1870[var5] += var3.getShort(1) << 16;
-				}
-			} else if (13 == var1) {
-				var4 = var3.getShort(1);
-				this.anIntArrayArray1867 = new int[var4][];
-
-				for (var5 = 0; var5 < var4; ++var5) {
-					int var6 = var3.getByte((byte) -96);
-					if (var6 > 0) {
-						this.anIntArrayArray1867[var5] = new int[var6];
-						this.anIntArrayArray1867[var5][0] = var3.getTriByte((byte) 102);
-
-						for (int var7 = 1; var7 < var6; ++var7) {
-							this.anIntArrayArray1867[var5][var7] = var3.getShort(1);
-						}
-					}
-				}
-			} else if (var1 == 14) {
-				this.aBoolean1848 = true;
-			} else if (15 == var1) {
-				this.aBoolean1846 = true;
-			} else if (16 == var1) {
-				this.aBoolean1872 = true;
 			}
 
 			var4 = 49 % ((-12 - var2) / 34);
@@ -583,7 +620,7 @@ final class AnimationDefinition {
 			GraphicDefinition.incomingBuffer.index = 0;
 
 			int var1;
-			for(var1 = 0; RuntimeException_Sub1.aClass96Array2114.length > var1; ++var1) {
+			for(var1 = 0; ~var1 > ~RuntimeException_Sub1.aClass96Array2114.length; ++var1) {
 				RuntimeException_Sub1.aClass96Array2114[var1] = null;
 			}
 
@@ -591,7 +628,7 @@ final class AnimationDefinition {
 			Class38_Sub1.aBoolean2615 = false;
 			Class23.method940(119, 0);
 
-			for(var1 = 0; var1 < 100; ++var1) {
+			for(var1 = 0; -101 < ~var1; ++var1) {
 				Class3_Sub29.aClass94Array2580[var1] = null;
 			}
 
@@ -626,8 +663,8 @@ final class AnimationDefinition {
 			Class3_Sub13_Sub15.aClass61_3177.method1211(-58);
 			if(null != Class3_Sub13_Sub22.aClass61ArrayArrayArray3273) {
 				for(var1 = 0; 4 > var1; ++var1) {
-					for(int var2 = 0; var2 < 104; ++var2) {
-						for(int var3 = 0; var3 < 104; ++var3) {
+					for(int var2 = 0; ~var2 > -105; ++var2) {
+						for(int var3 = 0; ~var3 > -105; ++var3) {
 							Class3_Sub13_Sub22.aClass61ArrayArrayArray3273[var1][var2][var3] = null;
 						}
 					}
@@ -650,11 +687,11 @@ final class AnimationDefinition {
 			Class3_Sub28_Sub10.anInt3631 = 0;
 			Class163_Sub2_Sub1.anInt4021 = 0;
 
-			for(var1 = 0; var1 < NPCDefinition.anIntArray1277.length; ++var1) {
+			for(var1 = 0; ~NPCDefinition.anIntArray1277.length < ~var1; ++var1) {
 				NPCDefinition.anIntArray1277[var1] = -1;
 			}
 
-			if(Class3_Sub28_Sub12.anInt3655 != -1) {
+			if(0 != ~Class3_Sub28_Sub12.anInt3655) {
 				Class60.method1208((byte)-128, Class3_Sub28_Sub12.anInt3655);
 			}
 
@@ -691,7 +728,7 @@ final class AnimationDefinition {
 				Class3_Sub13_Sub33.aClass133Array3393[var1] = new Class133();
 			}
 
-			for(var1 = 0; var1 < 25; ++var1) {
+			for(var1 = 0; -26 < ~var1; ++var1) {
 				Class3_Sub13_Sub15.anIntArray3185[var1] = 0;
 				Class3_Sub20.anIntArray2480[var1] = 0;
 				Class133.anIntArray1743[var1] = 0;
@@ -703,7 +740,7 @@ final class AnimationDefinition {
 
 			Class3_Sub28_Sub10_Sub2.aBoolean4068 = var0;
 			Class113.interfacePacketCounter = 0;
-			Class3_Sub13_Sub28.aClass94_3353 = TextCore.HasWalkHere;
+			Class3_Sub13_Sub28.aClass94_3353 = Class56.aClass94_891;
 			Class73.aBoolean1084 = false;
 			Class3_Sub13_Sub38.aShortArray3455 = Class3_Sub13_Sub9.aShortArray3110 = Class136.aShortArray1779 = Class3_Sub13_Sub38.aShortArray3453 = new short[256];
 			Class3_Sub13.method165(-7878);

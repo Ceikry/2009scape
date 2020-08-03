@@ -2,7 +2,7 @@ package org.runite.jagex;
 
 final class Class3_Sub13_Sub2 extends Class3_Sub13 {
 
-   //static RSString aClass94_3042 = RSString.createRSString("<col=ff9040>");
+   static RSString aClass94_3042 = RSString.createRSString("<col=ff9040>");
    private int anInt3043 = 0;
    static float aFloat3044;
    static int[] anIntArray3045;
@@ -13,16 +13,16 @@ final class Class3_Sub13_Sub2 extends Class3_Sub13 {
       try {
          if(0 == var1) {
             this.anInt3043 = var2.getShort(1);
-         } else if(1 == var1) {
-            this.anInt3046 = var2.getShort(1);
-         } else {
+         } else if(1 != var1) {
             if(2 == var1) {
                this.aBoolean2375 = var2.getByte((byte)-76) == 1;
             }
+         } else {
+            this.anInt3046 = var2.getShort(1);
          }
 
          if(!var3) {
-            ;//aClass94_3042 = (RSString)null;
+            aClass94_3042 = (RSString)null;
          }
 
       } catch (RuntimeException var5) {
@@ -34,7 +34,7 @@ final class Class3_Sub13_Sub2 extends Class3_Sub13 {
       try {
          anIntArray3045 = null;
          if(var0 == 11597) {
-         ;
+            aClass94_3042 = null;
          }
       } catch (RuntimeException var2) {
          throw Class44.method1067(var2, "aj.B(" + var0 + ')');
@@ -57,11 +57,11 @@ final class Class3_Sub13_Sub2 extends Class3_Sub13 {
             int[] var9 = var3[1];
             int[] var10 = var3[2];
 
-            for(int var11 = 0; var11 < Class113.anInt1559; ++var11) {
+            for(int var11 = 0; ~Class113.anInt1559 < ~var11; ++var11) {
                int var13 = var6[var11];
                int var12 = var5[var11];
                int var14 = var7[var11];
-               if(var12 >= this.anInt3043) {
+               if(~this.anInt3043 >= ~var12) {
                   if(var12 > this.anInt3046) {
                      var8[var11] = this.anInt3046;
                   } else {
@@ -103,7 +103,7 @@ final class Class3_Sub13_Sub2 extends Class3_Sub13 {
             method176(-50);
          }
 
-         return !Client.method44(var2).method92(var1, (byte)-109) && null == var2.anObjectArray314?-1:(null != var2.anIntArray249 && var2.anIntArray249.length > var1 ?var2.anIntArray249[var1]:-1);
+         return !Client.method44(var2).method92(var1, (byte)-109) && null == var2.anObjectArray314?-1:(null != var2.anIntArray249 && ~var1 > ~var2.anIntArray249.length?var2.anIntArray249[var1]:-1);
       } catch (RuntimeException var4) {
          throw Class44.method1067(var4, "aj.F(" + var0 + ',' + var1 + ',' + (var2 != null?"{...}":"null") + ')');
       }
@@ -146,10 +146,10 @@ final class Class3_Sub13_Sub2 extends Class3_Sub13 {
             anIntArray3045 = (int[])null;
          }
 
-         while(var9 > var7) {
+         while(~var7 > ~var9) {
             var14 += 2;
             var12 += var14;
-            if(var12 >= 0 && var11 >= 1) {
+            if(~var12 <= -1 && ~var11 <= -2) {
                GameObject.anIntArray1838[var11] = var7;
                --var11;
                var12 -= var11 << 1;
@@ -165,10 +165,10 @@ final class Class3_Sub13_Sub2 extends Class3_Sub13 {
             int var23;
             int var22;
             int var24;
-            if(var10 >= 0) {
+            if(~var10 <= -1) {
                --var9;
                var10 -= var9 << 1;
-               if(var9 < var8) {
+               if(~var8 < ~var9) {
                   var18 = Class38.anIntArrayArray663[var9 + var2];
                   var19 = Class38.anIntArrayArray663[-var9 + var2];
                   var22 = -var7 + var6;
@@ -228,9 +228,9 @@ final class Class3_Sub13_Sub2 extends Class3_Sub13 {
             method176(40);
          }
 
-         for(; var1 < Class95.anInt1344; ++var1) {
+         for(; ~Class95.anInt1344 < ~var1; ++var1) {
             Class29 var2 = Class145.method2076(-109, var1);
-            if(null != var2 && var2.anInt556 == 0) {
+            if(null != var2 && ~var2.anInt556 == -1) {
                Class57.anIntArray898[var1] = 0;
                Class163_Sub1.anIntArray2985[var1] = 0;
             }

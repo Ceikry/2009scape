@@ -46,7 +46,7 @@ final class IOHandler implements Runnable {
                             }
 
                             var2 = this.anInt1236;
-                            if(this.anInt1230 < this.anInt1236) {
+                            if(~this.anInt1236 < ~this.anInt1230) {
                                 var1 = -this.anInt1236 + 5000;
                             } else {
                                 var1 = this.anInt1230 - this.anInt1236;
@@ -66,7 +66,7 @@ final class IOHandler implements Runnable {
                         this.anInt1236 = (var1 + this.anInt1236) % 5000;
 
                         try {
-                            if(this.anInt1236 == this.anInt1230) {
+                            if(~this.anInt1230 == ~this.anInt1236) {
                                 this.anOutputStream1231.flush();
                             }
                         } catch (IOException var7) {
@@ -105,7 +105,7 @@ final class IOHandler implements Runnable {
 
     static final void method1460(int var0, int var1, byte var2, int var3, int var4, int var5, int var6) {
         try {
-            if(Class101.anInt1425 <= var5 - var4 && Class3_Sub28_Sub18.anInt3765 >= var5 - -var4 && Class159.anInt2020 <= -var4 + var1 && Class57.anInt902 >= var4 + var1) {
+            if(~(var5 - var4) <= ~Class101.anInt1425 && Class3_Sub28_Sub18.anInt3765 >= var5 - -var4 && Class159.anInt2020 <= -var4 + var1 && Class57.anInt902 >= var4 + var1) {
                 Class3_Sub13_Sub2.method175(var6, var0, var1, true, var3, var4, var5);
             } else {
                 Class168.method2275(var3, (byte)109, var1, var4, var6, var0, var5);
@@ -169,19 +169,16 @@ final class IOHandler implements Runnable {
     final void sendBytes(boolean var1, int var2, byte[] var3, int var4) throws IOException {
         try {
             if(!this.aBoolean1241) {
-                if(this.aBoolean1243) {
-                    this.aBoolean1243 = false;
-                    throw new IOException();
-                } else {
+                if(!this.aBoolean1243) {
                     if(this.aByteArray1233 == null) {
                         this.aByteArray1233 = new byte[5000];
                     }
 
                     synchronized(this) {
-                        for(int var6 = 0; var6 < var4; ++var6) {
+                        for(int var6 = 0; ~var4 < ~var6; ++var6) {
                             this.aByteArray1233[this.anInt1230] = var3[var2 + var6];
                             this.anInt1230 = (this.anInt1230 + 1) % 5000;
-                            if((4900 + this.anInt1236) % 5000 == this.anInt1230) {
+                            if(~this.anInt1230 == ~((4900 + this.anInt1236) % 5000)) {
                                 throw new IOException();
                             }
                         }
@@ -196,6 +193,9 @@ final class IOHandler implements Runnable {
 
                         this.notifyAll();
                     }
+                } else {
+                    this.aBoolean1243 = false;
+                    throw new IOException();
                 }
             }
         } catch (RuntimeException var9) {
@@ -269,7 +269,7 @@ final class IOHandler implements Runnable {
                         Class3_Sub13_Sub34.method331(1L, 64);
                     }
 
-                    if(this.aClass64_1237.anInt978 == 1) {
+                    if(-2 == ~this.aClass64_1237.anInt978) {
                         try {
                             ((Thread)this.aClass64_1237.anObject974).join();
                         } catch (InterruptedException var4) {
@@ -290,7 +290,19 @@ final class IOHandler implements Runnable {
         if(var6 != null) {
             Class126 var7 = var6.aClass126_2240;
             int var9;
-            if(var7 == null) {
+            if(var7 != null) {
+                int var17 = var7.anInt1673;
+                if(var17 != 0) {
+                    for(var9 = 0; var9 < 4; ++var9) {
+                        var0[var1] = var17;
+                        var0[var1 + 1] = var17;
+                        var0[var1 + 2] = var17;
+                        var0[var1 + 3] = var17;
+                        var1 += var2;
+                    }
+
+                }
+            } else {
                 Class35 var8 = var6.aClass35_2226;
                 if(var8 != null) {
                     var9 = var8.anInt611;
@@ -301,7 +313,15 @@ final class IOHandler implements Runnable {
                     int[] var14 = Class162.anIntArrayArray2039[var10];
                     int var15 = 0;
                     int var16;
-                    if(var11 == 0) {
+                    if(var11 != 0) {
+                        for(var16 = 0; var16 < 4; ++var16) {
+                            var0[var1] = var13[var14[var15++]] == 0?var11:var12;
+                            var0[var1 + 1] = var13[var14[var15++]] == 0?var11:var12;
+                            var0[var1 + 2] = var13[var14[var15++]] == 0?var11:var12;
+                            var0[var1 + 3] = var13[var14[var15++]] == 0?var11:var12;
+                            var1 += var2;
+                        }
+                    } else {
                         for(var16 = 0; var16 < 4; ++var16) {
                             if(var13[var14[var15++]] != 0) {
                                 var0[var1] = var12;
@@ -321,26 +341,6 @@ final class IOHandler implements Runnable {
 
                             var1 += var2;
                         }
-                    } else {
-                        for(var16 = 0; var16 < 4; ++var16) {
-                            var0[var1] = var13[var14[var15++]] == 0?var11:var12;
-                            var0[var1 + 1] = var13[var14[var15++]] == 0?var11:var12;
-                            var0[var1 + 2] = var13[var14[var15++]] == 0?var11:var12;
-                            var0[var1 + 3] = var13[var14[var15++]] == 0?var11:var12;
-                            var1 += var2;
-                        }
-                    }
-
-                }
-            } else {
-                int var17 = var7.anInt1673;
-                if(var17 != 0) {
-                    for(var9 = 0; var9 < 4; ++var9) {
-                        var0[var1] = var17;
-                        var0[var1 + 1] = var17;
-                        var0[var1 + 2] = var17;
-                        var0[var1 + 3] = var17;
-                        var1 += var2;
                     }
 
                 }
@@ -363,8 +363,8 @@ final class IOHandler implements Runnable {
 
     static final void method1470(int var0, AnimationDefinition var1, int var2, int var3, boolean var4, int var5) {
         try {
-            if(Class113.anInt1552 < 50) {
-                if(var1.anIntArrayArray1867 != null && var1.anIntArrayArray1867.length > var5 && null != var1.anIntArrayArray1867[var5]) {
+            if(-51 < ~Class113.anInt1552) {
+                if(var1.anIntArrayArray1867 != null && ~var5 > ~var1.anIntArrayArray1867.length && null != var1.anIntArrayArray1867[var5]) {
                     int var6 = var1.anIntArrayArray1867[var5][0];
                     int var7 = var6 >> 8;
                     int var10;
@@ -377,12 +377,7 @@ final class IOHandler implements Runnable {
 
                     int var8 = var6 >> 5 & 7;
                     int var9 = var6 & 31;
-                    if(var9 == 0) {
-                        if(var4) {
-                            Class3_Sub13_Sub6.method199(var8, var7, 0, -799);
-                        }
-
-                    } else {
+                    if(~var9 != -1) {
                         if(0 != Class14.anInt340) {
                             Class3_Sub25.anIntArray2550[Class113.anInt1552] = var7;
                             Class166.anIntArray2068[Class113.anInt1552] = var8;
@@ -397,6 +392,11 @@ final class IOHandler implements Runnable {
 
                             ++Class113.anInt1552;
                         }
+                    } else {
+                        if(var4) {
+                            Class3_Sub13_Sub6.method199(var8, var7, 0, -799);
+                        }
+
                     }
                 }
             }

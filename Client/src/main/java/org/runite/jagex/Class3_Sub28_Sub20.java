@@ -1,8 +1,8 @@
 package org.runite.jagex;
 
+import java.nio.ByteBuffer;
 import javax.media.opengl.GL;
 import javax.media.opengl.glu.GLU;
-import java.nio.ByteBuffer;
 
 final class Class3_Sub28_Sub20 extends Node {
 
@@ -10,24 +10,29 @@ final class Class3_Sub28_Sub20 extends Node {
    private float aFloat3782;
    private int anInt3783;
    private int anInt3784;
+   static RSString aClass94_3785 = RSString.createRSString("Benutzeroberfl-=che geladen)3");
    static CacheIndex aClass153_3786;
    private boolean aBoolean3787;
    private int anInt3788;
    private boolean aBoolean3789;
    private Class82 aClass82_3790;
    private int anInt3791;
+   static RSString aClass94_3792 = RSString.createRSString("huffman");
    private int[] anIntArray3793;
    static Class118 aClass118_3794 = Class21.method913(31431);
    private int anInt3795 = -1;
    private int anInt3796 = 0;
    boolean aBoolean3797 = false;
+   static RSString aClass94_3798 = RSString.createRSString("RuneScape wird geladen )2 bitte warten)3)3)3");
    private int anInt3799;
    private boolean aBoolean3800;
 
 
    final int[] method718(Interface2 var1, int var2, float var3, CacheIndex var4, boolean var5) {
       try {
-         if(var2 == 0) {
+         if(var2 != 0) {
+            return (int[])null;
+         } else {
             if(null == this.anIntArray3793 || this.aFloat3782 != var3) {
                if(!this.aClass82_3790.method1408(true, var1, var4)) {
                   return null;
@@ -66,14 +71,14 @@ final class Class3_Sub28_Sub20 extends Node {
 
                   int var25 = var19;
 
-                  for(int var31 = var18; var31 >= 0; --var31) {
+                  for(int var31 = var18; ~var31 <= -1; --var31) {
                      int var30 = 0;
                      int var29 = 0;
                      int var28 = 0;
                      int var26 = 1;
                      int var27 = 1;
 
-                     for(var11 = 2; var11 >= 0; --var11) {
+                     for(var11 = 2; ~var11 <= -1; --var11) {
                         --var27;
                         var30 += var8[var27];
                         var29 += var9[var27];
@@ -83,7 +88,7 @@ final class Class3_Sub28_Sub20 extends Node {
                         }
                      }
 
-                     for(var11 = var17; var11 >= 0; --var11) {
+                     for(var11 = var17; -1 >= ~var11; --var11) {
                         --var26;
                         int var21 = var30 / 9;
                         int var22 = var29 / 9;
@@ -94,16 +99,16 @@ final class Class3_Sub28_Sub20 extends Node {
                         var28 += var7[var27] + -var7[var26];
                         var29 += var9[var27] - var9[var26];
                         var30 += -var8[var26] + var8[var27];
-                        if(var26 == 0) {
+                        if(-1 == ~var26) {
                            var26 = var15;
                         }
 
-                        if(var27 == 0) {
+                        if(~var27 == -1) {
                            var27 = var15;
                         }
                      }
 
-                     for(var11 = var17; var11 >= 0; --var11) {
+                     for(var11 = var17; ~var11 <= -1; --var11) {
                         --var13;
                         int var23 = this.anIntArray3793[var13];
                         --var14;
@@ -127,8 +132,6 @@ final class Class3_Sub28_Sub20 extends Node {
             }
 
             return this.anIntArray3793;
-         } else {
-            return (int[])null;
          }
       } catch (RuntimeException var32) {
          throw Class44.method1067(var32, "uh.D(" + (var1 != null?"{...}":"null") + ',' + var2 + ',' + var3 + ',' + (var4 != null?"{...}":"null") + ',' + var5 + ')');
@@ -143,23 +146,24 @@ final class Class3_Sub28_Sub20 extends Node {
             GL var5 = HDToolKit.gl;
             int var6 = !var4?128:64;
             int var7 = Class27.method961(1536);
-            if((1 & var7) == 0) {
-               if(this.anInt3795 == -1) {
+            if(~(1 & var7) == -1) {
+               if(0 != ~this.anInt3795) {
+                  HDToolKit.bindTexture2D(this.anInt3795);
+               } else {
                   int[] var8 = new int[1];
                   var5.glGenTextures(1, var8, 0);
                   this.anInt3791 = Class31.anInt582;
                   this.anInt3795 = var8[0];
                   HDToolKit.bindTexture2D(this.anInt3795);
                   ByteBuffer var9 = ByteBuffer.wrap(this.aClass82_3790.method1407(var6, var6, this.aBoolean3800, var2, 0.7D, 8839, var1));
-                  if(2 == this.anInt3788) {
-                     GLU var14 = new GLU();
-                     var14.gluBuild2DMipmaps(3553, 6408, var6, var6, 6408, 5121, var9);
-                     var5.glTexParameteri(3553, 10241, 9987);
-                     var5.glTexParameteri(3553, 10240, 9729);
-                     Class31.anInt580 += 4 * var9.limit() / 3 - this.anInt3796;
-                     this.anInt3796 = var9.limit() * 4 / 3;
-                  } else {
-                     if(this.anInt3788 == 1) {
+                  if(2 != this.anInt3788) {
+                     if(~this.anInt3788 != -2) {
+                        var5.glTexImage2D(3553, 0, 6408, var6, var6, 0, 6408, 5121, var9);
+                        var5.glTexParameteri(3553, 10241, 9729);
+                        var5.glTexParameteri(3553, 10240, 9729);
+                        Class31.anInt580 += var9.limit() - this.anInt3796;
+                        this.anInt3796 = var9.limit();
+                     } else {
                         int var10 = 0;
 
                         while(true) {
@@ -175,23 +179,22 @@ final class Class3_Sub28_Sub20 extends Node {
 
                            var9 = ByteBuffer.wrap(this.aClass82_3790.method1407(var6, var6, this.aBoolean3800, var2, 0.7D, 8839, var1));
                         }
-                     } else {
-                        var5.glTexImage2D(3553, 0, 6408, var6, var6, 0, 6408, 5121, var9);
-                        var5.glTexParameteri(3553, 10241, 9729);
-                        var5.glTexParameteri(3553, 10240, 9729);
-                        Class31.anInt580 += var9.limit() - this.anInt3796;
-                        this.anInt3796 = var9.limit();
                      }
+                  } else {
+                     GLU var14 = new GLU();
+                     var14.gluBuild2DMipmaps(3553, 6408, var6, var6, 6408, 5121, var9);
+                     var5.glTexParameteri(3553, 10241, 9987);
+                     var5.glTexParameteri(3553, 10240, 9729);
+                     Class31.anInt580 += 4 * var9.limit() / 3 - this.anInt3796;
+                     this.anInt3796 = var9.limit() * 4 / 3;
                   }
 
                   var5.glTexParameteri(3553, 10242, !this.aBoolean3787?'\u812f':10497);
                   var5.glTexParameteri(3553, 10243, this.aBoolean3781?10497:'\u812f');
-               } else {
-                  HDToolKit.bindTexture2D(this.anInt3795);
                }
             }
 
-            if((2 & var7) == 0) {
+            if(~(2 & var7) == -1) {
                HDToolKit.method1856(this.anInt3784);
             }
 
@@ -200,7 +203,7 @@ final class Class3_Sub28_Sub20 extends Node {
             }
 
             if((var7 & 8) == 0) {
-               if(this.anInt3799 == 0 && 0 == this.anInt3783) {
+               if(-1 == ~this.anInt3799 && 0 == this.anInt3783) {
                   HDToolKit.method1823();
                } else {
                   float var12 = (float)(this.anInt3799 * HDToolKit.anInt1791) / (float)var6;
@@ -224,11 +227,11 @@ final class Class3_Sub28_Sub20 extends Node {
             this.method723(45, (byte)75);
          }
 
-         if(this.aClass82_3790.method1408(true, var3, var4)) {
+         if(!this.aClass82_3790.method1408(true, var3, var4)) {
+            return null;
+         } else {
             int var5 = !var2?128:64;
             return this.aClass82_3790.method1404(var5, this.aBoolean3800, var5, 1.0D, 327680, var4, var3, false);
-         } else {
-            return null;
          }
       } catch (RuntimeException var6) {
          throw Class44.method1067(var6, "uh.O(" + var1 + ',' + var2 + ',' + (var3 != null?"{...}":"null") + ',' + (var4 != null?"{...}":"null") + ')');
@@ -237,6 +240,9 @@ final class Class3_Sub28_Sub20 extends Node {
 
    public static void method721(int var0) {
       try {
+         aClass94_3785 = null;
+         aClass94_3792 = null;
+         aClass94_3798 = null;
          aClass153_3786 = null;
          aClass118_3794 = null;
          if(var0 != 20413) {
@@ -263,13 +269,13 @@ final class Class3_Sub28_Sub20 extends Node {
          }
 
          if(this.anIntArray3793 != null) {
-            if(0 != this.anInt3799 || this.anInt3783 != 0) {
-               if(null == Class3_Sub23.anIntArray2533 || this.anIntArray3793.length > Class3_Sub23.anIntArray2533.length) {
+            if(0 != this.anInt3799 || ~this.anInt3783 != -1) {
+               if(null == Class3_Sub23.anIntArray2533 || ~Class3_Sub23.anIntArray2533.length > ~this.anIntArray3793.length) {
                   Class3_Sub23.anIntArray2533 = new int[this.anIntArray3793.length];
                }
 
                int var5 = var1 * this.anInt3783;
-               int var3 = this.anIntArray3793.length == 4096 ?64:128;
+               int var3 = ~this.anIntArray3793.length == -4097?64:128;
                int var4 = this.anIntArray3793.length;
                int var6 = var3 + -1;
                int var7 = this.anInt3799 * var1 * var3;
@@ -325,20 +331,20 @@ final class Class3_Sub28_Sub20 extends Node {
    static final void method725(int var0) {
       try {
          int var1 = 67 / ((-60 - var0) / 41);
-         if(Class137.method1817((byte) 70) == 2) {
+         if(~Class137.method1817((byte)70) == -3) {
             byte var2 = (byte)(255 & Class79.anInt1127 + -4);
             int var3 = Class79.anInt1127 % 104;
 
             int var4;
             int var5;
-            for(var4 = 0; var4 < 4; ++var4) {
+            for(var4 = 0; -5 < ~var4; ++var4) {
                for(var5 = 0; 104 > var5; ++var5) {
                   Class158.aByteArrayArrayArray2008[var4][var3][var5] = var2;
                }
             }
 
             if(WorldListCountry.localPlane != 3) {
-               for(var4 = 0; var4 < 2; ++var4) {
+               for(var4 = 0; -3 < ~var4; ++var4) {
                   Class41.anIntArray686[var4] = -1000000;
                   Class129_Sub1.anIntArray2696[var4] = 1000000;
                   Class159.anIntArray2021[var4] = 0;
@@ -351,7 +357,7 @@ final class Class3_Sub28_Sub20 extends Node {
                      Class140_Sub7.method2031((byte)-85, false, Class102.player.anInt2819 >> 7, Class102.player.anInt2829 >> 7, Class75_Sub2.aClass3_Sub2ArrayArrayArray2638, 0);
                   }
 
-                  if(Class139.anInt1823 < 310) {
+                  if(-311 < ~Class139.anInt1823) {
                      int var7 = Class102.player.anInt2829 >> 7;
                      var5 = Class77.anInt1111 >> 7;
                      int var9;
@@ -364,7 +370,7 @@ final class Class3_Sub28_Sub20 extends Node {
                      var4 = NPC.anInt3995 >> 7;
                      int var6 = Class102.player.anInt2819 >> 7;
                      int var8;
-                     if(var4 < var6) {
+                     if(~var6 < ~var4) {
                         var8 = -var4 + var6;
                      } else {
                         var8 = -var6 + var4;
@@ -385,7 +391,7 @@ final class Class3_Sub28_Sub20 extends Node {
                               ++var4;
                            }
 
-                           if((Class9.aByteArrayArrayArray113[WorldListCountry.localPlane][var4][var5] & 4) != 0) {
+                           if(~(Class9.aByteArrayArrayArray113[WorldListCountry.localPlane][var4][var5] & 4) != -1) {
                               Class140_Sub7.method2031((byte)-29, false, var4, var5, Class75_Sub2.aClass3_Sub2ArrayArrayArray2638, 1);
                               break;
                            }
@@ -401,7 +407,7 @@ final class Class3_Sub28_Sub20 extends Node {
                               }
 
                               var11 -= 65536;
-                              if((4 & Class9.aByteArrayArrayArray113[WorldListCountry.localPlane][var4][var5]) != 0) {
+                              if(~(4 & Class9.aByteArrayArrayArray113[WorldListCountry.localPlane][var4][var5]) != -1) {
                                  Class140_Sub7.method2031((byte)-120, false, var4, var5, Class75_Sub2.aClass3_Sub2ArrayArrayArray2638, 1);
                                  break;
                               }
@@ -411,20 +417,20 @@ final class Class3_Sub28_Sub20 extends Node {
                         var11 = '\u8000';
                         var10 = 65536 * var8 / var9;
 
-                        while(var7 != var5) {
+                        while(~var5 != ~var7) {
                            if(var5 < var7) {
                               ++var5;
                            } else if(var5 > var7) {
                               --var5;
                            }
 
-                           if((4 & Class9.aByteArrayArrayArray113[WorldListCountry.localPlane][var4][var5]) != 0) {
+                           if(~(4 & Class9.aByteArrayArrayArray113[WorldListCountry.localPlane][var4][var5]) != -1) {
                               Class140_Sub7.method2031((byte)-13, false, var4, var5, Class75_Sub2.aClass3_Sub2ArrayArrayArray2638, 1);
                               break;
                            }
 
                            var11 += var10;
-                           if(var11 >= 65536) {
+                           if(~var11 <= -65537) {
                               if(var6 > var4) {
                                  ++var4;
                               } else if(var6 < var4) {
@@ -459,8 +465,8 @@ final class Class3_Sub28_Sub20 extends Node {
          this.aClass82_3790 = new Class82(var1);
          this.aBoolean3789 = var1.getByte((byte)-86) == 1;
          this.aBoolean3800 = 1 == var1.getByte((byte)-80);
-         this.aBoolean3787 = var1.getByte((byte) -67) == 1;
-         this.aBoolean3781 = var1.getByte((byte) -114) == 1;
+         this.aBoolean3787 = -2 == ~var1.getByte((byte)-67);
+         this.aBoolean3781 = ~var1.getByte((byte)-114) == -2;
          int var2 = 3 & var1.getByte((byte)-35);
          this.anInt3783 = var1.getByte();
          this.anInt3799 = var1.getByte();
@@ -468,12 +474,12 @@ final class Class3_Sub28_Sub20 extends Node {
          var1.getByte((byte)-87);
          if(var2 == 1) {
             this.anInt3784 = 2;
-         } else if(var2 == 2) {
+         } else if(-3 == ~var2) {
             this.anInt3784 = 3;
-         } else if(var2 == 3) {
-            this.anInt3784 = 4;
-         } else {
+         } else if(~var2 != -4) {
             this.anInt3784 = 0;
+         } else {
+            this.anInt3784 = 4;
          }
 
          this.anInt3788 = (var3 & 240) >> 4;

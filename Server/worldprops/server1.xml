@@ -3,13 +3,13 @@
 
     <!--Note: Bots are EXTREMELY EXPERIMENTAL, issues are not currently of concern.-->
     <GameSettings
-    name="2009scape"
+    name="RBGScape"
     debug="false"
     dev="false"
     startGui="false"
     worldID="1"
     countryID="0"
-    activity="2009scape classic."
+    activity="RBGScape classic."
     pvpWorld="false"
     msip="127.0.0.1"
     default_xp_rate="5"

@@ -37,14 +37,11 @@ final class Class3_Sub13_Sub18 extends Class3_Sub13 {
             }
          }
 
-         if(Class3_Sub13_Sub34.anInt3415 == 1) {
-            Class38_Sub1.aBoolean2615 = false;
+         if(-2 != ~Class3_Sub13_Sub34.anInt3415) {
             Class75.method1340(AbstractIndexedSprite.anInt1462, Class3_Sub28_Sub3.anInt3552, (byte)-40, Class3_Sub13_Sub33.anInt3395, Class3_Sub28_Sub1.anInt3537);
-         } else {
-            Class75.method1340(AbstractIndexedSprite.anInt1462, Class3_Sub28_Sub3.anInt3552, (byte)-40, Class3_Sub13_Sub33.anInt3395, Class3_Sub28_Sub1.anInt3537);
-            var7 = Class168.aClass3_Sub28_Sub17_2096.method682(TextCore.HasChooseOptions);
+            var7 = Class168.aClass3_Sub28_Sub17_2096.method682(Class75_Sub4.aClass94_2667);
 
-            for(int var8 = 0; Class3_Sub13_Sub34.anInt3415 > var8; ++var8) {
+            for(int var8 = 0; ~var8 > ~Class3_Sub13_Sub34.anInt3415; ++var8) {
                int var9 = Class168.aClass3_Sub28_Sub17_2096.method682(RSByteBuffer.method802(var8, true));
                if(var7 < var9) {
                   var7 = var9;
@@ -53,6 +50,9 @@ final class Class3_Sub13_Sub18 extends Class3_Sub13 {
 
             Class3_Sub28_Sub1.anInt3537 = Class3_Sub13_Sub34.anInt3415 * 15 + (CacheIndex.aBoolean1951?26:22);
             Class3_Sub28_Sub3.anInt3552 = var7 + 8;
+         } else {
+            Class38_Sub1.aBoolean2615 = false;
+            Class75.method1340(AbstractIndexedSprite.anInt1462, Class3_Sub28_Sub3.anInt3552, (byte)-40, Class3_Sub13_Sub33.anInt3395, Class3_Sub28_Sub1.anInt3537);
          }
 
          if(-1 != Class3_Sub28_Sub12.anInt3655) {
@@ -140,12 +140,12 @@ final class Class3_Sub13_Sub18 extends Class3_Sub13 {
 
    final void method157(int var1, RSByteBuffer var2, boolean var3) {
       try {
-         if(var1 == 0) {
-            this.anInt3217 = var2.getShort(1) << 4;
-         } else {
+         if(~var1 != -1) {
             if(var1 == 1) {
-               this.aBoolean2375 = var2.getByte((byte) -107) == 1;
+               this.aBoolean2375 = ~var2.getByte((byte)-107) == -2;
             }
+         } else {
+            this.anInt3217 = var2.getShort(1) << 4;
          }
 
          if(!var3) {
@@ -180,8 +180,8 @@ final class Class3_Sub13_Sub18 extends Class3_Sub13 {
             method259((Class126)null, 69, 54, -87, 72, -85, 88, 37, true);
          }
 
-         for(int var2 = 0; var2 < 104; ++var2) {
-            for(int var3 = 0; var3 < 104; ++var3) {
+         for(int var2 = 0; -105 < ~var2; ++var2) {
+            for(int var3 = 0; ~var3 > -105; ++var3) {
                if(Class140_Sub7.method2031((byte)-106, true, var2, var3, Class75_Sub2.aClass3_Sub2ArrayArrayArray2638, var1)) {
                   ++var1;
                }

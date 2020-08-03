@@ -1,7 +1,7 @@
 package org.runite.jagex;
 
-import javax.media.opengl.GL;
 import java.nio.ByteBuffer;
+import javax.media.opengl.GL;
 
 final class Class3_Sub28_Sub17_Sub2 extends Class3_Sub28_Sub17 {
 
@@ -32,15 +32,7 @@ final class Class3_Sub28_Sub17_Sub2 extends Class3_Sub28_Sub17 {
 
    final void method678(int var1, int var2, int var3, int var4, int var5, int var6, boolean var7) {
       GL var8;
-      if(Class22.aClass3_Sub28_Sub16_Sub1_447 == null) {
-         HDToolKit.method1824();
-         var8 = HDToolKit.gl;
-         HDToolKit.bindTexture2D(this.anInt4084);
-         var8.glColor3ub((byte)(var6 >> 16), (byte)(var6 >> 8), (byte)var6);
-         var8.glTranslatef((float)var2, (float)(HDToolKit.anInt1811 - var3), 0.0F);
-         var8.glCallList(this.anIntArray4085[var1]);
-         var8.glLoadIdentity();
-      } else {
+      if(Class22.aClass3_Sub28_Sub16_Sub1_447 != null) {
          HDToolKit.method1824();
          var8 = HDToolKit.gl;
          var8.glColor3ub((byte)(var6 >> 16), (byte)(var6 >> 8), (byte)var6);
@@ -78,6 +70,14 @@ final class Class3_Sub28_Sub17_Sub2 extends Class3_Sub28_Sub17 {
          var8.glTexEnvi(8960, '\u8580', 5890);
          var8.glDisable(3553);
          var8.glActiveTexture('\u84c0');
+         var8.glLoadIdentity();
+      } else {
+         HDToolKit.method1824();
+         var8 = HDToolKit.gl;
+         HDToolKit.bindTexture2D(this.anInt4084);
+         var8.glColor3ub((byte)(var6 >> 16), (byte)(var6 >> 8), (byte)var6);
+         var8.glTranslatef((float)var2, (float)(HDToolKit.anInt1811 - var3), 0.0F);
+         var8.glCallList(this.anIntArray4085[var1]);
          var8.glLoadIdentity();
       }
 
@@ -159,11 +159,11 @@ final class Class3_Sub28_Sub17_Sub2 extends Class3_Sub28_Sub17 {
 
             for(int var12 = 0; var12 < var9; ++var12) {
                for(int var13 = 0; var13 < var10; ++var13) {
-                  if(var11[var8++] == 0) {
-                     var7 += 2;
+                  if(var11[var8++] != 0) {
+                     var3[var7++] = -1;
+                     var3[var7++] = -1;
                   } else {
-                     var3[var7++] = -1;
-                     var3[var7++] = -1;
+                     var7 += 2;
                   }
                }
 

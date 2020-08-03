@@ -97,7 +97,7 @@ abstract class Class140_Sub4 extends GameObject {
    final RenderAnimationDefinition method1965(boolean var1) {
       try {
          int var2 = this.getRenderAnimationId(-1);
-         return var1?(RenderAnimationDefinition)null:(var2 == -1 ?PacketParser.aClass16_84:Class3_Sub10.getRenderAnimationDefinition(false, var2));
+         return var1?(RenderAnimationDefinition)null:(0 == ~var2?PacketParser.aClass16_84:Class3_Sub10.getRenderAnimationDefinition(false, var2));
       } catch (RuntimeException var3) {
          throw Class44.method1067(var3, "fe.D(" + var1 + ')');
       }
@@ -117,19 +117,19 @@ abstract class Class140_Sub4 extends GameObject {
 
    final void method1967(int var1, int var2, int var3, int var4, boolean var5) {
       try {
-         if(this.anInt2771 != -1 && Client.getAnimationDefinition(this.anInt2771, (byte) -20).anInt1850 == 1) {
+         if(~this.anInt2771 != 0 && -2 == ~Client.getAnimationDefinition(this.anInt2771, (byte)-20).anInt1850) {
             this.anInt2771 = -1;
          }
 
          if(!var5) {
             int var6 = var3 + -this.anIntArray2767[0];
             int var7 = var4 + -this.anIntArray2755[0];
-            if(var6 >= -8 && 8 >= var6 && var7 >= -8 && var7 <= 8) {
+            if(~var6 <= 7 && 8 >= var6 && 7 >= ~var7 && ~var7 >= -9) {
                if(this.anInt2816 < 9) {
                   ++this.anInt2816;
                }
 
-               for(int var8 = this.anInt2816; var8 > 0; --var8) {
+               for(int var8 = this.anInt2816; ~var8 < -1; --var8) {
                   this.anIntArray2767[var8] = this.anIntArray2767[-1 + var8];
                   this.anIntArray2755[var8] = this.anIntArray2755[var8 + -1];
                   this.aByteArray2795[var8] = this.aByteArray2795[var8 - 1];
@@ -171,22 +171,22 @@ abstract class Class140_Sub4 extends GameObject {
             ++var5;
          }
 
-         if(this.anInt2771 != -1 && 1 == Client.getAnimationDefinition(this.anInt2771, (byte)-20).anInt1850) {
+         if(~this.anInt2771 != 0 && 1 == Client.getAnimationDefinition(this.anInt2771, (byte)-20).anInt1850) {
             this.anInt2771 = -1;
          }
 
-         if(this.anInt2816 < 9) {
+         if(-10 < ~this.anInt2816) {
             ++this.anInt2816;
          }
 
          int var6;
-         for(var6 = this.anInt2816; var6 > 0; --var6) {
+         for(var6 = this.anInt2816; -1 > ~var6; --var6) {
             this.anIntArray2767[var6] = this.anIntArray2767[-1 + var6];
             this.anIntArray2755[var6] = this.anIntArray2755[-1 + var6];
             this.aByteArray2795[var6] = this.aByteArray2795[-1 + var6];
          }
 
-         if(var3 == 1) {
+         if(-2 == ~var3) {
             ++var5;
          }
 
@@ -196,7 +196,7 @@ abstract class Class140_Sub4 extends GameObject {
             ++var4;
          }
 
-         if(var3 == 3) {
+         if(-4 == ~var3) {
             --var4;
          }
 
@@ -213,7 +213,7 @@ abstract class Class140_Sub4 extends GameObject {
             --var5;
          }
 
-         if(var3 == 7) {
+         if(-8 == ~var3) {
             --var5;
             ++var4;
          }
@@ -238,7 +238,7 @@ abstract class Class140_Sub4 extends GameObject {
          RenderAnimationDefinition var4 = this.method1965(false);
          int var5 = var4.anInt395;
          int var6 = var4.anInt381;
-         if(var5 != 0 && var6 != 0) {
+         if(-1 != ~var5 && var6 != 0) {
             int var7 = Class51.anIntArray840[var3];
             int var8 = Class51.anIntArray851[var3];
             int var9 = -var5 / 2;
@@ -260,7 +260,7 @@ abstract class Class140_Sub4 extends GameObject {
             int var27 = var25 * var8 - var7 * var24 >> 16;
             int var26 = var7 * var25 + var8 * var24 >> 16;
             int var23 = Class121.method1736(WorldListCountry.localPlane, 1, this.anInt2819 + var21, var22 + this.anInt2829);
-            int var29 = var13 < var18 ?var13:var18;
+            int var29 = ~var18 < ~var13?var13:var18;
             int var28 = Class121.method1736(WorldListCountry.localPlane, 1, var26 + this.anInt2819, var27 + this.anInt2829);
             int var30 = var28 > var23?var23:var28;
             int var31 = var28 > var18?var18:var28;
@@ -276,7 +276,7 @@ abstract class Class140_Sub4 extends GameObject {
             }
 
             Class3_Sub13_Sub9.anInt3111 = var28 + var13;
-            if(Class3_Sub13_Sub9.anInt3111 > var23 + var18) {
+            if(~(var23 + var18) > ~Class3_Sub13_Sub9.anInt3111) {
                Class3_Sub13_Sub9.anInt3111 = var23 + var18;
             }
 
@@ -294,7 +294,7 @@ abstract class Class140_Sub4 extends GameObject {
    final void method1970(int var1, int var2, int var3, int var4) {
       try {
          if(var2 == -8) {
-            for(int var5 = 0; var5 < 4; ++var5) {
+            for(int var5 = 0; -5 < ~var5; ++var5) {
                if(var3 >= this.anIntArray2768[var5]) {
                   this.anIntArray2836[var5] = var4;
                   this.anIntArray2815[var5] = var1;
@@ -319,7 +319,7 @@ abstract class Class140_Sub4 extends GameObject {
          if(0 != var3.anInt400 || 0 != var3.anInt371) {
             int var4 = 0;
             int var5 = 0;
-            if(this.aBoolean2769 && this.anInt2821 != 0) {
+            if(this.aBoolean2769 && ~this.anInt2821 != -1) {
                var5 = var3.anInt371;
                if(this.anInt2821 >= 0) {
                   var4 = var3.anInt400;
@@ -334,7 +334,7 @@ abstract class Class140_Sub4 extends GameObject {
             int var9;
             if(this.anInt2827 != var4) {
                this.anInt2827 = var4;
-               if(this.anInt2754 > 0 && this.anInt2787 < var4) {
+               if(-1 > ~this.anInt2754 && this.anInt2787 < var4) {
                   var6 = this.anInt2754 * this.anInt2754 / (2 * var3.anInt387);
                   var7 = -this.anInt2787 + var4;
                   if(var6 <= var7) {
@@ -348,7 +348,7 @@ abstract class Class140_Sub4 extends GameObject {
                   } else {
                      this.aBoolean2807 = false;
                   }
-               } else if(this.anInt2754 < 0 && var4 < this.anInt2787) {
+               } else if(-1 < ~this.anInt2754 && ~this.anInt2787 < ~var4) {
                   var6 = this.anInt2754 * this.anInt2754 / (var3.anInt387 * 2);
                   var7 = var4 - this.anInt2787;
                   if(var7 >= var6) {
@@ -367,9 +367,39 @@ abstract class Class140_Sub4 extends GameObject {
                }
             }
 
-            if(this.anInt2754 == 0) {
+            if(~this.anInt2754 != -1) {
+               if(this.anInt2754 > 0) {
+                  if(~this.anInt2787 <= ~this.anInt2804) {
+                     this.aBoolean2807 = false;
+                  }
+
+                  if(!this.aBoolean2807) {
+                     this.anInt2754 -= var3.anInt387;
+                     if(-1 < ~this.anInt2754) {
+                        this.anInt2754 = 0;
+                     }
+                  } else if(var3.anInt370 > this.anInt2754) {
+                     this.anInt2754 += var3.anInt387;
+                  }
+               } else {
+                  if(~this.anInt2804 <= ~this.anInt2787) {
+                     this.aBoolean2807 = false;
+                  }
+
+                  if(this.aBoolean2807) {
+                     if(~this.anInt2754 < ~(-var3.anInt370)) {
+                        this.anInt2754 -= var3.anInt387;
+                     }
+                  } else {
+                     this.anInt2754 += var3.anInt387;
+                     if(this.anInt2754 > 0) {
+                        this.anInt2754 = 0;
+                     }
+                  }
+               }
+            } else {
                var6 = -this.anInt2787 + this.anInt2827;
-               if(-var3.anInt387 < var6 && var6 < var3.anInt387) {
+               if(-var3.anInt387 < var6 && ~var3.anInt387 < ~var6) {
                   this.anInt2787 = this.anInt2827;
                } else {
                   this.aBoolean2807 = true;
@@ -378,49 +408,21 @@ abstract class Class140_Sub4 extends GameObject {
                   if(var6 >= 0) {
                      var8 = -var7 + this.anInt2827;
                      this.anInt2754 = var3.anInt387;
-                     if(this.anInt2804 < var8) {
+                     if(~var8 < ~this.anInt2804) {
                         this.anInt2804 = var8;
                      }
                   } else {
                      this.anInt2754 = -var3.anInt387;
                      var8 = var7 + this.anInt2827;
-                     if(var8 < this.anInt2804) {
+                     if(~this.anInt2804 < ~var8) {
                         this.anInt2804 = var8;
                      }
-                  }
-               }
-            } else if (this.anInt2754 > 0) {
-               if (this.anInt2804 <= this.anInt2787) {
-                  this.aBoolean2807 = false;
-               }
-
-               if (!this.aBoolean2807) {
-                  this.anInt2754 -= var3.anInt387;
-                  if (this.anInt2754 < 0) {
-                     this.anInt2754 = 0;
-                  }
-               } else if (var3.anInt370 > this.anInt2754) {
-                  this.anInt2754 += var3.anInt387;
-               }
-            } else {
-               if (this.anInt2787 <= this.anInt2804) {
-                  this.aBoolean2807 = false;
-               }
-
-               if (this.aBoolean2807) {
-                  if (-var3.anInt370 < this.anInt2754) {
-                     this.anInt2754 -= var3.anInt387;
-                  }
-               } else {
-                  this.anInt2754 += var3.anInt387;
-                  if (this.anInt2754 > 0) {
-                     this.anInt2754 = 0;
                   }
                }
             }
 
             this.anInt2787 += this.anInt2754;
-            if(this.anInt2787 != 0) {
+            if(~this.anInt2787 != -1) {
                var6 = (this.anInt2787 & '\ufff1') >> 5;
                var7 = var1.method1871() / 2;
                var1.method1897(0, -var7, 0);
@@ -430,7 +432,7 @@ abstract class Class140_Sub4 extends GameObject {
 
             if(var5 != this.anInt2766) {
                this.anInt2766 = var5;
-               if(this.anInt2830 > 0 && this.anInt2834 < var5) {
+               if(-1 > ~this.anInt2830 && this.anInt2834 < var5) {
                   var6 = this.anInt2830 * this.anInt2830 / (2 * var3.anInt403);
                   var7 = -this.anInt2834 + var5;
                   if(var6 > var7) {
@@ -440,11 +442,11 @@ abstract class Class140_Sub4 extends GameObject {
                      this.aBoolean2783 = true;
                      var8 = var3.anInt399 * var3.anInt399 / (2 * var3.anInt403);
                      var9 = var5 + -var8;
-                     if(var9 > this.anInt2757) {
+                     if(~this.anInt2757 > ~var9) {
                         this.anInt2757 = var9;
                      }
                   }
-               } else if(this.anInt2830 < 0 && this.anInt2834 > var5) {
+               } else if(-1 < ~this.anInt2830 && this.anInt2834 > var5) {
                   var7 = -this.anInt2834 + var5;
                   var6 = this.anInt2830 * this.anInt2830 / (2 * var3.anInt403);
                   if(var7 >= var6) {
@@ -463,15 +465,47 @@ abstract class Class140_Sub4 extends GameObject {
                }
             }
 
-            if(this.anInt2830 == 0) {
+            if(~this.anInt2830 != -1) {
+               if(-1 > ~this.anInt2830) {
+                  if(~this.anInt2834 <= ~this.anInt2757) {
+                     this.aBoolean2783 = false;
+                  }
+
+                  if(this.aBoolean2783) {
+                     if(~this.anInt2830 > ~var3.anInt399) {
+                        this.anInt2830 += var3.anInt403;
+                     }
+                  } else {
+                     this.anInt2830 -= var3.anInt403;
+                     if(0 > this.anInt2830) {
+                        this.anInt2830 = 0;
+                     }
+                  }
+               } else {
+                  if(this.anInt2757 >= this.anInt2834) {
+                     this.aBoolean2783 = false;
+                  }
+
+                  if(this.aBoolean2783) {
+                     if(~(-var3.anInt399) > ~this.anInt2830) {
+                        this.anInt2830 -= var3.anInt403;
+                     }
+                  } else {
+                     this.anInt2830 += var3.anInt403;
+                     if(0 < this.anInt2830) {
+                        this.anInt2830 = 0;
+                     }
+                  }
+               }
+            } else {
                var6 = -this.anInt2834 + this.anInt2766;
-               if(-var3.anInt403 < var6 && var3.anInt403 > var6) {
+               if(~var6 < ~(-var3.anInt403) && var3.anInt403 > var6) {
                   this.anInt2834 = this.anInt2766;
                } else {
                   this.anInt2757 = (this.anInt2766 + this.anInt2834) / 2;
                   this.aBoolean2783 = true;
                   var7 = var3.anInt399 * var3.anInt399 / (2 * var3.anInt403);
-                  if(var6 < 0) {
+                  if(-1 < ~var6) {
                      this.anInt2830 = -var3.anInt403;
                      var8 = var7 + this.anInt2766;
                      if(this.anInt2757 > var8) {
@@ -480,45 +514,15 @@ abstract class Class140_Sub4 extends GameObject {
                   } else {
                      this.anInt2830 = var3.anInt403;
                      var8 = -var7 + this.anInt2766;
-                     if(var8 > this.anInt2757) {
+                     if(~this.anInt2757 > ~var8) {
                         this.anInt2757 = var8;
                      }
-                  }
-               }
-            } else if (this.anInt2830 > 0) {
-               if (this.anInt2757 <= this.anInt2834) {
-                  this.aBoolean2783 = false;
-               }
-
-               if (this.aBoolean2783) {
-                  if (var3.anInt399 > this.anInt2830) {
-                     this.anInt2830 += var3.anInt403;
-                  }
-               } else {
-                  this.anInt2830 -= var3.anInt403;
-                  if (0 > this.anInt2830) {
-                     this.anInt2830 = 0;
-                  }
-               }
-            } else {
-               if (this.anInt2757 >= this.anInt2834) {
-                  this.aBoolean2783 = false;
-               }
-
-               if (this.aBoolean2783) {
-                  if (this.anInt2830 > -var3.anInt399) {
-                     this.anInt2830 -= var3.anInt403;
-                  }
-               } else {
-                  this.anInt2830 += var3.anInt403;
-                  if (0 < this.anInt2830) {
-                     this.anInt2830 = 0;
                   }
                }
             }
 
             this.anInt2834 += this.anInt2830;
-            if(this.anInt2834 != 0) {
+            if(-1 != ~this.anInt2834) {
                var6 = (this.anInt2834 & '\uffe6') >> 5;
                var7 = var1.method1871() / 2;
                var1.method1897(0, -var7, 0);

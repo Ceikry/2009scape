@@ -106,13 +106,13 @@ final class LDIndexedSprite extends AbstractIndexedSprite {
 
          for(int var15 = -var7; var15 < 0; ++var15) {
             byte var16 = var1[(var3 >> 16) + var14];
-            if(var16 == 0) {
-               ++var5;
-            } else {
+            if(var16 != 0) {
                var0[var5++] = var2[var16 & 255];
+            } else {
+               ++var5;
             }
 
-             var3 += var9;
+            var3 += var9;
          }
 
          var4 += var10;
@@ -151,40 +151,40 @@ final class LDIndexedSprite extends AbstractIndexedSprite {
          byte var13;
          for(var12 = var10; var12 < 0; ++var12) {
             var13 = var1[var4++];
-            if(var13 == 0) {
-               ++var5;
-            } else {
+            if(var13 != 0) {
                var0[var5++] = var2[var13 & 255];
+            } else {
+               ++var5;
             }
 
-             var13 = var1[var4++];
-            if(var13 == 0) {
-               ++var5;
-            } else {
+            var13 = var1[var4++];
+            if(var13 != 0) {
                var0[var5++] = var2[var13 & 255];
+            } else {
+               ++var5;
             }
 
-             var13 = var1[var4++];
-            if(var13 == 0) {
-               ++var5;
-            } else {
+            var13 = var1[var4++];
+            if(var13 != 0) {
                var0[var5++] = var2[var13 & 255];
+            } else {
+               ++var5;
             }
 
-             var13 = var1[var4++];
-            if(var13 == 0) {
-               ++var5;
-            } else {
+            var13 = var1[var4++];
+            if(var13 != 0) {
                var0[var5++] = var2[var13 & 255];
+            } else {
+               ++var5;
             }
          }
 
          for(var12 = var6; var12 < 0; ++var12) {
             var13 = var1[var4++];
-            if(var13 == 0) {
-               ++var5;
-            } else {
+            if(var13 != 0) {
                var0[var5++] = var2[var13 & 255];
+            } else {
+               ++var5;
             }
          }
 
@@ -205,17 +205,17 @@ final class LDIndexedSprite extends AbstractIndexedSprite {
 
          for(int var19 = -var7; var19 < 0; ++var19) {
             byte var20 = var1[(var3 >> 16) + var18];
-            if(var20 == 0) {
-               ++var5;
-            } else {
+            if(var20 != 0) {
                int var24 = var2[var20 & 255];
                int var21 = var24 >> 16 & 255;
                int var22 = var24 >> 8 & 255;
                int var23 = var24 & 255;
                var0[var5++] = (var21 * var14 >> 8 << 16) + (var22 * var15 >> 8 << 8) + (var23 * var16 >> 8);
+            } else {
+               ++var5;
             }
 
-             var3 += var9;
+            var3 += var9;
          }
 
          var4 += var10;
@@ -317,12 +317,12 @@ final class LDIndexedSprite extends AbstractIndexedSprite {
       for(int var11 = -var6; var11 < 0; ++var11) {
          for(int var12 = -var5; var12 < 0; ++var12) {
             byte var13 = var1[var3++];
-            if(var13 == 0) {
-               ++var4;
-            } else {
+            if(var13 != 0) {
                int var15 = var2[var13 & 255];
                int var14 = var0[var4];
                var0[var4++] = ((var15 & 16711935) * var9 + (var14 & 16711935) * var10 & -16711936) + ((var15 & '\uff00') * var9 + (var14 & '\uff00') * var10 & 16711680) >> 8;
+            } else {
+               ++var4;
             }
          }
 

@@ -19,7 +19,7 @@ final class Class93 {
             this.aClass130_1332 = (Class130)null;
          }
 
-         if(this.anInt1327 == 0) {
+         if(-1 == ~this.anInt1327) {
             Class3_Sub28_Sub7 var5 = (Class3_Sub28_Sub7)this.aClass13_1329.method877(-1);
             var5.method86(-1024);
             var5.method524((byte)-107);
@@ -52,7 +52,7 @@ final class Class93 {
   /** static final void method1517(byte var0) {
       try {
          Class139.aFontMetrics1822 = null;
-         TextCore.Helvetica = null;
+         Class3_Sub13_Sub32.aFont3384 = null;
          if(var0 != -118) {
             method1516(64, 82);
          }
@@ -66,6 +66,7 @@ final class Class93 {
    static final void method1517(byte var0) {
 	      try {
 	         Class139.aFontMetrics1822 = null;
+	         Class3_Sub13_Sub32.aFont3384 = null;
 	         if(var0 != -118) {
 	            method1516(64, 82);
 	         }
@@ -102,7 +103,9 @@ final class Class93 {
 
    final int method1520(int var1) {
       try {
-         if(var1 == -12623) {
+         if(var1 != -12623) {
+            return -85;
+         } else {
             int var2 = 0;
 
             for(Class3_Sub28_Sub7 var3 = (Class3_Sub28_Sub7)this.aClass13_1329.method876((byte)70); var3 != null; var3 = (Class3_Sub28_Sub7)this.aClass13_1329.method878(var1 + 12744)) {
@@ -112,8 +115,6 @@ final class Class93 {
             }
 
             return var2;
-         } else {
-            return -85;
          }
       } catch (RuntimeException var4) {
          throw Class44.method1067(var4, "n.D(" + var1 + ')');
@@ -238,12 +239,7 @@ final class Class93 {
             return null;
          } else {
             Object var5 = var4.method567(true);
-            if(var5 == null) {
-               var4.method86(-1024);
-               var4.method524((byte)-107);
-               ++this.anInt1327;
-               return null;
-            } else {
+            if(var5 != null) {
                if(var4.method568(-22358)) {
                   Class3_Sub28_Sub7_Sub1 var6 = new Class3_Sub28_Sub7_Sub1(var5);
                   this.aClass130_1332.method1779(1, var6, var4.aLong71);
@@ -257,6 +253,11 @@ final class Class93 {
                }
 
                return var5;
+            } else {
+               var4.method86(-1024);
+               var4.method524((byte)-107);
+               ++this.anInt1327;
+               return null;
             }
          }
       } catch (RuntimeException var7) {

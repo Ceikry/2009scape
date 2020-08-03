@@ -6,17 +6,21 @@ final class Class3_Sub13_Sub10 extends Class3_Sub13 {
    static volatile boolean aBoolean3116 = true;
   
    static boolean[][] aBooleanArrayArray3118 = new boolean[][]{new boolean[0], {true, false, true}, {true, false, false, true}, {false, false, true, true}, {true, true, false}, {false, true, true}, {true, false, false, true}, {false, false, false, true, true}, {false, true, true}, {true, false, true, true, true}, {false, true, true, true, true}, {false, true, true, true, true, false}};
+   static RSString aClass94_3119 = RSString.createRSString("vert:");
+   private static RSString aClass94_3120 = RSString.createRSString("M");
    static Frame aFrame3121;
    static int anInt3122;
-   static RSString COMMAND_NOCLIP = RSString.createRSString("::noclip");
+   static RSString aClass94_3123 = RSString.createRSString("::noclip");
+   static RSString aClass94_3124 = aClass94_3120;
    static Signlink aClass87_3125;
    private int anInt3126 = 2048;
    private int anInt3127 = 3072;
    private int anInt3128 = 1024;
+ static RSString aClass94_3117 = aClass94_3120;
 
    static final int method210(int var0, int var1, int var2, int var3) {
       try {
-         if(var3 == var2) {
+         if(~var2 == ~var3) {
             return var2;
          } else {
             int var4 = -var1 + 128;
@@ -35,14 +39,14 @@ final class Class3_Sub13_Sub10 extends Class3_Sub13 {
 
    final void method157(int var1, RSByteBuffer var2, boolean var3) {
       try {
-         if(var1 == 0) {
-            this.anInt3128 = var2.getShort(1);
-         } else {
+         if(var1 != 0) {
             if(var1 == 1) {
                this.anInt3127 = var2.getShort(1);
-            } else if(var1 == 2) {
+            } else if(-3 == ~var1) {
                this.aBoolean2375 = var2.getByte((byte)-117) == 1;
             }
+         } else {
+            this.anInt3128 = var2.getShort(1);
          }
 
          if(!var3) {
@@ -56,12 +60,17 @@ final class Class3_Sub13_Sub10 extends Class3_Sub13 {
 
    public static void method211(int var0) {
       try {
+         aClass94_3124 = null;
+         aClass94_3117 = null;
          if(var0 != 1024) {
             aClass87_3125 = (Signlink)null;
          }
-         COMMAND_NOCLIP = null;
+
+         aClass94_3120 = null;
+         aClass94_3123 = null;
          aFrame3121 = null;
          aBooleanArrayArray3118 = (boolean[][])null;
+         aClass94_3119 = null;
          aClass87_3125 = null;
       } catch (RuntimeException var2) {
          throw Class44.method1067(var2, "fh.C(" + var0 + ')');
@@ -89,12 +98,12 @@ final class Class3_Sub13_Sub10 extends Class3_Sub13 {
    static final void method212(long var0, int var2) {
       try {
          if(0L != var0) {
-            for(int var3 = var2; Class3_Sub28_Sub5.anInt3591 > var3; ++var3) {
+            for(int var3 = var2; ~var3 > ~Class3_Sub28_Sub5.anInt3591; ++var3) {
                if(Class114.ignores[var3] == var0) {
                   ++Class137.anInt1781;
                   --Class3_Sub28_Sub5.anInt3591;
 
-                  for(int var4 = var3; var4 < Class3_Sub28_Sub5.anInt3591; ++var4) {
+                  for(int var4 = var3; ~Class3_Sub28_Sub5.anInt3591 < ~var4; ++var4) {
                      Class114.ignores[var4] = Class114.ignores[var4 + 1];
                      Class3_Sub13_Sub27.aClass94Array3341[var4] = Class3_Sub13_Sub27.aClass94Array3341[1 + var4];
                   }
@@ -205,15 +214,15 @@ final class Class3_Sub13_Sub10 extends Class3_Sub13 {
          }
 
          int var4;
-         for(var3 = 0; var3 < 5000; ++var3) {
+         for(var3 = 0; -5001 < ~var3; ++var3) {
             var4 = (int)((double)var2 * Math.random() * 128.0D);
             Class161.anIntArray2026[var4] = (int)(Math.random() * 284.0D);
          }
 
          int var5;
          int var6;
-         for(var3 = 0; var3 < 20; ++var3) {
-            for(var4 = 1; var4 < -1 + var2; ++var4) {
+         for(var3 = 0; -21 < ~var3; ++var3) {
+            for(var4 = 1; ~(-1 + var2) < ~var4; ++var4) {
                for(var5 = 1; var5 < 127; ++var5) {
                   var6 = var5 - -(var4 << 7);
                   OutputStream_Sub1.anIntArray49[var6] = (Class161.anIntArray2026[128 + var6] + Class161.anIntArray2026[-1 + var6] + Class161.anIntArray2026[1 + var6] - -Class161.anIntArray2026[-128 + var6]) / 4;
@@ -257,7 +266,7 @@ final class Class3_Sub13_Sub10 extends Class3_Sub13 {
             int[] var9 = var3[1];
             int[] var10 = var3[2];
 
-            for(int var11 = 0; Class113.anInt1559 > var11; ++var11) {
+            for(int var11 = 0; ~var11 > ~Class113.anInt1559; ++var11) {
                var8[var11] = this.anInt3128 - -(this.anInt3126 * var5[var11] >> 12);
                var9[var11] = (this.anInt3126 * var6[var11] >> 12) + this.anInt3128;
                var10[var11] = this.anInt3128 + (this.anInt3126 * var7[var11] >> 12);
@@ -290,10 +299,10 @@ final class Class3_Sub13_Sub10 extends Class3_Sub13 {
 
    static final void method216(RSByteBuffer var0, int var1) {
       try {
-         for(int var2 = 0; var2 < Class57.activeWorldListSize; ++var2) {
+         for(int var2 = 0; ~Class57.activeWorldListSize < ~var2; ++var2) {
             int var3 = var0.getSmart(true);
             int var4 = var0.getShort(1);
-            if(var4 == 65535) {
+            if(~var4 == -65536) {
                var4 = -1;
             }
 
@@ -303,7 +312,7 @@ final class Class3_Sub13_Sub10 extends Class3_Sub13 {
          }
 
          if(var1 != -14991) {
-            COMMAND_NOCLIP = (RSString)null;
+            aClass94_3123 = (RSString)null;
          }
 
       } catch (RuntimeException var5) {

@@ -21,7 +21,7 @@ final class Class82 {
          Class3_Sub13_Sub3.method180(-1, var1, var3);
 
          int var11;
-         for(var11 = 0; var11 < this.aClass3_Sub13Array1147.length; ++var11) {
+         for(var11 = 0; ~this.aClass3_Sub13Array1147.length < ~var11; ++var11) {
             this.aClass3_Sub13Array1147[var11].method160(var1, var3, 250);
          }
 
@@ -32,20 +32,20 @@ final class Class82 {
          int[] var10 = new int[var1 * var3];
          int var12;
          byte var13;
-         if(var9) {
-            var13 = -1;
-            var12 = -1;
-            var11 = var3 - 1;
-         } else {
+         if(!var9) {
             var13 = 1;
             var11 = 0;
             var12 = var3;
+         } else {
+            var13 = -1;
+            var12 = -1;
+            var11 = var3 - 1;
          }
 
          int var14 = 0;
 
          int var15;
-         for(var15 = 0; var1 > var15; ++var15) {
+         for(var15 = 0; ~var15 > ~var1; ++var15) {
             if(var2) {
                var14 = var15;
             }
@@ -71,7 +71,7 @@ final class Class82 {
                   var20 = 255;
                }
 
-               if(var20 < 0) {
+               if(~var20 > -1) {
                   var20 = 0;
                }
 
@@ -86,12 +86,12 @@ final class Class82 {
                   var21 = 0;
                }
 
-               if(var22 > 255) {
+               if(-256 > ~var22) {
                   var22 = 255;
                }
 
                var21 = Class3_Sub30_Sub1.anIntArray3804[var21];
-               if(var22 < 0) {
+               if(-1 < ~var22) {
                   var22 = 0;
                }
 
@@ -126,9 +126,9 @@ final class Class82 {
          int var32;
          for(var7 = -1; var7 < Class159.localPlayerCount + Class163.localNPCCount; ++var7) {
             Object var8;
-            if(var7 == -1) {
+            if(0 == ~var7) {
                var8 = Class102.player;
-            } else if(var7 < Class159.localPlayerCount) {
+            } else if(~Class159.localPlayerCount < ~var7) {
                var8 = Class3_Sub13_Sub22.players[Class56.localPlayerIndexes[var7]];
             } else {
                var8 = Class3_Sub13_Sub24.npcs[Class15.localNPCIndexes[-Class159.localPlayerCount + var7]];
@@ -154,7 +154,7 @@ final class Class82 {
                   if(var10.skullIcon != -1 || -1 != var10.headIcon) {
                      Class107.method1647((byte)122, var4 >> 1, var3, (Class140_Sub4)var8, var5, ((Class140_Sub4)var8).method1975(var6 ^ -28716) - -15, var1 >> 1);
                      if(-1 < Class32.anInt590) {
-                        if(var10.skullIcon != -1) {
+                        if(0 != ~var10.skullIcon) {
                            Class3_Sub13_Sub31.aClass3_Sub28_Sub16Array3373[var10.skullIcon].method643(-12 + Class32.anInt590 + var2, -var19 + var0 + Class3_Sub1.anInt2208);
                            var19 += 25;
                         }
@@ -166,12 +166,12 @@ final class Class82 {
                      }
                   }
 
-                  if(var7 >= 0) {
+                  if(~var7 <= -1) {
                      Class96[] var11 = RuntimeException_Sub1.aClass96Array2114;
 
-                     for(var12 = 0; var12 < var11.length; ++var12) {
+                     for(var12 = 0; ~var11.length < ~var12; ++var12) {
                         Class96 var13 = var11[var12];
-                        if(null != var13 && var13.anInt1360 == 10 && Class56.localPlayerIndexes[var7] == var13.anInt1359) {
+                        if(null != var13 && -11 == ~var13.anInt1360 && Class56.localPlayerIndexes[var7] == var13.anInt1359) {
                            Class107.method1647((byte)122, var4 >> 1, var3, (Class140_Sub4)var8, var5, ((Class140_Sub4)var8).method1975(var6 ^ -28716) - -15, var1 >> 1);
                            if(Class32.anInt590 > -1) {
                               Class166.aClass3_Sub28_Sub16Array2072[var13.anInt1351].method643(var2 - (-Class32.anInt590 + 12), var0 + (Class3_Sub1.anInt2208 - var19));
@@ -185,39 +185,39 @@ final class Class82 {
                      var9 = var9.method1471((byte)102);
                   }
 
-                  if(var9.anInt1269 >= 0 && NPC.aClass3_Sub28_Sub16Array3977.length > var9.anInt1269) {
-                     if(var9.anInt1265 == -1) {
+                  if(~var9.anInt1269 <= -1 && NPC.aClass3_Sub28_Sub16Array3977.length > var9.anInt1269) {
+                     if(0 == ~var9.anInt1265) {
                         var22 = 15 + ((Class140_Sub4)var8).method1975(27855);
                      } else {
                         var22 = 15 + var9.anInt1265;
                      }
 
                      Class107.method1647((byte)122, var4 >> 1, var3, (Class140_Sub4)var8, var5, var22, var1 >> 1);
-                     if(Class32.anInt590 > -1) {
+                     if(~Class32.anInt590 < 0) {
                         NPC.aClass3_Sub28_Sub16Array3977[var9.anInt1269].method643(var2 - -Class32.anInt590 - 12, -30 + var0 - -Class3_Sub1.anInt2208);
                      }
                   }
 
                   Class96[] var20 = RuntimeException_Sub1.aClass96Array2114;
 
-                  for(var21 = 0; var20.length > var21; ++var21) {
+                  for(var21 = 0; ~var21 > ~var20.length; ++var21) {
                      Class96 var24 = var20[var21];
-                     if(null != var24 && var24.anInt1360 == 1 && Class15.localNPCIndexes[-Class159.localPlayerCount + var7] == var24.anInt1359 && Class44.anInt719 % 20 < 10) {
-                        if(-1 == var9.anInt1265) {
-                           var29 = 15 + ((Class140_Sub4)var8).method1975(var6 + '\u89b4');
-                        } else {
+                     if(null != var24 && var24.anInt1360 == 1 && ~var24.anInt1359 == ~Class15.localNPCIndexes[-Class159.localPlayerCount + var7] && -11 < ~(Class44.anInt719 % 20)) {
+                        if(-1 != var9.anInt1265) {
                            var29 = 15 + var9.anInt1265;
+                        } else {
+                           var29 = 15 + ((Class140_Sub4)var8).method1975(var6 + '\u89b4');
                         }
 
                         Class107.method1647((byte)122, var4 >> 1, var3, (Class140_Sub4)var8, var5, var29, var1 >> 1);
-                        if(Class32.anInt590 > -1) {
+                        if(0 > ~Class32.anInt590) {
                            Class166.aClass3_Sub28_Sub16Array2072[var24.anInt1351].method643(-12 + var2 + Class32.anInt590, -28 + Class3_Sub1.anInt2208 + var0);
                         }
                      }
                   }
                }
 
-               if(((Class140_Sub4)var8).textSpoken != null && (var7 >= Class159.localPlayerCount || Class3_Sub13_Sub8.anInt3101 == 0 || 3 == Class3_Sub13_Sub8.anInt3101 || 1 == Class3_Sub13_Sub8.anInt3101 && Class54.method1176(((Player)var8).displayName, (byte)-82))) {
+               if(((Class140_Sub4)var8).textSpoken != null && (var7 >= Class159.localPlayerCount || ~Class3_Sub13_Sub8.anInt3101 == -1 || 3 == Class3_Sub13_Sub8.anInt3101 || 1 == Class3_Sub13_Sub8.anInt3101 && Class54.method1176(((Player)var8).displayName, (byte)-82))) {
                   Class107.method1647((byte)122, var4 >> 1, var3, (Class140_Sub4)var8, var5, ((Class140_Sub4)var8).method1975(27855), var1 >> 1);
                   if(-1 < Class32.anInt590 && Class3_Sub13_Sub39.anInt3464 < Class3_Sub13_Sub26.anInt3332) {
                      Class3_Sub13_Sub26.anIntArray3329[Class3_Sub13_Sub39.anInt3464] = Class168.aClass3_Sub28_Sub17_2096.method682(((Class140_Sub4)var8).textSpoken) / 2;
@@ -232,7 +232,7 @@ final class Class82 {
                   }
                }
 
-               if(Class44.anInt719 < ((Class140_Sub4) var8).anInt2781) {
+               if(~((Class140_Sub4)var8).anInt2781 < ~Class44.anInt719) {
                   Class3_Sub28_Sub16 var23 = Class66.aClass3_Sub28_Sub16Array996[0];
                   Class3_Sub28_Sub16 var25 = Class66.aClass3_Sub28_Sub16Array996[1];
                   if(var8 instanceof NPC) {
@@ -245,7 +245,7 @@ final class Class82 {
                         }
                      }
 
-                     if(null != var31 && var31.length == 2) {
+                     if(null != var31 && ~var31.length == -3) {
                         var25 = var31[1];
                         var23 = var31[0];
                      }
@@ -267,10 +267,10 @@ final class Class82 {
                      var23.method643(var12, var29);
                      var32 = var23.anInt3707 * ((Class140_Sub4)var8).anInt2775 / 255;
                      var15 = var23.anInt3696;
-                     if(HDToolKit.highDetail) {
-                        Class22.method931(var12, var29, var12 + var32, var29 + var15);
-                     } else {
+                     if(!HDToolKit.highDetail) {
                         Class74.method1326(var12, var29, var12 + var32, var15 + var29);
+                     } else {
+                        Class22.method931(var12, var29, var12 + var32, var29 + var15);
                      }
 
                      var25.method643(var12, var29);
@@ -282,18 +282,18 @@ final class Class82 {
                   }
                }
 
-               for(var19 = 0; var19 < 4; ++var19) {
-                  if(Class44.anInt719 < ((Class140_Sub4) var8).anIntArray2768[var19]) {
-                     if(var8 instanceof NPC) {
+               for(var19 = 0; ~var19 > -5; ++var19) {
+                  if(~((Class140_Sub4)var8).anIntArray2768[var19] < ~Class44.anInt719) {
+                     if(!(var8 instanceof NPC)) {
+                        var22 = ((Class140_Sub4)var8).method1975(var6 ^ -28716) / 2;
+                     } else {
                         NPC var30 = (NPC)var8;
                         NPCDefinition var26 = var30.definition;
-                        if(var26.anInt1265 == -1) {
+                        if(~var26.anInt1265 == 0) {
                            var22 = ((Class140_Sub4)var8).method1975(27855) / 2;
                         } else {
                            var22 = var26.anInt1265 / 2;
                         }
-                     } else {
-                        var22 = ((Class140_Sub4)var8).method1975(var6 ^ -28716) / 2;
                      }
 
                      Class107.method1647((byte)122, var4 >> 1, var3, (Class140_Sub4)var8, var5, var22, var1 >> 1);
@@ -302,7 +302,7 @@ final class Class82 {
                            Class3_Sub1.anInt2208 -= 20;
                         }
 
-                        if(var19 == 2) {
+                        if(-3 == ~var19) {
                            Class3_Sub1.anInt2208 -= 10;
                            Class32.anInt590 -= 15;
                         }
@@ -346,9 +346,9 @@ final class Class82 {
             Class32.anInt590 = Class3_Sub13_Sub26.anIntArray3319[var7];
             Class3_Sub1.anInt2208 = Class3_Sub13_Sub26.anIntArray3337[var7] = var19;
             RSString var33 = Class3_Sub13_Sub26.aClass94Array3317[var7];
-            if(Class41.anInt688 == 0) {
+            if(~Class41.anInt688 == -1) {
                var32 = 16776960;
-               if(Class3_Sub13_Sub26.anIntArray3331[var7] < 6) {
+               if(-7 < ~Class3_Sub13_Sub26.anIntArray3331[var7]) {
                   var32 = Class3_Sub1.anIntArray2213[Class3_Sub13_Sub26.anIntArray3331[var7]];
                }
 
@@ -356,12 +356,12 @@ final class Class82 {
                   var32 = 10 <= Class79.anInt1127 % 20?16776960:16711680;
                }
 
-               if(Class3_Sub13_Sub26.anIntArray3331[var7] == 7) {
-                  var32 = Class79.anInt1127 % 20 < 10 ?255:'\uffff';
+               if(~Class3_Sub13_Sub26.anIntArray3331[var7] == -8) {
+                  var32 = ~(Class79.anInt1127 % 20) > -11?255:'\uffff';
                }
 
                if(8 == Class3_Sub13_Sub26.anIntArray3331[var7]) {
-                  var32 = Class79.anInt1127 % 20 >= 10 ?8454016:'\ub000';
+                  var32 = ~(Class79.anInt1127 % 20) <= -11?8454016:'\ub000';
                }
 
                if(9 == Class3_Sub13_Sub26.anIntArray3331[var7]) {
@@ -382,7 +382,7 @@ final class Class82 {
                if(10 == Class3_Sub13_Sub26.anIntArray3331[var7]) {
                   var15 = -Class3_Sub13_Sub26.anIntArray3318[var7] + 150;
                   if(50 <= var15) {
-                     if(var15 < 100) {
+                     if(~var15 > -101) {
                         var32 = -(327680 * (-50 + var15)) + 16711935;
                      } else if(150 > var15) {
                         var32 = 327680 * var15 - (32768000 - (255 + -(5 * var15) + 500));
@@ -395,7 +395,7 @@ final class Class82 {
                if(Class3_Sub13_Sub26.anIntArray3331[var7] == 11) {
                   var15 = 150 + -Class3_Sub13_Sub26.anIntArray3318[var7];
                   if(var15 >= 50) {
-                     if(var15 >= 100) {
+                     if(-101 >= ~var15) {
                         if(var15 < 150) {
                            var32 = 16777215 - var15 * 327680 + 32768000;
                         }
@@ -419,16 +419,16 @@ final class Class82 {
                   Class168.aClass3_Sub28_Sub17_2096.method695(var33, var2 - -Class32.anInt590, var0 - -Class3_Sub1.anInt2208, var32, 0, Class79.anInt1127);
                }
 
-               if(Class3_Sub13_Sub26.anIntArray3336[var7] == 3) {
+               if(-4 == ~Class3_Sub13_Sub26.anIntArray3336[var7]) {
                   Class168.aClass3_Sub28_Sub17_2096.method692(var33, var2 + Class32.anInt590, Class3_Sub1.anInt2208 + var0, var32, 0, Class79.anInt1127, 150 - Class3_Sub13_Sub26.anIntArray3318[var7]);
                }
 
                if(4 == Class3_Sub13_Sub26.anIntArray3336[var7]) {
                   var15 = (-Class3_Sub13_Sub26.anIntArray3318[var7] + 150) * (Class168.aClass3_Sub28_Sub17_2096.method682(var33) - -100) / 150;
-                  if(HDToolKit.highDetail) {
-                     Class22.method931(Class32.anInt590 + var2 + -50, var0, Class32.anInt590 + var2 - -50, var4 + var0);
-                  } else {
+                  if(!HDToolKit.highDetail) {
                      Class74.method1326(-50 + (var2 - -Class32.anInt590), var0, 50 + Class32.anInt590 + var2, var4 + var0);
+                  } else {
+                     Class22.method931(Class32.anInt590 + var2 + -50, var0, Class32.anInt590 + var2 - -50, var4 + var0);
                   }
 
                   Class168.aClass3_Sub28_Sub17_2096.method681(var33, var2 - (-Class32.anInt590 + -50) + -var15, var0 + Class3_Sub1.anInt2208, var32, 0);
@@ -483,7 +483,9 @@ final class Class82 {
    final byte[] method1407(int var1, int var2, boolean var3, Interface2 var4, double var5, int var7, CacheIndex var8) {
       try {
          byte[] var9 = new byte[4 * var2 * var1];
-         if(var7 == 8839) {
+         if(var7 != 8839) {
+            return (byte[])null;
+         } else {
             GameObject.method1859(var5, 32258);
             Class104.aClass153_2172 = var8;
             Class17.anInterface2_408 = var4;
@@ -497,7 +499,7 @@ final class Class82 {
             var10 = 0;
 
             int var11;
-            for(var11 = 0; var11 < var1; ++var11) {
+            for(var11 = 0; ~var1 < ~var11; ++var11) {
                if(var3) {
                   var10 = var11 << 2;
                }
@@ -524,7 +526,7 @@ final class Class82 {
                   var15 = this.aClass3_Sub13_1148.method166(-1, var11)[0];
                }
 
-               for(int var16 = var2 - 1; var16 >= 0; --var16) {
+               for(int var16 = var2 - 1; ~var16 <= -1; --var16) {
                   int var17 = var12[var16] >> 4;
                   if(var17 > 255) {
                      var17 = 255;
@@ -535,7 +537,7 @@ final class Class82 {
                   }
 
                   int var18 = var13[var16] >> 4;
-                  if(var18 > 255) {
+                  if(-256 > ~var18) {
                      var18 = 255;
                   }
 
@@ -545,18 +547,18 @@ final class Class82 {
                   }
 
                   var17 = Class3_Sub30_Sub1.anIntArray3804[var17];
-                  if(var19 < 0) {
+                  if(~var19 > -1) {
                      var19 = 0;
                   }
 
-                  if(var18 < 0) {
+                  if(~var18 > -1) {
                      var18 = 0;
                   }
 
                   var18 = Class3_Sub30_Sub1.anIntArray3804[var18];
                   var19 = Class3_Sub30_Sub1.anIntArray3804[var19];
                   int var20;
-                  if(var17 == 0 && var18 == 0 && var19 == 0) {
+                  if(~var17 == -1 && -1 == ~var18 && -1 == ~var19) {
                      var20 = 0;
                   } else {
                      var20 = var15[var16] >> 4;
@@ -564,7 +566,7 @@ final class Class82 {
                         var20 = 255;
                      }
 
-                     if(var20 < 0) {
+                     if(-1 < ~var20) {
                         var20 = 0;
                      }
                   }
@@ -579,13 +581,11 @@ final class Class82 {
                }
             }
 
-            for(var11 = 0; this.aClass3_Sub13Array1147.length > var11; ++var11) {
+            for(var11 = 0; ~var11 > ~this.aClass3_Sub13Array1147.length; ++var11) {
                this.aClass3_Sub13Array1147[var11].method161((byte)-45);
             }
 
             return var9;
-         } else {
-            return (byte[])null;
          }
       } catch (RuntimeException var21) {
          throw Class44.method1067(var21, "lc.F(" + var1 + ',' + var2 + ',' + var3 + ',' + (var4 != null?"{...}":"null") + ',' + var5 + ',' + var7 + ',' + (var8 != null?"{...}":"null") + ')');
@@ -596,13 +596,13 @@ final class Class82 {
       try {
          int var4;
          if(0 < Class126.anInt1668) {
-            for(var4 = 0; this.anIntArray1144.length > var4; ++var4) {
+            for(var4 = 0; ~var4 > ~this.anIntArray1144.length; ++var4) {
                if(!var3.method2129((byte)-78, this.anIntArray1144[var4], Class126.anInt1668)) {
                   return false;
                }
             }
          } else {
-            for(var4 = 0; this.anIntArray1144.length > var4; ++var4) {
+            for(var4 = 0; ~var4 > ~this.anIntArray1144.length; ++var4) {
                if(!var3.method2144(0, this.anIntArray1144[var4])) {
                   return false;
                }
@@ -613,7 +613,7 @@ final class Class82 {
             this.anIntArray1144 = (int[])null;
          }
 
-         for(var4 = 0; var4 < this.anIntArray1149.length; ++var4) {
+         for(var4 = 0; ~this.anIntArray1149.length < ~var4; ++var4) {
             if(!var2.method11(21, this.anIntArray1149[var4])) {
                return false;
             }
@@ -670,14 +670,14 @@ final class Class82 {
                ++var3;
             }
 
-            if(var7.method155((byte) 19) >= 0) {
+            if(~var7.method155((byte)19) <= -1) {
                ++var4;
             }
 
             var8 = var7.aClass3_Sub13Array2377.length;
             var5[var6] = new int[var8];
 
-            for(var9 = 0; var9 < var8; ++var9) {
+            for(var9 = 0; ~var8 < ~var9; ++var9) {
                var5[var6][var9] = var1.getByte((byte)-85);
             }
 
@@ -693,17 +693,17 @@ final class Class82 {
             var7 = this.aClass3_Sub13Array1147[var6];
             var8 = var7.aClass3_Sub13Array2377.length;
 
-            for(var9 = 0; var8 > var9; ++var9) {
+            for(var9 = 0; ~var9 > ~var8; ++var9) {
                var7.aClass3_Sub13Array2377[var9] = this.aClass3_Sub13Array1147[var5[var6][var9]];
             }
 
             var9 = var7.method159(4);
             int var10 = var7.method155((byte)19);
-            if(var9 > 0) {
+            if(-1 > ~var9) {
                this.anIntArray1144[var3++] = var9;
             }
 
-            if(var10 > 0) {
+            if(~var10 < -1) {
                this.anIntArray1149[var4++] = var10;
             }
 

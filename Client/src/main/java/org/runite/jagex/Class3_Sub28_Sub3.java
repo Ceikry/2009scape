@@ -22,7 +22,7 @@ final class Class3_Sub28_Sub3 extends Node {
 
    final boolean method537(int var1, byte var2, int var3) {
       try {
-         if(var3 >= this.anInt3555 && var3 <= this.anInt3559 && var1 >= this.anInt3562 && var1 <= this.anInt3549) {
+         if(~this.anInt3555 >= ~var3 && var3 <= this.anInt3559 && var1 >= this.anInt3562 && var1 <= this.anInt3549) {
             for(Class3_Sub21 var4 = (Class3_Sub21)this.aClass61_3560.method1222(); var4 != null; var4 = (Class3_Sub21)this.aClass61_3560.method1221()) {
                if(var4.method393((byte)-45, var1, var3)) {
                   return true;
@@ -54,11 +54,11 @@ final class Class3_Sub28_Sub3 extends Node {
          this.anInt3555 = 12800;
 
          for(Class3_Sub21 var2 = (Class3_Sub21)this.aClass61_3560.method1222(); null != var2; var2 = (Class3_Sub21)this.aClass61_3560.method1221()) {
-            if(this.anInt3562 > var2.anInt2494) {
+            if(~var2.anInt2494 > ~this.anInt3562) {
                this.anInt3562 = var2.anInt2494;
             }
 
-            if(this.anInt3555 > var2.anInt2492) {
+            if(~var2.anInt2492 > ~this.anInt3555) {
                this.anInt3555 = var2.anInt2492;
             }
 
@@ -90,16 +90,16 @@ final class Class3_Sub28_Sub3 extends Node {
 
    static final int method540(int var0, int var1, int var2) {
       try {
-         if(var1 == -14314) {
+         if(var1 != -14314) {
+            return 116;
+         } else {
             int var3;
-            for(var3 = 0; var0 > 0; --var0) {
+            for(var3 = 0; -1 > ~var0; --var0) {
                var3 = var3 << 1 | 1 & var2;
                var2 >>>= 1;
             }
 
             return var3;
-         } else {
-            return 116;
          }
       } catch (RuntimeException var4) {
          throw Class44.method1067(var4, "bn.P(" + var0 + ',' + var1 + ',' + var2 + ')');
@@ -182,7 +182,7 @@ final class Class3_Sub28_Sub3 extends Node {
 
    static final boolean method544(int var0, int var1) {
       try {
-         return var0 != -49?true: var1 >= 48 && 57 >= var1;
+         return var0 != -49?true:-49 >= ~var1 && 57 >= var1;
       } catch (RuntimeException var3) {
          throw Class44.method1067(var3, "bn.E(" + var0 + ',' + var1 + ')');
       }
@@ -197,7 +197,7 @@ final class Class3_Sub28_Sub3 extends Node {
          this.aClass94_3554 = var2;
          this.anInt3563 = var7;
          this.anInt3558 = var3;
-         if(this.anInt3563 == 255) {
+         if(-256 == ~this.anInt3563) {
             this.anInt3563 = 0;
          }
 

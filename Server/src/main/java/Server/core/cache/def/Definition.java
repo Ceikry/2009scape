@@ -3,6 +3,8 @@ package core.cache.def;
 import java.util.HashMap;
 import java.util.Map;
 
+import core.cache.def.impl.ObjectDefinition;
+import core.game.system.SystemLogger;
 import core.tools.StringUtils;
 import core.game.node.Node;
 

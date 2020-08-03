@@ -14,6 +14,8 @@ final class Class3_Sub13_Sub7 extends Class3_Sub13 {
    private int anInt3093 = 2048;
    static boolean aBoolean3094 = false;
    static short[] aShortArray3095 = new short[500];
+   private static RSString aClass94_3096 = RSString.createRSString("Close");
+   static RSString aClass94_3097 = aClass94_3096;
    static CacheIndex aClass153_3098;
    static Class3_Sub28_Sub16 aClass3_Sub28_Sub16_3099;
 
@@ -30,6 +32,7 @@ final class Class3_Sub13_Sub7 extends Class3_Sub13 {
 
    public static void method200(byte var0) {
       try {
+         aClass94_3097 = null;
          aShortArray3095 = null;
          if(var0 != 122) {
             method201(62, -109, 127);
@@ -37,6 +40,7 @@ final class Class3_Sub13_Sub7 extends Class3_Sub13 {
 
          GameShell.frame = null;
          aRandom3088 = null;
+         aClass94_3096 = null;
          aClass3_Sub28_Sub16_3099 = null;
          aClass11_3087 = null;
          aClass153_3098 = null;
@@ -80,14 +84,14 @@ final class Class3_Sub13_Sub7 extends Class3_Sub13 {
 
    final void method157(int var1, RSByteBuffer var2, boolean var3) {
       try {
-         if(var1 == 0) {
+         if(~var1 == -1) {
             this.anInt3085 = var2.getByte((byte)-118);
-         } else if(var1 == 1) {
-            this.anInt3093 = var2.getShort(1);
-         } else {
-            if(var1 == 2) {
+         } else if(-2 != ~var1) {
+            if(-3 == ~var1) {
                this.anInt3086 = var2.getByte((byte)-81);
             }
+         } else {
+            this.anInt3093 = var2.getShort(1);
          }
 
          if(!var3) {
@@ -114,7 +118,7 @@ final class Class3_Sub13_Sub7 extends Class3_Sub13 {
                short var6 = 0;
 
                for(var7 = 0; this.anInt3085 > var7; ++var7) {
-                  if(var5 >= this.anIntArray3089[var7] && this.anIntArray3089[var7 - -1] > var5) {
+                  if(~this.anIntArray3089[var7] >= ~var5 && ~var5 > ~this.anIntArray3089[var7 - -1]) {
                      if(var5 < this.anIntArray3091[var7]) {
                         var6 = 4096;
                      }
@@ -124,25 +128,25 @@ final class Class3_Sub13_Sub7 extends Class3_Sub13 {
 
                Class76.method1359(var3, 0, Class113.anInt1559, var6);
             } else {
-               for(int var12 = 0; Class113.anInt1559 > var12; ++var12) {
+               for(int var12 = 0; ~var12 > ~Class113.anInt1559; ++var12) {
                   int var9 = Class102.anIntArray2125[var12];
                   var7 = 0;
                   int var10 = this.anInt3086;
                   if(var10 == 1) {
                      var7 = var9;
-                  } else if(var10 == 2) {
-                     var7 = (var9 + var5 + -4096 >> 1) + 2048;
-                  } else {
-                     if(var10 == 3) {
+                  } else if(var10 != 2) {
+                     if(~var10 == -4) {
                         var7 = (-var5 + var9 >> 1) + 2048;
                      }
+                  } else {
+                     var7 = (var9 + var5 + -4096 >> 1) + 2048;
                   }
 
                   short var8 = 0;
 
                   for(var10 = 0; var10 < this.anInt3085; ++var10) {
-                     if(var7 >= this.anIntArray3089[var10] && this.anIntArray3089[var10 - -1] > var7) {
-                        if(this.anIntArray3091[var10] > var7) {
+                     if(~this.anIntArray3089[var10] >= ~var7 && ~var7 > ~this.anIntArray3089[var10 - -1]) {
+                        if(~var7 > ~this.anIntArray3091[var10]) {
                            var8 = 4096;
                         }
                         break;

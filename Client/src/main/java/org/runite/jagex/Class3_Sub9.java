@@ -86,10 +86,10 @@ final class Class3_Sub9 extends Class3 {
                   var4 = var4.method1471((byte)-87);
                }
 
-               if(var4 == null) {
-                  this.anInt2328 = 0;
-               } else {
+               if(var4 != null) {
                   this.anInt2328 = var4.anInt1291 * 128;
+               } else {
+                  this.anInt2328 = 0;
                }
             }
          }
@@ -134,7 +134,7 @@ final class Class3_Sub9 extends Class3 {
             int var22 = var7 + var0;
             int var21 = var0 - var7;
             if(var13 < 0) {
-               while(var13 < 0) {
+               while(-1 < ~var13) {
                   ++var6;
                   var13 += var17;
                   var14 += var19;
@@ -143,7 +143,7 @@ final class Class3_Sub9 extends Class3 {
                }
             }
 
-            if(var14 < 0) {
+            if(~var14 > -1) {
                var13 += var17;
                var17 += var16;
                var14 += var19;

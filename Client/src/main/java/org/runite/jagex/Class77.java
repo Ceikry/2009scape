@@ -2,6 +2,7 @@ package org.runite.jagex;
 
 final class Class77 {
 
+   static RSString aClass94_1110 = RSString.createRSString("Attaquer");
    static int anInt1111;
    static Class52 aClass52_1112 = new Class52();
 
@@ -23,6 +24,7 @@ final class Class77 {
    public static void method1365(int var0) {
       try {
          aClass52_1112 = null;
+         aClass94_1110 = null;
          if(var0 <= 96) {
             anInt1111 = 55;
          }
@@ -49,7 +51,7 @@ final class Class77 {
          Class3_Sub13_Sub23_Sub1.method282(Class38.anIntArrayArray663[var2++], var5, 92, var1, var0);
          Class3_Sub13_Sub23_Sub1.method282(Class38.anIntArrayArray663[var4--], var5, 97, var1, var0);
          if(var3 >= 23) {
-            for(int var6 = var2; var4 >= var6; ++var6) {
+            for(int var6 = var2; ~var6 >= ~var4; ++var6) {
                int[] var7 = Class38.anIntArrayArray663[var6];
                var7[var5] = var7[var1] = var0;
             }

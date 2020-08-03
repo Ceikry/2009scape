@@ -1,10 +1,12 @@
 package core.game.world
 
+import core.game.node.entity.combat.CombatStyle
 import core.game.world.map.Location
 import core.game.world.map.zone.ZoneBorders
 import plugin.ai.general.GeneralBotCreator
 import plugin.ai.general.scriptrepository.*
 import plugin.ai.pvmbots.CombatBotAssembler
+import plugin.ai.pvmbots.DragonKiller
 import plugin.ai.skillingbot.SkillingBotAssembler
 import java.util.concurrent.Executors
 
@@ -16,7 +18,7 @@ object ImmerseWorld {
         Executors.newSingleThreadExecutor().execute {
             immerseSeersAndCatherby()
             immerseLumbridgeDraynor()
-            immerseVarrock()
+            immerseVarrockEdgeville()
         }
     }
 
@@ -43,7 +45,7 @@ object ImmerseWorld {
         GeneralBotCreator(DraynorFisher(), skillingBotAssembler.produce(SkillingBotAssembler.Wealth.POOR,Location.create(3095, 3246, 0)))
     }
 
-    fun immerseVarrock(){
+    fun immerseVarrockEdgeville(){
         val WestBankIdlerBorders = ZoneBorders(3184, 3435,3187, 3444)
         GeneralBotCreator(GlassBlowingBankstander(), skillingBotAssembler.produce(SkillingBotAssembler.Wealth.RICH,Location.create(3189, 3435, 0)))
         GeneralBotCreator(FletchingBankstander(), skillingBotAssembler.produce(SkillingBotAssembler.Wealth.AVERAGE,Location.create(3189, 3439, 0)))
@@ -52,5 +54,8 @@ object ImmerseWorld {
         GeneralBotCreator(VarrockEssenceMiner(), skillingBotAssembler.produce(SkillingBotAssembler.Wealth.POOR,Location.create(3253, 3420, 0)))
         GeneralBotCreator(VarrockSmither(), skillingBotAssembler.produce(SkillingBotAssembler.Wealth.RICH,Location.create(3189, 3436, 0)))
         GeneralBotCreator(NonBankingMiner(), skillingBotAssembler.produce(SkillingBotAssembler.Wealth.POOR,Location.create(3182, 3374, 0)))
+        GeneralBotCreator(GreenDragonKiller(CombatStyle.MELEE), assembler.assembleMeleeDragonBot(CombatBotAssembler.Tier.HIGH,Location.create(2980, 3613, 0)))
+        GeneralBotCreator(GreenDragonKiller(CombatStyle.RANGE), assembler.assembleRangeDragonBot(CombatBotAssembler.Tier.HIGH,Location.create(2980, 3613, 0)))
+        GeneralBotCreator(GreenDragonKiller(CombatStyle.MELEE), assembler.assembleMeleeDragonBot(CombatBotAssembler.Tier.HIGH,Location.create(2980, 3613, 0)))
     }
 }

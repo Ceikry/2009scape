@@ -237,15 +237,29 @@ final class Class3_Sub11 extends Class3 {
 
       if(aClass3_Sub30_2372.index != 0 || aClass3_Sub30_2362.index != 0) {
          GL var10 = HDToolKit.gl;
-         if(this.anInt2351 == -1 || var3) {
+         if(this.anInt2351 != -1 && !var3) {
+            Class51.anInterface2_838.method8(this.anInt2351, true);
+         } else {
             HDToolKit.bindTexture2D(-1);
             Class3_Sub28_Sub4.method551(0, 0, 0);
-         } else {
-            Class51.anInterface2_838.method8(this.anInt2351, true);
          }
 
-          int var11 = this.aBoolean2347?40:36;
-         if(this.aClass156_2363 == null) {
+         int var11 = this.aBoolean2347?40:36;
+         if(this.aClass156_2363 != null) {
+            this.aClass156_2363.method2169();
+            var10.glVertexPointer(3, 5126, var11, 0L);
+            var10.glColorPointer(4, 5121, var11, 12L);
+            if(Class106.aBoolean1441) {
+               var10.glNormalPointer(5126, var11, 16L);
+            }
+
+            var10.glTexCoordPointer(2, 5126, var11, 28L);
+            if(this.aBoolean2347) {
+               var10.glClientActiveTexture(Class165.method2252());
+               var10.glTexCoordPointer(1, 5126, var11, 36L);
+               var10.glClientActiveTexture('\u84c0');
+            }
+         } else {
             if(HDToolKit.aBoolean1813) {
                var10.glBindBufferARB('\u8892', 0);
             }
@@ -267,23 +281,9 @@ final class Class3_Sub11 extends Class3 {
                var10.glTexCoordPointer(1, 5126, var11, this.aByteBuffer2345);
                var10.glClientActiveTexture('\u84c0');
             }
-         } else {
-            this.aClass156_2363.method2169();
-            var10.glVertexPointer(3, 5126, var11, 0L);
-            var10.glColorPointer(4, 5121, var11, 12L);
-            if(Class106.aBoolean1441) {
-               var10.glNormalPointer(5126, var11, 16L);
-            }
-
-            var10.glTexCoordPointer(2, 5126, var11, 28L);
-            if(this.aBoolean2347) {
-               var10.glClientActiveTexture(Class165.method2252());
-               var10.glTexCoordPointer(1, 5126, var11, 36L);
-               var10.glClientActiveTexture('\u84c0');
-            }
          }
 
-          if(HDToolKit.aBoolean1813) {
+         if(HDToolKit.aBoolean1813) {
             var10.glBindBufferARB('\u8893', 0);
          }
 

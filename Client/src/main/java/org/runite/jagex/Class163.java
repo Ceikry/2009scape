@@ -3,9 +3,10 @@ package org.runite.jagex;
 class Class163 {
 
    static Class47 aClass47_2041 = new Class47(64);
+   static RSString aClass94_2042 = RSString.createRSString("Spieler kann nicht gefunden werden: ");
    static int[] anIntArray2043 = new int[]{8, 11, 4, 6, 9, 7, 10, 0};
    static RSString aClass94_2044 = RSString.createRSString("cookieprefix");
-   static RSString COMMAND_ERROR_TEST = RSString.createRSString("::errortest");
+   static RSString aClass94_2045 = RSString.createRSString("::errortest");
    static int localNPCCount = 0;
 
 
@@ -13,11 +14,13 @@ class Class163 {
       try {
          aClass47_2041 = null;
          anIntArray2043 = null;
-         COMMAND_ERROR_TEST = null;
+         aClass94_2045 = null;
          aClass94_2044 = null;
          if(var0 != 30358) {
-            COMMAND_ERROR_TEST = (RSString)null;
+            aClass94_2045 = (RSString)null;
          }
+
+         aClass94_2042 = null;
       } catch (RuntimeException var2) {
          throw Class44.method1067(var2, "wd.L(" + var0 + ')');
       }
@@ -34,7 +37,7 @@ class Class163 {
          int var6 = var3.anInt1125;
          int var5 = var3.anInt1123;
          int var7 = Class3_Sub6.anIntArray2288[var6 - var5];
-         if(var1 < 0 || var7 < var1) {
+         if(~var1 > -1 || var7 < var1) {
             var1 = 0;
          }
 

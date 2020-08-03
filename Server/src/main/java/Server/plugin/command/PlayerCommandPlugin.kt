@@ -75,6 +75,12 @@ class PlayerCommandPlugin : CommandPlugin() {
                 player.sendMessage("<col=3498db>Your bank tabs have been reset!")
                 return true
             }
+            "credits" -> {
+                player ?: return true
+                val amount = player.details.credits
+                player.sendMessage("You have $amount ${if(amount == 1) "credit" else "credits"}")
+                return true
+            }
             "ge" -> {
                 val offers = HashMap<Int,Int>()
                 for(offer in GEOfferDispatch.getOfferMapping().values){

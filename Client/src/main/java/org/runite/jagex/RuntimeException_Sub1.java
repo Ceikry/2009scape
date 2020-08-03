@@ -46,7 +46,7 @@ final class RuntimeException_Sub1 extends RuntimeException {
 
    static final int method2287(int var0, byte var1) {
       try {
-         return (var0 < 97 || var0 > 122) && (var0 < 224 || var0 > 254 || 247 == var0)?(var0 != 255 ?(var0 != 156?(var1 != 59?72:var0):140):159):var0 + -32;
+         return (-98 < ~var0 || ~var0 < -123) && (-225 < ~var0 || ~var0 < -255 || 247 == var0)?(-256 != ~var0?(var0 != 156?(var1 != 59?72:var0):140):159):var0 + -32;
       } catch (RuntimeException var3) {
          throw Class44.method1067(var3, "ld.C(" + var0 + ',' + var1 + ')');
       }

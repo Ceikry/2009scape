@@ -1,7 +1,7 @@
 package org.runite.jagex;
 
-import javax.media.opengl.GL;
 import java.nio.ByteBuffer;
+import javax.media.opengl.GL;
 
 final class Class140_Sub1_Sub1 extends Model {
 
@@ -417,35 +417,35 @@ final class Class140_Sub1_Sub1 extends Model {
          short[] var17;
          short[] var16;
          short[] var18;
-         if(this.aClass18_3843 == null) {
-            var15 = null;
-            var16 = null;
-            var17 = null;
-            var18 = null;
-         } else {
+         if(this.aClass18_3843 != null) {
             var15 = this.aClass18_3843.aShortArray417;
             var16 = this.aClass18_3843.aShortArray419;
             var17 = this.aClass18_3843.aShortArray418;
             var18 = this.aClass18_3843.aShortArray416;
+         } else {
+            var15 = null;
+            var16 = null;
+            var17 = null;
+            var18 = null;
          }
 
-          short[] var19;
+         short[] var19;
          short[] var21;
          short[] var20;
          short[] var22;
-         if(var6.aClass18_3843 == null) {
-            var19 = null;
-            var20 = null;
-            var21 = null;
-            var22 = null;
-         } else {
+         if(var6.aClass18_3843 != null) {
             var19 = var6.aClass18_3843.aShortArray417;
             var20 = var6.aClass18_3843.aShortArray419;
             var21 = var6.aClass18_3843.aShortArray418;
             var22 = var6.aClass18_3843.aShortArray416;
+         } else {
+            var19 = null;
+            var20 = null;
+            var21 = null;
+            var22 = null;
          }
 
-          int[] var23 = var6.anIntArray3838;
+         int[] var23 = var6.anIntArray3838;
          short[] var24 = var6.aShortArray3828;
          if(!var6.aClass6_3835.aBoolean98) {
             var6.method1917();
@@ -842,102 +842,7 @@ final class Class140_Sub1_Sub1 extends Model {
             int var37;
             int var40;
             if(var1 == 2) {
-               if(var8 == null) {
-                  for(var10 = 0; var10 < var9; ++var10) {
-                     var11 = var2[var10];
-                     if(var11 < this.anIntArrayArray3825.length) {
-                        var12 = this.anIntArrayArray3825[var11];
-
-                        for(var13 = 0; var13 < var12.length; ++var13) {
-                           var14 = var12[var13];
-                           if(this.aShortArray3832 == null || (var7 & this.aShortArray3832[var14]) != 0) {
-                              this.anIntArray3822[var14] -= anInt3859;
-                              this.anIntArray3845[var14] -= anInt3865;
-                              this.anIntArray3848[var14] -= anInt3862;
-                              if(var5 != 0) {
-                                 var15 = Class51.anIntArray840[var5];
-                                 var16 = Class51.anIntArray851[var5];
-                                 var17 = this.anIntArray3845[var14] * var15 + this.anIntArray3822[var14] * var16 + 32767 >> 16;
-                                 this.anIntArray3845[var14] = this.anIntArray3845[var14] * var16 - this.anIntArray3822[var14] * var15 + 32767 >> 16;
-                                 this.anIntArray3822[var14] = var17;
-                              }
-
-                              if(var3 != 0) {
-                                 var15 = Class51.anIntArray840[var3];
-                                 var16 = Class51.anIntArray851[var3];
-                                 var17 = this.anIntArray3845[var14] * var16 - this.anIntArray3848[var14] * var15 + 32767 >> 16;
-                                 this.anIntArray3848[var14] = this.anIntArray3845[var14] * var15 + this.anIntArray3848[var14] * var16 + 32767 >> 16;
-                                 this.anIntArray3845[var14] = var17;
-                              }
-
-                              if(var4 != 0) {
-                                 var15 = Class51.anIntArray840[var4];
-                                 var16 = Class51.anIntArray851[var4];
-                                 var17 = this.anIntArray3848[var14] * var15 + this.anIntArray3822[var14] * var16 + 32767 >> 16;
-                                 this.anIntArray3848[var14] = this.anIntArray3848[var14] * var16 - this.anIntArray3822[var14] * var15 + 32767 >> 16;
-                                 this.anIntArray3822[var14] = var17;
-                              }
-
-                              this.anIntArray3822[var14] += anInt3859;
-                              this.anIntArray3845[var14] += anInt3865;
-                              this.anIntArray3848[var14] += anInt3862;
-                           }
-                        }
-                     }
-                  }
-
-                  if(var6 && this.aShortArray3810 != null) {
-                     for(var10 = 0; var10 < var9; ++var10) {
-                        var11 = var2[var10];
-                        if(var11 < this.anIntArrayArray3825.length) {
-                           var12 = this.anIntArrayArray3825[var11];
-
-                           for(var13 = 0; var13 < var12.length; ++var13) {
-                              var14 = var12[var13];
-                              if(this.aShortArray3832 == null || (var7 & this.aShortArray3832[var14]) != 0) {
-                                 var15 = this.anIntArray3838[var14];
-                                 var16 = this.anIntArray3838[var14 + 1];
-
-                                 for(var17 = var15; var17 < var16; ++var17) {
-                                    var18 = this.aShortArray3828[var17] - 1;
-                                    if(var18 == -1) {
-                                       break;
-                                    }
-
-                                    if(var5 != 0) {
-                                       var19 = Class51.anIntArray840[var5];
-                                       var20 = Class51.anIntArray851[var5];
-                                       var21 = this.aShortArray3826[var18] * var19 + this.aShortArray3810[var18] * var20 + 32767 >> 16;
-                                       this.aShortArray3826[var18] = (short)(this.aShortArray3826[var18] * var20 - this.aShortArray3810[var18] * var19 + 32767 >> 16);
-                                       this.aShortArray3810[var18] = (short)var21;
-                                    }
-
-                                    if(var3 != 0) {
-                                       var19 = Class51.anIntArray840[var3];
-                                       var20 = Class51.anIntArray851[var3];
-                                       var21 = this.aShortArray3826[var18] * var20 - this.aShortArray3837[var18] * var19 + 32767 >> 16;
-                                       this.aShortArray3837[var18] = (short)(this.aShortArray3826[var18] * var19 + this.aShortArray3837[var18] * var20 + 32767 >> 16);
-                                       this.aShortArray3826[var18] = (short)var21;
-                                    }
-
-                                    if(var4 != 0) {
-                                       var19 = Class51.anIntArray840[var4];
-                                       var20 = Class51.anIntArray851[var4];
-                                       var21 = this.aShortArray3837[var18] * var19 + this.aShortArray3810[var18] * var20 + 32767 >> 16;
-                                       this.aShortArray3837[var18] = (short)(this.aShortArray3837[var18] * var20 - this.aShortArray3810[var18] * var19 + 32767 >> 16);
-                                       this.aShortArray3810[var18] = (short)var21;
-                                    }
-                                 }
-                              }
-                           }
-                        }
-                     }
-
-                     if(this.aClass121_3815 != null) {
-                        this.aClass121_3815.aBoolean1640 = false;
-                     }
-                  }
-               } else {
+               if(var8 != null) {
                   var10 = var8[9] << 4;
                   var11 = var8[10] << 4;
                   var47 = var8[11] << 4;
@@ -1043,10 +948,7 @@ final class Class140_Sub1_Sub1 extends Model {
                         }
                      }
                   }
-               }
-
-            } else if(var1 == 3) {
-               if(var8 == null) {
+               } else {
                   for(var10 = 0; var10 < var9; ++var10) {
                      var11 = var2[var10];
                      if(var11 < this.anIntArrayArray3825.length) {
@@ -1058,9 +960,30 @@ final class Class140_Sub1_Sub1 extends Model {
                               this.anIntArray3822[var14] -= anInt3859;
                               this.anIntArray3845[var14] -= anInt3865;
                               this.anIntArray3848[var14] -= anInt3862;
-                              this.anIntArray3822[var14] = this.anIntArray3822[var14] * var3 >> 7;
-                              this.anIntArray3845[var14] = this.anIntArray3845[var14] * var4 >> 7;
-                              this.anIntArray3848[var14] = this.anIntArray3848[var14] * var5 >> 7;
+                              if(var5 != 0) {
+                                 var15 = Class51.anIntArray840[var5];
+                                 var16 = Class51.anIntArray851[var5];
+                                 var17 = this.anIntArray3845[var14] * var15 + this.anIntArray3822[var14] * var16 + 32767 >> 16;
+                                 this.anIntArray3845[var14] = this.anIntArray3845[var14] * var16 - this.anIntArray3822[var14] * var15 + 32767 >> 16;
+                                 this.anIntArray3822[var14] = var17;
+                              }
+
+                              if(var3 != 0) {
+                                 var15 = Class51.anIntArray840[var3];
+                                 var16 = Class51.anIntArray851[var3];
+                                 var17 = this.anIntArray3845[var14] * var16 - this.anIntArray3848[var14] * var15 + 32767 >> 16;
+                                 this.anIntArray3848[var14] = this.anIntArray3845[var14] * var15 + this.anIntArray3848[var14] * var16 + 32767 >> 16;
+                                 this.anIntArray3845[var14] = var17;
+                              }
+
+                              if(var4 != 0) {
+                                 var15 = Class51.anIntArray840[var4];
+                                 var16 = Class51.anIntArray851[var4];
+                                 var17 = this.anIntArray3848[var14] * var15 + this.anIntArray3822[var14] * var16 + 32767 >> 16;
+                                 this.anIntArray3848[var14] = this.anIntArray3848[var14] * var16 - this.anIntArray3822[var14] * var15 + 32767 >> 16;
+                                 this.anIntArray3822[var14] = var17;
+                              }
+
                               this.anIntArray3822[var14] += anInt3859;
                               this.anIntArray3845[var14] += anInt3865;
                               this.anIntArray3848[var14] += anInt3862;
@@ -1068,7 +991,62 @@ final class Class140_Sub1_Sub1 extends Model {
                         }
                      }
                   }
-               } else {
+
+                  if(var6 && this.aShortArray3810 != null) {
+                     for(var10 = 0; var10 < var9; ++var10) {
+                        var11 = var2[var10];
+                        if(var11 < this.anIntArrayArray3825.length) {
+                           var12 = this.anIntArrayArray3825[var11];
+
+                           for(var13 = 0; var13 < var12.length; ++var13) {
+                              var14 = var12[var13];
+                              if(this.aShortArray3832 == null || (var7 & this.aShortArray3832[var14]) != 0) {
+                                 var15 = this.anIntArray3838[var14];
+                                 var16 = this.anIntArray3838[var14 + 1];
+
+                                 for(var17 = var15; var17 < var16; ++var17) {
+                                    var18 = this.aShortArray3828[var17] - 1;
+                                    if(var18 == -1) {
+                                       break;
+                                    }
+
+                                    if(var5 != 0) {
+                                       var19 = Class51.anIntArray840[var5];
+                                       var20 = Class51.anIntArray851[var5];
+                                       var21 = this.aShortArray3826[var18] * var19 + this.aShortArray3810[var18] * var20 + 32767 >> 16;
+                                       this.aShortArray3826[var18] = (short)(this.aShortArray3826[var18] * var20 - this.aShortArray3810[var18] * var19 + 32767 >> 16);
+                                       this.aShortArray3810[var18] = (short)var21;
+                                    }
+
+                                    if(var3 != 0) {
+                                       var19 = Class51.anIntArray840[var3];
+                                       var20 = Class51.anIntArray851[var3];
+                                       var21 = this.aShortArray3826[var18] * var20 - this.aShortArray3837[var18] * var19 + 32767 >> 16;
+                                       this.aShortArray3837[var18] = (short)(this.aShortArray3826[var18] * var19 + this.aShortArray3837[var18] * var20 + 32767 >> 16);
+                                       this.aShortArray3826[var18] = (short)var21;
+                                    }
+
+                                    if(var4 != 0) {
+                                       var19 = Class51.anIntArray840[var4];
+                                       var20 = Class51.anIntArray851[var4];
+                                       var21 = this.aShortArray3837[var18] * var19 + this.aShortArray3810[var18] * var20 + 32767 >> 16;
+                                       this.aShortArray3837[var18] = (short)(this.aShortArray3837[var18] * var20 - this.aShortArray3810[var18] * var19 + 32767 >> 16);
+                                       this.aShortArray3810[var18] = (short)var21;
+                                    }
+                                 }
+                              }
+                           }
+                        }
+                     }
+
+                     if(this.aClass121_3815 != null) {
+                        this.aClass121_3815.aBoolean1640 = false;
+                     }
+                  }
+               }
+
+            } else if(var1 == 3) {
+               if(var8 != null) {
                   var10 = var8[9] << 4;
                   var11 = var8[10] << 4;
                   var47 = var8[11] << 4;
@@ -1143,6 +1121,28 @@ final class Class140_Sub1_Sub1 extends Model {
                               this.anIntArray3822[var37] = var38;
                               this.anIntArray3845[var37] = var39;
                               this.anIntArray3848[var37] = var40;
+                           }
+                        }
+                     }
+                  }
+               } else {
+                  for(var10 = 0; var10 < var9; ++var10) {
+                     var11 = var2[var10];
+                     if(var11 < this.anIntArrayArray3825.length) {
+                        var12 = this.anIntArrayArray3825[var11];
+
+                        for(var13 = 0; var13 < var12.length; ++var13) {
+                           var14 = var12[var13];
+                           if(this.aShortArray3832 == null || (var7 & this.aShortArray3832[var14]) != 0) {
+                              this.anIntArray3822[var14] -= anInt3859;
+                              this.anIntArray3845[var14] -= anInt3865;
+                              this.anIntArray3848[var14] -= anInt3862;
+                              this.anIntArray3822[var14] = this.anIntArray3822[var14] * var3 >> 7;
+                              this.anIntArray3845[var14] = this.anIntArray3845[var14] * var4 >> 7;
+                              this.anIntArray3848[var14] = this.anIntArray3848[var14] * var5 >> 7;
+                              this.anIntArray3822[var14] += anInt3859;
+                              this.anIntArray3845[var14] += anInt3865;
+                              this.anIntArray3848[var14] += anInt3862;
                            }
                         }
                      }
@@ -1605,15 +1605,7 @@ final class Class140_Sub1_Sub1 extends Model {
       int var11 = var8 + var3.aClass6_3835.aShort97;
       int var12 = var8 + var3.aClass6_3835.aShort96;
       if(var1 != 1 && var1 != 2 && var1 != 3 && var1 != 5 || var9 >= 0 && var10 + 128 >> 7 < var4.length && var11 >= 0 && var12 + 128 >> 7 < var4[0].length) {
-         if(var1 == 4 || var1 == 5) {
-            if(var5 == null) {
-               return;
-            }
-
-            if(var9 < 0 || var10 + 128 >> 7 >= var5.length || var11 < 0 || var12 + 128 >> 7 >= var5[0].length) {
-               return;
-            }
-         } else {
+         if(var1 != 4 && var1 != 5) {
             var9 >>= 7;
             var10 = var10 + 127 >> 7;
             var11 >>= 7;
@@ -1621,9 +1613,17 @@ final class Class140_Sub1_Sub1 extends Model {
             if(var4[var9][var11] == var7 && var4[var10][var11] == var7 && var4[var9][var12] == var7 && var4[var10][var12] == var7) {
                return;
             }
+         } else {
+            if(var5 == null) {
+               return;
+            }
+
+            if(var9 < 0 || var10 + 128 >> 7 >= var5.length || var11 < 0 || var12 + 128 >> 7 >= var5[0].length) {
+               return;
+            }
          }
 
-          int var13;
+         int var13;
          int var14;
          int var15;
          int var17;
@@ -1878,17 +1878,7 @@ final class Class140_Sub1_Sub1 extends Model {
          }
 
          if(var3) {
-            if(Class106.aBoolean1441) {
-               for(var7 = 0; var7 < this.anInt3852; ++var7) {
-                  var8 = method1905(this.aShortArray3808[var7], this.aShortArray3827[var7], this.aShort3849, this.aByteArray3816[var7]);
-                  aClass3_Sub30_3818.index = this.aClass121_3814.anInt1639 + this.aShortArray3811[var7] * var6;
-                  aClass3_Sub30_3818.putInt(-123, var8);
-                  aClass3_Sub30_3818.index = this.aClass121_3814.anInt1639 + this.aShortArray3830[var7] * var6;
-                  aClass3_Sub30_3818.putInt(-121, var8);
-                  aClass3_Sub30_3818.index = this.aClass121_3814.anInt1639 + this.aShortArray3831[var7] * var6;
-                  aClass3_Sub30_3818.putInt(-127, var8);
-               }
-            } else {
+            if(!Class106.aBoolean1441) {
                var7 = (int)Class92.light0Position[0];
                var8 = (int)Class92.light0Position[1];
                var9 = (int)Class92.light0Position[2];
@@ -1903,13 +1893,13 @@ final class Class140_Sub1_Sub1 extends Model {
                   if(var15 < 0) {
                      var16 = -1 - var15;
                   } else {
-                     if(var15 == 0) {
-                        var16 = var11 + (var7 * this.aShortArray3810[var33] + var8 * this.aShortArray3826[var33] + var9 * this.aShortArray3837[var33]) / (var12 + var12 / 2);
-                     } else {
+                     if(var15 != 0) {
                         var16 = var11 + (var7 * this.aShortArray3810[var33] + var8 * this.aShortArray3826[var33] + var9 * this.aShortArray3837[var33]) / (var12 * var15);
+                     } else {
+                        var16 = var11 + (var7 * this.aShortArray3810[var33] + var8 * this.aShortArray3826[var33] + var9 * this.aShortArray3837[var33]) / (var12 + var12 / 2);
                      }
 
-                      if(var16 < 0) {
+                     if(var16 < 0) {
                         var16 = 0;
                      } else if(var16 > 16384) {
                         var16 = 16384;
@@ -1924,13 +1914,13 @@ final class Class140_Sub1_Sub1 extends Model {
                   if(var18 < 0) {
                      var19 = -1 - var18;
                   } else {
-                     if(var18 == 0) {
-                        var19 = var11 + (var7 * this.aShortArray3810[var17] + var8 * this.aShortArray3826[var17] + var9 * this.aShortArray3837[var17]) / (var12 + var12 / 2);
-                     } else {
+                     if(var18 != 0) {
                         var19 = var11 + (var7 * this.aShortArray3810[var17] + var8 * this.aShortArray3826[var17] + var9 * this.aShortArray3837[var17]) / (var12 * var18);
+                     } else {
+                        var19 = var11 + (var7 * this.aShortArray3810[var17] + var8 * this.aShortArray3826[var17] + var9 * this.aShortArray3837[var17]) / (var12 + var12 / 2);
                      }
 
-                      if(var19 < 0) {
+                     if(var19 < 0) {
                         var19 = 0;
                      } else if(var19 > 16384) {
                         var19 = 16384;
@@ -1945,13 +1935,13 @@ final class Class140_Sub1_Sub1 extends Model {
                   if(var21 < 0) {
                      var22 = -1 - var21;
                   } else {
-                     if(var21 == 0) {
-                        var22 = var11 + (var7 * this.aShortArray3810[var20] + var8 * this.aShortArray3826[var20] + var9 * this.aShortArray3837[var20]) / (var12 + var12 / 2);
-                     } else {
+                     if(var21 != 0) {
                         var22 = var11 + (var7 * this.aShortArray3810[var20] + var8 * this.aShortArray3826[var20] + var9 * this.aShortArray3837[var20]) / (var12 * var21);
+                     } else {
+                        var22 = var11 + (var7 * this.aShortArray3810[var20] + var8 * this.aShortArray3826[var20] + var9 * this.aShortArray3837[var20]) / (var12 + var12 / 2);
                      }
 
-                      if(var22 < 0) {
+                     if(var22 < 0) {
                         var22 = 0;
                      } else if(var22 > 16384) {
                         var22 = 16384;
@@ -1974,6 +1964,16 @@ final class Class140_Sub1_Sub1 extends Model {
                this.aShortArray3810 = null;
                this.aShortArray3826 = null;
                this.aShortArray3837 = null;
+            } else {
+               for(var7 = 0; var7 < this.anInt3852; ++var7) {
+                  var8 = method1905(this.aShortArray3808[var7], this.aShortArray3827[var7], this.aShort3849, this.aByteArray3816[var7]);
+                  aClass3_Sub30_3818.index = this.aClass121_3814.anInt1639 + this.aShortArray3811[var7] * var6;
+                  aClass3_Sub30_3818.putInt(-123, var8);
+                  aClass3_Sub30_3818.index = this.aClass121_3814.anInt1639 + this.aShortArray3830[var7] * var6;
+                  aClass3_Sub30_3818.putInt(-121, var8);
+                  aClass3_Sub30_3818.index = this.aClass121_3814.anInt1639 + this.aShortArray3831[var7] * var6;
+                  aClass3_Sub30_3818.putInt(-127, var8);
+               }
             }
          }
 
@@ -2247,13 +2247,7 @@ final class Class140_Sub1_Sub1 extends Model {
          var4.aClass121_3814.aBoolean1640 = false;
       }
 
-      if(var3 || this.aShortArray3810 == null) {
-         var4.aShortArray3810 = this.aShortArray3810;
-         var4.aShortArray3826 = this.aShortArray3826;
-         var4.aShortArray3837 = this.aShortArray3837;
-         var4.aShortArray3841 = this.aShortArray3841;
-         var4.aClass121_3815 = this.aClass121_3815;
-      } else {
+      if(!var3 && this.aShortArray3810 != null) {
          if(var5.aShortArray3810 == null || var5.aShortArray3810.length < this.anInt3833) {
             var5.aShortArray3810 = new short[this.anInt3833 + 100];
             var5.aShortArray3826 = new short[this.anInt3833 + 100];
@@ -2283,9 +2277,15 @@ final class Class140_Sub1_Sub1 extends Model {
          } else {
             var4.aClass121_3815 = null;
          }
+      } else {
+         var4.aShortArray3810 = this.aShortArray3810;
+         var4.aShortArray3826 = this.aShortArray3826;
+         var4.aShortArray3837 = this.aShortArray3837;
+         var4.aShortArray3841 = this.aShortArray3841;
+         var4.aClass121_3815 = this.aClass121_3815;
       }
 
-       var4.aFloatArray3824 = this.aFloatArray3824;
+      var4.aFloatArray3824 = this.aFloatArray3824;
       var4.aFloatArray3847 = this.aFloatArray3847;
       var4.anIntArray3844 = this.anIntArray3844;
       var4.anIntArrayArray3825 = this.anIntArrayArray3825;
@@ -2808,20 +2808,7 @@ final class Class140_Sub1_Sub1 extends Model {
                this.anIntArray3848[var5] += anInt3862;
             }
 
-         } else if(var1 == 3) {
-            for(var5 = 0; var5 < this.anInt3823; ++var5) {
-               this.anIntArray3822[var5] -= anInt3859;
-               this.anIntArray3845[var5] -= anInt3865;
-               this.anIntArray3848[var5] -= anInt3862;
-               this.anIntArray3822[var5] = this.anIntArray3822[var5] * var2 / 128;
-               this.anIntArray3845[var5] = this.anIntArray3845[var5] * var3 / 128;
-               this.anIntArray3848[var5] = this.anIntArray3848[var5] * var4 / 128;
-               this.anIntArray3822[var5] += anInt3859;
-               this.anIntArray3845[var5] += anInt3865;
-               this.anIntArray3848[var5] += anInt3862;
-            }
-
-         } else {
+         } else if(var1 != 3) {
             if(var1 == 5) {
                for(var5 = 0; var5 < this.anInt3852; ++var5) {
                   var6 = (this.aByteArray3816[var5] & 255) + var2 * 8;
@@ -2861,6 +2848,19 @@ final class Class140_Sub1_Sub1 extends Model {
 
                this.aClass121_3814.aBoolean1640 = false;
             }
+         } else {
+            for(var5 = 0; var5 < this.anInt3823; ++var5) {
+               this.anIntArray3822[var5] -= anInt3859;
+               this.anIntArray3845[var5] -= anInt3865;
+               this.anIntArray3848[var5] -= anInt3862;
+               this.anIntArray3822[var5] = this.anIntArray3822[var5] * var2 / 128;
+               this.anIntArray3845[var5] = this.anIntArray3845[var5] * var3 / 128;
+               this.anIntArray3848[var5] = this.anIntArray3848[var5] * var4 / 128;
+               this.anIntArray3822[var5] += anInt3859;
+               this.anIntArray3845[var5] += anInt3865;
+               this.anIntArray3848[var5] += anInt3862;
+            }
+
          }
       }
    }
@@ -3010,11 +3010,11 @@ final class Class140_Sub1_Sub1 extends Model {
                Class51.anInterface2_838.method8(var7 & '\uffff', true);
             }
 
-            if(this.aClass121_3846.aClass156_1643 == null) {
+            if(this.aClass121_3846.aClass156_1643 != null) {
+               var1.glDrawElements(4, (var6 - var5) * 3, 5125, (long)(var5 * 12));
+            } else {
                this.aClass121_3846.aByteBuffer1644.position(var5 * 12);
                var1.glDrawElements(4, (var6 - var5) * 3, 5125, this.aClass121_3846.aByteBuffer1644);
-            } else {
-               var1.glDrawElements(4, (var6 - var5) * 3, 5125, (long)(var5 * 12));
             }
          }
 
@@ -3685,13 +3685,13 @@ final class Class140_Sub1_Sub1 extends Model {
             this.aShortArray3831[var68] = this.method1907(var1, var1.anIntArray2864[var70], var84 + (long)var83, var85.anInt1634, var85.anInt1635, var85.anInt1632, 0, var82, var79);
          }
 
-         if(var1.aShortArray2858 == null) {
-            this.aShortArray3827[var68] = -1;
-         } else {
+         if(var1.aShortArray2858 != null) {
             this.aShortArray3827[var68] = var1.aShortArray2858[var70];
+         } else {
+            this.aShortArray3827[var68] = -1;
          }
 
-          if(this.aByteArray3820 != null) {
+         if(this.aByteArray3820 != null) {
             this.aByteArray3820[var68] = (byte)var1.anIntArray2847[var70];
          }
 

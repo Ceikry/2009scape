@@ -43,12 +43,12 @@ final class Class166 {
    }
 
    static final boolean method2256(int var0, int var1, int var2, int var3) {
-      if(Class8.method846(var0, var1, var2)) {
+      if(!Class8.method846(var0, var1, var2)) {
+         return false;
+      } else {
          int var4 = var1 << 7;
          int var5 = var2 << 7;
          return Class3_Sub13_Sub37.method349(var4 + 1, Class44.anIntArrayArrayArray723[var0][var1][var2] + var3, var5 + 1) && Class3_Sub13_Sub37.method349(var4 + 128 - 1, Class44.anIntArrayArrayArray723[var0][var1 + 1][var2] + var3, var5 + 1) && Class3_Sub13_Sub37.method349(var4 + 128 - 1, Class44.anIntArrayArrayArray723[var0][var1 + 1][var2 + 1] + var3, var5 + 128 - 1) && Class3_Sub13_Sub37.method349(var4 + 1, Class44.anIntArrayArrayArray723[var0][var1][var2 + 1] + var3, var5 + 128 - 1);
-      } else {
-         return false;
       }
    }
 
@@ -69,7 +69,7 @@ final class Class166 {
          RSString var3 = var2.method1579(-17).method1545((byte)-50);
          boolean var4 = false;
 
-         for(int var5 = var1; Class159.localPlayerCount > var5; ++var5) {
+         for(int var5 = var1; ~var5 > ~Class159.localPlayerCount; ++var5) {
             Player var6 = Class3_Sub13_Sub22.players[Class56.localPlayerIndexes[var5]];
             if(null != var6 && null != var6.displayName && var6.displayName.equals(-110, var3)) {
                var4 = true;
@@ -78,21 +78,27 @@ final class Class166 {
                   ++ItemDefinition.anInt759;
                   Class3_Sub13_Sub1.outgoingBuffer.putOpcode(68);
                   Class3_Sub13_Sub1.outgoingBuffer.putLEShortA(Class56.localPlayerIndexes[var5]);
-               } else if(4 == var0) {
+               } else if(4 != var0) {
+                  if(5 != var0) {
+                     if(~var0 != -7) {
+                        if(~var0 == -8) {
+                           ++Class20.anInt437;
+                           Class3_Sub13_Sub1.outgoingBuffer.putOpcode(114);
+                           Class3_Sub13_Sub1.outgoingBuffer.putLEShortA(Class56.localPlayerIndexes[var5]);
+                        }
+                     } else {
+                        Class3_Sub13_Sub1.outgoingBuffer.putOpcode(133);
+                        Class3_Sub13_Sub1.outgoingBuffer.putLEShort(-1, Class56.localPlayerIndexes[var5]);
+                        ++Class3_Sub24_Sub4.anInt3517;
+                     }
+                  } else {
+                     Class3_Sub13_Sub1.outgoingBuffer.putOpcode(4);
+                     Class3_Sub13_Sub1.outgoingBuffer.putLEShort(var1 + -1, Class56.localPlayerIndexes[var5]);
+                     ++IOHandler.anInt1240;
+                  }
+               } else {
                   ++KeyboardListener.anInt1910;
                   Class3_Sub13_Sub1.outgoingBuffer.putOpcode(180);
-                  Class3_Sub13_Sub1.outgoingBuffer.putLEShortA(Class56.localPlayerIndexes[var5]);
-               } else if (5 == var0) {
-                  Class3_Sub13_Sub1.outgoingBuffer.putOpcode(4);
-                  Class3_Sub13_Sub1.outgoingBuffer.putLEShort(var1 + -1, Class56.localPlayerIndexes[var5]);
-                  ++IOHandler.anInt1240;
-               } else if (var0 == 6) {
-                  Class3_Sub13_Sub1.outgoingBuffer.putOpcode(133);
-                  Class3_Sub13_Sub1.outgoingBuffer.putLEShort(-1, Class56.localPlayerIndexes[var5]);
-                  ++Class3_Sub24_Sub4.anInt3517;
-               } else if (var0 == 7) {
-                  ++Class20.anInt437;
-                  Class3_Sub13_Sub1.outgoingBuffer.putOpcode(114);
                   Class3_Sub13_Sub1.outgoingBuffer.putLEShortA(Class56.localPlayerIndexes[var5]);
                }
                break;
@@ -100,7 +106,7 @@ final class Class166 {
          }
 
          if(!var4) {
-            Class3_Sub30_Sub1.addChatMessage(Class3_Sub28_Sub14.aClass94_3672, 0, RenderAnimationDefinition.method903(new RSString[]{TextCore.HasUnableFind, var3}, (byte)-77), -1);
+            Class3_Sub30_Sub1.addChatMessage(Class3_Sub28_Sub14.aClass94_3672, 0, RenderAnimationDefinition.method903(new RSString[]{Class43.aClass94_691, var3}, (byte)-77), -1);
          }
 
       } catch (RuntimeException var7) {

@@ -9,6 +9,7 @@ class Class155 {
    static int anInt1971;
    private long aLong1972 = Class5.method830((byte)-55);
    private Class3_Sub24 aClass3_Sub24_1973;
+   static RSString aClass94_1974 = RSString.createRSString("Verbindung mit Update)2Server)3)3)3");
    int[] anIntArray1975;
    static int[] anIntArray1976 = new int[]{1, 0, 0, 0, 1, 0, 2, 1, 1, 1, 0, 2, 0, 0, 1, 0};
    static int anInt1977 = 0;
@@ -153,12 +154,12 @@ class Class155 {
                }
 
                int var4 = this.method2157();
-               if(-var4 + this.anInt1985 > this.anInt1981) {
+               if(~this.anInt1981 > ~(-var4 + this.anInt1985)) {
                   this.anInt1981 = -var4 + this.anInt1985;
                }
 
                int var5 = this.anInt1989 - -this.anInt1986;
-               if(256 + var5 > 16384) {
+               if(~(256 + var5) < -16385) {
                   var5 = 16128;
                }
 
@@ -179,17 +180,17 @@ class Class155 {
                   this.aBoolean1984 = true;
                }
 
-               while(var4 < var5) {
+               while(~var5 < ~var4) {
                   var4 += 256;
                   this.method2152(this.anIntArray1975, 256);
                   this.method2149();
                }
 
-               if(this.aLong1979 < var2) {
+               if(~var2 < ~this.aLong1979) {
                   if(this.aBoolean1984) {
                      this.aBoolean1984 = false;
                   } else {
-                     if(this.anInt1981 == 0 && this.anInt1988 == 0) {
+                     if(-1 == ~this.anInt1981 && ~this.anInt1988 == -1) {
                         this.method2160();
                         this.aLong1982 = var2 - -2000L;
                         return;
@@ -373,7 +374,7 @@ class Class155 {
          if(null != Class38_Sub1.aClass15_2613) {
             boolean var2 = true;
 
-            for(int var3 = 0; var3 < 2; ++var3) {
+            for(int var3 = 0; ~var3 > -3; ++var3) {
                if(this == Class38_Sub1.aClass15_2613.aClass155Array352[var3]) {
                   Class38_Sub1.aClass15_2613.aClass155Array352[var3] = null;
                }
@@ -409,6 +410,7 @@ class Class155 {
    public static void method2165(int var0) {
       try {
          char_colon = null;
+         aClass94_1974 = null;
          anIntArray1976 = null;
          if(var0 != 0) {
             method2165(-20);

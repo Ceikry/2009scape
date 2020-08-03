@@ -2,6 +2,7 @@ package org.runite.jagex;
 
 class Class164_Sub1 extends Class164 {
 
+   static RSString aClass94_3008 = RSString.createRSString("hitbar_default");
    static Class158 aClass158_3009;
    private int anInt3010;
    static short[] aShortArray3011 = new short[]{(short)6798, (short)8741, (short)25238, (short)4626, (short)4550};
@@ -36,7 +37,7 @@ class Class164_Sub1 extends Class164 {
             aClass94_3013 = (RSString)null;
          }
 
-         if(Class163_Sub2_Sub1.anInt4014 >= 100) {
+         if(-101 >= ~Class163_Sub2_Sub1.anInt4014) {
             int var6 = 64 + 128 * MouseListeningClass.anInt1923;
             int var7 = 64 + Class157.anInt1996 * 128;
             int var8 = Class121.method1736(WorldListCountry.localPlane, 1, var6, var7) - GraphicDefinition.anInt529;
@@ -62,7 +63,9 @@ class Class164_Sub1 extends Class164 {
    }
 
    static final boolean method2239(int var0, int var1, int var2, int var3) {
-      if(Class8.method846(var0, var1, var2)) {
+      if(!Class8.method846(var0, var1, var2)) {
+         return false;
+      } else {
          int var4 = var1 << 7;
          int var5 = var2 << 7;
          int var6 = Class44.anIntArrayArrayArray723[var0][var1][var2] - 1;
@@ -199,14 +202,13 @@ class Class164_Sub1 extends Class164 {
             }
          }
 
-         return Class3_Sub13_Sub37.method349(var4 + 64, var9, var5 + 64) && (var3 == 16 ? Class3_Sub13_Sub37.method349(var4, var8, var5 + 128) : (var3 == 32 ? Class3_Sub13_Sub37.method349(var4 + 128, var8, var5 + 128) : (var3 == 64 ? Class3_Sub13_Sub37.method349(var4 + 128, var8, var5) : (var3 != 128 || Class3_Sub13_Sub37.method349(var4, var8, var5)))));
-      } else {
-         return false;
+         return !Class3_Sub13_Sub37.method349(var4 + 64, var9, var5 + 64)?false:(var3 == 16?Class3_Sub13_Sub37.method349(var4, var8, var5 + 128):(var3 == 32?Class3_Sub13_Sub37.method349(var4 + 128, var8, var5 + 128):(var3 == 64?Class3_Sub13_Sub37.method349(var4 + 128, var8, var5):(var3 == 128?Class3_Sub13_Sub37.method349(var4, var8, var5):true))));
       }
    }
 
    public static void method2240(int var0) {
       try {
+         aClass94_3008 = null;
          aShortArray3011 = null;
          aClass94_3013 = null;
          if(var0 == 128) {
@@ -278,7 +280,7 @@ class Class164_Sub1 extends Class164 {
       try {
          this.anIntArray3014 = new int[this.anInt2062];
 
-         for(int var7 = 0; var7 < this.anInt2062; ++var7) {
+         for(int var7 = 0; ~this.anInt2062 < ~var7; ++var7) {
             this.anIntArray3014[var7] = (short)((int)(Math.pow((double)var6, (double)var7) * 4096.0D));
          }
 

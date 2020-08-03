@@ -3,7 +3,9 @@ package org.runite.jagex;
 final class Class32 {
 
    static int anInt590 = -1;
+   static RSString aClass94_591 = RSString.createRSString("Lade Benutzeroberfl-=che )2 ");
    static RSString aClass94_592 = RSString.createRSString("<img=0>");
+   static RSString aClass94_593 = RSString.createRSString("Utiliser");
 
 
    static final RSString method992(RSByteBuffer var0, int var1) {
@@ -25,7 +27,7 @@ final class Class32 {
          if(var1 < 110) {
             return 102;
          } else {
-            if(var3 >= 10) {
+            if(-11 >= ~var3) {
                if(var3 > 60) {
                   var3 = 60;
                }
@@ -42,8 +44,10 @@ final class Class32 {
 
    public static void method994(int var0) {
       try {
+         aClass94_591 = null;
          if(var0 == '\u93bd') {
             aClass94_592 = null;
+            aClass94_593 = null;
          }
       } catch (RuntimeException var2) {
          throw Class44.method1067(var2, "fc.A(" + var0 + ')');
@@ -111,7 +115,7 @@ final class Class32 {
             ++Class3_Sub13_Sub33.anInt3398;
             int var2;
             if(Class3_Sub13.anInt2384 < 0) {
-               for(var2 = 0; var2 < 112; ++var2) {
+               for(var2 = 0; ~var2 > -113; ++var2) {
                   ObjectDefinition.aBooleanArray1490[var2] = false;
                }
 

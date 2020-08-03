@@ -105,14 +105,18 @@ final class Class105 {
          var7 >>= 8;
          ++var4;
          if(var4 != var12) {
-            if(var1 == var5) {
+            if(var1 != var5) {
+               var5 = var1;
+            } else {
                var3 = 3;
                var7 = var6[var7];
                var1 = (byte)(var7 & 255);
                var7 >>= 8;
                ++var4;
                if(var4 != var12) {
-                  if(var1 == var5) {
+                  if(var1 != var5) {
+                     var5 = var1;
+                  } else {
                      var7 = var6[var7];
                      var1 = (byte)(var7 & 255);
                      var7 >>= 8;
@@ -122,12 +126,8 @@ final class Class105 {
                      var5 = (byte)(var7 & 255);
                      var7 >>= 8;
                      ++var4;
-                  } else {
-                     var5 = var1;
                   }
                }
-            } else {
-               var5 = var1;
             }
          }
       }
@@ -420,47 +420,7 @@ final class Class105 {
          int var44 = var25[var50 - var24[var51]];
 
          while(var44 != var42) {
-            if(var44 == 0 || var44 == 1) {
-               int var46 = -1;
-               int var48 = 1;
-
-               do {
-                  if(var44 == 0) {
-                     var46 += 1 * var48;
-                  } else if(var44 == 1) {
-                     var46 += 2 * var48;
-                  }
-
-                  var48 *= 2;
-                  if(var45 == 0) {
-                     ++var41;
-                     var45 = 50;
-                     var53 = var0.aByteArray130[var41];
-                     var22 = var0.anIntArray138[var53];
-                     var23 = var0.anIntArrayArray115[var53];
-                     var25 = var0.anIntArrayArray110[var53];
-                     var24 = var0.anIntArrayArray108[var53];
-                  }
-
-                  --var45;
-                  var51 = var22;
-
-                  for(var50 = method1633(var22, var0); var50 > var23[var51]; var50 = var50 << 1 | var52) {
-                     ++var51;
-                     var52 = method1639(var0);
-                  }
-
-                  var44 = var25[var50 - var24[var51]];
-               } while(var44 == 0 || var44 == 1);
-
-               ++var46;
-               var1 = var0.aByteArray114[var0.aByteArray109[var0.anIntArray123[0]] & 255];
-
-               for(var0.anIntArray134[var1 & 255] += var46; var46 > 0; --var46) {
-                  Class129.anIntArray1690[var47] = var1 & 255;
-                  ++var47;
-               }
-            } else {
+            if(var44 != 0 && var44 != 1) {
                int var33 = var44 - 1;
                int var30;
                if(var33 < 16) {
@@ -535,6 +495,46 @@ final class Class105 {
                }
 
                var44 = var25[var50 - var24[var51]];
+            } else {
+               int var46 = -1;
+               int var48 = 1;
+
+               do {
+                  if(var44 == 0) {
+                     var46 += 1 * var48;
+                  } else if(var44 == 1) {
+                     var46 += 2 * var48;
+                  }
+
+                  var48 *= 2;
+                  if(var45 == 0) {
+                     ++var41;
+                     var45 = 50;
+                     var53 = var0.aByteArray130[var41];
+                     var22 = var0.anIntArray138[var53];
+                     var23 = var0.anIntArrayArray115[var53];
+                     var25 = var0.anIntArrayArray110[var53];
+                     var24 = var0.anIntArrayArray108[var53];
+                  }
+
+                  --var45;
+                  var51 = var22;
+
+                  for(var50 = method1633(var22, var0); var50 > var23[var51]; var50 = var50 << 1 | var52) {
+                     ++var51;
+                     var52 = method1639(var0);
+                  }
+
+                  var44 = var25[var50 - var24[var51]];
+               } while(var44 == 0 || var44 == 1);
+
+               ++var46;
+               var1 = var0.aByteArray114[var0.aByteArray109[var0.anIntArray123[0]] & 255];
+
+               for(var0.anIntArray134[var1 & 255] += var46; var46 > 0; --var46) {
+                  Class129.anIntArray1690[var47] = var1 & 255;
+                  ++var47;
+               }
             }
          }
 

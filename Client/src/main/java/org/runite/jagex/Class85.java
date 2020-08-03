@@ -9,6 +9,7 @@ final class Class85 {
    static int anInt1170;
    static CacheIndex aClass153_1171;
    static int anInt1172;
+   static RSString aClass94_1173 = RSString.createRSString("gr-Un:");
    static int anInt1174 = 99;
 
 
@@ -59,6 +60,8 @@ final class Class85 {
          if(var0 != -25247) {
             aClass142Array1168 = (AnimationDefinition[])null;
          }
+
+         aClass94_1173 = null;
          aClass142Array1168 = null;
       } catch (RuntimeException var2) {
          throw Class44.method1067(var2, "lg.B(" + var0 + ')');

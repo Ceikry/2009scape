@@ -6,11 +6,14 @@ final class Class56 {
    static Class47 aClass47_885 = new Class47(128);
    static RSInterface aClass11_886 = null;
    static int[] localPlayerIndexes = new int[2048];
+   static RSString aClass94_888 = RSString.createRSString("<col=ffff00>");
    static int anInt889;
    static Class106[] aClass106Array890;
    
    static RSString aClass94_892 = RSString.createRSString(" )2> <col=ffffff>");
    static int anInt893 = 0;
+   private static RSString aClass94_894 = RSString.createRSString("Walk here");
+static RSString aClass94_891 = aClass94_894;
 
    static final int method1186(int var0, int var1) {
       try {
@@ -61,12 +64,12 @@ final class Class56 {
          var12 /= 6.0D;
          if(0 > var20) {
             var20 = 0;
-         } else if(var20 > 255) {
+         } else if(~var20 < -256) {
             var20 = 255;
          }
 
          int var18 = (int)(var12 * 256.0D);
-         if(var19 >= 0) {
+         if(~var19 <= -1) {
             if(var19 > 255) {
                var19 = 255;
             }
@@ -74,11 +77,11 @@ final class Class56 {
             var19 = 0;
          }
 
-         if(var20 <= 243) {
-            if(var20 <= 217) {
-               if(var20 > 192) {
+         if(-244 <= ~var20) {
+            if(~var20 >= -218) {
+               if(-193 > ~var20) {
                   var19 >>= 2;
-               } else if(var20 > 179) {
+               } else if(~var20 < -180) {
                   var19 >>= 1;
                }
             } else {
@@ -99,9 +102,13 @@ final class Class56 {
          if(var0 != 30351) {
             method1189(-73, -127, -26, 43, 67, 125, 38, 80, (GameObject)null, -92, true, 27L);
          }
+
+         aClass94_891 = null;
          aClass94_892 = null;
          aClass11_886 = null;
          localPlayerIndexes = null;
+         aClass94_894 = null;
+         aClass94_888 = null;
          aClass47_885 = null;
          aClass106Array890 = null;
          aClass3_Sub26_884 = null;
@@ -121,6 +128,10 @@ final class Class56 {
          Class139.aByteArrayArrayArray1828 = (byte[][][])null;
          Class3_Sub13_Sub36.aByteArrayArrayArray3430 = (byte[][][])null;
          Class80.anIntArray1138 = null;
+         if(var0 >= -60) {
+            aClass94_891 = (RSString)null;
+         }
+
          Class129.anIntArray1695 = null;
          Class3_Sub31.anIntArray2606 = null;
       } catch (RuntimeException var2) {

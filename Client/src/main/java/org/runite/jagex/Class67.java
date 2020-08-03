@@ -29,7 +29,7 @@ final class Class67 implements Runnable {
          for(; this.aBoolean1015; Class3_Sub13_Sub34.method331(50L, 64)) {
             Object var1 = this.anObject1016;
             synchronized(var1) {
-               if(this.anInt1018 < 500) {
+               if(-501 < ~this.anInt1018) {
                   this.anIntArray1020[this.anInt1018] = Class126.anInt1676;
                   this.anIntArray1019[this.anInt1018] = Class130.anInt1709;
                   ++this.anInt1018;
@@ -70,8 +70,8 @@ final class Class67 implements Runnable {
       try {
          for(int var3 = 0; var3 < var2.length; ++var3) {
             RSInterface var4 = var2[var3];
-            if(null != var4 && var1 == var4.parentId && (!var4.usingScripts || !Client.method51(var4))) {
-               if(var4.type == 0) {
+            if(null != var4 && ~var4.parentId == ~var1 && (!var4.usingScripts || !Client.method51(var4))) {
+               if(-1 == ~var4.type) {
                   if(!var4.usingScripts && Client.method51(var4) && var4 != Class107.aClass11_1453) {
                      continue;
                   }
@@ -89,7 +89,7 @@ final class Class67 implements Runnable {
 
                if(var4.type == 6) {
                   int var6;
-                  if(var4.animationId != -1 || var4.secondAnimationId != -1) {
+                  if(0 != ~var4.animationId || ~var4.secondAnimationId != 0) {
                      boolean var9 = Class3_Sub28_Sub12.method609(var4, var0 + -23173);
                      if(var9) {
                         var6 = var4.secondAnimationId;
@@ -100,12 +100,12 @@ final class Class67 implements Runnable {
                      if(var6 != -1) {
                         AnimationDefinition var7 = Client.getAnimationDefinition(var6, (byte)-20);
                         if(null != var7) {
-                           for(var4.anInt267 += Class106.anInt1446; var7.duration[var4.anInt283] < var4.anInt267; Class20.method909(115, var4)) {
+                           for(var4.anInt267 += Class106.anInt1446; ~var4.anInt267 < ~var7.duration[var4.anInt283]; Class20.method909(115, var4)) {
                               var4.anInt267 -= var7.duration[var4.anInt283];
                               ++var4.anInt283;
                               if(var7.frames.length <= var4.anInt283) {
                                  var4.anInt283 -= var7.anInt1865;
-                                 if(var4.anInt283 < 0 || var7.frames.length <= var4.anInt283) {
+                                 if(~var4.anInt283 > -1 || var7.frames.length <= var4.anInt283) {
                                     var4.anInt283 = 0;
                                  }
                               }
@@ -113,7 +113,7 @@ final class Class67 implements Runnable {
                               var4.anInt260 = var4.anInt283 + 1;
                               if(var7.frames.length <= var4.anInt260) {
                                  var4.anInt260 -= var7.anInt1865;
-                                 if(var4.anInt260 < 0 || var7.frames.length <= var4.anInt260) {
+                                 if(~var4.anInt260 > -1 || var7.frames.length <= var4.anInt260) {
                                     var4.anInt260 = -1;
                                  }
                               }

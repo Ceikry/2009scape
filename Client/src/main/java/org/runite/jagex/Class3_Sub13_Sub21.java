@@ -22,24 +22,24 @@ final class Class3_Sub13_Sub21 extends Class3_Sub13 {
 
    final void method157(int var1, RSByteBuffer var2, boolean var3) {
       try {
-         if(var1 == 0) {
+         if(~var1 == -1) {
             this.anInt3265 = var2.getShort(1);
          } else if(var1 == 1) {
             this.anInt3253 = var2.getShort(1);
-         } else if(var1 == 2) {
+         } else if(-3 == ~var1) {
             this.anInt3258 = var2.getShort(1);
-         } else if(var1 == 3) {
-            this.anInt3262 = var2.getShort(1);
-         } else {
-            if(var1 == 4) {
-               this.anInt3257 = var2.getShort(1);
-            } else {
-               if(var1 == 5) {
+         } else if(var1 != 3) {
+            if(var1 != 4) {
+               if(-6 == ~var1) {
                   this.anInt3254 = var2.getShort(1);
                } else if(var1 == 6) {
                   this.anInt3266 = var2.getShort(1);
                }
+            } else {
+               this.anInt3257 = var2.getShort(1);
             }
+         } else {
+            this.anInt3262 = var2.getShort(1);
          }
 
          if(!var3) {
@@ -61,7 +61,7 @@ final class Class3_Sub13_Sub21 extends Class3_Sub13 {
                      Class3_Sub15.aClass89_2429 = null;
                   }
 
-                  if(GraphicDefinition.anInt548 >= 1) {
+                  if(~GraphicDefinition.anInt548 <= -2) {
                      Class130.anInt1711 = -5;
                      Canvas_Sub1.registryStage = 0;
                      return;
@@ -70,10 +70,10 @@ final class Class3_Sub13_Sub21 extends Class3_Sub13 {
                   Canvas_Sub1.registryStage = 1;
                   Class132.anInt1734 = 0;
                   ++GraphicDefinition.anInt548;
-                  if(Class140_Sub6.accRegistryPort == Class162.anInt2036) {
-                     Class140_Sub6.accRegistryPort = WorldListCountry.anInt506;
-                  } else {
+                  if(Class140_Sub6.accRegistryPort != Class162.anInt2036) {
                      Class140_Sub6.accRegistryPort = Class162.anInt2036;
+                  } else {
+                     Class140_Sub6.accRegistryPort = WorldListCountry.anInt506;
                   }
                }
 
@@ -84,8 +84,8 @@ final class Class3_Sub13_Sub21 extends Class3_Sub13 {
                }
 
                int response;
-               if(Canvas_Sub1.registryStage == 2) {
-                  if(Class3_Sub9.aClass64_2318.anInt978 == 2) {
+               if(-3 == ~Canvas_Sub1.registryStage) {
+                  if(-3 == ~Class3_Sub9.aClass64_2318.anInt978) {
                      throw new IOException();
                   }
                   if(1 != Class3_Sub9.aClass64_2318.anInt978) {
@@ -123,7 +123,7 @@ final class Class3_Sub13_Sub21 extends Class3_Sub13 {
                }
 
                if(3 == Canvas_Sub1.registryStage) {
-                  if(Class3_Sub15.aClass89_2429.availableBytes(-18358) < 1) {
+                  if(~Class3_Sub15.aClass89_2429.availableBytes(-18358) > -2) {
                      return;
                   }
 
@@ -131,15 +131,15 @@ final class Class3_Sub13_Sub21 extends Class3_Sub13 {
                   Canvas_Sub1.registryStage = 4;
                }
 
-               if(Canvas_Sub1.registryStage == 4) {
-                  if(8 * Class3_Sub13_Sub33.aClass94Array3391.length > Class3_Sub15.aClass89_2429.availableBytes(-18358)) {
+               if(~Canvas_Sub1.registryStage == -5) {
+                  if(~Class3_Sub15.aClass89_2429.availableBytes(-18358) > ~(8 * Class3_Sub13_Sub33.aClass94Array3391.length)) {
                      return;
                   }
 
                   GraphicDefinition.incomingBuffer.index = 0;
                   Class3_Sub15.aClass89_2429.readBytes(0, 8 * Class3_Sub13_Sub33.aClass94Array3391.length, -18455, GraphicDefinition.incomingBuffer.buffer);
 
-                  for(response = 0; response < Class3_Sub13_Sub33.aClass94Array3391.length; ++response) {
+                  for(response = 0; ~Class3_Sub13_Sub33.aClass94Array3391.length < ~response; ++response) {
                      Class3_Sub13_Sub33.aClass94Array3391[response] = Class41.method1052(-29664, GraphicDefinition.incomingBuffer.getLong(-125));
                   }
 
@@ -155,7 +155,7 @@ final class Class3_Sub13_Sub21 extends Class3_Sub13 {
                   Class3_Sub15.aClass89_2429 = null;
                }
 
-               if(GraphicDefinition.anInt548 < 1) {
+               if(~GraphicDefinition.anInt548 > -2) {
                   ++GraphicDefinition.anInt548;
                   if(Class162.anInt2036 == Class140_Sub6.accRegistryPort) {
                      Class140_Sub6.accRegistryPort = WorldListCountry.anInt506;
@@ -216,16 +216,16 @@ final class Class3_Sub13_Sub21 extends Class3_Sub13 {
                int var9 = var5 + this.anInt3253;
                int var7 = Class102.anIntArray2125[var6] + -2048;
                int var8 = this.anInt3265 + var7;
-               var9 = var9 < -2048 ?var9 - -4096:var9;
+               var9 = 2047 < ~var9?var9 - -4096:var9;
                var9 = 2048 < var9?-4096 + var9:var9;
                int var10 = var7 + this.anInt3258;
                var8 = var8 < -2048?var8 + 4096:var8;
-               var8 = var8 <= 2048 ?var8:-4096 + var8;
-               var10 = var10 >= -2048 ?var10:4096 + var10;
-               var10 = var10 > 2048 ?var10 - 4096:var10;
+               var8 = -2049 <= ~var8?var8:-4096 + var8;
+               var10 = ~var10 <= 2047?var10:4096 + var10;
+               var10 = -2049 > ~var10?var10 - 4096:var10;
                int var11 = var5 - -this.anInt3262;
                var11 = -2048 > var11?var11 + 4096:var11;
-               var11 = var11 > 2048 ?var11 - 4096:var11;
+               var11 = -2049 > ~var11?var11 - 4096:var11;
                var3[var6] = !this.method271(var8, var9, (byte)113) && !this.method270((byte)-44, var10, var11)?0:4096;
             }
          }
@@ -247,7 +247,7 @@ final class Class3_Sub13_Sub21 extends Class3_Sub13 {
          var5 = (var5 << 12) / this.anInt3257;
          var5 = (var5 << 12) / this.anInt3266;
          var5 = var5 * this.anInt3254 >> 12;
-         return var5 > -var2 + var3 && var3 + -var2 > -var5;
+         return var5 > -var2 + var3 && ~(-var5) > ~(var3 + -var2);
       } catch (RuntimeException var6) {
          throw Class44.method1067(var6, "mh.S(" + var1 + ',' + var2 + ',' + var3 + ')');
       }
@@ -276,7 +276,7 @@ final class Class3_Sub13_Sub21 extends Class3_Sub13 {
          var5 = (var5 << 12) / this.anInt3257;
          var5 = (var5 << 12) / this.anInt3266;
          var5 = var5 * this.anInt3254 >> 12;
-         return var5 > var2 + var1 && -var5 < var2 + var1;
+         return ~(var2 + var1) > ~var5 && -var5 < var2 + var1;
       } catch (RuntimeException var6) {
          throw Class44.method1067(var6, "mh.F(" + var1 + ',' + var2 + ',' + var3 + ')');
       }
@@ -294,14 +294,14 @@ final class Class3_Sub13_Sub21 extends Class3_Sub13 {
             if(Class3_Sub13_Sub26.aByteArrayArray3335[var2] != null) {
                int var3 = -1;
 
-               for(int var4 = 0; Class3_Sub13_Sub20.anInt3244 > var4; ++var4) {
+               for(int var4 = 0; ~var4 > ~Class3_Sub13_Sub20.anInt3244; ++var4) {
                   if(Class3_Sub13_Sub30.anIntArray3367[var4] == Class3_Sub24_Sub3.anIntArray3494[var2]) {
                      var3 = var4;
                      break;
                   }
                }
 
-               if(var3 == -1) {
+               if(0 == ~var3) {
                   Class3_Sub13_Sub30.anIntArray3367[Class3_Sub13_Sub20.anInt3244] = Class3_Sub24_Sub3.anIntArray3494[var2];
                   var3 = Class3_Sub13_Sub20.anInt3244++;
                }
@@ -309,7 +309,7 @@ final class Class3_Sub13_Sub21 extends Class3_Sub13 {
                int var5 = 0;
                RSByteBuffer var16 = new RSByteBuffer(Class3_Sub13_Sub26.aByteArrayArray3335[var2]);
 
-               while(Class3_Sub13_Sub26.aByteArrayArray3335[var2].length > var16.index && 511 > var5) {
+               while(~var16.index > ~Class3_Sub13_Sub26.aByteArrayArray3335[var2].length && 511 > var5) {
                   int var6 = var5++ << 6 | var3;
                   int var7 = var16.getShort(var0 ^ -123);
                   int var8 = var7 >> 14;
@@ -318,7 +318,7 @@ final class Class3_Sub13_Sub21 extends Class3_Sub13 {
                   int var10 = var7 & 63;
                   int var12 = var10 + -Class82.anInt1152 + 64 * (255 & Class3_Sub24_Sub3.anIntArray3494[var2]);
                   NPCDefinition var13 = Node.method522(var16.getShort(1), 27112);
-                  if(Class3_Sub13_Sub24.npcs[var6] == null && (var13.aByte1267 & 1) > 0 && Class140_Sub3.anInt2745 == var8 && var11 >= 0 && 104 > var13.size + var11 && var12 >= 0 && 104 > var12 - -var13.size) {
+                  if(Class3_Sub13_Sub24.npcs[var6] == null && (var13.aByte1267 & 1) > 0 && ~var8 == ~Class140_Sub3.anInt2745 && -1 >= ~var11 && 104 > var13.size + var11 && ~var12 <= -1 && 104 > var12 - -var13.size) {
                      Class3_Sub13_Sub24.npcs[var6] = new NPC();
                      NPC npc = Class3_Sub13_Sub24.npcs[var6];
                      Class15.localNPCIndexes[Class163.localNPCCount++] = var6;
@@ -327,7 +327,7 @@ final class Class3_Sub13_Sub21 extends Class3_Sub13 {
                      npc.setSize(npc.definition.size, 2);
                      npc.anInt2806 = npc.anInt2785 = Class27.anIntArray510[npc.definition.aByte1268];
                      npc.anInt2779 = npc.definition.anInt1274;
-                     if(npc.anInt2779 == 0) {
+                     if(~npc.anInt2779 == -1) {
                         npc.anInt2785 = 0;
                      }
 

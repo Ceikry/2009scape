@@ -21,7 +21,9 @@ final class Class163_Sub2_Sub1 extends Class163_Sub2 {
    static int anInt4019 = 0;
    static int anInt4020 = 0;
    static int anInt4021;
+   private static RSString aClass94_4022 = RSString.createRSString("Your friend list is full)3 Max of 100 for free users)1 and 200 for members)3");
    static RSString aClass94_4023 = RSString.createRSString(")3");
+   static RSString aClass94_4024 = aClass94_4022;
    static int[] anIntArray4025 = new int[32];
    static int anInt4026 = 0;
    static LDIndexedSprite[] aClass109_Sub1Array4027;
@@ -41,11 +43,11 @@ final class Class163_Sub2_Sub1 extends Class163_Sub2 {
       try {
          int var8 = 0;
 
-         for(Class96[] var7 = RuntimeException_Sub1.aClass96Array2114; var8 < var7.length; ++var8) {
+         for(Class96[] var7 = RuntimeException_Sub1.aClass96Array2114; ~var7.length < ~var8; ++var8) {
             Class96 var9 = var7[var8];
             if(null != var9 && var9.anInt1360 == 2) {
                Class118.method1724(var0 >> 1, var5, (-Class82.anInt1152 + var9.anInt1347 << 7) - -var9.anInt1350, var9.anInt1353 * 2, var2 >> 1, var9.anInt1346 + (var9.anInt1356 + -Class131.anInt1716 << 7), (byte)-114, var4);
-               if(-1 < Class32.anInt590 && Class44.anInt719 % 20 < 10) {
+               if(-1 < Class32.anInt590 && ~(Class44.anInt719 % 20) > -11) {
                   Class166.aClass3_Sub28_Sub16Array2072[var9.anInt1351].method643(-12 + var1 + Class32.anInt590, -28 + var6 - -Class3_Sub1.anInt2208);
                }
             }
@@ -90,10 +92,10 @@ final class Class163_Sub2_Sub1 extends Class163_Sub2 {
          for(int var5 = 0; var5 < var3; ++var5) {
             Class58.method1194(-16385);
 
-            for(int var6 = 0; var6 < 13; ++var6) {
-               for(int var7 = 0; var7 < 13; ++var7) {
+            for(int var6 = 0; ~var6 > -14; ++var6) {
+               for(int var7 = 0; ~var7 > -14; ++var7) {
                   int var8 = ObjectDefinition.anIntArrayArrayArray1497[var5][var6][var7];
-                  if(var8 != -1) {
+                  if(0 != ~var8) {
                      int var9 = var8 >> 24 & 3;
                      if(!var0 || var9 == 0) {
                         int var10 = (6 & var8) >> 1;
@@ -102,7 +104,7 @@ final class Class163_Sub2_Sub1 extends Class163_Sub2 {
                         int var13 = var12 / 8 + (var11 / 8 << 8);
 
                         for(int var14 = 0; Class3_Sub24_Sub3.anIntArray3494.length > var14; ++var14) {
-                           if(var13 == Class3_Sub24_Sub3.anIntArray3494[var14] && var4[var14] != null) {
+                           if(~Class3_Sub24_Sub3.anIntArray3494[var14] == ~var13 && var4[var14] != null) {
                               Class3_Sub13_Sub30.parseObjectMapping(Class86.aClass91Array1182, var5, var4[var14], var9, var10, 8 * var6, var7 * 8, var0, (var11 & 7) * 8, 8 * (7 & var12), (byte)-54);
                               break;
                            }
@@ -127,22 +129,22 @@ final class Class163_Sub2_Sub1 extends Class163_Sub2 {
 
          int var6 = (int)var1 >> 20 & 3;
          int var7 = (int)(var1 >>> 32) & Integer.MAX_VALUE;
-         if(var5 != 10 && var5 != 11 && var5 != 22) {
+         if(var5 != 10 && -12 != ~var5 && var5 != 22) {
             Class3_Sub28_Sub9.method582(Class102.player.anIntArray2755[0], var6, 0, true, 0, 2, var4, 0, 1 + var5, 2, var3, Class102.player.anIntArray2767[0]);
          } else {
             ObjectDefinition var8 = Class162.getObjectDefinition(4, var7);
             int var9;
             int var10;
-            if(var6 == 0 || var6 == 2) {
-               var10 = var8.SizeY;
-               var9 = var8.SizeX;
+            if(~var6 != -1 && ~var6 != -3) {
+               var10 = var8.anInt1480;
+               var9 = var8.anInt1485;
             } else {
-               var10 = var8.SizeX;
-               var9 = var8.SizeY;
+               var10 = var8.anInt1485;
+               var9 = var8.anInt1480;
             }
 
-            int var11 = var8.WalkingFlag;
-            if(var6 != 0) {
+            int var11 = var8.anInt1533;
+            if(-1 != ~var6) {
                var11 = (var11 << var6 & 15) - -(var11 >> -var6 + 4);
             }
 
@@ -163,11 +165,13 @@ final class Class163_Sub2_Sub1 extends Class163_Sub2 {
       try {
          int var1 = 58 % ((var0 - 7) / 43);
          aClass89_4012 = null;
+         aClass94_4024 = null;
          aClass109_Sub1Array4027 = null;
          anIntArray4025 = null;
          aClass94Array4016 = null;
          aClass93_4015 = null;
          aLongArray4017 = null;
+         aClass94_4022 = null;
          aClass94_4023 = null;
       } catch (RuntimeException var2) {
          throw Class44.method1067(var2, "t.F(" + var0 + ')');
@@ -189,23 +193,23 @@ final class Class163_Sub2_Sub1 extends Class163_Sub2 {
             boolean var4 = false;
 
             int var5;
-            for(var5 = 0; var3.anInt2296 > var5; ++var5) {
+            for(var5 = 0; ~var5 > ~var3.anInt2296; ++var5) {
                if(var3.aClass64Array2303[var5] != null) {
-                  if(var3.aClass64Array2303[var5].anInt978 == 2) {
+                  if(-3 == ~var3.aClass64Array2303[var5].anInt978) {
                      var3.anIntArray2300[var5] = -5;
                   }
 
-                  if(var3.aClass64Array2303[var5].anInt978 == 0) {
+                  if(-1 == ~var3.aClass64Array2303[var5].anInt978) {
                      var4 = true;
                   }
                }
 
                if(null != var3.aClass64Array2298[var5]) {
-                  if(var3.aClass64Array2298[var5].anInt978 == 2) {
+                  if(-3 == ~var3.aClass64Array2298[var5].anInt978) {
                      var3.anIntArray2300[var5] = -6;
                   }
 
-                  if(var3.aClass64Array2298[var5].anInt978 == 0) {
+                  if(-1 == ~var3.aClass64Array2298[var5].anInt978) {
                      var4 = true;
                   }
                }
@@ -220,19 +224,16 @@ final class Class163_Sub2_Sub1 extends Class163_Sub2 {
             var5 = var0.index;
             var0.putInt(-127, var3.anInt2305);
 
-            for(int var6 = 0; var6 < var3.anInt2296; ++var6) {
-               if(var3.anIntArray2300[var6] == 0) {
+            for(int var6 = 0; ~var3.anInt2296 < ~var6; ++var6) {
+               if(~var3.anIntArray2300[var6] != -1) {
+                  var0.putByte((byte)-101, var3.anIntArray2300[var6]);
+               } else {
                   try {
                      int var7 = var3.anIntArray2301[var6];
                      Field var8;
                      int var9;
-                     if(var7 == 0) {
-                        var8 = (Field)var3.aClass64Array2303[var6].anObject974;
-                        var9 = var8.getInt((Object)null);
-                        var0.putByte((byte)-102, 0);
-                        var0.putInt(-122, var9);
-                     } else {
-                        if(var7 == 1) {
+                     if(-1 != ~var7) {
+                        if(~var7 == -2) {
                            var8 = (Field)var3.aClass64Array2303[var6].anObject974;
                            var8.setInt((Object)null, var3.anIntArray2299[var6]);
                            var0.putByte((byte)-98, 0);
@@ -242,6 +243,11 @@ final class Class163_Sub2_Sub1 extends Class163_Sub2 {
                            var0.putByte((byte)-26, 0);
                            var0.putInt(-124, var9);
                         }
+                     } else {
+                        var8 = (Field)var3.aClass64Array2303[var6].anObject974;
+                        var9 = var8.getInt((Object)null);
+                        var0.putByte((byte)-102, 0);
+                        var0.putInt(-122, var9);
                      }
 
                      Method var26;
@@ -258,16 +264,16 @@ final class Class163_Sub2_Sub1 extends Class163_Sub2 {
                         Object var28 = var26.invoke((Object)null, var10);
                         if(var28 == null) {
                            var0.putByte((byte)-51, 0);
-                        } else if(var28 instanceof Number) {
-                           var0.putByte((byte)-94, 1);
-                           var0.putLong(((Number)var28).longValue(), -2037491440);
-                        } else {
+                        } else if(!(var28 instanceof Number)) {
                            if(var28 instanceof RSString) {
                               var0.putByte((byte)-52, 2);
                               var0.putString(0, (RSString)var28);
                            } else {
                               var0.putByte((byte)-94, 4);
                            }
+                        } else {
+                           var0.putByte((byte)-94, 1);
+                           var0.putLong(((Number)var28).longValue(), -2037491440);
                         }
                      } else if(var7 == 4) {
                         var26 = (Method)var3.aClass64Array2298[var6].anObject974;
@@ -300,8 +306,6 @@ final class Class163_Sub2_Sub1 extends Class163_Sub2 {
                   } catch (Throwable var24) {
                      var0.putByte((byte)-79, -21);
                   }
-               } else {
-                  var0.putByte((byte)-101, var3.anIntArray2300[var6]);
                }
             }
 

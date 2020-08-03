@@ -3,10 +3,12 @@ package org.runite.jagex;
 final class Class106 {
 
    static int anInt1439;
+   private static RSString aClass94_1440 = RSString.createRSString("Connected to update server");
    static boolean aBoolean1441 = true;
    static int anInt1442 = 0;
    static Class67 aClass67_1443;
    static short aShort1444 = 256;
+   static RSString aClass94_1445 = aClass94_1440;
    static int anInt1446 = 0;
    int anInt1447;
    int anInt1448;
@@ -25,7 +27,7 @@ final class Class106 {
             long var3 = var1.toLong(var0 + -3930);
             int var2 = 0;
             if(var3 != 0L) {
-               while(Class3_Sub28_Sub15.aClass3_Sub19Array3694.length > var2 && var3 != Class3_Sub28_Sub15.aClass3_Sub19Array3694[var2].aLong71) {
+               while(Class3_Sub28_Sub15.aClass3_Sub19Array3694.length > var2 && ~Class3_Sub28_Sub15.aClass3_Sub19Array3694[var2].aLong71 != ~var3) {
                   ++var2;
                }
 
@@ -48,12 +50,10 @@ final class Class106 {
          }
 
          Class3_Sub25 var4 = (Class3_Sub25)Class3_Sub2.aClass130_2220.method1780((long)var2, var0 + -10131);
-         if(null == var4) {
-            return 0;
-         } else {
+         if(null != var4) {
             int var5 = 0;
 
-            for(int var6 = 0; var6 < var4.anIntArray2547.length; ++var6) {
+            for(int var6 = 0; ~var4.anIntArray2547.length < ~var6; ++var6) {
                if(var4.anIntArray2547[var6] >= 0 && Class3_Sub13_Sub23.itemDefinitionSize > var4.anIntArray2547[var6]) {
                   ItemDefinition var7 = Class38.getItemDefinition(var4.anIntArray2547[var6], (byte)79);
                   if(null != var7.aClass130_798) {
@@ -70,6 +70,8 @@ final class Class106 {
             }
 
             return var5;
+         } else {
+            return 0;
          }
       } catch (RuntimeException var9) {
          throw Class44.method1067(var9, "od.B(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ')');
@@ -82,6 +84,9 @@ final class Class106 {
          if(var0 != 121) {
             aClass67_1443 = (Class67)null;
          }
+
+         aClass94_1445 = null;
+         aClass94_1440 = null;
       } catch (RuntimeException var2) {
          throw Class44.method1067(var2, "od.A(" + var0 + ')');
       }

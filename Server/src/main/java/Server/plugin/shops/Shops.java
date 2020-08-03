@@ -384,23 +384,6 @@ public enum Shops{
             new Item(ItemNames.STUDDED_BODY,2),
             new Item(ItemNames.STUDDED_CHAPS,2)
     },true,ItemNames.COINS,false),new int[]{575}),
-    LOWE_ARCHERY(new Shop("Lowe's Archery Emporium",new Item[]{
-            new Item(ItemNames.BRONZE_ARROW,2000),
-            new Item(ItemNames.IRON_ARROW,1500),
-            new Item(ItemNames.STEEL_ARROW,1000),
-            new Item(ItemNames.MITHRIL_ARROW,800),
-            new Item(ItemNames.ADAMANT_ARROW,600),
-            new Item(ItemNames.BRONZE_BOLTS,1500),
-            new Item(ItemNames.SHORTBOW_841,4),
-            new Item(ItemNames.LONGBOW_839,4),
-            new Item(ItemNames.OAK_SHORTBOW_843,3),
-            new Item(ItemNames.OAK_LONGBOW_845,3),
-            new Item(ItemNames.WILLOW_SHORTBOW_849,2),
-            new Item(ItemNames.WILLOW_LONGBOW_847,2),
-            new Item(ItemNames.MAPLE_SHORTBOW_853,1),
-            new Item(ItemNames.MAPLE_LONGBOW_851,1),
-            new Item(ItemNames.CROSSBOW_837,1)
-    },false,ItemNames.COINS,false),new int[]{550}),
     BRIAN_ARCHERY(new Shop("Brian's Archery Supplies",new Item[]{
             new Item(ItemNames.STEEL_ARROW,1500),
             new Item(ItemNames.MITHRIL_ARROW,1000),

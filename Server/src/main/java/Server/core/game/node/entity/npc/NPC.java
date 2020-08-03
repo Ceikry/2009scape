@@ -423,8 +423,8 @@ public class NPC extends Entity {
 	 */
 	public void handleTickActions() {
 		if (!getLocks().isInteractionLocked()) {
-			if (!pathBoundMovement && walkRadius > 0 && !getLocation().withinDistance(getProperties().getSpawnLocation(), walkRadius)) {
-				if(!isNeverWalks()){
+			if (!pathBoundMovement && walkRadius > 0 && !getLocation().withinDistance(getProperties().getSpawnLocation(), walkRadius) && isWalks()) {
+				if(isWalks()){
 					if(walkRadius == 0)
 						walkRadius = 3;
 				}
@@ -450,7 +450,7 @@ public class NPC extends Entity {
 		if (!getLocks().isMovementLocked()) {
 			if (dialoguePlayer == null || !dialoguePlayer.isActive() || !dialoguePlayer.getInterfaceManager().hasChatbox()) {
 				dialoguePlayer = null;
-				if (walks && !getPulseManager().hasPulseRunning() && !getProperties().getCombatPulse().isAttacking() && !getProperties().getCombatPulse().isInCombat() && nextWalk < GameWorld.getTicks()) {
+				if (isWalks() && !getPulseManager().hasPulseRunning() && !getProperties().getCombatPulse().isAttacking() && !getProperties().getCombatPulse().isInCombat() && nextWalk < GameWorld.getTicks()) {
 					setNextWalk();
 					Location l = getMovementDestination();
 					if (canMove(l)) {

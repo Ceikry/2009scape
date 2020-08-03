@@ -56,7 +56,7 @@ final class Class140_Sub6 extends GameObject {
          }
 
          while(null != var5) {
-            if(var4 == var5.anInt2314 && 128 * var0 == var5.anInt2326 && var5.anInt2308 == 128 * var3 && var5.aClass111_2320.objectId == var1.objectId) {
+            if(var4 == var5.anInt2314 && ~var5.anInt2326 == ~(128 * var0) && var5.anInt2308 == 128 * var3 && ~var1.objectId == ~var5.aClass111_2320.objectId) {
                if(null != var5.aClass3_Sub24_Sub1_2312) {
                   Class3_Sub26.aClass3_Sub24_Sub2_2563.method461(var5.aClass3_Sub24_Sub1_2312);
                   var5.aClass3_Sub24_Sub1_2312 = null;
@@ -136,7 +136,7 @@ final class Class140_Sub6 extends GameObject {
             while(this.anInt2896 > this.aClass142_2923.duration[this.anInt2922]) {
                this.anInt2896 -= this.aClass142_2923.duration[this.anInt2922];
                ++this.anInt2922;
-               if(this.aClass142_2923.frames.length <= this.anInt2922) {
+               if(~this.anInt2922 <= ~this.aClass142_2923.frames.length) {
                   this.anInt2922 -= this.aClass142_2923.anInt1865;
                   if(this.anInt2922 < 0 || this.aClass142_2923.frames.length <= this.anInt2922) {
                      this.anInt2922 = 0;
@@ -146,7 +146,7 @@ final class Class140_Sub6 extends GameObject {
                this.anInt2898 = this.anInt2922 + 1;
                if(this.aClass142_2923.frames.length <= this.anInt2898) {
                   this.anInt2898 -= this.aClass142_2923.anInt1865;
-                  if(this.anInt2898 < 0 || this.aClass142_2923.frames.length <= this.anInt2898) {
+                  if(-1 < ~this.anInt2898 || ~this.anInt2898 <= ~this.aClass142_2923.frames.length) {
                      this.anInt2898 = -1;
                   }
                }
@@ -174,7 +174,7 @@ final class Class140_Sub6 extends GameObject {
          this.aDouble2918 = ((double)var1 - this.aDouble2900) / var6;
          this.aDouble2895 = (-this.aDouble2920 + (double)var5) / var6;
          this.aDouble2921 = Math.sqrt(this.aDouble2918 * this.aDouble2918 + this.aDouble2895 * this.aDouble2895);
-         if(this.anInt2927 == -1) {
+         if(0 == ~this.anInt2927) {
             this.aDouble2913 = (-this.aDouble2914 + (double)var4) / var6;
          } else {
             if(!this.aBoolean2904) {
@@ -256,10 +256,10 @@ final class Class140_Sub6 extends GameObject {
             var1 *= var1;
          }
 
-         if(var0 == 1) {
-            return var4 * var1;
-         } else {
+         if(var0 != 1) {
             return var4;
+         } else {
+            return var4 * var1;
          }
       } catch (RuntimeException var5) {
          throw Class44.method1067(var5, "ra.A(" + var0 + ',' + var1 + ',' + var2 + ')');
@@ -281,10 +281,10 @@ final class Class140_Sub6 extends GameObject {
          this.anInt2925 = var6;
          this.anInt2911 = var5;
          int var12 = RenderAnimationDefinition.getGraphicDefinition((byte)42, this.anInt2915).anInt542;
-         if(var12 == -1) {
-            this.aClass142_2923 = null;
-         } else {
+         if(0 != ~var12) {
             this.aClass142_2923 = Client.getAnimationDefinition(var12, (byte)-20);
+         } else {
+            this.aClass142_2923 = null;
          }
 
       } catch (RuntimeException var13) {

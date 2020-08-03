@@ -81,12 +81,12 @@ abstract class Class3_Sub28_Sub7 extends Node {
                Class3_Sub13_Sub34.method331(1L, var1 ^ 64);
             }
 
-            if(var3.anInt978 == 1) {
+            if(-2 == ~var3.anInt978) {
                var2 = (Class122)var3.anObject974;
                byte[] var4 = new byte[(int)var2.method1741(-1)];
 
                int var6;
-               for(int var5 = 0; var4.length > var5; var5 += var6) {
+               for(int var5 = 0; ~var5 > ~var4.length; var5 += var6) {
                   var6 = var2.method1739(var5, var1 + 0, var4.length - var5, var4);
                   if(var6 == -1) {
                      throw new IOException("EOF");
@@ -128,15 +128,15 @@ abstract class Class3_Sub28_Sub7 extends Node {
          Class3_Sub13_Sub30.anInt3362 = Class108.anInt1460 + -1 + Class2.anInt65 + -var2;
          int var6 = (int)((float)Class3_Sub28_Sub3.aClass11_3551.anInt193 / Class44.aFloat727) + Class3_Sub13_Sub30.anInt3362;
          int var5 = Class3_Sub13_Sub30.anInt3362 - (int)((float)Class3_Sub28_Sub3.aClass11_3551.anInt193 / Class44.aFloat727);
-         if(Class23.anInt455 < var4) {
+         if(~var4 < ~Class23.anInt455) {
             Class82.anInt1150 = Class23.anInt455 + -((int)((float)Class3_Sub28_Sub3.aClass11_3551.anInt168 / Class44.aFloat727));
          }
 
-         if(var5 < 0) {
+         if(-1 < ~var5) {
             Class3_Sub13_Sub30.anInt3362 = (int)((float)Class3_Sub28_Sub3.aClass11_3551.anInt193 / Class44.aFloat727);
          }
 
-         if(var6 > Class108.anInt1460) {
+         if(~Class108.anInt1460 > ~var6) {
             Class3_Sub13_Sub30.anInt3362 = -((int)((float)Class3_Sub28_Sub3.aClass11_3551.anInt193 / Class44.aFloat727)) + Class108.anInt1460;
          }
 

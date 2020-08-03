@@ -6,8 +6,10 @@ final class Class3_Sub17 extends Class3 {
 	int[] anIntArray2455;
 	static int anInt2456;
 	static float aFloat2457;
+	static RSString aClass94_2458 = RSString.createRSString("Module texte charg-B");
 	static int anInt2459;
 	int[][] anIntArrayArray2460;
+	static RSString aClass94_2461 = RSString.createRSString("3D)2Softwarebibliothek gestartet)3");
 	int anInt2462;
 	boolean[] aBooleanArray2463;
 
@@ -22,7 +24,9 @@ final class Class3_Sub17 extends Class3 {
 				method381(false);
 			}
 
+			aClass94_2458 = null;
 			aClass94_2465 = null;
+			aClass94_2461 = null;
 		} catch (RuntimeException var2) {
 			throw Class44.method1067(var2, "jm.B(" + var0 + ')');
 		}
@@ -30,7 +34,7 @@ final class Class3_Sub17 extends Class3 {
 
 	static final void method381(boolean var0) {
 		try {
-			if(Class3_Sub28_Sub12.anInt3655 != -1) {
+			if(0 != ~Class3_Sub28_Sub12.anInt3655) {
 				Class52.method1160(-120, Class3_Sub28_Sub12.anInt3655);
 			}
 
@@ -55,7 +59,7 @@ final class Class3_Sub17 extends Class3 {
 				method380(-78);
 			}
 
-			if(Class3_Sub28_Sub12.anInt3655 != -1) {
+			if(~Class3_Sub28_Sub12.anInt3655 != 0) {
 				Class3_Sub28_Sub3.anInt3557 = 0;
 				Class8.method841(true);
 			}
@@ -83,12 +87,12 @@ final class Class3_Sub17 extends Class3 {
 			this.anIntArray2455 = new int[this.anInt2462];
 
 			int var4;
-			for(var4 = 0; this.anInt2462 > var4; ++var4) {
+			for(var4 = 0; ~var4 > ~this.anInt2462; ++var4) {
 				this.anIntArray2466[var4] = var3.getByte((byte)-70);
 			}
 
-			for(var4 = 0; var4 < this.anInt2462; ++var4) {
-				this.aBooleanArray2463[var4] = var3.getByte((byte) -35) == 1;
+			for(var4 = 0; ~this.anInt2462 < ~var4; ++var4) {
+				this.aBooleanArray2463[var4] = ~var3.getByte((byte)-35) == -2;
 			}
 
 			for(var4 = 0; var4 < this.anInt2462; ++var4) {
@@ -100,7 +104,7 @@ final class Class3_Sub17 extends Class3 {
 			}
 
 			for(var4 = 0; this.anInt2462 > var4; ++var4) {
-				for(int var5 = 0; this.anIntArrayArray2460[var4].length > var5; ++var5) {
+				for(int var5 = 0; ~var5 > ~this.anIntArrayArray2460[var4].length; ++var5) {
 					this.anIntArrayArray2460[var4][var5] = var3.getByte((byte)-70);
 				}
 			}
@@ -123,7 +127,7 @@ final class Class3_Sub17 extends Class3 {
 		this.anIntArray2455 = new int[this.anInt2462];
 
 		int var4;
-		for(var4 = 0; this.anInt2462 > var4; ++var4) {
+		for(var4 = 0; ~var4 > ~this.anInt2462; ++var4) {
 			this.anIntArray2466[var4] = var3.getByte((byte)-70);
 		}
 
@@ -140,7 +144,7 @@ final class Class3_Sub17 extends Class3 {
 		}
 
 		for(var4 = 0; this.anInt2462 > var4; ++var4) {
-			for(int var5 = 0; this.anIntArrayArray2460[var4].length > var5; ++var5) {
+			for(int var5 = 0; ~var5 > ~this.anIntArrayArray2460[var4].length; ++var5) {
 				this.anIntArrayArray2460[var4][var5] = var3.getByte((byte)-70);
 			}
 		}

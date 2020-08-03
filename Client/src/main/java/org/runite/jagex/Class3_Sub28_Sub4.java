@@ -10,17 +10,22 @@ final class Class3_Sub28_Sub4 extends Node {
    private int[][] anIntArrayArray3570;
    private RSString[] aClass94Array3571;
    static Class93 aClass93_3572 = new Class93(64);
+   static RSString aClass94_3573 = RSString.createRSString(" )2> <col=00ffff>");
    static RSString aClass94_3574 = RSString.createRSString("titlebg");
+  
+   static RSString aClass94_3576 = RSString.createRSString("name_icons");
    static RSString aClass94_3577 = RSString.createRSString(": ");
+   private static RSString aClass94_3578 = RSString.createRSString("Loaded title screen");
    static Class83 aClass83_3579;
+ static RSString aClass94_3575 = aClass94_3578;
 
    final void method545(RSByteBuffer var1, int[] var2, boolean var3) {
       try {
          if(!var3) {
             if(this.anIntArray3566 != null) {
-               for(int var4 = 0; var4 < this.anIntArray3566.length && var2.length > var4; ++var4) {
+               for(int var4 = 0; ~this.anIntArray3566.length < ~var4 && ~var4 > ~var2.length; ++var4) {
                   int var5 = RuntimeException_Sub1.anIntArray2113[this.method550(89, var4)];
-                  if(var5 > 0) {
+                  if(~var5 < -1) {
                      var1.method739(0, var5, (long)var2[var4]);
                   }
                }
@@ -53,9 +58,17 @@ final class Class3_Sub28_Sub4 extends Node {
 
    public static void method547(int var0) {
       try {
+         if(var0 != -2951) {
+            aClass94_3576 = (RSString)null;
+         }
+
+         aClass94_3578 = null;
          aClass93_3572 = null;
+         aClass94_3575 = null;
          aClass94_3574 = null;
          aClass94_3577 = null;
+         aClass94_3576 = null;
+         aClass94_3573 = null;
          aClass83_3579 = null;
          anIntArray3565 = null;
       } catch (RuntimeException var2) {
@@ -66,7 +79,7 @@ final class Class3_Sub28_Sub4 extends Node {
    final void method548(int var1) {
       try {
          if(null != this.anIntArray3567) {
-            for(int var2 = 0; var2 < this.anIntArray3567.length; ++var2) {
+            for(int var2 = 0; ~this.anIntArray3567.length < ~var2; ++var2) {
                this.anIntArray3567[var2] = Class3_Sub13_Sub29.bitwiseOr(this.anIntArray3567[var2], '\u8000');
             }
          }
@@ -86,7 +99,7 @@ final class Class3_Sub28_Sub4 extends Node {
             aClass94_3577 = (RSString)null;
          }
 
-         return null != this.anIntArray3566 && var3 >= 0 && this.anIntArray3566.length >= var3 ?(this.anIntArrayArray3570[var3] != null && var2 >= 0 && this.anIntArrayArray3570[var3].length >= var2 ?this.anIntArrayArray3570[var3][var2]:-1):-1;
+         return null != this.anIntArray3566 && var3 >= 0 && ~var3 >= ~this.anIntArray3566.length?(this.anIntArrayArray3570[var3] != null && -1 >= ~var2 && ~var2 >= ~this.anIntArrayArray3570[var3].length?this.anIntArrayArray3570[var3][var2]:-1):-1;
       } catch (RuntimeException var5) {
          throw Class44.method1067(var5, "cb.P(" + var1 + ',' + var2 + ',' + var3 + ')');
       }
@@ -94,7 +107,11 @@ final class Class3_Sub28_Sub4 extends Node {
 
    final int method550(int var1, int var2) {
       try {
-         if(null != this.anIntArray3566 && var2 >= 0 && var2 <= this.anIntArray3566.length) {
+         if(null != this.anIntArray3566 && -1 >= ~var2 && var2 <= this.anIntArray3566.length) {
+            if(var1 <= 33) {
+               aClass94_3578 = (RSString)null;
+            }
+
             return this.anIntArray3566[var2];
          } else {
             return -1;
@@ -112,7 +129,7 @@ final class Class3_Sub28_Sub4 extends Node {
                var1 = 2;
             }
 
-            if(var2 == Class23.anInt453) {
+            if(~Class23.anInt453 == ~var2) {
                if(0 != var2 && var1 != Class3_Sub13_Sub21.anInt3263) {
                   Class2.anInterface5Array70[var2].method23(var1);
                   Class3_Sub13_Sub21.anInt3263 = var1;
@@ -122,11 +139,11 @@ final class Class3_Sub28_Sub4 extends Node {
                   return;
                }
 
-               if(Class23.anInt453 != 0) {
+               if(~Class23.anInt453 != -1) {
                   Class2.anInterface5Array70[Class23.anInt453].method21();
                }
 
-               if(var2 != 0) {
+               if(-1 != ~var2) {
                   Interface5 var3 = Class2.anInterface5Array70[var2];
                   var3.method22();
                   var3.method23(var1);
@@ -156,20 +173,15 @@ final class Class3_Sub28_Sub4 extends Node {
             this.method548(-20);
          }
 
-         if(var2 == 1) {
-            this.aClass94Array3571 = var1.getString().method1567(60, (byte)118);
-         } else {
+         if(var2 != 1) {
             int var4;
             int var5;
-            if(var2 == 2) {
-               var4 = var1.getByte((byte)-114);
-               this.anIntArray3567 = new int[var4];
-
-               for(var5 = 0; var5 < var4; ++var5) {
-                  this.anIntArray3567[var5] = var1.getShort(1);
-               }
-            } else {
-               if(var2 == 3) {
+            if(var2 != 2) {
+               if(var2 != 3) {
+                  if(var2 == 4) {
+                     this.aBoolean3568 = false;
+                  }
+               } else {
                   var4 = var1.getByte((byte)-34);
                   this.anIntArray3566 = new int[var4];
                   this.anIntArrayArray3570 = new int[var4][];
@@ -183,12 +195,17 @@ final class Class3_Sub28_Sub4 extends Node {
                         this.anIntArrayArray3570[var5][var7] = var1.getShort(1);
                      }
                   }
-               } else {
-                  if(var2 == 4) {
-                     this.aBoolean3568 = false;
-                  }
+               }
+            } else {
+               var4 = var1.getByte((byte)-114);
+               this.anIntArray3567 = new int[var4];
+
+               for(var5 = 0; var5 < var4; ++var5) {
+                  this.anIntArray3567[var5] = var1.getShort(1);
                }
             }
+         } else {
+            this.aClass94Array3571 = var1.getString().method1567(60, (byte)118);
          }
 
       } catch (RuntimeException var8) {
@@ -198,7 +215,9 @@ final class Class3_Sub28_Sub4 extends Node {
 
    final RSString method554(int var1) {
       try {
-         if(var1 == -1) {
+         if(var1 != -1) {
+            return (RSString)null;
+         } else {
             RSString var2 = Class47.method1090((byte)-118, 80);
             if(null == this.aClass94Array3571) {
                return Class3_Sub13_Sub29.aClass94_3357;
@@ -212,8 +231,6 @@ final class Class3_Sub28_Sub4 extends Node {
 
                return var2.method1576((byte)90);
             }
-         } else {
-            return (RSString)null;
          }
       } catch (RuntimeException var4) {
          throw Class44.method1067(var4, "cb.C(" + var1 + ')');

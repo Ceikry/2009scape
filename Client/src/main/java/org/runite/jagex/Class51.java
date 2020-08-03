@@ -1330,27 +1330,27 @@ final class Class51 {
             var10 += (var13 >> 3) * var23;
             var11 += (var14 >> 3) * var23;
             var22 = var11 >> 12;
-            if(var22 == 0) {
-               var18 = 0;
-               var19 = 0;
-            } else {
+            if(var22 != 0) {
                var18 = var9 / var22;
                var19 = var10 / var22;
+            } else {
+               var18 = 0;
+               var19 = 0;
             }
 
-             var9 += var12;
+            var9 += var12;
             var10 += var13;
             var11 += var14;
             var22 = var11 >> 12;
-            if(var22 == 0) {
-               var20 = 0;
-               var21 = 0;
-            } else {
+            if(var22 != 0) {
                var20 = var9 / var22;
                var21 = var10 / var22;
+            } else {
+               var20 = 0;
+               var21 = 0;
             }
 
-             var2 = (var18 << 20) + var19;
+            var2 = (var18 << 20) + var19;
             var16 = (var20 - var18 >> 3 << 20) + (var21 - var19 >> 3);
             var17 >>= 3;
             var8 <<= 3;
@@ -1388,15 +1388,15 @@ final class Class51 {
                      var10 += var13;
                      var11 += var14;
                      var22 = var11 >> 12;
-                     if(var22 == 0) {
-                        var20 = 0;
-                        var21 = 0;
-                     } else {
+                     if(var22 != 0) {
                         var20 = var9 / var22;
                         var21 = var10 / var22;
+                     } else {
+                        var20 = 0;
+                        var21 = 0;
                      }
 
-                      var2 = (var18 << 20) + var19;
+                     var2 = (var18 << 20) + var19;
                      var16 = (var20 - var18 >> 3 << 20) + (var21 - var19 >> 3);
                      var7 += var8;
                      var15 = var7 >> 8;
@@ -1470,15 +1470,15 @@ final class Class51 {
                      var10 += var13;
                      var11 += var14;
                      var22 = var11 >> 12;
-                     if(var22 == 0) {
-                        var20 = 0;
-                        var21 = 0;
-                     } else {
+                     if(var22 != 0) {
                         var20 = var9 / var22;
                         var21 = var10 / var22;
+                     } else {
+                        var20 = 0;
+                        var21 = 0;
                      }
 
-                      var2 = (var18 << 20) + var19;
+                     var2 = (var18 << 20) + var19;
                      var16 = (var20 - var18 >> 3 << 20) + (var21 - var19 >> 3);
                      var7 += var8;
                      var15 = var7 >> 8;
@@ -1505,27 +1505,27 @@ final class Class51 {
             var10 += (var13 >> 3) * var23;
             var11 += (var14 >> 3) * var23;
             var22 = var11 >> 14;
-            if(var22 == 0) {
-               var18 = 0;
-               var19 = 0;
-            } else {
+            if(var22 != 0) {
                var18 = var9 / var22;
                var19 = var10 / var22;
+            } else {
+               var18 = 0;
+               var19 = 0;
             }
 
-             var9 += var12;
+            var9 += var12;
             var10 += var13;
             var11 += var14;
             var22 = var11 >> 14;
-            if(var22 == 0) {
-               var20 = 0;
-               var21 = 0;
-            } else {
+            if(var22 != 0) {
                var20 = var9 / var22;
                var21 = var10 / var22;
+            } else {
+               var20 = 0;
+               var21 = 0;
             }
 
-             var2 = (var18 << 18) + var19;
+            var2 = (var18 << 18) + var19;
             var16 = (var20 - var18 >> 3 << 18) + (var21 - var19 >> 3);
             var17 >>= 3;
             var8 <<= 3;
@@ -1563,15 +1563,15 @@ final class Class51 {
                      var10 += var13;
                      var11 += var14;
                      var22 = var11 >> 14;
-                     if(var22 == 0) {
-                        var20 = 0;
-                        var21 = 0;
-                     } else {
+                     if(var22 != 0) {
                         var20 = var9 / var22;
                         var21 = var10 / var22;
+                     } else {
+                        var20 = 0;
+                        var21 = 0;
                      }
 
-                      var2 = (var18 << 18) + var19;
+                     var2 = (var18 << 18) + var19;
                      var16 = (var20 - var18 >> 3 << 18) + (var21 - var19 >> 3);
                      var7 += var8;
                      var15 = var7 >> 8;
@@ -1645,15 +1645,15 @@ final class Class51 {
                      var10 += var13;
                      var11 += var14;
                      var22 = var11 >> 14;
-                     if(var22 == 0) {
-                        var20 = 0;
-                        var21 = 0;
-                     } else {
+                     if(var22 != 0) {
                         var20 = var9 / var22;
                         var21 = var10 / var22;
+                     } else {
+                        var20 = 0;
+                        var21 = 0;
                      }
 
-                      var2 = (var18 << 18) + var19;
+                     var2 = (var18 << 18) + var19;
                      var16 = (var20 - var18 >> 3 << 18) + (var21 - var19 >> 3);
                      var7 += var8;
                      var15 = var7 >> 8;
@@ -1708,27 +1708,27 @@ final class Class51 {
             var10 += var13 * var23;
             var11 += var14 * var23;
             var22 = var11 >> 12;
-            if(var22 == 0) {
-               var18 = 0;
-               var19 = 0;
-            } else {
+            if(var22 != 0) {
                var18 = var9 / var22;
                var19 = var10 / var22;
+            } else {
+               var18 = 0;
+               var19 = 0;
             }
 
-             var9 += var12 * var17;
+            var9 += var12 * var17;
             var10 += var13 * var17;
             var11 += var14 * var17;
             var22 = var11 >> 12;
-            if(var22 == 0) {
-               var20 = 0;
-               var21 = 0;
-            } else {
+            if(var22 != 0) {
                var20 = var9 / var22;
                var21 = var10 / var22;
+            } else {
+               var20 = 0;
+               var21 = 0;
             }
 
-             var2 = (var18 << 20) + var19;
+            var2 = (var18 << 20) + var19;
             var16 = ((var20 - var18) / var17 << 20) + (var21 - var19) / var17;
             var17 >>= 3;
             var8 <<= 3;
@@ -1851,27 +1851,27 @@ final class Class51 {
             var10 += var13 * var23;
             var11 += var14 * var23;
             var22 = var11 >> 14;
-            if(var22 == 0) {
-               var18 = 0;
-               var19 = 0;
-            } else {
+            if(var22 != 0) {
                var18 = var9 / var22;
                var19 = var10 / var22;
+            } else {
+               var18 = 0;
+               var19 = 0;
             }
 
-             var9 += var12 * var17;
+            var9 += var12 * var17;
             var10 += var13 * var17;
             var11 += var14 * var17;
             var22 = var11 >> 14;
-            if(var22 == 0) {
-               var20 = 0;
-               var21 = 0;
-            } else {
+            if(var22 != 0) {
                var20 = var9 / var22;
                var21 = var10 / var22;
+            } else {
+               var20 = 0;
+               var21 = 0;
             }
 
-             var2 = (var18 << 18) + var19;
+            var2 = (var18 << 18) + var19;
             var16 = ((var20 - var18) / var17 << 18) + (var21 - var19) / var17;
             var17 >>= 3;
             var8 <<= 3;
@@ -3194,27 +3194,27 @@ final class Class51 {
       int var13 = var7 - var6;
       int var14 = var8 - var6;
       int var15;
-      if(var2 == var1) {
-         var15 = 0;
-      } else {
+      if(var2 != var1) {
          var15 = (var5 - var4 << 16) / (var2 - var1);
+      } else {
+         var15 = 0;
       }
 
-       int var16;
-      if(var1 == var0) {
-         var16 = 0;
-      } else {
+      int var16;
+      if(var1 != var0) {
          var16 = (var9 << 16) / var10;
-      }
-
-       int var17;
-      if(var2 == var0) {
-         var17 = 0;
       } else {
-         var17 = (var11 << 16) / var12;
+         var16 = 0;
       }
 
-       int var18 = var9 * var12 - var11 * var10;
+      int var17;
+      if(var2 != var0) {
+         var17 = (var11 << 16) / var12;
+      } else {
+         var17 = 0;
+      }
+
+      int var18 = var9 * var12 - var11 * var10;
       if(var18 != 0) {
          int var19 = (var13 * var12 - var14 * var10 << 8) / var18;
          int var20 = (var14 * var9 - var13 * var11 << 8) / var18;

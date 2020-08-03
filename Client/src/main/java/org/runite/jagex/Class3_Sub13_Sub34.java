@@ -8,6 +8,8 @@ final class Class3_Sub13_Sub34 extends Class3_Sub13 {
    private int anInt3405 = 4096;
    private int anInt3406 = 4096;
    static Class47 aClass47_3407 = new Class47(64);
+   static RSString aClass94_3408 = RSString.createRSString("Untersuchen");
+   static RSString aClass94_3409 = RSString.createRSString("Musik)2Engine vorbereitet)3");
    private int anInt3410 = 4096;
    static long aLong3411 = 0L;
    static Class93 aClass93_3412 = new Class93(64);
@@ -356,6 +358,8 @@ final class Class3_Sub13_Sub34 extends Class3_Sub13 {
       try {
          //int var1 = 100 / ((76 - var0) / 44);
          aClass93_3412 = null;
+         aClass94_3409 = null;
+         aClass94_3408 = null;
          aClass47_3407 = null;
       } catch (RuntimeException var2) {
          throw Class44.method1067(var2, "sk.B(" + var0 + ')');

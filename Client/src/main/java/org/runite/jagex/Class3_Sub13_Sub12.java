@@ -3,6 +3,8 @@ import java.util.zip.CRC32;
 
 final class Class3_Sub13_Sub12 extends Class3_Sub13 {
 
+   private static RSString aClass94_3141 = RSString.createRSString("Loaded config");
+   static RSString aClass94_3142 = aClass94_3141;
    static CRC32 aCRC32_3143 = new CRC32();
    static int anInt3144;
    static RSString aClass94_3145 = RSString.createRSString(")1 ");
@@ -10,14 +12,14 @@ final class Class3_Sub13_Sub12 extends Class3_Sub13 {
 
    static final void method223(boolean var0, int var1, int var2, int var3, int var4, int var5, int var6, int var7) {
       try {
-         if(var7 == var4) {
+         if(~var4 == ~var7) {
             IOHandler.method1460(var1, var3, (byte)-113, var6, var7, var2, var5);
          } else {
             if(!var0) {
                method226(87, 8);
             }
 
-            if(Class101.anInt1425 <= var2 - var7 && var7 + var2 <= Class3_Sub28_Sub18.anInt3765 && var3 - var4 >= Class159.anInt2020 && Class57.anInt902 >= var3 + var4) {
+            if(~(var2 - var7) <= ~Class101.anInt1425 && var7 + var2 <= Class3_Sub28_Sub18.anInt3765 && ~Class159.anInt2020 >= ~(var3 - var4) && Class57.anInt902 >= var3 + var4) {
                Class161.method2200(var6, var2, var3, var5, var7, 95, var4, var1);
             } else {
                Class3_Sub13_Sub34.method329(var7, var6, var5, var1, (byte)-54, var3, var2, var4);
@@ -99,7 +101,7 @@ final class Class3_Sub13_Sub12 extends Class3_Sub13 {
 
    static final void method226(int var0, int var1) {
       try {
-         if(var0 != -1) {
+         if(0 != ~var0) {
             if(var1 <= 27) {
                method228((CacheIndex)null, (CacheIndex)null, true);
             }
@@ -126,8 +128,14 @@ final class Class3_Sub13_Sub12 extends Class3_Sub13 {
 
    public static void method227(boolean var0) {
       try {
+         aClass94_3142 = null;
          aClass94_3145 = null;
          aCRC32_3143 = null;
+         if(!var0) {
+            aClass94_3142 = (RSString)null;
+         }
+
+         aClass94_3141 = null;
       } catch (RuntimeException var2) {
          throw Class44.method1067(var2, "fn.O(" + var0 + ')');
       }
@@ -143,7 +151,7 @@ final class Class3_Sub13_Sub12 extends Class3_Sub13 {
             int[] var7 = var4[2];
             int[] var6 = var4[1];
 
-            for(int var8 = 0; Class113.anInt1559 > var8; ++var8) {
+            for(int var8 = 0; ~var8 > ~Class113.anInt1559; ++var8) {
                var10[var8] = (var7[var8] + var5[var8] + var6[var8]) / 3;
             }
          }
@@ -173,6 +181,9 @@ final class Class3_Sub13_Sub12 extends Class3_Sub13 {
             ++var3;
          }
 
+         if(var2) {
+            aClass94_3142 = (RSString)null;
+         }
 
          if(var1.method2144(0, Class75_Sub2.anInt2643)) {
             ++var3;

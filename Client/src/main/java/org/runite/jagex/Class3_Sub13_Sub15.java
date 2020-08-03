@@ -11,7 +11,7 @@ final class Class3_Sub13_Sub15 extends Class3_Sub13 {
    private int anInt3180;
    static int[] anIntArray3181;
    private int anInt3182;
-   static RSString COMMAND_HIGHRES_GRAPHICS_FULLSCREEN = RSString.createRSString("::wm3");
+   static RSString aClass94_3183 = RSString.createRSString("::wm3");
    static boolean aBoolean3184 = true;
    static int[] anIntArray3185 = new int[25];
    private int anInt3186;
@@ -22,14 +22,14 @@ final class Class3_Sub13_Sub15 extends Class3_Sub13 {
 
    final void method157(int var1, RSByteBuffer var2, boolean var3) {
       try {
-         if(var1 == 0) {
+         if(~var1 == -1) {
             this.anInt3175 = var2.getShort((byte)18);
-         } else if(var1 == 1) {
-            this.anInt3178 = (var2.getByte() << 12) / 100;
-         } else {
-            if(var1 == 2) {
+         } else if(-2 != ~var1) {
+            if(-3 == ~var1) {
                this.anInt3176 = (var2.getByte() << 12) / 100;
             }
+         } else {
+            this.anInt3178 = (var2.getByte() << 12) / 100;
          }
 
          if(!var3) {
@@ -45,7 +45,7 @@ final class Class3_Sub13_Sub15 extends Class3_Sub13 {
       try {
          int var6 = 32 / ((15 - var3) / 45);
          int var5 = var1 <= 2048?var1 * (4096 + var2) >> 12:-(var1 * var2 >> 12) + var1 + var2;
-         if(var5 > 0) {
+         if(~var5 < -1) {
             var4 *= 6;
             int var7 = -var5 + var1 + var1;
             int var9 = var4 >> 12;
@@ -59,34 +59,34 @@ final class Class3_Sub13_Sub15 extends Class3_Sub13 {
                this.anInt3182 = var7;
                this.anInt3186 = var5;
                this.anInt3174 = var12;
-            } else if(var9 == 1) {
-               this.anInt3182 = var7;
-               this.anInt3174 = var5;
-               this.anInt3186 = var13;
-            } else {
-               if(var9 == 2) {
-                  this.anInt3186 = var7;
-                  this.anInt3174 = var5;
-                  this.anInt3182 = var12;
-               } else {
-                  if(var9 == 3) {
-                     this.anInt3174 = var13;
-                     this.anInt3182 = var5;
-                     this.anInt3186 = var7;
-                  } else {
-                     if(var9 == 4) {
-                        this.anInt3182 = var5;
-                        this.anInt3186 = var12;
-                        this.anInt3174 = var7;
-                     } else {
-                        if(var9 == 5) {
+            } else if(var9 != 1) {
+               if(~var9 != -3) {
+                  if(var9 != 3) {
+                     if(var9 != 4) {
+                        if(~var9 == -6) {
                            this.anInt3174 = var7;
                            this.anInt3186 = var5;
                            this.anInt3182 = var13;
                         }
+                     } else {
+                        this.anInt3182 = var5;
+                        this.anInt3186 = var12;
+                        this.anInt3174 = var7;
                      }
+                  } else {
+                     this.anInt3174 = var13;
+                     this.anInt3182 = var5;
+                     this.anInt3186 = var7;
                   }
+               } else {
+                  this.anInt3186 = var7;
+                  this.anInt3174 = var5;
+                  this.anInt3182 = var12;
                }
+            } else {
+               this.anInt3182 = var7;
+               this.anInt3174 = var5;
+               this.anInt3186 = var13;
             }
          } else {
             this.anInt3186 = this.anInt3174 = this.anInt3182 = var1;
@@ -108,22 +108,22 @@ final class Class3_Sub13_Sub15 extends Class3_Sub13 {
             this.method166(38, -39);
          }
 
-         var5 = var5 >= var4 ?var5:var4;
+         var5 = ~var4 >= ~var5?var5:var4;
          int var6 = var3 > var2?var2:var3;
-         var6 = var6 <= var4 ?var6:var4;
+         var6 = ~var4 <= ~var6?var6:var4;
          int var7 = -var6 + var5;
          if(0 < var7) {
             int var9 = (var5 - var3 << 12) / var7;
             int var8 = (var5 + -var2 << 12) / var7;
             int var10 = (-var4 + var5 << 12) / var7;
-            if(var2 == var5) {
-               this.anInt3180 = var3 == var6 ?var10 + 20480:4096 + -var9;
-            } else {
-               if(var3 == var5) {
-                  this.anInt3180 = var4 == var6 ?var8 + 4096:-var10 + 12288;
+            if(var2 != var5) {
+               if(~var5 == ~var3) {
+                  this.anInt3180 = ~var6 == ~var4?var8 + 4096:-var10 + 12288;
                } else {
                   this.anInt3180 = var6 != var2?-var8 + 20480:12288 + var9;
                }
+            } else {
+               this.anInt3180 = ~var6 == ~var3?var10 + 20480:4096 + -var9;
             }
 
             this.anInt3180 /= 6;
@@ -132,7 +132,7 @@ final class Class3_Sub13_Sub15 extends Class3_Sub13 {
          }
 
          this.anInt3188 = (var6 - -var5) / 2;
-         if(this.anInt3188 > 0 && 4096 > this.anInt3188) {
+         if(-1 > ~this.anInt3188 && 4096 > this.anInt3188) {
             this.anInt3189 = (var7 << 12) / (this.anInt3188 > 2048?8192 - 2 * this.anInt3188:this.anInt3188 * 2);
          } else {
             this.anInt3189 = 0;
@@ -146,7 +146,7 @@ final class Class3_Sub13_Sub15 extends Class3_Sub13 {
    final int[][] method166(int var1, int var2) {
       try {
          if(var1 != -1) {
-            COMMAND_HIGHRES_GRAPHICS_FULLSCREEN = (RSString)null;
+            aClass94_3183 = (RSString)null;
          }
 
          int[][] var3 = this.aClass97_2376.method1594((byte)-118, var2);
@@ -167,7 +167,7 @@ final class Class3_Sub13_Sub15 extends Class3_Sub13 {
                }
 
                this.anInt3189 += this.anInt3178;
-               if(this.anInt3188 > 4096) {
+               if(-4097 > ~this.anInt3188) {
                   this.anInt3188 = 4096;
                }
 
@@ -179,11 +179,11 @@ final class Class3_Sub13_Sub15 extends Class3_Sub13 {
                   this.anInt3189 = 4096;
                }
 
-               for(this.anInt3180 += this.anInt3175; this.anInt3180 < 0; this.anInt3180 += 4096) {
+               for(this.anInt3180 += this.anInt3175; -1 < ~this.anInt3180; this.anInt3180 += 4096) {
                   ;
                }
 
-               while(this.anInt3180 > 4096) {
+               while(-4097 > ~this.anInt3180) {
                   this.anInt3180 -= 4096;
                }
 
@@ -209,7 +209,7 @@ final class Class3_Sub13_Sub15 extends Class3_Sub13 {
          }
 
          anIntArray3185 = null;
-         COMMAND_HIGHRES_GRAPHICS_FULLSCREEN = null;
+         aClass94_3183 = null;
       } catch (RuntimeException var2) {
          throw Class44.method1067(var2, "hk.B(" + var0 + ')');
       }

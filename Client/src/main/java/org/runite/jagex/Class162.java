@@ -76,7 +76,6 @@ final class Class162 {
          if(var0 != 4) {
             method2205(95);
          }
-         //36873, 24065, 22418
 
          ObjectDefinition var2 = (ObjectDefinition)Canvas_Sub1.aClass93_21.get((long)objectId, (byte)121);
          if(var2 == null) {
@@ -92,9 +91,9 @@ final class Class162 {
                var2.options = null;
             }
 
-            if(var2.NotClipped) {
-               var2.ClipType = 0;
-               var2.ProjectileClipped = false;
+            if(var2.aBoolean1498) {
+               var2.actionCount = 0;
+               var2.aBoolean1486 = false;
             }
 
             Canvas_Sub1.aClass93_21.put((byte)-114, var2, (long)objectId);

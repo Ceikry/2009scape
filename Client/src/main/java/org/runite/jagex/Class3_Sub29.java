@@ -9,6 +9,7 @@ final class Class3_Sub29 extends Class3 {
    static int anInt2582 = 0;
    static boolean isDynamicSceneGraph = false;
    static RSString aClass94_2584 = RSString.createRSString("<)4col>");
+   static RSString aClass94_2585 = RSString.createRSString("Connexion au serveur de mise -9 jour en cours");
    RSString aClass94_2586;
    static int anInt2587;
    static GameShell anApplet_Sub1_2588 = null;
@@ -34,9 +35,9 @@ final class Class3_Sub29 extends Class3 {
          try {
             if(Class10.anInt154 == 1) {
                int var1 = Class101.aClass3_Sub24_Sub4_1421.method499(var0);
-               if(var1 > 0 && Class101.aClass3_Sub24_Sub4_1421.method473(-124)) {
+               if(-1 > ~var1 && Class101.aClass3_Sub24_Sub4_1421.method473(-124)) {
                   var1 -= GraphicDefinition.anInt546;
-                  if(var1 < 0) {
+                  if(-1 < ~var1) {
                      var1 = 0;
                   }
 
@@ -48,10 +49,10 @@ final class Class3_Sub29 extends Class3 {
                Class101.aClass3_Sub24_Sub4_1421.method485(-110);
                Class83.aClass3_Sub27_1154 = null;
                Class3_Sub28_Sub4.aClass83_3579 = null;
-               if(Class101.aClass153_1423 == null) {
-                  Class10.anInt154 = 0;
-               } else {
+               if(Class101.aClass153_1423 != null) {
                   Class10.anInt154 = 2;
+               } else {
+                  Class10.anInt154 = 0;
                }
             }
          } catch (Exception var2) {
@@ -74,10 +75,10 @@ final class Class3_Sub29 extends Class3 {
             return 88;
          } else if(var1 == -2) {
             return 12345678;
-         } else if(var1 == -1) {
+         } else if(~var1 == 0) {
             if(2 > var2) {
                var2 = 2;
-            } else if(var2 > 126) {
+            } else if(~var2 < -127) {
                var2 = 126;
             }
 
@@ -100,7 +101,7 @@ final class Class3_Sub29 extends Class3 {
    static final void method730(int var0, int var1, byte var2, int var3, int var4, int var5) {
       try {
          int var6 = 19 % ((var2 - -44) / 47);
-         if(Class101.anInt1425 <= var0 && var4 <= Class3_Sub28_Sub18.anInt3765 && Class159.anInt2020 <= var5 && Class57.anInt902 >= var3) {
+         if(~var0 <= ~Class101.anInt1425 && var4 <= Class3_Sub28_Sub18.anInt3765 && Class159.anInt2020 <= var5 && Class57.anInt902 >= var3) {
             Class104.method1632(95, var3, var4, var5, var0, var1);
          } else {
             Class93.method1525(3074, var1, var4, var5, var0, var3);
@@ -141,7 +142,7 @@ final class Class3_Sub29 extends Class3 {
          var3.length = 0;
 
          for(int var4 = 0; var4 < var2.length; ++var4) {
-            if(var2[var4] != 0) {
+            if(-1 != ~var2[var4]) {
                var2[var3.length++] = var2[var4];
             }
          }
@@ -157,7 +158,7 @@ final class Class3_Sub29 extends Class3 {
          Class3_Sub28_Sub4 var2 = (Class3_Sub28_Sub4)Class3_Sub28_Sub19.aClass47_3776.method1092((long)var1, 1400);
          if(null == var2) {
             byte[] var3;
-            if(var1 < 32768) {
+            if(-32769 < ~var1) {
                var3 = Class3_Sub24_Sub3.aClass153_3490.getFile(1, (byte)-122, var1);
             } else {
                var3 = Class154.aClass153_1967.getFile(1, (byte)-122, 32767 & var1);
@@ -195,9 +196,9 @@ final class Class3_Sub29 extends Class3 {
                RSString var3 = Class144.aClass94_1885.method1573((byte)126, Class38.aClass87_665.anApplet1219);
                RSString var4 = RenderAnimationDefinition.method903(new RSString[]{var2, Class82.aClass94_1151, var1, Class166.aClass94_2074, var3}, (byte)-119);
                if(var0 == var1.length(var0 + -84)) {
-                  var4 = RenderAnimationDefinition.method903(new RSString[]{var4, TextCore.HasAgeExpire}, (byte)-60);
+                  var4 = RenderAnimationDefinition.method903(new RSString[]{var4, Canvas_Sub2.aClass94_28}, (byte)-60);
                } else {
-                  var4 = RenderAnimationDefinition.method903(new RSString[]{var4, TextCore.HasExpires, Class15.method894(94608000000L + Class5.method830((byte)-55), (byte)52), TextCore.HasMaxAge, Class3_Sub28_Sub12.method612(94608000L, (byte)102)}, (byte)-80);
+                  var4 = RenderAnimationDefinition.method903(new RSString[]{var4, OutputStream_Sub1.aClass94_51, Class15.method894(94608000000L + Class5.method830((byte)-55), (byte)52), Class163_Sub3.aClass94_3000, Class3_Sub28_Sub12.method612(94608000L, (byte)102)}, (byte)-80);
                }
 
                RenderAnimationDefinition.method903(new RSString[]{Class129.aClass94_1694, var4, Class130.aClass94_1698}, (byte)-84).method1554(true, Class38.aClass87_665.anApplet1219);
@@ -219,6 +220,8 @@ final class Class3_Sub29 extends Class3 {
          if(var0 != -22749) {
             anInt2579 = 66;
          }
+
+         aClass94_2585 = null;
       } catch (RuntimeException var2) {
          throw Class44.method1067(var2, "sj.C(" + var0 + ')');
       }
@@ -230,10 +233,10 @@ final class Class3_Sub29 extends Class3 {
             method736(-60, -93);
          }
 
-         if(Class10.anInt154 == 0) {
-            Class101.aClass3_Sub24_Sub4_1421.method506(128, var0);
-         } else {
+         if(-1 != ~Class10.anInt154) {
             Class3_Sub13_Sub36.anInt3423 = var0;
+         } else {
+            Class101.aClass3_Sub24_Sub4_1421.method506(128, var0);
          }
 
       } catch (RuntimeException var3) {

@@ -14,6 +14,7 @@ abstract class Class158 {
    static int anInt2010 = -16 + (int)(33.0D * Math.random());
    int anInt2011;
    int anInt2012;
+   static RSString aClass94_2013 = RSString.createRSString("Lade Liste der Welten");
    static int anInt2014 = 0;
    static int anInt2015;
 
@@ -22,6 +23,10 @@ abstract class Class158 {
 
    static final void method2180(CacheIndex var0, CacheIndex var1, int var2) {
       try {
+         if(var2 != 11504) {
+            aClass94_2013 = (RSString)null;
+         }
+
          Class3_Sub28_Sub7_Sub1.aClass153_4048 = var0;
          Class3_Sub13_Sub18.aClass153_3214 = var1;
       } catch (RuntimeException var4) {
@@ -33,6 +38,7 @@ abstract class Class158 {
       try {
          aByteArrayArrayArray2008 = (byte[][][])null;
          anIntArray2004 = null;
+         aClass94_2013 = null;
          if(var0) {
             method2181(false);
          }
@@ -59,12 +65,12 @@ abstract class Class158 {
       try {
          int var6 = 0;
          if(var3 == 235) {
-            for(; var5.length > var6; ++var6) {
+            for(; ~var6 > ~var5.length; ++var6) {
                RSInterface var7 = var5[var6];
                if(null != var7 && var7.parentId == var0) {
                   Class3_Sub28_Sub11.method603(var4, 13987, var2, var7, var1);
                   Class62.method1224(var7, 23730, var4, var2);
-                  if(var7.anInt247 > var7.anInt240 - var7.anInt168) {
+                  if(~(var7.anInt240 - var7.anInt168) > ~var7.anInt247) {
                      var7.anInt247 = var7.anInt240 - var7.anInt168;
                   }
 
@@ -72,7 +78,7 @@ abstract class Class158 {
                      var7.anInt208 = var7.anInt252 - var7.anInt193;
                   }
 
-                  if(var7.anInt208 < 0) {
+                  if(-1 < ~var7.anInt208) {
                      var7.anInt208 = 0;
                   }
 
@@ -80,7 +86,7 @@ abstract class Class158 {
                      var7.anInt247 = 0;
                   }
 
-                  if(var7.type == 0) {
+                  if(-1 == ~var7.type) {
                      Class151_Sub1.method2104(var7, var1, var3 + -343);
                   }
                }

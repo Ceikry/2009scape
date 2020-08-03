@@ -12,6 +12,7 @@ final class Class102 implements Interface2 {
    private byte[] aByteArray2129;
    static int anInt2130;
    static Class135[] aClass135Array2131 = new Class135[50];
+   static RSString aClass94_2132 = RSString.createRSString("Titelbild ge-Offnet)3");
    private boolean[] aBooleanArray2133;
    private boolean aBoolean2134 = false;
    private boolean[] aBooleanArray2135;
@@ -59,20 +60,20 @@ final class Class102 implements Interface2 {
                int var4 = var3.getSize((byte)114);
                int var5;
                if(1 != var4) {
-                  if(((1 & var4) != 0 || (127 & var3.anInt2819) == 0 && 0 == (127 & var3.anInt2829)) && ((var4 & 1) != 1 || (127 & var3.anInt2819) == 64 && 64 == (127 & var3.anInt2829))) {
+                  if((~(1 & var4) != -1 || ~(127 & var3.anInt2819) == -1 && 0 == (127 & var3.anInt2829)) && ((var4 & 1) != 1 || -65 == ~(127 & var3.anInt2819) && 64 == (127 & var3.anInt2829))) {
                      var5 = var3.anInt2819 + -(var4 * 64) >> 7;
                      var6 = -(var4 * 64) + var3.anInt2829 >> 7;
                      var7 = var3.getSize((byte)114) + var5;
-                     if(var5 < 0) {
+                     if(~var5 > -1) {
                         var5 = 0;
                      }
 
-                     if(var7 > 104) {
+                     if(~var7 < -105) {
                         var7 = 104;
                      }
 
                      var8 = var6 + var3.getSize((byte)114);
-                     if(var6 < 0) {
+                     if(-1 < ~var6) {
                         var6 = 0;
                      }
 
@@ -80,16 +81,16 @@ final class Class102 implements Interface2 {
                         var8 = 104;
                      }
 
-                     for(var9 = var5; var9 < var7; ++var9) {
-                        for(var10 = var6; var8 > var10; ++var10) {
+                     for(var9 = var5; ~var7 < ~var9; ++var9) {
+                        for(var10 = var6; ~var10 > ~var8; ++var10) {
                            ++Class163_Sub1_Sub1.anIntArrayArray4010[var9][var10];
                         }
                      }
                   }
-               } else if((127 & var3.anInt2819) == 64 && (var3.anInt2829 & 127) == 64) {
+               } else if(-65 == ~(127 & var3.anInt2819) && (var3.anInt2829 & 127) == 64) {
                   var5 = var3.anInt2819 >> 7;
                   var6 = var3.anInt2829 >> 7;
-                  if(var5 >= 0 && var5 < 104 && var6 >= 0 && var6 < 104) {
+                  if(-1 >= ~var5 && var5 < 104 && ~var6 <= -1 && -105 < ~var6) {
                      ++Class163_Sub1_Sub1.anIntArrayArray4010[var5][var6];
                   }
                }
@@ -97,13 +98,13 @@ final class Class102 implements Interface2 {
          }
 
          label200:
-         for(var2 = 0; Class163.localNPCCount > var2; ++var2) {
+         for(var2 = 0; ~var2 > ~Class163.localNPCCount; ++var2) {
             var3 = Class3_Sub13_Sub24.npcs[Class15.localNPCIndexes[var2]];
             long var15 = (long)Class15.localNPCIndexes[var2] << 32 | 536870912L;
             if(var3 != null && var3.hasDefinitions((byte)17) && !var3.definition.aBoolean1263 == !var1 && var3.definition.method1472((byte)74)) {
                var6 = var3.getSize((byte)114);
-               if(var6 != 1) {
-                  if((var6 & 1) == 0 && (var3.anInt2819 & 127) == 0 && (127 & var3.anInt2829) == 0 || (var6 & 1) == 1 && (var3.anInt2819 & 127) == 64 && (127 & var3.anInt2829) == 64) {
+               if(-2 != ~var6) {
+                  if((var6 & 1) == 0 && -1 == ~(var3.anInt2819 & 127) && -1 == ~(127 & var3.anInt2829) || ~(var6 & 1) == -2 && -65 == ~(var3.anInt2819 & 127) && (127 & var3.anInt2829) == 64) {
                      var7 = -(64 * var6) + var3.anInt2819 >> 7;
                      var8 = -(var6 * 64) + var3.anInt2829 >> 7;
                      var10 = var8 - -var6;
@@ -113,23 +114,23 @@ final class Class102 implements Interface2 {
 
                      boolean var11 = true;
                      var9 = var7 + var6;
-                     if(var10 > 104) {
+                     if(-105 > ~var10) {
                         var10 = 104;
                      }
 
-                     if(var7 < 0) {
+                     if(-1 < ~var7) {
                         var7 = 0;
                      }
 
-                     if(var9 > 104) {
+                     if(~var9 < -105) {
                         var9 = 104;
                      }
 
                      int var12;
                      int var13;
                      for(var12 = var7; var12 < var9; ++var12) {
-                        for(var13 = var8; var10 > var13; ++var13) {
-                           if(Class163_Sub1_Sub1.anIntArrayArray4010[var12][var13] <= 1) {
+                        for(var13 = var8; ~var13 > ~var10; ++var13) {
+                           if(~Class163_Sub1_Sub1.anIntArrayArray4010[var12][var13] >= -2) {
                               var11 = false;
                               break;
                            }
@@ -152,10 +153,10 @@ final class Class102 implements Interface2 {
                         }
                      }
                   }
-               } else if((127 & var3.anInt2819) == 64 && (127 & var3.anInt2829) == 64) {
+               } else if((127 & var3.anInt2819) == 64 && ~(127 & var3.anInt2829) == -65) {
                   var7 = var3.anInt2819 >> 7;
                   var8 = var3.anInt2829 >> 7;
-                  if(0 > var7 || var7 >= 104 || var8 < 0 || var8 >= 104) {
+                  if(0 > var7 || ~var7 <= -105 || var8 < 0 || ~var8 <= -105) {
                      continue;
                   }
 
@@ -201,6 +202,7 @@ final class Class102 implements Interface2 {
          }
 
          anIntArray2125 = null;
+         aClass94_2132 = null;
          aClass3_Sub28_Sub16_Sub2Array2140 = null;
          aClass135Array2131 = null;
       } catch (RuntimeException var2) {
@@ -236,18 +238,18 @@ final class Class102 implements Interface2 {
          }
 
          Class3_Sub28_Sub20 var3 = (Class3_Sub28_Sub20)this.aClass47_2142.method1092((long)var1, 1400);
-         if(null == var3) {
+         if(null != var3) {
+            return var3;
+         } else {
             byte[] var4 = this.aClass153_2127.getFile(var1, (byte)-122, 0);
-            if(null == var4) {
-               return null;
-            } else {
+            if(null != var4) {
                RSByteBuffer var5 = new RSByteBuffer(var4);
                var3 = new Class3_Sub28_Sub20(var5);
                this.aClass47_2142.method1097(var3, (long)var1, (byte)-118);
                return var3;
+            } else {
+               return null;
             }
-         } else {
-            return var3;
          }
       } catch (RuntimeException var6) {
          throw Class44.method1067(var6, "nk.T(" + var1 + ',' + var2 + ')');
@@ -347,7 +349,7 @@ final class Class102 implements Interface2 {
 
    static final void method1617(int var0, int var1, int var2, int var3, int var4, byte var5) {
       try {
-         if(Class57.anInt902 >= var4 && Class159.anInt2020 <= var2) {
+         if(~var4 >= ~Class57.anInt902 && ~var2 <= ~Class159.anInt2020) {
             boolean var6;
             if(Class101.anInt1425 <= var1) {
                if(Class3_Sub28_Sub18.anInt3765 >= var1) {
@@ -365,7 +367,7 @@ final class Class102 implements Interface2 {
             if(var3 < Class101.anInt1425) {
                var3 = Class101.anInt1425;
                var7 = false;
-            } else if(Class3_Sub28_Sub18.anInt3765 < var3) {
+            } else if(~var3 < ~Class3_Sub28_Sub18.anInt3765) {
                var3 = Class3_Sub28_Sub18.anInt3765;
                var7 = false;
             } else {
@@ -390,15 +392,15 @@ final class Class102 implements Interface2 {
                   int[] var9 = Class38.anIntArrayArray663[var8];
                   var9[var1] = var9[var3] = var0;
                }
-            } else if(var6) {
-               for(var8 = var4; var2 >= var8; ++var8) {
-                  Class38.anIntArrayArray663[var8][var1] = var0;
-               }
-            } else {
+            } else if(!var6) {
                if(var7) {
-                  for(var8 = var4; var8 <= var2; ++var8) {
+                  for(var8 = var4; ~var2 <= ~var8; ++var8) {
                      Class38.anIntArrayArray663[var8][var3] = var0;
                   }
+               }
+            } else {
+               for(var8 = var4; ~var8 >= ~var2; ++var8) {
+                  Class38.anIntArrayArray663[var8][var1] = var0;
                }
             }
          }
@@ -474,10 +476,10 @@ final class Class102 implements Interface2 {
 
          this.anInt2139 = var1;
          this.aClass47_2142 = new Class47(this.anInt2139);
-         if(HDToolKit.highDetail) {
-            this.aClass47_2138 = new Class47(this.anInt2139);
-         } else {
+         if(!HDToolKit.highDetail) {
             this.aClass47_2138 = null;
+         } else {
+            this.aClass47_2138 = new Class47(this.anInt2139);
          }
 
       } catch (RuntimeException var4) {
@@ -501,10 +503,10 @@ final class Class102 implements Interface2 {
          this.anInt2139 = var4;
          this.aClass153_2127 = var1;
          this.aClass47_2142 = new Class47(this.anInt2139);
-         if(HDToolKit.highDetail) {
-            this.aClass47_2138 = new Class47(this.anInt2139);
-         } else {
+         if(!HDToolKit.highDetail) {
             this.aClass47_2138 = null;
+         } else {
+            this.aClass47_2138 = new Class47(this.anInt2139);
          }
 
          RSByteBuffer var6 = new RSByteBuffer(var2.getFile(0, (byte)-122, 0));
@@ -521,31 +523,31 @@ final class Class102 implements Interface2 {
          this.aBooleanArray2135 = new boolean[var7];
 
          int var8;
-         for(var8 = 0; var8 < var7; ++var8) {
+         for(var8 = 0; ~var7 < ~var8; ++var8) {
             this.aBooleanArray2133[var8] = 1 == var6.getByte((byte)-69);
          }
 
-         for(var8 = 0; var8 < var7; ++var8) {
+         for(var8 = 0; ~var7 < ~var8; ++var8) {
             if(this.aBooleanArray2133[var8]) {
-               this.aBooleanArray2124[var8] = var6.getByte((byte) -50) == 1;
+               this.aBooleanArray2124[var8] = ~var6.getByte((byte)-50) == -2;
             }
          }
 
-         for(var8 = 0; var7 > var8; ++var8) {
+         for(var8 = 0; ~var8 > ~var7; ++var8) {
             if(this.aBooleanArray2133[var8]) {
                this.aBooleanArray2128[var8] = 1 == var6.getByte((byte)-60);
             }
          }
 
-         for(var8 = 0; var7 > var8; ++var8) {
+         for(var8 = 0; ~var8 > ~var7; ++var8) {
             if(this.aBooleanArray2133[var8]) {
-               this.aBooleanArray2122[var8] = var6.getByte((byte) -23) == 1;
+               this.aBooleanArray2122[var8] = -2 == ~var6.getByte((byte)-23);
             }
          }
 
          for(var8 = 0; var8 < var7; ++var8) {
             if(this.aBooleanArray2133[var8]) {
-               this.aBooleanArray2135[var8] = var6.getByte((byte) -30) == 1;
+               this.aBooleanArray2135[var8] = -2 == ~var6.getByte((byte)-30);
             }
          }
 
@@ -567,7 +569,7 @@ final class Class102 implements Interface2 {
             }
          }
 
-         for(var8 = 0; var7 > var8; ++var8) {
+         for(var8 = 0; ~var8 > ~var7; ++var8) {
             if(this.aBooleanArray2133[var8]) {
                this.aByteArray2143[var8] = var6.getByte();
             }

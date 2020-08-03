@@ -6,6 +6,11 @@ final class Class3_Sub28_Sub5 extends Node {
 
    static CacheIndex aClass153_3580;
    static Calendar aCalendar3581 = Calendar.getInstance(TimeZone.getTimeZone("GMT"));
+   private static RSString aClass94_3582 = RSString.createRSString("K");
+   static RSString aClass94_3583 = RSString.createRSString("brillant3:");
+   static RSString aClass94_3584 = aClass94_3582;
+   static RSString aClass94_3585 = RSString.createRSString(",Mcran)2titre ouvert");
+   static RSString aClass94_3586 = aClass94_3582;
    static int[] anIntArray3587;
    AnimationHeader[] animations;
    static int anInt3589;
@@ -42,7 +47,7 @@ final class Class3_Sub28_Sub5 extends Node {
 
             for(int var20 = var15 * (-1 + var1); 0 < var7; var20 -= var15) {
                --var7;
-               if(var13 < 0) {
+               if(-1 < ~var13) {
                   while(0 > var13) {
                      ++var6;
                      var13 += var17;
@@ -65,14 +70,14 @@ final class Class3_Sub28_Sub5 extends Node {
                var18 -= var15;
                var13 += -var20;
                var22 = var7 + var5;
-               if(var22 >= Class159.anInt2020 && var21 <= Class57.anInt902) {
+               if(~Class159.anInt2020 >= ~var22 && ~Class57.anInt902 <= ~var21) {
                   int var23 = Class40.method1040(Class3_Sub28_Sub18.anInt3765, var6 + var4, (byte)0, Class101.anInt1425);
                   int var24 = Class40.method1040(Class3_Sub28_Sub18.anInt3765, -var6 + var4, (byte)0, Class101.anInt1425);
                   if(var21 >= Class159.anInt2020) {
                      Class3_Sub13_Sub23_Sub1.method282(Class38.anIntArrayArray663[var21], var24, 121, var23, var0);
                   }
 
-                  if(var22 <= Class57.anInt902) {
+                  if(~Class57.anInt902 <= ~var22) {
                      Class3_Sub13_Sub23_Sub1.method282(Class38.anIntArrayArray663[var22], var24, -110, var23, var0);
                   }
                }
@@ -102,12 +107,18 @@ final class Class3_Sub28_Sub5 extends Node {
 
    public static void method558(int var0) {
       try {
+         aClass94_3585 = null;
          anIntArray3592 = null;
+         aClass94_3582 = null;
+         aClass94_3586 = null;
          aClass153_3580 = null;
          anIntArray3587 = null;
          if(var0 != -29679) {
             method556(-76, 24, -17, (byte)-85, 58, -87);
          }
+
+         aClass94_3583 = null;
+         aClass94_3584 = null;
          aCalendar3581 = null;
       } catch (RuntimeException var2) {
          throw Class44.method1067(var2, "cl.B(" + var0 + ')');
@@ -124,7 +135,7 @@ final class Class3_Sub28_Sub5 extends Node {
 
    static final void method560(int var0) {
       try {
-         for(int var1 = 0; var1 < 5; ++var1) {
+         for(int var1 = 0; ~var1 > -6; ++var1) {
             Class104.aBooleanArray2169[var1] = false;
          }
 
@@ -267,7 +278,7 @@ final class Class3_Sub28_Sub5 extends Node {
          int[] fileIds = cacheIndex0.getFileIds((byte)-128, frame);
          int var8 = 0;
 
-         while(fileIds.length > var8) {
+         while(~var8 > ~fileIds.length) {
             byte[] var9 = cacheIndex0.getFile(frame, (byte)-122, fileIds[var8]);
             int skinId = 255 & var9[1] | (var9[0] & 255) << 8;
             Class3_Sub17 var12 = (Class3_Sub17) var5.method1222();
@@ -285,10 +296,10 @@ final class Class3_Sub28_Sub5 extends Node {
 
                if(null == skin) {
                   byte[] var13;
-                  if(var4) {
-                     var13 = var2.method2140(skinId, 0, 0);
-                  } else {
+                  if(!var4) {
                      var13 = var2.method2140(0, skinId, 0);
+                  } else {
+                     var13 = var2.method2140(skinId, 0, 0);
                   }
 
                   skin = new Class3_Sub17(skinId, var13);

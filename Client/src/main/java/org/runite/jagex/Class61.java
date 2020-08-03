@@ -100,16 +100,16 @@ final class Class61 {
          for(var5 = (Class3_Sub9)IOHandler.aClass61_1242.method1222(); var5 != null; var5 = (Class3_Sub9)IOHandler.aClass61_1242.method1221()) {
             var6 = 1;
             var7 = var5.aClass140_Sub4_Sub2_2324.method1965(false);
-            if(var5.aClass140_Sub4_Sub2_2324.anInt2764 == var7.anInt368) {
-               var6 = 0;
-            } else {
-               if(var5.aClass140_Sub4_Sub2_2324.anInt2764 != var7.anInt393 && var5.aClass140_Sub4_Sub2_2324.anInt2764 != var7.anInt386 && var5.aClass140_Sub4_Sub2_2324.anInt2764 != var7.anInt375 && var5.aClass140_Sub4_Sub2_2324.anInt2764 != var7.anInt373) {
-                  if(var7.anInt398 == var5.aClass140_Sub4_Sub2_2324.anInt2764 || var7.anInt372 == var5.aClass140_Sub4_Sub2_2324.anInt2764 || var5.aClass140_Sub4_Sub2_2324.anInt2764 == var7.anInt379 || var5.aClass140_Sub4_Sub2_2324.anInt2764 == var7.anInt406) {
+            if(~var7.anInt368 != ~var5.aClass140_Sub4_Sub2_2324.anInt2764) {
+               if(~var7.anInt393 != ~var5.aClass140_Sub4_Sub2_2324.anInt2764 && ~var7.anInt386 != ~var5.aClass140_Sub4_Sub2_2324.anInt2764 && ~var7.anInt375 != ~var5.aClass140_Sub4_Sub2_2324.anInt2764 && ~var7.anInt373 != ~var5.aClass140_Sub4_Sub2_2324.anInt2764) {
+                  if(var7.anInt398 == var5.aClass140_Sub4_Sub2_2324.anInt2764 || var7.anInt372 == var5.aClass140_Sub4_Sub2_2324.anInt2764 || var5.aClass140_Sub4_Sub2_2324.anInt2764 == var7.anInt379 || ~var7.anInt406 == ~var5.aClass140_Sub4_Sub2_2324.anInt2764) {
                      var6 = 3;
                   }
                } else {
                   var6 = 2;
                }
+            } else {
+               var6 = 0;
             }
 
             if(var5.anInt2322 != var6) {
@@ -137,21 +137,21 @@ final class Class61 {
             for(var5 = (Class3_Sub9)Class3_Sub28_Sub7_Sub1.aClass130_4046.method1776(88); var5 != null; var5 = (Class3_Sub9)Class3_Sub28_Sub7_Sub1.aClass130_4046.method1778(var4 ^ -92)) {
                var6 = 1;
                var7 = var5.aClass140_Sub4_Sub1_2327.method1965(false);
-               if(var5.aClass140_Sub4_Sub1_2327.anInt2764 == var7.anInt368) {
-                  var6 = 0;
-               } else {
-                  if(var5.aClass140_Sub4_Sub1_2327.anInt2764 != var7.anInt393 && var5.aClass140_Sub4_Sub1_2327.anInt2764 != var7.anInt386 && var7.anInt375 != var5.aClass140_Sub4_Sub1_2327.anInt2764 && var7.anInt373 != var5.aClass140_Sub4_Sub1_2327.anInt2764) {
-                     if(var7.anInt398 == var5.aClass140_Sub4_Sub1_2327.anInt2764 || var5.aClass140_Sub4_Sub1_2327.anInt2764 == var7.anInt372 || var7.anInt379 == var5.aClass140_Sub4_Sub1_2327.anInt2764 || var7.anInt406 == var5.aClass140_Sub4_Sub1_2327.anInt2764) {
+               if(var5.aClass140_Sub4_Sub1_2327.anInt2764 != var7.anInt368) {
+                  if(var5.aClass140_Sub4_Sub1_2327.anInt2764 != var7.anInt393 && var5.aClass140_Sub4_Sub1_2327.anInt2764 != var7.anInt386 && ~var5.aClass140_Sub4_Sub1_2327.anInt2764 != ~var7.anInt375 && var7.anInt373 != var5.aClass140_Sub4_Sub1_2327.anInt2764) {
+                     if(var7.anInt398 == var5.aClass140_Sub4_Sub1_2327.anInt2764 || var5.aClass140_Sub4_Sub1_2327.anInt2764 == var7.anInt372 || ~var5.aClass140_Sub4_Sub1_2327.anInt2764 == ~var7.anInt379 || ~var5.aClass140_Sub4_Sub1_2327.anInt2764 == ~var7.anInt406) {
                         var6 = 3;
                      }
                   } else {
                      var6 = 2;
                   }
+               } else {
+                  var6 = 0;
                }
 
-               if(var6 != var5.anInt2322) {
+               if(~var5.anInt2322 != ~var6) {
                   var8 = Class81.method1398(0, var5.aClass140_Sub4_Sub1_2327);
-                  if(var8 != var5.anInt2332) {
+                  if(~var5.anInt2332 != ~var8) {
                      if(var5.aClass3_Sub24_Sub1_2312 != null) {
                         Class3_Sub26.aClass3_Sub24_Sub2_2563.method461(var5.aClass3_Sub24_Sub1_2312);
                         var5.aClass3_Sub24_Sub1_2312 = null;
@@ -256,11 +256,11 @@ final class Class61 {
          Class3 var2 = this.aClass3_940.aClass3_74;
          if(var1 != -3) {
             return (Class3)null;
-         } else if(this.aClass3_940 == var2) {
-            return null;
-         } else {
+         } else if(this.aClass3_940 != var2) {
             var2.method86(var1 + -1021);
             return var2;
+         } else {
+            return null;
          }
       } catch (RuntimeException var3) {
          throw Class44.method1067(var3, "ih.E(" + var1 + ')');
@@ -279,12 +279,12 @@ final class Class61 {
    final Class3 method1221() {
       try {
             Class3 var2 = this.aClass3_941;
-            if(var2 == this.aClass3_940) {
-               this.aClass3_941 = null;
-               return null;
-            } else {
+            if(var2 != this.aClass3_940) {
                this.aClass3_941 = var2.aClass3_74;
                return var2;
+            } else {
+               this.aClass3_941 = null;
+               return null;
             }
       } catch (RuntimeException var3) {
          throw Class44.method1067(var3, "ih.L(" + 1 + ')');

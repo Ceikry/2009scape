@@ -6,6 +6,7 @@ final class Class3_Sub13_Sub17 extends Class3_Sub13 {
    static Class130 aClass130_3208 = new Class130(8);
    static RSString aClass94_3209 = RSString.createRSString("showingVideoAd");
    static CacheIndex aClass153_3210;
+   static RSString aClass94_3211 = RSString.createRSString(" <col=ffffff>");
    static int[] anIntArray3212;
    static int anInt3213 = 1;
 
@@ -100,8 +101,8 @@ final class Class3_Sub13_Sub17 extends Class3_Sub13 {
 
    final void method157(int var1, RSByteBuffer var2, boolean var3) {
       try {
-         if(var1 == 0) {
-            this.aBoolean2375 = var2.getByte((byte) -117) == 1;
+         if(~var1 == -1) {
+            this.aBoolean2375 = ~var2.getByte((byte)-117) == -2;
          }
 
          if(!var3) {
@@ -116,6 +117,7 @@ final class Class3_Sub13_Sub17 extends Class3_Sub13 {
    public static void method249(int var0) {
       try {
          anIntArray3212 = null;
+         aClass94_3211 = null;
          aClass130_3208 = null;
          aClass153_3210 = null;
          aClass94_3209 = null;
@@ -145,7 +147,7 @@ final class Class3_Sub13_Sub17 extends Class3_Sub13 {
          } else if(Class119.aClass131_1624 == null) {
             return -1;
          } else {
-            while(Class119.aClass131_1624.anInt1720 > Class136.anInt1780) {
+            while(~Class136.anInt1780 > ~Class119.aClass131_1624.anInt1720) {
                if(Class119.aClass131_1624.method1794(Class136.anInt1780, -20138)) {
                   return Class136.anInt1780++;
                }

@@ -5,7 +5,7 @@ final class Class3_Sub31 extends Class3 {
    int anInt2602;
    int anInt2603;
    static Class93 aClass93_2604 = new Class93(64);
-   static RSString COMMAND_BREAK_JS5_CLIENT_CONNECTION = RSString.createRSString("::clientjs5drop");
+   static RSString aClass94_2605 = RSString.createRSString("::clientjs5drop");
    static int[] anIntArray2606;
    static int countryId;
    static RSString aClass94_2608 = RSString.createRSString(")4l=");
@@ -26,7 +26,7 @@ final class Class3_Sub31 extends Class3 {
       try {
          aClass93_2604 = null;
          anIntArray2606 = null;
-         COMMAND_BREAK_JS5_CLIENT_CONNECTION = null;
+         aClass94_2605 = null;
          aClass94_2608 = null;
          if(var0 != 26971) {
             method820(-51, -76);
@@ -44,7 +44,7 @@ final class Class3_Sub31 extends Class3 {
             method821(-26);
          }
 
-         for(int var3 = 0; var3 < 5; ++var3) {
+         for(int var3 = 0; ~var3 > -6; ++var3) {
             var2[var3] = RenderAnimationDefinition.method903(new RSString[]{
                     Class72.method1298((byte)9, var3), Class3_Sub28_Sub4.aClass94_3577}, (byte)-67);
             if(var1 != null && null != var1[var3]) {

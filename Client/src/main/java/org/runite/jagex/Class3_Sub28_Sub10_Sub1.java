@@ -4,8 +4,10 @@ import java.awt.Frame;
 final class Class3_Sub28_Sub10_Sub1 extends Class3_Sub28_Sub10 {
 
    static int anInt4054;
+   private static RSString aClass94_4055 = RSString.createRSString(" has logged in)3");
    Class41 aClass41_4056;
    static RSString aClass94_4057 = RSString.createRSString("Mem:");
+   static RSString aClass94_4058 = aClass94_4055;
    byte[] aByteArray4059;
    static Class25[] aClass25Array4060;
    int anInt4061;
@@ -19,10 +21,10 @@ final class Class3_Sub28_Sub10_Sub1 extends Class3_Sub28_Sub10 {
             aBoolean4063 = true;
          }
 
-         if(this.aBoolean3632) {
-            throw new RuntimeException();
-         } else {
+         if(!this.aBoolean3632) {
             return this.aByteArray4059;
+         } else {
+            throw new RuntimeException();
          }
       } catch (RuntimeException var3) {
          throw Class44.method1067(var3, "c.E(" + var1 + ')');
@@ -33,9 +35,7 @@ final class Class3_Sub28_Sub10_Sub1 extends Class3_Sub28_Sub10 {
       try {
          KeyboardListener var1 = Class3_Sub13_Sub3.aClass148_3049;
          synchronized(var1) {
-            if(Class3_Sub28_Sub9.anInt3620 == Class134.anInt1762) {
-               return false;
-            } else {
+            if(~Class134.anInt1762 != ~Class3_Sub28_Sub9.anInt3620) {
                Class3_Sub28_Sub9.anInt3624 = Class129.anIntArray1693[Class3_Sub28_Sub9.anInt3620];
                Class3_Sub13_Sub27.anInt3342 = Class155.anIntArray1978[Class3_Sub28_Sub9.anInt3620];
                Class3_Sub28_Sub9.anInt3620 = 1 + Class3_Sub28_Sub9.anInt3620 & 127;
@@ -44,6 +44,8 @@ final class Class3_Sub28_Sub10_Sub1 extends Class3_Sub28_Sub10 {
                }
 
                return true;
+            } else {
+               return false;
             }
          }
       } catch (RuntimeException var4) {
@@ -55,6 +57,10 @@ final class Class3_Sub28_Sub10_Sub1 extends Class3_Sub28_Sub10 {
       try {
          aClass25Array4060 = null;
          aClass94_4057 = null;
+         if(var0 > 33) {
+            aClass94_4058 = null;
+            aClass94_4055 = null;
+         }
       } catch (RuntimeException var2) {
          throw Class44.method1067(var2, "c.P(" + var0 + ')');
       }
@@ -69,7 +75,7 @@ final class Class3_Sub28_Sub10_Sub1 extends Class3_Sub28_Sub10 {
          while(true) {
             Class64 var3 = var2.method1436(var0, 86);
 
-            while(var3.anInt978 == 0) {
+            while(-1 == ~var3.anInt978) {
                Class3_Sub13_Sub34.method331(10L, 64);
             }
 

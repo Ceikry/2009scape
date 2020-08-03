@@ -46,7 +46,7 @@ final class Class3_Sub13_Sub35 extends Class3_Sub13 {
       try {
          if(var3) {
             if(var1 == 0) {
-               this.aBoolean2375 = var2.getByte((byte) -80) == 1;
+               this.aBoolean2375 = -2 == ~var2.getByte((byte)-80);
             }
 
          }
@@ -57,7 +57,9 @@ final class Class3_Sub13_Sub35 extends Class3_Sub13 {
 
    final int[][] method166(int var1, int var2) {
       try {
-         if(var1 == -1) {
+         if(var1 != -1) {
+            return (int[][])((int[][])null);
+         } else {
             int[][] var3 = this.aClass97_2376.method1594((byte)-128, var2);
             if(this.aClass97_2376.aBoolean1379) {
                int[][] var4 = this.method162(var2, 0, (byte)-51);
@@ -68,7 +70,7 @@ final class Class3_Sub13_Sub35 extends Class3_Sub13 {
                int[] var9 = var3[1];
                int[] var10 = var3[2];
 
-               for(int var11 = 0; var11 < Class113.anInt1559; ++var11) {
+               for(int var11 = 0; ~Class113.anInt1559 < ~var11; ++var11) {
                   var8[var11] = -var5[var11] + 4096;
                   var9[var11] = 4096 - var6[var11];
                   var10[var11] = 4096 - var7[var11];
@@ -76,8 +78,6 @@ final class Class3_Sub13_Sub35 extends Class3_Sub13 {
             }
 
             return var3;
-         } else {
-            return (int[][])((int[][])null);
          }
       } catch (RuntimeException var12) {
          throw Class44.method1067(var12, "tb.T(" + var1 + ',' + var2 + ')');
@@ -87,7 +87,9 @@ final class Class3_Sub13_Sub35 extends Class3_Sub13 {
    static final Class3_Sub28_Sub1 getQuickChatMessage(int fileId, byte var1) {
       try {
          Class3_Sub28_Sub1 var2 = (Class3_Sub28_Sub1)Class3_Sub13_Sub11.aClass47_3137.method1092((long)fileId, 1400);
-         if(null == var2) {
+         if(null != var2) {
+            return var2;
+         } else {
             byte[] var3;
             if(fileId < '\u8000') {
                var3 = Class47.quickChatMessages.getFile(0, (byte)-122, fileId);
@@ -104,13 +106,11 @@ final class Class3_Sub13_Sub35 extends Class3_Sub13 {
                method337(19);
             }
 
-            if(fileId >= 32768) {
+            if(-32769 >= ~fileId) {
                var2.method525(-85);
             }
 
             Class3_Sub13_Sub11.aClass47_3137.method1097(var2, (long)fileId, (byte)40);
-            return var2;
-         } else {
             return var2;
          }
       } catch (RuntimeException var4) {

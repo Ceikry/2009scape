@@ -14,12 +14,16 @@ final class RSString implements Interface3 {
    static boolean aBoolean2146 = false;
    static int incomingOpcode = 0;
    static int anInt2148 = 0;
+   static RSString aClass94_2149 = RSString.createRSString("Bitte warten Sie )2 es wird versucht)1 die Verbindung wiederherzustellen)3");
    static boolean aBoolean2150;
    private boolean aBoolean2152 = true;
    byte[] byteArray;
    static boolean aBoolean2154;
+   static RSString aClass94_2155 = RSString.createRSString(":allyreq:");
    int length;
    static int[] anIntArray2157 = new int[50];
+   private static RSString aClass94_2158 = RSString.createRSString("Allocated memory");
+   static RSString aClass94_2151 = aClass94_2158;
 
    final URL method1527(boolean var1) throws MalformedURLException {
       try {
@@ -39,7 +43,9 @@ final class RSString implements Interface3 {
             return false;
          } else if(this == var2) {
             return true;
-         } else if(this.length == var2.length) {
+         } else if(this.length != var2.length) {
+            return false;
+         } else {
             if(var1 != -42) {
                this.method1568(-127);
             }
@@ -47,15 +53,13 @@ final class RSString implements Interface3 {
             byte[] var4 = var2.byteArray;
             byte[] var3 = this.byteArray;
 
-            for(int var5 = 0; var5 < this.length; ++var5) {
+            for(int var5 = 0; ~this.length < ~var5; ++var5) {
                if(var3[var5] != var4[var5]) {
                   return false;
                }
             }
 
             return true;
-         } else {
-            return false;
          }
       } catch (RuntimeException var6) {
          throw Class44.method1067(var6, "na.F(" + var1 + ',' + (var2 != null?"{...}":"null") + ')');
@@ -72,40 +76,48 @@ final class RSString implements Interface3 {
          int var14;
          int[] var15;
          int var16;
-         if(var8 != 0) {
+         if(~var8 != -1L) {
             var10 = 3 & (int)var8 >> 20;
             var11 = (508650 & (int)var8) >> 14;
             var12 = Integer.MAX_VALUE & (int)(var8 >>> 32);
             var13 = Class162.getObjectDefinition(4, var12);
-            if(var13.anInt1516 == -1) {
+            if(0 != ~var13.anInt1516) {
+               if(!Class15.method888(var1, var13, false, var0, var5, var3, var10)) {
+                  return false;
+               }
+            } else {
                var14 = var2;
-               if(var8 > 0) {
+               if(~var8 < -1L) {
                   var14 = var4;
                }
 
                var15 = Class74.anIntArray1100;
                var16 = 4 * (-(var3 * 512) + '\uce00') + var1 * 4 + 24624;
                if(var11 == 0 || var11 == 2) {
-                  if(var10 == 0) {
+                  if(~var10 == -1) {
                      var15[var16] = var14;
                      var15[512 + var16] = var14;
                      var15[var16 - -1024] = var14;
                      var15[1536 + var16] = var14;
-                  } else if(var10 == 1) {
+                  } else if(~var10 != -2) {
+                     if(~var10 != -3) {
+                        if(3 == var10) {
+                           var15[var16 + 1536] = var14;
+                           var15[1536 + var16 - -1] = var14;
+                           var15[var16 + 1538] = var14;
+                           var15[3 + var16 + 1536] = var14;
+                        }
+                     } else {
+                        var15[var16 - -3] = var14;
+                        var15[var16 - -3 - -512] = var14;
+                        var15[var16 - -3 + 1024] = var14;
+                        var15[var16 + 3 + 1536] = var14;
+                     }
+                  } else {
                      var15[var16] = var14;
                      var15[1 + var16] = var14;
                      var15[var16 - -2] = var14;
                      var15[var16 - -3] = var14;
-                  } else if (var10 == 2) {
-                     var15[var16 - -3] = var14;
-                     var15[var16 - -3 - -512] = var14;
-                     var15[var16 - -3 + 1024] = var14;
-                     var15[var16 + 3 + 1536] = var14;
-                  } else if (3 == var10) {
-                     var15[var16 + 1536] = var14;
-                     var15[1536 + var16 - -1] = var14;
-                     var15[var16 + 1538] = var14;
-                     var15[3 + var16 + 1536] = var14;
                   }
                }
 
@@ -114,38 +126,42 @@ final class RSString implements Interface3 {
                      var15[var16] = var14;
                   } else if(1 == var10) {
                      var15[var16 - -3] = var14;
-                  } else if(var10 == 2) {
+                  } else if(-3 == ~var10) {
                      var15[var16 - -3 + 1536] = var14;
-                  } else if(var10 == 3) {
+                  } else if(-4 == ~var10) {
                      var15[var16 - -1536] = var14;
                   }
                }
 
-               if(var11 == 2) {
-                  if(var10 == 3) {
+               if(~var11 == -3) {
+                  if(-4 != ~var10) {
+                     if(-1 != ~var10) {
+                        if(-2 != ~var10) {
+                           if(2 == var10) {
+                              var15[1536 + var16] = var14;
+                              var15[var16 - -1536 + 1] = var14;
+                              var15[1536 + var16 + 2] = var14;
+                              var15[var16 + 1539] = var14;
+                           }
+                        } else {
+                           var15[var16 - -3] = var14;
+                           var15[512 + 3 + var16] = var14;
+                           var15[3 + (var16 - -1024)] = var14;
+                           var15[1536 + var16 + 3] = var14;
+                        }
+                     } else {
+                        var15[var16] = var14;
+                        var15[1 + var16] = var14;
+                        var15[2 + var16] = var14;
+                        var15[3 + var16] = var14;
+                     }
+                  } else {
                      var15[var16] = var14;
                      var15[var16 - -512] = var14;
                      var15[var16 + 1024] = var14;
                      var15[1536 + var16] = var14;
-                  } else if (var10 == 0) {
-                     var15[var16] = var14;
-                     var15[1 + var16] = var14;
-                     var15[2 + var16] = var14;
-                     var15[3 + var16] = var14;
-                  } else if (var10 == 1) {
-                     var15[var16 - -3] = var14;
-                     var15[512 + 3 + var16] = var14;
-                     var15[3 + (var16 - -1024)] = var14;
-                     var15[1536 + var16 + 3] = var14;
-                  } else if (2 == var10) {
-                     var15[1536 + var16] = var14;
-                     var15[var16 - -1536 + 1] = var14;
-                     var15[1536 + var16 + 2] = var14;
-                     var15[var16 + 1539] = var14;
                   }
                }
-            } else if (!Class15.method888(var1, var13, false, var0, var5, var3, var10)) {
-               return false;
             }
          }
 
@@ -155,28 +171,28 @@ final class RSString implements Interface3 {
             var11 = ((int)var8 & 520964) >> 14;
             var12 = (int)(var8 >>> 32) & Integer.MAX_VALUE;
             var13 = Class162.getObjectDefinition(4, var12);
-            if(var13.anInt1516 != -1) {
+            if(~var13.anInt1516 != 0) {
                if(!Class15.method888(var1, var13, false, var0, var5, var3, var10)) {
                   return false;
                }
             } else if(var11 == 9) {
                var14 = 15658734;
-               if(var8 > 0) {
+               if(~var8 < -1L) {
                   var14 = 15597568;
                }
 
                var16 = var1 * 4 + (24624 - -(2048 * (103 - var3)));
                var15 = Class74.anIntArray1100;
-               if(var10 == 0 || var10 == 2) {
-                  var15[1536 + var16] = var14;
-                  var15[var16 - -1025] = var14;
-                  var15[var16 + 512 + 2] = var14;
-                  var15[var16 - -3] = var14;
-               } else {
+               if(~var10 != -1 && ~var10 != -3) {
                   var15[var16] = var14;
                   var15[var16 - -512 - -1] = var14;
                   var15[var16 - -1024 - -2] = var14;
                   var15[1536 + var16 - -3] = var14;
+               } else {
+                  var15[1536 + var16] = var14;
+                  var15[var16 - -1025] = var14;
+                  var15[var16 + 512 + 2] = var14;
+                  var15[var16 - -3] = var14;
                }
             }
          }
@@ -186,7 +202,7 @@ final class RSString implements Interface3 {
             var10 = (int)var8 >> 20 & 3;
             var11 = (int)(var8 >>> 32) & Integer.MAX_VALUE;
             ObjectDefinition var18 = Class162.getObjectDefinition(4, var11);
-            if(var18.anInt1516 != -1 && !Class15.method888(var1, var18, !var7, var0, var5, var3, var10)) {
+            if(0 != ~var18.anInt1516 && !Class15.method888(var1, var18, !var7, var0, var5, var3, var10)) {
                return false;
             }
          }
@@ -203,7 +219,7 @@ final class RSString implements Interface3 {
 
    final int method1530(byte var1, int var2) {
       try {
-         if(var2 < 1 || var2 > 36) {
+         if(var2 < 1 || -37 > ~var2) {
             var2 = 10;
          }
 
@@ -214,7 +230,7 @@ final class RSString implements Interface3 {
 
          for(int var7 = 29 / ((-47 - var1) / 37); this.length > var6; ++var6) {
             int var8 = 255 & this.byteArray[var6];
-            if(var6 == 0) {
+            if(~var6 == -1) {
                if(45 == var8) {
                   var3 = true;
                   continue;
@@ -227,17 +243,17 @@ final class RSString implements Interface3 {
 
             if(var8 >= 48 && 57 >= var8) {
                var8 -= 48;
-            } else if(65 <= var8 && var8 <= 90) {
+            } else if(65 <= var8 && -91 <= ~var8) {
                var8 -= 55;
             } else {
-               if(var8 < 97 || var8 > 122) {
+               if(-98 < ~var8 || ~var8 < -123) {
                   throw new NumberFormatException();
                }
 
                var8 -= 87;
             }
 
-            if(var8 >= var2) {
+            if(~var2 >= ~var8) {
                throw new NumberFormatException();
             }
 
@@ -254,10 +270,10 @@ final class RSString implements Interface3 {
             var4 = true;
          }
 
-         if(var4) {
-            return var5;
-         } else {
+         if(!var4) {
             throw new NumberFormatException();
+         } else {
+            return var5;
          }
       } catch (RuntimeException var10) {
          throw Class44.method1067(var10, "na.AB(" + var1 + ',' + var2 + ')');
@@ -268,28 +284,28 @@ final class RSString implements Interface3 {
       try {
          if(var2 == null) {
             return false;
-         } else if(this.length == var2.length) {
+         } else if(this.length != var2.length) {
+            return false;
+         } else {
             int var4 = -54 / ((var1 - -43) / 61);
 
-            for(int var3 = 0; var3 < this.length; ++var3) {
+            for(int var3 = 0; ~this.length < ~var3; ++var3) {
                byte var5 = this.byteArray[var3];
-               if(var5 >= 65 && var5 <= 90 || var5 >= -64 && var5 <= -34 && var5 != -41) {
+               if(-66 >= ~var5 && ~var5 >= -91 || ~var5 <= 63 && var5 <= -34 && ~var5 != 40) {
                   var5 = (byte)(var5 + 32);
                }
 
                byte var6 = var2.byteArray[var3];
-               if(65 <= var6 && var6 <= 90 || -64 <= var6 && var6 <= -34 && var6 != -41) {
+               if(65 <= var6 && -91 <= ~var6 || -64 <= var6 && var6 <= -34 && 40 != ~var6) {
                   var6 = (byte)(var6 + 32);
                }
 
-               if(var6 != var5) {
+               if(~var5 != ~var6) {
                   return false;
                }
             }
 
             return true;
-         } else {
-            return false;
          }
       } catch (RuntimeException var7) {
          throw Class44.method1067(var7, "na.EA(" + var1 + ',' + (var2 != null?"{...}":"null") + ')');
@@ -315,10 +331,12 @@ final class RSString implements Interface3 {
    final RSString method1533(RSString var1, boolean var2) {
       try {
          if(this.aBoolean2152) {
-            if(var2) {
+            if(!var2) {
+               return (RSString)null;
+            } else {
                if(var1.length + this.length > this.byteArray.length) {
                   int var3;
-                  for(var3 = 1; var3 < var1.length + this.length; var3 += var3) {
+                  for(var3 = 1; ~(var1.length + this.length) < ~var3; var3 += var3) {
                      ;
                   }
 
@@ -330,8 +348,6 @@ final class RSString implements Interface3 {
                Class76.method1357(var1.byteArray, 0, this.byteArray, this.length, var1.length);
                this.length += var1.length;
                return this;
-            } else {
-               return (RSString)null;
             }
          } else {
             throw new IllegalArgumentException();
@@ -351,9 +367,9 @@ final class RSString implements Interface3 {
          var2.length = this.length;
          var2.byteArray = new byte[this.length];
 
-         for(int var3 = 0; var3 < this.length; ++var3) {
+         for(int var3 = 0; ~this.length < ~var3; ++var3) {
             byte var4 = this.byteArray[var3];
-            if(65 <= var4 && var4 <= 90 || var4 >= -64 && var4 <= -34 && var4 != -41) {
+            if(65 <= var4 && var4 <= 90 || var4 >= -64 && ~var4 >= 33 && var4 != -41) {
                var4 = (byte)(var4 + 32);
             }
 
@@ -372,11 +388,11 @@ final class RSString implements Interface3 {
          if(var7 == 0) {
             if(var2 != 5730) {
                return -76;
-            } else if(var3 == -1) {
-               return 0;
-            } else {
+            } else if(var3 != -1) {
                int var8 = Class161.method2201(var1, var3, var2 ^ 5651, var0, var5);
                return !var5?var8:-var8;
+            } else {
+               return 0;
             }
          } else {
             return !var6?var7:-var7;
@@ -396,11 +412,11 @@ final class RSString implements Interface3 {
          } else {
             var2.byteArray = new byte[this.length];
 
-            for(int var4 = 0; var4 < this.length; ++var4) {
+            for(int var4 = 0; ~this.length < ~var4; ++var4) {
                byte var5 = this.byteArray[var4];
-               if((var5 < 97 || 122 < var5) && (var5 < -32 || var5 > -2 || var5 == -9)) {
-                  if((var5 < 65 || var5 > 90) && (var5 < -64 || var5 > -34 || var5 == -41)) {
-                     if(var5 != 46 && 33 != var5 && var5 != 63) {
+               if((-98 < ~var5 || 122 < var5) && (31 < ~var5 || ~var5 < 1 || var5 == -9)) {
+                  if((var5 < 65 || ~var5 < -91) && (var5 < -64 || var5 > -34 || ~var5 == 40)) {
+                     if(~var5 != -47 && 33 != var5 && var5 != 63) {
                         if(32 == var5) {
                            if(2 != var3) {
                               var3 = 1;
@@ -438,14 +454,14 @@ final class RSString implements Interface3 {
 
    static final Class3_Sub28_Sub16_Sub2 method1537(CacheIndex var0, int var1, boolean var2) {
       try {
-         if(Class140_Sub7.method2029((byte) -118, var0, var1)) {
+         if(!Class140_Sub7.method2029((byte)-118, var0, var1)) {
+            return null;
+         } else {
             if(var2) {
                method1539(-39, true, -93, (CacheIndex)null);
             }
 
             return Class117.method1722(-93);
-         } else {
-            return null;
          }
       } catch (RuntimeException var4) {
          throw Class44.method1067(var4, "na.GB(" + (var0 != null?"{...}":"null") + ',' + var1 + ',' + var2 + ')');
@@ -455,6 +471,10 @@ final class RSString implements Interface3 {
    final long method1538(int var1) {
       try {
          long var2 = 0L;
+         if(var1 < 4) {
+            aClass94_2158 = (RSString)null;
+         }
+
          for(int var4 = 0; var4 < this.length; ++var4) {
             var2 = (long)(this.byteArray[var4] & 255) + (var2 << 5) + -var2;
          }
@@ -491,7 +511,15 @@ final class RSString implements Interface3 {
 
    public static void method1541(int var0) {
       try {
+         aClass94_2151 = null;
+         if(var0 != -8635) {
+            aClass94_2151 = (RSString)null;
+         }
+
          anIntArray2157 = null;
+         aClass94_2155 = null;
+         aClass94_2149 = null;
+         aClass94_2158 = null;
       } catch (RuntimeException var2) {
          throw Class44.method1067(var2, "na.R(" + var0 + ')');
       }
@@ -501,10 +529,10 @@ final class RSString implements Interface3 {
       try {
          if(!this.aBoolean2152) {
             throw new IllegalArgumentException();
-         } else if(0 <= var3 && var3 <= var4 && var2.length >= var4) {
+         } else if(0 <= var3 && var3 <= var4 && ~var4 >= ~var2.length) {
             if(this.length + (var4 - var3) > this.byteArray.length) {
                int var5;
-               for(var5 = 1; var5 < this.length + var2.length; var5 += var5) {
+               for(var5 = 1; ~(this.length + var2.length) < ~var5; var5 += var5) {
                   ;
                }
 
@@ -514,6 +542,10 @@ final class RSString implements Interface3 {
             }
 
             Class76.method1357(var2.byteArray, var3, this.byteArray, this.length, -var3 + var4);
+            if(var1 != 1) {
+               aClass94_2155 = (RSString)null;
+            }
+
             this.length += var4 + -var3;
             return this;
          } else {
@@ -541,14 +573,14 @@ final class RSString implements Interface3 {
          RSString var2 = new RSString();
          var2.length = this.length;
          var2.byteArray = new byte[var2.length];
-         if(var1) {
+         if(!var1) {
+            return (RSString)null;
+         } else {
             for(int var3 = 0; this.length > var3; ++var3) {
                var2.byteArray[this.length - var3 + -1] = this.byteArray[var3];
             }
 
             return var2;
-         } else {
-            return (RSString)null;
          }
       } catch (RuntimeException var4) {
          throw Class44.method1067(var4, "na.FB(" + var1 + ')');
@@ -566,17 +598,19 @@ final class RSString implements Interface3 {
             this.toString();
          }
 
-         for(; var4 < this.length; ++var4) {
+         for(; ~this.length < ~var4; ++var4) {
             byte var5 = this.byteArray[var4];
-            if(var5 == 95) {
+            if(~var5 != -96) {
+               if(97 <= var5 && var5 <= 122 && var3) {
+                  var3 = false;
+                  var2.byteArray[var4] = (byte)(-32 + var5);
+               } else {
+                  var2.byteArray[var4] = var5;
+                  var3 = false;
+               }
+            } else {
                var3 = true;
                var2.byteArray[var4] = 32;
-            } else if (97 <= var5 && var5 <= 122 && var3) {
-               var3 = false;
-               var2.byteArray[var4] = (byte) (-32 + var5);
-            } else {
-               var2.byteArray[var4] = var5;
-               var3 = false;
             }
          }
 
@@ -601,33 +635,41 @@ final class RSString implements Interface3 {
          int var9 = 0;
          int var10 = 0;
 
-         while(var5 != 0 && var6 != 0) {
-            if(var3 == 156 || var3 == 230) {
+         while(-1 != ~var5 && var6 != 0) {
+            if(~var3 != -157 && var3 != 230) {
+               if(140 != var3 && -199 != ~var3) {
+                  if(var3 != 223) {
+                     var3 = this.byteArray[var9] & 255;
+                     ++var9;
+                  } else {
+                     var3 = 115;
+                  }
+               } else {
+                  var3 = 69;
+               }
+            } else {
                var3 = 101;
-            } else if (140 == var3 || var3 == 198) {
-               var3 = 69;
-            } else if (var3 == 223) {
-               var3 = 115;
-            } else {
-               var3 = this.byteArray[var9] & 255;
-               ++var9;
             }
 
-            if(Class151_Sub1.method2103(var3, -116)) {
-               ++var7;
-            } else {
+            if(!Class151_Sub1.method2103(var3, -116)) {
                --var5;
+            } else {
+               ++var7;
             }
 
-            if(var4 == 156 || 230 == var4) {
-               var4 = 101;
-            } else if (var4 == 140 || var4 == 198) {
-               var4 = 69;
-            } else if (223 == var4) {
-               var4 = 115;
+            if(var4 != 156 && 230 != var4) {
+               if(~var4 != -141 && ~var4 != -199) {
+                  if(223 == var4) {
+                     var4 = 115;
+                  } else {
+                     var4 = 255 & var2.byteArray[var10];
+                     ++var10;
+                  }
+               } else {
+                  var4 = 69;
+               }
             } else {
-               var4 = 255 & var2.byteArray[var10];
-               ++var10;
+               var4 = 101;
             }
 
             if(Class151_Sub1.method2103(var4, -86)) {
@@ -636,11 +678,11 @@ final class RSString implements Interface3 {
                --var6;
             }
 
-            if(Class158.anIntArray2004[var4] > Class158.anIntArray2004[var3]) {
+            if(~Class158.anIntArray2004[var3] > ~Class158.anIntArray2004[var4]) {
                return -1;
             }
 
-            if(Class158.anIntArray2004[var3] > Class158.anIntArray2004[var4]) {
+            if(~Class158.anIntArray2004[var4] > ~Class158.anIntArray2004[var3]) {
                return 1;
             }
          }
@@ -665,10 +707,14 @@ final class RSString implements Interface3 {
 
    final RSString method1548(boolean var1, int var2) {
       try {
-         if(var2 > 0 && var2 <= 255) {
+         if(~var2 < -1 && ~var2 >= -256) {
             RSString var3 = new RSString();
             var3.byteArray = new byte[1 + this.length];
             var3.length = this.length + 1;
+            if(var1) {
+               aClass94_2155 = (RSString)null;
+            }
+
             Class76.method1357(this.byteArray, 0, var3.byteArray, 0, this.length);
             var3.byteArray[this.length] = (byte)var2;
             return var3;
@@ -746,12 +792,12 @@ final class RSString implements Interface3 {
       try {
          if(!this.aBoolean2152) {
             throw new IllegalArgumentException();
-         } else if(var1 < 0) {
+         } else if(-1 < ~var1) {
             throw new IllegalArgumentException();
          } else {
             int var3;
-            if(this.byteArray.length < var1) {
-               for(var3 = 1; var1 > var3; var3 += var3) {
+            if(~var1 < ~this.byteArray.length) {
+               for(var3 = 1; ~var3 > ~var1; var3 += var3) {
                   ;
                }
 
@@ -760,7 +806,7 @@ final class RSString implements Interface3 {
                this.byteArray = var4;
             }
 
-            for(var3 = this.length; var1 > var3; ++var3) {
+            for(var3 = this.length; ~var3 > ~var1; ++var3) {
                this.byteArray[var3] = 32;
             }
 
@@ -796,16 +842,16 @@ final class RSString implements Interface3 {
    final int method1555(int var1, int var2, int var3) {
       try {
          byte var4 = (byte)var1;
-         if(var3 == 1536) {
-            for(int var5 = var2; this.length > var5; ++var5) {
+         if(var3 != 1536) {
+            return 123;
+         } else {
+            for(int var5 = var2; ~var5 > ~this.length; ++var5) {
                if(this.byteArray[var5] == var4) {
                   return var5;
                }
             }
 
             return -1;
-         } else {
-            return 123;
          }
       } catch (RuntimeException var6) {
          throw Class44.method1067(var6, "na.NA(" + var1 + ',' + var2 + ',' + var3 + ')');
@@ -838,9 +884,9 @@ final class RSString implements Interface3 {
 
    final boolean method1558(RSString var1, int var2) {
       try {
-         if(var1.length <= this.length) {
+         if(~this.length <= ~var1.length) {
             for(int var3 = var2; var3 < var1.length; ++var3) {
-               if(var1.byteArray[var3] != this.byteArray[var3]) {
+               if(~this.byteArray[var3] != ~var1.byteArray[var3]) {
                   return false;
                }
             }
@@ -856,10 +902,10 @@ final class RSString implements Interface3 {
 
    public final boolean equals(Object var1) {
       try {
-         if(var1 instanceof RSString) {
-            return this.method1528((byte)-42, (RSString)var1);
-         } else {
+         if(!(var1 instanceof RSString)) {
             throw new IllegalArgumentException();
+         } else {
+            return this.method1528((byte)-42, (RSString)var1);
          }
       } catch (RuntimeException var3) {
          throw Class44.method1067(var3, "na.equals(" + (var1 != null?"{...}":"null") + ')');
@@ -884,14 +930,14 @@ final class RSString implements Interface3 {
                return -1;
             }
 
-            if((this.byteArray[var4] & 255) > (var1.byteArray[var4] & 255)) {
+            if(~(var1.byteArray[var4] & 255) > ~(this.byteArray[var4] & 255)) {
                return 1;
             }
          }
 
          if(var1.length > this.length) {
             return -1;
-         } else if(this.length <= var1.length) {
+         } else if(~var1.length <= ~this.length) {
             return 0;
          } else {
             return 1;
@@ -916,7 +962,7 @@ final class RSString implements Interface3 {
                while(true) {
                   int var8 = this.method1566(var3, var6, -1);
                   if(0 > var8) {
-                     while(this.length > var6) {
+                     while(~var6 > ~this.length) {
                         var10.method1572(255 & this.byteArray[var6++], (byte)117);
                      }
 
@@ -954,7 +1000,7 @@ final class RSString implements Interface3 {
 
    private final boolean method1561(int var1, boolean var2) {
       try {
-         if(var1 < 1 || var1 > 36) {
+         if(~var1 > -2 || var1 > 36) {
             var1 = 10;
          }
 
@@ -979,19 +1025,19 @@ final class RSString implements Interface3 {
                }
             }
 
-            if(var7 >= 48 && var7 <= 57) {
+            if(var7 >= 48 && ~var7 >= -58) {
                var7 -= 48;
-            } else if(var7 >= 65 && var7 <= 90) {
+            } else if(-66 >= ~var7 && -91 <= ~var7) {
                var7 -= 55;
             } else {
-               if(97 > var7 || var7 > 122) {
+               if(97 > var7 || ~var7 < -123) {
                   return false;
                }
 
                var7 -= 87;
             }
 
-            if(var1 <= var7) {
+            if(~var7 <= ~var1) {
                return false;
             }
 
@@ -1000,7 +1046,7 @@ final class RSString implements Interface3 {
             }
 
             int var8 = var7 + var1 * var5;
-            if(var8 / var1 != var5) {
+            if(~var5 != ~(var8 / var1)) {
                return false;
             }
 
@@ -1030,11 +1076,11 @@ final class RSString implements Interface3 {
                   var5 = (byte)(var5 + 32);
                }
 
-               if(65 <= var4 && var4 <= 90 || var4 >= -64 && -34 >= var4 && var4 != -41) {
+               if(65 <= var4 && ~var4 >= -91 || var4 >= -64 && -34 >= var4 && var4 != -41) {
                   var4 = (byte)(var4 + 32);
                }
 
-               if(var5 != var4) {
+               if(~var4 != ~var5) {
                   return false;
                }
             }
@@ -1065,16 +1111,16 @@ final class RSString implements Interface3 {
          }
 
          int var2;
-         for(var2 = 0; var2 < this.length && (0 <= this.byteArray[var2] && 32 >= this.byteArray[var2] || (255 & this.byteArray[var2]) == 160); ++var2) {
+         for(var2 = 0; var2 < this.length && (0 <= this.byteArray[var2] && 32 >= this.byteArray[var2] || -161 == ~(255 & this.byteArray[var2])); ++var2) {
             ;
          }
 
          int var3;
-         for(var3 = this.length; var3 > var2 && (this.byteArray[var3 - 1] >= 0 && this.byteArray[var3 - 1] <= 32 || (255 & this.byteArray[var3 + -1]) == 160); --var3) {
+         for(var3 = this.length; var3 > var2 && (~this.byteArray[var3 - 1] <= -1 && -33 <= ~this.byteArray[var3 - 1] || -161 == ~(255 & this.byteArray[var3 + -1])); --var3) {
             ;
          }
 
-         if(var2 == 0 && var3 == this.length) {
+         if(~var2 == -1 && ~this.length == ~var3) {
             return this;
          } else {
             RSString var4 = new RSString();
@@ -1103,12 +1149,12 @@ final class RSString implements Interface3 {
             aBoolean2146 = true;
          }
 
-         for(int var7 = 0; var7 < this.length; ++var7) {
+         for(int var7 = 0; ~this.length < ~var7; ++var7) {
             byte var8 = this.byteArray[var7];
-            if(var4 == var8) {
-               var6.byteArray[var7] = var5;
-            } else {
+            if(~var8 != ~var4) {
                var6.byteArray[var7] = var8;
+            } else {
+               var6.byteArray[var7] = var5;
             }
          }
 
@@ -1122,9 +1168,9 @@ final class RSString implements Interface3 {
       try {
          int var4 = var1.length;
          if(var2 >= this.length) {
-            return var4 == 0 ?this.length:-1;
+            return ~var4 == -1?this.length:-1;
          } else {
-            if(var2 < 0) {
+            if(~var2 > -1) {
                var2 = 0;
             }
 
@@ -1136,14 +1182,14 @@ final class RSString implements Interface3 {
                byte var6 = var5[0];
                int var8 = var2;
 
-               while(var7 >= var8) {
-                  if(this.byteArray[var8] != var6) {
+               while(~var8 >= ~var7) {
+                  if(~var6 != ~this.byteArray[var8]) {
                      do {
                         ++var8;
                         if(var8 > var7) {
                            return -1;
                         }
-                     } while(this.byteArray[var8] != var6);
+                     } while(~var6 != ~this.byteArray[var8]);
                   }
 
                   boolean var9 = true;
@@ -1152,7 +1198,7 @@ final class RSString implements Interface3 {
 
                   while(true) {
                      if(var11 < var4) {
-                        if(this.byteArray[var10] == var5[var11]) {
+                        if(~var5[var11] == ~this.byteArray[var10]) {
                            ++var10;
                            ++var11;
                            continue;
@@ -1182,8 +1228,8 @@ final class RSString implements Interface3 {
       try {
          int var3 = 0;
 
-         for(int var4 = 0; var4 < this.length; ++var4) {
-            if(this.byteArray[var4] == var1) {
+         for(int var4 = 0; ~this.length < ~var4; ++var4) {
+            if(~var1 == ~this.byteArray[var4]) {
                ++var3;
             }
          }
@@ -1197,9 +1243,9 @@ final class RSString implements Interface3 {
             int var6 = 0;
             int var7 = 0;
 
-            for(int var8 = 88 / ((var2 - -12) / 33); var3 > var7; ++var7) {
+            for(int var8 = 88 / ((var2 - -12) / 33); ~var7 > ~var3; ++var7) {
                int var9;
-               for(var9 = 0; this.byteArray[var9 + var6] != var1; ++var9) {
+               for(var9 = 0; ~var1 != ~this.byteArray[var9 + var6]; ++var9) {
                   ;
                }
 
@@ -1236,35 +1282,35 @@ final class RSString implements Interface3 {
 
    static final Class3_Sub28_Sub16 method1570(int var0, byte var1, boolean var2, int var3, boolean var4, int var5, int var6, boolean var7) {
       try {
-         ItemDefinition item = Class38.getItemDefinition(var3, (byte)106);
-         if(var6 > 1 && item.anIntArray804 != null) {
+         ItemDefinition var8 = Class38.getItemDefinition(var3, (byte)106);
+         if(~var6 < -2 && var8.anIntArray804 != null) {
             int var9 = -1;
 
-            for(int var10 = 0; var10 < 10; ++var10) {
-               if(item.anIntArray766[var10] <= var6 && item.anIntArray766[var10] != 0) {
-                  var9 = item.anIntArray804[var10];
+            for(int var10 = 0; -11 < ~var10; ++var10) {
+               if(~var6 <= ~var8.anIntArray766[var10] && var8.anIntArray766[var10] != 0) {
+                  var9 = var8.anIntArray804[var10];
                }
             }
 
-            if(var9 != -1) {
-               item = Class38.getItemDefinition(var9, (byte)84);
+            if(0 != ~var9) {
+               var8 = Class38.getItemDefinition(var9, (byte)84);
             }
          }
 
-         Class140_Sub1_Sub2 var21 = item.method1120(18206);
+         Class140_Sub1_Sub2 var21 = var8.method1120(18206);
          if(null == var21) {
             return null;
          } else {
             Class3_Sub28_Sub16_Sub2 var22 = null;
-            if(item.anInt791 == -1) {
-               if(item.anInt762 != -1) {
-                  var22 = (Class3_Sub28_Sub16_Sub2)method1570(var0, (byte)-107, true, item.anInt795, false, var5, var6, false);
+            if(0 == ~var8.anInt791) {
+               if(var8.anInt762 != -1) {
+                  var22 = (Class3_Sub28_Sub16_Sub2)method1570(var0, (byte)-107, true, var8.anInt795, false, var5, var6, false);
                   if(null == var22) {
                      return null;
                   }
                }
             } else {
-               var22 = (Class3_Sub28_Sub16_Sub2)method1570(0, (byte)116, true, item.anInt789, false, 1, 10, true);
+               var22 = (Class3_Sub28_Sub16_Sub2)method1570(0, (byte)116, true, var8.anInt789, false, 1, 10, true);
                if(null == var22) {
                   return null;
                }
@@ -1279,7 +1325,7 @@ final class RSString implements Interface3 {
             Class74.method1319(var15.anIntArray4081, 36, 32);
             Class51.method1134();
             Class51.method1145(16, 16);
-            int var16 = item.anInt810;
+            int var16 = var8.anInt810;
             Class51.aBoolean843 = false;
             if(var7) {
                var16 = (int)((double)var16 * 1.5D);
@@ -1287,33 +1333,33 @@ final class RSString implements Interface3 {
                var16 = (int)(1.04D * (double)var16);
             }
 
-            int var18 = Class51.anIntArray851[item.anInt786] * var16 >> 16;
-            int var17 = Class51.anIntArray840[item.anInt786] * var16 >> 16;
-            var21.method1893(0, item.anInt799, item.anInt768, item.anInt786, item.anInt792, var17 - (var21.method1871() / 2 + -item.anInt754), item.anInt754 + var18, -1L);
+            int var18 = Class51.anIntArray851[var8.anInt786] * var16 >> 16;
+            int var17 = Class51.anIntArray840[var8.anInt786] * var16 >> 16;
+            var21.method1893(0, var8.anInt799, var8.anInt768, var8.anInt786, var8.anInt792, var17 - (var21.method1871() / 2 + -var8.anInt754), var8.anInt754 + var18, -1L);
             if(var5 >= 1) {
                var15.method657(1);
-               if(var5 >= 2) {
+               if(-3 >= ~var5) {
                   var15.method657(16777215);
                }
 
                Class74.method1319(var15.anIntArray4081, 36, 32);
             }
 
-            if(var0 != 0) {
+            if(~var0 != -1) {
                var15.method668(var0);
             }
 
             int var19 = 73 / ((-56 - var1) / 47);
-            if(item.anInt791 != -1) {
+            if(0 != ~var8.anInt791) {
                var22.method643(0, 0);
-            } else if(-1 != item.anInt762) {
+            } else if(-1 != var8.anInt762) {
                Class74.method1319(var22.anIntArray4081, 36, 32);
                var15.method643(0, 0);
                var15 = var22;
             }
 
-            if(var4 && (item.stackingType == 1 || var6 != 1) && var6 != -1) {
-               Class3_Sub13_Sub37.aClass3_Sub28_Sub17_Sub1_3440.method681(Class3_Sub7.itemStackColor(1000, var6), 0, 9, 16776960, 1);
+            if(var4 && (~var8.stackingType == -2 || var6 != 1) && var6 != -1) {
+               Class3_Sub13_Sub37.aClass3_Sub28_Sub17_Sub1_3440.method681(Class3_Sub7.method123(1000, var6), 0, 9, 16776960, 1);
             }
 
             Class74.method1319(var11, var12, var13);
@@ -1333,14 +1379,14 @@ final class RSString implements Interface3 {
          Class var4 = RSString.class;
          synchronized(var4) {
             Class3_Sub29 var5;
-            if(Class86.aClass130_1194 == null) {
-               Class86.aClass130_1194 = new Class130(4096);
-            } else {
+            if(Class86.aClass130_1194 != null) {
                for(var5 = (Class3_Sub29)Class86.aClass130_1194.method1780(var2, var1 ^ 32); null != var5; var5 = (Class3_Sub29)Class86.aClass130_1194.method1784(0)) {
                   if(this.method1528((byte)-42, var5.aClass94_2586)) {
                      return var5.aClass94_2586;
                   }
                }
+            } else {
+               Class86.aClass130_1194 = new Class130(4096);
             }
 
             var5 = new Class3_Sub29();
@@ -1354,8 +1400,8 @@ final class RSString implements Interface3 {
          }
 
          return this;
-      } catch (RuntimeException item) {
-         throw Class44.method1067(item, "na.BB(" + var1 + ')');
+      } catch (RuntimeException var8) {
+         throw Class44.method1067(var8, "na.BB(" + var1 + ')');
       }
    }
 
@@ -1366,10 +1412,12 @@ final class RSString implements Interface3 {
          }
 
          if(0 < var1 && var1 <= 255) {
-            if(this.aBoolean2152) {
+            if(!this.aBoolean2152) {
+               throw new IllegalArgumentException();
+            } else {
                if(this.length == this.byteArray.length) {
                   int var3;
-                  for(var3 = 1; this.length >= var3; var3 += var3) {
+                  for(var3 = 1; ~var3 >= ~this.length; var3 += var3) {
                      ;
                   }
 
@@ -1380,8 +1428,6 @@ final class RSString implements Interface3 {
 
                this.byteArray[this.length++] = (byte)var1;
                return this;
-            } else {
-               throw new IllegalArgumentException();
             }
          } else {
             throw new IllegalArgumentException("invalid char:" + var1);
@@ -1424,7 +1470,9 @@ final class RSString implements Interface3 {
 
    final int method1575(int var1, FontMetrics var2) {
       try {
-         if(var1 == -21018) {
+         if(var1 != -21018) {
+            return 63;
+         } else {
             String var3;
             try {
                var3 = new String(this.byteArray, 0, this.length, "ISO-8859-1");
@@ -1433,8 +1481,6 @@ final class RSString implements Interface3 {
             }
 
             return var2.stringWidth(var3);
-         } else {
-            return 63;
          }
       } catch (RuntimeException var6) {
          throw Class44.method1067(var6, "na.V(" + var1 + ',' + (var2 != null?"{...}":"null") + ')');
@@ -1443,7 +1489,9 @@ final class RSString implements Interface3 {
 
    final RSString method1576(byte var1) {
       try {
-         if(this.aBoolean2152) {
+         if(!this.aBoolean2152) {
+            throw new IllegalArgumentException();
+         } else {
             if(var1 != 90) {
                incomingOpcode = -84;
             }
@@ -1455,8 +1503,6 @@ final class RSString implements Interface3 {
             }
 
             return this;
-         } else {
-            throw new IllegalArgumentException();
          }
       } catch (RuntimeException var3) {
          throw Class44.method1067(var3, "na.PA(" + var1 + ')');
@@ -1488,19 +1534,19 @@ final class RSString implements Interface3 {
          if(var1 >= -105) {
             aBoolean2154 = true;
          }
-         for(int var4 = 0; var4 < this.length && var4 < 12; ++var4) {
+         for(int var4 = 0; ~this.length < ~var4 && -13 < ~var4; ++var4) {
             byte var5 = this.byteArray[var4];
             var2 *= 37L;
             if(65 <= var5 && 90 >= var5) {
                var2 += (long)(-65 + 1 + var5);
-            } else if(var5 >= 97 && 122 >= var5) {
+            } else if(~var5 <= -98 && 122 >= var5) {
                var2 += (long)(-97 + var5 + 1);
             } else if(var5 >= 48 && var5 <= 57) {
                var2 += (long)(-48 + var5 + 27);
             }
          }
 
-         while(var2 % 37L == 0 && var2 != 0L) {
+         while(~(var2 % 37L) == -1L && var2 != 0L) {
             var2 /= 37L;
          }
 
@@ -1545,14 +1591,14 @@ static final RSString createRSString(String string) {
 
 		while(var3 > var5) {
 			int var6 = var2[var5++] & 255;
-			if(45 >= var6 && var6 >= 40) {
-				if(var3 <= var5) {
+			if(45 >= var6 && ~var6 <= -41) {
+				if(~var5 <= ~var3) {
 					break;
 				}
 
 				int var7 = 255 & var2[var5++];
 				var4.byteArray[var4.length++] = (byte)(-48 + var7 + 43 * (-40 + var6));
-			} else if(var6 != 0) {
+			} else if(~var6 != -1) {
 				var4.byteArray[var4.length++] = (byte)var6;
 			}
 		}

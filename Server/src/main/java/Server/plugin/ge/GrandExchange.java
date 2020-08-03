@@ -416,7 +416,7 @@ public final class GrandExchange implements SavingModule {
         player.getGrandExchange().update(offer);
         player.getMonitor().log("aborted offer => item => " + ItemDefinition.forId(offer.getItemId()).getName() + " => amount => " + offer.getAmount() + "", PlayerMonitor.GRAND_EXCHANGE_LOG);
 
-        GEOfferDispatch.setDumpDatabase(true);
+        //GEOfferDispatch.setDumpDatabase(true);
     }
 
     /**
@@ -518,7 +518,7 @@ public final class GrandExchange implements SavingModule {
         }
         player.getAudioManager().send(new Audio(4040, 1, 1));
         offer.sendItems();
-        GEOfferDispatch.setDumpDatabase(true);
+        //GEOfferDispatch.setDumpDatabase(true);
     }
 
     /**

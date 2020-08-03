@@ -36,6 +36,12 @@ public enum CommandSet {
 		public boolean validate(Player player) {
 			return GameWorld.getSettings().isBeta() || ADMINISTRATOR.validate(player) || GameWorld.getSettings().isDevMode();
 		}
+	},
+	DONATOR() {
+		@Override
+		public boolean validate(Player player) {
+			return player.getDetails().isDonator;
+		}
 	};
 
 	/**

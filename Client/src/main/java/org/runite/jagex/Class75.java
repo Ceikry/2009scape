@@ -90,8 +90,8 @@ abstract class Class75 {
             anInt1105 = 43;
          }
 
-         for(int var5 = 0; var5 < Class3_Sub28_Sub3.anInt3557; ++var5) {
-            if(var0 < Class3_Sub28_Sub18.anIntArray3768[var5] + Class155.anIntArray1969[var5] && Class155.anIntArray1969[var5] < var1 + var0 && Class140_Sub4.anIntArray2794[var5] + Player.anIntArray3954[var5] > var3 && Player.anIntArray3954[var5] < var3 - -var4) {
+         for(int var5 = 0; ~Class3_Sub28_Sub3.anInt3557 < ~var5; ++var5) {
+            if(~(Class3_Sub28_Sub18.anIntArray3768[var5] + Class155.anIntArray1969[var5]) < ~var0 && ~(var1 + var0) < ~Class155.anIntArray1969[var5] && ~var3 > ~(Class140_Sub4.anIntArray2794[var5] + Player.anIntArray3954[var5]) && Player.anIntArray3954[var5] < var3 - -var4) {
                Class3_Sub28_Sub14.aBooleanArray3674[var5] = true;
             }
          }

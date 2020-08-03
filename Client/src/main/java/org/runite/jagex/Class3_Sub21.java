@@ -7,6 +7,7 @@ final class Class3_Sub21 extends Class3 {
    static volatile int anInt2493 = -1;
    int anInt2494;
    int anInt2495;
+   static RSString aClass94_2496 = RSString.createRSString("scrollen:");
    int anInt2497;
    static RSString aClass94_2498 = RSString.createRSString("(U (X");
 
@@ -17,7 +18,7 @@ final class Class3_Sub21 extends Class3 {
             method394(6, -105);
          }
 
-         return var3 >= this.anInt2492 && var3 <= this.anInt2495 && this.anInt2494 <= var2 && var2 <= this.anInt2497;
+         return var3 >= this.anInt2492 && ~this.anInt2495 <= ~var3 && this.anInt2494 <= var2 && var2 <= this.anInt2497;
       } catch (RuntimeException var5) {
          throw Class44.method1067(var5, "lh.D(" + var1 + ',' + var2 + ',' + var3 + ')');
       }
@@ -121,6 +122,7 @@ final class Class3_Sub21 extends Class3 {
 
          aClass155_2491 = null;
          aClass94_2498 = null;
+         aClass94_2496 = null;
       } catch (RuntimeException var2) {
          throw Class44.method1067(var2, "lh.B(" + var0 + ')');
       }

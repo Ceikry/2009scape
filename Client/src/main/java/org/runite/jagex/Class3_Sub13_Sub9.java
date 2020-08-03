@@ -45,14 +45,14 @@ final class Class3_Sub13_Sub9 extends Class3_Sub13 {
    final void method157(int var1, RSByteBuffer var2, boolean var3) {
       try {
          if(var3) {
-            if(var1 == 0) {
-               this.anInt3108 = var2.getByte((byte)-86);
-            } else {
+            if(~var1 != -1) {
                if(var1 == 1) {
                   this.anInt3113 = var2.getByte((byte)-118);
                } else if(var1 == 2) {
                   this.anInt3109 = var2.getShort(1);
                }
+            } else {
+               this.anInt3108 = var2.getByte((byte)-86);
             }
 
          }
@@ -73,8 +73,8 @@ final class Class3_Sub13_Sub9 extends Class3_Sub13 {
                int var9 = var7 * this.anInt3113 >> 12;
                int var10 = this.anInt3108 * (var6 % (4096 / this.anInt3108));
                int var11 = var7 % (4096 / this.anInt3113) * this.anInt3113;
-               if(var11 < this.anInt3109) {
-                  for(var8 -= var9; var8 < 0; var8 += 4) {
+               if(~this.anInt3109 < ~var11) {
+                  for(var8 -= var9; ~var8 > -1; var8 += 4) {
                      ;
                   }
 
@@ -87,7 +87,7 @@ final class Class3_Sub13_Sub9 extends Class3_Sub13 {
                      continue;
                   }
 
-                  if(var10 < this.anInt3109) {
+                  if(~this.anInt3109 < ~var10) {
                      var4[var5] = 0;
                      continue;
                   }
@@ -98,7 +98,7 @@ final class Class3_Sub13_Sub9 extends Class3_Sub13 {
                      ;
                   }
 
-                  while(var8 > 3) {
+                  while(~var8 < -4) {
                      var8 -= 4;
                   }
 

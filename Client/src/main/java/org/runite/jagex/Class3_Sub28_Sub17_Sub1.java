@@ -16,36 +16,36 @@ final class Class3_Sub28_Sub17_Sub1 extends Class3_Sub28_Sub17 {
       for(int var10 = -var6; var10 < 0; ++var10) {
          int var11;
          for(var11 = var9; var11 < 0; ++var11) {
-            if(var1[var3++] == 0) {
-               ++var4;
-            } else {
+            if(var1[var3++] != 0) {
                var0[var4++] = var2;
+            } else {
+               ++var4;
             }
 
-             if(var1[var3++] == 0) {
-                ++var4;
-             } else {
-                var0[var4++] = var2;
-             }
+            if(var1[var3++] != 0) {
+               var0[var4++] = var2;
+            } else {
+               ++var4;
+            }
 
-             if(var1[var3++] == 0) {
-                ++var4;
-             } else {
-                var0[var4++] = var2;
-             }
+            if(var1[var3++] != 0) {
+               var0[var4++] = var2;
+            } else {
+               ++var4;
+            }
 
-             if(var1[var3++] == 0) {
-                ++var4;
-             } else {
-                var0[var4++] = var2;
-             }
+            if(var1[var3++] != 0) {
+               var0[var4++] = var2;
+            } else {
+               ++var4;
+            }
          }
 
          for(var11 = var5; var11 < 0; ++var11) {
-            if(var1[var3++] == 0) {
-               ++var4;
-            } else {
+            if(var1[var3++] != 0) {
                var0[var4++] = var2;
+            } else {
+               ++var4;
             }
          }
 
@@ -94,10 +94,10 @@ final class Class3_Sub28_Sub17_Sub1 extends Class3_Sub28_Sub17 {
          }
 
          for(int var20 = -var17; var20 < 0; ++var20) {
-            if(var1[var7++] == 0) {
-               ++var8;
-            } else {
+            if(var1[var7++] != 0) {
                Class74.anIntArray1100[var8++] = var6;
+            } else {
+               ++var8;
             }
          }
 
@@ -113,11 +113,11 @@ final class Class3_Sub28_Sub17_Sub1 extends Class3_Sub28_Sub17 {
 
       for(int var10 = -var6; var10 < 0; ++var10) {
          for(int var11 = -var5; var11 < 0; ++var11) {
-            if(var1[var3++] == 0) {
-               ++var4;
-            } else {
+            if(var1[var3++] != 0) {
                int var12 = var0[var4];
                var0[var4++] = (((var12 & 16711935) * var9 & -16711936) + ((var12 & '\uff00') * var9 & 16711680) >> 8) + var2;
+            } else {
+               ++var4;
             }
          }
 
@@ -208,10 +208,10 @@ final class Class3_Sub28_Sub17_Sub1 extends Class3_Sub28_Sub17 {
       }
 
       if(var4 > 0 && var5 > 0) {
-         if(Class74.anIntArray1097 == null) {
-            method704(Class74.anIntArray1100, this.aByteArrayArray4082[var1], var6, var11, var8, var4, var5, var9, var10);
-         } else {
+         if(Class74.anIntArray1097 != null) {
             method705(Class74.anIntArray1100, this.aByteArrayArray4082[var1], var2, var3, var4, var5, var6, var11, var8, var9, var10, Class74.anIntArray1097, Class74.anIntArray1098);
+         } else {
+            method704(Class74.anIntArray1100, this.aByteArrayArray4082[var1], var6, var11, var8, var4, var5, var9, var10);
          }
 
       }

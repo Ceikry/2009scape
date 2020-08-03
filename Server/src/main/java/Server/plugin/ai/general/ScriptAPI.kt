@@ -7,6 +7,7 @@ import core.game.node.`object`.GameObject
 import core.game.node.entity.Entity
 import core.game.node.entity.npc.NPC
 import core.game.node.entity.player.Player
+import core.game.node.entity.player.info.PlayerDetails
 import core.game.node.item.GroundItem
 import core.game.node.item.GroundItemManager
 import core.game.node.item.Item
@@ -25,8 +26,13 @@ import plugin.ai.AIPlayer
 import plugin.ai.AIRepository
 import plugin.ai.general.scriptrepository.LobsterCatcher
 import plugin.ai.general.scriptrepository.SeersMagicTrees
+import plugin.consumable.Consumable
+import plugin.consumable.ConsumableProperties
+import plugin.consumable.Consumables
+import plugin.consumable.Food
 import plugin.ge.GEOfferDispatch
 import plugin.ge.GrandExchangeOffer
+import plugin.skill.Skills
 import java.util.ArrayList
 import java.util.concurrent.Executors
 import kotlin.math.abs
@@ -117,6 +123,7 @@ class ScriptAPI(private val bot: Player) {
                 closest = item
             }
         }
+        if(!GroundItemManager.getItems().contains(closest)) AIRepository.getItems(bot)?.remove(closest).also {return null}
         return closest
     }
 
@@ -248,9 +255,9 @@ class ScriptAPI(private val bot: Player) {
                 val offer = GrandExchangeOffer(id,true)
                 val itemAmt = bot.bank.getAmount(id)
                 offer.amount = itemAmt
-                offer.offeredValue = ItemDefinition.forId(id).value
+                offer.offeredValue = checkPriceOverrides(id) ?: ItemDefinition.forId(id).value
                 SystemLogger.log("Offered " + offer.amount)
-                GEOfferDispatch.dispatch(bot,offer)
+                GEOfferDispatch.dispatch(Player(PlayerDetails.getDetails("2009scape")),offer)
                 bot.bank.remove(Item(id,itemAmt))
                 bot.bank.refresh()
                 SystemLogger.log("Banked fish: " + bot.bank.getAmount(ItemNames.RAW_LOBSTER))
@@ -260,13 +267,35 @@ class ScriptAPI(private val bot: Player) {
         bot.pulseManager.run(toCounterPulse())
     }
 
+    fun sellAllOnGe(){
+        class toCounterPulseAll : MovementPulse(bot,Location.create(3165, 3487, 0) ){
+            override fun pulse(): Boolean {
+                for(item in bot.bank.toArray()) {
+                    item ?: continue
+                    SystemLogger.log("Checking ${item.id}")
+                    if(!item.definition.isTradeable) {continue}
+                    SystemLogger.log("Adding ${item.name}")
+                    val offer = GrandExchangeOffer(item.id, true)
+                    val itemAmt = item.amount
+                    offer.amount = itemAmt
+                    offer.offeredValue = checkPriceOverrides(item.id) ?: item.definition.value
+                    GEOfferDispatch.dispatch(bot, offer)
+                    bot.bank.remove(item)
+                    bot.bank.refresh()
+                }
+                return true
+            }
+        }
+        bot.pulseManager.run(toCounterPulseAll())
+    }
+
     fun sellOnGE(id: Int, value: Int){
         class toCounterPulseWithPrice : MovementPulse(bot,Location.create(3165, 3487, 0) ){
             override fun pulse(): Boolean {
                 val offer = GrandExchangeOffer(id,true)
                 val itemAmt = bot.bank.getAmount(id)
                 offer.amount = itemAmt
-                offer.offeredValue = value
+                offer.offeredValue = checkPriceOverrides(id) ?: value
                 SystemLogger.log("Offered " + offer.amount)
                 GEOfferDispatch.dispatch(bot,offer)
                 bot.bank.remove(Item(id,itemAmt))
@@ -305,5 +334,56 @@ class ScriptAPI(private val bot: Player) {
             }
         }
         bot.pulseManager.run(BankingPulse())
+    }
+
+
+    fun eat(foodId: Int) {
+        val foodItem = Item(foodId)
+        if (bot.skills.getStaticLevel(Skills.HITPOINTS) * RandomFunction.random(0.5,0.75) >= bot.skills.lifepoints && bot.inventory.containsItem(foodItem)) {
+            bot.lock(3)
+            //this.animate(new Animation(829));
+            val food = bot.inventory.getItem(foodItem)
+            var consumable: Consumable? = Consumables.getFoodByItemID(food.id)
+            if (consumable == null) {
+                consumable = Food(food.id, ConsumableProperties(1))
+            }
+            consumable.consume(food, bot)
+            bot.properties.combatPulse.delayNextAttack(3)
+        }
+    }
+
+    fun forceEat(foodId: Int) {
+        val foodItem = Item(foodId)
+        if (bot.inventory.containsItem(foodItem)) {
+            bot.lock(3)
+            //this.animate(new Animation(829));
+            val food = bot.inventory.getItem(foodItem)
+            var consumable: Consumable? = Consumables.getFoodByItemID(food.id)
+            if (consumable == null) {
+                consumable = Food(food.id, ConsumableProperties(1))
+            }
+            consumable.consume(food, bot)
+            bot.properties.combatPulse.delayNextAttack(3)
+        }
+    }
+
+    fun checkPriceOverrides(id: Int): Int?{
+        return when(id){
+            ItemNames.DRAGON_BONES ->          1250
+            ItemNames.GREEN_DRAGONHIDE_1753 -> 550
+            ItemNames.BOW_STRING_1777 ->       250
+            ItemNames.MAGIC_LOGS_1513 ->       750
+            ItemNames.GRIMY_RANARR ->          1214
+            ItemNames.GRIMY_AVANTOE ->         453
+            ItemNames.GRIMY_CADANTINE ->       232
+            ItemNames.GRIMY_DWARF_WEED ->      86
+            ItemNames.GRIMY_GUAM ->            50
+            ItemNames.GRIMY_HARRALANDER ->     115
+            ItemNames.GRIMY_IRIT ->            860
+            ItemNames.GRIMY_KWUARM ->          334
+            ItemNames.GRIMY_LANTADYME ->       115
+            ItemNames.GRIMY_MARRENTILL ->      250
+            else -> null
+        }
     }
 }

@@ -133,7 +133,7 @@ final class AnimationHeader {
 		      int var7 = -1;
 		      int var8 = -1;
 		      parent.index = buffer.index + size;
-
+		
 		      int i;
 		      for(i = 0; i < size; ++i) {
 		         int var10 = this.skins.anIntArray2466[i];
@@ -145,38 +145,38 @@ final class AnimationHeader {
 		            if(var10 == 0) {
 		               var8 = i;
 		            }
-
+		
 		            aShortArray1397[var6] = (short)i;
 		            short var12 = 0;
 		            if(var10 == 3) {
 		               var12 = 128;
 		            }
-
-		            if((var11 & 1) == 0) {
-		               aShortArray1394[var6] = var12;
-		            } else {
+		
+		            if((var11 & 1) != 0) {
 		               aShortArray1394[var6] = (short)parent.getSmart(-21208);
+		            } else {
+		               aShortArray1394[var6] = var12;
 		            }
-
-                     if((var11 & 2) == 0) {
-                        aShortArray1391[var6] = var12;
-                     } else {
-                        aShortArray1391[var6] = (short)parent.getSmart(-21208);
-                     }
-
-                     if((var11 & 4) == 0) {
-                        aShortArray1390[var6] = var12;
-                     } else {
-                        aShortArray1390[var6] = (short)parent.getSmart(-21208);
-                     }
-
-                     aByteArray1389[var6] = (byte)(var11 >>> 3 & 3);
+		
+		            if((var11 & 2) != 0) {
+		               aShortArray1391[var6] = (short)parent.getSmart(-21208);
+		            } else {
+		               aShortArray1391[var6] = var12;
+		            }
+		
+		            if((var11 & 4) != 0) {
+		               aShortArray1390[var6] = (short)parent.getSmart(-21208);
+		            } else {
+		               aShortArray1390[var6] = var12;
+		            }
+		
+		            aByteArray1389[var6] = (byte)(var11 >>> 3 & 3);
 		            if(var10 == 2) {
 		               aShortArray1394[var6] = (short)(((aShortArray1394[var6] & 255) << 3) + (aShortArray1394[var6] >> 8 & 7));
 		               aShortArray1391[var6] = (short)(((aShortArray1391[var6] & 255) << 3) + (aShortArray1391[var6] >> 8 & 7));
 		               aShortArray1390[var6] = (short)(((aShortArray1390[var6] & 255) << 3) + (aShortArray1390[var6] >> 8 & 7));
 		            }
-
+		
 		            aShortArray1392[var6] = -1;
 		            if(var10 != 1 && var10 != 2 && var10 != 3) {
 		               if(var10 == 5) {
@@ -188,12 +188,14 @@ final class AnimationHeader {
 		               aShortArray1392[var6] = (short)var7;
 		               var8 = var7;
 		            }
-
+		
 		            ++var6;
 		         }
 		      }
-
-		      if(parent.index == bs.length) {
+		
+		      if(parent.index != bs.length) {
+		         throw new RuntimeException();
+		      } else {
 		         this.anInt1383 = var6;
 		         this.aShortArray1385 = new short[var6];
 		         this.aShortArray1388 = new short[var6];
@@ -201,7 +203,7 @@ final class AnimationHeader {
 		         this.aShortArray1395 = new short[var6];
 		         this.aShortArray1387 = new short[var6];
 		         this.aByteArray1393 = new byte[var6];
-
+		
 		         for(i = 0; i < var6; ++i) {
 		            this.aShortArray1385[i] = aShortArray1397[i];
 		            this.aShortArray1388[i] = aShortArray1394[i];
@@ -210,10 +212,8 @@ final class AnimationHeader {
 		            this.aShortArray1387[i] = aShortArray1392[i];
 		            this.aByteArray1393[i] = aByteArray1389[i];
 		         }
-
-		      } else {
-		         throw new RuntimeException();
+		
 		      }
-           }
+		   }
 
 	}

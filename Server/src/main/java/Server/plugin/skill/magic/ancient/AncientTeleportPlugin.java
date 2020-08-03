@@ -1,5 +1,6 @@
 package plugin.skill.magic.ancient;
 
+import core.ServerConstants;
 import plugin.skill.magic.MagicSpell;
 import plugin.skill.magic.Runes;
 import core.game.node.Node;
@@ -68,7 +69,7 @@ public final class AncientTeleportPlugin extends MagicSpell {
 	@Override
 	public Plugin<SpellType> newInstance(SpellType arg) throws Throwable {
 		// home
-		SpellBook.ANCIENT.register(28, new AncientTeleportPlugin(0, 0, Location.create(3087, 3495, 0)));
+		SpellBook.ANCIENT.register(28, new AncientTeleportPlugin(0, 0, ServerConstants.HOME_LOCATION));
 		// paddewwa teleport
 		SpellBook.ANCIENT.register(20, new AncientTeleportPlugin(54, 64, Location.create(3098, 9882, 0), new Item(Runes.LAW_RUNE.getId(), 2), new Item(Runes.FIRE_RUNE.getId(), 1), new Item(Runes.AIR_RUNE.getId(), 1)));
 		// sennisten teleport

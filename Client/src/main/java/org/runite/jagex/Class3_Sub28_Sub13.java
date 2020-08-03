@@ -6,6 +6,7 @@ final class Class3_Sub28_Sub13 extends Node {
    int anInt3658;
    static int anInt3659;
    static int anInt3660 = 0;
+   static RSString aClass94_3661 = RSString.createRSString("T");
    int anInt3662;
    Class130 aClass130_3663;
    private RSString aClass94_3664;
@@ -20,25 +21,19 @@ final class Class3_Sub28_Sub13 extends Node {
             anInt3657 = 70;
          }
 
-         if(var1 == 1) {
-            this.anInt3662 = var2.getByte((byte)-47);
-         } else {
-            if(var1 == 2) {
+         if(~var1 != -2) {
+            if(~var1 == -3) {
                this.anInt3658 = var2.getByte((byte)-52);
-            } else if(3 == var1) {
-               this.aClass94_3664 = var2.getString();
-            } else {
-               if(var1 == 4) {
-                  this.anInt3667 = var2.getInt();
-               } else {
-                  if(5 == var1 || var1 == 6) {
+            } else if(3 != var1) {
+               if(var1 != 4) {
+                  if(5 == var1 || -7 == ~var1) {
                      int var4 = var2.getShort(1);
                      this.aClass130_3663 = new Class130(Class95.method1585((byte)94, var4));
 
                      for(int var5 = 0; var5 < var4; ++var5) {
                         int var6 = var2.getInt();
                         Object var7;
-                        if(var1 == 5) {
+                        if(~var1 == -6) {
                            var7 = new Class3_Sub29(var2.getString());
                         } else {
                            var7 = new Class3_Sub18(var2.getInt());
@@ -47,8 +42,14 @@ final class Class3_Sub28_Sub13 extends Node {
                         this.aClass130_3663.method1779(1, (Class3)var7, (long)var6);
                      }
                   }
+               } else {
+                  this.anInt3667 = var2.getInt();
                }
+            } else {
+               this.aClass94_3664 = var2.getString();
             }
+         } else {
+            this.anInt3662 = var2.getByte((byte)-47);
          }
 
       } catch (RuntimeException var8) {
@@ -123,11 +124,11 @@ final class Class3_Sub28_Sub13 extends Node {
 
    final int method620(int var1, int var2) {
       try {
-         if(this.aClass130_3663 == null) {
-            return this.anInt3667;
-         } else {
+         if(this.aClass130_3663 != null) {
             Class3_Sub18 var3 = (Class3_Sub18)this.aClass130_3663.method1780((long)var2, var1);
             return var3 != null?var3.anInt2467:this.anInt3667;
+         } else {
+            return this.anInt3667;
          }
       } catch (RuntimeException var4) {
          throw Class44.method1067(var4, "ml.E(" + var1 + ',' + var2 + ')');
@@ -136,9 +137,7 @@ final class Class3_Sub28_Sub13 extends Node {
 
    final boolean method621(int var1, int var2) {
       try {
-         if(null == this.aClass130_3663) {
-            return false;
-         } else {
+         if(null != this.aClass130_3663) {
             if(this.aClass130_3666 == null) {
                this.method622(109);
             }
@@ -149,6 +148,8 @@ final class Class3_Sub28_Sub13 extends Node {
 
             Class3_Sub18 var3 = (Class3_Sub18)this.aClass130_3666.method1780((long)var2, 0);
             return var3 != null;
+         } else {
+            return false;
          }
       } catch (RuntimeException var4) {
          throw Class44.method1067(var4, "ml.B(" + var1 + ',' + var2 + ')');
@@ -179,19 +180,19 @@ final class Class3_Sub28_Sub13 extends Node {
          RSByteBuffer var2 = new RSByteBuffer(var1);
          int var3 = var2.getByte((byte)-67);
          int var4 = var2.getInt();
-         if(0 <= var4 && (Class75.anInt1108 == 0 || var4 <= Class75.anInt1108)) {
-            if(var3 == 0) {
+         if(0 <= var4 && (-1 == ~Class75.anInt1108 || ~Class75.anInt1108 <= ~var4)) {
+            if(-1 == ~var3) {
                byte[] var8 = new byte[var4];
                var2.method764(0, var4, var8, (byte)93);
                return var8;
             } else {
                int var5 = var2.getInt();
-               if(0 <= var5 && (Class75.anInt1108 == 0 || var5 <= Class75.anInt1108)) {
+               if(0 <= var5 && (Class75.anInt1108 == 0 || ~Class75.anInt1108 <= ~var5)) {
                   byte[] var6 = new byte[var5];
-                  if(1 == var3) {
-                     Class105.method1640(var6, var5, var1, var4, 9);
-                  } else {
+                  if(1 != var3) {
                      Class3_Sub22.aClass49_2505.method1128(var6, var2, false);
+                  } else {
+                     Class105.method1640(var6, var5, var1, var4, 9);
                   }
 
                   return var6;
@@ -210,6 +211,7 @@ final class Class3_Sub28_Sub13 extends Node {
 
    public static void method624(int var0) {
       try {
+         aClass94_3661 = null;
          if(var0 != -1) {
             method623((byte)-86, (byte[])null);
          }
@@ -223,7 +225,7 @@ final class Class3_Sub28_Sub13 extends Node {
       try {
          while(true) {
             int var3 = var1.getByte((byte)-83);
-            if(var3 == 0) {
+            if(-1 == ~var3) {
                var3 = 68 % ((-84 - var2) / 35);
                return;
             }

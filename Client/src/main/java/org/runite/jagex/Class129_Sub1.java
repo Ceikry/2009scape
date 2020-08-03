@@ -7,6 +7,7 @@ final class Class129_Sub1 extends Class129 {
    static int anInt2684;
    private int anInt2685;
    static Class47 aClass47_2686 = new Class47(128);
+   static RSString aClass94_2687 = RSString.createRSString("Fallen lassen");
    private int anInt2688;
    static int anInt2689;
    static Class3_Sub28_Sub16[] aClass3_Sub28_Sub16Array2690;
@@ -21,6 +22,7 @@ final class Class129_Sub1 extends Class129 {
 
    public static void method1771(int var0) {
       try {
+         aClass94_2687 = null;
          anIntArray2696 = null;
          anImage2695 = null;
          if(var0 != 14635) {
@@ -37,7 +39,7 @@ final class Class129_Sub1 extends Class129 {
    final void method1770(int var1) {
       try {
          int var2;
-         for(var2 = 0; var2 < 10; ++var2) {
+         for(var2 = 0; ~var2 > -11; ++var2) {
             this.aLongArray2694[var2] = 0L;
          }
 
@@ -74,15 +76,15 @@ final class Class129_Sub1 extends Class129 {
             this.anInt2691 = (int)(-((this.aLong2683 - this.aLongArray2694[this.anInt2685]) / 10L) + (long)var3);
          }
 
-         if(this.anInt2691 > var3) {
+         if(~var3 > ~this.anInt2691) {
             this.anInt2691 = var3;
          }
 
          this.aLongArray2694[this.anInt2685] = this.aLong2683;
          this.anInt2685 = (1 + this.anInt2685) % 10;
          int var6;
-         if(this.anInt2691 > 1) {
-            for(var6 = 0; var6 < 10; ++var6) {
+         if(~this.anInt2691 < -2) {
+            for(var6 = 0; -11 < ~var6; ++var6) {
                if(this.aLongArray2694[var6] != 0L) {
                   this.aLongArray2694[var6] += (long)this.anInt2691;
                }

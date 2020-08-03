@@ -2,8 +2,10 @@ package org.runite.jagex;
 
 final class Class3_Sub28_Sub19 extends Node {
 
+   static RSString aClass94_3771 = RSString.createRSString("Chargement en cours)3)3)3");
    static CacheIndex aClass153_3772;
    static int anInt3773;
+   static RSString aClass94_3774 = RSString.createRSString("clignotant1:");
    static int anInt3775 = 0;
    static Class47 aClass47_3776 = new Class47(64);
    static RSString aClass94_3777 = RSString.createRSString(" x ");
@@ -40,10 +42,12 @@ final class Class3_Sub28_Sub19 extends Node {
    public static void method717(int var0) {
       try {
          aClass94_3777 = null;
+         aClass94_3774 = null;
          int var1 = 54 % ((48 - var0) / 56);
          anIntArray3780 = null;
          aClass153_3772 = null;
          aClass47_3776 = null;
+         aClass94_3771 = null;
       } catch (RuntimeException var2) {
          throw Class44.method1067(var2, "ud.C(" + var0 + ')');
       }

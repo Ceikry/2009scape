@@ -48,7 +48,7 @@ final class Class21 {
             }
          }
 
-         for(var1 = 0; Class3_Sub13_Sub24.npcs.length > var1; ++var1) {
+         for(var1 = 0; ~var1 > ~Class3_Sub13_Sub24.npcs.length; ++var1) {
             if(Class3_Sub13_Sub24.npcs[var1] != null) {
                Class3_Sub13_Sub24.npcs[var1].anInt2772 = -1;
             }
@@ -92,10 +92,10 @@ final class Class21 {
          Class3_Sub13_Sub17.aClass130_3208.method1779(1, var4, (long)interfaceHash);
          Class3_Sub13_Sub13.method232(interfaceId, 16182);
          RSInterface var5 = Class7.getRSInterface((byte)122, interfaceHash);
-         if(var5 == null) {
-        	 System.out.println("Invalid interface opened - [window=" + (interfaceHash >> 16) + ", child=" + (interfaceHash & 0xFF) + ", id=" + interfaceId + "]");
-         } else {
+         if(var5 != null) {
             Class20.method909(120, var5);
+         } else {
+        	 System.out.println("Invalid interface opened - [window=" + (interfaceHash >> 16) + ", child=" + (interfaceHash & 0xFF) + ", id=" + interfaceId + "]");
          }
 
          if(null != Class3_Sub13_Sub7.aClass11_3087) {
@@ -120,11 +120,11 @@ final class Class21 {
             Class75.method1340(AbstractIndexedSprite.anInt1462, Class3_Sub28_Sub3.anInt3552, (byte)-40, Class3_Sub13_Sub33.anInt3395, Class3_Sub28_Sub1.anInt3537);
          } else {
             Class75.method1340(AbstractIndexedSprite.anInt1462, Class3_Sub28_Sub3.anInt3552, (byte)-40, Class3_Sub13_Sub33.anInt3395, Class3_Sub28_Sub1.anInt3537);
-            var7 = Class168.aClass3_Sub28_Sub17_2096.method682(TextCore.HasChooseOptions);
+            var7 = Class168.aClass3_Sub28_Sub17_2096.method682(Class75_Sub4.aClass94_2667);
 
             for(int var8 = 0; Class3_Sub13_Sub34.anInt3415 > var8; ++var8) {
                int var9 = Class168.aClass3_Sub28_Sub17_2096.method682(RSByteBuffer.method802(var8, true));
-               if(var7 < var9) {
+               if(~var9 < ~var7) {
                   var7 = var9;
                }
             }
@@ -138,7 +138,7 @@ final class Class21 {
          }
 
          Class3_Sub13_Sub12.method226(interfaceId, 58);
-         if(Class3_Sub28_Sub12.anInt3655 != -1) {
+         if(0 != ~Class3_Sub28_Sub12.anInt3655) {
             Class3_Sub8.method124(var0 ^ 6509, 1, Class3_Sub28_Sub12.anInt3655);
          }
 

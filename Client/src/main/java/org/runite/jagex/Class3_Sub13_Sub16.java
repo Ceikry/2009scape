@@ -19,6 +19,7 @@ final class Class3_Sub13_Sub16 extends Class3_Sub13 {
    private int anInt3203 = 5;
    private int anInt3204 = 5;
    static int anInt3205;
+   static RSString aClass94_3206 = RSString.createRSString("Moteur son pr-Bpar-B");
 
 
    private final void method242(byte var1) {
@@ -57,7 +58,7 @@ final class Class3_Sub13_Sub16 extends Class3_Sub13 {
             method245(-29);
          }
 
-         for(int var2 = 0; Class3_Sub13_Sub19.aClass94Array3238.length > var2; ++var2) {
+         for(int var2 = 0; ~var2 > ~Class3_Sub13_Sub19.aClass94Array3238.length; ++var2) {
             if(Class3_Sub13_Sub19.aClass94Array3238[var2].equals(var1 + 40, var0)) {
                return var2;
             }
@@ -88,40 +89,40 @@ final class Class3_Sub13_Sub16 extends Class3_Sub13 {
                int var18 = 1 + var17;
 
                int var19;
-               for(int var9 = var6 - 1; var7 >= var9; ++var9) {
-                  int var13 = 255 & this.aByteArray3195[(var9 >= this.anInt3204 ?-this.anInt3204 + var9:var9) & 255];
+               for(int var9 = var6 - 1; ~var9 >= ~var7; ++var9) {
+                  int var13 = 255 & this.aByteArray3195[(~this.anInt3204 >= ~var9?-this.anInt3204 + var9:var9) & 255];
 
                   for(int var8 = var17 + -1; var18 >= var8; ++var8) {
-                     int var14 = (255 & this.aByteArray3195[(var8 >= this.anInt3203 ?-this.anInt3203 + var8:var8) + var13 & 255]) * 2;
+                     int var14 = (255 & this.aByteArray3195[(~this.anInt3203 >= ~var8?-this.anInt3203 + var8:var8) + var13 & 255]) * 2;
                      int var10 = -(var8 << 12) - (this.aShortArray3200[var14++] - var16);
                      int var11 = var5 - (this.aShortArray3200[var14] + (var9 << 12));
                      var19 = this.anInt3194;
                      int var12;
-                     if(var19 == 1) {
-                        var12 = var11 * var11 + var10 * var10 >> 12;
-                     } else {
+                     if(~var19 != -2) {
                         if(3 == var19) {
                            var10 = var10 < 0?-var10:var10;
-                           var11 = var11 >= 0 ?var11:-var11;
+                           var11 = -1 >= ~var11?var11:-var11;
                            var12 = var11 >= var10?var11:var10;
                         } else if(4 == var19) {
                            var10 = (int)(Math.sqrt((double)((float)(0 > var10?-var10:var10) / 4096.0F)) * 4096.0D);
-                           var11 = (int)(Math.sqrt((double)((float)(var11 >= 0 ?var11:-var11) / 4096.0F)) * 4096.0D);
+                           var11 = (int)(Math.sqrt((double)((float)(~var11 <= -1?var11:-var11) / 4096.0F)) * 4096.0D);
                            var12 = var11 + var10;
                            var12 = var12 * var12 >> 12;
-                        } else if(var19 == 5) {
+                        } else if(-6 == ~var19) {
                            var10 *= var10;
                            var11 *= var11;
                            var12 = (int)(Math.sqrt(Math.sqrt((double)((float)(var11 + var10) / 1.6777216E7F))) * 4096.0D);
-                        } else if(2 == var19) {
-                           var12 = (var10 >= 0 ?var10:-var10) - -(var11 < 0 ?-var11:var11);
-                        } else {
+                        } else if(2 != var19) {
                            var12 = (int)(4096.0D * Math.sqrt((double)((float)(var11 * var11 + var10 * var10) / 1.6777216E7F)));
+                        } else {
+                           var12 = (~var10 <= -1?var10:-var10) - -(-1 < ~var11?-var11:var11);
                         }
+                     } else {
+                        var12 = var11 * var11 + var10 * var10 >> 12;
                      }
 
                      if(var12 >= Class3_Sub28_Sub5.anInt3589) {
-                        if(Class69.anInt1042 > var12) {
+                        if(~var12 > ~Class69.anInt1042) {
                            Class3_Sub13_Sub36.anInt3422 = KeyboardListener.anInt1914;
                            KeyboardListener.anInt1914 = Class69.anInt1042;
                            Class69.anInt1042 = var12;
@@ -143,18 +144,18 @@ final class Class3_Sub13_Sub16 extends Class3_Sub13 {
                }
 
                var19 = this.anInt3191;
-               if(var19 == 0) {
+               if(-1 == ~var19) {
                   var3[var15] = Class3_Sub28_Sub5.anInt3589;
-               } else if(var19 == 1) {
-                  var3[var15] = Class69.anInt1042;
-               } else {
-                  if(var19 == 3) {
+               } else if(var19 != 1) {
+                  if(-4 == ~var19) {
                      var3[var15] = KeyboardListener.anInt1914;
                   } else if(var19 == 4) {
                      var3[var15] = Class3_Sub13_Sub36.anInt3422;
-                  } else if(var19 == 2) {
+                  } else if(-3 == ~var19) {
                      var3[var15] = Class69.anInt1042 + -Class3_Sub28_Sub5.anInt3589;
                   }
+               } else {
+                  var3[var15] = Class69.anInt1042;
                }
             }
          }
@@ -168,12 +169,12 @@ final class Class3_Sub13_Sub16 extends Class3_Sub13 {
    static final void method244(int var0, int var1, int var2, int var3, int var4) {
       try {
          int var5;
-         if(var3 >= var1) {
+         if(~var1 >= ~var3) {
             for(var5 = var1; var5 < var3; ++var5) {
                Class38.anIntArrayArray663[var5][var2] = var4;
             }
          } else {
-            for(var5 = var3; var1 > var5; ++var5) {
+            for(var5 = var3; ~var5 > ~var1; ++var5) {
                Class38.anIntArrayArray663[var5][var2] = var4;
             }
          }
@@ -193,14 +194,12 @@ final class Class3_Sub13_Sub16 extends Class3_Sub13 {
             this.method157(-122, (RSByteBuffer)null, false);
          }
 
-         if(var1 == 0) {
+         if(-1 == ~var1) {
             this.anInt3203 = this.anInt3204 = var2.getByte((byte)-57);
-         } else if(var1 == 1) {
+         } else if(-2 == ~var1) {
             this.anInt3197 = var2.getByte((byte)-57);
-         } else if(2 == var1) {
-            this.anInt3193 = var2.getShort(1);
-         } else {
-            if(var1 == 3) {
+         } else if(2 != var1) {
+            if(-4 == ~var1) {
                this.anInt3191 = var2.getByte((byte)-55);
             } else if(var1 == 4) {
                this.anInt3194 = var2.getByte((byte)-124);
@@ -209,6 +208,8 @@ final class Class3_Sub13_Sub16 extends Class3_Sub13 {
             } else if(var1 == 6) {
                this.anInt3204 = var2.getByte((byte)-64);
             }
+         } else {
+            this.anInt3193 = var2.getShort(1);
          }
 
       } catch (RuntimeException var5) {
@@ -224,6 +225,7 @@ final class Class3_Sub13_Sub16 extends Class3_Sub13 {
       try {
          aClass44_Sub1Array3201 = null;
          aClass94_3192 = null;
+         aClass94_3206 = null;
          if(var0 != 0) {
             method245(111);
          }

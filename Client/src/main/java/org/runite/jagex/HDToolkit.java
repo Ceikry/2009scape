@@ -105,18 +105,18 @@ final class HDToolKit {
          if(var0 != aFloat1797 || var1 != aFloat1794) {
             aFloat1797 = var0;
             aFloat1794 = var1;
-            if(var1 == 0.0F) {
-               aFloatArray1808[10] = aFloat1787;
-               aFloatArray1808[14] = aFloat1795;
-            } else {
+            if(var1 != 0.0F) {
                float var2 = var0 / (var1 + var0);
                float var3 = var2 * var2;
                float var4 = -aFloat1795 * (1.0F - var2) * (1.0F - var2) / var1;
                aFloatArray1808[10] = aFloat1787 + var4;
                aFloatArray1808[14] = aFloat1795 * var3;
+            } else {
+               aFloatArray1808[10] = aFloat1787;
+               aFloatArray1808[14] = aFloat1795;
             }
 
-             gl.glMatrixMode(5889);
+            gl.glMatrixMode(5889);
             gl.glLoadMatrixf(aFloatArray1808, 0);
             gl.glMatrixMode(5888);
          }
@@ -359,7 +359,9 @@ final class HDToolKit {
          var0 |= 16;
       }
 
-      if(var0 == 0) {
+      if(var0 != 0) {
+         return var0;
+      } else {
          aBoolean1790 = ByteOrder.nativeOrder() == ByteOrder.BIG_ENDIAN;
          aBoolean1813 = gl.isExtensionAvailable("GL_ARB_vertex_buffer_object");
          aBoolean1809 = gl.isExtensionAvailable("GL_ARB_multisample");
@@ -400,8 +402,6 @@ final class HDToolKit {
          }
 
          return 0;
-      } else {
-         return var0;
       }
    }
 
@@ -564,17 +564,17 @@ final class HDToolKit {
 
    static final void bindTexture2D(int var0) {
       if(var0 != anInt1803) {
-         if(var0 == -1) {
-            gl.glDisable(3553);
-         } else {
+         if(var0 != -1) {
             if(anInt1803 == -1) {
                gl.glEnable(3553);
             }
 
             gl.glBindTexture(3553, var0);
+         } else {
+            gl.glDisable(3553);
          }
 
-          anInt1803 = var0;
+         anInt1803 = var0;
       }
    }
 
@@ -588,7 +588,9 @@ final class HDToolKit {
 
    static final int method1853(Canvas var0, int var1) {
       try {
-         if(var0.isDisplayable()) {
+         if(!var0.isDisplayable()) {
+            return -1;
+         } else {
             GLCapabilities var2 = new GLCapabilities();
             if(var1 > 0) {
                var2.setSampleBuffers(true);
@@ -626,7 +628,10 @@ final class HDToolKit {
             anInt1820 = var0.getSize().width;
             anInt1811 = var0.getSize().height;
             var5 = method1840();
-            if(var5 == 0) {
+            if(var5 != 0) {
+               method1842();
+               return var5;
+            } else {
                method1857();
                method1829();
                gl.glClear(16384);
@@ -648,12 +653,7 @@ final class HDToolKit {
 
                gl.glClear(16384);
                return 0;
-            } else {
-               method1842();
-               return var5;
             }
-         } else {
-            return -1;
          }
       } catch (Throwable var9) {
          method1842();

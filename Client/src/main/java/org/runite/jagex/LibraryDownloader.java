@@ -68,20 +68,20 @@ public class LibraryDownloader {
 			/**
 			 * User doesn't have the cache.
 			 */
-			if(location.exists()) {
-				println("You have the required HD libs.");
-				downloaded=true;
-			} else {
+			if(!location.exists()) {
 				println("Aquiring  required HD libraries...");
 				if(downloadFile(getCacheLink(), getArchivedName())){
 					if(unZip()){
 						deleteZIP(fileToExtract);
 						println("Libraries aquired.");
 						downloaded = true;
-					}
+					}	
 				}
+			} else {
+				println("You have the required HD libs.");
+				downloaded=true;
 			}
-        } catch(Exception e) {
+		} catch(Exception e) {
 			e.printStackTrace();
 		}
 		return;
@@ -185,7 +185,9 @@ public class LibraryDownloader {
 	private void deleteZIP(String fileToDelete) {
 		File ZIPFile=new File(fileToDelete);
 		boolean exists = ZIPFile.exists();
-		if (exists) {
+		if (!exists) {
+			println("Unable to find unneeded .ZIP data to delete.");
+		} else {
 			try{
 				if(ZIPFile.delete()){
 					println(ZIPFile.getName()+ " was deleted.");
@@ -195,10 +197,8 @@ public class LibraryDownloader {
 			}catch(Exception e){
 				e.printStackTrace();
 			}
-		} else {
-			println("Unable to find unneeded .ZIP data to delete.");
 		}
-    }
+	}
 
 	private void println(String string) {
 		System.out.println(string);

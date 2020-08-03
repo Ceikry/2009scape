@@ -8,6 +8,7 @@ class Class3 {
    Class3 aClass3_74;
    static RSString[] aClass94Array75 = new RSString[1000];
    Class3 aClass3_76;
+   static RSString aClass94_77 = RSString.createRSString("Objet d(Wabonn-Bs");
    static Class61 aClass61_78 = new Class61();
 
 
@@ -21,6 +22,7 @@ class Class3 {
 
    public static void method83(byte var0) {
       try {
+         aClass94_77 = null;
          aClass94Array75 = null;
          if(var0 != 30) {
             method84((RSString)null, 89);
@@ -35,8 +37,12 @@ class Class3 {
 
    static final void method84(RSString var0, int var1) {
       try {
+         if(var1 != -801) {
+            aClass94_77 = (RSString)null;
+         }
+
          int var2 = Class100.method1602(0, var0);
-         if(var2 != -1) {
+         if(~var2 != 0) {
             Class3_Sub28_Sub7.method565((byte)86, Class119.aClass131_1624.aShortArray1727[var2], Class119.aClass131_1624.aShortArray1718[var2]);
          }
       } catch (RuntimeException var3) {
@@ -78,14 +84,14 @@ class Class3 {
          }
 
          if(0 != var1) {
-            if(var1 == 1) {
-               Translation.englishToGerman(false);
-            } else {
+            if(~var1 != -2) {
                if(2 != var1) {
                   throw new RuntimeException();
                }
 
-               Translation.englishToFrench((byte)121);
+               Class9.method850((byte)121);
+            } else {
+               Class3_Sub28_Sub11.method607(false);
             }
 
          }
@@ -108,11 +114,11 @@ class Class3 {
             label58:
             for(int var4 = 0; var4 < var1.length; ++var4) {
                Class106 var5 = var1[var4];
-               if((0 >= var5.anInt1450 || var5.anInt1450 >= 24) && var5.anInt1447 >= 800 && 600 <= var5.anInt1449) {
+               if((0 >= var5.anInt1450 || var5.anInt1450 >= 24) && ~var5.anInt1447 <= -801 && 600 <= var5.anInt1449) {
                   for(int var6 = 0; var3 > var6; ++var6) {
                      Class106 var7 = var2[var6];
-                     if(var5.anInt1447 == var7.anInt1447 && var5.anInt1449 == var7.anInt1449) {
-                        if(var7.anInt1450 < var5.anInt1450) {
+                     if(var5.anInt1447 == var7.anInt1447 && ~var7.anInt1449 == ~var5.anInt1449) {
+                        if(~var5.anInt1450 < ~var7.anInt1450) {
                            var2[var6] = var5;
                         }
                         continue label58;

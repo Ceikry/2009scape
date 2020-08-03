@@ -1,14 +1,18 @@
 package org.runite.jagex;
 
-import javax.media.opengl.GL;
 import java.lang.reflect.Method;
 import java.nio.ByteBuffer;
+import javax.media.opengl.GL;
 
 final class Class3_Sub28_Sub18 extends Node {
 
    static int anInt3757;
+   static RSString aClass94_3758 = RSString.createRSString("Veuillez patienter )2 tentative de r-Btablissement)3");
    private int anInt3759 = -1;
    private int anInt3760;
+   private static RSString aClass94_3761 = RSString.createRSString("Face here");
+   static RSString aClass94_3762 = aClass94_3761;
+   static RSString aClass94_3763 = RSString.createRSString("Liste der Welten geladen");
    static int anInt3764;
    static int anInt3765 = 100;
    static int anInt3766 = 0;
@@ -68,7 +72,15 @@ final class Class3_Sub28_Sub18 extends Node {
 
    public static void method711(int var0) {
       try {
+         aClass94_3762 = null;
+         aClass94_3758 = null;
          anIntArray3768 = null;
+         if(var0 != 1) {
+            aClass94_3761 = (RSString)null;
+         }
+
+         aClass94_3763 = null;
+         aClass94_3761 = null;
       } catch (RuntimeException var2) {
          throw Class44.method1067(var2, "sd.B(" + var0 + ')');
       }
@@ -77,7 +89,7 @@ final class Class3_Sub28_Sub18 extends Node {
    final void method712(byte var1) {
       try {
          int var2 = Class27.method961(var1 + 1530);
-         if((1 & var2) == 0) {
+         if(-1 == ~(1 & var2)) {
             HDToolKit.bindTexture2D(this.anInt3759);
          }
 
@@ -85,9 +97,14 @@ final class Class3_Sub28_Sub18 extends Node {
             HDToolKit.method1856(0);
          }
 
-         if((var2 & 4) == 0) {
+         if(~(var2 & 4) == -1) {
             HDToolKit.method1847(0);
          }
+
+         if(var1 != 6) {
+            aClass94_3763 = (RSString)null;
+         }
+
       } catch (RuntimeException var3) {
          throw Class44.method1067(var3, "sd.E(" + var1 + ')');
       }

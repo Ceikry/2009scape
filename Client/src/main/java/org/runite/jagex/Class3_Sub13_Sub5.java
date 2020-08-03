@@ -30,23 +30,23 @@ final class Class3_Sub13_Sub5 extends Class3_Sub13 {
             int[] var15 = var6[2];
             int[] var14 = var6[1];
 
-            for(int var16 = 0; var16 < Class113.anInt1559; ++var16) {
+            for(int var16 = 0; ~Class113.anInt1559 < ~var16; ++var16) {
                int var17 = var4[var16];
-               if(var17 == 4096) {
-                  var7[var16] = var10[var16];
-                  var8[var16] = var11[var16];
-                  var9[var16] = var12[var16];
-               } else {
-                  if(0 == var17) {
-                     var7[var16] = var13[var16];
-                     var8[var16] = var14[var16];
-                     var9[var16] = var15[var16];
-                  } else {
+               if(var17 != 4096) {
+                  if(0 != var17) {
                      int var18 = -var17 + 4096;
                      var7[var16] = var18 * var13[var16] + var17 * var10[var16] >> 12;
                      var8[var16] = var18 * var14[var16] + var11[var16] * var17 >> 12;
                      var9[var16] = var15[var16] * var18 + var12[var16] * var17 >> 12;
+                  } else {
+                     var7[var16] = var13[var16];
+                     var8[var16] = var14[var16];
+                     var9[var16] = var15[var16];
                   }
+               } else {
+                  var7[var16] = var10[var16];
+                  var8[var16] = var11[var16];
+                  var9[var16] = var12[var16];
                }
             }
          }
@@ -78,7 +78,7 @@ final class Class3_Sub13_Sub5 extends Class3_Sub13 {
 
    static final void method194(int var0, int var1, int var2, int var3, int var4, int var5, int var6, int var7) {
       try {
-         if(var7 >= Class101.anInt1425 && Class3_Sub28_Sub18.anInt3765 >= var6 && var4 >= Class159.anInt2020 && var1 <= Class57.anInt902) {
+         if(~Class101.anInt1425 >= ~var7 && Class3_Sub28_Sub18.anInt3765 >= var6 && var4 >= Class159.anInt2020 && var1 <= Class57.anInt902) {
             Class3_Sub13_Sub19.method262(var3, 119, var4, var1, var2, var0, var6, var7);
          } else {
             Class143.method2062(var6, var2, var5 + -4185, var1, var0, var3, var4, var7);
@@ -101,14 +101,14 @@ final class Class3_Sub13_Sub5 extends Class3_Sub13 {
             int[] var6 = this.method152(1, var1, 32755);
             int[] var7 = this.method152(2, var1, 32755);
 
-            for(int var8 = 0; var8 < Class113.anInt1559; ++var8) {
+            for(int var8 = 0; ~Class113.anInt1559 < ~var8; ++var8) {
                int var9 = var7[var8];
                if(4096 == var9) {
                   var3[var8] = var5[var8];
-               } else if(var9 == 0) {
-                  var3[var8] = var6[var8];
-               } else {
+               } else if(~var9 != -1) {
                   var3[var8] = var9 * var5[var8] - -((-var9 + 4096) * var6[var8]) >> 12;
+               } else {
+                  var3[var8] = var6[var8];
                }
             }
          }

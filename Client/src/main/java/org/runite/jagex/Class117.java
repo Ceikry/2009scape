@@ -3,15 +3,19 @@ package org.runite.jagex;
 final class Class117 {
 
    static WorldListEntry[] worldList;
+   private static RSString aClass94_1610 = RSString.createRSString("Loaded wordpack");
    static int[] anIntArray1611 = new int[]{-1, -1, -1, -1, -1, -1, -1, -1, 85, 80, 84, -1, 91, -1, -1, -1, 81, 82, 86, -1, -1, -1, -1, -1, -1, -1, -1, 13, -1, -1, -1, -1, 83, 104, 105, 103, 102, 96, 98, 97, 99, -1, -1, -1, -1, -1, -1, -1, 25, 16, 17, 18, 19, 20, 21, 22, 23, 24, -1, -1, -1, -1, -1, -1, -1, 48, 68, 66, 50, 34, 51, 52, 53, 39, 54, 55, 56, 70, 69, 40, 41, 32, 35, 49, 36, 38, 67, 33, 65, 37, 64, -1, -1, -1, -1, -1, 228, 231, 227, 233, 224, 219, 225, 230, 226, 232, 89, 87, -1, 88, 229, 90, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, -1, -1, -1, 101, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 100, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1};
+   static RSString aClass94_1612 = RSString.createRSString("classement ");
    static int[] anIntArray1613 = new int[500];
+   static RSString cmdTradeReq = RSString.createRSString(":tradereq:");
+   static RSString aClass94_1615 = aClass94_1610;
    static int anInt1616 = 0;
 
 
    static final void method1719(int var0, int var1) {
       try {
          if(Class143.loadingStage != var0) {
-            if(Class143.loadingStage == 0) {
+            if(-1 == ~Class143.loadingStage) {
                Class93.method1517((byte)-118);
             }
 
@@ -34,24 +38,24 @@ final class Class117 {
                Class66.method1250(102, true);
             }
 
-            if(var0 == 25 || var0 == 10) {
+            if(-26 == ~var0 || var0 == 10) {
                Class72.method1293(true);
             }
 
-            if(var0 == 5) {
+            if(~var0 == -6) {
                Class108.method1656(Class140_Sub6.spritesCacheIndex, (byte)-111);
             } else {
                Class3_Sub13_Sub17.method247((byte)-121);
             }
 
-            boolean var3 = var1 == Class143.loadingStage || Class143.loadingStage == 10 || Class143.loadingStage == 28;
+            boolean var3 = var1 == Class143.loadingStage || ~Class143.loadingStage == -11 || -29 == ~Class143.loadingStage;
             if(var3 == !var2) {
                if(var2) {
                   Class129.anInt1691 = KeyboardListener.anInt1912;
-                  if(Class9.anInt120 == 0) {
-                     NodeList.method882(-1, 2);
-                  } else {
+                  if(Class9.anInt120 != 0) {
                      Class151.method2099(true, KeyboardListener.anInt1912, 0, Class75_Sub2.aClass153_2645, false, 255, 2);
+                  } else {
+                     NodeList.method882(-1, 2);
                   }
 
                   Class58.aClass66_917.method1247(false, true);
@@ -61,7 +65,7 @@ final class Class117 {
                }
             }
 
-            if(HDToolKit.highDetail && (25 == var0 || var0 == 28 || var0 == 40)) {
+            if(HDToolKit.highDetail && (25 == var0 || var0 == 28 || -41 == ~var0)) {
                HDToolKit.method1833();
             }
 
@@ -100,13 +104,17 @@ final class Class117 {
 
    public static void method1721(boolean var0) {
       try {
+         aClass94_1610 = null;
          anIntArray1611 = null;
+         aClass94_1612 = null;
+         cmdTradeReq = null;
          worldList = null;
          if(!var0) {
             method1720(true, 30);
          }
 
          anIntArray1613 = null;
+         aClass94_1615 = null;
       } catch (RuntimeException var2) {
          throw Class44.method1067(var2, "pl.D(" + var0 + ')');
       }

@@ -6,6 +6,7 @@ final class Class75_Sub3 extends Class75 {
    private int anInt2650;
    static int anInt2651;
    private int anInt2652;
+   static RSString aClass94_2653 = RSString.createRSString("Hierhin gehen");
    private int anInt2654;
    private int anInt2655;
    static Class3_Sub28_Sub16[] aClass3_Sub28_Sub16Array2656;
@@ -25,6 +26,10 @@ final class Class75_Sub3 extends Class75 {
          int var8 = this.anInt2655 * var3 >> 12;
          int var9 = var1 * this.anInt2652 >> 12;
          int var10 = this.anInt2659 * var3 >> 12;
+         if(!var2) {
+            aClass94_2653 = (RSString)null;
+         }
+
          int var11 = var1 * this.anInt2650 >> 12;
          Class108.method1652(var6, var10, var9, var11, var5, var4, var8, var7, this.anInt1104, 0);
       } catch (RuntimeException var12) {
@@ -100,7 +105,9 @@ final class Class75_Sub3 extends Class75 {
 
    static final Class3_Sub28_Sub16[] method1347(int var0) {
       try {
-         if(var0 == -26802) {
+         if(var0 != -26802) {
+            return (Class3_Sub28_Sub16[])null;
+         } else {
             Class3_Sub28_Sub16[] var1 = new Class3_Sub28_Sub16[Class95.anInt1338];
 
             for(int var2 = 0; Class95.anInt1338 > var2; ++var2) {
@@ -114,15 +121,15 @@ final class Class75_Sub3 extends Class75 {
                      var6[var7] = Class3_Sub13_Sub29.bitwiseOr(Class3_Sub13_Sub38.spritePalette[Class3_Sub28_Sub15.method633(var4[var7], 255)], Class3_Sub28_Sub15.method633(-16777216, var5[var7] << 24));
                   }
 
-                  if(HDToolKit.highDetail) {
-                     var1[var2] = new Class3_Sub28_Sub16_Sub1_Sub1(Class3_Sub15.anInt2426, Class133.anInt1748, Class164.anIntArray2048[var2], RSByteBuffer.anIntArray2591[var2], Class140_Sub7.anIntArray2931[var2], Class3_Sub13_Sub6.anIntArray3076[var2], var6);
-                  } else {
+                  if(!HDToolKit.highDetail) {
                      var1[var2] = new Class3_Sub28_Sub16_Sub2_Sub1(Class3_Sub15.anInt2426, Class133.anInt1748, Class164.anIntArray2048[var2], RSByteBuffer.anIntArray2591[var2], Class140_Sub7.anIntArray2931[var2], Class3_Sub13_Sub6.anIntArray3076[var2], var6);
+                  } else {
+                     var1[var2] = new Class3_Sub28_Sub16_Sub1_Sub1(Class3_Sub15.anInt2426, Class133.anInt1748, Class164.anIntArray2048[var2], RSByteBuffer.anIntArray2591[var2], Class140_Sub7.anIntArray2931[var2], Class3_Sub13_Sub6.anIntArray3076[var2], var6);
                   }
                } else {
                   int[] var9 = new int[var3];
 
-                  for(int var10 = 0; var3 > var10; ++var10) {
+                  for(int var10 = 0; ~var10 > ~var3; ++var10) {
                      var9[var10] = Class3_Sub13_Sub38.spritePalette[Class3_Sub28_Sub15.method633(var4[var10], 255)];
                   }
 
@@ -136,8 +143,6 @@ final class Class75_Sub3 extends Class75 {
 
             Class39.method1035((byte)106);
             return var1;
-         } else {
-            return (Class3_Sub28_Sub16[])null;
          }
       } catch (RuntimeException var8) {
          throw Class44.method1067(var8, "re.B(" + var0 + ')');
@@ -150,6 +155,8 @@ final class Class75_Sub3 extends Class75 {
          if(var0 != 100) {
             method1347(-79);
          }
+
+         aClass94_2653 = null;
          aClass3_Sub28_Sub16Array2656 = null;
       } catch (RuntimeException var2) {
          throw Class44.method1067(var2, "re.C(" + var0 + ')');

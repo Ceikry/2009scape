@@ -16,11 +16,11 @@ final class Class84 {
             method1418(55, (CacheIndex)null);
          }
 
-         if(Class143.loadingStage == 10 && HDToolKit.highDetail) {
+         if(~Class143.loadingStage == -11 && HDToolKit.highDetail) {
             Class117.method1719(28, 5);
          }
 
-         if(Class143.loadingStage == 30) {
+         if(~Class143.loadingStage == -31) {
             Class117.method1719(25, 5);
          }
 
@@ -35,7 +35,7 @@ final class Class84 {
          Class52.anIntArray861 = new int[256];
 
          int var2;
-         for(var2 = 0; var2 < 3; ++var2) {
+         for(var2 = 0; -4 < ~var2; ++var2) {
             int var4 = (Class131.anIntArray1729[1 + var2] & 16711680) >> 16;
             float var3 = (float)((Class131.anIntArray1729[var2] & 16711680) >> 16);
             float var6 = (float)(Class131.anIntArray1729[var2] >> 8 & 255);
@@ -46,7 +46,7 @@ final class Class84 {
             int var10 = Class131.anIntArray1729[var2 + 1] & 255;
             float var11 = ((float)var10 - var9) / 64.0F;
 
-            for(int var12 = 0; var12 < 64; ++var12) {
+            for(int var12 = 0; -65 < ~var12; ++var12) {
                Class52.anIntArray861[var12 + 64 * var2] = Class3_Sub13_Sub29.bitwiseOr((int)var9, Class3_Sub13_Sub29.bitwiseOr((int)var6 << 8, (int)var3 << 16));
                var6 += var8;
                var9 += var11;
@@ -77,27 +77,27 @@ final class Class84 {
          int var1 = AbstractIndexedSprite.anInt1462;
          int var5 = 6116423;
          int var4 = Class3_Sub28_Sub1.anInt3537;
-         if(HDToolKit.highDetail) {
-            Class22.method934(var1, var2, var3, var4, var5);
-            Class22.method934(1 + var1, 1 + var2, var3 + -2, 16, 0);
-            Class22.method927(1 + var1, var2 + 18, var3 + -2, -19 + var4, 0);
-         } else {
+         if(!HDToolKit.highDetail) {
             Class74.method1323(var1, var2, var3, var4, var5);
             Class74.method1323(1 + var1, 1 + var2, var3 + -2, 16, 0);
             Class74.method1311(1 + var1, var2 + 18, -2 + var3, -19 + var4, 0);
+         } else {
+            Class22.method934(var1, var2, var3, var4, var5);
+            Class22.method934(1 + var1, 1 + var2, var3 + -2, 16, 0);
+            Class22.method927(1 + var1, var2 + 18, var3 + -2, -19 + var4, 0);
          }
 
-         Class168.aClass3_Sub28_Sub17_2096.method681(TextCore.HasChooseOptions, var1 - -3, var2 + 14, var5, -1);
+         Class168.aClass3_Sub28_Sub17_2096.method681(Class75_Sub4.aClass94_2667, var1 - -3, var2 + 14, var5, -1);
          int var7 = Class130.anInt1709;
          int var6 = Class126.anInt1676;
          if(var0 >= -113) {
             anIntArrayArray1160 = (int[][])((int[][])null);
          }
 
-         for(int var8 = 0; var8 < Class3_Sub13_Sub34.anInt3415; ++var8) {
+         for(int var8 = 0; ~Class3_Sub13_Sub34.anInt3415 < ~var8; ++var8) {
             int var9 = (-var8 + -1 + Class3_Sub13_Sub34.anInt3415) * 15 + var2 - -31;
             int var10 = 16777215;
-            if(var6 > var1 && var1 - -var3 > var6 && -13 + var9 < var7 && 3 + var9 > var7) {
+            if(~var1 > ~var6 && ~var6 > ~(var1 - -var3) && -13 + var9 < var7 && ~var7 > ~(3 + var9)) {
                var10 = 16776960;
             }
 
@@ -132,7 +132,7 @@ final class Class84 {
             method1422((byte)26);
          }
 
-         return ((Class3_Sub13_Sub15.aBoolean3184?1:0) << 19) + (((Class38.aBoolean661?1:0) << 16) + ((!Class128.aBoolean1685?0:1) << 15) + ((!Class106.aBoolean1441?0:1) << 13) + ((Class140_Sub6.aBoolean2910?1:0) << 10) + ((Class3_Sub13_Sub22.aBoolean3275?1:0) << 9) + ((RSInterface.aBoolean236?1:0) << 7) + ((!Class25.aBoolean488?0:1) << 6) + ((KeyboardListener.aBoolean1905?1:0) << 5) + (((!Class3_Sub28_Sub13.aBoolean3665?0:1) << 3) + (Class3_Sub28_Sub10.anInt3625 & 7) - (-((!Class3_Sub28_Sub7.aBoolean3604?0:1) << 4) + -((WorldListEntry.aBoolean2623?1:0) << 8)) - (-(Class80.anInt1137 << 11 & 6144) + -((CS2Script.anInt2453 == 0 ?0:1) << 20) - (((Class9.anInt120 != 0 ?1:0) << 21) + ((Class14.anInt340 == 0 ?0:1) << 22)))) - -(Class127_Sub1.method1757() << 23));
+         return ((Class3_Sub13_Sub15.aBoolean3184?1:0) << 19) + (((Class38.aBoolean661?1:0) << 16) + ((!Class128.aBoolean1685?0:1) << 15) + ((!Class106.aBoolean1441?0:1) << 13) + ((Class140_Sub6.aBoolean2910?1:0) << 10) + ((Class3_Sub13_Sub22.aBoolean3275?1:0) << 9) + ((RSInterface.aBoolean236?1:0) << 7) + ((!Class25.aBoolean488?0:1) << 6) + ((KeyboardListener.aBoolean1905?1:0) << 5) + (((!Class3_Sub28_Sub13.aBoolean3665?0:1) << 3) + (Class3_Sub28_Sub10.anInt3625 & 7) - (-((!Class3_Sub28_Sub7.aBoolean3604?0:1) << 4) + -((WorldListEntry.aBoolean2623?1:0) << 8)) - (-(Class80.anInt1137 << 11 & 6144) + -((-1 == ~CS2Script.anInt2453?0:1) << 20) - (((~Class9.anInt120 != -1?1:0) << 21) + ((~Class14.anInt340 == -1?0:1) << 22)))) - -(Class127_Sub1.method1757() << 23));
       } catch (RuntimeException var2) {
          throw Class44.method1067(var2, "lf.F(" + var0 + ')');
       }

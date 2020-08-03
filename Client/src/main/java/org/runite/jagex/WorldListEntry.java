@@ -2,13 +2,16 @@ package org.runite.jagex;
 
 final class WorldListEntry extends Class44 {
 
+   private static RSString aClass94_2619 = RSString.createRSString("Loaded update list");
    RSString activity;
    int worldId;
    static int inTutorialIsland = 0; // could be boolean
    static boolean aBoolean2623 = true;
+   static RSString aClass94_2624 = aClass94_2619;
    RSString address;
    static int anInt2626 = 20;
    static Class155 aClass155_2627;
+   static RSString aClass94_2628 = RSString.createRSString("Stufe: ");
 
 
    static final void method1076(int var0) {
@@ -22,10 +25,14 @@ final class WorldListEntry extends Class44 {
 
    public static void method1077(int var0) {
       try {
+         aClass94_2619 = null;
+         aClass94_2624 = null;
          aClass155_2627 = null;
          if(var0 != 0) {
             anInt2626 = 89;
          }
+
+         aClass94_2628 = null;
       } catch (RuntimeException var2) {
          throw Class44.method1067(var2, "ba.A(" + var0 + ')');
       }
@@ -54,7 +61,7 @@ final class WorldListEntry extends Class44 {
                int var3 = 0;
 
                for(int var4 = 0; var4 < var2.anIntArray2547.length; ++var4) {
-                  if(var2.anIntArray2547[var4] == -1) {
+                  if(0 == ~var2.anIntArray2547[var4]) {
                      ++var3;
                   }
                }

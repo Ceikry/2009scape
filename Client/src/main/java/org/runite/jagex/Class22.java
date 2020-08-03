@@ -263,10 +263,10 @@ final class Class22 {
    }
 
    static final void method936(Class3_Sub28_Sub16_Sub1 var0) {
-      if(var0.anInt3696 == anInt451 - anInt448) {
-         aClass3_Sub28_Sub16_Sub1_447 = var0;
-      } else {
+      if(var0.anInt3696 != anInt451 - anInt448) {
          throw new IllegalArgumentException();
+      } else {
+         aClass3_Sub28_Sub16_Sub1_447 = var0;
       }
    }
 

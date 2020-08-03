@@ -44,19 +44,17 @@ final class Class75_Sub1 extends Class75 {
             int var7 = var4[var5];
             int var8 = var0[var5];
 
-            for(int var9 = 0; var7 != 0 && var2.aClass145Array2809.length > var9; var7 >>>= 1) {
-               if((1 & var7) != 0) {
-                  if(var6 == -1) {
+            for(int var9 = 0; ~var7 != -1 && ~var9 > ~var2.aClass145Array2809.length; var7 >>>= 1) {
+               if(~(1 & var7) != -1) {
+                  if(~var6 == 0) {
                      var2.aClass145Array2809[var9] = null;
                   } else {
                      AnimationDefinition var10 = Client.getAnimationDefinition(var6, (byte)-20);
                      int var11 = var10.anInt1845;
                      Class145 var12 = var2.aClass145Array2809[var9];
                      if(var12 != null) {
-                        if(var12.animationId == var6) {
-                           if(var11 == 0) {
-                              var12 = var2.aClass145Array2809[var9] = null;
-                           } else {
+                        if(~var6 == ~var12.animationId) {
+                           if(var11 != 0) {
                               if(1 == var11) {
                                  var12.anInt1894 = 0;
                                  var12.anInt1891 = 1;
@@ -64,9 +62,11 @@ final class Class75_Sub1 extends Class75 {
                                  var12.anInt1900 = var8;
                                  var12.anInt1897 = 0;
                                  IOHandler.method1470(var2.anInt2829, var10, 183921384, var2.anInt2819, var2 == Class102.player, 0);
-                              } else if(var11 == 2) {
+                              } else if(-3 == ~var11) {
                                  var12.anInt1894 = 0;
                               }
+                           } else {
+                              var12 = var2.aClass145Array2809[var9] = null;
                            }
                         } else if(var10.anInt1857 >= Client.getAnimationDefinition(var12.animationId, (byte)-20).anInt1857) {
                            var12 = var2.aClass145Array2809[var9] = null;

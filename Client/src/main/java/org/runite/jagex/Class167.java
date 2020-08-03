@@ -2,8 +2,11 @@ package org.runite.jagex;
 
 final class Class167 {
 
+   static RSString aClass94_2082 = RSString.createRSString(" <col=ffff00>");
    static RSString aClass94_2083 = null;
+   static RSString aClass94_2084 = RSString.createRSString("ul");
    static int anInt2085;
+   static RSString aClass94_2086 = RSString.createRSString("Continuer");
    static int anInt2087 = 0;
 
 
@@ -33,7 +36,7 @@ final class Class167 {
                   }
 
                   int var6 = GraphicDefinition.incomingBuffer.getBits((byte)-11, 1);
-                  if(var6 == 1) {
+                  if(~var6 == -2) {
                      Class21.maskUpdateIndexes[Class66.maskUpdateCount++] = var1;
                   }
 
@@ -51,11 +54,11 @@ final class Class167 {
                   var3.setSize(var3.definition.size, 2);
                   var3.renderAnimationId = var3.definition.renderAnimationId;
                   var3.anInt2779 = var3.definition.anInt1274;
-                  if(var3.anInt2779 == 0) {
+                  if(~var3.anInt2779 == -1) {
                      var3.anInt2785 = 0;
                   }
 
-                  var3.method1967(-2, var3.getSize((byte)114), Class102.player.anIntArray2767[0] + var8, var7 + Class102.player.anIntArray2755[0], var4 == 1);
+                  var3.method1967(-2, var3.getSize((byte)114), Class102.player.anIntArray2767[0] + var8, var7 + Class102.player.anIntArray2755[0], ~var4 == -2);
                   if(var3.definition.method1474(-1)) {
                      Class70.method1286(var3.anIntArray2755[0], false, (ObjectDefinition)null, 0, var3, var3.anIntArray2767[0], WorldListCountry.localPlane, (Player)null);
                   }
@@ -78,6 +81,11 @@ final class Class167 {
    public static void method2262(byte var0) {
       try {
          aClass94_2083 = null;
+         if(var0 > 0) {
+            aClass94_2086 = null;
+            aClass94_2082 = null;
+            aClass94_2084 = null;
+         }
       } catch (RuntimeException var2) {
          throw Class44.method1067(var2, "wj.F(" + var0 + ')');
       }
@@ -116,6 +124,10 @@ final class Class167 {
    static final void method2265(int var0) {
       try {
          CS2Script.aClass93_2442.method1524(3);
+         if(var0 != 0) {
+            aClass94_2084 = (RSString)null;
+         }
+
       } catch (RuntimeException var2) {
          throw Class44.method1067(var2, "wj.B(" + var0 + ')');
       }
@@ -127,6 +139,11 @@ final class Class167 {
             Class70.method1285(Node.aClass153_2573, false, var1, 0, false, Class9.anInt120);
             Class83.aBoolean1158 = true;
          }
+
+         if(var2 != -1) {
+            aClass94_2084 = (RSString)null;
+         }
+
       } catch (RuntimeException var4) {
          throw Class44.method1067(var4, "wj.D(" + var0 + ',' + var1 + ',' + var2 + ')');
       }
@@ -135,40 +152,40 @@ final class Class167 {
    static final void method2267(int var0, int var1, boolean var2, RSByteBuffer var3, int var4, int var5, byte var6, int var7, int var8) {
       try {
          int var9;
-         if(var5 >= 0 && var5 < 104 && var4 >= 0 && var4 < 104) {
+         if(-1 >= ~var5 && ~var5 > -105 && var4 >= 0 && -105 < ~var4) {
             if(!var2) {
                Class9.aByteArrayArrayArray113[var8][var5][var4] = 0;
             }
 
             while(true) {
                var9 = var3.getByte((byte)-111);
-               if(var9 == 0) {
-                  if(var2) {
-                     Class44.anIntArrayArrayArray723[0][var5][var4] = Class58.anIntArrayArrayArray914[0][var5][var4];
-                  } else {
-                     if(var8 == 0) {
-                        Class44.anIntArrayArrayArray723[0][var5][var4] = 8 * -Class32.method993(var4 + 556238 + var1, 125, var0 + var5 + 932731);
-                     } else {
+               if(-1 == ~var9) {
+                  if(!var2) {
+                     if(~var8 != -1) {
                         Class44.anIntArrayArrayArray723[var8][var5][var4] = -240 + Class44.anIntArrayArrayArray723[var8 - 1][var5][var4];
+                     } else {
+                        Class44.anIntArrayArrayArray723[0][var5][var4] = 8 * -Class32.method993(var4 + 556238 + var1, 125, var0 + var5 + 932731);
                      }
+                  } else {
+                     Class44.anIntArrayArrayArray723[0][var5][var4] = Class58.anIntArrayArrayArray914[0][var5][var4];
                   }
                   break;
                }
 
                if(var9 == 1) {
                   int var10 = var3.getByte((byte)-110);
-                  if(var2) {
-                     Class44.anIntArrayArrayArray723[0][var5][var4] = Class58.anIntArrayArrayArray914[0][var5][var4] - -(var10 * 8);
-                  } else {
-                     if(var10 == 1) {
+                  if(!var2) {
+                     if(~var10 == -2) {
                         var10 = 0;
                      }
 
-                     if(var8 == 0) {
+                     if(-1 == ~var8) {
                         Class44.anIntArrayArrayArray723[0][var5][var4] = 8 * -var10;
                      } else {
                         Class44.anIntArrayArrayArray723[var8][var5][var4] = -(var10 * 8) + Class44.anIntArrayArrayArray723[-1 + var8][var5][var4];
                      }
+                  } else {
+                     Class44.anIntArrayArrayArray723[0][var5][var4] = Class58.anIntArrayArrayArray914[0][var5][var4] - -(var10 * 8);
                   }
                   break;
                }
@@ -186,16 +203,16 @@ final class Class167 {
          } else {
             while(true) {
                var9 = var3.getByte((byte)-103);
-               if(var9 == 0) {
+               if(~var9 == -1) {
                   break;
                }
 
-               if(var9 == 1) {
+               if(~var9 == -2) {
                   var3.getByte((byte)-48);
                   break;
                }
 
-               if(var9 <= 49) {
+               if(-50 <= ~var9) {
                   var3.getByte((byte)-68);
                }
             }
@@ -213,19 +230,26 @@ final class Class167 {
    static final int method2268(byte var0, int var1, int var2) {
       try {
          Class3_Sub25 var3 = (Class3_Sub25)Class3_Sub2.aClass130_2220.method1780((long)var1, 0);
-         if(var3 == null) {
-            return 0;
-         } else if (var2 == -1) {
-            return 0;
-         } else {
-            int var4 = 0;
+         if(var3 != null) {
+            if(var2 != -1) {
+               int var4 = 0;
 
-            for (int var5 = 0; var3.anIntArray2551.length > var5; ++var5) {
-               if (var3.anIntArray2547[var5] == var2) {
-                  var4 += var3.anIntArray2551[var5];
+               for(int var5 = 0; ~var5 > ~var3.anIntArray2551.length; ++var5) {
+                  if(~var2 == ~var3.anIntArray2547[var5]) {
+                     var4 += var3.anIntArray2551[var5];
+                  }
                }
+
+               if(var0 > -45) {
+                  aClass94_2086 = (RSString)null;
+               }
+
+               return var4;
+            } else {
+               return 0;
             }
-            return var4;
+         } else {
+            return 0;
          }
       } catch (RuntimeException var6) {
          throw Class44.method1067(var6, "wj.H(" + var0 + ',' + var1 + ',' + var2 + ')');
@@ -243,7 +267,7 @@ final class Class167 {
          Class32.method995();
 
          int var1;
-         for(var1 = 0; var1 < 4; ++var1) {
+         for(var1 = 0; ~var1 > -5; ++var1) {
             Class86.aClass91Array1182[var1].method1496(0);
          }
 
@@ -274,13 +298,13 @@ final class Class167 {
             Class65.aClass3_Sub30Array986[var1] = null;
          }
 
-         for(var1 = 0; var1 < 32768; ++var1) {
+         for(var1 = 0; -32769 < ~var1; ++var1) {
             Class3_Sub13_Sub24.npcs[var1] = null;
          }
 
          for(var1 = 0; 4 > var1; ++var1) {
-            for(int var2 = 0; var2 < 104; ++var2) {
-               for(int var3 = 0; var3 < 104; ++var3) {
+            for(int var2 = 0; -105 < ~var2; ++var2) {
+               for(int var3 = 0; ~var3 > -105; ++var3) {
                   Class3_Sub13_Sub22.aClass61ArrayArrayArray3273[var1][var2][var3] = null;
                }
             }

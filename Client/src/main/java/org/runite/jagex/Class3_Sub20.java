@@ -8,9 +8,12 @@ final class Class3_Sub20 extends Class3 {
    int anInt2483;
    static int wlPacketIndex = 0;
    static int language = 0;
+   private static RSString aClass94_2486 = RSString.createRSString("red:");
    static int anInt2487;
    static int anInt2488 = 0;
    int anInt2489;
+   static RSString aClass94_2490 = aClass94_2486;
+static RSString aClass94_2481 = aClass94_2486;
 
    static final void method388(byte var0) {
       try {
@@ -100,11 +103,14 @@ final class Class3_Sub20 extends Class3 {
 
    public static void method391(int var0) {
       try {
+         aClass94_2490 = null;
          anIntArray2480 = null;
+         aClass94_2481 = null;
          if(var0 != 25) {
             method388((byte)-58);
          }
 
+         aClass94_2486 = null;
          aClass94_2482 = null;
       } catch (RuntimeException var2) {
          throw Class44.method1067(var2, "lb.B(" + var0 + ')');

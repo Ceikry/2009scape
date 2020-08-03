@@ -1,9 +1,9 @@
 package org.runite.jagex;
-import org.runite.Configurations;
-
 import java.io.IOException;
 import java.net.Socket;
 import java.nio.ByteBuffer;
+
+import org.runite.Configurations;
 
 final class Class121 {
 
@@ -14,13 +14,15 @@ final class Class121 {
    Class156 aClass156_1643;
    ByteBuffer aByteBuffer1644;
    static RSString aClass94_1645 = RSString.createRSString("Hidden)2");
-   static RSString COMMAND_HIGHRES_GRAPHICS_RESIZE = RSString.createRSString("::wm2");
+   static RSString aClass94_1646 = RSString.createRSString("::wm2");
+   static RSString aClass94_1647 = RSString.createRSString("gleiten:");
    int anInt1648 = 0;
 
 
    public static void method1733(int var0) {
       try {
-         COMMAND_HIGHRES_GRAPHICS_RESIZE = null;
+         aClass94_1647 = null;
+         aClass94_1646 = null;
          aClass94_1645 = null;
          if(var0 != -17148) {
             anInt1642 = 54;
@@ -34,43 +36,43 @@ final class Class121 {
    static final int method1734(int var0, float var1, int var2, int var3, int[][] var4, int[][] var5, int var6, float[][] var7, int var8, byte var9, int var10, boolean var11, Class3_Sub11 var12, float[][] var13, int var14, int var15, float[][] var16, int var17) {
       try {
          int var18;
-         if(var10 == 1) {
-            var18 = var15;
-            var15 = var17;
-            var17 = -var18 + 128;
-         } else {
-            if(var10 == 2) {
-               var17 = -var17 + 128;
-               var15 = -var15 + 128;
-            } else {
-               if(var10 == 3) {
+         if(~var10 != -2) {
+            if(var10 != 2) {
+               if(~var10 == -4) {
                   var18 = var15;
                   var15 = 128 + -var17;
                   var17 = var18;
                }
+            } else {
+               var17 = -var17 + 128;
+               var15 = -var15 + 128;
             }
+         } else {
+            var18 = var15;
+            var15 = var17;
+            var17 = -var18 + 128;
          }
 
          float var19;
          int var21;
          float var20;
          float var30;
-         if(var15 == 0 && var17 == 0) {
+         if(~var15 == -1 && -1 == ~var17) {
             var19 = var16[var6][var14];
             var20 = var7[var6][var14];
             var30 = var13[var6][var14];
             var21 = var2;
-         } else if(var15 == 128 && var17 == 0) {
+         } else if(-129 == ~var15 && ~var17 == -1) {
             var21 = var3;
             var19 = var16[var6 + 1][var14];
             var20 = var7[1 + var6][var14];
             var30 = var13[var6 + 1][var14];
-         } else if(var15 == 128 && var17 == 128) {
+         } else if(-129 == ~var15 && ~var17 == -129) {
             var20 = var7[1 + var6][var14 - -1];
             var30 = var13[var6 + 1][1 + var14];
             var19 = var16[1 + var6][var14 - -1];
             var21 = var8;
-         } else if(var15 == 0 && var17 == 128) {
+         } else if(~var15 == -1 && -129 == ~var17) {
             var20 = var7[var6][1 + var14];
             var19 = var16[var6][1 + var14];
             var30 = var13[var6][var14 - -1];
@@ -114,8 +116,8 @@ final class Class121 {
    static final int method1735(int var0) {
       try {
          try {
-            if(Class43.anInt692 == 0) {
-               if(Class3_Sub13_Sub34.aLong3411 > Class5.method830((byte) -55) + -5000L) {
+            if(~Class43.anInt692 == -1) {
+               if(~(Class5.method830((byte)-55) + -5000L) > ~Class3_Sub13_Sub34.aLong3411) {
                   return 0;
                }
 
@@ -131,7 +133,7 @@ final class Class121 {
             int wlUpdateStamp;
             int var2;
             if(1 == Class43.anInt692) {
-               if(Class3_Sub9.aClass64_2318.anInt978 == 2) {
+               if(-3 == ~Class3_Sub9.aClass64_2318.anInt978) {
                   return Class3_Sub13_Sub3.method179((byte)92, 1001);
                }
 
@@ -175,7 +177,7 @@ final class Class121 {
                Class43.anInt692 = 2;
             }
 
-            if(Class43.anInt692 == 2) {
+            if(-3 == ~Class43.anInt692) {
                if(2 > Class3_Sub15.aClass89_2429.availableBytes(-18358)) {
                   return -1;
                }
@@ -188,7 +190,7 @@ final class Class121 {
                Class3_Sub13_Sub33.aByteArray3396 = new byte[Class66.wlPacketSize];
             }
 
-            if(Class43.anInt692 == 3) {
+            if(-4 == ~Class43.anInt692) {
                wlUpdateStamp = Class3_Sub15.aClass89_2429.availableBytes(var0 + -48342);
                if(1 > wlUpdateStamp) {
                   return -1;
@@ -248,11 +250,11 @@ final class Class121 {
          } else {
             int var4 = var2 >> 7;
             int var5 = var3 >> 7;
-            if(var4 >= 0 && 0 <= var5 && var4 <= 103 && 103 >= var5) {
+            if(-1 >= ~var4 && 0 <= var5 && var4 <= 103 && 103 >= var5) {
                int var7 = 127 & var2;
                int var8 = var3 & 127;
                int var6 = var0;
-               if(3 > var0 && (2 & Class9.aByteArrayArrayArray113[1][var4][var5]) == 2) {
+               if(3 > var0 && ~(2 & Class9.aByteArrayArrayArray113[1][var4][var5]) == -3) {
                   var6 = var0 + 1;
                }
 

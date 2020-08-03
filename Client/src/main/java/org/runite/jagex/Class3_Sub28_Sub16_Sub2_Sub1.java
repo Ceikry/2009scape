@@ -754,12 +754,12 @@ final class Class3_Sub28_Sub16_Sub2_Sub1 extends Class3_Sub28_Sub16_Sub2 {
          for(int var11 = var9; var11 < 0; ++var11) {
             var2 = var1[var3--];
             int var12 = var2 >>> 24;
-            if(var12 == 0) {
-               ++var4;
-            } else {
+            if(var12 != 0) {
                int var13 = 256 - var12;
                int var14 = var0[var4];
                var0[var4++] = ((var2 & 16711935) * var12 + (var14 & 16711935) * var13 & -16711936) + ((var2 & '\uff00') * var12 + (var14 & '\uff00') * var13 & 16711680) >>> 8;
+            } else {
+               ++var4;
             }
          }
 
@@ -927,12 +927,12 @@ final class Class3_Sub28_Sub16_Sub2_Sub1 extends Class3_Sub28_Sub16_Sub2 {
          for(int var11 = var9; var11 < 0; ++var11) {
             var2 = var1[var3++];
             int var12 = var2 >>> 24;
-            if(var12 == 0) {
-               ++var4;
-            } else {
+            if(var12 != 0) {
                int var13 = 256 - var12;
                int var14 = var0[var4];
                var0[var4++] = ((var2 & 16711935) * var12 + (var14 & 16711935) * var13 & -16711936) + ((var2 & '\uff00') * var12 + (var14 & '\uff00') * var13 & 16711680) >>> 8;
+            } else {
+               ++var4;
             }
          }
 
@@ -967,15 +967,15 @@ final class Class3_Sub28_Sub16_Sub2_Sub1 extends Class3_Sub28_Sub16_Sub2 {
          for(int var15 = -var7; var15 < 0; ++var15) {
             var2 = var1[(var3 >> 16) + var14];
             int var16 = var2 >>> 24;
-            if(var16 == 0) {
-               ++var5;
-            } else {
+            if(var16 != 0) {
                int var17 = 256 - var16;
                int var18 = var0[var5];
                var0[var5++] = ((var2 & 16711935) * var16 + (var18 & 16711935) * var17 & -16711936) + ((var2 & '\uff00') * var16 + (var18 & '\uff00') * var17 & 16711680) >>> 8;
+            } else {
+               ++var5;
             }
 
-             var3 += var9;
+            var3 += var9;
          }
 
          var4 += var10;

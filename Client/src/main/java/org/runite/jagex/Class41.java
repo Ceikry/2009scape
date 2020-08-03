@@ -26,7 +26,7 @@ final class Class41 {
                Class3_Sub13_Sub16.aClass44_Sub1Array3201[var2] = var9;
 
                for(int var10 = var4; var10 < var2; ++var10) {
-                  if(RSString.method1535(var9, Class3_Sub13_Sub16.aClass44_Sub1Array3201[var10], 5730, var0, var1, var3, var5) <= 0) {
+                  if(~RSString.method1535(var9, Class3_Sub13_Sub16.aClass44_Sub1Array3201[var10], 5730, var0, var1, var3, var5) >= -1) {
                      WorldListEntry var11 = Class3_Sub13_Sub16.aClass44_Sub1Array3201[var10];
                      Class3_Sub13_Sub16.aClass44_Sub1Array3201[var10] = Class3_Sub13_Sub16.aClass44_Sub1Array3201[var8];
                      Class3_Sub13_Sub16.aClass44_Sub1Array3201[var8++] = var11;
@@ -59,7 +59,7 @@ final class Class41 {
             anInt688 = -64;
          }
 
-         if(var1 >= 1 && var4 >= 1 && 102 >= var1 && var4 <= 102) {
+         if(-2 >= ~var1 && var4 >= 1 && 102 >= var1 && var4 <= 102) {
             int var8;
             if(!NPC.method1986(41) && 0 == (2 & Class9.aByteArrayArrayArray113[0][var1][var4])) {
                var8 = var2;
@@ -73,7 +73,7 @@ final class Class41 {
             }
 
             var8 = var2;
-            if(var2 < 3 && (2 & Class9.aByteArrayArrayArray113[1][var1][var4]) == 2) {
+            if(-4 < ~var2 && -3 == ~(2 & Class9.aByteArrayArrayArray113[1][var1][var4])) {
                var8 = var2 + 1;
             }
 
@@ -132,7 +132,7 @@ final class Class41 {
          synchronized(var3) {
             Object var10000;
             try {
-               if((long) (var1 * 6 + 6) > this.aClass30_683.method976(0)) {
+               if(~this.aClass30_683.method976(0) > ~((long)(var1 * 6 + 6))) {
                   var10000 = null;
                   return (byte[])var10000;
                }
@@ -147,12 +147,12 @@ final class Class41 {
                   return (byte[])var10000;
                }
 
-               if(0 < var5 && this.aClass30_681.method976(0) / 520L >= (long) var5) {
+               if(0 < var5 && ~((long)var5) >= ~(this.aClass30_681.method976(0) / 520L)) {
                   byte[] var7 = new byte[var4];
                   int var8 = 0;
 
                   int var13;
-                  for(int var9 = 0; var4 > var8; var5 = var13) {
+                  for(int var9 = 0; ~var8 > ~var4; var5 = var13) {
                      if(0 == var5) {
                         var10000 = null;
                         return (byte[])var10000;
@@ -160,7 +160,7 @@ final class Class41 {
 
                      int var10 = -var8 + var4;
                      this.aClass30_681.method984(-113, (long)(520 * var5));
-                     if(var10 > 512) {
+                     if(-513 > ~var10) {
                         var10 = 512;
                      }
 
@@ -179,7 +179,7 @@ final class Class41 {
                         return (byte[])var10000;
                      }
 
-                     for(int var15 = 0; var10 > var15; ++var15) {
+                     for(int var15 = 0; ~var15 > ~var10; ++var15) {
                         var7[var8++] = Class162.aByteArray2040[var15 + 8];
                      }
 
@@ -204,8 +204,8 @@ final class Class41 {
 
    static final RSString method1052(int var0, long var1) {
       try {
-         if(var1 > 0 && var1 < 6582952005840035281L) {
-            if(var1 % 37L == 0) {
+         if(-1L > ~var1 && -6582952005840035282L < ~var1) {
+            if(-1L == ~(var1 % 37L)) {
                return null;
             } else {
                int var3 = 0;
@@ -275,13 +275,13 @@ final class Class41 {
                   this.aClass30_683.method984(-116, (long)(6 * var3));
                   this.aClass30_683.method978(0, Class162.aByteArray2040, 6, 0);
                   var7 = (16711680 & Class162.aByteArray2040[3] << 16) + ('\uff00' & Class162.aByteArray2040[4] << 8) + (Class162.aByteArray2040[5] & 255);
-                  if(var7 <= 0 || (long) var7 > this.aClass30_681.method976(0) / 520L) {
+                  if(~var7 >= -1 || ~(this.aClass30_681.method976(0) / 520L) > ~((long)var7)) {
                      var10000 = false;
                      return var10000;
                   }
                } else {
                   var7 = (int)((this.aClass30_681.method976(var1 + -87) - -519L) / 520L);
-                  if(var7 == 0) {
+                  if(-1 == ~var7) {
                      var7 = 1;
                   }
                }
@@ -302,7 +302,7 @@ final class Class41 {
                this.aClass30_683.method983(Class162.aByteArray2040, 0, var1 ^ -903171097, 6);
 
                while(true) {
-                  if(var2 > var8) {
+                  if(~var8 > ~var2) {
                      label146: {
                         int var10 = 0;
                         int var11;
@@ -319,38 +319,38 @@ final class Class41 {
                            var11 = (255 & Class162.aByteArray2040[1]) + ((Class162.aByteArray2040[0] & 255) << 8);
                            int var13 = 255 & Class162.aByteArray2040[7];
                            int var12 = (Class162.aByteArray2040[3] & 255) + (Class162.aByteArray2040[2] << 8 & '\uff00');
-                           if(var11 != var3 || var12 != var9 || var13 != this.cacheIndex) {
+                           if(var11 != var3 || ~var9 != ~var12 || ~this.cacheIndex != ~var13) {
                               var10000 = false;
                               return var10000;
                            }
 
-                           if(var10 < 0 || this.aClass30_681.method976(0) / 520L < (long) var10) {
+                           if(var10 < 0 || ~((long)var10) < ~(this.aClass30_681.method976(0) / 520L)) {
                               var10000 = false;
                               return var10000;
                            }
                         }
 
                         var11 = -var8 + var2;
-                        if(var10 == 0) {
+                        if(~var10 == -1) {
                            var5 = false;
                            var10 = (int)((this.aClass30_681.method976(0) - -519L) / 520L);
-                           if(var10 == 0) {
+                           if(~var10 == -1) {
                               ++var10;
                            }
 
-                           if(var7 == var10) {
+                           if(~var10 == ~var7) {
                               ++var10;
                            }
                         }
 
                         Class162.aByteArray2040[7] = (byte)this.cacheIndex;
                         Class162.aByteArray2040[0] = (byte)(var3 >> 8);
-                        if(-var8 + var2 <= 512) {
+                        if(~(-var8 + var2) >= -513) {
                            var10 = 0;
                         }
 
                         Class162.aByteArray2040[4] = (byte)(var10 >> 16);
-                        if(var11 > 512) {
+                        if(~var11 < -513) {
                            var11 = 512;
                         }
 

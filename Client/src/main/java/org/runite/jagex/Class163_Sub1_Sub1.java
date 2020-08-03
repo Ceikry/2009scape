@@ -36,14 +36,14 @@ final class Class163_Sub1_Sub1 extends Class163_Sub1 {
             aByteArray4005 = (byte[])null;
          }
 
-         if(NPC.method1986(90) || WorldListCountry.localPlane == Class140_Sub3.anInt2745) {
-            if(Class58.anInt909 != WorldListCountry.localPlane && Class3_Sub19.method385(var0 + 0, WorldListCountry.localPlane)) {
+         if(!NPC.method1986(90) && ~Class140_Sub3.anInt2745 != ~WorldListCountry.localPlane) {
+            Class73.method1301(WorldListCountry.localPlane, Class3_Sub7.anInt2294, Class3_Sub28_Sub7.anInt3606, Class102.player.anIntArray2755[0], false, Class102.player.anIntArray2767[0], true);
+         } else {
+            if(~WorldListCountry.localPlane != ~Class58.anInt909 && Class3_Sub19.method385(var0 + 0, WorldListCountry.localPlane)) {
                Class58.anInt909 = WorldListCountry.localPlane;
                RSByteBuffer.method792(var0 + 9179409);
             }
 
-         } else {
-            Class73.method1301(WorldListCountry.localPlane, Class3_Sub7.anInt2294, Class3_Sub28_Sub7.anInt3606, Class102.player.anIntArray2755[0], false, Class102.player.anIntArray2767[0], true);
          }
       } catch (RuntimeException var2) {
          throw Class44.method1067(var2, "ch.E(" + var0 + ')');
@@ -68,7 +68,7 @@ final class Class163_Sub1_Sub1 extends Class163_Sub1 {
             method2215((Component)null, 14);
          }
 
-         if(Class3_Sub13_Sub31.anInt3375 != 0) {
+         if(~Class3_Sub13_Sub31.anInt3375 != -1) {
             try {
                if(1500 < ++Class3_Sub2.anInt2246) {
                   if(null != Class3_Sub15.aClass89_2429) {
@@ -92,14 +92,14 @@ final class Class163_Sub1_Sub1 extends Class163_Sub1 {
                   }
                }
 
-               if(Class3_Sub13_Sub31.anInt3375 == 1) {
+               if(~Class3_Sub13_Sub31.anInt3375 == -2) {
                   Class3_Sub9.aClass64_2318 = Class38.aClass87_665.method1441((byte)8, RuntimeException_Sub1.worldListHost, Class123.anInt1658);
                   Class3_Sub13_Sub31.anInt3375 = 2;
                }
 
                int var1;
-               if(Class3_Sub13_Sub31.anInt3375 == 2) {
-                  if(Class3_Sub9.aClass64_2318.anInt978 == 2) {
+               if(-3 == ~Class3_Sub13_Sub31.anInt3375) {
+                  if(~Class3_Sub9.aClass64_2318.anInt978 == -3) {
                      throw new IOException();
                   }
 
@@ -126,7 +126,7 @@ final class Class163_Sub1_Sub1 extends Class163_Sub1 {
                      Class3_Sub21.aClass155_2491.method2159(113);
                   }
 
-                  if(var1 != 101) {
+                  if(-102 != ~var1) {
                      Class158.anInt2005 = var1;
                      Class3_Sub13_Sub31.anInt3375 = 0;
                      Class3_Sub15.aClass89_2429.close(14821);
@@ -137,8 +137,8 @@ final class Class163_Sub1_Sub1 extends Class163_Sub1 {
                   Class3_Sub13_Sub31.anInt3375 = 3;
                }
 
-               if(Class3_Sub13_Sub31.anInt3375 == 3) {
-                  if(Class3_Sub15.aClass89_2429.availableBytes(-18358) < 2) {
+               if(~Class3_Sub13_Sub31.anInt3375 == -4) {
+                  if(~Class3_Sub15.aClass89_2429.availableBytes(-18358) > -3) {
                      return;
                   }
 
@@ -165,10 +165,10 @@ final class Class163_Sub1_Sub1 extends Class163_Sub1 {
                }
 
                if(Class117.anInt1616 < 1) {
-                  if(Class123.anInt1658 == Class3_Sub28_Sub19.anInt3773) {
-                     Class123.anInt1658 = Class53.anInt867;
-                  } else {
+                  if(Class123.anInt1658 != Class3_Sub28_Sub19.anInt3773) {
                      Class123.anInt1658 = Class3_Sub28_Sub19.anInt3773;
+                  } else {
+                     Class123.anInt1658 = Class53.anInt867;
                   }
 
                   Class3_Sub13_Sub31.anInt3375 = 1;

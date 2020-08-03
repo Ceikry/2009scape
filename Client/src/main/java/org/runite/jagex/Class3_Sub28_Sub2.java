@@ -2,13 +2,25 @@ package org.runite.jagex;
 
 final class Class3_Sub28_Sub2 extends Node {
 
+   private static RSString aClass94_3541 = RSString.createRSString("yellow:");
    static int anInt3542;
+   private static RSString aClass94_3543 = RSString.createRSString("Loading config )2 ");
+   static RSString aClass94_3544 = aClass94_3541;
    Class140_Sub2 aClass140_Sub2_3545;
+   static RSString aClass94_3546 = aClass94_3543;
+   static RSString aClass94_3547 = RSString.createRSString("Speicher wird zugewiesen)3");
+   static RSString aClass94_3548 = aClass94_3541;
 
 
    public static void method534(int var0) {
       try {
+         aClass94_3546 = null;
+         aClass94_3548 = null;
+         aClass94_3543 = null;
          int var1 = 101 % ((-29 - var0) / 45);
+         aClass94_3544 = null;
+         aClass94_3547 = null;
+         aClass94_3541 = null;
       } catch (RuntimeException var2) {
          throw Class44.method1067(var2, "bk.B(" + var0 + ')');
       }

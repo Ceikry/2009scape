@@ -122,36 +122,36 @@ final class Class33 {
       for(int var11 = -var7; var11 < 0; ++var11) {
          int var12;
          for(var12 = var10; var12 < 0; ++var12) {
-            if(var2[var4++] == 0) {
-               ++var5;
-            } else {
+            if(var2[var4++] != 0) {
                var1[var5++] = var3;
+            } else {
+               ++var5;
             }
 
-             if(var2[var4++] == 0) {
-                ++var5;
-             } else {
-                var1[var5++] = var3;
-             }
+            if(var2[var4++] != 0) {
+               var1[var5++] = var3;
+            } else {
+               ++var5;
+            }
 
-             if(var2[var4++] == 0) {
-                ++var5;
-             } else {
-                var1[var5++] = var3;
-             }
+            if(var2[var4++] != 0) {
+               var1[var5++] = var3;
+            } else {
+               ++var5;
+            }
 
-             if(var2[var4++] == 0) {
-                ++var5;
-             } else {
-                var1[var5++] = var3;
-             }
+            if(var2[var4++] != 0) {
+               var1[var5++] = var3;
+            } else {
+               ++var5;
+            }
          }
 
          for(var12 = var6; var12 < 0; ++var12) {
-            if(var2[var4++] == 0) {
-               ++var5;
-            } else {
+            if(var2[var4++] != 0) {
                var1[var5++] = var3;
+            } else {
+               ++var5;
             }
          }
 

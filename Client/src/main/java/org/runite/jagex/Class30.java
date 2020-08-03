@@ -7,7 +7,7 @@ final class Class30 {
 
    private long aLong563;
    private byte[] aByteArray564;
-   static RSString COMMAND_TOGGLE_FPSOFF = RSString.createRSString("::fpsoff");
+   static RSString aClass94_565 = RSString.createRSString("::fpsoff");
    private int anInt566 = 0;
    static RSString cmdChalReq = RSString.createRSString(":chalreq:");
    private long aLong568;
@@ -30,7 +30,7 @@ final class Class30 {
          if(var0) {
             anIntArray574 = null;
             cmdChalReq = null;
-            COMMAND_TOGGLE_FPSOFF = null;
+            aClass94_565 = null;
          }
       } catch (RuntimeException var2) {
          throw Class44.method1067(var2, "en.G(" + var0 + ')');
@@ -48,9 +48,9 @@ final class Class30 {
 
             this.aClass122_573.method1738(127, this.aByteArray572, this.anInt566, 0);
             long var3 = -1L;
-            if(this.aLong571 >= this.aLong576 && this.aLong571 < this.aLong576 + (long) this.anInt575) {
+            if(~this.aLong576 >= ~this.aLong571 && ~(this.aLong576 + (long)this.anInt575) < ~this.aLong571) {
                var3 = this.aLong571;
-            } else if(this.aLong571 <= this.aLong576 && this.aLong571 - -((long) this.anInt566) > this.aLong576) {
+            } else if(this.aLong571 <= this.aLong576 && ~this.aLong576 > ~(this.aLong571 - -((long)this.anInt566))) {
                var3 = this.aLong576;
             }
 
@@ -62,11 +62,11 @@ final class Class30 {
             long var5 = -1L;
             if(this.aLong576 < this.aLong571 - -((long)this.anInt566) && (long)this.anInt575 + this.aLong576 >= (long)this.anInt566 + this.aLong571) {
                var5 = this.aLong571 - -((long)this.anInt566);
-            } else if(this.aLong571 < this.aLong576 - -((long) this.anInt575) && (long)this.anInt566 + this.aLong571 >= (long)this.anInt575 + this.aLong576) {
+            } else if(~(this.aLong576 - -((long)this.anInt575)) < ~this.aLong571 && (long)this.anInt566 + this.aLong571 >= (long)this.anInt575 + this.aLong576) {
                var5 = (long)this.anInt575 + this.aLong576;
             }
 
-            if(-1L < var3 && var3 < var5) {
+            if(-1L < var3 && ~var5 < ~var3) {
                int var7 = (int)(-var3 + var5);
                Class76.method1357(this.aByteArray572, (int)(var3 - this.aLong571), this.aByteArray564, (int)(var3 + -this.aLong576), var7);
             }
@@ -122,7 +122,7 @@ final class Class30 {
             int var9;
             if(this.aLong576 <= this.aLong569 && this.aLong576 + (long)this.anInt575 > this.aLong569) {
                var9 = (int)((long)this.anInt575 - this.aLong569 + this.aLong576);
-               if(var3 < var9) {
+               if(~var9 < ~var3) {
                   var9 = var3;
                }
 
@@ -132,12 +132,12 @@ final class Class30 {
                this.aLong569 += (long)var9;
             }
 
-            if(var3 > this.aByteArray564.length) {
+            if(~this.aByteArray564.length > ~var3) {
                this.aClass122_573.method1737((byte)-10, this.aLong569);
 
                for(this.aLong570 = this.aLong569; 0 < var3; this.aLong569 += (long)var9) {
                   var9 = this.aClass122_573.method1739(var1, 0, var3, var2);
-                  if(var9 == -1) {
+                  if(0 == ~var9) {
                      break;
                   }
 
@@ -145,7 +145,7 @@ final class Class30 {
                   var3 -= var9;
                   var1 += var9;
                }
-            } else if(var3 > 0) {
+            } else if(~var3 < -1) {
                this.method981(4393);
                var9 = var3;
                if(var3 > this.anInt575) {
@@ -159,9 +159,9 @@ final class Class30 {
             }
 
             if(-1L != this.aLong571) {
-               if(this.aLong569 < this.aLong571 && var3 > 0) {
+               if(this.aLong569 < this.aLong571 && ~var3 < -1) {
                   var9 = (int)(-this.aLong569 + this.aLong571) + var1;
-                  if(var9 > var1 - -var3) {
+                  if(~(var1 - -var3) > ~var9) {
                      var9 = var1 + var3;
                   }
 
@@ -176,13 +176,13 @@ final class Class30 {
                long var11 = -1L;
                if((long)this.anInt566 + this.aLong571 > var5 && (long)var8 + var5 >= (long)this.anInt566 + this.aLong571) {
                   var11 = (long)this.anInt566 + this.aLong571;
-               } else if((long) var8 + var5 > this.aLong571 && (long) var8 + var5 <= (long) this.anInt566 + this.aLong571) {
+               } else if(~this.aLong571 > ~((long)var8 + var5) && ~((long)this.anInt566 + this.aLong571) <= ~((long)var8 + var5)) {
                   var11 = (long)var8 + var5;
                }
 
-               if(this.aLong571 >= var5 && this.aLong571 < var5 - -((long) var8)) {
+               if(~var5 >= ~this.aLong571 && ~(var5 - -((long)var8)) < ~this.aLong571) {
                   var16 = this.aLong571;
-               } else if(this.aLong571 <= var5 && var5 < (long)this.anInt566 + this.aLong571) {
+               } else if(~var5 <= ~this.aLong571 && var5 < (long)this.anInt566 + this.aLong571) {
                   var16 = var5;
                }
 
@@ -216,7 +216,7 @@ final class Class30 {
             aClass94_577 = (RSString)null;
          }
 
-         Class73.ClientCommands(var4, false);
+         Class73.method1308(var4, false);
       } catch (RuntimeException var5) {
          throw Class44.method1067(var5, "en.I(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ')');
       }
@@ -250,12 +250,12 @@ final class Class30 {
          int var3;
          for(this.aLong576 = this.aLong569; this.aByteArray564.length > this.anInt575; this.anInt575 += var3) {
             int var2 = this.aByteArray564.length + -this.anInt575;
-            if(var2 > 200000000) {
+            if(-200000001 > ~var2) {
                var2 = 200000000;
             }
 
             var3 = this.aClass122_573.method1739(this.anInt575, 0, var2, this.aByteArray564);
-            if(var3 == -1) {
+            if(0 == ~var3) {
                break;
             }
 
@@ -282,15 +282,15 @@ final class Class30 {
    final void method983(byte[] var1, int var2, int var3, int var4) throws IOException {
       try {
          try {
-            if((long) var4 + this.aLong569 > this.aLong568) {
+            if(~this.aLong568 > ~((long)var4 + this.aLong569)) {
                this.aLong568 = (long)var4 + this.aLong569;
             }
 
-            if(this.aLong571 != -1 && (this.aLong571 > this.aLong569 || (long) this.anInt566 + this.aLong571 < this.aLong569)) {
+            if(0L != ~this.aLong571 && (this.aLong571 > this.aLong569 || ~this.aLong569 < ~((long)this.anInt566 + this.aLong571))) {
                this.method975((byte)124);
             }
 
-            if(this.aLong571 != -1 && (long)this.aByteArray572.length + this.aLong571 < (long)var4 + this.aLong569) {
+            if(~this.aLong571 != 0L && (long)this.aByteArray572.length + this.aLong571 < (long)var4 + this.aLong569) {
                int var5 = (int)((long)this.aByteArray572.length - this.aLong569 + this.aLong571);
                var4 -= var5;
                Class76.method1357(var1, var2, this.aByteArray572, (int)(this.aLong569 + -this.aLong571), var5);
@@ -300,17 +300,17 @@ final class Class30 {
                var2 += var5;
             }
 
-            if(var4 > this.aByteArray572.length) {
-               if(this.aLong570 != this.aLong569) {
+            if(~this.aByteArray572.length > ~var4) {
+               if(~this.aLong569 != ~this.aLong570) {
                   this.aClass122_573.method1737((byte)-10, this.aLong569);
                   this.aLong570 = this.aLong569;
                }
 
                this.aClass122_573.method1738(111, var1, var4, var2);
                long var12 = -1L;
-               if(this.aLong576 <= this.aLong569 && this.aLong569 < (long) this.anInt575 + this.aLong576) {
+               if(this.aLong576 <= this.aLong569 && ~((long)this.anInt575 + this.aLong576) < ~this.aLong569) {
                   var12 = this.aLong569;
-               } else if(this.aLong576 >= this.aLong569 && this.aLong576 < (long) var4 + this.aLong569) {
+               } else if(~this.aLong569 >= ~this.aLong576 && ~((long)var4 + this.aLong569) < ~this.aLong576) {
                   var12 = this.aLong576;
                }
 
@@ -320,13 +320,13 @@ final class Class30 {
                   this.aLong563 = this.aLong570;
                }
 
-               if(this.aLong569 + (long)var4 > this.aLong576 && this.aLong576 - -((long) this.anInt575) >= this.aLong569 - -((long) var4)) {
+               if(this.aLong569 + (long)var4 > this.aLong576 && ~(this.aLong569 - -((long)var4)) >= ~(this.aLong576 - -((long)this.anInt575))) {
                   var7 = (long)var4 + this.aLong569;
-               } else if(this.aLong569 < this.aLong576 + (long) this.anInt575 && this.aLong569 + (long)var4 >= (long)this.anInt575 + this.aLong576) {
+               } else if(~(this.aLong576 + (long)this.anInt575) < ~this.aLong569 && this.aLong569 + (long)var4 >= (long)this.anInt575 + this.aLong576) {
                   var7 = (long)this.anInt575 + this.aLong576;
                }
 
-               if(var12 > -1 && var7 > var12) {
+               if(~var12 < 0L && var7 > var12) {
                   int var9 = (int)(-var12 + var7);
                   Class76.method1357(var1, (int)(-this.aLong569 + var12 + (long)var2), this.aByteArray564, (int)(-this.aLong576 + var12), var9);
                }
@@ -342,7 +342,7 @@ final class Class30 {
 
                Class76.method1357(var1, var2, this.aByteArray572, (int)(this.aLong569 + -this.aLong571), var4);
                this.aLong569 += (long)var4;
-               if(-this.aLong571 + this.aLong569 > (long) this.anInt566) {
+               if(~((long)this.anInt566) > ~(-this.aLong571 + this.aLong569)) {
                   this.anInt566 = (int)(-this.aLong571 + this.aLong569);
                }
 

@@ -1,7 +1,5 @@
 package org.runite.jagex;
 
-import org.runite.Configurations;
-
 final class Class1 {
 
    static int[] anIntArray52 = new int[4096];
@@ -54,10 +52,10 @@ final class Class1 {
          boolean[] var75;
          boolean[] var81;
          for(var13 = 1; var13 <= 102; ++var13) {
-            for(var14 = 1; var14 <= 102; ++var14) {
+            for(var14 = 1; ~var14 >= -103; ++var14) {
                var15 = var9[var13][var14] & 255;
                var16 = 255 & var10[var13][var14];
-               if(var16 != 0) {
+               if(~var16 != -1) {
                   Class168 var17 = Class3_Sub13_Sub37.method350((byte)-81, -1 + var16);
                   if(var17.anInt2103 == -1) {
                      continue;
@@ -73,7 +71,7 @@ final class Class1 {
                   }
                }
 
-               if((var9[var13][var14] & 255) != 0 || var16 != 0 && var8[var13][var14] == 0) {
+               if(-1 != ~(var9[var13][var14] & 255) || ~var16 != -1 && ~var8[var13][var14] == -1) {
                   var58 = 0;
                   int var60 = 0;
                   var21 = 0;
@@ -92,11 +90,9 @@ final class Class1 {
                   int var34;
                   byte var32;
                   boolean var70;
-                  if(0 == var27 || var27 == var16) {
-                     var70 = false;
-                  } else {
+                  if(0 != var27 && ~var16 != ~var27) {
                      var31 = Class3_Sub13_Sub37.method350((byte)106, -1 + var27);
-                     if(var31.aBoolean2092 && var31.anInt2103 != -1) {
+                     if(var31.aBoolean2092 && ~var31.anInt2103 != 0) {
                         var32 = var5[var13 + -1][var14 - -1];
                         var33 = var8[-1 + var13][var14 + 1];
                         var34 = Class75_Sub2.anIntArray2642[4 * var33 - -(2 + var32 & 3)];
@@ -105,12 +101,12 @@ final class Class1 {
                            var70 = false;
                         } else {
                            for(var36 = 0; 8 > var36; ++var36) {
-                              if(var58 == var36) {
+                              if(~var36 == ~var58) {
                                  var63[var58++] = var27;
                                  break;
                               }
 
-                              if(var63[var36] == var27) {
+                              if(~var27 == ~var63[var36]) {
                                  break;
                               }
                            }
@@ -118,14 +114,14 @@ final class Class1 {
                      } else {
                         var70 = false;
                      }
+                  } else {
+                     var70 = false;
                   }
 
                   boolean var69;
-                  if(var28 == 0 || var28 == var16) {
-                     var69 = false;
-                  } else {
+                  if(-1 != ~var28 && var28 != var16) {
                      var31 = Class3_Sub13_Sub37.method350((byte)114, -1 + var28);
-                     if(var31.aBoolean2092 && var31.anInt2103 != -1) {
+                     if(var31.aBoolean2092 && 0 != ~var31.anInt2103) {
                         var32 = var5[-1 + var13][var14 + -1];
                         var33 = var8[-1 + var13][-1 + var14];
                         var34 = Class75_Sub2.anIntArray2642[var33 * 4 - -(var32 & 3)];
@@ -133,13 +129,13 @@ final class Class1 {
                         if(Class3_Sub13_Sub39.aBooleanArrayArray3468[var34][1] && Class3_Sub13_Sub39.aBooleanArrayArray3468[var35][0]) {
                            var69 = false;
                         } else {
-                           for(var36 = 0; var36 < 8; ++var36) {
-                              if(var36 == var58) {
+                           for(var36 = 0; ~var36 > -9; ++var36) {
+                              if(~var58 == ~var36) {
                                  var63[var58++] = var28;
                                  break;
                               }
 
-                              if(var28 == var63[var36]) {
+                              if(~var63[var36] == ~var28) {
                                  break;
                               }
                            }
@@ -147,14 +143,14 @@ final class Class1 {
                      } else {
                         var69 = false;
                      }
+                  } else {
+                     var69 = false;
                   }
 
                   boolean var72;
-                  if(var29 == 0 || var29 == var16) {
-                     var72 = false;
-                  } else {
+                  if(-1 != ~var29 && ~var16 != ~var29) {
                      var31 = Class3_Sub13_Sub37.method350((byte)107, var29 - 1);
-                     if(var31.aBoolean2092 && var31.anInt2103 != -1) {
+                     if(var31.aBoolean2092 && ~var31.anInt2103 != 0) {
                         var32 = var5[1 + var13][var14 - 1];
                         var33 = var8[var13 - -1][var14 + -1];
                         var35 = Class75_Sub2.anIntArray2642[4 * var33 + (3 & 1 + var32)];
@@ -162,13 +158,13 @@ final class Class1 {
                         if(Class3_Sub13_Sub39.aBooleanArrayArray3468[var35][1] && Class3_Sub13_Sub39.aBooleanArrayArray3468[var34][0]) {
                            var72 = false;
                         } else {
-                           for(var36 = 0; var36 < 8; ++var36) {
-                              if(var36 == var58) {
+                           for(var36 = 0; ~var36 > -9; ++var36) {
+                              if(~var58 == ~var36) {
                                  var63[var58++] = var29;
                                  break;
                               }
 
-                              if(var63[var36] == var29) {
+                              if(~var29 == ~var63[var36]) {
                                  break;
                               }
                            }
@@ -176,14 +172,14 @@ final class Class1 {
                      } else {
                         var72 = false;
                      }
+                  } else {
+                     var72 = false;
                   }
 
                   boolean var71;
-                  if(var30 == 0 || var16 == var30) {
-                     var71 = false;
-                  } else {
+                  if(var30 != 0 && ~var30 != ~var16) {
                      var31 = Class3_Sub13_Sub37.method350((byte)105, var30 + -1);
-                     if(var31.aBoolean2092 && var31.anInt2103 != -1) {
+                     if(var31.aBoolean2092 && 0 != ~var31.anInt2103) {
                         var32 = var5[var13 - -1][1 + var14];
                         var33 = var8[var13 + 1][1 + var14];
                         var35 = Class75_Sub2.anIntArray2642[4 * var33 + (var32 - -1 & 3)];
@@ -191,13 +187,13 @@ final class Class1 {
                         if(Class3_Sub13_Sub39.aBooleanArrayArray3468[var34][1] && Class3_Sub13_Sub39.aBooleanArrayArray3468[var35][0]) {
                            var71 = false;
                         } else {
-                           for(var36 = 0; var36 < 8; ++var36) {
+                           for(var36 = 0; ~var36 > -9; ++var36) {
                               if(var58 == var36) {
                                  var63[var58++] = var30;
                                  break;
                               }
 
-                              if(var63[var36] == var30) {
+                              if(~var30 == ~var63[var36]) {
                                  break;
                               }
                            }
@@ -205,15 +201,17 @@ final class Class1 {
                      } else {
                         var71 = false;
                      }
+                  } else {
+                     var71 = false;
                   }
 
-                  if(var23 != 0 && var23 != var16) {
+                  if(-1 != ~var23 && ~var16 != ~var23) {
                      var31 = Class3_Sub13_Sub37.method350((byte)-29, -1 + var23);
                      if(var31.aBoolean2092 && var31.anInt2103 != -1) {
                         var60 = Class75_Sub2.anIntArray2642[4 * var8[var13][var14 - -1] + (var5[var13][var14 - -1] - -2 & 3)];
 
-                        for(var74 = 0; var74 < 8; ++var74) {
-                           if(var74 == var58) {
+                        for(var74 = 0; ~var74 > -9; ++var74) {
+                           if(~var58 == ~var74) {
                               var63[var58++] = var23;
                               break;
                            }
@@ -225,31 +223,31 @@ final class Class1 {
                      }
                   }
 
-                  if(0 != var24 && var24 != var16) {
+                  if(0 != var24 && ~var16 != ~var24) {
                      var31 = Class3_Sub13_Sub37.method350((byte)-32, var24 + -1);
                      if(var31.aBoolean2092 && var31.anInt2103 != -1) {
                         var65 = Class75_Sub2.anIntArray2642[(3 & 3 + var5[var13 + -1][var14]) + var8[var13 + -1][var14] * 4];
 
-                        for(var74 = 0; var74 < 8; ++var74) {
+                        for(var74 = 0; -9 < ~var74; ++var74) {
                            if(var58 == var74) {
                               var63[var58++] = var24;
                               break;
                            }
 
-                           if(var63[var74] == var24) {
+                           if(~var24 == ~var63[var74]) {
                               break;
                            }
                         }
                      }
                   }
 
-                  if(var25 != 0 && var16 != var25) {
+                  if(-1 != ~var25 && var16 != var25) {
                      var31 = Class3_Sub13_Sub37.method350((byte)112, -1 + var25);
-                     if(var31.aBoolean2092 && var31.anInt2103 != -1) {
+                     if(var31.aBoolean2092 && ~var31.anInt2103 != 0) {
                         var21 = Class75_Sub2.anIntArray2642[(3 & var5[var13][var14 + -1]) + var8[var13][var14 + -1] * 4];
 
-                        for(var74 = 0; var74 < 8; ++var74) {
-                           if(var58 == var74) {
+                        for(var74 = 0; ~var74 > -9; ++var74) {
+                           if(~var74 == ~var58) {
                               var63[var58++] = var25;
                               break;
                            }
@@ -263,11 +261,11 @@ final class Class1 {
 
                   if(0 != var26 && var16 != var26) {
                      var31 = Class3_Sub13_Sub37.method350((byte)-41, var26 - 1);
-                     if(var31.aBoolean2092 && var31.anInt2103 != -1) {
+                     if(var31.aBoolean2092 && ~var31.anInt2103 != 0) {
                         var22 = Class75_Sub2.anIntArray2642[(3 & var5[var13 + 1][var14] + 1) + 4 * var8[1 + var13][var14]];
 
-                        for(var74 = 0; var74 < 8; ++var74) {
-                           if(var74 == var58) {
+                        for(var74 = 0; ~var74 > -9; ++var74) {
+                           if(~var58 == ~var74) {
                               var63[var58++] = var26;
                               break;
                            }
@@ -281,8 +279,8 @@ final class Class1 {
 
                   for(var73 = 0; var58 > var73; ++var73) {
                      var74 = var63[var73];
-                     var79 = Class3_Sub13_Sub39.aBooleanArrayArray3468[var74 != var24 ?0:var65];
-                     var75 = Class3_Sub13_Sub39.aBooleanArrayArray3468[var25 != var74 ?0:var21];
+                     var79 = Class3_Sub13_Sub39.aBooleanArrayArray3468[~var24 != ~var74?0:var65];
+                     var75 = Class3_Sub13_Sub39.aBooleanArrayArray3468[~var74 != ~var25?0:var21];
                      boolean[] var80 = Class3_Sub13_Sub39.aBooleanArrayArray3468[var23 == var74?var60:0];
                      var81 = Class3_Sub13_Sub39.aBooleanArrayArray3468[var26 == var74?var22:0];
                      Class168 var37 = Class3_Sub13_Sub37.method350((byte)113, -1 + var74);
@@ -304,12 +302,12 @@ final class Class1 {
          }
 
          for(var13 = 1; 102 >= var13; ++var13) {
-            for(var14 = 1; var14 <= 102; ++var14) {
+            for(var14 = 1; ~var14 >= -103; ++var14) {
                var16 = 255 & var9[var13][var14];
                var58 = 255 & var10[var13][var14];
                if((8 & var11[var3][var13][var14]) != 0) {
                   var15 = 0;
-               } else if(2 == (var11[1][var13][var14] & 2) && var3 > 0) {
+               } else if(2 == (var11[1][var13][var14] & 2) && ~var3 < -1) {
                   var15 = var3 + -1;
                } else {
                   var15 = var3;
@@ -328,10 +326,10 @@ final class Class1 {
                   var23 = Class3_Sub13_Sub4.method190(var62.anInt2095, var62.anInt2103, (byte)65, var6[var13 + 1][var14]);
                   var24 = Class3_Sub13_Sub4.method190(var62.anInt2095, var62.anInt2103, (byte)68, var6[1 + var13][var14 + 1]);
                   var25 = Class3_Sub13_Sub4.method190(var62.anInt2095, var62.anInt2103, (byte)-84, var6[var13][var14 - -1]);
-                  Class29.method971(var22, var2, var1, var13, var0, var23, var68, var15, var24, (byte)88, var16 != 0 && var62.aBoolean2092, var67, var14, var4, var25, var66);
+                  Class29.method971(var22, var2, var1, var13, var0, var23, var68, var15, var24, (byte)88, ~var16 != -1 && var62.aBoolean2092, var67, var14, var4, var25, var66);
                }
 
-               if((var9[var13][var14] & 255) != 0 || var58 != 0 && 0 == var8[var13][var14]) {
+               if(~(var9[var13][var14] & 255) != -1 || ~var58 != -1 && 0 == var8[var13][var14]) {
                   int[] var64 = new int[8];
                   var65 = 0;
                   int var61 = 0;
@@ -349,9 +347,7 @@ final class Class1 {
                   Class168 var76;
                   byte var77;
                   int var83;
-                  if(0 == var28 || var28 == var58) {
-                     var28 = 0;
-                  } else {
+                  if(0 != var28 && var28 != var58) {
                      var76 = Class3_Sub13_Sub37.method350((byte)-88, -1 + var28);
                      if(var76.aBoolean2092 && var76.anInt2103 != -1) {
                         var33 = var5[var13 + -1][1 + var14];
@@ -361,13 +357,13 @@ final class Class1 {
                         if(Class3_Sub13_Sub39.aBooleanArrayArray3468[var36][1] && Class3_Sub13_Sub39.aBooleanArrayArray3468[var35][0]) {
                            var28 = 0;
                         } else {
-                           for(var83 = 0; var83 < 8; ++var83) {
+                           for(var83 = 0; -9 < ~var83; ++var83) {
                               if(var61 == var83) {
                                  var64[var61++] = var28;
                                  break;
                               }
 
-                              if(var28 == var64[var83]) {
+                              if(~var64[var83] == ~var28) {
                                  break;
                               }
                            }
@@ -375,11 +371,11 @@ final class Class1 {
                      } else {
                         var28 = 0;
                      }
+                  } else {
+                     var28 = 0;
                   }
 
-                  if(0 == var29 || var29 == var58) {
-                     var29 = 0;
-                  } else {
+                  if(0 != var29 && ~var58 != ~var29) {
                      var76 = Class3_Sub13_Sub37.method350((byte)-87, -1 + var29);
                      if(var76.aBoolean2092 && -1 != var76.anInt2103) {
                         var33 = var5[var13 + -1][-1 + var14];
@@ -403,11 +399,11 @@ final class Class1 {
                      } else {
                         var29 = 0;
                      }
+                  } else {
+                     var29 = 0;
                   }
 
-                  if(var30 == 0 || var58 == var30) {
-                     var30 = 0;
-                  } else {
+                  if(var30 != 0 && ~var30 != ~var58) {
                      var76 = Class3_Sub13_Sub37.method350((byte)-123, -1 + var30);
                      if(var76.aBoolean2092 && -1 != var76.anInt2103) {
                         var33 = var5[1 + var13][var14 - 1];
@@ -418,7 +414,7 @@ final class Class1 {
                            var30 = 0;
                         } else {
                            for(var83 = 0; 8 > var83; ++var83) {
-                              if(var61 == var83) {
+                              if(~var83 == ~var61) {
                                  var64[var61++] = var30;
                                  break;
                               }
@@ -431,11 +427,11 @@ final class Class1 {
                      } else {
                         var30 = 0;
                      }
+                  } else {
+                     var30 = 0;
                   }
 
-                  if(var73 == 0 || var73 == var58) {
-                     var73 = 0;
-                  } else {
+                  if(~var73 != -1 && ~var58 != ~var73) {
                      var76 = Class3_Sub13_Sub37.method350((byte)119, -1 + var73);
                      if(var76.aBoolean2092 && var76.anInt2103 != -1) {
                         var77 = var8[1 + var13][1 + var14];
@@ -445,8 +441,8 @@ final class Class1 {
                         if(Class3_Sub13_Sub39.aBooleanArrayArray3468[var35][1] && Class3_Sub13_Sub39.aBooleanArrayArray3468[var36][0]) {
                            var73 = 0;
                         } else {
-                           for(var83 = 0; var83 < 8; ++var83) {
-                              if(var61 == var83) {
+                           for(var83 = 0; ~var83 > -9; ++var83) {
+                              if(~var83 == ~var61) {
                                  var64[var61++] = var73;
                                  break;
                               }
@@ -459,21 +455,23 @@ final class Class1 {
                      } else {
                         var73 = 0;
                      }
+                  } else {
+                     var73 = 0;
                   }
 
                   int var78;
-                  if(var24 != 0 && var58 != var24) {
+                  if(-1 != ~var24 && ~var24 != ~var58) {
                      var76 = Class3_Sub13_Sub37.method350((byte)113, var24 - 1);
                      if(var76.aBoolean2092 && -1 != var76.anInt2103) {
                         var65 = Class75_Sub2.anIntArray2642[var8[var13][var14 - -1] * 4 + (2 + var5[var13][var14 - -1] & 3)];
 
                         for(var78 = 0; 8 > var78; ++var78) {
-                           if(var61 == var78) {
+                           if(~var78 == ~var61) {
                               var64[var61++] = var24;
                               break;
                            }
 
-                           if(var24 == var64[var78]) {
+                           if(~var64[var78] == ~var24) {
                               break;
                            }
                         }
@@ -482,11 +480,11 @@ final class Class1 {
 
                   if(var25 != 0 && var58 != var25) {
                      var76 = Class3_Sub13_Sub37.method350((byte)-103, var25 + -1);
-                     if(var76.aBoolean2092 && var76.anInt2103 != -1) {
+                     if(var76.aBoolean2092 && 0 != ~var76.anInt2103) {
                         var21 = Class75_Sub2.anIntArray2642[(3 & var5[var13 - 1][var14] - -3) + 4 * var8[var13 + -1][var14]];
 
                         for(var78 = 0; var78 < 8; ++var78) {
-                           if(var78 == var61) {
+                           if(~var61 == ~var78) {
                               var64[var61++] = var25;
                               break;
                            }
@@ -498,18 +496,18 @@ final class Class1 {
                      }
                   }
 
-                  if(var26 != 0 && var58 != var26) {
+                  if(var26 != 0 && ~var26 != ~var58) {
                      var76 = Class3_Sub13_Sub37.method350((byte)126, var26 - 1);
                      if(var76.aBoolean2092 && -1 != var76.anInt2103) {
                         var22 = Class75_Sub2.anIntArray2642[(var5[var13][var14 + -1] & 3) + 4 * var8[var13][-1 + var14]];
 
-                        for(var78 = 0; var78 < 8; ++var78) {
-                           if(var78 == var61) {
+                        for(var78 = 0; ~var78 > -9; ++var78) {
+                           if(~var61 == ~var78) {
                               var64[var61++] = var26;
                               break;
                            }
 
-                           if(var64[var78] == var26) {
+                           if(~var26 == ~var64[var78]) {
                               break;
                            }
                         }
@@ -521,24 +519,24 @@ final class Class1 {
                      if(var76.aBoolean2092 && var76.anInt2103 != -1) {
                         var23 = Class75_Sub2.anIntArray2642[4 * var8[1 + var13][var14] - -(3 & var5[var13 + 1][var14] - -1)];
 
-                        for(var78 = 0; var78 < 8; ++var78) {
-                           if(var61 == var78) {
+                        for(var78 = 0; ~var78 > -9; ++var78) {
+                           if(~var78 == ~var61) {
                               var64[var61++] = var27;
                               break;
                            }
 
-                           if(var27 == var64[var78]) {
+                           if(~var64[var78] == ~var27) {
                               break;
                            }
                         }
                      }
                   }
 
-                  for(var74 = 0; var61 > var74; ++var74) {
+                  for(var74 = 0; ~var74 > ~var61; ++var74) {
                      var78 = var64[var74];
                      var79 = Class3_Sub13_Sub39.aBooleanArrayArray3468[var78 == var24?var65:0];
                      var75 = Class3_Sub13_Sub39.aBooleanArrayArray3468[var25 == var78?var21:0];
-                     var81 = Class3_Sub13_Sub39.aBooleanArrayArray3468[var26 == var78 ?var22:0];
+                     var81 = Class3_Sub13_Sub39.aBooleanArrayArray3468[~var78 == ~var26?var22:0];
                      boolean[] var84 = Class3_Sub13_Sub39.aBooleanArrayArray3468[var78 != var27?0:var23];
                      Class168 var82 = Class3_Sub13_Sub37.method350((byte)121, -1 + var78);
                      Class3_Sub11 var39 = AnimationDefinition.method2052(var12, false, var82);
@@ -547,11 +545,11 @@ final class Class1 {
                      int var41 = 255 | Class3_Sub13_Sub4.method190(var82.anInt2095, var82.anInt2103, (byte)-85, var6[1 + var13][var14]) << 8;
                      int var42 = Class3_Sub13_Sub4.method190(var82.anInt2095, var82.anInt2103, (byte)123, var6[var13 - -1][var14 - -1]) << 8 | 255;
                      int var43 = 255 | Class3_Sub13_Sub4.method190(var82.anInt2095, var82.anInt2103, (byte)106, var6[var13][var14 - -1]) << 8;
-                     boolean var48 = var29 != var78 && var81[0] && var75[1];
-                     boolean var47 = var73 != var78 && var79[0] && var84[1];
+                     boolean var48 = ~var78 != ~var29 && var81[0] && var75[1];
+                     boolean var47 = ~var78 != ~var73 && var79[0] && var84[1];
                      boolean var46 = var28 != var78 && var75[0] && var79[1];
                      int var85 = var44 + -2 + var79.length;
-                     boolean var49 = var30 != var78 && var84[0] && var81[1];
+                     boolean var49 = ~var78 != ~var30 && var84[0] && var81[1];
                      var85 += -2 + var75.length;
                      var85 += var81.length - 2;
                      var85 += -2 + var84.length;
@@ -565,7 +563,7 @@ final class Class1 {
                      var85 = var44 + 1;
                      var45[var44] = var50;
                      var45[var85++] = var52;
-                     if(var79.length > 2) {
+                     if(-3 > ~var79.length) {
                         var45[var85++] = Class121.method1734(var43, 0.0F, var40, var41, (int[][])null, var2, var13, var4, var42, (byte)-117, 0, var79[2], var39, var1, var14, 64, var0, 128);
                      }
 
@@ -580,7 +578,7 @@ final class Class1 {
                      }
 
                      var45[var85++] = var54;
-                     if(var84.length > 2) {
+                     if(-3 > ~var84.length) {
                         var45[var85++] = Class121.method1734(var43, 0.0F, var40, var41, (int[][])null, var2, var13, var4, var42, (byte)-127, 0, var84[2], var39, var1, var14, 128, var0, 64);
                      }
 
@@ -592,10 +590,10 @@ final class Class1 {
          }
 
          for(var56 = (Class3_Sub11)var12.method1776(62); null != var56; var56 = (Class3_Sub11)var12.method1778(-80)) {
-            if(var56.anInt2343 == 0) {
-               var56.method86(-1024);
-            } else {
+            if(-1 != ~var56.anInt2343) {
                var56.method148();
+            } else {
+               var56.method86(-1024);
             }
          }
 
@@ -604,7 +602,7 @@ final class Class1 {
          long[] var59 = new long[var13];
          var12.method1782(var57, var7 + 83);
 
-         for(var16 = var7; var16 < var13; ++var16) {
+         for(var16 = var7; ~var13 < ~var16; ++var16) {
             var59[var16] = var57[var16].aLong71;
          }
 
@@ -640,7 +638,7 @@ final class Class1 {
             Class74.method1323(var0, var4, var2, var1, 0);
          }
 
-         if(Class140_Sub3.anInt2737 >= 100) {
+         if(~Class140_Sub3.anInt2737 <= -101) {
             if(null == Class36.aClass3_Sub28_Sub16_637 || var2 != Class36.aClass3_Sub28_Sub16_637.anInt3707 || Class36.aClass3_Sub28_Sub16_637.anInt3696 != var1) {
                Class3_Sub28_Sub16_Sub2 var5 = new Class3_Sub28_Sub16_Sub2(var2, var1);
                Class74.method1319(var5.anIntArray4081, var2, var1);
@@ -668,7 +666,7 @@ final class Class1 {
             int var15 = var0 + var2 * Class60.anInt930 / Class23.anInt455;
             int var7 = var2 * Class49.anInt817 / Class23.anInt455;
             int var9 = 16711680;
-            if(Class158.anInt2014 == 1) {
+            if(-2 == ~Class158.anInt2014) {
                var9 = 16777215;
             }
 
@@ -680,16 +678,16 @@ final class Class1 {
                Class74.method1311(var15, var6, var7, var8, var9);
             }
 
-            if(Class3_Sub28_Sub16.anInt3704 > 0) {
+            if(~Class3_Sub28_Sub16.anInt3704 < -1) {
                int var10;
-               if(Class3_Sub28_Sub8.anInt3611 > 10) {
+               if(-11 > ~Class3_Sub28_Sub8.anInt3611) {
                   var10 = (-Class3_Sub28_Sub8.anInt3611 + 20) * 25;
                } else {
                   var10 = 25 * Class3_Sub28_Sub8.anInt3611;
                }
 
                for(Class3_Sub23 var11 = (Class3_Sub23)Class84.aClass61_1162.method1222(); var11 != null; var11 = (Class3_Sub23)Class84.aClass61_1162.method1221()) {
-                  if(Class8.anInt101 == var11.anInt2532) {
+                  if(~var11.anInt2532 == ~Class8.anInt101) {
                      int var13 = var4 - -(var11.anInt2539 * var1 / Class108.anInt1460);
                      int var12 = var2 * var11.anInt2531 / Class23.anInt455 + var0;
                      if(HDToolKit.highDetail) {
@@ -713,7 +711,7 @@ final class Class1 {
       }
 
       aBooleanArray54 = new boolean[8];
-      aClass94_53 = RSString.createRSString(Configurations.LOGIN_THEME_SONG);
+      aClass94_53 = RSString.createRSString("scape main");
       anInt57 = 0;
       aClass94_58 = RSString.createRSString("<col=ffffff> )4 ");
    }

@@ -29,10 +29,7 @@ object PickupHandler {
      */
 	@JvmStatic
 	fun take(player: Player, item: GroundItem): Boolean {
-        if (item.location == null) {
-            player.packetDispatch.sendMessage("Invalid ground item!")
-            return true
-        }
+        item.location ?: return true
         if (!GroundItemManager.getItems().contains(item)) {
             player.packetDispatch.sendMessage("Too late!")
             return true

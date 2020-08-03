@@ -54,29 +54,29 @@ final class Class3_Sub13_Sub22 extends Class3_Sub13 {
                int var7 = var0[var5];
                int var8 = var3[var5];
 
-               for(int var9 = 0; var7 != 0 && var9 < var2.aClass145Array2809.length; ++var9) {
+               for(int var9 = 0; -1 != ~var7 && ~var2.aClass145Array2809.length < ~var9; ++var9) {
                   if((1 & var7) != 0) {
-                     if(var6 == -1) {
+                     if(~var6 == 0) {
                         var2.aClass145Array2809[var9] = null;
                      } else {
                         AnimationDefinition var10 = Client.getAnimationDefinition(var6, (byte)-20);
                         Class145 var12 = var2.aClass145Array2809[var9];
                         int var11 = var10.anInt1845;
                         if(null != var12) {
-                           if(var12.animationId != var6) {
-                              if(Client.getAnimationDefinition(var12.animationId, (byte) -20).anInt1857 <= var10.anInt1857) {
+                           if(~var6 != ~var12.animationId) {
+                              if(~var10.anInt1857 <= ~Client.getAnimationDefinition(var12.animationId, (byte)-20).anInt1857) {
                                  var12 = var2.aClass145Array2809[var9] = null;
                               }
-                           } else if(var11 == 0) {
+                           } else if(~var11 == -1) {
                               var12 = var2.aClass145Array2809[var9] = null;
-                           } else if(var11 == 1) {
+                           } else if(-2 == ~var11) {
                               var12.anInt1893 = 0;
                               var12.anInt1894 = 0;
                               var12.anInt1891 = 1;
                               var12.anInt1897 = 0;
                               var12.anInt1900 = var8;
                               IOHandler.method1470(var2.anInt2829, var10, 183921384, var2.anInt2819, false, 0);
-                           } else if(var11 == 2) {
+                           } else if(~var11 == -3) {
                               var12.anInt1894 = 0;
                            }
                         }

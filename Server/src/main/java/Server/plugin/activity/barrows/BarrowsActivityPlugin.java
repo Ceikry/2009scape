@@ -304,6 +304,7 @@ public final class BarrowsActivityPlugin extends ActivityPlugin {
 					return true;
 				}
 				RewardChest.reward(player);
+				player.setAttribute("/save:barrow:looted",true);
 				PacketRepository.send(CameraViewPacket.class, new CameraContext(player, CameraType.SHAKE, 3, 2, 2, 2, 2));
 				return true;
 			}

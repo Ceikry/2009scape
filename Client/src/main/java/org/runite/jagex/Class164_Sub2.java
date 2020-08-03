@@ -85,7 +85,7 @@ class Class164_Sub2 extends Class164 {
 
    static final int method2247(byte var0, int var1, RSInterface var2) {
       try {
-         if(var2.childDataBuffers != null && var2.childDataBuffers.length > var1) {
+         if(var2.childDataBuffers != null && ~var1 > ~var2.childDataBuffers.length) {
             int var3 = -92 % ((var0 - 71) / 34);
 
             try {
@@ -98,7 +98,7 @@ class Class164_Sub2 extends Class164 {
                   int var9 = 0;
                   int var8 = var4[var6++];
                   byte var10 = 0;
-                  if(var8 == 0) {
+                  if(~var8 == -1) {
                      return var5;
                   }
 
@@ -110,19 +110,19 @@ class Class164_Sub2 extends Class164 {
                      var10 = 2;
                   }
 
-                  if(var8 == 1) {
+                  if(~var8 == -2) {
                      var9 = Class3_Sub13_Sub15.anIntArray3185[var4[var6++]];
                   }
 
-                  if(var8 == 17) {
+                  if(-18 == ~var8) {
                      var10 = 3;
                   }
 
-                  if(var8 == 2) {
+                  if(-3 == ~var8) {
                      var9 = Class3_Sub20.anIntArray2480[var4[var6++]];
                   }
 
-                  if(var8 == 3) {
+                  if(~var8 == -4) {
                      var9 = Class133.anIntArray1743[var4[var6++]];
                   }
 
@@ -130,13 +130,13 @@ class Class164_Sub2 extends Class164 {
                   RSInterface var12;
                   int var13;
                   int var14;
-                  if(var8 == 4) {
+                  if(-5 == ~var8) {
                      var11 = var4[var6++] << 16;
                      var11 += var4[var6++];
                      var12 = Class7.getRSInterface((byte)124, var11);
                      var13 = var4[var6++];
                      if(-1 != var13 && (!Class38.getItemDefinition(var13, (byte)109).membersItem || Class2.isMember)) {
-                        for(var14 = 0; var14 < var12.itemAmounts.length; ++var14) {
+                        for(var14 = 0; ~var12.itemAmounts.length < ~var14; ++var14) {
                            if(1 + var13 == var12.itemAmounts[var14]) {
                               var9 += var12.itemIds[var14];
                            }
@@ -152,16 +152,16 @@ class Class164_Sub2 extends Class164 {
                      var9 = ItemDefinition.anIntArray781[-1 + Class3_Sub20.anIntArray2480[var4[var6++]]];
                   }
 
-                  if(var8 == 7) {
+                  if(~var8 == -8) {
                      var9 = 100 * Class163_Sub1.anIntArray2985[var4[var6++]] / '\ub71b';
                   }
 
-                  if(var8 == 8) {
+                  if(-9 == ~var8) {
                      var9 = Class102.player.COMBAT_LEVEL;
                   }
 
                   if(9 == var8) {
-                     for(var11 = 0; var11 < 25; ++var11) {
+                     for(var11 = 0; -26 < ~var11; ++var11) {
                         if(Class3_Sub23.aBooleanArray2538[var11]) {
                            var9 += Class3_Sub20.anIntArray2480[var11];
                         }
@@ -173,9 +173,9 @@ class Class164_Sub2 extends Class164 {
                      var11 += var4[var6++];
                      var12 = Class7.getRSInterface((byte)115, var11);
                      var13 = var4[var6++];
-                     if(var13 != -1 && (!Class38.getItemDefinition(var13, (byte)88).membersItem || Class2.isMember)) {
-                        for(var14 = 0; var14 < var12.itemAmounts.length; ++var14) {
-                           if(1 + var13 == var12.itemAmounts[var14]) {
+                     if(~var13 != 0 && (!Class38.getItemDefinition(var13, (byte)88).membersItem || Class2.isMember)) {
+                        for(var14 = 0; ~var12.itemAmounts.length < ~var14; ++var14) {
+                           if(~var12.itemAmounts[var14] == ~(1 + var13)) {
                               var9 = 999999999;
                               break;
                            }
@@ -183,7 +183,7 @@ class Class164_Sub2 extends Class164 {
                      }
                   }
 
-                  if(var8 == 11) {
+                  if(-12 == ~var8) {
                      var9 = Class9.anInt136;
                   }
 
@@ -191,22 +191,22 @@ class Class164_Sub2 extends Class164 {
                      var9 = MouseListeningClass.anInt1925;
                   }
 
-                  if(var8 == 13) {
+                  if(-14 == ~var8) {
                      var11 = Class163_Sub1.anIntArray2985[var4[var6++]];
                      int var17 = var4[var6++];
-                     var9 = (1 << var17 & var11) == 0 ?0:1;
+                     var9 = ~(1 << var17 & var11) == -1?0:1;
                   }
 
-                  if(var8 == 14) {
+                  if(-15 == ~var8) {
                      var11 = var4[var6++];
                      var9 = NPCDefinition.method1484(64835055, var11);
                   }
 
-                  if(var8 == 18) {
+                  if(~var8 == -19) {
                      var9 = (Class102.player.anInt2819 >> 7) - -Class131.anInt1716;
                   }
 
-                  if(var8 == 19) {
+                  if(-20 == ~var8) {
                      var9 = (Class102.player.anInt2829 >> 7) - -Class82.anInt1152;
                   }
 
@@ -219,11 +219,11 @@ class Class164_Sub2 extends Class164 {
                         var5 += var9;
                      }
 
-                     if(var7 == 1) {
+                     if(-2 == ~var7) {
                         var5 -= var9;
                      }
 
-                     if(2 == var7 && var9 != 0) {
+                     if(2 == var7 && ~var9 != -1) {
                         var5 /= var9;
                      }
 
@@ -253,7 +253,7 @@ class Class164_Sub2 extends Class164 {
             aClass33_3019 = (Class33)null;
          }
 
-         return 32 <= var1 && var1 <= 126 || (var1 >= 160 && 255 >= var1 || (var1 == 128 || var1 == 140 || var1 == 151 || var1 == 156 || var1 == 159));
+         return 32 <= var1 && -127 <= ~var1?true:(~var1 <= -161 && 255 >= var1?true:~var1 == -129 || -141 == ~var1 || ~var1 == -152 || ~var1 == -157 || var1 == 159);
       } catch (RuntimeException var3) {
          throw Class44.method1067(var3, "we.B(" + var0 + ',' + var1 + ')');
       }
@@ -267,7 +267,7 @@ class Class164_Sub2 extends Class164 {
          }
 
          for(; var2 != null; var2 = Class124.aClass130_1659.method1778(-97)) {
-            if((long) var1 == (65535L & var2.aLong71 >> 48)) {
+            if(~(65535L & var2.aLong71 >> 48) == ~((long)var1)) {
                var2.method86(-1024);
             }
          }
@@ -279,26 +279,26 @@ class Class164_Sub2 extends Class164 {
 
    final void method2237(int var1, int var2, int var3) {
       try {
-         if(0 == var2) {
-            this.anInt3023 = 4096;
-            this.anInt3024 = -(var1 >= 0 ?var1:-var1) + this.anInt3026;
-            this.anInt3024 = this.anInt3024 * this.anInt3024 >> 12;
-            this.anInt3029 = this.anInt3024;
-         } else {
+         if(0 != var2) {
             this.anInt3023 = this.anInt3022 * this.anInt3024 >> 12;
-            if(this.anInt3023 >= 0) {
-               if(this.anInt3023 > 4096) {
+            if(-1 >= ~this.anInt3023) {
+               if(~this.anInt3023 < -4097) {
                   this.anInt3023 = 4096;
                }
             } else {
                this.anInt3023 = 0;
             }
 
-            this.anInt3024 = -(var1 >= 0 ?var1:-var1) + this.anInt3026;
+            this.anInt3024 = -(-1 >= ~var1?var1:-var1) + this.anInt3026;
             this.anInt3024 = this.anInt3024 * this.anInt3024 >> 12;
             this.anInt3024 = this.anInt3024 * this.anInt3023 >> 12;
             this.anInt3029 += this.anInt3018 * this.anInt3024 >> 12;
             this.anInt3018 = this.anInt3021 * this.anInt3018 >> 12;
+         } else {
+            this.anInt3023 = 4096;
+            this.anInt3024 = -(-1 >= ~var1?var1:-var1) + this.anInt3026;
+            this.anInt3024 = this.anInt3024 * this.anInt3024 >> 12;
+            this.anInt3029 = this.anInt3024;
          }
 
          if(var3 != -20975) {

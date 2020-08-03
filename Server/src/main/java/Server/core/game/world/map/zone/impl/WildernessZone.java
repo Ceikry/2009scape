@@ -43,7 +43,7 @@ public final class WildernessZone extends MapZone {
 	/**
 	 * The zone borders.
 	 */
-	private ZoneBorders[] borders;
+	public ZoneBorders[] borders;
 
 	/**
 	 * Constructs a new {@code WildernessZone} {@code Object}.
@@ -118,6 +118,9 @@ public final class WildernessZone extends MapZone {
 						((Player) killer).getSlayer().finalizeDeath(killer.asPlayer(), e.asNpc());
 					}
 				}
+				if(e instanceof Player){
+					return false;
+				}
 
 			}
 
@@ -157,7 +160,11 @@ public final class WildernessZone extends MapZone {
 	public boolean enter(Entity e) {
 		if (e instanceof Player) {
 			Player p = (Player) e;
-			if(!p.isArtificial()) {
+			if(p.isArtificial()) {
+				p.getSkullManager().setLevel(getWilderness(p));
+				p.getInteraction().set(Option._P_ATTACK);
+				p.getSkullManager().setWilderness(true);
+			} else {
 				show(p);
 			}
 			p.getAntiMacroHandler().isDisabled = true;

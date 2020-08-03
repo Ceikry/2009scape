@@ -3,6 +3,7 @@ package org.runite.jagex;
 final class Class131 {
 
    static int anInt1716;
+   private static RSString aClass94_1717 = RSString.createRSString("Prepared sound engine");
    short[] aShortArray1718;
    static int anInt1719 = -1;
    int anInt1720;
@@ -11,14 +12,18 @@ final class Class131 {
    static CacheIndex aClass153_1723;
    static RSString aClass94_1724 = RSString.createRSString(" )2>");
    int[] anIntArray1725;
+   private static RSString aClass94_1726 = RSString.createRSString("Select");
    short[] aShortArray1727;
+   static RSString aClass94_1728 = RSString.createRSString("Eingabeprozedur geladen)3");
    static int[] anIntArray1729 = new int[]{12543016, 15504954, 15914854, 16773818};
    byte[] aByteArray1730;
+   static RSString aClass94_1731 = aClass94_1717;
+static RSString aClass94_1722 = aClass94_1726;
 
    static final void addLocalPlayers(int var0) {
       try {
          while(true) {
-            if(GraphicDefinition.incomingBuffer.method815(Class130.incomingPacketLength, 32666) >= 11) {
+            if(~GraphicDefinition.incomingBuffer.method815(Class130.incomingPacketLength, 32666) <= -12) {
                int index = GraphicDefinition.incomingBuffer.getBits((byte)-11, 11);
                if(index != 2047) {
                   boolean var2 = false;
@@ -34,7 +39,7 @@ final class Class131 {
                   Player var3 = Class3_Sub13_Sub22.players[index];
                   var3.anInt2838 = Class44.anInt719;
                   int var4 = GraphicDefinition.incomingBuffer.getBits((byte)-11, 1);
-                  if(var4 == 1) {
+                  if(~var4 == -2) {
                      Class21.maskUpdateIndexes[Class66.maskUpdateCount++] = index;
                   }
 
@@ -54,7 +59,7 @@ final class Class131 {
                      var8 -= 32;
                   }
 
-                  var3.method1981((byte)126, var5 + Class102.player.anIntArray2767[0], var7 == 1, Class102.player.anIntArray2755[0] + var8);
+                  var3.method1981((byte)126, var5 + Class102.player.anIntArray2767[0], ~var7 == -2, Class102.player.anIntArray2755[0] + var8);
                   continue;
                }
             }
@@ -85,13 +90,13 @@ final class Class131 {
 
    static final int method1788(int var0, int var1, int var2, int var3, boolean var4) {
       try {
-         if(var4) {
-            int var5 = 15 & var3;
-            int var7 = var5 >= 4 ?(var5 != 12 && var5 != 14 ?var1:var0):var2;
-            int var6 = var5 < 8 ?var0:var2;
-            return ((var5 & 1) != 0 ?-var6:var6) - -((2 & var5) != 0 ?-var7:var7);
-         } else {
+         if(!var4) {
             return 127;
+         } else {
+            int var5 = 15 & var3;
+            int var7 = -5 >= ~var5?(~var5 != -13 && -15 != ~var5?var1:var0):var2;
+            int var6 = ~var5 > -9?var0:var2;
+            return (-1 != ~(var5 & 1)?-var6:var6) - -(~(2 & var5) != -1?-var7:var7);
          }
       } catch (RuntimeException var8) {
          throw Class44.method1067(var8, "se.H(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ')');
@@ -104,7 +109,7 @@ final class Class131 {
             this.method1794(-111, 26);
          }
 
-         return (4 & this.aByteArray1730[var1]) != 0;
+         return ~(4 & this.aByteArray1730[var1]) != -1;
       } catch (RuntimeException var4) {
          throw Class44.method1067(var4, "se.A(" + var1 + ',' + var2 + ')');
       }
@@ -112,6 +117,10 @@ final class Class131 {
 
    static final void method1790(int var0, int var1, int var2) {
       try {
+         if(var2 < 90) {
+            aClass94_1731 = (RSString)null;
+         }
+
          Class3_Sub28_Sub6 var3 = Class3_Sub24_Sub3.method466(4, 5, var0);
          var3.g((byte)33);
          var3.anInt3598 = var1;
@@ -133,6 +142,11 @@ final class Class131 {
          anIntArray1729 = null;
          if(var0 == 0) {
             aClass153_1723 = null;
+            aClass94_1726 = null;
+            aClass94_1731 = null;
+            aClass94_1717 = null;
+            aClass94_1722 = null;
+            aClass94_1728 = null;
             aClass94_1724 = null;
          }
       } catch (RuntimeException var2) {
@@ -145,10 +159,10 @@ final class Class131 {
          Class3_Sub28_Sub14.password = var1;
          Class7.anInt2161 = var2;
          Class3_Sub28_Sub14.username = var0;
-         if(Class3_Sub28_Sub14.username.method1528((byte) -42, Class3_Sub28_Sub14.aClass94_3672) || Class3_Sub28_Sub14.password.method1528((byte) -42, Class3_Sub28_Sub14.aClass94_3672)) {
-            Class158.anInt2005 = 3;
-         } else {
-            if(CS2Script.anInt2451 == -1) {
+         if(!Class3_Sub28_Sub14.username.method1528((byte)-42, Class3_Sub28_Sub14.aClass94_3672) && !Class3_Sub28_Sub14.password.method1528((byte)-42, Class3_Sub28_Sub14.aClass94_3672)) {
+            if(0 != ~CS2Script.anInt2451) {
+               Class24.method951(0);
+            } else {
                Class3_Sub2.anInt2246 = 0;
                Class117.anInt1616 = 0;
                Class158.anInt2005 = -3;
@@ -167,9 +181,9 @@ final class Class131 {
                Class3_Sub13_Sub1.outgoingBuffer.putByte((byte)-29, 210);
                Class3_Sub13_Sub1.outgoingBuffer.putByte((byte)-121, var4.index);
                Class3_Sub13_Sub1.outgoingBuffer.putBytes(var4.buffer, 0, var4.index, 125);
-            } else {
-               Class24.method951(0);
             }
+         } else {
+            Class158.anInt2005 = 3;
          }
       } catch (RuntimeException var6) {
          throw Class44.method1067(var6, "se.C(" + (var0 != null?"{...}":"null") + ',' + (var1 != null?"{...}":"null") + ',' + var2 + ',' + var3 + ')');

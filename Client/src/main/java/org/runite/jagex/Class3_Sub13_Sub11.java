@@ -4,12 +4,14 @@ final class Class3_Sub13_Sub11 extends Class3_Sub13 {
 
    private int anInt3129;
    static Class93 aClass93_3130 = new Class93(4);
+   static RSString aClass94_3131 = RSString.createRSString(" ");
    static int anInt3132;
    static RSString aClass94_3133 = RSString.createRSString(")2");
    private int anInt3134;
    private int anInt3135;
    static int anInt3136;
    static Class47 aClass47_3137 = new Class47(64);
+   static RSString aClass94_3138 = RSString.createRSString("b12_full");
    static int[] anIntArray3139 = new int[14];
    static RSString aClass94_3140 = RSString.createRSString("overlay2");
 
@@ -26,10 +28,16 @@ final class Class3_Sub13_Sub11 extends Class3_Sub13 {
 
    public static void method217(int var0) {
       try {
+         aClass94_3138 = null;
          aClass94_3133 = null;
          aClass94_3140 = null;
          aClass93_3130 = null;
          anIntArray3139 = null;
+         aClass94_3131 = null;
+         if(var0 != 1) {
+            aClass94_3138 = (RSString)null;
+         }
+
          aClass47_3137 = null;
       } catch (RuntimeException var2) {
          throw Class44.method1067(var2, "fm.B(" + var0 + ')');
@@ -64,7 +72,7 @@ final class Class3_Sub13_Sub11 extends Class3_Sub13 {
             int[] var5 = var3[1];
             int[] var6 = var3[2];
 
-            for(int var7 = 0; Class113.anInt1559 > var7; ++var7) {
+            for(int var7 = 0; ~var7 > ~Class113.anInt1559; ++var7) {
                var4[var7] = this.anInt3129;
                var5[var7] = this.anInt3134;
                var6[var7] = this.anInt3135;
@@ -103,7 +111,7 @@ final class Class3_Sub13_Sub11 extends Class3_Sub13 {
          Class102.player.anInt2829 = 3000;
          Class102.player.anInt2819 = var1;
          if(HDToolKit.highDetail) {
-            if(Class133.anInt1753 == 2) {
+            if(-3 == ~Class133.anInt1753) {
                NPC.anInt3995 = Canvas_Sub2.anInt30 << 7;
                Class77.anInt1111 = Class146.anInt1904 << 7;
             } else {
@@ -152,7 +160,7 @@ final class Class3_Sub13_Sub11 extends Class3_Sub13 {
             method221(-64, (RSString)null, (RSString)null, (RSString)null, 34);
          }
 
-         if(var1 == 0) {
+         if(-1 == ~var1) {
             this.method218((byte)75, var2.getTriByte((byte)82));
          }
 
@@ -165,12 +173,12 @@ final class Class3_Sub13_Sub11 extends Class3_Sub13 {
       int var6;
       int var7;
       if(var1 == var2 && var3 == var4) {
-         if(Class8.method846(var0, var1, var3)) {
+         if(!Class8.method846(var0, var1, var3)) {
+            return false;
+         } else {
             var6 = var1 << 7;
             var7 = var3 << 7;
             return Class3_Sub13_Sub37.method349(var6 + 1, Class44.anIntArrayArrayArray723[var0][var1][var3] + var5, var7 + 1) && Class3_Sub13_Sub37.method349(var6 + 128 - 1, Class44.anIntArrayArrayArray723[var0][var1 + 1][var3] + var5, var7 + 1) && Class3_Sub13_Sub37.method349(var6 + 128 - 1, Class44.anIntArrayArrayArray723[var0][var1 + 1][var3 + 1] + var5, var7 + 128 - 1) && Class3_Sub13_Sub37.method349(var6 + 1, Class44.anIntArrayArrayArray723[var0][var1][var3 + 1] + var5, var7 + 128 - 1);
-         } else {
-            return false;
          }
       } else {
          for(var6 = var1; var6 <= var2; ++var6) {
@@ -184,22 +192,22 @@ final class Class3_Sub13_Sub11 extends Class3_Sub13 {
          var6 = (var1 << 7) + 1;
          var7 = (var3 << 7) + 2;
          int var8 = Class44.anIntArrayArrayArray723[var0][var1][var3] + var5;
-         if(Class3_Sub13_Sub37.method349(var6, var8, var7)) {
+         if(!Class3_Sub13_Sub37.method349(var6, var8, var7)) {
+            return false;
+         } else {
             int var9 = (var2 << 7) - 1;
-            if(Class3_Sub13_Sub37.method349(var9, var8, var7)) {
+            if(!Class3_Sub13_Sub37.method349(var9, var8, var7)) {
+               return false;
+            } else {
                int var10 = (var4 << 7) - 1;
                if(!Class3_Sub13_Sub37.method349(var6, var8, var10)) {
                   return false;
-               } else if(Class3_Sub13_Sub37.method349(var9, var8, var10)) {
-                  return true;
-               } else {
+               } else if(!Class3_Sub13_Sub37.method349(var9, var8, var10)) {
                   return false;
+               } else {
+                  return true;
                }
-            } else {
-               return false;
             }
-         } else {
-            return false;
          }
       }
    }

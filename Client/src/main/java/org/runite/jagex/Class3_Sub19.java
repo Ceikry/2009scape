@@ -7,6 +7,7 @@ final class Class3_Sub19 extends Class3 {
    static CacheIndex aClass153_2474;
    static int anInt2475 = 0;
    RSString aClass94_2476;
+   static RSString aClass94_2477 = RSString.createRSString("<col=ffffff>");
    int anInt2478;
    static int anInt2479;
 
@@ -32,28 +33,28 @@ final class Class3_Sub19 extends Class3 {
          int var7;
          int var8;
          if(null == Class27.aClass3_Sub28_Sub16_Sub2_518) {
-            if(HDToolKit.highDetail || null == Class49.aClass3_Sub28_Sub16_812) {
-               Class27.aClass3_Sub28_Sub16_Sub2_518 = new Class3_Sub28_Sub16_Sub2(512, 512);
-            } else {
+            if(!HDToolKit.highDetail && null != Class49.aClass3_Sub28_Sub16_812) {
                Class27.aClass3_Sub28_Sub16_Sub2_518 = (Class3_Sub28_Sub16_Sub2)Class49.aClass3_Sub28_Sub16_812;
+            } else {
+               Class27.aClass3_Sub28_Sub16_Sub2_518 = new Class3_Sub28_Sub16_Sub2(512, 512);
             }
 
             int[] var4 = Class27.aClass3_Sub28_Sub16_Sub2_518.anIntArray4081;
             var5 = var4.length;
 
-            for(var6 = 0; var5 > var6; ++var6) {
+            for(var6 = 0; ~var6 > ~var5; ++var6) {
                var4[var6] = 1;
             }
 
             for(var6 = var3 + 1; -1 + -var3 + 104 > var6; ++var6) {
                var7 = 4 * 512 * (var3 + 103 + -var6) + 24628;
 
-               for(var8 = 1 + var2; -var2 + 104 + -1 > var8; ++var8) {
-                  if((Class9.aByteArrayArrayArray113[var1][var8][var6] & 24) == 0) {
+               for(var8 = 1 + var2; ~var8 > ~(-var2 + 104 + -1); ++var8) {
+                  if(-1 == ~(Class9.aByteArrayArrayArray113[var1][var8][var6] & 24)) {
                      IOHandler.method1469(var4, var7, 512, var1, var8, var6);
                   }
 
-                  if(var1 < 3 && 0 != (Class9.aByteArrayArrayArray113[1 + var1][var8][var6] & 8)) {
+                  if(~var1 > -4 && 0 != (Class9.aByteArrayArrayArray113[1 + var1][var8][var6] & 8)) {
                      IOHandler.method1469(var4, var7, 512, var1 + 1, var8, var6);
                   }
 
@@ -66,43 +67,43 @@ final class Class3_Sub19 extends Class3 {
             for(var6 = 0; 104 > var6; ++var6) {
                for(var7 = 0; 104 > var7; ++var7) {
                   long var20 = Class3_Sub2.method104(WorldListCountry.localPlane, var6 + var2, var7 - -var3);
-                  if(var20 != 0) {
+                  if(~var20 != -1L) {
                      ObjectDefinition var10 = Class162.getObjectDefinition(4, (int)(var20 >>> 32) & Integer.MAX_VALUE);
-                     int var11 = var10.MapIcon;
+                     int var11 = var10.anInt1482;
                      int var12;
-                     if(null != var10.ChildrenIds) {
-                        for(var12 = 0; var12 < var10.ChildrenIds.length; ++var12) {
-                           if(-1 != var10.ChildrenIds[var12]) {
-                              ObjectDefinition var13 = Class162.getObjectDefinition(4, var10.ChildrenIds[var12]);
-                              if(0 <= var13.MapIcon) {
-                                 var11 = var13.MapIcon;
+                     if(null != var10.anIntArray1524) {
+                        for(var12 = 0; ~var10.anIntArray1524.length < ~var12; ++var12) {
+                           if(-1 != var10.anIntArray1524[var12]) {
+                              ObjectDefinition var13 = Class162.getObjectDefinition(4, var10.anIntArray1524[var12]);
+                              if(0 <= var13.anInt1482) {
+                                 var11 = var13.anInt1482;
                                  break;
                               }
                            }
                         }
                      }
 
-                     if(var11 >= 0) {
+                     if(~var11 <= -1) {
                         int var21 = var3 + var7;
                         var12 = var2 + var6;
-                        if(22 != var11 && var11 != 29 && 34 != var11 && var11 != 36 && 46 != var11 && var11 != 47 && var11 != 48) {
+                        if(22 != var11 && var11 != 29 && 34 != var11 && -37 != ~var11 && 46 != var11 && var11 != 47 && var11 != 48) {
                            int[][] var14 = Class86.aClass91Array1182[WorldListCountry.localPlane].anIntArrayArray1304;
 
-                           for(int var15 = 0; var15 < 10; ++var15) {
+                           for(int var15 = 0; -11 < ~var15; ++var15) {
                               int var16 = (int)(Math.random() * 4.0D);
-                              if(var16 == 0 && var12 > 0 && var12 > var6 - 3 && (var14[var12 - 1][var21] & 19661064) == 0) {
+                              if(var16 == 0 && var12 > 0 && ~(var6 - 3) > ~var12 && ~(var14[var12 - 1][var21] & 19661064) == -1) {
                                  --var12;
                               }
 
-                              if(var16 == 1 && var12 < 103 && var12 < 3 + var6 && (var14[var12 - -1][var21] & 19661184) == 0) {
+                              if(var16 == 1 && -104 < ~var12 && ~(3 + var6) < ~var12 && (var14[var12 - -1][var21] & 19661184) == 0) {
                                  ++var12;
                               }
 
-                              if(2 == var16 && var21 > 0 && var21 > -3 + var7 && 0 == (var14[var12][-1 + var21] & 19661058)) {
+                              if(2 == var16 && var21 > 0 && ~(-3 + var7) > ~var21 && 0 == (var14[var12][-1 + var21] & 19661058)) {
                                  --var21;
                               }
 
-                              if(3 == var16 && var21 < 103 && var7 - -3 > var21 && 0 == (19661088 & var14[var12][1 + var21])) {
+                              if(3 == var16 && var21 < 103 && ~var21 > ~(var7 - -3) && 0 == (19661088 & var14[var12][1 + var21])) {
                                  ++var21;
                               }
                            }
@@ -122,7 +123,7 @@ final class Class3_Sub19 extends Class3 {
          int var18 = (238 + (int)(20.0D * Math.random()) - 10 << 8) + (-10 + (int)(Math.random() * 20.0D) + 238 << 16) + (228 - -((int)(20.0D * Math.random())));
          var5 = (int)(Math.random() * 20.0D) + 238 + -10 << 16;
 
-         for(var6 = 1; var6 < 103; ++var6) {
+         for(var6 = 1; ~var6 > -104; ++var6) {
             for(var7 = 1; 103 > var7; ++var7) {
                if(0 == (Class9.aByteArrayArrayArray113[var1][var7 + var2][var6 - -var3] & 24) && !RSString.method1529(var3, var7, var18, var6, var5, var2, var1, true)) {
                   if(HDToolKit.highDetail) {
@@ -134,11 +135,11 @@ final class Class3_Sub19 extends Class3 {
                   return false;
                }
 
-               if(var1 < 3 && (Class9.aByteArrayArrayArray113[1 + var1][var7 + var2][var6 + var3] & 8) != 0 && !RSString.method1529(var3, var7, var18, var6, var5, var2, 1 + var1, true)) {
-                  if(HDToolKit.highDetail) {
-                     Class74.anIntArray1100 = null;
-                  } else {
+               if(-4 < ~var1 && ~(Class9.aByteArrayArrayArray113[1 + var1][var7 + var2][var6 + var3] & 8) != -1 && !RSString.method1529(var3, var7, var18, var6, var5, var2, 1 + var1, true)) {
+                  if(!HDToolKit.highDetail) {
                      Class164_Sub1.aClass158_3009.method2182(0);
+                  } else {
+                     Class74.anIntArray1100 = null;
                   }
 
                   return false;
@@ -161,10 +162,10 @@ final class Class3_Sub19 extends Class3 {
             Class49.aClass3_Sub28_Sub16_812 = Class27.aClass3_Sub28_Sub16_Sub2_518;
          }
 
-         if(HDToolKit.highDetail) {
-            Class74.anIntArray1100 = null;
-         } else {
+         if(!HDToolKit.highDetail) {
             Class164_Sub1.aClass158_3009.method2182(0);
+         } else {
+            Class74.anIntArray1100 = null;
          }
 
          Class27.aClass3_Sub28_Sub16_Sub2_518 = null;
@@ -188,6 +189,7 @@ final class Class3_Sub19 extends Class3 {
    public static void method387(int var0) {
       try {
          //int var1 = 41 % ((var0 - -70) / 32);
+         aClass94_2477 = null;
          aClass153_2474 = null;
       } catch (RuntimeException var2) {
          throw Class44.method1067(var2, "kl.A(" + var0 + ')');

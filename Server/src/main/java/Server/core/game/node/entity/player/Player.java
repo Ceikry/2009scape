@@ -121,6 +121,8 @@ public class Player extends Entity {
 
 	public EquipmentDegrader degrader = new EquipmentDegrader();
 
+	public int credits = 0;
+
 	/**
 	 * The inventory.
 	 */
@@ -534,11 +536,6 @@ public class Player extends Entity {
 		Player k = killer instanceof Player ? (Player) killer : this;
 		if (!k.isActive()) {
 			k = this;
-		}
-		if (this.isArtificial() && killer instanceof Player){
-			setAttribute("dead", true);
-			k.sendMessage("You did not gain any loot as the player you killed was artificial.");
-			return;
 		}
 		if (this.isArtificial() && killer instanceof NPC) {
 			return;

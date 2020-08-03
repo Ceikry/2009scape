@@ -8,12 +8,14 @@ final class Class134 {
    static int anInt1761 = -1;
    static int anInt1762 = 0;
    static int[][] anIntArrayArray1763 = new int[][]{{0, 128, 0, 0, 128, 0, 128, 128}, {0, 128, 0, 0, 128, 0}, {0, 0, 64, 128, 0, 128}, {128, 128, 64, 128, 128, 0}, {0, 0, 128, 0, 128, 128, 64, 128}, {0, 128, 0, 0, 128, 0, 64, 128}, {64, 128, 0, 128, 0, 0, 64, 0}, {0, 0, 64, 0, 0, 64}, {128, 0, 128, 128, 0, 128, 0, 64, 64, 0}, {0, 128, 0, 0, 32, 64, 64, 96, 128, 128}, {0, 0, 128, 0, 128, 128, 64, 96, 32, 64}, {0, 0, 128, 0, 96, 32, 32, 32}};
+   static RSString aClass94_1764 = RSString.createRSString("headicons_prayer");
    static boolean aBoolean1765 = false;
    static long[] aLongArray1766 = new long[32];
 
 
    public static void method1806(int var0) {
       try {
+         aClass94_1764 = null;
          aClass61_1758 = null;
          if(var0 != 3846) {
             anInt1762 = 60;
@@ -30,7 +32,7 @@ final class Class134 {
    static final synchronized byte[] method1807(int var0, int var1) {
       try {
          byte[] var2;
-         if(var1 == 100 && Class65.anInt984 > 0) {
+         if(~var1 == -101 && -1 > ~Class65.anInt984) {
             var2 = Class3_Sub13_Sub39.aByteArrayArray3461[--Class65.anInt984];
             Class3_Sub13_Sub39.aByteArrayArray3461[Class65.anInt984] = null;
             return var2;
@@ -39,11 +41,11 @@ final class Class134 {
                method1806(-79);
             }
 
-            if(var1 == 5000 && MouseListeningClass.anInt1927 > 0) {
+            if(~var1 == -5001 && MouseListeningClass.anInt1927 > 0) {
                var2 = Class9.aByteArrayArray125[--MouseListeningClass.anInt1927];
                Class9.aByteArrayArray125[MouseListeningClass.anInt1927] = null;
                return var2;
-            } else if(var1 == 30000 && 0 < Class3_Sub28_Sub18.anInt3766) {
+            } else if(-30001 == ~var1 && 0 < Class3_Sub28_Sub18.anInt3766) {
                var2 = Class140_Sub3.aByteArrayArray2747[--Class3_Sub28_Sub18.anInt3766];
                Class140_Sub3.aByteArrayArray2747[Class3_Sub28_Sub18.anInt3766] = null;
                return var2;
@@ -74,7 +76,7 @@ final class Class134 {
             aClass61_1758 = (Class61)null;
          }
 
-         if(var0 > var3) {
+         if(~var3 > ~var0) {
             int var6 = var3;
             int var5 = (var3 - -var0) / 2;
             long var7 = var1[var5];

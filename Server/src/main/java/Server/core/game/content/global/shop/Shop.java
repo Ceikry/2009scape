@@ -8,6 +8,7 @@ import core.game.node.entity.player.Player;
 import core.game.node.entity.player.link.diary.DiaryType;
 import core.game.node.item.Item;
 import core.game.system.config.ItemConfigParser;
+import core.game.system.config.ShopParser;
 import core.game.world.GameWorld;
 
 import java.util.ArrayList;
@@ -594,7 +595,7 @@ public class Shop {
         if (amount < 1) {
             amount = getContainer(0).getAmount(item);
         }
-        int value = getSellValue(player, amount, item);
+        int value = Integer.parseInt(ItemDefinition.forId(item.getId()).getConfigurations().get(ItemConfigParser.VALUE).toString()) / 3;
         if (getCurrency() == TOKKUL) {
             int tokkul = item.getDefinition().getConfiguration("tokkul_price", -1);
             if (tokkul > 0) {
@@ -637,7 +638,7 @@ public class Shop {
      */
     public int getBuyPrice(Item item, Player player) {
         item = new Item(item.getId(), 1);
-        int price = item.getDefinition().getMaxValue();
+        int price = Integer.parseInt(item.getDefinition().getConfigurations().get(ItemConfigParser.VALUE).toString());
         int sellVal = getSellingValue(item, player);
         if (price < sellVal) {
             price = getSellValue(player, 0, item) + sellVal - (sellVal - item.getDefinition().getMaxValue());

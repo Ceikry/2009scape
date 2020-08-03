@@ -6,13 +6,19 @@ import java.io.IOException;
 final class Class3_Sub13_Sub3 extends Class3_Sub13 {
 
    private int anInt3047 = 4096;
+   private static RSString aClass94_3048 = RSString.createRSString("Hidden");
    static KeyboardListener aClass148_3049 = new KeyboardListener();
    private boolean aBoolean3050 = true;
+   static RSString aClass94_3051 = aClass94_3048;
    static short aShort3052 = 205;
+   static RSString aClass94_3053 = RSString.createRSString("Lade Schrifts-=tze )2 ");
 
 
    public static void method177(byte var0) {
       try {
+         aClass94_3053 = null;
+         aClass94_3051 = null;
+         aClass94_3048 = null;
          if(var0 != 119) {
             aShort3052 = 109;
          }
@@ -28,8 +34,12 @@ final class Class3_Sub13_Sub3 extends Class3_Sub13 {
          RSString var4 = new RSString();
          var4.byteArray = new byte[var2];
          var4.length = 0;
-         for(int var5 = var3; var5 < var2 + var3; ++var5) {
-            if(var0[var5] != 0) {
+         if(var1 != -4114) {
+            aClass94_3053 = (RSString)null;
+         }
+
+         for(int var5 = var3; ~(var2 + var3) < ~var5; ++var5) {
+            if(-1 != ~var0[var5]) {
                var4.byteArray[var4.length++] = var0[var5];
             }
          }
@@ -57,7 +67,7 @@ final class Class3_Sub13_Sub3 extends Class3_Sub13 {
 
          if(0 == var1) {
             this.anInt3047 = var2.getShort(1);
-         } else if(var1 == 1) {
+         } else if(-2 == ~var1) {
             this.aBoolean3050 = var2.getByte((byte)-88) == 1;
          }
 
@@ -68,29 +78,29 @@ final class Class3_Sub13_Sub3 extends Class3_Sub13 {
 
    static final int method179(byte var0, int var1) {
       try {
-         if(var0 == 92) {
+         if(var0 != 92) {
+            return 122;
+         } else {
             if(null != Class3_Sub15.aClass89_2429) {
                Class3_Sub15.aClass89_2429.close(14821);
                Class3_Sub15.aClass89_2429 = null;
             }
 
             ++Class73.anInt1088;
-            if(Class73.anInt1088 > 4) {
+            if(~Class73.anInt1088 < -5) {
                Class43.anInt692 = 0;
                Class73.anInt1088 = 0;
                return var1;
             } else {
                Class43.anInt692 = 0;
-               if(Class123.anInt1658 == Class3_Sub28_Sub19.anInt3773) {
-                  Class123.anInt1658 = Class53.anInt867;
-               } else {
+               if(Class123.anInt1658 != Class3_Sub28_Sub19.anInt3773) {
                   Class123.anInt1658 = Class3_Sub28_Sub19.anInt3773;
+               } else {
+                  Class123.anInt1658 = Class53.anInt867;
                }
 
                return -1;
             }
-         } else {
-            return 122;
          }
       } catch (RuntimeException var3) {
          throw Class44.method1067(var3, "an.F(" + var0 + ',' + var1 + ')');
@@ -103,7 +113,7 @@ final class Class3_Sub13_Sub3 extends Class3_Sub13 {
          if(Class113.anInt1559 != var2) {
             Class102.anIntArray2125 = new int[var2];
 
-            for(var3 = 0; var3 < var2; ++var3) {
+            for(var3 = 0; ~var2 < ~var3; ++var3) {
                Class102.anIntArray2125[var3] = (var3 << 12) / var2;
             }
 
@@ -114,14 +124,14 @@ final class Class3_Sub13_Sub3 extends Class3_Sub13 {
 
          var3 = 111 / ((56 - var0) / 38);
          if(Class101.anInt1427 != var1) {
-            if(Class113.anInt1559 == var1) {
-               Class163_Sub3.anIntArray2999 = Class102.anIntArray2125;
-            } else {
+            if(Class113.anInt1559 != var1) {
                Class163_Sub3.anIntArray2999 = new int[var1];
 
                for(int var4 = 0; var4 < var1; ++var4) {
                   Class163_Sub3.anIntArray2999[var4] = (var4 << 12) / var1;
                }
+            } else {
+               Class163_Sub3.anIntArray2999 = Class102.anIntArray2125;
             }
 
             Class101.anInt1427 = var1;
@@ -204,14 +214,14 @@ final class Class3_Sub13_Sub3 extends Class3_Sub13 {
             Class3_Sub13_Sub23_Sub1.method282(Class38.anIntArrayArray663[var15], var13, 127, var14, var5);
          }
 
-         for(var15 = var12; var15 > var8; --var15) {
+         for(var15 = var12; ~var8 > ~var15; --var15) {
             Class3_Sub13_Sub23_Sub1.method282(Class38.anIntArrayArray663[var15], var13, -76, var14, var5);
          }
 
          int var9 = Class40.method1040(Class3_Sub28_Sub18.anInt3765, var1 + var3, (byte)0, Class101.anInt1425);
          int var10 = Class40.method1040(Class3_Sub28_Sub18.anInt3765, -var1 + var2, (byte)0, Class101.anInt1425);
 
-         for(var15 = var7; var8 >= var15; ++var15) {
+         for(var15 = var7; ~var15 >= ~var8; ++var15) {
             int[] var16 = Class38.anIntArrayArray663[var15];
             Class3_Sub13_Sub23_Sub1.method282(var16, var13, -59, var9, var5);
             Class3_Sub13_Sub23_Sub1.method282(var16, var10, var4 + -97, var14, var5);

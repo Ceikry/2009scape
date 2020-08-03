@@ -18,12 +18,14 @@ final class Class126 {
    int anInt1675;
    static int anInt1676 = 0;
    static int anInt1677;
+   static RSString aClass94_1678 = RSString.createRSString("OK");
 
 
    public static void method1751(byte var0) {
       try {
          aClass13_1666 = null;
          aClient1671 = null;
+         aClass94_1678 = null;
          anIntArray1662 = null;
          aClass3_Sub28_Sub17_1669 = null;
          if(var0 != -58) {

@@ -2,11 +2,16 @@ package org.runite.jagex;
 
 class Class38 {
 
+   private static RSString aClass94_658 = RSString.createRSString("Please remove ");
+   static RSString aClass94_659 = RSString.createRSString("V-Brification des mises -9 jour )2 ");
    static int anInt660;
    static boolean aBoolean661 = true;
+   static RSString aClass94_662 = aClass94_658;
    static int[][] anIntArrayArray663;
    static int[] anIntArray664 = new int[14];
    static Signlink aClass87_665;
+   static RSString aClass94_666 = aClass94_658;
+   static RSString aClass94_667 = RSString.createRSString("ondulation2:");
    static Class146 aClass146_668;
 
 
@@ -26,7 +31,7 @@ class Class38 {
             }
 
             var2.method1112(5401);
-            if(var2.anInt791 != -1) {
+            if(0 != ~var2.anInt791) {
                var2.method1118(getItemDefinition(var2.anInt789, (byte)70), getItemDefinition(var2.anInt791, (byte)73), false);
             }
 
@@ -35,7 +40,7 @@ class Class38 {
             }
 
             if(!Class139.aBoolean1827 && var2.membersItem) {
-               var2.name = TextCore.MembersObject;
+               var2.name = Class3_Sub28_Sub15.aClass94_3691;
                var2.teamId = 0;
                var2.inventoryOptions = RuntimeException_Sub1.aClass94Array2119;
                var2.aBoolean807 = false;
@@ -54,6 +59,8 @@ class Class38 {
 
    public static void method1024(int var0) {
       try {
+         aClass94_658 = null;
+         aClass94_667 = null;
          if(var0 != 21474) {
             method1029(-65);
          }
@@ -62,6 +69,9 @@ class Class38 {
          anIntArrayArray663 = (int[][])null;
          aClass146_668 = null;
          aClass87_665 = null;
+         aClass94_659 = null;
+         aClass94_662 = null;
+         aClass94_666 = null;
       } catch (RuntimeException var2) {
          throw Class44.method1067(var2, "fk.E(" + var0 + ')');
       }
@@ -99,9 +109,9 @@ class Class38 {
 
    static final void method1028(int var0) {
       try {
-         for(int var1 = -1; Class159.localPlayerCount > var1; ++var1) {
+         for(int var1 = -1; ~var1 > ~Class159.localPlayerCount; ++var1) {
             int var2;
-            if(var1 == -1) {
+            if(0 == ~var1) {
                var2 = 2047;
             } else {
                var2 = Class56.localPlayerIndexes[var1];
@@ -111,6 +121,10 @@ class Class38 {
             if(var3 != null) {
                OutputStream_Sub1.method68(var3.getSize((byte)114), 2279, var3);
             }
+         }
+
+         if(var0 >= -3) {
+            aClass94_666 = (RSString)null;
          }
 
       } catch (RuntimeException var4) {

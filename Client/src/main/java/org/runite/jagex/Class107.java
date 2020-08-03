@@ -3,8 +3,9 @@ package org.runite.jagex;
 final class Class107 {
 
    static int currentChunkY;
-   static RSString[] aClass94Array1454;
    static RSInterface aClass11_1453;
+   static RSString[] aClass94Array1454;
+   static RSString aClass94_1455 = RSString.createRSString(" loggt sich aus)3");
 
 
    static final void method1645(CacheIndex var0, CacheIndex var1, byte var2) {
@@ -28,6 +29,11 @@ final class Class107 {
 
    public static void method1646(boolean var0) {
       try {
+         aClass94_1455 = null;
+         if(!var0) {
+            aClass94_1455 = (RSString)null;
+         }
+
          aClass94Array1454 = null;
          aClass11_1453 = null;
       } catch (RuntimeException var2) {
@@ -85,7 +91,7 @@ final class Class107 {
    static final int method1651(int var0, int var1, int var2) {
       try {
          int var3;
-         if(var1 > var2) {
+         if(~var2 > ~var1) {
             var3 = var2;
             var2 = var1;
             var1 = var3;

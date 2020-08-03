@@ -8,12 +8,12 @@ abstract class Class3_Sub13 extends Class3 {
    Class3_Sub13[] aClass3_Sub13Array2377;
    static int anInt2378 = 0;
    static Class3_Sub28_Sub17 aClass3_Sub28_Sub17_2379;
-   static RSString COMMAND_SHIFT_DROP_CLICK = RSString.createRSString("::shiftclick");
+   static RSString aClass94_2380 = RSString.createRSString("::shiftclick");
    int anInt2381;
    Class114 aClass114_2382;
    static int anInt2383 = 0;
    static int anInt2384 = 0;
-   static RSString COMMAND_REPLACE_CANVAS = RSString.createRSString("::replacecanvas");
+   static RSString aClass94_2385 = RSString.createRSString("::replacecanvas");
    static int[] anIntArray2386 = new int[]{1, -1, -1, 1};
 
 
@@ -67,8 +67,8 @@ abstract class Class3_Sub13 extends Class3 {
          }
 
          anIntArray2386 = null;
-         COMMAND_REPLACE_CANVAS = null;
-         COMMAND_SHIFT_DROP_CLICK = null;
+         aClass94_2385 = null;
+         aClass94_2380 = null;
          aClass3_Sub28_Sub17_2379 = null;
       } catch (RuntimeException var2) {
          throw Class44.method1067(var2, "j.PA(" + var0 + ')');
@@ -133,12 +133,12 @@ abstract class Class3_Sub13 extends Class3 {
             anInt2383 = 16;
          }
 
-         if(this.aBoolean2375) {
-            this.aClass114_2382.method1706(1127165736);
-            this.aClass114_2382 = null;
-         } else {
+         if(!this.aBoolean2375) {
             this.aClass97_2376.method1590((byte)-22);
             this.aClass97_2376 = null;
+         } else {
+            this.aClass114_2382.method1706(1127165736);
+            this.aClass114_2382 = null;
          }
 
       } catch (RuntimeException var3) {
@@ -150,12 +150,12 @@ abstract class Class3_Sub13 extends Class3 {
       try {
          if(var3 > -45) {
             return (int[][])((int[][])null);
-         } else if(this.aClass3_Sub13Array2377[var2].aBoolean2375) {
+         } else if(!this.aClass3_Sub13Array2377[var2].aBoolean2375) {
+            return this.aClass3_Sub13Array2377[var2].method166(-1, var1);
+         } else {
             int[] var4 = this.aClass3_Sub13Array2377[var2].method154(var1, (byte)-105);
             int[][] var5 = new int[][]{var4, var4, var4};
             return var5;
-         } else {
-            return this.aClass3_Sub13Array2377[var2].method166(-1, var1);
          }
       } catch (RuntimeException var6) {
          throw Class44.method1067(var6, "j.UA(" + var1 + ',' + var2 + ',' + var3 + ')');
@@ -188,12 +188,12 @@ abstract class Class3_Sub13 extends Class3 {
             int var5 = var3 + 6;
             int var6 = Class126.aClass3_Sub28_Sub17_1669.method680(var2, 250);
             int var7 = Class126.aClass3_Sub28_Sub17_1669.method684(var2, 250) * 13;
-            if(HDToolKit.highDetail) {
-               Class22.method934(var4 - var3, -var3 + var5, var3 + var6 - -var3, var3 + var3 + var7, 0);
-               Class22.method927(-var3 + var4, -var3 + var5, var6 + var3 - -var3, var3 + var7 + var3, 16777215);
-            } else {
+            if(!HDToolKit.highDetail) {
                Class74.method1323(var4 - var3, -var3 + var5, var3 + var6 - -var3, var3 + var3 + var7, 0);
                Class74.method1311(var4 + -var3, var5 - var3, var3 + var3 + var6, var3 + var3 + var7, 16777215);
+            } else {
+               Class22.method934(var4 - var3, -var3 + var5, var3 + var6 - -var3, var3 + var3 + var7, 0);
+               Class22.method927(-var3 + var4, -var3 + var5, var6 + var3 - -var3, var3 + var7 + var3, 16777215);
             }
 
             Class126.aClass3_Sub28_Sub17_1669.method676(var2, var4, var5, var6, var7, 16777215, -1, 1, 1, 0);
@@ -246,10 +246,10 @@ abstract class Class3_Sub13 extends Class3 {
 
    int[][] method166(int var1, int var2) {
       try {
-         if(var1 == -1) {
-            throw new IllegalStateException("This operation does not have a colour output");
-         } else {
+         if(var1 != -1) {
             return (int[][])((int[][])null);
+         } else {
+            throw new IllegalStateException("This operation does not have a colour output");
          }
       } catch (RuntimeException var4) {
          throw Class44.method1067(var4, "j.T(" + var1 + ',' + var2 + ')');

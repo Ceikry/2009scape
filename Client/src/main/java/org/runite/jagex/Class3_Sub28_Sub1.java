@@ -1,5 +1,7 @@
 package org.runite.jagex;
-import java.awt.*;
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.Graphics;
 import java.awt.image.ImageObserver;
 
 final class Class3_Sub28_Sub1 extends Node {
@@ -20,7 +22,7 @@ final class Class3_Sub28_Sub1 extends Node {
       try {
          int var2;
          if(null != this.anIntArray3540) {
-            for(var2 = 0; var2 < this.anIntArray3540.length; ++var2) {
+            for(var2 = 0; ~this.anIntArray3540.length < ~var2; ++var2) {
                this.anIntArray3540[var2] = Class3_Sub13_Sub29.bitwiseOr(this.anIntArray3540[var2], '\u8000');
             }
          }
@@ -39,15 +41,15 @@ final class Class3_Sub28_Sub1 extends Node {
 
    final int method526(int var1, int var2) {
       try {
-         if(this.anIntArray3540 == null) {
-            return -1;
-         } else {
-            for(int var3 = var2; this.anIntArray3540.length > var3; ++var3) {
+         if(this.anIntArray3540 != null) {
+            for(int var3 = var2; ~var3 > ~this.anIntArray3540.length; ++var3) {
                if(var1 == this.anIntArray3533[var3]) {
                   return this.anIntArray3540[var3];
                }
             }
 
+            return -1;
+         } else {
             return -1;
          }
       } catch (RuntimeException var4) {
@@ -66,16 +68,7 @@ final class Class3_Sub28_Sub1 extends Node {
          } else {
             int var4;
             int var5;
-            if(var3 == 2) {
-               var4 = var1.getByte((byte)-38);
-               this.anIntArray3534 = new int[var4];
-               this.anIntArray3535 = new int[var4];
-
-               for(var5 = 0; var5 < var4; ++var5) {
-                  this.anIntArray3534[var5] = var1.getShort(1);
-                  this.anIntArray3535[var5] = Class3_Sub13_Sub33.method322(true, var1.getByte());
-               }
-            } else {
+            if(var3 != 2) {
                if(var3 == 3) {
                   var4 = var1.getByte((byte)-114);
                   this.anIntArray3540 = new int[var4];
@@ -85,8 +78,17 @@ final class Class3_Sub28_Sub1 extends Node {
                      this.anIntArray3540[var5] = var1.getShort(var2 + 1);
                      this.anIntArray3533[var5] = Class3_Sub13_Sub33.method322(true, var1.getByte());
                   }
-               } else if(var3 == 4) {
+               } else if(-5 == ~var3) {
                   ;
+               }
+            } else {
+               var4 = var1.getByte((byte)-38);
+               this.anIntArray3534 = new int[var4];
+               this.anIntArray3535 = new int[var4];
+
+               for(var5 = 0; var5 < var4; ++var5) {
+                  this.anIntArray3534[var5] = var1.getShort(1);
+                  this.anIntArray3535[var5] = Class3_Sub13_Sub33.method322(true, var1.getByte());
                }
             }
          }
@@ -115,7 +117,7 @@ final class Class3_Sub28_Sub1 extends Node {
             return -1;
          } else {
             for(int var4 = 0; this.anIntArray3534.length > var4; ++var4) {
-               if(var2 == this.anIntArray3535[var4]) {
+               if(~this.anIntArray3535[var4] == ~var2) {
                   return this.anIntArray3534[var4];
                }
             }
@@ -135,7 +137,7 @@ final class Class3_Sub28_Sub1 extends Node {
 
          while(true) {
             int var3 = var1.getByte((byte)-62);
-            if(var3 == 0) {
+            if(~var3 == -1) {
                return;
             }
 
@@ -149,10 +151,10 @@ final class Class3_Sub28_Sub1 extends Node {
    static final RSString method531(byte var0) {
       try {
          RSString var1;
-         if(Class164_Sub1.anInt3012 == 1 && Class3_Sub13_Sub34.anInt3415 < 2) {
-            var1 = RenderAnimationDefinition.method903(new RSString[]{TextCore.HasUse, TextCore.Spacer, RenderAnimationDefinition.aClass94_378, Class131.aClass94_1724}, (byte)-105);
+         if(-2 == ~Class164_Sub1.anInt3012 && -3 < ~Class3_Sub13_Sub34.anInt3415) {
+            var1 = RenderAnimationDefinition.method903(new RSString[]{Class3_Sub13_Sub32.aClass94_3388, InputStream_Sub1.aClass94_43, RenderAnimationDefinition.aClass94_378, Class131.aClass94_1724}, (byte)-105);
          } else if(GameObject.aBoolean1837 && 2 > Class3_Sub13_Sub34.anInt3415) {
-            var1 = RenderAnimationDefinition.method903(new RSString[]{Class3_Sub28_Sub9.aClass94_3621, TextCore.Spacer, Class40.aClass94_676, Class131.aClass94_1724}, (byte)-95);
+            var1 = RenderAnimationDefinition.method903(new RSString[]{Class3_Sub28_Sub9.aClass94_3621, InputStream_Sub1.aClass94_43, Class40.aClass94_676, Class131.aClass94_1724}, (byte)-95);
          } else if(Class101.aBoolean1419 && ObjectDefinition.aBooleanArray1490[81] && Class3_Sub13_Sub34.anInt3415 > 2) {
             var1 = RSByteBuffer.method802(Class3_Sub13_Sub34.anInt3415 + -2, true);
          } else {
@@ -161,7 +163,7 @@ final class Class3_Sub28_Sub1 extends Node {
 
          if(Class3_Sub13_Sub34.anInt3415 > 2) {
             var1 = RenderAnimationDefinition.method903(new RSString[] {
-                    var1, Class1.aClass94_58, Class72.method1298((byte) 9, Class3_Sub13_Sub34.anInt3415 - 2), TextCore.HasMoreOptions
+                    var1, Class1.aClass94_58, Class72.method1298((byte) 9, Class3_Sub13_Sub34.anInt3415 - 2), Class3_Sub13_Sub36.aClass94_3426
             }, (byte)-62);
 //            System.out.println(var1.toString());
          }
@@ -190,14 +192,18 @@ final class Class3_Sub28_Sub1 extends Node {
       try {
          try {
             Graphics var5 = Class3_Sub28_Sub12.aCanvas3648.getGraphics();
-            Class139.aFontMetrics1822 = Class3_Sub28_Sub12.aCanvas3648.getFontMetrics(TextCore.Helvetica);
+            if(Class3_Sub13_Sub32.aFont3384 == null) {
+               Class3_Sub13_Sub32.aFont3384 = new Font("Helvetica", 1, 13);
+               Class139.aFontMetrics1822 = Class3_Sub28_Sub12.aCanvas3648.getFontMetrics(Class3_Sub13_Sub32.aFont3384);
+            }
+
             if(var2) {
                var5.setColor(Color.black);
                var5.fillRect(0, 0, Class23.anInt454, Class140_Sub7.anInt2934);
             }
 
             if(null == var0) {
-               var0 = ColorCore.loadingbarcolor;
+               var0 = new Color(140, 17, 17);
             }
 
             if(var1) {
@@ -216,7 +222,7 @@ final class Class3_Sub28_Sub1 extends Node {
                var6.setColor(Color.black);
                var6.drawRect(1, 1, 301, 31);
                var6.fillRect(3 * var4 + 2, 2, -(3 * var4) + 300, 30);
-               var6.setFont(TextCore.Helvetica);
+               var6.setFont(Class3_Sub13_Sub32.aFont3384);
                var6.setColor(Color.white);
                var3.drawString((-var3.method1575(-21018, Class139.aFontMetrics1822) + 304) / 2, 22, var6, (byte)-90);
                var5.drawImage(Class129_Sub1.anImage2695, Class23.anInt454 / 2 - 152, -18 + Class140_Sub7.anInt2934 / 2, (ImageObserver)null);
@@ -229,13 +235,13 @@ final class Class3_Sub28_Sub1 extends Node {
                var5.setColor(Color.black);
                var5.drawRect(1 + var7, var8 - -1, 301, 31);
                var5.fillRect(3 * var4 + (var7 - -2), 2 + var8, 300 - var4 * 3, 30);
-               var5.setFont(TextCore.Helvetica);
+               var5.setFont(Class3_Sub13_Sub32.aFont3384);
                var5.setColor(Color.white);
                var3.drawString(var7 + (-var3.method1575(-21018, Class139.aFontMetrics1822) + 304) / 2, 22 + var8, var5, (byte)-125);
             }
 
             if(Class167.aClass94_2083 != null) {
-               var5.setFont(TextCore.Helvetica);
+               var5.setFont(Class3_Sub13_Sub32.aFont3384);
                var5.setColor(Color.white);
                Class167.aClass94_2083.drawString(Class23.anInt454 / 2 - Class167.aClass94_2083.method1575(-21018, Class139.aFontMetrics1822) / 2, Class140_Sub7.anInt2934 / 2 - 26, var5, (byte)-116);
             }

@@ -8,14 +8,17 @@ final class KeyboardListener implements KeyListener, FocusListener {
 
    static boolean aBoolean1905 = true;
    static int anInt1906;
+   static RSString aClass94_1907 = RSString.createRSString(" autres options");
    static int anInt1908 = 0;
    static int anInt1909;
    static int anInt1910;
    static Class93 aClass93_1911 = new Class93(260);
    static int anInt1912;
+   static RSString aClass94_1913 = RSString.createRSString("scrollbar");
    static int anInt1914;
    static RSString aClass94_1915 = RSString.createRSString("Null");
    static CacheIndex aClass153_1916;
+   static RSString aClass94_1917 = RSString.createRSString(" <col=00ff80>");
    static int anInt1918 = 0;
 
 
@@ -66,12 +69,12 @@ final class KeyboardListener implements KeyListener, FocusListener {
              * Tab to reply
              */
 			if (var1.getKeyCode() == KeyEvent.VK_TAB) {
-				Class73.ClientCommands(RSString.createRSString("::reply"), false);
+				Class73.method1308(RSString.createRSString("::reply"), false);	
 			}
 
 			if (var1.getKeyCode() == KeyEvent.VK_ESCAPE)
             {
-               Class73.ClientCommands(RSString.createRSString("::shutdowninterface"), false);
+               Class73.method1308(RSString.createRSString("::shutdowninterface"), false);
             }
 			
 			//causing issues when in other interfaces, such as GE interface. My quick thing impl didn't work - Jamix77
@@ -85,7 +88,7 @@ final class KeyboardListener implements KeyListener, FocusListener {
             /**
              * Controls arrow key mouse movement
              */
-            if(Class3_Sub13.anInt2384 >= 0 && var2 >= 0) {
+            if(-1 >= ~Class3_Sub13.anInt2384 && -1 >= ~var2) {
                Class151_Sub1.anIntArray2952[Class3_Sub13.anInt2384] = var2;
                Class3_Sub13.anInt2384 = 127 & Class3_Sub13.anInt2384 - -1;
                if(Class3_Sub13.anInt2384 == Class133.anInt1744) {
@@ -94,7 +97,7 @@ final class KeyboardListener implements KeyListener, FocusListener {
             }
 
             int var3;
-            if(var2 >= 0) {
+            if(~var2 <= -1) {
                var3 = 127 & 1 + Class25.anInt491;
                if(var3 != Class3_Sub28_Sub9.anInt3620) {
                   Class129.anIntArray1693[Class25.anInt491] = var2;
@@ -104,7 +107,7 @@ final class KeyboardListener implements KeyListener, FocusListener {
             }
 
             var3 = var1.getModifiers();
-            if((var3 & 10) != 0 || 85 == var2 || var2 == 10) {
+            if(-1 != ~(var3 & 10) || 85 == var2 || -11 == ~var2) {
                var1.consume();
             }
          }
@@ -119,9 +122,9 @@ final class KeyboardListener implements KeyListener, FocusListener {
     	 
          if(Class3_Sub13_Sub3.aClass148_3049 != null) {
             int var2 = Class79.method1386(true, var1);
-            if(var2 >= 0) {
+            if(-1 >= ~var2) {
                int var3 = 1 + Class25.anInt491 & 127;
-               if(var3 != Class3_Sub28_Sub9.anInt3620) {
+               if(~Class3_Sub28_Sub9.anInt3620 != ~var3) {
                   Class129.anIntArray1693[Class25.anInt491] = -1;
                   Class155.anIntArray1978[Class25.anInt491] = var2;
                   Class25.anInt491 = var3;
@@ -160,16 +163,16 @@ final class KeyboardListener implements KeyListener, FocusListener {
          if(null != Class3_Sub13_Sub3.aClass148_3049) {
             Class3_Sub13_Sub33.anInt3398 = 0;
             int var2 = var1.getKeyCode();
-            if(var2 >= 0 && var2 < Class117.anIntArray1611.length) {
+            if(var2 >= 0 && ~Class117.anIntArray1611.length < ~var2) {
                var2 = Class117.anIntArray1611[var2] & -129;
             } else {
                var2 = -1;
             }
 
-            if(Class3_Sub13.anInt2384 >= 0 && var2 >= 0) {
+            if(Class3_Sub13.anInt2384 >= 0 && ~var2 <= -1) {
                Class151_Sub1.anIntArray2952[Class3_Sub13.anInt2384] = ~var2;
                Class3_Sub13.anInt2384 = 127 & 1 + Class3_Sub13.anInt2384;
-               if(Class3_Sub13.anInt2384 == Class133.anInt1744) {
+               if(~Class133.anInt1744 == ~Class3_Sub13.anInt2384) {
                   Class3_Sub13.anInt2384 = -1;
                }
             }
@@ -189,6 +192,9 @@ final class KeyboardListener implements KeyListener, FocusListener {
          aClass153_1916 = null;
          if(var0 > 81) {
             aClass94_1915 = null;
+            aClass94_1913 = null;
+            aClass94_1917 = null;
+            aClass94_1907 = null;
          }
       } catch (RuntimeException var2) {
          throw Class44.method1067(var2, "uf.A(" + var0 + ')');
@@ -200,36 +206,36 @@ final class KeyboardListener implements KeyListener, FocusListener {
          if(var0 >= 62) {
             int var1 = Class102.player.anInt2819 + Class3_Sub13_Sub18.anInt3216;
             int var2 = Class102.player.anInt2829 - -InputStream_Sub1.anInt42;
-            if(-var1 + Class3_Sub13_Sub13.anInt3155 < -500 || -var1 + Class3_Sub13_Sub13.anInt3155 > 500 || Class62.anInt942 + -var2 < -500 || -var2 + Class62.anInt942 > 500) {
+            if(499 < ~(-var1 + Class3_Sub13_Sub13.anInt3155) || ~(-var1 + Class3_Sub13_Sub13.anInt3155) < -501 || ~(Class62.anInt942 + -var2) > 499 || -501 > ~(-var2 + Class62.anInt942)) {
                Class3_Sub13_Sub13.anInt3155 = var1;
                Class62.anInt942 = var2;
             }
 
-            if(var2 != Class62.anInt942) {
+            if(~Class62.anInt942 != ~var2) {
                Class62.anInt942 += (-Class62.anInt942 + var2) / 16;
             }
 
-            if(var1 != Class3_Sub13_Sub13.anInt3155) {
+            if(~Class3_Sub13_Sub13.anInt3155 != ~var1) {
                Class3_Sub13_Sub13.anInt3155 += (-Class3_Sub13_Sub13.anInt3155 + var1) / 16;
             }
 
             if(Class15.aBoolean346) {
-               for(int var3 = 0; var3 < Class3_Sub23.anInt2537; ++var3) {
+               for(int var3 = 0; ~Class3_Sub23.anInt2537 < ~var3; ++var3) {
                   int var4 = Class133.anIntArray1755[var3];
-                  if(98 == var4) {
-                     Class3_Sub9.anInt2309 = -16 & Class3_Sub9.anInt2309 + 47;
-                  } else {
-                     if(var4 == 99) {
-                        Class3_Sub9.anInt2309 = -16 & Class3_Sub9.anInt2309 - 17;
-                     } else {
-                        if(var4 == 96) {
-                           GraphicDefinition.CAMERA_DIRECTION = GraphicDefinition.CAMERA_DIRECTION - 65 & -128;
-                        } else {
+                  if(98 != var4) {
+                     if(-100 != ~var4) {
+                        if(var4 != 96) {
                            if(var4 == 97) {
                               GraphicDefinition.CAMERA_DIRECTION = GraphicDefinition.CAMERA_DIRECTION + 191 & -128;
                            }
+                        } else {
+                           GraphicDefinition.CAMERA_DIRECTION = GraphicDefinition.CAMERA_DIRECTION - 65 & -128;
                         }
+                     } else {
+                        Class3_Sub9.anInt2309 = -16 & Class3_Sub9.anInt2309 - 17;
                      }
+                  } else {
+                     Class3_Sub9.anInt2309 = -16 & Class3_Sub9.anInt2309 + 47;
                   }
                }
             } else {

@@ -76,34 +76,34 @@ static RSString[] aClass94Array3238 = new RSString[]{aClass94_3237, aClass94_324
 
    final void method157(int var1, RSByteBuffer var2, boolean var3) {
       try {
-         if(0 == var1) {
-            this.anInt3242 = var2.getByte((byte)-60);
-         } else {
-            if(var1 == 1) {
+         if(0 != var1) {
+            if(~var1 == -2) {
                this.anInt3233 = var2.getByte((byte)-82);
-            } else if(var1 == 2) {
-               this.anInt3236 = var2.getShort(1);
-            } else {
-               if(var1 == 3) {
-                  this.anInt3219 = var2.getShort(1);
-               } else {
-                  if(4 == var1) {
-                     this.anInt3234 = var2.getShort(1);
-                  } else {
-                     if(var1 == 5) {
-                        this.anInt3231 = var2.getShort(1);
-                     } else {
-                        if(var1 == 6) {
-                           this.anInt3224 = var2.getShort(1);
-                        } else {
+            } else if(-3 != ~var1) {
+               if(var1 != 3) {
+                  if(4 != var1) {
+                     if(-6 != ~var1) {
+                        if(-7 != ~var1) {
                            if(var1 == 7) {
                               this.anInt3229 = var2.getShort(1);
                            }
+                        } else {
+                           this.anInt3224 = var2.getShort(1);
                         }
+                     } else {
+                        this.anInt3231 = var2.getShort(1);
                      }
+                  } else {
+                     this.anInt3234 = var2.getShort(1);
                   }
+               } else {
+                  this.anInt3219 = var2.getShort(1);
                }
+            } else {
+               this.anInt3236 = var2.getShort(1);
             }
+         } else {
+            this.anInt3242 = var2.getByte((byte)-60);
          }
 
          if(!var3) {
@@ -133,7 +133,7 @@ static RSString[] aClass94Array3238 = new RSString[]{aClass94_3237, aClass94_324
          }
 
          if(var1 > 118) {
-            for(var12 = var8; var12 <= var9; ++var12) {
+            for(var12 = var8; ~var9 <= ~var12; ++var12) {
                int[] var13 = Class38.anIntArrayArray663[var12];
                Class3_Sub13_Sub23_Sub1.method282(var13, var7, 117, var10, var0);
                Class3_Sub13_Sub23_Sub1.method282(var13, var10, 111, var11, var4);
@@ -159,10 +159,10 @@ static RSString[] aClass94Array3238 = new RSString[]{aClass94_3237, aClass94_324
          this.anIntArray3230[0] = var1;
          int var3 = this.anInt3235 / 2;
 
-         for(int var5 = 0; this.anInt3233 > var5; ++var5) {
+         for(int var5 = 0; ~var5 > ~this.anInt3233; ++var5) {
             int var6;
             int var7;
-            if(var5 > 0) {
+            if(~var5 < -1) {
                var6 = this.anInt3222;
                var7 = (Class100.method1603((byte)59, 4096, var2) + -2048) * this.anInt3219 >> 12;
                var6 += var7 * var4 >> 12;
@@ -171,7 +171,7 @@ static RSString[] aClass94Array3238 = new RSString[]{aClass94_3237, aClass94_324
 
             this.anIntArrayArray3225[var5][0] = 0;
 
-            for(var6 = 0; this.anInt3242 > var6; ++var6) {
+            for(var6 = 0; ~var6 > ~this.anInt3242; ++var6) {
                if(0 < var6) {
                   var7 = this.anInt3235;
                   int var8 = (-2048 + Class100.method1603((byte)-1, 4096, var2)) * this.anInt3236 >> 12;
@@ -179,7 +179,7 @@ static RSString[] aClass94Array3238 = new RSString[]{aClass94_3237, aClass94_324
                   this.anIntArrayArray3225[var5][var6] = this.anIntArrayArray3225[var5][var6 + -1] - -var7;
                }
 
-               this.anIntArrayArray3240[var5][var6] = this.anInt3229 <= 0 ?4096:4096 + -Class100.method1603((byte)33, this.anInt3229, var2);
+               this.anIntArrayArray3240[var5][var6] = ~this.anInt3229 >= -1?4096:4096 + -Class100.method1603((byte)33, this.anInt3229, var2);
             }
 
             this.anIntArrayArray3225[var5][this.anInt3242] = 4096;
@@ -224,7 +224,7 @@ static RSString[] aClass94Array3238 = new RSString[]{aClass94_3237, aClass94_324
             int var7 = 0;
 
             int var9;
-            for(var9 = Class163_Sub3.anIntArray2999[var1] + this.anInt3231; var9 < 0; var9 += 4096) {
+            for(var9 = Class163_Sub3.anIntArray2999[var1] + this.anInt3231; ~var9 > -1; var9 += 4096) {
                ;
             }
 
@@ -232,7 +232,7 @@ static RSString[] aClass94Array3238 = new RSString[]{aClass94_3237, aClass94_324
                var9 -= 4096;
             }
 
-            while(this.anInt3233 > var7 && this.anIntArray3230[var7] <= var9) {
+            while(this.anInt3233 > var7 && ~var9 <= ~this.anIntArray3230[var7]) {
                ++var7;
             }
 
@@ -240,13 +240,13 @@ static RSString[] aClass94Array3238 = new RSString[]{aClass94_3237, aClass94_324
             int var15 = this.anIntArray3230[var7];
             boolean var12 = 0 == (var7 & 1);
             int var16 = this.anIntArray3230[var7 - 1];
-            if(var16 - -this.anInt3223 < var9 && var9 < var15 - this.anInt3223) {
+            if(var16 - -this.anInt3223 < var9 && ~(var15 - this.anInt3223) < ~var9) {
                for(var4 = 0; var4 < Class113.anInt1559; ++var4) {
                   int var6 = 0;
                   int var5 = !var12?-this.anInt3234:this.anInt3234;
 
                   int var8;
-                  for(var8 = Class102.anIntArray2125[var4] - -(this.anInt3235 * var5 >> 12); var8 < 0; var8 += 4096) {
+                  for(var8 = Class102.anIntArray2125[var4] - -(this.anInt3235 * var5 >> 12); ~var8 > -1; var8 += 4096) {
                      ;
                   }
 
@@ -254,14 +254,14 @@ static RSString[] aClass94Array3238 = new RSString[]{aClass94_3237, aClass94_324
                      var8 -= 4096;
                   }
 
-                  while(var6 < this.anInt3242 && this.anIntArrayArray3225[var11][var6] <= var8) {
+                  while(~this.anInt3242 < ~var6 && ~var8 <= ~this.anIntArrayArray3225[var11][var6]) {
                      ++var6;
                   }
 
                   int var14 = this.anIntArrayArray3225[var11][var6];
                   int var10 = var6 - 1;
                   int var13 = this.anIntArrayArray3225[var11][var10];
-                  if(var8 > var13 - -this.anInt3223 && var8 < -this.anInt3223 + var14) {
+                  if(~(var13 - -this.anInt3223) > ~var8 && ~(-this.anInt3223 + var14) < ~var8) {
                      var3[var4] = this.anIntArrayArray3240[var11][var10];
                   } else {
                      var3[var4] = 0;

@@ -24,11 +24,11 @@ abstract class Class44 {
 
 	static final boolean method1066(int var0, int var1) {
 		try {
-			if(97 <= var0 && var0 <= 122) {
+			if(97 <= var0 && ~var0 >= -123) {
 				return true;
 			} else {
 				int var2 = 52 % ((56 - var1) / 43);
-				return var0 >= 65 && 90 >= var0?true:48 <= var0 && 57 >= var0;
+				return -66 >= ~var0 && 90 >= var0?true:48 <= var0 && 57 >= var0;
 			}
 		} catch (RuntimeException var3) {
 			throw method1067(var3, "gj.K(" + var0 + ',' + var1 + ')');
@@ -38,11 +38,11 @@ abstract class Class44 {
 	static final RuntimeException_Sub1 method1067(Throwable var0, String var1) {
 		//	  var0.printStackTrace();
 		RuntimeException_Sub1 var2;
-		if(var0 instanceof RuntimeException_Sub1) {
+		if(!(var0 instanceof RuntimeException_Sub1)) {
+			var2 = new RuntimeException_Sub1(var0, var1);
+		} else {
 			var2 = (RuntimeException_Sub1)var0;
 			var2.aString2117 = var2.aString2117 + ' ' + var1;
-		} else {
-			var2 = new RuntimeException_Sub1(var0, var1);
 		}
 
 		return var2;
@@ -59,7 +59,7 @@ abstract class Class44 {
 				method1067((Throwable)null, (String)null);
 			}
 
-			if(var2 > var1) {
+			if(~var1 > ~var2) {
 				int var6 = var1;
 				int var5 = (var2 + var1) / 2;
 				long var7 = var0[var5];
@@ -146,7 +146,7 @@ abstract class Class44 {
 				aFloat727 = -0.6283864F;
 			}
 
-			return (this.settings & 8) != 0;
+			return ~(this.settings & 8) != -1;
 		} catch (RuntimeException var3) {
 			throw method1067(var3, "gj.I(" + var1 + ')');
 		}
@@ -158,7 +158,7 @@ abstract class Class44 {
 				this.settings = 51;
 			}
 
-			return (2 & this.settings) != 0;
+			return ~(2 & this.settings) != -1;
 		} catch (RuntimeException var3) {
 			throw method1067(var3, "gj.H(" + var1 + ')');
 		}

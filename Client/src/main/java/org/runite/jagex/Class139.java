@@ -7,6 +7,7 @@ final class Class139 {
    static int anInt1823;
    static int anInt1824;
    static Class3_Sub28_Sub16[] aClass3_Sub28_Sub16Array1825;
+   static RSString aClass94_1826 = RSString.createRSString("<col=00ffff>");
    static boolean aBoolean1827;
    static byte[][][] aByteArrayArrayArray1828;
    static int anInt1829 = 0;
@@ -18,6 +19,7 @@ final class Class139 {
          aClass94_1830 = null;
          aByteArrayArrayArray1828 = (byte[][][])null;
          aFontMetrics1822 = null;
+         aClass94_1826 = null;
          if(var0 != -17124) {
             aFontMetrics1822 = (FontMetrics)null;
          }

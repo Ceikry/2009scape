@@ -4,6 +4,7 @@ final class NodeList {
 
    static CacheIndex aClass153_332;
    private Node aClass3_Sub28_333 = new Node();
+   static RSString aClass94_334 = RSString.createRSString("Lade Texturen )2 ");
    private Node aClass3_Sub28_335;
 
 
@@ -25,6 +26,7 @@ final class NodeList {
       try {
          int var1 = -102 / ((var0 - 35) / 48);
          aClass153_332 = null;
+         aClass94_334 = null;
       } catch (RuntimeException var2) {
          throw Class44.method1067(var2, "ce.C(" + var0 + ')');
       }
@@ -33,16 +35,16 @@ final class NodeList {
    final Node method876(byte var1) {
       try {
          Node var2 = this.aClass3_Sub28_333.aClass3_Sub28_2578;
-         if(this.aClass3_Sub28_333 == var2) {
-            this.aClass3_Sub28_335 = null;
-            return null;
-         } else {
+         if(this.aClass3_Sub28_333 != var2) {
             this.aClass3_Sub28_335 = var2.aClass3_Sub28_2578;
             if(var1 < 14) {
                this.aClass3_Sub28_335 = (Node)null;
             }
 
             return var2;
+         } else {
+            this.aClass3_Sub28_335 = null;
+            return null;
          }
       } catch (RuntimeException var3) {
          throw Class44.method1067(var3, "ce.K(" + var1 + ')');
@@ -97,22 +99,22 @@ final class NodeList {
 
    static final Class3_Sub28_Sub17 method880(int var0, byte[] var1) {
       try {
-         if(null == var1) {
-            return null;
-         } else {
-            if(var0 == -22376) {
+         if(null != var1) {
+            if(var0 != -22376) {
+               return (Class3_Sub28_Sub17)null;
+            } else {
                Object var2;
-               if(HDToolKit.highDetail) {
-                  var2 = new Class3_Sub28_Sub17_Sub2(var1, Class164.anIntArray2048, RSByteBuffer.anIntArray2591, Class140_Sub7.anIntArray2931, Class3_Sub13_Sub6.anIntArray3076, Class163_Sub1.aByteArrayArray2987);
-               } else {
+               if(!HDToolKit.highDetail) {
                   var2 = new Class3_Sub28_Sub17_Sub1(var1, Class164.anIntArray2048, RSByteBuffer.anIntArray2591, Class140_Sub7.anIntArray2931, Class3_Sub13_Sub6.anIntArray3076, Class163_Sub1.aByteArrayArray2987);
+               } else {
+                  var2 = new Class3_Sub28_Sub17_Sub2(var1, Class164.anIntArray2048, RSByteBuffer.anIntArray2591, Class140_Sub7.anIntArray2931, Class3_Sub13_Sub6.anIntArray3076, Class163_Sub1.aByteArrayArray2987);
                }
 
                Class39.method1035((byte)106);
                return (Class3_Sub28_Sub17)var2;
-            } else {
-               return (Class3_Sub28_Sub17)null;
             }
+         } else {
+            return null;
          }
       } catch (RuntimeException var3) {
          throw Class44.method1067(var3, "ce.G(" + var0 + ',' + (var1 != null?"{...}":"null") + ')');
@@ -125,7 +127,7 @@ final class NodeList {
             Class3_Sub4 var10 = null;
 
             for(Class3_Sub4 var11 = (Class3_Sub4)Class3_Sub13_Sub6.aClass61_3075.method1222(); var11 != null; var11 = (Class3_Sub4)Class3_Sub13_Sub6.aClass61_3075.method1221()) {
-               if(var11.anInt2250 == var0 && var11.anInt2264 == var4 && var11.anInt2248 == var1 && var11.anInt2263 == var7) {
+               if(var11.anInt2250 == var0 && ~var4 == ~var11.anInt2264 && var11.anInt2248 == var1 && ~var7 == ~var11.anInt2263) {
                   var10 = var11;
                   break;
                }

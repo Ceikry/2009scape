@@ -4,6 +4,7 @@ final class Class14 {
 
    static int anInt336;
    static boolean aBoolean337;
+   static RSString aClass94_338 = RSString.createRSString("Ablegen");
    static RSString aClass94_339 = RSString.createRSString("1");
    static int anInt340 = 127;
    static RSString aClass94_341 = RSString.createRSString(")3");
@@ -11,6 +12,9 @@ final class Class14 {
 
    private static final LDIndexedSprite[] method885(boolean var0, int var1, CacheIndex var2, int var3) {
       try {
+         if(!var0) {
+            aClass94_338 = (RSString)null;
+         }
        //  System.out.println("Class 14 " + var1);
          return !Class75_Sub4.method1351(var2, var3, var1, -30901)?null:Class69.method1281(0);
       } catch (RuntimeException var5) {
@@ -23,6 +27,8 @@ final class Class14 {
          if(var0 < 26) {
             aClass94_339 = (RSString)null;
          }
+
+         aClass94_338 = null;
          aClass94_339 = null;
          aClass94_341 = null;
       } catch (RuntimeException var2) {
@@ -50,7 +56,7 @@ final class Class14 {
          if(HDToolKit.highDetail) {
             Class141.aClass109_Sub1Array1843 = method885(true, Class45.anInt735, var1, 0);
 
-            for(int var2 = 0; var2 < Class141.aClass109_Sub1Array1843.length; ++var2) {
+            for(int var2 = 0; ~Class141.aClass109_Sub1Array1843.length < ~var2; ++var2) {
                Class141.aClass109_Sub1Array1843[var2].method1675();
             }
          }
@@ -66,18 +72,18 @@ final class Class14 {
          Class3_Sub28_Sub16_Sub2[] var3 = Class157.method2176(0, 32767, Class3_Sub18.anInt2471, var1);
 
          int var4;
-         for(var4 = 0; var3.length > var4; ++var4) {
+         for(var4 = 0; ~var4 > ~var3.length; ++var4) {
             var3[var4].method665();
          }
 
-         if(HDToolKit.highDetail) {
+         if(!HDToolKit.highDetail) {
+            Class3_Sub13_Sub39.aClass3_Sub28_Sub16Array3458 = var3;
+         } else {
             Class3_Sub13_Sub39.aClass3_Sub28_Sub16Array3458 = new Class3_Sub28_Sub16[var3.length];
 
             for(var4 = 0; var4 < var3.length; ++var4) {
                Class3_Sub13_Sub39.aClass3_Sub28_Sub16Array3458[var4] = new Class3_Sub28_Sub16_Sub1(var3[var4]);
             }
-         } else {
-            Class3_Sub13_Sub39.aClass3_Sub28_Sub16Array3458 = var3;
          }
 
          int var5 = (int)((double)var0 * Math.random()) - 10;
@@ -90,14 +96,14 @@ final class Class14 {
             Class102.aClass3_Sub28_Sub16_Sub2Array2140[var8].method669(var4 + var7, var7 + var5, var7 + var6);
          }
 
-         if(HDToolKit.highDetail) {
+         if(!HDToolKit.highDetail) {
+            Class140_Sub4.aClass3_Sub28_Sub16Array2839 = Class102.aClass3_Sub28_Sub16_Sub2Array2140;
+         } else {
             Class140_Sub4.aClass3_Sub28_Sub16Array2839 = new Class3_Sub28_Sub16[Class102.aClass3_Sub28_Sub16_Sub2Array2140.length];
 
-            for(var8 = 0; var8 < Class102.aClass3_Sub28_Sub16_Sub2Array2140.length; ++var8) {
+            for(var8 = 0; ~Class102.aClass3_Sub28_Sub16_Sub2Array2140.length < ~var8; ++var8) {
                Class140_Sub4.aClass3_Sub28_Sub16Array2839[var8] = new Class3_Sub28_Sub16_Sub1(Class102.aClass3_Sub28_Sub16_Sub2Array2140[var8]);
             }
-         } else {
-            Class140_Sub4.aClass3_Sub28_Sub16Array2839 = Class102.aClass3_Sub28_Sub16_Sub2Array2140;
          }
 
       } catch (RuntimeException var9) {

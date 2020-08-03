@@ -32,7 +32,9 @@ final class Class71 {
             var6 = var2[var4];
             var1[var3] = var6;
             int var9;
-            if((var6 & var5) == 0) {
+            if((var6 & var5) != 0) {
+               var7 = var2[var4 - 1];
+            } else {
                var7 = var6 | var5;
 
                for(var8 = var4 - 1; var8 >= 1; --var8) {
@@ -49,11 +51,9 @@ final class Class71 {
 
                   var2[var8] = var9 | var10;
                }
-            } else {
-               var7 = var2[var4 - 1];
             }
 
-             var2[var4] = var7;
+            var2[var4] = var7;
 
             for(var8 = var4 + 1; var8 <= 32; ++var8) {
                var9 = var2[var8];
@@ -75,17 +75,17 @@ final class Class71 {
 
             for(var7 = 0; var7 < var4; ++var7) {
                var8 = Integer.MIN_VALUE >>> var7;
-               if((var5 & var8) == 0) {
-                  ++var6;
-               } else {
+               if((var5 & var8) != 0) {
                   if(this.anIntArray1066[var6] == 0) {
                      this.anIntArray1066[var6] = var11;
                   }
 
                   var6 = this.anIntArray1066[var6];
+               } else {
+                  ++var6;
                }
 
-                if(var6 >= this.anIntArray1066.length) {
+               if(var6 >= this.anIntArray1066.length) {
                   int[] var12 = new int[this.anIntArray1066.length * 2];
 
                   for(var10 = 0; var10 < this.anIntArray1066.length; ++var10) {

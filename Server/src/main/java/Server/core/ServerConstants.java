@@ -44,12 +44,12 @@ public final class ServerConstants {
 	/**
 	 * The start location for a fresh account.
 	 */
-	public static final Location START_LOCATION = Location.create(2524, 5002, 0);
+	public static final Location START_LOCATION = Location.create(2337, 3160, 0);
 	
 	/**
 	 * The main home teleport location.
 	 */
-	public static final Location HOME_LOCATION = Location.create(3222, 3218, 0);
+	public static final Location HOME_LOCATION = Location.create(2337, 3160, 0);
 	
 	/**
 	 * The teleport destinations.
@@ -174,6 +174,6 @@ public final class ServerConstants {
 	}
 	
 	public static final Boolean NEW_PLAYER_DEFAULT_CLAN = true;
-	public static final String SERVER_NAME = "2009Scape";
+	public static final String SERVER_NAME = "RBGScape";
 	
 }

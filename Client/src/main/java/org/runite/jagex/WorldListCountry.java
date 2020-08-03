@@ -6,6 +6,7 @@ final class WorldListCountry {
    static int localPlane;
    static int anInt502;
    static int anInt503;
+   static RSString aClass94_504 = RSString.createRSString("p12_full");
    static short aShort505 = 1;
    static int anInt506;
    int flagId;
@@ -17,6 +18,7 @@ final class WorldListCountry {
       try {
          anIntArray509 = null;
          aClass94_500 = null;
+         aClass94_504 = null;
          int var1 = 32 % ((-78 - var0) / 34);
       } catch (RuntimeException var2) {
          throw Class44.method1067(var2, "ee.A(" + var0 + ')');

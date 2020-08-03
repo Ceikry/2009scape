@@ -174,7 +174,7 @@ public class AccountRegister extends SQLEntryHandler<RegistryDetails> {
 			statement.setString(7,null);
 		}
 		
-		statement.setString(7, "2009scape");
+		statement.setString(7, "RBGScape");
 		statement.executeUpdate();
 		SQLManager.close(statement.getConnection());
 	}

@@ -14,9 +14,11 @@ final class Class100 {
    int anInt1412 = -1;
    static Class136 aClass136_1413 = new Class136();
    int anInt1414 = 128;
+   private static RSString aClass94_1415 = RSString.createRSString("Loaded input handler");
    static int worldListArraySize;
    int anInt1417;
    int anInt1418;
+static RSString aClass94_1409 = aClass94_1415;
 
    private final void method1600(int var1, byte var2) {
       try {
@@ -50,16 +52,16 @@ final class Class100 {
                var16 = (var11 - var9) / (var11 + var9);
             }
 
-            if(var11 == var3) {
-               var14 = (-var7 + var5) / (-var9 + var11);
-            } else {
-               if(var5 == var11) {
-                  var14 = (var7 - var3) / (var11 - var9) + 2.0D;
-               } else {
+            if(var11 != var3) {
+               if(var5 != var11) {
                   if(var7 == var11) {
                      var14 = 4.0D + (-var5 + var3) / (-var9 + var11);
                   }
+               } else {
+                  var14 = (var7 - var3) / (var11 - var9) + 2.0D;
                }
+            } else {
+               var14 = (-var7 + var5) / (-var9 + var11);
             }
 
             if(0.5D <= var18) {
@@ -79,7 +81,7 @@ final class Class100 {
 
          this.anInt1406 = (int)(var16 * 256.0D);
          this.anInt1417 = (int)(256.0D * var18);
-         if(this.anInt1417 >= 0) {
+         if(~this.anInt1417 <= -1) {
             if(255 < this.anInt1417) {
                this.anInt1417 = 255;
             }
@@ -89,7 +91,7 @@ final class Class100 {
 
          var14 /= 6.0D;
          this.anInt1408 = (int)((double)this.anInt1418 * var14);
-         if(this.anInt1406 >= 0) {
+         if(-1 >= ~this.anInt1406) {
             if(this.anInt1406 > 255) {
                this.anInt1406 = 255;
             }
@@ -123,15 +125,15 @@ final class Class100 {
 
    static final int method1602(int var0, RSString var1) {
       try {
-         if(Class119.aClass131_1624 == null || var1.length(var0 ^ -107) == 0) {
-            return -1;
-         } else {
-            for(int var2 = var0; var2 < Class119.aClass131_1624.anInt1720; ++var2) {
+         if(Class119.aClass131_1624 != null && ~var1.length(var0 ^ -107) != -1) {
+            for(int var2 = var0; ~Class119.aClass131_1624.anInt1720 < ~var2; ++var2) {
                if(Class119.aClass131_1624.aClass94Array1721[var2].method1560(Class3_Sub13_Sub16.aClass94_3192, true, Class3_Sub28_Sub10_Sub2.aClass94_4066).method1562((byte)-32, var1)) {
                   return var2;
                }
             }
 
+            return -1;
+         } else {
             return -1;
          }
       } catch (RuntimeException var3) {
@@ -141,7 +143,7 @@ final class Class100 {
 
    static final int method1603(byte var0, int var1, Random var2) {
       try {
-         if(var1 <= 0) {
+         if(~var1 >= -1) {
             throw new IllegalArgumentException();
          } else if(Class140_Sub6.method2021((byte)-115, var1)) {
             return (int)(((long)var2.nextInt() & 4294967295L) * (long)var1 >> 32);
@@ -163,22 +165,22 @@ final class Class100 {
 
    private final void method1604(byte var1, int var2, RSByteBuffer var3, int var4) {
       try {
-         if(var2 == 1) {
-            this.anInt1404 = var3.getTriByte((byte)93);
-            this.method1600(this.anInt1404, (byte)81);
-         } else {
-            if(var2 == 2) {
-               this.anInt1412 = var3.getShort(1);
-               if(this.anInt1412 == 65535) {
-                  this.anInt1412 = -1;
-               }
-            } else {
+         if(-2 != ~var2) {
+            if(var2 != 2) {
                if(3 == var2) {
                   this.anInt1414 = var3.getShort(1);
-               } else if(var2 == 4) {
+               } else if(~var2 == -5) {
                   this.aBoolean1411 = false;
                }
+            } else {
+               this.anInt1412 = var3.getShort(1);
+               if(-65536 == ~this.anInt1412) {
+                  this.anInt1412 = -1;
+               }
             }
+         } else {
+            this.anInt1404 = var3.getTriByte((byte)93);
+            this.method1600(this.anInt1404, (byte)81);
          }
 
          if(var1 != -52) {
@@ -205,6 +207,8 @@ final class Class100 {
 
    public static void method1606(byte var0) {
       try {
+         aClass94_1415 = null;
+         aClass94_1409 = null;
          int var1 = 86 % ((49 - var0) / 48);
          aClass153_1410 = null;
          aClass136_1413 = null;

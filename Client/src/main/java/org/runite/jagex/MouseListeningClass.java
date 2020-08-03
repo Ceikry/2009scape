@@ -1,7 +1,12 @@
 package org.runite.jagex;
 
-import javax.swing.*;
-import java.awt.event.*;
+import java.awt.event.FocusEvent;
+import java.awt.event.FocusListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import java.awt.event.MouseMotionListener;
+
+import javax.swing.SwingUtilities;
 
 final class MouseListeningClass implements MouseListener, MouseMotionListener, FocusListener
 {
@@ -10,6 +15,7 @@ final class MouseListeningClass implements MouseListener, MouseMotionListener, F
 	  static float[] aFloatArray1919 = new float[4];
 	  static int[] anIntArray1920;
 	  static int anInt1921 = 0;
+	  static RSString aClass94_1922 = RSString.createRSString("weiss:");
 	  static int anInt1923;
 	  static int anInt1924 = 0;
 	  static int anInt1925 = 0;
@@ -47,21 +53,21 @@ final class MouseListeningClass implements MouseListener, MouseMotionListener, F
 	        }
 	        if (var1.anInt2259 != 0)
 	        {
-	          if (var1.anInt2261 > 0) {
+	          if ((var1.anInt2261 ^ 0xFFFFFFFF) < -1) {
 	            var1.anInt2261 -= 1;
 	          }
-	          if ((var1.anInt2261 == 0) && (1 <= var1.anInt2264) && (1 <= var1.anInt2248) && (102 >= var1.anInt2264) && (var1.anInt2248 <= 102) && ((var1.anInt2265 < 0) || (Class3_Sub28_Sub10.method590((byte)-34, var1.anInt2265, var1.anInt2262))))
+	          if (((var1.anInt2261 ^ 0xFFFFFFFF) == -1) && (1 <= var1.anInt2264) && (1 <= var1.anInt2248) && (102 >= var1.anInt2264) && ((var1.anInt2248 ^ 0xFFFFFFFF) >= -103) && (((var1.anInt2265 ^ 0xFFFFFFFF) > -1) || (Class3_Sub28_Sub10.method590((byte)-34, var1.anInt2265, var1.anInt2262))))
 	          {
 	            Class41.method1048(var1.anInt2265, var1.anInt2264, var1.anInt2250, var1.anInt2256, var1.anInt2248, -65, var1.anInt2262, var1.anInt2263);
 	            var1.anInt2261 = -1;
-	            if ((var1.anInt2265 == var1.anInt2254) && (var1.anInt2254 == -1)) {
+	            if (((var1.anInt2254 ^ 0xFFFFFFFF) == (var1.anInt2265 ^ 0xFFFFFFFF)) && (var1.anInt2254 == -1)) {
 	              var1.method86(-1024);
-	            } else if ((var1.anInt2254 == var1.anInt2265) && (var1.anInt2256 == var1.anInt2257) && (var1.anInt2262 == var1.anInt2253)) {
+	            } else if (((var1.anInt2265 ^ 0xFFFFFFFF) == (var1.anInt2254 ^ 0xFFFFFFFF)) && (var1.anInt2256 == var1.anInt2257) && ((var1.anInt2253 ^ 0xFFFFFFFF) == (var1.anInt2262 ^ 0xFFFFFFFF))) {
 	              var1.method86(-1024);
 	            }
 	          }
 	        }
-	        else if ((-1 < (~var1.anInt2254)) || (Class3_Sub28_Sub10.method590((byte)-66, var1.anInt2254, var1.anInt2253)))
+	        else if ((-1 < (var1.anInt2254 ^ 0xFFFFFFFF)) || (Class3_Sub28_Sub10.method590((byte)-66, var1.anInt2254, var1.anInt2253)))
 	        {
 	          Class41.method1048(var1.anInt2254, var1.anInt2264, var1.anInt2250, var1.anInt2257, var1.anInt2248, -71, var1.anInt2253, var1.anInt2263);
 	          var1.method86(-1024);
@@ -78,6 +84,7 @@ final class MouseListeningClass implements MouseListener, MouseMotionListener, F
 	  {
 	    try
 	    {
+	      aClass94_1922 = null;
 	      anIntArray1920 = null;
 	      if (!var0) {
 	        anIntArray1920 = null;
@@ -159,11 +166,11 @@ final class MouseListeningClass implements MouseListener, MouseMotionListener, F
 	        
 
 
-	          ((var2 & 0x4) == 0) &&
+	          (-1 == (var2 & 0x4 ^ 0xFFFFFFFF)) && 
 	          
 
 
-	          ((var2 & 0x8) != 0))) {}
+	          (-1 != (var2 & 0x8 ^ 0xFFFFFFFF)))) {}
 	      }
 	      if (var1.isPopupTrigger()) {
 	        var1.consume();
@@ -242,11 +249,11 @@ final class MouseListeningClass implements MouseListener, MouseMotionListener, F
 	        
 
 
-	          ((0x4 & var2) != 0) &&
+	          ((0x4 & var2 ^ 0xFFFFFFFF) != -1) && 
 	          
 
 
-	          ((var2 & 0x8) == 0))) {}
+	          (-1 == (var2 & 0x8 ^ 0xFFFFFFFF)))) {}
 	      }
 	      if (var1.isPopupTrigger()) {
 	        var1.consume();
@@ -313,6 +320,9 @@ final class MouseListeningClass implements MouseListener, MouseMotionListener, F
 	  {
 	    try
 	    {
+	      if (var1 != -47) {
+	        aClass94_1922 = null;
+	      }
 	      Class3_Sub28_Sub6 var2 = Class3_Sub24_Sub3.method466(4, 9, var0);
 	      var2.a(true);
 	    }

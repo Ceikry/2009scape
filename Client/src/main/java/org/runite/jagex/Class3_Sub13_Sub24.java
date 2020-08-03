@@ -3,12 +3,14 @@ package org.runite.jagex;
 final class Class3_Sub13_Sub24 extends Class3_Sub13 {
 
    static int[] npcSpawnCacheIndices;
+   static RSString aClass94_3291 = RSString.createRSString("Schlie-8en");
    static NPC[] npcs = new NPC['\u8000'];
    static int anInt3293 = 0;
    private int anInt3294 = 1;
    static RSString aClass94_3295;
    static long aLong3296 = 0L;
    private int anInt3297 = 1;
+   static RSString aClass94_3298 = RSString.createRSString("<col=ff0000>");
 
 
    final int[] method154(int var1, byte var2) {
@@ -23,17 +25,17 @@ final class Class3_Sub13_Sub24 extends Class3_Sub13 {
             int[][] var9 = new int[var5][];
 
             int var10;
-            for(var10 = -this.anInt3297 + var1; var1 - -this.anInt3297 >= var10; ++var10) {
+            for(var10 = -this.anInt3297 + var1; ~var10 >= ~(var1 - -this.anInt3297); ++var10) {
                int[] var11 = this.method152(0, var10 & Class3_Sub20.anInt2487, 32755);
                int[] var12 = new int[Class113.anInt1559];
                int var13 = 0;
 
                int var14;
-               for(var14 = -this.anInt3294; var14 <= this.anInt3294; ++var14) {
+               for(var14 = -this.anInt3294; ~this.anInt3294 <= ~var14; ++var14) {
                   var13 += var11[var14 & RenderAnimationDefinition.anInt396];
                }
 
-               for(var14 = 0; var14 < Class113.anInt1559; var13 += var11[RenderAnimationDefinition.anInt396 & this.anInt3294 + var14]) {
+               for(var14 = 0; ~Class113.anInt1559 < ~var14; var13 += var11[RenderAnimationDefinition.anInt396 & this.anInt3294 + var14]) {
                   var12[var14] = var8 * var13 >> 16;
                   var13 -= var11[RenderAnimationDefinition.anInt396 & var14 - this.anInt3294];
                   ++var14;
@@ -42,10 +44,10 @@ final class Class3_Sub13_Sub24 extends Class3_Sub13 {
                var9[this.anInt3297 + var10 + -var1] = var12;
             }
 
-            for(var10 = 0; var10 < Class113.anInt1559; ++var10) {
+            for(var10 = 0; ~Class113.anInt1559 < ~var10; ++var10) {
                int var16 = 0;
 
-               for(int var17 = 0; var5 > var17; ++var17) {
+               for(int var17 = 0; ~var17 > ~var5; ++var17) {
                   var16 += var9[var17][var10];
                }
 
@@ -66,6 +68,8 @@ final class Class3_Sub13_Sub24 extends Class3_Sub13 {
          }
 
          npcSpawnCacheIndices = null;
+         aClass94_3298 = null;
+         aClass94_3291 = null;
          npcs = null;
          aClass94_3295 = null;
       } catch (RuntimeException var2) {
@@ -98,7 +102,7 @@ final class Class3_Sub13_Sub24 extends Class3_Sub13 {
    final int[][] method166(int var1, int var2) {
       try {
          if(var1 != -1) {
-         ;
+            aClass94_3298 = (RSString)null;
          }
 
          int[][] var3 = this.aClass97_2376.method1594((byte)90, var2);
@@ -155,12 +159,12 @@ final class Class3_Sub13_Sub24 extends Class3_Sub13 {
             int[] var26 = var3[1];
             int[] var25 = var3[2];
 
-            for(var12 = 0; var12 < Class113.anInt1559; ++var12) {
+            for(var12 = 0; ~Class113.anInt1559 < ~var12; ++var12) {
                var14 = 0;
                var13 = 0;
                int var27 = 0;
 
-               for(int var28 = 0; var28 < var4; ++var28) {
+               for(int var28 = 0; ~var4 < ~var28; ++var28) {
                   int[][] var29 = var8[var28];
                   var27 += var29[2][var12];
                   var14 += var29[1][var12];
@@ -181,14 +185,14 @@ final class Class3_Sub13_Sub24 extends Class3_Sub13 {
 
    final void method157(int var1, RSByteBuffer var2, boolean var3) {
       try {
-         if(var1 == 0) {
+         if(~var1 == -1) {
             this.anInt3294 = var2.getByte((byte)-50);
-         } else if(var1 == 1) {
-            this.anInt3297 = var2.getByte((byte)-118);
-         } else {
+         } else if(var1 != 1) {
             if(2 == var1) {
                this.aBoolean2375 = var2.getByte((byte)-51) == 1;
             }
+         } else {
+            this.anInt3297 = var2.getByte((byte)-118);
          }
 
          if(!var3) {

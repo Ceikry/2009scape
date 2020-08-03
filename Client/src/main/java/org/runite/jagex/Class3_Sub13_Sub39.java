@@ -28,8 +28,57 @@ final class Class3_Sub13_Sub39 extends Class3_Sub13 {
          int var8;
          int var9;
          int var10;
-         if(2 == var2) {
-            for(var2 = 0; var2 < 257; ++var2) {
+         if(2 != var2) {
+            if(var2 == 1) {
+               for(var2 = 0; -258 < ~var2; ++var2) {
+                  var4 = var2 << 4;
+
+                  for(var3 = 1; ~var3 > ~(-1 + this.anIntArrayArray3469.length) && ~this.anIntArrayArray3469[var3][0] >= ~var4; ++var3) {
+                     ;
+                  }
+
+                  var5 = this.anIntArrayArray3469[-1 + var3];
+                  var6 = this.anIntArrayArray3469[var3];
+                  var7 = (var4 + -var5[0] << 12) / (-var5[0] + var6[0]);
+                  var8 = 4096 + -Class75_Sub2.anIntArray2639[(8189 & var7) >> 5] >> 1;
+                  var9 = -var8 + 4096;
+                  var10 = var8 * var6[1] + var5[1] * var9 >> 12;
+                  if(32767 <= ~var10) {
+                     var10 = -32767;
+                  }
+
+                  if('\u8000' <= var10) {
+                     var10 = 32767;
+                  }
+
+                  this.aShortArray3465[var2] = (short)var10;
+               }
+            } else {
+               for(var2 = 0; ~var2 > -258; ++var2) {
+                  var4 = var2 << 4;
+
+                  for(var3 = 1; -1 + this.anIntArrayArray3469.length > var3 && ~this.anIntArrayArray3469[var3][0] >= ~var4; ++var3) {
+                     ;
+                  }
+
+                  var6 = this.anIntArrayArray3469[var3];
+                  var5 = this.anIntArrayArray3469[-1 + var3];
+                  var7 = (-var5[0] + var4 << 12) / (-var5[0] + var6[0]);
+                  var8 = -var7 + 4096;
+                  var9 = var6[1] * var7 + var8 * var5[1] >> 12;
+                  if(-32768 >= var9) {
+                     var9 = -32767;
+                  }
+
+                  if('\u8000' <= var9) {
+                     var9 = 32767;
+                  }
+
+                  this.aShortArray3465[var2] = (short)var9;
+               }
+            }
+         } else {
+            for(var2 = 0; -258 < ~var2; ++var2) {
                var4 = var2 << 4;
 
                for(var3 = 1; this.anIntArrayArray3469.length - 1 > var3 && this.anIntArrayArray3469[var3][0] <= var4; ++var3) {
@@ -55,60 +104,11 @@ final class Class3_Sub13_Sub39 extends Class3_Sub13 {
                   var20 = -32767;
                }
 
-               if(var20 >= 32768) {
+               if(~var20 <= -32769) {
                   var20 = 32767;
                }
 
                this.aShortArray3465[var2] = (short)var20;
-            }
-         } else {
-            if(var2 == 1) {
-               for(var2 = 0; var2 < 257; ++var2) {
-                  var4 = var2 << 4;
-
-                  for(var3 = 1; -1 + this.anIntArrayArray3469.length > var3 && var4 >= this.anIntArrayArray3469[var3][0]; ++var3) {
-                     ;
-                  }
-
-                  var5 = this.anIntArrayArray3469[-1 + var3];
-                  var6 = this.anIntArrayArray3469[var3];
-                  var7 = (var4 + -var5[0] << 12) / (-var5[0] + var6[0]);
-                  var8 = 4096 + -Class75_Sub2.anIntArray2639[(8189 & var7) >> 5] >> 1;
-                  var9 = -var8 + 4096;
-                  var10 = var8 * var6[1] + var5[1] * var9 >> 12;
-                  if(var10 <= -32768) {
-                     var10 = -32767;
-                  }
-
-                  if('\u8000' <= var10) {
-                     var10 = 32767;
-                  }
-
-                  this.aShortArray3465[var2] = (short)var10;
-               }
-            } else {
-               for(var2 = 0; var2 < 257; ++var2) {
-                  var4 = var2 << 4;
-
-                  for(var3 = 1; -1 + this.anIntArrayArray3469.length > var3 && var4 >= this.anIntArrayArray3469[var3][0]; ++var3) {
-                     ;
-                  }
-
-                  var6 = this.anIntArrayArray3469[var3];
-                  var5 = this.anIntArrayArray3469[-1 + var3];
-                  var7 = (-var5[0] + var4 << 12) / (-var5[0] + var6[0]);
-                  var8 = -var7 + 4096;
-                  var9 = var6[1] * var7 + var8 * var5[1] >> 12;
-                  if(-32768 >= var9) {
-                     var9 = -32767;
-                  }
-
-                  if('\u8000' <= var9) {
-                     var9 = 32767;
-                  }
-
-                  this.aShortArray3465[var2] = (short)var9;
-               }
             }
          }
 
@@ -125,7 +125,7 @@ final class Class3_Sub13_Sub39 extends Class3_Sub13 {
          if(this.aClass114_2382.aBoolean1580) {
             int[] var5 = this.method152(0, var1, 32755);
 
-            for(int var6 = 0; var6 < Class113.anInt1559; ++var6) {
+            for(int var6 = 0; ~Class113.anInt1559 < ~var6; ++var6) {
                int var4 = var5[var6] >> 4;
                if(0 > var4) {
                   var4 = 0;
@@ -159,7 +159,7 @@ final class Class3_Sub13_Sub39 extends Class3_Sub13 {
                var2 -= 2000;
             }
 
-            return var2 == 1003;
+            return ~var2 == -1004;
          }
       } catch (RuntimeException var3) {
          throw Class44.method1067(var3, "wi.Q(" + var0 + ',' + var1 + ')');
@@ -229,7 +229,7 @@ final class Class3_Sub13_Sub39 extends Class3_Sub13 {
             this.anInt3462 = var2.getByte((byte)-31);
             this.anIntArrayArray3469 = new int[var2.getByte((byte)-52)][2];
 
-            for(int var4 = 0; var4 < this.anIntArrayArray3469.length; ++var4) {
+            for(int var4 = 0; ~this.anIntArrayArray3469.length < ~var4; ++var4) {
                this.anIntArrayArray3469[var4][0] = var2.getShort(1);
                this.anIntArrayArray3469[var4][1] = var2.getShort(1);
             }
@@ -246,8 +246,8 @@ final class Class3_Sub13_Sub39 extends Class3_Sub13 {
 
    private final int[] method356(byte var1, int var2) {
       try {
-         if(var2 >= 0) {
-            if(this.anIntArrayArray3469.length <= var2) {
+         if(~var2 <= -1) {
+            if(~var2 <= ~this.anIntArrayArray3469.length) {
                return this.anIntArray3467;
             } else {
                if(var1 != -106) {

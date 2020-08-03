@@ -14,9 +14,7 @@ final class Class160 implements Interface5 {
       GL var1 = HDToolKit.gl;
       this.anInt2187 = var1.glGenLists(2);
       var1.glNewList(this.anInt2187, 4864);
-      if(this.anIntArray2189 == null) {
-         var1.glTexEnvi(8960, '\u8588', '\u8577');
-      } else {
+      if(this.anIntArray2189 != null) {
          var1.glActiveTexture('\u84c1');
          var1.glTexGeni(8192, 9472, '\u8511');
          var1.glTexGeni(8193, 9472, '\u8511');
@@ -29,12 +27,7 @@ final class Class160 implements Interface5 {
          var1.glLoadIdentity();
          var1.glRotatef(22.5F, 1.0F, 0.0F, 0.0F);
          var1.glMatrixMode(5888);
-         if(this.aBoolean2188) {
-            var1.glTexEnvi(8960, '\u8571', 260);
-            var1.glTexEnvi(8960, '\u8590', 770);
-            var1.glTexEnvi(8960, '\u8572', 7681);
-            var1.glTexEnvi(8960, '\u8588', '\u8577');
-         } else {
+         if(!this.aBoolean2188) {
             var1.glTexEnvi(8960, '\u8571', 7681);
             var1.glTexEnvi(8960, '\u8580', '\u8578');
             var1.glTexEnvi(8960, '\u8572', 8448);
@@ -48,16 +41,21 @@ final class Class160 implements Interface5 {
             var1.glTexEnvi(8960, '\u8588', '\u8577');
             var1.glBindTexture(3553, HDToolKit.anInt1810);
             var1.glEnable(3553);
+         } else {
+            var1.glTexEnvi(8960, '\u8571', 260);
+            var1.glTexEnvi(8960, '\u8590', 770);
+            var1.glTexEnvi(8960, '\u8572', 7681);
+            var1.glTexEnvi(8960, '\u8588', '\u8577');
          }
 
-          var1.glActiveTexture('\u84c0');
+         var1.glActiveTexture('\u84c0');
+      } else {
+         var1.glTexEnvi(8960, '\u8588', '\u8577');
       }
 
-       var1.glEndList();
+      var1.glEndList();
       var1.glNewList(this.anInt2187 + 1, 4864);
-      if(this.anIntArray2189 == null) {
-         var1.glTexEnvi(8960, '\u8588', 5890);
-      } else {
+      if(this.anIntArray2189 != null) {
          var1.glActiveTexture('\u84c1');
          var1.glDisable(3168);
          var1.glDisable(3169);
@@ -66,12 +64,7 @@ final class Class160 implements Interface5 {
          var1.glMatrixMode(5890);
          var1.glLoadIdentity();
          var1.glMatrixMode(5888);
-         if(this.aBoolean2188) {
-            var1.glTexEnvi(8960, '\u8571', 8448);
-            var1.glTexEnvi(8960, '\u8590', 768);
-            var1.glTexEnvi(8960, '\u8572', 8448);
-            var1.glTexEnvi(8960, '\u8588', 5890);
-         } else {
+         if(!this.aBoolean2188) {
             var1.glTexEnvi(8960, '\u8571', 8448);
             var1.glTexEnvi(8960, '\u8580', 5890);
             var1.glActiveTexture('\u84c2');
@@ -82,12 +75,19 @@ final class Class160 implements Interface5 {
             var1.glTexEnvi(8960, '\u8572', 8448);
             var1.glTexEnvi(8960, '\u8588', 5890);
             var1.glDisable(3553);
+         } else {
+            var1.glTexEnvi(8960, '\u8571', 8448);
+            var1.glTexEnvi(8960, '\u8590', 768);
+            var1.glTexEnvi(8960, '\u8572', 8448);
+            var1.glTexEnvi(8960, '\u8588', 5890);
          }
 
-          var1.glActiveTexture('\u84c0');
+         var1.glActiveTexture('\u84c0');
+      } else {
+         var1.glTexEnvi(8960, '\u8588', 5890);
       }
 
-       var1.glEndList();
+      var1.glEndList();
    }
 
    public final void method21() {

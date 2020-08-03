@@ -2,6 +2,7 @@ package plugin.command
 
 import core.game.component.Component
 import core.game.node.entity.player.Player
+import core.game.node.entity.player.info.PlayerDetails
 import core.game.node.entity.player.info.Rights
 import core.game.system.command.CommandPlugin
 import core.game.system.command.CommandSet
@@ -75,6 +76,42 @@ class ModeratorCommand : CommandPlugin() {
             }
             "uidban", "mskban" -> {
                 punish(player, args!![1], args, 4)
+                return true
+            }
+            "givecredits" -> {
+                args ?: return true
+                player ?: return true
+                if(args.size < 3){
+                    player.sendMessage("Usage: ::givecredits player amount").also { return true }
+                }
+                var other = Repository.PLAYER_NAMES.get(args[1])
+                other = other ?: Player(PlayerDetails.getDetails(args[1]))
+                if(!other.isPlaying)
+                    player.sendMessage("Player needs to be online when you use this command.").also { return true }
+                var amount = args[2]?.toIntOrNull()
+                amount = amount ?: 0.also { player.sendMessage("You need to supply a valid number for the number of credits.") }
+
+                other.details.credits += amount
+                if(amount > 0){
+                    player.sendMessage("Added $amount credits to ${other.username}'s account.")
+                    other.sendMessage("You have received $amount credits.")
+                }
+                return true
+            }
+            "donator" -> {
+                args ?: return true
+                player ?: return true
+                if(args.size < 2)
+                    player.sendMessage("You need to specify who to make a donator.").also { return true }
+                var other = Repository.PLAYER_NAMES.get(args[1])
+                other = other ?: Player(PlayerDetails.getDetails(args[1]))
+                if(!other.isPlaying)
+                    player.sendMessage("The player has to be online in order for you to rank them!").also { return true }
+                if(other.details.isDonator)
+                    player.sendMessage("That player is already a donator!").also { return true }
+                other.details.isDonator = true
+                player.sendMessage("${other.username} is now a donator!")
+                other.sendMessage("You are now a donator!")
                 return true
             }
             "sysban" -> {

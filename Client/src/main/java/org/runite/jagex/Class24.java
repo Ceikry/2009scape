@@ -3,6 +3,8 @@ package org.runite.jagex;
 final class Class24 {
 
    private short[] aShortArray460;
+  
+   static RSString aClass94_463 = RSString.createRSString("Bitte entfernen Sie ");
    private short[] aShortArray464;
    static RSString aClass94_465 = RSString.createRSString(" ");
    int anInt466 = -1;
@@ -12,18 +14,24 @@ final class Class24 {
    private short[] aShortArray470;
    private short[] aShortArray471;
    static int anInt472 = 0;
+   private static RSString aClass94_473 = RSString.createRSString("Loading title screen )2 ");
    private int[] anIntArray474;
    private int[] anIntArray475 = new int[]{-1, -1, -1, -1, -1};
    boolean aBoolean476 = false;
+   private static RSString aClass94_477 = RSString.createRSString("Loading)3)3)3");
+ static RSString aClass94_461 = aClass94_473;
+   static RSString aClass94_462 = aClass94_477;
 
    final Model_Sub1 method941(boolean var1) {
       try {
-         if(var1) {
+         if(!var1) {
+            return (Model_Sub1)null;
+         } else {
             int var3 = 0;
             Model_Sub1[] var2 = new Model_Sub1[5];
 
-            for(int var4 = 0; var4 < 5; ++var4) {
-               if(this.anIntArray475[var4] != -1) {
+            for(int var4 = 0; -6 < ~var4; ++var4) {
+               if(0 != ~this.anIntArray475[var4]) {
                   var2[var3++] = Model_Sub1.method2015(Class10.aClass153_152, this.anIntArray475[var4], 0);
                }
             }
@@ -31,20 +39,18 @@ final class Class24 {
             Model_Sub1 var7 = new Model_Sub1(var2, var3);
             int var5;
             if(this.aShortArray464 != null) {
-               for(var5 = 0; this.aShortArray464.length > var5; ++var5) {
+               for(var5 = 0; ~var5 > ~this.aShortArray464.length; ++var5) {
                   var7.method2016(this.aShortArray464[var5], this.aShortArray460[var5]);
                }
             }
 
             if(null != this.aShortArray471) {
-               for(var5 = 0; var5 < this.aShortArray471.length; ++var5) {
+               for(var5 = 0; ~this.aShortArray471.length < ~var5; ++var5) {
                   var7.method1998(this.aShortArray471[var5], this.aShortArray470[var5]);
                }
             }
 
             return var7;
-         } else {
-            return (Model_Sub1)null;
          }
       } catch (RuntimeException var6) {
          throw Class44.method1067(var6, "dm.F(" + var1 + ')');
@@ -61,7 +67,7 @@ final class Class24 {
                this.method948(44);
             }
 
-            for(int var3 = 0; this.anIntArray474.length > var3; ++var3) {
+            for(int var3 = 0; ~var3 > ~this.anIntArray474.length; ++var3) {
                if(!Class10.aClass153_152.method2129((byte)-90, 0, this.anIntArray474[var3])) {
                   var2 = false;
                }
@@ -77,8 +83,13 @@ final class Class24 {
    public static void method943(int var0) {
       try {
          aClass94_468 = null;
+         aClass94_473 = null;
          if(var0 == -9893) {
+            aClass94_477 = null;
             aClass94_465 = null;
+            aClass94_462 = null;
+            aClass94_463 = null;
+            aClass94_461 = null;
          }
       } catch (RuntimeException var2) {
          throw Class44.method1067(var2, "dm.C(" + var0 + ')');
@@ -111,14 +122,7 @@ final class Class24 {
 
             while(true) {
                int var11;
-               if(var10) {
-                  var11 = buffer.getSmart(true);
-                  if(var11 == 0) {
-                     break;
-                  }
-
-                  buffer.getByte((byte)-116);
-               } else {
+               if(!var10) {
             	   if (buffer.index == buffer.buffer.length) {
             		   break;
             	   }
@@ -133,9 +137,9 @@ final class Class24 {
                   int var16 = var2 + var12;
                   int var15 = var1 + var13;
                   int var14 = buffer.getByte((byte)-94) >> 2;
-                  if(var15 > 0 && var16 > 0 && 103 > var15 && 103 > var16) {
+                  if(~var15 < -1 && var16 > 0 && 103 > var15 && 103 > var16) {
                      ObjectDefinition var17 = Class162.getObjectDefinition(4, var7);
-                     if(var14 != 22 || KeyboardListener.aBoolean1905 || 0 != var17.SecondInt || var17.ClipType == 1 || var17.aBoolean1483) {
+                     if(var14 != 22 || KeyboardListener.aBoolean1905 || 0 != var17.anInt1529 || ~var17.actionCount == -2 || var17.aBoolean1483) {
                         var10 = true;
                         if(!var17.hasModels(false)) {
                            var5 = false;
@@ -143,6 +147,13 @@ final class Class24 {
                         }
                      }
                   }
+               } else {
+                  var11 = buffer.getSmart(true);
+                  if(~var11 == -1) {
+                     break;
+                  }
+
+                  buffer.getByte((byte)-116);
                }
             }
          }
@@ -156,7 +167,7 @@ final class Class24 {
          GraphicDefinition.incomingBuffer.setBitAccess((byte)-98);
          int var1 = GraphicDefinition.incomingBuffer.getBits(var0, 8);
          int var2;
-         if(var1 < Class163.localNPCCount) {
+         if(~Class163.localNPCCount < ~var1) {
             for(var2 = var1; var2 < Class163.localNPCCount; ++var2) {
                Class3_Sub7.anIntArray2292[Class139.anInt1829++] = Class15.localNPCIndexes[var2];
             }
@@ -167,36 +178,20 @@ final class Class24 {
          } else {
             Class163.localNPCCount = 0;
 
-            for(var2 = 0; var1 > var2; ++var2) {
+            for(var2 = 0; ~var2 > ~var1; ++var2) {
                int var3 = Class15.localNPCIndexes[var2];
                NPC var4 = Class3_Sub13_Sub24.npcs[var3];
                int var5 = GraphicDefinition.incomingBuffer.getBits((byte)-11, 1);
-               if(0 == var5) {
-                  Class15.localNPCIndexes[Class163.localNPCCount++] = var3;
-                  var4.anInt2838 = Class44.anInt719;
-               } else {
+               if(0 != var5) {
                   int var6 = GraphicDefinition.incomingBuffer.getBits((byte)-11, 2);
-                  if(var6 == 0) {
-                     Class15.localNPCIndexes[Class163.localNPCCount++] = var3;
-                     var4.anInt2838 = Class44.anInt719;
-                     Class21.maskUpdateIndexes[Class66.maskUpdateCount++] = var3;
-                  } else {
+                  if(-1 != ~var6) {
                      int var7;
                      int var8;
-                     if(1 == var6) {
-                        Class15.localNPCIndexes[Class163.localNPCCount++] = var3;
-                        var4.anInt2838 = Class44.anInt719;
-                        var7 = GraphicDefinition.incomingBuffer.getBits((byte)-11, 3);
-                        var4.walkStep(1, (byte)32, var7);
-                        var8 = GraphicDefinition.incomingBuffer.getBits((byte)-11, 1);
-                        if(1 == var8) {
-                           Class21.maskUpdateIndexes[Class66.maskUpdateCount++] = var3;
-                        }
-                     } else {
+                     if(1 != var6) {
                         if(var6 == 2) {
                            Class15.localNPCIndexes[Class163.localNPCCount++] = var3;
                            var4.anInt2838 = Class44.anInt719;
-                           if(GraphicDefinition.incomingBuffer.getBits((byte) -11, 1) == 1) {
+                           if(-2 == ~GraphicDefinition.incomingBuffer.getBits((byte)-11, 1)) {
                               var7 = GraphicDefinition.incomingBuffer.getBits((byte)-11, 3);
                               var4.walkStep(2, (byte)-122, var7);
                               var8 = GraphicDefinition.incomingBuffer.getBits((byte)-11, 3);
@@ -213,8 +208,24 @@ final class Class24 {
                         } else if(var6 == 3) {
                            Class3_Sub7.anIntArray2292[Class139.anInt1829++] = var3;
                         }
+                     } else {
+                        Class15.localNPCIndexes[Class163.localNPCCount++] = var3;
+                        var4.anInt2838 = Class44.anInt719;
+                        var7 = GraphicDefinition.incomingBuffer.getBits((byte)-11, 3);
+                        var4.walkStep(1, (byte)32, var7);
+                        var8 = GraphicDefinition.incomingBuffer.getBits((byte)-11, 1);
+                        if(1 == var8) {
+                           Class21.maskUpdateIndexes[Class66.maskUpdateCount++] = var3;
+                        }
                      }
+                  } else {
+                     Class15.localNPCIndexes[Class163.localNPCCount++] = var3;
+                     var4.anInt2838 = Class44.anInt719;
+                     Class21.maskUpdateIndexes[Class66.maskUpdateCount++] = var3;
                   }
+               } else {
+                  Class15.localNPCIndexes[Class163.localNPCCount++] = var3;
+                  var4.anInt2838 = Class44.anInt719;
                }
             }
 
@@ -230,21 +241,32 @@ final class Class24 {
             this.aShortArray470 = (short[])null;
          }
 
-         if(var3 == 1) {
-            this.anInt466 = var2.getByte((byte)-67);
-         } else {
+         if(~var3 != -2) {
             int var4;
             int var5;
-            if(var3 == 2) {
+            if(-3 == ~var3) {
                var4 = var2.getByte((byte)-71);
                this.anIntArray474 = new int[var4];
 
                for(var5 = 0; var4 > var5; ++var5) {
                   this.anIntArray474[var5] = var2.getShort(1);
                }
-            } else if(var3 == 3) {
+            } else if(-4 == ~var3) {
                this.aBoolean476 = true;
-            } else if(var3 == 40) {
+            } else if(-41 != ~var3) {
+               if(-42 == ~var3) {
+                  var4 = var2.getByte((byte)-49);
+                  this.aShortArray471 = new short[var4];
+                  this.aShortArray470 = new short[var4];
+
+                  for(var5 = 0; ~var4 < ~var5; ++var5) {
+                     this.aShortArray471[var5] = (short)var2.getShort(1);
+                     this.aShortArray470[var5] = (short)var2.getShort(1);
+                  }
+               } else if(~var3 <= -61 && var3 < 70) {
+                  this.anIntArray475[-60 + var3] = var2.getShort(1);
+               }
+            } else {
                var4 = var2.getByte((byte)-128);
                this.aShortArray460 = new short[var4];
                this.aShortArray464 = new short[var4];
@@ -253,20 +275,9 @@ final class Class24 {
                   this.aShortArray464[var5] = (short)var2.getShort(1);
                   this.aShortArray460[var5] = (short)var2.getShort(1);
                }
-            } else {
-               if(var3 == 41) {
-                  var4 = var2.getByte((byte)-49);
-                  this.aShortArray471 = new short[var4];
-                  this.aShortArray470 = new short[var4];
-
-                  for(var5 = 0; var5 < var4; ++var5) {
-                     this.aShortArray471[var5] = (short)var2.getShort(1);
-                     this.aShortArray470[var5] = (short)var2.getShort(1);
-                  }
-               } else if(var3 >= 60 && var3 < 70) {
-                  this.anIntArray475[-60 + var3] = var2.getShort(1);
-               }
             }
+         } else {
+            this.anInt466 = var2.getByte((byte)-67);
          }
 
       } catch (RuntimeException var6) {
@@ -281,7 +292,7 @@ final class Class24 {
          } else {
             Model_Sub1[] var2 = new Model_Sub1[this.anIntArray474.length];
 
-            for(int var3 = 0; this.anIntArray474.length > var3; ++var3) {
+            for(int var3 = 0; ~var3 > ~this.anIntArray474.length; ++var3) {
                var2[var3] = Model_Sub1.method2015(Class10.aClass153_152, this.anIntArray474[var3], 0);
             }
 
@@ -301,7 +312,7 @@ final class Class24 {
             }
 
             if(this.aShortArray471 != null) {
-               for(var5 = 0; this.aShortArray471.length > var5; ++var5) {
+               for(var5 = 0; ~var5 > ~this.aShortArray471.length; ++var5) {
                   var7.method1998(this.aShortArray471[var5], this.aShortArray470[var5]);
                }
             }
@@ -341,7 +352,7 @@ final class Class24 {
          int var7 = var2;
          int var9 = -1;
 
-         while(var7 > var6) {
+         while(~var6 > ~var7) {
             ++var6;
             var9 += 2;
             var8 += var9;
@@ -371,7 +382,11 @@ final class Class24 {
 
    static final void method950(RSInterface var0, int var1, int var2, int var3) {
       try {
-         if(2 <= Class3_Sub13_Sub34.anInt3415 || Class164_Sub1.anInt3012 != 0 || GameObject.aBoolean1837) {
+         if(2 <= Class3_Sub13_Sub34.anInt3415 || ~Class164_Sub1.anInt3012 != -1 || GameObject.aBoolean1837) {
+            if(var1 > -55) {
+               aClass94_473 = (RSString)null;
+            }
+
             RSString var4 = Class3_Sub28_Sub1.method531((byte)94);
             if(var0 == null) {
                int var5 = Class168.aClass3_Sub28_Sub17_2096.method683(var4, 4 + var3, var2 - -15, 16777215, 0, Class3_Sub13_Sub7.aRandom3088, Class38_Sub1.anInt2618);

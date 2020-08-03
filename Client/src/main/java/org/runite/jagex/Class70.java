@@ -70,16 +70,16 @@ final class Class70 {
             var8.aClass111_2320 = var2;
             var8.anInt2332 = var2.anInt1512;
             var8.anInt2310 = var2.anInt1518;
-            int var9 = var2.SizeX;
-            int var10 = var2.SizeY;
-            if(var3 == 1 || 3 == var3) {
-               var9 = var2.SizeY;
-               var10 = var2.SizeX;
+            int var9 = var2.anInt1480;
+            int var10 = var2.anInt1485;
+            if(-2 == ~var3 || 3 == var3) {
+               var9 = var2.anInt1485;
+               var10 = var2.anInt1480;
             }
 
             var8.anInt2307 = (var10 + var0) * 128;
             var8.anInt2321 = (var5 + var9) * 128;
-            if(var2.ChildrenIds != null) {
+            if(var2.anIntArray1524 != null) {
                var8.aBoolean2329 = true;
                var8.method134(1);
             }

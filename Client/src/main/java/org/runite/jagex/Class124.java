@@ -3,6 +3,7 @@ package org.runite.jagex;
 final class Class124 {
 
    static Class130 aClass130_1659 = new Class130(512);
+   static RSString aClass94_1660 = RSString.createRSString("Versteckt");
    static CacheIndex aClass153_1661;
 
 
@@ -10,6 +11,7 @@ final class Class124 {
       try {
          aClass130_1659 = null;
          aClass153_1661 = null;
+         aClass94_1660 = null;
          if(!var0) {
             aClass130_1659 = (Class130)null;
          }
@@ -21,7 +23,7 @@ final class Class124 {
 
    static final void method1745(int var0) {
       try {
-         for(int var1 = var0; var1 < 104; ++var1) {
+         for(int var1 = var0; ~var1 > -105; ++var1) {
             for(int var2 = 0; 104 > var2; ++var2) {
                Class163_Sub1_Sub1.anIntArrayArray4010[var1][var2] = 0;
             }
@@ -49,7 +51,7 @@ final class Class124 {
          Class3_Sub28_Sub3 var2 = new Class3_Sub28_Sub3(var0.getString(), var0.getString(), var0.getShort(1), var0.getShort(1), var0.getInt(), var0.getByte((byte)-91) == 1, var0.getByte((byte)-112));
          int var3 = var0.getByte((byte)-83);
 
-         for(int var4 = 0; var3 > var4; ++var4) {
+         for(int var4 = 0; ~var4 > ~var3; ++var4) {
             var2.aClass61_3560.method1215(var1, new Class3_Sub21(var0.getShort(1), var0.getShort(1), var0.getShort(1), var0.getShort(1)));
          }
 

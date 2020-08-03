@@ -124,7 +124,7 @@ public final class DisconnectionQueue {
 	 */
 	public void clear() {
 		for (DisconnectionEntry entry : queue.values()) {
-			finish(entry, true);
+			finish(entry, false);
 		}
 		queue.clear();
 	}

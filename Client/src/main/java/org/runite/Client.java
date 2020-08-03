@@ -2,6 +2,11 @@ package org.runite;
 
 import org.runite.jagex.GameShell;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+
 /**
  * Handles the launching of our Game Client.
  * @author Keldagrim Development Team
@@ -22,7 +27,7 @@ public class Client {
 	/**
 	 * The game settings.
 	 */
-	public static GameSetting SETTINGS = new GameSetting("2009Scape", "127.0.0.1", 1, "live", false);
+	public static GameSetting SETTINGS = new GameSetting("RBGScape", "127.0.0.1", 1, "live", false);
 	
 	/**
 	 * The main method.

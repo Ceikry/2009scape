@@ -2,6 +2,7 @@ package core.game.node.entity.state;
 
 import core.game.node.entity.Entity;
 import core.game.node.entity.player.info.login.SavingModule;
+import core.game.system.SystemLogger;
 
 import java.nio.ByteBuffer;
 import java.util.HashMap;

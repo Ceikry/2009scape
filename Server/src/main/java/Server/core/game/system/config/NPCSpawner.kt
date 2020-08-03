@@ -28,10 +28,12 @@ class NPCSpawner {
                 }
                 tokens = d.replace("{", "").replace("}", "").split(",".toRegex()).toTypedArray()
                 val npc = NPC.create(id, Location.create(Integer.valueOf(tokens[0].trim { it <= ' ' }), Integer.valueOf(tokens[1].trim { it <= ' ' }), Integer.valueOf(tokens[2].trim { it <= ' ' })))
-                npc.isWalks = tokens[3].trim { it <= ' ' } == "1"
+                npc.isWalks = Integer.parseInt(tokens[3].trim { it <= ' ' }) == 1
                 npc.direction = Direction.values()[Integer.valueOf(tokens[4].trim { it <= ' ' })]
                 npc.setAttribute("spawned:npc", true)
                 npc.init()
+                if(npc.id == 550 || npc.id == 461)
+                    npc.locks.lockMovement(Integer.MAX_VALUE)
                 count++
             }
         }

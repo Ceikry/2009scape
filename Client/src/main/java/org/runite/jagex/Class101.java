@@ -21,7 +21,7 @@ final class Class101 {
             method1608((byte)106);
          }
 
-         if(var1 > var0) {
+         if(~var0 > ~var1) {
             int var5 = (var1 + var0) / 2;
             int var6 = var0;
             int var7 = var3[var5];
@@ -31,8 +31,8 @@ final class Class101 {
             var4[var5] = var4[var1];
             var4[var1] = var8;
 
-            for(int var9 = var0; var9 < var1; ++var9) {
-               if((var9 & 1) + var7 < var3[var9]) {
+            for(int var9 = var0; ~var1 < ~var9; ++var9) {
+               if(~var3[var9] < ~((var9 & 1) + var7)) {
                   int var10 = var3[var9];
                   var3[var9] = var3[var6];
                   var3[var6] = var10;

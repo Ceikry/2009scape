@@ -8,18 +8,21 @@ final class Player extends Class140_Sub4 {
    static int[] anIntArray3954 = new int[100];
    int headIcon = -1;
    int teamId = 0;
+   static RSString aClass94_3957 = RSString.createRSString("Gestionnaire de saisie charg-B");
    private int anInt3958 = 0;
    static int[] anIntArray3959 = new int[2];
    int COMBAT_LEVEL = 0;
    static RSString aClass94_3961 = RSString.createRSString("Forced tweening / animation smoothing ENABLED(Q");
    Class52 class52;
    int anInt3963 = -1;
-   int combatLevel = 0;
+   static RSString aClass94_3964 = RSString.createRSString("_labels");
+   int anInt3965 = 0;
    int anInt3966 = -1;
    RSString displayName;
    boolean aBoolean3968 = false;
    int anInt3969 = 0;
    int anInt3970 = -1;
+   static RSString aClass94_3971 = RSString.createRSString("www)2wtqa");
    int skullIcon = -1;
    int anInt3973 = -1;
    int anInt3974 = 0;
@@ -27,14 +30,14 @@ final class Player extends Class140_Sub4 {
 
    final int getSize(byte var1) {
       try {
-         if(null == this.class52 || this.class52.pnpcId == -1) {
+         if(null != this.class52 && 0 != ~this.class52.pnpcId) {
+            return Node.method522(this.class52.pnpcId, var1 + 26998).size;
+         } else {
             if(var1 != 114) {
                this.hasDefinitions((byte)-22);
             }
 
             return super.getSize((byte)114);
-         } else {
-            return Node.method522(this.class52.pnpcId, var1 + 26998).size;
          }
       } catch (RuntimeException var3) {
          throw Class44.method1067(var3, "e.H(" + var1 + ')');
@@ -59,7 +62,7 @@ final class Player extends Class140_Sub4 {
          int var3 = buffer.getByte((byte)-105);
          int npcId = -1;
          int var4 = 1 & var3;
-         boolean var6 = (var3 & 4) != 0;
+         boolean var6 = ~(var3 & 4) != -1;
          int var7 = super.getSize((byte)114);
          int[] look = new int[12];
          this.setSize(1 + (var3 >> 3 & 7), 2);
@@ -74,14 +77,12 @@ final class Player extends Class140_Sub4 {
          int var12;
          int outfit;
          int var14;
-         for(int var10 = 0; var10 < 12; ++var10) {
+         for(int var10 = 0; -13 < ~var10; ++var10) {
             var11 = buffer.getByte((byte)-29);
-            if(var11 == 0) {
-               look[var10] = 0;
-            } else {
+            if(~var11 != -1) {
                var12 = buffer.getByte((byte)-109);
                outfit = (var11 << 8) + var12;
-               if(var10 == 0 && outfit == 65535) {
+               if(~var10 == -1 && -65536 == ~outfit) {
                   npcId = buffer.getShort(1);
                   this.teamId = buffer.getByte((byte)-24);
                   break;
@@ -102,6 +103,8 @@ final class Player extends Class140_Sub4 {
                } else {
                   look[var10] = Class3_Sub13_Sub29.bitwiseOr(-256 + outfit, Integer.MIN_VALUE);
                }
+            } else {
+               look[var10] = 0;
             }
          }
 
@@ -109,7 +112,7 @@ final class Player extends Class140_Sub4 {
 
          for(var11 = 0; var11 < 5; ++var11) {
             var12 = buffer.getByte((byte)-94);
-            if(var12 < 0 || var12 >= Class15.aShortArrayArray344[var11].length) {
+            if(-1 < ~var12 || var12 >= Class15.aShortArrayArray344[var11].length) {
                var12 = 0;
             }
 
@@ -122,20 +125,20 @@ final class Player extends Class140_Sub4 {
          this.COMBAT_LEVEL = buffer.getByte((byte)-41);
          if(var6) {
             this.anInt3974 = buffer.getShort(1);
-            this.combatLevel = this.COMBAT_LEVEL;
+            this.anInt3965 = this.COMBAT_LEVEL;
             this.anInt3970 = -1;
          } else {
             this.anInt3974 = 0;
-            this.combatLevel = buffer.getByte((byte)-119);
+            this.anInt3965 = buffer.getByte((byte)-119);
             this.anInt3970 = buffer.getByte((byte)-116);
-            if(this.anInt3970 == 255) {
+            if(-256 == ~this.anInt3970) {
                this.anInt3970 = -1;
             }
          }
 
          outfit = this.anInt3969;
          this.anInt3969 = buffer.getByte((byte)-87);
-         if(this.anInt3969 == 0) {
+         if(-1 == ~this.anInt3969) {
             Class162.method2203(this, 8);
          } else {
             int var15 = this.anInt3966;
@@ -146,7 +149,7 @@ final class Player extends Class140_Sub4 {
             this.anInt3966 = buffer.getShort(1);
             this.anInt3963 = buffer.getShort(1);
             this.anInt3973 = buffer.getShort(1);
-            if(this.anInt3969 != outfit || var14 != this.anInt3952 || var15 != this.anInt3966 || var16 != this.anInt3963 || var17 != this.anInt3973) {
+            if(this.anInt3969 != outfit || ~this.anInt3952 != ~var14 || ~this.anInt3966 != ~var15 || var16 != this.anInt3963 || ~this.anInt3973 != ~var17) {
                Node.method518(this, -110);
             }
          }
@@ -156,8 +159,8 @@ final class Player extends Class140_Sub4 {
          }
 
          var14 = this.class52.pnpcId;
-         this.class52.method1161(colors, npcId, var4 == 1, 0, look, this.renderAnimationId);
-         if(npcId != var14) {
+         this.class52.method1161(colors, npcId, ~var4 == -2, 0, look, this.renderAnimationId);
+         if(~var14 != ~npcId) {
             this.anInt2819 = 128 * this.anIntArray2767[0] + this.getSize((byte)114) * 64;
             this.anInt2829 = 128 * this.anIntArray2755[0] - -(64 * this.getSize((byte)114));
          }
@@ -175,10 +178,10 @@ final class Player extends Class140_Sub4 {
       try {
          if(this.class52 != null) {
             AnimationDefinition var13 = this.anInt2771 != -1 && 0 == this.anInt2828?Client.getAnimationDefinition(this.anInt2771, (byte)-20):null;
-            AnimationDefinition var14 = this.anInt2764 != -1 && !this.aBoolean3968 && (this.method1965(false).anInt368 != this.anInt2764 || var13 == null)?Client.getAnimationDefinition(this.anInt2764, (byte)-20):null;
+            AnimationDefinition var14 = 0 != ~this.anInt2764 && !this.aBoolean3968 && (~this.anInt2764 != ~this.method1965(false).anInt368 || var13 == null)?Client.getAnimationDefinition(this.anInt2764, (byte)-20):null;
             Model var15 = this.class52.method1165(this.aClass145Array2809, this.anInt2776, var14, var13, this.anInt2802, this.anInt2793, -120, this.anInt2760, true, this.anInt2832, this.anInt2813);
             int var16 = Class118.method1727((byte)123);
-            if(HDToolKit.highDetail && Class3_Sub24_Sub3.anInt3492 < 96 && var16 > 50) {
+            if(HDToolKit.highDetail && Class3_Sub24_Sub3.anInt3492 < 96 && ~var16 < -51) {
                Class3_Sub1.method90(1);
             }
 
@@ -213,12 +216,12 @@ final class Player extends Class140_Sub4 {
                }
 
                if(Class102.player == this) {
-                  for(var17 = RuntimeException_Sub1.aClass96Array2114.length + -1; var17 >= 0; --var17) {
+                  for(var17 = RuntimeException_Sub1.aClass96Array2114.length + -1; -1 >= ~var17; --var17) {
                      Class96 var27 = RuntimeException_Sub1.aClass96Array2114[var17];
-                     if(var27 != null && var27.anInt1355 != -1) {
+                     if(var27 != null && ~var27.anInt1355 != 0) {
                         int var21;
                         int var20;
-                        if(var27.anInt1360 == 1 && 0 <= var27.anInt1359 && var27.anInt1359 < Class3_Sub13_Sub24.npcs.length) {
+                        if(-2 == ~var27.anInt1360 && 0 <= var27.anInt1359 && ~Class3_Sub13_Sub24.npcs.length < ~var27.anInt1359) {
                            NPC var24 = Class3_Sub13_Sub24.npcs[var27.anInt1359];
                            if(null != var24) {
                               var20 = var24.anInt2819 / 32 - Class102.player.anInt2819 / 32;
@@ -233,7 +236,7 @@ final class Player extends Class140_Sub4 {
                            this.method1979((Class127_Sub1)null, var20, var15, var29, var6, var11, 2047, var1, var8, var5, var4, var2, var27.anInt1355, var3, var7);
                         }
 
-                        if(var27.anInt1360 == 10 && var27.anInt1359 >= 0 && var27.anInt1359 < Class3_Sub13_Sub22.players.length) {
+                        if(-11 == ~var27.anInt1360 && var27.anInt1359 >= 0 && ~Class3_Sub13_Sub22.players.length < ~var27.anInt1359) {
                            Player var28 = Class3_Sub13_Sub22.players[var27.anInt1359];
                            if(null != var28) {
                               var20 = -(Class102.player.anInt2819 / 32) + var28.anInt2819 / 32;
@@ -248,7 +251,7 @@ final class Player extends Class140_Sub4 {
                this.method1971(var15, (byte)-103);
                this.method1969((byte)110, var15, var1);
                var23 = null;
-               if(!this.aBoolean3968 && this.anInt2842 != -1 && this.anInt2805 != -1) {
+               if(!this.aBoolean3968 && 0 != ~this.anInt2842 && this.anInt2805 != -1) {
                   GraphicDefinition var26 = RenderAnimationDefinition.getGraphicDefinition((byte)42, this.anInt2842);
                   var23 = var26.method966(this.anInt2826, (byte)-30, this.anInt2805, this.anInt2761);
                   if(var23 != null) {
@@ -275,24 +278,24 @@ final class Player extends Class140_Sub4 {
                      this.anObject2796 = null;
                   }
 
-                  if(Class44.anInt719 >= this.anInt2797 && this.anInt2778 > Class44.anInt719) {
-                     if(this.anObject2796 instanceof Class140_Sub3) {
-                        var25 = (Model)((Class140_Sub3)this.anObject2796).method1963(3);
-                     } else {
+                  if(~this.anInt2797 >= ~Class44.anInt719 && this.anInt2778 > Class44.anInt719) {
+                     if(!(this.anObject2796 instanceof Class140_Sub3)) {
                         var25 = (Model)this.anObject2796;
+                     } else {
+                        var25 = (Model)((Class140_Sub3)this.anObject2796).method1963(3);
                      }
 
                      var25.method1897(this.anInt2782 + -this.anInt2819, this.anInt2812 + -this.anInt2831, this.anInt2833 + -this.anInt2829);
-                     if(this.anInt2806 == 512) {
-                        var25.method1900();
-                     } else {
-                        if(this.anInt2806 == 1024) {
-                           var25.method1874();
-                        } else {
-                           if(this.anInt2806 == 1536) {
+                     if(-513 != ~this.anInt2806) {
+                        if(~this.anInt2806 != -1025) {
+                           if(-1537 == ~this.anInt2806) {
                               var25.method1885();
                            }
+                        } else {
+                           var25.method1874();
                         }
+                     } else {
+                        var25.method1900();
                      }
                   }
                }
@@ -339,7 +342,7 @@ final class Player extends Class140_Sub4 {
    private final void method1979(Class127_Sub1 var1, int var2, Model var3, int var4, int var5, int var6, int var7, int var8, int var9, int var10, int var11, int var12, int var13, int var14, int var15) {
       try {
          int var16 = var4 * var4 - -(var2 * var2);
-         if(var16 >= 16 && var16 <= 360000) {
+         if(-17 >= ~var16 && -360001 <= ~var16) {
             int var17 = (int)(325.949D * Math.atan2((double)var4, (double)var2)) & var7;
             Model var18 = Class128.method1763(true, var17, this.anInt2829, var13, this.anInt2819, var3, this.anInt2831);
             if(var18 != null) {
@@ -400,6 +403,9 @@ final class Player extends Class140_Sub4 {
    final void method1981(byte var1, int var2, boolean var3, int var4) {
       try {
          super.method1967(var1 + -128, this.getSize((byte)114), var2, var4, var3);
+         if(var1 != 126) {
+            aClass94_3964 = (RSString)null;
+         }
 
       } catch (RuntimeException var6) {
          throw Class44.method1067(var6, "e.O(" + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ')');
@@ -410,6 +416,8 @@ final class Player extends Class140_Sub4 {
 
    public static void method1982(byte var0) {
       try {
+         aClass94_3971 = null;
+         aClass94_3957 = null;
          anIntArray3951 = null;
          aClass94_3961 = null;
          anIntArray3959 = null;
@@ -418,6 +426,7 @@ final class Player extends Class140_Sub4 {
          }
 
          anIntArray3954 = null;
+         aClass94_3964 = null;
       } catch (RuntimeException var2) {
          throw Class44.method1067(var2, "e.R(" + var0 + ')');
       }

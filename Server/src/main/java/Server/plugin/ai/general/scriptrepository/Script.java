@@ -18,18 +18,21 @@ public abstract class Script {
 
     public AIPlayer bot;
 
+    public boolean running = true;
+
     public void init()
     {
         //bot.init();
         scriptAPI = new ScriptAPI(bot);
 
-        for (Item i : inventory)
-        {
-            bot.getInventory().add(i);
-        }
         for (Item i : equipment)
         {
             bot.getEquipment().add(i, true, false);
+        }
+        bot.getInventory().clear();
+        for (Item i : inventory)
+        {
+            bot.getInventory().add(i);
         }
         for (Map.Entry<Integer, Integer> skill : skills.entrySet())
         {

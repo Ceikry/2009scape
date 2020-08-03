@@ -7,6 +7,7 @@ abstract class AbstractIndexedSprite {
    static int anInt1463 = -16 + (int)(Math.random() * 33.0D);
    int anInt1464;
    static long aLong1465 = 0L;
+   static RSString aClass94_1466 = RSString.createRSString("Lade Titelbild )2 ");
    int anInt1467;
    int anInt1468;
    int anInt1469;
@@ -32,6 +33,7 @@ abstract class AbstractIndexedSprite {
 
    public static void method1663(int var0) {
       try {
+         aClass94_1466 = null;
          if(var0 != 33) {
             anInt1463 = 15;
          }
@@ -69,7 +71,7 @@ abstract class AbstractIndexedSprite {
          int var9 = var5 + var6;
 
          int var11;
-         for(var11 = var2; var7 > var11; ++var11) {
+         for(var11 = var2; ~var11 > ~var7; ++var11) {
             Class3_Sub13_Sub23_Sub1.method282(Class38.anIntArrayArray663[var11], var6, -91, var1, var3);
          }
 
@@ -79,7 +81,7 @@ abstract class AbstractIndexedSprite {
 
          int var10 = -var5 + var1;
 
-         for(var11 = var7; var11 <= var8; ++var11) {
+         for(var11 = var7; ~var8 <= ~var11; ++var11) {
             int[] var12 = Class38.anIntArrayArray663[var11];
             Class3_Sub13_Sub23_Sub1.method282(var12, var6, -111, var9, var3);
             Class3_Sub13_Sub23_Sub1.method282(var12, var10, -124, var1, var3);

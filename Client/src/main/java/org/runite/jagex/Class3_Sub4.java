@@ -6,12 +6,15 @@ final class Class3_Sub4 extends Class3 {
 	static int anInt2249;
 	int anInt2250;
 	static int anInt2251;
+	static RSString aClass94_2252 = RSString.createRSString("Atteindre");
 	int anInt2253;
 	int anInt2254;
+	static RSString aClass94_2255 = RSString.createRSString("Suche nach Updates )2 ");
 	int anInt2256;
 	int anInt2257;
 	static CacheIndex aClass153_2258;
 	int anInt2259 = -1;
+	static RSString aClass94_2260 = RSString.createRSString("Lade Wordpack )2 ");
 	int anInt2261 = 0;
 	int anInt2262;
 	int anInt2263;
@@ -94,6 +97,9 @@ final class Class3_Sub4 extends Class3 {
 
 	public static void method109(int var0) {
 		try {
+			aClass94_2255 = null;
+			aClass94_2260 = null;
+			aClass94_2252 = null;
 			if(var0 != 2) {
 				method109(-22);
 			}

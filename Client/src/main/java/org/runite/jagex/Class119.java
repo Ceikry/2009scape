@@ -34,10 +34,10 @@ final class Class119 {
       try {
          Object var1;
          if(null == Class3_Sub13_Sub10.aFrame3121) {
-            if(GameShell.frame == null) {
-               var1 = Class38.aClass87_665.anApplet1219;
-            } else {
+            if(GameShell.frame != null) {
                var1 = GameShell.frame;
+            } else {
+               var1 = Class38.aClass87_665.anApplet1219;
             }
          } else {
             var1 = Class3_Sub13_Sub10.aFrame3121;
@@ -52,7 +52,7 @@ final class Class119 {
             Class3_Sub9.anInt2334 -= var2.right + var2.left;
          }
 
-         if(Class83.method1411(0) >= 2) {
+         if(~Class83.method1411(0) <= -3) {
             Class23.anInt454 = Class3_Sub9.anInt2334;
             Class84.anInt1164 = 0;
             Class106.anInt1442 = 0;
@@ -69,14 +69,14 @@ final class Class119 {
          }
 
          Class3_Sub28_Sub12.aCanvas3648.setSize(Class23.anInt454, Class140_Sub7.anInt2934);
-         if(var1 == GameShell.frame) {
+         if(var1 != GameShell.frame) {
+            Class3_Sub28_Sub12.aCanvas3648.setLocation(Class84.anInt1164, Class106.anInt1442);
+         } else {
             var2 = GameShell.frame.getInsets();
             Class3_Sub28_Sub12.aCanvas3648.setLocation(var2.left + Class84.anInt1164, Class106.anInt1442 + var2.top);
-         } else {
-            Class3_Sub28_Sub12.aCanvas3648.setLocation(Class84.anInt1164, Class106.anInt1442);
          }
 
-         if(Class3_Sub28_Sub12.anInt3655 != -1) {
+         if(~Class3_Sub28_Sub12.anInt3655 != 0) {
             Class124.method1746(true, (byte)-125);
          }
 
@@ -102,7 +102,7 @@ final class Class119 {
                   Class3_Sub13_Sub34.method331(1L, 64);
                }
 
-               if(var3.anInt978 == 1) {
+               if(~var3.anInt978 == -2) {
                   var2 = (Class122)var3.anObject974;
                   RSByteBuffer var4 = Class23.method939((byte)-116);
                   var2.method1738(116, var4.buffer, var4.index, 0);

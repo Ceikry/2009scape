@@ -8,6 +8,7 @@ final class Class3_Sub13_Sub8 extends Class3_Sub13 {
 	static int anInt3103;
 	private boolean aBoolean3104 = true;
 	static float aFloat3105;
+	static RSString aClass94_3106 = RSString.createRSString("clignotant2:");
 
 
 	final void method157(int var1, RSByteBuffer var2, boolean var3) {
@@ -16,12 +17,12 @@ final class Class3_Sub13_Sub8 extends Class3_Sub13 {
 				method207(18, false, -19, 102L);
 			}
 
-			if(var1 == 0) {
-				this.aBoolean3100 = var2.getByte((byte) -117) == 1;
-			} else if(var1 == 1) {
+			if(~var1 == -1) {
+				this.aBoolean3100 = -2 == ~var2.getByte((byte)-117);
+			} else if(-2 == ~var1) {
 				this.aBoolean3104 = var2.getByte((byte)-93) == 1;
-			} else if(var1 == 2) {
-				this.aBoolean2375 = var2.getByte((byte) -45) == 1;
+			} else if(-3 == ~var1) {
+				this.aBoolean2375 = ~var2.getByte((byte)-45) == -2;
 			}
 
 		} catch (RuntimeException var5) {
@@ -52,7 +53,7 @@ final class Class3_Sub13_Sub8 extends Class3_Sub13 {
 						var10[var11] = var7[RenderAnimationDefinition.anInt396 - var11];
 					}
 				} else {
-					for(var11 = 0; var11 < Class113.anInt1559; ++var11) {
+					for(var11 = 0; ~Class113.anInt1559 < ~var11; ++var11) {
 						var8[var11] = var5[var11];
 						var9[var11] = var6[var11];
 						var10[var11] = var7[var11];
@@ -70,17 +71,17 @@ final class Class3_Sub13_Sub8 extends Class3_Sub13 {
 		try {
 			//int var1 = 15 / ((-11 - var0) / 63);
 			if(Class3_Sub28_Sub13.anInt3660 == 2) {
-				if(Class3_Sub13_Sub39.anInt3460 == NPCDefinition.anInt1297 && Class38_Sub1.anInt2612 == Class168.anInt2099) {
+				if(~NPCDefinition.anInt1297 == ~Class3_Sub13_Sub39.anInt3460 && Class38_Sub1.anInt2612 == Class168.anInt2099) {
 					Class3_Sub28_Sub13.anInt3660 = 0;
-					if(Class101.aBoolean1419 && ObjectDefinition.aBooleanArray1490[81] && Class3_Sub13_Sub34.anInt3415 > 2) {
+					if(Class101.aBoolean1419 && ObjectDefinition.aBooleanArray1490[81] && ~Class3_Sub13_Sub34.anInt3415 < -3) {
 						Class3_Sub30_Sub1.method806(2597, Class3_Sub13_Sub34.anInt3415 + -2);
 					} else {
 						Class3_Sub30_Sub1.method806(2597, Class3_Sub13_Sub34.anInt3415 + -1);
 					}
 				}
-			} else if(NPCDefinition.anInt1297 == Class163_Sub1.anInt2993 && Class38_Sub1.anInt2614 == Class38_Sub1.anInt2612) {
+			} else if(NPCDefinition.anInt1297 == Class163_Sub1.anInt2993 && ~Class38_Sub1.anInt2612 == ~Class38_Sub1.anInt2614) {
 				Class3_Sub28_Sub13.anInt3660 = 0;
-				if(Class101.aBoolean1419 && ObjectDefinition.aBooleanArray1490[81] && Class3_Sub13_Sub34.anInt3415 > 2) {
+				if(Class101.aBoolean1419 && ObjectDefinition.aBooleanArray1490[81] && -3 > ~Class3_Sub13_Sub34.anInt3415) {
 					Class3_Sub30_Sub1.method806(2597, Class3_Sub13_Sub34.anInt3415 - 2);
 				} else {
 					Class3_Sub30_Sub1.method806(2597, Class3_Sub13_Sub34.anInt3415 - 1);
@@ -126,6 +127,11 @@ final class Class3_Sub13_Sub8 extends Class3_Sub13 {
 			if(Class154.aClass153_1967 != null) {
 				RenderAnimationDefinition.anInt377 = Class154.aClass153_1967.getFileAmount(1, (byte)83);
 			}
+
+			if(var1 <= 32) {
+				aClass94_3106 = (RSString)null;
+			}
+
 		} catch (RuntimeException var5) {
 			throw Class44.method1067(var5, "ej.E(" + (var0 != null?"{...}":"null") + ',' + var1 + ',' + (var2 != null?"{...}":"null") + ',' + (var3 != null?"{...}":"null") + ')');
 		}
@@ -137,6 +143,7 @@ final class Class3_Sub13_Sub8 extends Class3_Sub13 {
 
 	public static void method206(boolean var0) {
 		try {
+			aClass94_3106 = null;
 			if(!var0) {
 				method204(-76);
 			}
@@ -152,12 +159,12 @@ final class Class3_Sub13_Sub8 extends Class3_Sub13 {
 			int[] var4 = this.aClass114_2382.method1709(-16409, var1);
 			if(this.aClass114_2382.aBoolean1580) {
 				int[] var5 = this.method152(0, !this.aBoolean3104?var1:Class3_Sub20.anInt2487 + -var1, 32755);
-				if(this.aBoolean3100) {
+				if(!this.aBoolean3100) {
+					Class76.method1358(var5, 0, var4, 0, Class113.anInt1559);
+				} else {
 					for(int var6 = 0; var6 < Class113.anInt1559; ++var6) {
 						var4[var6] = var5[-var6 + RenderAnimationDefinition.anInt396];
 					}
-				} else {
-					Class76.method1358(var5, 0, var4, 0, Class113.anInt1559);
 				}
 			}
 
@@ -169,7 +176,7 @@ final class Class3_Sub13_Sub8 extends Class3_Sub13 {
 
 	static final RSString method207(int var0, boolean var1, int var2, long var3) {
 		try {
-			if(var0 >= 2 && var0 <= 36) {
+			if(~var0 <= -3 && var0 <= 36) {
 				if(var2 <= 71) {
 					aFloat3105 = 1.3008908F;
 				}
@@ -195,7 +202,7 @@ final class Class3_Sub13_Sub8 extends Class3_Sub13 {
 					var9[0] = 45;
 				}
 
-				for(int var10 = 0; var10 < var5; ++var10) {
+				for(int var10 = 0; ~var5 < ~var10; ++var10) {
 					int var11 = (int)(var3 % (long)var0);
 					var3 /= (long)var0;
 					if(var11 < 0) {

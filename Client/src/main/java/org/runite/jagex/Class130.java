@@ -5,8 +5,10 @@ final class Class130 {
 
    Class3[] aClass3Array1697;
    static RSString aClass94_1698 = RSString.createRSString("(R");
+   static RSString aClass94_1699 = RSString.createRSString(" )2> <col=ff9040>");
    int anInt1700;
    static int anInt1701;
+   static RSString aClass94_1702 = RSString.createRSString("Hierhin drehen");
    static boolean[] aBooleanArray1703;
    static int incomingPacketLength = 0;
    static int anInt1705 = 0;
@@ -14,9 +16,12 @@ final class Class130 {
    
    private long aLong1708;
    static int anInt1709 = 0;
+   private static RSString aClass94_1710 = RSString.createRSString("Loaded sprites");
+   static RSString aClass94_1707 = aClass94_1710;
    static int anInt1711 = -2;
    static boolean[] aBooleanArray1712 = new boolean[100];
    private Class3 aClass3_1713;
+   static RSString aClass94_1714 = RSString.createRSString("<col=ff7000>");
    private int anInt1715 = 0;
 
 
@@ -34,10 +39,10 @@ final class Class130 {
                IOHandler.method1470(var3.anInt2829, var4, 183921384, var3.anInt2819, false, var3.anInt2832);
             }
 
-            if(var5 == 2) {
+            if(-3 == ~var5) {
                var3.anInt2773 = 0;
             }
-         } else if(animId == -1 || -1 == var3.anInt2771 || Client.getAnimationDefinition(animId, (byte)-20).anInt1857 >= Client.getAnimationDefinition(var3.anInt2771, (byte)-20).anInt1857) {
+         } else if(~animId == 0 || -1 == var3.anInt2771 || Client.getAnimationDefinition(animId, (byte)-20).anInt1857 >= Client.getAnimationDefinition(var3.anInt2771, (byte)-20).anInt1857) {
             var3.anInt2760 = 0;
             var3.anInt2771 = animId;
             var3.anInt2776 = 1;
@@ -88,11 +93,17 @@ final class Class130 {
    public static void method1774(int var0) {
       try {
          aClass94_1698 = null;
+         aClass94_1707 = null;
          aBooleanArray1712 = null;
+         aClass94_1702 = null;
          aBooleanArray1703 = null;
+         aClass94_1699 = null;
+         aClass94_1714 = null;
          if(var0 <= 96) {
             method1783(-63, (Component)null);
          }
+
+         aClass94_1710 = null;
       } catch (RuntimeException var2) {
          throw Class44.method1067(var2, "sc.H(" + var0 + ')');
       }
@@ -119,106 +130,62 @@ final class Class130 {
 
    static final Class3_Sub13 method1777(int var0, boolean var1) {
       try {
-         if(var0 == 0) {
+         if(-1 == ~var0) {
             return new Class3_Sub13_Sub22();
-         } else if(var0 == 1) {
-            return new Class3_Sub13_Sub11();
-         } else {
-            if(2 == var0) {
-               return new Class3_Sub13_Sub31();
-            } else {
-               if(var0 == 3) {
+         } else if(-2 != ~var0) {
+            if(2 != var0) {
+               if(~var0 == -4) {
                   return new Class3_Sub13_Sub29();
-               } else if(var0 == 4) {
-                  return new Class3_Sub13_Sub19();
-               } else {
+               } else if(var0 != 4) {
                   if(var0 == 5) {
                      return new Class3_Sub13_Sub24();
                   } else if(var0 == 6) {
                      return new Class3_Sub13_Sub2();
-                  } else if(var0 == 7) {
-                     return new Class3_Sub13_Sub27();
-                  } else {
-                     if(var0 == 8) {
-                        return new Class3_Sub13_Sub39();
-                     } else {
-                        if(9 == var0) {
-                           return new Class3_Sub13_Sub8();
-                        } else {
+                  } else if(var0 != 7) {
+                     if(var0 != 8) {
+                        if(9 != var0) {
                            if(10 == var0) {
                               return new Class3_Sub13_Sub37();
-                           } else if(var0 == 11) {
-                              return new Class3_Sub13_Sub20();
-                           } else {
-                              if(var0 == 12) {
+                           } else if(var0 != 11) {
+                              if(-13 == ~var0) {
                                  return new Class3_Sub13_Sub1();
-                              } else if(var0 == 13) {
-                                 return new Class3_Sub13_Sub30();
-                              } else {
+                              } else if(-14 != ~var0) {
                                  if(14 == var0) {
                                     return new Class3_Sub13_Sub32();
-                                 } else if(var0 == 15) {
-                                    return new Class3_Sub13_Sub16();
-                                 } else {
+                                 } else if(~var0 != -16) {
                                     if(var0 == 16) {
                                        return new Class3_Sub13_Sub9();
-                                    } else if(17 == var0) {
-                                       return new Class3_Sub13_Sub15();
-                                    } else {
-                                       if(var0 == 18) {
+                                    } else if(17 != var0) {
+                                       if(~var0 == -19) {
                                           return new Class3_Sub13_Sub23_Sub1();
-                                       } else if(var0 == 19) {
+                                       } else if(-20 == ~var0) {
                                           return new Class3_Sub13_Sub18();
-                                       } else if(var0 == 20) {
+                                       } else if(~var0 == -21) {
                                           return new Class3_Sub13_Sub13();
                                        } else if(21 == var0) {
                                           return new Class3_Sub13_Sub5();
-                                       } else if(22 == var0) {
-                                          return new Class3_Sub13_Sub35();
-                                       } else {
-                                          if(var0 == 23) {
-                                             return new Class3_Sub13_Sub17();
-                                          } else {
-                                             if(24 == var0) {
-                                                return new Class3_Sub13_Sub12();
-                                             } else {
-                                                if(var0 == 25) {
-                                                   return new Class3_Sub13_Sub34();
-                                                } else {
-                                                   if(var0 == 26) {
-                                                      return new Class3_Sub13_Sub6();
-                                                   } else {
-                                                      if(27 == var0) {
-                                                         return new Class3_Sub13_Sub7();
-                                                      } else {
-                                                         if(var0 == 28) {
+                                       } else if(22 != var0) {
+                                          if(~var0 != -24) {
+                                             if(24 != var0) {
+                                                if(var0 != 25) {
+                                                   if(~var0 != -27) {
+                                                      if(27 != var0) {
+                                                         if(-29 == ~var0) {
                                                             return new Class3_Sub13_Sub25();
-                                                         } else if(var0 == 29) {
-                                                            return new Class3_Sub13_Sub33();
-                                                         } else {
-                                                            if(var0 == 30) {
-                                                               return new Class3_Sub13_Sub10();
-                                                            } else {
-                                                               if(31 == var0) {
-                                                                  return new Class3_Sub13_Sub14();
-                                                               } else {
-                                                                  if(32 == var0) {
-                                                                     return new Class3_Sub13_Sub28();
-                                                                  } else {
+                                                         } else if(-30 != ~var0) {
+                                                            if(var0 != 30) {
+                                                               if(31 != var0) {
+                                                                  if(32 != var0) {
                                                                      if(33 == var0) {
                                                                         return new Class3_Sub13_Sub3();
-                                                                     } else if(var0 == 34) {
+                                                                     } else if(-35 == ~var0) {
                                                                         return new Class3_Sub13_Sub4();
                                                                      } else if(var0 == 35) {
                                                                         return new Class3_Sub13_Sub26();
-                                                                     } else if(var0 == 36) {
-                                                                        return new Class3_Sub13_Sub36();
-                                                                     } else {
+                                                                     } else if(~var0 != -37) {
                                                                         if(var0 == 37) {
                                                                            return new Class3_Sub13_Sub21();
-                                                                        } else if(38 == var0) {
-                                                                           return new Class3_Sub13_Sub38();
-                                                                        } else {
+                                                                        } else if(38 != var0) {
                                                                            if(39 == var0) {
                                                                               return new Class3_Sub13_Sub23();
                                                                            } else {
@@ -228,27 +195,71 @@ final class Class130 {
 
                                                                               return null;
                                                                            }
+                                                                        } else {
+                                                                           return new Class3_Sub13_Sub38();
                                                                         }
+                                                                     } else {
+                                                                        return new Class3_Sub13_Sub36();
                                                                      }
+                                                                  } else {
+                                                                     return new Class3_Sub13_Sub28();
                                                                   }
+                                                               } else {
+                                                                  return new Class3_Sub13_Sub14();
                                                                }
+                                                            } else {
+                                                               return new Class3_Sub13_Sub10();
                                                             }
+                                                         } else {
+                                                            return new Class3_Sub13_Sub33();
                                                          }
+                                                      } else {
+                                                         return new Class3_Sub13_Sub7();
                                                       }
+                                                   } else {
+                                                      return new Class3_Sub13_Sub6();
                                                    }
+                                                } else {
+                                                   return new Class3_Sub13_Sub34();
                                                 }
+                                             } else {
+                                                return new Class3_Sub13_Sub12();
                                              }
+                                          } else {
+                                             return new Class3_Sub13_Sub17();
                                           }
+                                       } else {
+                                          return new Class3_Sub13_Sub35();
                                        }
+                                    } else {
+                                       return new Class3_Sub13_Sub15();
                                     }
+                                 } else {
+                                    return new Class3_Sub13_Sub16();
                                  }
+                              } else {
+                                 return new Class3_Sub13_Sub30();
                               }
+                           } else {
+                              return new Class3_Sub13_Sub20();
                            }
+                        } else {
+                           return new Class3_Sub13_Sub8();
                         }
+                     } else {
+                        return new Class3_Sub13_Sub39();
                      }
+                  } else {
+                     return new Class3_Sub13_Sub27();
                   }
+               } else {
+                  return new Class3_Sub13_Sub19();
                }
+            } else {
+               return new Class3_Sub13_Sub31();
             }
+         } else {
+            return new Class3_Sub13_Sub11();
          }
       } catch (RuntimeException var3) {
          throw Class44.method1067(var3, "sc.I(" + var0 + ',' + var1 + ')');
@@ -258,13 +269,13 @@ final class Class130 {
    final Class3 method1778(int var1) {
       try {
          Class3 var2;
-         if(this.anInt1715 > 0 && this.aClass3_1713 != this.aClass3Array1697[this.anInt1715 - 1]) {
+         if(-1 > ~this.anInt1715 && this.aClass3_1713 != this.aClass3Array1697[this.anInt1715 - 1]) {
             var2 = this.aClass3_1713;
             this.aClass3_1713 = var2.aClass3_74;
             return var2;
          } else {
             do {
-               if(this.anInt1700 <= this.anInt1715) {
+               if(~this.anInt1715 <= ~this.anInt1700) {
                   if(var1 > -61) {
                      this.method1773(119);
                   }
@@ -326,7 +337,7 @@ final class Class130 {
          Class3 var4 = this.aClass3Array1697[(int)(var1 & (long)(-1 + this.anInt1700))];
 
          for(this.aClass3_1706 = var4.aClass3_74; var4 != this.aClass3_1706; this.aClass3_1706 = this.aClass3_1706.aClass3_74) {
-            if(this.aClass3_1706.aLong71 == var1) {
+            if(~var1 == ~this.aClass3_1706.aLong71) {
                Class3 var5 = this.aClass3_1706;
                this.aClass3_1706 = this.aClass3_1706.aClass3_74;
                return var5;
@@ -361,6 +372,10 @@ final class Class130 {
 
    final int method1782(Class3[] var1, int var2) {
       try {
+         if(var2 < 3) {
+            aClass94_1699 = (RSString)null;
+         }
+
          int var3 = 0;
 
          for(int var4 = 0; var4 < this.anInt1700; ++var4) {
@@ -394,9 +409,7 @@ final class Class130 {
 
    final Class3 method1784(int var1) {
       try {
-         if(null == this.aClass3_1706) {
-            return null;
-         } else {
+         if(null != this.aClass3_1706) {
             Class3 var2 = this.aClass3Array1697[(int)(this.aLong1708 & (long)(-1 + this.anInt1700))];
             if(var1 != 0) {
                method1772(-100, 110, -46, (NPC)null);
@@ -413,6 +426,8 @@ final class Class130 {
             }
 
             this.aClass3_1706 = null;
+            return null;
+         } else {
             return null;
          }
       } catch (RuntimeException var4) {

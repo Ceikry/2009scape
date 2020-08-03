@@ -3,6 +3,7 @@ package org.runite.jagex;
 final class Class3_Sub13_Sub26 extends Class3_Sub13 {
 
 	static int anInt3332 = 50;
+	private static RSString aClass94_3334 = RSString.createRSString("wave2:");
 	static RSString[] aClass94Array3317 = new RSString[anInt3332];
 	static int[] anIntArray3318 = new int[anInt3332];
 	static int[] anIntArray3319 = new int[anInt3332];
@@ -10,10 +11,15 @@ final class Class3_Sub13_Sub26 extends Class3_Sub13 {
 	static int[] anIntArray3321 = new int[]{76, 8, 137, 4, 0, 1, 38, 2, 19};
 	private int anInt3322 = 4096;
 	static int anInt3323 = 50;
+	static RSString aClass94_3324 = RSString.createRSString(" loggt sich ein)3");
+	static RSString aClass94_3325 = aClass94_3334;
+	static RSString aClass94_3326 = RSString.createRSString("leuchten1:");
 	static int[] anIntArray3327 = new int[anInt3332];
 	static int[] anIntArray3328 = new int[8];
 	static int[] anIntArray3329 = new int[anInt3332];
+	static RSString aClass94_3330 = RSString.createRSString(":assistreq:");
 	static int[] anIntArray3331 = new int[anInt3332];
+	static RSString aClass94_3333 = aClass94_3334;
 	static byte[][] aByteArrayArray3335;
 	static int[] anIntArray3336 = new int[anInt3332];
 	static int[] anIntArray3337 = new int[anInt3332];
@@ -23,16 +29,22 @@ final class Class3_Sub13_Sub26 extends Class3_Sub13 {
 		try {
 			anIntArray3327 = null;
 			anIntArray3337 = null;
+			aClass94_3326 = null;
 			aClass94Array3317 = null;
+			aClass94_3334 = null;
 			anIntArray3328 = null;
+			aClass94_3330 = null;
+			aClass94_3324 = null;
 			anIntArray3319 = null;
 			aByteArrayArray3335 = (byte[][])null;
 			anIntArray3329 = null;
+			aClass94_3333 = null;
 			anIntArray3336 = null;
 			int var1 = -62 % ((-59 - var0) / 47);
 			anIntArray3321 = null;
 			anIntArray3318 = null;
 			anIntArray3331 = null;
+			aClass94_3325 = null;
 		} catch (RuntimeException var2) {
 			throw Class44.method1067(var2, "pg.B(" + var0 + ')');
 		}

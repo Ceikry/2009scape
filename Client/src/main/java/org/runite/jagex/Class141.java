@@ -174,13 +174,13 @@ final class Class141 {
    private static final boolean method2039(byte[] var0, int var1, int var2, int var3, int var4, int var5) {
       int var6 = var2 % var5;
       int var7;
-      if(var6 == 0) {
-         var7 = 0;
-      } else {
+      if(var6 != 0) {
          var7 = var5 - var6;
+      } else {
+         var7 = 0;
       }
 
-       int var8 = -((var3 + var5 - 1) / var5);
+      int var8 = -((var3 + var5 - 1) / var5);
       int var9 = -((var2 + var5 - 1) / var5);
 
       for(int var10 = var8; var10 < 0; ++var10) {

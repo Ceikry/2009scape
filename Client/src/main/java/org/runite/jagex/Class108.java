@@ -2,19 +2,20 @@ package org.runite.jagex;
 
 final class Class108 {
 
-   static RSString COMMAND_QA_OP_TEST = RSString.createRSString("::qa_op_test");
+   static RSString aClass94_1456 = RSString.createRSString("::qa_op_test");
    static Class3_Sub28_Sub16 aClass3_Sub28_Sub16_1457;
-   static RSString COMMAND_HIGHRES_GRAPHICS_WINDOW = RSString.createRSString("::wm1");
+   static RSString aClass94_1458 = RSString.createRSString("::wm1");
+   static RSString aClass94_1459 = RSString.createRSString("cyan:");
    static int anInt1460;
 
 
    static final void method1652(int var0, int var1, int var2, int var3, int var4, int var5, int var6, int var7, int var8, int var9) {
       try {
          if(var9 != 0) {
-            COMMAND_HIGHRES_GRAPHICS_WINDOW = (RSString)null;
+            aClass94_1458 = (RSString)null;
          }
 
-         if(Class101.anInt1425 <= var5 && Class3_Sub28_Sub18.anInt3765 >= var5 && var0 >= Class101.anInt1425 && Class3_Sub28_Sub18.anInt3765 >= var0 && Class101.anInt1425 <= var6 && var6 <= Class3_Sub28_Sub18.anInt3765 && var1 >= Class101.anInt1425 && Class3_Sub28_Sub18.anInt3765 >= var1 && var4 >= Class159.anInt2020 && Class57.anInt902 >= var4 && Class159.anInt2020 <= var7 && Class57.anInt902 >= var7 && var2 >= Class159.anInt2020 && var2 <= Class57.anInt902 && Class159.anInt2020 <= var3 && Class57.anInt902 >= var3) {
+         if(~var5 <= ~Class101.anInt1425 && ~var5 >= ~Class3_Sub28_Sub18.anInt3765 && var0 >= Class101.anInt1425 && ~var0 >= ~Class3_Sub28_Sub18.anInt3765 && ~var6 <= ~Class101.anInt1425 && ~Class3_Sub28_Sub18.anInt3765 <= ~var6 && ~Class101.anInt1425 >= ~var1 && ~var1 >= ~Class3_Sub28_Sub18.anInt3765 && ~Class159.anInt2020 >= ~var4 && ~var4 >= ~Class57.anInt902 && ~var7 <= ~Class159.anInt2020 && Class57.anInt902 >= var7 && var2 >= Class159.anInt2020 && ~Class57.anInt902 <= ~var2 && ~var3 <= ~Class159.anInt2020 && ~var3 >= ~Class57.anInt902) {
             Class3_Sub5.method114(3, var2, var8, var7, var6, var1, var3, var4, var0, var5);
          } else {
             Class95.method1583(var5, var0, var7, 3, var8, var3, var2, var1, var6, var4);
@@ -69,10 +70,10 @@ final class Class108 {
    static final void method1656(CacheIndex var0, byte var1) {
       try {
          if(!Class140_Sub2.aBoolean2713) {
-            if(HDToolKit.highDetail) {
-               Class22.method932();
-            } else {
+            if(!HDToolKit.highDetail) {
                Class74.method1320();
+            } else {
+               Class22.method932();
             }
 
             Class40.aClass3_Sub28_Sub16_680 = Class75_Sub2.method1344(117, var0, Class154.anInt1966);
@@ -97,7 +98,7 @@ final class Class108 {
          Class3_Sub28_Sub6 var2 = Class3_Sub24_Sub3.method466(4, 5, var0);
          var2.a(true);
          if(var1 != -903) {
-            COMMAND_HIGHRES_GRAPHICS_WINDOW = (RSString)null;
+            aClass94_1458 = (RSString)null;
          }
 
       } catch (RuntimeException var3) {
@@ -128,11 +129,13 @@ final class Class108 {
    public static void method1660(int var0) {
       try {
          aClass3_Sub28_Sub16_1457 = null;
-         COMMAND_HIGHRES_GRAPHICS_WINDOW = null;
-         COMMAND_QA_OP_TEST = null;
+         aClass94_1458 = null;
+         aClass94_1456 = null;
          if(var0 != 13123) {
-            COMMAND_HIGHRES_GRAPHICS_WINDOW = (RSString)null;
+            aClass94_1458 = (RSString)null;
          }
+
+         aClass94_1459 = null;
       } catch (RuntimeException var2) {
          throw Class44.method1067(var2, "oi.A(" + var0 + ')');
       }

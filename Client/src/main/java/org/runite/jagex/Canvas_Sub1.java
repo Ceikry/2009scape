@@ -13,14 +13,20 @@ final class Canvas_Sub1 extends Canvas implements FocusListener {
    static int anInt19;
    static int[][] anIntArrayArray20 = new int[5][5000];
    static Class93 aClass93_21 = new Class93(64);
+   static RSString aClass94_22 = RSString.createRSString("leuchten3:");
    static int registryStage = 0;
+   static RSString aClass94_24 = RSString.createRSString("Chargement de RuneScape en cours )2 veuillez patienter)3)3)3");
    static int anInt25 = 1;
+   static RSString aClass94_26 = RSString.createRSString("n");
 
 
    public static void method53(int var0) {
       try {
          aClass93_21 = null;
+         aClass94_24 = null;
+         aClass94_22 = null;
          anIntArrayArray20 = (int[][])null;
+         aClass94_26 = null;
          if(var0 != 0) {
             aClass93_21 = (Class93)null;
          }

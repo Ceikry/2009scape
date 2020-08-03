@@ -5,11 +5,13 @@ final class Class151_Sub1 extends Class151 {
    static Class3_Sub30_Sub1 aClass3_Sub30_Sub1_2942 = new Class3_Sub30_Sub1(5000);
    private Class41 aClass41_2943;
    private Class62 aClass62_2944;
+   static RSString aClass94_2945 = RSString.createRSString("Votre liste d(Wamis est pleine (X100 noms maximum pour la version gratuite et 200 pour les abonn-Bs(Y)3");
    private Class130 aClass130_2946 = new Class130(16);
    private int anInt2947;
    private int anInt2948 = 0;
    private byte[] aByteArray2949;
    private Class3_Sub28_Sub10 aClass3_Sub28_Sub10_2950;
+   static RSString aClass94_2951 = RSString.createRSString("k");
    static int[] anIntArray2952 = new int[128];
    private Class66 aClass66_2953;
     Class41 aClass41_2954;
@@ -17,6 +19,9 @@ final class Class151_Sub1 extends Class151 {
    private Class73 aClass73_2956;
    private int anInt2957;
    static int anInt2958 = 0;
+   static RSString aClass94_2959 = RSString.createRSString("mapfunction");
+   private static RSString aClass94_2960 = RSString.createRSString("Loading interfaces )2 ");
+   static RSString aClass94_2961 = aClass94_2960;
    private boolean aBoolean2962;
    private Class61 aClass61_2963 = new Class61();
    private int anInt2964 = 0;
@@ -30,23 +35,34 @@ final class Class151_Sub1 extends Class151 {
       try {
          GraphicDefinition.incomingBuffer.setBitAccess((byte)118);
          int opcode = GraphicDefinition.incomingBuffer.getBits((byte)-11, 1);
-         if(opcode != 0) {
+         if(-1 != ~opcode) {
             int type = GraphicDefinition.incomingBuffer.getBits((byte)-11, 2);
-            if(0 == type) {
-               Class21.maskUpdateIndexes[Class66.maskUpdateCount++] = 2047;
-            } else {
+            if(0 != type) {
                int var3 = -112 / ((var0 - 26) / 40);
                int var4;
                int var5;
-               if(type == 1) { //Walk
+               if(~type == -2) { //Walk
                   var4 = GraphicDefinition.incomingBuffer.getBits((byte)-11, 3);
                   Class102.player.walkStep(1, (byte)-128, var4);
                   var5 = GraphicDefinition.incomingBuffer.getBits((byte)-11, 1);
-                  if(var5 == 1) {
+                  if(-2 == ~var5) {
                      Class21.maskUpdateIndexes[Class66.maskUpdateCount++] = 2047;
                   }
 
-               } else if(2 == type) {
+               } else if(2 != type) {
+                  if(-4 == ~type) {
+                     var4 = GraphicDefinition.incomingBuffer.getBits((byte)-11, 7);
+                     var5 = GraphicDefinition.incomingBuffer.getBits((byte)-11, 1);
+                     WorldListCountry.localPlane = GraphicDefinition.incomingBuffer.getBits((byte)-11, 2);
+                     int var6 = GraphicDefinition.incomingBuffer.getBits((byte)-11, 1);
+                     if(~var6 == -2) {
+                        Class21.maskUpdateIndexes[Class66.maskUpdateCount++] = 2047;
+                     }
+
+                     int var7 = GraphicDefinition.incomingBuffer.getBits((byte)-11, 7);
+                     Class102.player.method1981((byte)126, var7, var5 == 1, var4);
+                  }
+               } else {
                   if(GraphicDefinition.incomingBuffer.getBits((byte)-11, 1) == 1) {
                      var4 = GraphicDefinition.incomingBuffer.getBits((byte)-11, 3);
                      Class102.player.walkStep(2, (byte)-104, var4);
@@ -62,20 +78,9 @@ final class Class151_Sub1 extends Class151 {
                      Class21.maskUpdateIndexes[Class66.maskUpdateCount++] = 2047;
                   }
 
-               } else {
-                  if(type == 3) {
-                     var4 = GraphicDefinition.incomingBuffer.getBits((byte)-11, 7);
-                     var5 = GraphicDefinition.incomingBuffer.getBits((byte)-11, 1);
-                     WorldListCountry.localPlane = GraphicDefinition.incomingBuffer.getBits((byte)-11, 2);
-                     int var6 = GraphicDefinition.incomingBuffer.getBits((byte)-11, 1);
-                     if(var6 == 1) {
-                        Class21.maskUpdateIndexes[Class66.maskUpdateCount++] = 2047;
-                     }
-
-                     int var7 = GraphicDefinition.incomingBuffer.getBits((byte)-11, 7);
-                     Class102.player.method1981((byte)126, var7, var5 == 1, var4);
-                  }
                }
+            } else {
+               Class21.maskUpdateIndexes[Class66.maskUpdateCount++] = 2047;
             }
          }
       } catch (RuntimeException var8) {
@@ -88,7 +93,7 @@ final class Class151_Sub1 extends Class151 {
          if(null != this.aClass41_2954) {
             Class3 var3;
             for(var3 = this.aClass61_2963.method1222(); null != var3; var3 = this.aClass61_2963.method1221()) {
-               if((long) var1 == var3.aLong71) {
+               if(~var3.aLong71 == ~((long)var1)) {
                   return;
                }
             }
@@ -107,7 +112,9 @@ final class Class151_Sub1 extends Class151 {
       try {
          if(this.aClass62_2944 != null) {
             return this.aClass62_2944;
-         } else if(var1 == 0) {
+         } else if(var1 != 0) {
+            return (Class62)null;
+         } else {
             if(null == this.aClass3_Sub28_Sub10_2950) {
                if(this.aClass66_2953.method1251((byte)73)) {
                   return null;
@@ -127,7 +134,7 @@ final class Class151_Sub1 extends Class151 {
                      }
 
                      this.aClass62_2944 = new Class62(var2, this.anInt2955);
-                     if(this.aClass62_2944.revision != this.anInt2947) {
+                     if(~this.anInt2947 != ~this.aClass62_2944.revision) {
                         throw new RuntimeException();
                      }
                   } catch (RuntimeException var4) {
@@ -150,10 +157,10 @@ final class Class151_Sub1 extends Class151 {
                   } catch (RuntimeException var5) {
                      this.aClass66_2953.method1252((byte)-107);
                      this.aClass62_2944 = null;
-                     if(this.aClass66_2953.method1251((byte) -71)) {
-                        this.aClass3_Sub28_Sub10_2950 = null;
-                     } else {
+                     if(!this.aClass66_2953.method1251((byte)-71)) {
                         this.aClass3_Sub28_Sub10_2950 = this.aClass66_2953.addJS5Request(var1 + 120, 255, (byte)0, this.anInt2957, true);
+                     } else {
+                        this.aClass3_Sub28_Sub10_2950 = null;
                      }
 
                      return null;
@@ -172,8 +179,6 @@ final class Class151_Sub1 extends Class151 {
                this.aClass3_Sub28_Sub10_2950 = null;
                return this.aClass62_2944;
             }
-         } else {
-            return (Class62)null;
          }
       } catch (RuntimeException var6) {
          throw Class44.method1067(var6, "bg.B(" + var1 + ')');
@@ -208,7 +213,7 @@ final class Class151_Sub1 extends Class151 {
 
    static final boolean method2103(int var0, int var1) {
       try {
-         return var1 >= -78?true: var0 == 198 || 230 == var0 || var0 == 156 || var0 == 140 || 223 == var0;
+         return var1 >= -78?true:-199 == ~var0 || 230 == var0 || var0 == 156 || ~var0 == -141 || 223 == var0;
       } catch (RuntimeException var3) {
          throw Class44.method1067(var3, "bg.P(" + var0 + ',' + var1 + ')');
       }
@@ -218,7 +223,7 @@ final class Class151_Sub1 extends Class151 {
       try {
          int var3 = 57 % ((var2 - -58) / 47);
          int var4 = var0.anInt240 != 0?var0.anInt240:var0.anInt168;
-         int var5 = var0.anInt252 != 0 ?var0.anInt252:var0.anInt193;
+         int var5 = -1 != ~var0.anInt252?var0.anInt252:var0.anInt193;
          Class158.method2183(var0.anInt279, var1, var4, 235, var5, GameObject.aClass11ArrayArray1834[var0.anInt279 >> 16]);
          if(var0.aClass11Array262 != null) {
             Class158.method2183(var0.anInt279, var1, var4, 235, var5, var0.aClass11Array262);
@@ -236,9 +241,14 @@ final class Class151_Sub1 extends Class151 {
 
    public static void method2105(boolean var0) {
       try {
+         aClass94_2959 = null;
+         aClass94_2951 = null;
          if(!var0) {
             anIntArray2952 = null;
             aClass3_Sub30_Sub1_2942 = null;
+            aClass94_2960 = null;
+            aClass94_2961 = null;
+            aClass94_2945 = null;
          }
       } catch (RuntimeException var2) {
          throw Class44.method1067(var2, "bg.F(" + var0 + ')');
@@ -247,23 +257,23 @@ final class Class151_Sub1 extends Class151 {
 
    final int method2106(int var1) {
       try {
-         if(null == this.aClass62_2944) {
-            return 0;
-         } else {
+         if(null != this.aClass62_2944) {
             if(this.aBoolean2962) {
                Class3 var2 = this.aClass61_2966.method1222();
-               if(null == var2) {
-                  return 0;
-               } else {
+               if(null != var2) {
                   if(var1 != 1) {
                      this.anInt2964 = -91;
                   }
 
                   return (int)var2.aLong71;
+               } else {
+                  return 0;
                }
             } else {
                return this.aClass62_2944.validArchiveAmount;
             }
+         } else {
+            return 0;
          }
       } catch (RuntimeException var3) {
          throw Class44.method1067(var3, "bg.O(" + var1 + ')');
@@ -281,52 +291,10 @@ final class Class151_Sub1 extends Class151 {
                boolean var2;
                Class3 var3;
                int var4;
-               if(this.aBoolean2962) {
-                  var2 = true;
-
-                  for(var3 = this.aClass61_2966.method1222(); null != var3; var3 = this.aClass61_2966.method1221()) {
-                     var4 = (int)var3.aLong71;
-                     if(this.aByteArray2949[var4] == 0) {
-                        this.method2109(1, var4, 51);
-                     }
-
-                     if(this.aByteArray2949[var4] == 0) {
-                        var2 = false;
-                     } else {
-                        var3.method86(-1024);
-                     }
-                  }
-
-                  while(this.aClass62_2944.archiveFileLengths.length > this.anInt2964) {
-                     if(this.aClass62_2944.archiveFileLengths[this.anInt2964] == 0) {
-                        ++this.anInt2964;
-                     } else {
-                        if(this.aClass73_2956.anInt1087 >= 250) {
-                           var2 = false;
-                           break;
-                        }
-
-                        if(0 == this.aByteArray2949[this.anInt2964]) {
-                           this.method2109(1, this.anInt2964, 99);
-                        }
-
-                        if(this.aByteArray2949[this.anInt2964] == 0) {
-                           var2 = false;
-                           var3 = new Class3();
-                           var3.aLong71 = (long)this.anInt2964;
-                           this.aClass61_2966.method1215(true, var3);
-                        }
-
-                        ++this.anInt2964;
-                     }
-                  }
-
-                  if(var2) {
-                     this.aBoolean2962 = false;
-                     this.anInt2964 = 0;
-                  }
-               } else {
-                  if(this.aBoolean2965) {
+               if(!this.aBoolean2962) {
+                  if(!this.aBoolean2965) {
+                     this.aClass61_2966 = null;
+                  } else {
                      var2 = true;
 
                      for(var3 = this.aClass61_2966.method1222(); var3 != null; var3 = this.aClass61_2966.method1221()) {
@@ -342,10 +310,8 @@ final class Class151_Sub1 extends Class151 {
                         }
                      }
 
-                     while(this.anInt2964 < this.aClass62_2944.archiveFileLengths.length) {
-                        if(this.aClass62_2944.archiveFileLengths[this.anInt2964] == 0) {
-                           ++this.anInt2964;
-                        } else {
+                     while(~this.aClass62_2944.archiveFileLengths.length < ~this.anInt2964) {
+                        if(-1 != ~this.aClass62_2944.archiveFileLengths[this.anInt2964]) {
                            if(this.aClass66_2953.method1241(-30064)) {
                               var2 = false;
                               break;
@@ -355,13 +321,15 @@ final class Class151_Sub1 extends Class151 {
                               this.method2109(2, this.anInt2964, 47);
                            }
 
-                           if(this.aByteArray2949[this.anInt2964] != 1) {
+                           if(-2 != ~this.aByteArray2949[this.anInt2964]) {
                               var3 = new Class3();
                               var3.aLong71 = (long)this.anInt2964;
                               this.aClass61_2966.method1215(true, var3);
                               var2 = false;
                            }
 
+                           ++this.anInt2964;
+                        } else {
                            ++this.anInt2964;
                         }
                      }
@@ -370,8 +338,50 @@ final class Class151_Sub1 extends Class151 {
                         this.anInt2964 = 0;
                         this.aBoolean2965 = false;
                      }
-                  } else {
-                     this.aClass61_2966 = null;
+                  }
+               } else {
+                  var2 = true;
+
+                  for(var3 = this.aClass61_2966.method1222(); null != var3; var3 = this.aClass61_2966.method1221()) {
+                     var4 = (int)var3.aLong71;
+                     if(~this.aByteArray2949[var4] == -1) {
+                        this.method2109(1, var4, 51);
+                     }
+
+                     if(~this.aByteArray2949[var4] != -1) {
+                        var3.method86(-1024);
+                     } else {
+                        var2 = false;
+                     }
+                  }
+
+                  while(this.aClass62_2944.archiveFileLengths.length > this.anInt2964) {
+                     if(~this.aClass62_2944.archiveFileLengths[this.anInt2964] == -1) {
+                        ++this.anInt2964;
+                     } else {
+                        if(-251 >= ~this.aClass73_2956.anInt1087) {
+                           var2 = false;
+                           break;
+                        }
+
+                        if(0 == this.aByteArray2949[this.anInt2964]) {
+                           this.method2109(1, this.anInt2964, 99);
+                        }
+
+                        if(-1 == ~this.aByteArray2949[this.anInt2964]) {
+                           var2 = false;
+                           var3 = new Class3();
+                           var3.aLong71 = (long)this.anInt2964;
+                           this.aClass61_2966.method1215(true, var3);
+                        }
+
+                        ++this.anInt2964;
+                     }
+                  }
+
+                  if(var2) {
+                     this.aBoolean2962 = false;
+                     this.anInt2964 = 0;
                   }
                }
             }
@@ -416,14 +426,14 @@ final class Class151_Sub1 extends Class151 {
 
    final int method2108(byte var1) {
       try {
-         if(this.aClass62_2944 == null) {
-            return 0;
-         } else {
+         if(this.aClass62_2944 != null) {
             if(var1 != 1) {
                anInt2958 = 100;
             }
 
             return this.aClass62_2944.validArchiveAmount;
+         } else {
+            return 0;
          }
       } catch (RuntimeException var3) {
          throw Class44.method1067(var3, "bg.M(" + var1 + ')');
@@ -433,30 +443,24 @@ final class Class151_Sub1 extends Class151 {
    private final Class3_Sub28_Sub10 method2109(int var1, int archiveIndex, int var3) {
       try {
          Object var4 = (Class3_Sub28_Sub10)this.aClass130_2946.method1780((long)archiveIndex, 0);
-         if(null != var4 && var1 == 0 && !((Class3_Sub28_Sub10)var4).aBoolean3628 && ((Class3_Sub28_Sub10)var4).aBoolean3632) {
+         if(null != var4 && ~var1 == -1 && !((Class3_Sub28_Sub10)var4).aBoolean3628 && ((Class3_Sub28_Sub10)var4).aBoolean3632) {
             ((Class3_Sub28_Sub10)var4).method86(-1024);
             var4 = null;
          }
 
          if(null == var4) {
             if(0 == var1) {
-               if(null == this.aClass41_2954 || this.aByteArray2949[archiveIndex] == -1) {
+               if(null != this.aClass41_2954 && ~this.aByteArray2949[archiveIndex] != 0) {
+                  var4 = this.aClass73_2956.method1309(this.aClass41_2954, (byte)106, archiveIndex);
+               } else {
                   if(this.aClass66_2953.method1251((byte)-83)) {
                      return null;
                   }
 
                   var4 = this.aClass66_2953.addJS5Request(-51, this.anInt2957, (byte)2, archiveIndex, true);
-               } else {
-                  var4 = this.aClass73_2956.method1309(this.aClass41_2954, (byte)106, archiveIndex);
                }
-            } else if(1 == var1) {
-               if(this.aClass41_2954 == null) {
-                  throw new RuntimeException();
-               }
-
-               var4 = this.aClass73_2956.method1307(archiveIndex, -27447, this.aClass41_2954);
-            } else {
-               if(var1 != 2) {
+            } else if(1 != var1) {
+               if(~var1 != -3) {
                   throw new RuntimeException();
                }
 
@@ -464,7 +468,7 @@ final class Class151_Sub1 extends Class151 {
                   throw new RuntimeException();
                }
 
-               if(this.aByteArray2949[archiveIndex] != -1) {
+               if(~this.aByteArray2949[archiveIndex] != 0) {
                   throw new RuntimeException();
                }
 
@@ -473,6 +477,12 @@ final class Class151_Sub1 extends Class151 {
                }
 
                var4 = this.aClass66_2953.addJS5Request(-37, this.anInt2957, (byte)2, archiveIndex, false);
+            } else {
+               if(this.aClass41_2954 == null) {
+                  throw new RuntimeException();
+               }
+
+               var4 = this.aClass73_2956.method1307(archiveIndex, -27447, this.aClass41_2954);
             }
 
             this.aClass130_2946.method1779(1, (Class3)var4, (long)archiveIndex);
@@ -487,15 +497,21 @@ final class Class151_Sub1 extends Class151 {
             Class3_Sub28_Sub10_Sub2 var12;
             if(var4 instanceof Class3_Sub28_Sub10_Sub1) {
                try {
-                  if(var5 != null && var5.length > 2) {
+                  if(var5 != null && ~var5.length < -3) {
                      Class3_Sub13_Sub12.aCRC32_3143.reset();
                      Class3_Sub13_Sub12.aCRC32_3143.update(var5, 0, -2 + var5.length);
                      var7 = (int)Class3_Sub13_Sub12.aCRC32_3143.getValue();
-                     if(this.aClass62_2944.archiveCRCs[archiveIndex] == var7) {
+                     if(this.aClass62_2944.archiveCRCs[archiveIndex] != var7) {
+                       	 System.err.println("CRC mismatch - [entry=" + this.aClass62_2944.archiveCRCs[archiveIndex] + ", pass=" + var7 + "]!");
+                         throw new RuntimeException();
+                     } else {
                         int var8 = (var5[-2 + var5.length] << 8 & '\uff00') - -(255 & var5[-1 + var5.length]);
-                        if(('\uffff' & this.aClass62_2944.archiveRevisions[archiveIndex]) == var8) {
+                        if(~var8 != ~('\uffff' & this.aClass62_2944.archiveRevisions[archiveIndex])) {
+                          	 System.err.println("CRC mismatch - [entry=" + this.aClass62_2944.archiveRevisions[archiveIndex] + ", pass=" + var8 + "]!");
+                           throw new RuntimeException();
+                        } else {
                            if(1 != this.aByteArray2949[archiveIndex]) {
-                              if(this.aByteArray2949[archiveIndex] != 0) {
+                              if(-1 != ~this.aByteArray2949[archiveIndex]) {
                                  ;
                               }
 
@@ -508,13 +524,7 @@ final class Class151_Sub1 extends Class151 {
                            }
 
                            return (Class3_Sub28_Sub10)var4;
-                        } else {
-                          	 System.err.println("CRC mismatch - [entry=" + this.aClass62_2944.archiveRevisions[archiveIndex] + ", pass=" + var8 + "]!");
-                           throw new RuntimeException();
                         }
-                     } else {
-                       	 System.err.println("CRC mismatch - [entry=" + this.aClass62_2944.archiveCRCs[archiveIndex] + ", pass=" + var7 + "]!");
-                         throw new RuntimeException();
                      }
                   } else {
 //                      if(1 != this.aByteArray2949[var2]) {
@@ -541,7 +551,7 @@ final class Class151_Sub1 extends Class151 {
                }
             } else {
                try {
-                  if(null == var5 || var5.length <= 2) {
+                  if(null == var5 || -3 <= ~var5.length) {
                 	 System.err.println("Invalid CRC?");
                      throw new RuntimeException();
                   }
@@ -549,7 +559,7 @@ final class Class151_Sub1 extends Class151 {
                   Class3_Sub13_Sub12.aCRC32_3143.reset();
                   Class3_Sub13_Sub12.aCRC32_3143.update(var5, 0, var5.length - 2);
                   var7 = (int)Class3_Sub13_Sub12.aCRC32_3143.getValue();
-                  if(var7 != this.aClass62_2944.archiveCRCs[archiveIndex]) {
+                  if(~this.aClass62_2944.archiveCRCs[archiveIndex] != ~var7) {
                 	 System.err.println("CRC mismatch - [found=" + this.aClass62_2944.archiveCRCs[archiveIndex] + ", expected=" + var7 + "]!");
                      throw new RuntimeException();
                   }
@@ -597,7 +607,7 @@ final class Class151_Sub1 extends Class151 {
             if(null != this.method2094(var1)) {
                for(Class3 var2 = this.aClass61_2963.method1222(); null != var2; var2 = this.aClass61_2963.method1221()) {
                   int var3 = (int)var2.aLong71;
-                  if(0 <= var3 && this.aClass62_2944.archiveAmount > var3 && this.aClass62_2944.archiveFileLengths[var3] != 0) {
+                  if(0 <= var3 && this.aClass62_2944.archiveAmount > var3 && ~this.aClass62_2944.archiveFileLengths[var3] != -1) {
                      if(this.aByteArray2949[var3] == 0) {
                         this.method2109(1, var3, var1 + 80);
                      }
@@ -606,7 +616,7 @@ final class Class151_Sub1 extends Class151 {
                         this.method2109(2, var3, var1 + 78);
                      }
 
-                     if(this.aByteArray2949[var3] == 1) {
+                     if(~this.aByteArray2949[var3] == -2) {
                         var2.method86(-1024);
                      }
                   } else {
@@ -649,11 +659,11 @@ final class Class151_Sub1 extends Class151 {
       try {
          this.anInt2957 = var1;
          this.aClass41_2954 = var2;
-         if(this.aClass41_2954 == null) {
-            this.aBoolean2962 = false;
-         } else {
+         if(this.aClass41_2954 != null) {
             this.aBoolean2962 = true;
             this.aClass61_2966 = new Class61();
+         } else {
+            this.aBoolean2962 = false;
          }
 
          this.aClass73_2956 = var5;

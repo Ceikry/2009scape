@@ -3,6 +3,7 @@ package org.runite.jagex;
 final class Class168 {
 
    static int anInt2088;
+   static RSString aClass94_2089 = RSString.createRSString("compass");
    int anInt2090 = 128;
    static RSInterface aClass11_2091 = null;
    boolean aBoolean2092 = false;
@@ -22,7 +23,7 @@ final class Class168 {
 
    static final void method2270(Class140_Sub4 var0, byte var1) {
       try {
-         if(Class44.anInt719 == var0.anInt2790 || var0.anInt2771 == -1 || var0.anInt2828 != 0 || Client.getAnimationDefinition(var0.anInt2771, (byte) -20).duration[var0.anInt2832] < 1 + var0.anInt2760) {
+         if(Class44.anInt719 == var0.anInt2790 || ~var0.anInt2771 == 0 || var0.anInt2828 != 0 || ~(1 + var0.anInt2760) < ~Client.getAnimationDefinition(var0.anInt2771, (byte)-20).duration[var0.anInt2832]) {
             int var2 = var0.anInt2790 + -var0.anInt2800;
             int var3 = Class44.anInt719 + -var0.anInt2800;
             int var4 = var0.anInt2784 * 128 + 64 * var0.getSize((byte)114);
@@ -35,7 +36,7 @@ final class Class168 {
 
          if(var1 <= -51) {
             var0.anInt2824 = 0;
-            if(var0.anInt2840 == 0) {
+            if(-1 == ~var0.anInt2840) {
                var0.anInt2806 = 1024;
             }
 
@@ -43,7 +44,7 @@ final class Class168 {
                var0.anInt2806 = 1536;
             }
 
-            if(var0.anInt2840 == 2) {
+            if(-3 == ~var0.anInt2840) {
                var0.anInt2806 = 0;
             }
 
@@ -76,8 +77,8 @@ final class Class168 {
    static final void method2272(int[] var0, int var1, int var2, int var3, int var4, int var5, int var6, int var7, int var8, boolean var9, byte var10) {
       try {
          int var11 = var2;
-         if(var2 < Class74.anInt1096) {
-            if(Class74.anInt1093 > var2) {
+         if(~Class74.anInt1096 < ~var2) {
+            if(~var2 > ~Class74.anInt1093) {
                var11 = Class74.anInt1093;
             }
 
@@ -88,16 +89,16 @@ final class Class168 {
                }
 
                int var13 = var8;
-               if(var8 < Class74.anInt1099) {
+               if(~Class74.anInt1099 < ~var8) {
                   int var14 = var8 + var6;
-                  if(Class74.anInt1095 > var8) {
+                  if(~var8 > ~Class74.anInt1095) {
                      var13 = Class74.anInt1095;
                   }
 
                   if(var14 > Class74.anInt1095) {
                      if(var10 == 21) {
                         int var15 = var11 + Class74.anInt1092 * var13;
-                        if(var5 == 9) {
+                        if(-10 == ~var5) {
                            var3 = 3 & var3 - -1;
                            var5 = 1;
                         }
@@ -109,7 +110,7 @@ final class Class168 {
                            var14 = Class74.anInt1099;
                         }
 
-                        if(var5 == 10) {
+                        if(~var5 == -11) {
                            var3 = var3 - -3 & 3;
                            var5 = 1;
                         }
@@ -127,29 +128,14 @@ final class Class168 {
                         int var19 = var6 - var14;
                         int var21;
                         int var22;
-                        if(var5 != 1) {
+                        if(-2 != ~var5) {
                            if(2 == var5) {
-                              if(var3 == 0) {
-                                 for(var21 = var20 + -1; var19 <= var21; --var21) {
-                                    for(var22 = var11; var12 > var22; ++var22) {
-                                       if(var22 <= var21 >> 1) {
-                                          var0[var15] = var1;
-                                       } else if(var9) {
-                                          var0[var15] = var4;
-                                       }
-
-                                       ++var15;
-                                    }
-
-                                    var15 += var16;
-                                 }
-
-                              } else {
+                              if(-1 != ~var3) {
                                  if(1 == var3) {
-                                    for(var21 = var13; var14 > var21; ++var21) {
-                                       for(var22 = var11; var22 < var12; ++var22) {
-                                          if(0 <= var15 && var0.length > var15) {
-                                             if(var22 >= var21 << 1) {
+                                    for(var21 = var13; ~var21 > ~var14; ++var21) {
+                                       for(var22 = var11; ~var12 < ~var22; ++var22) {
+                                          if(0 <= var15 && ~var15 > ~var0.length) {
+                                             if(~(var21 << 1) >= ~var22) {
                                                 var0[var15] = var1;
                                              } else if(var9) {
                                                 var0[var15] = var4;
@@ -164,22 +150,7 @@ final class Class168 {
                                        var15 += var16;
                                     }
 
-                                 } else if(var3 == 2) {
-                                    for(var21 = var13; var21 < var14; ++var21) {
-                                       for(var22 = var18 + -1; var17 <= var22; --var22) {
-                                          if(var21 >> 1 >= var22) {
-                                             var0[var15] = var1;
-                                          } else if(var9) {
-                                             var0[var15] = var4;
-                                          }
-
-                                          ++var15;
-                                       }
-
-                                       var15 += var16;
-                                    }
-
-                                 } else {
+                                 } else if(var3 != 2) {
                                     if(3 == var3) {
                                        for(var21 = var20 + -1; var19 <= var21; --var21) {
                                           for(var22 = -1 + var18; var17 <= var22; --var22) {
@@ -198,13 +169,43 @@ final class Class168 {
                                        }
 
                                     }
+                                 } else {
+                                    for(var21 = var13; ~var14 < ~var21; ++var21) {
+                                       for(var22 = var18 + -1; var17 <= var22; --var22) {
+                                          if(var21 >> 1 >= var22) {
+                                             var0[var15] = var1;
+                                          } else if(var9) {
+                                             var0[var15] = var4;
+                                          }
+
+                                          ++var15;
+                                       }
+
+                                       var15 += var16;
+                                    }
+
                                  }
+                              } else {
+                                 for(var21 = var20 + -1; var19 <= var21; --var21) {
+                                    for(var22 = var11; ~var22 > ~var12; ++var22) {
+                                       if(~(var21 >> 1) <= ~var22) {
+                                          var0[var15] = var1;
+                                       } else if(var9) {
+                                          var0[var15] = var4;
+                                       }
+
+                                       ++var15;
+                                    }
+
+                                    var15 += var16;
+                                 }
+
                               }
-                           } else if(var5 != 3) {
-                              if(var5 != 4) {
+                           } else if(~var5 != -4) {
+                              if(~var5 != -5) {
                                  if(var5 != 5) {
-                                    if(var5 == 6) {
-                                       if(var3 == 0) {
+                                    if(~var5 == -7) {
+                                       if(~var3 == -1) {
                                           for(var21 = var13; var14 > var21; ++var21) {
                                              for(var22 = var11; var12 > var22; ++var22) {
                                                 if(var22 > var7 / 2) {
@@ -224,8 +225,8 @@ final class Class168 {
                                           return;
                                        }
 
-                                       if(var3 == 1) {
-                                          for(var21 = var13; var14 > var21; ++var21) {
+                                       if(~var3 == -2) {
+                                          for(var21 = var13; ~var21 > ~var14; ++var21) {
                                              for(var22 = var11; var12 > var22; ++var22) {
                                                 if(var21 > var6 / 2) {
                                                    if(var9) {
@@ -245,8 +246,8 @@ final class Class168 {
                                        }
 
                                        if(2 == var3) {
-                                          for(var21 = var13; var14 > var21; ++var21) {
-                                             for(var22 = var11; var22 < var12; ++var22) {
+                                          for(var21 = var13; ~var21 > ~var14; ++var21) {
+                                             for(var22 = var11; ~var12 < ~var22; ++var22) {
                                                 if(var22 >= var7 / 2) {
                                                    var0[var15] = var1;
                                                 } else if(var9) {
@@ -262,10 +263,10 @@ final class Class168 {
                                           return;
                                        }
 
-                                       if(var3 == 3) {
-                                          for(var21 = var13; var14 > var21; ++var21) {
-                                             for(var22 = var11; var12 > var22; ++var22) {
-                                                if(var6 / 2 > var21) {
+                                       if(~var3 == -4) {
+                                          for(var21 = var13; ~var21 > ~var14; ++var21) {
+                                             for(var22 = var11; ~var22 > ~var12; ++var22) {
+                                                if(~var21 > ~(var6 / 2)) {
                                                    if(var9) {
                                                       var0[var15] = var4;
                                                    }
@@ -285,8 +286,8 @@ final class Class168 {
 
                                     if(7 == var5) {
                                        if(0 == var3) {
-                                          for(var21 = var13; var21 < var14; ++var21) {
-                                             for(var22 = var11; var22 < var12; ++var22) {
+                                          for(var21 = var13; ~var14 < ~var21; ++var21) {
+                                             for(var22 = var11; ~var12 < ~var22; ++var22) {
                                                 if(var22 <= var21 + -(var6 / 2)) {
                                                    var0[var15] = var1;
                                                 } else if(var9) {
@@ -305,7 +306,7 @@ final class Class168 {
                                        if(var3 == 1) {
                                           for(var21 = var20 + -1; var21 >= var19; --var21) {
                                              for(var22 = var11; var12 > var22; ++var22) {
-                                                if(var22 > -(var6 / 2) + var21) {
+                                                if(~(-(var6 / 2) + var21) > ~var22) {
                                                    if(var9) {
                                                       var0[var15] = var4;
                                                    }
@@ -322,9 +323,9 @@ final class Class168 {
                                           return;
                                        }
 
-                                       if(var3 == 2) {
-                                          for(var21 = var20 + -1; var21 >= var19; --var21) {
-                                             for(var22 = -1 + var18; var22 >= var17; --var22) {
+                                       if(~var3 == -3) {
+                                          for(var21 = var20 + -1; ~var19 >= ~var21; --var21) {
+                                             for(var22 = -1 + var18; ~var17 >= ~var22; --var22) {
                                                 if(var22 > var21 + -(var6 / 2)) {
                                                    if(var9) {
                                                       var0[var15] = var4;
@@ -343,8 +344,8 @@ final class Class168 {
                                        }
 
                                        if(3 == var3) {
-                                          for(var21 = var13; var14 > var21; ++var21) {
-                                             for(var22 = -1 + var18; var17 <= var22; --var22) {
+                                          for(var21 = var13; ~var21 > ~var14; ++var21) {
+                                             for(var22 = -1 + var18; ~var22 <= ~var17; --var22) {
                                                 if(var21 + -(var6 / 2) >= var22) {
                                                    var0[var15] = var1;
                                                 } else if(var9) {
@@ -361,10 +362,10 @@ final class Class168 {
                                        }
                                     }
 
-                                    if(var5 == 8) {
+                                    if(~var5 == -9) {
                                        if(0 == var3) {
                                           for(var21 = var13; var14 > var21; ++var21) {
-                                             for(var22 = var11; var22 < var12; ++var22) {
+                                             for(var22 = var11; ~var12 < ~var22; ++var22) {
                                                 if(-(var6 / 2) + var21 <= var22) {
                                                    var0[var15] = var1;
                                                 } else if(var9) {
@@ -382,7 +383,7 @@ final class Class168 {
 
                                        if(var3 == 1) {
                                           for(var21 = -1 + var20; var21 >= var19; --var21) {
-                                             for(var22 = var11; var22 < var12; ++var22) {
+                                             for(var22 = var11; ~var12 < ~var22; ++var22) {
                                                 if(-(var6 / 2) + var21 > var22) {
                                                    if(var9) {
                                                       var0[var15] = var4;
@@ -401,9 +402,9 @@ final class Class168 {
                                        }
 
                                        if(var3 == 2) {
-                                          for(var21 = var20 - 1; var19 <= var21; --var21) {
-                                             for(var22 = -1 + var18; var22 >= var17; --var22) {
-                                                if(var21 - var6 / 2 > var22) {
+                                          for(var21 = var20 - 1; ~var21 <= ~var19; --var21) {
+                                             for(var22 = -1 + var18; ~var17 >= ~var22; --var22) {
+                                                if(~var22 > ~(var21 - var6 / 2)) {
                                                    if(var9) {
                                                       var0[var15] = var4;
                                                    }
@@ -420,9 +421,9 @@ final class Class168 {
                                           return;
                                        }
 
-                                       if(var3 == 3) {
-                                          for(var21 = var13; var21 < var14; ++var21) {
-                                             for(var22 = -1 + var18; var17 <= var22; --var22) {
+                                       if(~var3 == -4) {
+                                          for(var21 = var13; ~var14 < ~var21; ++var21) {
+                                             for(var22 = -1 + var18; ~var22 <= ~var17; --var22) {
                                                 if(var21 + -(var6 / 2) > var22) {
                                                    if(var9) {
                                                       var0[var15] = var4;
@@ -443,7 +444,7 @@ final class Class168 {
 
                                  } else if(0 == var3) {
                                     for(var21 = var20 + -1; var21 >= var19; --var21) {
-                                       for(var22 = -1 + var18; var22 >= var17; --var22) {
+                                       for(var22 = -1 + var18; ~var17 >= ~var22; --var22) {
                                           if(var21 >> 1 <= var22) {
                                              var0[var15] = var1;
                                           } else if(var9) {
@@ -457,7 +458,7 @@ final class Class168 {
                                     }
 
                                  } else if(1 == var3) {
-                                    for(var21 = -1 + var20; var21 >= var19; --var21) {
+                                    for(var21 = -1 + var20; ~var19 >= ~var21; --var21) {
                                        for(var22 = var11; var22 < var12; ++var22) {
                                           if(var22 > var21 << 1) {
                                              if(var9) {
@@ -473,26 +474,9 @@ final class Class168 {
                                        var15 += var16;
                                     }
 
-                                 } else if(var3 == 2) {
-                                    for(var21 = var13; var14 > var21; ++var21) {
-                                       for(var22 = var11; var22 < var12; ++var22) {
-                                          if(var21 >> 1 > var22) {
-                                             if(var9) {
-                                                var0[var15] = var4;
-                                             }
-                                          } else {
-                                             var0[var15] = var1;
-                                          }
-
-                                          ++var15;
-                                       }
-
-                                       var15 += var16;
-                                    }
-
-                                 } else {
-                                    if(var3 == 3) {
-                                       for(var21 = var13; var21 < var14; ++var21) {
+                                 } else if(~var3 != -3) {
+                                    if(~var3 == -4) {
+                                       for(var21 = var13; ~var14 < ~var21; ++var21) {
                                           for(var22 = var18 + -1; var17 <= var22; --var22) {
                                              if(var21 << 1 >= var22) {
                                                 var0[var15] = var1;
@@ -507,29 +491,29 @@ final class Class168 {
                                        }
 
                                     }
-                                 }
-                              } else if(var3 == 0) {
-                                 for(var21 = var20 + -1; var21 >= var19; --var21) {
-                                    for(var22 = var11; var12 > var22; ++var22) {
-                                       if(var22 < var21 >> 1) {
-                                          if(var9) {
-                                             var0[var15] = var4;
+                                 } else {
+                                    for(var21 = var13; var14 > var21; ++var21) {
+                                       for(var22 = var11; ~var12 < ~var22; ++var22) {
+                                          if(~var22 > ~(var21 >> 1)) {
+                                             if(var9) {
+                                                var0[var15] = var4;
+                                             }
+                                          } else {
+                                             var0[var15] = var1;
                                           }
-                                       } else {
-                                          var0[var15] = var1;
+
+                                          ++var15;
                                        }
 
-                                       ++var15;
+                                       var15 += var16;
                                     }
 
-                                    var15 += var16;
                                  }
-
-                              } else {
+                              } else if(~var3 != -1) {
                                  if(1 == var3) {
                                     for(var21 = var13; var21 < var14; ++var21) {
                                        for(var22 = var11; var22 < var12; ++var22) {
-                                          if(var22 <= var21 << 1) {
+                                          if(~(var21 << 1) <= ~var22) {
                                              var0[var15] = var1;
                                           } else if(var9) {
                                              var0[var15] = var4;
@@ -543,8 +527,8 @@ final class Class168 {
 
                                  } else if(2 == var3) {
                                     for(var21 = var13; var21 < var14; ++var21) {
-                                       for(var22 = var18 + -1; var22 >= var17; --var22) {
-                                          if(var21 >> 1 <= var22) {
+                                       for(var22 = var18 + -1; ~var17 >= ~var22; --var22) {
+                                          if(~var22 <= ~(var21 >> 1)) {
                                              var0[var15] = var1;
                                           } else if(var9) {
                                              var0[var15] = var4;
@@ -557,8 +541,8 @@ final class Class168 {
                                     }
 
                                  } else if(var3 == 3) {
-                                    for(var21 = -1 + var20; var21 >= var19; --var21) {
-                                       for(var22 = -1 + var18; var22 >= var17; --var22) {
+                                    for(var21 = -1 + var20; ~var19 >= ~var21; --var21) {
+                                       for(var22 = -1 + var18; ~var17 >= ~var22; --var22) {
                                           if(var22 <= var21 << 1) {
                                              var0[var15] = var1;
                                           } else if(var9) {
@@ -572,11 +556,28 @@ final class Class168 {
                                     }
 
                                  }
+                              } else {
+                                 for(var21 = var20 + -1; ~var19 >= ~var21; --var21) {
+                                    for(var22 = var11; ~var22 > ~var12; ++var22) {
+                                       if(~(var21 >> 1) < ~var22) {
+                                          if(var9) {
+                                             var0[var15] = var4;
+                                          }
+                                       } else {
+                                          var0[var15] = var1;
+                                       }
+
+                                       ++var15;
+                                    }
+
+                                    var15 += var16;
+                                 }
+
                               }
-                           } else if(var3 == 0) {
-                              for(var21 = var20 - 1; var21 >= var19; --var21) {
+                           } else if(-1 == ~var3) {
+                              for(var21 = var20 - 1; ~var19 >= ~var21; --var21) {
                                  for(var22 = -1 + var18; var17 <= var22; --var22) {
-                                    if(var22 <= var21 >> 1) {
+                                    if(~(var21 >> 1) <= ~var22) {
                                        var0[var15] = var1;
                                     } else if(var9) {
                                        var0[var15] = var4;
@@ -588,9 +589,9 @@ final class Class168 {
                                  var15 += var16;
                               }
 
-                           } else if(var3 == 1) {
-                              for(var21 = -1 + var20; var19 <= var21; --var21) {
-                                 for(var22 = var11; var12 > var22; ++var22) {
+                           } else if(~var3 == -2) {
+                              for(var21 = -1 + var20; ~var21 <= ~var19; --var21) {
+                                 for(var22 = var11; ~var22 > ~var12; ++var22) {
                                     if(var22 >= var21 << 1) {
                                        var0[var15] = var1;
                                     } else if(var9) {
@@ -604,9 +605,9 @@ final class Class168 {
                               }
 
                            } else if(2 == var3) {
-                              for(var21 = var13; var21 < var14; ++var21) {
-                                 for(var22 = var11; var12 > var22; ++var22) {
-                                    if(var21 >> 1 >= var22) {
+                              for(var21 = var13; ~var14 < ~var21; ++var21) {
+                                 for(var22 = var11; ~var22 > ~var12; ++var22) {
+                                    if(~var22 >= ~(var21 >> 1)) {
                                        var0[var15] = var1;
                                     } else if(var9) {
                                        var0[var15] = var4;
@@ -619,9 +620,9 @@ final class Class168 {
                               }
 
                            } else if(3 == var3) {
-                              for(var21 = var13; var21 < var14; ++var21) {
-                                 for(var22 = var18 - 1; var17 <= var22; --var22) {
-                                    if(var22 < var21 << 1) {
+                              for(var21 = var13; ~var14 < ~var21; ++var21) {
+                                 for(var22 = var18 - 1; ~var22 <= ~var17; --var22) {
+                                    if(~(var21 << 1) < ~var22) {
                                        if(var9) {
                                           var0[var15] = var4;
                                        }
@@ -637,9 +638,9 @@ final class Class168 {
 
                            }
                         } else if(var3 == 0) {
-                           for(var21 = var13; var21 < var14; ++var21) {
-                              for(var22 = var11; var22 < var12; ++var22) {
-                                 if(var21 >= var22) {
+                           for(var21 = var13; ~var14 < ~var21; ++var21) {
+                              for(var22 = var11; ~var12 < ~var22; ++var22) {
+                                 if(~var22 >= ~var21) {
                                     var0[var15] = var1;
                                  } else if(var9) {
                                     var0[var15] = var4;
@@ -651,41 +652,11 @@ final class Class168 {
                               var15 += var16;
                            }
 
-                        } else if(1 == var3) {
-                           for(var21 = var20 + -1; var21 >= var19; --var21) {
-                              for(var22 = var11; var22 < var12; ++var22) {
-                                 if(var21 >= var22) {
-                                    var0[var15] = var1;
-                                 } else if(var9) {
-                                    var0[var15] = var4;
-                                 }
-
-                                 ++var15;
-                              }
-
-                              var15 += var16;
-                           }
-
-                        } else {
-                           if(2 == var3) {
-                              for(var21 = var13; var21 < var14; ++var21) {
-                                 for(var22 = var11; var12 > var22; ++var22) {
-                                    if(var22 >= var21) {
-                                       var0[var15] = var1;
-                                    } else if(var9) {
-                                       var0[var15] = var4;
-                                    }
-
-                                    ++var15;
-                                 }
-
-                                 var15 += var16;
-                              }
-
-                           } else {
-                              if(var3 == 3) {
+                        } else if(1 != var3) {
+                           if(2 != var3) {
+                              if(-4 == ~var3) {
                                  for(var21 = var20 + -1; var19 <= var21; --var21) {
-                                    for(var22 = var11; var12 > var22; ++var22) {
+                                    for(var22 = var11; ~var22 > ~var12; ++var22) {
                                        if(var22 < var21) {
                                           if(var9) {
                                              var0[var15] = var4;
@@ -701,7 +672,37 @@ final class Class168 {
                                  }
 
                               }
+                           } else {
+                              for(var21 = var13; var21 < var14; ++var21) {
+                                 for(var22 = var11; var12 > var22; ++var22) {
+                                    if(var22 >= var21) {
+                                       var0[var15] = var1;
+                                    } else if(var9) {
+                                       var0[var15] = var4;
+                                    }
+
+                                    ++var15;
+                                 }
+
+                                 var15 += var16;
+                              }
+
                            }
+                        } else {
+                           for(var21 = var20 + -1; var21 >= var19; --var21) {
+                              for(var22 = var11; ~var12 < ~var22; ++var22) {
+                                 if(var21 >= var22) {
+                                    var0[var15] = var1;
+                                 } else if(var9) {
+                                    var0[var15] = var4;
+                                 }
+
+                                 ++var15;
+                              }
+
+                              var15 += var16;
+                           }
+
                         }
                      }
                   }
@@ -724,7 +725,7 @@ final class Class168 {
             Class80 var4 = new Class80(Class3_Sub13_Sub17.aClass130_3208);
 
             for(Class3_Sub31 var2 = (Class3_Sub31)var4.method1393((byte)125); null != var2; var2 = (Class3_Sub31)var4.method1392(0)) {
-               if(var2.anInt2602 == var3) {
+               if(~var3 == ~var2.anInt2602) {
                   return Class7.getRSInterface((byte)127, (int)var2.aLong71);
                }
             }
@@ -766,7 +767,7 @@ final class Class168 {
          int var8 = -var5 + var3;
          MouseListeningClass.method2091(var3, 4);
          int var7 = 0;
-         if(var8 < 0) {
+         if(~var8 > -1) {
             var8 = 0;
          }
 
@@ -792,12 +793,12 @@ final class Class168 {
 
          int var14 = -1;
 
-         while(var9 > var7) {
+         while(~var7 > ~var9) {
             var13 += 2;
             var14 += 2;
             var12 += var14;
             var10 += var13;
-            if(var12 >= 0 && var11 >= 1) {
+            if(-1 >= ~var12 && ~var11 <= -2) {
                --var11;
                GameObject.anIntArray1838[var11] = var7;
                var12 -= var11 << 1;
@@ -813,11 +814,11 @@ final class Class168 {
                var10 -= var9 << 1;
                var24 = var2 + -var9;
                var16 = var2 + var9;
-               if(var16 >= Class159.anInt2020 && var24 <= Class57.anInt902) {
-                  if(var8 <= var9) {
+               if(~Class159.anInt2020 >= ~var16 && ~Class57.anInt902 <= ~var24) {
+                  if(~var9 <= ~var8) {
                      var17 = Class40.method1040(Class3_Sub28_Sub18.anInt3765, var7 + var6, (byte)0, Class101.anInt1425);
                      var18 = Class40.method1040(Class3_Sub28_Sub18.anInt3765, -var7 + var6, (byte)0, Class101.anInt1425);
-                     if(var16 <= Class57.anInt902) {
+                     if(~Class57.anInt902 <= ~var16) {
                         Class3_Sub13_Sub23_Sub1.method282(Class38.anIntArrayArray663[var16], var18, -53, var17, var4);
                      }
 
@@ -837,7 +838,7 @@ final class Class168 {
                         Class3_Sub13_Sub23_Sub1.method282(var22, var20, 87, var18, var4);
                      }
 
-                     if(Class159.anInt2020 <= var24) {
+                     if(~var24 <= ~Class159.anInt2020) {
                         var22 = Class38.anIntArrayArray663[var24];
                         Class3_Sub13_Sub23_Sub1.method282(var22, var19, 110, var21, var4);
                         Class3_Sub13_Sub23_Sub1.method282(var22, var21, -114, var20, var0);
@@ -849,10 +850,10 @@ final class Class168 {
 
             var24 = -var7 + var2;
             var16 = var2 - -var7;
-            if(var16 >= Class159.anInt2020 && var24 <= Class57.anInt902) {
+            if(~Class159.anInt2020 >= ~var16 && ~Class57.anInt902 <= ~var24) {
                var17 = var6 + var9;
                var18 = var6 + -var9;
-               if(var17 >= Class101.anInt1425 && var18 <= Class3_Sub28_Sub18.anInt3765) {
+               if(var17 >= Class101.anInt1425 && ~Class3_Sub28_Sub18.anInt3765 <= ~var18) {
                   var17 = Class40.method1040(Class3_Sub28_Sub18.anInt3765, var17, (byte)0, Class101.anInt1425);
                   var18 = Class40.method1040(Class3_Sub28_Sub18.anInt3765, var18, (byte)0, Class101.anInt1425);
                   if(var7 < var8) {
@@ -873,7 +874,7 @@ final class Class168 {
                         Class3_Sub13_Sub23_Sub1.method282(var22, var20, 99, var17, var4);
                      }
                   } else {
-                     if(var16 <= Class57.anInt902) {
+                     if(~Class57.anInt902 <= ~var16) {
                         Class3_Sub13_Sub23_Sub1.method282(Class38.anIntArrayArray663[var16], var18, 94, var17, var4);
                      }
 
@@ -894,6 +895,7 @@ final class Class168 {
       try {
          aClass3_Sub28_Sub17_2096 = null;
          if(var0 == -2) {
+            aClass94_2089 = null;
             aClass153_2097 = null;
             aClass11_2091 = null;
          }
@@ -916,12 +918,12 @@ final class Class168 {
                int[] var7 = new int[1 + var1];
 
                int var8;
-               for(var8 = 0; var8 < var5.anIntArray2547.length; ++var8) {
+               for(var8 = 0; ~var5.anIntArray2547.length < ~var8; ++var8) {
                   var6[var8] = var5.anIntArray2547[var8];
                   var7[var8] = var5.anIntArray2551[var8];
                }
 
-               for(var8 = var5.anIntArray2547.length; var1 > var8; ++var8) {
+               for(var8 = var5.anIntArray2547.length; ~var8 > ~var1; ++var8) {
                   var6[var8] = -1;
                   var7[var8] = 0;
                }
@@ -945,8 +947,8 @@ final class Class168 {
          while(!var1) {
             var1 = true;
 
-            for(int var2 = 0; -1 + Class3_Sub13_Sub34.anInt3415 > var2; ++var2) {
-               if(Class3_Sub13_Sub7.aShortArray3095[var2] < 1000 && Class3_Sub13_Sub7.aShortArray3095[1 + var2] > 1000) {
+            for(int var2 = 0; ~var2 > ~(-1 + Class3_Sub13_Sub34.anInt3415); ++var2) {
+               if(Class3_Sub13_Sub7.aShortArray3095[var2] < 1000 && -1001 > ~Class3_Sub13_Sub7.aShortArray3095[1 + var2]) {
                   RSString var3 = Class163_Sub2_Sub1.aClass94Array4016[var2];
                   var1 = false;
                   Class163_Sub2_Sub1.aClass94Array4016[var2] = Class163_Sub2_Sub1.aClass94Array4016[1 + var2];
@@ -974,7 +976,7 @@ final class Class168 {
          }
 
          if(var0 <= 103) {
-            ;
+            aClass94_2089 = (RSString)null;
          }
 
       } catch (RuntimeException var9) {
@@ -985,55 +987,55 @@ final class Class168 {
    private final void method2279(int var1, int var2, RSByteBuffer var3, int var4) {
       try {
          if(var1 == 0) {
-            if(var2 == 1) {
-               this.anInt2103 = RSInterface.method869(116, var3.getTriByte((byte)83));
-            } else {
-               if(var2 == 2) {
-                  this.anInt2095 = var3.getByte((byte)-128);
-               } else {
-                  if(3 == var2) {
+            if(-2 != ~var2) {
+               if(var2 != 2) {
+                  if(3 != var2) {
+                     if(5 != var2) {
+                        if(-8 != ~var2) {
+                           if(~var2 != -9) {
+                              if(-10 != ~var2) {
+                                 if(-11 != ~var2) {
+                                    if(var2 != 11) {
+                                       if(12 != var2) {
+                                          if(13 != var2) {
+                                             if(~var2 == -15) {
+                                                this.anInt2101 = var3.getByte((byte)-68);
+                                             }
+                                          } else {
+                                             this.anInt2094 = var3.getTriByte((byte)110);
+                                          }
+                                       } else {
+                                          this.aBoolean2092 = true;
+                                       }
+                                    } else {
+                                       this.anInt2100 = var3.getByte((byte)-89);
+                                    }
+                                 } else {
+                                    this.aBoolean2093 = false;
+                                 }
+                              } else {
+                                 this.anInt2090 = var3.getShort(var1 ^ 1);
+                              }
+                           } else {
+                              Class3_Sub13_Sub6.anInt3081 = var4;
+                           }
+                        } else {
+                           this.anInt2098 = RSInterface.method869(116, var3.getTriByte((byte)82));
+                        }
+                     } else {
+                        this.aBoolean2102 = false;
+                     }
+                  } else {
                      this.anInt2095 = var3.getShort(1);
                      if(this.anInt2095 == '\uffff') {
                         this.anInt2095 = -1;
                      }
-                  } else {
-                     if(5 == var2) {
-                        this.aBoolean2102 = false;
-                     } else {
-                        if(var2 == 7) {
-                           this.anInt2098 = RSInterface.method869(116, var3.getTriByte((byte)82));
-                        } else {
-                           if(var2 == 8) {
-                              Class3_Sub13_Sub6.anInt3081 = var4;
-                           } else {
-                              if(var2 == 9) {
-                                 this.anInt2090 = var3.getShort(var1 ^ 1);
-                              } else {
-                                 if(var2 == 10) {
-                                    this.aBoolean2093 = false;
-                                 } else {
-                                    if(var2 == 11) {
-                                       this.anInt2100 = var3.getByte((byte)-89);
-                                    } else {
-                                       if(12 == var2) {
-                                          this.aBoolean2092 = true;
-                                       } else {
-                                          if(13 == var2) {
-                                             this.anInt2094 = var3.getTriByte((byte)110);
-                                          } else {
-                                             if(var2 == 14) {
-                                                this.anInt2101 = var3.getByte((byte)-68);
-                                             }
-                                          }
-                                       }
-                                    }
-                                 }
-                              }
-                           }
-                        }
-                     }
                   }
+               } else {
+                  this.anInt2095 = var3.getByte((byte)-128);
                }
+            } else {
+               this.anInt2103 = RSInterface.method869(116, var3.getTriByte((byte)83));
             }
 
          }

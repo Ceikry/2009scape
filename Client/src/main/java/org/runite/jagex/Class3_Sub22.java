@@ -4,6 +4,7 @@ import javax.media.opengl.GL;
 
 final class Class3_Sub22 extends Class3 {
 
+   static RSString aClass94_2499 = RSString.createRSString("Okay");
    static int anInt2500;
    int anInt2501;
    int anInt2502;
@@ -22,11 +23,15 @@ final class Class3_Sub22 extends Class3 {
    int anInt2515;
    int anInt2516;
    int anInt2517;
+   static RSString aClass94_2518 = RSString.createRSString("Poser");
    int anInt2519;
    int anInt2520;
    static byte[][] aByteArrayArray2521;
    int anInt2522;
    int anInt2523;
+   static RSString aClass94_2524 = RSString.createRSString("Starte 3D)2Softwarebibliothek)3");
+   private static RSString aClass94_2525 = RSString.createRSString("rating: ");
+   static RSString aClass94_2526 = aClass94_2525;
    Class3_Sub15 aClass3_Sub15_2527;
    static CacheIndex aClass153_2528;
    static int anInt2529;
@@ -91,10 +96,10 @@ final class Class3_Sub22 extends Class3 {
             int var21 = Class3_Sub13_Sub27.anInt3340 - Class3_Sub13_Sub39.anInt3466 + var17;
             if(var20 >= 0 && var21 >= 0 && var20 < IOHandler.anInt1234 && var21 < Class3_Sub13_Sub15.anInt3179) {
                int var22;
-               if(Class3_Sub28_Sub7.anIntArrayArrayArray3605 == null) {
-                  var22 = Class58.anIntArrayArrayArray914[0][var20][var21] - Class3_Sub28_Sub13.anInt3657 + 128;
-               } else {
+               if(Class3_Sub28_Sub7.anIntArrayArrayArray3605 != null) {
                   var22 = Class3_Sub28_Sub7.anIntArrayArrayArray3605[0][var20][var21] - Class3_Sub28_Sub13.anInt3657 + 128;
+               } else {
+                  var22 = Class58.anIntArrayArrayArray914[0][var20][var21] - Class3_Sub28_Sub13.anInt3657 + 128;
                }
 
                int var23 = Class58.anIntArrayArrayArray914[3][var20][var21] - Class3_Sub28_Sub13.anInt3657 - 1000;
@@ -135,9 +140,18 @@ final class Class3_Sub22 extends Class3 {
 
    public static void method399(int var0) {
       try {
+         if(var0 != 186) {
+            aClass94_2518 = (RSString)null;
+         }
+
+         aClass94_2525 = null;
          aByteArrayArray2521 = (byte[][])null;
+         aClass94_2524 = null;
          aClass153_2528 = null;
+         aClass94_2526 = null;
+         aClass94_2499 = null;
          aClass49_2505 = null;
+         aClass94_2518 = null;
       } catch (RuntimeException var2) {
          throw Class44.method1067(var2, "mf.E(" + var0 + ')');
       }
@@ -161,6 +175,9 @@ final class Class3_Sub22 extends Class3 {
          this.aClass3_Sub12_Sub1_2509 = null;
          this.aClass3_Sub24_Sub1_2507 = null;
          this.aClass3_Sub15_2527 = null;
+         if(var1 != 221) {
+            aClass94_2518 = (RSString)null;
+         }
 
       } catch (RuntimeException var3) {
          throw Class44.method1067(var3, "mf.A(" + var1 + ')');
@@ -169,7 +186,20 @@ final class Class3_Sub22 extends Class3 {
 
    static final void method402(int var0) {
       try {
-         if(Signlink.javaVendor.toLowerCase().indexOf("microsoft") == -1) {
+         if(0 != ~Signlink.javaVendor.toLowerCase().indexOf("microsoft")) {
+            Class117.anIntArray1611[187] = 27;
+            Class117.anIntArray1611[223] = 28;
+            Class117.anIntArray1611[221] = 43;
+            Class117.anIntArray1611[188] = 71;
+            Class117.anIntArray1611[222] = 59;
+            Class117.anIntArray1611[192] = 58;
+            Class117.anIntArray1611[191] = 73;
+            Class117.anIntArray1611[219] = 42;
+            Class117.anIntArray1611[190] = 72;
+            Class117.anIntArray1611[186] = 57;
+            Class117.anIntArray1611[220] = 74;
+            Class117.anIntArray1611[189] = 26;
+         } else {
             if(null == Signlink.aMethod1222) {
                Class117.anIntArray1611[192] = 58;
                Class117.anIntArray1611[222] = 59;
@@ -188,19 +218,6 @@ final class Class3_Sub22 extends Class3 {
             Class117.anIntArray1611[92] = 74;
             Class117.anIntArray1611[46] = 72;
             Class117.anIntArray1611[47] = 73;
-         } else {
-            Class117.anIntArray1611[187] = 27;
-            Class117.anIntArray1611[223] = 28;
-            Class117.anIntArray1611[221] = 43;
-            Class117.anIntArray1611[188] = 71;
-            Class117.anIntArray1611[222] = 59;
-            Class117.anIntArray1611[192] = 58;
-            Class117.anIntArray1611[191] = 73;
-            Class117.anIntArray1611[219] = 42;
-            Class117.anIntArray1611[190] = 72;
-            Class117.anIntArray1611[186] = 57;
-            Class117.anIntArray1611[220] = 74;
-            Class117.anIntArray1611[189] = 26;
          }
 
          if(var0 != 74) {

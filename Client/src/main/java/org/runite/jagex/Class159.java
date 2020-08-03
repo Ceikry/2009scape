@@ -47,7 +47,7 @@ final class Class159 {
             var0 = var2;
          }
 
-         if(var0 > 10) {
+         if(~var0 < -11) {
             var0 = 10;
          }
 
@@ -65,7 +65,7 @@ final class Class159 {
 
          int var6;
          int var7;
-         for(var6 = 0; var6 < var5; ++var6) {
+         for(var6 = 0; ~var5 < ~var6; ++var6) {
             var7 = Class127.anIntArray1681[var3 - -var4] - var0 * Class161.anIntArray2026[-1 + Class161.anIntArray2026.length & Class72.anInt1071 + var3] / 6;
             if(0 > var7) {
                var7 = 0;
@@ -81,7 +81,7 @@ final class Class159 {
 
             for(var8 = 0; 128 > var8; ++var8) {
                var9 = (int)(100.0D * Math.random());
-               if(var9 < 50 && var8 > 10 && var8 < 118) {
+               if(-51 < ~var9 && ~var8 < -11 && ~var8 > -119) {
                   Class127.anIntArray1681[var8 + var7] = 255;
                } else {
                   Class127.anIntArray1681[var8 + var7] = 0;
@@ -100,7 +100,7 @@ final class Class159 {
 
          Class132.anInt1740 += var0;
          var6 = (var0 - -(1 & Class44.anInt719)) / 2;
-         if(var6 > 0) {
+         if(~var6 < -1) {
             for(var7 = 0; Class132.anInt1740 > var7; ++var7) {
                var8 = 2 + (int)(124.0D * Math.random());
                var9 = (int)(128.0D * Math.random()) + 128;
@@ -110,16 +110,16 @@ final class Class159 {
             Class132.anInt1740 = 0;
 
             int var10;
-            for(var7 = 0; var7 < var2; ++var7) {
+            for(var7 = 0; ~var2 < ~var7; ++var7) {
                var9 = var7 * 128;
                var8 = 0;
 
-               for(var10 = -var6; var10 < 128; ++var10) {
+               for(var10 = -var6; ~var10 > -129; ++var10) {
                   if(128 > var6 + var10) {
                      var8 += Class127.anIntArray1681[var9 + (var10 - -var6)];
                   }
 
-                  if(-1 + -var6 + var10 >= 0) {
+                  if(-1 >= ~(-1 + -var6 + var10)) {
                      var8 -= Class127.anIntArray1681[-var6 + -1 + var10 + var9];
                   }
 
@@ -134,7 +134,7 @@ final class Class159 {
 
                for(var9 = -var6; var2 > var9; ++var9) {
                   var10 = var9 * 128;
-                  if(var2 > var9 + var6) {
+                  if(~(var9 + var6) > ~var2) {
                      var8 += Class3_Sub30_Sub1.anIntArray3805[var6 * 128 + (var7 - -var10)];
                   }
 

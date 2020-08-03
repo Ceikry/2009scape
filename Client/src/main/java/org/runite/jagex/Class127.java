@@ -1,8 +1,8 @@
 package org.runite.jagex;
-import org.runite.GameLaunch;
-
 import java.io.IOException;
 import java.net.Socket;
+
+import org.runite.GameLaunch;
 
 class Class127 {
 
@@ -15,23 +15,23 @@ class Class127 {
       try {
          if(0 != Class3_Sub13_Sub25.loginStage && 5 != Class3_Sub13_Sub25.loginStage) {
             try {
-               if(++Class50.anInt820 > 2000) {
+               if(~(++Class50.anInt820) < -2001) {
                   if(Class3_Sub15.aClass89_2429 != null) {
                      Class3_Sub15.aClass89_2429.close(14821);
                      Class3_Sub15.aClass89_2429 = null;
                   }
 
-                  if(Class166.anInt2079 >= 1) {
+                  if(-2 >= ~Class166.anInt2079) {
                      Class158.anInt2005 = -5;
                      Class3_Sub13_Sub25.loginStage = 0;
                      return;
                   }
 
                   Class50.anInt820 = 0;
-                  if(Class140_Sub6.accRegistryPort == Class162.anInt2036) {
-                     Class140_Sub6.accRegistryPort = WorldListCountry.anInt506;
-                  } else {
+                  if(Class140_Sub6.accRegistryPort != Class162.anInt2036) {
                      Class140_Sub6.accRegistryPort = Class162.anInt2036;
+                  } else {
+                     Class140_Sub6.accRegistryPort = WorldListCountry.anInt506;
                   }
 
                   Class3_Sub13_Sub25.loginStage = 1;
@@ -42,8 +42,8 @@ class Class127 {
                   Class3_Sub13_Sub25.loginStage = 2;
                }
 
-               if(Class3_Sub13_Sub25.loginStage == 2) {
-                  if(Class3_Sub9.aClass64_2318.anInt978 == 2) {
+               if(-3 == ~Class3_Sub13_Sub25.loginStage) {
+                  if(~Class3_Sub9.aClass64_2318.anInt978 == -3) {
                      throw new IOException();
                   }
 
@@ -76,7 +76,7 @@ class Class127 {
                      Class3_Sub21.aClass155_2491.method2159(109);
                   }
 
-                  if(var4 != 0) {
+                  if(~var4 != -1) {
                      Class158.anInt2005 = var4;
                      Class3_Sub13_Sub25.loginStage = 0;
                      Class3_Sub15.aClass89_2429.close(var0 + 14830);
@@ -88,7 +88,7 @@ class Class127 {
                }
 
                if(Class3_Sub13_Sub25.loginStage == 3) {
-                  if(Class3_Sub15.aClass89_2429.availableBytes(-18358) < 8) {
+                  if(~Class3_Sub15.aClass89_2429.availableBytes(-18358) > -9) {
                      return;
                   }
 
@@ -165,7 +165,7 @@ class Class127 {
                   Class3_Sub15.aClass89_2429.sendBytes(false, 0, Class151_Sub1.aClass3_Sub30_Sub1_2942.buffer, Class151_Sub1.aClass3_Sub30_Sub1_2942.index);
                   Class3_Sub13_Sub1.outgoingBuffer.method814(var9, false);
 
-                  for(int var2 = 0; var2 < 4; ++var2) {
+                  for(int var2 = 0; ~var2 > -5; ++var2) {
                      var9[var2] += 50;
                   }
 
@@ -173,47 +173,49 @@ class Class127 {
                   Class3_Sub13_Sub25.loginStage = 4;
                }
 
-               if(Class3_Sub13_Sub25.loginStage == 4) {
-                  if(Class3_Sub15.aClass89_2429.availableBytes(-18358) < 1) {
+               if(-5 == ~Class3_Sub13_Sub25.loginStage) {
+                  if(~Class3_Sub15.aClass89_2429.availableBytes(-18358) > -2) {
                      return;
                   }
 
                   int opcode = Class3_Sub15.aClass89_2429.readByte(0);
-                  if(opcode == 21) {
-                     Class3_Sub13_Sub25.loginStage = 7;
-                  } else if (opcode == 29) {
-                     Class3_Sub13_Sub25.loginStage = 10;
-                  } else {
-                     if (opcode == 1) {
-                        Class3_Sub13_Sub25.loginStage = 5;
-                        Class158.anInt2005 = opcode;
-                        return;
-                     }
+                  if(~opcode != -22) {
+                     if(opcode != 29) {
+                        if(opcode == 1) {
+                           Class3_Sub13_Sub25.loginStage = 5;
+                           Class158.anInt2005 = opcode;
+                           return;
+                        }
 
-                     if (2 != opcode) {
-                        if (opcode != 15) {
-                           if (23 == opcode && Class166.anInt2079 < 1) {
-                              Class3_Sub13_Sub25.loginStage = 1;
-                              ++Class166.anInt2079;
-                              Class50.anInt820 = 0;
-                              Class3_Sub15.aClass89_2429.close(14821);
+                        if(2 != opcode) {
+                           if(~opcode != -16) {
+                              if(23 == opcode && ~Class166.anInt2079 > -2) {
+                                 Class3_Sub13_Sub25.loginStage = 1;
+                                 ++Class166.anInt2079;
+                                 Class50.anInt820 = 0;
+                                 Class3_Sub15.aClass89_2429.close(14821);
+                                 Class3_Sub15.aClass89_2429 = null;
+                                 return;
+                              }
+
+                              Class158.anInt2005 = opcode;
+                              Class3_Sub13_Sub25.loginStage = 0;
+                              Class3_Sub15.aClass89_2429.close(var0 + 14830);
                               Class3_Sub15.aClass89_2429 = null;
                               return;
                            }
 
-                           Class158.anInt2005 = opcode;
                            Class3_Sub13_Sub25.loginStage = 0;
-                           Class3_Sub15.aClass89_2429.close(var0 + 14830);
-                           Class3_Sub15.aClass89_2429 = null;
+                           Class158.anInt2005 = opcode;
                            return;
                         }
 
-                        Class3_Sub13_Sub25.loginStage = 0;
-                        Class158.anInt2005 = opcode;
-                        return;
+                        Class3_Sub13_Sub25.loginStage = 8;
+                     } else {
+                        Class3_Sub13_Sub25.loginStage = 10;
                      }
-
-                     Class3_Sub13_Sub25.loginStage = 8;
+                  } else {
+                     Class3_Sub13_Sub25.loginStage = 7;
                   }
                }
 
@@ -226,7 +228,7 @@ class Class127 {
                }
 
                if(Class3_Sub13_Sub25.loginStage == 7) {
-                  if(Class3_Sub15.aClass89_2429.availableBytes(var0 + -18349) >= 1) {
+                  if(-2 >= ~Class3_Sub15.aClass89_2429.availableBytes(var0 + -18349)) {
                      Class3_Sub13_Sub34.anInt3413 = 60 * (3 + Class3_Sub15.aClass89_2429.readByte(var0 + 9));
                      Class3_Sub13_Sub25.loginStage = 0;
                      Class158.anInt2005 = 21;
@@ -238,7 +240,7 @@ class Class127 {
                   return;
                }
 
-               if(Class3_Sub13_Sub25.loginStage == 10) {
+               if(-11 == ~Class3_Sub13_Sub25.loginStage) {
                   if(1 <= Class3_Sub15.aClass89_2429.availableBytes(var0 + -18349)) {
                      Class3_Sub26.anInt2561 = Class3_Sub15.aClass89_2429.readByte(var0 ^ -9);
                      Class3_Sub13_Sub25.loginStage = 0;
@@ -252,7 +254,7 @@ class Class127 {
                }
 
                if(Class3_Sub13_Sub25.loginStage == 8) {
-                  if(Class3_Sub15.aClass89_2429.availableBytes(-18358) < 14) {
+                  if(~Class3_Sub15.aClass89_2429.availableBytes(-18358) > -15) {
                      return;
                   }
 
@@ -262,12 +264,12 @@ class Class127 {
                   Class3_Sub28_Sub19.anInt3775 = GraphicDefinition.incomingBuffer.getByte((byte)-86);
                   Class3_Sub15.aBoolean2433 = GraphicDefinition.incomingBuffer.getByte((byte)-67) == 1;
                   Class121.aBoolean1641 = 1 == GraphicDefinition.incomingBuffer.getByte((byte)-25);
-                  Class3_Sub28_Sub10_Sub1.aBoolean4063 = GraphicDefinition.incomingBuffer.getByte((byte) -39) == 1;
+                  Class3_Sub28_Sub10_Sub1.aBoolean4063 = ~GraphicDefinition.incomingBuffer.getByte((byte)-39) == -2;
                   Class3_Sub13_Sub14.aBoolean3166 = 1 == GraphicDefinition.incomingBuffer.getByte((byte)-28);
                   Canvas_Sub2.aBoolean29 = GraphicDefinition.incomingBuffer.getByte((byte)-120) == 1;
                   Class3_Sub1.localIndex = GraphicDefinition.incomingBuffer.getShort(var0 + 10);
                   Class3_Sub13_Sub29.disableGEBoxes = GraphicDefinition.incomingBuffer.getByte((byte)-127) == 1;
-                  Class2.isMember = GraphicDefinition.incomingBuffer.getByte((byte) -112) == 1;
+                  Class2.isMember = ~GraphicDefinition.incomingBuffer.getByte((byte)-112) == -2;
                   Class113.method1702((byte)-124, Class2.isMember);
                   Class8.method845(Class2.isMember, 255);
                   if(!Class3_Sub28_Sub19.aBoolean3779) {
@@ -292,8 +294,8 @@ class Class127 {
                   Class3_Sub13_Sub25.loginStage = 9;
                }
 
-               if(Class3_Sub13_Sub25.loginStage == 9) {
-                  if(Class130.incomingPacketLength > Class3_Sub15.aClass89_2429.availableBytes(-18358)) {
+               if(-10 == ~Class3_Sub13_Sub25.loginStage) {
+                  if(~Class3_Sub15.aClass89_2429.availableBytes(-18358) > ~Class130.incomingPacketLength) {
                      return;
                   }
 
@@ -324,7 +326,7 @@ class Class127 {
                   Class3_Sub13_Sub25.loginStage = 1;
                   Class50.anInt820 = 0;
                   ++Class166.anInt2079;
-                  if(Class140_Sub6.accRegistryPort == Class162.anInt2036) {
+                  if(~Class162.anInt2036 == ~Class140_Sub6.accRegistryPort) {
                      Class140_Sub6.accRegistryPort = WorldListCountry.anInt506;
                   } else {
                      Class140_Sub6.accRegistryPort = Class162.anInt2036;

@@ -5,22 +5,33 @@ final class Class154 {
    static Class93 aClass93_1955 = new Class93(64);
    static int anInt1956;
    static int anInt1957;
+   private static RSString aClass94_1958 = RSString.createRSString("Please wait )2 attempting to reestablish)3");
+   static RSString aClass94_1959 = aClass94_1958;
    static int[] anIntArray1960 = new int[14];
+   
+   private static RSString aClass94_1963 = RSString.createRSString("glow2:");
    static Class93 aClass93_1964 = new Class93(5);
    static Class93 aClass93_1965 = new Class93(50);
    static int anInt1966 = -1;
    static CacheIndex aClass153_1967;
+static RSString aClass94_1961 = aClass94_1963;
+   static RSString aClass94_1962 = aClass94_1963;
 
    public static void method2145(byte var0) {
       try {
          aClass93_1955 = null;
+         aClass94_1962 = null;
+         aClass94_1959 = null;
          if(var0 >= -41) {
             method2147(-28, 103, -37);
          }
 
+         aClass94_1958 = null;
+         aClass94_1963 = null;
          anIntArray1960 = null;
          aClass153_1967 = null;
          aClass93_1965 = null;
+         aClass94_1961 = null;
          aClass93_1964 = null;
       } catch (RuntimeException var2) {
          throw Class44.method1067(var2, "vf.A(" + var0 + ')');

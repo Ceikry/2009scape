@@ -11,6 +11,7 @@ final class Class3_Sub26 extends Class3 {
    static int[] anIntArray2559 = new int[]{0, 1, 2, 3, 4, 5, 6, 14};
    static Class3_Sub28_Sub16 aClass3_Sub28_Sub16_2560;
    static int anInt2561 = -1;
+   static RSString CONTEXT_MENU_COLOR = RSString.createRSString("<col=ffffff>");
    static Class3_Sub24_Sub2 aClass3_Sub24_Sub2_2563;
 
 
@@ -19,6 +20,7 @@ final class Class3_Sub26 extends Class3 {
          int var1 = -59 / ((var0 - 67) / 36);
          aClass3_Sub28_Sub16_2560 = null;
          anIntArray2559 = null;
+         CONTEXT_MENU_COLOR  = null;
          aClass61_2557 = null;
          aClass3_Sub24_Sub2_2563 = null;
       } catch (RuntimeException var2) {
@@ -43,7 +45,7 @@ final class Class3_Sub26 extends Class3 {
    static final int method513(int var0, int var1) {
       try {
          int var2 = 0;
-         if(var0 < 0 || var0 >= 65536) {
+         if(~var0 > -1 || ~var0 <= -65537) {
             var2 += 16;
             var0 >>>= 16;
          }
@@ -63,7 +65,7 @@ final class Class3_Sub26 extends Class3 {
             var2 += 2;
          }
 
-         if(var0 >= 1) {
+         if(-2 >= ~var0) {
             var0 >>>= 1;
             ++var2;
          }
@@ -90,7 +92,7 @@ final class Class3_Sub26 extends Class3 {
             method513(-92, 76);
          }
 
-         return var0 == 0 ?var1:(1 == var0?var3:(2 != var0?-var3 + 1023:1023 + -var1));
+         return ~var0 == -1?var1:(1 == var0?var3:(2 != var0?-var3 + 1023:1023 + -var1));
       } catch (RuntimeException var5) {
          throw Class44.method1067(var5, "qi.C(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ')');
       }

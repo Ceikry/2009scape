@@ -8,15 +8,19 @@ final class Class23 {
    static int anInt455;
    static int anInt456;
    static boolean[][] aBooleanArrayArray457;
+   private static RSString aClass94_458 = RSString.createRSString("Opened title screen");
+   static RSString aClass94_459 = aClass94_458;
 
 
    public static void method937(int var0) {
       try {
          aBooleanArrayArray457 = (boolean[][])null;
+         aClass94_458 = null;
          if(var0 != 0) {
             aBooleanArrayArray457 = (boolean[][])((boolean[][])null);
          }
 
+         aClass94_459 = null;
       } catch (RuntimeException var2) {
          throw Class44.method1067(var2, "dl.A(" + var0 + ')');
       }
@@ -24,6 +28,10 @@ final class Class23 {
 
    static final void method938(int var0, int var1, int var2, int var3, int var4, int var5, int var6, int var7, int var8) {
       try {
+         if(var6 != 1) {
+            aClass94_458 = (RSString)null;
+         }
+
          int var9 = var2 - var7;
          int var10 = var3 - var8;
          int var11 = (-var1 + var0 << 16) / var9;

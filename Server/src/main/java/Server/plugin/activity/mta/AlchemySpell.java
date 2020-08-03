@@ -1,5 +1,6 @@
 package plugin.activity.mta;
 
+import core.game.system.config.ItemConfigParser;
 import plugin.skill.magic.MagicSpell;
 import plugin.skill.magic.Runes;
 import core.game.node.Node;
@@ -87,7 +88,7 @@ public final class AlchemySpell extends MagicSpell {
 				return false;
 			}
 		}
-		Item coins = new Item(995, item.getDefinition().getAlchemyValue(highAlchemy));
+		Item coins = new Item(995, (Integer.parseInt(item.getDefinition().getConfigurations().get(ItemConfigParser.VALUE).toString()) / 4) * 3);
 		if (alchZone) {
 			coins = new Item(AlchemistZone.COINS.getId(), alch.getCost());
 			if (p.getInventory().getAmount(AlchemistZone.COINS.getId()) + alch.getCost() > 10000) {

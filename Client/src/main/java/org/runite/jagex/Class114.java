@@ -9,6 +9,7 @@ final class Class114 {
    static Class30 aClass30_1572;
    private int[][] anIntArrayArray1573;
    static long[] ignores = new long[100];
+   static RSString aClass94_1575 = RSString.createRSString(" weitere Optionen");
    private int anInt1576 = -1;
    private Class61 aClass61_1577 = new Class61();
    static int[] anIntArray1578 = new int[500];
@@ -25,6 +26,7 @@ final class Class114 {
 
          anIntArray1578 = null;
          ignores = null;
+         aClass94_1575 = null;
          aClass30_1572 = null;
       } catch (RuntimeException var2) {
          throw Class44.method1067(var2, "pf.G(" + var0 + ')');
@@ -70,7 +72,9 @@ final class Class114 {
 
    static final Class3_Sub28_Sub16 method1707(int var0, int var1, boolean var2, int var3, int var4, int var5) {
       try {
-         if(var5 == 65536) {
+         if(var5 != 65536) {
+            return (Class3_Sub28_Sub16)null;
+         } else {
             int var7 = (!var2?0:65536) + var1 + (var0 << 17) + (var4 << 19);
             long var8 = (long)var7 * 3849834839L + 3147483667L * (long)var3;
             Class3_Sub28_Sub16 var10 = (Class3_Sub28_Sub16)Class67.aClass93_1013.get(var8, (byte)121);
@@ -85,8 +89,6 @@ final class Class114 {
             } else {
                return var10;
             }
-         } else {
-            return (Class3_Sub28_Sub16)null;
          }
       } catch (RuntimeException var11) {
          throw Class44.method1067(var11, "pf.B(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ',' + var5 + ')');
@@ -111,18 +113,12 @@ final class Class114 {
             this.aBoolean1580 = false;
          }
 
-         if(this.anInt1579 == this.anInt1568) {
-            this.aBoolean1580 = this.aClass3_Sub26Array1571[var2] == null;
-            this.aClass3_Sub26Array1571[var2] = Class56.aClass3_Sub26_884;
-            return this.anIntArrayArray1573[var2];
-         } else {
-            if(this.anInt1579 == 1) {
-               this.aBoolean1580 = this.anInt1576 != var2;
-               this.anInt1576 = var2;
-               return this.anIntArrayArray1573[0];
-            } else {
+         if(~this.anInt1568 != ~this.anInt1579) {
+            if(this.anInt1579 != 1) {
                Class3_Sub26 var3 = this.aClass3_Sub26Array1571[var2];
-               if(null == var3) {
+               if(null != var3) {
+                  this.aBoolean1580 = false;
+               } else {
                   this.aBoolean1580 = true;
                   if(this.anInt1570 < this.anInt1579) {
                      var3 = new Class3_Sub26(var2, this.anInt1570);
@@ -135,13 +131,19 @@ final class Class114 {
                   }
 
                   this.aClass3_Sub26Array1571[var2] = var3;
-               } else {
-                  this.aBoolean1580 = false;
                }
 
                this.aClass61_1577.method1216(64, var3);
                return this.anIntArrayArray1573[var3.anInt2555];
+            } else {
+               this.aBoolean1580 = this.anInt1576 != var2;
+               this.anInt1576 = var2;
+               return this.anIntArrayArray1573[0];
             }
+         } else {
+            this.aBoolean1580 = this.aClass3_Sub26Array1571[var2] == null;
+            this.aClass3_Sub26Array1571[var2] = Class56.aClass3_Sub26_884;
+            return this.anIntArrayArray1573[var2];
          }
       } catch (RuntimeException var5) {
          throw Class44.method1067(var5, "pf.C(" + var1 + ',' + var2 + ')');
@@ -152,14 +154,14 @@ final class Class114 {
       try {
          if(var1 <= 67) {
             return (int[][])((int[][])null);
-         } else if(this.anInt1579 == this.anInt1568) {
+         } else if(this.anInt1579 != this.anInt1568) {
+            throw new RuntimeException("Can only retrieve a full image cache");
+         } else {
             for(int var2 = 0; this.anInt1579 > var2; ++var2) {
                this.aClass3_Sub26Array1571[var2] = Class56.aClass3_Sub26_884;
             }
 
             return this.anIntArrayArray1573;
-         } else {
-            throw new RuntimeException("Can only retrieve a full image cache");
          }
       } catch (RuntimeException var3) {
          throw Class44.method1067(var3, "pf.H(" + var1 + ')');

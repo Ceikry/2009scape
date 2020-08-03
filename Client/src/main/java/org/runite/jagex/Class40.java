@@ -15,7 +15,7 @@ final class Class40 {
 
    static final int method1040(int var0, int var1, byte var2, int var3) {
       try {
-         return var2 != 0?-127:(var1 < var3 ?var3:(var1 > var0?var0:var1));
+         return var2 != 0?-127:(~var3 < ~var1?var3:(var1 > var0?var0:var1));
       } catch (RuntimeException var5) {
          throw Class44.method1067(var5, "gd.C(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ')');
       }
@@ -99,8 +99,8 @@ final class Class40 {
          boolean var1 = true;
 
          int var2;
-         for(var2 = 0; Class164_Sub2.aByteArrayArray3027.length > var2; ++var2) {
-            if(Client.anIntArray2200[var2] != -1 && null == Class164_Sub2.aByteArrayArray3027[var2]) {
+         for(var2 = 0; ~var2 > ~Class164_Sub2.aByteArrayArray3027.length; ++var2) {
+            if(0 != ~Client.anIntArray2200[var2] && null == Class164_Sub2.aByteArrayArray3027[var2]) {
                Class164_Sub2.aByteArrayArray3027[var2] = Class3_Sub13_Sub6.aClass153_3077.getFile(Client.anIntArray2200[var2], (byte)-122, 0);
                if(Class164_Sub2.aByteArrayArray3027[var2] == null) {
                   ++Class3_Sub13_Sub24.anInt3293;
@@ -117,7 +117,7 @@ final class Class40 {
             }
 
             if(HDToolKit.highDetail) {
-               if(Class3_Sub13_Sub15.anIntArray3181[var2] != -1 && Class3_Sub28_Sub14.aByteArrayArray3669[var2] == null) {
+               if(~Class3_Sub13_Sub15.anIntArray3181[var2] != 0 && Class3_Sub28_Sub14.aByteArrayArray3669[var2] == null) {
                   Class3_Sub28_Sub14.aByteArrayArray3669[var2] = Class3_Sub13_Sub6.aClass153_3077.getFile(Class3_Sub13_Sub15.anIntArray3181[var2], (byte)-122, 0);
                   if(null == Class3_Sub28_Sub14.aByteArrayArray3669[var2]) {
                      var1 = false;
@@ -144,25 +144,27 @@ final class Class40 {
          }
 
          if(Class3_Sub13_Sub35.aClass131_3421 == null) {
-            if(null != Class3_Sub13_Sub21.aClass3_Sub28_Sub3_3264 && Class133.aClass153_1751.method2135(RenderAnimationDefinition.method903(new RSString[]{Class3_Sub13_Sub21.aClass3_Sub28_Sub3_3264.aClass94_3561, TextCore.HasPlayerLabels}, (byte)-77), -104)) {
-               if(Class133.aClass153_1751.method2127((byte) -83, RenderAnimationDefinition.method903(new RSString[]{Class3_Sub13_Sub21.aClass3_Sub28_Sub3_3264.aClass94_3561, TextCore.HasPlayerLabels}, (byte) -95))) {
-                  Class3_Sub13_Sub35.aClass131_3421 = Class81.method1403(-41, RenderAnimationDefinition.method903(new RSString[]{Class3_Sub13_Sub21.aClass3_Sub28_Sub3_3264.aClass94_3561, TextCore.HasPlayerLabels}, (byte)-92), Class133.aClass153_1751);
-               } else {
+            if(null != Class3_Sub13_Sub21.aClass3_Sub28_Sub3_3264 && Class133.aClass153_1751.method2135(RenderAnimationDefinition.method903(new RSString[]{Class3_Sub13_Sub21.aClass3_Sub28_Sub3_3264.aClass94_3561, Player.aClass94_3964}, (byte)-77), -104)) {
+               if(!Class133.aClass153_1751.method2127((byte)-83, RenderAnimationDefinition.method903(new RSString[]{Class3_Sub13_Sub21.aClass3_Sub28_Sub3_3264.aClass94_3561, Player.aClass94_3964}, (byte)-95))) {
                   var1 = false;
                   ++Class3_Sub13_Sub24.anInt3293;
+               } else {
+                  Class3_Sub13_Sub35.aClass131_3421 = Class81.method1403(-41, RenderAnimationDefinition.method903(new RSString[]{Class3_Sub13_Sub21.aClass3_Sub28_Sub3_3264.aClass94_3561, Player.aClass94_3964}, (byte)-92), Class133.aClass153_1751);
                }
             } else {
                Class3_Sub13_Sub35.aClass131_3421 = new Class131(0);
             }
          }
 
-         if(var1) {
+         if(!var1) {
+            Class163_Sub2_Sub1.anInt4019 = 1;
+         } else {
             Class162.anInt2038 = 0;
             var1 = true;
 
             int var4;
             int var5;
-            for(var2 = 0; var2 < Class164_Sub2.aByteArrayArray3027.length; ++var2) {
+            for(var2 = 0; ~Class164_Sub2.aByteArrayArray3027.length < ~var2; ++var2) {
                byte[] var3 = Class3_Sub22.aByteArrayArray2521[var2];
                if(null != var3) {
                   var5 = -Class82.anInt1152 + (Class3_Sub24_Sub3.anIntArray3494[var2] & 255) * 64;
@@ -194,9 +196,11 @@ final class Class40 {
                method1042(true);
             }
 
-            if(var1) {
-               if(Class163_Sub2_Sub1.anInt4019 != 0) {
-                  Class3_Sub13.method164((byte)-24, true, RenderAnimationDefinition.method903(new RSString[]{TextCore.LoadingPleaseWait2, Class140_Sub2.aClass94_2707}, (byte)-127));
+            if(!var1) {
+               Class163_Sub2_Sub1.anInt4019 = 2;
+            } else {
+               if(~Class163_Sub2_Sub1.anInt4019 != -1) {
+                  Class3_Sub13.method164((byte)-24, true, RenderAnimationDefinition.method903(new RSString[]{Class3_Sub13_Sub23.aClass94_3282, Class140_Sub2.aClass94_2707}, (byte)-127));
                }
 
                Class58.method1194(-16385);
@@ -204,7 +208,7 @@ final class Class40 {
                boolean var11 = false;
                int var12;
                if(HDToolKit.highDetail && Class128.aBoolean1685) {
-                  for(var12 = 0; var12 < Class164_Sub2.aByteArrayArray3027.length; ++var12) {
+                  for(var12 = 0; ~Class164_Sub2.aByteArrayArray3027.length < ~var12; ++var12) {
                      if(null != Class3_Sub13_Sub4.aByteArrayArray3057[var12] || Class3_Sub28_Sub14.aByteArrayArray3669[var12] != null) {
                         var11 = true;
                         break;
@@ -218,9 +222,9 @@ final class Class40 {
                   Class86.aClass91Array1182[var12].method1496(0);
                }
 
-               for(var12 = 0; var12 < 4; ++var12) {
+               for(var12 = 0; ~var12 > -5; ++var12) {
                   for(var4 = 0; var4 < 104; ++var4) {
-                     for(var5 = 0; var5 < 104; ++var5) {
+                     for(var5 = 0; -105 < ~var5; ++var5) {
                         Class9.aByteArrayArrayArray113[var12][var4][var5] = 0;
                      }
                   }
@@ -289,14 +293,14 @@ final class Class40 {
                   var12 = WorldListCountry.localPlane;
                }
 
-               if(WorldListCountry.localPlane + -1 > var12) {
+               if(~var12 > ~(WorldListCountry.localPlane + -1)) {
                   var12 = -1 + WorldListCountry.localPlane;
                }
 
-               if(NPC.method1986(39)) {
-                  Class85.method1425(0);
-               } else {
+               if(!NPC.method1986(39)) {
                   Class85.method1425(Class85.anInt1174);
+               } else {
+                  Class85.method1425(0);
                }
 
                Class56.method1188(-113);
@@ -325,7 +329,7 @@ final class Class40 {
 
                if(HDToolKit.highDetail) {
                   for(var4 = 0; var4 < 13; ++var4) {
-                     for(var5 = 0; var5 < 13; ++var5) {
+                     for(var5 = 0; ~var5 > -14; ++var5) {
                         Class141.aClass169ArrayArray1841[var4][var5].method2281(Class44.anIntArrayArrayArray723[0], var4 * 8, var5 * 8);
                      }
                   }
@@ -354,9 +358,9 @@ final class Class40 {
                   var4 = (Class3_Sub28_Sub7.anInt3606 - 6) / 8;
                   var5 = (Class3_Sub28_Sub7.anInt3606 - -6) / 8;
 
-                  for(int var8 = var4 - 1; var5 - -1 >= var8; ++var8) {
-                     for(int var9 = -1 + var6; var7 - -1 >= var9; ++var9) {
-                        if(var4 > var8 || var8 > var5 || var6 > var9 || var9 > var7) {
+                  for(int var8 = var4 - 1; ~var8 >= ~(var5 - -1); ++var8) {
+                     for(int var9 = -1 + var6; ~var9 >= ~(var7 - -1); ++var9) {
+                        if(~var8 > ~var4 || var8 > var5 || ~var9 > ~var6 || var9 > var7) {
                            Class3_Sub13_Sub6.aClass153_3077.method2124(-124, RenderAnimationDefinition.method903(new RSString[]{Class3_Sub30_Sub1.aClass94_3807, Class72.method1298((byte)9, var8), Class3_Sub13_Sub14.aClass94_3161, Class72.method1298((byte)9, var9)}, (byte)-76));
                            Class3_Sub13_Sub6.aClass153_3077.method2124(-123, RenderAnimationDefinition.method903(new RSString[]{Class161.aClass94_2029, Class72.method1298((byte)9, var8), Class3_Sub13_Sub14.aClass94_3161, Class72.method1298((byte)9, var9)}, (byte)-121));
                         }
@@ -376,11 +380,7 @@ final class Class40 {
                Class3_Sub20.method388((byte)116);
                Class58.method1194(-16385);
                Class75_Sub4.method1355(true);
-            } else {
-               Class163_Sub2_Sub1.anInt4019 = 2;
             }
-         } else {
-            Class163_Sub2_Sub1.anInt4019 = 1;
          }
       } catch (RuntimeException var10) {
          throw Class44.method1067(var10, "gd.F(" + var0 + ')');

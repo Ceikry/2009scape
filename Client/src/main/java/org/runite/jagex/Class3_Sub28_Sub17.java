@@ -436,14 +436,14 @@ abstract class Class3_Sub28_Sub17 extends Node {
                   aClass94_3745.method1533(var15, true);
                   aClass94_3745.method1572(62, (byte)112);
                   if(var15.method1528((byte)-42, aClass94_3737)) {
-                     if(var3[var11] == null) {
-                        var3[var11] = aClass94_3745.method1563(101).method1557(aClass94_3745.length(-91), 0, var5);
-                     } else {
+                     if(var3[var11] != null) {
                         var3[var11].method1553(0, false);
                         var3[var11].method1542(1, aClass94_3745, var5, aClass94_3745.length(-72));
+                     } else {
+                        var3[var11] = aClass94_3745.method1563(101).method1557(aClass94_3745.length(-91), 0, var5);
                      }
 
-                      ++var11;
+                     ++var11;
                      var5 = aClass94_3745.length(-26);
                      var4 = 0;
                      var6 = -1;
@@ -535,14 +535,14 @@ abstract class Class3_Sub28_Sub17 extends Node {
                   }
 
                   if(var2 != null && var4 > var2[var11 < var2.length?var11:var2.length - 1] && var6 >= 0) {
-                     if(var3[var11] == null) {
-                        var3[var11] = aClass94_3745.method1563(88).method1557(var6 - var8, 0, var5);
-                     } else {
+                     if(var3[var11] != null) {
                         var3[var11].method1553(0, false);
                         var3[var11] = var3[var11].method1542(1, aClass94_3745, var5, var6 - var8);
+                     } else {
+                        var3[var11] = aClass94_3745.method1563(88).method1557(var6 - var8, 0, var5);
                      }
 
-                      ++var11;
+                     ++var11;
                      var5 = var6;
                      var6 = -1;
                      var4 -= var7;
@@ -559,14 +559,14 @@ abstract class Class3_Sub28_Sub17 extends Node {
          }
 
          if(aClass94_3745.length(-78) > var5) {
-            if(var3[var11] == null) {
-               var3[var11] = aClass94_3745.method1563(94).method1557(aClass94_3745.length(-89), 0, var5);
-            } else {
+            if(var3[var11] != null) {
                var3[var11].method1553(0, false);
                var3[var11] = var3[var11].method1542(1, aClass94_3745, var5, aClass94_3745.length(-64));
+            } else {
+               var3[var11] = aClass94_3745.method1563(94).method1557(aClass94_3745.length(-89), 0, var5);
             }
 
-             ++var11;
+            ++var11;
          }
 
          return var11;
@@ -717,11 +717,11 @@ abstract class Class3_Sub28_Sub17 extends Node {
    }
 
    final void method697(AbstractIndexedSprite[] var1, int[] var2) {
-      if(var2 == null || var2.length == var1.length) {
+      if(var2 != null && var2.length != var1.length) {
+         throw new IllegalArgumentException();
+      } else {
          this.aClass109Array3740 = var1;
          this.anIntArray3723 = var2;
-      } else {
-         throw new IllegalArgumentException();
       }
    }
 
@@ -943,19 +943,19 @@ abstract class Class3_Sub28_Sub17 extends Node {
                   if(!var12.method1528((byte)-42, aClass94_3743)) {
                      if(var12.method1558(aClass94_3739, 0)) {
                         try {
-                           if(var4 == null) {
-                              var13 = 0;
-                           } else {
+                           if(var4 != null) {
                               var13 = var4[var8];
+                           } else {
+                              var13 = 0;
                            }
 
-                            if(var5 == null) {
-                               var14 = 0;
-                            } else {
-                               var14 = var5[var8];
-                            }
+                           if(var5 != null) {
+                              var14 = var5[var8];
+                           } else {
+                              var14 = 0;
+                           }
 
-                            ++var8;
+                           ++var8;
                            var15 = var12.method1556(4, (byte)-74).method1552((byte)-97);
                            AbstractIndexedSprite var20 = this.aClass109Array3740[var15];
                            int var17 = this.anIntArray3723 != null?this.anIntArray3723[var15]:var20.anInt1467;
@@ -987,19 +987,19 @@ abstract class Class3_Sub28_Sub17 extends Node {
 
                int var19 = this.anIntArray3709[var11];
                var13 = this.anIntArray3721[var11];
-               if(var4 == null) {
-                  var14 = 0;
-               } else {
+               if(var4 != null) {
                   var14 = var4[var8];
+               } else {
+                  var14 = 0;
                }
 
-                if(var5 == null) {
-                   var15 = 0;
-                } else {
-                   var15 = var5[var8];
-                }
+               if(var5 != null) {
+                  var15 = var5[var8];
+               } else {
+                  var15 = 0;
+               }
 
-                ++var8;
+               ++var8;
                if(var11 != 32) {
                   if(anInt3750 == 256) {
                      if(anInt3754 != -1) {

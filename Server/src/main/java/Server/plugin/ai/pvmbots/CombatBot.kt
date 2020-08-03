@@ -1,5 +1,6 @@
 package plugin.ai.pvmbots
 
+import core.game.node.entity.Entity
 import core.game.node.entity.player.link.appearance.Gender
 import core.game.node.entity.player.link.prayer.PrayerType
 import core.game.node.item.Item
@@ -52,5 +53,11 @@ open class CombatBot(location: Location) : AIPlayer(location) {
             properties.combatPulse.delayNextAttack(3)
         }
         if (!checkVictimIsPlayer()) if (!inventory.contains(foodId, 1)) inventory.add(Item(foodId, 5)) //Add Food to Inventory
+    }
+
+    override fun finalizeDeath(killer: Entity?) {
+        val arrows = equipment.get(13)
+        if(arrows != null) {equipment.remove(arrows)}
+        super.finalizeDeath(killer)
     }
 }

@@ -29,8 +29,8 @@ final class Class3_Sub13_Sub37 extends Class3_Sub13 {
 
    private final void method345(int var1, boolean var2) {
       try {
-         if(var1 != 0) {
-            if(var1 == 1) {
+         if(~var1 != -1) {
+            if(~var1 == -2) {
                this.anIntArrayArray3438 = new int[2][4];
                this.anIntArrayArray3438[0][1] = 0;
                this.anIntArrayArray3438[0][0] = 0;
@@ -40,7 +40,7 @@ final class Class3_Sub13_Sub37 extends Class3_Sub13 {
                this.anIntArrayArray3438[0][2] = 0;
                this.anIntArrayArray3438[1][2] = 4096;
                this.anIntArrayArray3438[1][3] = 4096;
-            } else if(var1 == 2) {
+            } else if(-3 == ~var1) {
                this.anIntArrayArray3438 = new int[8][4];
                this.anIntArrayArray3438[0][0] = 0;
                this.anIntArrayArray3438[1][0] = 2867;
@@ -239,17 +239,17 @@ final class Class3_Sub13_Sub37 extends Class3_Sub13 {
          if(var3) {
             if(var1 == 0) {
                int var4 = var2.getByte((byte)-68);
-               if(var4 == 0) {
+               if(-1 != ~var4) {
+                  this.method345(var4, false);
+               } else {
                   this.anIntArrayArray3438 = new int[var2.getByte((byte)-126)][4];
 
-                  for(int var5 = 0; var5 < this.anIntArrayArray3438.length; ++var5) {
+                  for(int var5 = 0; ~this.anIntArrayArray3438.length < ~var5; ++var5) {
                      this.anIntArrayArray3438[var5][0] = var2.getShort(1);
                      this.anIntArrayArray3438[var5][1] = var2.getByte((byte)-81) << 4;
                      this.anIntArrayArray3438[var5][2] = var2.getByte((byte)-63) << 4;
                      this.anIntArrayArray3438[var5][3] = var2.getByte((byte)-28) << 4;
                   }
-               } else {
-                  this.method345(var4, false);
                }
             }
 
@@ -266,7 +266,7 @@ final class Class3_Sub13_Sub37 extends Class3_Sub13 {
          }
 
          int var5 = this.anIntArrayArray3438.length;
-         if(var5 > 0) {
+         if(~var5 < -1) {
             for(int var6 = 0; var6 < 257; ++var6) {
                int var7 = 0;
                int var8 = var6 << 4;
@@ -304,7 +304,7 @@ final class Class3_Sub13_Sub37 extends Class3_Sub13 {
                var3 >>= 4;
                if(var2 < 0) {
                   var2 = 0;
-               } else if(var2 > 255) {
+               } else if(~var2 < -256) {
                   var2 = 255;
                }
 
@@ -316,7 +316,7 @@ final class Class3_Sub13_Sub37 extends Class3_Sub13 {
 
                var4 >>= 4;
                if(var4 >= 0) {
-                  if(var4 > 255) {
+                  if(-256 > ~var4) {
                      var4 = 255;
                   }
                } else {
@@ -341,7 +341,7 @@ final class Class3_Sub13_Sub37 extends Class3_Sub13 {
 
          int var1 = Class131.anInt1716 + (Class102.player.anInt2819 >> 7);
          int var2 = (Class102.player.anInt2829 >> 7) - -Class82.anInt1152;
-         if(var1 >= 3053 && var1 <= 3156 && var2 >= 3056 && var2 <= 3136) {
+         if(-3054 >= ~var1 && -3157 <= ~var1 && -3057 >= ~var2 && var2 <= 3136) {
             WorldListEntry.inTutorialIsland = 1;
          }
 
@@ -349,7 +349,7 @@ final class Class3_Sub13_Sub37 extends Class3_Sub13 {
             WorldListEntry.inTutorialIsland = 1;
          }
 
-         if(WorldListEntry.inTutorialIsland == 1 && var1 >= 3139 && var1 <= 3199 && var2 >= 3008 && 3062 >= var2) {
+         if(WorldListEntry.inTutorialIsland == 1 && -3140 >= ~var1 && -3200 <= ~var1 && var2 >= 3008 && 3062 >= var2) {
             WorldListEntry.inTutorialIsland = 0;
          }
 
@@ -373,7 +373,7 @@ final class Class3_Sub13_Sub37 extends Class3_Sub13 {
 
             for(int var9 = 0; Class113.anInt1559 > var9; ++var9) {
                int var4 = var5[var9] >> 4;
-               if(var4 < 0) {
+               if(-1 < ~var4) {
                   var4 = 0;
                }
 

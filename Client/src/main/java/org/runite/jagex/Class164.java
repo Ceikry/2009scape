@@ -9,6 +9,7 @@ abstract class Class164 {
    static int anInt2050;
    static int anInt2051;
    static CacheIndex aClass153_2052;
+   static RSString aClass94_2053 = RSString.createRSString("Update)2Liste geladen)3");
    private int anInt2054 = 0;
    static RSInterface aClass11_2055;
    private int anInt2056 = 4;
@@ -27,7 +28,7 @@ abstract class Class164 {
          int[] var41 = new int[var3];
 
          int var42;
-         for(var42 = 0; var42 < var2; ++var42) {
+         for(var42 = 0; ~var2 < ~var42; ++var42) {
             var39[var42] = (var42 << 12) / var2;
          }
 
@@ -46,9 +47,9 @@ abstract class Class164 {
          this.method2233(-949697716);
 
          for(int var37 = 0; var37 < var3; ++var37) {
-            for(int var36 = 0; var36 < var4; ++var36) {
+            for(int var36 = 0; ~var4 < ~var36; ++var36) {
                for(int var35 = 0; var35 < var2; ++var35) {
-                  for(int var38 = 0; var38 < this.anInt2062; ++var38) {
+                  for(int var38 = 0; ~this.anInt2062 < ~var38; ++var38) {
                      var42 = this.aShortArray2049[var38] << 12;
                      int var8 = this.anInt2057 * var42 >> 12;
                      int var7 = var42 * var41[var37] >> 12;
@@ -138,7 +139,7 @@ abstract class Class164 {
             method2234(-92, 105);
          }
 
-         while(var2 < this.anInt2062) {
+         while(~this.anInt2062 < ~var2) {
             this.aShortArray2049[var2] = (short)((int)Math.pow(2.0D, (double)var2));
             ++var2;
          }
@@ -164,6 +165,7 @@ abstract class Class164 {
          anIntArray2048 = null;
          aClass153_2052 = null;
          if(var0 == 4) {
+            aClass94_2053 = null;
             aClass140_Sub5Array2058 = null;
             aClass94_2061 = null;
             aClass11_2055 = null;

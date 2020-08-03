@@ -24,13 +24,13 @@ final class Class80 {
          }
 
          Class3 var2;
-         if(this.anInt1132 > 0 && this.aClass130_1134.aClass3Array1697[this.anInt1132 + -1] != this.aClass3_1130) {
+         if(-1 > ~this.anInt1132 && this.aClass130_1134.aClass3Array1697[this.anInt1132 + -1] != this.aClass3_1130) {
             var2 = this.aClass3_1130;
             this.aClass3_1130 = var2.aClass3_74;
             return var2;
          } else {
             do {
-               if(this.anInt1132 >= this.aClass130_1134.anInt1700) {
+               if(~this.aClass130_1134.anInt1700 >= ~this.anInt1132) {
                   return null;
                }
 
@@ -82,7 +82,7 @@ final class Class80 {
          int var1 = Class84.anInt1164;
          int var4 = -Class140_Sub7.anInt2934 + (Class70.anInt1047 - var2);
          int var3 = -var1 + Class3_Sub9.anInt2334 - Class23.anInt454;
-         if(~var1 < var0 || var3 > 0 || var2 > 0 || var4 > 0) {
+         if(~var1 < var0 || ~var3 < -1 || var2 > 0 || ~var4 < -1) {
             try {
                Object var5;
                if(null != Class3_Sub13_Sub10.aFrame3121) {
@@ -103,7 +103,7 @@ final class Class80 {
 
                Graphics var11 = ((Container)var5).getGraphics();
                var11.setColor(Color.black);
-               if(var1 > 0) {
+               if(~var1 < -1) {
                   var11.fillRect(var6, var7, var1, Class70.anInt1047);
                }
 
@@ -115,7 +115,7 @@ final class Class80 {
                   var11.fillRect(-var3 + var6 + Class3_Sub9.anInt2334, var7, var3, Class70.anInt1047);
                }
 
-               if(var4 > 0) {
+               if(~var4 < -1) {
                   var11.fillRect(var6, -var4 + var7 + Class70.anInt1047, Class3_Sub9.anInt2334, var4);
                }
             } catch (Exception var9) {

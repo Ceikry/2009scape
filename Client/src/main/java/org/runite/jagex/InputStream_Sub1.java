@@ -9,11 +9,15 @@ final class InputStream_Sub1 extends InputStream {
    static int anInt40 = 0;
    static IOHandler js5Connection;
    static int anInt42 = 0;
+   private static RSString aClass94_44 = RSString.createRSString(" ");
+   static RSString aClass94_43 = aClass94_44;
 
    public static void method61(int var0) {
       try {
          int var1 = 10 / ((-37 - var0) / 33);
+         aClass94_44 = null;
          js5Connection = null;
+         aClass94_43 = null;
          aClass94_38 = null;
          aClass94_37 = null;
          anIntArray39 = null;
@@ -52,6 +56,10 @@ final class InputStream_Sub1 extends InputStream {
          Class3_Sub13 var3 = Class130.method1777(var2, true);
          var3.anInt2381 = var1.getByte((byte)-66);
          int var4 = var1.getByte((byte)-33);
+         if(var0 > -26) {
+            aClass94_43 = (RSString)null;
+         }
+
          for(int var5 = 0; var5 < var4; ++var5) {
             int var6 = var1.getByte((byte)-92);
             var3.method157(var6, var1, true);
@@ -75,6 +83,10 @@ final class InputStream_Sub1 extends InputStream {
 
    static final int method64(boolean var0, int var1) {
       try {
+         if(!var0) {
+            aClass94_43 = (RSString)null;
+         }
+
          return var1 >>> 8;
       } catch (RuntimeException var3) {
          throw Class44.method1067(var3, "qk.D(" + var0 + ',' + var1 + ')');

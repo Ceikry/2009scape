@@ -16,13 +16,13 @@ final class Class3_Sub28_Sub16_Sub1_Sub1 extends Class3_Sub28_Sub16_Sub1 {
       for(int var6 = 0; var6 < this.anInt3696; ++var6) {
          for(int var7 = 0; var7 < this.anInt3707; ++var7) {
             int var8 = var1[var4++];
-            if(var8 == 0) {
-               var3 += 4;
-            } else {
+            if(var8 != 0) {
                var2[var3++] = (byte)(var8 >> 16);
                var2[var3++] = (byte)(var8 >> 8);
                var2[var3++] = (byte)var8;
                var2[var3++] = (byte)(var8 >> 24);
+            } else {
+               var3 += 4;
             }
          }
 

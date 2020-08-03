@@ -15,6 +15,7 @@ final class Class3_Sub13_Sub1 extends Class3_Sub13 {
 	static RSString aClass2325;
 	static RSString aClass16_1543;
 	static RSString aClass94_3039 = RSString.createRSString("0");
+	static RSString aClass94_3040 = RSString.createRSString("<col=40ff00>");
 	static Class3_Sub28_Sub5[] aClass3_Sub28_Sub5Array3041 = new Class3_Sub28_Sub5[14];
 
 
@@ -42,6 +43,7 @@ final class Class3_Sub13_Sub1 extends Class3_Sub13 {
 
 	public static void method168(int var0) {
 		try {
+			aClass94_3040 = null;
 			if(var0 != -1771542303) {
 				aClass3_Sub28_Sub5Array3041 = (Class3_Sub28_Sub5[])null;
 			}
@@ -66,20 +68,20 @@ final class Class3_Sub13_Sub1 extends Class3_Sub13 {
 					int var8 = Class102.anIntArray2125[var6];
 					int var9 = -2048 + var8 >> 1;
 				int var7;
-				if(this.anInt3038 == 0) {
-					var7 = (var8 + -var4) * this.anInt3037;
-				} else {
+				if(~this.anInt3038 != -1) {
 					int var10 = var9 * var9 - -(var5 * var5) >> 12;
 					var7 = (int)(Math.sqrt((double)((float)var10 / 4096.0F)) * 4096.0D);
 					var7 = (int)(3.141592653589793D * (double)(var7 * this.anInt3037));
+				} else {
+					var7 = (var8 + -var4) * this.anInt3037;
 				}
 
-					var7 -= var7 & -4096;
-				if(this.anInt3036 == 0) {
+				var7 -= var7 & -4096;
+				if(~this.anInt3036 == -1) {
 					var7 = Class3_Sub13_Sub17.anIntArray3212[(var7 & 4085) >> 4] + 4096 >> 1;
 				} else if(this.anInt3036 == 2) {
 					var7 -= 2048;
-					if(var7 < 0) {
+					if(-1 < ~var7) {
 						var7 = -var7;
 					}
 
@@ -160,12 +162,12 @@ final class Class3_Sub13_Sub1 extends Class3_Sub13 {
 			if(Canvas_Sub2.loadInterface(var1, 104)) {
 				Class47.method1095(var2, var8, var4, GameObject.aClass11ArrayArray1834[var1], var3, -1, var7, var6, (byte)119, var5);
 			} else {
-				if(var5 == -1) {
-					for(int var9 = 0; var9 < 100; ++var9) {
+				if(~var5 != 0) {
+					Class3_Sub28_Sub14.aBooleanArray3674[var5] = true;
+				} else {
+					for(int var9 = 0; -101 < ~var9; ++var9) {
 						Class3_Sub28_Sub14.aBooleanArray3674[var9] = true;
 					}
-				} else {
-					Class3_Sub28_Sub14.aBooleanArray3674[var5] = true;
 				}
 
 			}
@@ -180,14 +182,14 @@ final class Class3_Sub13_Sub1 extends Class3_Sub13 {
 				this.method158(10);
 			}
 
-			if(var1 == 0) {
-				this.anInt3038 = var2.getByte((byte)-70);
-			} else {
+			if(-1 != ~var1) {
 				if(1 == var1) {
 					this.anInt3036 = var2.getByte((byte)-119);
-				} else if(var1 == 3) {
+				} else if(~var1 == -4) {
 					this.anInt3037 = var2.getByte((byte)-113);
 				}
+			} else {
+				this.anInt3038 = var2.getByte((byte)-70);
 			}
 
 		} catch (RuntimeException var5) {

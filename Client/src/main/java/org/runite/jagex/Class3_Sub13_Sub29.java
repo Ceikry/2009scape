@@ -50,14 +50,14 @@ final class Class3_Sub13_Sub29 extends Class3_Sub13 {
          var4.anIntArray2301 = new int[var4.anInt2296];
          var4.anIntArray2299 = new int[var4.anInt2296];
 
-         for(int var6 = 0; var4.anInt2296 > var6; ++var6) {
+         for(int var6 = 0; ~var6 > ~var4.anInt2296; ++var6) {
             try {
                int var7 = var1.getByte((byte)-50);
                String var8;
                String var9;
                int var10;
-               if(var7 != 0 && var7 != 1 && var7 != 2) {
-                  if(var7 == 3 || var7 == 4) {
+               if(~var7 != -1 && var7 != 1 && -3 != ~var7) {
+                  if(-4 == ~var7 || -5 == ~var7) {
                      var8 = new String(var1.getString().method1568(0));
                      var9 = new String(var1.getString().method1568(0));
                      var10 = var1.getByte((byte)-113);
@@ -70,7 +70,7 @@ final class Class3_Sub13_Sub29 extends Class3_Sub13 {
                      byte[][] var21 = new byte[var10][];
                      int var14;
                      if(3 == var7) {
-                        for(int var13 = 0; var13 < var10; ++var13) {
+                        for(int var13 = 0; ~var10 < ~var13; ++var13) {
                            var14 = var1.getInt();
                            var21[var13] = new byte[var14];
                            var1.method764(0, var14, var21[var13], (byte)93);
@@ -126,7 +126,7 @@ final class Class3_Sub13_Sub29 extends Class3_Sub13 {
             int var5 = var3.anInt1123;
             int var4 = var3.anInt1128;
             int var7 = Class3_Sub6.anIntArray2288[var6 - var5];
-            if(var2 < 0 || var7 < var2) {
+            if(~var2 > -1 || ~var2 < ~var7) {
                var2 = 0;
             }
 
@@ -175,14 +175,14 @@ final class Class3_Sub13_Sub29 extends Class3_Sub13 {
    static final int method310(int var0, byte var1, int var2, int var3) {
       try {
          var0 &= 3;
-         if(var0 == 0) {
-            return var3;
-         } else {
+         if(~var0 != -1) {
             if(var1 >= -17) {
                aClass94_3357 = (RSString)null;
             }
 
-            return var0 == 1?7 + -var2:(var0 == 2 ?-var3 + 7:var2);
+            return var0 == 1?7 + -var2:(~var0 == -3?-var3 + 7:var2);
+         } else {
+            return var3;
          }
       } catch (RuntimeException var5) {
          throw Class44.method1067(var5, "qg.B(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ')');
@@ -192,7 +192,9 @@ final class Class3_Sub13_Sub29 extends Class3_Sub13 {
    static final Class55 method311(int var0, int var1) {
       try {
          Class55 var2 = (Class55)Class41.aClass93_684.get((long)var0, (byte)121);
-         if(var2 == null) {
+         if(var2 != null) {
+            return var2;
+         } else {
             byte[] var3 = Class3_Sub13_Sub19.aClass153_3227.getFile(33, (byte)-122, var0);
             if(var1 != 5) {
                aClass94_3357 = (RSString)null;
@@ -204,8 +206,6 @@ final class Class3_Sub13_Sub29 extends Class3_Sub13 {
             }
 
             Class41.aClass93_684.put((byte)-112, var2, (long)var0);
-            return var2;
-         } else {
             return var2;
          }
       } catch (RuntimeException var4) {

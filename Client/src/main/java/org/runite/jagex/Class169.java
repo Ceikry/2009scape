@@ -1,8 +1,8 @@
 package org.runite.jagex;
 
-import javax.media.opengl.GL;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
+import javax.media.opengl.GL;
 
 final class Class169 {
 
@@ -111,7 +111,9 @@ final class Class169 {
 
          for(var9 = -128; var9 < 0; ++var9) {
             for(int var10 = -128; var10 < 0; ++var10) {
-               if(var4[var6] == 0) {
+               if(var4[var6] != 0) {
+                  aByteArray2111[var8++] = 68;
+               } else {
                   int var11 = 0;
                   if(var4[var6 - 1] != 0) {
                      ++var11;
@@ -130,11 +132,9 @@ final class Class169 {
                   }
 
                   aByteArray2111[var8++] = (byte)(17 * var11);
-               } else {
-                  aByteArray2111[var8++] = 68;
                }
 
-                ++var6;
+               ++var6;
             }
 
             var6 += var5 - 128;
@@ -156,29 +156,29 @@ final class Class169 {
    final void method2284() {
       javax.media.opengl.GL var1 = HDToolKit.gl;
       HDToolKit.bindTexture2D(this.anInt2108);
-      if(this.aClass156_2110 == null) {
+      if(this.aClass156_2110 != null) {
+         this.aClass156_2110.method2169();
+         var1.glInterleavedArrays(10791, 20, 0L);
+         HDToolKit.aBoolean1798 = false;
+      } else {
          if(HDToolKit.aBoolean1813) {
             var1.glBindBufferARB('\u8892', 0);
          }
 
          var1.glInterleavedArrays(10791, 20, this.aByteBuffer2109);
          HDToolKit.aBoolean1798 = false;
-      } else {
-         this.aClass156_2110.method2169();
-         var1.glInterleavedArrays(10791, 20, 0L);
-         HDToolKit.aBoolean1798 = false;
       }
 
-       if(this.aClass156_2105 == null) {
-          if(HDToolKit.aBoolean1813) {
-             var1.glBindBufferARB('\u8893', 0);
-          }
+      if(this.aClass156_2105 != null) {
+         this.aClass156_2105.method2171();
+         var1.glDrawElements(4, 384, 5125, 0L);
+      } else {
+         if(HDToolKit.aBoolean1813) {
+            var1.glBindBufferARB('\u8893', 0);
+         }
 
-          var1.glDrawElements(4, 384, 5125, this.aByteBuffer2107);
-       } else {
-          this.aClass156_2105.method2171();
-          var1.glDrawElements(4, 384, 5125, 0L);
-       }
+         var1.glDrawElements(4, 384, 5125, this.aByteBuffer2107);
+      }
 
    }
 

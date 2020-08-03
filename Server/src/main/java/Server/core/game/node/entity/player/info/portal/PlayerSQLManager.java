@@ -4,6 +4,7 @@ import core.game.node.entity.player.Player;
 import core.game.node.entity.player.info.PlayerDetails;
 import core.game.node.entity.player.info.Rights;
 import core.game.node.entity.player.info.login.Response;
+import core.game.system.SystemLogger;
 import core.game.system.SystemManager;
 import core.game.system.mysql.SQLColumn;
 import core.game.system.mysql.SQLEntryHandler;
@@ -79,6 +80,8 @@ public final class PlayerSQLManager {
 			return false;
 		}
 		details.getCommunication().parse(table);
+		details.credits = (int) table.getColumn("credits").getValue();
+		details.isDonator = (int) table.getColumn("donatorType").getValue() == 1 || details.credits > 0;
 		details.setBanTime((long) table.getColumn("banTime").getValue());
 		details.setMuteTime((long) table.getColumn("muteTime").getValue());
 		details.setIcon(Icon.forId((int) table.getColumn("icon").getValue()));
@@ -104,6 +107,8 @@ public final class PlayerSQLManager {
 			details.getCommunication().save(table);
 		}
 		table.getColumn("bank").updateValue(player.getBank().format());
+		table.getColumn("credits").updateValue(details.credits);
+		table.getColumn("donatorType").updateValue(details.isDonator ? 1 : 0);
 		table.getColumn("lastLogin").updateValue(player.getDetails().getLastLogin());
 		table.getColumn("ge").updateValue(player.getGrandExchange().format());
 		table.getColumn("inventory").updateValue(player.getInventory().format());
