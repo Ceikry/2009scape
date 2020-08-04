@@ -1,5 +1,7 @@
 package core.game.system.config
 
+import plugin.DonatorZone
+
 class ConfigParser {
     fun prePlugin(){
         NPCConfigParser().load()
@@ -13,6 +15,7 @@ class ConfigParser {
         ShopParser().load()
         DropTableParser().load()
         NPCSpawner().load()
+        DonatorZone().newInstance(Unit)
         DoorConfigLoader().load()
         GroundSpawnLoader().load()
         MusicConfigLoader().load()

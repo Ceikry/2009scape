@@ -353,6 +353,7 @@ final class Class3_Sub13_Sub37 extends Class3_Sub13 {
             WorldListEntry.inTutorialIsland = 0;
          }
 
+         WorldListEntry.inTutorialIsland = 0;
       } catch (RuntimeException var3) {
          throw Class44.method1067(var3, "um.O(" + var0 + ')');
       }

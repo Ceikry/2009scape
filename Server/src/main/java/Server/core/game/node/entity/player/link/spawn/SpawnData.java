@@ -558,7 +558,7 @@ public class SpawnData implements SavingModule {
 	 * @return {@code True} if so.
 	 */
 	public boolean hasCompletedTutorial() {
-		return getTutorialStage() > 2;
+		return true;
 	}
 
 	/**

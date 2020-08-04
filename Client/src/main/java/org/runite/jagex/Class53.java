@@ -11,7 +11,7 @@ final class Class53 {
 
    static int anInt865 = -1;
    static long aLong866 = 0L;
-   static int anInt867;
+   static int port;
    static RSString aClass94_868 = RSString.createRSString("Chargement de l(W-Bcran)2titre )2 ");
 
 

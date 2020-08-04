@@ -36,7 +36,7 @@ final class KeyboardListener implements KeyListener, FocusListener {
          if(null != Class3_Sub13_Sub3.aClass148_3049) {
             Class3_Sub13_Sub33.anInt3398 = 0;
             int var2 = var1.getKeyCode();
-            switch(var2) {
+            /*switch(var2) {
                case 112://f1
                   var2 = 115;
                   break;
@@ -52,7 +52,7 @@ final class KeyboardListener implements KeyListener, FocusListener {
                case 116://f5
                   var2 = 112;
                   break;
-            }
+            }*/
             if(0 <= var2 && Class117.anIntArray1611.length > var2) {
                var2 = Class117.anIntArray1611[var2];
                // System.out.println(var2);

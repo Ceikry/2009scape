@@ -27,7 +27,7 @@ class PVPEquipmentRegister : Plugin<Any> {
 
 
     override fun newInstance(arg: Any?): Plugin<Any> {
-        EquipmentDegrader.registerSet(VESTA_BODY)
+       /* EquipmentDegrader.registerSet(VESTA_BODY)
         EquipmentDegrader.registerSet(VESTA_SKIRT)
         EquipmentDegrader.registerSet(VESTA_SWORD)
         EquipmentDegrader.registerSet(VESTA_SPEAR)
@@ -41,7 +41,7 @@ class PVPEquipmentRegister : Plugin<Any> {
         EquipmentDegrader.registerSet(ZURIEL_TOP)
         EquipmentDegrader.registerSet(MORRIGAN_BODY)
         EquipmentDegrader.registerSet(MORRIGAN_CHAP)
-        EquipmentDegrader.registerSet(MORRIGAN_COIF)
+        EquipmentDegrader.registerSet(MORRIGAN_COIF)*/
         return this
     }
 

@@ -96,7 +96,7 @@ final class Class3_Sub13_Sub3 extends Class3_Sub13 {
                if(Class123.anInt1658 != Class3_Sub28_Sub19.anInt3773) {
                   Class123.anInt1658 = Class3_Sub28_Sub19.anInt3773;
                } else {
-                  Class123.anInt1658 = Class53.anInt867;
+                  Class123.anInt1658 = Class53.port;
                }
 
                return -1;
