@@ -36,7 +36,9 @@ public final class TradeCloseEvent implements CloseEvent {
 		closeInterfaces(module.getTarget());
 		module.getTarget().getInterfaceManager().close();
 		end(player);
+		player.getInterfaceManager().openDefaultTabs();
 		end(module.getTarget());
+		module.getTarget().getInterfaceManager().openDefaultTabs();
 		return true;
 	}
 

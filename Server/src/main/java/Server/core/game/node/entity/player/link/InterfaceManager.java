@@ -246,7 +246,7 @@ public final class InterfaceManager {
 		component.open(player);
 		if (component.getCloseEvent() == null) {
 			component.setCloseEvent((player, c) -> {
-				openDefaultTabs();
+//				openDefaultTabs();
 				return true;
 			});
 		}
