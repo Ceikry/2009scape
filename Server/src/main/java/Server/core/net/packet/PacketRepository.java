@@ -28,6 +28,7 @@ public final class PacketRepository {
 	 */
 	static {
 		OUTGOING_PACKETS.put(LoginPacket.class, new LoginPacket());
+		OUTGOING_PACKETS.put(SendLink.class, new SendLink());
 		OUTGOING_PACKETS.put(UpdateSceneGraph.class, new UpdateSceneGraph());
 		OUTGOING_PACKETS.put(WindowsPane.class, new WindowsPane());
 		OUTGOING_PACKETS.put(Interface.class, new Interface());

@@ -31,6 +31,14 @@
     <ObjectAction mode="remove" id="8768" x="2351" y="3174" z="0"/>
     <ObjectAction mode="remove" id="8751" x="2354" y="3173" z="0"/>
     <ObjectAction mode="remove" id="8751" x="2354" y="3170" z="0"/>
+    <ObjectAction mode="remove" id="22973" x="2717" y="5336" z="0"/>
+    <ObjectAction mode="remove" id="22973" x="2717" y="5330" z="0"/>
+    <ObjectAction mode="remove" id="22669" x="2717" y="5334" z="0"/>
+    <ObjectAction mode="remove" id="22669" x="2717" y="5333" z="0"/>
+    <ObjectAction mode="remove" id="22804" x="2716" y="5333" z="0"/>
+    <ObjectAction mode="remove" id="22805" x="2716" y="5334" z="0"/>
+    <ObjectAction mode="remove" id="22806" x="2719" y="5333" z="0"/>
+
 
     <ObjectAction mode="add" id="2213" x="2357" y="3173" z="0"/>
     <ObjectAction mode="add" id="2213" x="2357" y="3172" z="0"/>
@@ -39,6 +47,50 @@
     <ObjectAction mode="add" id="6552" x="2354" y="3167" z="0" direction="e"/>
     <ObjectAction mode="add" id="36972" x="2351" y="3167" z="0" direction="e"/>
     <ObjectAction mode="add" id="17010" x="2345" y="3180" z="0" />
+
+    <ObjectAction mode="add" id="1281" x="2723" y="5347" z="0" />
+    <ObjectAction mode="add" id="1308" x="2720" y="5347" z="0" />
+    <ObjectAction mode="add" id="1307" x="2716" y="5347" z="0" />
+    <ObjectAction mode="add" id="9036" x="2724" y="5342" z="0" />
+    <ObjectAction mode="add" id="9034" x="2720" y="5342" z="0" direction="s" />
+    <ObjectAction mode="add" id="1306" x="2716" y="5342" z="0" />
+    <ObjectAction mode="add" id="2090" x="2720" y="5337" z="0" />
+    <ObjectAction mode="add" id="2094" x="2720" y="5336" z="0" />
+
+    <ObjectAction mode="add" id="2109" x="2720" y="5335" z="0" />
+
+    <ObjectAction mode="add" id="4027" x="2720" y="5334" z="0" />
+
+    <ObjectAction mode="add" id="2092" x="2720" y="5333" z="0" />
+
+    <ObjectAction mode="add" id="2101" x="2720" y="5332" z="0" />
+
+    <ObjectAction mode="add" id="2099" x="2720" y="5331" z="0" />
+
+    <ObjectAction mode="add" id="23567" x="2720" y="5330" z="0" />
+    <ObjectAction mode="add" id="23566" x="2720" y="5329" z="0" />
+
+
+
+    <ObjectAction mode="add" id="2103" x="2714" y="5337" z="0" />
+    <ObjectAction mode="add" id="2103" x="2714" y="5336" z="0" />
+
+    <ObjectAction mode="add" id="2103" x="2714" y="5335" z="0" />
+
+    <ObjectAction mode="add" id="2105" x="2714" y="5334" z="0" />
+
+    <ObjectAction mode="add" id="2105" x="2714" y="5333" z="0" />
+
+    <ObjectAction mode="add" id="2105" x="2714" y="5332" z="0" />
+
+    <ObjectAction mode="add" id="2107" x="2714" y="5331" z="0" />
+
+    <ObjectAction mode="add" id="2107" x="2714" y="5330" z="0" />
+    <ObjectAction mode="add" id="2107" x="2714" y="5329" z="0" />
+
+
+
+
 
 
 

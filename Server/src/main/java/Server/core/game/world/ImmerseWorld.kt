@@ -54,8 +54,8 @@ object ImmerseWorld {
         GeneralBotCreator(VarrockEssenceMiner(), skillingBotAssembler.produce(SkillingBotAssembler.Wealth.POOR,Location.create(3253, 3420, 0)))
         GeneralBotCreator(VarrockSmither(), skillingBotAssembler.produce(SkillingBotAssembler.Wealth.RICH,Location.create(3189, 3436, 0)))
         GeneralBotCreator(NonBankingMiner(), skillingBotAssembler.produce(SkillingBotAssembler.Wealth.POOR,Location.create(3182, 3374, 0)))
-        GeneralBotCreator(GreenDragonKiller(CombatStyle.MELEE), assembler.assembleMeleeDragonBot(CombatBotAssembler.Tier.HIGH,Location.create(2980, 3613, 0)))
+       /* GeneralBotCreator(GreenDragonKiller(CombatStyle.MELEE), assembler.assembleMeleeDragonBot(CombatBotAssembler.Tier.HIGH,Location.create(2980, 3613, 0)))
         GeneralBotCreator(GreenDragonKiller(CombatStyle.RANGE), assembler.assembleRangeDragonBot(CombatBotAssembler.Tier.HIGH,Location.create(2980, 3613, 0)))
         GeneralBotCreator(GreenDragonKiller(CombatStyle.MELEE), assembler.assembleMeleeDragonBot(CombatBotAssembler.Tier.HIGH,Location.create(2980, 3613, 0)))
-    }
+*/    }
 }

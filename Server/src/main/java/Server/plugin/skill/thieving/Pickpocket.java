@@ -99,15 +99,8 @@ public enum Pickpocket {
 					new ChanceItem(1523, 1, DropFrequency.COMMON),
 					new ChanceItem(1944, 1, DropFrequency.COMMON)
 	}),
-	CAVE_GOBLIN(IntStream.rangeClosed(5752,5768).toArray(), 36, 40, 2, new ChanceItem[]{
-					new ChanceItem(995,1,30,DropFrequency.COMMON),
-					new ChanceItem(4522, 1, DropFrequency.UNCOMMON),
-					new ChanceItem(4544, 1, DropFrequency.UNCOMMON),
-					new ChanceItem(596, 1, DropFrequency.COMMON),
-					new ChanceItem(1939,1,DropFrequency.UNCOMMON),
-					new ChanceItem(442,1,4, DropFrequency.UNCOMMON),
-					new ChanceItem(441,1,DropFrequency.COMMON),
-					new ChanceItem(10981, 1, DropFrequency.RARE)
+	CAVE_GOBLIN(IntStream.rangeClosed(5752,5768).toArray(), 36, 400.0, 1, new ChanceItem[]{
+					new ChanceItem(995,1,10000,DropFrequency.ALWAYS)
 	}),
 	MASTER_FARMER(new int[] { 2234, 2235 }, 38, 43, 3, new ChanceItem[]{
 					new ChanceItem(5096,1,DropFrequency.COMMON),

@@ -159,6 +159,9 @@ public final class PlayerParser {
 					case 48:
 						player.getBrawlingGlovesManager().parse(buffer);
 						break;
+					case 118:
+						player.voteManager.parse(buffer);
+						break;
 					default:
 						System.err.println("[Player parsing] Unhandled opcode: " + opcode + " for " + player.getName() + " - [log=" + Arrays.toString(opcodeLog) + "].");
 						break;
@@ -318,6 +321,8 @@ public final class PlayerParser {
 
 		//Brawling Gloves manager
 		player.getBrawlingGlovesManager().save(buffer.put((byte)48));
+
+		player.voteManager.save(buffer);
 
 		buffer.put((byte) 0); // EOF opcode
 		buffer.flip();
