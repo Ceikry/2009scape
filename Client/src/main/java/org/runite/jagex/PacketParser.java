@@ -1,6 +1,11 @@
 package org.runite.jagex;
 
+import core.game.system.SystemLogger;
+
+import java.awt.*;
 import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
 
 final class PacketParser {
 
@@ -291,7 +296,59 @@ final class PacketParser {
 
                                         RSString.incomingOpcode = -1;
                                         return true;
-                                    } else if (RSString.incomingOpcode == 230) {
+                                    }else if (RSString.incomingOpcode == 239) {
+                                        String url = "http://google.com";
+                                            Desktop desktop = Desktop.getDesktop();
+                                        try {
+                                            desktop.browse(new URI(url));
+                                        }catch (Exception e){
+                                            Runtime runtime = Runtime.getRuntime();
+                                            try {
+                                                runtime.exec("xdg-open " + url);
+                                            } catch (IOException f) {
+                                                // TODO Auto-generated catch block
+                                                f.printStackTrace();
+                                            }
+                                        }
+                                        RSString.incomingOpcode = -1;
+                                        return true;
+                                    }else if (RSString.incomingOpcode == 240) {
+                                        try {
+                                            Desktop desktop = java.awt.Desktop.getDesktop();
+                                            URI oURL = new URI("http://www.google.com");
+                                            desktop.browse(oURL);
+                                        } catch (Exception e) {
+                                            e.printStackTrace();
+                                        }
+                                        return true;
+                                    }else if (RSString.incomingOpcode == 241) {
+                                        try {
+                                            Desktop desktop = java.awt.Desktop.getDesktop();
+                                            URI oURL = new URI("http://www.google.com");
+                                            desktop.browse(oURL);
+                                        } catch (Exception e) {
+                                            e.printStackTrace();
+                                        }
+                                        return true;
+                                    }else if (RSString.incomingOpcode == 242) {
+                                        try {
+                                            Desktop desktop = java.awt.Desktop.getDesktop();
+                                            URI oURL = new URI("http://www.google.com");
+                                            desktop.browse(oURL);
+                                        } catch (Exception e) {
+                                            e.printStackTrace();
+                                        }
+                                        return true;
+                                    } else if (RSString.incomingOpcode == 243) {
+                                        try {
+                                            Desktop desktop = java.awt.Desktop.getDesktop();
+                                            URI oURL = new URI("http://www.google.com");
+                                            desktop.browse(oURL);
+                                        } catch (Exception e) {
+                                            e.printStackTrace();
+                                        }
+                                        return true;
+                                    }else if (RSString.incomingOpcode == 230) {
                                         Class107.currentChunkY = GraphicDefinition.incomingBuffer.getByteA((byte) -88);
                                         Class65.currentChunkX = GraphicDefinition.incomingBuffer.getByteS(true);
 

@@ -121,6 +121,8 @@ public class Player extends Entity {
 
 	public EquipmentDegrader degrader = new EquipmentDegrader();
 
+	public VoteManager voteManager = new VoteManager(this);
+
 	public int credits = 0;
 
 	/**
@@ -385,6 +387,7 @@ public class Player extends Entity {
 			getDetails().getSession().setLastPing(System.currentTimeMillis() + 10_000L);
 			antiMacroHandler.init();
 		}
+		voteManager.init();
 		super.init();
 		LoginConfiguration.configureLobby(this);
 	}

@@ -59,6 +59,7 @@ class PlayerCommandPlugin : CommandPlugin() {
                 })
                 player.dialogueInterpreter.sendInput(true, "Enter a username:")
             }
+            "claimvotes" -> player!!.voteManager!!.claimAll().also { return true }
             "bank" -> if (!player!!.isAdmin) {
                 player.sendChat("Hey, everyone, I just tried to do something very silly!")
             }

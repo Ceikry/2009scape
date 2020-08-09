@@ -20,7 +20,6 @@ import core.tools.RandomFunction
 import plugin.ai.AIPBuilder
 import plugin.ai.AIPlayer
 import plugin.ai.general.GeneralBotCreator
-import plugin.ai.general.scriptrepository.GreenDragonKiller
 import plugin.ai.general.scriptrepository.LobsterCatcher
 //import plugin.ai.general.scriptrepository.ManThiever
 import plugin.ai.pvmbots.CombatBotAssembler
@@ -135,7 +134,7 @@ class AIPCommandPlugin : CommandPlugin() {
                 return true
             }
             "banktest" -> {
-                GeneralBotCreator(GreenDragonKiller(CombatStyle.MELEE),CombatBotAssembler().produce(CombatBotAssembler.Type.MELEE,CombatBotAssembler.Tier.HIGH,player.location))
+                //GeneralBotCreator(GreenDragonKiller(CombatStyle.MELEE),CombatBotAssembler().produce(CombatBotAssembler.Type.MELEE,CombatBotAssembler.Tier.HIGH,player.location))
                 return true
             }
             "pvplegion" -> {
