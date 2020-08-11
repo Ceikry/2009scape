@@ -1,30 +1,39 @@
+/*
 package plugin.dialogue;
 
 import core.game.node.entity.npc.NPC;
 import core.plugin.InitializablePlugin;
 import core.game.node.entity.player.Player;
 
+*/
 /**
  * Dialogue for the boss pet, K'ril Tsutsaroth JR.
  * @author Splinter
  * @version 1.0
- */
+ *//*
+
 @InitializablePlugin
 public final class KrilJRDialogue extends DialoguePlugin {
 
-	/**
+	*/
+/**
 	 * Constructs a new {@code KrilJRDialogue} {@code Object}.
-	 */
+	 *//*
+
 	public KrilJRDialogue() {
-		/**
+		*/
+/**
 		 * empty.
-		 */
+		 *//*
+
 	}
 
-	/**
+	*/
+/**
 	 * Constructs a new {@code KrilJRDialogue} {@code Object}.
 	 * @param player the player.
-	 */
+	 *//*
+
 	public KrilJRDialogue(Player player) {
 		super(player);
 	}
@@ -81,3 +90,4 @@ public final class KrilJRDialogue extends DialoguePlugin {
 		return new int[] { 8591 };
 	}
 }
+*/

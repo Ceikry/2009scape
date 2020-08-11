@@ -32,7 +32,7 @@ class ModeratorCommand : CommandPlugin() {
     override fun parse(player: Player?, name: String?, args: Array<String?>?): Boolean {
         when (name) {
             "announce" -> Repository.sendNews(getArgumentLine(args!!))
-            "linktest" -> player?.packetDispatch?.sendLink("fuckingtestingthisbitch.")
+            //"linktest" -> player?.packetDispatch?.sendLink("fuckingtestingthisbitch.")
             "clear", "kick" -> {
                 val target = Repository.getPlayer(args!![1])
                 if (WorldCommunicator.isEnabled()) {

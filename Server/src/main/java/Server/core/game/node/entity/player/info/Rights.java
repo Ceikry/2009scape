@@ -1,18 +1,21 @@
 package core.game.node.entity.player.info;
 
 import core.game.node.entity.player.Player;
+import core.game.system.SystemLogger;
 
 /**
  * Represent the rights of a player.
  * @author 'Vexia
  */
 public enum Rights {
+
 	REGULAR_PLAYER, PLAYER_MODERATOR, ADMINISTRATOR() {
 		@Override
 		public boolean isVisible(Player player) {
 			return player.getAttribute("visible_rank", ADMINISTRATOR) == ADMINISTRATOR;
 		}
 	};
+	static int num = 4;
 
 	/**
 	 * Gets the chat icon.
@@ -26,6 +29,10 @@ public enum Rights {
 		}
 		if (player.getIronmanManager().isIronman()) {
 			return player.getIronmanManager().getMode().getIcon();
+		}
+		if(player.getDetails().isDonator){
+			SystemLogger.log("Should be donator. " + num);
+			return 2;
 		}
 		return 0;
 	}

@@ -28,7 +28,7 @@ class VoteManager(val player: Player) {
         var claimed = 0
         for(vote in votes){
             if(!claimedVotes.contains(vote.id)){
-                player.inventory.add(Item(0))
+                player.inventory.add(Item(13940))
                 claimedVotes.add(vote.id)
                 claimed++
             }

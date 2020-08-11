@@ -98,8 +98,8 @@ public final class PacketDispatch {
 		PacketRepository.send(AccessMask.class, new AccessMaskContext(player, id, childId, interfaceId, offset, length));
 	}
 
-	public void sendLink(String link){
-		PacketRepository.send(SendLink.class, new SendLinkContext(player,link));
+	public void sendLink(int linkIndex){
+		PacketRepository.send(SendLink.class, new SendLinkContext(player,linkIndex));
 	}
 
 	/**
