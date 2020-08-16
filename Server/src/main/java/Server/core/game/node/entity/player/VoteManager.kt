@@ -37,7 +37,7 @@ class VoteManager(val player: Player) {
             player.sendMessage("You have claimed $claimed votes.")
         } else {
             player.sendMessage("You had no votes to claim!")
-            player.sendMessage("If you have recently voted, try waiting and relogging!")
+            player.sendMessage("If you have recently voted, try waiting a minute.")
         }
     }
 
