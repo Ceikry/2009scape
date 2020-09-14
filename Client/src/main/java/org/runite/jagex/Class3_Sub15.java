@@ -41,7 +41,7 @@ final class Class3_Sub15 extends Class3 {
       try {
 
          for(Class3_Sub28_Sub3 var2 = (Class3_Sub28_Sub3)Class134.aClass61_1758.method1222(); var2 != null; var2 = (Class3_Sub28_Sub3)Class134.aClass61_1758.method1221()) {
-            if(var2.aClass94_3561.method1528(var1)) {
+            if(var2.aClass94_3561.equalsString(var1)) {
                return var2;
             }
          }

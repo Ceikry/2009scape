@@ -16,7 +16,7 @@ final class Class155_Sub1 extends Class155 {
    }
 
    final void method2164(Component var1) throws Exception {
-      anInterface1_2970.method5(Class21.anInt443, (byte)-39, var1, RSString.aBoolean2150);
+      anInterface1_2970.method5(Class21.anInt443, (byte)-39, var1, Unsorted.aBoolean2150);
    }
 
    final void method2151() {

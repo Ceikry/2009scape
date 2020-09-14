@@ -158,7 +158,7 @@ final class Class3_Sub13_Sub6 extends Class3_Sub13 {
          if(CS2Script.anInt2453 != 0 && var0 != 0 && Class113.anInt1552 < 50 && var1 != -1) {
             Class3_Sub25.anIntArray2550[Class113.anInt1552] = var1;
             Class166.anIntArray2068[Class113.anInt1552] = var0;
-            RSString.anIntArray2157[Class113.anInt1552] = var2;
+            Unsorted.anIntArray2157[Class113.anInt1552] = var2;
             Class102.aClass135Array2131[Class113.anInt1552] = null;
             anIntArray3083[Class113.anInt1552] = 0;
             ++Class113.anInt1552;

@@ -3,7 +3,14 @@ package org.runite.jagex;
 import java.util.Objects;
 
 public class Unsorted {
-    static void method2086() {
+   public static boolean aBoolean2146 = false;
+   public static int incomingOpcode = 0;
+   public static int anInt2148 = 0;
+   public static boolean aBoolean2150;
+   public static boolean aBoolean2154;
+   public static int[] anIntArray2157 = new int[50];
+
+   static void method2086() {
        try {
            int var1 = Class102.player.anInt2819 + Class3_Sub13_Sub18.anInt3216;
            int var2 = Class102.player.anInt2829 - -InputStream_Sub1.anInt42;

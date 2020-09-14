@@ -45,9 +45,9 @@ final class Class23 {
          var1.putShort(Class3_Sub13.anInt2378);
          var1.putShort(Class3_Sub13_Sub5.anInt3071);
          var1.putByte((byte)-53, Class127_Sub1.method1757());
-         var1.putInt(-123, RSString.anInt2148);
+         var1.putInt(-123, Unsorted.anInt2148);
          var1.putByte((byte)-19, Node.anInt2577);
-         var1.putByte((byte)-117, RSString.aBoolean2146?1:0);
+         var1.putByte((byte)-117, Unsorted.aBoolean2146?1:0);
          var1.putByte((byte)-9, !Class15.aBoolean346?0:1);
          var1.putByte((byte)-39, Class3_Sub20.anInt2488);
          var1.putByte((byte)-78, Class73.aBoolean1080?1:0);

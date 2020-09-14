@@ -408,7 +408,7 @@ final class AnimationDefinition {
 			Class3_Sub13.method153(112);
 			Class24.anInt469 = -1;
 			Class7.anInt2166 = -1;
-			RSString.incomingOpcode = -1;
+			Unsorted.incomingOpcode = -1;
 			Class159.anInt2023 = 0;
 			Class38_Sub1.anInt2617 = 0;
 			Class3_Sub13_Sub1.outgoingBuffer.index = 0;

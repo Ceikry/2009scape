@@ -436,7 +436,7 @@ final class Class3_Sub13_Sub13 extends Class3_Sub13 {
                            RSInterface var20;
                            if(var3 == 3) {
                               var20 = Class7.getRSInterface(var4);
-                              if(!var16.aClass94_3599.method1528(Objects.requireNonNull(var20).aClass94_232)) {
+                              if(!var16.aClass94_3599.equalsString(Objects.requireNonNull(var20).aClass94_232)) {
                                  var20.aClass94_232 = var16.aClass94_3599;
                                  Class20.method909(107, var20);
                               }
@@ -769,12 +769,12 @@ final class Class3_Sub13_Sub13 extends Class3_Sub13 {
 
                                        if(Class15.aClass64_351 != null && Class15.aClass64_351.anInt978 == 1) {
                                           if(null != Class15.aClass64_351.anObject974) {
-                                             Class99.method1596(Class3_Sub13_Sub24.aClass94_3295, (byte)126, RSString.aBoolean2154);
+                                             Class99.method1596(Class3_Sub13_Sub24.aClass94_3295, (byte)126, Unsorted.aBoolean2154);
                                           }
 
                                           Class3_Sub13_Sub24.aClass94_3295 = null;
                                           Class15.aClass64_351 = null;
-                                          RSString.aBoolean2154 = false;
+                                          Unsorted.aBoolean2154 = false;
                                        }
 
                                        ++Class3_Sub13_Sub23_Sub1.anInt4032;

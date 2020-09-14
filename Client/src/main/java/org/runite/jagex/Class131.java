@@ -126,7 +126,7 @@ final class Class131 {
          Class3_Sub28_Sub14.password = var1;
          Class7.anInt2161 = var2;
          Class3_Sub28_Sub14.username = var0;
-         if(Class3_Sub28_Sub14.username.method1528(Class3_Sub28_Sub14.aClass94_3672) || Class3_Sub28_Sub14.password.method1528(Class3_Sub28_Sub14.aClass94_3672)) {
+         if(Class3_Sub28_Sub14.username.equalsString(Class3_Sub28_Sub14.aClass94_3672) || Class3_Sub28_Sub14.password.equalsString(Class3_Sub28_Sub14.aClass94_3672)) {
             Class158.anInt2005 = 3;
          } else if (CS2Script.anInt2451 == -1) {
             Class3_Sub2.anInt2246 = 0;

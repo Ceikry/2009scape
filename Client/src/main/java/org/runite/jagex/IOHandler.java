@@ -356,7 +356,7 @@ final class IOHandler implements Runnable {
                         Class166.anIntArray2068[Class113.anInt1552] = var8;
                         int var11 = (-64 + var0) / 128;
                         var10 = (var3 + -64) / 128;
-                        RSString.anIntArray2157[Class113.anInt1552] = 0;
+                        Unsorted.anIntArray2157[Class113.anInt1552] = 0;
                         Class102.aClass135Array2131[Class113.anInt1552] = null;
                         Class3_Sub13_Sub6.anIntArray3083[Class113.anInt1552] = var9 + (var10 << 16) + (var11 << 8);
                         if (var2 != 183921384) {

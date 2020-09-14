@@ -77,12 +77,12 @@ final class PacketParser {
                 if (0 == var1) {
                     return false;
                 } else {
-                    if (RSString.incomingOpcode == -1) {
+                    if (Unsorted.incomingOpcode == -1) {
                         --var1;
                         Class3_Sub15.aClass89_2429.readBytes(0, 1, GraphicDefinition.incomingBuffer.buffer);
                         GraphicDefinition.incomingBuffer.index = 0;
-                        RSString.incomingOpcode = GraphicDefinition.incomingBuffer.getOpcode();
-                        Class130.incomingPacketLength = Class75_Sub4.anIntArray2668[RSString.incomingOpcode];
+                        Unsorted.incomingOpcode = GraphicDefinition.incomingBuffer.getOpcode();
+                        Class130.incomingPacketLength = Class75_Sub4.anIntArray2668[Unsorted.incomingOpcode];
                     }
 
                     if (Class130.incomingPacketLength == -1) {
@@ -113,19 +113,19 @@ final class PacketParser {
                         Class3_Sub15.aClass89_2429.readBytes(0, Class130.incomingPacketLength, GraphicDefinition.incomingBuffer.buffer);
                         Class24.anInt469 = Class7.anInt2166;
                         Class7.anInt2166 = Class3_Sub29.anInt2582;
-                        Class3_Sub29.anInt2582 = RSString.incomingOpcode;
+                        Class3_Sub29.anInt2582 = Unsorted.incomingOpcode;
                         Class3_Sub28_Sub16.anInt3699 = 0;
                         int nodeModelId;
-                        if (60 == RSString.incomingOpcode) {
+                        if (60 == Unsorted.incomingOpcode) {
                             nodeModelId = GraphicDefinition.incomingBuffer.getShortA((byte) -83 + 188);
                             byte var69 = GraphicDefinition.incomingBuffer.method763((byte) 100);
                             Class3_Sub13_Sub23.method281(var69, nodeModelId);
-                            RSString.incomingOpcode = -1;
+                            Unsorted.incomingOpcode = -1;
                             return true;
                         } else {
                             int counter;
                             RSString playerName;
-                            if (RSString.incomingOpcode == 115) {
+                            if (Unsorted.incomingOpcode == 115) {
                                 nodeModelId = GraphicDefinition.incomingBuffer.getShort();
                                 playerName = GraphicDefinition.incomingBuffer.getString();
                                 Object[] var71 = new Object[playerName.length(-92) - -1];
@@ -143,14 +143,14 @@ final class PacketParser {
                                 var66.arguments = var71;
                                 Class43.method1065(var66);
 
-                                RSString.incomingOpcode = -1;
+                                Unsorted.incomingOpcode = -1;
                                 return true;
                             } else {
                                 long nameAsLong;
                                 boolean isIgnored;
                                 int var30;
                                 RSString var41;
-                                if (RSString.incomingOpcode == 70) {
+                                if (Unsorted.incomingOpcode == 70) {
                                     RSString message = GraphicDefinition.incomingBuffer.getString();
                                     if (message.endsWith(TextCore.HasTradeRequest)) {
                                         playerName = message.method1557(message.indexOf(Class155.char_colon, 65), 0, 0);
@@ -276,12 +276,12 @@ final class PacketParser {
                                         Class3_Sub30_Sub1.addChatMessage(Class3_Sub28_Sub14.aClass94_3672, 0, message, (byte) -83 + 82);
                                     }
 
-                                    RSString.incomingOpcode = -1;
+                                    Unsorted.incomingOpcode = -1;
                                     return true;
                                 } else {
                                     int var19;
                                     RSString var58;
-                                    if (RSString.incomingOpcode == 123) {
+                                    if (Unsorted.incomingOpcode == 123) {
                                         nodeModelId = GraphicDefinition.incomingBuffer.getLEShort(-69);
                                         var19 = GraphicDefinition.incomingBuffer.getShortA(-126);
                                         var58 = GraphicDefinition.incomingBuffer.getString();
@@ -289,33 +289,33 @@ final class PacketParser {
                                         Class3_Sub13_Sub27.method295(var58, nodeModelId);
 
 
-                                        RSString.incomingOpcode = -1;
+                                        Unsorted.incomingOpcode = -1;
                                         return true;
-                                    } else if (RSString.incomingOpcode == 230) {
+                                    } else if (Unsorted.incomingOpcode == 230) {
                                         Class107.currentChunkY = GraphicDefinition.incomingBuffer.getByteA((byte) -88);
                                         Class65.currentChunkX = GraphicDefinition.incomingBuffer.getByteS();
 
                                         while (GraphicDefinition.incomingBuffer.index < Class130.incomingPacketLength) {
-                                            RSString.incomingOpcode = GraphicDefinition.incomingBuffer.getByteB();
+                                            Unsorted.incomingOpcode = GraphicDefinition.incomingBuffer.getByteB();
                                             Class39.parseChunkPacket((byte) -82);
                                         }
 
-                                        RSString.incomingOpcode = -1;
+                                        Unsorted.incomingOpcode = -1;
                                         return true;
-                                    } else if (153 == RSString.incomingOpcode) {
-                                        RSString.incomingOpcode = -1;
+                                    } else if (153 == Unsorted.incomingOpcode) {
+                                        Unsorted.incomingOpcode = -1;
                                         Class65.anInt987 = 0;
                                         return true;
                                     } else {
                                         int modelId;
-                                        if (RSString.incomingOpcode == 220) {
+                                        if (Unsorted.incomingOpcode == 220) {
                                             nodeModelId = GraphicDefinition.incomingBuffer.getIntB((byte) -59);
                                             var19 = GraphicDefinition.incomingBuffer.getLEShort(-75);
                                             modelId = GraphicDefinition.incomingBuffer.getShort();
                                             Class146.updateInterfacePacketCounter(modelId);
                                             Class3_Sub13_Sub33.method327(var19, nodeModelId);
 
-                                            RSString.incomingOpcode = -1;
+                                            Unsorted.incomingOpcode = -1;
                                             return true;
                                         } else {
                                             long var2;
@@ -323,7 +323,7 @@ final class PacketParser {
                                             int var11;
                                             long var29;
                                             long var36;
-                                            if (81 == RSString.incomingOpcode) {
+                                            if (81 == Unsorted.incomingOpcode) {
                                                 var2 = GraphicDefinition.incomingBuffer.getLong(-120);
                                                 GraphicDefinition.incomingBuffer.getByte();
                                                 nameAsLong = GraphicDefinition.incomingBuffer.getLong((byte) -83 ^ 54);
@@ -371,18 +371,18 @@ final class PacketParser {
                                                     }
                                                 }
 
-                                                RSString.incomingOpcode = -1;
+                                                Unsorted.incomingOpcode = -1;
                                                 return true;
                                             } else {
                                                 int var6;
                                                 int chatIcon;
                                                 boolean var32;
-                                                if (RSString.incomingOpcode == 55) {
+                                                if (Unsorted.incomingOpcode == 55) {
                                                     Class167.anInt2087 = Class3_Sub13_Sub17.anInt3213;
                                                     var2 = GraphicDefinition.incomingBuffer.getLong(-110);
                                                     if (var2 == 0) {
                                                         Class161.aClass94_2035 = null;
-                                                        RSString.incomingOpcode = -1;
+                                                        Unsorted.incomingOpcode = -1;
                                                         RSInterface.aClass94_251 = null;
                                                         aClass3_Sub19Array3694 = null;
                                                         Node.clanSize = 0;
@@ -431,36 +431,36 @@ final class PacketParser {
 
                                                             aClass3_Sub19Array3694 = var7;
                                                         }
-                                                        RSString.incomingOpcode = -1;
+                                                        Unsorted.incomingOpcode = -1;
                                                         return true;
                                                     }
-                                                } else if (RSString.incomingOpcode == 164) {
+                                                } else if (Unsorted.incomingOpcode == 164) {
                                                     nodeModelId = GraphicDefinition.incomingBuffer.getIntA(-1);
                                                     Class136.aClass64_1778 = Class38.aClass87_665.method1449((byte) -83 ^ -82, nodeModelId);
-                                                    RSString.incomingOpcode = -1;
+                                                    Unsorted.incomingOpcode = -1;
                                                     return true;
-                                                } else if (RSString.incomingOpcode == 225) {
+                                                } else if (Unsorted.incomingOpcode == 225) {
                                                     Class163_Sub3.renderPlayers();
-                                                    RSString.incomingOpcode = -1;
+                                                    Unsorted.incomingOpcode = -1;
                                                     return true;
-                                                } else if (RSString.incomingOpcode == 48) {
+                                                } else if (Unsorted.incomingOpcode == 48) {
                                                     nodeModelId = GraphicDefinition.incomingBuffer.getShort();
                                                     playerName = GraphicDefinition.incomingBuffer.getString();
                                                     modelId = GraphicDefinition.incomingBuffer.getLEShortA((byte) -115);
                                                     Class146.updateInterfacePacketCounter(nodeModelId);
                                                     Class3_Sub13_Sub27.method295(playerName, modelId);
 
-                                                    RSString.incomingOpcode = -1;
+                                                    Unsorted.incomingOpcode = -1;
                                                     return true;
-                                                } else if (232 == RSString.incomingOpcode) {
+                                                } else if (232 == Unsorted.incomingOpcode) {
                                                     Class3_Sub13_Sub8.anInt3101 = GraphicDefinition.incomingBuffer.getByteB();
                                                     Class24.anInt467 = GraphicDefinition.incomingBuffer.getByteB();
                                                     Class45.anInt734 = GraphicDefinition.incomingBuffer.getByteB();
-                                                    RSString.incomingOpcode = -1;
+                                                    Unsorted.incomingOpcode = -1;
                                                     return true;
                                                 } else {
                                                     RSString var56;
-                                                    if (RSString.incomingOpcode == 44) {
+                                                    if (Unsorted.incomingOpcode == 44) {
                                                         nodeModelId = GraphicDefinition.incomingBuffer.getLEShortA((byte) -88);
                                                         if (nodeModelId == '\uffff') {
                                                             nodeModelId = -1;
@@ -479,24 +479,24 @@ final class PacketParser {
                                                             Class1.aBooleanArray54[modelId + -1] = var19 == 0;
                                                         }
 
-                                                        RSString.incomingOpcode = -1;
+                                                        Unsorted.incomingOpcode = -1;
                                                         return true;
-                                                    } else if (RSString.incomingOpcode == 226) {
+                                                    } else if (Unsorted.incomingOpcode == 226) {
                                                         nodeModelId = GraphicDefinition.incomingBuffer.getInt();
                                                         var19 = GraphicDefinition.incomingBuffer.getShortA(-112);
                                                         Class3_Sub13_Sub23.method281(nodeModelId, var19);
-                                                        RSString.incomingOpcode = -1;
+                                                        Unsorted.incomingOpcode = -1;
                                                         return true;
-                                                    } else if (RSString.incomingOpcode == 21) {
+                                                    } else if (Unsorted.incomingOpcode == 21) {
                                                         nodeModelId = GraphicDefinition.incomingBuffer.getByteC();
                                                         var19 = GraphicDefinition.incomingBuffer.getShort();
                                                         modelId = GraphicDefinition.incomingBuffer.getLEInt((byte) -83 ^ 19);
                                                         Class146.updateInterfacePacketCounter(var19);
                                                         Class3_Sub13_Sub19.method260(modelId, nodeModelId);
 
-                                                        RSString.incomingOpcode = -1;
+                                                        Unsorted.incomingOpcode = -1;
                                                         return true;
-                                                    } else if (RSString.incomingOpcode == 145) {
+                                                    } else if (Unsorted.incomingOpcode == 145) {
                                                         nodeModelId = GraphicDefinition.incomingBuffer.getLEShortA((byte) -110);
                                                         var19 = GraphicDefinition.incomingBuffer.getByteA((byte) -101);
                                                         modelId = GraphicDefinition.incomingBuffer.getLEShortA((byte) -120);
@@ -513,35 +513,35 @@ final class PacketParser {
                                                             Class3_Sub28_Sub14.aBooleanArray3674[counter] = true;
                                                         }
 
-                                                        RSString.incomingOpcode = -1;
+                                                        Unsorted.incomingOpcode = -1;
                                                         return true;
-                                                    } else if (RSString.incomingOpcode == 69) {
+                                                    } else if (Unsorted.incomingOpcode == 69) {
                                                         nodeModelId = GraphicDefinition.incomingBuffer.getLEShortA((byte) -113);
                                                         var19 = GraphicDefinition.incomingBuffer.getInt();
                                                         modelId = GraphicDefinition.incomingBuffer.getShortA(-107);
                                                         Class146.updateInterfacePacketCounter(nodeModelId);
                                                         Class3_Sub13_Sub18.method255(modelId, var19, 1);
 
-                                                        RSString.incomingOpcode = -1;
+                                                        Unsorted.incomingOpcode = -1;
                                                         return true;
-                                                    } else if (141 == RSString.incomingOpcode) {
+                                                    } else if (141 == Unsorted.incomingOpcode) {
                                                         var2 = GraphicDefinition.incomingBuffer.getLong(-125);
                                                         modelId = GraphicDefinition.incomingBuffer.getShort();
                                                         var56 = Class3_Sub29.method733(modelId).method555(GraphicDefinition.incomingBuffer);
                                                         Class3_Sub28_Sub12.sendGameMessage(modelId, 19, var56, null, Objects.requireNonNull(Class41.method1052(var2)).method1545());
-                                                        RSString.incomingOpcode = -1;
+                                                        Unsorted.incomingOpcode = -1;
                                                         return true;
-                                                    } else if (RSString.incomingOpcode == 169) {
+                                                    } else if (Unsorted.incomingOpcode == 169) {
                                                         Class162.method2204(GraphicDefinition.incomingBuffer);
-                                                        RSString.incomingOpcode = -1;
+                                                        Unsorted.incomingOpcode = -1;
                                                         return true;
-                                                    } else if (89 == RSString.incomingOpcode) {
+                                                    } else if (89 == Unsorted.incomingOpcode) {
                                                         Class3_Sub13_Sub2.method176(-117);
                                                         Class3_Sub30_Sub1.method819();
                                                         Class36.anInt641 += 32;
-                                                        RSString.incomingOpcode = -1;
+                                                        Unsorted.incomingOpcode = -1;
                                                         return true;
-                                                    } else if (RSString.incomingOpcode == 125) {//camera rotation
+                                                    } else if (Unsorted.incomingOpcode == 125) {//camera rotation
                                                         nodeModelId = GraphicDefinition.incomingBuffer.getShort();
                                                         var19 = GraphicDefinition.incomingBuffer.getByteB();
                                                         modelId = GraphicDefinition.incomingBuffer.getByteB();
@@ -551,21 +551,21 @@ final class PacketParser {
                                                         Class146.updateInterfacePacketCounter(nodeModelId);
                                                         Class164_Sub1.method2238(counter, modelId, var6, var19, var30);
 
-                                                        RSString.incomingOpcode = -1;
+                                                        Unsorted.incomingOpcode = -1;
                                                         return true;
-                                                    } else if (RSString.incomingOpcode == 36) {
+                                                    } else if (Unsorted.incomingOpcode == 36) {
                                                         nodeModelId = GraphicDefinition.incomingBuffer.getIntB((byte) 122);
                                                         var19 = GraphicDefinition.incomingBuffer.getLEShort();
                                                         modelId = GraphicDefinition.incomingBuffer.getShortA(114);
                                                         Class146.updateInterfacePacketCounter(modelId);
                                                         Class131.method1790(nodeModelId, var19);
 
-                                                        RSString.incomingOpcode = -1;
+                                                        Unsorted.incomingOpcode = -1;
                                                         return true;
                                                     } else {
                                                         Class3_Sub1 var38;
                                                         Class3_Sub1 var47;
-                                                        if (RSString.incomingOpcode == 9) {
+                                                        if (Unsorted.incomingOpcode == 9) {
                                                             nodeModelId = GraphicDefinition.incomingBuffer.getLEShortA((byte) -97);
                                                             var19 = GraphicDefinition.incomingBuffer.getLEInt(-101);
                                                             modelId = GraphicDefinition.incomingBuffer.getShortA(-105);
@@ -595,11 +595,11 @@ final class PacketParser {
                                                                 Class124.aClass130_1659.method1779(var38, var36);
                                                             }
 
-                                                            RSString.incomingOpcode = -1;
+                                                            Unsorted.incomingOpcode = -1;
                                                             return true;
                                                         } else {
                                                             int var33;
-                                                            if (RSString.incomingOpcode == 56) {
+                                                            if (Unsorted.incomingOpcode == 56) {
                                                                 nodeModelId = GraphicDefinition.incomingBuffer.getShort();
                                                                 var19 = GraphicDefinition.incomingBuffer.getLEShort((byte) -83 + -8);
                                                                 modelId = GraphicDefinition.incomingBuffer.getIntA(-1);
@@ -688,9 +688,9 @@ final class PacketParser {
                                                                     }
                                                                 }
 
-                                                                RSString.incomingOpcode = -1;
+                                                                Unsorted.incomingOpcode = -1;
                                                                 return true;
-                                                            } else if (RSString.incomingOpcode == 207) {
+                                                            } else if (Unsorted.incomingOpcode == 207) {
                                                                 nodeModelId = GraphicDefinition.incomingBuffer.getIntB((byte) -87);
                                                                 var19 = GraphicDefinition.incomingBuffer.getShortA((byte) -83 + 92);
                                                                 modelId = GraphicDefinition.incomingBuffer.getShort();
@@ -698,9 +698,9 @@ final class PacketParser {
                                                                 Class146.updateInterfacePacketCounter(var19);
                                                                 Class114.method1708(counter + (modelId << 16), nodeModelId);
 
-                                                                RSString.incomingOpcode = -1;
+                                                                Unsorted.incomingOpcode = -1;
                                                                 return true;
-                                                            } else if (RSString.incomingOpcode == 38) {
+                                                            } else if (Unsorted.incomingOpcode == 38) {
                                                                 Class3_Sub30_Sub1.method819();
                                                                 nodeModelId = GraphicDefinition.incomingBuffer.getByteA((byte) -111);
                                                                 var19 = GraphicDefinition.incomingBuffer.getIntA(-1);
@@ -716,25 +716,25 @@ final class PacketParser {
                                                                 }
 
                                                                 Class3_Sub28_Sub19.anIntArray3780[Class69.bitwiseAnd(31, Class49.anInt815++)] = modelId;
-                                                                RSString.incomingOpcode = -1;
+                                                                Unsorted.incomingOpcode = -1;
                                                                 return true;
-                                                            } else if (RSString.incomingOpcode == 104 ||
-                                                                    121 == RSString.incomingOpcode ||
-                                                                    RSString.incomingOpcode == 97 ||
-                                                                    RSString.incomingOpcode == 14 ||
-                                                                    RSString.incomingOpcode == 202 ||
-                                                                    RSString.incomingOpcode == 135 ||
-                                                                    RSString.incomingOpcode == 17 ||
-                                                                    RSString.incomingOpcode == 16 ||
-                                                                    RSString.incomingOpcode == 240 ||
-                                                                    RSString.incomingOpcode == 33 ||
-                                                                    RSString.incomingOpcode == 20 ||
-                                                                    195 == RSString.incomingOpcode ||
-                                                                    179 == RSString.incomingOpcode) {
+                                                            } else if (Unsorted.incomingOpcode == 104 ||
+                                                                    121 == Unsorted.incomingOpcode ||
+                                                                    Unsorted.incomingOpcode == 97 ||
+                                                                    Unsorted.incomingOpcode == 14 ||
+                                                                    Unsorted.incomingOpcode == 202 ||
+                                                                    Unsorted.incomingOpcode == 135 ||
+                                                                    Unsorted.incomingOpcode == 17 ||
+                                                                    Unsorted.incomingOpcode == 16 ||
+                                                                    Unsorted.incomingOpcode == 240 ||
+                                                                    Unsorted.incomingOpcode == 33 ||
+                                                                    Unsorted.incomingOpcode == 20 ||
+                                                                    195 == Unsorted.incomingOpcode ||
+                                                                    179 == Unsorted.incomingOpcode) {
                                                                         Class39.parseChunkPacket((byte) -99);
-                                                                        RSString.incomingOpcode = -1;
+                                                                        Unsorted.incomingOpcode = -1;
                                                                         return true;
-                                                                    } else if (RSString.incomingOpcode == 149) {
+                                                                    } else if (Unsorted.incomingOpcode == 149) {
                                                                 nodeModelId = GraphicDefinition.incomingBuffer.getShort();
                                                                 var19 = GraphicDefinition.incomingBuffer.getInt();
                                                                 Class146.updateInterfacePacketCounter(nodeModelId);
@@ -748,9 +748,9 @@ final class PacketParser {
                                                                     Class3_Sub13_Sub7.aClass11_3087 = null;
                                                                 }
 
-                                                                RSString.incomingOpcode = -1;
+                                                                Unsorted.incomingOpcode = -1;
                                                                 return true;
-                                                            } else if (RSString.incomingOpcode == 187) {
+                                                            } else if (Unsorted.incomingOpcode == 187) {
                                                                 //set camera
                                                                 nodeModelId = GraphicDefinition.incomingBuffer.getLEShort(-107);
                                                                 var19 = GraphicDefinition.incomingBuffer.getShort();
@@ -765,9 +765,9 @@ final class PacketParser {
 
                                                                 Class47.method1098((byte) -117);
 
-                                                                RSString.incomingOpcode = -1;
+                                                                Unsorted.incomingOpcode = -1;
                                                                 return true;
-                                                            } else if (RSString.incomingOpcode == 132) {
+                                                            } else if (Unsorted.incomingOpcode == 132) {
                                                                 nodeModelId = GraphicDefinition.incomingBuffer.getShort();
                                                                 var19 = GraphicDefinition.incomingBuffer.getShortA(31);
                                                                 modelId = GraphicDefinition.incomingBuffer.getLEShortA((byte) -117);
@@ -776,9 +776,9 @@ final class PacketParser {
                                                                 Class146.updateInterfacePacketCounter(var19);
                                                                 CacheIndex.method2143((byte) -124, modelId, var6, counter, nodeModelId);
 
-                                                                RSString.incomingOpcode = -1;
+                                                                Unsorted.incomingOpcode = -1;
                                                                 return true;
-                                                            } else if (112 == RSString.incomingOpcode) {
+                                                            } else if (112 == Unsorted.incomingOpcode) {
                                                                 Class65.currentChunkX = GraphicDefinition.incomingBuffer.getByteB();
                                                                 Class107.currentChunkY = GraphicDefinition.incomingBuffer.getByteC();
 
@@ -797,9 +797,9 @@ final class PacketParser {
                                                                     }
                                                                 }
 
-                                                                RSString.incomingOpcode = -1;
+                                                                Unsorted.incomingOpcode = -1;
                                                                 return true;
-                                                            } else if (RSString.incomingOpcode == 144) {
+                                                            } else if (Unsorted.incomingOpcode == 144) {
                                                                 nodeModelId = GraphicDefinition.incomingBuffer.getIntB((byte) 72);
                                                                 RSInterface var65 = Class7.getRSInterface(nodeModelId);
 
@@ -809,9 +809,9 @@ final class PacketParser {
                                                                 }
 
                                                                 Class20.method909(123, var65);
-                                                                RSString.incomingOpcode = -1;
+                                                                Unsorted.incomingOpcode = -1;
                                                                 return true;
-                                                            } else if (RSString.incomingOpcode == 130) {
+                                                            } else if (Unsorted.incomingOpcode == 130) {
                                                                 nodeModelId = GraphicDefinition.incomingBuffer.getLEInt(-104);
                                                                 var19 = GraphicDefinition.incomingBuffer.getLEShortA((byte) -125);
                                                                 modelId = GraphicDefinition.incomingBuffer.getShortA((byte) -83 ^ -2);
@@ -822,25 +822,25 @@ final class PacketParser {
                                                                 Class146.updateInterfacePacketCounter(var19);
                                                                 Class3_Sub13_Sub18.method256(-1, 1, nodeModelId, (byte) -109, modelId);
 
-                                                                RSString.incomingOpcode = -1;
+                                                                Unsorted.incomingOpcode = -1;
                                                                 return true;
-                                                            } else if (RSString.incomingOpcode == 192) {
+                                                            } else if (Unsorted.incomingOpcode == 192) {
                                                                 Class161.anInt2028 = GraphicDefinition.incomingBuffer.getByteB();
-                                                                RSString.incomingOpcode = -1;
+                                                                Unsorted.incomingOpcode = -1;
                                                                 return true;
-                                                            } else if (RSString.incomingOpcode == 13) {
+                                                            } else if (Unsorted.incomingOpcode == 13) {
                                                                 nodeModelId = GraphicDefinition.incomingBuffer.getByteS();
                                                                 var19 = GraphicDefinition.incomingBuffer.getByteA((byte) 108);
                                                                 modelId = GraphicDefinition.incomingBuffer.getByteB();
                                                                 WorldListCountry.localPlane = var19 >> 1;
                                                                 Class102.player.method1981(nodeModelId, (var19 & 1) == 1, modelId);
-                                                                RSString.incomingOpcode = -1;
+                                                                Unsorted.incomingOpcode = -1;
                                                                 return true;
                                                             } else {
                                                                 int var12;
                                                                 RSString var57;
                                                                 RSString var64;
-                                                                if (RSString.incomingOpcode == 62) {
+                                                                if (Unsorted.incomingOpcode == 62) {
                                                                     var2 = GraphicDefinition.incomingBuffer.getLong(-127);
                                                                     modelId = GraphicDefinition.incomingBuffer.getShort();
                                                                     counter = GraphicDefinition.incomingBuffer.getByteB();
@@ -925,18 +925,18 @@ final class PacketParser {
                                                                         }
                                                                     }
 
-                                                                    RSString.incomingOpcode = -1;
+                                                                    Unsorted.incomingOpcode = -1;
                                                                     return true;
-                                                                } else if (RSString.incomingOpcode == 160) {
+                                                                } else if (Unsorted.incomingOpcode == 160) {
                                                                     if (0 == Class130.incomingPacketLength) {
                                                                         Class3_Sub13_Sub28.aClass94_3353 = TextCore.HasWalkHere;
                                                                     } else {
                                                                         Class3_Sub13_Sub28.aClass94_3353 = GraphicDefinition.incomingBuffer.getString();
                                                                     }
 
-                                                                    RSString.incomingOpcode = -1;
+                                                                    Unsorted.incomingOpcode = -1;
                                                                     return true;
-                                                                } else if (128 == RSString.incomingOpcode) {
+                                                                } else if (128 == Unsorted.incomingOpcode) {
                                                                     for (nodeModelId = 0; nodeModelId < ItemDefinition.ram.length; ++nodeModelId) {
                                                                         if (ItemDefinition.ram[nodeModelId] != Class57.anIntArray898[nodeModelId]) {
                                                                             ItemDefinition.ram[nodeModelId] = Class57.anIntArray898[nodeModelId];
@@ -945,9 +945,9 @@ final class PacketParser {
                                                                         }
                                                                     }
 
-                                                                    RSString.incomingOpcode = -1;
+                                                                    Unsorted.incomingOpcode = -1;
                                                                     return true;
-                                                                } else if (RSString.incomingOpcode == 154) {//camera position
+                                                                } else if (Unsorted.incomingOpcode == 154) {//camera position
                                                                     nodeModelId = GraphicDefinition.incomingBuffer.getShort();
                                                                     var19 = GraphicDefinition.incomingBuffer.getByteB();
                                                                     modelId = GraphicDefinition.incomingBuffer.getByteB();
@@ -957,9 +957,9 @@ final class PacketParser {
                                                                     Class146.updateInterfacePacketCounter(nodeModelId);
                                                                     Class3_Sub20.method390(true, var6, counter, var30, (byte) -124, modelId, var19);
 
-                                                                    RSString.incomingOpcode = -1;
+                                                                    Unsorted.incomingOpcode = -1;
                                                                     return true;
-                                                                } else if (247 == RSString.incomingOpcode) {
+                                                                } else if (247 == Unsorted.incomingOpcode) {
                                                                     var2 = GraphicDefinition.incomingBuffer.getLong(-115);
                                                                     nameAsLong = GraphicDefinition.incomingBuffer.getShort();
                                                                     var29 = GraphicDefinition.incomingBuffer.getTriByte((byte) 77);
@@ -1005,11 +1005,11 @@ final class PacketParser {
                                                                         }
                                                                     }
 
-                                                                    RSString.incomingOpcode = -1;
+                                                                    Unsorted.incomingOpcode = -1;
                                                                     return true;
                                                                 } else {
                                                                     Class3_Sub31 var26;
-                                                                    if (RSString.incomingOpcode == 176) {
+                                                                    if (Unsorted.incomingOpcode == 176) {
                                                                         nodeModelId = GraphicDefinition.incomingBuffer.getIntA((byte) -83 ^ 82);
                                                                         var19 = GraphicDefinition.incomingBuffer.getShortA(19);
                                                                         modelId = GraphicDefinition.incomingBuffer.getIntA(-1);
@@ -1040,9 +1040,9 @@ final class PacketParser {
                                                                             Class3_Sub8.method124(28, 1, Class3_Sub28_Sub12.anInt3655);
                                                                         }
 
-                                                                        RSString.incomingOpcode = -1;
+                                                                        Unsorted.incomingOpcode = -1;
                                                                         return true;
-                                                                    } else if (RSString.incomingOpcode == 27) {
+                                                                    } else if (Unsorted.incomingOpcode == 27) {
                                                                         nodeModelId = GraphicDefinition.incomingBuffer.getShort();
                                                                         var19 = GraphicDefinition.incomingBuffer.getByteB();
                                                                         modelId = GraphicDefinition.incomingBuffer.getByteB();
@@ -1056,55 +1056,55 @@ final class PacketParser {
                                                                         Class3_Sub13_Sub29.anIntArray3359[var19] = var6;
                                                                         Class163_Sub1_Sub1.anIntArray4009[var19] = var30;
 
-                                                                        RSString.incomingOpcode = -1;
+                                                                        Unsorted.incomingOpcode = -1;
                                                                         return true;
-                                                                    } else if (RSString.incomingOpcode == 2) {
+                                                                    } else if (Unsorted.incomingOpcode == 2) {
                                                                         nodeModelId = GraphicDefinition.incomingBuffer.getIntA(-1);
                                                                         var19 = GraphicDefinition.incomingBuffer.getShortA(-114);
                                                                         modelId = GraphicDefinition.incomingBuffer.getLEShortA((byte) -119);
                                                                         Class146.updateInterfacePacketCounter(var19);
                                                                         Class79.method1385(modelId, nodeModelId);
 
-                                                                        RSString.incomingOpcode = -1;
+                                                                        Unsorted.incomingOpcode = -1;
                                                                         return true;
-                                                                    } else if (RSString.incomingOpcode == 85) {
+                                                                    } else if (Unsorted.incomingOpcode == 85) {
                                                                         Class38_Sub1.anInt2617 = GraphicDefinition.incomingBuffer.getShort() * 30;
-                                                                        RSString.incomingOpcode = -1;
+                                                                        Unsorted.incomingOpcode = -1;
                                                                         Class140_Sub6.anInt2905 = Class3_Sub13_Sub17.anInt3213;
                                                                         return true;
-                                                                    } else if (RSString.incomingOpcode == 114) {
+                                                                    } else if (Unsorted.incomingOpcode == 114) {
                                                                         Class3_Sub13_Sub29.method305(Class38.aClass87_665, GraphicDefinition.incomingBuffer, Class130.incomingPacketLength);
-                                                                        RSString.incomingOpcode = -1;
+                                                                        Unsorted.incomingOpcode = -1;
                                                                         return true;
-                                                                    } else if (65 == RSString.incomingOpcode) {
+                                                                    } else if (65 == Unsorted.incomingOpcode) {
                                                                         nodeModelId = GraphicDefinition.incomingBuffer.getLEShort((byte) -83 ^ 13);
                                                                         var19 = GraphicDefinition.incomingBuffer.getByteC();
                                                                         modelId = GraphicDefinition.incomingBuffer.getLEShortA((byte) -100);
                                                                         Class146.updateInterfacePacketCounter(nodeModelId);
                                                                         Class3_Sub13_Sub18.method255(modelId, var19, (byte) -83 ^ -84);
 
-                                                                        RSString.incomingOpcode = -1;
+                                                                        Unsorted.incomingOpcode = -1;
                                                                         return true;
-                                                                    } else if (RSString.incomingOpcode == 234) {
+                                                                    } else if (Unsorted.incomingOpcode == 234) {
                                                                         Class3_Sub30_Sub1.method819();
                                                                         Class9.anInt136 = GraphicDefinition.incomingBuffer.getByteB();
                                                                         Class140_Sub6.anInt2905 = Class3_Sub13_Sub17.anInt3213;
-                                                                        RSString.incomingOpcode = -1;
+                                                                        Unsorted.incomingOpcode = -1;
                                                                         return true;
-                                                                    } else if (RSString.incomingOpcode == 209) {
+                                                                    } else if (Unsorted.incomingOpcode == 209) {
                                                                         if (-1 != Class3_Sub28_Sub12.anInt3655) {
                                                                             Class3_Sub8.method124(48, 0, Class3_Sub28_Sub12.anInt3655);
                                                                         }
 
-                                                                        RSString.incomingOpcode = -1;
+                                                                        Unsorted.incomingOpcode = -1;
                                                                         return true;
-                                                                    } else if (RSString.incomingOpcode == 191) {
+                                                                    } else if (Unsorted.incomingOpcode == 191) {
                                                                         nodeModelId = GraphicDefinition.incomingBuffer.getLEShort(-59);
                                                                         Class3_Sub28_Sub1.method532(nodeModelId);
                                                                         Class3_Sub28_Sub4.anIntArray3565[Class69.bitwiseAnd(31, ReferenceTable.anInt944++)] = Class69.bitwiseAnd(nodeModelId, 32767);
-                                                                        RSString.incomingOpcode = -1;
+                                                                        Unsorted.incomingOpcode = -1;
                                                                         return true;
-                                                                    } else if (RSString.incomingOpcode == 102) {
+                                                                    } else if (Unsorted.incomingOpcode == 102) {
                                                                         nodeModelId = GraphicDefinition.incomingBuffer.getLEShort(-116);
                                                                         var19 = GraphicDefinition.incomingBuffer.getByteS();
                                                                         modelId = GraphicDefinition.incomingBuffer.getShort();
@@ -1113,21 +1113,21 @@ final class PacketParser {
                                                                             Class130.method1772(var19, modelId, 39, var39);
                                                                         }
 
-                                                                        RSString.incomingOpcode = -1;
+                                                                        Unsorted.incomingOpcode = -1;
                                                                         return true;
-                                                                    } else if (RSString.incomingOpcode == 159) {
+                                                                    } else if (Unsorted.incomingOpcode == 159) {
                                                                         Class3_Sub30_Sub1.method819();
                                                                         MouseListeningClass.anInt1925 = GraphicDefinition.incomingBuffer.getShort((byte) 59);
                                                                         Class140_Sub6.anInt2905 = Class3_Sub13_Sub17.anInt3213;
-                                                                        RSString.incomingOpcode = -1;
+                                                                        Unsorted.incomingOpcode = -1;
                                                                         return true;
-                                                                    } else if (RSString.incomingOpcode == 71) {
+                                                                    } else if (Unsorted.incomingOpcode == 71) {
                                                                         var2 = GraphicDefinition.incomingBuffer.getLong((byte) -83 ^ 28);
                                                                         var58 = Class3_Sub28_Sub17.method686(Objects.requireNonNull(Class32.method992(GraphicDefinition.incomingBuffer).method1536(121)));
                                                                         Class3_Sub30_Sub1.addChatMessage(Objects.requireNonNull(Class41.method1052(var2)).method1545(), 6, var58, (byte) -83 ^ 82);
-                                                                        RSString.incomingOpcode = -1;
+                                                                        Unsorted.incomingOpcode = -1;
                                                                         return true;
-                                                                    } else if (RSString.incomingOpcode == 42) {
+                                                                    } else if (Unsorted.incomingOpcode == 42) {
                                                                         if (null != Class3_Sub13_Sub10.aFrame3121) {
                                                                             GameObject.graphicsSettings(false, Node.anInt2577, -1, -1);
                                                                         }
@@ -1139,13 +1139,13 @@ final class PacketParser {
                                                                             Class99.method1596(playerName, (byte) 127, true);
                                                                         } else {
                                                                             Class3_Sub13_Sub24.aClass94_3295 = playerName;
-                                                                            RSString.aBoolean2154 = true;
+                                                                            Unsorted.aBoolean2154 = true;
                                                                             Class15.aClass64_351 = Class38.aClass87_665.method1452(new String(playerName.method1568(), StandardCharsets.ISO_8859_1), true);
                                                                         }
 
-                                                                        RSString.incomingOpcode = -1;
+                                                                        Unsorted.incomingOpcode = -1;
                                                                         return true;
-                                                                    } else if (RSString.incomingOpcode == 111) {
+                                                                    } else if (Unsorted.incomingOpcode == 111) {
                                                                         nodeModelId = GraphicDefinition.incomingBuffer.getShortA(-123);
                                                                         var19 = GraphicDefinition.incomingBuffer.getIntB((byte) -45);
                                                                         modelId = GraphicDefinition.incomingBuffer.getLEShortA((byte) -109);
@@ -1154,15 +1154,15 @@ final class PacketParser {
                                                                         Class146.updateInterfacePacketCounter(nodeModelId);
                                                                         Class3_Sub13_Sub18.method256(modelId, 7, var19, (byte) -126, counter << 16 | var6);
 
-                                                                        RSString.incomingOpcode = -1;
+                                                                        Unsorted.incomingOpcode = -1;
                                                                         return true;
-                                                                    } else if (37 == RSString.incomingOpcode) {
+                                                                    } else if (37 == Unsorted.incomingOpcode) {
                                                                         nodeModelId = GraphicDefinition.incomingBuffer.getByteA((byte) 122);
                                                                         var19 = GraphicDefinition.incomingBuffer.getLEShort(-124);
                                                                         Class163.method2209((byte) -122, nodeModelId, var19);
-                                                                        RSString.incomingOpcode = -1;
+                                                                        Unsorted.incomingOpcode = -1;
                                                                         return true;
-                                                                    } else if (RSString.incomingOpcode == 155) {
+                                                                    } else if (Unsorted.incomingOpcode == 155) {
                                                                         nodeModelId = GraphicDefinition.incomingBuffer.getByteB();
                                                                         var19 = GraphicDefinition.incomingBuffer.getIntB((byte) -51);
                                                                         modelId = GraphicDefinition.incomingBuffer.getShortA((byte) -83 + 163);
@@ -1175,9 +1175,9 @@ final class PacketParser {
 
                                                                         Class21.method914(counter, var19, nodeModelId);
 
-                                                                        RSString.incomingOpcode = -1;
+                                                                        Unsorted.incomingOpcode = -1;
                                                                         return true;
-                                                                    } else if (RSString.incomingOpcode == 131) {
+                                                                    } else if (Unsorted.incomingOpcode == 131) {
                                                                         for (nodeModelId = 0; nodeModelId < Class3_Sub13_Sub22.players.length; ++nodeModelId) {
                                                                             if (Class3_Sub13_Sub22.players[nodeModelId] != null) {
                                                                                 Class3_Sub13_Sub22.players[nodeModelId].anInt2771 = -1;
@@ -1190,9 +1190,9 @@ final class PacketParser {
                                                                             }
                                                                         }
 
-                                                                        RSString.incomingOpcode = -1;
+                                                                        Unsorted.incomingOpcode = -1;
                                                                         return true;
-                                                                    } else if (RSString.incomingOpcode == 217) {
+                                                                    } else if (Unsorted.incomingOpcode == 217) {
                                                                         nodeModelId = GraphicDefinition.incomingBuffer.getByteB();
                                                                         Class96 var48 = new Class96();
                                                                         var19 = nodeModelId >> 6;
@@ -1242,9 +1242,9 @@ final class PacketParser {
                                                                             ClientErrorException.aClass96Array2114[var19] = var48;
                                                                         }
 
-                                                                        RSString.incomingOpcode = -1;
+                                                                        Unsorted.incomingOpcode = -1;
                                                                         return true;
-                                                                    } else if (126 == RSString.incomingOpcode) {
+                                                                    } else if (126 == Unsorted.incomingOpcode) {
                                                                         Class3_Sub28_Sub5.anInt3591 = Class130.incomingPacketLength / 8;
 
                                                                         for (nodeModelId = 0; Class3_Sub28_Sub5.anInt3591 > nodeModelId; ++nodeModelId) {
@@ -1253,13 +1253,13 @@ final class PacketParser {
                                                                         }
 
                                                                         Class110.anInt1472 = Class3_Sub13_Sub17.anInt3213;
-                                                                        RSString.incomingOpcode = -1;
+                                                                        Unsorted.incomingOpcode = -1;
                                                                         return true;
-                                                                    } else if (RSString.incomingOpcode == 32) {
+                                                                    } else if (Unsorted.incomingOpcode == 32) {
                                                                         Class3_Sub13_Sub14.renderNPCs(8169);
-                                                                        RSString.incomingOpcode = -1;
+                                                                        Unsorted.incomingOpcode = -1;
                                                                         return true;
-                                                                    } else if (RSString.incomingOpcode == 119) {
+                                                                    } else if (Unsorted.incomingOpcode == 119) {
                                                                         //Reposition child?
                                                                         nodeModelId = GraphicDefinition.incomingBuffer.getShortA(-125);
                                                                         var19 = GraphicDefinition.incomingBuffer.getLEInt(-48);
@@ -1268,9 +1268,9 @@ final class PacketParser {
                                                                         Class146.updateInterfacePacketCounter(nodeModelId);
                                                                         Class168.method2271(modelId, var19, counter);
 
-                                                                        RSString.incomingOpcode = -1;
+                                                                        Unsorted.incomingOpcode = -1;
                                                                         return true;
-                                                                    } else if (RSString.incomingOpcode == 235) {
+                                                                    } else if (Unsorted.incomingOpcode == 235) {
                                                                         nodeModelId = GraphicDefinition.incomingBuffer.getByteS();
                                                                         var19 = nodeModelId >> 2;
                                                                         modelId = 3 & nodeModelId;
@@ -1287,9 +1287,9 @@ final class PacketParser {
                                                                         clanChatIcon -= Class82.anInt1152;
                                                                         chatIcon = 3 & var30 >> 28;
                                                                         Class50.method1131(chatIcon, 110, modelId, var19, clanChatIcon, counter, var33, var6);
-                                                                        RSString.incomingOpcode = -1;
+                                                                        Unsorted.incomingOpcode = -1;
                                                                         return true;
-                                                                    } else if (RSString.incomingOpcode == 0) {
+                                                                    } else if (Unsorted.incomingOpcode == 0) {
                                                                         var2 = GraphicDefinition.incomingBuffer.getLong(-85);
                                                                         nameAsLong = GraphicDefinition.incomingBuffer.getShort();
                                                                         var29 = GraphicDefinition.incomingBuffer.getTriByte((byte) 93);
@@ -1336,9 +1336,9 @@ final class PacketParser {
                                                                             }
                                                                         }
 
-                                                                        RSString.incomingOpcode = -1;
+                                                                        Unsorted.incomingOpcode = -1;
                                                                         return true;
-                                                                    } else if (RSString.incomingOpcode == 54) {//cc messahe
+                                                                    } else if (Unsorted.incomingOpcode == 54) {//cc messahe
                                                                         var2 = GraphicDefinition.incomingBuffer.getLong(-122);
                                                                         GraphicDefinition.incomingBuffer.getByte();
                                                                         nameAsLong = GraphicDefinition.incomingBuffer.getLong(-124);
@@ -1390,13 +1390,13 @@ final class PacketParser {
                                                                             }
                                                                         }
 
-                                                                        RSString.incomingOpcode = -1;
+                                                                        Unsorted.incomingOpcode = -1;
                                                                         return true;
-                                                                    } else if (RSString.incomingOpcode == 214) {
+                                                                    } else if (Unsorted.incomingOpcode == 214) {
                                                                         Class39.updateSceneGraph(true);
-                                                                        RSString.incomingOpcode = -1;
+                                                                        Unsorted.incomingOpcode = -1;
                                                                         return true;
-                                                                    } else if (RSString.incomingOpcode == 172) {
+                                                                    } else if (Unsorted.incomingOpcode == 172) {
                                                                         nodeModelId = GraphicDefinition.incomingBuffer.getShort();
                                                                         var19 = GraphicDefinition.incomingBuffer.getByteB();
                                                                         if (nodeModelId == 65535) {
@@ -1405,9 +1405,9 @@ final class PacketParser {
 
                                                                         modelId = GraphicDefinition.incomingBuffer.getShort();
                                                                         Class3_Sub13_Sub6.method199(var19, nodeModelId, modelId);
-                                                                        RSString.incomingOpcode = -1;
+                                                                        Unsorted.incomingOpcode = -1;
                                                                         return true;
-                                                                    } else if (RSString.incomingOpcode == 66) {
+                                                                    } else if (Unsorted.incomingOpcode == 66) {
                                                                         nodeModelId = GraphicDefinition.incomingBuffer.getLEShortA((byte) -87);
                                                                         var19 = GraphicDefinition.incomingBuffer.getIntA(-1);
                                                                         Class146.updateInterfacePacketCounter(nodeModelId);
@@ -1418,26 +1418,26 @@ final class PacketParser {
 
                                                                         Class3_Sub13_Sub18.method256(-1, 3, var19, (byte) -110, modelId);
 
-                                                                        RSString.incomingOpcode = -1;
+                                                                        Unsorted.incomingOpcode = -1;
                                                                         return true;
-                                                                    } else if (RSString.incomingOpcode == 171) {
+                                                                    } else if (Unsorted.incomingOpcode == 171) {
                                                                         nodeModelId = GraphicDefinition.incomingBuffer.getIntB((byte) -55);
                                                                         playerName = GraphicDefinition.incomingBuffer.getString();
                                                                         modelId = GraphicDefinition.incomingBuffer.getShortA(103);
                                                                         Class146.updateInterfacePacketCounter(modelId);
                                                                         Class3_Sub28_Sub7.method566(playerName, nodeModelId);
 
-                                                                        RSString.incomingOpcode = -1;
+                                                                        Unsorted.incomingOpcode = -1;
                                                                         return true;
-                                                                    } else if (RSString.incomingOpcode == 84) {
+                                                                    } else if (Unsorted.incomingOpcode == 84) {
                                                                         nodeModelId = GraphicDefinition.incomingBuffer.getLEInt(-79);
                                                                         var19 = GraphicDefinition.incomingBuffer.getLEShortA((byte) -96);
                                                                         Class163.method2209((byte) -106, nodeModelId, var19);
-                                                                        RSString.incomingOpcode = -1;
+                                                                        Unsorted.incomingOpcode = -1;
                                                                         return true;
                                                                     } else {
                                                                         RSInterface var25;
-                                                                        if (RSString.incomingOpcode == 22) {
+                                                                        if (Unsorted.incomingOpcode == 22) {
                                                                             nodeModelId = GraphicDefinition.incomingBuffer.getInt();
                                                                             var19 = GraphicDefinition.incomingBuffer.getShort();
                                                                             if (nodeModelId < -70000) {
@@ -1473,20 +1473,20 @@ final class PacketParser {
 
                                                                             Class3_Sub30_Sub1.method819();
                                                                             Class3_Sub28_Sub4.anIntArray3565[Class69.bitwiseAnd(ReferenceTable.anInt944++, 31)] = Class69.bitwiseAnd(32767, var19);
-                                                                            RSString.incomingOpcode = -1;
+                                                                            Unsorted.incomingOpcode = -1;
                                                                             return true;
-                                                                        } else if (RSString.incomingOpcode == 24) {
+                                                                        } else if (Unsorted.incomingOpcode == 24) {
                                                                             nodeModelId = GraphicDefinition.incomingBuffer.getShort();
                                                                             Class146.updateInterfacePacketCounter(nodeModelId);
                                                                             Class3_Sub28_Sub5.method560();
 
-                                                                            RSString.incomingOpcode = -1;
+                                                                            Unsorted.incomingOpcode = -1;
                                                                             return true;
-                                                                        } else if (RSString.incomingOpcode == 86) {
+                                                                        } else if (Unsorted.incomingOpcode == 86) {
                                                                             Class167.method2269((byte) 46);
-                                                                            RSString.incomingOpcode = -1;
+                                                                            Unsorted.incomingOpcode = -1;
                                                                             return false;
-                                                                        } else if (116 == RSString.incomingOpcode) {
+                                                                        } else if (116 == Unsorted.incomingOpcode) {
                                                                             nodeModelId = GraphicDefinition.incomingBuffer.getByteB();
                                                                             if (GraphicDefinition.incomingBuffer.getByteB() == 0) {
                                                                                 Class3_Sub13_Sub33.aClass133Array3393[nodeModelId] = new Class133();
@@ -1495,10 +1495,10 @@ final class PacketParser {
                                                                                 Class3_Sub13_Sub33.aClass133Array3393[nodeModelId] = new Class133(GraphicDefinition.incomingBuffer);
                                                                             }
 
-                                                                            RSString.incomingOpcode = -1;
+                                                                            Unsorted.incomingOpcode = -1;
                                                                             Class121.anInt1642 = Class3_Sub13_Sub17.anInt3213;
                                                                             return true;
-                                                                        } else if (RSString.incomingOpcode == 73) {//npc model
+                                                                        } else if (Unsorted.incomingOpcode == 73) {//npc model
                                                                             nodeModelId = GraphicDefinition.incomingBuffer.getShortA(-121);
                                                                             var19 = GraphicDefinition.incomingBuffer.getLEInt(-105);
                                                                             if (nodeModelId == 65535) {
@@ -1509,13 +1509,13 @@ final class PacketParser {
                                                                             Class146.updateInterfacePacketCounter(modelId);
                                                                             Class3_Sub13_Sub18.method256(-1, 2, var19, (byte) -113, nodeModelId);
 
-                                                                            RSString.incomingOpcode = -1;
+                                                                            Unsorted.incomingOpcode = -1;
                                                                             return true;
-                                                                        } else if (RSString.incomingOpcode == 162) {
+                                                                        } else if (Unsorted.incomingOpcode == 162) {
                                                                             Class39.updateSceneGraph(false);
-                                                                            RSString.incomingOpcode = -1;
+                                                                            Unsorted.incomingOpcode = -1;
                                                                             return true;
-                                                                        } else if (165 == RSString.incomingOpcode) {
+                                                                        } else if (165 == Unsorted.incomingOpcode) {
                                                                             nodeModelId = GraphicDefinition.incomingBuffer.getLEShort(-95);
                                                                             var19 = GraphicDefinition.incomingBuffer.getLEShort(-72);
                                                                             if (var19 == '\uffff') {
@@ -1547,14 +1547,14 @@ final class PacketParser {
                                                                                 Class124.aClass130_1659.method1779(var38, var36);
                                                                             }
 
-                                                                            RSString.incomingOpcode = -1;
+                                                                            Unsorted.incomingOpcode = -1;
                                                                             return true;
-                                                                        } else if (RSString.incomingOpcode == 197) {
+                                                                        } else if (Unsorted.incomingOpcode == 197) {
                                                                             Class96.anInt1357 = GraphicDefinition.incomingBuffer.getByteB();
                                                                             Class110.anInt1472 = Class3_Sub13_Sub17.anInt3213;
-                                                                            RSString.incomingOpcode = -1;
+                                                                            Unsorted.incomingOpcode = -1;
                                                                             return true;
-                                                                        } else if (RSString.incomingOpcode == 196) {
+                                                                        } else if (Unsorted.incomingOpcode == 196) {
                                                                             var2 = GraphicDefinition.incomingBuffer.getLong(-93);
                                                                             modelId = GraphicDefinition.incomingBuffer.getShort();
                                                                             byte var28 = GraphicDefinition.incomingBuffer.getByte();
@@ -1562,7 +1562,7 @@ final class PacketParser {
 
                                                                             if (isIgnored) {
                                                                                 if (Node.clanSize == 0) {
-                                                                                    RSString.incomingOpcode = -1;
+                                                                                    Unsorted.incomingOpcode = -1;
                                                                                     return true;
                                                                                 }
 
@@ -1600,7 +1600,7 @@ final class PacketParser {
                                                                                         }
 
                                                                                         Class167.anInt2087 = Class3_Sub13_Sub17.anInt3213;
-                                                                                        RSString.incomingOpcode = -1;
+                                                                                        Unsorted.incomingOpcode = -1;
                                                                                         return true;
                                                                                     }
 
@@ -1610,7 +1610,7 @@ final class PacketParser {
                                                                                 }
 
                                                                                 if (aClass3_Sub19Array3694.length <= Node.clanSize) {
-                                                                                    RSString.incomingOpcode = -1;
+                                                                                    Unsorted.incomingOpcode = -1;
                                                                                     return true;
                                                                                 }
 
@@ -1630,10 +1630,10 @@ final class PacketParser {
                                                                                 ++Node.clanSize;
                                                                             }
 
-                                                                            RSString.incomingOpcode = -1;
+                                                                            Unsorted.incomingOpcode = -1;
                                                                             Class167.anInt2087 = Class3_Sub13_Sub17.anInt3213;
                                                                             return true;
-                                                                        } else if (50 == RSString.incomingOpcode) {
+                                                                        } else if (50 == Unsorted.incomingOpcode) {
                                                                             nodeModelId = GraphicDefinition.incomingBuffer.getInt();
                                                                             var19 = GraphicDefinition.incomingBuffer.getIntB((byte) -79);
                                                                             modelId = GraphicDefinition.incomingBuffer.getLEShortA((byte) -118);
@@ -1653,7 +1653,7 @@ final class PacketParser {
                                                                             } else {
                                                                                 if (-1 == modelId) {
                                                                                     var34.modelType = 0;
-                                                                                    RSString.incomingOpcode = -1;
+                                                                                    Unsorted.incomingOpcode = -1;
                                                                                     return true;
                                                                                 }
 
@@ -1666,9 +1666,9 @@ final class PacketParser {
                                                                                 Class20.method909(117, var34);
                                                                             }
 
-                                                                            RSString.incomingOpcode = -1;
+                                                                            Unsorted.incomingOpcode = -1;
                                                                             return true;
-                                                                        } else if (RSString.incomingOpcode == 105) {
+                                                                        } else if (Unsorted.incomingOpcode == 105) {
                                                                             nodeModelId = GraphicDefinition.incomingBuffer.getInt();
                                                                             var19 = GraphicDefinition.incomingBuffer.getShort();
                                                                             if (nodeModelId < -70000) {
@@ -1712,27 +1712,27 @@ final class PacketParser {
 
                                                                             Class3_Sub30_Sub1.method819();
                                                                             Class3_Sub28_Sub4.anIntArray3565[Class69.bitwiseAnd(ReferenceTable.anInt944++, 31)] = Class69.bitwiseAnd(32767, var19);
-                                                                            RSString.incomingOpcode = -1;
+                                                                            Unsorted.incomingOpcode = -1;
                                                                             return true;
-                                                                        } else if (RSString.incomingOpcode == 142) {
+                                                                        } else if (Unsorted.incomingOpcode == 142) {
                                                                             Class3_Sub29.method734(GraphicDefinition.incomingBuffer.getString());
-                                                                            RSString.incomingOpcode = -1;
+                                                                            Unsorted.incomingOpcode = -1;
                                                                             return true;
-                                                                        } else if (RSString.incomingOpcode == 26) {
+                                                                        } else if (Unsorted.incomingOpcode == 26) {
                                                                             Class65.currentChunkX = GraphicDefinition.incomingBuffer.getByteC();
                                                                             Class107.currentChunkY = GraphicDefinition.incomingBuffer.getByteB();
-                                                                            RSString.incomingOpcode = -1;
+                                                                            Unsorted.incomingOpcode = -1;
                                                                             return true;
-                                                                        } else if (4 == RSString.incomingOpcode) {
+                                                                        } else if (4 == Unsorted.incomingOpcode) {
                                                                             nodeModelId = GraphicDefinition.incomingBuffer.getLEShortA((byte) -121);
                                                                             if (nodeModelId == '\uffff') {
                                                                                 nodeModelId = -1;
                                                                             }
 
                                                                             Class86.method1427(nodeModelId);
-                                                                            RSString.incomingOpcode = -1;
+                                                                            Unsorted.incomingOpcode = -1;
                                                                             return true;
-                                                                        } else if (RSString.incomingOpcode == 208) {
+                                                                        } else if (Unsorted.incomingOpcode == 208) {
                                                                             nodeModelId = GraphicDefinition.incomingBuffer.getTriByte2();
                                                                             var19 = GraphicDefinition.incomingBuffer.getLEShort(-57);
                                                                             if (var19 == '\uffff') {
@@ -1740,10 +1740,10 @@ final class PacketParser {
                                                                             }
 
                                                                             Class167.method2266(nodeModelId, var19);
-                                                                            RSString.incomingOpcode = -1;
+                                                                            Unsorted.incomingOpcode = -1;
                                                                             return true;
                                                                         } else {
-                                                                            Class49.method1125("T1 - " + RSString.incomingOpcode + "," + Class7.anInt2166 + "," + Class24.anInt469 + " - " + Class130.incomingPacketLength, null, (byte) 117);
+                                                                            Class49.method1125("T1 - " + Unsorted.incomingOpcode + "," + Class7.anInt2166 + "," + Class24.anInt469 + " - " + Class130.incomingPacketLength, null, (byte) 117);
                                                                             Class167.method2269((byte) 46);
                                                                             return true;
                                                                         }

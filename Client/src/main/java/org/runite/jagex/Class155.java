@@ -36,7 +36,7 @@ class Class155 {
 
    private void method2152(int[] var1) {
       int var3 = 256;
-      if(RSString.aBoolean2150) {
+      if(Unsorted.aBoolean2150) {
          var3 = 256 << 1;
       }
 

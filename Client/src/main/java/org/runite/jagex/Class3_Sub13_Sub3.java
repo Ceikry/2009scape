@@ -129,7 +129,7 @@ final class Class3_Sub13_Sub3 extends Class3_Sub13 {
             Class3_Sub13_Sub24.method289();
             return true;
          } catch (Exception var5) {
-            String var2 = "T2 - " + RSString.incomingOpcode + "," + Class7.anInt2166 + "," + Class24.anInt469 + " - " + Class130.incomingPacketLength + "," + (Class131.anInt1716 - -Class102.player.anIntArray2767[0]) + "," + (Class102.player.anIntArray2755[0] + Class82.anInt1152) + " - ";
+            String var2 = "T2 - " + Unsorted.incomingOpcode + "," + Class7.anInt2166 + "," + Class24.anInt469 + " - " + Class130.incomingPacketLength + "," + (Class131.anInt1716 - -Class102.player.anIntArray2767[0]) + "," + (Class102.player.anIntArray2755[0] + Class82.anInt1152) + " - ";
 
             for(int var3 = 0; var3 < Class130.incomingPacketLength && 50 > var3; ++var3) {
                var2 = var2 + GraphicDefinition.incomingBuffer.buffer[var3] + ",";

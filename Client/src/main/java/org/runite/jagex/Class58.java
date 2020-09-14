@@ -43,7 +43,7 @@ final class Class58 {
             try {
                Class155 var9 = (Class155)Class.forName(Configurations.PACKAGE_JAGEX + ".Class155_Sub2").newInstance();
                var9.anInt1989 = var0;
-               var9.anIntArray1975 = new int[(!RSString.aBoolean2150?1:2) * 256];
+               var9.anIntArray1975 = new int[(!Unsorted.aBoolean2150?1:2) * 256];
                var9.method2164(var2);
                var9.anInt1990 = (var0 & -1024) - -1024;
                if(var9.anInt1990 > 16384) {
@@ -70,7 +70,7 @@ final class Class58 {
 
                try {
                   Class155_Sub1 var5 = new Class155_Sub1(var1, var3);
-                  var5.anIntArray1975 = new int[256 * (RSString.aBoolean2150?2:1)];
+                  var5.anIntArray1975 = new int[256 * (Unsorted.aBoolean2150?2:1)];
                   var5.anInt1989 = var0;
                   var5.method2164(var2);
                   var5.anInt1990 = 16384;

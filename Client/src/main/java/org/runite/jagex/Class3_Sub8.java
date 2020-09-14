@@ -348,15 +348,15 @@ final class Class3_Sub8 extends Class3 {
    static void method132(byte var0) {
       try {
          for(int var1 = 0; var1 < Class113.anInt1552; ++var1) {
-            --RSString.anIntArray2157[var1];
-            if(RSString.anIntArray2157[var1] < -10) {
+            --Unsorted.anIntArray2157[var1];
+            if(Unsorted.anIntArray2157[var1] < -10) {
                --Class113.anInt1552;
 
                for(int var2 = var1; var2 < Class113.anInt1552; ++var2) {
                   Class3_Sub25.anIntArray2550[var2] = Class3_Sub25.anIntArray2550[var2 - -1];
                   Class102.aClass135Array2131[var2] = Class102.aClass135Array2131[var2 + 1];
                   Class166.anIntArray2068[var2] = Class166.anIntArray2068[1 + var2];
-                  RSString.anIntArray2157[var2] = RSString.anIntArray2157[1 + var2];
+                  Unsorted.anIntArray2157[var2] = Unsorted.anIntArray2157[1 + var2];
                   Class3_Sub13_Sub6.anIntArray3083[var2] = Class3_Sub13_Sub6.anIntArray3083[var2 - -1];
                }
 
@@ -369,11 +369,11 @@ final class Class3_Sub8 extends Class3 {
                      continue;
                   }
 
-                  RSString.anIntArray2157[var1] += var11.method1813();
+                  Unsorted.anIntArray2157[var1] += var11.method1813();
                   Class102.aClass135Array2131[var1] = var11;
                }
 
-               if(0 > RSString.anIntArray2157[var1]) {
+               if(0 > Unsorted.anIntArray2157[var1]) {
                   int var3;
                   if(Class3_Sub13_Sub6.anIntArray3083[var1] == 0) {
                      var3 = CS2Script.anInt2453;
@@ -393,7 +393,7 @@ final class Class3_Sub8 extends Class3 {
 
                      int var9 = -128 + var6 + var8;
                      if(var9 > var4) {
-                        RSString.anIntArray2157[var1] = -100;
+                        Unsorted.anIntArray2157[var1] = -100;
                         continue;
                      }
 
@@ -411,7 +411,7 @@ final class Class3_Sub8 extends Class3 {
                      Class3_Sub26.aClass3_Sub24_Sub2_2563.method457(var13);
                   }
 
-                  RSString.anIntArray2157[var1] = -100;
+                  Unsorted.anIntArray2157[var1] = -100;
                }
             }
          }

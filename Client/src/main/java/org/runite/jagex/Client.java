@@ -190,8 +190,8 @@ public final class Client extends GameShell {
 					Class75_Sub3.method1346();
 				}
 
-				if(RSString.aBoolean2146 && 10 == Class143.loadingStage && Class3_Sub28_Sub12.anInt3655 != -1) {
-					RSString.aBoolean2146 = false;
+				if(Unsorted.aBoolean2146 && 10 == Class143.loadingStage && Class3_Sub28_Sub12.anInt3655 != -1) {
+					Unsorted.aBoolean2146 = false;
 					Class119.method1730(Class38.aClass87_665);
 				}
 
@@ -581,10 +581,10 @@ public final class Client extends GameShell {
 
 									if(null != Class15.aClass64_351 && Class15.aClass64_351.anInt978 == 1) {
 										if(null != Class15.aClass64_351.anObject974) {
-											Class99.method1596(Class3_Sub13_Sub24.aClass94_3295, (byte)126, RSString.aBoolean2154);
+											Class99.method1596(Class3_Sub13_Sub24.aClass94_3295, (byte)126, Unsorted.aBoolean2154);
 										}
 
-										RSString.aBoolean2154 = false;
+										Unsorted.aBoolean2154 = false;
 										Class3_Sub13_Sub24.aClass94_3295 = null;
 										Class15.aClass64_351 = null;
 									}
@@ -1348,10 +1348,10 @@ public final class Client extends GameShell {
 
 	private void method52(int var1) {
 		try {
-			if(!RSString.aBoolean2146) {
+			if(!Unsorted.aBoolean2146) {
 				while(Class3_Sub28_Sub10_Sub1.method591(107)) {
 					if(Class3_Sub13_Sub27.anInt3342 == 115 || Class3_Sub13_Sub27.anInt3342 == 83) {
-						RSString.aBoolean2146 = true;
+						Unsorted.aBoolean2146 = true;
 					}
 				}
 			}
@@ -1631,14 +1631,14 @@ public final class Client extends GameShell {
 								Class58.aBoolean913 = true;
 							} else if (Class96.anInt1354 == 150) {
 								Class88.method1454();
-								if (RSString.aBoolean2146) {
+								if (Unsorted.aBoolean2146) {
 									Class3_Sub28_Sub9.anInt3622 = 0;
 									Class3_Sub28_Sub14.anInt3671 = 0;
 									Node.anInt2577 = 0;
 									Class3_Sub20.anInt2488 = 0;
 								}
 
-								RSString.aBoolean2146 = true;
+								Unsorted.aBoolean2146 = true;
 								Class119.method1730(Class38.aClass87_665);
 								GameObject.graphicsSettings(false, Node.anInt2577, -1, -1);
 								LoadingStageNumber = 100;

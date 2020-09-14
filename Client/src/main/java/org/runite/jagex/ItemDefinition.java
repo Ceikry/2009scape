@@ -288,7 +288,7 @@ final class ItemDefinition {
 				if (!(aobj[i2] instanceof RSString))
 					continue;
 				RSString class94 = (RSString) aobj[i2];
-				if (class94.method1528(RSInterface.aClass94_209))
+				if (class94.equalsString(RSInterface.aClass94_209))
 					class94 = script.aClass94_2439;
 				stringArguments[stringArgIter++] = class94;
 				//	System.out.println("Item Definition line 168 " + class94.toString());
@@ -891,7 +891,7 @@ final class ItemDefinition {
 													if (opcode == 3104) {
 														RSString class94_4 = stringsStack[--sStackCounter];
 														int i46 = 0;
-														if (class94_4.method1543(82))
+														if (class94_4.isInteger())
 															i46 = class94_4.method1552((byte) -104);
 														Class3_Sub13_Sub1.outgoingBuffer.putOpcode(23);
 														Class3_Sub13_Sub1.outgoingBuffer.putInt(-124, i46);
@@ -2387,7 +2387,7 @@ final class ItemDefinition {
 																		if (null == GameShell.frame && (!flag5 || Signlink.anInt1214 == 3 || !Signlink.osName.startsWith("win") || Class106.hasInternetExplorer6)) {
 																			Class99.method1596(class94_64, (byte) 127, flag5);
 																		} else {
-																			RSString.aBoolean2154 = flag5;
+																			Unsorted.aBoolean2154 = flag5;
 																			Class3_Sub13_Sub24.aClass94_3295 = class94_64;
 																			Class15.aClass64_351 = Class38.aClass87_665.method1452(new String(class94_64.method1568(), StandardCharsets.ISO_8859_1), true);
 																		}
@@ -2943,12 +2943,12 @@ final class ItemDefinition {
 																					continue;
 																				}
 																				if (opcode == 6504) {
-																					RSString.anInt2148 = intsStack[--iStackCounter];
+																					Unsorted.anInt2148 = intsStack[--iStackCounter];
 																					Class119.method1730(Class38.aClass87_665);
 																					continue;
 																				}
 																				if (6505 == opcode) {
-																					intsStack[iStackCounter++] = RSString.anInt2148;
+																					intsStack[iStackCounter++] = Unsorted.anInt2148;
 																					continue;
 																				}
 																				if (opcode == 6506) {
@@ -3850,7 +3850,7 @@ final class ItemDefinition {
 					}
 					if (1112 == opcode) {
 						RSString class94_63 = stringsStack[--sStackCounter];
-						if (!class94_63.method1528(class11_16.aClass94_232)) {
+						if (!class94_63.equalsString(class11_16.aClass94_232)) {
 							class11_16.aClass94_232 = class94_63;
 							Class20.method909(117, class11_16);
 						}

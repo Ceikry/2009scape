@@ -272,7 +272,7 @@ final class Class39 {
 			int var5;
 			int var6;
 			int var7;
-			if(RSString.incomingOpcode == 195) {
+			if(Unsorted.incomingOpcode == 195) {
 				var1 = GraphicDefinition.incomingBuffer.getByteC();
 				var3 = var1 & 3;
 				var2 = var1 >> 2;
@@ -284,7 +284,7 @@ final class Class39 {
 					NodeList.method881(WorldListCountry.localPlane, var7, -101, var3, var6, -1, -1, var4, var2, 0);
 				}
 
-			} else if(RSString.incomingOpcode == 33) {
+			} else if(Unsorted.incomingOpcode == 33) {
 				var1 = GraphicDefinition.incomingBuffer.getLEShort(-58);
 				var2 = GraphicDefinition.incomingBuffer.getByteB();
 				var4 = (7 & var2) + Class107.currentChunkY;
@@ -310,7 +310,7 @@ final class Class39 {
 				int var28;
 				int var35;
 				Class140_Sub6 var36;
-				if(RSString.incomingOpcode == 121) {
+				if(Unsorted.incomingOpcode == 121) {
 					var1 = GraphicDefinition.incomingBuffer.getByteB();
 					var2 = 2 * Class65.currentChunkX + (15 & var1 >> 4);
 					var3 = (15 & var1) + 2 * Class107.currentChunkY;
@@ -338,7 +338,7 @@ final class Class39 {
 						Class3_Sub13_Sub30.aClass61_3364.method1215(new Class3_Sub28_Sub19(var36));
 					}
 
-				} else if(RSString.incomingOpcode == 17) {
+				} else if(Unsorted.incomingOpcode == 17) {
 					var1 = GraphicDefinition.incomingBuffer.getByteB();
 					var2 = Class65.currentChunkX + (var1 >> 4 & 7);
 					var3 = Class107.currentChunkY - -(var1 & 7);
@@ -352,7 +352,7 @@ final class Class39 {
 						Class3_Sub13_Sub15.aClass61_3177.method1215(new Class3_Sub28_Sub2(var32));
 					}
 
-				} else if(RSString.incomingOpcode == 179) {
+				} else if(Unsorted.incomingOpcode == 179) {
 					var1 = GraphicDefinition.incomingBuffer.getByteA((byte)-111);
 					var2 = var1 >> 2;
 					var3 = 3 & var1;
@@ -365,7 +365,7 @@ final class Class39 {
 						NodeList.method881(WorldListCountry.localPlane, var7, -91, var3, var6, -1, var8, var4, var2, 0);
 					}
 
-				} else if(RSString.incomingOpcode == 20) {
+				} else if(Unsorted.incomingOpcode == 20) {
 					var1 = GraphicDefinition.incomingBuffer.getByteS();
 					var2 = ((var1 & 125) >> 4) + Class65.currentChunkX;
 					var3 = Class107.currentChunkY + (7 & var1);
@@ -381,7 +381,7 @@ final class Class39 {
 					Class50.method1131(WorldListCountry.localPlane, 125, var6, var5, var3, var7, var2, var8);
 				} else {
 					int var14;
-					if(202 == RSString.incomingOpcode) {
+					if(202 == Unsorted.incomingOpcode) {
 						var1 = GraphicDefinition.incomingBuffer.getByteB();
 						var2 = var1 >> 2;
 						var3 = var1 & 3;
@@ -401,7 +401,7 @@ final class Class39 {
 						}
 					}
 
-					if(RSString.incomingOpcode == 14) {
+					if(Unsorted.incomingOpcode == 14) {
 						var1 = GraphicDefinition.incomingBuffer.getByteB();
 						var3 = Class107.currentChunkY + (var1 & 7);
 						var2 = ((var1 & 119) >> 4) + Class65.currentChunkX;
@@ -423,7 +423,7 @@ final class Class39 {
 							}
 						}
 
-					} else if(135 == RSString.incomingOpcode) {
+					} else if(135 == Unsorted.incomingOpcode) {
 						var1 = GraphicDefinition.incomingBuffer.getLEShortA((byte)-113);
 						var2 = GraphicDefinition.incomingBuffer.getByteC();
 						var4 = Class107.currentChunkY + (7 & var2);
@@ -443,7 +443,7 @@ final class Class39 {
 						}
 
 					} else if(var0 <= -67) {
-						if(16 == RSString.incomingOpcode) {
+						if(16 == Unsorted.incomingOpcode) {
 							var1 = GraphicDefinition.incomingBuffer.getByteB();
 							var2 = Class65.currentChunkX - -(var1 >> 4 & 7);
 							var3 = (var1 & 7) + Class107.currentChunkY;
@@ -471,7 +471,7 @@ final class Class39 {
 								Class3_Sub13_Sub30.aClass61_3364.method1215(new Class3_Sub28_Sub19(var36));
 							}
 
-						} else if (RSString.incomingOpcode == 104) {
+						} else if (Unsorted.incomingOpcode == 104) {
 							var1 = GraphicDefinition.incomingBuffer.getByteB();
 							var3 = 2 * Class107.currentChunkY + (var1 & 15);
 							var2 = 2 * Class65.currentChunkX - -(var1 >> 4 & 15);
@@ -537,7 +537,7 @@ final class Class39 {
 								Class3_Sub13_Sub30.aClass61_3364.method1215(new Class3_Sub28_Sub19(var37));
 							}
 
-						} else if (97 == RSString.incomingOpcode) {
+						} else if (97 == Unsorted.incomingOpcode) {
 							var1 = GraphicDefinition.incomingBuffer.getByteB();
 							var2 = Class65.currentChunkX + (7 & var1 >> 4);
 							var3 = Class107.currentChunkY + (var1 & 7);
@@ -555,14 +555,14 @@ final class Class39 {
 								if (var2 + -var28 <= Class102.player.anIntArray2767[0] && Class102.player.anIntArray2767[0] <= var28 + var2 && Class102.player.anIntArray2755[0] >= -var28 + var3 && Class102.player.anIntArray2755[0] <= var28 + var3 && 0 != Class14.anInt340 && var7 > 0 && 50 > Class113.anInt1552 && var4 != -1) {
 									Class3_Sub25.anIntArray2550[Class113.anInt1552] = var4;
 									Class166.anIntArray2068[Class113.anInt1552] = var7;
-									RSString.anIntArray2157[Class113.anInt1552] = var8;
+									Unsorted.anIntArray2157[Class113.anInt1552] = var8;
 									Class102.aClass135Array2131[Class113.anInt1552] = null;
 									Class3_Sub13_Sub6.anIntArray3083[Class113.anInt1552] = var6 + ((var2 << 16) - -(var3 << 8));
 									++Class113.anInt1552;
 								}
 							}
 
-						} else if (RSString.incomingOpcode == 240) {
+						} else if (Unsorted.incomingOpcode == 240) {
 							var1 = GraphicDefinition.incomingBuffer.getByteS();
 							var3 = Class107.currentChunkY + (var1 & 7);
 							var2 = ((113 & var1) >> 4) + Class65.currentChunkX;

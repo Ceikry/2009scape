@@ -285,8 +285,8 @@ class Class127 {
                      }
                   }
 
-                  RSString.incomingOpcode = GraphicDefinition.incomingBuffer.getOpcode();
-                  dynamic = RSString.incomingOpcode == 214;
+                  Unsorted.incomingOpcode = GraphicDefinition.incomingBuffer.getOpcode();
+                  dynamic = Unsorted.incomingOpcode == 214;
                   Class130.incomingPacketLength = GraphicDefinition.incomingBuffer.getShort();
                   Class3_Sub13_Sub25.loginStage = 9;
                }
@@ -303,7 +303,7 @@ class Class127 {
                   AnimationDefinition.resetAll();
                   Class3_Sub28_Sub7.anInt3606 = -1;
                   Class39.updateSceneGraph(dynamic);
-                  RSString.incomingOpcode = -1;
+                  Unsorted.incomingOpcode = -1;
                   return;
                }
 

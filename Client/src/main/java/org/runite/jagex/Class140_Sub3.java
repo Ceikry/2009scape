@@ -202,7 +202,7 @@ final class Class140_Sub3 extends GameObject {
    static void method1959(boolean var3) {
       try {
          Class3_Sub24_Sub4.anInt3507 = 2;
-         RSString.aBoolean2150 = var3;
+         Unsorted.aBoolean2150 = var3;
          Class21.anInt443 = 22050;
       } catch (RuntimeException var5) {
          throw Class44.clientError(var5, "dc.D(" + 256 + ',' + 2 + ',' + 22050 + ',' + var3 + ')');

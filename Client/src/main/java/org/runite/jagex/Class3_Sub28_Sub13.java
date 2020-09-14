@@ -68,7 +68,7 @@ final class Class3_Sub28_Sub13 extends Node {
             }
 
             for (Class3_Sub10 var3 = (Class3_Sub10) this.aClass130_3666.method1780(var1.method1538(23)); var3 != null; var3 = (Class3_Sub10) this.aClass130_3666.method1784()) {
-               if (var3.aClass94_2341.method1528(var1)) {
+               if (var3.aClass94_2341.equalsString(var1)) {
                   return true;
                }
             }

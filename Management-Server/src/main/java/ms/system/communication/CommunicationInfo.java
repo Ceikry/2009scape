@@ -168,11 +168,11 @@ public final class CommunicationInfo {
 		if (contacts != null && contacts != "") {
 			String[] datas = contacts.split("~");
 			for (String d : datas) {
-				tokens = d.replace("{", "").replace("}", "").split(",");
-				if (tokens.length == 0) {
-					continue;
-				}
-				this.contacts.put(tokens[0], ClanRank.values()[Integer.valueOf(tokens[1])]);
+//				tokens = d.replace("{", "").replace("}", "").split(",");
+//				if (tokens.length == 0) {
+//					continue;
+//				}
+//				this.contacts.put(tokens[0], ClanRank.values()[Integer.valueOf(tokens[1])]);
 			}
 		}
 		String bl = set.getString("blocked");

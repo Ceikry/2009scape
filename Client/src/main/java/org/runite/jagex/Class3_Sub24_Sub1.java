@@ -318,12 +318,12 @@ final class Class3_Sub24_Sub1 extends Class3_Sub24 {
 
             this.anInt3480 += var2;
             if(this.anInt3470 == 256 && (this.anInt3474 & 255) == 0) {
-               if(RSString.aBoolean2150) {
+               if(Unsorted.aBoolean2150) {
                   var2 = method426(((Class3_Sub12_Sub1)this.aClass3_Sub12_2544).aByteArray3030, var1, this.anInt3474, var2, this.anInt3484, this.anInt3481, this.anInt3475, this.anInt3483, var6, var3, this);
                } else {
                   var2 = method428(((Class3_Sub12_Sub1)this.aClass3_Sub12_2544).aByteArray3030, var1, this.anInt3474, var2, this.anInt3476, this.anInt3472, var6, var3, this);
                }
-            } else if(RSString.aBoolean2150) {
+            } else if(Unsorted.aBoolean2150) {
                var2 = method421(((Class3_Sub12_Sub1)this.aClass3_Sub12_2544).aByteArray3030, var1, this.anInt3474, var2, this.anInt3484, this.anInt3481, this.anInt3475, this.anInt3483, var6, var3, this, this.anInt3470, var5);
             } else {
                var2 = method422(((Class3_Sub12_Sub1)this.aClass3_Sub12_2544).aByteArray3030, var1, this.anInt3474, var2, this.anInt3476, this.anInt3472, var6, var3, this, this.anInt3470, var5);
@@ -342,14 +342,14 @@ final class Class3_Sub24_Sub1 extends Class3_Sub24 {
          }
 
          if(this.anInt3470 == 256 && (this.anInt3474 & 255) == 0) {
-            if(RSString.aBoolean2150) {
+            if(Unsorted.aBoolean2150) {
                return method420(((Class3_Sub12_Sub1)this.aClass3_Sub12_2544).aByteArray3030, var1, this.anInt3474, var2, this.anInt3484, this.anInt3481, var4, var3, this);
             }
 
             return method424(((Class3_Sub12_Sub1)this.aClass3_Sub12_2544).aByteArray3030, var1, this.anInt3474, var2, this.anInt3476, var4, var3, this);
          }
 
-         if(RSString.aBoolean2150) {
+         if(Unsorted.aBoolean2150) {
             return method433(((Class3_Sub12_Sub1)this.aClass3_Sub12_2544).aByteArray3030, var1, this.anInt3474, var2, this.anInt3484, this.anInt3481, var4, var3, this, this.anInt3470, var5);
          }
 
@@ -1032,12 +1032,12 @@ final class Class3_Sub24_Sub1 extends Class3_Sub24 {
 
             this.anInt3480 += var2;
             if(this.anInt3470 == -256 && (this.anInt3474 & 255) == 0) {
-               if(RSString.aBoolean2150) {
+               if(Unsorted.aBoolean2150) {
                   var2 = method435(((Class3_Sub12_Sub1)this.aClass3_Sub12_2544).aByteArray3030, var1, this.anInt3474, var2, this.anInt3484, this.anInt3481, this.anInt3475, this.anInt3483, var6, var3, this);
                } else {
                   var2 = method427(((Class3_Sub12_Sub1)this.aClass3_Sub12_2544).aByteArray3030, var1, this.anInt3474, var2, this.anInt3476, this.anInt3472, var6, var3, this);
                }
-            } else if(RSString.aBoolean2150) {
+            } else if(Unsorted.aBoolean2150) {
                var2 = method440(((Class3_Sub12_Sub1)this.aClass3_Sub12_2544).aByteArray3030, var1, this.anInt3474, var2, this.anInt3484, this.anInt3481, this.anInt3475, this.anInt3483, var6, var3, this, this.anInt3470, var5);
             } else {
                var2 = method448(((Class3_Sub12_Sub1)this.aClass3_Sub12_2544).aByteArray3030, var1, this.anInt3474, var2, this.anInt3476, this.anInt3472, var6, var3, this, this.anInt3470, var5);
@@ -1056,14 +1056,14 @@ final class Class3_Sub24_Sub1 extends Class3_Sub24 {
          }
 
          if(this.anInt3470 == -256 && (this.anInt3474 & 255) == 0) {
-            if(RSString.aBoolean2150) {
+            if(Unsorted.aBoolean2150) {
                return method447(((Class3_Sub12_Sub1)this.aClass3_Sub12_2544).aByteArray3030, var1, this.anInt3474, var2, this.anInt3484, this.anInt3481, var4, var3, this);
             }
 
             return method446(((Class3_Sub12_Sub1)this.aClass3_Sub12_2544).aByteArray3030, var1, this.anInt3474, var2, this.anInt3476, var4, var3, this);
          }
 
-         if(RSString.aBoolean2150) {
+         if(Unsorted.aBoolean2150) {
             return method453(((Class3_Sub12_Sub1)this.aClass3_Sub12_2544).aByteArray3030, var1, this.anInt3474, var2, this.anInt3484, this.anInt3481, var4, var3, this, this.anInt3470, var5);
          }
 

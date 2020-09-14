@@ -13,155 +13,127 @@ import java.util.Objects;
 
 final class RSString implements Interface3 {
 
-    static boolean aBoolean2146 = false;
-    static int incomingOpcode = 0;
-    static int anInt2148 = 0;
-    static boolean aBoolean2150;
     private boolean aBoolean2152 = true;
-    static boolean aBoolean2154;
-    static int[] anIntArray2157 = new int[50];
-
     byte[] buffer;
     int length;
 
-    final URL method1527() throws MalformedURLException {
-        try {
+    final URL toURL() throws MalformedURLException {
+        return new URL(new String(this.buffer, 0, this.length));
+    }
 
-            return new URL(new String(this.buffer, 0, this.length));
-        } catch (RuntimeException var3) {
-            throw Class44.clientError(var3, "na.W(" + false + ')');
+    // TODO What kind of comparison is done in this method
+    final boolean equals(int var1, RSString other) {
+        if (other == null) {
+            return false;
+        } else if (this.length == other.length) {
+
+            for (int i = 0; i < this.length; ++i) {
+                byte var5 = this.buffer[i];
+                if (var5 >= 65 && var5 <= 90 || var5 >= -64 && var5 <= -34 && var5 != -41) {
+                    var5 = (byte) (var5 + 32);
+                }
+
+                byte var6 = other.buffer[i];
+                if (65 <= var6 && var6 <= 90 || -64 <= var6 && var6 <= -34 && var6 != -41) {
+                    var6 = (byte) (var6 + 32);
+                }
+
+                if (var6 != var5) {
+                    return false;
+                }
+            }
+
+            return true;
+        } else {
+            return false;
         }
     }
 
-    final boolean method1528(RSString var2) {
-        try {
-            if (var2 == null) {
-                return false;
-            } else if (this == var2) {
-                return true;
-            } else if (this.length == var2.length) {
+    // TODO Refactor to support regular equals method
+    final boolean equalsString(RSString other) {
+        if (other == null) {
+            return false;
+        } else if (this == other) {
+            return true;
+        } else if (this.length == other.length) {
 
-                byte[] var4 = var2.buffer;
-                byte[] var3 = this.buffer;
+            byte[] otherBuffer = other.buffer;
+            byte[] thisBuffer = this.buffer;
 
-                for (int var5 = 0; var5 < this.length; ++var5) {
-                    if (var3[var5] != var4[var5]) {
-                        return false;
-                    }
+            for (int i = 0; i < this.length; ++i) {
+                if (thisBuffer[i] != otherBuffer[i]) {
+                    return false;
+                }
+            }
+
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    final int parseInt(int radix) {
+        if (radix < 1 || radix > 36) {
+            radix = 10;
+        }
+
+        boolean negate = false;
+        boolean success = false;
+        int value = 0;
+
+        for (int i = 0; this.length > i; ++i) {
+            int currentNumber = this.buffer[i] & 0xff;
+
+            if (i == 0) {
+                if (currentNumber == '-') {
+                    negate = true;
+                    continue;
                 }
 
-                return true;
+                if (currentNumber == '+') {
+                    continue;
+                }
+            }
+
+            if (currentNumber >= '0' && '9' >= currentNumber) {
+                currentNumber -= '0';
+            } else if ('A' <= currentNumber && currentNumber <= 'Z') {
+                currentNumber -= 55;
             } else {
-                return false;
+                if (currentNumber < 'a' || currentNumber > 'z') {
+                    throw new NumberFormatException("invalid character in number with value: " + currentNumber + " ('" + ((char) currentNumber) + "')");
+                }
+
+                currentNumber -= 87;
             }
-        } catch (RuntimeException var6) {
-            throw Class44.clientError(var6, "na.F(" + (byte) -42 + ',' + "{...}" + ')');
+
+            if (currentNumber >= radix) {
+                throw new NumberFormatException("got radix " + radix + ", but found number value " + currentNumber);
+            }
+
+            if (negate) {
+                currentNumber = -currentNumber;
+            }
+
+            int newValue = currentNumber + value * radix;
+            if (newValue / radix != value) {
+                throw new NumberFormatException("integer overflow");
+            }
+
+            value = newValue;
+            success = true;
+        }
+
+        if (success) {
+            return value;
+        } else {
+            throw new NumberFormatException("failed to parse number");
         }
     }
 
-    final int method1530(byte var1, int var2) {
-        try {
-            if (var2 < 1 || var2 > 36) {
-                var2 = 10;
-            }
-
-            boolean var3 = false;
-            boolean var4 = false;
-            int var5 = 0;
-
-            for (int var6 = 0; this.length > var6; ++var6) {
-                int var8 = 255 & this.buffer[var6];
-                if (var6 == 0) {
-                    if (45 == var8) {
-                        var3 = true;
-                        continue;
-                    }
-
-                    if (var8 == 43) {
-                        continue;
-                    }
-                }
-
-                if (var8 >= 48 && 57 >= var8) {
-                    var8 -= 48;
-                } else if (65 <= var8 && var8 <= 90) {
-                    var8 -= 55;
-                } else {
-                    if (var8 < 97 || var8 > 122) {
-                        throw new NumberFormatException();
-                    }
-
-                    var8 -= 87;
-                }
-
-                if (var8 >= var2) {
-                    throw new NumberFormatException();
-                }
-
-                if (var3) {
-                    var8 = -var8;
-                }
-
-                int var9 = var8 + var5 * var2;
-                if (var9 / var2 != var5) {
-                    throw new NumberFormatException();
-                }
-
-                var5 = var9;
-                var4 = true;
-            }
-
-            if (var4) {
-                return var5;
-            } else {
-                throw new NumberFormatException();
-            }
-        } catch (RuntimeException var10) {
-            throw Class44.clientError(var10, "na.AB(" + var1 + ',' + var2 + ')');
-        }
-    }
-
-    final boolean equals(int var1, RSString var2) {
-        try {
-            if (var2 == null) {
-                return false;
-            } else if (this.length == var2.length) {
-
-                for (int var3 = 0; var3 < this.length; ++var3) {
-                    byte var5 = this.buffer[var3];
-                    if (var5 >= 65 && var5 <= 90 || var5 >= -64 && var5 <= -34 && var5 != -41) {
-                        var5 = (byte) (var5 + 32);
-                    }
-
-                    byte var6 = var2.buffer[var3];
-                    if (65 <= var6 && var6 <= 90 || -64 <= var6 && var6 <= -34 && var6 != -41) {
-                        var6 = (byte) (var6 + 32);
-                    }
-
-                    if (var6 != var5) {
-                        return false;
-                    }
-                }
-
-                return true;
-            } else {
-                return false;
-            }
-        } catch (RuntimeException var7) {
-            throw Class44.clientError(var7, "na.EA(" + var1 + ',' + "{...}" + ')');
-        }
-    }
-
-    final void drawString(int x, int y, Graphics var3, byte var4) {
-        try {
-            if (var4 < -85) {
-                String string;
-                string = new String(this.buffer, 0, this.length, StandardCharsets.ISO_8859_1);
-                var3.drawString(string, x, y);
-            }
-        } catch (RuntimeException var8) {
-            throw Class44.clientError(var8, "na.B(" + y + ',' + x + ',' + (var3 != null ? "{...}" : "null") + ',' + var4 + ')');
-        }
+    final void drawString(int x, int y, Graphics g) {
+        String string = new String(this.buffer, 0, this.length, StandardCharsets.ISO_8859_1);
+        g.drawString(string, x, y);
     }
 
     final void method1533(RSString var1) {
@@ -310,16 +282,8 @@ final class RSString implements Interface3 {
         }
     }
 
-    final boolean method1543(int var1) {
-        try {
-            if (var1 < 79) {
-                this.method1552((byte) 114);
-            }
-
-            return this.method1561(10);
-        } catch (RuntimeException var3) {
-            throw Class44.clientError(var3, "na.I(" + var1 + ')');
-        }
+    final boolean isInteger() {
+        return this.isInteger(10);
     }
 
     final RSString method1544(boolean var1) {
@@ -482,7 +446,7 @@ final class RSString implements Interface3 {
                 this.method1557(33, 31, -79);
             }
 
-            return this.method1530((byte) -114, 10);
+            return this.parseInt(10);
         } catch (RuntimeException var3) {
             throw Class44.clientError(var3, "na.T(" + var1 + ')');
         }
@@ -589,7 +553,7 @@ final class RSString implements Interface3 {
     public final boolean equals(Object var1) {
         try {
             if (var1 instanceof RSString) {
-                return this.method1528((RSString) var1);
+                return this.equalsString((RSString) var1);
             } else {
                 throw new IllegalArgumentException();
             }
@@ -681,62 +645,58 @@ final class RSString implements Interface3 {
         }
     }
 
-    private boolean method1561(int var1) {
-        try {
-            if (var1 < 1 || var1 > 36) {
-                var1 = 10;
-            }
-
-            boolean var4 = false;
-            boolean var3 = false;
-            int var5 = 0;
-
-            for (int var6 = 0; var6 < this.length; ++var6) {
-                int var7 = this.buffer[var6] & 255;
-                if (0 == var6) {
-                    if (var7 == 45) {
-                        var3 = true;
-                        continue;
-                    }
-
-                    if (var7 == 43) {
-                        continue;
-                    }
-                }
-
-                if (var7 >= 48 && var7 <= 57) {
-                    var7 -= 48;
-                } else if (var7 >= 65 && var7 <= 90) {
-                    var7 -= 55;
-                } else {
-                    if (97 > var7 || var7 > 122) {
-                        return false;
-                    }
-
-                    var7 -= 87;
-                }
-
-                if (var1 <= var7) {
-                    return false;
-                }
-
-                if (var3) {
-                    var7 = -var7;
-                }
-
-                int var8 = var7 + var1 * var5;
-                if (var8 / var1 != var5) {
-                    return false;
-                }
-
-                var5 = var8;
-                var4 = true;
-            }
-
-            return var4;
-        } catch (RuntimeException var9) {
-            throw Class44.clientError(var9, "na.P(" + var1 + ',' + true + ')');
+    private boolean isInteger(int radix) {
+        if (radix < 1 || radix > 36) {
+            radix = 10;
         }
+
+        boolean success = false;
+        boolean negate = false;
+        int value = 0;
+
+        for (int i = 0; i < this.length; ++i) {
+            int current = this.buffer[i] & 255;
+            if (0 == i) {
+                if (current == 45) {
+                    negate = true;
+                    continue;
+                }
+
+                if (current == 43) {
+                    continue;
+                }
+            }
+
+            if (current >= 48 && current <= 57) {
+                current -= 48;
+            } else if (current >= 65 && current <= 90) {
+                current -= 55;
+            } else {
+                if (97 > current || current > 122) {
+                    return false;
+                }
+
+                current -= 87;
+            }
+
+            if (radix <= current) {
+                return false;
+            }
+
+            if (negate) {
+                current = -current;
+            }
+
+            int newValue = current + radix * value;
+            if (newValue / radix != value) {
+                return false;
+            }
+
+            value = newValue;
+            success = true;
+        }
+
+        return success;
     }
 
     final boolean method1562(byte var1, RSString var2) {
@@ -958,7 +918,7 @@ final class RSString implements Interface3 {
                     Class86.aClass130_1194 = new Class130(4096);
                 } else {
                     for (var5 = (Class3_Sub29) Class86.aClass130_1194.method1780(var2); null != var5; var5 = (Class3_Sub29) Class86.aClass130_1194.method1784()) {
-                        if (this.method1528(var5.aClass94_2586)) {
+                        if (this.equalsString(var5.aClass94_2586)) {
                             return var5.aClass94_2586;
                         }
                     }

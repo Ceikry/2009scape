@@ -52,11 +52,11 @@ abstract class Class3_Sub28_Sub7 extends Node {
             Class127_Sub1.method1758(0);
          }
 
-         RSString.anInt2148 = 0;
+         Unsorted.anInt2148 = 0;
          Class3_Sub20.anInt2488 = 0;
          Class15.aBoolean346 = false;
          Class163_Sub3.aBoolean3004 = true;
-         RSString.aBoolean2146 = false;
+         Unsorted.aBoolean2146 = false;
          Class73.aBoolean1080 = false;
          anInt2577 = 0;
 

@@ -183,7 +183,7 @@ final class Class3_Sub28_Sub1 extends Node {
                var6.fillRect(3 * var4 + 2, 2, -(3 * var4) + 300, 30);
                var6.setFont(TextCore.Helvetica);
                var6.setColor(Color.white);
-               var3.drawString((-var3.method1575(Class139.aFontMetrics1822) + 304) / 2, 22, var6, (byte)-90);
+               var3.drawString((-var3.method1575(Class139.aFontMetrics1822) + 304) / 2, 22, var6);
                var5.drawImage(Class129_Sub1.anImage2695, Class23.anInt454 / 2 - 152, -18 + Class140_Sub7.anInt2934 / 2, (ImageObserver)null);
             } catch (Exception var9) {
                int var7 = -152 + Class23.anInt454 / 2;
@@ -196,13 +196,13 @@ final class Class3_Sub28_Sub1 extends Node {
                var5.fillRect(3 * var4 + (var7 - -2), 2 + var8, 300 - var4 * 3, 30);
                var5.setFont(TextCore.Helvetica);
                var5.setColor(Color.white);
-               var3.drawString(var7 + (-var3.method1575(Class139.aFontMetrics1822) + 304) / 2, 22 + var8, var5, (byte)-125);
+               var3.drawString(var7 + (-var3.method1575(Class139.aFontMetrics1822) + 304) / 2, 22 + var8, var5);
             }
 
             if(Class167.aClass94_2083 != null) {
                var5.setFont(TextCore.Helvetica);
                var5.setColor(Color.white);
-               Class167.aClass94_2083.drawString(Class23.anInt454 / 2 - Class167.aClass94_2083.method1575(Class139.aFontMetrics1822) / 2, Class140_Sub7.anInt2934 / 2 - 26, var5, (byte)-116);
+               Class167.aClass94_2083.drawString(Class23.anInt454 / 2 - Class167.aClass94_2083.method1575(Class139.aFontMetrics1822) / 2, Class140_Sub7.anInt2934 / 2 - 26, var5);
             }
          } catch (Exception var10) {
             Class3_Sub28_Sub12.aCanvas3648.repaint();

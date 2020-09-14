@@ -38,13 +38,13 @@ final class Class155_Sub2 extends Class155 {
          }
       }
 
-      this.anAudioFormat2974 = new AudioFormat((float)Class21.anInt443, 16, !RSString.aBoolean2150?1:2, true, false);
-      this.aByteArray2975 = new byte[256 << (RSString.aBoolean2150?2:1)];
+      this.anAudioFormat2974 = new AudioFormat((float)Class21.anInt443, 16, !Unsorted.aBoolean2150?1:2, true, false);
+      this.aByteArray2975 = new byte[256 << (Unsorted.aBoolean2150?2:1)];
    }
 
    final void method2150(int var1) throws LineUnavailableException {
       try {
-         javax.sound.sampled.DataLine.Info var2 = new javax.sound.sampled.DataLine.Info(SourceDataLine.class, this.anAudioFormat2974, var1 << (!RSString.aBoolean2150?1:2));
+         javax.sound.sampled.DataLine.Info var2 = new javax.sound.sampled.DataLine.Info(SourceDataLine.class, this.anAudioFormat2974, var1 << (!Unsorted.aBoolean2150?1:2));
          this.aSourceDataLine2972 = (SourceDataLine)AudioSystem.getLine(var2);
          this.aSourceDataLine2972.open();
          this.aSourceDataLine2972.start();
@@ -64,7 +64,7 @@ final class Class155_Sub2 extends Class155 {
       if(this.aBoolean2973) {
          this.aSourceDataLine2972.close();
          this.aSourceDataLine2972 = null;
-         javax.sound.sampled.DataLine.Info var1 = new javax.sound.sampled.DataLine.Info(SourceDataLine.class, this.anAudioFormat2974, this.anInt2971 << (!RSString.aBoolean2150?1:2));
+         javax.sound.sampled.DataLine.Info var1 = new javax.sound.sampled.DataLine.Info(SourceDataLine.class, this.anAudioFormat2974, this.anInt2971 << (!Unsorted.aBoolean2150?1:2));
          this.aSourceDataLine2972 = (SourceDataLine)AudioSystem.getLine(var1);
          this.aSourceDataLine2972.open();
          this.aSourceDataLine2972.start();
@@ -73,12 +73,12 @@ final class Class155_Sub2 extends Class155 {
    }
 
    final int method2157() {
-      return this.anInt2971 - (this.aSourceDataLine2972.available() >> (!RSString.aBoolean2150?1:2));
+      return this.anInt2971 - (this.aSourceDataLine2972.available() >> (!Unsorted.aBoolean2150?1:2));
    }
 
    final void method2149() {
       int var1 = 256;
-      if(RSString.aBoolean2150) {
+      if(Unsorted.aBoolean2150) {
          var1 <<= 1;
       }
 

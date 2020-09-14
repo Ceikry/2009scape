@@ -77,7 +77,7 @@ final class Class163_Sub3 extends Class163 {
                   }
                }
 
-               if(var3.method1528(Class102.player.displayName)) {
+               if(var3.equalsString(Class102.player.displayName)) {
                   Class3_Sub30_Sub1.addChatMessage(Class3_Sub28_Sub14.aClass94_3672, 0, TextCore.HasOnOwnFriendsList, -1);
                } else {
                   Class70.aClass94Array1046[Class8.anInt104] = var3;

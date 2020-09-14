@@ -21,7 +21,7 @@ public final class SQLManager {
     /**
      * The database URL.
      */
-    public static final String DATABASE_URL = (LOCAL ? "127.0.0.1" : "keldagrim.org") + ":3306/" + (SQLManager.LOCAL ? "global" : ServerConstants.DATABASE_NAMES[1]);
+    public static final String DATABASE_URL = (LOCAL ? "127.0.0.1" : "keldagrim.org") + ":3306/" + (SQLManager.LOCAL ? "2009scape_global" : ServerConstants.DATABASE_NAMES[1]);
 
     /**
      * The username of the user.

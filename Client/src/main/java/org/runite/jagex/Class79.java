@@ -167,7 +167,7 @@ final class Class79 {
                   }
 
                   if(var2 >= 5) {
-                     RSString.anInt2148 = var0.getInt();
+                     Unsorted.anInt2148 = var0.getInt();
                   }
 
                   if(6 <= var2) {
@@ -175,7 +175,7 @@ final class Class79 {
                   }
 
                   if(var2 >= 7) {
-                     RSString.aBoolean2146 = 1 == var0.getByteB();
+                     Unsorted.aBoolean2146 = 1 == var0.getByteB();
                   }
 
                   if(8 <= var2) {

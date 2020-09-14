@@ -73,22 +73,22 @@ abstract class Class3_Sub28_Sub17 extends Node {
             if(var8 == 62 && var4 != -1) {
                RSString var9 = var1.method1557(var7, 0, var4 + 1);
                var4 = -1;
-               if(var9.method1528(aClass94_3712)) {
+               if(var9.equalsString(aClass94_3712)) {
                   var8 = 60;
-               } else if(var9.method1528(aClass94_3711)) {
+               } else if(var9.equalsString(aClass94_3711)) {
                   var8 = 62;
-               } else if(var9.method1528(aClass94_3732)) {
+               } else if(var9.equalsString(aClass94_3732)) {
                   var8 = 160;
-               } else if(var9.method1528(aClass94_3714)) {
+               } else if(var9.equalsString(aClass94_3714)) {
                   var8 = 173;
-               } else if(var9.method1528(aClass94_3729)) {
+               } else if(var9.equalsString(aClass94_3729)) {
                   var8 = 215;
-               } else if(var9.method1528(aClass94_3718)) {
+               } else if(var9.equalsString(aClass94_3718)) {
                   var8 = 128;
-               } else if(var9.method1528(aClass94_3741)) {
+               } else if(var9.equalsString(aClass94_3741)) {
                   var8 = 169;
                } else {
-                  if(!var9.method1528(aClass94_3743)) {
+                  if(!var9.equalsString(aClass94_3743)) {
                      if(var9.method1558(aClass94_3739)) {
                         try {
                            var10 = var9.method1556(4).method1552((byte)-98);
@@ -208,22 +208,22 @@ abstract class Class3_Sub28_Sub17 extends Node {
                if(var7 == 62 && var2 != -1) {
                   RSString var8 = var1.method1557(var6, 0, var2 + 1);
                   var2 = -1;
-                  if(var8.method1528(aClass94_3712)) {
+                  if(var8.equalsString(aClass94_3712)) {
                      var7 = 60;
-                  } else if(var8.method1528(aClass94_3711)) {
+                  } else if(var8.equalsString(aClass94_3711)) {
                      var7 = 62;
-                  } else if(var8.method1528(aClass94_3732)) {
+                  } else if(var8.equalsString(aClass94_3732)) {
                      var7 = 160;
-                  } else if(var8.method1528(aClass94_3714)) {
+                  } else if(var8.equalsString(aClass94_3714)) {
                      var7 = 173;
-                  } else if(var8.method1528(aClass94_3729)) {
+                  } else if(var8.equalsString(aClass94_3729)) {
                      var7 = 215;
-                  } else if(var8.method1528(aClass94_3718)) {
+                  } else if(var8.equalsString(aClass94_3718)) {
                      var7 = 128;
-                  } else if(var8.method1528(aClass94_3741)) {
+                  } else if(var8.equalsString(aClass94_3741)) {
                      var7 = 169;
                   } else {
-                     if(!var8.method1528(aClass94_3743)) {
+                     if(!var8.equalsString(aClass94_3743)) {
                         if(var8.method1558(aClass94_3739)) {
                            try {
                               int var9 = var8.method1556(4).method1552((byte)-101);
@@ -283,32 +283,32 @@ abstract class Class3_Sub28_Sub17 extends Node {
    private void method685(RSString var1) {
       try {
          if(var1.method1558(aClass94_3725)) {
-            anInt3755 = var1.method1556(4).method1530((byte)70, 16);
-         } else if(var1.method1528(aClass94_3720)) {
+            anInt3755 = var1.method1556(4).parseInt(16);
+         } else if(var1.equalsString(aClass94_3720)) {
             anInt3755 = anInt3749;
          } else if(var1.method1558(aClass94_3715)) {
             anInt3750 = var1.method1556(6).method1552((byte)-95);
-         } else if(var1.method1528(aClass94_3731)) {
+         } else if(var1.equalsString(aClass94_3731)) {
             anInt3750 = anInt3751;
          } else if(var1.method1558(aClass94_3717)) {
-            anInt3746 = var1.method1556(4).method1530((byte)54, 16);
-         } else if(var1.method1528(aClass94_3744)) {
+            anInt3746 = var1.method1556(4).parseInt(16);
+         } else if(var1.equalsString(aClass94_3744)) {
             anInt3746 = 8388608;
-         } else if(var1.method1528(aClass94_3742)) {
+         } else if(var1.equalsString(aClass94_3742)) {
             anInt3746 = -1;
          } else if(var1.method1558(aClass94_3716)) {
-            anInt3747 = var1.method1556(2).method1530((byte)62, 16);
-         } else if(var1.method1528(aClass94_3728)) {
+            anInt3747 = var1.method1556(2).parseInt(16);
+         } else if(var1.equalsString(aClass94_3728)) {
             anInt3747 = 0;
-         } else if(var1.method1528(aClass94_3735)) {
+         } else if(var1.equalsString(aClass94_3735)) {
             anInt3747 = -1;
          } else if(var1.method1558(aClass94_3713)) {
-            anInt3754 = var1.method1556(5).method1530((byte)82, 16);
-         } else if(var1.method1528(aClass94_3738)) {
+            anInt3754 = var1.method1556(5).parseInt(16);
+         } else if(var1.equalsString(aClass94_3738)) {
             anInt3754 = 0;
-         } else if(var1.method1528(aClass94_3724)) {
+         } else if(var1.equalsString(aClass94_3724)) {
             anInt3754 = anInt3752;
-         } else if(var1.method1528(aClass94_3737)) {
+         } else if(var1.equalsString(aClass94_3737)) {
             this.method701(anInt3749, anInt3752, anInt3751);
          }
       } catch (Exception var3) {
@@ -403,7 +403,7 @@ abstract class Class3_Sub28_Sub17 extends Node {
                   aClass94_3745.appendCharacter(60);
                   aClass94_3745.method1533(var15);
                   aClass94_3745.appendCharacter(62);
-                  if(var15.method1528(aClass94_3737)) {
+                  if(var15.equalsString(aClass94_3737)) {
                      if(var3[var11] == null) {
                         var3[var11] = aClass94_3745.method1563(101).method1557(aClass94_3745.length(-91), 0, var5);
                      } else {
@@ -416,56 +416,56 @@ abstract class Class3_Sub28_Sub17 extends Node {
                      var4 = 0;
                      var6 = -1;
                      var10 = 0;
-                  } else if(var15.method1528(aClass94_3712)) {
+                  } else if(var15.equalsString(aClass94_3712)) {
                      var4 += this.method687(60);
                      if(this.aByteArray3733 != null && var10 != 0) {
                         var4 += this.aByteArray3733[(var10 << 8) + 60];
                      }
 
                      var10 = 60;
-                  } else if(var15.method1528(aClass94_3711)) {
+                  } else if(var15.equalsString(aClass94_3711)) {
                      var4 += this.method687(62);
                      if(this.aByteArray3733 != null && var10 != 0) {
                         var4 += this.aByteArray3733[(var10 << 8) + 62];
                      }
 
                      var10 = 62;
-                  } else if(var15.method1528(aClass94_3732)) {
+                  } else if(var15.equalsString(aClass94_3732)) {
                      var4 += this.method687(160);
                      if(this.aByteArray3733 != null && var10 != 0) {
                         var4 += this.aByteArray3733[(var10 << 8) + 160];
                      }
 
                      var10 = 160;
-                  } else if(var15.method1528(aClass94_3714)) {
+                  } else if(var15.equalsString(aClass94_3714)) {
                      var4 += this.method687(173);
                      if(this.aByteArray3733 != null && var10 != 0) {
                         var4 += this.aByteArray3733[(var10 << 8) + 173];
                      }
 
                      var10 = 173;
-                  } else if(var15.method1528(aClass94_3729)) {
+                  } else if(var15.equalsString(aClass94_3729)) {
                      var4 += this.method687(215);
                      if(this.aByteArray3733 != null && var10 != 0) {
                         var4 += this.aByteArray3733[(var10 << 8) + 215];
                      }
 
                      var10 = 215;
-                  } else if(var15.method1528(aClass94_3718)) {
+                  } else if(var15.equalsString(aClass94_3718)) {
                      var4 += this.method687(128);
                      if(this.aByteArray3733 != null && var10 != 0) {
                         var4 += this.aByteArray3733[(var10 << 8) + 128];
                      }
 
                      var10 = 128;
-                  } else if(var15.method1528(aClass94_3741)) {
+                  } else if(var15.equalsString(aClass94_3741)) {
                      var4 += this.method687(169);
                      if(this.aByteArray3733 != null && var10 != 0) {
                         var4 += this.aByteArray3733[(var10 << 8) + 169];
                      }
 
                      var10 = 169;
-                  } else if(var15.method1528(aClass94_3743)) {
+                  } else if(var15.equalsString(aClass94_3743)) {
                      var4 += this.method687(174);
                      if(this.aByteArray3733 != null && var10 != 0) {
                         var4 += this.aByteArray3733[(var10 << 8) + 174];
@@ -890,22 +890,22 @@ abstract class Class3_Sub28_Sub17 extends Node {
             if(var11 == 62 && var6 != -1) {
                RSString var12 = var1.method1557(var10, 0, var6 + 1);
                var6 = -1;
-               if(var12.method1528(aClass94_3712)) {
+               if(var12.equalsString(aClass94_3712)) {
                   var11 = 60;
-               } else if(var12.method1528(aClass94_3711)) {
+               } else if(var12.equalsString(aClass94_3711)) {
                   var11 = 62;
-               } else if(var12.method1528(aClass94_3732)) {
+               } else if(var12.equalsString(aClass94_3732)) {
                   var11 = 160;
-               } else if(var12.method1528(aClass94_3714)) {
+               } else if(var12.equalsString(aClass94_3714)) {
                   var11 = 173;
-               } else if(var12.method1528(aClass94_3729)) {
+               } else if(var12.equalsString(aClass94_3729)) {
                   var11 = 215;
-               } else if(var12.method1528(aClass94_3718)) {
+               } else if(var12.equalsString(aClass94_3718)) {
                   var11 = 128;
-               } else if(var12.method1528(aClass94_3741)) {
+               } else if(var12.equalsString(aClass94_3741)) {
                   var11 = 169;
                } else {
-                  if(!var12.method1528(aClass94_3743)) {
+                  if(!var12.equalsString(aClass94_3743)) {
                      if(var12.method1558(aClass94_3739)) {
                         try {
                            if(var4 == null) {

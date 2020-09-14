@@ -25,7 +25,7 @@ final class Class21 {
          Class24.anInt469 = -1;
          GraphicDefinition.incomingBuffer.index = 0;
          Class3_Sub28_Sub16.anInt3699 = 0;
-         RSString.incomingOpcode = -1;
+         Unsorted.incomingOpcode = -1;
 
          int var1;
          for(var1 = 0; Class3_Sub13_Sub22.players.length > var1; ++var1) {
