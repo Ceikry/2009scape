@@ -32,20 +32,17 @@ class ReferenceTable(data: ByteArray, crc: Int) {
         validArchiveAmount = buffer.readUnsignedShort()
         validArchiveIds = IntArray(validArchiveAmount)
 
-        var var6 = 0
-        var var7 = -1
+        var offset = 0
+        var highest = -1
 
-        var var8 = 0
-        while (validArchiveAmount > var8) {
-            var6 += buffer.readUnsignedShort()
-            validArchiveIds[var8] = var6
-            if (validArchiveIds[var8] > var7) {
-                var7 = validArchiveIds[var8]
-            }
-            var8++
+        for (i in 0 until validArchiveAmount) {
+            offset += buffer.readUnsignedShort()
+            validArchiveIds[i] = offset
+            if (validArchiveIds[i] > highest)
+                highest = validArchiveIds[i]
         }
 
-        archiveAmount = var7 - -1
+        archiveAmount = highest - -1
         archiveRevisions = IntArray(archiveAmount)
         validFileIds = arrayOfNulls(archiveAmount)
         archiveCRCs = IntArray(archiveAmount)
@@ -55,93 +52,60 @@ class ReferenceTable(data: ByteArray, crc: Int) {
         if (fields != 0) {
             archiveNameHash = IntArray(archiveAmount)
 
-            var8 = 0
-            while (archiveAmount > var8) {
-                archiveNameHash[var8] = -1
-                var8++
-            }
+            for (i in 0 until archiveAmount)
+                archiveNameHash[i] = -1
 
-            var8 = 0
-            while (validArchiveAmount > var8) {
-                archiveNameHash[validArchiveIds[var8]] = buffer.readInt()
-                var8++
-            }
+            for (i in 0 until validArchiveAmount)
+                archiveNameHash[validArchiveIds[i]] = buffer.readInt()
 
             aClass69_949 = Class69(archiveNameHash)
         }
 
-        var8 = 0
-        while (var8 < validArchiveAmount) {
-            archiveCRCs[validArchiveIds[var8]] = buffer.readInt()
-            ++var8
-        }
+        for (i in 0 until validArchiveAmount)
+            archiveCRCs[validArchiveIds[i]] = buffer.readInt()
 
-        var8 = 0
-        while (validArchiveAmount > var8) {
-            archiveRevisions[validArchiveIds[var8]] = buffer.readInt()
-            ++var8
-        }
+        for (i in 0 until validArchiveAmount)
+            archiveRevisions[validArchiveIds[i]] = buffer.readInt()
 
-        var8 = 0
-        while (validArchiveAmount > var8) {
-            archiveFileLengths[validArchiveIds[var8]] = buffer.readUnsignedShort()
-            ++var8
-        }
+        for (i in 0 until validArchiveAmount)
+            archiveFileLengths[validArchiveIds[i]] = buffer.readUnsignedShort()
 
-        var var9: Int
-        var var10: Int
-        var var11: Int
-        var var12: Int
-        var8 = 0
-        while (validArchiveAmount > var8) {
-            var6 = 0
-            var9 = validArchiveIds[var8]
-            var10 = archiveFileLengths[var9]
-            var11 = -1
-            this.validFileIds[var9] = IntArray(var10)
-            var12 = 0
-            while (var10 > var12) {
-                var6 += buffer.readUnsignedShort()
-                this.validFileIds[var9]!![var12] = var6
-                val var13 = this.validFileIds[var9]!![var12]
-                if (var13 > var11) {
-                    var11 = var13
-                }
-                ++var12
+        for (i in 0 until validArchiveAmount) {
+            offset = 0
+            val archiveId = validArchiveIds[i]
+            val archiveFileCount = archiveFileLengths[archiveId]
+            var highestFileId = -1
+            validFileIds[archiveId] = IntArray(archiveFileCount)
+            for (file in 0 until archiveFileCount) {
+                offset += buffer.readUnsignedShort()
+                validFileIds[archiveId]!![file] = offset
+                if (offset > highestFileId) highestFileId = offset
             }
-            archiveLengths[var9] = var11 + 1
-            if (var10 == 1 + var11) {
-                validFileIds[var9] = null
-            }
-            ++var8
+            archiveLengths[archiveId] = highestFileId + 1
+            if (archiveFileCount == highestFileId + 1)
+                validFileIds[archiveId] = null
         }
 
         if (fields != 0) {
-            val aClass69Array962 = arrayOfNulls<Class69>(var7 + 1)
-            val fileNameHashes = arrayOfNulls<IntArray>(var7 + 1)
-            var8 = 0
-            while (var8 < validArchiveAmount) {
-                var9 = validArchiveIds[var8]
-                var10 = archiveFileLengths[var9]
-                fileNameHashes[var9] = IntArray(archiveLengths[var9])
-                var11 = 0
-                while (var11 < archiveLengths[var9]) {
-                    fileNameHashes[var9]!![var11] = -1
-                    ++var11
+            val aClass69Array962 = arrayOfNulls<Class69>(highest + 1)
+            val fileNameHashes = arrayOfNulls<IntArray>(highest + 1)
+
+            for (i in 0 until validArchiveAmount) {
+                val archiveId = validArchiveIds[i]
+                val archiveFileLength = archiveFileLengths[archiveId]
+                val archiveFileNameHashes = IntArray(archiveLengths[archiveId])
+                fileNameHashes[archiveId] = archiveFileNameHashes
+
+                for (j in 0 until archiveLengths[archiveId])
+                    archiveFileNameHashes[j] = -1
+
+                for (j in 0 until archiveFileLength) {
+                    val fileIndex = if (validFileIds[archiveId] == null) j else validFileIds[archiveId]!![j]
+                    archiveFileNameHashes[fileIndex] = buffer.readInt()
                 }
-                var11 = 0
-                while (var10 > var11) {
-                    var12 = if (null == validFileIds[var9]) {
-                        var11
-                    } else {
-                        validFileIds[var9]!![var11]
-                    }
-                    fileNameHashes[var9]!![var12] = buffer.readInt()
-                    ++var11
-                }
-                aClass69Array962[var9] = Class69(fileNameHashes[var9])
-                ++var8
+                aClass69Array962[archiveId] = Class69(archiveFileNameHashes)
             }
+
             this.fileNameHashes = fileNameHashes
             this.aClass69Array962 = aClass69Array962
         }

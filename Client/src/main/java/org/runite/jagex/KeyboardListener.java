@@ -57,7 +57,7 @@ final class KeyboardListener implements KeyListener, FocusListener {
 
    public final synchronized void keyPressed(KeyEvent var1) {
       try {
-         System.out.println("Key code: " + var1.getKeyCode());
+//         System.out.println("Key code: " + var1.getKeyCode());
 
          switch (var1.getKeyCode())
          {
