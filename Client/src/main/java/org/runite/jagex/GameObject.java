@@ -29,25 +29,6 @@ abstract class GameObject {
       }
    }
 
-   public static void method1860(int var0) {
-      try {
-         aClass109Array1831 = null;
-         aClass11Array1836 = null;
-         aClass11ArrayArray1834 = (RSInterface[][])null;
-         if(var0 != 0) {
-            method1860(-87);
-         }
-
-         aClass3_Sub28_Sub16_Sub2Array1839 = null;
-         anIntArray1835 = null;
-         COMMAND_SET_PARTICLES = null;
-         anIntArray1833 = null;
-         anIntArray1838 = null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "th.HC(" + var0 + ')');
-      }
-   }
-
    GameObject method1861() {
       try {
          return this;

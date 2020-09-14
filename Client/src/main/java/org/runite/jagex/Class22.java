@@ -29,10 +29,6 @@ final class Class22 {
       var7.glEnd();
    }
 
-   public static void method923() {
-      aClass3_Sub28_Sub16_Sub1_447 = null;
-   }
-
    static void method924(int var0, int var1, int var2, int var3) {
       HDToolKit.method1835();
       float var4 = (float)var0 + 0.3F;

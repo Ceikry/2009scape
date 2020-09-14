@@ -147,10 +147,6 @@ final class Class169 {
       }
    }
 
-   public static void method2283() {
-      aByteArray2111 = null;
-   }
-
    final void method2284() {
       javax.media.opengl.GL var1 = HDToolKit.gl;
       HDToolKit.bindTexture2D(this.anInt2108);

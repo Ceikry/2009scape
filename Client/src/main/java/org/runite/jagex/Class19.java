@@ -16,15 +16,4 @@ final class Class19 {
    static int anInt433 = 0;
 
 
-   public static void method906(byte var0) {
-      try {
-         aClass94_422 = null;
-         if(var0 != 112) {
-            method906((byte)-42);
-         }
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "df.A(" + var0 + ')');
-      }
-   }
-
 }

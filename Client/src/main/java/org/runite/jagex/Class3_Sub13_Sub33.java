@@ -107,20 +107,6 @@ final class Class3_Sub13_Sub33 extends Class3_Sub13 {
       }
    }
 
-   public static void method325(int var0) {
-      try {
-         aByteArrayArrayArray3390 = (byte[][][])null;
-         if(var0 == 0) {
-            aByteArray3396 = null;
-            aClass133Array3393 = null;
-            aClass94Array3391 = null;
-            aClass94_3399 = null;
-         }
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "si.E(" + var0 + ')');
-      }
-   }
-
    static int method326(byte var0, RSString var1) {
       try {
          if(var0 <= 13) {

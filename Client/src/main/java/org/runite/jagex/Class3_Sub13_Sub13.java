@@ -156,19 +156,6 @@ final class Class3_Sub13_Sub13 extends Class3_Sub13 {
       }
    }
 
-   public static void method234(int var0) {
-      try {
-         if(var0 != -3) {
-            method233(-114, (CacheIndex)null);
-         }
-
-         aClass153_3154 = null;
-         aClass94_3152 = null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "gg.O(" + var0 + ')');
-      }
-   }
-
    final int[][] method166(int var1, int var2) {
       try {
          if(var1 == -1) {

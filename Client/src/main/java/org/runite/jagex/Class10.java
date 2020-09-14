@@ -52,16 +52,4 @@ final class Class10 {
       }
    }
 
-   public static void method853(int var0) {
-      try {
-         aClass94_148 = null;
-         if(var0 != 0) {
-         }
-
-         aClass153_152 = null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "bd.A(" + var0 + ')');
-      }
-   }
-
 }

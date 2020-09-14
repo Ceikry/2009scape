@@ -144,19 +144,6 @@ final class IOHandler implements Runnable {
         }
     }
 
-    public static void method1463(int var0) {
-        try {
-            if(var0 != 0) {
-                aClass61_1242 = (Class61)null;
-            }
-
-            aClass61_1242 = null;
-            aClass33_1238 = null;
-        } catch (RuntimeException var2) {
-            throw Class44.clientError(var2, "ma.I(" + var0 + ')');
-        }
-    }
-
     final void sendBytes(byte[] var3, int var4) throws IOException {
         try {
             if(!this.aBoolean1241) {

@@ -31,25 +31,6 @@ final class Class3_Sub28_Sub7_Sub1 extends Class3_Sub28_Sub7 {
       }
    }
 
-   public static void method570(int var0) {
-      try {
-         aClass94_4049 = null;
-         anIntArray4050 = null;
-         aClass149_4047 = null;
-         aClass130_4046 = null;
-         aClass94_4052 = null;
-         aClass93_4043 = null;
-         aClass153_4048 = null;
-         if(var0 > -101) {
-            method570(-94);
-         }
-
-         aClass93_4051 = null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "he.D(" + var0 + ')');
-      }
-   }
-
    final boolean method568() {
       try {
          return false;

@@ -132,17 +132,4 @@ final class Class96 {
          throw Class44.clientError(var17, "nc.A(" + (byte) -83 + ',' + (var1 != null?"{...}":"null") + ')');
       }
    }
-
-   public static void method1588(byte var0) {
-      try {
-         if(var0 <= 38) {
-            method1588((byte)-126);
-         }
-
-         aClass94_1349 = null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "nc.B(" + var0 + ')');
-      }
-   }
-
 }

@@ -19,21 +19,6 @@ final class Class70 {
    int anInt1059;
 
 
-   public static void method1284(byte var0) {
-      try {
-         if(var0 != -87) {
-            aClass94Array1046 = (RSString[])null;
-         }
-
-         aClass153_1058 = null;
-         aClass94_1051 = null;
-         aClass94Array1046 = null;
-         aClass10_1056 = null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "jh.A(" + var0 + ')');
-      }
-   }
-
    static void method1285(CacheIndex var0, int var2, int var5) {
       try {
          Class101.aClass153_1423 = var0;

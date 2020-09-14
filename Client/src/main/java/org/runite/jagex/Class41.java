@@ -88,22 +88,9 @@ final class Class41 {
       }
    }
 
-   public static void method1049(boolean var0) {
-      try {
-         anIntArray686 = null;
-         aClass93_684 = null;
-         if(!var0) {
-         }
-
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "ge.G(" + var0 + ')');
-      }
-   }
-
    final void method1050(int var1, int var2, byte[] var3) {
       try {
-         Class30 var5 = this.aClass30_681;
-         synchronized(var5) {
+         synchronized(this.aClass30_681) {
             if(0 <= var2 && var2 <= this.anInt687) {
                boolean var6 = this.method1054((byte)87, var2, var1, var3, true);
                if(!var6) {
@@ -121,8 +108,7 @@ final class Class41 {
 
    final byte[] method1051(int var1, byte var2) {
       try {
-         Class30 var3 = this.aClass30_681;
-         synchronized(var3) {
+         synchronized(this.aClass30_681) {
             Object var10000;
             try {
                if((long) (var1 * 6 + 6) > this.aClass30_683.method976(0)) {
@@ -248,8 +234,7 @@ final class Class41 {
 
    private boolean method1054(byte var1, int var2, int var3, byte[] var4, boolean var5) {
       try {
-         Class30 var6 = this.aClass30_681;
-         synchronized(var6) {
+         synchronized(this.aClass30_681) {
             try {
                int var7;
                if(var5) {

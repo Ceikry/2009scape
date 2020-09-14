@@ -12,8 +12,6 @@ final class Class85 {
 
    static void method1423(RSByteBuffer var1, RSString var2) {
       try {
-
-          int var3 = var1.index;
          byte[] var4 = var2.method1568();
          var1.method768(-32769, var4.length);
          var1.index += Class3_Sub13_Sub9.aClass36_3112.method1015(var4.length, var1.buffer, var4, 0, var1.index);
@@ -42,18 +40,6 @@ final class Class85 {
          }
       }
 
-   }
-
-   public static void method1426(int var0) {
-      try {
-         aClass153_1171 = null;
-         if(var0 != -25247) {
-            aClass142Array1168 = (AnimationDefinition[])null;
-         }
-         aClass142Array1168 = null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "lg.B(" + var0 + ')');
-      }
    }
 
 }

@@ -59,21 +59,6 @@ abstract class Class3_Sub13 extends Class3 {
       }
    }
 
-   public static void method156(int var0) {
-      try {
-         if(var0 != 2) {
-            method153(18);
-         }
-
-         anIntArray2386 = null;
-         COMMAND_REPLACE_CANVAS = null;
-         COMMAND_SHIFT_DROP_CLICK = null;
-         aClass3_Sub28_Sub17_2379 = null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "j.PA(" + var0 + ')');
-      }
-   }
-
    void method157(int var1, RSByteBuffer var2, boolean var3) {
       try {
          if(!var3) {

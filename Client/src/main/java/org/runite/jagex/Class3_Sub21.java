@@ -107,19 +107,6 @@ final class Class3_Sub21 extends Class3 {
 
    }
 
-   public static void method396(int var0) {
-      try {
-         if(var0 != 0) {
-            method397((byte)35);
-         }
-
-         aClass155_2491 = null;
-         aClass94_2498 = null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "lh.B(" + var0 + ')');
-      }
-   }
-
    static void method397(byte var0) {
       try {
          Class114.aClass93_1569.method1524();

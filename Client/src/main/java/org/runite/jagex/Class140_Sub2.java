@@ -144,17 +144,6 @@ final class Class140_Sub2 extends GameObject {
       }
    }
 
-   public static void method1954(int var0) {
-      try {
-         if(var0 == 0) {
-            anIntArray2709 = null;
-            aClass94_2707 = null;
-         }
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "bh.B(" + var0 + ')');
-      }
-   }
-
    final void animate(int var1, int var2, int var3, int var4, int var5, int var6, int var7, int var8, long var9, int var11, Class127_Sub1 var12) {
       try {
          Model var13 = this.method1949();

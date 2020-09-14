@@ -21,18 +21,4 @@ final class Class27 {
       }
    }
 
-   public static void method962(byte var0) {
-      try {
-         anIntArray512 = null;
-         aClass3_Sub28_Sub16_Sub2_518 = null;
-         aClass11_526 = null;
-         anIntArray510 = null;
-         aClass94_516 = null;
-         aClass157_524 = null;
-         aClass93_511 = null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "ef.A(" + var0 + ')');
-      }
-   }
-
 }

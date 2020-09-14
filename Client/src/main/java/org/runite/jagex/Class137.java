@@ -14,13 +14,6 @@ final class Class137 {
       }
    }
 
-   public static void method1818(boolean var0) { //TODO: Misplaced Check Method
-      try {
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "tc.C(" + var0 + ')');
-      }
-   }
-
    static void method1819(int var0, int var1, RSInterface var2, int var4, int var5, int var6, int var7) {
       try {
 

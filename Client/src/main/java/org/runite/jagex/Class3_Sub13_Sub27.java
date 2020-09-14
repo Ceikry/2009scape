@@ -103,19 +103,6 @@ final class Class3_Sub13_Sub27 extends Class3_Sub13 {
       }
    }
 
-   public static void method296(byte var0) {
-      try {
-         aClass94Array3341 = null;
-         if(var0 >= -56) {
-            anInt3340 = 30;
-         }
-
-         aClass94_3339 = null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "pi.F(" + var0 + ')');
-      }
-   }
-
    final int[][] method166(int var1, int var2) {
       try {
          if(var1 != -1) {

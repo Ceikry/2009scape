@@ -28,14 +28,6 @@ final class Class3_Sub13_Sub2 extends Class3_Sub13 {
       }
    }
 
-   public static void method172(int var0) {
-      try {
-         anIntArray3045 = null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "aj.B(" + var0 + ')');
-      }
-   }
-
    final int[][] method166(int var1, int var2) {
       try {
          if(var1 != -1) {

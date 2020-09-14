@@ -150,20 +150,6 @@ final class Class36 {
       }
    }
 
-   public static void method1016(byte var0) {
-      try {
-         aByteArrayArrayArray640 = (byte[][][])null;
-         if(var0 <= 85) {
-            anInt638 = 33;
-         }
-
-         anIntArray634 = null;
-         aClass3_Sub28_Sub16_637 = null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "fi.C(" + var0 + ')');
-      }
-   }
-
    final int method1017(int var1, int var2, byte[] var3, byte[] var5, int var6) {
       try {
          if(var2 == 0) {
@@ -372,9 +358,7 @@ final class Class36 {
                   if(this.anIntArray633.length <= var10) {
                      int[] var13 = new int[this.anIntArray633.length * 2];
 
-                     for(int var14 = 0; this.anIntArray633.length > var14; ++var14) {
-                        var13[var14] = this.anIntArray633[var14];
-                     }
+                     System.arraycopy(this.anIntArray633, 0, var13, 0, this.anIntArray633.length);
 
                      this.anIntArray633 = var13;
                   }

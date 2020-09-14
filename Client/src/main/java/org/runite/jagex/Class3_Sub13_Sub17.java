@@ -114,20 +114,6 @@ final class Class3_Sub13_Sub17 extends Class3_Sub13 {
       }
    }
 
-   public static void method249(int var0) {
-      try {
-         anIntArray3212 = null;
-         aClass130_3208 = null;
-         aClass153_3210 = null;
-         aClass94_3209 = null;
-         if(var0 >= -100) {
-         }
-
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "je.R(" + var0 + ')');
-      }
-   }
-
    static void method250(CacheIndex var1) {
       try {
          Class8.aClass153_105 = var1;

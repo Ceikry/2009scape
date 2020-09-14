@@ -576,19 +576,6 @@ final class RSInterface {
       }
    }
 
-   public static void method860(int var0) {
-      try {
-         aClass94_209 = null;
-         if(var0 < 63) {
-            method860(42);
-         }
-
-         aClass94_251 = null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "be.F(" + var0 + ')');
-      }
-   }
-
    static int method861(int var0, int var1, int var2) {
       try {
          Class3_Sub25 var3 = (Class3_Sub25)Class3_Sub2.aClass130_2220.method1780((long)var0);

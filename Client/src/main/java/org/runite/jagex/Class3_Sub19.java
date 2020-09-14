@@ -44,7 +44,7 @@ final class Class3_Sub19 extends Class3 {
             for(var6 = var3 + 1; -1 + -var3 + 104 > var6; ++var6) {
                var7 = 4 * 512 * (var3 + 103 + -var6) + 24628;
 
-               for(var8 = 1 + 0; -0 + 104 + -1 > var8; ++var8) {
+               for(var8 = 1; 104 + -1 > var8; ++var8) {
                   if((Class9.aByteArrayArrayArray113[var1][var8][var6] & 24) == 0) {
                      IOHandler.method1469(var4, var7, 512, var1, var8, var6);
                   }
@@ -61,7 +61,7 @@ final class Class3_Sub19 extends Class3 {
 
             for(var6 = 0; 104 > var6; ++var6) {
                for(var7 = 0; 104 > var7; ++var7) {
-                  long var20 = Class3_Sub2.method104(WorldListCountry.localPlane, var6 + 0, var7 - -var3);
+                  long var20 = Class3_Sub2.method104(WorldListCountry.localPlane, var6, var7 - -var3);
                   if(var20 != 0) {
                      ObjectDefinition var10 = Class162.getObjectDefinition((int)(var20 >>> 32) & Integer.MAX_VALUE);
                      int var11 = var10.MapIcon;
@@ -80,7 +80,7 @@ final class Class3_Sub19 extends Class3 {
 
                      if(var11 >= 0) {
                         int var21 = var3 + var7;
-                        var12 = 0 + var6;
+                        var12 = var6;
                         if(22 != var11 && var11 != 29 && 34 != var11 && var11 != 36 && 46 != var11 && var11 != 47 && var11 != 48) {
                            int[][] var14 = Class86.aClass91Array1182[WorldListCountry.localPlane].anIntArrayArray1304;
 
@@ -105,7 +105,7 @@ final class Class3_Sub19 extends Class3 {
                         }
 
                         anIntArray3693[MouseListeningClass.anInt1924] = var10.objectId;
-                        Class84.anIntArray1163[MouseListeningClass.anInt1924] = -0 + var12;
+                        Class84.anIntArray1163[MouseListeningClass.anInt1924] = var12;
                         Class3_Sub28_Sub7_Sub1.anIntArray4050[MouseListeningClass.anInt1924] = var21 + -var3;
                         ++MouseListeningClass.anInt1924;
                      }
@@ -120,7 +120,7 @@ final class Class3_Sub19 extends Class3 {
 
          for(var6 = 1; var6 < 103; ++var6) {
             for(var7 = 1; 103 > var7; ++var7) {
-               if(0 == (Class9.aByteArrayArrayArray113[var1][var7 + 0][var6 - -var3] & 24) && !RSString.method1529(var3, var7, var18, var6, var5, var1)) {
+               if(0 == (Class9.aByteArrayArrayArray113[var1][var7][var6 - -var3] & 24) && !RSString.method1529(var3, var7, var18, var6, var5, var1)) {
                   if(HDToolKit.highDetail) {
                      Class74.anIntArray1100 = null;
                   } else {
@@ -130,7 +130,7 @@ final class Class3_Sub19 extends Class3 {
                   return false;
                }
 
-               if(var1 < 3 && (Class9.aByteArrayArrayArray113[1 + var1][var7 + 0][var6 + var3] & 8) != 0 && !RSString.method1529(var3, var7, var18, var6, var5, 1 + var1)) {
+               if(var1 < 3 && (Class9.aByteArrayArrayArray113[1 + var1][var7][var6 + var3] & 8) != 0 && !RSString.method1529(var3, var7, var18, var6, var5, 1 + var1)) {
                   if(HDToolKit.highDetail) {
                      Class74.anIntArray1100 = null;
                   } else {
@@ -167,24 +167,6 @@ final class Class3_Sub19 extends Class3 {
          return true;
       } catch (RuntimeException var17) {
          throw Class44.clientError(var17, "kl.B(" + 0 + ',' + var1 + ')');
-      }
-   }
-
-   static void method386() {
-      try {
-         Class3_Sub31.aClass93_2604.method1522(-128, 5);
-         Class27.aClass93_511.method1522(-126, 5);
-      } catch (RuntimeException var3) {
-         throw Class44.clientError(var3, "kl.D(" + 5 + ',' + -123 + ')');
-      }
-   }
-
-   public static void method387(int var0) {
-      try {
-         //int var1 = 41 % ((var0 - -70) / 32);
-         aClass153_2474 = null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "kl.A(" + var0 + ')');
       }
    }
 

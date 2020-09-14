@@ -343,16 +343,6 @@ final class Class68 {
       anIntArrayArrayArray1027 = (int[][][])null;
    }
 
-   public static void method1274() {
-      aClass43Array1021 = null;
-      anIntArrayArrayArray1027 = (int[][][])null;
-      anIntArray1028 = null;
-      aBooleanArray1026 = null;
-      aFloatArray1022 = null;
-      anIntArray1023 = null;
-      aBooleanArray1033 = null;
-   }
-
    static void method1275() {
       javax.media.opengl.GL var0 = HDToolKit.gl;
 

@@ -84,16 +84,6 @@ final class Class130 {
       }
    }
 
-   public static void method1774() {
-      try {
-         aClass94_1698 = null;
-         aBooleanArray1712 = null;
-         aBooleanArray1703 = null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "sc.H(" + ')');
-      }
-   }
-
    static void method1775() {
       for(int var0 = 0; var0 < Class3_Sub13_Sub5.anInt3070; ++var0) {
          Class25 var1 = AnimationDefinition.aClass25Array1868[var0];

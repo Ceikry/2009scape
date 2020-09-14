@@ -163,18 +163,4 @@ final class Class159 {
       }
    }
 
-   public static void method2197(boolean var0) {
-      try {
-         if(var0) {
-            anIntArray2021 = null;
-            aClass94_2018 = null;
-            anIntArray2017 = null;
-            aClass153_2019 = null;
-            aClass93_2016 = null;
-         }
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "vl.C(" + var0 + ')');
-      }
-   }
-
 }

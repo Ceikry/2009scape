@@ -20,20 +20,6 @@ final class CS2Script extends Class3 {
    static int anInt2453 = 127;
 
 
-   public static void method376(boolean var0) {
-      try {
-         aClass93_2442 = null;
-         if(var0) {
-            method378(97, (byte)-80);
-         }
-
-         aByteArrayArrayArray2452 = (byte[][][])null;
-         aClass93_2450 = null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "jl.E(" + ')');
-      }
-   }
-
    static void sendRegistryRequest(int year, int country, int day, int month) {
       try {
     	//  System.out.println("CS2Script year=" + year + ", country=" + country + ", day=" + day + ", month=" + month + ", stage=" + stage + ", " + System.currentTimeMillis());

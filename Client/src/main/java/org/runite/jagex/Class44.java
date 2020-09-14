@@ -101,21 +101,6 @@ abstract class Class44 {
 		}
 	}
 
-	public static void method1071(byte var0) {
-		try {
-			anIntArray726 = null;
-			aClass93_725 = null;
-			anIntArrayArrayArray723 = (int[][][])null;
-			if(var0 >= -82) {
-				method1071((byte)3);
-			}
-
-			anIntArrayArrayArray720 = (int[][][])null;
-		} catch (RuntimeException var2) {
-			throw clientError(var2, "gj.M(" + var0 + ')');
-		}
-	}
-
 	final boolean method1072() {
 		try {
 			return (this.settings & 4) != 0;

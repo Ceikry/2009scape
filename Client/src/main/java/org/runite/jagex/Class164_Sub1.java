@@ -182,22 +182,8 @@ class Class164_Sub1 extends Class164 {
       }
    }
 
-   public static void method2240(int var0) {
-      try {
-         aShortArray3011 = null;
-         aClass94_3013 = null;
-         if(var0 == 128) {
-            aClass158_3009 = null;
-         }
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "vd.I(" + var0 + ')');
-      }
-   }
-
    static void method2241(byte var0, boolean var1) {
       try {
-         int var2 = -47 / ((var0 - 5) / 49);
-
          Class3_Sub9 var3;
          for(var3 = (Class3_Sub9)Class3.aClass61_78.method1222(); var3 != null; var3 = (Class3_Sub9)Class3.aClass61_78.method1221()) {
             if(null != var3.aClass3_Sub24_Sub1_2312) {

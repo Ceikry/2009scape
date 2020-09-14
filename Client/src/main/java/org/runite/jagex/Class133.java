@@ -19,21 +19,6 @@ final class Class133 {
    int anInt1757;
 
 
-   public static void method1802(int var0) {
-      try {
-         aClass94_1745 = null;
-         anIntArray1743 = null;
-         inputTextCodeArray = null;
-         aClass153_1751 = null;
-         aClass11_1749 = null;
-         if(var0 != 25) {
-         }
-
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "sg.A(" + var0 + ')');
-      }
-   }
-
    static void method1803() {
       try {
          Class82.aClass93_1146.method1523((byte)-119);

@@ -13,18 +13,6 @@ abstract class Class75 {
    static int anInt1109 = 0;
 
 
-   public static void method1334(byte var0) {
-      try {
-         anIntArray1107 = null;
-         aClass3_Sub28_Sub5Array1103 = null;
-         if(var0 != -115) {
-         }
-
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "kf.J(" + var0 + ')');
-      }
-   }
-
    abstract void method1335(int var1, int var2, int var3);
 
    static Class25 method1336(int var0, int var1, int var2) {

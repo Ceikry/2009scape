@@ -11,17 +11,6 @@ final class InputStream_Sub1 extends InputStream {
    static IOHandler js5Connection;
    static int anInt42 = 0;
 
-   public static void method61(int var0) {
-      try {
-         js5Connection = null;
-         aClass94_38 = null;
-         aClass94_37 = null;
-         anIntArray39 = null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "qk.C(" + var0 + ')');
-      }
-   }
-
    static int[] method62() {
       try {
 

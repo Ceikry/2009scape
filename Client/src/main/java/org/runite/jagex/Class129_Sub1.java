@@ -18,21 +18,6 @@ final class Class129_Sub1 extends Class129 {
    static int anInt2697;
 
 
-   public static void method1771(int var0) {
-      try {
-         anIntArray2696 = null;
-         anImage2695 = null;
-         if(var0 != 14635) {
-            aClass47_2686 = (Class47)null;
-         }
-
-         aClass3_Sub28_Sub16Array2690 = null;
-         aClass47_2686 = null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "lj.G(" + var0 + ')');
-      }
-   }
-
    final void method1770() {
       try {
          int var2;

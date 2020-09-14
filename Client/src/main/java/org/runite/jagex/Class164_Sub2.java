@@ -44,19 +44,6 @@ class Class164_Sub2 extends Class164 {
       }
    }
 
-   public static void method2245(byte var0) {
-      try {
-         aClass33_3019 = null;
-         if(var0 != -74) {
-            aByteArrayArray3027 = (byte[][])((byte[][])null);
-         }
-
-         aByteArrayArray3027 = (byte[][])null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "we.I(" + var0 + ')');
-      }
-   }
-
    Class164_Sub2() {
       super(8, 8, 8);
 

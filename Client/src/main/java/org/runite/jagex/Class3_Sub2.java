@@ -41,15 +41,6 @@ final class Class3_Sub2 extends Class3 {
       }
    }
 
-   public static void method102(int var0) {
-      try {
-         aClass130_2220 = null;
-         aShortArray2219 = null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "bj.A(" + var0 + ')');
-      }
-   }
-
    static void method103() {
       try {
          Client.aClass130_2194.method1773(122);

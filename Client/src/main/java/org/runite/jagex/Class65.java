@@ -80,18 +80,6 @@ final class Class65 {
       }
    }
 
-   public static void method1238(int var0) {
-      try {
-         if(var0 < -83) {
-            aClass61_983 = null;
-            aClass94_985 = null;
-            aClass3_Sub30Array986 = null;
-         }
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "ja.B(" + var0 + ')');
-      }
-   }
-
    static void method1239(int var0, int var1, int var2, int var3, int var4, boolean var5) {
       try {
          if(var0 < 1) {

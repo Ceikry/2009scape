@@ -1463,20 +1463,6 @@ final class Class140_Sub1_Sub1 extends Model {
       this.aClass121_3814.aBoolean1640 = false;
    }
 
-   public static void method1915() {
-      aLongArray3821 = null;
-      aClass3_Sub30_3818 = null;
-      aByteBuffer3834 = null;
-      aClass140_Sub1_Sub1_3842 = null;
-      aClass140_Sub1_Sub1_3850 = null;
-      aClass140_Sub1_Sub1_3853 = null;
-      aClass140_Sub1_Sub1_3854 = null;
-      aClass140_Sub1_Sub1_3855 = null;
-      aClass140_Sub1_Sub1_3856 = null;
-      anIntArray3861 = null;
-      anIntArray3857 = null;
-   }
-
    final boolean method1873() {
       if(this.anIntArrayArray3825 == null) {
          return false;

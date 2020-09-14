@@ -382,17 +382,6 @@ final class Class3_Sub13_Sub37 extends Class3_Sub13 {
       }
    }
 
-   public static void method348(int var0) {
-      try {
-         if(var0 >= 7) {
-            aClass3_Sub28_Sub17_Sub1_3440 = null;
-            aBigInteger3441 = null;
-         }
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "um.Q(" + var0 + ')');
-      }
-   }
-
    static boolean method349(int var0, int var1, int var2) {
       for(int var3 = 0; var3 < Class126.anInt1672; ++var3) {
          Class113 var4 = Class145.aClass113Array1895[var3];

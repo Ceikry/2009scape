@@ -140,15 +140,6 @@ final class Class81 {
       }
    }
 
-   public static void method1402(byte var0) {
-      try {
-         aClass13_1139 = null;
-         anIntArrayArrayArray1142 = (int[][][])null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "la.F(" + var0 + ')');
-      }
-   }
-
    static Class131 method1403(int var0, RSString var1, CacheIndex var2) {
       try {
          int var3 = var2.getArchiveForName(var1);

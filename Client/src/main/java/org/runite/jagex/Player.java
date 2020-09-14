@@ -389,21 +389,6 @@ final class Player extends Class140_Sub4 {
 
    protected final void finalize() {}
 
-   public static void method1982(byte var0) {
-      try {
-         anIntArray3951 = null;
-         aClass94_3961 = null;
-         anIntArray3959 = null;
-         if(var0 <= 116) {
-            method1982((byte)-48);
-         }
-
-         anIntArray3954 = null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "e.R(" + var0 + ')');
-      }
-   }
-
    final int method1871() {
       try {
          return this.anInt2820;

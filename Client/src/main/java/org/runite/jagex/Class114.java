@@ -18,21 +18,6 @@ final class Class114 {
    boolean aBoolean1580 = false;
 
 
-   public static void method1704(int var0) {
-      try {
-         aClass93_1569 = null;
-         if(var0 != 65536) {
-            method1705(-109, -68);
-         }
-
-         anIntArray1578 = null;
-         ignores = null;
-         aClass30_1572 = null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "pf.G(" + var0 + ')');
-      }
-   }
-
    static float[] method1705(int var0, int var1) {
       try {
          float var2 = Class92.method1514() + Class92.getLightingModelAmbient();

@@ -202,19 +202,4 @@ final class Class3_Sub13_Sub16 extends Class3_Sub13 {
       super(0, true);
    }
 
-   public static void method245(int var0) {
-      try {
-         aClass44_Sub1Array3201 = null;
-         aClass94_3192 = null;
-         if(var0 != 0) {
-            method245(111);
-         }
-
-         aClass94_3190 = null;
-         aClass94_3196 = null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "hm.B(" + var0 + ')');
-      }
-   }
-
 }

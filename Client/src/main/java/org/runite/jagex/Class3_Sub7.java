@@ -8,18 +8,6 @@ final class Class3_Sub7 extends Class3 {
    long aLong2295;
 
 
-   public static void method120(int var0) {
-      try {
-         anIntArray2292 = null;
-         if(var0 != 1000) {
-            anInt2293 = 55;
-         }
-
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "eb.B(" + var0 + ')');
-      }
-   }
-
    static int method121(int var0, int var1, int var2, int var3, int var4, int var6) {
       try {
          if((var2 & 1) == 1) {

@@ -30,17 +30,6 @@ final class Class116 {
    private Class34 aClass34_1608;
 
 
-   public static void method1715() {
-      anIntArray1598 = null;
-      anIntArray1594 = null;
-      anIntArray1591 = null;
-      anIntArray1601 = null;
-      anIntArray1602 = null;
-      anIntArray1603 = null;
-      anIntArray1599 = null;
-      anIntArray1600 = null;
-   }
-
    private int method1716(int var1, int var2, int var3) {
       return var3 == 1?((var1 & 32767) < 16384?var2:-var2):(var3 == 2?anIntArray1591[var1 & 32767] * var2 >> 14:(var3 == 3?((var1 & 32767) * var2 >> 14) - var2:(var3 == 4?anIntArray1594[var1 / 2607 & 32767] * var2:0)));
    }

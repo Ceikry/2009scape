@@ -2,8 +2,6 @@ package org.runite;
 
 import org.runite.jagex.GameShell;
 
-import static org.runite.Client.PUBLIC_IP_ADDRESS;
-
 /**
  * Handles the launching of our Game Client.
  * @author Keldagrim Development Team

@@ -60,18 +60,6 @@ final class Class132 {
       }
    }
 
-   public static void method1800(byte var0) {
-      try {
-         aClass94Array1739 = null;
-         aClass153_1735 = null;
-         if(var0 <= 52) {
-         }
-
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "sf.A(" + var0 + ')');
-      }
-   }
-
    static void method1801(byte var0) {
       try {
          if(var0 >= -94) {

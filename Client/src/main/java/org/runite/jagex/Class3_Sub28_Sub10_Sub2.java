@@ -54,19 +54,7 @@ final class Class3_Sub28_Sub10_Sub2 extends Class3_Sub28_Sub10 {
       }
    }
 
-   public static void method597(byte var0) {
-      try {
-         aClass3_Sub2ArrayArrayArray4070 = (Class3_Sub2[][][])null;
-         aClass94_4066 = null;
-         if(var0 < 91) {
-		 }
-
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "pm.O(" + var0 + ')');
-      }
-   }
-   
-   static void method598(boolean var0, int var1, boolean var2, int var3, boolean var4, int var5, int var6) {
+	static void method598(boolean var0, int var1, boolean var2, int var3, boolean var4, int var5, int var6) {
 	      try {
 	         if(var2) {
 	            HDToolKit.method1842();

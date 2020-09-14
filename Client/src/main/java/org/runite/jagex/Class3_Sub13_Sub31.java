@@ -7,19 +7,6 @@ final class Class3_Sub13_Sub31 extends Class3_Sub13 {
    static int anInt3375 = 0;
    static int anInt3377 = 7759444;
 
-   public static void method317(int var0) {
-      try {
-         if(var0 != 7759444) {
-            method317(72);
-         }
-
-         aClass93_3369 = null;
-         aClass3_Sub28_Sub16Array3373 = null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "rl.C(" + var0 + ')');
-      }
-   }
-
    final int[] method154(int var1, byte var2) {
       try {
          return Class102.anIntArray2125;

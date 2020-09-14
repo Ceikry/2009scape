@@ -10,22 +10,6 @@ final class Class154 {
    static int anInt1966 = -1;
    static CacheIndex aClass153_1967;
 
-   public static void method2145(byte var0) {
-      try {
-         aClass93_1955 = null;
-         if(var0 >= -41) {
-            method2147(-28, 103, -37);
-         }
-
-         anIntArray1960 = null;
-         aClass153_1967 = null;
-         aClass93_1965 = null;
-         aClass93_1964 = null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "vf.A(" + var0 + ')');
-      }
-   }
-
    static void method2146(int var0, int var1, int var2, int var3, GameObject var4, GameObject var5, int var6, int var7, long var8) {
       if(var4 != null || var5 != null) {
          Class70 var10 = new Class70();

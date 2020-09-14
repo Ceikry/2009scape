@@ -38,16 +38,4 @@ final class ClientErrorException extends RuntimeException {
       }
    }
 
-   public static void method2288(boolean var0) {
-      anIntArray2113 = null;
-      aClass94_2116 = null;
-      aClass96Array2114 = null;
-      aClass94Array2119 = null;
-      if(var0) {
-         method2287(-64, (byte)-87);
-      }
-
-      worldListHost = null;
-   }
-
 }

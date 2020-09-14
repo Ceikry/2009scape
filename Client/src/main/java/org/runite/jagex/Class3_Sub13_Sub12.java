@@ -118,15 +118,6 @@ final class Class3_Sub13_Sub12 extends Class3_Sub13 {
       }
    }
 
-   public static void method227(boolean var0) {
-      try {
-         aClass94_3145 = null;
-         CRC32 = null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "fn.O(" + var0 + ')');
-      }
-   }
-
    final int[] method154(int var1, byte var2) {
       try {
          int[] var10 = this.aClass114_2382.method1709(var1);

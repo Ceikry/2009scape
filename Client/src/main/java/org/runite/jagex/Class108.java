@@ -93,18 +93,6 @@ final class Class108 {
       }
    }
 
-   public static void method1660(int var0) {
-      try {
-         aClass3_Sub28_Sub16_1457 = null;
-         COMMAND_HIGHRES_GRAPHICS_WINDOW = null;
-         COMMAND_QA_OP_TEST = null;
-         if(var0 != 13123) {
-         }
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "oi.A(" + var0 + ')');
-      }
-   }
-
    static void method1661(CacheIndex var1, CacheIndex var2) {
       try {
          Class14.aBoolean337 = true;

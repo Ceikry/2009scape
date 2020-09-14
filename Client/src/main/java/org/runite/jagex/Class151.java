@@ -9,22 +9,6 @@ abstract class Class151 {
    static Class8 aClass8_1936;
 
 
-   public static void method2093(int var0) {
-      try {
-         aClass8_1936 = null;
-         aClass94_1932 = null;
-         aFloatArray1934 = null;
-         COMMAND_BREAK_CLIENT_CONNECTION = null;
-         aClass11_1933 = null;
-         if(var0 != 1) {
-            method2096(-83, 44, -77, 121L);
-         }
-
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "v.R(" + var0 + ')');
-      }
-   }
-
    abstract ReferenceTable method2094();
 
    abstract void method2095(int var1);

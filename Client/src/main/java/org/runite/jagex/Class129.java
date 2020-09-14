@@ -22,21 +22,6 @@ abstract class Class129 {
       }
    }
 
-   public static void method1766(int var0) {
-      try {
-         anIntArray1695 = null;
-         if(var0 != 24241) {
-            method1766(84);
-         }
-
-         anIntArray1690 = null;
-         anIntArray1693 = null;
-         aClass94_1694 = null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "s.E(" + var0 + ')');
-      }
-   }
-
    abstract int method1767(int var1, int var2, int var3);
 
    static void method1768(int var0, int var2) {

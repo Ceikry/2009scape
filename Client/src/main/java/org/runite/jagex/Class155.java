@@ -388,19 +388,4 @@ class Class155 {
 
    void method2164(Component var1) throws Exception {}
 
-   public static void method2165(int var0) {
-      try {
-         char_colon = null;
-         anIntArray1976 = null;
-         if(var0 != 0) {
-            method2165(-20);
-         }
-
-         anIntArray1969 = null;
-         anIntArray1978 = null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "vh.G(" + var0 + ')');
-      }
-   }
-
 }

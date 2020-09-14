@@ -11,20 +11,6 @@ final class Class21 {
    static RSString aClass94_444 = RSString.createRSString("<img=1>");
 
 
-   public static void method911(int var0) {
-      try {
-         if(var0 != 26) {
-            maskUpdateIndexes = (int[])null;
-         }
-
-         maskUpdateIndexes = null;
-         aClass94_444 = null;
-         aClass94_442 = null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "dh.B(" + var0 + ')');
-      }
-   }
-
    static void method912() {
       try {
          Class3_Sub13_Sub1.outgoingBuffer.index = 0;

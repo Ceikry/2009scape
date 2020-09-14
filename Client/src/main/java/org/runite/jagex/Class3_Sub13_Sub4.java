@@ -148,19 +148,6 @@ final class Class3_Sub13_Sub4 extends Class3_Sub13 {
       }
    }
 
-   public static void method187(boolean var0) {
-      try {
-         aByteArrayArray3057 = (byte[][])null;
-         if(var0) {
-            aClass94_3055 = (RSString)null;
-         }
-
-         aClass94_3055 = null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "bi.S(" + var0 + ')');
-      }
-   }
-
    final void method158(int var1) {
       try {
          this.aByteArray3059 = Class49.method1123(16711935, this.anInt3067);

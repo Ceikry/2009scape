@@ -114,19 +114,6 @@ final class Class93 {
       }
    }
 
-   public static void method1521(int var0) {
-      try {
-         aByteArrayArrayArray1328 = (byte[][][])null;
-         aClass94_1326 = null;
-         if(var0 != 3101) {
-            method1516(99, -14);
-         }
-
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "n.A(" + var0 + ')');
-      }
-   }
-
    final void method1522(int var1, int var2) {
       try {
          if(null != Class3_Sub28_Sub20.aClass118_3794) {

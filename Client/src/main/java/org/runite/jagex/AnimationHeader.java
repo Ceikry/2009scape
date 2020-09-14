@@ -21,16 +21,7 @@ final class AnimationHeader {
 	private static short[] aShortArray1397 = new short[500];
 
 
-	public static void method1595() {
-		aShortArray1397 = null;
-		aShortArray1394 = null;
-		aShortArray1391 = null;
-		aShortArray1390 = null;
-		aShortArray1392 = null;
-		aByteArray1389 = null;
-	}
-
-//	AnimationHeader(byte[] bs, Class3_Sub17 skin) {
+	//	AnimationHeader(byte[] bs, Class3_Sub17 skin) {
 //		this.skins = skin;
 //		RSByteBuffer buffer = new RSByteBuffer(bs);
 //		RSByteBuffer parent = new RSByteBuffer(bs);

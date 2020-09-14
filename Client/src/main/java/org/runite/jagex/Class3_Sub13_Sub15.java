@@ -187,18 +187,4 @@ final class Class3_Sub13_Sub15 extends Class3_Sub13 {
       }
    }
 
-   public static void method241(byte var0) {
-      try {
-         anIntArray3181 = null;
-         aClass61_3177 = null;
-         if(var0 <= 38) {
-         }
-
-         anIntArray3185 = null;
-         COMMAND_HIGHRES_GRAPHICS_FULLSCREEN = null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "hk.B(" + var0 + ')');
-      }
-   }
-
 }

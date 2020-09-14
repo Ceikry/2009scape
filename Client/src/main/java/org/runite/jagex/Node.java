@@ -47,18 +47,6 @@ class Node extends Class3 {
       }
    }
 
-   public static void method521(int var0) {
-      try {
-         aClass153_2573 = null;
-         if(var0 == -3) {
-            aClass94Array2566 = null;
-            anIntArray2574 = null;
-         }
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "rg.QA(" + var0 + ')');
-      }
-   }
-
    static NPCDefinition method522(int var0) {
       try {
          NPCDefinition def = (NPCDefinition)Class3_Sub28_Sub7_Sub1.aClass93_4043.get((long)var0);

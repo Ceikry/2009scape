@@ -29,20 +29,6 @@ abstract class Class158 {
       }
    }
 
-   public static void method2181(boolean var0) {
-      try {
-         aByteArrayArrayArray2008 = (byte[][][])null;
-         anIntArray2004 = null;
-         if(var0) {
-            method2181(false);
-         }
-
-         aClass94_2006 = null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "vk.H(" + ')');
-      }
-   }
-
    final void method2182() {
       try {
          Class74.method1319(this.anIntArray2007, this.anInt2012, this.anInt2011);

@@ -13,13 +13,6 @@ abstract class Class3_Sub28_Sub10 extends Node {
 
    abstract byte[] method587();
 
-   public static void method588(byte var0) {
-      try {
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "il.C(" + var0 + ')');
-      }
-   }
-
    static void method589(int var0, int var1, int var2) {
       Class3_Sub13_Sub21.aBoolean3261 = true;
       Class91.anInt1302 = var0;

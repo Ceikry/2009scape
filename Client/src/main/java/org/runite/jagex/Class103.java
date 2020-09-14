@@ -102,11 +102,6 @@ final class Class103 {
       }
    }
 
-   public static void method1623() {
-      aFloatArrayArray1431 = (float[][])null;
-      anIntArrayArray1435 = (int[][])null;
-   }
-
    private float method1624(int var1, int var2, float var3) {
       float var4 = (float)this.anIntArrayArrayArray1432[var1][0][var2] + var3 * (float)(this.anIntArrayArrayArray1432[var1][1][var2] - this.anIntArrayArrayArray1432[var1][0][var2]);
       var4 *= 0.0015258789F;

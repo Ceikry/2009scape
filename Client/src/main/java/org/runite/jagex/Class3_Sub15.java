@@ -52,18 +52,6 @@ final class Class3_Sub15 extends Class3 {
       }
    }
 
-   public static void method372(boolean var0) {
-      try {
-         COMMAND_TWEENING = null;
-         if(var0) {
-            aClass93_2428 = null;
-            aClass89_2429 = null;
-         }
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "jk.D(" + var0 + ')');
-      }
-   }
-
    final boolean method373(int[] var2, Class83 var3, byte[] var4) {
       try {
          int var6 = 0;

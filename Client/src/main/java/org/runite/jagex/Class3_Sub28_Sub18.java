@@ -64,14 +64,6 @@ final class Class3_Sub28_Sub18 extends Node {
       }
    }
 
-   public static void method711(int var0) {
-      try {
-         anIntArray3768 = null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "sd.B(" + var0 + ')');
-      }
-   }
-
    final void method712() {
       try {
          int var2 = Class27.method961();

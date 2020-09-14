@@ -12,18 +12,6 @@ final class Canvas_Sub1 extends Canvas implements FocusListener {
    static int anInt25 = 1;
 
 
-   public static void method53(int var0) {
-      try {
-         aClass93_21 = null;
-         ItemDefinition.pagedRam = (int[][])null;
-         if(var0 != 0) {
-         }
-
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "oe.C(" + var0 + ')');
-      }
-   }
-
    static int method54(int var0) {
       try {
          return var0 & 127;

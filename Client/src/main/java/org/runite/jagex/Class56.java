@@ -93,22 +93,6 @@ final class Class56 {
       }
    }
 
-   public static void method1187(int var0) {
-      try {
-         if(var0 != 30351) {
-            method1189(-73, -127, -26, 43, 67, 125, 38, 80, (GameObject)null, -92, true, 27L);
-         }
-         aClass94_892 = null;
-         aClass11_886 = null;
-         localPlayerIndexes = null;
-         aClass47_885 = null;
-         aClass106Array890 = null;
-         aClass3_Sub26_884 = null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "ib.B(" + var0 + ')');
-      }
-   }
-
    static void method1188() {
       try {
          MouseListeningClass.anIntArray1920 = null;

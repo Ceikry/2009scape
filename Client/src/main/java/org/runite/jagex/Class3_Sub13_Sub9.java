@@ -12,19 +12,6 @@ final class Class3_Sub13_Sub9 extends Class3_Sub13 {
    static int anInt3114 = 0;
    static int[][] anIntArrayArray3115;
 
-   public static void method209(byte var0) {
-      try {
-         aShortArray3110 = null;
-         aClass36_3112 = null;
-         if(var0 >= 30) {
-            anIntArray3107 = null;
-            anIntArrayArray3115 = (int[][])null;
-         }
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "f.C(" + var0 + ')');
-      }
-   }
-
    public Class3_Sub13_Sub9() {
       super(0, true);
    }

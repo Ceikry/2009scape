@@ -355,18 +355,6 @@ final class Class83 {
       }
    }
 
-   public static void method1414(int var0) {
-      try {
-         if(var0 < 86) {
-            method1410(73, 59, 119, 60, 89, -42, -25, 37, 88, -62, 69);
-         }
-
-         aClass3_Sub27_1154 = null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "le.E(" + var0 + ')');
-      }
-   }
-
    private Class3_Sub12_Sub1 method1415(int var1, int[] var2, int var3) {
       try {
          int var5 = var3 ^ (var1 >>> 12 | '\ufff3' & var1 << 4);

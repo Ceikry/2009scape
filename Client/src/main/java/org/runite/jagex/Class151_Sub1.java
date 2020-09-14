@@ -148,7 +148,7 @@ final class Class151_Sub1 extends Class151 {
                             if (this.aClass66_2953.method1251((byte) -71)) {
                                 this.aClass3_Sub28_Sub10_2950 = null;
                             } else {
-                                this.aClass3_Sub28_Sub10_2950 = this.aClass66_2953.addJS5Request(0 + 120, 255, (byte) 0, this.anInt2957, true);
+                                this.aClass3_Sub28_Sub10_2950 = this.aClass66_2953.addJS5Request(120, 255, (byte) 0, this.anInt2957, true);
                             }
 
                             return null;
@@ -222,17 +222,6 @@ final class Class151_Sub1 extends Class151 {
 
         } catch (RuntimeException var7) {
             throw Class44.clientError(var7, "bg.N(" + (var0 != null ? "{...}" : "null") + ',' + var1 + ',' + var2 + ')');
-        }
-    }
-
-    public static void method2105(boolean var0) {
-        try {
-            if (!var0) {
-                anIntArray2952 = null;
-                aClass3_Sub30_Sub1_2942 = null;
-            }
-        } catch (RuntimeException var2) {
-            throw Class44.clientError(var2, "bg.F(" + var0 + ')');
         }
     }
 
@@ -519,7 +508,13 @@ final class Class151_Sub1 extends Class151 {
                         Class3_Sub13_Sub12.CRC32.update(var5, 0, var5.length - 2);
                         expectedCRC = (int) Class3_Sub13_Sub12.CRC32.getValue();
                         if (expectedCRC != this.aReferenceTable_2944.archiveCRCs[archiveIndex]) {
-                            throw new RuntimeException("CRC mismatch - [found=" + this.aReferenceTable_2944.archiveCRCs[archiveIndex] + ", expected=" + expectedCRC + "]!");
+                            Class3_Sub13_Sub12.CRC32.reset();
+                            Class3_Sub13_Sub12.CRC32.update(var5, 0, var5.length - 4);
+                            expectedCRC = (int) Class3_Sub13_Sub12.CRC32.getValue();
+
+                            if (expectedCRC != this.aReferenceTable_2944.archiveCRCs[archiveIndex]) {
+                                throw new RuntimeException("CRC mismatch - [found=" + this.aReferenceTable_2944.archiveCRCs[archiveIndex] + ", expected=" + expectedCRC + "]!");
+                            }
                         }
 
                         this.aClass66_2953.anInt1011 = 0;

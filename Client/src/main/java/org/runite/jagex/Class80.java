@@ -50,18 +50,6 @@ final class Class80 {
       }
    }
 
-   public static void method1394(byte var0) {
-      try {
-         anIntArray1138 = null;
-         aClass93_1131 = null;
-         aClass94_1133 = null;
-         aClass93_1135 = null;
-         aClass3_Sub28_Sub16Array1136 = null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "l.E(" + var0 + ')');
-      }
-   }
-
    static long method1395(int var0, int var1, int var2) {
       Class3_Sub2 var3 = Class75_Sub2.aClass3_Sub2ArrayArrayArray2638[var0][var1][var2];
       return var3 != null && var3.aClass19_2233 != null?var3.aClass19_2233.aLong428:0L;

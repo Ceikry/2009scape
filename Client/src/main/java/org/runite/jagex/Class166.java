@@ -22,24 +22,6 @@ final class Class166 {
    static RSString aClass94_2080 = RSString.createRSString("(U2");
 
 
-   public static void method2255(byte var0) {
-      try {
-         anIntArray2073 = null;
-         aClass3_Sub2ArrayArrayArray2065 = (Class3_Sub2[][][])null;
-         aClass94_2080 = null;
-         aClass94_2075 = null;
-         if(var0 >= -126) {
-         }
-
-         anIntArray2068 = null;
-         aClass3_Sub28_Sub5Array2070 = null;
-         aClass3_Sub28_Sub16Array2072 = null;
-         aClass94_2074 = null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "wh.B(" + var0 + ')');
-      }
-   }
-
    static boolean method2256(int var0, int var1, int var2, int var3) {
       if(Class8.method846(var0, var1, var2)) {
          int var4 = var1 << 7;

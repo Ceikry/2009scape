@@ -534,22 +534,6 @@ abstract class Class140_Sub4 extends GameObject {
       }
    }
 
-   public static void method1974(byte var0) {
-      try {
-         if(var0 > -101) {
-            aClass3_Sub28_Sub16Array2839 = (Class3_Sub28_Sub16[])null;
-         }
-
-         ItemDefinition.methodStack = null;
-         aClass94_2765 = null;
-         aClass93_2792 = null;
-         aClass3_Sub28_Sub16Array2839 = null;
-         anIntArray2794 = null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "fe.K(" + var0 + ')');
-      }
-   }
-
    final int method1975(int var1) {
       try {
          return var1 != 27855?107:(this.anInt2820 != -32768?-this.anInt2820:200);

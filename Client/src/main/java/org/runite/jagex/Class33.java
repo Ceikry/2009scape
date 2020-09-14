@@ -39,11 +39,6 @@ final class Class33 {
       return this.aByteArray594[8] - 1;
    }
 
-   public static void method999() {
-      aString597 = null;
-      anIntArray599 = null;
-   }
-
    private void method1000(int[] var1, byte[] var2, int var3, int var4, int var5, int var6, int var7, int var8, int var9) {
       for(int var10 = -var7; var10 < 0; ++var10) {
          for(int var11 = -var6; var11 < 0; ++var11) {

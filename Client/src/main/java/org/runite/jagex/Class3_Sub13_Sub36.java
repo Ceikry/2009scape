@@ -283,17 +283,6 @@ final class Class3_Sub13_Sub36 extends Class3_Sub13 {
       }
    }
 
-   public static void method341(byte var0) {
-      try {
-         if(var0 > 66) {
-            aClass153_3429 = null;
-            aByteArrayArrayArray3430 = (byte[][][])null;
-         }
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "ui.MA(" + var0 + ')');
-      }
-   }
-
    static Class3_Sub28_Sub13 method342(int var0) {
       try {
          Class3_Sub28_Sub13 var2 = (Class3_Sub28_Sub13)Class129_Sub1.aClass47_2686.getNodeByID((long)var0);

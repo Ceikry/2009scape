@@ -321,16 +321,6 @@ static boolean aBoolean1080 = false;
       }
    }
 
-   public static void method1306(int var0) {
-      try {
-         if(var0 == -16222) {
-            anIntArray1083 = null;
-         }
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "k.I(" + var0 + ')');
-      }
-   }
-
    final Class3_Sub28_Sub10_Sub1 method1307(int var1, Class41 var3) {
       try {
          Class3_Sub28_Sub10_Sub1 var4 = new Class3_Sub28_Sub10_Sub1();

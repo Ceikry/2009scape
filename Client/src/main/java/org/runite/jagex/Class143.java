@@ -40,13 +40,4 @@ final class Class143 {
       }
    }
 
-   public static void method2063(int var0) {
-      try {
-         aClass93_1874 = null;
-         aClass94_1880 = null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "tl.A(" + var0 + ')');
-      }
-   }
-
 }

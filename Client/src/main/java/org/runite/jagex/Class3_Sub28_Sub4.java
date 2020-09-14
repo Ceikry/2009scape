@@ -47,18 +47,6 @@ final class Class3_Sub28_Sub4 extends Node {
       }
    }
 
-   public static void method547(int var0) {
-      try {
-         aClass93_3572 = null;
-         aClass94_3574 = null;
-         aClass94_3577 = null;
-         aClass83_3579 = null;
-         anIntArray3565 = null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "cb.F(" + var0 + ')');
-      }
-   }
-
    final void method548() {
       try {
          if(null != this.anIntArray3567) {

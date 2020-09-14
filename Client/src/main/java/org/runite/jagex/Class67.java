@@ -11,19 +11,6 @@ final class Class67 implements Runnable {
    int[] anIntArray1019 = new int[500];
    int[] anIntArray1020 = new int[500];
 
-
-   public static void method1257(int var0) {
-      try {
-         if(var0 == 25951) {
-            aClass11_1017 = null;
-            aByteArrayArrayArray1014 = (byte[][][])null;
-            aClass93_1013 = null;
-         }
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "jd.B(" + var0 + ')');
-      }
-   }
-
    public final void run() {
       try {
          for(; this.aBoolean1015; Class3_Sub13_Sub34.method331(50L, 64)) {
@@ -130,11 +117,6 @@ final class Class67 implements Runnable {
                }
             }
          }
-
-         if(var0 != 23206) {
-            method1257(107);
-         }
-
       } catch (RuntimeException var8) {
          throw Class44.clientError(var8, "jd.E(" + var0 + ',' + var1 + ',' + (var2 != null?"{...}":"null") + ')');
       }

@@ -29,21 +29,9 @@ abstract class Class146 {
          var0 = 252645135 & (var0 >>> 4) + var0;
          var0 += var0 >>> 8;
          var0 += var0 >>> 16;
-         int var2 = -9 / ((-125 - -80) / 42);
          return 255 & var0;
       } catch (RuntimeException var3) {
          throw Class44.clientError(var3, "uc.E(" + var0 + ',' + -125 + ')');
-      }
-   }
-
-   public static void method2081(int var0) {
-      try {
-         anIntArrayArrayArray1903 = (int[][][])null;
-         if(var0 == 0) {
-            aClass153_1902 = null;
-         }
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "uc.A(" + var0 + ')');
       }
    }
 

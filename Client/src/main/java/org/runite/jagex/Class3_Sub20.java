@@ -97,19 +97,7 @@ final class Class3_Sub20 extends Class3 {
       }
    }
 
-   public static void method391(int var0) {
-      try {
-         anIntArray2480 = null;
-         if(var0 != 25) {
-            method388((byte)-58);
-         }
-
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "lb.B(" + var0 + ')');
-      }
-   }
-
-   Class3_Sub20(int var1, int var2) {
+	Class3_Sub20(int var1, int var2) {
       try {
          this.anInt2483 = var2;
          this.anInt2489 = var1;

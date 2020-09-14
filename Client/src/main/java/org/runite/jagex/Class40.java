@@ -36,23 +36,7 @@ final class Class40 {
       }
    }
 
-   public static void method1042(boolean var0) {
-      try {
-         aClass153_679 = null;
-         aClass94_676 = null;
-         if(!var0) {
-         }
-
-         aClass94_672 = null;
-         anIntArray675 = null;
-         aClass94_673 = null;
-         aClass3_Sub28_Sub16_680 = null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "gd.A(" + var0 + ')');
-      }
-   }
-
-   static Class3_Sub28_Sub16_Sub2 method1043(int var0, CacheIndex var1, int archiveId) {
+    static Class3_Sub28_Sub16_Sub2 method1043(int var0, CacheIndex var1, int archiveId) {
       try {
          // System.out.println("Class 40 " + archiveId);
          return Class75_Sub4.method1351(var1, var0, archiveId, -30901)?Class117.method1722(-53):null;

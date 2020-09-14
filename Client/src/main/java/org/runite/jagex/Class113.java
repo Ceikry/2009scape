@@ -36,14 +36,4 @@ final class Class113 {
       }
    }
 
-   public static void method1703(int var0) {
-      try {
-         if(var0 != 10967) {
-            method1703(-117);
-         }
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "pe.A(" + var0 + ')');
-      }
-   }
-
 }

@@ -88,18 +88,6 @@ final class Class3_Sub4 extends Class3 {
 		}
 	}
 
-	public static void method109(int var0) {
-		try {
-			if(var0 != 2) {
-				method109(-22);
-			}
-
-			aClass153_2258 = null;
-		} catch (RuntimeException var2) {
-			throw Class44.clientError(var2, "cd.A(" + var0 + ')');
-		}
-	}
-
 	static void method110(int var3, boolean var4) {
 		IOHandler.anInt1234 = 104;
 		Class3_Sub13_Sub15.anInt3179 = 104;

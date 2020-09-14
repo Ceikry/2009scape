@@ -56,20 +56,6 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
 
    public final void windowIconified(WindowEvent var1) {}
 
-   public static void method26(int var0) {
-      try {
-         if(var0 < 15) {
-            method27((RSString)null);
-         }
-
-         aClass94_8 = null;
-         aClass94_10 = null;
-         aClass94_9 = null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "rc.W(" + var0 + ')');
-      }
-   }
-
    public final void windowDeactivated(WindowEvent var1) {}
 
    static RSString method27(RSString var0) {
@@ -374,8 +360,8 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
 	         try {
 	            if(null != Signlink.javaVendor) {
 	               String var1 = Signlink.javaVendor.toLowerCase();
-	               if(var1.indexOf("sun") == -1 && -1 == var1.indexOf("apple")) {
-	                  if(var1.indexOf("ibm") != -1 && Signlink.javaVendor.equals("1.4.2")) {
+	               if(!var1.contains("sun") && !var1.contains("apple")) {
+	                  if(var1.contains("ibm") && Signlink.javaVendor.equals("1.4.2")) {
 	                     this.method31("wrongjava");
 	                     return;
 	                  }

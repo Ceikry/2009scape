@@ -342,12 +342,6 @@ final class Class141 {
 
    }
 
-   public static void method2045() {
-      aClass109_Sub1_1840 = null;
-      aClass109_Sub1Array1843 = null;
-      aClass169ArrayArray1841 = (Class169[][])null;
-   }
-
    private static void method2046(byte[] var0, byte[] var1, int var2, int var3, int var4, int var5, int var6) {
       for(int var7 = -16; var7 < 0; ++var7) {
          for(int var8 = -4; var8 < 0; ++var8) {

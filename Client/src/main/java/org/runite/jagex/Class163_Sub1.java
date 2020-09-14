@@ -130,19 +130,4 @@ class Class163_Sub1 extends Class163 {
       }
    }
 
-   public static void method2212(boolean var0) {
-      try {
-         ItemDefinition.ram = null;
-         aClass93_2984 = null;
-         aClass61_2990 = null;
-         aLongArray2986 = null;
-         if(var0) {
-            method2211(68);
-         }
-         aByteArrayArray2987 = (byte[][])null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "ah.C(" + ')');
-      }
-   }
-
 }

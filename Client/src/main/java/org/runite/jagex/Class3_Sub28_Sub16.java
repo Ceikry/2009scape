@@ -14,19 +14,6 @@ abstract class Class3_Sub28_Sub16 extends Node {
    int anInt3707;
    static RSInterface aClass11_3708 = null;
 
-
-   public static void method634(byte var0) {
-      try {
-         aClass11_3708 = null;
-         if(var0 == 108) {
-            aClass94_3703 = null;
-            COMMAND_GRAPHICS_CARD_MEMORY = null;
-         }
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "qf.R(" + var0 + ')');
-      }
-   }
-
    abstract void method635(int var1, int var2);
 
    abstract void method636(int var1, int var2, int var3, int var4, int var5, int var6);

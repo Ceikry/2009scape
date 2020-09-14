@@ -9,19 +9,6 @@ final class Class120 {
    static int[] anIntArray1638;
 
 
-   public static void method1731(int var0) {
-      try {
-         anIntArray1638 = null;
-         aLongArray1631 = null;
-         if(var0 != 12881) {
-            method1732((RSInterface)null, (byte)-74, -125);
-         }
-
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "qj.A(" + var0 + ')');
-      }
-   }
-
    static RSString method1732(RSInterface var0, byte var1, int var2) {
       try {
          if(var1 >= -8) {

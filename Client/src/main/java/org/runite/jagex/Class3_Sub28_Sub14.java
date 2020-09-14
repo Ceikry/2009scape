@@ -168,20 +168,6 @@ final class Class3_Sub28_Sub14 extends Node {
       }
    }
 
-   public static void method627(byte var0) {
-      try {
-         if(var0 <= -112) {
-            username = null;
-            password = null;
-            aByteArrayArray3669 = (byte[][])null;
-            aClass94_3672 = null;
-            aBooleanArray3674 = null;
-         }
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "pa.A(" + var0 + ')');
-      }
-   }
-
    static void method628(int var1, int var2, Player var3) {
       try {
 
@@ -194,7 +180,7 @@ final class Class3_Sub28_Sub14 extends Node {
                var3.anInt2776 = 1;
                var3.anInt2832 = 0;
                var3.anInt2773 = 0;
-               IOHandler.method1470(var3.anInt2829, var4, 0 + 183921384, var3.anInt2819, Class102.player == var3, var3.anInt2832);
+               IOHandler.method1470(var3.anInt2829, var4, 183921384, var3.anInt2819, Class102.player == var3, var3.anInt2832);
             }
 
             if(var5 == 2) {

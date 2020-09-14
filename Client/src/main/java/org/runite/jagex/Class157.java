@@ -60,14 +60,6 @@ final class Class157 {
       return var3 != null && var3.aClass70_2234 != null?var3.aClass70_2234.aLong1048:0L;
    }
 
-   public static void method2175(byte var0) {
-      try {
-         aClass3_Sub28_Sub17_Sub1_2000 = null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "vj.F(" + var0 + ')');
-      }
-   }
-
    static Class3_Sub28_Sub16_Sub2[] method2176(int var0, int var1, int var2, CacheIndex var3) {
       try {
     	  //System.out.println("Class 157 " + var2);

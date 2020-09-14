@@ -195,17 +195,6 @@ final class Class3_Sub13_Sub30 extends Class3_Sub13 {
       super(0, true);
    }
 
-   public static void method315(int var0) {
-      try {
-         aClass61_3364 = null;
-         anIntArray3367 = null;
-         if(var0 != -15028) {
-         }
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "rj.B(" + var0 + ')');
-      }
-   }
-
    final int[] method154(int var1, byte var2) {
       try {
          int[] var3 = this.aClass114_2382.method1709(var1);

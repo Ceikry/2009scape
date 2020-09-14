@@ -18,19 +18,6 @@ final class Class121 {
    int anInt1648 = 0;
 
 
-   public static void method1733(int var0) {
-      try {
-         COMMAND_HIGHRES_GRAPHICS_RESIZE = null;
-         aClass94_1645 = null;
-         if(var0 != -17148) {
-            anInt1642 = 54;
-         }
-
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "ql.C(" + var0 + ')');
-      }
-   }
-
    static int method1734(int var0, float var1, int var2, int var3, int[][] var4, int[][] var5, int var6, float[][] var7, int var8, byte var9, int var10, boolean var11, Class3_Sub11 var12, float[][] var13, int var14, int var15, float[][] var16, int var17) {
       try {
          int var18;

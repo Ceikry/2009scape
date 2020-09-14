@@ -86,18 +86,6 @@ final class Class3_Sub28_Sub1 extends Node {
       }
    }
 
-   public static void method528(int var0) {
-      try {
-         aClass3_Sub20_3532 = null;
-         if(var0 != -1667) {
-            anInt3539 = 101;
-         }
-
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "bc.B(" + var0 + ')');
-      }
-   }
-
    final int method529(int var2) {
       try {
          if (null != this.anIntArray3534) {

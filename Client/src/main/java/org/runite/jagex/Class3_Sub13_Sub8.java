@@ -136,17 +136,6 @@ final class Class3_Sub13_Sub8 extends Class3_Sub13 {
 		super(1, false);
 	}
 
-	public static void method206(boolean var0) {
-		try {
-			if(!var0) {
-				method204(-76);
-			}
-
-		} catch (RuntimeException var2) {
-			throw Class44.clientError(var2, "ej.O(" + ')');
-		}
-	}
-
 	final int[] method154(int var1, byte var2) {
 		try {
 			int[] var4 = this.aClass114_2382.method1709(var1);

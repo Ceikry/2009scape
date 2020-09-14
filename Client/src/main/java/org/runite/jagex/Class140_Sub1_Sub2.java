@@ -1619,50 +1619,6 @@ final class Class140_Sub1_Sub2 extends Model {
       this.aBoolean3897 = true;
    }
 
-   public static void method1948() {
-      aClass140_Sub1_Sub2_3902 = null;
-      aByteArray3907 = null;
-      aShortArray3910 = null;
-      anIntArray3905 = null;
-      anIntArray3909 = null;
-      anIntArray3904 = null;
-      aClass140_Sub1_Sub2_3906 = null;
-      aByteArray3914 = null;
-      aShortArray3912 = null;
-      anIntArray3913 = null;
-      anIntArray3916 = null;
-      anIntArray3911 = null;
-      aClass140_Sub1_Sub2_3915 = null;
-      aByteArray3933 = null;
-      aShortArray3949 = null;
-      anIntArray3939 = null;
-      anIntArray3947 = null;
-      anIntArray3924 = null;
-      aBooleanArray3937 = null;
-      aBooleanArray3917 = null;
-      anIntArray3943 = null;
-      anIntArray3932 = null;
-      anIntArray3920 = null;
-      anIntArray3950 = null;
-      anIntArray3948 = null;
-      anIntArray3928 = null;
-      anIntArray3921 = null;
-      anIntArray3946 = null;
-      anIntArrayArray3926 = (int[][])null;
-      anIntArray3935 = null;
-      anIntArrayArray3923 = (int[][])null;
-      anIntArray3931 = null;
-      anIntArray3929 = null;
-      anIntArray3918 = null;
-      anIntArrayArray3938 = (int[][])null;
-      anIntArray3922 = null;
-      anIntArray3941 = null;
-      anIntArray3944 = null;
-      anIntArray3919 = null;
-      anIntArray3925 = null;
-      anIntArray3936 = null;
-   }
-
    final int method1884() {
       if(!this.aBoolean3897) {
          this.method1947();

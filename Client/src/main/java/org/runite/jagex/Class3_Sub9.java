@@ -159,22 +159,6 @@ final class Class3_Sub9 extends Class3 {
       }
    }
 
-   public static void method136(int var0) {
-      try {
-         aClass94_2323 = null;
-         RIGHT_PARENTHESES = null;
-         if(var0 != -3) {
-            anInt2317 = 98;
-         }
-
-         aClass94_2331 = null;
-         aClass64_2318 = null;
-         regionXteaKeys = (int[][])null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "fl.D(" + var0 + ')');
-      }
-   }
-
    static void method137(int var0, byte var1) {
       try {
          if(var1 >= -111) {

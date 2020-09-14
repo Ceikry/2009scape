@@ -78,13 +78,6 @@ final class Class88 {
       method1459();
    }
 
-   public static void method1457() {
-      anIntArray1224 = null;
-      anIntArray1223 = null;
-      aByteBuffer1226 = null;
-      aByteBuffer1225 = null;
-   }
-
    private static void method1458() {
       javax.media.opengl.GL var0 = HDToolKit.gl;
       if(aBoolean1227) {

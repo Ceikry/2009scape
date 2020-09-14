@@ -23,18 +23,6 @@ final class Class3_Sub13_Sub11 extends Class3_Sub13 {
       }
    }
 
-   public static void method217(int var0) {
-      try {
-         aClass94_3133 = null;
-         aClass94_3140 = null;
-         aClass93_3130 = null;
-         anIntArray3139 = null;
-         aClass47_3137 = null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "fm.B(" + var0 + ')');
-      }
-   }
-
    private void method218(int var2) {
       try {
          this.anInt3134 = 4080 & var2 >> 4;

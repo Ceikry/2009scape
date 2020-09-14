@@ -121,18 +121,6 @@ final class Class131 {
       }
    }
 
-   public static void method1792(int var0) {
-      try {
-         anIntArray1729 = null;
-         if(var0 == 0) {
-            aClass153_1723 = null;
-            aClass94_1724 = null;
-         }
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "se.F(" + var0 + ')');
-      }
-   }
-
    static void method1793(RSString var0, RSString var1, int var2) {
       try {
          Class3_Sub28_Sub14.password = var1;

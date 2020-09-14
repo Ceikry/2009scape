@@ -25,10 +25,6 @@ final class Class125 implements Interface5 {
       return 0;
    }
 
-   public static void method1748() {
-      aFloatArray2185 = null;
-   }
-
    public final void method22() {
       if(this.anInt2186 >= 0) {
          javax.media.opengl.GL var1 = HDToolKit.gl;

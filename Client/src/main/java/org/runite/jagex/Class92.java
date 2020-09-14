@@ -48,12 +48,6 @@ final class Class92 {
          }
    }
 
-   public static void method1507() {
-      light0Position = null;
-      light1Position = null;
-      fogColor = null;
-   }
-
    static void setFogValues(int fogCol, int fogOff) {
       if(fogColorRGB != fogCol || fogOffset != fogOff) {
          fogColorRGB = fogCol;

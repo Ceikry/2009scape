@@ -210,16 +210,6 @@ final class Class3_Sub13_Sub25 extends Class3_Sub13 {
       }
    }
 
-   public static void method290(int var0) {
-      try {
-         if(var0 == -9) {
-            aClass153_3304 = null;
-         }
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "ol.F(" + var0 + ')');
-      }
-   }
-
    public Class3_Sub13_Sub25() {
       super(0, true);
    }

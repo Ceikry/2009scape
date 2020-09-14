@@ -91,7 +91,6 @@ final class Class1 {
                   Class168 var31;
                   int var34;
                   byte var32;
-                  boolean var70;
                   if(0 == var27 || var27 == var16) {
                   } else {
                      var31 = Class3_Sub13_Sub37.method350((byte)106, -1 + var27);
@@ -117,7 +116,6 @@ final class Class1 {
                      }
                   }
 
-                  boolean var69;
                   if(var28 == 0 || var28 == var16) {
                   } else {
                      var31 = Class3_Sub13_Sub37.method350((byte)114, -1 + var28);
@@ -143,7 +141,6 @@ final class Class1 {
                      }
                   }
 
-                  boolean var72;
                   if(var29 == 0 || var29 == var16) {
                   } else {
                      var31 = Class3_Sub13_Sub37.method350((byte)107, var29 - 1);
@@ -169,7 +166,6 @@ final class Class1 {
                      }
                   }
 
-                  boolean var71;
                   if(var30 == 0 || var16 == var30) {
                   } else {
                      var31 = Class3_Sub13_Sub37.method350((byte)105, var30 + -1);
@@ -287,7 +283,7 @@ final class Class1 {
          }
 
          Class3_Sub11 var56;
-         for(var56 = (Class3_Sub11)var12.method1776(0 + 36); null != var56; var56 = (Class3_Sub11)var12.method1778(-117)) {
+         for(var56 = (Class3_Sub11)var12.method1776(36); null != var56; var56 = (Class3_Sub11)var12.method1778(-117)) {
             var56.method145();
          }
 
@@ -590,31 +586,16 @@ final class Class1 {
          var13 = var12.method1781(97);
          Class3_Sub11[] var57 = new Class3_Sub11[var13];
          long[] var59 = new long[var13];
-         var12.method1782(var57, 0 + 83);
+         var12.method1782(var57, 83);
 
          for(var16 = 0; var16 < var13; ++var16) {
             var59[var16] = var57[var16].aLong71;
          }
 
-         PacketParser.method824(var59, var57, 0 + -27);
+         PacketParser.method824(var59, var57, -27);
          return var57;
       } catch (RuntimeException var55) {
          throw Class44.clientError(var55, "a.A(" + (var0 != null?"{...}":"null") + ',' + (var1 != null?"{...}":"null") + ',' + (var2 != null?"{...}":"null") + ',' + var3 + ',' + (var4 != null?"{...}":"null") + ',' + (var5 != null?"{...}":"null") + ',' + (var6 != null?"{...}":"null") + ',' + 0 + ',' + (var8 != null?"{...}":"null") + ',' + (var9 != null?"{...}":"null") + ',' + (var10 != null?"{...}":"null") + ',' + (var11 != null?"{...}":"null") + ')');
-      }
-   }
-
-   public static void method71(byte var0) {
-      try {
-         aBooleanArray54 = null;
-         aClass94_53 = null;
-         if(var0 != -124) {
-            aClass94_58 = (RSString)null;
-         }
-
-         aClass94_58 = null;
-         anIntArray52 = null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "a.C(" + var0 + ')');
       }
    }
 

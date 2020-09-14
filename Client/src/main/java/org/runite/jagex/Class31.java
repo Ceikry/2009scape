@@ -32,14 +32,6 @@ final class Class31 {
       }
    }
 
-   public static void method987() {
-      aClass61_581 = null;
-      aClass61_586 = null;
-      aClass61_587 = null;
-      aClass61_588 = null;
-      anIntArray589 = null;
-   }
-
    static synchronized void method988() {
       ++anInt582;
       aClass61_581.method1211(-110);

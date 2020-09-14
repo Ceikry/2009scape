@@ -38,17 +38,6 @@ final class GraphicDefinition {
 		}
 	}
 
-	public static void method964(int var0) {
-		try {
-			incomingBuffer = null;
-			if(var0 != 6) {
-				method964(-57);
-			}
-		} catch (RuntimeException var2) {
-			throw Class44.clientError(var2, "eg.E(" + var0 + ')');
-		}
-	}
-
 	private void method965(RSByteBuffer var1, int var2) {
 		try {
 			if(var2 == 1) {

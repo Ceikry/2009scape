@@ -348,18 +348,4 @@ class Class127 {
       return (var0 & '\uff80') + var1;
    }
 
-   public static void method1754(int var0) {
-      try {
-         aClass153_1680 = null;
-         anIntArray1679 = null;
-         if(var0 >= -49) {
-            handleLogin((byte)102);
-         }
-
-         anIntArray1681 = null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "ri.B(" + var0 + ')');
-      }
-   }
-
 }

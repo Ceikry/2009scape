@@ -100,5 +100,4 @@ final class Class135 {
       this.anInt1767 = var1.getShort();
    }
 
-   private Class135() {}
 }

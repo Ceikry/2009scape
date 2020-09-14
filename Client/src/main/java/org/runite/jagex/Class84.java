@@ -131,19 +131,4 @@ final class Class84 {
       }
    }
 
-   public static void method1422(byte var0) {
-      try {
-         anIntArrayArray1160 = (int[][])null;
-         anIntArray1161 = null;
-         aClass61_1162 = null;
-         anIntArray1163 = null;
-         if(var0 != 24) {
-            method1420(-74, 65, 51, 91, (byte)-26);
-         }
-
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "lf.B(" + var0 + ')');
-      }
-   }
-
 }

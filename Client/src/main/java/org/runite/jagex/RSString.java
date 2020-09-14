@@ -58,7 +58,7 @@ final class RSString implements Interface3 {
 
    static boolean method1529(int var0, int var1, int var2, int var3, int var4, int var6) {
       try {
-         long var8 = Class157.method2174(var6, var1 + 0, var3 + var0);
+         long var8 = Class157.method2174(var6, var1, var3 + var0);
          int var10;
          int var11;
          int var12;
@@ -143,7 +143,7 @@ final class RSString implements Interface3 {
             }
          }
 
-         var8 = Class3_Sub28_Sub5.method557(var6, var1 - -0, var0 + var3);
+         var8 = Class3_Sub28_Sub5.method557(var6, var1, var0 + var3);
          if(var8 != 0L) {
             var10 = (int)var8 >> 20 & 3;
             var11 = ((int)var8 & 520964) >> 14;
@@ -175,7 +175,7 @@ final class RSString implements Interface3 {
             }
          }
 
-         var8 = Class3_Sub2.method104(var6, var1 + 0, var3 + var0);
+         var8 = Class3_Sub2.method104(var6, var1, var3 + var0);
          if(var8 != 0L) {
             var10 = (int)var8 >> 20 & 3;
             var11 = (int)(var8 >>> 32) & Integer.MAX_VALUE;
@@ -453,14 +453,6 @@ final class RSString implements Interface3 {
          return this.length;
       } catch (RuntimeException var3) {
          throw Class44.clientError(var3, "na.M(" + var1 + ')');
-      }
-   }
-
-   public static void method1541(int var0) {
-      try {
-         anIntArray2157 = null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "na.R(" + var0 + ')');
       }
    }
 
@@ -999,7 +991,7 @@ final class RSString implements Interface3 {
             var4.length = var3 + -var2;
             var4.byteArray = new byte[var4.length];
 
-            if (var4.length >= 0) System.arraycopy(this.byteArray, var2 + 0, var4.byteArray, 0, var4.length);
+            if (var4.length >= 0) System.arraycopy(this.byteArray, var2, var4.byteArray, 0, var4.length);
 
             return var4;
          }
@@ -1238,7 +1230,7 @@ final class RSString implements Interface3 {
    final RSString method1571() {
       try {
          long var2 = this.method1538((byte) 32 + 90);
-         Class var4 = RSString.class;
+         Class<RSString> var4 = RSString.class;
          synchronized(var4) {
             Class3_Sub29 var5;
             if(Class86.aClass130_1194 == null) {
@@ -1406,9 +1398,9 @@ final class RSString implements Interface3 {
 
    final int method1580(byte[] var2, int var3, int var5) {
       try {
-         Class76.method1357(this.byteArray, 0, var2, var3, -0 + var5);
+         Class76.method1357(this.byteArray, 0, var2, var3, var5);
 
-         return -0 + var5;
+         return var5;
       } catch (RuntimeException var7) {
          throw Class44.clientError(var7, "na.LA(" + true + ',' + (var2 != null?"{...}":"null") + ',' + var3 + ',' + 0 + ',' + var5 + ')');
       }

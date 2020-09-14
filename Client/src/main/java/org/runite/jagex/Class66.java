@@ -33,19 +33,6 @@ final class Class66 {
 		}
 	}
 
-	public static void method1242(byte var0) {
-		try {
-			aClass3_Sub28_Sub16Array996 = null;
-			if(var0 != -88) {
-				method1250(-72, true);
-			}
-
-			aClass94_995 = null;
-		} catch (RuntimeException var2) {
-			throw Class44.clientError(var2, "jb.G(" + var0 + ')');
-		}
-	}
-
 	final boolean method1243() {
 		try {
 			int var4;

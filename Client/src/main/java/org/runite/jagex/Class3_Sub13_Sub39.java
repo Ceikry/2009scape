@@ -246,18 +246,4 @@ final class Class3_Sub13_Sub39 extends Class3_Sub13 {
       }
    }
 
-   public static void method357(boolean var0) {
-      try {
-         aByteArrayArray3461 = (byte[][])null;
-         aClass3_Sub28_Sub16Array3458 = null;
-         if(var0) {
-            method353(-71, 100);
-         }
-
-         aBooleanArrayArray3468 = (boolean[][])null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "wi.O(" + ')');
-      }
-   }
-
 }

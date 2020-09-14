@@ -3692,16 +3692,6 @@ final class Class51 {
       }
    }
 
-   public static void method1155() {
-      anIntArray836 = null;
-      anIntArray834 = null;
-      anInterface2_838 = null;
-      anIntArray839 = null;
-      anIntArray841 = null;
-      anIntArray840 = null;
-      anIntArray851 = null;
-   }
-
    private static void method1156(byte[] var0, int var1, int var3, int var4) {
       if(var3 < var4) {
          var1 += var3;

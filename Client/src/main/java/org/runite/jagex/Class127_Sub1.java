@@ -7,11 +7,6 @@ final class Class127_Sub1 extends Class127 {
    private static int anInt2682;
 
 
-   Class127_Sub1() {
-      new Class17();
-      new Class61();
-   }
-
    static void method1755() {
       GL var0 = HDToolKit.gl;
       if(var0.isExtensionAvailable("GL_ARB_point_parameters")) {

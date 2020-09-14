@@ -31,7 +31,7 @@ final class Class155_Sub2 extends Class155 {
             Info var5 = var2[var4];
             if(null != var5) {
                String var6 = var5.getName();
-               if(null != var6 && var6.toLowerCase().indexOf("soundmax") >= 0) {
+               if(null != var6 && var6.toLowerCase().contains("soundmax")) {
                   this.aBoolean2973 = true;
                }
             }

@@ -39,20 +39,6 @@ final class Class3_Sub13_Sub1 extends Class3_Sub13 {
 		super(0, true);
 	}
 
-	public static void method168(int var0) {
-		try {
-			if(var0 != -1771542303) {
-				aClass3_Sub28_Sub5Array3041 = (Class3_Sub28_Sub5[])null;
-			}
-
-			aClass3_Sub28_Sub5Array3041 = null;
-			aClass94_3039 = null;
-			outgoingBuffer = null;
-		} catch (RuntimeException var2) {
-			throw Class44.clientError(var2, "ag.F(" + var0 + ')');
-		}
-	}
-
 	final int[] method154(int var1, byte var2) {
 		try {
 			int[] var3 = this.aClass114_2382.method1709(var1);
@@ -122,7 +108,7 @@ final class Class3_Sub13_Sub1 extends Class3_Sub13 {
 		}
 	}
 
-	static Class method170(String var1) throws ClassNotFoundException {
+	static Class<?> method170(String var1) throws ClassNotFoundException {
 		try {
 
 			return var1.equals("B")?Byte.TYPE:(!var1.equals("I")?(var1.equals("S")?Short.TYPE:(!var1.equals("J")?(var1.equals("Z")?Boolean.TYPE:(var1.equals("F")?Float.TYPE:(var1.equals("D")?Double.TYPE:(var1.equals("C")?Character.TYPE:Class.forName(Configurations.PACKAGE_JAGEX + "." + var1))))):Long.TYPE)):Integer.TYPE);

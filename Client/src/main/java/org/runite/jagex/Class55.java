@@ -252,17 +252,6 @@ final class Class55 {
       }
    }
 
-   public static void method1181(byte var0) {
-      try {
-         anIntArray882 = null;
-         if(var0 != -118) {
-         }
-
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "ia.E(" + var0 + ')');
-      }
-   }
-
    final void method1182(RSByteBuffer var1, int var2, byte var3) {
       try {
          if(var3 < 75) {

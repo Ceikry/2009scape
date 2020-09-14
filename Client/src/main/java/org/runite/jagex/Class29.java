@@ -199,16 +199,4 @@ final class Class29 {
       }
    }
 
-   public static void method973(byte var0) {
-      try {
-         aClass153_557 = null;
-         anIntArrayArrayArray558 = (int[][][])null;
-         if(var0 != 62) {
-         }
-
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "eh.E(" + var0 + ')');
-      }
-   }
-
 }

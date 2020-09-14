@@ -26,18 +26,4 @@ final class Class3_Sub25 extends Class3 {
       }
    }
 
-   public static void method510(int var0) {
-      try {
-         if(var0 > -73) {
-            method510(-59);
-         }
-
-         aClass129_2552 = null;
-         aShortArray2548 = null;
-         anIntArray2550 = null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "qe.B(" + var0 + ')');
-      }
-   }
-
 }

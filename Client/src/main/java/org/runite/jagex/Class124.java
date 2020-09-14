@@ -6,18 +6,6 @@ final class Class124 {
    static CacheIndex aClass153_1661;
 
 
-   public static void method1744(boolean var0) {
-      try {
-         aClass130_1659 = null;
-         aClass153_1661 = null;
-         if(!var0) {
-         }
-
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "rb.A(" + var0 + ')');
-      }
-   }
-
    static void method1745() {
       try {
          for(int var1 = 0; var1 < 104; ++var1) {

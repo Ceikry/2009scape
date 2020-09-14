@@ -24,19 +24,6 @@ final class Class30 {
    static boolean loadedWorldList = false;
 
 
-   public static void method974(boolean var0) {
-      try {
-         aClass94_577 = null;
-         if(var0) {
-            anIntArray574 = null;
-            cmdChalReq = null;
-            COMMAND_TOGGLE_FPSOFF = null;
-         }
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "en.G(" + var0 + ')');
-      }
-   }
-
    private void method975(byte var1) throws IOException {
       try {
          if(-1L != this.aLong571) {

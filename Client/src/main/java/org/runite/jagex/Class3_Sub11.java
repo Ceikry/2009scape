@@ -102,13 +102,6 @@ final class Class3_Sub11 extends Class3 {
       return this.anInt2343++;
    }
 
-   public static void method147() {
-      aClass3_Sub30_2372 = null;
-      aClass3_Sub30_2362 = null;
-      aByteBuffer2368 = null;
-      aByteBuffer2361 = null;
-   }
-
    final void method148() {
       RSByteBuffer var1 = new RSByteBuffer((this.aBoolean2347?40:36) * this.anInt2343);
 

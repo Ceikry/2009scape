@@ -82,16 +82,6 @@ final class Canvas_Sub2 extends Canvas {
       }
    }
 
-   public static void method59(byte var0) {
-      try {
-         if(var0 >= -69) {
-            aBoolean29 = false;
-         }
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "tm.B(" + var0 + ')');
-      }
-   }
-
    public final void update(Graphics var1) {
       try {
          this.aComponent33.update(var1);

@@ -791,15 +791,6 @@ final class Class3_Sub24_Sub4 extends Class3_Sub24 {
       }
    }
 
-   public static void method491(byte var0) {
-      try {
-         aBooleanArray3503 = null;
-         //int var1 = 21 / ((var0 - -51) / 62);
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "va.C(" + var0 + ')');
-      }
-   }
-
    final synchronized void method413(int[] var1, int var2, int var3) {
       try {
          if(this.aClass78_3505.method1373()) {

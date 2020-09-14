@@ -87,17 +87,4 @@ final class Class9 {
       }
    }
 
-   public static void method849(int var0) {
-      try {
-         if(var0 == 2) {
-            aByteArrayArray125 = (byte[][])null;
-            aClass94_119 = null;
-            aClass94_132 = null;
-            aByteArrayArrayArray113 = (byte[][][])null;
-         }
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "bb.B(" + var0 + ')');
-      }
-   }
-
 }

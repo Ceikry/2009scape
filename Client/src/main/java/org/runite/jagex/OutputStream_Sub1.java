@@ -115,19 +115,6 @@ final class OutputStream_Sub1 extends OutputStream {
       }
    }
 
-   public static void method67(boolean var0) {
-      try {
-         aClass94Array45 = null;
-         if(!var0) {
-            aBoolean47 = true;
-         }
-
-         anIntArray49 = null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "vg.B(" + var0 + ')');
-      }
-   }
-
    static void method68(int var0, Class140_Sub4 var2) {
       try {
          if(var2.anInt2800 <= Class44.anInt719) {

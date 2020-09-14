@@ -184,15 +184,4 @@ abstract class Class144 {
       }
    }
 
-   public static void method2070(byte var0) {
-      try {
-         if(var0 < 0) {
-            anInt1881 = -60;
-         }
-         aClass94_1885 = null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "u.F(" + var0 + ')');
-      }
-   }
-
 }

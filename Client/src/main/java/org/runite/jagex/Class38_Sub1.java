@@ -51,19 +51,4 @@ final class Class38_Sub1 extends Class38 {
       }
    }
 
-   public static void method1032(boolean var0) {
-      try {
-         anIntArrayArrayArray2609 = (int[][][])null;
-         accRegistryIp = Configurations.MS_IP;
-         aClass94_2610 = null;
-         aClass15_2613 = null;
-         if(var0) {
-            method1032(true);
-         }
-
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "em.A(" + ')');
-      }
-   }
-
 }

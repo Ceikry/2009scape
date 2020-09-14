@@ -346,16 +346,6 @@ final class Class3_Sub13_Sub34 extends Class3_Sub13 {
       }
    }
 
-   public static void method333(byte var0) {
-      try {
-         //int var1 = 100 / ((76 - var0) / 44);
-         aClass93_3412 = null;
-         aClass47_3407 = null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "sk.B(" + var0 + ')');
-      }
-   }
-
    static boolean method334(CacheIndex var0) {
       try {
          return var0.method2144(NPC.anInt4001);

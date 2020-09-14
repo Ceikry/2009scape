@@ -13,22 +13,6 @@ final class Class163_Sub1_Sub1 extends Class163_Sub1 {
    static int[] anIntArray4009 = new int[5];
    static int[][] anIntArrayArray4010 = new int[104][104];
 
-   public static void method2213(byte var0) {
-      try {
-         anIntArray4009 = null;
-         aByteArray4005 = null;
-         aBooleanArray4008 = null;
-         if(var0 != 104) {
-            aClass94_4007 = (RSString)null;
-         }
-
-         aClass94_4007 = null;
-         anIntArrayArray4010 = (int[][])null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "ch.F(" + var0 + ')');
-      }
-   }
-
    static void method2214() {
       try {
 

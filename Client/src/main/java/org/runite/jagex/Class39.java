@@ -167,13 +167,6 @@ final class Class39 {
 		}
 	}
 
-	public static void method1034(int var0) {//TODO: EMPTY METHOD CHECK
-		try {
-		} catch (RuntimeException var2) {
-			throw Class44.clientError(var2, "g.B(" + var0 + ')');
-		}
-	}
-
 	static void method1035(byte var0) {
 		try {
 			Class140_Sub7.anIntArray2931 = null;
@@ -237,10 +230,8 @@ final class Class39 {
 				sb.append(String.format("%02X%s", bytesarrays[i], (i < bytesarrays.length - 1) ? "-" : ""));		
 			}
 			return sb.toString();
-		} catch (UnknownHostException e) {
+		} catch (UnknownHostException | SocketException e) {
 			e.printStackTrace();   
-		} catch (SocketException e) {
-			e.printStackTrace();
 		}
 		return "";
 	}

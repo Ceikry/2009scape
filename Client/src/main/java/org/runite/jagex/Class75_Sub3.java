@@ -40,7 +40,6 @@ final class Class75_Sub3 extends Class75 {
          Class140_Sub6.method2025();
          Class114.method1711(5, 26211 + -25956);
          Class3_Sub9.method137(5, (byte)-118);
-         Class3_Sub19.method386();
          RSByteBuffer.method795();
          Class3_Sub28_Sub3.method539();
          Class3_Sub13_Sub4.method188(5, 0);
@@ -137,18 +136,6 @@ final class Class75_Sub3 extends Class75 {
          }
       } catch (RuntimeException var8) {
          throw Class44.clientError(var8, "re.B(" + var0 + ')');
-      }
-   }
-
-   public static void method1348(byte var0) {
-      try {
-         aClass153_2660 = null;
-         if(var0 != 100) {
-            method1347(-79);
-         }
-         aClass3_Sub28_Sub16Array2656 = null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "re.C(" + var0 + ')');
       }
    }
 

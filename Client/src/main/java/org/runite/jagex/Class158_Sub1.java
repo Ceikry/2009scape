@@ -44,7 +44,7 @@ final class Class158_Sub1 extends Class158 implements ImageProducer, ImageObserv
       try {
          this.anImageConsumer2978 = var1;
          var1.setDimensions(this.anInt2012, this.anInt2011);
-         var1.setProperties((Hashtable)null);
+         var1.setProperties(null);
          var1.setColorModel(this.aColorModel2979);
          var1.setHints(14);
       } catch (RuntimeException var3) {

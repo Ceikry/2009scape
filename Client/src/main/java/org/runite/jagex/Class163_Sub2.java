@@ -21,19 +21,6 @@ class Class163_Sub2 extends Class163 {
       return null;
    }
 
-   public static void method2218(byte var0) {
-      try {
-         aClass94_2996 = null;
-         if(var0 != -83) {
-            method2218((byte)-9);
-         }
-
-         aClass30Array2998 = null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "dk.B(" + var0 + ')');
-      }
-   }
-
    static void method2219(RSByteBuffer var0) {
       try {
 

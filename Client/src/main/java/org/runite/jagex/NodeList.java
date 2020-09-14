@@ -21,14 +21,6 @@ final class NodeList {
       }
    }
 
-   public static void method875(byte var0) {
-      try {
-         aClass153_332 = null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "ce.C(" + var0 + ')');
-      }
-   }
-
    final Node method876(byte var1) {
       try {
          Node var2 = this.aClass3_Sub28_333.aClass3_Sub28_2578;

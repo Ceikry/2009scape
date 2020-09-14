@@ -13,17 +13,6 @@ final class Class3_Sub13_Sub28 extends Class3_Sub13 {
    private int anInt3354 = 3216;
 
 
-   public static void method300(int var0) {
-      try {
-         aClass94_3353 = null;
-         aShortArray3349 = null;
-         aClass3_Sub11ArrayArray3346 = (Class3_Sub11[][])null;
-         aClass153_3352 = null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "pk.F(" + var0 + ')');
-      }
-   }
-
    final void method157(int var1, RSByteBuffer var2, boolean var3) {
       try {
          if(0 == var1) {

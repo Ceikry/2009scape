@@ -52,23 +52,6 @@ static RSString[] aClass94Array3238 = new RSString[]{aClass94_3237, aClass94_324
       }
    }
 
-   public static void method261(int var0) {
-      try {
-         aClass153_3227 = null;
-         aClass94_3243 = null;
-         aClass94_3232 = null;
-         aClass94_3239 = null;
-         aClass94_3220 = null;
-         anIntArray3228 = null;
-         aClass94Array3238 = null;
-         aClass94Array3226 = null;
-         aClass94_3237 = null;
-         aClass3_Sub28_Sub16_Sub2_3221 = null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "mc.F(" + var0 + ')');
-      }
-   }
-
    final void method157(int var1, RSByteBuffer var2, boolean var3) {
       try {
          if(0 == var1) {

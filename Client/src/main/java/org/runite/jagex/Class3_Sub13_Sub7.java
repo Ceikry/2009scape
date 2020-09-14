@@ -27,23 +27,6 @@ final class Class3_Sub13_Sub7 extends Class3_Sub13 {
       }
    }
 
-   public static void method200(byte var0) {
-      try {
-         aShortArray3095 = null;
-         if(var0 != 122) {
-            method201(62, -109, 127);
-         }
-
-         GameShell.frame = null;
-         aRandom3088 = null;
-         aClass3_Sub28_Sub16_3099 = null;
-         aClass11_3087 = null;
-         aClass153_3098 = null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "d.E(" + var0 + ')');
-      }
-   }
-
    static int method201(int var0, int var1, int var2) {
       try {
          int var3 = var1 + -1 & var0 >> 31;

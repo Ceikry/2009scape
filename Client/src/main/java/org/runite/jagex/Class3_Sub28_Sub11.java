@@ -177,17 +177,6 @@ final class Class3_Sub28_Sub11 extends Node {
       }
    }
 
-   public static void method605(int var0) {
-      try {
-         aClass94_3637 = null;
-         if(var0 != 221301966) {
-            method603(-111, -64, -10, (RSInterface)null, false);
-         }
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "lk.D(" + var0 + ')');
-      }
-   }
-
    static void method606(int var0, Class3_Sub9 var1, int var2, int var3, int var4, int var5) {
       try {
          if(var5 > 44) {

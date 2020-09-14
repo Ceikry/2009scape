@@ -29,20 +29,6 @@ final class Class3_Sub24_Sub3 extends Class3_Sub24 {
       }
    }
 
-   public static void method463(int var0) {
-      try {
-         aClass153_3490 = null;
-         anIntArray3491 = null;
-         anIntArray3494 = null;
-         if(var0 != -28918) {
-            method468(-39);
-         }
-
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "te.C(" + var0 + ')');
-      }
-   }
-
    final Class3_Sub24 method411() {
       try {
          Class3_Sub22 var1 = (Class3_Sub22)this.aClass61_3489.method1222();

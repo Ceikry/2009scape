@@ -43,19 +43,6 @@ class Class3_Sub13_Sub23 extends Class3_Sub13 {
       }
    }
 
-   public static void method277(byte var0) {
-      try {
-         TextCore.LoadingPleaseWait2 = null;
-         if(var0 >= -11) {
-            itemDefinitionSize = -68;
-         }
-         aClass94_3289 = null;
-         anIntArray3288 = null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "nh.DA(" + var0 + ')');
-      }
-   }
-
    static boolean handleWorldListUpdate(byte[] buf) {
       try {
          RSByteBuffer buffer = new RSByteBuffer(buf);

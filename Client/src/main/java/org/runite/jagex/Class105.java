@@ -551,8 +551,4 @@ final class Class105 {
       }
    }
 
-   public static void method1641() {
-      aClass9_1438 = null;
-   }
-
 }

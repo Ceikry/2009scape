@@ -25,10 +25,6 @@ final class Class112 implements Interface5 {
       this.anInt2180 = var3[0];
    }
 
-   public static void method1700() {
-      aFloatArray2178 = null;
-   }
-
    private void method1701() {
       javax.media.opengl.GL var1 = HDToolKit.gl;
       this.anInt2177 = var1.glGenLists(2);

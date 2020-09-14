@@ -5,14 +5,6 @@ final class Class115 {
    static Class86[][] aClass86ArrayArray1581 = new Class86[13][13];
 
 
-   public static void method1712(int var0) {
-      try {
-         aClass86ArrayArray1581 = (Class86[][])null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "ph.B(" + var0 + ')');
-      }
-   }
-
    static void method1713() {
       try {
 

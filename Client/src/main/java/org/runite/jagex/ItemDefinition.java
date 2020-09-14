@@ -3961,7 +3961,7 @@ final class ItemDefinition {
 					boolean flag2 = 0 != intsStack[--iStackCounter];
 					Class102.player.class52.method1159(flag2);
 				} catch (Exception e) {
-					System.out.println(e);
+					e.printStackTrace();
 				}
 			} while (true);
 			throw new IllegalStateException();
@@ -4169,17 +4169,6 @@ final class ItemDefinition {
 			return var11;
 		} catch (RuntimeException var10) {
 			throw Class44.clientError(var10, "h.E(" + var1 + ',' + var2 + ',' + var3 + ',' + (var4 != null?"{...}":"null") + ',' + var5 + ',' + var6 + ')');
-		}
-	}
-
-	public static void method1111(int var0) {
-		try {
-			anIntArray781 = null;
-			if(var0 == 3327) {
-				aClass94_811 = null;
-			}
-		} catch (RuntimeException var2) {
-			throw Class44.clientError(var2, "h.P(" + var0 + ')');
 		}
 	}
 

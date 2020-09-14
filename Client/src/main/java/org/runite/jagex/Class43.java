@@ -39,13 +39,6 @@ final class Class43 {
       }
    }
 
-   public static void method1059(byte var0) {//TODO: Empty check method
-      try {
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "gi.E(" + var0 + ')');
-      }
-   }
-
    final void method1060(byte var1, int var2, int var3, int var4, int var5) {
       try {
          this.anInt694 = var2;

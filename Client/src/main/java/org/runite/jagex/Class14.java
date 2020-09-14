@@ -19,18 +19,6 @@ final class Class14 {
       }
    }
 
-   public static void method886(byte var0) {
-      try {
-         if(var0 < 26) {
-            aClass94_339 = (RSString)null;
-         }
-         aClass94_339 = null;
-         aClass94_341 = null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "cg.B(" + var0 + ')');
-      }
-   }
-
    static void method887(CacheIndex var1) {
       try {
          Class102.aClass3_Sub28_Sub16_Sub2Array2140 = Class157.method2176(0, 32767, Class168.anInt2104, var1);

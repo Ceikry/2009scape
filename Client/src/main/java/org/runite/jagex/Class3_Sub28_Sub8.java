@@ -15,18 +15,6 @@ final class Class3_Sub28_Sub8 extends Node {
       }
    }
 
-   public static void method573(int var0) {
-      try {
-         if(var0 != -11346) {
-            anInt3611 = -69;
-         }
-
-         aClass113Array3610 = null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "hc.A(" + var0 + ')');
-      }
-   }
-
    static void method574(NPC var0) {
       try {
          for(Class3_Sub9 var2 = (Class3_Sub9)IOHandler.aClass61_1242.method1222(); var2 != null; var2 = (Class3_Sub9)IOHandler.aClass61_1242.method1221()) {

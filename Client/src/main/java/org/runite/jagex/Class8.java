@@ -15,19 +15,6 @@ final class Class8 {
    private Class151_Sub1[] aClass151_Sub1Array107;
 
 
-   public static void method836(int var0) {
-      try {
-         aClass153_105 = null;
-         if(var0 > -10) {
-            method843(-80, (RSByteBuffer)null);
-         }
-
-         aClass94_106 = null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "al.I(" + var0 + ')');
-      }
-   }
-
    final boolean method837() {
       try {
          if(null == this.aClass3_Sub30_99) {

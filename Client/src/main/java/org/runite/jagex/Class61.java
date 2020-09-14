@@ -191,18 +191,6 @@ final class Class61 {
       }
    }
 
-   public static void method1217(int var0) {
-      try {
-         aClass93_939 = null;
-         if(var0 != 0) {
-            method1213(56, (Class3_Sub11[])null);
-         }
-
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "ih.J(" + var0 + ')');
-      }
-   }
-
    static RSString method1218(int var2) {
       try {
          return Class118.method1723((byte)-128, true, var2);

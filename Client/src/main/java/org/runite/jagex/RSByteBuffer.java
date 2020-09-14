@@ -380,22 +380,6 @@ class RSByteBuffer extends Class3 {
 		}
 	}
 
-	public static void method767(int var0) {
-		try {
-			anIntArray2591 = null;
-			aClass3_Sub28_Sub3_2600 = null;
-			aClass94Array2596 = null;
-			TextCore.LoadedInterfaces = null;
-			aClass151_Sub1Array2601 = null;
-			aClass94_2598 = null;
-			if(var0 != 0) {
-			}
-
-		} catch (RuntimeException var2) {
-			throw Class44.clientError(var2, "wa.IC(" + var0 + ')');
-		}
-	}
-
 	final void method768(int var1, int var2) {
 		try {
 			if(var1 != -32769) {

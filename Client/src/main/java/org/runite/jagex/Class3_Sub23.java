@@ -16,21 +16,6 @@ final class Class3_Sub23 extends Class3 {
    static Class3_Sub11[][] aClass3_Sub11ArrayArray2542;
 
 
-   public static void method405(boolean var0) {
-      try {
-         aClass153_2536 = null;
-         anIntArray2533 = null;
-         aClass3_Sub11ArrayArray2542 = (Class3_Sub11[][])null;
-         aBooleanArray2538 = null;
-         if(!var0) {
-            method408(-65, (byte)-3, 110, (int[][])((int[][])null), -123, 122);
-         }
-
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "oj.B(" + ')');
-      }
-   }
-
    static void method406(byte var0, boolean var1, Class3_Sub28_Sub17 var2) {
       try {
          int var3;

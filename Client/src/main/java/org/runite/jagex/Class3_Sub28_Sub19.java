@@ -34,17 +34,6 @@ final class Class3_Sub28_Sub19 extends Node {
       }
    }
 
-   public static void method717(int var0) {
-      try {
-         aClass94_3777 = null;
-         anIntArray3780 = null;
-         aClass153_3772 = null;
-         aClass47_3776 = null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "ud.C(" + var0 + ')');
-      }
-   }
-
    Class3_Sub28_Sub19(Class140_Sub6 var1) {
       try {
          this.aClass140_Sub6_3778 = var1;

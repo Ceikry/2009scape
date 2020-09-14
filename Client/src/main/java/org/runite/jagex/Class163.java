@@ -11,19 +11,6 @@ class Class163 {
    static int localNPCCount = 0;
 
 
-   public static void method2208(int var0) {
-      try {
-         aClass47_2041 = null;
-         anIntArray2043 = null;
-         COMMAND_ERROR_TEST = null;
-         aClass94_2044 = null;
-         if(var0 != 30358) {
-         }
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "wd.L(" + var0 + ')');
-      }
-   }
-
    static void method2209(byte var0, int var1, int var2) {
       try {
          if(var0 >= -99) {

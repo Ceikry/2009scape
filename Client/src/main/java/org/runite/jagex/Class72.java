@@ -232,17 +232,6 @@ final class Class72 {
       }
    }
 
-   public static void method1296(int var0) {
-      try {
-         aClass94_1076 = null;
-         if(var0 == 1) {
-        	LEFT_PARENTHESES = null;
-         }
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "jj.F(" + var0 + ')');
-      }
-   }
-
    static float[] method1297() {
       try {
          float var1 = Class92.method1514() + Class92.getLightingModelAmbient();

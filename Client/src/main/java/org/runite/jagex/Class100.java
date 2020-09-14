@@ -181,13 +181,4 @@ final class Class100 {
       }
    }
 
-   public static void method1606(byte var0) {
-      try {
-         aClass153_1410 = null;
-         aClass136_1413 = null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "ni.A(" + var0 + ')');
-      }
-   }
-
 }

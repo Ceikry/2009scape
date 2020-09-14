@@ -1073,20 +1073,6 @@ final class Class47 {
       }
    }
 
-   public static void method1096(byte var0) {
-      try {
-         quickChatMessages = null;
-         if(var0 < 84) {
-            method1091(true, -127);
-         }
-
-         aClass94_750 = null;
-         aClass93_743 = null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "gn.G(" + var0 + ')');
-      }
-   }
-
    final void method1097(Node var1, long var2, byte var4) {
       try {
          if(this.anInt749 == 0) {

@@ -17,18 +17,6 @@ final class Class77 {
       }
    }
 
-   public static void method1365(int var0) {
-      try {
-         aClass52_1112 = null;
-         if(var0 <= 96) {
-            anInt1111 = 55;
-         }
-
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "kh.E(" + var0 + ')');
-      }
-   }
-
    static void method1366() {
       try {
 

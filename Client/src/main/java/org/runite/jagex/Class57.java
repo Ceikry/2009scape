@@ -45,16 +45,4 @@ final class Class57 {
       }
    }
 
-   public static void method1192(byte var0) {
-      try {
-         anIntArray898 = null;
-         anIntArray904 = null;
-         if(var0 == -86) {
-            aClass3_Sub28_Sub16_895 = null;
-         }
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "ic.B(" + var0 + ')');
-      }
-   }
-
 }

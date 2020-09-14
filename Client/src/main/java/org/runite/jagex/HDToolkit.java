@@ -286,16 +286,6 @@ final class HDToolKit {
       }
    }
 
-   public static void method1838() {
-      aClass94_1819 = null;
-      aString1786 = null;
-      aString1785 = null;
-      gl = null;
-      aGLDrawable1815 = null;
-      aGLContext1800 = null;
-      aFloatArray1808 = null;
-   }
-
    static float method1839() {
       return aFloat1794;
    }
@@ -305,11 +295,11 @@ final class HDToolKit {
       aString1785 = gl.glGetString(7936);
       aString1786 = gl.glGetString(7937);
       String var1 = aString1785.toLowerCase();
-      if(var1.indexOf("microsoft") != -1) {
+      if(var1.contains("microsoft")) {
          var0 |= 1;
       }
 
-      if(var1.indexOf("brian paul") != -1 || var1.indexOf("mesa") != -1) {
+      if(var1.contains("brian paul") || var1.contains("mesa")) {
          var0 |= 1;
       }
 

@@ -11,14 +11,6 @@ final class Class145 {
    static int anInt1898;
    int anInt1900;
 
-   public static void method2071(byte var0) {
-      try {
-         aClass113Array1895 = null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "ub.G(" + var0 + ')');
-      }
-   }
-
    static void method2072(int var0, int var1, int var2, int var3, int var4, int var5) {
       try {
          if(Class101.anInt1425 <= var1 && Class3_Sub28_Sub18.anInt3765 >= var3 && var2 >= Class159.anInt2020 && var4 <= Class57.anInt902) {

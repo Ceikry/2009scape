@@ -26,16 +26,6 @@ final class Class35 {
    int[] anIntArray632;
 
 
-   public static void method1011() {
-      anIntArray623 = null;
-      anIntArray622 = null;
-      anIntArray614 = null;
-      anIntArray630 = null;
-      anIntArray628 = null;
-      anIntArrayArray619 = (int[][])null;
-      anIntArrayArray620 = (int[][])null;
-   }
-
    Class35(int var1, int var2, int var3, int var4, int var5, int var6, int var7, int var8, int var9, int var10, int var11, int var12, int var13, int var14, int var15, int var16, int var17, int var18, int var19) {
       if(var6 != var7 || var6 != var8 || var6 != var9) {
          this.aBoolean629 = false;

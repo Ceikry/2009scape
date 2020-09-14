@@ -259,20 +259,6 @@ final class AnimationDefinition {
 		}
 	}
 
-	public static void method2057(byte var0) {
-		try {
-			aClass25Array1868 = null;
-			aClass109_1856 = null;
-			aClass153_1860 = null;
-			aClass153_1852 = null;
-			if(var0 != -108) {
-			}
-			anIntArray1871 = null;
-		} catch (RuntimeException var2) {
-			throw Class44.clientError(var2, "tk.F(" + var0 + ')');
-		}
-	}
-
 	final void method2058() {
 		try {
 			if(this.anInt1866 == -1) {

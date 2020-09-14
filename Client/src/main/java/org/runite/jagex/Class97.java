@@ -76,24 +76,6 @@ final class Class97 {
       }
    }
 
-   public static void method1592(byte var0) {
-      try {
-         aClass153_1376 = null;
-         aClass153_1378 = null;
-         anIntArrayArray1373 = (int[][])null;
-         aClass3_Sub28_Sub16_Sub2_1381 = null;
-         if(var0 > 25) {
-            aClass94_1380 = null;
-            aClass153_1372 = null;
-            aClass153_1370 = null;
-            aByteArray1364 = null;
-            aClass94_1374 = null;
-         }
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "nd.B(" + var0 + ')');
-      }
-   }
-
    static void method1593(int var0, CacheIndex var1) {
       try {
          Class154.anInt1966 = var1.getArchiveForName(Class3_Sub28_Sub4.aClass94_3574);

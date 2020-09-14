@@ -322,17 +322,6 @@ final class ISAACCipher {
       }
    }
 
-   public static void method1231(int var0) {
-      try {
-         if(var0 <= 116) {
-            method1230((byte)-73);
-         }
-
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "ij.D(" + var0 + ')');
-      }
-   }
-
    static int method1232(NPC var0) {
       try {
          NPCDefinition var2 = var0.definition;
@@ -360,8 +349,6 @@ final class ISAACCipher {
          throw Class44.clientError(var5, "ij.B(" + (var0 != null?"{...}":"null") + ',' + -1 + ')');
       }
    }
-
-   private ISAACCipher() {}
 
    ISAACCipher(int[] var1) {
       try {

@@ -110,21 +110,4 @@ final class Class3_Sub13_Sub22 extends Class3_Sub13 {
       }
    }
 
-   public static void method274(int var0) {
-      try {
-         players = null;
-         if(var0 != -2) {
-            aClass94_3268 = (RSString)null;
-         }
-
-         aClass94_3268 = null;
-         aBooleanArray3272 = null;
-         aClass109Array3270 = null;
-         aLongArray3271 = null;
-         aClass61ArrayArrayArray3273 = (Class61[][][])null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "mi.C(" + var0 + ')');
-      }
-   }
-
 }

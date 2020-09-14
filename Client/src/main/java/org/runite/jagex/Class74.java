@@ -647,10 +647,4 @@ final class Class74 {
 
    }
 
-   public static void method1333() {
-      anIntArray1100 = null;
-      anIntArray1097 = null;
-      anIntArray1098 = null;
-   }
-
 }

@@ -20,17 +20,6 @@ final class WorldListEntry extends Class44 {
       }
    }
 
-   public static void method1077(int var0) {
-      try {
-         aClass155_2627 = null;
-         if(var0 != 0) {
-            anInt2626 = 89;
-         }
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "ba.A(" + var0 + ')');
-      }
-   }
-
    final WorldListCountry method1078(int var1) {
       try {
          return Class119.countries[this.countryIndex];

@@ -11,18 +11,6 @@ final class Class3_Sub13_Sub3 extends Class3_Sub13 {
    static short aShort3052 = 205;
 
 
-   public static void method177(byte var0) {
-      try {
-         if(var0 != 119) {
-            aShort3052 = 109;
-         }
-
-         aClass148_3049 = null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "an.E(" + var0 + ')');
-      }
-   }
-
    static RSString method178(byte[] var0, int var2, int var3) {
       try {
          RSString var4 = new RSString();

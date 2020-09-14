@@ -94,19 +94,6 @@ public final class Class3_Sub28_Sub12 extends Node {
       }
    }
 
-   public static void method613(int var0) {
-      try {
-         aCanvas3648 = null;
-         aClass94_3653 = null;
-         aShortArrayArray3654 = (short[][])null;
-         if(var0 > 22) {
-            aClass94_3651 = null;
-         }
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "md.B(" + var0 + ')');
-      }
-   }
-
    private void method614(RSByteBuffer var1, int var2) {
       try {
 

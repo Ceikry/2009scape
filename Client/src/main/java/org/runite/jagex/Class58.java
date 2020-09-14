@@ -16,22 +16,6 @@ final class Class58 {
    static Class66 aClass66_917;
 
 
-   public static void method1193(int var0) {
-      try {
-         anInterface4_915 = null;
-         anIntArrayArrayArray911 = (int[][][])null;
-         anIntArrayArrayArray914 = (int[][][])null;
-         aClass66_917 = null;
-         anIntArray912 = null;
-         if(var0 != -26723) {
-         }
-
-         COMMAND_TOGGLE_FPSON = null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "id.C(" + var0 + ')');
-      }
-   }
-
    static void method1194() {
       try {
          if(null != Class3_Sub21.aClass155_2491) {

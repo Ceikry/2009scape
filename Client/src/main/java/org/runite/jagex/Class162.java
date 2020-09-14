@@ -42,19 +42,6 @@ final class Class162 {
       }
    }
 
-   public static void method2205(int var0) {
-      try {
-         anIntArrayArray2039 = (int[][])null;
-         aByteArray2040 = null;
-         if(var0 != -17413) {
-            anInt2036 = 77;
-         }
-
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "wc.C(" + var0 + ')');
-      }
-   }
-
    static void method2206(int var1) {
       try {
          Class3_Sub28_Sub6 var2 = Class3_Sub24_Sub3.method466(4, var1);

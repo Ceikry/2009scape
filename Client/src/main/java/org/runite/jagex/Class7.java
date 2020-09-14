@@ -37,16 +37,6 @@ final class Class7 implements Interface4 {
       }
    }
 
-   public static void method833(byte var0) {
-      try {
-         aShortArray2167 = null;
-         aClass153_2160 = null;
-         aClass94_2168 = null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "af.E(" + var0 + ')');
-      }
-   }
-
    public final RSString method20(int var1, int[] var2, int var3, long var4) {
       try {
          if(var1 == 0) {

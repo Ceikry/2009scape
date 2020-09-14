@@ -128,25 +128,6 @@ final class Class3_Sub14 extends Class3 {
 
    }
 
-   public static void method361() {
-      aByteArray2417 = null;
-      aClass71Array2406 = null;
-      aClass59Array2407 = null;
-      aClass152Array2392 = null;
-      aClass150Array2398 = null;
-      aBooleanArray2393 = null;
-      anIntArray2420 = null;
-      aFloatArray2403 = null;
-      aFloatArray2400 = null;
-      aFloatArray2413 = null;
-      aFloatArray2416 = null;
-      aFloatArray2399 = null;
-      aFloatArray2387 = null;
-      aFloatArray2388 = null;
-      anIntArray2391 = null;
-      anIntArray2409 = null;
-   }
-
    private static boolean method362(CacheIndex var0) {
       if(!aBoolean2405) {
          byte[] var1 = var0.getFile(0, 0);

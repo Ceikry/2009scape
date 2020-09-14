@@ -94,20 +94,6 @@ final class Class3_Sub1 extends Class3 {
       }
    }
 
-   public static void method91(byte var0) {
-      try {
-         anIntArray2213 = null;
-         if(var0 <= 110) {
-            method90(-74);
-         }
-
-         interfaceScriptsIndex = null;
-         anIntArray2209 = null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "bf.P(" + var0 + ')');
-      }
-   }
-
    final boolean method92(int var1, byte var2) {
       try {
          return 0 != (this.anInt2205 >> 1 + var1 & 1);

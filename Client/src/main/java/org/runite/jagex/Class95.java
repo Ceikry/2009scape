@@ -14,21 +14,6 @@ final class Class95 {
    static int anInt1344;
 
 
-   public static void method1582(int var0) {
-      try {
-         aClass3_Sub28_Sub16_1339 = null;
-         aClass94_1342 = null;
-         aClass94_1333 = null;
-         aClass94_1341 = null;
-         if(var0 != 3) {
-            anInt1340 = -18;
-         }
-         COMMAND_BREAK_CONNECTION = null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "nb.D(" + var0 + ')');
-      }
-   }
-
    static void method1583(int var0, int var1, int var2, int var4, int var5, int var6, int var7, int var8, int var9) {
       try {
 

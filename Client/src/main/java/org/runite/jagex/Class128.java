@@ -66,17 +66,6 @@ final class Class128 {
       }
    }
 
-   public static void method1761(byte var0) {
-      try {
-         aClass94_1687 = null;
-         if(var0 < -46) {
-            aClass93_1683 = null;
-         }
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "rm.C(" + var0 + ')');
-      }
-   }
-
    static void method1762(long var0, byte var2) {
       try {
          try {

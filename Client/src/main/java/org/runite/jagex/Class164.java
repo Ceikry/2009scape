@@ -146,20 +146,6 @@ abstract class Class164 {
 
    abstract void method2233();
 
-   public static void method2235(int var0) {
-      try {
-         anIntArray2048 = null;
-         aClass153_2052 = null;
-         if(var0 == 4) {
-            aClass140_Sub5Array2058 = null;
-            aClass94_2061 = null;
-            aClass11_2055 = null;
-         }
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "wf.J(" + var0 + ')');
-      }
-   }
-
    private void method2236(int var1) {
       try {
          Random var2 = new Random((long)this.anInt2054);

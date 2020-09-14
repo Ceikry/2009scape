@@ -86,15 +86,6 @@ final class Class50 {
 		}
 	}
 
-	public static void method1133(byte var0) {
-		try {
-			aLongArray826 = null;
-			aClass3_Sub28_Sub16_824 = null;
-		} catch (RuntimeException var2) {
-			throw Class44.clientError(var2, "hd.C(" + var0 + ')');
-		}
-	}
-
 	public Class50() {}
 
 	Class50(Class50 var1) {

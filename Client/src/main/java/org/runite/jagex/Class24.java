@@ -69,17 +69,6 @@ final class Class24 {
       }
    }
 
-   public static void method943(int var0) {
-      try {
-         aClass94_468 = null;
-         if(var0 == -9893) {
-            aClass94_465 = null;
-         }
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "dm.C(" + var0 + ')');
-      }
-   }
-
    static boolean isValidObjectMapping(byte var0, int var1, int var2, byte[] var3) {
       try {
          boolean var5 = true;

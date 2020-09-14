@@ -24,15 +24,6 @@ final class Class107 {
       }
    }
 
-   public static void method1646(boolean var0) {
-      try {
-         ItemDefinition.stringArguments = null;
-         aClass11_1453 = null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "og.E(" + var0 + ')');
-      }
-   }
-
    static void method1647(int var1, int var2, Class140_Sub4 var3, int var4, int var5, int var6) {
       try {
 

@@ -53,17 +53,6 @@ final class Class79 {
       }
    }
 
-   public static void method1388(boolean var0) {
-      try {
-         if(!var0) {
-            anInt1126 = 8;
-         }
-
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "kk.D(" + var0 + ')');
-      }
-   }
-
    private void method1389(RSByteBuffer var1, int var3) {
       try {
          if(1 == var3) {

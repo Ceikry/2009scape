@@ -71,14 +71,6 @@ final class Class167 {
       }
    }
 
-   public static void method2262(byte var0) {
-      try {
-         aClass94_2083 = null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "wj.F(" + var0 + ')');
-      }
-   }
-
    static void method2263(int var0, int var1, int var2, int var3, int var4, int var5, int var6) {
       Class113 var7 = new Class113();
       var7.anInt1553 = var1 / 128;

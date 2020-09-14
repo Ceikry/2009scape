@@ -257,24 +257,10 @@ final class ObjectDefinition {
       }
    }
 
-   public static void method1687(int var0) {
-      try {
-         anIntArrayArrayArray1497 = (int[][][])null;
-         aBooleanArray1490 = null;
-         if(var0 != -11) {
-            anInt1521 = -96;
-         }
-
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "pb.B(" + var0 + ')');
-      }
-   }
-
    static void method1688(int var0, int var1, int var2) {
       Class3_Sub2 var3 = Class75_Sub2.aClass3_Sub2ArrayArrayArray2638[var0][var1][var2];
       if(var3 == null) {
       } else {
-         Class72 var4 = var3.aClass72_2245;
          var3.aClass72_2245 = null;
       }
    }

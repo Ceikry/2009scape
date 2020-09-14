@@ -86,18 +86,6 @@ final class Class75_Sub1 extends Class75 {
       }
    }
 
-   public static void method1343(boolean var0) {
-      try {
-         aClass109_Sub1_2631 = null;
-         aShortArrayArray2634 = (short[][])null;
-         if(var0) {
-         }
-
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "ci.C(" + var0 + ')');
-      }
-   }
-
    final void method1337(int var1, boolean var2, int var3) {
       try {
          int var4 = var3 * this.anInt2629 >> 12;

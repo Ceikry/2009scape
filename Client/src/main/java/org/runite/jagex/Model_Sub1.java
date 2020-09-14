@@ -64,13 +64,6 @@ final class Model_Sub1 extends GameObject {
       this.method2007();
    }
 
-   public static void method1990() {
-      anIntArray2861 = null;
-      anIntArray2875 = null;
-      anIntArray2871 = null;
-      anIntArray2863 = null;
-   }
-
    final void method1991() {
       for(int var1 = 0; var1 < this.anInt2887; ++var1) {
          int var2 = this.anIntArray2885[var1];

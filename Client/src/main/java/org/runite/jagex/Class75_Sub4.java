@@ -165,19 +165,6 @@ final class Class75_Sub4 extends Class75 {
       }
    }
 
-   public static void method1350(byte var0) {
-      try {
-         anIntArray2664 = null;
-         if(var0 != 75) {
-            method1350((byte)-116);
-         }
-         anIntArray2668 = null;
-         anIntArray2663 = null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "ta.C(" + var0 + ')');
-      }
-   }
-
    Class75_Sub4(int var1, int var2, int var3, int var4, int var5, int var6, int var7) {
       super(var5, var6, var7);
 

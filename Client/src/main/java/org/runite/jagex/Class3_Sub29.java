@@ -192,19 +192,6 @@ final class Class3_Sub29 extends Class3 {
       }
    }
 
-   public static void method735(int var0) {
-      try {
-         aClass153_2581 = null;
-         aClass94Array2580 = null;
-         aClass94_2584 = null;
-         if(var0 != -22749) {
-            anInt2579 = 66;
-         }
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "sj.C(" + var0 + ')');
-      }
-   }
-
    static void method736(int var0, int var1) {
       try {
          if(var1 <= 61) {

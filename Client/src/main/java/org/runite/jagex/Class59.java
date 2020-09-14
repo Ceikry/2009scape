@@ -242,14 +242,6 @@ final class Class59 {
       }
    }
 
-   public static void method1204() {
-      anIntArray928 = null;
-      aFloatArray929 = null;
-      anIntArray925 = null;
-      anIntArray927 = null;
-      aBooleanArray919 = null;
-   }
-
    final boolean method1205() {
       boolean var1 = Class3_Sub14.method364() != 0;
       if(var1) {

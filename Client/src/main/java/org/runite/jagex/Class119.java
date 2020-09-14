@@ -12,23 +12,6 @@ final class Class119 {
    static RSString aClass94_1630 = RSString.createRSString("Mem:");
 
 
-   public static void method1728(int var0) {
-      try {
-         aClass33_1626 = null;
-         aClass131_1624 = null;
-         countries = null;
-         aClass94_1630 = null;
-         aClass153_1628 = null;
-         aClass94_1625 = null;
-         if(var0 != -14256) {
-            method1728(46);
-         }
-
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "qh.B(" + var0 + ')');
-      }
-   }
-
    static void method1729() {
       try {
          Object var1;

@@ -99,20 +99,6 @@ final class Class3_Sub28_Sub5 extends Node {
       return 0L;
    }
 
-   public static void method558(int var0) {
-      try {
-         anIntArray3592 = null;
-         aClass153_3580 = null;
-         anIntArray3587 = null;
-         if(var0 != -29679) {
-            method556(-76, 24, -17, (byte)-85, 58, -87);
-         }
-         aCalendar3581 = null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "cl.B(" + var0 + ')');
-      }
-   }
-
    final boolean method559(int var2) {
       try {
          return this.animations[var2].aBoolean1386;

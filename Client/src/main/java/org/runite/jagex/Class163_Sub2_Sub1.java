@@ -145,20 +145,6 @@ final class Class163_Sub2_Sub1 extends Class163_Sub2 {
       }
    }
 
-   public static void method2225(byte var0) {
-      try {
-         aClass89_4012 = null;
-         aClass109_Sub1Array4027 = null;
-         anIntArray4025 = null;
-         aClass94Array4016 = null;
-         aClass93_4015 = null;
-         aLongArray4017 = null;
-         aClass94_4023 = null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "t.F(" + var0 + ')');
-      }
-   }
-
    static void method2226(Class3_Sub30_Sub1 var0, int var1, int var2) {
       try {
          if(var2 > -109) {

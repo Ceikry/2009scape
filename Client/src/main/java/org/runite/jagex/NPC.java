@@ -15,20 +15,6 @@ final class NPC extends Class140_Sub4 {
 	static int[] anIntArray3997 = new int[]{19, 55, 38, 155, 255, 110, 137, 205, 76};
 	static int anInt4001;
 
-	public static void method1983(int var0) {
-		try {
-			anIntArray3986 = null;
-			if(var0 == -3) {
-				aClass153_3994 = null;
-				anIntArray3997 = null;
-				aClass3_Sub28_Sub16Array3977 = null;
-				aClass153_3993 = null;
-			}
-		} catch (RuntimeException var2) {
-			throw Class44.clientError(var2, "km.N(" + var0 + ')');
-		}
-	}
-
 	static int method1984(int var0, int var1, int var2) {
 		try {
 			if(var1 == 38) {

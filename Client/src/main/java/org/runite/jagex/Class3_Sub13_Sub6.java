@@ -126,21 +126,6 @@ final class Class3_Sub13_Sub6 extends Class3_Sub13 {
       super(1, true);
    }
 
-   public static void method197(int var0) {
-      try {
-         anIntArray3076 = null;
-         aClass61_3075 = null;
-         anIntArray3082 = null;
-         aClass94_3080 = null;
-         if(var0 == 1) {
-            anIntArray3083 = null;
-            aClass153_3077 = null;
-         }
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "ca.O(" + var0 + ')');
-      }
-   }
-
    static void method198(boolean var0) {
       try {
 

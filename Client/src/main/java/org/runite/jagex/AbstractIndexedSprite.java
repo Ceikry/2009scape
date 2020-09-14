@@ -28,17 +28,6 @@ abstract class AbstractIndexedSprite {
       }
    }
 
-   public static void method1663(int var0) {
-      try {
-         if(var0 != 33) {
-            anInt1463 = 15;
-         }
-
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "ok.D(" + var0 + ')');
-      }
-   }
-
    static NodeList method1664(int var0, int var1) {
       try {
          NodeList var3 = new NodeList();

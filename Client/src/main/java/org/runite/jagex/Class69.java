@@ -69,15 +69,6 @@ final class Class69 {
       }
    }
 
-   public static void method1283(byte var0) {
-      try {
-         aClass153_1043 = null;
-         aClass30_1039 = null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "jg.B(" + var0 + ')');
-      }
-   }
-
    Class69(int[] var1) {
       try {
          int var2;

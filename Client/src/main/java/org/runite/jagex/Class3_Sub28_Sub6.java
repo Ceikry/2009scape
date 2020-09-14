@@ -218,15 +218,6 @@ final class Class3_Sub28_Sub6 extends Node {
       }
    }
 
-   public static void f(int var0) {
-      try {
-         if(var0 == 3) {
-         }
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "da.O(" + var0 + ')');
-      }
-   }
-
    Class3_Sub28_Sub6(int var1, int var2) {
       try {
          this.aLong71 = (long)var1 << 32 | (long)var2;

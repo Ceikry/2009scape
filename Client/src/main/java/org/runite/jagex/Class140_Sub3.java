@@ -186,20 +186,6 @@ final class Class140_Sub3 extends GameObject {
       }
    }
 
-   public static void method1958(int var0) {
-      try {
-         aClass153_2727 = null;
-         if(var0 != 2) {
-            method1958(64);
-         }
-
-         aByteArrayArray2747 = (byte[][])null;
-         aClass94_2735 = null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "dc.G(" + var0 + ')');
-      }
-   }
-
    final void method1867(int var1, int var2, int var3, int var4, int var5) {
       try {
          if(HDToolKit.highDetail) {

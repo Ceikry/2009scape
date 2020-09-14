@@ -66,17 +66,6 @@ final class Class3_Sub10 extends Class3 {
       }
    }
 
-   public static void method143(int var0) {
-      try {
-         anIntArray2338 = null;
-         if(var0 <= -16) {
-            aByteArrayArrayArray2339 = (byte[][][])null;
-         }
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "hb.B(" + var0 + ')');
-      }
-   }
-
    public Class3_Sub10() {}
 
    Class3_Sub10(RSString var1, int var2) {

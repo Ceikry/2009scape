@@ -113,18 +113,6 @@ final class CacheIndex {
       }
    }
 
-   public static void method2119(int var0) {
-      try {
-         if(var0 != 100) {
-            method2143((byte)-45, -91, 7, -83, 24);
-         }
-
-         aClass153_1948 = null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "ve.AA(" + var0 + ')');
-      }
-   }
-
    final int getArchiveForName(RSString name) {
       try {
          if(this.method2122()) {

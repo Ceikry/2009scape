@@ -1767,22 +1767,6 @@ final class PacketParser {
         }
     }
 
-    public static void method828(int var0) {
-        try {
-            aClass16_84 = null;
-            aByteArrayArrayArray81 = null;
-            aClass94_85 = null;
-            if (var0 > -88) {
-                method828(-84);
-            }
-
-            aClass61_82 = null;
-            aClass11_88 = null;
-        } catch (RuntimeException var2) {
-            throw Class44.clientError(var2, "ac.A(" + var0 + ')');
-        }
-    }
-
     static void method829() {
         try {
             Class20.method909(-1 + 111, Class56.aClass11_886);

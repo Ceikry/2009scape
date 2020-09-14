@@ -149,19 +149,6 @@ final class Class3_Sub13_Sub29 extends Class3_Sub13 {
       }
    }
 
-   public static void method309(boolean var0) {
-      try {
-         anIntArray3359 = null;
-         if(var0) {
-            aClass153_3361 = null;
-            aClass94_3357 = null;
-            aClass94_3360 = null;
-         }
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "qg.S(" + var0 + ')');
-      }
-   }
-
    public Class3_Sub13_Sub29() {
       super(0, true);
    }

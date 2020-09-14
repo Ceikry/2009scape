@@ -13,10 +13,6 @@ final class Class78 {
    private int anInt1121;
 
 
-   public static void method1369() {
-      aByteArray1117 = null;
-   }
-
    final long method1370(int var1) {
       return this.aLong1119 + (long)var1 * (long)this.anInt1121;
    }

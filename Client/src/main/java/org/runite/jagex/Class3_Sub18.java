@@ -11,18 +11,6 @@ final class Class3_Sub18 extends Class3 {
 
    public Class3_Sub18() {}
 
-   public static void method382(int var0) {
-      try {
-         anIntArray2469 = null;
-         aClass61_2468 = null;
-         if(var0 == 1) {
-            anIntArray2470 = null;
-         }
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "ka.B(" + var0 + ')');
-      }
-   }
-
    Class3_Sub18(int var1) {
       try {
          this.anInt2467 = var1;

@@ -37,16 +37,6 @@ final class Class140_Sub6 extends GameObject {
    private final int anInt2927;
 
 
-   public static void method2019(boolean var0) {
-      try {
-         if(var0) {
-            spritesCacheIndex = null;
-         }
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "ra.C(" + var0 + ')');
-      }
-   }
-
    static void method2020(int var0, ObjectDefinition var1, int var3, int var4) {
       try {
          Class3_Sub9 var5 = (Class3_Sub9)Class3.aClass61_78.method1222();

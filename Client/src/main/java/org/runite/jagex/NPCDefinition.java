@@ -108,17 +108,6 @@ final class NPCDefinition {
       }
    }
 
-   public static void method1473(byte var0) {
-      try {
-         anIntArray1277 = null;
-         if(var0 != 103) {
-            anInt1297 = -20;
-         }
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "me.K(" + var0 + ')');
-      }
-   }
-
    final boolean method1474() {
       try {
 

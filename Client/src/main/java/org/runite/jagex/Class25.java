@@ -33,18 +33,6 @@ final class Class25 {
       }
    }
 
-   public static void method954(int var0) {
-      try {
-         aClass47_480 = null;
-         anIntArrayArray499 = (int[][])null;
-         if(var0 != 128) {
-            method954(113);
-         }
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "ec.A(" + var0 + ')');
-      }
-   }
-
    static void method955(int[][] var0, boolean var1, int var2, Class3_Sub11 var3, int[] var4, int var5, int var6, int var7, boolean var8, float[][] var9, boolean var10, int var11, float[][] var12, int var13, int var14, int var15, boolean var16, int[][] var17, float[][] var18, byte var19, int var20, boolean[] var21) {
       try {
          int var22 = (var2 << 8) + (var1?255:0);

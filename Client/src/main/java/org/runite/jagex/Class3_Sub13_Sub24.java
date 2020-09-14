@@ -60,20 +60,6 @@ final class Class3_Sub13_Sub24 extends Class3_Sub13 {
       }
    }
 
-   public static void method288(byte var0) {
-      try {
-         if(var0 < 31) {
-            method289();
-         }
-
-         npcSpawnCacheIndices = null;
-         npcs = null;
-         aClass94_3295 = null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "nm.C(" + var0 + ')');
-      }
-   }
-
    public Class3_Sub13_Sub24() {
       super(1, false);
    }

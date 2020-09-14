@@ -39,19 +39,6 @@ final class RenderAnimationDefinition {
    int anInt406 = -1;
    int anInt407 = -1;
 
-   public static void method896(boolean var0) {
-      try {
-         anIntArray356 = null;
-         aClass94_378 = null;
-         if(!var0) {
-            getGraphicDefinition((byte)20, -109);
-         }
-         aByteArrayArrayArray383 = (byte[][][])null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "ck.A(" + ')');
-      }
-   }
-
    static void method897(int var0, Class3_Sub24_Sub4 var1, CacheIndex var2, CacheIndex var3, CacheIndex var4) {
       try {
          Class124.aClass153_1661 = var2;

@@ -133,16 +133,6 @@ final class Class3_Sub22 extends Class3 {
       Class146.method2083(var0, var1, var2, var5, var11, var12, var13, var14);
    }
 
-   public static void method399(int var0) {
-      try {
-         aByteArrayArray2521 = (byte[][])null;
-         aClass153_2528 = null;
-         aClass49_2505 = null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "mf.E(" + var0 + ')');
-      }
-   }
-
    static void method400(long var0) {
       try {
          if((long) 0 != var0) {
@@ -163,47 +153,6 @@ final class Class3_Sub22 extends Class3 {
 
       } catch (RuntimeException var3) {
          throw Class44.clientError(var3, "mf.A(" + 221 + ')');
-      }
-   }
-
-   static void method402() {
-      try {
-         if(Signlink.javaVendor.toLowerCase().indexOf("microsoft") == -1) {
-            if(null == Signlink.aMethod1222) {
-               Class117.anIntArray1611[192] = 58;
-               Class117.anIntArray1611[222] = 59;
-            } else {
-               Class117.anIntArray1611[222] = 58;
-               Class117.anIntArray1611[192] = 28;
-               Class117.anIntArray1611[520] = 59;
-            }
-
-            Class117.anIntArray1611[45] = 26;
-            Class117.anIntArray1611[61] = 27;
-            Class117.anIntArray1611[91] = 42;
-            Class117.anIntArray1611[59] = 57;
-            Class117.anIntArray1611[93] = 43;
-            Class117.anIntArray1611[44] = 71;
-            Class117.anIntArray1611[92] = 74;
-            Class117.anIntArray1611[46] = 72;
-            Class117.anIntArray1611[47] = 73;
-         } else {
-            Class117.anIntArray1611[187] = 27;
-            Class117.anIntArray1611[223] = 28;
-            Class117.anIntArray1611[221] = 43;
-            Class117.anIntArray1611[188] = 71;
-            Class117.anIntArray1611[222] = 59;
-            Class117.anIntArray1611[192] = 58;
-            Class117.anIntArray1611[191] = 73;
-            Class117.anIntArray1611[219] = 42;
-            Class117.anIntArray1611[190] = 72;
-            Class117.anIntArray1611[186] = 57;
-            Class117.anIntArray1611[220] = 74;
-            Class117.anIntArray1611[189] = 26;
-         }
-
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "mf.O(" + 74 + ')');
       }
    }
 

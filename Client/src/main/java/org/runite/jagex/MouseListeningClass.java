@@ -71,23 +71,8 @@ final class MouseListeningClass implements MouseListener, MouseMotionListener, F
 	      throw Class44.clientError(var3, "ug.A(" + (byte) -82 + ')');
 	    }
 	  }
-	  
-	  public static void method2088(boolean var0)
-	  {
-	    try
-	    {
-	      anIntArray1920 = null;
-	      if (!var0) {
-		  }
-	      aFloatArray1919 = null;
-	    }
-	    catch (RuntimeException var2)
-	    {
-	      throw Class44.clientError(var2, "ug.C(" + var0 + ')');
-	    }
-	  }
-	  
-	  public final synchronized void focusLost(FocusEvent var1)
+
+	public final synchronized void focusLost(FocusEvent var1)
 	  {
 	    try
 	    {

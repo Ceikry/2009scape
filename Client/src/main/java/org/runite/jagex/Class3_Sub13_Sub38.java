@@ -16,20 +16,6 @@ final class Class3_Sub13_Sub38 extends Class3_Sub13 {
    static short[] aShortArray3455;
    static int[] anIntArray3456 = new int[4096];
 
-   public static void method351(int var0) {
-      try {
-         aShortArray3455 = null;
-         spritePalette = null;
-         if(var0 == -1) {
-            aShortArray3453 = null;
-            aLongArray3448 = null;
-            anIntArray3456 = null;
-         }
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "vc.B(" + var0 + ')');
-      }
-   }
-
    final void method158(int var1) {
       try {
          Class8.method844((byte)-9);

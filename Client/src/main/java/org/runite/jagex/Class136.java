@@ -84,20 +84,6 @@ final class Class136 {
       }
    }
 
-   public static void method1815(byte var0) {
-      try {
-         aShortArray1779 = null;
-         aClass93_1772 = null;
-         aClass64_1778 = null;
-         if(var0 > -33) {
-            method1816(-10, 68);
-         }
-         aByteArrayArrayArray1774 = (byte[][][])null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "sm.A(" + var0 + ')');
-      }
-   }
-
    static void method1816(int var0, int var1) {
       try {
          if(var1 == -7) {

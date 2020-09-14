@@ -22,21 +22,6 @@ final class Class3_Sub31 extends Class3 {
       }
    }
 
-   public static void method821(int var0) {
-      try {
-         aClass93_2604 = null;
-         anIntArray2606 = null;
-         COMMAND_BREAK_JS5_CLIENT_CONNECTION = null;
-         aClass94_2608 = null;
-         if(var0 != 26971) {
-            method820(-51, -76);
-         }
-
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "wk.B(" + var0 + ')');
-      }
-   }
-
    static RSString[] method822(RSString[] var1) {
       try {
          RSString[] var2 = new RSString[5];

@@ -11,19 +11,6 @@ final class Class163_Sub3 extends Class163 {
    static int[] anIntArray3007 = new int[]{-1, -1, 1, 1};
 
 
-   public static void method2227(byte var0) {
-      try {
-         anIntArray3007 = null;
-         aClass94Array3003 = null;
-         if(var0 == 37) {
-            aByteArrayArray3005 = (byte[][])null;
-            anIntArray2999 = null;
-         }
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "fb.A(" + var0 + ')');
-      }
-   }
-
    static final int[] PLAYER_RENDER_LOG = new int[4];
    
    static void renderPlayers() {

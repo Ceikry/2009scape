@@ -287,20 +287,6 @@ final class Class15 implements Runnable {
       }
    }
 
-   public static void method892(int var0) {
-      try {
-         aShortArrayArray344 = (short[][])null;
-         aClass64_351 = null;
-         if(var0 <= 75) {
-            aBoolean346 = false;
-         }
-
-         localNPCIndexes = null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "cj.G(" + var0 + ')');
-      }
-   }
-
    static RSString method894(long var0, byte var2) {
       try {
          Class3_Sub28_Sub5.aCalendar3581.setTime(new Date(var0));

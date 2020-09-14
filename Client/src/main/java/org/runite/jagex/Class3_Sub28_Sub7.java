@@ -22,20 +22,6 @@ abstract class Class3_Sub28_Sub7 extends Node {
       }
    }
 
-   public static void method563(int var0) {
-      try {
-         anIntArrayArrayArray3605 = (int[][][])null;
-         aClass94_3601 = null;
-         anIntArray3607 = null;
-         if(var0 != 3) {
-            anInt3603 = -108;
-         }
-
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "gf.Q(" + var0 + ')');
-      }
-   }
-
    static void method564(Signlink var0) {
       try {
          Class3_Sub28_Sub10.anInt3625 = 3;

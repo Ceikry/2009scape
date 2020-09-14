@@ -355,18 +355,6 @@ final class Class2 {
 		}
 	}
 
-	public static void method80(int var0) {
-		try {
-			aShortArray63 = null;
-			if(var0 != -27401) {
-				anInt65 = 93;
-			}
-			anInterface5Array70 = null;
-		} catch (RuntimeException var2) {
-			throw Class44.clientError(var2, "aa.G(" + var0 + ')');
-		}
-	}
-
 	static void method81(RSInterface var1) {
 		try {
 

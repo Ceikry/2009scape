@@ -864,18 +864,6 @@ final class Class168 {
       }
    }
 
-   public static void method2276(int var0) {
-      try {
-         aClass3_Sub28_Sub17_2096 = null;
-         if(var0 == -2) {
-            aClass153_2097 = null;
-            aClass11_2091 = null;
-         }
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "wl.G(" + var0 + ')');
-      }
-   }
-
    static void method2277(int var0, int var1, int var2, int var3, byte var4) {
       try {
          Class3_Sub25 var5 = (Class3_Sub25)Class3_Sub2.aClass130_2220.method1780((long)var3);

@@ -23,15 +23,6 @@ final class ReferenceTable {
 	static int anInt963;
 	int crc;
 
-
-	public static void method1223(int var0) {
-		try {
-			aClass94_946 = null;
-		} catch (RuntimeException var2) {
-			throw Class44.clientError(var2, "ii.A(" + var0 + ')');
-		}
-	}
-
 	static void method1224(RSInterface var0, int var2, int var3) {
 		try {
 			if (0 == var0.aByte162) {

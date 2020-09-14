@@ -152,18 +152,4 @@ final class Class161 {
       }
    }
 
-   public static void method2202(int var0) {
-      try {
-         aClass94_2025 = null;
-         aClass94_2033 = null;
-         aClass3_Sub30_2030 = null;
-         anIntArray2026 = null;
-         aClass33_2034 = null;
-         aClass94_2029 = null;
-         aClass94_2035 = null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "wb.B(" + var0 + ')');
-      }
-   }
-
 }

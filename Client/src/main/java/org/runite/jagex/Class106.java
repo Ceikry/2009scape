@@ -67,14 +67,4 @@ final class Class106 {
       }
    }
 
-   public static void method1644(byte var0) {
-      try {
-         aClass67_1443 = null;
-         if(var0 != 121) {
-         }
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "od.A(" + var0 + ')');
-      }
-   }
-
 }

@@ -1,5 +1,6 @@
 package org.runite.jagex;
 
+import java.util.Arrays;
 import java.util.Objects;
 
 final class Class3_Sub30_Sub1 extends RSByteBuffer {
@@ -850,21 +851,6 @@ final class Class3_Sub30_Sub1 extends RSByteBuffer {
 		}
 	}
 
-	public static void method808(int var0) {
-		try {
-			aClass94_3807 = null;
-			if(var0 != 1) {
-				anIntArray3804 = (int[])null;
-			}
-
-			anIntArray3805 = null;
-			anIntArray3804 = null;
-			aClass94Array3802 = null;
-		} catch (RuntimeException var2) {
-			throw Class44.clientError(var2, "i.V(" + var0 + ')');
-		}
-	}
-
 	Class3_Sub30_Sub1() {
 		super(5000);
 	}
@@ -1009,7 +995,7 @@ final class Class3_Sub30_Sub1 extends RSByteBuffer {
 
 	final void putOpcode(int opcode) {
 		if (buffer == null || isaacCipher == null) {
-			System.err.println("Buffer or cipher was null in CLass2_Sub30_Sub1 " + buffer + ", " + isaacCipher);
+			System.err.println("Buffer or cipher was null in CLass2_Sub30_Sub1 " + Arrays.toString(buffer) + ", " + isaacCipher);
 			return;
 		}
 		this.buffer[this.index++] = (byte)(opcode + this.isaacCipher.nextOpcode(-9356));

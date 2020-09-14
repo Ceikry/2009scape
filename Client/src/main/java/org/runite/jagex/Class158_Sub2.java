@@ -26,7 +26,7 @@ public final class Class158_Sub2 extends Class158 {
       DataBufferInt var5 = new DataBufferInt(this.anIntArray2007, this.anIntArray2007.length);
       DirectColorModel var6 = new DirectColorModel(32, 16711680, '\uff00', 255);
       WritableRaster var7 = Raster.createWritableRaster(var6.createCompatibleSampleModel(this.anInt2012, this.anInt2011), var5, (Point)null);
-      this.anImage2009 = new BufferedImage(var6, var7, false, new Hashtable());
+      this.anImage2009 = new BufferedImage(var6, var7, false, new Hashtable<>());
       this.aComponent2983 = var4;
       this.method2182();
    }

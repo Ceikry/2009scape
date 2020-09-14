@@ -223,18 +223,6 @@ final class Class3_Sub28_Sub20 extends Node {
       }
    }
 
-   public static void method721(int var0) {
-      try {
-         aClass153_3786 = null;
-         aClass118_3794 = null;
-         if(var0 != 20413) {
-         }
-
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "uh.C(" + var0 + ')');
-      }
-   }
-
    final boolean method722(Interface2 var2, CacheIndex var3) {
       try {
          return this.aClass82_3790.method1408(var2, var3);

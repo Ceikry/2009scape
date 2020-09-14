@@ -6,6 +6,7 @@ import java.awt.event.KeyListener;
 
 final class KeyboardListener implements KeyListener, FocusListener {
 
+   static int[] KEY_CODE_MAP = new int[]{-1, -1, -1, -1, -1, -1, -1, -1, 85, 80, 84, -1, 91, -1, -1, -1, 81, 82, 86, -1, -1, -1, -1, -1, -1, -1, -1, 13, -1, -1, -1, -1, 83, 104, 105, 103, 102, 96, 98, 97, 99, -1, -1, -1, -1, -1, -1, -1, 25, 16, 17, 18, 19, 20, 21, 22, 23, 24, -1, -1, -1, -1, -1, -1, -1, 48, 68, 66, 50, 34, 51, 52, 53, 39, 54, 55, 56, 70, 69, 40, 41, 32, 35, 49, 36, 38, 67, 33, 65, 37, 64, -1, -1, -1, -1, -1, 228, 231, 227, 233, 224, 219, 225, 230, 226, 232, 89, 87, -1, 88, 229, 90, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, -1, -1, -1, 101, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 100, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1};
    static boolean aBoolean1905 = true;
    static int anInt1908 = 0;
    static Class93 aClass93_1911 = new Class93(260);
@@ -14,6 +15,42 @@ final class KeyboardListener implements KeyListener, FocusListener {
    static RSString aClass94_1915 = RSString.createRSString("Null");
    static CacheIndex aClass153_1916;
    static int anInt1918 = 0;
+
+   static void adjustKeyCodeMap() {
+         if(!Signlink.javaVendor.toLowerCase().contains("microsoft")) {
+            if(null == Signlink.aMethod1222) {
+               KEY_CODE_MAP[192] = 58;
+               KEY_CODE_MAP[222] = 59;
+            } else {
+               KEY_CODE_MAP[222] = 58;
+               KEY_CODE_MAP[192] = 28;
+               KEY_CODE_MAP[520] = 59;
+            }
+
+            KEY_CODE_MAP[45] = 26;
+            KEY_CODE_MAP[61] = 27;
+            KEY_CODE_MAP[91] = 42;
+            KEY_CODE_MAP[59] = 57;
+            KEY_CODE_MAP[93] = 43;
+            KEY_CODE_MAP[44] = 71;
+            KEY_CODE_MAP[92] = 74;
+            KEY_CODE_MAP[46] = 72;
+            KEY_CODE_MAP[47] = 73;
+         } else {
+            KEY_CODE_MAP[187] = 27;
+            KEY_CODE_MAP[223] = 28;
+            KEY_CODE_MAP[221] = 43;
+            KEY_CODE_MAP[188] = 71;
+            KEY_CODE_MAP[222] = 59;
+            KEY_CODE_MAP[192] = 58;
+            KEY_CODE_MAP[191] = 73;
+            KEY_CODE_MAP[219] = 42;
+            KEY_CODE_MAP[190] = 72;
+            KEY_CODE_MAP[186] = 57;
+            KEY_CODE_MAP[220] = 74;
+            KEY_CODE_MAP[189] = 26;
+         }
+   }
 
 
    public final synchronized void keyPressed(KeyEvent var1) {
@@ -47,8 +84,8 @@ final class KeyboardListener implements KeyListener, FocusListener {
 //                  var2 = 112;
 //                  break;
 //            }
-            if(0 <= var2 && Class117.anIntArray1611.length > var2) {
-               var2 = Class117.anIntArray1611[var2];
+            if(0 <= var2 && KEY_CODE_MAP.length > var2) {
+               var2 = KEY_CODE_MAP[var2];
                // System.out.println(var2);
                if(0 != (var2 & 128)) {
                   var2 = -1;
@@ -157,8 +194,8 @@ final class KeyboardListener implements KeyListener, FocusListener {
          if(null != Class3_Sub13_Sub3.aClass148_3049) {
             Class3_Sub13_Sub33.anInt3398 = 0;
             int var2 = var1.getKeyCode();
-            if(var2 >= 0 && var2 < Class117.anIntArray1611.length) {
-               var2 = Class117.anIntArray1611[var2] & -129;
+            if(var2 >= 0 && var2 < KEY_CODE_MAP.length) {
+               var2 = KEY_CODE_MAP[var2] & -129;
             } else {
                var2 = -1;
             }
@@ -179,18 +216,6 @@ final class KeyboardListener implements KeyListener, FocusListener {
    }
 
    public final void focusGained(FocusEvent var1) {}
-
-   public static void method2085(int var0) {
-      try {
-         aClass93_1911 = null;
-         aClass153_1916 = null;
-         if(var0 > 81) {
-            aClass94_1915 = null;
-         }
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "uf.A(" + var0 + ')');
-      }
-   }
 
    static void method2086() {
       try {

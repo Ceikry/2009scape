@@ -86,19 +86,6 @@ final class Class99 {
       }
    }
 
-   public static void method1598(int var0) {
-      try {
-         if(var0 <= -106) {
-            aShortArray1398 = null;
-            aClass11_1402 = null;
-            aClass93_1401 = null;
-            aClass33_1399 = null;
-         }
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "nf.B(" + var0 + ')');
-      }
-   }
-
    static int crc32(int offset, int end, byte[] data) {
       int hash = -1;
 

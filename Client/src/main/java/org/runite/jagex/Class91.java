@@ -666,21 +666,6 @@ final class Class91 {
       }
    }
 
-   public static void method1491(byte var0) {
-      try {
-         if(var0 > -123) {
-            method1491((byte)-27);
-         }
-
-         aShortArray1311 = null;
-         aClass94Array1299 = null;
-         aClass94_1301 = null;
-         aClass33_1305 = null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "mj.R(" + var0 + ')');
-      }
-   }
-
    final boolean method1492(int var1, int var2, int var3, int var4, int var5, int var6, int var7, int var8) {
       try {
          if(var5 == 1) {

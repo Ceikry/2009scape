@@ -8,17 +8,6 @@ final class Class23 {
    static boolean[][] aBooleanArrayArray457;
 
 
-   public static void method937(int var0) {
-      try {
-         aBooleanArrayArray457 = (boolean[][])null;
-         if(var0 != 0) {
-         }
-
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "dl.A(" + var0 + ')');
-      }
-   }
-
    static void method938(int var0, int var1, int var2, int var3, int var4, int var5, int var7, int var8) {
       try {
          int var9 = var2 - var7;

@@ -50,22 +50,7 @@ class Class38 {
       }
    }
 
-   public static void method1024(int var0) {
-      try {
-         if(var0 != 21474) {
-            method1029(-65);
-         }
-
-         anIntArray664 = null;
-         anIntArrayArray663 = (int[][])null;
-         aClass146_668 = null;
-         aClass87_665 = null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "fk.E(" + var0 + ')');
-      }
-   }
-
-   static void method1025(byte var0) {
+	static void method1025(byte var0) {
       try {
          Class3_Sub31.aClass93_2604.method1523((byte)-121);
          if(var0 > -51) {

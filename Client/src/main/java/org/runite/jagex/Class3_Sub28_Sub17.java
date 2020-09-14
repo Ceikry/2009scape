@@ -355,36 +355,6 @@ abstract class Class3_Sub28_Sub17 extends Node {
       }
    }
 
-   public static void method689() {
-      aClass94_3712 = null;
-      aClass94_3711 = null;
-      aClass94_3732 = null;
-      aClass94_3714 = null;
-      aClass94_3729 = null;
-      aClass94_3718 = null;
-      aClass94_3741 = null;
-      aClass94_3743 = null;
-      aClass94_3739 = null;
-      aClass94_3737 = null;
-      aClass94_3734 = null;
-      aClass94_3726 = null;
-      aClass94_3725 = null;
-      aClass94_3720 = null;
-      aClass94_3715 = null;
-      aClass94_3731 = null;
-      aClass94_3716 = null;
-      aClass94_3728 = null;
-      aClass94_3735 = null;
-      aClass94_3713 = null;
-      aClass94_3738 = null;
-      aClass94_3724 = null;
-      aClass94_3717 = null;
-      aClass94_3744 = null;
-      aClass94_3742 = null;
-      aClass94_3745 = null;
-      aClass94Array3753 = null;
-   }
-
    private void method690(RSString var1, int var2) {
       int var3 = 0;
       boolean var4 = false;

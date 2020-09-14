@@ -73,16 +73,6 @@ final class Class12 {
       }
    }
 
-   public static void method871(byte var0) {
-      try {
-         aClass94_331 = null;
-         aClass153_322 = null;
-         aClass153_323 = null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "bm.A(" + var0 + ')');
-      }
-   }
-
    static int method872(int var1, int var2) {
       try {
          Class3_Sub25 var3 = (Class3_Sub25)Class3_Sub2.aClass130_2220.method1780((long)var1);

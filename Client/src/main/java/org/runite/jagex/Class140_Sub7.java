@@ -33,23 +33,6 @@ final class Class140_Sub7 extends GameObject {
       }
    }
 
-   public static void method2030(byte var0) {
-      try {
-         ItemDefinition.intsStack = null;
-         if(var0 < 82) {
-            method2031((byte)-61, false, -20, 24, (Class3_Sub2[][][])((Class3_Sub2[][][])null), 124);
-         }
-
-         anIntArray2931 = null;
-         anIntArray2933 = null;
-         aClass94Array2935 = null;
-         aClass94_2928 = null;
-         aClass153_2939 = null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "uj.C(" + var0 + ')');
-      }
-   }
-
    static boolean method2031(byte var0, boolean var1, int var2, int var3, Class3_Sub2[][][] var4, int var5) {
       try {
          byte var6 = !var1?(byte)(255 & Class79.anInt1127):1;

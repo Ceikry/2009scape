@@ -12,21 +12,6 @@ final class Class134 {
    static long[] aLongArray1766 = new long[32];
 
 
-   public static void method1806(int var0) {
-      try {
-         aClass61_1758 = null;
-         if(var0 != 3846) {
-            anInt1762 = 60;
-         }
-
-         anIntArrayArray1763 = (int[][])null;
-         aLongArray1766 = null;
-         aClass94_1760 = null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "sh.D(" + var0 + ')');
-      }
-   }
-
    static synchronized byte[] method1807(int var1) {
       try {
          byte[] var2;

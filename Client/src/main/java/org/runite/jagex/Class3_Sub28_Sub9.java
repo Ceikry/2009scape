@@ -112,19 +112,6 @@ final class Class3_Sub28_Sub9 extends Node {
       }
    }
 
-   public static void method584(int var0) {
-      try {
-         aCalendar3616 = null;
-         if(var0 != 0) {
-            method580((byte)-90);
-         }
-
-         aClass94_3621 = null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "hn.F(" + var0 + ')');
-      }
-   }
-
    final boolean method585() {
       try {
 

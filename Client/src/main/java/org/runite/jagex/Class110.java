@@ -26,19 +26,6 @@ final class Class110 {
       }
    }
 
-   public static void method1682(int var0) {
-      try {
-         COMMAND_BREAK_JS5_SERVER_CONNECTION = null;
-         aClass61_1471 = null;
-         if(var0 >= -65) {
-            method1681(-121);
-         }
-
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "p.C(" + var0 + ')');
-      }
-   }
-
    static void method1683(int var0, boolean var1, int var2, boolean var3, Class91 var4, int objectId, int type, int var7, int var9, int var10) {
       try {
     	 var2 %= 4;

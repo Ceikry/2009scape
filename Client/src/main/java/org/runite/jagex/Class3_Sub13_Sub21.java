@@ -172,18 +172,6 @@ final class Class3_Sub13_Sub21 extends Class3_Sub13 {
       }
    }
 
-   public static void method268(byte var0) {
-      try {
-         if(var0 != -91) {
-            method268((byte)7);
-         }
-
-         aClass3_Sub28_Sub3_3264 = null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "mh.R(" + var0 + ')');
-      }
-   }
-
    public Class3_Sub13_Sub21() {
       super(0, true);
    }

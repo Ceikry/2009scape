@@ -33,16 +33,6 @@ final class Class32 {
       }
    }
 
-   public static void method994(int var0) {
-      try {
-         if(var0 == '\u93bd') {
-            aClass94_592 = null;
-         }
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "fc.A(" + var0 + ')');
-      }
-   }
-
    static void method995() {
       int var0;
       int var1;

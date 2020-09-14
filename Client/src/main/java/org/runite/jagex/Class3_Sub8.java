@@ -345,19 +345,6 @@ final class Class3_Sub8 extends Class3 {
       }
    }
 
-   public static void method131(int var0) {
-      try {
-         aClass94_2304 = null;
-         aClass94_2306 = null;
-         if(var0 >= -104) {
-            method132((byte)-28);
-         }
-
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "ed.Q(" + var0 + ')');
-      }
-   }
-
    static void method132(byte var0) {
       try {
          for(int var1 = 0; var1 < Class113.anInt1552; ++var1) {

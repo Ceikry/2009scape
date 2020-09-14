@@ -112,17 +112,4 @@ final class Class3_Sub13_Sub35 extends Class3_Sub13 {
       }
    }
 
-   public static void method337(int var0) {
-      try {
-         aClass94_3418 = null;
-         if(var0 != 2) {
-            anInt3419 = -53;
-         }
-
-         aClass131_3421 = null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "tb.E(" + var0 + ')');
-      }
-   }
-
 }

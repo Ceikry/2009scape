@@ -10,16 +10,6 @@ final class Class46 {
    static int anInt741;
 
 
-   public static void method1085(int var0) {
-      try {
-         if(var0 == -1) {
-            aClass153_737 = null;
-         }
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "gl.B(" + var0 + ')');
-      }
-   }
-
    static void method1086(CacheIndex var0) {
       try {
          Class45.aClass153_731 = var0;

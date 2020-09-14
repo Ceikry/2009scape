@@ -134,19 +134,7 @@ final class Class3_Sub28_Sub3 extends Node {
       }
    }
 
-   public static void method542(byte var0) {
-      try {
-         if(var0 != -46) {
-            anInt3552 = 7;
-         }
-
-         aClass11_3551 = null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "bn.D(" + var0 + ')');
-      }
-   }
-
-   static int method543(int var0, int var1, byte var2) {
+	static int method543(int var0, int var1, byte var2) {
       try {
          if(var2 > -71) {
             return -52;

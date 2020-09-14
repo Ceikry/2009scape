@@ -42,21 +42,6 @@ final class Class20 {
       }
    }
 
-   public static void method908(int var0) {
-      try {
-         aClass11_439 = null;
-         if(var0 != 5157) {
-            aClass94_434 = (RSString)null;
-         }
-
-         aClass94_436 = null;
-         aClass94_434 = null;
-         aShortArrayArray435 = (short[][])null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "dg.A(" + var0 + ')');
-      }
-   }
-
    static void method909(int var0, RSInterface var1) {
       try {
          if(var1.anInt204 == Class3_Sub23.anInt2535) {

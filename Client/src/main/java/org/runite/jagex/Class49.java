@@ -373,18 +373,4 @@ final class Class49 {
       }
    }
 
-   public static void method1130(int var0) {
-      try {
-         aClass3_Sub28_Sub16_812 = null;
-         if(var0 < 54) {
-            anInt819 = -109;
-         }
-
-         aClass47_818 = null;
-         aBooleanArrayArray814 = (boolean[][])null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "ha.F(" + var0 + ')');
-      }
-   }
-
 }

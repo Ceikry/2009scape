@@ -10,17 +10,6 @@ final class Class53 {
    static int anInt867;
 
 
-   public static void method1169(boolean var0) {
-      try {
-         if(var0) {
-            method1170((byte)25, 28);
-         }
-
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "hi.C(" + ')');
-      }
-   }
-
    static int method1170(byte var0, int var1) {
       try {
          return var1 >>> 8;

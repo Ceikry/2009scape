@@ -49,21 +49,6 @@ final class Class86 {
       }
    }
 
-   public static void method1429(byte var0) {
-      try {
-         aClass3_Sub24_Sub4_1193 = null;
-         COMMAND_REBUILD = null;
-         aClass91Array1182 = null;
-         aClass41_1186 = null;
-         aClass130_1194 = null;
-         if(var0 != 53) {
-         }
-
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "li.C(" + var0 + ')');
-      }
-   }
-
    static Class3_Sub28_Sub17_Sub1 method1430(int var0, int var1) {
       try {
          if(var0 == -28922) {
