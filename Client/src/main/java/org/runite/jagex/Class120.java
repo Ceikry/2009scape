@@ -15,7 +15,7 @@ final class Class120 {
             anIntArray1638 = (int[])null;
          }
 
-         return !Client.method44(var0).method92(var2, (byte)-110) && var0.anObjectArray314 == null?null:(null != var0.aClass94Array171 && var0.aClass94Array171.length > var2 && var0.aClass94Array171[var2] != null && var0.aClass94Array171[var2].trim(1).length(-58) != 0 ?var0.aClass94Array171[var2]:(!Class69.aBoolean1040?null:RenderAnimationDefinition.method903(new RSString[]{Class121.aClass94_1645, Class72.method1298((byte)9, var2)}, (byte)-101)));
+         return !Client.method44(var0).method92(var2, (byte)-110) && var0.anObjectArray314 == null?null:(null != var0.aClass94Array171 && var0.aClass94Array171.length > var2 && var0.aClass94Array171[var2] != null && var0.aClass94Array171[var2].trim(1).length(-58) != 0 ?var0.aClass94Array171[var2]:(!Unsorted.aBoolean1040?null:RenderAnimationDefinition.method903(new RSString[]{Class121.aClass94_1645, Class72.method1298((byte)9, var2)}, (byte)-101)));
       } catch (RuntimeException var4) {
          throw Class44.clientError(var4, "qj.B(" + (var0 != null?"{...}":"null") + ',' + var1 + ',' + var2 + ')');
       }

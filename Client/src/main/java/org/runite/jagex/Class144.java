@@ -63,8 +63,8 @@ abstract class Class144 {
                   if(Class164_Sub1.anInt3012 == 1) {
                      Class3_Sub24_Sub4.method1177(Class99.anInt1403, (long)var3, (byte)-125, RenderAnimationDefinition.method903(new RSString[]{RenderAnimationDefinition.aClass94_378, ColorCore.TextColor, var5}, (byte)-125), var1, (short)26, TextCore.HasUse, var4);
                   } else if(GameObject.aBoolean1837) {
-                     Class3_Sub28_Sub9 var12 = -1 == Class69.anInt1038?null:Class61.method1210(Class69.anInt1038);
-                     if((2 & Class164.anInt2051) != 0 && (var12 == null || var0.method1475(Class69.anInt1038, var12.anInt3614) != var12.anInt3614)) {
+                     Class3_Sub28_Sub9 var12 = -1 == Unsorted.anInt1038?null:Class61.method1210(Unsorted.anInt1038);
+                     if((2 & Class164.anInt2051) != 0 && (var12 == null || var0.method1475(Unsorted.anInt1038, var12.anInt3614) != var12.anInt3614)) {
                         Class3_Sub24_Sub4.method1177(anInt1887, (long)var3, (byte)-93, RenderAnimationDefinition.method903(new RSString[]{Class40.aClass94_676, ColorCore.TextColor, var5}, (byte)-65), var1, (short)45, Class3_Sub28_Sub9.aClass94_3621, var4);
                      }
                   } else {

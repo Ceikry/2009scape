@@ -52,9 +52,9 @@ final class Class3_Sub28_Sub20 extends Node {
                   for(var11 = var17; var11 >= 0; --var11) {
                      --var14;
                      int var12 = this.anIntArray3793[var14];
-                     var7[var11] += Class69.bitwiseAnd(var12, 16726965) >> 16;
-                     var8[var11] += Class69.bitwiseAnd('\uff72', var12) >> 8;
-                     var9[var11] += Class69.bitwiseAnd(var12, 255);
+                     var7[var11] += Unsorted.bitwiseAnd(var12, 16726965) >> 16;
+                     var8[var11] += Unsorted.bitwiseAnd('\uff72', var12) >> 8;
+                     var9[var11] += Unsorted.bitwiseAnd(var12, 255);
                   }
 
                   if(var14 == 0) {
@@ -106,9 +106,9 @@ final class Class3_Sub28_Sub20 extends Node {
                      int var23 = this.anIntArray3793[var13];
                      --var14;
                      int var24 = this.anIntArray3793[var14];
-                     var7[var11] += (Class69.bitwiseAnd(var24, 16729186) >> 16) + -Class69.bitwiseAnd(var23 >> 16, 255);
-                     var8[var11] += (Class69.bitwiseAnd('\uff8b', var24) >> 8) + -Class69.bitwiseAnd(255, var23 >> 8);
-                     var9[var11] += -Class69.bitwiseAnd(var23, 255) + Class69.bitwiseAnd(255, var24);
+                     var7[var11] += (Unsorted.bitwiseAnd(var24, 16729186) >> 16) + -Unsorted.bitwiseAnd(var23 >> 16, 255);
+                     var8[var11] += (Unsorted.bitwiseAnd('\uff8b', var24) >> 8) + -Unsorted.bitwiseAnd(255, var23 >> 8);
+                     var9[var11] += -Unsorted.bitwiseAnd(var23, 255) + Unsorted.bitwiseAnd(255, var24);
                   }
 
                   if(0 == var13) {

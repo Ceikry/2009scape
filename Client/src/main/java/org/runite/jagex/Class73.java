@@ -477,7 +477,7 @@ static boolean aBoolean1080 = false;
             }
 
             if(command.equals(104, Class108.COMMAND_QA_OP_TEST)) {
-               Class69.aBoolean1040 = true;
+               Unsorted.aBoolean1040 = true;
             }
             /* Client tweening */
             if(command.equals(104, Class3_Sub15.COMMAND_TWEENING)) {

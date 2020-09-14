@@ -97,7 +97,7 @@ final class Canvas_Sub2 extends Canvas {
             for(int var12 = 0; var12 < 8; ++var12) {
                for(var13 = 0; 8 > var13; ++var13) {
                   if(0 < var1 - -var12 && var12 + var1 < 103 && var13 + var4 > 0 && var4 + var13 < 103) {
-                     var3[var2].anIntArrayArray1304[var12 + var1][var13 + var4] = Class69.bitwiseAnd(var3[var2].anIntArrayArray1304[var12 + var1][var13 + var4], -16777217);
+                     var3[var2].anIntArrayArray1304[var12 + var1][var13 + var4] = Unsorted.bitwiseAnd(var3[var2].anIntArrayArray1304[var12 + var1][var13 + var4], -16777217);
                   }
                }
             }

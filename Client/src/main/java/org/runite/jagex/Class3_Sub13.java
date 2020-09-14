@@ -187,7 +187,7 @@ abstract class Class3_Sub13 extends Class3 {
                   }
                }
             } else {
-               Class69.method1282(var4, (byte)-97, var5, var7, var6);
+               Unsorted.method1282(var4, (byte)-97, var5, var7, var6);
             }
 
          }

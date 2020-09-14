@@ -187,8 +187,8 @@ final class ISAACCipher {
 
             this.anInt972 += this.anIntArray971[128 + var2 & 255];
             int var4;
-            this.anIntArray971[var2] = var4 = this.anInt967 + this.anInt972 + this.anIntArray971[Class69.bitwiseAnd(var3, 1020) >> 2];
-            this.anIntArray970[var2] = this.anInt967 = var3 + this.anIntArray971[Class69.bitwiseAnd(261347, var4) >> 8 >> 2];
+            this.anIntArray971[var2] = var4 = this.anInt967 + this.anInt972 + this.anIntArray971[Unsorted.bitwiseAnd(var3, 1020) >> 2];
+            this.anIntArray970[var2] = this.anInt967 = var3 + this.anIntArray971[Unsorted.bitwiseAnd(261347, var4) >> 8 >> 2];
             ++var2;
          }
 
@@ -316,7 +316,7 @@ final class ISAACCipher {
             Class168.aClass3_Sub28_Sub17_2096.method681(Unsorted.method802(var7), 3 + var1, var8, var9, 0);
          }
 
-         Class69.method1282(AbstractIndexedSprite.anInt1462, (byte)122, Class3_Sub13_Sub33.anInt3395, Class3_Sub28_Sub1.anInt3537, Class3_Sub28_Sub3.anInt3552);
+         Unsorted.method1282(AbstractIndexedSprite.anInt1462, (byte)122, Class3_Sub13_Sub33.anInt3395, Class3_Sub28_Sub1.anInt3537, Class3_Sub28_Sub3.anInt3552);
       } catch (RuntimeException var10) {
          throw Class44.clientError(var10, "ij.F(" + var0 + ')');
       }

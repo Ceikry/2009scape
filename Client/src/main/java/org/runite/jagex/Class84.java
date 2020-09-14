@@ -100,7 +100,7 @@ final class Class84 {
             Class168.aClass3_Sub28_Sub17_2096.method681(Unsorted.method802(var8), var1 - -3, var9, var10, 0);
          }
 
-         Class69.method1282(AbstractIndexedSprite.anInt1462, (byte)107, Class3_Sub13_Sub33.anInt3395, Class3_Sub28_Sub1.anInt3537, Class3_Sub28_Sub3.anInt3552);
+         Unsorted.method1282(AbstractIndexedSprite.anInt1462, (byte)107, Class3_Sub13_Sub33.anInt3395, Class3_Sub28_Sub1.anInt3537, Class3_Sub28_Sub3.anInt3552);
       } catch (RuntimeException var11) {
          throw Class44.clientError(var11, "lf.A(" + -117 + ')');
       }

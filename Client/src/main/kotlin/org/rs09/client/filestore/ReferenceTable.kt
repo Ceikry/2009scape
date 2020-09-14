@@ -3,7 +3,6 @@ package org.rs09.client.filestore
 import org.rs09.client.DataBuffer
 import org.rs09.client.filestore.compression.Container
 import org.rs09.client.util.CRC
-import org.runite.jagex.Class69
 
 class ReferenceTable(data: ByteArray, crc: Int) {
     val crc: Int = CRC.crc32(data, data.size)
@@ -17,8 +16,8 @@ class ReferenceTable(data: ByteArray, crc: Int) {
     lateinit var archiveLengths: IntArray
     lateinit var archiveFileLengths: IntArray
     lateinit var archiveNameHash: IntArray
-    var aClass69_949: Class69? = null
-    var aClass69Array962: Array<Class69?>? = null
+    var aLookupTable_949: LookupTable? = null
+    var aLookupTableArray962: Array<LookupTable?>? = null
     var fileNameHashes: Array<IntArray?>? = null
 
     private fun decode(data: ByteArray) {
@@ -58,7 +57,7 @@ class ReferenceTable(data: ByteArray, crc: Int) {
             for (i in 0 until validArchiveAmount)
                 archiveNameHash[validArchiveIds[i]] = buffer.readInt()
 
-            aClass69_949 = Class69(archiveNameHash)
+            aLookupTable_949 = LookupTable(archiveNameHash)
         }
 
         for (i in 0 until validArchiveAmount)
@@ -87,7 +86,7 @@ class ReferenceTable(data: ByteArray, crc: Int) {
         }
 
         if (fields != 0) {
-            val aClass69Array962 = arrayOfNulls<Class69>(highest + 1)
+            val aClass69Array962 = arrayOfNulls<LookupTable>(highest + 1)
             val fileNameHashes = arrayOfNulls<IntArray>(highest + 1)
 
             for (i in 0 until validArchiveAmount) {
@@ -103,11 +102,11 @@ class ReferenceTable(data: ByteArray, crc: Int) {
                     val fileIndex = if (validFileIds[archiveId] == null) j else validFileIds[archiveId]!![j]
                     archiveFileNameHashes[fileIndex] = buffer.readInt()
                 }
-                aClass69Array962[archiveId] = Class69(archiveFileNameHashes)
+                aClass69Array962[archiveId] = LookupTable(archiveFileNameHashes)
             }
 
             this.fileNameHashes = fileNameHashes
-            this.aClass69Array962 = aClass69Array962
+            this.aLookupTableArray962 = aClass69Array962
         }
     }
 

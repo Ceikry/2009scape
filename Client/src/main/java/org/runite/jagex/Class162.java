@@ -28,10 +28,10 @@ final class Class162 {
 
    static void method2204(RSByteBuffer var0) {
       try {
-         if(null != Class69.aClass30_1039) {
+         if(null != Unsorted.aClass30_1039) {
             try {
-               Class69.aClass30_1039.method984(-117, 0L);
-               Class69.aClass30_1039.method983(var0.buffer, var0.index, -903171152, 24);
+               Unsorted.aClass30_1039.method984(-117, 0L);
+               Unsorted.aClass30_1039.method983(var0.buffer, var0.index, -903171152, 24);
             } catch (Exception var3) {
             }
          }

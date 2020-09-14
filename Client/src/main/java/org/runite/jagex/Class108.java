@@ -96,7 +96,7 @@ final class Class108 {
    static void method1661(CacheIndex var1, CacheIndex var2) {
       try {
          Class14.aBoolean337 = true;
-         Class69.aClass153_1043 = var2;
+         Unsorted.aClass153_1043 = var2;
 
          Class85.aClass153_1171 = var1;
       } catch (RuntimeException var5) {

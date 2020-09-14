@@ -132,7 +132,7 @@ final class Class3_Sub28_Sub11 extends Node {
             var3.anInt193 = var3.anInt160 * var3.anInt168 / var3.anInt216;
          }
 
-         if(Class69.aBoolean1040 && (Client.method44(var3).anInt2205 != 0 || var3.type == 0)) {
+         if(Unsorted.aBoolean1040 && (Client.method44(var3).anInt2205 != 0 || var3.type == 0)) {
             if(var3.anInt193 < 5 && 5 > var3.anInt168) {
                var3.anInt193 = 5;
                var3.anInt168 = 5;

@@ -370,9 +370,9 @@ final class Class3_Sub13_Sub37 extends Class3_Sub13 {
                }
 
                var4 = this.anIntArray3443[var4];
-               var6[var9] = Class69.bitwiseAnd(var4, 16711680) >> 12;
-               var7[var9] = Class69.bitwiseAnd(4080, var4 >> 4);
-               var8[var9] = Class69.bitwiseAnd(255, var4) << 4;
+               var6[var9] = Unsorted.bitwiseAnd(var4, 16711680) >> 12;
+               var7[var9] = Unsorted.bitwiseAnd(4080, var4 >> 4);
+               var8[var9] = Unsorted.bitwiseAnd(255, var4) << 4;
             }
          }
 

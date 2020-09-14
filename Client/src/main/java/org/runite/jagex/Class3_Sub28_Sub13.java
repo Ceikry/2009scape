@@ -97,7 +97,7 @@ public final class Class3_Sub28_Sub13 extends Node {
 
    static LDIndexedSprite[] method619(byte var0, int var1, CacheIndex var2) {
       try {
-         return Class140_Sub7.method2029((byte)-119, var2, var1)?(var0 <= 52?(LDIndexedSprite[])null:Class69.method1281()):null;
+         return Class140_Sub7.method2029((byte)-119, var2, var1)?(var0 <= 52?(LDIndexedSprite[])null: Unsorted.method1281()):null;
       } catch (RuntimeException var4) {
          throw Class44.clientError(var4, "ml.A(" + var0 + ',' + var1 + ',' + (var2 != null?"{...}":"null") + ')');
       }

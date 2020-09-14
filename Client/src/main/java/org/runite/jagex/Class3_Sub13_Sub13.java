@@ -419,7 +419,7 @@ final class Class3_Sub13_Sub13 extends Class3_Sub13 {
 
                      for(var1 = Class3_Sub5.method115(true); var1 != -1; var1 = Class3_Sub5.method115(false)) {
                         Class46.method1087(40, var1);
-                        Class44.anIntArray726[Class69.bitwiseAnd(Class36.anInt641++, 31)] = var1;
+                        Class44.anIntArray726[Unsorted.bitwiseAnd(Class36.anInt641++, 31)] = var1;
                      }
 
                      int nodeModelID;
@@ -428,10 +428,10 @@ final class Class3_Sub13_Sub13 extends Class3_Sub13 {
                         var4 = var16.f();
                         if(1 == var3) {
                            NPCDefinition.anIntArray1277[var4] = var16.anInt3598;
-                           NPC.anIntArray3986[Class69.bitwiseAnd(31, PacketParser.anInt87++)] = var4;
+                           NPC.anIntArray3986[Unsorted.bitwiseAnd(31, PacketParser.anInt87++)] = var4;
                         } else if(var3 == 2) {
                            Class132.aClass94Array1739[var4] = var16.aClass94_3599;
-                           Class163_Sub2_Sub1.anIntArray4025[Class69.bitwiseAnd(31, Class3_Sub9.anInt2317++)] = var4;
+                           Class163_Sub2_Sub1.anIntArray4025[Unsorted.bitwiseAnd(31, Class3_Sub9.anInt2317++)] = var4;
                         } else {
                            RSInterface var20;
                            if(var3 == 3) {

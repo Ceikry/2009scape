@@ -249,12 +249,12 @@ final class Class3_Sub13_Sub25 extends Class3_Sub13 {
                   if(this.anInt3309 == 0) {
                      for(var20 = 0; var20 < var13; ++var20) {
                         var21 = var20 * var8 / var13;
-                        var18[Class69.bitwiseAnd(RenderAnimationDefinition.anInt396, var20 + var3)] = var18[Class69.bitwiseAnd(-1 + var4 + var3 + -var20, RenderAnimationDefinition.anInt396)] = var21 * var19 >> 12;
+                        var18[Unsorted.bitwiseAnd(RenderAnimationDefinition.anInt396, var20 + var3)] = var18[Unsorted.bitwiseAnd(-1 + var4 + var3 + -var20, RenderAnimationDefinition.anInt396)] = var21 * var19 >> 12;
                      }
                   } else {
                      for(var20 = 0; var20 < var13; ++var20) {
                         var21 = var20 * var8 / var13;
-                        var18[Class69.bitwiseAnd(RenderAnimationDefinition.anInt396, var3 - -var20)] = var18[Class69.bitwiseAnd(RenderAnimationDefinition.anInt396, var4 + var3 + -var20 - 1)] = var21 >= var19 ?var19:var21;
+                        var18[Unsorted.bitwiseAnd(RenderAnimationDefinition.anInt396, var3 - -var20)] = var18[Unsorted.bitwiseAnd(RenderAnimationDefinition.anInt396, var4 + var3 + -var20 - 1)] = var21 >= var19 ?var19:var21;
                      }
                   }
 
@@ -269,7 +269,7 @@ final class Class3_Sub13_Sub25 extends Class3_Sub13 {
                   var19 = var6 + -var17 - 1;
                   if(var14 <= var19) {
                      for(var20 = 0; var13 > var20; ++var20) {
-                        var18[Class69.bitwiseAnd(RenderAnimationDefinition.anInt396, var3 + var20)] = var18[Class69.bitwiseAnd(-1 + -var20 + var3 - -var4, RenderAnimationDefinition.anInt396)] = var8 * var20 / var13;
+                        var18[Unsorted.bitwiseAnd(RenderAnimationDefinition.anInt396, var3 + var20)] = var18[Unsorted.bitwiseAnd(-1 + -var20 + var3 - -var4, RenderAnimationDefinition.anInt396)] = var8 * var20 / var13;
                      }
 
                      if(Class113.anInt1559 < var15 - -var16) {
@@ -285,12 +285,12 @@ final class Class3_Sub13_Sub25 extends Class3_Sub13 {
                      if(this.anInt3309 == 0) {
                         for(var21 = 0; var13 > var21; ++var21) {
                            var22 = var8 * var21 / var13;
-                           var18[Class69.bitwiseAnd(RenderAnimationDefinition.anInt396, var3 - -var21)] = var18[Class69.bitwiseAnd(RenderAnimationDefinition.anInt396, -1 + var3 - (-var4 + var21))] = var22 * var20 >> 12;
+                           var18[Unsorted.bitwiseAnd(RenderAnimationDefinition.anInt396, var3 - -var21)] = var18[Unsorted.bitwiseAnd(RenderAnimationDefinition.anInt396, -1 + var3 - (-var4 + var21))] = var22 * var20 >> 12;
                         }
                      } else {
                         for(var21 = 0; var21 < var13; ++var21) {
                            var22 = var21 * var8 / var13;
-                           var18[Class69.bitwiseAnd(var3 - -var21, RenderAnimationDefinition.anInt396)] = var18[Class69.bitwiseAnd(-1 + -var21 + var4 + var3, RenderAnimationDefinition.anInt396)] = var22 >= var20 ?var20:var22;
+                           var18[Unsorted.bitwiseAnd(var3 - -var21, RenderAnimationDefinition.anInt396)] = var18[Unsorted.bitwiseAnd(-1 + -var21 + var4 + var3, RenderAnimationDefinition.anInt396)] = var22 >= var20 ?var20:var22;
                         }
                      }
 

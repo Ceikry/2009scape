@@ -63,10 +63,10 @@ final class CacheIndex {
          if(this.method2122()) {
             if(var2) {
                this.aReferenceTable_1949.archiveNameHash = null;
-               this.aReferenceTable_1949.setAClass69_949(null);
+               this.aReferenceTable_1949.setALookupTable_949(null);
             }
 
-            this.aReferenceTable_1949.setAClass69Array962(null);
+            this.aReferenceTable_1949.setALookupTableArray962(null);
             this.aReferenceTable_1949.setFileNameHashes(null);
 
          }
@@ -79,7 +79,7 @@ final class CacheIndex {
       try {
          if(this.method2122()) {
             var2 = var2.method1534();
-            int var3 = this.aReferenceTable_1949.getAClass69_949().method1280(var2.method1574());
+            int var3 = this.aReferenceTable_1949.getALookupTable_949().get(var2.method1574());
             return this.method2114(var3);
          } else {
             return 0;
@@ -122,7 +122,7 @@ final class CacheIndex {
       try {
          if(this.method2122()) {
             name = name.method1534();
-            int var3 = this.aReferenceTable_1949.getAClass69_949().method1280(name.method1574());
+            int var3 = this.aReferenceTable_1949.getALookupTable_949().get(name.method1574());
             return this.isValidArchive(var3)? var3 :-1;
          } else {
             return -1;
@@ -168,10 +168,10 @@ final class CacheIndex {
          if(this.method2122()) {
             var3 = var3.method1534();
             var2 = var2.method1534();
-            int var4 = this.aReferenceTable_1949.getAClass69_949().method1280(var3.method1574());
+            int var4 = this.aReferenceTable_1949.getALookupTable_949().get(var3.method1574());
 
             if(this.isValidArchive(var4)) {
-               int var5 = this.aReferenceTable_1949.getAClass69Array962()[var4].method1280(var2.method1574());
+               int var5 = this.aReferenceTable_1949.getALookupTableArray962()[var4].get(var2.method1574());
                return this.getFile(var4, var5);
             } else {
                return null;
@@ -188,7 +188,7 @@ final class CacheIndex {
       try {
          if(this.method2122()) {
             var2 = var2.method1534();
-            int var3 = this.aReferenceTable_1949.getAClass69_949().method1280(var2.method1574());
+            int var3 = this.aReferenceTable_1949.getALookupTable_949().get(var2.method1574());
             this.method2131(var3);
          }
       } catch (RuntimeException var5) {
@@ -201,9 +201,9 @@ final class CacheIndex {
          if(this.method2122()) {
             var3 = var3.method1534();
             var1 = var1.method1534();
-            int var4 = this.aReferenceTable_1949.getAClass69_949().method1280(var3.method1574());
+            int var4 = this.aReferenceTable_1949.getALookupTable_949().get(var3.method1574());
             if(this.isValidArchive(var4)) {
-               int var5 = this.aReferenceTable_1949.getAClass69Array962()[var4].method1280(var1.method1574());
+               int var5 = this.aReferenceTable_1949.getALookupTableArray962()[var4].get(var1.method1574());
 
                return this.method2129((byte)70, var5, var4);
             } else {
@@ -253,7 +253,7 @@ final class CacheIndex {
       try {
          if(this.method2122()) {
             var2 = var2.method1534();
-            int var3 = this.aReferenceTable_1949.getAClass69_949().method1280(var2.method1574());
+            int var3 = this.aReferenceTable_1949.getALookupTable_949().get(var2.method1574());
             return this.method2117(var3);
          } else {
             return false;
@@ -480,7 +480,7 @@ final class CacheIndex {
             return false;
          } else if(this.method2122()) {
             var1 = var1.method1534();
-            int var3 = this.aReferenceTable_1949.getAClass69_949().method1280(var1.method1574());
+            int var3 = this.aReferenceTable_1949.getALookupTable_949().get(var1.method1574());
             return var3 >= 0;
          } else {
             return false;

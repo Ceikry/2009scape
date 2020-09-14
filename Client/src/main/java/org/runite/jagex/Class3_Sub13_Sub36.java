@@ -203,17 +203,17 @@ final class Class3_Sub13_Sub36 extends Class3_Sub13 {
             if(this.anInt3431 == Class113.anInt1559) {
                for(var8 = 0; var8 < Class113.anInt1559; ++var8) {
                   var9 = this.anIntArray3425[var4++];
-                  var7[var8] = Class69.bitwiseAnd(var9 << 4, 4080);
-                  var6[var8] = Class69.bitwiseAnd(var9, '\uff00') >> 4;
-                  var5[var8] = Class69.bitwiseAnd(var9, 16711680) >> 12;
+                  var7[var8] = Unsorted.bitwiseAnd(var9 << 4, 4080);
+                  var6[var8] = Unsorted.bitwiseAnd(var9, '\uff00') >> 4;
+                  var5[var8] = Unsorted.bitwiseAnd(var9, 16711680) >> 12;
                }
             } else {
                for(var8 = 0; var8 < Class113.anInt1559; ++var8) {
                   var9 = this.anInt3431 * var8 / Class113.anInt1559;
                   int var10 = this.anIntArray3425[var4 - -var9];
-                  var7[var8] = Class69.bitwiseAnd(var10 << 4, 4080);
-                  var6[var8] = Class69.bitwiseAnd('\uff00', var10) >> 4;
-                  var5[var8] = Class69.bitwiseAnd(var10 >> 12, 4080);
+                  var7[var8] = Unsorted.bitwiseAnd(var10 << 4, 4080);
+                  var6[var8] = Unsorted.bitwiseAnd('\uff00', var10) >> 4;
+                  var5[var8] = Unsorted.bitwiseAnd(var10 >> 12, 4080);
                }
             }
          }

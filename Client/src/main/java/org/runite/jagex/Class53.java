@@ -137,7 +137,7 @@ final class Class53 {
 
    static RSString method1174(RSInterface var0, byte var1) {
       try {
-         return Client.method44(var0).method101() != 0 ?(null != var0.aClass94_245 && var0.aClass94_245.trim(1).length(-45) != 0?var0.aClass94_245:(Class69.aBoolean1040? ClientErrorException.aClass94_2116:null)):null;
+         return Client.method44(var0).method101() != 0 ?(null != var0.aClass94_245 && var0.aClass94_245.trim(1).length(-45) != 0?var0.aClass94_245:(Unsorted.aBoolean1040? ClientErrorException.aClass94_2116:null)):null;
       } catch (RuntimeException var3) {
          throw Class44.clientError(var3, "hi.F(" + (var0 != null?"{...}":"null") + ',' + var1 + ')');
       }

@@ -289,7 +289,7 @@ final class Class3_Sub15 extends Class3 {
                var22 = var2.method741((byte)122);
             }
 
-            this.aShortArray2434[var23] = (short)(this.aShortArray2434[var23] + Class69.bitwiseAnd('\u8000', -1 + var22 << 14));
+            this.aShortArray2434[var23] = (short)(this.aShortArray2434[var23] + Unsorted.bitwiseAnd('\u8000', -1 + var22 << 14));
             this.anIntArray2423[var23] = var22;
             --var20;
          }

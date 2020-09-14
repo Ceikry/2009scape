@@ -108,7 +108,7 @@ final class Class3_Sub24_Sub4 extends Class3_Sub24 {
    private void method472() {
       try {
          this.anIntArray3501[9] = 128;
-         this.anIntArray3506[9] = Class69.bitwiseAnd(128, -128);
+         this.anIntArray3506[9] = Unsorted.bitwiseAnd(128, -128);
          this.method484(128, 9);
       } catch (RuntimeException var5) {
          throw Class44.clientError(var5, "va.SA(" + 128 + ',' + 9 + ',' + 85 + ')');
@@ -226,8 +226,8 @@ final class Class3_Sub24_Sub4 extends Class3_Sub24 {
                               method1177(-1, (long)var10.itemId, (byte)-91, RenderAnimationDefinition.method903(new RSString[]{RenderAnimationDefinition.aClass94_378, ColorCore.BankItemColor, var10.name}, (byte)-59), var15, (short)40, TextCore.HasUse, var3.anInt279);
                            }
                         } else if(GameObject.aBoolean1837 && var9.method99()) {
-                           Class3_Sub28_Sub9 var18 = Class69.anInt1038 != -1 ?Class61.method1210(Class69.anInt1038):null;
-                           if(0 != (16 & Class164.anInt2051) && (var18 == null || var18.anInt3614 != var10.method1115(var18.anInt3614, 103, Class69.anInt1038))) {
+                           Class3_Sub28_Sub9 var18 = Unsorted.anInt1038 != -1 ?Class61.method1210(Unsorted.anInt1038):null;
+                           if(0 != (16 & Class164.anInt2051) && (var18 == null || var18.anInt3614 != var10.method1115(var18.anInt3614, 103, Unsorted.anInt1038))) {
                               method1177(Class144.anInt1887, (long)var10.itemId, (byte)-89, RenderAnimationDefinition.method903(new RSString[]{Class40.aClass94_676, ColorCore.BankItemColor, var10.name}, (byte)-122), var15, (short)3, Class3_Sub28_Sub9.aClass94_3621, var3.anInt279);
                            }
                         } else {
@@ -609,84 +609,84 @@ final class Class3_Sub24_Sub4 extends Class3_Sub24 {
             var4 = var2 & 15;
             var6 = (8388489 & var2) >> 16;
             if(var5 == 0) {
-               this.anIntArray3506[var4] = (var6 << 14) + Class69.bitwiseAnd(-2080769, this.anIntArray3506[var4]);
+               this.anIntArray3506[var4] = (var6 << 14) + Unsorted.bitwiseAnd(-2080769, this.anIntArray3506[var4]);
             }
 
             if(var5 == 32) {
-               this.anIntArray3506[var4] = Class69.bitwiseAnd(-16257, this.anIntArray3506[var4]) + (var6 << 7);
+               this.anIntArray3506[var4] = Unsorted.bitwiseAnd(-16257, this.anIntArray3506[var4]) + (var6 << 7);
             }
 
             if(var5 == 1) {
-               this.anIntArray3502[var4] = (var6 << 7) + Class69.bitwiseAnd(this.anIntArray3502[var4], -16257);
+               this.anIntArray3502[var4] = (var6 << 7) + Unsorted.bitwiseAnd(this.anIntArray3502[var4], -16257);
             }
 
             if(33 == var5) {
-               this.anIntArray3502[var4] = Class69.bitwiseAnd(-128, this.anIntArray3502[var4]) - -var6;
+               this.anIntArray3502[var4] = Unsorted.bitwiseAnd(-128, this.anIntArray3502[var4]) - -var6;
             }
 
             if(var5 == 5) {
-               this.anIntArray3510[var4] = Class69.bitwiseAnd(this.anIntArray3510[var4], -16257) + (var6 << 7);
+               this.anIntArray3510[var4] = Unsorted.bitwiseAnd(this.anIntArray3510[var4], -16257) + (var6 << 7);
             }
 
             if(var5 == 37) {
-               this.anIntArray3510[var4] = var6 + Class69.bitwiseAnd(this.anIntArray3510[var4], -128);
+               this.anIntArray3510[var4] = var6 + Unsorted.bitwiseAnd(this.anIntArray3510[var4], -128);
             }
 
             if(var5 == 7) {
-               this.anIntArray3497[var4] = (var6 << 7) + Class69.bitwiseAnd(this.anIntArray3497[var4], -16257);
+               this.anIntArray3497[var4] = (var6 << 7) + Unsorted.bitwiseAnd(this.anIntArray3497[var4], -16257);
             }
 
             if(var5 == 39) {
-               this.anIntArray3497[var4] = Class69.bitwiseAnd(this.anIntArray3497[var4], -128) + var6;
+               this.anIntArray3497[var4] = Unsorted.bitwiseAnd(this.anIntArray3497[var4], -128) + var6;
             }
 
             if(var5 == 10) {
-               this.anIntArray3498[var4] = Class69.bitwiseAnd(-16257, this.anIntArray3498[var4]) - -(var6 << 7);
+               this.anIntArray3498[var4] = Unsorted.bitwiseAnd(-16257, this.anIntArray3498[var4]) - -(var6 << 7);
             }
 
             if(var5 == 42) {
-               this.anIntArray3498[var4] = var6 + Class69.bitwiseAnd(-128, this.anIntArray3498[var4]);
+               this.anIntArray3498[var4] = var6 + Unsorted.bitwiseAnd(-128, this.anIntArray3498[var4]);
             }
 
             if(var5 == 11) {
-               this.anIntArray3514[var4] = Class69.bitwiseAnd(this.anIntArray3514[var4], -16257) + (var6 << 7);
+               this.anIntArray3514[var4] = Unsorted.bitwiseAnd(this.anIntArray3514[var4], -16257) + (var6 << 7);
             }
 
             if(var5 == 43) {
-               this.anIntArray3514[var4] = var6 + Class69.bitwiseAnd(-128, this.anIntArray3514[var4]);
+               this.anIntArray3514[var4] = var6 + Unsorted.bitwiseAnd(-128, this.anIntArray3514[var4]);
             }
 
             if(var5 == 64) {
                if(64 <= var6) {
                   this.anIntArray3518[var4] = Class3_Sub13_Sub29.bitwiseOr(this.anIntArray3518[var4], 1);
                } else {
-                  this.anIntArray3518[var4] = Class69.bitwiseAnd(this.anIntArray3518[var4], -2);
+                  this.anIntArray3518[var4] = Unsorted.bitwiseAnd(this.anIntArray3518[var4], -2);
                }
             }
 
             if(var5 == 65) {
                if(var6 < 64) {
                   this.method502(var4, (byte) 56 ^ -57);
-                  this.anIntArray3518[var4] = Class69.bitwiseAnd(this.anIntArray3518[var4], -3);
+                  this.anIntArray3518[var4] = Unsorted.bitwiseAnd(this.anIntArray3518[var4], -3);
                } else {
                   this.anIntArray3518[var4] = Class3_Sub13_Sub29.bitwiseOr(this.anIntArray3518[var4], 2);
                }
             }
 
             if(var5 == 99) {
-               this.anIntArray3500[var4] = (var6 << 7) + Class69.bitwiseAnd(this.anIntArray3500[var4], 127);
+               this.anIntArray3500[var4] = (var6 << 7) + Unsorted.bitwiseAnd(this.anIntArray3500[var4], 127);
             }
 
             if(var5 == 98) {
-               this.anIntArray3500[var4] = Class69.bitwiseAnd(this.anIntArray3500[var4], 16256) - -var6;
+               this.anIntArray3500[var4] = Unsorted.bitwiseAnd(this.anIntArray3500[var4], 16256) - -var6;
             }
 
             if(var5 == 101) {
-               this.anIntArray3500[var4] = (var6 << 7) + Class69.bitwiseAnd(127, this.anIntArray3500[var4]) + 16384;
+               this.anIntArray3500[var4] = (var6 << 7) + Unsorted.bitwiseAnd(127, this.anIntArray3500[var4]) + 16384;
             }
 
             if(var5 == 100) {
-               this.anIntArray3500[var4] = var6 + Class69.bitwiseAnd(16256, this.anIntArray3500[var4]) + 16384;
+               this.anIntArray3500[var4] = var6 + Unsorted.bitwiseAnd(16256, this.anIntArray3500[var4]) + 16384;
             }
 
             if(var5 == 120) {
@@ -705,23 +705,23 @@ final class Class3_Sub24_Sub4 extends Class3_Sub24 {
             if(6 == var5) {
                var7 = this.anIntArray3500[var4];
                if(var7 == 16384) {
-                  this.anIntArray3504[var4] = Class69.bitwiseAnd(this.anIntArray3504[var4], -16257) + (var6 << 7);
+                  this.anIntArray3504[var4] = Unsorted.bitwiseAnd(this.anIntArray3504[var4], -16257) + (var6 << 7);
                }
             }
 
             if(var5 == 38) {
                var7 = this.anIntArray3500[var4];
                if(var7 == 16384) {
-                  this.anIntArray3504[var4] = Class69.bitwiseAnd(this.anIntArray3504[var4], -128) + var6;
+                  this.anIntArray3504[var4] = Unsorted.bitwiseAnd(this.anIntArray3504[var4], -128) + var6;
                }
             }
 
             if(var5 == 16) {
-               this.anIntArray3519[var4] = Class69.bitwiseAnd(this.anIntArray3519[var4], -16257) - -(var6 << 7);
+               this.anIntArray3519[var4] = Unsorted.bitwiseAnd(this.anIntArray3519[var4], -16257) - -(var6 << 7);
             }
 
             if(var5 == 48) {
-               this.anIntArray3519[var4] = Class69.bitwiseAnd(this.anIntArray3519[var4], -128) - -var6;
+               this.anIntArray3519[var4] = Unsorted.bitwiseAnd(this.anIntArray3519[var4], -128) - -var6;
             }
 
             if(var5 == 81) {
@@ -729,7 +729,7 @@ final class Class3_Sub24_Sub4 extends Class3_Sub24 {
                   this.anIntArray3518[var4] = Class3_Sub13_Sub29.bitwiseOr(this.anIntArray3518[var4], 4);
                } else {
                   this.method497(var4, -102);
-                  this.anIntArray3518[var4] = Class69.bitwiseAnd(this.anIntArray3518[var4], -5);
+                  this.anIntArray3518[var4] = Unsorted.bitwiseAnd(this.anIntArray3518[var4], -5);
                }
             }
 
@@ -1140,7 +1140,7 @@ final class Class3_Sub24_Sub4 extends Class3_Sub24 {
             }
 
             for(var3 = 0; var3 < 16; ++var3) {
-               this.anIntArray3506[var3] = Class69.bitwiseAnd(-128, this.anIntArray3501[var3]);
+               this.anIntArray3506[var3] = Unsorted.bitwiseAnd(-128, this.anIntArray3501[var3]);
             }
 
          }

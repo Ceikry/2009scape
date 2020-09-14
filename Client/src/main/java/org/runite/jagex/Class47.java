@@ -204,7 +204,7 @@ final class Class47 {
                   int var14 = var1 + var11.anInt210;
                   int var15 = var11.anInt223;
                   int var13 = var11.anInt306 - -var2;
-                  if (Class69.aBoolean1040 && (0 != Client.method44(var11).anInt2205 || var11.type == 0) && var15 > 127) {
+                  if (Unsorted.aBoolean1040 && (0 != Client.method44(var11).anInt2205 || var11.type == 0) && var15 > 127) {
                      var15 = 127;
                   }
 
@@ -449,7 +449,7 @@ final class Class47 {
                      }
 
                      if (!Class38_Sub1.aBoolean2615) {
-                        if (var11.type == 0 && var11.aBoolean219 && NPCDefinition.anInt1297 >= var16 && var17 <= Class38_Sub1.anInt2612 && NPCDefinition.anInt1297 < var18 && Class38_Sub1.anInt2612 < var19 && !Class69.aBoolean1040) {
+                        if (var11.type == 0 && var11.aBoolean219 && NPCDefinition.anInt1297 >= var16 && var17 <= Class38_Sub1.anInt2612 && NPCDefinition.anInt1297 < var18 && Class38_Sub1.anInt2612 < var19 && !Unsorted.aBoolean1040) {
                            Class3_Sub13_Sub34.anInt3415 = 1;
                            Class114.anIntArray1578[0] = Class3_Sub28_Sub5.anInt3590;
                            Class140_Sub7.aClass94Array2935[0] = TextCore.HasCancel;
@@ -484,7 +484,7 @@ final class Class47 {
 
                         Class3_Sub31 var36 = (Class3_Sub31) Class3_Sub13_Sub17.aClass130_3208.method1780((long) var11.anInt279);
                         if (var36 != null) {
-                           if (var36.anInt2603 == 0 && !Class38_Sub1.aBoolean2615 && NPCDefinition.anInt1297 >= var16 && Class38_Sub1.anInt2612 >= var17 && NPCDefinition.anInt1297 < var18 && Class38_Sub1.anInt2612 < var19 && !Class69.aBoolean1040) {
+                           if (var36.anInt2603 == 0 && !Class38_Sub1.aBoolean2615 && NPCDefinition.anInt1297 >= var16 && Class38_Sub1.anInt2612 >= var17 && NPCDefinition.anInt1297 < var18 && Class38_Sub1.anInt2612 < var19 && !Unsorted.aBoolean1040) {
                               Class140_Sub7.aClass94Array2935[0] = TextCore.HasCancel;
                               Class3_Sub13_Sub34.anInt3415 = 1;
                               Class114.anIntArray1578[0] = Class3_Sub28_Sub5.anInt3590;

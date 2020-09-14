@@ -16,10 +16,10 @@ final class Class81 {
          }
 
          byte[] var2 = new byte[24];
-         if(null != Class69.aClass30_1039) {
+         if(null != Unsorted.aClass30_1039) {
             try {
-               Class69.aClass30_1039.method984(-41, 0L);
-               Class69.aClass30_1039.method982(var2);
+               Unsorted.aClass30_1039.method984(-41, 0L);
+               Unsorted.aClass30_1039.method982(var2);
 
                int var3;
                for(var3 = 0; var3 < 24 && var2[var3] == 0; ++var3) {

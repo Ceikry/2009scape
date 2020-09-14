@@ -139,9 +139,9 @@ final class Class3_Sub13_Sub33 extends Class3_Sub13 {
 
                   for(int var14 = 0; Class113.anInt1559 > var14; ++var14) {
                      int var15 = var9[var14];
-                     var13[var14] = Class69.bitwiseAnd(255, var15) << 4;
-                     var12[var14] = Class69.bitwiseAnd(4080, var15 >> 4);
-                     var11[var14] = Class69.bitwiseAnd(var15 >> 12, 4080);
+                     var13[var14] = Unsorted.bitwiseAnd(255, var15) << 4;
+                     var12[var14] = Unsorted.bitwiseAnd(4080, var15 >> 4);
+                     var11[var14] = Unsorted.bitwiseAnd(var15 >> 12, 4080);
                   }
                }
             }

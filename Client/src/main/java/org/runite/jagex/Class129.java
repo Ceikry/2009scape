@@ -62,7 +62,7 @@ abstract class Class129 {
                   }
 
                   var10 = Class52.anIntArray861[var10];
-                  Class97.aClass3_Sub28_Sub16_Sub2_1381.anIntArray4081[var6++] = Class69.bitwiseAnd(var13 * Class69.bitwiseAnd(var11, 16711935) + Class69.bitwiseAnd(16711935, var10) * var12, -16711936) - -Class69.bitwiseAnd(Class69.bitwiseAnd(var10, '\uff00') * var12 - -(Class69.bitwiseAnd('\uff00', var11) * var13), 16711680) >> 8;
+                  Class97.aClass3_Sub28_Sub16_Sub2_1381.anIntArray4081[var6++] = Unsorted.bitwiseAnd(var13 * Unsorted.bitwiseAnd(var11, 16711935) + Unsorted.bitwiseAnd(16711935, var10) * var12, -16711936) - -Unsorted.bitwiseAnd(Unsorted.bitwiseAnd(var10, '\uff00') * var12 - -(Unsorted.bitwiseAnd('\uff00', var11) * var13), 16711680) >> 8;
                }
             }
 

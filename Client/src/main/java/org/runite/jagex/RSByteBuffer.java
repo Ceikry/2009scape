@@ -540,7 +540,7 @@ public class RSByteBuffer extends Class3 {
                     for (var10 = 0; var10 < 64; ++var10) {
                         for (var11 = 0; var11 < 64; ++var11) {
                             if (var5 - -var10 > 0 && var10 + var5 < 103 && var3 + var11 > 0 && var11 + var3 < 103) {
-                                var0[var9].anIntArrayArray1304[var10 + var5][var3 - -var11] = Class69.bitwiseAnd(var0[var9].anIntArrayArray1304[var10 + var5][var3 - -var11], -16777217);
+                                var0[var9].anIntArrayArray1304[var10 + var5][var3 - -var11] = Unsorted.bitwiseAnd(var0[var9].anIntArrayArray1304[var10 + var5][var3 - -var11], -16777217);
                             }
                         }
                     }

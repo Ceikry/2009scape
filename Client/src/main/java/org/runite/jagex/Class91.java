@@ -916,16 +916,16 @@ final class Class91 {
    static boolean method1495(int var0, int var1, int var2, int var3, int var4) {
       int var5 = var3 * Class3_Sub13_Sub34.anInt3417 + var0 * Class3_Sub13_Sub13.anInt3153 >> 16;
       int var6 = var3 * Class3_Sub13_Sub13.anInt3153 - var0 * Class3_Sub13_Sub34.anInt3417 >> 16;
-      int var7 = var1 * Class60.anInt936 + var6 * Class69.anInt1037 >> 16;
-      int var8 = var1 * Class69.anInt1037 - var6 * Class60.anInt936 >> 16;
+      int var7 = var1 * Class60.anInt936 + var6 * Unsorted.anInt1037 >> 16;
+      int var8 = var1 * Unsorted.anInt1037 - var6 * Class60.anInt936 >> 16;
       if(var7 < 1) {
          var7 = 1;
       }
 
       int var9 = (var5 << 9) / var7;
       int var10 = (var8 << 9) / var7;
-      int var11 = var2 * Class60.anInt936 + var6 * Class69.anInt1037 >> 16;
-      int var12 = var2 * Class69.anInt1037 - var6 * Class60.anInt936 >> 16;
+      int var11 = var2 * Class60.anInt936 + var6 * Unsorted.anInt1037 >> 16;
+      int var12 = var2 * Unsorted.anInt1037 - var6 * Class60.anInt936 >> 16;
       if(var11 < 1) {
          var11 = 1;
       }
@@ -988,7 +988,7 @@ final class Class91 {
       try {
          var3 -= this.anInt1309;
          var1 -= this.anInt1306;
-         this.anIntArrayArray1304[var3][var1] = Class69.bitwiseAnd(this.anIntArrayArray1304[var3][var1], -262145);
+         this.anIntArrayArray1304[var3][var1] = Unsorted.bitwiseAnd(this.anIntArrayArray1304[var3][var1], -262145);
 
       } catch (RuntimeException var5) {
          throw Class44.clientError(var5, "mj.I(" + var1 + ',' + (byte) -73 + ',' + var3 + ')');
@@ -1126,7 +1126,7 @@ final class Class91 {
    private void method1501(byte var1, int var2, int var3, int var4) {
       try {
          if(var1 >= 18) {
-            this.anIntArrayArray1304[var3][var2] = Class69.bitwiseAnd(this.anIntArrayArray1304[var3][var2], ~var4);
+            this.anIntArrayArray1304[var3][var2] = Unsorted.bitwiseAnd(this.anIntArrayArray1304[var3][var2], ~var4);
          }
       } catch (RuntimeException var6) {
          throw Class44.clientError(var6, "mj.H(" + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ')');

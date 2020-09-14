@@ -73,7 +73,7 @@ final class Class3_Sub13_Sub16 extends Class3_Sub13 {
             for(int var15 = 0; var15 < Class113.anInt1559; ++var15) {
                Class3_Sub13_Sub36.anInt3422 = Integer.MAX_VALUE;
                KeyboardListener.anInt1914 = Integer.MAX_VALUE;
-               Class69.anInt1042 = Integer.MAX_VALUE;
+               Unsorted.anInt1042 = Integer.MAX_VALUE;
                Class3_Sub28_Sub5.anInt3589 = Integer.MAX_VALUE;
                int var16 = this.anInt3203 * Class102.anIntArray2125[var15] + 2048;
                int var17 = var16 >> 12;
@@ -111,10 +111,10 @@ final class Class3_Sub13_Sub16 extends Class3_Sub13 {
                      }
 
                      if(var12 >= Class3_Sub28_Sub5.anInt3589) {
-                        if(Class69.anInt1042 > var12) {
+                        if(Unsorted.anInt1042 > var12) {
                            Class3_Sub13_Sub36.anInt3422 = KeyboardListener.anInt1914;
-                           KeyboardListener.anInt1914 = Class69.anInt1042;
-                           Class69.anInt1042 = var12;
+                           KeyboardListener.anInt1914 = Unsorted.anInt1042;
+                           Unsorted.anInt1042 = var12;
                         } else if(KeyboardListener.anInt1914 <= var12) {
                            if(var12 < Class3_Sub13_Sub36.anInt3422) {
                               Class3_Sub13_Sub36.anInt3422 = var12;
@@ -125,8 +125,8 @@ final class Class3_Sub13_Sub16 extends Class3_Sub13 {
                         }
                      } else {
                         Class3_Sub13_Sub36.anInt3422 = KeyboardListener.anInt1914;
-                        KeyboardListener.anInt1914 = Class69.anInt1042;
-                        Class69.anInt1042 = Class3_Sub28_Sub5.anInt3589;
+                        KeyboardListener.anInt1914 = Unsorted.anInt1042;
+                        Unsorted.anInt1042 = Class3_Sub28_Sub5.anInt3589;
                         Class3_Sub28_Sub5.anInt3589 = var12;
                      }
                   }
@@ -136,13 +136,13 @@ final class Class3_Sub13_Sub16 extends Class3_Sub13 {
                if(var19 == 0) {
                   var3[var15] = Class3_Sub28_Sub5.anInt3589;
                } else if(var19 == 1) {
-                  var3[var15] = Class69.anInt1042;
+                  var3[var15] = Unsorted.anInt1042;
                } else if (var19 == 3) {
                    var3[var15] = KeyboardListener.anInt1914;
                } else if (var19 == 4) {
                    var3[var15] = Class3_Sub13_Sub36.anInt3422;
                } else if (var19 == 2) {
-                   var3[var15] = Class69.anInt1042 + -Class3_Sub28_Sub5.anInt3589;
+                   var3[var15] = Unsorted.anInt1042 + -Class3_Sub28_Sub5.anInt3589;
                }
             }
          }

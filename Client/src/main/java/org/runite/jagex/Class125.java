@@ -31,7 +31,7 @@ final class Class125 implements Interface5 {
          var1.glCallList(this.anInt2186);
          var1.glActiveTexture('\u84c1');
          var1.glMatrixMode(5890);
-         var1.glTranslatef((float) Unsorted.anInt144, (float) Class69.anInt3695, (float)Class3_Sub29.anInt2587);
+         var1.glTranslatef((float) Unsorted.anInt144, (float) Unsorted.anInt3695, (float)Class3_Sub29.anInt2587);
          var1.glRotatef(-((float)Class3_Sub13_Sub8.anInt3103 * 360.0F) / 2048.0F, 0.0F, 1.0F, 0.0F);
          var1.glRotatef(-((float)Class140_Sub7.anInt2938 * 360.0F) / 2048.0F, 1.0F, 0.0F, 0.0F);
          var1.glRotatef(-180.0F, 1.0F, 0.0F, 0.0F);

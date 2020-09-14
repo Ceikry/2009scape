@@ -715,7 +715,7 @@ final class PacketParser {
                                                                     }
                                                                 }
 
-                                                                Class3_Sub28_Sub19.anIntArray3780[Class69.bitwiseAnd(31, Class49.anInt815++)] = modelId;
+                                                                Class3_Sub28_Sub19.anIntArray3780[Unsorted.bitwiseAnd(31, Class49.anInt815++)] = modelId;
                                                                 Unsorted.incomingOpcode = -1;
                                                                 return true;
                                                             } else if (Unsorted.incomingOpcode == 104 ||
@@ -941,7 +941,7 @@ final class PacketParser {
                                                                         if (ItemDefinition.ram[nodeModelId] != Class57.anIntArray898[nodeModelId]) {
                                                                             ItemDefinition.ram[nodeModelId] = Class57.anIntArray898[nodeModelId];
                                                                             Class46.method1087(98, nodeModelId);
-                                                                            Class44.anIntArray726[Class69.bitwiseAnd(Class36.anInt641++, 31)] = nodeModelId;
+                                                                            Class44.anIntArray726[Unsorted.bitwiseAnd(Class36.anInt641++, 31)] = nodeModelId;
                                                                         }
                                                                     }
 
@@ -1101,7 +1101,7 @@ final class PacketParser {
                                                                     } else if (Unsorted.incomingOpcode == 191) {
                                                                         nodeModelId = GraphicDefinition.incomingBuffer.getLEShort(-59);
                                                                         Class3_Sub28_Sub1.method532(nodeModelId);
-                                                                        Class3_Sub28_Sub4.anIntArray3565[Class69.bitwiseAnd(31, Unsorted.anInt944++)] = Class69.bitwiseAnd(nodeModelId, 32767);
+                                                                        Class3_Sub28_Sub4.anIntArray3565[Unsorted.bitwiseAnd(31, Unsorted.anInt944++)] = Unsorted.bitwiseAnd(nodeModelId, 32767);
                                                                         Unsorted.incomingOpcode = -1;
                                                                         return true;
                                                                     } else if (Unsorted.incomingOpcode == 102) {
@@ -1472,7 +1472,7 @@ final class PacketParser {
                                                                             }
 
                                                                             Class3_Sub30_Sub1.method819();
-                                                                            Class3_Sub28_Sub4.anIntArray3565[Class69.bitwiseAnd(Unsorted.anInt944++, 31)] = Class69.bitwiseAnd(32767, var19);
+                                                                            Class3_Sub28_Sub4.anIntArray3565[Unsorted.bitwiseAnd(Unsorted.anInt944++, 31)] = Unsorted.bitwiseAnd(32767, var19);
                                                                             Unsorted.incomingOpcode = -1;
                                                                             return true;
                                                                         } else if (Unsorted.incomingOpcode == 24) {
@@ -1711,7 +1711,7 @@ final class PacketParser {
                                                                             }
 
                                                                             Class3_Sub30_Sub1.method819();
-                                                                            Class3_Sub28_Sub4.anIntArray3565[Class69.bitwiseAnd(Unsorted.anInt944++, 31)] = Class69.bitwiseAnd(32767, var19);
+                                                                            Class3_Sub28_Sub4.anIntArray3565[Unsorted.bitwiseAnd(Unsorted.anInt944++, 31)] = Unsorted.bitwiseAnd(32767, var19);
                                                                             Unsorted.incomingOpcode = -1;
                                                                             return true;
                                                                         } else if (Unsorted.incomingOpcode == 142) {

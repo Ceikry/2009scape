@@ -282,8 +282,8 @@ public final class Client extends GameShell {
 					Class114.aClass30_1572.method980();
 				}
 
-				if(null != Class69.aClass30_1039) {
-					Class69.aClass30_1039.method980();
+				if(null != Unsorted.aClass30_1039) {
+					Unsorted.aClass30_1039.method980();
 				}
 			} catch (IOException var3) {
 			}
@@ -431,14 +431,14 @@ public final class Client extends GameShell {
 
 					Class114.aClass30_1572 = new Class30(Class38.aClass87_665.aClass122_1204, 6000);
 					Class86.aClass41_1186 = new Class41(255, Class101.aClass30_1422, Class114.aClass30_1572, 500000);
-					Class69.aClass30_1039 = new Class30(Class38.aClass87_665.aClass122_1207, 24);
+					Unsorted.aClass30_1039 = new Class30(Class38.aClass87_665.aClass122_1207, 24);
 					Class38.aClass87_665.aClass122Array1197 = null;
 					Class38.aClass87_665.aClass122_1204 = null;
 					Class38.aClass87_665.aClass122_1207 = null;
 					Class38.aClass87_665.aClass122_1198 = null;
 				}
 			} catch (IOException var3) {
-				Class69.aClass30_1039 = null;
+				Unsorted.aClass30_1039 = null;
 				Class101.aClass30_1422 = null;
 				Class114.aClass30_1572 = null;
 				Class86.aClass41_1186 = null;
@@ -1333,7 +1333,7 @@ public final class Client extends GameShell {
 	}
 
 	static boolean method51(RSInterface var0) {
-		if(Class69.aBoolean1040) {
+		if(Unsorted.aBoolean1040) {
 			if(method44(var0).anInt2205 != 0) {
 				return false;
 			}

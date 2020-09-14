@@ -162,7 +162,7 @@ final class Class167 {
                if(49 >= var9) {
                   Class139.aByteArrayArrayArray1828[var8][var5][var4] = var3.getByte();
                   Class93.aByteArrayArrayArray1328[var8][var5][var4] = (byte)((-2 + var9) / 4);
-                  PacketParser.aByteArrayArrayArray81[var8][var5][var4] = (byte) Class69.bitwiseAnd(-2 + var9 + var7, 3);
+                  PacketParser.aByteArrayArrayArray81[var8][var5][var4] = (byte) Unsorted.bitwiseAnd(-2 + var9 + var7, 3);
                } else if(var9 > 81) {
                   Class3_Sub13_Sub36.aByteArrayArrayArray3430[var8][var5][var4] = (byte)(-81 + var9);
                } else if(!var2) {

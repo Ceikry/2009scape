@@ -1011,7 +1011,7 @@ final class ItemDefinition {
 													}
 													if (opcode == 3309) {
 														int i10 = intsStack[--iStackCounter];
-														intsStack[iStackCounter++] = Class69.bitwiseAnd(16383, i10 >> 14);
+														intsStack[iStackCounter++] = Unsorted.bitwiseAnd(16383, i10 >> 14);
 														continue;
 													}
 													if (3310 == opcode) {
@@ -1021,7 +1021,7 @@ final class ItemDefinition {
 													}
 													if (opcode == 3311) {
 														int k10 = intsStack[--iStackCounter];
-														intsStack[iStackCounter++] = Class69.bitwiseAnd(k10, 16383);
+														intsStack[iStackCounter++] = Unsorted.bitwiseAnd(k10, 16383);
 														continue;
 													}
 													if (opcode == 3312) {
@@ -1528,14 +1528,14 @@ final class ItemDefinition {
 														iStackCounter -= 2;
 														int j21 = intsStack[iStackCounter];
 														int l52 = intsStack[1 + iStackCounter];
-														intsStack[iStackCounter++] = Class69.bitwiseAnd(-1 - (1 << l52), j21);
+														intsStack[iStackCounter++] = Unsorted.bitwiseAnd(-1 - (1 << l52), j21);
 														continue;
 													}
 													if (opcode == 4010) {
 														iStackCounter -= 2;
 														int k21 = intsStack[iStackCounter];
 														int i53 = intsStack[iStackCounter - -1];
-														intsStack[iStackCounter++] = Class69.bitwiseAnd(k21, 1 << i53) != 0 ? 1 : 0;
+														intsStack[iStackCounter++] = Unsorted.bitwiseAnd(k21, 1 << i53) != 0 ? 1 : 0;
 														continue;
 													}
 													if (opcode == 4011) {
@@ -1571,7 +1571,7 @@ final class ItemDefinition {
 														iStackCounter -= 2;
 														int i54 = intsStack[iStackCounter + 1];
 														int k22 = intsStack[iStackCounter];
-														intsStack[iStackCounter++] = Class69.bitwiseAnd(i54, k22);
+														intsStack[iStackCounter++] = Unsorted.bitwiseAnd(i54, k22);
 														continue;
 													}
 													if (opcode == 4015) {
@@ -2035,7 +2035,7 @@ final class ItemDefinition {
 																		if (Class99.aShortArray1398 == null || Unsorted.anInt952 <= Class140_Sub4.anInt2756)
 																			intsStack[iStackCounter++] = -1;
 																		else
-																			intsStack[iStackCounter++] = Class69.bitwiseAnd(Class99.aShortArray1398[Class140_Sub4.anInt2756++], 65535);
+																			intsStack[iStackCounter++] = Unsorted.bitwiseAnd(Class99.aShortArray1398[Class140_Sub4.anInt2756++], 65535);
 																		continue;
 																	}
 																	if (opcode != 5073)
@@ -2337,10 +2337,10 @@ final class ItemDefinition {
 																		int l81 = intsStack[5 + iStackCounter];
 																		if (j33 >= 0 && j33 < 2 && null != Class58.anIntArrayArrayArray911[j33] && l59 >= 0 && Class58.anIntArrayArrayArray911[j33].length > l59) {
 																			Class58.anIntArrayArrayArray911[j33][l59] = (new int[]{
-																					(Class69.bitwiseAnd(0xfffc3b9, l71) >> 14) * 128, k77, 128 * Class69.bitwiseAnd(l71, 16383), j82
+																					(Unsorted.bitwiseAnd(0xfffc3b9, l71) >> 14) * 128, k77, 128 * Unsorted.bitwiseAnd(l71, 16383), j82
 																			});
 																			Class58.anIntArrayArrayArray911[j33][l59 + 1] = (new int[]{
-																					128 * (Class69.bitwiseAnd(j80, 0xfffed27) >> 14), l81, 128 * Class69.bitwiseAnd(j80, 16383)
+																					128 * (Unsorted.bitwiseAnd(j80, 0xfffed27) >> 14), l81, 128 * Unsorted.bitwiseAnd(j80, 16383)
 																			});
 																		}
 																		continue;
@@ -3236,7 +3236,7 @@ final class ItemDefinition {
 														if (null == Class99.aShortArray1398 || Class140_Sub4.anInt2756 >= Unsorted.anInt952)
 															intsStack[iStackCounter++] = -1;
 														else
-															intsStack[iStackCounter++] = Class69.bitwiseAnd(Class99.aShortArray1398[Class140_Sub4.anInt2756++], 65535);
+															intsStack[iStackCounter++] = Unsorted.bitwiseAnd(Class99.aShortArray1398[Class140_Sub4.anInt2756++], 65535);
 														continue;
 													}
 													if (4212 != opcode)

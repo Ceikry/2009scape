@@ -224,9 +224,9 @@ final class Class3_Sub13_Sub34 extends Class3_Sub13 {
                 this.anInt3410 = var2.getShort();
             } else if (4 == var1) {
                 int var4 = var2.getTriByte((byte) 107);
-                this.anIntArray3403[2] = Class69.bitwiseAnd(var4, 255) >> 12;
-                this.anIntArray3403[1] = Class69.bitwiseAnd(var4 >> 4, 4080);
-                this.anIntArray3403[0] = Class69.bitwiseAnd(16711680, var4) << 4;
+                this.anIntArray3403[2] = Unsorted.bitwiseAnd(var4, 255) >> 12;
+                this.anIntArray3403[1] = Unsorted.bitwiseAnd(var4 >> 4, 4080);
+                this.anIntArray3403[0] = Unsorted.bitwiseAnd(16711680, var4) << 4;
             }
 
          }

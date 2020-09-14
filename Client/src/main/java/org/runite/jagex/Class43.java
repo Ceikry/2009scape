@@ -69,7 +69,7 @@ final class Class43 {
          }
 
          for(int var4 = 0; var4 < var1; ++var4) {
-            var3[var4] = Class3_Sub13_Sub38.spritePalette[Class69.bitwiseAnd(var2[var4], 255)];
+            var3[var4] = Class3_Sub13_Sub38.spritePalette[Unsorted.bitwiseAnd(var2[var4], 255)];
          }
 
          Object var6;
@@ -112,9 +112,9 @@ final class Class43 {
 
          this.aFloat707 = (float)(this.anInt693 + (var4 * this.anInt702 >> 11)) / 2048.0F;
          float var8 = this.aFloat707 / 255.0F;
-         this.aFloatArray717[0] = (float)(Class69.bitwiseAnd(this.anInt713, 16771365) >> 16) * var8;
-         this.aFloatArray717[2] = var8 * (float) Class69.bitwiseAnd(255, this.anInt713);
-         this.aFloatArray717[1] = (float)(Class69.bitwiseAnd(this.anInt713, '\uffe7') >> 8) * var8;
+         this.aFloatArray717[0] = (float)(Unsorted.bitwiseAnd(this.anInt713, 16771365) >> 16) * var8;
+         this.aFloatArray717[2] = var8 * (float) Unsorted.bitwiseAnd(255, this.anInt713);
+         this.aFloatArray717[1] = (float)(Unsorted.bitwiseAnd(this.anInt713, '\uffe7') >> 8) * var8;
       } catch (RuntimeException var7) {
          throw Class44.clientError(var7, "gi.A(" + var1 + ',' + var2 + ',' + -3696 + ')');
       }

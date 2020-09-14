@@ -46,7 +46,7 @@ final class Class3_Sub22 extends Class3 {
       }
 
       Class60.anInt936 = Class51.anIntArray840[var3];
-      Class69.anInt1037 = Class51.anIntArray851[var3];
+      Unsorted.anInt1037 = Class51.anIntArray851[var3];
       Class3_Sub13_Sub34.anInt3417 = Class51.anIntArray840[var4];
       Class3_Sub13_Sub13.anInt3153 = Class51.anIntArray851[var4];
       Class129_Sub1.anInt2697 = var0;

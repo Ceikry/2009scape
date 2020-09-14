@@ -75,7 +75,7 @@ final class ObjectDefinition {
          if(this.configuration != null) {
             for(int var7 = 0; var7 < this.configuration.length; ++var7) {
                if(this.configuration[var7] == var2) {
-                  return Class69.aClass153_1043.method2129((byte)72, 0, this.models[var7] & '\uffff');
+                  return Unsorted.aClass153_1043.method2129((byte)72, 0, this.models[var7] & '\uffff');
                }
             }
 
@@ -86,7 +86,7 @@ final class ObjectDefinition {
             boolean var4 = true;
 
             for(int var5 = 0; this.models.length > var5; ++var5) {
-               var4 &= Class69.aClass153_1043.method2129((byte)71, 0, '\uffff' & this.models[var5]);
+               var4 &= Unsorted.aClass153_1043.method2129((byte)71, 0, '\uffff' & this.models[var5]);
             }
 
             return var4;
@@ -151,7 +151,7 @@ final class ObjectDefinition {
 
                var4 = (Model_Sub1)Class99.aClass93_1401.get((long)var8);
                if(var4 == null) {
-                  var4 = Model_Sub1.method2015(Class69.aClass153_1043, var8 & '\uffff');
+                  var4 = Model_Sub1.method2015(Unsorted.aClass153_1043, var8 & '\uffff');
                   if(var4 == null) {
                      return null;
                   }
@@ -192,7 +192,7 @@ final class ObjectDefinition {
 
             var4 = (Model_Sub1)Class99.aClass93_1401.get((long)var7);
             if(null == var4) {
-               var4 = Model_Sub1.method2015(Class69.aClass153_1043, var7 & '\uffff');
+               var4 = Model_Sub1.method2015(Unsorted.aClass153_1043, var7 & '\uffff');
                if(null == var4) {
                   return null;
                }
@@ -584,7 +584,7 @@ final class ObjectDefinition {
             boolean var2 = true;
 
             for(int var3 = 0; var3 < this.models.length; ++var3) {
-               var2 &= Class69.aClass153_1043.method2129((byte)64, 0, '\uffff' & this.models[var3]);
+               var2 &= Unsorted.aClass153_1043.method2129((byte)64, 0, '\uffff' & this.models[var3]);
             }
 
             return var2;
@@ -630,7 +630,7 @@ final class ObjectDefinition {
                Model_Sub1 var17 = null;
 
                for(var12 = 0; var12 < var8; ++var12) {
-                  var17 = Model_Sub1.method2015(Class69.aClass153_1043, this.models[var12] & '\uffff');
+                  var17 = Model_Sub1.method2015(Unsorted.aClass153_1043, this.models[var12] & '\uffff');
                   if(null == var17) {
                      return null;
                   }
@@ -669,7 +669,7 @@ final class ObjectDefinition {
 
             var5 = (Class140_Sub1_Sub1)Class99.aClass93_1401.get((long)var9);
             if(null == var5) {
-               Model_Sub1 var10 = Model_Sub1.method2015(Class69.aClass153_1043, '\uffff' & var9);
+               Model_Sub1 var10 = Model_Sub1.method2015(Unsorted.aClass153_1043, '\uffff' & var9);
                if(null == var10) {
                   return null;
                }

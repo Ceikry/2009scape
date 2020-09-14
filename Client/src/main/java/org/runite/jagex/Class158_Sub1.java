@@ -565,7 +565,7 @@ final class Class158_Sub1 extends Class158 implements ImageProducer, ImageObserv
 
                            for(var19 = var13; var19 <= var14; ++var19) {
                               for(var20 = var11; var37 >= var20; ++var20) {
-                                 Class38_Sub1.anIntArrayArrayArray2609[var19][var10][var20] = Class69.bitwiseAnd(Class38_Sub1.anIntArrayArrayArray2609[var19][var10][var20], -2);
+                                 Class38_Sub1.anIntArrayArrayArray2609[var19][var10][var20] = Unsorted.bitwiseAnd(Class38_Sub1.anIntArrayArrayArray2609[var19][var10][var20], -2);
                               }
                            }
                         }
@@ -612,7 +612,7 @@ final class Class158_Sub1 extends Class158 implements ImageProducer, ImageObserv
 
                            for(var19 = var13; var14 >= var19; ++var19) {
                               for(var20 = var11; var20 <= var37; ++var20) {
-                                 Class38_Sub1.anIntArrayArrayArray2609[var19][var20][var36] = Class69.bitwiseAnd(Class38_Sub1.anIntArrayArrayArray2609[var19][var20][var36], -3);
+                                 Class38_Sub1.anIntArrayArrayArray2609[var19][var20][var36] = Unsorted.bitwiseAnd(Class38_Sub1.anIntArrayArrayArray2609[var19][var20][var36], -3);
                               }
                            }
                         }
@@ -656,7 +656,7 @@ final class Class158_Sub1 extends Class158 implements ImageProducer, ImageObserv
 
                            for(var16 = var11; var37 >= var16; ++var16) {
                               for(var44 = var13; var14 >= var44; ++var44) {
-                                 Class38_Sub1.anIntArrayArrayArray2609[var8][var16][var44] = Class69.bitwiseAnd(Class38_Sub1.anIntArrayArrayArray2609[var8][var16][var44], -5);
+                                 Class38_Sub1.anIntArrayArrayArray2609[var8][var16][var44] = Unsorted.bitwiseAnd(Class38_Sub1.anIntArrayArrayArray2609[var8][var16][var44], -5);
                               }
                            }
                         }
