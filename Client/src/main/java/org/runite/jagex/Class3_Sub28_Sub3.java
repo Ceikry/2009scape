@@ -102,7 +102,7 @@ final class Class3_Sub28_Sub3 extends Node {
             Class3_Sub28_Sub4 var9 = Class3_Sub29.method733(var8);
             if(var9.aBoolean3568 && var9.method554().method1534().indexOf(var2, 112) != -1) {
                if(var4 >= 50) {
-                  ReferenceTable.anInt952 = -1;
+                  Unsorted.anInt952 = -1;
                   Class99.aShortArray1398 = null;
                   return;
                }
@@ -120,11 +120,11 @@ final class Class3_Sub28_Sub3 extends Node {
          }
 
          Class99.aShortArray1398 = var3;
-         ReferenceTable.anInt952 = var4;
+         Unsorted.anInt952 = var4;
          Class140_Sub4.anInt2756 = 0;
-         RSString[] var13 = new RSString[ReferenceTable.anInt952];
+         RSString[] var13 = new RSString[Unsorted.anInt952];
 
-         for(int var14 = 0; ReferenceTable.anInt952 > var14; ++var14) {
+         for(int var14 = 0; Unsorted.anInt952 > var14; ++var14) {
             var13[var14] = Class3_Sub29.method733(var3[var14]).method554();
          }
 

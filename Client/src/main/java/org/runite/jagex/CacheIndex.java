@@ -1,6 +1,7 @@
 package org.runite.jagex;
 
 import org.rs09.client.util.ArrayUtils;
+import org.rs09.client.util.CRC;
 
 import java.util.Objects;
 
@@ -364,7 +365,7 @@ final class CacheIndex {
                try {
                   var23 = Class3_Sub28_Sub13.decodeContainer(var21);
                } catch (Throwable var19) {
-                  throw Class44.clientError(var19, "T3 - " + (xteaKeys != null) + "," + archive + "," + Objects.requireNonNull(var21).length + "," + Class38.crc32(var21, var21.length) + "," + Class38.crc32(var21, var21.length - 2) + "," + this.aReferenceTable_1949.archiveCRCs[archive] + "," + this.aReferenceTable_1949.crc);
+                  throw Class44.clientError(var19, "T3 - " + (xteaKeys != null) + "," + archive + "," + Objects.requireNonNull(var21).length + "," + CRC.INSTANCE.crc32(var21, var21.length) + "," + CRC.INSTANCE.crc32(var21, var21.length - 2) + "," + this.aReferenceTable_1949.archiveCRCs[archive] + "," + this.aReferenceTable_1949.crc);
                }
 
                if (this.aBoolean1945) {

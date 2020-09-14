@@ -1111,8 +1111,8 @@ final class Class47 {
          }
 
          int var1 = Class3_Sub13_Sub13.anInt3155 >> 7;
-         int var2 = ReferenceTable.anInt942 >> 7;
-         int var3 = Class121.method1736(WorldListCountry.localPlane, 1, Class3_Sub13_Sub13.anInt3155, ReferenceTable.anInt942);
+         int var2 = Unsorted.anInt942 >> 7;
+         int var3 = Class121.method1736(WorldListCountry.localPlane, 1, Class3_Sub13_Sub13.anInt3155, Unsorted.anInt942);
          int var4 = 0;
          int var5;
          if(var1 > 3 && 3 < var2 && 100 > var1 && var2 < 100) {

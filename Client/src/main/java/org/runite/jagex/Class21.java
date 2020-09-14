@@ -102,7 +102,7 @@ final class Class21 {
             var7 = Class168.aClass3_Sub28_Sub17_2096.method682(TextCore.HasChooseOptions);
 
             for(int var8 = 0; Class3_Sub13_Sub34.anInt3415 > var8; ++var8) {
-               int var9 = Class168.aClass3_Sub28_Sub17_2096.method682(RSByteBuffer.method802(var8));
+               int var9 = Class168.aClass3_Sub28_Sub17_2096.method682(Unsorted.method802(var8));
                if(var7 < var9) {
                   var7 = var9;
                }

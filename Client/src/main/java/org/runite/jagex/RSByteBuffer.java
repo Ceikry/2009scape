@@ -1,4 +1,5 @@
 package org.runite.jagex;
+import org.rs09.client.util.CRC;
 import org.runite.Configurations;
 
 import java.math.BigInteger;
@@ -952,7 +953,7 @@ class RSByteBuffer extends Class3 {
 
 	final void method793(int var2) {
 		try {
-			int var3 = Class99.crc32(var2, this.index, this.buffer);
+			int var3 = CRC.INSTANCE.crc32(this.buffer, var2, this.index);
 			this.putInt(-120, var3);
         } catch (RuntimeException var4) {
 			throw Class44.clientError(var4, "wa.QB(" + (byte) 86 + ',' + var2 + ')');
@@ -1133,15 +1134,6 @@ class RSByteBuffer extends Class3 {
 			this.buffer[this.index++] = (byte)var3;
 		} catch (RuntimeException var4) {
 			throw Class44.clientError(var4, "wa.QA(" + 881 + ',' + var2 + ')');
-		}
-	}
-
-	static RSString method802(int var0) {
-		try {
-
-			return Class163_Sub2_Sub1.aClass94Array4016[var0].length(-26) > 0 ?RenderAnimationDefinition.method903(new RSString[]{Class140_Sub7.aClass94Array2935[var0], TextCore.Spacer, Class163_Sub2_Sub1.aClass94Array4016[var0]}, (byte)-86):Class140_Sub7.aClass94Array2935[var0];
-		} catch (RuntimeException var3) {
-			throw Class44.clientError(var3, "wa.RB(" + var0 + ',' + true + ')');
 		}
 	}
 

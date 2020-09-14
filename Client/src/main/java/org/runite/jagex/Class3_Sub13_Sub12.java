@@ -84,7 +84,7 @@ final class Class3_Sub13_Sub12 extends Class3_Sub13 {
          }
 
          Class3_Sub28_Sub11.method603(var4, 13987, var3, var1, false);
-         ReferenceTable.method1224(var1, var4, var3);
+         Unsorted.method1224(var1, var4, var3);
       } catch (RuntimeException var5) {
          throw Class44.clientError(var5, "fn.Q(" + 14 + ',' + (var1 != null?"{...}":"null") + ')');
       }

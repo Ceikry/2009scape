@@ -19,20 +19,6 @@ class Class3 {
       }
    }
 
-   public static void method83(byte var0) {
-      try {
-         ItemDefinition.stringsStack = null;
-         if(var0 != 30) {
-            method84((RSString)null, 89);
-         }
-
-         aClass61_78 = null;
-         aBooleanArray73 = null;
-      } catch (RuntimeException var2) {
-         throw Class44.clientError(var2, "ab.H(" + var0 + ')');
-      }
-   }
-
    static void method84(RSString var0, int var1) {
       try {
          int var2 = Class100.method1602(var0);
@@ -65,7 +51,7 @@ class Class3 {
    static void method87(int var0, int var1) {
       try {
          if(var0 >= -20) {
-            method83((byte)44);
+            Unsorted.method83((byte)44);
          }
 
          if(0 != var1) {

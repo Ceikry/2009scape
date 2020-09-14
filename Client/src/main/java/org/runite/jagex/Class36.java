@@ -7,7 +7,6 @@ import java.util.Objects;
 final class Class36 {
 
    private int[] anIntArray633;
-   static int[] anIntArray634 = new int[256];
    private final byte[] aByteArray635;
    private final int[] anIntArray636;
    static Class3_Sub28_Sub16 aClass3_Sub28_Sub16_637;
@@ -378,20 +377,6 @@ final class Class36 {
    }
 
    static {
-      for(int var1 = 0; var1 < 256; ++var1) {
-         int var0 = var1;
-
-         for(int var2 = 0; var2 < 8; ++var2) {
-            if(1 == (1 & var0)) {
-               var0 = var0 >>> 1 ^ -306674912;
-            } else {
-               var0 >>>= 1;
-            }
-         }
-
-         anIntArray634[var1] = var0;
-      }
-
       anInt639 = 0;
       anInt638 = 0;
       anInt641 = 0;

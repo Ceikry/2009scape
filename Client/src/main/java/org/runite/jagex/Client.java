@@ -1189,10 +1189,10 @@ public final class Client extends GameShell {
 								inter.anInt213 = Class36.anInt641;
 							}
 
-							if(inter.anObjectArray174 != null && ReferenceTable.anInt944 > inter.anInt255) {
-								if(inter.anIntArray175 != null && ReferenceTable.anInt944 - inter.anInt255 <= 32) {
+							if(inter.anObjectArray174 != null && Unsorted.anInt944 > inter.anInt255) {
+								if(inter.anIntArray175 != null && Unsorted.anInt944 - inter.anInt255 <= 32) {
 									label474:
-										for(var19 = inter.anInt255; var19 < ReferenceTable.anInt944; ++var19) {
+										for(var19 = inter.anInt255; var19 < Unsorted.anInt944; ++var19) {
 											var29 = Class3_Sub28_Sub4.anIntArray3565[var19 & 31];
 
 											for(var21 = 0; var21 < inter.anIntArray175.length; ++var21) {
@@ -1212,7 +1212,7 @@ public final class Client extends GameShell {
 									Class110.aClass61_1471.method1215(var30);
 								}
 
-								inter.anInt255 = ReferenceTable.anInt944;
+								inter.anInt255 = Unsorted.anInt944;
 							}
 
 							if(inter.anObjectArray158 != null && Class49.anInt815 > inter.anInt311) {
@@ -1708,7 +1708,7 @@ public final class Client extends GameShell {
 	            Class3_Sub29.method728();
 	            Class58.method1194();
 	            Class32.method996();
-	            ReferenceTable.method1225();
+	            Unsorted.method1225();
 	            if(HDToolKit.highDetail) {
 	               Class31.method990();
 	            }

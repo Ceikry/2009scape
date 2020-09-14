@@ -63,10 +63,6 @@ class Class38 {
       }
    }
 
-   static int crc32(byte[] data, int length) {
-      return Class99.crc32(0, length, data);
-   }
-
    static void method1027(int var0, byte var1) {
       try {
          Class44.aClass93_725.method1522(-128, var0);

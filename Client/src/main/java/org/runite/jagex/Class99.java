@@ -1,4 +1,6 @@
 package org.runite.jagex;
+import org.rs09.client.util.CRC;
+
 import java.awt.Frame;
 import java.util.Objects;
 
@@ -84,17 +86,6 @@ final class Class99 {
       } catch (RuntimeException var9) {
          throw Class44.clientError(var9, "nf.D(" + 2 + ',' + 0 + ',' + var2 + ',' + var3 + ',' + var4 + ',' + (var5 != null?"{...}":"null") + ')');
       }
-   }
-
-   static int crc32(int offset, int end, byte[] data) {
-      int hash = -1;
-
-      for(int i = offset; end > i; ++i) {
-         hash = hash >>> 8 ^ Class36.anIntArray634[(hash ^ data[i]) & 0xff];
-      }
-
-      hash = ~hash;
-      return hash;
    }
 
 }

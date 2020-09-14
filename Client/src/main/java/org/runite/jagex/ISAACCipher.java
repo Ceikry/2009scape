@@ -221,9 +221,9 @@ final class ISAACCipher {
                   }
                }
             } else if(HDToolKit.highDetail) {
-               Class22.method930(var1, var2, var3, 20, Class3_Sub28_Sub6.anInt3600, -ReferenceTable.anInt963 + 256);
+               Class22.method930(var1, var2, var3, 20, Class3_Sub28_Sub6.anInt3600, -Unsorted.anInt963 + 256);
             } else {
-               Class74.method1312(var1, var2, var3, 20, Class3_Sub28_Sub6.anInt3600, -ReferenceTable.anInt963 + 256);
+               Class74.method1312(var1, var2, var3, 20, Class3_Sub28_Sub6.anInt3600, -Unsorted.anInt963 + 256);
             }
          }
 
@@ -242,9 +242,9 @@ final class ISAACCipher {
 
          Class168.aClass3_Sub28_Sub17_2096.method681(TextCore.HasChooseOptions, var1 - -3, 14 + var2, Class3_Sub13_Sub28.anInt3351, -1);
          if(HDToolKit.highDetail) {
-            Class22.method930(var1, 20 + var2, var3, var4 - 20, Class3_Sub28_Sub6.anInt3600, -ReferenceTable.anInt963 + 256);
+            Class22.method930(var1, 20 + var2, var3, var4 - 20, Class3_Sub28_Sub6.anInt3600, -Unsorted.anInt963 + 256);
          } else {
-            Class74.method1312(var1, 20 + var2, var3, -20 + var4, Class3_Sub28_Sub6.anInt3600, -ReferenceTable.anInt963 + 256);
+            Class74.method1312(var1, 20 + var2, var3, -20 + var4, Class3_Sub28_Sub6.anInt3600, -Unsorted.anInt963 + 256);
          }
 
          var6 = Class130.anInt1709;
@@ -313,7 +313,7 @@ final class ISAACCipher {
                var9 = Class154.anInt1957;
             }
 
-            Class168.aClass3_Sub28_Sub17_2096.method681(RSByteBuffer.method802(var7), 3 + var1, var8, var9, 0);
+            Class168.aClass3_Sub28_Sub17_2096.method681(Unsorted.method802(var7), 3 + var1, var8, var9, 0);
          }
 
          Class69.method1282(AbstractIndexedSprite.anInt1462, (byte)122, Class3_Sub13_Sub33.anInt3395, Class3_Sub28_Sub1.anInt3537, Class3_Sub28_Sub3.anInt3552);

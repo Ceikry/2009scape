@@ -9,18 +9,23 @@ public class Unsorted {
    public static boolean aBoolean2150;
    public static boolean aBoolean2154;
    public static int[] anIntArray2157 = new int[50];
+    static RSString  aClass94_946 = RSString.of(")2");
+   static int anInt942;
+   static int anInt944 = 0;
+   static int anInt952;
+   static int anInt963;
 
    static void method2086() {
        try {
            int var1 = Class102.player.anInt2819 + Class3_Sub13_Sub18.anInt3216;
            int var2 = Class102.player.anInt2829 - -InputStream_Sub1.anInt42;
-           if(-var1 + Class3_Sub13_Sub13.anInt3155 < -500 || -var1 + Class3_Sub13_Sub13.anInt3155 > 500 || ReferenceTable.anInt942 + -var2 < -500 || -var2 + ReferenceTable.anInt942 > 500) {
+           if(-var1 + Class3_Sub13_Sub13.anInt3155 < -500 || -var1 + Class3_Sub13_Sub13.anInt3155 > 500 || anInt942 + -var2 < -500 || -var2 + anInt942 > 500) {
               Class3_Sub13_Sub13.anInt3155 = var1;
-              ReferenceTable.anInt942 = var2;
+              anInt942 = var2;
            }
 
-           if(var2 != ReferenceTable.anInt942) {
-              ReferenceTable.anInt942 += (-ReferenceTable.anInt942 + var2) / 16;
+           if(var2 != anInt942) {
+              anInt942 += (-anInt942 + var2) / 16;
            }
 
            if(var1 != Class3_Sub13_Sub13.anInt3155) {
@@ -335,4 +340,96 @@ public class Unsorted {
           throw Class44.clientError(var20, "na.WA(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ',' + var5 + ',' + var6 + ',' + var7 + ')');
        }
     }
+
+    static RSString method802(int var0) {
+        try {
+
+            return Class163_Sub2_Sub1.aClass94Array4016[var0].length(-26) > 0 ?RenderAnimationDefinition.method903(new RSString[]{Class140_Sub7.aClass94Array2935[var0], TextCore.Spacer, Class163_Sub2_Sub1.aClass94Array4016[var0]}, (byte)-86):Class140_Sub7.aClass94Array2935[var0];
+        } catch (RuntimeException var3) {
+            throw Class44.clientError(var3, "wa.RB(" + var0 + ',' + true + ')');
+        }
+    }
+
+    public static void method83(byte var0) {
+       try {
+          ItemDefinition.stringsStack = null;
+          if(var0 != 30) {
+             Class3.method84((RSString)null, 89);
+          }
+
+          Class3.aClass61_78 = null;
+          Class3.aBooleanArray73 = null;
+       } catch (RuntimeException var2) {
+          throw Class44.clientError(var2, "ab.H(" + var0 + ')');
+       }
+    }
+
+   static void method1224(RSInterface var0, int var2, int var3) {
+      try {
+            if (0 == var0.aByte162) {
+               var0.anInt210 = var0.y;
+            } else if (var0.aByte162 == 1) {
+               var0.anInt210 = (var2 - var0.anInt193) / 2 + var0.y;
+            } else if (2 == var0.aByte162) {
+               var0.anInt210 = var2 - var0.anInt193 - var0.y;
+            } else if (var0.aByte162 == 3) {
+               var0.anInt210 = var0.y * var2 >> 14;
+            } else if (4 == var0.aByte162) {
+               var0.anInt210 = (var2 * var0.y >> 14) + (-var0.anInt193 + var2) / 2;
+            } else {
+               var0.anInt210 = -(var2 * var0.y >> 14) + -var0.anInt193 + var2;
+            }
+
+            if (0 == var0.aByte273) {
+               var0.anInt306 = var0.x;
+            } else if (var0.aByte273 == 1) {
+               var0.anInt306 = var0.x + (var3 - var0.anInt168) / 2;
+            } else if (var0.aByte273 == 2) {
+               var0.anInt306 = -var0.x + -var0.anInt168 + var3;
+            } else if (3 == var0.aByte273) {
+               var0.anInt306 = var0.x * var3 >> 14;
+            } else if (4 == var0.aByte273) {
+               var0.anInt306 = (var0.x * var3 >> 14) + (var3 - var0.anInt168) / 2;
+            } else {
+               var0.anInt306 = -(var3 * var0.x >> 14) + var3 + -var0.anInt168;
+            }
+
+            if (Class69.aBoolean1040 && (Client.method44(var0).anInt2205 != 0 || var0.type == 0)) {
+               if (var0.anInt210 < 0) {
+                  var0.anInt210 = 0;
+               } else if (var0.anInt193 + var0.anInt210 > var2) {
+                  var0.anInt210 = var2 + -var0.anInt193;
+               }
+
+               if (0 > var0.anInt306) {
+                  var0.anInt306 = 0;
+               } else if (var3 < var0.anInt306 - -var0.anInt168) {
+                  var0.anInt306 = var3 + -var0.anInt168;
+               }
+            }
+
+      } catch (RuntimeException var5) {
+            throw Class44.clientError(var5, "ii.B(" + (var0 != null ? "{...}" : "null") + ',' + 23730 + ',' + var2 + ',' + var3 + ')');
+      }
+   }
+
+   static void method1225() {
+      try {
+            MouseListeningClass var1 = Class3_Sub28_Sub7_Sub1.aClass149_4047;
+            synchronized (var1) {
+
+               Class3_Sub13_Sub5.anInt3069 = GraphicDefinition.anInt549;
+               Class126.anInt1676 = Class3_Sub21.anInt2493;
+               Class130.anInt1709 = Class95.anInt1340;
+               Class3_Sub28_Sub11.anInt3644 = Class140_Sub3.anInt2743;
+               Class163_Sub1.anInt2993 = RenderAnimationDefinition.anInt362;
+               ++Class3_Sub28_Sub7_Sub1.anInt4045;
+               Class38_Sub1.anInt2614 = Class3_Sub13_Sub32.anInt3389;
+               Class75.aLong1102 = Class140_Sub6.aLong2926;
+               Class140_Sub3.anInt2743 = 0;
+            }
+      } catch (RuntimeException var4) {
+            throw Class44.clientError(var4, "ii.D(" + 18074 + ')');
+      }
+   }
 }

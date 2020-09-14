@@ -1,16 +1,13 @@
 package org.runite.jagex;
 
+import org.rs09.client.util.CRC;
+
 final class ReferenceTable {
 
-	static int anInt942;
 	int[][] fileNameHashes;
-	static int anInt944 = 0;
 	int[] archiveCRCs;
-	static RSString aClass94_946 = RSString.of(")2");
 	int validArchiveAmount;
 	Class69 aClass69_949;
-	static int anInt950;
-	static int anInt952;
 	int[] validArchiveIds;
 	int[] archiveLengths;
 	int[] archiveNameHash;
@@ -20,77 +17,7 @@ final class ReferenceTable {
 	int archiveAmount;
 	int revision;
 	Class69[] aClass69Array962;
-	static int anInt963;
 	int crc;
-
-	static void method1224(RSInterface var0, int var2, int var3) {
-		try {
-			if (0 == var0.aByte162) {
-				var0.anInt210 = var0.y;
-			} else if (var0.aByte162 == 1) {
-				var0.anInt210 = (var2 - var0.anInt193) / 2 + var0.y;
-			} else if (2 == var0.aByte162) {
-				var0.anInt210 = var2 - var0.anInt193 - var0.y;
-			} else if (var0.aByte162 == 3) {
-				var0.anInt210 = var0.y * var2 >> 14;
-			} else if (4 == var0.aByte162) {
-				var0.anInt210 = (var2 * var0.y >> 14) + (-var0.anInt193 + var2) / 2;
-			} else {
-				var0.anInt210 = -(var2 * var0.y >> 14) + -var0.anInt193 + var2;
-			}
-
-			if (0 == var0.aByte273) {
-				var0.anInt306 = var0.x;
-			} else if (var0.aByte273 == 1) {
-				var0.anInt306 = var0.x + (var3 - var0.anInt168) / 2;
-			} else if (var0.aByte273 == 2) {
-				var0.anInt306 = -var0.x + -var0.anInt168 + var3;
-			} else if (3 == var0.aByte273) {
-				var0.anInt306 = var0.x * var3 >> 14;
-			} else if (4 == var0.aByte273) {
-				var0.anInt306 = (var0.x * var3 >> 14) + (var3 - var0.anInt168) / 2;
-			} else {
-				var0.anInt306 = -(var3 * var0.x >> 14) + var3 + -var0.anInt168;
-			}
-
-			if (Class69.aBoolean1040 && (Client.method44(var0).anInt2205 != 0 || var0.type == 0)) {
-				if (var0.anInt210 < 0) {
-					var0.anInt210 = 0;
-				} else if (var0.anInt193 + var0.anInt210 > var2) {
-					var0.anInt210 = var2 + -var0.anInt193;
-				}
-
-				if (0 > var0.anInt306) {
-					var0.anInt306 = 0;
-				} else if (var3 < var0.anInt306 - -var0.anInt168) {
-					var0.anInt306 = var3 + -var0.anInt168;
-				}
-			}
-
-		} catch (RuntimeException var5) {
-			throw Class44.clientError(var5, "ii.B(" + (var0 != null ? "{...}" : "null") + ',' + 23730 + ',' + var2 + ',' + var3 + ')');
-		}
-	}
-
-	static void method1225() {
-		try {
-			MouseListeningClass var1 = Class3_Sub28_Sub7_Sub1.aClass149_4047;
-			synchronized (var1) {
-
-				Class3_Sub13_Sub5.anInt3069 = GraphicDefinition.anInt549;
-				Class126.anInt1676 = Class3_Sub21.anInt2493;
-				Class130.anInt1709 = Class95.anInt1340;
-				Class3_Sub28_Sub11.anInt3644 = Class140_Sub3.anInt2743;
-				Class163_Sub1.anInt2993 = RenderAnimationDefinition.anInt362;
-				++Class3_Sub28_Sub7_Sub1.anInt4045;
-				Class38_Sub1.anInt2614 = Class3_Sub13_Sub32.anInt3389;
-				Class75.aLong1102 = Class140_Sub6.aLong2926;
-				Class140_Sub3.anInt2743 = 0;
-			}
-		} catch (RuntimeException var4) {
-			throw Class44.clientError(var4, "ii.D(" + 18074 + ')');
-		}
-	}
 
 	private void decode(byte[] data) {
 		try {
@@ -211,8 +138,8 @@ final class ReferenceTable {
 		}
 	}
 
-	ReferenceTable(byte[] data, int crc) {
-		this.crc = Class38.crc32(data, data.length);
+	public ReferenceTable(byte[] data, int crc) {
+		this.crc = CRC.INSTANCE.crc32(data, data.length);
 		if (this.crc != crc)
 			throw new RuntimeException("Reference table CRC mismatch. Expected: " + crc + ", got" + this.crc);
 		decode(data);

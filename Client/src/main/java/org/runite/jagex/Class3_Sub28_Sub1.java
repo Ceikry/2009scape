@@ -126,9 +126,9 @@ final class Class3_Sub28_Sub1 extends Node {
          } else if(GameObject.aBoolean1837 && 2 > Class3_Sub13_Sub34.anInt3415) {
             var1 = RenderAnimationDefinition.method903(new RSString[]{Class3_Sub28_Sub9.aClass94_3621, TextCore.Spacer, Class40.aClass94_676, Class131.aClass94_1724}, (byte)-95);
          } else if(Class101.aBoolean1419 && ObjectDefinition.aBooleanArray1490[81] && Class3_Sub13_Sub34.anInt3415 > 2) {
-            var1 = RSByteBuffer.method802(Class3_Sub13_Sub34.anInt3415 + -2);
+            var1 = Unsorted.method802(Class3_Sub13_Sub34.anInt3415 + -2);
          } else {
-            var1 = RSByteBuffer.method802(Class3_Sub13_Sub34.anInt3415 - 1);
+            var1 = Unsorted.method802(Class3_Sub13_Sub34.anInt3415 - 1);
          }
 
          if(Class3_Sub13_Sub34.anInt3415 > 2) {
