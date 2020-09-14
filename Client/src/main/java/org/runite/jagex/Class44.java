@@ -159,7 +159,7 @@ abstract class Class44 {
 		} catch (Exception ex) {
 			ex.printStackTrace();
 		}
-		return RSString.createRSString(format.replace("\"", "").trim());
+		return RSString.of(format.replace("\"", "").trim());
 	}
 
 
@@ -186,7 +186,7 @@ abstract class Class44 {
 				aString1 += line;
 			}
 			input.close();
-			rsString = RSString.createRSString(aString1);
+			rsString = RSString.of(aString1);
 		}
 		catch(Exception e){
 			e.printStackTrace();

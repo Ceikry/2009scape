@@ -10,7 +10,7 @@ class RSByteBuffer extends Class3 {
 	static int[] anIntArray2591;
 	int index;
 	static RSString[] aClass94Array2596 = null;
-	static RSString aClass94_2598 = RSString.createRSString("<br>");
+	static RSString aClass94_2598 = RSString.of("<br>");
 	static Class3_Sub28_Sub3 aClass3_Sub28_Sub3_2600;
 	static Class151_Sub1[] aClass151_Sub1Array2601 = new Class151_Sub1[29]; //TODO
 

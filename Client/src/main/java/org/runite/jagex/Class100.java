@@ -175,7 +175,7 @@ final class Class100 {
       try {
          Class3_Sub13_Sub1.outgoingBuffer.putOpcode(188);
          Class3_Sub13_Sub1.outgoingBuffer.putByteA(var2);
-         Class3_Sub13_Sub1.outgoingBuffer.putLong(var1.toLong(-126), -2037491440);
+         Class3_Sub13_Sub1.outgoingBuffer.putLong(var1.toLong(), -2037491440);
       } catch (RuntimeException var4) {
          throw Class44.clientError(var4, "ni.B(" + 255 + ',' + (var1 != null?"{...}":"null") + ',' + var2 + ')');
       }

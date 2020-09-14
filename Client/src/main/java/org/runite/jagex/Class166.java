@@ -13,13 +13,13 @@ final class Class166 {
    int anInt2071;
    static Class3_Sub28_Sub16[] aClass3_Sub28_Sub16Array2072;
    static int[] anIntArray2073 = new int[5];
-   static RSString aClass94_2074 = RSString.createRSString("; version=1; path=)4; domain=");
-   static RSString aClass94_2075 = RSString.createRSString("rect_debug=");
+   static RSString aClass94_2074 = RSString.of("; version=1; path=)4; domain=");
+   static RSString aClass94_2075 = RSString.of("rect_debug=");
    byte[] aByteArray2076;
    int anInt2077;
    int anInt2078;
    static int anInt2079 = 0;
-   static RSString aClass94_2080 = RSString.createRSString("(U2");
+   static RSString aClass94_2080 = RSString.of("(U2");
 
 
    static boolean method2256(int var0, int var1, int var2, int var3) {

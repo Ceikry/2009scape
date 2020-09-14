@@ -6,8 +6,8 @@ import java.util.Objects;
 
 final class Class73 implements Runnable {
 
-   private static final RSString TOGGLE_ATK = RSString.createRSString("::toggleatk");
-   private static final RSString TOGGLE_FK = RSString.createRSString("::togglefk");
+   private static final RSString TOGGLE_ATK = RSString.of("::toggleatk");
+   private static final RSString TOGGLE_FK = RSString.of("::togglefk");
 static boolean aBoolean1080 = false;
    static int anInt1081 = 0;
    static int anInt1082;
@@ -422,13 +422,13 @@ static boolean aBoolean1080 = false;
             	boolean on = !Properties.get().isInstantAttack();
             	Properties.get().setInstantAttack(on);
 				Properties.get().save();
-                Class3_Sub30_Sub1.addChatMessage((RSString)null, 0, RSString.createRSString("Left click attack option mode toggled " + (on ? "on." : "off.")), -1);
+                Class3_Sub30_Sub1.addChatMessage((RSString)null, 0, RSString.of("Left click attack option mode toggled " + (on ? "on." : "off.")), -1);
             }
             if (command.equals(-120, TOGGLE_FK)) {
             	boolean on = !Properties.get().isModernHotkeys();
             	Properties.get().setModernHotkeys(on);
 				Properties.get().save();
-                Class3_Sub30_Sub1.addChatMessage((RSString)null, 0, RSString.createRSString("Modern hotkeys mode toggled " + (on ? "on." : "off.")), -1);
+                Class3_Sub30_Sub1.addChatMessage((RSString)null, 0, RSString.of("Modern hotkeys mode toggled " + (on ? "on." : "off.")), -1);
             }
 
             if(command.equals(-120, Class52.COMMAND_LOWRES_GRAPHICS)) {

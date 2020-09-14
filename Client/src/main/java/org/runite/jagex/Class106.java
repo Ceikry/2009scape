@@ -17,7 +17,7 @@ final class Class106 {
       try {
          if(null != PacketParser.aClass3_Sub19Array3694) {
 
-             long var3 = var1.toLong(3803 + -3930);
+             long var3 = var1.toLong();
             int var2 = 0;
             if(var3 != 0L) {
                while(PacketParser.aClass3_Sub19Array3694.length > var2 && var3 != PacketParser.aClass3_Sub19Array3694[var2].aLong71) {

@@ -5,7 +5,7 @@ import org.runite.Properties;
 abstract class Class144 {
 
    static int anInt1881 = 0;
-   static RSString aClass94_1885 = RSString.createRSString("cookiehost");
+   static RSString aClass94_1885 = RSString.of("cookiehost");
    static int anInt1887;
 
    abstract byte[] method2064();

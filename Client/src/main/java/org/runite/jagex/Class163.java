@@ -6,8 +6,8 @@ class Class163 {
 
    static Class47 aClass47_2041 = new Class47(64);
    static int[] anIntArray2043 = new int[]{8, 11, 4, 6, 9, 7, 10, 0};
-   static RSString aClass94_2044 = RSString.createRSString("cookieprefix");
-   static RSString COMMAND_ERROR_TEST = RSString.createRSString("::errortest");
+   static RSString aClass94_2044 = RSString.of("cookieprefix");
+   static RSString COMMAND_ERROR_TEST = RSString.of("::errortest");
    static int localNPCCount = 0;
 
 

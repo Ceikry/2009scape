@@ -9,7 +9,7 @@ final class Class131 {
    RSString[] aClass94Array1721;
    
    static CacheIndex aClass153_1723;
-   static RSString aClass94_1724 = RSString.createRSString(" )2>");
+   static RSString aClass94_1724 = RSString.of(" )2>");
    int[] anIntArray1725;
    short[] aShortArray1727;
    static int[] anIntArray1729 = new int[]{12543016, 15504954, 15914854, 16773818};
@@ -137,7 +137,7 @@ final class Class131 {
             var4.putByte((byte) -97, 10);
             var4.putShort((int) (Math.random() * 99999.0D));
             var4.putShort(530);
-            var4.putLong(Class3_Sub28_Sub14.username.toLong(-117), -2037491440);
+            var4.putLong(Class3_Sub28_Sub14.username.toLong(), -2037491440);
             var4.putInt(-123, (int) (Math.random() * 9.9999999E7D));
             var4.putString(Class3_Sub28_Sub14.password);
             var4.putInt(-128, (int) (Math.random() * 9.9999999E7D));

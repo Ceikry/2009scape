@@ -12,7 +12,7 @@ final class Class86 {
    int anInt1185;
    static Class41 aClass41_1186;
    float aFloat1187;
-   static RSString COMMAND_REBUILD = RSString.createRSString("::rebuild");
+   static RSString COMMAND_REBUILD = RSString.of("::rebuild");
    float aFloat1189;
    float aFloat1190;
    static int anInt1191;

@@ -1,5 +1,7 @@
 package org.runite.jagex;
 
+import org.rs09.client.util.ArrayUtils;
+
 class Class3 {
    long aLong71;
    Class3 aClass3_74;
@@ -111,7 +113,7 @@ class Class3 {
             }
 
             Class56.aClass106Array890 = new Class106[var3];
-            Class76.method1362(var2, 0, Class56.aClass106Array890, 0, var3);
+            ArrayUtils.arraycopy(var2, 0, Class56.aClass106Array890, 0, var3);
             int[] var9 = new int[Class56.aClass106Array890.length];
 
             for(int var10 = 0; Class56.aClass106Array890.length > var10; ++var10) {

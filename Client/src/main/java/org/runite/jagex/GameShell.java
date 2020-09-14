@@ -31,9 +31,9 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
 
 
    static boolean aBoolean6 = false;
-   static RSString aClass94_8 = RSString.createRSString("");
-   static RSString aClass94_9 = RSString.createRSString(")3)3)3");
-   static RSString aClass94_10 = RSString.createRSString("::rect_debug");
+   static RSString aClass94_8 = RSString.of("");
+   static RSString aClass94_9 = RSString.of(")3)3)3");
+   static RSString aClass94_10 = RSString.of("::rect_debug");
    static boolean aBoolean11 = false;
 
    public final void focusLost(FocusEvent var1) {

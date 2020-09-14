@@ -4,8 +4,8 @@ import java.util.Objects;
 
 final class InputStream_Sub1 extends InputStream {
 
-   static RSString aClass94_37 = RSString.createRSString("0(U");
-   static RSString aClass94_38 = RSString.createRSString("tbrefresh");
+   static RSString aClass94_37 = RSString.of("0(U");
+   static RSString aClass94_38 = RSString.of("tbrefresh");
    static int[] anIntArray39;
    static int anInt40 = 0;
    static IOHandler js5Connection;

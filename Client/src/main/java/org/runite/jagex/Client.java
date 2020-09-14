@@ -1,5 +1,4 @@
 package org.runite.jagex;
-import org.rs09.client.console.DeveloperConsole;
 import org.runite.Configurations;
 import org.runite.GameLaunch;
 
@@ -1619,7 +1618,7 @@ public final class Client extends GameShell {
 									Class117.method1719(1000);
 								}
 							} else if (Class96.anInt1354 == 140) {
-								Class3_Sub22.anInt2529 = Class140_Sub3.aClass153_2727.getArchiveForName(RSString.createRSString("loginscreen"));
+								Class3_Sub22.anInt2529 = Class140_Sub3.aClass153_2727.getArchiveForName(RSString.of("loginscreen"));
 								Class3_Sub13_Sub6.aClass153_3077.method2115(-9, false);
 								Class75_Sub2.aClass153_2645.method2115(111, true);
 								Class140_Sub6.spritesCacheIndex.method2115(-76, true);

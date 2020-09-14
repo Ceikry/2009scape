@@ -1,10 +1,12 @@
 package org.runite.jagex;
 
+import org.rs09.client.util.ArrayUtils;
+
 final class Class65 {
 
    static Class61 aClass61_983 = new Class61();
    static int anInt984 = 0;
-   static RSString aClass94_985 = RSString.createRSString("Fps:");
+   static RSString aClass94_985 = RSString.of("Fps:");
    static RSByteBuffer[] aClass3_Sub30Array986 = new RSByteBuffer[2048];
    static int anInt987 = 0;
    static int currentChunkX;
@@ -21,7 +23,7 @@ final class Class65 {
             }
 
             int[] var2 = new int[var0.length];
-            Class76.method1358(var0, 0, var2, 0, var0.length);
+            ArrayUtils.arraycopy(var0, 0, var2, 0, var0.length);
             return var2;
          }
       } catch (RuntimeException var3) {

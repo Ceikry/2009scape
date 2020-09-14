@@ -2,8 +2,8 @@ package org.runite.jagex;
 
 final class Class40 {
 
-   static RSString aClass94_672 = RSString.createRSString("null");
-   static RSString aClass94_673 = RSString.createRSString(")0");
+   static RSString aClass94_672 = RSString.of("null");
+   static RSString aClass94_673 = RSString.of(")0");
    static int[] anIntArray675 = new int[]{16, 32, 64, 128};
    static RSString aClass94_676 = null;
    static int anInt677 = 0;

@@ -5,7 +5,7 @@ import java.util.Objects;
 final class Class130 {
 
    Class3[] aClass3Array1697;
-   static RSString aClass94_1698 = RSString.createRSString("(R");
+   static RSString aClass94_1698 = RSString.of("(R");
    int anInt1700;
    static boolean[] aBooleanArray1703;
    static int incomingPacketLength = 0;

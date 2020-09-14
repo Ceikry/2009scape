@@ -56,7 +56,7 @@ final class RSInterface {
    Object[] anObjectArray206;
    int[] anIntArray207;
    int anInt208 = 0;
-   static RSString aClass94_209 = RSString.createRSString("event_opbase");
+   static RSString aClass94_209 = RSString.of("event_opbase");
    int anInt210 = 0;
    int[] anIntArray211;
    int anInt212;
@@ -195,7 +195,7 @@ final class RSInterface {
    final boolean method855() {
       try {
          if(this.anIntArray207 == null) {
-            LDIndexedSprite var2 = RSString.method1539(this.spriteArchiveId, Class12.aClass153_323);
+            LDIndexedSprite var2 = Unsorted.method1539(this.spriteArchiveId, Class12.aClass153_323);
             if(null == var2) {
                return false;
             } else {
@@ -249,7 +249,7 @@ final class RSInterface {
          RSString var1 = Class3_Sub28_Sub7_Sub1.aClass94_4052;
          RSString var2 = Class3_Sub28_Sub14.aClass94_3672;
          if(Class44.anInt718 != 0) {
-            var1 = RSString.createRSString("www)2wtqa");
+            var1 = RSString.of("www)2wtqa");
          }
 
          if(null != Class163_Sub2.aClass94_2996) {

@@ -3,13 +3,13 @@ import java.util.Random;
 
 final class Class3_Sub13_Sub16 extends Class3_Sub13 {
 
-   static RSString aClass94_3190 = RSString.createRSString("<img=1>");
+   static RSString aClass94_3190 = RSString.of("<img=1>");
    private int anInt3191 = 2;
-   static RSString aClass94_3192 = RSString.createRSString(" ");
+   static RSString aClass94_3192 = RSString.of(" ");
    private int anInt3193 = 2048;
    private int anInt3194 = 1;
    private byte[] aByteArray3195 = new byte[512];
-   static RSString aClass94_3196 = RSString.createRSString("Fps:");
+   static RSString aClass94_3196 = RSString.of("Fps:");
    private int anInt3197 = 0;
    static int anInt3198 = 0;
    private short[] aShortArray3200 = new short[512];

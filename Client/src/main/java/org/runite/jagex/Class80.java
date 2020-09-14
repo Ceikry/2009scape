@@ -9,7 +9,7 @@ final class Class80 {
    private Class3 aClass3_1130;
    static Class93 aClass93_1131 = new Class93(5);
    private int anInt1132 = 0;
-   static RSString aClass94_1133 = RSString.createRSString(")4j");
+   static RSString aClass94_1133 = RSString.of(")4j");
    private final Class130 aClass130_1134;
    static Class93 aClass93_1135 = new Class93(4);
    static Class3_Sub28_Sub16[] aClass3_Sub28_Sub16Array1136;

@@ -2,10 +2,10 @@ package org.runite.jagex;
 
 abstract class Class151 {
 
-   static RSString aClass94_1932 = RSString.createRSString(")4a=");
+   static RSString aClass94_1932 = RSString.of(")4a=");
    static RSInterface aClass11_1933;
    static float[] aFloatArray1934 = new float[]{0.073F, 0.169F, 0.24F, 1.0F};
-   static RSString COMMAND_BREAK_CLIENT_CONNECTION = RSString.createRSString("::clientdrop");
+   static RSString COMMAND_BREAK_CLIENT_CONNECTION = RSString.of("::clientdrop");
    static Class8 aClass8_1936;
 
 

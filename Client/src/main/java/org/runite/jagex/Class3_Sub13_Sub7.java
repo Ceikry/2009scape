@@ -1,5 +1,7 @@
 package org.runite.jagex;
 
+import org.rs09.client.util.ArrayUtils;
+
 import java.util.Random;
 
 final class Class3_Sub13_Sub7 extends Class3_Sub13 {
@@ -98,7 +100,7 @@ final class Class3_Sub13_Sub7 extends Class3_Sub13 {
                   }
                }
 
-               Class76.method1359(var3, 0, Class113.anInt1559, var6);
+               ArrayUtils.fill(var3, 0, Class113.anInt1559, var6);
             } else {
                for(int var12 = 0; Class113.anInt1559 > var12; ++var12) {
                   int var9 = Class102.anIntArray2125[var12];

@@ -6,7 +6,7 @@ final class Class3_Sub13_Sub17 extends Class3_Sub13 {
 
    static boolean aBoolean3207 = false;
    static Class130 aClass130_3208 = new Class130(8);
-   static RSString aClass94_3209 = RSString.createRSString("showingVideoAd");
+   static RSString aClass94_3209 = RSString.of("showingVideoAd");
    static CacheIndex aClass153_3210;
    static int[] anIntArray3212;
    static int anInt3213 = 1;

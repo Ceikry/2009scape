@@ -4,7 +4,7 @@ import java.awt.Frame;
 final class Class3_Sub28_Sub10_Sub1 extends Class3_Sub28_Sub10 {
 
    Class41 aClass41_4056;
-   static RSString aClass94_4057 = RSString.createRSString("Mem:");
+   static RSString aClass94_4057 = RSString.of("Mem:");
    byte[] aByteArray4059;
    static Class25[] aClass25Array4060;
    int anInt4061;

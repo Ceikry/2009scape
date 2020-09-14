@@ -58,7 +58,7 @@ final class Class114 {
          Class3_Sub28_Sub16 var10 = (Class3_Sub28_Sub16)Class67.aClass93_1013.get(var8);
          if(var10 == null) {
             Class51.aBoolean837 = false;
-            var10 = RSString.method1570(var4, (byte)13, false, var1, var2, var0, var3, false);
+            var10 = Unsorted.method1570(var4, (byte)13, false, var1, var2, var0, var3, false);
             if(var10 != null && !Class51.aBoolean837) {
                Class67.aClass93_1013.put((byte)-79, var10, var8);
             }

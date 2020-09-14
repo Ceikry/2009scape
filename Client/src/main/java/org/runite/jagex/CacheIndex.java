@@ -1,5 +1,7 @@
 package org.runite.jagex;
 
+import org.rs09.client.util.ArrayUtils;
+
 import java.util.Objects;
 
 final class CacheIndex {
@@ -407,7 +409,7 @@ final class CacheIndex {
 
                      for (int var18 = 0; var18 < var4; ++var18) {
                         var17 += var12.getInt();
-                        Class76.method1357(var23, var15, var24[var18], var13[var18], var17);
+                        ArrayUtils.arraycopy(var23, var15, var24[var18], var13[var18], var17);
                         var15 += var17;
                         var13[var18] += var17;
                      }

@@ -6,10 +6,10 @@ final class Class24 {
 
    private short[] aShortArray460;
    private short[] aShortArray464;
-   static RSString aClass94_465 = RSString.createRSString(" ");
+   static RSString aClass94_465 = RSString.of(" ");
    int anInt466 = -1;
    static int anInt467 = 0;
-   static RSString aClass94_468 = RSString.createRSString("(U");
+   static RSString aClass94_468 = RSString.of("(U");
    static int anInt469 = 0;
    private short[] aShortArray470;
    private short[] aShortArray471;

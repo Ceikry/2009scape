@@ -59,7 +59,7 @@ public class DumpingTools {
                     if (s == CS2AsmOpcodes.RETURN.getOp() || s == 38 || s == 39 || s >= 100) {
                         fileData.put((byte) am.instructionOperands[j]);
                     } else if (s == CS2AsmOpcodes.PUSH_STR.getOp()) {
-                        fileData.put(am.stringInstructionOperands[j].byteArray);
+                        fileData.put(am.stringInstructionOperands[j].buffer);
                         fileData.put((byte) 0);
                     } else {
                         fileData.putInt(am.instructionOperands[j]);

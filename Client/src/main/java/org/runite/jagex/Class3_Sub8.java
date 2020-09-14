@@ -13,9 +13,9 @@ final class Class3_Sub8 extends Class3 {
    int[] anIntArray2301;
    byte[][][] aByteArrayArrayArray2302;
    Class64[] aClass64Array2303;
-   static RSString aClass94_2304 = RSString.createRSString("details");
+   static RSString aClass94_2304 = RSString.of("details");
    int anInt2305;
-   static RSString aClass94_2306 = RSString.createRSString("<)4col> x");
+   static RSString aClass94_2306 = RSString.of("<)4col> x");
 
 
    static void method124(int var0, int var1, int var2) {
@@ -154,7 +154,7 @@ final class Class3_Sub8 extends Class3 {
                if(null != var23 && var23.hasDefinitions()) {
                   var12 = var23.anInt2829 / 32 - Class102.player.anInt2829 / 32;
                   var11 = -(Class102.player.anInt2819 / 32) + var23.anInt2819 / 32;
-                  long var29 = var23.displayName.toLong(-128);
+                  long var29 = var23.displayName.toLong();
                   boolean var28 = false;
 
                   for(var16 = 0; var16 < Class8.anInt104; ++var16) {

@@ -5,7 +5,7 @@ final class Class96 {
    static int anInt1345;
    int anInt1346;
    int anInt1347;
-   static RSString aClass94_1349 = RSString.createRSString("underlay");
+   static RSString aClass94_1349 = RSString.of("underlay");
    int anInt1350;
    int anInt1351;
    static int anInt1352;

@@ -11,7 +11,7 @@ class Class3_Sub13_Sub23 extends Class3_Sub13 {
    static int anInt3285 = 128;
    static int itemDefinitionSize;
    static int[] anIntArray3288 = new int[]{4, 4, 1, 2, 6, 4, 2, 49, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
-   static RSString aClass94_3289 = RSString.createRSString("::fps ");
+   static RSString aClass94_3289 = RSString.of("::fps ");
 
    static int method275(int var0, int var1, int var2, int var3, int var4) {
       try {
@@ -70,7 +70,7 @@ class Class3_Sub13_Sub23 extends Class3_Sub13 {
             if(this.anInt3278 < 0) {
                return false;
             } else {
-               Class3_Sub28_Sub16_Sub2 var3 = Class126.anInt1668 < 0 ?RSString.method1537(Class104.aClass153_2172, this.anInt3278):Class40.method1043(this.anInt3278, Class104.aClass153_2172, Class126.anInt1668);
+               Class3_Sub28_Sub16_Sub2 var3 = Class126.anInt1668 < 0 ? Unsorted.method1537(Class104.aClass153_2172, this.anInt3278):Class40.method1043(this.anInt3278, Class104.aClass153_2172, Class126.anInt1668);
                Objects.requireNonNull(var3).method665();
                this.anInt3283 = var3.anInt3696;
                this.anInt3280 = var3.anInt3707;

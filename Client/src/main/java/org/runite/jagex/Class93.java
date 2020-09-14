@@ -5,7 +5,7 @@ import java.util.Objects;
 final class Class93 {
 
    static int anInt1325;
-   static RSString aClass94_1326 = RSString.createRSString(")2");
+   static RSString aClass94_1326 = RSString.of(")2");
    private int anInt1327;
    static byte[][][] aByteArrayArrayArray1328;
    private final NodeList aClass13_1329 = new NodeList();

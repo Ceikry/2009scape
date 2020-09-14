@@ -8,11 +8,11 @@ import java.util.Objects;
 final class Class104 implements Interface5 {
 
    static boolean[] aBooleanArray2169 = new boolean[5];
-   static RSString aClass94_2171 = RSString.createRSString("");
+   static RSString aClass94_2171 = RSString.of("");
    static CacheIndex aClass153_2172;
    private int anInt2173;
    private final float[] aFloatArray2174 = new float[4];
-   private static RSString aClass94_2175 = RSString.createRSString(")4a=");
+   private static RSString aClass94_2175 = RSString.of(")4a=");
 
 
    static void method1626(byte var0) {
@@ -45,7 +45,7 @@ final class Class104 implements Interface5 {
                if (Class163_Sub2.aClass94_2996 != null) {
                   var4 = RenderAnimationDefinition.method903(new RSString[]{Class97.aClass94_1380, Class163_Sub2.aClass94_2996}, (byte) -100);
                }
-               RSString var5 = RenderAnimationDefinition.method903(new RSString[]{RSString.createRSString("http:)4)4"), var2.address, var9, Class3_Sub31.aClass94_2608, Class72.method1298((byte) 9, Class3_Sub20.language), aClass94_2175, Class72.method1298((byte) 9, Class3_Sub26.anInt2554), var4, Class80.aClass94_1133, !Class3_Sub28_Sub11.aBoolean3641 ? Class164_Sub1.aClass94_3013 : Class14.aClass94_339, Class38_Sub1.aClass94_2610, !Class163_Sub2_Sub1.aBoolean4018 ? Class164_Sub1.aClass94_3013 : Class14.aClass94_339, Class118.aClass94_1617, Class3_Sub28_Sub19.aBoolean3779 ? Class14.aClass94_339 : Class164_Sub1.aClass94_3013}, (byte) -110);
+               RSString var5 = RenderAnimationDefinition.method903(new RSString[]{RSString.of("http:)4)4"), var2.address, var9, Class3_Sub31.aClass94_2608, Class72.method1298((byte) 9, Class3_Sub20.language), aClass94_2175, Class72.method1298((byte) 9, Class3_Sub26.anInt2554), var4, Class80.aClass94_1133, !Class3_Sub28_Sub11.aBoolean3641 ? Class164_Sub1.aClass94_3013 : Class14.aClass94_339, Class38_Sub1.aClass94_2610, !Class163_Sub2_Sub1.aBoolean4018 ? Class164_Sub1.aClass94_3013 : Class14.aClass94_339, Class118.aClass94_1617, Class3_Sub28_Sub19.aBoolean3779 ? Class14.aClass94_339 : Class164_Sub1.aClass94_3013}, (byte) -110);
 
                try {
                   Objects.requireNonNull(Class126.aClient1671.getAppletContext()).showDocument(var5.method1527(), "_self");

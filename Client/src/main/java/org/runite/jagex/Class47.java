@@ -12,7 +12,7 @@ final class Class47 {
    private final NodeList aClass13_747 = new NodeList();
    static CacheIndex quickChatMessages;
    private int anInt749;
-   static RSString aClass94_750 = RSString.createRSString("null");
+   static RSString aClass94_750 = RSString.of("null");
 
 
    static boolean method1088(boolean var0) {
@@ -77,7 +77,7 @@ final class Class47 {
          } else {
             RSString var2 = new RSString();
             var2.length = 0;
-            var2.byteArray = new byte[var1];
+            var2.buffer = new byte[var1];
             return var2;
          }
       } catch (RuntimeException var3) {
@@ -851,7 +851,7 @@ final class Class47 {
 
                                        Player var49 = Class3_Sub13_Sub22.players[var24];
                                        AnimationDefinition var56 = var21 == -1 ? null : Client.getAnimationDefinition(var21);
-                                       if (null != var49 && (-2048 & var11.itemId) == (int) var49.displayName.toLong(-128) << 11) {
+                                       if (null != var49 && (-2048 & var11.itemId) == (int) var49.displayName.toLong() << 11) {
                                           var38 = var49.class52.method1165((Class145[]) null, -1, (AnimationDefinition) null, var56, 0, -1, -126, 0, var11.anInt283, 0);
                                        }
                                     }

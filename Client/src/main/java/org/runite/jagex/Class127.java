@@ -54,7 +54,7 @@ class Class127 {
 
                   Class3_Sub15.aClass89_2429 = new IOHandler((Socket)Class3_Sub9.aClass64_2318.anObject974, Class38.aClass87_665);
                   Class3_Sub9.aClass64_2318 = null;
-                  long var1 = Class3_Sub13_Sub16.aLong3202 = Class3_Sub28_Sub14.username.toLong(-106);
+                  long var1 = Class3_Sub13_Sub16.aLong3202 = Class3_Sub28_Sub14.username.toLong();
                   Class3_Sub13_Sub1.outgoingBuffer.index = 0;
                   Class3_Sub13_Sub1.outgoingBuffer.putByte((byte)-40, 14);
                   int nameHash = (int)(var1 >> 16 & 31L);
@@ -107,7 +107,7 @@ class Class127 {
                   Class3_Sub13_Sub1.outgoingBuffer.putInt(-125, var9[1]);
                   Class3_Sub13_Sub1.outgoingBuffer.putInt(-127, var9[2]);
                   Class3_Sub13_Sub1.outgoingBuffer.putInt(var0 + -111, var9[3]);
-                  Class3_Sub13_Sub1.outgoingBuffer.putLong(Class3_Sub28_Sub14.username.toLong(var0 + -116), var0 + -2037491431);
+                  Class3_Sub13_Sub1.outgoingBuffer.putLong(Class3_Sub28_Sub14.username.toLong(), var0 + -2037491431);
                   Class3_Sub13_Sub1.outgoingBuffer.putString(Class3_Sub28_Sub14.password);
                   Class3_Sub13_Sub1.method229();
                   Class3_Sub13_Sub1.outgoingBuffer.encryptRSA(Class3_Sub13_Sub14.aBigInteger3162, Class3_Sub13_Sub37.aBigInteger3441);

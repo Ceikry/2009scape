@@ -11,7 +11,7 @@ final class Class3_Sub30_Sub1 extends RSByteBuffer {
 	static int[] anIntArray3804 = new int[256];
 	static int[] anIntArray3805;
 	private int anInt3806;
-	static RSString aClass94_3807 = RSString.createRSString("m");
+	static RSString aClass94_3807 = RSString.of("m");
 
 
 	static void addChatMessage(RSString var0, int type, RSString message, int var3) {
@@ -409,7 +409,7 @@ final class Class3_Sub30_Sub1 extends RSByteBuffer {
 						if(var13.usingScripts) {
 							Class40.aClass94_676 = RenderAnimationDefinition.method903(new RSString[]{var13.aClass94_277, ColorCore.ContextColor }, (byte)-83);
 						} else {
-							Class40.aClass94_676 = RenderAnimationDefinition.method903(new RSString[]{RSString.createRSString("<col=00ff00>"), var13.aClass94_243, ColorCore.ContextColor }, (byte)-94);
+							Class40.aClass94_676 = RenderAnimationDefinition.method903(new RSString[]{RSString.of("<col=00ff00>"), var13.aClass94_243, ColorCore.ContextColor }, (byte)-94);
 						}
 					}
 

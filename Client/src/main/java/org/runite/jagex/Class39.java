@@ -596,25 +596,25 @@ final class Class39 {
 
 	static void method1039(CacheIndex var1) {
 		try {
-			Class96.anInt1352 = var1.getArchiveForName(RSString.createRSString("p11_full"));
-			Class75_Sub2.anInt2643 = var1.getArchiveForName(RSString.createRSString("p12_full"));
-			Class3_Sub13_Sub11.anInt3132 = var1.getArchiveForName(RSString.createRSString("b12_full"));
-			Class168.anInt2104 = var1.getArchiveForName(RSString.createRSString("mapfunction"));
-			Class3_Sub13_Sub23_Sub1.hitMarkIndex = var1.getArchiveForName(RSString.createRSString("hitmarks"));
-			Client.anInt2195 = var1.getArchiveForName(RSString.createRSString("hitbar_default"));
-			Node.anInt2575 = var1.getArchiveForName(RSString.createRSString("headicons_pk"));
+			Class96.anInt1352 = var1.getArchiveForName(RSString.of("p11_full"));
+			Class75_Sub2.anInt2643 = var1.getArchiveForName(RSString.of("p12_full"));
+			Class3_Sub13_Sub11.anInt3132 = var1.getArchiveForName(RSString.of("b12_full"));
+			Class168.anInt2104 = var1.getArchiveForName(RSString.of("mapfunction"));
+			Class3_Sub13_Sub23_Sub1.hitMarkIndex = var1.getArchiveForName(RSString.of("hitmarks"));
+			Client.anInt2195 = var1.getArchiveForName(RSString.of("hitbar_default"));
+			Node.anInt2575 = var1.getArchiveForName(RSString.of("headicons_pk"));
 
-            RenderAnimationDefinition.anInt380 = var1.getArchiveForName(RSString.createRSString("headicons_prayer"));
-			Class3_Sub13_Sub29.anInt3356 = var1.getArchiveForName(RSString.createRSString("hint_headicons"));
-			Class129_Sub1.anInt2689 = var1.getArchiveForName(RSString.createRSString("hint_mapmarkers"));
-			Class3_Sub13_Sub4.anInt3061 = var1.getArchiveForName(RSString.createRSString("mapflag"));
-			Class75_Sub1.anInt2633 = var1.getArchiveForName(RSString.createRSString("cross"));
-			Class40.anInt678 = var1.getArchiveForName(RSString.createRSString("mapdots"));
-			Class3_Sub15.anInt2436 = var1.getArchiveForName(RSString.createRSString("scrollbar"));
-			Class3_Sub28_Sub18.anInt3757 = var1.getArchiveForName(RSString.createRSString("name_icons"));
-			Class45.anInt735 = var1.getArchiveForName(RSString.createRSString("floorshadows"));
-			Class93.anInt1325 = var1.getArchiveForName(RSString.createRSString("compass"));
-			Class3_Sub18.anInt2471 = var1.getArchiveForName(RSString.createRSString("hint_mapedge"));
+            RenderAnimationDefinition.anInt380 = var1.getArchiveForName(RSString.of("headicons_prayer"));
+			Class3_Sub13_Sub29.anInt3356 = var1.getArchiveForName(RSString.of("hint_headicons"));
+			Class129_Sub1.anInt2689 = var1.getArchiveForName(RSString.of("hint_mapmarkers"));
+			Class3_Sub13_Sub4.anInt3061 = var1.getArchiveForName(RSString.of("mapflag"));
+			Class75_Sub1.anInt2633 = var1.getArchiveForName(RSString.of("cross"));
+			Class40.anInt678 = var1.getArchiveForName(RSString.of("mapdots"));
+			Class3_Sub15.anInt2436 = var1.getArchiveForName(RSString.of("scrollbar"));
+			Class3_Sub28_Sub18.anInt3757 = var1.getArchiveForName(RSString.of("name_icons"));
+			Class45.anInt735 = var1.getArchiveForName(RSString.of("floorshadows"));
+			Class93.anInt1325 = var1.getArchiveForName(RSString.of("compass"));
+			Class3_Sub18.anInt2471 = var1.getArchiveForName(RSString.of("hint_mapedge"));
 		} catch (RuntimeException var3) {
 			throw Class44.clientError(var3, "g.C(" + 208 + ',' + (var1 != null?"{...}":"null") + ')');
 		}

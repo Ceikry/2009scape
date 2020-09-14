@@ -1,4 +1,6 @@
 package org.runite.jagex;
+import org.rs09.client.util.ArrayUtils;
+
 import java.util.Random;
 
 final class Class116 {
@@ -35,7 +37,7 @@ final class Class116 {
    }
 
    final int[] method1717(int var1, int var2) {
-      Class76.method1363(anIntArray1598, 0, var1);
+      ArrayUtils.zero(anIntArray1598, 0, var1);
       if (var2 >= 10) {
          double var3 = (double) var1 / ((double) var2 + 0.0D);
          this.aClass34_1589.method1008();

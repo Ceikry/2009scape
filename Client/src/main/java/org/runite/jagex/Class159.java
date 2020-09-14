@@ -4,7 +4,7 @@ final class Class159 {
 
    static Class93 aClass93_2016 = new Class93(100);
    static int[] anIntArray2017 = new int[]{1, 2, 4, 8};
-   static RSString aClass94_2018 = RSString.createRSString("Cabbage");
+   static RSString aClass94_2018 = RSString.of("Cabbage");
    static CacheIndex aClass153_2019;
    static int anInt2020 = 0;
    static int[] anIntArray2021 = new int[2];

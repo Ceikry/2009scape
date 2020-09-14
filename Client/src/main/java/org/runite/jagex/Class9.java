@@ -13,7 +13,7 @@ final class Class9 {
    int anInt116 = 0;
    byte[] aByteArray117;
    int anInt118 = 0;
-   static RSString aClass94_119 = RSString.createRSString("runes");
+   static RSString aClass94_119 = RSString.of("runes");
    static int anInt120 = 255;
    int anInt121;
    int[] anIntArray122 = new int[257];
@@ -26,7 +26,7 @@ final class Class9 {
    int anInt129;
    byte[] aByteArray130 = new byte[18002];
    int anInt131;
-   static RSString aClass94_132 = RSString.createRSString("::");
+   static RSString aClass94_132 = RSString.of("::");
    int anInt133;
    int[] anIntArray134 = new int[256];
    int anInt135;

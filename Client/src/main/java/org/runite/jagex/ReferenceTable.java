@@ -6,7 +6,7 @@ final class ReferenceTable {
 	int[][] fileNameHashes;
 	static int anInt944 = 0;
 	int[] archiveCRCs;
-	static RSString aClass94_946 = RSString.createRSString(")2");
+	static RSString aClass94_946 = RSString.of(")2");
 	int validArchiveAmount;
 	Class69 aClass69_949;
 	static int anInt950;

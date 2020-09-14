@@ -6,40 +6,40 @@ abstract class Class3_Sub28_Sub17 extends Node {
 
    int[] anIntArray3709;
    private int anInt3710;
-   private static RSString aClass94_3711 = RSString.createRSString("gt");
-   private static RSString aClass94_3712 = RSString.createRSString("lt");
-   private static RSString aClass94_3713 = RSString.createRSString("shad=");
-   private static RSString aClass94_3714 = RSString.createRSString("shy");
-   private static RSString aClass94_3715 = RSString.createRSString("trans=");
-   private static RSString aClass94_3716 = RSString.createRSString("u=");
-   private static RSString aClass94_3717 = RSString.createRSString("str=");
-   private static RSString aClass94_3718 = RSString.createRSString("euro");
+   private static RSString aClass94_3711 = RSString.of("gt");
+   private static RSString aClass94_3712 = RSString.of("lt");
+   private static RSString aClass94_3713 = RSString.of("shad=");
+   private static RSString aClass94_3714 = RSString.of("shy");
+   private static RSString aClass94_3715 = RSString.of("trans=");
+   private static RSString aClass94_3716 = RSString.of("u=");
+   private static RSString aClass94_3717 = RSString.of("str=");
+   private static RSString aClass94_3718 = RSString.of("euro");
    private int[] anIntArray3719;
-   private static RSString aClass94_3720 = RSString.createRSString(")4col");
+   private static RSString aClass94_3720 = RSString.of(")4col");
    int[] anIntArray3721;
    private int anInt3722;
    private int[] anIntArray3723;
-   private static RSString aClass94_3724 = RSString.createRSString(")4shad");
-   private static RSString aClass94_3725 = RSString.createRSString("col=");
-   private static RSString aClass94_3726 = RSString.createRSString("<gt>");
+   private static RSString aClass94_3724 = RSString.of(")4shad");
+   private static RSString aClass94_3725 = RSString.of("col=");
+   private static RSString aClass94_3726 = RSString.of("<gt>");
    int anInt3727 = 0;
-   private static RSString aClass94_3728 = RSString.createRSString("u");
-   private static RSString aClass94_3729 = RSString.createRSString("times");
+   private static RSString aClass94_3728 = RSString.of("u");
+   private static RSString aClass94_3729 = RSString.of("times");
    private int[] anIntArray3730;
-   private static RSString aClass94_3731 = RSString.createRSString(")4trans");
-   private static RSString aClass94_3732 = RSString.createRSString("nbsp");
+   private static RSString aClass94_3731 = RSString.of(")4trans");
+   private static RSString aClass94_3732 = RSString.of("nbsp");
    private byte[] aByteArray3733;
-   private static RSString aClass94_3734 = RSString.createRSString("<lt>");
-   private static RSString aClass94_3735 = RSString.createRSString(")4u");
+   private static RSString aClass94_3734 = RSString.of("<lt>");
+   private static RSString aClass94_3735 = RSString.of(")4u");
    private int[] anIntArray3736;
-   private static RSString aClass94_3737 = RSString.createRSString("br");
-   private static RSString aClass94_3738 = RSString.createRSString("shad");
-   private static RSString aClass94_3739 = RSString.createRSString("img=");
+   private static RSString aClass94_3737 = RSString.of("br");
+   private static RSString aClass94_3738 = RSString.of("shad");
+   private static RSString aClass94_3739 = RSString.of("img=");
    private AbstractIndexedSprite[] aClass109Array3740;
-   private static RSString aClass94_3741 = RSString.createRSString("copy");
-   private static RSString aClass94_3742 = RSString.createRSString(")4str");
-   private static RSString aClass94_3743 = RSString.createRSString("reg");
-   private static RSString aClass94_3744 = RSString.createRSString("str");
+   private static RSString aClass94_3741 = RSString.of("copy");
+   private static RSString aClass94_3742 = RSString.of(")4str");
+   private static RSString aClass94_3743 = RSString.of("reg");
+   private static RSString aClass94_3744 = RSString.of("str");
    private static RSString aClass94_3745 = Class47.method1090((byte)-123, 100);
    private static int anInt3746 = -1;
    private static int anInt3747 = -1;
@@ -337,7 +337,7 @@ abstract class Class3_Sub28_Sub17 extends Node {
          } else if(var5 == 62) {
             Objects.requireNonNull(var6).method1533(aClass94_3726);
          } else {
-            Objects.requireNonNull(var6).method1572(var5, (byte)115);
+            Objects.requireNonNull(var6).appendCharacter(var5);
          }
       }
 
@@ -400,9 +400,9 @@ abstract class Class3_Sub28_Sub17 extends Node {
                if(var14 == 62 && var9 != -1) {
                   RSString var15 = var1.method1557(var13, 0, var9 + 1);
                   var9 = -1;
-                  aClass94_3745.method1572(60, (byte)111);
+                  aClass94_3745.appendCharacter(60);
                   aClass94_3745.method1533(var15);
-                  aClass94_3745.method1572(62, (byte)112);
+                  aClass94_3745.appendCharacter(62);
                   if(var15.method1528(aClass94_3737)) {
                      if(var3[var11] == null) {
                         var3[var11] = aClass94_3745.method1563(101).method1557(aClass94_3745.length(-91), 0, var5);
@@ -486,7 +486,7 @@ abstract class Class3_Sub28_Sub17 extends Node {
 
                if(var9 == -1) {
                   if(var14 != 0) {
-                     aClass94_3745.method1572(var14, (byte)127);
+                     aClass94_3745.appendCharacter(var14);
                      var4 += this.anIntArray3736[var14];
                      if(this.aByteArray3733 != null && var10 != 0) {
                         var4 += this.aByteArray3733[(var10 << 8) + var14];

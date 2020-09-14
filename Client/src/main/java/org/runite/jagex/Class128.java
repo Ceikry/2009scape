@@ -7,7 +7,7 @@ final class Class128 {
    static int anInt1682 = 1;
    static Class93 aClass93_1683 = new Class93(64);
    static boolean aBoolean1685 = true;
-   static RSString aClass94_1687 = RSString.createRSString("(Z");
+   static RSString aClass94_1687 = RSString.of("(Z");
 
 
    static void method1760(int var0, int var2) {

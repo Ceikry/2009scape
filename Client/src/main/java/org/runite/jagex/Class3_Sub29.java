@@ -8,7 +8,7 @@ final class Class3_Sub29 extends Class3 {
    static CacheIndex aClass153_2581;
    static int anInt2582 = 0;
    static boolean isDynamicSceneGraph = false;
-   static RSString aClass94_2584 = RSString.createRSString("<)4col>");
+   static RSString aClass94_2584 = RSString.of("<)4col>");
    RSString aClass94_2586;
    static int anInt2587;
    static GameShell anApplet_Sub1_2588 = null;
@@ -124,7 +124,7 @@ final class Class3_Sub29 extends Class3 {
           var2 = var0.getBytes(StandardCharsets.ISO_8859_1);
 
           RSString var3 = new RSString();
-         var3.byteArray = var2;
+         var3.buffer = var2;
          var3.length = 0;
 
          for(int var4 = 0; var4 < var2.length; ++var4) {

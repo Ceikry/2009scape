@@ -1,5 +1,7 @@
 package org.runite.jagex;
 
+import org.rs09.client.util.ArrayUtils;
+
 final class Class12 {
 
    static float aFloat319;
@@ -11,7 +13,7 @@ final class Class12 {
    long aLong328;
    boolean aBoolean329 = false;
    int anInt330;
-   static RSString aClass94_331 = RSString.createRSString("(U1");
+   static RSString aClass94_331 = RSString.of("(U1");
 
 
    static void method870(int var0, byte var1, int var2, int var3, int var4, int var5) {
@@ -86,7 +88,7 @@ final class Class12 {
       try {
          int var2 = var1.length;
          byte[] var3 = new byte[var2];
-          Class76.method1357(var1, 0, var3, 0, var2);
+          ArrayUtils.arraycopy(var1, 0, var3, 0, var2);
           return var3;
       } catch (RuntimeException var4) {
          throw Class44.clientError(var4, "bm.D(" + (byte) 62 + ',' + (var1 != null?"{...}":"null") + ')');

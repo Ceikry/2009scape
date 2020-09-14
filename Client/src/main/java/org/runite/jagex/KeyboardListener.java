@@ -14,7 +14,7 @@ final class KeyboardListener implements KeyListener, FocusListener {
    static Class93 aClass93_1911 = new Class93(260);
    static int anInt1912;
    static int anInt1914;
-   static RSString aClass94_1915 = RSString.createRSString("Null");
+   static RSString aClass94_1915 = RSString.of("Null");
    static CacheIndex aClass153_1916;
    static int anInt1918 = 0;
 
@@ -57,6 +57,8 @@ final class KeyboardListener implements KeyListener, FocusListener {
 
    public final synchronized void keyPressed(KeyEvent var1) {
       try {
+         System.out.println("Key code: " + var1.getKeyCode());
+
          switch (var1.getKeyCode())
          {
             case 16:
@@ -105,12 +107,12 @@ final class KeyboardListener implements KeyListener, FocusListener {
              * Tab to reply
              */
 			if (var1.getKeyCode() == KeyEvent.VK_TAB) {
-				Class73.ClientCommands(RSString.createRSString("::reply"));
+				Class73.ClientCommands(RSString.of("::reply"));
 			}
 
 			if (var1.getKeyCode() == KeyEvent.VK_ESCAPE)
             {
-               Class73.ClientCommands(RSString.createRSString("::shutdowninterface"));
+               Class73.ClientCommands(RSString.of("::shutdowninterface"));
             }
 			
 			//causing issues when in other interfaces, such as GE interface. My quick thing impl didn't work - Jamix77

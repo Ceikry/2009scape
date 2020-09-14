@@ -1,4 +1,6 @@
 package org.runite.jagex;
+import org.rs09.client.util.ArrayUtils;
+
 import java.util.Objects;
 import java.util.Random;
 
@@ -257,11 +259,11 @@ final class Class3_Sub13_Sub25 extends Class3_Sub13 {
                   }
 
                   if(Class113.anInt1559 >= var16 + var15) {
-                     Class76.method1359(var18, var15, var16, var19);
+                     ArrayUtils.fill(var18, var15, var16, var19);
                   } else {
                      var20 = -var15 + Class113.anInt1559;
-                     Class76.method1359(var18, var15, var20, var19);
-                     Class76.method1359(var18, 0, -var20 + var16, var19);
+                     ArrayUtils.fill(var18, var15, var20, var19);
+                     ArrayUtils.fill(var18, 0, -var20 + var16, var19);
                   }
                } else {
                   var19 = var6 + -var17 - 1;
@@ -272,10 +274,10 @@ final class Class3_Sub13_Sub25 extends Class3_Sub13 {
 
                      if(Class113.anInt1559 < var15 - -var16) {
                         var20 = -var15 + Class113.anInt1559;
-                        Class76.method1359(var18, var15, var20, var8);
-                        Class76.method1359(var18, 0, var16 - var20, var8);
+                        ArrayUtils.fill(var18, var15, var20, var8);
+                        ArrayUtils.fill(var18, 0, var16 - var20, var8);
                      } else {
-                        Class76.method1359(var18, var15, var16, var8);
+                        ArrayUtils.fill(var18, var15, var16, var8);
                      }
                   } else {
                      var20 = var19 * var8 / var14;
@@ -294,25 +296,25 @@ final class Class3_Sub13_Sub25 extends Class3_Sub13 {
 
                      if(var16 + var15 > Class113.anInt1559) {
                         var21 = Class113.anInt1559 + -var15;
-                        Class76.method1359(var18, var15, var21, var20);
-                        Class76.method1359(var18, 0, -var21 + var16, var20);
+                        ArrayUtils.fill(var18, var15, var21, var20);
+                        ArrayUtils.fill(var18, 0, -var21 + var16, var20);
                      } else {
-                        Class76.method1359(var18, var15, var16, var20);
+                        ArrayUtils.fill(var18, var15, var16, var20);
                      }
                   }
                }
             }
          } else if(var3 - -var4 <= Class113.anInt1559) {
             for(var11 = 0; var11 < var6; ++var11) {
-               Class76.method1359(var7[var1 - -var11], var3, var4, var8);
+               ArrayUtils.fill(var7[var1 - -var11], var3, var4, var8);
             }
          } else {
             var11 = Class113.anInt1559 - var3;
 
             for(var12 = 0; var6 > var12; ++var12) {
                int[] var24 = var7[var12 + var1];
-               Class76.method1359(var24, var3, var11, var8);
-               Class76.method1359(var24, 0, -var11 + var4, var8);
+               ArrayUtils.fill(var24, var3, var11, var8);
+               ArrayUtils.fill(var24, 0, -var11 + var4, var8);
             }
          }
 

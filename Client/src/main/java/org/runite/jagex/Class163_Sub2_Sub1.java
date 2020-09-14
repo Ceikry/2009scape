@@ -21,7 +21,7 @@ final class Class163_Sub2_Sub1 extends Class163_Sub2 {
    static int anInt4019 = 0;
    static int anInt4020 = 0;
    static int anInt4021;
-   static RSString aClass94_4023 = RSString.createRSString(")3");
+   static RSString aClass94_4023 = RSString.of(")3");
    static int[] anIntArray4025 = new int[32];
    static int anInt4026 = 0;
    static LDIndexedSprite[] aClass109_Sub1Array4027;

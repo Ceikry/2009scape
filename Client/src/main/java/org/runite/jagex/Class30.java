@@ -1,4 +1,6 @@
 package org.runite.jagex;
+import org.rs09.client.util.ArrayUtils;
+
 import java.io.EOFException;
 import java.io.File;
 import java.io.IOException;
@@ -7,9 +9,9 @@ final class Class30 {
 
    private long aLong563;
    private final byte[] aByteArray564;
-   static RSString COMMAND_TOGGLE_FPSOFF = RSString.createRSString("::fpsoff");
+   static RSString COMMAND_TOGGLE_FPSOFF = RSString.of("::fpsoff");
    private int anInt566 = 0;
-   static RSString cmdChalReq = RSString.createRSString(":chalreq:");
+   static RSString cmdChalReq = RSString.of(":chalreq:");
    private long aLong568;
    private long aLong569;
    private long aLong570;
@@ -19,7 +21,7 @@ final class Class30 {
    static int[] anIntArray574 = new int[14];
    private int anInt575;
    private long aLong576 = -1L;
-   static RSString aClass94_577 = RSString.createRSString("http:)4)4");
+   static RSString aClass94_577 = RSString.of("http:)4)4");
    static float aFloat578;
    static boolean loadedWorldList = false;
 
@@ -54,7 +56,7 @@ final class Class30 {
 
             if(-1L < var3 && var3 < var5) {
                int var7 = (int)(-var3 + var5);
-               Class76.method1357(this.aByteArray572, (int)(var3 - this.aLong571), this.aByteArray564, (int)(var3 + -this.aLong576), var7);
+               ArrayUtils.arraycopy(this.aByteArray572, (int)(var3 - this.aLong571), this.aByteArray564, (int)(var3 + -this.aLong576), var7);
             }
 
             this.anInt566 = 0;
@@ -95,7 +97,7 @@ final class Class30 {
             }
 
             if(-1L != this.aLong571 && this.aLong569 >= this.aLong571 && (long)this.anInt566 + this.aLong571 >= (long)var3 + this.aLong569) {
-               Class76.method1357(this.aByteArray572, (int)(-this.aLong571 + this.aLong569), var2, var1, var3);
+               ArrayUtils.arraycopy(this.aByteArray572, (int)(-this.aLong571 + this.aLong569), var2, var1, var3);
                this.aLong569 += (long)var3;
                return;
             }
@@ -109,7 +111,7 @@ final class Class30 {
                   var9 = var3;
                }
 
-               Class76.method1357(this.aByteArray564, (int)(this.aLong569 - this.aLong576), var2, var1, var9);
+               ArrayUtils.arraycopy(this.aByteArray564, (int)(this.aLong569 - this.aLong576), var2, var1, var9);
                var1 += var9;
                var3 -= var9;
                this.aLong569 += (long)var9;
@@ -135,7 +137,7 @@ final class Class30 {
                   var9 = this.anInt575;
                }
 
-               Class76.method1357(this.aByteArray564, 0, var2, var1, var9);
+               ArrayUtils.arraycopy(this.aByteArray564, 0, var2, var1, var9);
                var3 -= var9;
                var1 += var9;
                this.aLong569 += (long)var9;
@@ -171,7 +173,7 @@ final class Class30 {
 
                if(-1L < var16 && var11 > var16) {
                   int var13 = (int)(var11 + -var16);
-                  Class76.method1357(this.aByteArray572, (int)(var16 + -this.aLong571), var2, (int)(var16 + -var5) + var1, var13);
+                  ArrayUtils.arraycopy(this.aByteArray572, (int)(var16 + -this.aLong571), var2, (int)(var16 + -var5) + var1, var13);
                   if(this.aLong569 < var11) {
                      var3 = (int)((long)var3 - (-this.aLong569 + var11));
                      this.aLong569 = var11;
@@ -263,7 +265,7 @@ final class Class30 {
             if(this.aLong571 != -1 && (long)this.aByteArray572.length + this.aLong571 < (long)var4 + this.aLong569) {
                int var5 = (int)((long)this.aByteArray572.length - this.aLong569 + this.aLong571);
                var4 -= var5;
-               Class76.method1357(var1, var2, this.aByteArray572, (int)(this.aLong569 + -this.aLong571), var5);
+               ArrayUtils.arraycopy(var1, var2, this.aByteArray572, (int)(this.aLong569 + -this.aLong571), var5);
                this.aLong569 += (long)var5;
                this.anInt566 = this.aByteArray572.length;
                this.method975((byte)93);
@@ -298,7 +300,7 @@ final class Class30 {
 
                if(var12 > -1 && var7 > var12) {
                   int var9 = (int)(-var12 + var7);
-                  Class76.method1357(var1, (int)(-this.aLong569 + var12 + (long)var2), this.aByteArray564, (int)(-this.aLong576 + var12), var9);
+                  ArrayUtils.arraycopy(var1, (int)(-this.aLong569 + var12 + (long)var2), this.aByteArray564, (int)(-this.aLong576 + var12), var9);
                }
 
                this.aLong569 += (long)var4;
@@ -310,7 +312,7 @@ final class Class30 {
                   this.aLong571 = this.aLong569;
                }
 
-               Class76.method1357(var1, var2, this.aByteArray572, (int)(this.aLong569 + -this.aLong571), var4);
+               ArrayUtils.arraycopy(var1, var2, this.aByteArray572, (int)(this.aLong569 + -this.aLong571), var4);
                this.aLong569 += (long)var4;
                if(-this.aLong571 + this.aLong569 > (long) this.anInt566) {
                   this.anInt566 = (int)(-this.aLong571 + this.aLong569);

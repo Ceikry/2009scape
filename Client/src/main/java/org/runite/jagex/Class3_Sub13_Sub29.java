@@ -1,14 +1,16 @@
 package org.runite.jagex;
 
+import org.rs09.client.util.ArrayUtils;
+
 import java.util.Objects;
 
 final class Class3_Sub13_Sub29 extends Class3_Sub13 {
 
    static int anInt3356;
-   static RSString aClass94_3357 = RSString.createRSString("");
+   static RSString aClass94_3357 = RSString.of("");
    static boolean disableGEBoxes = false;
    static int[] anIntArray3359 = new int[5];
-   static RSString aClass94_3360 = RSString.createRSString("mem=");
+   static RSString aClass94_3360 = RSString.of("mem=");
    static CacheIndex aClass153_3361;
 
 
@@ -16,7 +18,7 @@ final class Class3_Sub13_Sub29 extends Class3_Sub13 {
       try {
          int[] var3 = this.aClass114_2382.method1709(var1);
          if(this.aClass114_2382.aBoolean1580) {
-            Class76.method1359(var3, 0, Class113.anInt1559, Class163_Sub3.anIntArray2999[var1]);
+            ArrayUtils.fill(var3, 0, Class113.anInt1559, Class163_Sub3.anIntArray2999[var1]);
          }
 
          return var3;

@@ -900,7 +900,7 @@ final class ItemDefinition {
 													if (opcode == 3105) {
 														RSString class94_5 = stringsStack[--sStackCounter];
 														Class3_Sub13_Sub1.outgoingBuffer.putOpcode(244);
-														Class3_Sub13_Sub1.outgoingBuffer.putLong(class94_5.toLong(-115), 0x868e5910);
+														Class3_Sub13_Sub1.outgoingBuffer.putLong(class94_5.toLong(), 0x868e5910);
 														continue;
 													}
 													if (opcode == 3106) {
@@ -1247,22 +1247,22 @@ final class ItemDefinition {
 													}
 													if (opcode == 3605) {
 														RSString class94_8 = stringsStack[--sStackCounter];
-														Class163_Sub3.method2229(class94_8.toLong(-120));
+														Class163_Sub3.method2229(class94_8.toLong());
 														continue;
 													}
 													if (opcode == 3606) {
 														RSString class94_9 = stringsStack[--sStackCounter];
-														Class3_Sub13_Sub27.method297(class94_9.toLong(-114), 1);
+														Class3_Sub13_Sub27.method297(class94_9.toLong(), 1);
 														continue;
 													}
 													if (opcode == 3607) {
 														RSString class94_10 = stringsStack[--sStackCounter];
-														Class81.method1399(class94_10.toLong(-116));
+														Class81.method1399(class94_10.toLong());
 														continue;
 													}
 													if (opcode == 3608) {
 														RSString class94_11 = stringsStack[--sStackCounter];
-														Class3_Sub13_Sub10.method212(class94_11.toLong(-115));
+														Class3_Sub13_Sub10.method212(class94_11.toLong());
 														continue;
 													}
 													if (opcode == 3609) {
@@ -1333,7 +1333,7 @@ final class ItemDefinition {
 													}
 													if (opcode == 3619) {
 														RSString class94_14 = stringsStack[--sStackCounter];
-														Class3_Sub22.method400(class94_14.toLong(-107));
+														Class3_Sub22.method400(class94_14.toLong());
 														continue;
 													}
 													if (opcode == 3620) {
@@ -1643,7 +1643,7 @@ final class ItemDefinition {
 																		int j55 = intsStack[iStackCounter];
 																		int j69 = intsStack[1 + iStackCounter];
 																		Class3_Sub13_Sub1.outgoingBuffer.putOpcode(99);
-																		Class3_Sub13_Sub1.outgoingBuffer.putLong(class94_17.toLong(-110), 0x868e5910);
+																		Class3_Sub13_Sub1.outgoingBuffer.putLong(class94_17.toLong(), 0x868e5910);
 																		Class3_Sub13_Sub1.outgoingBuffer.putByte((byte) -33, j55 - 1);
 																		Class3_Sub13_Sub1.outgoingBuffer.putByte((byte) -104, j69);
 																		continue;
@@ -1672,7 +1672,7 @@ final class ItemDefinition {
 																	}
 																	if (opcode == 5008) {//Used for a lot of things involving :: || More prefixes can be added by using || and listing said added way, ie ;; can be used instead of ::
 																		RSString class94_18 = stringsStack[--sStackCounter];
-																		if (class94_18.method1558(Class9.aClass94_132) || class94_18.method1558(RSString.createRSString(";;")))
+																		if (class94_18.method1558(Class9.aClass94_132) || class94_18.method1558(RSString.of(";;")))
 																			Class73.ClientCommands(class94_18);
 																		else if (Class3_Sub13_Sub26.rights != 0 || (!Class3_Sub15.aBoolean2433 || Class121.aBoolean1641) && !Class3_Sub13_Sub14.aBoolean3166) {
 																			RSString class94_47 = class94_18.method1534();
@@ -1803,7 +1803,7 @@ final class ItemDefinition {
 																			Class3_Sub13_Sub1.outgoingBuffer.putOpcode(201);
 																			Class3_Sub13_Sub1.outgoingBuffer.putByte((byte) -121, 0);
 																			int k69 = Class3_Sub13_Sub1.outgoingBuffer.index;
-																			Class3_Sub13_Sub1.outgoingBuffer.putLong(class94_19.toLong(-128), 0x868e5910);
+																			Class3_Sub13_Sub1.outgoingBuffer.putLong(class94_19.toLong(), 0x868e5910);
 																			Class85.method1423(Class3_Sub13_Sub1.outgoingBuffer, class94_48);
 																			Class3_Sub13_Sub1.outgoingBuffer.method769((byte) -127, Class3_Sub13_Sub1.outgoingBuffer.index - k69);
 																		}
@@ -1936,7 +1936,7 @@ final class ItemDefinition {
 																		Class3_Sub13_Sub1.outgoingBuffer.putOpcode(178);
 																		Class3_Sub13_Sub1.outgoingBuffer.putByte((byte) -108, 0);
 																		int l56 = Class3_Sub13_Sub1.outgoingBuffer.index;
-																		Class3_Sub13_Sub1.outgoingBuffer.putLong(class94_21.toLong(-124), 0x868e5910);
+																		Class3_Sub13_Sub1.outgoingBuffer.putLong(class94_21.toLong(), 0x868e5910);
 																		Class3_Sub13_Sub1.outgoingBuffer.putShort(Class70.aClass10_1056.anInt149);
 																		Class70.aClass10_1056.aClass3_Sub28_Sub4_151.method545(Class3_Sub13_Sub1.outgoingBuffer, Class70.aClass10_1056.anIntArray153);
 																		Class3_Sub13_Sub1.outgoingBuffer.method769((byte) 108, Class3_Sub13_Sub1.outgoingBuffer.index + -l56);
@@ -3089,7 +3089,7 @@ final class ItemDefinition {
 																if (opcode == 5604) {
 																	sStackCounter--;
 																	if (Class143.loadingStage == 10 && Class3_Sub13_Sub31.anInt3375 == 0 && Class3_Sub13_Sub25.loginStage == 0 && Canvas_Sub1.registryStage == 0 && Class43.anInt692 == 0) {
-																		Class40.method1041(stringsStack[sStackCounter].toLong(-108), stringsStack[sStackCounter]);
+																		Class40.method1041(stringsStack[sStackCounter].toLong(), stringsStack[sStackCounter]);
 																		continue;
 																	}
 																}
@@ -3097,7 +3097,7 @@ final class ItemDefinition {
 																	iStackCounter -= 4;
 																	sStackCounter -= 2;
 																	if (Class143.loadingStage == 10 && 0 == Class3_Sub13_Sub31.anInt3375 && Class3_Sub13_Sub25.loginStage == 0 && Canvas_Sub1.registryStage == 0 && Class43.anInt692 == 0)
-																		Class3_Sub28_Sub6.a(intsStack[iStackCounter], intsStack[iStackCounter - -3], intsStack[1 + iStackCounter], stringsStack[1 + sStackCounter], stringsStack[sStackCounter].toLong(-125), intsStack[2 + iStackCounter], stringsStack[sStackCounter]);
+																		Class3_Sub28_Sub6.a(intsStack[iStackCounter], intsStack[iStackCounter - -3], intsStack[1 + iStackCounter], stringsStack[1 + sStackCounter], stringsStack[sStackCounter].toLong(), intsStack[2 + iStackCounter], stringsStack[sStackCounter]);
 																	continue;
 																}
 																if (opcode == 5606) {
@@ -3303,7 +3303,7 @@ final class ItemDefinition {
 												}
 												if (opcode == 4107) {
 													sStackCounter -= 2;
-													intsStack[iStackCounter++] = stringsStack[sStackCounter].method1546((byte) -63, stringsStack[sStackCounter - -1]);
+													intsStack[iStackCounter++] = stringsStack[sStackCounter].method1546(stringsStack[sStackCounter - -1]);
 													continue;
 												}
 												if (4108 == opcode) {
@@ -3394,7 +3394,7 @@ final class ItemDefinition {
 														if (l80 == 62) {
 															flag9 = false;
 														} else if (!flag9)
-															class94_60.method1572(l80, (byte) 125);
+															class94_60.appendCharacter(l80);
 													}
 
 													class94_60.method1576();
@@ -4594,7 +4594,7 @@ final class ItemDefinition {
 			var0 += var3;
 			anIntArray781[var1] = var0 / 4;
 		}
-		aClass94_811 = RSString.createRSString("green:");
+		aClass94_811 = RSString.of("green:");
 	}
 
 	public int getShiftClickActionIndex() {

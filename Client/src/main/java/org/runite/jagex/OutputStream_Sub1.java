@@ -1,4 +1,6 @@
 package org.runite.jagex;
+import org.rs09.client.util.ArrayUtils;
+
 import java.io.IOException;
 import java.io.OutputStream;
 
@@ -17,7 +19,7 @@ final class OutputStream_Sub1 extends OutputStream {
             return null;
          } else {
             short[] var2 = new short[var1.length];
-            Class76.method1361(var1, 0, var2, 0, var1.length);
+            ArrayUtils.arraycopy(var1, 0, var2, 0, var1.length);
             return var2;
          }
       } catch (RuntimeException var3) {

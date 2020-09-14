@@ -308,7 +308,7 @@ final class Class2 {
 			LDIndexedSprite var3 = (LDIndexedSprite)Class3_Sub13_Sub31.aClass93_3369.get((long)(var1 << 16 | this.anInt64));
 			if(var3 == null) {
 				KeyboardListener.aClass153_1916.method2144(this.anInt64);
-				var3 = RSString.method1539(this.anInt64, KeyboardListener.aClass153_1916);
+				var3 = Unsorted.method1539(this.anInt64, KeyboardListener.aClass153_1916);
 				if(var3 != null) {
 					var3.method1668(Class102.anInt2136, Class46.anInt740, Class158.anInt2015);
 					var3.anInt1469 = var3.anInt1461;
@@ -395,7 +395,7 @@ final class Class2 {
 					var1.anInt182 = 150;
 					var1.anInt308 = 2047 & (int) (256.0D * Math.sin((double) Class44.anInt719 / 40.0D));
 					var1.modelType = 5;
-					var1.itemId = 2047 + ((int) Class102.player.displayName.toLong((byte) -128 + 18) << 11);
+					var1.itemId = 2047 + ((int) Class102.player.displayName.toLong() << 11);
 					var1.anInt260 = Class102.player.anInt2793;
 					var1.anInt267 = 0;
 					var1.animationId = Class102.player.anInt2764;

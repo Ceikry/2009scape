@@ -20,107 +20,107 @@ public class TextCore {
     /**Login Screen Text
      * Files that use these texts:
      */
-    static RSString RSLoadingPleaseWait = RSString.createRSString(GameLaunch.SETTINGS.getName() + " is loading )2 please wait)3)3)3");
-    static RSString LoadingConfig = RSString.createRSString("Loading config )2 ");
-    static RSString LoadedConfig = RSString.createRSString("Loaded config");
-    static RSString LoadingSprites = RSString.createRSString("Loading sprites )2 ");
-    static RSString LoadedSprites = RSString.createRSString("Loaded sprites");
-    static RSString LoadingWLD = RSString.createRSString("Loading world list data");
-    static RSString LoadedWLD = RSString.createRSString("Loaded world list data");
-    static RSString LoadingPleaseWait = RSString.createRSString("Please wait)3)3)3");
-    static RSString LoadingPleaseWait2 = RSString.createRSString("Loading )2 please wait)3");
-    static RSString LoadingFonts = RSString.createRSString("Loading fonts )2 ");
-    static RSString LoadedFonts = RSString.createRSString("Loaded fonts");
-    static RSString LoadedWordPack = RSString.createRSString("Loaded wordpack");
-    static RSString LoadingTextures = RSString.createRSString("Loading textures )2 ");
-    static RSString LoadedTextures = RSString.createRSString("Loaded textures");
-    static RSString LoadingInterfaces = RSString.createRSString("Loading interfaces )2 ");
-    static RSString LoadedInterfaces = RSString.createRSString("Loaded interfaces");
-    static RSString LoadingTitleScreen = RSString.createRSString("Loading title screen )2 ");
-    static RSString LoadingGeneral = RSString.createRSString("Loading)3)3)3");
-    static RSString LoadingWordPack = RSString.createRSString("Loading wordpack )2 ");
-    static RSString LoadingConnecting = RSString.createRSString("Connecting.. This takes a LONG time.");
-    static RSString LoadedUpdateList = RSString.createRSString("Loaded update list");
-    static RSString AttemptingReestablish = RSString.createRSString("Please wait )2 attempting to reestablish)3");
-    static RSString CreatedWorld = RSString.createRSString("Created gameworld");
-    static RSString CheckingForUpdates = RSString.createRSString("Checking for updates )2 ");
-    static RSString LoadedInputHandler = RSString.createRSString("Loaded input handler");
-    static RSString OpenedTitleScreen = RSString.createRSString("Opened title screen");
-    static RSString LoadedTitleScreen = RSString.createRSString("Loaded title screen");
-    static RSString Starting3DLibrary = RSString.createRSString("Starting 3d Library");
-    static RSString Started3DLibrary = RSString.createRSString("Started 3d Library");
-    static RSString AllocatingMemory = RSString.createRSString("Allocating memory");
-    static RSString AllocatedMemory = RSString.createRSString("Allocated memory");
-    static RSString PreparedSoundEngine = RSString.createRSString("Prepared sound engine");
-    static RSString ConxLost = RSString.createRSString("Connection lost)3");
-    static RSString ConxUpdateServer = RSString.createRSString("Connected to update server");
+    static RSString RSLoadingPleaseWait = RSString.of(GameLaunch.SETTINGS.getName() + " is loading )2 please wait)3)3)3");
+    static RSString LoadingConfig = RSString.of("Loading config )2 ");
+    static RSString LoadedConfig = RSString.of("Loaded config");
+    static RSString LoadingSprites = RSString.of("Loading sprites )2 ");
+    static RSString LoadedSprites = RSString.of("Loaded sprites");
+    static RSString LoadingWLD = RSString.of("Loading world list data");
+    static RSString LoadedWLD = RSString.of("Loaded world list data");
+    static RSString LoadingPleaseWait = RSString.of("Please wait)3)3)3");
+    static RSString LoadingPleaseWait2 = RSString.of("Loading )2 please wait)3");
+    static RSString LoadingFonts = RSString.of("Loading fonts )2 ");
+    static RSString LoadedFonts = RSString.of("Loaded fonts");
+    static RSString LoadedWordPack = RSString.of("Loaded wordpack");
+    static RSString LoadingTextures = RSString.of("Loading textures )2 ");
+    static RSString LoadedTextures = RSString.of("Loaded textures");
+    static RSString LoadingInterfaces = RSString.of("Loading interfaces )2 ");
+    static RSString LoadedInterfaces = RSString.of("Loaded interfaces");
+    static RSString LoadingTitleScreen = RSString.of("Loading title screen )2 ");
+    static RSString LoadingGeneral = RSString.of("Loading)3)3)3");
+    static RSString LoadingWordPack = RSString.of("Loading wordpack )2 ");
+    static RSString LoadingConnecting = RSString.of("Connecting.. This takes a LONG time.");
+    static RSString LoadedUpdateList = RSString.of("Loaded update list");
+    static RSString AttemptingReestablish = RSString.of("Please wait )2 attempting to reestablish)3");
+    static RSString CreatedWorld = RSString.of("Created gameworld");
+    static RSString CheckingForUpdates = RSString.of("Checking for updates )2 ");
+    static RSString LoadedInputHandler = RSString.of("Loaded input handler");
+    static RSString OpenedTitleScreen = RSString.of("Opened title screen");
+    static RSString LoadedTitleScreen = RSString.of("Loaded title screen");
+    static RSString Starting3DLibrary = RSString.of("Starting 3d Library");
+    static RSString Started3DLibrary = RSString.of("Started 3d Library");
+    static RSString AllocatingMemory = RSString.of("Allocating memory");
+    static RSString AllocatedMemory = RSString.of("Allocated memory");
+    static RSString PreparedSoundEngine = RSString.of("Prepared sound engine");
+    static RSString ConxLost = RSString.of("Connection lost)3");
+    static RSString ConxUpdateServer = RSString.of("Connected to update server");
 
     /**User Login/ User Text
      *
      */
-    static RSString HasExpires = RSString.createRSString("; Expires=");
-    static RSString HasMaxAge = RSString.createRSString("; Max)2Age=");
-    static RSString HasAgeExpire = RSString.createRSString("; Expires=Thu)1 01)2Jan)21970 00:00:00 GMT; Max)2Age=0");
-    static RSString HasLoggedIn = RSString.createRSString(" has logged in)3");
-    static RSString HasLoggedOut = RSString.createRSString(" has logged out)3");
-    static RSString HasFriendsListFull = RSString.createRSString("Your friend list is full)3 Max of 100 for free users)1 and 200 for members)3");
-    static RSString HasIgnoreListFull = RSString.createRSString("Your ignore list is full)3 Max of 100 users)3");
-    static RSString HasOnOwnFriendsList = RSString.createRSString("You can(Wt add yourself to your own friend list)3");
-    static RSString HasOnOwnIgnoreList = RSString.createRSString("You can(Wt add yourself to your own ignore list)3");
-    static RSString HasPleaseRemove = RSString.createRSString("Please remove ");
-    static RSString HasIgnoreToFriends = RSString.createRSString(" from your ignore list first)3");
-    static RSString HasFriendsToIgnore = RSString.createRSString(" from your friend list first)3");
-    static RSString HasFriendsAlready = RSString.createRSString(" is already on your friend list)3");
-    static RSString HasIgnoreAlready = RSString.createRSString(" is already on your ignore list)3");
-    static RSString HasWishToTrade = RSString.createRSString("wishes to trade with you)3");
-    static RSString HasAttack = RSString.createRSString("Attack");
-    static RSString HasUse = RSString.createRSString("Use");
-    static RSString HasExamine = RSString.createRSString("Examine");
-    static RSString HasTake = RSString.createRSString("Take");
-    static RSString HasWalkHere = RSString.createRSString("Walk here");
-    static RSString HasDrop = RSString.createRSString("Drop");
-    static RSString HasDiscard = RSString.createRSString("Discard");
-    static RSString HasHidden = RSString.createRSString("Hidden");
-    static RSString HasNull = RSString.createRSString("null");
-    static RSString HasCancel = RSString.createRSString("Cancel");
-    static RSString HasFaceHere = RSString.createRSString("Face here");
-    static RSString HasContinue = RSString.createRSString("Continue");
-    static RSString HasClose = RSString.createRSString("Close");
-    static RSString HasOK = RSString.createRSString("Ok");
-    static RSString HasSelect = RSString.createRSString("Select");
-    static RSString HasChooseOptions = RSString.createRSString("Choose Option");
-    static RSString HasMoreOptions = RSString.createRSString(" more options");
-    static RSString HasUnableFind = RSString.createRSString("Unable to find ");
-    static RSString HasSkill = RSString.createRSString("skill: ");
-    static RSString HasScroll = RSString.createRSString("scroll:");
-    static RSString HasLevel = RSString.createRSString("level: ");
-    static RSString HasRating = RSString.createRSString("rating: ");
+    static RSString HasExpires = RSString.of("; Expires=");
+    static RSString HasMaxAge = RSString.of("; Max)2Age=");
+    static RSString HasAgeExpire = RSString.of("; Expires=Thu)1 01)2Jan)21970 00:00:00 GMT; Max)2Age=0");
+    static RSString HasLoggedIn = RSString.of(" has logged in)3");
+    static RSString HasLoggedOut = RSString.of(" has logged out)3");
+    static RSString HasFriendsListFull = RSString.of("Your friend list is full)3 Max of 100 for free users)1 and 200 for members)3");
+    static RSString HasIgnoreListFull = RSString.of("Your ignore list is full)3 Max of 100 users)3");
+    static RSString HasOnOwnFriendsList = RSString.of("You can(Wt add yourself to your own friend list)3");
+    static RSString HasOnOwnIgnoreList = RSString.of("You can(Wt add yourself to your own ignore list)3");
+    static RSString HasPleaseRemove = RSString.of("Please remove ");
+    static RSString HasIgnoreToFriends = RSString.of(" from your ignore list first)3");
+    static RSString HasFriendsToIgnore = RSString.of(" from your friend list first)3");
+    static RSString HasFriendsAlready = RSString.of(" is already on your friend list)3");
+    static RSString HasIgnoreAlready = RSString.of(" is already on your ignore list)3");
+    static RSString HasWishToTrade = RSString.of("wishes to trade with you)3");
+    static RSString HasAttack = RSString.of("Attack");
+    static RSString HasUse = RSString.of("Use");
+    static RSString HasExamine = RSString.of("Examine");
+    static RSString HasTake = RSString.of("Take");
+    static RSString HasWalkHere = RSString.of("Walk here");
+    static RSString HasDrop = RSString.of("Drop");
+    static RSString HasDiscard = RSString.of("Discard");
+    static RSString HasHidden = RSString.of("Hidden");
+    static RSString HasNull = RSString.of("null");
+    static RSString HasCancel = RSString.of("Cancel");
+    static RSString HasFaceHere = RSString.of("Face here");
+    static RSString HasContinue = RSString.of("Continue");
+    static RSString HasClose = RSString.of("Close");
+    static RSString HasOK = RSString.of("Ok");
+    static RSString HasSelect = RSString.of("Select");
+    static RSString HasChooseOptions = RSString.of("Choose Option");
+    static RSString HasMoreOptions = RSString.of(" more options");
+    static RSString HasUnableFind = RSString.of("Unable to find ");
+    static RSString HasSkill = RSString.of("skill: ");
+    static RSString HasScroll = RSString.of("scroll:");
+    static RSString HasLevel = RSString.of("level: ");
+    static RSString HasRating = RSString.of("rating: ");
 
     /**Money values (K (Thousand)), (M (Million))
      *
      */
-    static RSString ThousandK = RSString.createRSString("K");
-    static RSString MillionM = RSString.createRSString("M");
+    static RSString ThousandK = RSString.of("K");
+    static RSString MillionM = RSString.of("M");
 
 
-    static RSString HasDuelFriend = RSString.createRSString(":duelfriend:");
-    static RSString HasDuelStake = RSString.createRSString(":duelstake:");
-    static RSString HasTradeRequest = RSString.createRSString(":tradereq:");
-    static RSString HasTrade = RSString.createRSString(":trade:");
-    static RSString HasAssist = RSString.createRSString(":assist:");
-    static RSString HasAssistRequest = RSString.createRSString(":assistreq:");
-    static RSString HasClanRequest = RSString.createRSString(":clanreq:");
-    static RSString HasClan = RSString.createRSString(":clan:");
-    static RSString HasAllyReq = RSString.createRSString(":allyreq:");
+    static RSString HasDuelFriend = RSString.of(":duelfriend:");
+    static RSString HasDuelStake = RSString.of(":duelstake:");
+    static RSString HasTradeRequest = RSString.of(":tradereq:");
+    static RSString HasTrade = RSString.of(":trade:");
+    static RSString HasAssist = RSString.of(":assist:");
+    static RSString HasAssistRequest = RSString.of(":assistreq:");
+    static RSString HasClanRequest = RSString.of(":clanreq:");
+    static RSString HasClan = RSString.of(":clan:");
+    static RSString HasAllyReq = RSString.of(":allyreq:");
 
 
     /**Archive Info for client cache lookup
      *
      */
-    static RSString HasLabels = RSString.createRSString("_labels");
-    static RSString HasPlayerLabels = RSString.createRSString("_labels");
-    static RSString HasULLookUp = RSString.createRSString("ul");
-    static RSString HasHuffman = RSString.createRSString("huffman");
+    static RSString HasLabels = RSString.of("_labels");
+    static RSString HasPlayerLabels = RSString.of("_labels");
+    static RSString HasULLookUp = RSString.of("ul");
+    static RSString HasHuffman = RSString.of("huffman");
 
 
     /**Colored Text Commands * For Color editing use ColorCore.java
@@ -129,22 +129,22 @@ public class TextCore {
      * red: purple: etc.
      */
 
-    static RSString TextColorYellow = RSString.createRSString("yellow:");
-    static RSString TextColorRed = RSString.createRSString("red:");
-    static RSString TextColorGreen = RSString.createRSString("green:");
-    static RSString TextColorCyan = RSString.createRSString("cyan:");
-    static RSString TextColorPurple = RSString.createRSString("purple:");
-    static RSString TextColorWhite = RSString.createRSString("white:");
-    static RSString TextFlashOne = RSString.createRSString("flash1:");
-    static RSString TextFlashTwo = RSString.createRSString("flash2:");
-    static RSString TextFlashThree = RSString.createRSString("flash3:");
-    static RSString TextGlowOne = RSString.createRSString("glow1:");
-    static RSString TextGlowTwo = RSString.createRSString("glow2:");
-    static RSString TextGlowThree = RSString.createRSString("glow3:");
-    static RSString TextWave = RSString.createRSString("wave:");
-    static RSString TextWaveTwo = RSString.createRSString("wave2:");
-    static RSString TextShake = RSString.createRSString("shake:");
-    static RSString TextSlide = RSString.createRSString("slide:");
+    static RSString TextColorYellow = RSString.of("yellow:");
+    static RSString TextColorRed = RSString.of("red:");
+    static RSString TextColorGreen = RSString.of("green:");
+    static RSString TextColorCyan = RSString.of("cyan:");
+    static RSString TextColorPurple = RSString.of("purple:");
+    static RSString TextColorWhite = RSString.of("white:");
+    static RSString TextFlashOne = RSString.of("flash1:");
+    static RSString TextFlashTwo = RSString.of("flash2:");
+    static RSString TextFlashThree = RSString.of("flash3:");
+    static RSString TextGlowOne = RSString.of("glow1:");
+    static RSString TextGlowTwo = RSString.of("glow2:");
+    static RSString TextGlowThree = RSString.of("glow3:");
+    static RSString TextWave = RSString.of("wave:");
+    static RSString TextWaveTwo = RSString.of("wave2:");
+    static RSString TextShake = RSString.of("shake:");
+    static RSString TextSlide = RSString.of("slide:");
 
 
 
@@ -152,34 +152,34 @@ public class TextCore {
     /**Months of the year
      * This was being accessed multiple times for other methods
      */
-    static RSString[] MonthsOfTheYear = new RSString[]{RSString.createRSString("Jan"),
-                                                       RSString.createRSString("Feb"),
-                                                       RSString.createRSString("Mar"),
-                                                       RSString.createRSString("Apr"),
-                                                       RSString.createRSString("May"),
-                                                       RSString.createRSString("Jun"),
-                                                       RSString.createRSString("Jul"),
-                                                       RSString.createRSString("Aug"),
-                                                       RSString.createRSString("Sep"),
-                                                       RSString.createRSString("Oct"),
-                                                       RSString.createRSString("Nov"),
-                                                       RSString.createRSString("Dec")};
+    static RSString[] MonthsOfTheYear = new RSString[]{RSString.of("Jan"),
+                                                       RSString.of("Feb"),
+                                                       RSString.of("Mar"),
+                                                       RSString.of("Apr"),
+                                                       RSString.of("May"),
+                                                       RSString.of("Jun"),
+                                                       RSString.of("Jul"),
+                                                       RSString.of("Aug"),
+                                                       RSString.of("Sep"),
+                                                       RSString.of("Oct"),
+                                                       RSString.of("Nov"),
+                                                       RSString.of("Dec")};
 
-    static RSString[] DaysOfTheWeek = new RSString[]{  RSString.createRSString("Sun"),
-                                                       RSString.createRSString("Mon"),
-                                                       RSString.createRSString("Tue"),
-                                                       RSString.createRSString("Wed"),
-                                                       RSString.createRSString("Thu"),
-                                                       RSString.createRSString("Fri"),
-                                                       RSString.createRSString("Sat")};
+    static RSString[] DaysOfTheWeek = new RSString[]{  RSString.of("Sun"),
+                                                       RSString.of("Mon"),
+                                                       RSString.of("Tue"),
+                                                       RSString.of("Wed"),
+                                                       RSString.of("Thu"),
+                                                       RSString.of("Fri"),
+                                                       RSString.of("Sat")};
 
 
     /**Unsorted
      *
      */
-    static RSString Memoryk = RSString.createRSString("k");
-    static RSString Spacer = RSString.createRSString(" ");
-    static RSString MembersObject = RSString.createRSString("Members object");
+    static RSString Memoryk = RSString.of("k");
+    static RSString Spacer = RSString.of(" ");
+    static RSString MembersObject = RSString.of("Members object");
 
     /**Fonts
      *

@@ -8,7 +8,7 @@ final class Class163_Sub1_Sub1 extends Class163_Sub1 {
 
    static byte[] aByteArray4005 = new byte[]{(byte)95, (byte)97, (byte)98, (byte)99, (byte)100, (byte)101, (byte)102, (byte)103, (byte)104, (byte)105, (byte)106, (byte)107, (byte)108, (byte)109, (byte)110, (byte)111, (byte)112, (byte)113, (byte)114, (byte)115, (byte)116, (byte)117, (byte)118, (byte)119, (byte)120, (byte)121, (byte)122, (byte)48, (byte)49, (byte)50, (byte)51, (byte)52, (byte)53, (byte)54, (byte)55, (byte)56, (byte)57};
    static int anInt4006;
-   static RSString aClass94_4007 = RSString.createRSString(":");
+   static RSString aClass94_4007 = RSString.of(":");
    static boolean[] aBooleanArray4008 = new boolean[100];
    static int[] anIntArray4009 = new int[5];
    static int[][] anIntArrayArray4010 = new int[104][104];

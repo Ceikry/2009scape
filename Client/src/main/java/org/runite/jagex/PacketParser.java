@@ -11,7 +11,7 @@ final class PacketParser {
     static Class61 aClass61_82 = new Class61();
     static short aShort83 = 32767;
     static RenderAnimationDefinition aClass16_84 = new RenderAnimationDefinition();
-    static RSString aClass94_85 = RSString.createRSString("overlay");
+    static RSString aClass94_85 = RSString.of("overlay");
     static int anInt86 = 0;
     static int anInt87 = 0;
     static RSInterface aClass11_88 = null;
@@ -152,9 +152,9 @@ final class PacketParser {
                                 RSString var41;
                                 if (RSString.incomingOpcode == 70) {
                                     RSString message = GraphicDefinition.incomingBuffer.getString();
-                                    if (message.endsWith((byte) -60, TextCore.HasTradeRequest)) {
+                                    if (message.endsWith(TextCore.HasTradeRequest)) {
                                         playerName = message.method1557(message.indexOf(Class155.char_colon, 65), 0, 0);
-                                        nameAsLong = playerName.toLong(-128);
+                                        nameAsLong = playerName.toLong();
                                         isIgnored = false;
 
                                         for (var30 = 0; Class3_Sub28_Sub5.anInt3591 > var30; ++var30) {
@@ -167,9 +167,9 @@ final class PacketParser {
                                         if (!isIgnored && inTutorialIsland == 0) {
                                             Class3_Sub30_Sub1.addChatMessage(playerName, 4, TextCore.HasWishToTrade, (byte) -83 + 82);
                                         }
-                                    } else if (message.endsWith((byte) -47, Class30.cmdChalReq)) {
+                                    } else if (message.endsWith(Class30.cmdChalReq)) {
                                         playerName = message.method1557(message.indexOf(Class155.char_colon, 75), 0, 0);
-                                        nameAsLong = playerName.toLong(-110);
+                                        nameAsLong = playerName.toLong();
                                         isIgnored = false;
 
                                         for (var30 = 0; var30 < Class3_Sub28_Sub5.anInt3591; ++var30) {
@@ -183,10 +183,10 @@ final class PacketParser {
                                             var41 = message.method1557(message.length((byte) -83 + -16) + -9, (byte) -83 ^ -83, 1 + message.indexOf(Class155.char_colon, 101));
                                             Class3_Sub30_Sub1.addChatMessage(playerName, 8, var41, (byte) -83 ^ 82);
                                         }
-                                    } else if (message.endsWith((byte) -98, TextCore.HasAssistRequest)) {
+                                    } else if (message.endsWith(TextCore.HasAssistRequest)) {
                                         isIgnored = false;
                                         playerName = message.method1557(message.indexOf(Class155.char_colon, 96), 0, 0);
-                                        nameAsLong = playerName.toLong(-109);
+                                        nameAsLong = playerName.toLong();
 
                                         for (var30 = 0; var30 < Class3_Sub28_Sub5.anInt3591; ++var30) {
                                             if (nameAsLong == Class114.ignores[var30]) {
@@ -198,23 +198,23 @@ final class PacketParser {
                                         if (!isIgnored && inTutorialIsland == 0) {
                                             Class3_Sub30_Sub1.addChatMessage(playerName, 10, Class3_Sub28_Sub14.aClass94_3672, -1);
                                         }
-                                    } else if (message.endsWith((byte) -128, TextCore.HasClan)) {
+                                    } else if (message.endsWith(TextCore.HasClan)) {
                                         playerName = message.method1557(message.indexOf(TextCore.HasClan, (byte) -83 ^ -50), 0, 0);
                                         Class3_Sub30_Sub1.addChatMessage(Class3_Sub28_Sub14.aClass94_3672, 11, playerName, -1);
-                                    } else if (message.endsWith((byte) -29, TextCore.HasTrade)) {
+                                    } else if (message.endsWith(TextCore.HasTrade)) {
                                         playerName = message.method1557(message.indexOf(TextCore.HasTrade, 102), 0, 0);
                                         if (0 == inTutorialIsland) {
                                             Class3_Sub30_Sub1.addChatMessage(Class3_Sub28_Sub14.aClass94_3672, 12, playerName, -1);
                                         }
-                                    } else if (message.endsWith((byte) -80, TextCore.HasAssist)) {
+                                    } else if (message.endsWith(TextCore.HasAssist)) {
                                         playerName = message.method1557(message.indexOf(TextCore.HasAssist, 121), 0, 0);
                                         if (inTutorialIsland == 0) {
                                             Class3_Sub30_Sub1.addChatMessage(Class3_Sub28_Sub14.aClass94_3672, 13, playerName, -1);
                                         }
-                                    } else if (message.endsWith((byte) -42, TextCore.HasDuelStake)) {
+                                    } else if (message.endsWith(TextCore.HasDuelStake)) {
                                         isIgnored = false;
                                         playerName = message.method1557(message.indexOf(Class155.char_colon, 115), 0, 0);
-                                        nameAsLong = playerName.toLong(-118);
+                                        nameAsLong = playerName.toLong();
 
                                         for (var30 = 0; Class3_Sub28_Sub5.anInt3591 > var30; ++var30) {
                                             if (nameAsLong == Class114.ignores[var30]) {
@@ -226,10 +226,10 @@ final class PacketParser {
                                         if (!isIgnored && inTutorialIsland == 0) {
                                             Class3_Sub30_Sub1.addChatMessage(playerName, 14, Class3_Sub28_Sub14.aClass94_3672, -1);
                                         }
-                                    } else if (message.endsWith((byte) -41, TextCore.HasDuelFriend)) {
+                                    } else if (message.endsWith(TextCore.HasDuelFriend)) {
                                         playerName = message.method1557(message.indexOf(Class155.char_colon, 118), 0, 0);
                                         isIgnored = false;
-                                        nameAsLong = playerName.toLong(-120);
+                                        nameAsLong = playerName.toLong();
 
                                         for (var30 = 0; var30 < Class3_Sub28_Sub5.anInt3591; ++var30) {
                                             if (nameAsLong == Class114.ignores[var30]) {
@@ -241,9 +241,9 @@ final class PacketParser {
                                         if (!isIgnored && 0 == inTutorialIsland) {
                                             Class3_Sub30_Sub1.addChatMessage(playerName, 15, Class3_Sub28_Sub14.aClass94_3672, -1);
                                         }
-                                    } else if (message.endsWith((byte) -110, TextCore.HasClanRequest)) {
+                                    } else if (message.endsWith(TextCore.HasClanRequest)) {
                                         playerName = message.method1557(message.indexOf(Class155.char_colon, (byte) -83 + 138), 0, 0);
-                                        nameAsLong = playerName.toLong((byte) -83 + -23);
+                                        nameAsLong = playerName.toLong();
                                         isIgnored = false;
 
                                         for (var30 = 0; var30 < Class3_Sub28_Sub5.anInt3591; ++var30) {
@@ -256,10 +256,10 @@ final class PacketParser {
                                         if (!isIgnored && inTutorialIsland == 0) {
                                             Class3_Sub30_Sub1.addChatMessage(playerName, 16, Class3_Sub28_Sub14.aClass94_3672, -1);
                                         }
-                                    } else if (message.endsWith((byte) -41, TextCore.HasAllyReq)) {
+                                    } else if (message.endsWith(TextCore.HasAllyReq)) {
                                         playerName = message.method1557(message.indexOf(Class155.char_colon, (byte) -83 + 189), (byte) -83 + 83, 0);
                                         isIgnored = false;
-                                        nameAsLong = playerName.toLong(-122);
+                                        nameAsLong = playerName.toLong();
 
                                         for (var30 = 0; var30 < Class3_Sub28_Sub5.anInt3591; ++var30) {
                                             if (nameAsLong == Class114.ignores[var30]) {
@@ -1330,9 +1330,9 @@ final class PacketParser {
                                                                             if (chatIcon == 2 || chatIcon == 3) {
                                                                                 Class3_Sub30_Sub1.addChatMessage(RenderAnimationDefinition.method903(new RSString[]{Class21.aClass94_444, Objects.requireNonNull(Class41.method1052(var2)).method1545()}, (byte) -105), 7, var52, -1);
                                                                             } else if (chatIcon == 1) {
-                                                                                Class3_Sub30_Sub1.addChatMessage(RenderAnimationDefinition.method903(new RSString[]{RSString.createRSString("<img=" + (chatIcon - 1) + ">"), Objects.requireNonNull(Class41.method1052(var2)).method1545()}, (byte) -71), 7, var52, -1);
+                                                                                Class3_Sub30_Sub1.addChatMessage(RenderAnimationDefinition.method903(new RSString[]{RSString.of("<img=" + (chatIcon - 1) + ">"), Objects.requireNonNull(Class41.method1052(var2)).method1545()}, (byte) -71), 7, var52, -1);
                                                                             } else {
-                                                                                Class3_Sub30_Sub1.addChatMessage(RenderAnimationDefinition.method903(new RSString[]{RSString.createRSString("<img=" + (chatIcon - 1) + ">"), Objects.requireNonNull(Class41.method1052(var2)).method1545()}, (byte) -71), 7, var52, -1);
+                                                                                Class3_Sub30_Sub1.addChatMessage(RenderAnimationDefinition.method903(new RSString[]{RSString.of("<img=" + (chatIcon - 1) + ">"), Objects.requireNonNull(Class41.method1052(var2)).method1545()}, (byte) -71), 7, var52, -1);
                                                                             }
                                                                         }
 
@@ -1385,7 +1385,7 @@ final class PacketParser {
                                                                                 Class3_Sub13_Sub11.method221(-1, var57, RenderAnimationDefinition.method903(new RSString[]{Class32.aClass94_592, Objects.requireNonNull(Class41.method1052(var2)).method1545()}, (byte) -85), Objects.requireNonNull(Class41.method1052(nameAsLong)).method1545(), 9);
                                                                             } else {
 
-                                                                                Class3_Sub13_Sub11.method221(-1, var57, RenderAnimationDefinition.method903(new RSString[]{RSString.createRSString("<img=" + (clanChatIcon - 1) + ">"), Objects.requireNonNull(Class41.method1052(var2)).method1545()}, (byte) -85), Objects.requireNonNull(Class41.method1052(nameAsLong)).method1545(), 9);
+                                                                                Class3_Sub13_Sub11.method221(-1, var57, RenderAnimationDefinition.method903(new RSString[]{RSString.of("<img=" + (clanChatIcon - 1) + ">"), Objects.requireNonNull(Class41.method1052(var2)).method1545()}, (byte) -85), Objects.requireNonNull(Class41.method1052(nameAsLong)).method1545(), 9);
 
                                                                             }
                                                                         }

@@ -4,7 +4,7 @@ final class Class91 {
 
    static RSString[] aClass94Array1299 = new RSString[8];
    private final int anInt1300;
-   static RSString aClass94_1301 = RSString.createRSString("(U3");
+   static RSString aClass94_1301 = RSString.of("(U3");
    static int anInt1302 = 0;
    private final int anInt1303;
    int[][] anIntArrayArray1304;

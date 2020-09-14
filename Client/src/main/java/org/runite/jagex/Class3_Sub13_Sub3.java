@@ -14,18 +14,18 @@ final class Class3_Sub13_Sub3 extends Class3_Sub13 {
    static RSString method178(byte[] var0, int var2, int var3) {
       try {
          RSString var4 = new RSString();
-         var4.byteArray = new byte[var2];
+         var4.buffer = new byte[var2];
          var4.length = 0;
          for(int var5 = var3; var5 < var2 + var3; ++var5) {
             if(var0[var5] != 0) {
-               var4.byteArray[var4.length++] = var0[var5];
+               var4.buffer[var4.length++] = var0[var5];
             }
          }
          if (var4.toString().contains("RuneScape")) {
-        	 var4 = RSString.createRSString(var4.toString().replace("RuneScape", GameLaunch.SETTINGS.getName()));
+        	 var4 = RSString.of(var4.toString().replace("RuneScape", GameLaunch.SETTINGS.getName()));
          }
          if (var4.toString().contains("Jagex")) {
-        	 var4 = RSString.createRSString(var4.toString().replace("Jagex", GameLaunch.SETTINGS.getName()));
+        	 var4 = RSString.of(var4.toString().replace("Jagex", GameLaunch.SETTINGS.getName()));
          }
          return var4;
       } catch (RuntimeException var6) {

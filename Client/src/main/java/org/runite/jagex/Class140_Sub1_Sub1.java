@@ -1,5 +1,7 @@
 package org.runite.jagex;
 
+import org.rs09.client.util.ArrayUtils;
+
 import javax.media.opengl.GL;
 import java.nio.ByteBuffer;
 import java.util.Objects;
@@ -1773,7 +1775,7 @@ final class Class140_Sub1_Sub1 extends Model {
 
    private static float[] method1921(float[] var0, int var1) {
       float[] var2 = new float[var1];
-      Class76.method1360(var0, 0, var2, 0, var1);
+      ArrayUtils.arraycopy(var0, 0, var2, 0, var1);
       return var2;
    }
 
@@ -2446,7 +2448,7 @@ final class Class140_Sub1_Sub1 extends Model {
 
    private static short[] method1928(short[] var0, int var1) {
       short[] var2 = new short[var1];
-      Class76.method1361(var0, 0, var2, 0, var1);
+      ArrayUtils.arraycopy(var0, 0, var2, 0, var1);
       return var2;
    }
 

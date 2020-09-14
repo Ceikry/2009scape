@@ -13,8 +13,8 @@ final class Class121 {
    static int anInt1642 = 0;
    Class156 aClass156_1643;
    ByteBuffer aByteBuffer1644;
-   static RSString aClass94_1645 = RSString.createRSString("Hidden)2");
-   static RSString COMMAND_HIGHRES_GRAPHICS_RESIZE = RSString.createRSString("::wm2");
+   static RSString aClass94_1645 = RSString.of("Hidden)2");
+   static RSString COMMAND_HIGHRES_GRAPHICS_RESIZE = RSString.of("::wm2");
    int anInt1648 = 0;
 
 

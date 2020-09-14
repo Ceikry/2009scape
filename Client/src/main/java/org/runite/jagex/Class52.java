@@ -4,11 +4,11 @@ import java.util.Objects;
 
 final class Class52 {
 
-   static RSString aClass94_852 = RSString.createRSString("(U4");
-   static RSString aClass94_853 = RSString.createRSString("::tele ");
+   static RSString aClass94_852 = RSString.of("(U4");
+   static RSString aClass94_853 = RSString.of("::tele ");
    int pnpcId;
    private long aLong855;
-   static RSString COMMAND_LOWRES_GRAPHICS = RSString.createRSString("::wm0");
+   static RSString COMMAND_LOWRES_GRAPHICS = RSString.of("::wm0");
    private int[] lookInfo;
    private int renderAnim;
    static int[] anIntArray859;

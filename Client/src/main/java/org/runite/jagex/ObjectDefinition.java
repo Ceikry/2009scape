@@ -974,7 +974,7 @@ final class ObjectDefinition {
    }
 
    public ObjectDefinition() {
-      this.name = RSString.createRSString("null");
+      this.name = RSString.of("null");
       this.aBoolean1503 = true;
       this.anInt1493 = -1;
       this.anInt1515 = 0;

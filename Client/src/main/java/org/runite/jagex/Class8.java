@@ -11,7 +11,7 @@ final class Class8 {
    private final Class73 aClass73_103;
    static int anInt104 = 0;
    static CacheIndex aClass153_105;
-   static RSString aClass94_106 = RSString.createRSString("showVideoAd");
+   static RSString aClass94_106 = RSString.of("showVideoAd");
    private Class151_Sub1[] aClass151_Sub1Array107;
 
 

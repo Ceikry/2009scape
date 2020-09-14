@@ -2,14 +2,14 @@ package org.runite.jagex;
 
 final class Class95 {
 
-   static RSString aClass94_1333 = RSString.createRSString("um");
+   static RSString aClass94_1333 = RSString.of("um");
    static int anInt1336 = 0;
-   static RSString COMMAND_BREAK_CONNECTION = RSString.createRSString("::breakcon");
+   static RSString COMMAND_BREAK_CONNECTION = RSString.of("::breakcon");
    static int anInt1338;
    static Class3_Sub28_Sub16 aClass3_Sub28_Sub16_1339;
    static volatile int anInt1340 = -1;
-   static RSString aClass94_1341 = RSString.createRSString("logo");
-   static RSString aClass94_1342 = RSString.createRSString("details");
+   static RSString aClass94_1341 = RSString.of("logo");
+   static RSString aClass94_1342 = RSString.of("details");
    static int anInt1343;
    static int anInt1344;
 
@@ -91,8 +91,8 @@ final class Class95 {
          RSString var2 = new RSString();
 
          var2.length = 1;
-         var2.byteArray = new byte[1];
-         var2.byteArray[0] = (byte) 160;
+         var2.buffer = new byte[1];
+         var2.buffer[0] = (byte) 160;
          return var2;
       } catch (RuntimeException var3) {
          throw Class44.clientError(var3, "nb.A(" + 23161 + ',' + 160 + ')');

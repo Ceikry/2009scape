@@ -120,7 +120,7 @@ final class Class3_Sub19 extends Class3 {
 
          for(var6 = 1; var6 < 103; ++var6) {
             for(var7 = 1; 103 > var7; ++var7) {
-               if(0 == (Class9.aByteArrayArrayArray113[var1][var7][var6 - -var3] & 24) && !RSString.method1529(var3, var7, var18, var6, var5, var1)) {
+               if(0 == (Class9.aByteArrayArrayArray113[var1][var7][var6 - -var3] & 24) && !Unsorted.method1529(var3, var7, var18, var6, var5, var1)) {
                   if(HDToolKit.highDetail) {
                      Class74.anIntArray1100 = null;
                   } else {
@@ -130,7 +130,7 @@ final class Class3_Sub19 extends Class3 {
                   return false;
                }
 
-               if(var1 < 3 && (Class9.aByteArrayArrayArray113[1 + var1][var7][var6 + var3] & 8) != 0 && !RSString.method1529(var3, var7, var18, var6, var5, 1 + var1)) {
+               if(var1 < 3 && (Class9.aByteArrayArrayArray113[1 + var1][var7][var6 + var3] & 8) != 0 && !Unsorted.method1529(var3, var7, var18, var6, var5, 1 + var1)) {
                   if(HDToolKit.highDetail) {
                      Class74.anIntArray1100 = null;
                   } else {

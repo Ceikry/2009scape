@@ -16,7 +16,7 @@ final class Class140_Sub3 extends GameObject {
    private final int anInt2732;
    private int anInt2733;
    private final int type;
-   static RSString aClass94_2735 = RSString.createRSString(")4");
+   static RSString aClass94_2735 = RSString.of(")4");
    private final int anInt2736;
    static int anInt2737 = 0;
    private LDIndexedSprite aClass109_Sub1_2738 = null;

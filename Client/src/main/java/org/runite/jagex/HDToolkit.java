@@ -45,7 +45,7 @@ final class HDToolKit {
    private static boolean aBoolean1816 = true;
    static boolean aBoolean1817;
    static boolean aBoolean1818;
-   private static RSString aClass94_1819 = RSString.createRSString("radeon");
+   private static RSString aClass94_1819 = RSString.of("radeon");
    static int anInt1820;
    static boolean aBoolean1821;
 

@@ -1,11 +1,9 @@
 package org.runite.jagex;
 
-import org.runite.Configurations;
-
 final class Class38_Sub1 extends Class38 {
 
    static int[][][] anIntArrayArrayArray2609;
-   static RSString aClass94_2610 = RSString.createRSString(")1o");
+   static RSString aClass94_2610 = RSString.of(")1o");
    static String accRegistryIp;
    static int anInt2612;
    static Class15 aClass15_2613;

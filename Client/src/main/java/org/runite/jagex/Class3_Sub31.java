@@ -5,10 +5,10 @@ final class Class3_Sub31 extends Class3 {
    int anInt2602;
    int anInt2603;
    static Class93 aClass93_2604 = new Class93(64);
-   static RSString COMMAND_BREAK_JS5_CLIENT_CONNECTION = RSString.createRSString("::clientjs5drop");
+   static RSString COMMAND_BREAK_JS5_CLIENT_CONNECTION = RSString.of("::clientjs5drop");
    static int[] anIntArray2606;
    static int countryId;
-   static RSString aClass94_2608 = RSString.createRSString(")4l=");
+   static RSString aClass94_2608 = RSString.of(")4l=");
 
 
    static void method820(int var0, int var1) {

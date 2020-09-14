@@ -10,7 +10,7 @@ final class Class3_Sub17 extends Class3 {
 	int anInt2462;
 	boolean[] aBooleanArray2463;
 
-	private static RSString aClass94_2465 = RSString.createRSString("");
+	private static RSString aClass94_2465 = RSString.of("");
 	int[] anIntArray2466;
 	static RSString aClass94_2464 = aClass94_2465;
 

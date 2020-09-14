@@ -3,7 +3,7 @@ package org.runite.jagex;
 abstract class GameObject {
 
    static AbstractIndexedSprite[] aClass109Array1831;
-   static RSString COMMAND_SET_PARTICLES = RSString.createRSString("::setparticles");
+   static RSString COMMAND_SET_PARTICLES = RSString.of("::setparticles");
    static int[] anIntArray1833 = new int[14];
    static RSInterface[][] aClass11ArrayArray1834;
    static int[] anIntArray1835 = new int[100];

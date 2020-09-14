@@ -6,7 +6,7 @@ abstract class Class129 {
    static int anInt1691 = -1;
    static int anInt1692 = 0;
    static int[] anIntArray1693 = new int[128];
-   static RSString aClass94_1694 = RSString.createRSString("document)3cookie=(R");
+   static RSString aClass94_1694 = RSString.of("document)3cookie=(R");
    static int[] anIntArray1695;
 
 

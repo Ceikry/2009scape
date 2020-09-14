@@ -6,7 +6,7 @@ final class Class3_Sub28_Sub19 extends Node {
    static int anInt3773;
    static int anInt3775 = 0;
    static Class47 aClass47_3776 = new Class47(64);
-   static RSString aClass94_3777 = RSString.createRSString(" x ");
+   static RSString aClass94_3777 = RSString.of(" x ");
    Class140_Sub6 aClass140_Sub6_3778;
    static boolean aBoolean3779 = false;
    static int[] anIntArray3780 = new int[32];

@@ -1,5 +1,7 @@
 package org.runite.jagex;
 
+import org.rs09.client.util.ArrayUtils;
+
 import java.util.Objects;
 
 final class Class3_Sub13_Sub8 extends Class3_Sub13 {
@@ -146,7 +148,7 @@ final class Class3_Sub13_Sub8 extends Class3_Sub13 {
 						var4[var6] = var5[-var6 + RenderAnimationDefinition.anInt396];
 					}
 				} else {
-					Class76.method1358(var5, 0, var4, 0, Class113.anInt1559);
+					ArrayUtils.arraycopy(var5, 0, var4, 0, Class113.anInt1559);
 				}
 			}
 
@@ -199,7 +201,7 @@ final class Class3_Sub13_Sub8 extends Class3_Sub13 {
 				}
 
 				RSString var13 = new RSString();
-				var13.byteArray = var9;
+				var13.buffer = var9;
 				var13.length = var8;
 				return var13;
 			} else {

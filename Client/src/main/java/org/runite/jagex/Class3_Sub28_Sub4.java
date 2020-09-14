@@ -11,8 +11,8 @@ final class Class3_Sub28_Sub4 extends Node {
    private int[][] anIntArrayArray3570;
    private RSString[] aClass94Array3571;
    static Class93 aClass93_3572 = new Class93(64);
-   static RSString aClass94_3574 = RSString.createRSString("titlebg");
-   static RSString aClass94_3577 = RSString.createRSString(": ");
+   static RSString aClass94_3574 = RSString.of("titlebg");
+   static RSString aClass94_3577 = RSString.of(": ");
    static Class83 aClass83_3579;
 
    final void method545(RSByteBuffer var1, int[] var2) {

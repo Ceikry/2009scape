@@ -5,7 +5,7 @@ import java.util.Objects;
 final class Class3_Sub28_Sub11 extends Node {
 
    private Class130 aClass130_3636;
-   static RSString aClass94_3637 = RSString.createRSString(")4p=");
+   static RSString aClass94_3637 = RSString.of(")4p=");
    static boolean aBoolean3641 = false;
    static int anInt3642 = 0;
    static int anInt3644 = 0;

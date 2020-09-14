@@ -15,7 +15,7 @@ abstract class Class164 {
    private final int anInt2057;
    static Model_Sub1[] aClass140_Sub5Array2058 = new Model_Sub1[4];
    private final int anInt2060;
-   static RSString aClass94_2061 = RSString.createRSString("Forced tweening disabled)3");
+   static RSString aClass94_2061 = RSString.of("Forced tweening disabled)3");
    int anInt2062;
 
 

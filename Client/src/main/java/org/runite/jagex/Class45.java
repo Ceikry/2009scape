@@ -27,7 +27,7 @@ final class Class45 {
 				var7 = GraphicDefinition.incomingBuffer.index;
 				boolean var8 = ('\u8000' & var4) != 0;
 				if(null != var3.displayName && var3.class52 != null) {
-					long var9 = var3.displayName.toLong(-125);
+					long var9 = var3.displayName.toLong();
 					boolean var11 = false;
 					if(chatIcon <= 1) {
 						if(!var8 && (Class3_Sub15.aBoolean2433 && !Class121.aBoolean1641 || Class3_Sub13_Sub14.aBoolean3166)) {
@@ -62,7 +62,7 @@ final class Class45 {
 						var3.textCycle = 150;
 						var3.textColor = var4 >> 8;
 						if (chatIcon == 2) {
-							Class3_Sub28_Sub12.sendGameMessage(var13, var8?17:1, message, (RSString)null, RenderAnimationDefinition.method903(new RSString[]{RSString.createRSString("<img=" + (chatIcon-1) + ">"), var3.getName()}, (byte)-116));
+							Class3_Sub28_Sub12.sendGameMessage(var13, var8?17:1, message, (RSString)null, RenderAnimationDefinition.method903(new RSString[]{RSString.of("<img=" + (chatIcon-1) + ">"), var3.getName()}, (byte)-116));
 						} else if (chatIcon == 1) {
 							Class3_Sub28_Sub12.sendGameMessage(var13, var8?17:1, message, (RSString)null, RenderAnimationDefinition.method903(new RSString[]{Class32.aClass94_592, var3.getName()}, (byte)-127));
 						} else {

@@ -1,5 +1,7 @@
 package org.runite.jagex;
 
+import org.rs09.client.util.ArrayUtils;
+
 final class Class67 implements Runnable {
 
    static Class93 aClass93_1013 = new Class93(100);
@@ -139,14 +141,14 @@ final class Class67 implements Runnable {
 
          for(int var7 = 0; var1 > var7; ++var7) {
             RSString var8 = var2[var7 + var0];
-            Class76.method1357(var8.byteArray, 0, var10, var6, var8.length);
+            ArrayUtils.arraycopy(var8.buffer, 0, var10, var6, var8.length);
             var6 += var8.length;
          }
 
          RSString var11 = new RSString();
          var11.length = var4;
 
-         var11.byteArray = var10;
+         var11.buffer = var10;
          return var11;
       } catch (RuntimeException var9) {
          throw Class44.clientError(var9, "jd.C(" + var0 + ',' + var1 + ',' + (var2 != null?"{...}":"null") + ',' + 2774 + ')');

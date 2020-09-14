@@ -5,7 +5,7 @@ final class ClientErrorException extends RuntimeException {
    static int[] anIntArray2113 = new int[]{2, 2, 4, 0, 1, 8, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0};
    static Class96[] aClass96Array2114 = new Class96[4];
    static int anInt2115 = -1;
-   static RSString aClass94_2116 = RSString.createRSString("Hidden)2use");
+   static RSString aClass94_2116 = RSString.of("Hidden)2use");
    String aString2117;
    Throwable aThrowable2118;
    static RSString[] aClass94Array2119 = null;

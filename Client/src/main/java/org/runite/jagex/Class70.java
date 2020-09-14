@@ -8,7 +8,7 @@ final class Class70 {
    long aLong1048 = 0L;
    GameObject aClass140_1049;
    static double aDouble1050 = -1.0D;
-   static RSString aClass94_1051 = RSString.createRSString("(Udns");
+   static RSString aClass94_1051 = RSString.of("(Udns");
    GameObject aClass140_1052;
    static int anInt1053 = 0;
    int anInt1054;
@@ -89,7 +89,7 @@ final class Class70 {
             var8.anInt2307 = 128 * (var7.getSize() + var0);
             var8.anInt2332 = Class81.method1398(var7);
             var8.anInt2328 = 128 * var7.anInt3969;
-            Class3_Sub28_Sub7_Sub1.aClass130_4046.method1779(var8, var7.displayName.toLong(-112));
+            Class3_Sub28_Sub7_Sub1.aClass130_4046.method1779(var8, var7.displayName.toLong());
          }
 
       } catch (RuntimeException var11) {

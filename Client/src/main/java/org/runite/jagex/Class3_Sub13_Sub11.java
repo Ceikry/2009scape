@@ -5,12 +5,12 @@ final class Class3_Sub13_Sub11 extends Class3_Sub13 {
    private int anInt3129;
    static Class93 aClass93_3130 = new Class93(4);
    static int anInt3132;
-   static RSString aClass94_3133 = RSString.createRSString(")2");
+   static RSString aClass94_3133 = RSString.of(")2");
    private int anInt3134;
    private int anInt3135;
    static Class47 aClass47_3137 = new Class47(64);
    static int[] anIntArray3139 = new int[14];
-   static RSString aClass94_3140 = RSString.createRSString("overlay2");
+   static RSString aClass94_3140 = RSString.of("overlay2");
 
 
    protected Class3_Sub13_Sub11() {

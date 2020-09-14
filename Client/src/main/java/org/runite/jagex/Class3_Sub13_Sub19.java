@@ -1,4 +1,6 @@
 package org.runite.jagex;
+import org.rs09.client.util.ArrayUtils;
+
 import java.util.Random;
 
 final class Class3_Sub13_Sub19 extends Class3_Sub13 {
@@ -15,17 +17,17 @@ final class Class3_Sub13_Sub19 extends Class3_Sub13 {
    private int anInt3229 = 1024;
    private int[] anIntArray3230;
    private int anInt3231 = 0;
-   private static RSString aClass94_3232 = RSString.createRSString("pt");
+   private static RSString aClass94_3232 = RSString.of("pt");
    private int anInt3233 = 8;
    private int anInt3234 = 1024;
    private int anInt3235;
    private int anInt3236 = 409;
-   private static RSString aClass94_3237 = RSString.createRSString("en");
-   private static RSString aClass94_3239 = RSString.createRSString("fr");
+   private static RSString aClass94_3237 = RSString.of("en");
+   private static RSString aClass94_3239 = RSString.of("fr");
    private int[][] anIntArrayArray3240;
    static short aShort3241 = 1;
    private int anInt3242 = 4;
-   private static RSString aClass94_3243 = RSString.createRSString("de");
+   private static RSString aClass94_3243 = RSString.of("de");
 static RSString[] aClass94Array3238 = new RSString[]{aClass94_3237, aClass94_3243, aClass94_3239, aClass94_3232};
    
 
@@ -229,7 +231,7 @@ static RSString[] aClass94Array3238 = new RSString[]{aClass94_3237, aClass94_324
                   }
                }
             } else {
-               Class76.method1359(var3, 0, Class113.anInt1559, 0);
+               ArrayUtils.fill(var3, 0, Class113.anInt1559, 0);
             }
          }
 

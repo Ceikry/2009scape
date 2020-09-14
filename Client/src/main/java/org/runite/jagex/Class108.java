@@ -4,9 +4,9 @@ import java.util.Objects;
 
 final class Class108 {
 
-   static RSString COMMAND_QA_OP_TEST = RSString.createRSString("::qa_op_test");
+   static RSString COMMAND_QA_OP_TEST = RSString.of("::qa_op_test");
    static Class3_Sub28_Sub16 aClass3_Sub28_Sub16_1457;
-   static RSString COMMAND_HIGHRES_GRAPHICS_WINDOW = RSString.createRSString("::wm1");
+   static RSString COMMAND_HIGHRES_GRAPHICS_WINDOW = RSString.of("::wm1");
    static int anInt1460;
 
 

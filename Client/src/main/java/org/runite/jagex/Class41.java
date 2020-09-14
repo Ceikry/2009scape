@@ -24,7 +24,7 @@ final class Class41 {
             Class3_Sub13_Sub16.aClass44_Sub1Array3201[var2] = var9;
 
             for(int var10 = var4; var10 < var2; ++var10) {
-               if(RSString.method1535(var9, Class3_Sub13_Sub16.aClass44_Sub1Array3201[var10], 5730, var0, var1, var3, var5) <= 0) {
+               if(Unsorted.method1535(var9, Class3_Sub13_Sub16.aClass44_Sub1Array3201[var10], 5730, var0, var1, var3, var5) <= 0) {
                   WorldListEntry var11 = Class3_Sub13_Sub16.aClass44_Sub1Array3201[var10];
                   Class3_Sub13_Sub16.aClass44_Sub1Array3201[var10] = Class3_Sub13_Sub16.aClass44_Sub1Array3201[var8];
                   Class3_Sub13_Sub16.aClass44_Sub1Array3201[var8++] = var11;
@@ -201,7 +201,7 @@ final class Class41 {
                }
 
                RSString var10 = new RSString();
-               var10.byteArray = var6;
+               var10.buffer = var6;
                var10.length = var6.length;
                return var10;
             }

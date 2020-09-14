@@ -1,10 +1,12 @@
 package org.runite.jagex;
+import org.rs09.client.util.ArrayUtils;
+
 import java.awt.Component;
 
 class Class155 {
 
    static int[] anIntArray1969 = new int[100];
-   static RSString char_colon = RSString.createRSString(":");
+   static RSString char_colon = RSString.of(":");
    static int anInt1971;
    private long aLong1972 = Class5.method830((byte)-55);
    private Class3_Sub24 aClass3_Sub24_1973;
@@ -38,7 +40,7 @@ class Class155 {
          var3 = 256 << 1;
       }
 
-      Class76.method1363(var1, 0, var3);
+      ArrayUtils.zero(var1, 0, var3);
       this.anInt1987 -= 256;
       if(this.aClass3_Sub24_1973 != null && this.anInt1987 <= 0) {
          this.anInt1987 += Class21.anInt443 >> 4;

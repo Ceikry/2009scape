@@ -5,7 +5,7 @@ import java.util.Objects;
 final class Class3_Sub13_Sub27 extends Class3_Sub13 {
 
    static long isaacServerKey = 0L;
-   static RSString aClass94_3339 = RSString.createRSString("null");
+   static RSString aClass94_3339 = RSString.of("null");
    static int anInt3340;
    static RSString[] aClass94Array3341 = new RSString[100];
    static int anInt3342;

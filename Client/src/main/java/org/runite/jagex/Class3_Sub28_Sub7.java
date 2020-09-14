@@ -3,7 +3,7 @@ import java.io.IOException;
 
 abstract class Class3_Sub28_Sub7 extends Node {
 
-   static RSString aClass94_3601 = RSString.createRSString(")3runescape)3com)4l=");
+   static RSString aClass94_3601 = RSString.of(")3runescape)3com)4l=");
    static int anInt3602;
    static int anInt3603;
    static boolean aBoolean3604 = true;

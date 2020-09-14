@@ -1,8 +1,10 @@
 package org.runite.jagex;
 
+import org.rs09.client.util.ArrayUtils;
+
 final class Class3_Sub13_Sub22 extends Class3_Sub13 {
 
-   static RSString aClass94_3268 = RSString.createRSString(")1");
+   static RSString aClass94_3268 = RSString.of(")1");
    static Player[] players = new Player[2048];
    static AbstractIndexedSprite[] aClass109Array3270;
    static long[] aLongArray3271 = new long[500];
@@ -101,7 +103,7 @@ final class Class3_Sub13_Sub22 extends Class3_Sub13 {
       try {
          int[] var4 = this.aClass114_2382.method1709(var1);
          if(this.aClass114_2382.aBoolean1580) {
-            Class76.method1359(var4, 0, Class113.anInt1559, this.anInt3276);
+            ArrayUtils.fill(var4, 0, Class113.anInt1559, this.anInt3276);
          }
 
          return var4;

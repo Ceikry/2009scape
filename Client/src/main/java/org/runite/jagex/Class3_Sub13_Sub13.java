@@ -8,7 +8,7 @@ final class Class3_Sub13_Sub13 extends Class3_Sub13 {
    private int anInt3147 = 4;
    static int anInt3148 = 0;
    private int anInt3149 = 4;
-   static RSString aClass94_3152 = RSString.createRSString("::gc");
+   static RSString aClass94_3152 = RSString.of("::gc");
    static int anInt3153;
    static CacheIndex aClass153_3154;
    static int anInt3155;

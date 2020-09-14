@@ -2,7 +2,7 @@ package org.runite.jagex;
 
 final class Class10 {
 
-   static RSString aClass94_148 = RSString.createRSString("(U(Y");
+   static RSString aClass94_148 = RSString.of("(U(Y");
    int anInt149;
    Class3_Sub28_Sub4 aClass3_Sub28_Sub4_151;
    static CacheIndex aClass153_152;
