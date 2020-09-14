@@ -1,5 +1,7 @@
 package org.runite.jagex;
 
+import org.rs09.client.filestore.ReferenceTable;
+
 abstract class Class151 {
 
    static RSString aClass94_1932 = RSString.of(")4a=");

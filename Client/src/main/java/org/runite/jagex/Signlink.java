@@ -300,14 +300,14 @@ public class Signlink implements Runnable {
                      } else if (var2 == 14) {
                         int var22 = var1.anInt980;
                         int var23 = var1.anInt979;
-                        this.aSensor1206.method1796(var23, var22);
+                        this.aSensor1206.moveMouse(var23, var22);
                      } else if (15 == var2) {
                         boolean var21 = var1.anInt979 != 0;
                         Component var27 = (Component) var1.anObject977;
-                        this.aSensor1206.method1797(var27, var21);
+                        this.aSensor1206.updateComponent(var27, var21);
                      } else if (17 == var2) {
                         var3 = (Object[]) var1.anObject977;
-                        this.aSensor1206.method1795((Point) var3[2], var1.anInt979, (Component) var3[0], var1.anInt980, (int[]) var3[1]);
+                        this.aSensor1206.setCursor((Component) var3[0], (Point) var3[2], var1.anInt979, var1.anInt980, (int[]) var3[1]);
                      } else {
                         if (16 != var2) {
                            throw new Exception();

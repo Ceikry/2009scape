@@ -1,6 +1,6 @@
 package org.runite.jagex;
 
-final class Class69 {
+public final class Class69 {
 
    static int anInt1037;
    static int anInt1038;
@@ -69,7 +69,7 @@ final class Class69 {
       }
    }
 
-   Class69(int[] var1) {
+   public Class69(int[] var1) {
       try {
          int var2;
          for(var2 = 1; (var1.length >> 1) + var1.length >= var2; var2 <<= 1) {

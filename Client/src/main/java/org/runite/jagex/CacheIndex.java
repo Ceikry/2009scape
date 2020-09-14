@@ -1,5 +1,6 @@
 package org.runite.jagex;
 
+import org.rs09.client.filestore.ReferenceTable;
 import org.rs09.client.filestore.compression.Container;
 import org.rs09.client.util.ArrayUtils;
 import org.rs09.client.util.CRC;
@@ -62,11 +63,11 @@ final class CacheIndex {
          if(this.method2122()) {
             if(var2) {
                this.aReferenceTable_1949.archiveNameHash = null;
-               this.aReferenceTable_1949.aClass69_949 = null;
+               this.aReferenceTable_1949.setAClass69_949(null);
             }
 
-            this.aReferenceTable_1949.aClass69Array962 = null;
-            this.aReferenceTable_1949.fileNameHashes = (int[][])null;
+            this.aReferenceTable_1949.setAClass69Array962(null);
+            this.aReferenceTable_1949.setFileNameHashes(null);
 
          }
       } catch (RuntimeException var5) {
@@ -78,7 +79,7 @@ final class CacheIndex {
       try {
          if(this.method2122()) {
             var2 = var2.method1534();
-            int var3 = this.aReferenceTable_1949.aClass69_949.method1280(var2.method1574());
+            int var3 = this.aReferenceTable_1949.getAClass69_949().method1280(var2.method1574());
             return this.method2114(var3);
          } else {
             return 0;
@@ -108,7 +109,7 @@ final class CacheIndex {
          }
 
          if(this.method2122()) {
-            return this.aReferenceTable_1949.crc;
+            return this.aReferenceTable_1949.getCrc();
          } else {
             throw new IllegalStateException("");
          }
@@ -121,7 +122,7 @@ final class CacheIndex {
       try {
          if(this.method2122()) {
             name = name.method1534();
-            int var3 = this.aReferenceTable_1949.aClass69_949.method1280(name.method1574());
+            int var3 = this.aReferenceTable_1949.getAClass69_949().method1280(name.method1574());
             return this.isValidArchive(var3)? var3 :-1;
          } else {
             return -1;
@@ -152,8 +153,8 @@ final class CacheIndex {
                return false;
             }
 
-            this.anObjectArrayArray1952 = new Object[this.aReferenceTable_1949.archiveAmount][];
-            this.files = new Object[this.aReferenceTable_1949.archiveAmount];
+            this.anObjectArrayArray1952 = new Object[this.aReferenceTable_1949.getArchiveAmount()][];
+            this.files = new Object[this.aReferenceTable_1949.getArchiveAmount()];
          }
 
          return true;
@@ -167,10 +168,10 @@ final class CacheIndex {
          if(this.method2122()) {
             var3 = var3.method1534();
             var2 = var2.method1534();
-            int var4 = this.aReferenceTable_1949.aClass69_949.method1280(var3.method1574());
+            int var4 = this.aReferenceTable_1949.getAClass69_949().method1280(var3.method1574());
 
             if(this.isValidArchive(var4)) {
-               int var5 = this.aReferenceTable_1949.aClass69Array962[var4].method1280(var2.method1574());
+               int var5 = this.aReferenceTable_1949.getAClass69Array962()[var4].method1280(var2.method1574());
                return this.getFile(var4, var5);
             } else {
                return null;
@@ -187,7 +188,7 @@ final class CacheIndex {
       try {
          if(this.method2122()) {
             var2 = var2.method1534();
-            int var3 = this.aReferenceTable_1949.aClass69_949.method1280(var2.method1574());
+            int var3 = this.aReferenceTable_1949.getAClass69_949().method1280(var2.method1574());
             this.method2131(var3);
          }
       } catch (RuntimeException var5) {
@@ -200,9 +201,9 @@ final class CacheIndex {
          if(this.method2122()) {
             var3 = var3.method1534();
             var1 = var1.method1534();
-            int var4 = this.aReferenceTable_1949.aClass69_949.method1280(var3.method1574());
+            int var4 = this.aReferenceTable_1949.getAClass69_949().method1280(var3.method1574());
             if(this.isValidArchive(var4)) {
-               int var5 = this.aReferenceTable_1949.aClass69Array962[var4].method1280(var1.method1574());
+               int var5 = this.aReferenceTable_1949.getAClass69Array962()[var4].method1280(var1.method1574());
 
                return this.method2129((byte)70, var5, var4);
             } else {
@@ -252,7 +253,7 @@ final class CacheIndex {
       try {
          if(this.method2122()) {
             var2 = var2.method1534();
-            int var3 = this.aReferenceTable_1949.aClass69_949.method1280(var2.method1574());
+            int var3 = this.aReferenceTable_1949.getAClass69_949().method1280(var2.method1574());
             return this.method2117(var3);
          } else {
             return false;
@@ -366,7 +367,7 @@ final class CacheIndex {
                try {
                   var23 = Container.INSTANCE.decode(var21);//Class3_Sub28_Sub13.decodeContainer(var21);
                } catch (Throwable var19) {
-                  throw Class44.clientError(var19, "T3 - " + (xteaKeys != null) + "," + archive + "," + Objects.requireNonNull(var21).length + "," + CRC.INSTANCE.crc32(var21, var21.length) + "," + CRC.INSTANCE.crc32(var21, var21.length - 2) + "," + this.aReferenceTable_1949.archiveCRCs[archive] + "," + this.aReferenceTable_1949.crc);
+                  throw Class44.clientError(var19, "T3 - " + (xteaKeys != null) + "," + archive + "," + Objects.requireNonNull(var21).length + "," + CRC.INSTANCE.crc32(var21, var21.length) + "," + CRC.INSTANCE.crc32(var21, var21.length - 2) + "," + this.aReferenceTable_1949.archiveCRCs[archive] + "," + this.aReferenceTable_1949.getCrc());
                }
 
                if (this.aBoolean1945) {
@@ -479,7 +480,7 @@ final class CacheIndex {
             return false;
          } else if(this.method2122()) {
             var1 = var1.method1534();
-            int var3 = this.aReferenceTable_1949.aClass69_949.method1280(var1.method1574());
+            int var3 = this.aReferenceTable_1949.getAClass69_949().method1280(var1.method1574());
             return var3 >= 0;
          } else {
             return false;

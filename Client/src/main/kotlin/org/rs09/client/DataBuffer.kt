@@ -8,6 +8,12 @@ class DataBuffer(val buffer: ByteArray, var index: Int) {
         return buffer[index++].toInt() and 0xff
     }
 
+    fun readUnsignedShort(): Int {
+        index += 2
+        return (buffer[index - 1].toInt() and 0xff) +
+                (buffer[index - 2].toInt() and 0xff shl 8)
+    }
+
 
     // TODO The shl 16 value was being AND-ed with 16711680. Why?
     fun readInt(): Int {

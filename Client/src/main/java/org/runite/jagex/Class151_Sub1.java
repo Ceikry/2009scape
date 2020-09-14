@@ -1,5 +1,7 @@
 package org.runite.jagex;
 
+import org.rs09.client.filestore.ReferenceTable;
+
 import java.util.Objects;
 
 final class Class151_Sub1 extends Class151 {
@@ -122,7 +124,7 @@ final class Class151_Sub1 extends Class151 {
                             }
 
                             this.aReferenceTable_2944 = new ReferenceTable(var2, this.anInt2955);
-                            if (this.aReferenceTable_2944.revision != this.anInt2947) {
+                            if (this.aReferenceTable_2944.getRevision() != this.anInt2947) {
                                 throw new RuntimeException();
                             }
                         } catch (RuntimeException var4) {
@@ -160,7 +162,7 @@ final class Class151_Sub1 extends Class151 {
                     }
 
                     if (null != this.aClass41_2954) {
-                        this.aByteArray2949 = new byte[this.aReferenceTable_2944.archiveAmount];
+                        this.aByteArray2949 = new byte[this.aReferenceTable_2944.getArchiveAmount()];
                         this.anInt2948 = 0;
                     }
 
@@ -238,7 +240,7 @@ final class Class151_Sub1 extends Class151 {
                     return (int) var2.aLong71;
                 }
             } else {
-                return this.aReferenceTable_2944.validArchiveAmount;
+                return this.aReferenceTable_2944.getValidArchiveAmount();
             }
         } catch (RuntimeException var3) {
             throw Class44.clientError(var3, "bg.O(" + 1 + ')');
@@ -385,7 +387,7 @@ final class Class151_Sub1 extends Class151 {
                 return 0;
             } else {
 
-                return this.aReferenceTable_2944.validArchiveAmount;
+                return this.aReferenceTable_2944.getValidArchiveAmount();
             }
         } catch (RuntimeException var3) {
             throw Class44.clientError(var3, "bg.M(" + (byte) 1 + ')');
@@ -560,7 +562,7 @@ final class Class151_Sub1 extends Class151 {
                 if (null != this.method2094()) {
                     for (Class3 var2 = this.aClass61_2963.method1222(); null != var2; var2 = this.aClass61_2963.method1221()) {
                         int var3 = (int) var2.aLong71;
-                        if (0 <= var3 && this.aReferenceTable_2944.archiveAmount > var3 && this.aReferenceTable_2944.archiveFileLengths[var3] != 0) {
+                        if (0 <= var3 && this.aReferenceTable_2944.getArchiveAmount() > var3 && this.aReferenceTable_2944.archiveFileLengths[var3] != 0) {
                             if (this.aByteArray2949[var3] == 0) {
                                 this.method2109(1, var3, 80);
                             }
