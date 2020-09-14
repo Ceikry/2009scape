@@ -33,7 +33,7 @@ final class Class167 {
 
                   int var6 = GraphicDefinition.incomingBuffer.getBits(1);
                   if(var6 == 1) {
-                     Class21.maskUpdateIndexes[Class66.maskUpdateCount++] = var1;
+                     Class21.maskUpdateIndexes[Unsorted.maskUpdateCount++] = var1;
                   }
 
                   int var7 = GraphicDefinition.incomingBuffer.getBits(5);
@@ -233,7 +233,7 @@ final class Class167 {
             Class86.aClass91Array1182[var1].method1496();
          }
 
-         Class66.method1250(62, false);
+         Unsorted.method1250(62, false);
          System.gc();
          NodeList.method882();
          Class83.aBoolean1158 = false;

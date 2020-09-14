@@ -144,7 +144,7 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
       try {
          if(this == Class3_Sub29.anApplet_Sub1_2588 && !Class29.aBoolean554) {
             Class3_Sub9.aLong2313 = Class5.method830((byte)-55);
-            Class3_Sub13_Sub34.method331(5000L, 64);
+            Class3_Sub13_Sub34.sleep(5000L);
             Class3_Sub13_Sub10.aClass87_3125 = null;
             this.method35(46, false);
          }
@@ -480,7 +480,7 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
             Class64 var10 = Class38.aClass87_665.method1451(0, 1, this);
 
             while(0 == Objects.requireNonNull(var10).anInt978) {
-               Class3_Sub13_Sub34.method331(10L, 64);
+               Class3_Sub13_Sub34.sleep(10L);
             }
 
             Class17.aThread409 = (Thread)var10.anObject974;
@@ -537,7 +537,7 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
             Class64 var7 = Class38.aClass87_665.method1451(0, 1, this);
 
             while(Objects.requireNonNull(var7).anInt978 == 0) {
-               Class3_Sub13_Sub34.method331(10L, 64);
+               Class3_Sub13_Sub34.sleep(10L);
             }
 
             Class17.aThread409 = (Thread)var7.anObject974;

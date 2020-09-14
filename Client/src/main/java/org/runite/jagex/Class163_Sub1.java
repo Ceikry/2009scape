@@ -101,7 +101,7 @@ class Class163_Sub1 extends Class163 {
 
                               Class67.aClass11_1017 = Class7.getRSInterface(var4);
                               Class129_Sub1.anInt2693 = anInt2993;
-                              InputStream_Sub1.anInt40 = Class38_Sub1.anInt2614;
+                              Unsorted.anInt40 = Class38_Sub1.anInt2614;
                               PacketParser.anInt86 = var3;
                               Class20.method909(var0 + 166, Class67.aClass11_1017);
                               return;
@@ -109,7 +109,7 @@ class Class163_Sub1 extends Class163 {
                         }
                      }
 
-                     if(var1 == 1 && (Class66.anInt998 == 1 && 2 < Class3_Sub13_Sub34.anInt3415 || Class3_Sub13_Sub39.method353(Class3_Sub13_Sub34.anInt3415 + -1, 0))) {
+                     if(var1 == 1 && (Unsorted.anInt998 == 1 && 2 < Class3_Sub13_Sub34.anInt3415 || Class3_Sub13_Sub39.method353(Class3_Sub13_Sub34.anInt3415 + -1, 0))) {
                         var1 = 2;
                      }
 

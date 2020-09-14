@@ -436,7 +436,7 @@ final class AnimationDefinition {
 			Class58.anInt909 = -1;
 			Class159.localPlayerCount = 0;
 			Class161.anInt2028 = 0;
-			InputStream_Sub1.anInt42 = (int)(110.0D * Math.random()) + -55;
+			Unsorted.anInt42 = (int)(110.0D * Math.random()) + -55;
 			GameObject.aBoolean1837 = false;
 			Class164_Sub2.anInt3020 = -20 + (int)(30.0D * Math.random());
 			Class113.anInt1552 = 0;

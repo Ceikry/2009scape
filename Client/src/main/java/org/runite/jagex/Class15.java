@@ -243,7 +243,7 @@ final class Class15 implements Runnable {
                   }
                }
 
-               Class3_Sub13_Sub34.method331(10L, 64);
+               Class3_Sub13_Sub34.sleep(10L);
                Class81.method1400(this.aClass87_350, (Object)null, -71);
             }
          } catch (Exception var7) {

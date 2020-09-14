@@ -2404,9 +2404,9 @@ final class ItemDefinition {
 																			Class3_Sub30_Sub1.aClass94Array3802[i72] = class94_26;
 																		}
 																		if (class94_55.length(-118) > 0) {
-																			if (OutputStream_Sub1.aClass94Array45 == null)
-																				OutputStream_Sub1.aClass94Array45 = new RSString[Class3_Sub13_Sub18.anIntArray3218[Class158.anInt2014]];
-																			OutputStream_Sub1.aClass94Array45[i72] = class94_55;
+																			if (Unsorted.aClass94Array45 == null)
+																				Unsorted.aClass94Array45 = new RSString[Class3_Sub13_Sub18.anIntArray3218[Class158.anInt2014]];
+																			Unsorted.aClass94Array45[i72] = class94_55;
 																		}
 																		continue;
 																	}
@@ -3013,9 +3013,9 @@ final class ItemDefinition {
 																	}
 																	if (opcode == 6201) {
 																		iStackCounter -= 2;
-																		OutputStream_Sub1.aShort46 = (short) intsStack[iStackCounter];
-																		if (OutputStream_Sub1.aShort46 <= 0)
-																			OutputStream_Sub1.aShort46 = 256;
+																		Unsorted.aShort46 = (short) intsStack[iStackCounter];
+																		if (Unsorted.aShort46 <= 0)
+																			Unsorted.aShort46 = 256;
 																		ObjectDefinition.aShort1535 = (short) intsStack[1 + iStackCounter];
 																		if (ObjectDefinition.aShort1535 <= 0)
 																			ObjectDefinition.aShort1535 = 320;
@@ -3052,7 +3052,7 @@ final class ItemDefinition {
 																		continue;
 																	}
 																	if (6204 == opcode) {
-																		intsStack[iStackCounter++] = OutputStream_Sub1.aShort46;
+																		intsStack[iStackCounter++] = Unsorted.aShort46;
 																		intsStack[iStackCounter++] = ObjectDefinition.aShort1535;
 																		continue;
 																	}

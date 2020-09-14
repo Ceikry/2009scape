@@ -253,7 +253,7 @@ final class Class3_Sub13_Sub18 extends Class3_Sub13 {
                   if((var26 - var28) * (var25 - var29) - (var27 - var29) * (var24 - var28) > 0) {
                      if(Class3_Sub13_Sub21.aBoolean3261 && Class3_Sub13_Sub4.method185(Class49.anInt819 + Class51.anInt846, Class3_Sub13_Sub23_Sub1.anInt4039 + Class51.anInt835, var27, var29, var25, var26, var28, var24)) {
                         Class27.anInt515 = var6;
-                        Class66.anInt999 = var7;
+                        Unsorted.anInt999 = var7;
                      }
 
                      if(!HDToolKit.highDetail && !var8) {
@@ -279,7 +279,7 @@ final class Class3_Sub13_Sub18 extends Class3_Sub13 {
                   if((var22 - var24) * (var29 - var25) - (var23 - var25) * (var28 - var24) > 0) {
                      if(Class3_Sub13_Sub21.aBoolean3261 && Class3_Sub13_Sub4.method185(Class49.anInt819 + Class51.anInt846, Class3_Sub13_Sub23_Sub1.anInt4039 + Class51.anInt835, var23, var25, var29, var22, var24, var28)) {
                         Class27.anInt515 = var6;
-                        Class66.anInt999 = var7;
+                        Unsorted.anInt999 = var7;
                      }
 
                      if(!HDToolKit.highDetail && !var8) {

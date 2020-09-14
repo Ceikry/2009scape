@@ -70,7 +70,7 @@ final class Class3_Sub24_Sub4 extends Class3_Sub24 {
             int var10 = (int)var9.aLong71;
             Class3_Sub15 var11 = (Class3_Sub15)this.aClass130_3508.method1780((long)var10);
             if(null == var11) {
-               var11 = Class66.method1245(var3, var10);
+               var11 = Unsorted.method1245(var3, var10);
                if(null == var11) {
                   var6 = false;
                   continue;

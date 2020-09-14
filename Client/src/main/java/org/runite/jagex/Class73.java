@@ -575,7 +575,7 @@ static boolean aBoolean1080 = false;
          Class64 var1 = Class38.aClass87_665.method1451(0, 5, this);
 
          while(Objects.requireNonNull(var1).anInt978 == 0) {
-            Class3_Sub13_Sub34.method331(10L, 64);
+            Class3_Sub13_Sub34.sleep(10L);
          }
 
          if(2 == var1.anInt978) {

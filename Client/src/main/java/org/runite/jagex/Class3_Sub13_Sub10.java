@@ -210,7 +210,7 @@ final class Class3_Sub13_Sub10 extends Class3_Sub13 {
                for (var4 = 1; true; ++var4) {
                   for (var5 = 1; true; ++var5) {
                      var6 = var5 - -(var4 << 7);
-                     OutputStream_Sub1.anIntArray49[var6] = (Class161.anIntArray2026[128 + var6] + Class161.anIntArray2026[-1 + var6] + Class161.anIntArray2026[1 + var6] - -Class161.anIntArray2026[-128 + var6]) / 4;
+                     Unsorted.anIntArray49[var6] = (Class161.anIntArray2026[128 + var6] + Class161.anIntArray2026[-1 + var6] + Class161.anIntArray2026[1 + var6] - -Class161.anIntArray2026[-128 + var6]) / 4;
                   }
                }
             }

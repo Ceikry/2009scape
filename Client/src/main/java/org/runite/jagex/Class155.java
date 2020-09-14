@@ -374,7 +374,7 @@ class Class155 {
                Class38_Sub1.aClass15_2613.aBoolean345 = true;
 
                while(Class38_Sub1.aClass15_2613.aBoolean353) {
-                  Class3_Sub13_Sub34.method331(50L, 64);
+                  Class3_Sub13_Sub34.sleep(50L);
                }
 
                Class38_Sub1.aClass15_2613 = null;

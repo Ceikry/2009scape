@@ -63,7 +63,7 @@ final class Class3_Sub28_Sub10_Sub1 extends Class3_Sub28_Sub10 {
             Class64 var3 = var2.method1436(var0, 86);
 
             while(var3.anInt978 == 0) {
-               Class3_Sub13_Sub34.method331(10L, 64);
+               Class3_Sub13_Sub34.sleep(10L);
             }
 
             if(1 == var3.anInt978) {
@@ -72,7 +72,7 @@ final class Class3_Sub28_Sub10_Sub1 extends Class3_Sub28_Sub10 {
                return;
             }
 
-            Class3_Sub13_Sub34.method331(100L, 64);
+            Class3_Sub13_Sub34.sleep(100L);
          }
       } catch (RuntimeException var4) {
          throw Class44.clientError(var4, "c.R(" + (var0 != null?"{...}":"null") + ',' + true + ',' + (var2 != null?"{...}":"null") + ')');

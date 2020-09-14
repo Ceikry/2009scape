@@ -13,7 +13,7 @@ final class Class60 {
             int var2 = Class15.localNPCIndexes[var1];
             NPC var3 = Class3_Sub13_Sub24.npcs[var2];
             if(null != var3) {
-               OutputStream_Sub1.method68(var3.definition.size, var3);
+               Unsorted.method68(var3.definition.size, var3);
             }
          }
 

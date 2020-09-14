@@ -337,7 +337,7 @@ final class Class3_Sub30_Sub1 extends RSByteBuffer {
 				}
 
 				if(var4 == 9 || 1003 == var4) {
-					OutputStream_Sub1.method66(Class163_Sub2_Sub1.aClass94Array4016[var1], var2, var5, (byte)-19, var3);
+					Unsorted.method66(Class163_Sub2_Sub1.aClass94Array4016[var1], var2, var5, (byte)-19, var3);
 				}
 
 				if(var4 == 5) {

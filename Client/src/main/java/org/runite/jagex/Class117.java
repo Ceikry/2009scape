@@ -30,7 +30,7 @@ final class Class117 {
                Class163_Sub2_Sub1.anInt4019 = 0;
                Class3_Sub5.anInt2275 = 1;
                Class3_Sub13_Sub24.anInt3293 = 0;
-               Class66.method1250(102, true);
+               Unsorted.method1250(102, true);
             }
 
             if(var0 == 25 || var0 == 10) {

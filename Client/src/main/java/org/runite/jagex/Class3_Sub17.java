@@ -46,7 +46,7 @@ final class Class3_Sub17 extends Class3 {
 			Class99.aClass11_1402 = null;
 			Class3_Sub23.anInt2535 = Class44.anInt719;
 			if(HDToolKit.highDetail) {
-				OutputStream_Sub1.aBoolean47 = true;
+				Unsorted.aBoolean47 = true;
 			}
 
 			Node.anInt2567 = -1;

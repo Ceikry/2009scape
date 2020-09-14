@@ -64,7 +64,7 @@ abstract class Class3_Sub28_Sub7 extends Node {
             Class64 var3 = var0.method1433("runescape", 12);
 
             while(0 == var3.anInt978) {
-               Class3_Sub13_Sub34.method331(1L, 64);
+               Class3_Sub13_Sub34.sleep(1L);
             }
 
             if(var3.anInt978 == 1) {

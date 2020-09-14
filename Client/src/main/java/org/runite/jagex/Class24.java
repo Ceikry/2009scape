@@ -162,7 +162,7 @@ final class Class24 {
                   if(var6 == 0) {
                      Class15.localNPCIndexes[Class163.localNPCCount++] = var3;
                      var4.anInt2838 = Class44.anInt719;
-                     Class21.maskUpdateIndexes[Class66.maskUpdateCount++] = var3;
+                     Class21.maskUpdateIndexes[Unsorted.maskUpdateCount++] = var3;
                   } else {
                      int var7;
                      int var8;
@@ -173,7 +173,7 @@ final class Class24 {
                         var4.walkStep(1, (byte)32, var7);
                         var8 = GraphicDefinition.incomingBuffer.getBits(1);
                         if(1 == var8) {
-                           Class21.maskUpdateIndexes[Class66.maskUpdateCount++] = var3;
+                           Class21.maskUpdateIndexes[Unsorted.maskUpdateCount++] = var3;
                         }
                      } else if (var6 == 2) {
                         Class15.localNPCIndexes[Class163.localNPCCount++] = var3;
@@ -190,7 +190,7 @@ final class Class24 {
 
                         var7 = GraphicDefinition.incomingBuffer.getBits(1);
                         if (var7 == 1) {
-                           Class21.maskUpdateIndexes[Class66.maskUpdateCount++] = var3;
+                           Class21.maskUpdateIndexes[Unsorted.maskUpdateCount++] = var3;
                         }
                      } else if (var6 == 3) {
                         Class3_Sub7.anIntArray2292[Class139.anInt1829++] = var3;

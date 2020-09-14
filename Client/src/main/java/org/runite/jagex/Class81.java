@@ -109,7 +109,7 @@ final class Class81 {
 
          if(null != var0.anEventQueue1199) {
             for(int var3 = 0; var3 < 50 && null != var0.anEventQueue1199.peekEvent(); ++var3) {
-               Class3_Sub13_Sub34.method331(1L, 64);
+               Class3_Sub13_Sub34.sleep(1L);
             }
 
             if(var1 != null) {

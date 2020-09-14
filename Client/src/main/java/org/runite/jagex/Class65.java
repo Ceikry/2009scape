@@ -183,7 +183,7 @@ final class Class65 {
          Class80.aClass3_Sub28_Sub16Array1136 = null;
          Class3_Sub13.aClass3_Sub28_Sub17_2379 = null;
          Class45.aClass3_Sub28_Sub16_736 = null;
-         Class66.aClass3_Sub28_Sub16Array996 = null;
+         Unsorted.aClass3_Sub28_Sub16Array996 = null;
          Class3_Sub13_Sub39.aClass3_Sub28_Sub16Array3458 = null;
          Class166.aClass3_Sub28_Sub16Array2072 = null;
          Class3_Sub13_Sub31.aClass3_Sub28_Sub16Array3373 = null;

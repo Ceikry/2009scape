@@ -20,11 +20,11 @@ final class Class8 {
          if(null == this.aClass3_Sub30_99) {
 
             if(this.aClass3_Sub28_Sub10_Sub2_100 == null) {
-               if(this.aClass66_102.method1251((byte)89)) {
+               if(this.aClass66_102.method1251()) {
                   return false;
                }
 
-               this.aClass3_Sub28_Sub10_Sub2_100 = this.aClass66_102.addJS5Request(123, 255, (byte)0, 255, true);
+               this.aClass3_Sub28_Sub10_Sub2_100 = this.aClass66_102.addJS5Request(255, (byte)0, 255, true);
             }
 
             if(this.aClass3_Sub28_Sub10_Sub2_100.aBoolean3632) {
@@ -254,8 +254,8 @@ final class Class8 {
       try {
          this.aClass73_103 = var2;
          this.aClass66_102 = var1;
-         if(!this.aClass66_102.method1251((byte)111)) {
-            this.aClass3_Sub28_Sub10_Sub2_100 = this.aClass66_102.addJS5Request(110, 255, (byte)0, 255, true);
+         if(!this.aClass66_102.method1251()) {
+            this.aClass3_Sub28_Sub10_Sub2_100 = this.aClass66_102.addJS5Request(255, (byte)0, 255, true);
          }
 
       } catch (RuntimeException var4) {

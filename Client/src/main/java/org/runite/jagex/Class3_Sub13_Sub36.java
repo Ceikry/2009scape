@@ -140,7 +140,7 @@ final class Class3_Sub13_Sub36 extends Class3_Sub13 {
             ClientErrorException.method2285(Class139.anInt1823, Class77.anInt1111, Class7.anInt2162, NPC.anInt3995, Class3_Sub13_Sub25.anInt3315);
             HDToolKit.anInt1791 = Class44.anInt719;
             Class3_Sub22.method398(NPC.anInt3995, Class7.anInt2162, Class77.anInt1111, Class139.anInt1823, Class3_Sub13_Sub25.anInt3315, Class158.aByteArrayArrayArray2008, Class41.anIntArray686, Class129_Sub1.anIntArray2696, Class159.anIntArray2021, Player.anIntArray3959, AnimationDefinition.anIntArray1871, WorldListCountry.localPlane + 1, var19, Class102.player.anInt2819 >> 7, Class102.player.anInt2829 >> 7);
-            OutputStream_Sub1.aBoolean47 = true;
+            Unsorted.aBoolean47 = true;
             Class68.method1265();
             ClientErrorException.method2285(0, 0, 0, 0, 0);
             Class58.method1194();

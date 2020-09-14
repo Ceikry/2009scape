@@ -37,7 +37,7 @@ final class Class151_Sub1 extends Class151 {
             if (opcode != 0) {
                 int type = GraphicDefinition.incomingBuffer.getBits(2);
                 if (0 == type) {
-                    Class21.maskUpdateIndexes[Class66.maskUpdateCount++] = 2047;
+                    Class21.maskUpdateIndexes[Unsorted.maskUpdateCount++] = 2047;
                 } else {
                     int var4;
                     int var5;
@@ -46,7 +46,7 @@ final class Class151_Sub1 extends Class151 {
                         Class102.player.walkStep(1, (byte) -128, var4);
                         var5 = GraphicDefinition.incomingBuffer.getBits(1);
                         if (var5 == 1) {
-                            Class21.maskUpdateIndexes[Class66.maskUpdateCount++] = 2047;
+                            Class21.maskUpdateIndexes[Unsorted.maskUpdateCount++] = 2047;
                         }
 
                     } else if (2 == type) {
@@ -62,7 +62,7 @@ final class Class151_Sub1 extends Class151 {
 
                         var4 = GraphicDefinition.incomingBuffer.getBits(1);
                         if (var4 == 1) {
-                            Class21.maskUpdateIndexes[Class66.maskUpdateCount++] = 2047;
+                            Class21.maskUpdateIndexes[Unsorted.maskUpdateCount++] = 2047;
                         }
 
                     } else if (type == 3) {
@@ -71,7 +71,7 @@ final class Class151_Sub1 extends Class151 {
                         WorldListCountry.localPlane = GraphicDefinition.incomingBuffer.getBits(2);
                         int var6 = GraphicDefinition.incomingBuffer.getBits(1);
                         if (var6 == 1) {
-                            Class21.maskUpdateIndexes[Class66.maskUpdateCount++] = 2047;
+                            Class21.maskUpdateIndexes[Unsorted.maskUpdateCount++] = 2047;
                         }
 
                         int var7 = GraphicDefinition.incomingBuffer.getBits(7);
@@ -106,11 +106,11 @@ final class Class151_Sub1 extends Class151 {
         try {
             if (this.aReferenceTable_2944 == null) {
                 if (null == this.aClass3_Sub28_Sub10_2950) {
-                    if (this.aClass66_2953.method1251((byte) 73)) {
+                    if (this.aClass66_2953.method1251()) {
                         return null;
                     }
 
-                    this.aClass3_Sub28_Sub10_2950 = this.aClass66_2953.addJS5Request(115, 255, (byte) 0, this.anInt2957, true);
+                    this.aClass3_Sub28_Sub10_2950 = this.aClass66_2953.addJS5Request(255, (byte) 0, this.anInt2957, true);
                 }
 
                 if (this.aClass3_Sub28_Sub10_2950.aBoolean3632) {
@@ -129,10 +129,10 @@ final class Class151_Sub1 extends Class151 {
                             }
                         } catch (RuntimeException var4) {
                             this.aReferenceTable_2944 = null;
-                            if (this.aClass66_2953.method1251((byte) 124)) {
+                            if (this.aClass66_2953.method1251()) {
                                 this.aClass3_Sub28_Sub10_2950 = null;
                             } else {
-                                this.aClass3_Sub28_Sub10_2950 = this.aClass66_2953.addJS5Request(-81, 255, (byte) 0, this.anInt2957, true);
+                                this.aClass3_Sub28_Sub10_2950 = this.aClass66_2953.addJS5Request(255, (byte) 0, this.anInt2957, true);
                             }
 
                             return null;
@@ -145,12 +145,12 @@ final class Class151_Sub1 extends Class151 {
 
                             this.aReferenceTable_2944 = new ReferenceTable(var2, this.anInt2955);
                         } catch (RuntimeException var5) {
-                            this.aClass66_2953.method1252((byte) -107);
+                            this.aClass66_2953.method1252();
                             this.aReferenceTable_2944 = null;
-                            if (this.aClass66_2953.method1251((byte) -71)) {
+                            if (this.aClass66_2953.method1251()) {
                                 this.aClass3_Sub28_Sub10_2950 = null;
                             } else {
-                                this.aClass3_Sub28_Sub10_2950 = this.aClass66_2953.addJS5Request(120, 255, (byte) 0, this.anInt2957, true);
+                                this.aClass3_Sub28_Sub10_2950 = this.aClass66_2953.addJS5Request(255, (byte) 0, this.anInt2957, true);
                             }
 
                             return null;
@@ -405,11 +405,11 @@ final class Class151_Sub1 extends Class151 {
             if (null == var4) {
                 if (0 == var1) {
                     if (null == this.aClass41_2954 || this.aByteArray2949[archiveIndex] == -1) {
-                        if (this.aClass66_2953.method1251((byte) -83)) {
+                        if (this.aClass66_2953.method1251()) {
                             return null;
                         }
 
-                        var4 = this.aClass66_2953.addJS5Request(-51, this.anInt2957, (byte) 2, archiveIndex, true);
+                        var4 = this.aClass66_2953.addJS5Request(this.anInt2957, (byte) 2, archiveIndex, true);
                     } else {
                         var4 = this.aClass73_2956.method1309(this.aClass41_2954, (byte) 106, archiveIndex);
                     }
@@ -436,7 +436,7 @@ final class Class151_Sub1 extends Class151 {
                         return null;
                     }
 
-                    var4 = this.aClass66_2953.addJS5Request(-37, this.anInt2957, (byte) 2, archiveIndex, false);
+                    var4 = this.aClass66_2953.addJS5Request(this.anInt2957, (byte) 2, archiveIndex, false);
                 }
 
                 this.aClass130_2946.method1779((Class3) var4, (long) archiveIndex);
@@ -492,8 +492,8 @@ final class Class151_Sub1 extends Class151 {
 //            	   var9.printStackTrace();
                         this.aByteArray2949[archiveIndex] = -1;
                         ((Class3_Sub28_Sub10) var4).method86(-1024);
-                        if (((Class3_Sub28_Sub10) var4).aBoolean3628 && !this.aClass66_2953.method1251((byte) -78)) {
-                            var12 = this.aClass66_2953.addJS5Request(-13, this.anInt2957, (byte) 2, archiveIndex, true);
+                        if (((Class3_Sub28_Sub10) var4).aBoolean3628 && !this.aClass66_2953.method1251()) {
+                            var12 = this.aClass66_2953.addJS5Request(this.anInt2957, (byte) 2, archiveIndex, true);
                             this.aClass130_2946.method1779(var12, (long) archiveIndex);
                         }
 
@@ -523,10 +523,10 @@ final class Class151_Sub1 extends Class151 {
                         this.aClass66_2953.anInt1010 = 0;
                     } catch (RuntimeException var10) {
                         var10.printStackTrace();
-                        this.aClass66_2953.method1252((byte) -67);
+                        this.aClass66_2953.method1252();
                         ((Class3_Sub28_Sub10) var4).method86(-1024);
-                        if (((Class3_Sub28_Sub10) var4).aBoolean3628 && !this.aClass66_2953.method1251((byte) 90)) {
-                            var12 = this.aClass66_2953.addJS5Request(112, this.anInt2957, (byte) 2, archiveIndex, true);
+                        if (((Class3_Sub28_Sub10) var4).aBoolean3628 && !this.aClass66_2953.method1251()) {
+                            var12 = this.aClass66_2953.addJS5Request(this.anInt2957, (byte) 2, archiveIndex, true);
                             this.aClass130_2946.method1779(var12, (long) archiveIndex);
                         }
 

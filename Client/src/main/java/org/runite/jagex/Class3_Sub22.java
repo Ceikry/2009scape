@@ -115,7 +115,7 @@ final class Class3_Sub22 extends Class3 {
       Class73.anIntArray1083 = var7;
       Class52.anIntArray859 = var8;
       Class75_Sub4.anIntArray2663 = var9;
-      InputStream_Sub1.anIntArray39 = var10;
+      Unsorted.anIntArray39 = var10;
       Class72.method1294();
       if(Class166.aClass3_Sub2ArrayArrayArray2065 != null) {
          Class167.method2264(true);

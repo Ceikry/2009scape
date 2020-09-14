@@ -460,7 +460,7 @@ final class Class140_Sub3 extends GameObject {
                   if(type == 0) {
                      Class56.localPlayerIndexes[Class159.localPlayerCount++] = var3;
                      var4.anInt2838 = Class44.anInt719;
-                     Class21.maskUpdateIndexes[Class66.maskUpdateCount++] = var3;
+                     Class21.maskUpdateIndexes[Unsorted.maskUpdateCount++] = var3;
                   } else {
                      int var7;
                      int var8;
@@ -471,7 +471,7 @@ final class Class140_Sub3 extends GameObject {
                         var4.walkStep(1, (byte)46, var7);
                         var8 = GraphicDefinition.incomingBuffer.getBits(1);
                         if(var8 == 1) {
-                           Class21.maskUpdateIndexes[Class66.maskUpdateCount++] = var3;
+                           Class21.maskUpdateIndexes[Unsorted.maskUpdateCount++] = var3;
                         }
                      } else if (type == 2) {
                         Class56.localPlayerIndexes[Class159.localPlayerCount++] = var3;
@@ -488,7 +488,7 @@ final class Class140_Sub3 extends GameObject {
 
                         var7 = GraphicDefinition.incomingBuffer.getBits(1);
                         if (1 == var7) {
-                           Class21.maskUpdateIndexes[Class66.maskUpdateCount++] = var3;
+                           Class21.maskUpdateIndexes[Unsorted.maskUpdateCount++] = var3;
                         }
                      } else if (type == 3) {
                         Class3_Sub7.anIntArray2292[Class139.anInt1829++] = var3;

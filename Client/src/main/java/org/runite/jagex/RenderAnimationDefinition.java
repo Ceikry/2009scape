@@ -54,7 +54,7 @@ final class RenderAnimationDefinition {
       try {
          GraphicDefinition def = (GraphicDefinition)Class3_Sub31.aClass93_2604.get((long)graphicId);
          if(def == null) {
-            byte[] var3 = Class3_Sub13_Sub18.aClass153_3214.getFile(InputStream_Sub1.method64(graphicId), Class75.method1338(graphicId, var0 ^ 7));
+            byte[] var3 = Class3_Sub13_Sub18.aClass153_3214.getFile(Unsorted.method64(graphicId), Class75.method1338(graphicId, var0 ^ 7));
             def = new GraphicDefinition();
             def.graphicId = graphicId;
             if(var0 != 42) {

@@ -163,12 +163,12 @@ final class Class121 {
                   return -1;
                }
 
-               Class66.wlPacketSize = Class3_Sub15.aClass89_2429.readByte(0);
-               Class66.wlPacketSize <<= 8;
-               Class66.wlPacketSize += Class3_Sub15.aClass89_2429.readByte(0);
+               Unsorted.wlPacketSize = Class3_Sub15.aClass89_2429.readByte(0);
+               Unsorted.wlPacketSize <<= 8;
+               Unsorted.wlPacketSize += Class3_Sub15.aClass89_2429.readByte(0);
                Class43.anInt692 = 3;
                Class3_Sub20.wlPacketIndex = 0;
-               Class3_Sub13_Sub33.aByteArray3396 = new byte[Class66.wlPacketSize];
+               Class3_Sub13_Sub33.aByteArray3396 = new byte[Unsorted.wlPacketSize];
             }
 
             if(Class43.anInt692 == 3) {
@@ -177,13 +177,13 @@ final class Class121 {
                   return -1;
                }
 
-               if(wlUpdateStamp > -Class3_Sub20.wlPacketIndex + Class66.wlPacketSize) {
-                  wlUpdateStamp = Class66.wlPacketSize + -Class3_Sub20.wlPacketIndex;
+               if(wlUpdateStamp > -Class3_Sub20.wlPacketIndex + Unsorted.wlPacketSize) {
+                  wlUpdateStamp = Unsorted.wlPacketSize + -Class3_Sub20.wlPacketIndex;
                }
 
                Class3_Sub15.aClass89_2429.readBytes(Class3_Sub20.wlPacketIndex, wlUpdateStamp, Class3_Sub13_Sub33.aByteArray3396);
                Class3_Sub20.wlPacketIndex += wlUpdateStamp;
-               if(Class3_Sub20.wlPacketIndex >= Class66.wlPacketSize) {
+               if(Class3_Sub20.wlPacketIndex >= Unsorted.wlPacketSize) {
                   if(Class3_Sub13_Sub23.handleWorldListUpdate(Class3_Sub13_Sub33.aByteArray3396)) {
                      Class3_Sub13_Sub16.aClass44_Sub1Array3201 = new WorldListEntry[Class57.activeWorldListSize];
                      var2 = 0;

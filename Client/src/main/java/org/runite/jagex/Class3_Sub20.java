@@ -38,7 +38,7 @@ final class Class3_Sub20 extends Class3 {
 	         Class140_Sub1_Sub1.method1929();
 	         Class141.method2043();
 	         Class65.method1240();
-	         Class66.method1250(17, false);
+	         Unsorted.method1250(17, false);
 	         Class3_Sub13_Sub17.method247((byte)51);
 
 	         for(int var1 = 0; 2048 > var1; ++var1) {

@@ -44,7 +44,7 @@ final class Class3_Sub13_Sub14 extends Class3_Sub13 {
    
    static void renderNPCs(int var0) {
       try {
-         Class66.maskUpdateCount = 0;
+         Unsorted.maskUpdateCount = 0;
          Class139.anInt1829 = 0;
          Class24.renderLocalNPCs();
          NPC_RENDER_LOG[0] = GraphicDefinition.incomingBuffer.index;

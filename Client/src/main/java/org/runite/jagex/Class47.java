@@ -552,7 +552,7 @@ final class Class47 {
                                              Class20.method909(-106, var11);
                                           } else if (Class67.aClass11_1017 == var11 && var20 == PacketParser.anInt86) {
                                              var25 = Class126.anInt1676 - Class129_Sub1.anInt2693;
-                                             var26 = -InputStream_Sub1.anInt40 + Class130.anInt1709;
+                                             var26 = -Unsorted.anInt40 + Class130.anInt1709;
                                              if (var26 < 5 && var26 > -5) {
                                                 var26 = 0;
                                              }
@@ -591,7 +591,7 @@ final class Class47 {
                                                    }
 
                                                    var51.anInt208 -= var32;
-                                                   InputStream_Sub1.anInt40 += var32;
+                                                   Unsorted.anInt40 += var32;
                                                    Class20.method909(121, var51);
                                                 }
 
@@ -606,7 +606,7 @@ final class Class47 {
                                                    }
 
                                                    var51.anInt208 += var32;
-                                                   InputStream_Sub1.anInt40 -= var32;
+                                                   Unsorted.anInt40 -= var32;
                                                    Class20.method909(-81, var51);
                                                 }
                                              }
@@ -883,11 +883,11 @@ final class Class47 {
                                           HDToolKit.method1831(true);
                                           HDToolKit.method1827(false);
                                           Class3_Sub13_Sub33.method324(Class3_Sub28_Sub10.anInt3625);
-                                          if (OutputStream_Sub1.aBoolean47) {
+                                          if (Unsorted.aBoolean47) {
                                              Class22.method925();
                                              HDToolKit.method1841();
                                              Class22.method935(var0, var6, var4, var7);
-                                             OutputStream_Sub1.aBoolean47 = false;
+                                             Unsorted.aBoolean47 = false;
                                           }
 
                                           if (var11.aBoolean309) {

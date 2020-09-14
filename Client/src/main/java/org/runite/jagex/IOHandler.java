@@ -1,5 +1,8 @@
 package org.runite.jagex;
 
+import org.rs09.client.net.DummyInputStream;
+import org.rs09.client.net.DummyOutputStream;
+
 import java.io.EOFException;
 import java.io.IOException;
 import java.io.InputStream;
@@ -215,8 +218,8 @@ final class IOHandler implements Runnable {
         try {
 
             if(!this.aBoolean1241) {
-                this.anInputStream1232 = new InputStream_Sub1();
-                this.anOutputStream1231 = new OutputStream_Sub1();
+                this.anInputStream1232 = new DummyInputStream();
+                this.anOutputStream1231 = new DummyOutputStream();
             }
         } catch (RuntimeException var3) {
             throw Class44.clientError(var3, "ma.H(" + false + ')');
@@ -236,7 +239,7 @@ final class IOHandler implements Runnable {
 
                 if(this.aClass64_1237 != null) {
                     while(this.aClass64_1237.anInt978 == 0) {
-                        Class3_Sub13_Sub34.method331(1L, 64);
+                        Class3_Sub13_Sub34.sleep(1L);
                     }
 
                     if(this.aClass64_1237.anInt978 == 1) {

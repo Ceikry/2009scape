@@ -55,7 +55,7 @@ final class Class7 implements Interface4 {
 
    static void method834() {
       try {
-         Class66.method1250(43, false);
+         Unsorted.method1250(43, false);
          System.gc();
          Class117.method1719(25);
 

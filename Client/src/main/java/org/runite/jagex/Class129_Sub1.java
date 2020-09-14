@@ -76,7 +76,7 @@ final class Class129_Sub1 extends Class129 {
             this.anInt2691 = var2;
          }
 
-         Class3_Sub13_Sub34.method331((long)this.anInt2691, var1 ^ -65);
+         Class3_Sub13_Sub34.sleep((long)this.anInt2691);
 
          for(var6 = 0; 256 > this.anInt2692; ++var6) {
             this.anInt2692 += this.anInt2688;

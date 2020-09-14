@@ -366,8 +366,8 @@ final class Player extends Class140_Sub4 {
             var2 = RenderAnimationDefinition.method903(new RSString[]{Class3_Sub30_Sub1.aClass94Array3802[this.anInt3958], var2}, (byte)-92);
          }
 
-         if(null != OutputStream_Sub1.aClass94Array45) {
-            var2 = RenderAnimationDefinition.method903(new RSString[]{var2, OutputStream_Sub1.aClass94Array45[this.anInt3958]}, (byte)-128);
+         if(null != Unsorted.aClass94Array45) {
+            var2 = RenderAnimationDefinition.method903(new RSString[]{var2, Unsorted.aClass94Array45[this.anInt3958]}, (byte)-128);
          }
 
          return var2;

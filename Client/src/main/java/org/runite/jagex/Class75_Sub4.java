@@ -17,7 +17,7 @@ final class Class75_Sub4 extends Class75 {
    static void renderNPCMasks(int var0) {
       try {
          int i;
-         for(i = 0; Class66.maskUpdateCount > i; ++i) {
+         for(i = 0; Unsorted.maskUpdateCount > i; ++i) {
             int mask = Class21.maskUpdateIndexes[i];
             NPC npc = Class3_Sub13_Sub24.npcs[mask];
             int var4 = GraphicDefinition.incomingBuffer.readUnsignedByte();

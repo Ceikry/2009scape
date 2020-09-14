@@ -83,7 +83,7 @@ class Class38 {
 
             Player var3 = Class3_Sub13_Sub22.players[var2];
             if(var3 != null) {
-               OutputStream_Sub1.method68(var3.getSize(), var3);
+               Unsorted.method68(var3.getSize(), var3);
             }
          }
 

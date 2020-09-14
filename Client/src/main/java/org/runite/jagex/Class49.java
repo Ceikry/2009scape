@@ -156,7 +156,7 @@ final class Class49 {
          Class64 var4 = Class3_Sub13_Sub10.aClass87_3125.method1439(false, new URL(Class3_Sub13_Sub10.aClass87_3125.anApplet1219.getCodeBase(), "clienterror.ws?c=" + Class3_Sub13_Sub23_Sub1.anInt4033 + "&u=" + Class3_Sub13_Sub16.aLong3202 + "&v1=" + Signlink.javaVendor + "&v2=" + Signlink.javaVersion + "&e=" + var3));
 
          while(var4.anInt978 == 0) {
-            Class3_Sub13_Sub34.method331(1L, 64);
+            Class3_Sub13_Sub34.sleep(1L);
          }
 
          if(var4.anInt978 == 1) {
@@ -219,7 +219,7 @@ final class Class49 {
             Node.anInt2567 = -1;
             Class99.aClass11_1402 = null;
             if(HDToolKit.highDetail) {
-               OutputStream_Sub1.aBoolean47 = true;
+               Unsorted.aBoolean47 = true;
             }
 
             Class3_Sub23.anInt2535 = Class44.anInt719;

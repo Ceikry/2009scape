@@ -15,7 +15,7 @@ final class Class163_Sub3 extends Class163 {
    
    static void renderPlayers() {
       try {
-         Class66.maskUpdateCount = 0;
+         Unsorted.maskUpdateCount = 0;
          Class139.anInt1829 = 0;
          Class151_Sub1.updateLocalPosition();
          PLAYER_RENDER_LOG[0] = GraphicDefinition.incomingBuffer.index;

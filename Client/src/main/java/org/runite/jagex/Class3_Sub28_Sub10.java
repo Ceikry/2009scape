@@ -19,7 +19,7 @@ abstract class Class3_Sub28_Sub10 extends Node {
       Class49.anInt819 = var1;
       Class3_Sub13_Sub23_Sub1.anInt4039 = var2;
       Class27.anInt515 = -1;
-      Class66.anInt999 = -1;
+      Unsorted.anInt999 = -1;
    }
 
    static boolean method590(byte var0, int var1, int var2) {

@@ -497,18 +497,18 @@ final class Class140_Sub1_Sub1 extends Model {
                               if(var39 != -1) {
                                  if(var15 == null) {
                                     this.aClass18_3843 = new Class18();
-                                    var15 = this.aClass18_3843.aShortArray417 = OutputStream_Sub1.method65(this.aShortArray3810);
-                                    var16 = this.aClass18_3843.aShortArray419 = OutputStream_Sub1.method65(this.aShortArray3826);
-                                    var17 = this.aClass18_3843.aShortArray418 = OutputStream_Sub1.method65(this.aShortArray3837);
-                                    var18 = this.aClass18_3843.aShortArray416 = OutputStream_Sub1.method65(this.aShortArray3841);
+                                    var15 = this.aClass18_3843.aShortArray417 = Unsorted.method65(this.aShortArray3810);
+                                    var16 = this.aClass18_3843.aShortArray419 = Unsorted.method65(this.aShortArray3826);
+                                    var17 = this.aClass18_3843.aShortArray418 = Unsorted.method65(this.aShortArray3837);
+                                    var18 = this.aClass18_3843.aShortArray416 = Unsorted.method65(this.aShortArray3841);
                                  }
 
                                  if(var19 == null) {
                                     Class18 var47 = var6.aClass18_3843 = new Class18();
-                                    var19 = var47.aShortArray417 = OutputStream_Sub1.method65(var11);
-                                    var20 = var47.aShortArray419 = OutputStream_Sub1.method65(var12);
-                                    var21 = var47.aShortArray418 = OutputStream_Sub1.method65(var13);
-                                    var22 = var47.aShortArray416 = OutputStream_Sub1.method65(var14);
+                                    var19 = var47.aShortArray417 = Unsorted.method65(var11);
+                                    var20 = var47.aShortArray419 = Unsorted.method65(var12);
+                                    var21 = var47.aShortArray418 = Unsorted.method65(var13);
+                                    var22 = var47.aShortArray416 = Unsorted.method65(var14);
                                  }
 
                                  short var46 = this.aShortArray3810[var35];
@@ -2362,7 +2362,7 @@ final class Class140_Sub1_Sub1 extends Model {
       if(var3) {
          var12.aShortArray3808 = this.aShortArray3808;
       } else {
-         var12.aShortArray3808 = OutputStream_Sub1.method65(this.aShortArray3808);
+         var12.aShortArray3808 = Unsorted.method65(this.aShortArray3808);
       }
 
       var12.aByteArray3816 = this.aByteArray3816;
@@ -2379,10 +2379,10 @@ final class Class140_Sub1_Sub1 extends Model {
          var12.aShortArray3837 = this.aShortArray3837;
          var12.aShortArray3841 = this.aShortArray3841;
       } else {
-         var12.aShortArray3810 = OutputStream_Sub1.method65(this.aShortArray3810);
-         var12.aShortArray3826 = OutputStream_Sub1.method65(this.aShortArray3826);
-         var12.aShortArray3837 = OutputStream_Sub1.method65(this.aShortArray3837);
-         var12.aShortArray3841 = OutputStream_Sub1.method65(this.aShortArray3841);
+         var12.aShortArray3810 = Unsorted.method65(this.aShortArray3810);
+         var12.aShortArray3826 = Unsorted.method65(this.aShortArray3826);
+         var12.aShortArray3837 = Unsorted.method65(this.aShortArray3837);
+         var12.aShortArray3841 = Unsorted.method65(this.aShortArray3841);
       }
 
       if(Class106.aBoolean1441) {
@@ -2405,16 +2405,16 @@ final class Class140_Sub1_Sub1 extends Model {
          var12.aShortArray3831 = this.aShortArray3831;
          var12.aClass121_3846 = this.aClass121_3846;
       } else {
-         var12.aShortArray3811 = OutputStream_Sub1.method65(this.aShortArray3811);
-         var12.aShortArray3830 = OutputStream_Sub1.method65(this.aShortArray3830);
-         var12.aShortArray3831 = OutputStream_Sub1.method65(this.aShortArray3831);
+         var12.aShortArray3811 = Unsorted.method65(this.aShortArray3811);
+         var12.aShortArray3830 = Unsorted.method65(this.aShortArray3830);
+         var12.aShortArray3831 = Unsorted.method65(this.aShortArray3831);
          var12.aClass121_3846 = new Class121();
       }
 
       if(var11) {
          var12.aShortArray3827 = this.aShortArray3827;
       } else {
-         var12.aShortArray3827 = OutputStream_Sub1.method65(this.aShortArray3827);
+         var12.aShortArray3827 = Unsorted.method65(this.aShortArray3827);
       }
 
       var12.anIntArray3844 = this.anIntArray3844;

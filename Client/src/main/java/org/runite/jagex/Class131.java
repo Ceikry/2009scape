@@ -35,7 +35,7 @@ final class Class131 {
                   var3.anInt2838 = Class44.anInt719;
                   int var4 = GraphicDefinition.incomingBuffer.getBits(1);
                   if(var4 == 1) {
-                     Class21.maskUpdateIndexes[Class66.maskUpdateCount++] = index;
+                     Class21.maskUpdateIndexes[Unsorted.maskUpdateCount++] = index;
                   }
 
                   int var5 = GraphicDefinition.incomingBuffer.getBits(5);

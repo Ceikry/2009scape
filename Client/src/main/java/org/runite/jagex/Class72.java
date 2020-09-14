@@ -39,7 +39,7 @@ final class Class72 {
       try {
          if(!Class3_Sub28_Sub19.aBoolean3779 && Class44.anInt718 != 2) {
             try {
-               InputStream_Sub1.aClass94_38.method1577(Class126.aClient1671);
+               Unsorted.aClass94_38.method1577(Class126.aClient1671);
             } catch (Throwable var2) {
             }
 
@@ -58,7 +58,7 @@ final class Class72 {
          int var2;
          if(Class3_Sub13_Sub2.anIntArray3045 != null) {
             for(var2 = 0; var2 < Class3_Sub13_Sub2.anIntArray3045.length; ++var2) {
-               if(Class3_Sub13_Sub2.anIntArray3045[var2] != -1000000 && (var1.anInt1544 <= Class3_Sub13_Sub2.anIntArray3045[var2] || var1.anInt1548 <= Class3_Sub13_Sub2.anIntArray3045[var2]) && (var1.anInt1562 <= Class52.anIntArray859[var2] || var1.anInt1545 <= Class52.anIntArray859[var2]) && (var1.anInt1562 >= Class73.anIntArray1083[var2] || var1.anInt1545 >= Class73.anIntArray1083[var2]) && (var1.anInt1560 <= Class75_Sub4.anIntArray2663[var2] || var1.anInt1550 <= Class75_Sub4.anIntArray2663[var2]) && (var1.anInt1560 >= InputStream_Sub1.anIntArray39[var2] || var1.anInt1550 >= InputStream_Sub1.anIntArray39[var2])) {
+               if(Class3_Sub13_Sub2.anIntArray3045[var2] != -1000000 && (var1.anInt1544 <= Class3_Sub13_Sub2.anIntArray3045[var2] || var1.anInt1548 <= Class3_Sub13_Sub2.anIntArray3045[var2]) && (var1.anInt1562 <= Class52.anIntArray859[var2] || var1.anInt1545 <= Class52.anIntArray859[var2]) && (var1.anInt1562 >= Class73.anIntArray1083[var2] || var1.anInt1545 >= Class73.anIntArray1083[var2]) && (var1.anInt1560 <= Class75_Sub4.anIntArray2663[var2] || var1.anInt1550 <= Class75_Sub4.anIntArray2663[var2]) && (var1.anInt1560 >= Unsorted.anIntArray39[var2] || var1.anInt1550 >= Unsorted.anIntArray39[var2])) {
                   continue label188;
                }
             }

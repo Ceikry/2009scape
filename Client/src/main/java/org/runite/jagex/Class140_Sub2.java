@@ -91,7 +91,7 @@ final class Class140_Sub2 extends GameObject {
                var8 = 0;
             }
 
-            var9 = var8 * (-OutputStream_Sub1.aShort46 + ObjectDefinition.aShort1535) / 100 + OutputStream_Sub1.aShort46;
+            var9 = var8 * (-Unsorted.aShort46 + ObjectDefinition.aShort1535) / 100 + Unsorted.aShort46;
             var4 = var9 * var4 >> 8;
          }
 

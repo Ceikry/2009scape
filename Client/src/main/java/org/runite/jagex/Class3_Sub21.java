@@ -81,7 +81,7 @@ final class Class3_Sub21 extends Class3 {
          if((var13 - var14) * (var18 - var17) - (var16 - var17) * (var15 - var14) > 0) {
             if(Class3_Sub13_Sub21.aBoolean3261 && Class3_Sub13_Sub4.method185(Class49.anInt819 + Class51.anInt846, Class3_Sub13_Sub23_Sub1.anInt4039 + Class51.anInt835, var16, var17, var18, var13, var14, var15)) {
                Class27.anInt515 = var5;
-               Class66.anInt999 = var6;
+               Unsorted.anInt999 = var6;
             }
 
             if(!HDToolKit.highDetail && !var7) {

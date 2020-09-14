@@ -9,7 +9,7 @@ final class Class3_Sub10 extends Class3 {
 
    static void method138(RSString var0) {
       try {
-         Class66.method1250(93, false);
+         Unsorted.method1250(93, false);
          Class75.method1339(var0);
       } catch (RuntimeException var3) {
          throw Class44.clientError(var3, "hb.F(" + (var0 != null?"{...}":"null") + ',' + 0 + ')');

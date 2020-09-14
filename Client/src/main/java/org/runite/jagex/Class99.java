@@ -1,5 +1,4 @@
 package org.runite.jagex;
-import org.rs09.client.util.CRC;
 
 import java.awt.Frame;
 import java.util.Objects;
@@ -68,7 +67,7 @@ final class Class99 {
             Class64 var10 = var5.method1450(0, var2, var3, var4);
 
             while(0 == var10.anInt978) {
-               Class3_Sub13_Sub34.method331(10L, 64);
+               Class3_Sub13_Sub34.sleep(10L);
             }
 
             Frame var11 = (Frame)var10.anObject974;

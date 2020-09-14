@@ -35,7 +35,7 @@ final class Class46 {
             }
 
             if(var2 == 5) {
-               Class66.anInt998 = var3;
+               Unsorted.anInt998 = var3;
             }
 
             if(var2 == 9) {

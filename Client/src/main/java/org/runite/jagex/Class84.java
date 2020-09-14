@@ -59,7 +59,7 @@ final class Class84 {
          }
 
           Class161.anIntArray2026 = new int['\u8000'];
-         OutputStream_Sub1.anIntArray49 = new int['\u8000'];
+         Unsorted.anIntArray49 = new int['\u8000'];
          Class3_Sub13_Sub10.method215((byte)-89, (LDIndexedSprite)null);
          Class3_Sub30_Sub1.anIntArray3805 = new int['\u8000'];
          Class127.anIntArray1681 = new int['\u8000'];

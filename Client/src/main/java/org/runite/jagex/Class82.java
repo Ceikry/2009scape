@@ -231,8 +231,8 @@ final class Class82 {
                }
 
                if(Class44.anInt719 < ((Class140_Sub4) var8).anInt2781) {
-                  Class3_Sub28_Sub16 var23 = Class66.aClass3_Sub28_Sub16Array996[0];
-                  Class3_Sub28_Sub16 var25 = Class66.aClass3_Sub28_Sub16Array996[1];
+                  Class3_Sub28_Sub16 var23 = Unsorted.aClass3_Sub28_Sub16Array996[0];
+                  Class3_Sub28_Sub16 var25 = Unsorted.aClass3_Sub28_Sub16Array996[1];
                   if(var8 instanceof NPC) {
                      NPC var28 = (NPC)var8;
                      Class3_Sub28_Sub16[] var31 = (Class3_Sub28_Sub16[])((Class3_Sub28_Sub16[])Class3_Sub13_Sub11.aClass93_3130.get((long)var28.definition.anInt1279));
@@ -654,7 +654,7 @@ final class Class82 {
          int var8;
          int var9;
          for(var6 = 0; var2 > var6; ++var6) {
-            var7 = InputStream_Sub1.method63(var1);
+            var7 = Unsorted.method63(var1);
             if(0 <= var7.method159(4)) {
                ++var3;
             }

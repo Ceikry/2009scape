@@ -27,7 +27,7 @@ final class Class3_Sub28_Sub10_Sub2 extends Class3_Sub28_Sub10 {
             Class64 var2 = var1.method1453((byte)8);
 
             while(0 == var2.anInt978) {
-               Class3_Sub13_Sub34.method331(10L, 64);
+               Class3_Sub13_Sub34.sleep(10L);
             }
 
             if(2 == var2.anInt978) {
@@ -169,7 +169,7 @@ final class Class3_Sub28_Sub10_Sub2 extends Class3_Sub28_Sub10 {
 					   Class64 var13 = Class38.aClass87_665.method1444(-43, Class126.aClient1671.getClass());
 
 	                  while(var13.anInt978 == 0) {
-	                     Class3_Sub13_Sub34.method331(100L, 64);
+	                     Class3_Sub13_Sub34.sleep(100L);
 	                  }
 
 	                  if(1 == var13.anInt978) {
