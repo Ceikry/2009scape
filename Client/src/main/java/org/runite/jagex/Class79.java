@@ -41,7 +41,7 @@ final class Class79 {
    final void method1387(RSByteBuffer var1) {
       try {
          while(true) {
-            int var3 = var1.getByteB();
+            int var3 = var1.readUnsignedByte();
             if(var3 == 0) {
                return;
             }
@@ -57,8 +57,8 @@ final class Class79 {
       try {
          if(1 == var3) {
             this.anInt1128 = var1.getShort();
-            this.anInt1123 = var1.getByteB();
-            this.anInt1125 = var1.getByteB();
+            this.anInt1123 = var1.readUnsignedByte();
+            this.anInt1125 = var1.readUnsignedByte();
          }
 
       } catch (RuntimeException var5) {
@@ -69,7 +69,7 @@ final class Class79 {
    static void method1390(RSByteBuffer var0) {
       try {
          if(-var0.index + var0.buffer.length >= 1) {
-            int var2 = var0.getByteB();
+            int var2 = var0.readUnsignedByte();
             if(var2 >= 0 && var2 <= 11) {
                byte var3;
                if(var2 == 11) {
@@ -99,7 +99,7 @@ final class Class79 {
                }
 
                if(var3 <= var0.buffer.length - var0.index) {
-                  Class3_Sub28_Sub10.anInt3625 = var0.getByteB();
+                  Class3_Sub28_Sub10.anInt3625 = var0.readUnsignedByte();
                   if(Class3_Sub28_Sub10.anInt3625 >= 1) {
                      if(Class3_Sub28_Sub10.anInt3625 > 4) {
                         Class3_Sub28_Sub10.anInt3625 = 4;
@@ -108,42 +108,42 @@ final class Class79 {
                      Class3_Sub28_Sub10.anInt3625 = 1;
                   }
 
-                  Class25.method957(1 == var0.getByteB());
-                  Class3_Sub28_Sub7.aBoolean3604 = var0.getByteB() == 1;
-                  KeyboardListener.aBoolean1905 = 1 == var0.getByteB();
-                  Class25.aBoolean488 = 1 == var0.getByteB();
-                  RSInterface.aBoolean236 = var0.getByteB() == 1;
-                  WorldListEntry.aBoolean2623 = var0.getByteB() == 1;
-                  Class3_Sub13_Sub22.aBoolean3275 = var0.getByteB() == 1;
-                  Class140_Sub6.aBoolean2910 = 1 == var0.getByteB();
-                  Class80.anInt1137 = var0.getByteB();
+                  Class25.method957(1 == var0.readUnsignedByte());
+                  Class3_Sub28_Sub7.aBoolean3604 = var0.readUnsignedByte() == 1;
+                  KeyboardListener.aBoolean1905 = 1 == var0.readUnsignedByte();
+                  Class25.aBoolean488 = 1 == var0.readUnsignedByte();
+                  RSInterface.aBoolean236 = var0.readUnsignedByte() == 1;
+                  WorldListEntry.aBoolean2623 = var0.readUnsignedByte() == 1;
+                  Class3_Sub13_Sub22.aBoolean3275 = var0.readUnsignedByte() == 1;
+                  Class140_Sub6.aBoolean2910 = 1 == var0.readUnsignedByte();
+                  Class80.anInt1137 = var0.readUnsignedByte();
                   if(2 < Class80.anInt1137) {
                      Class80.anInt1137 = 2;
                   }
 
                   if(var2 < 2) {
-                     Class106.aBoolean1441 = var0.getByteB() == 1;
-                     var0.getByteB();
+                     Class106.aBoolean1441 = var0.readUnsignedByte() == 1;
+                     var0.readUnsignedByte();
                   } else {
-                     Class106.aBoolean1441 = var0.getByteB() == 1;
+                     Class106.aBoolean1441 = var0.readUnsignedByte() == 1;
                   }
 
-                  Class128.aBoolean1685 = 1 == var0.getByteB();
-                  Class38.aBoolean661 = var0.getByteB() == 1;
-                  Class3_Sub28_Sub9.anInt3622 = var0.getByteB();
+                  Class128.aBoolean1685 = 1 == var0.readUnsignedByte();
+                  Class38.aBoolean661 = var0.readUnsignedByte() == 1;
+                  Class3_Sub28_Sub9.anInt3622 = var0.readUnsignedByte();
                   if(Class3_Sub28_Sub9.anInt3622 > 2) {
                      Class3_Sub28_Sub9.anInt3622 = 2;
                   }
 
                   Class3_Sub28_Sub14.anInt3671 = Class3_Sub28_Sub9.anInt3622;
-                  Class3_Sub13_Sub15.aBoolean3184 = var0.getByteB() == 1;
-                  CS2Script.anInt2453 = var0.getByteB();
+                  Class3_Sub13_Sub15.aBoolean3184 = var0.readUnsignedByte() == 1;
+                  CS2Script.anInt2453 = var0.readUnsignedByte();
                   if(CS2Script.anInt2453 > 127) {
                      CS2Script.anInt2453 = 127;
                   }
 
-                  Class9.anInt120 = var0.getByteB();
-                  Class14.anInt340 = var0.getByteB();
+                  Unsorted.anInt120 = var0.readUnsignedByte();
+                  Class14.anInt340 = var0.readUnsignedByte();
                   if(Class14.anInt340 > 127) {
                      Class14.anInt340 = 127;
                   }
@@ -154,11 +154,11 @@ final class Class79 {
                   }
 
                   if(var2 >= 3 && var2 < 6) {
-                     var0.getByteB();
+                     var0.readUnsignedByte();
                   }
 
                   if(var2 >= 4) {
-                     int var4 = var0.getByteB();
+                     int var4 = var0.readUnsignedByte();
                      if(Class3_Sub24_Sub3.anInt3492 < 96) {
                         var4 = 0;
                      }
@@ -167,31 +167,31 @@ final class Class79 {
                   }
 
                   if(var2 >= 5) {
-                     Unsorted.anInt2148 = var0.getInt();
+                     Unsorted.anInt2148 = var0.readInt();
                   }
 
                   if(6 <= var2) {
-                     Node.anInt2577 = var0.getByteB();
+                     Node.anInt2577 = var0.readUnsignedByte();
                   }
 
                   if(var2 >= 7) {
-                     Unsorted.aBoolean2146 = 1 == var0.getByteB();
+                     Unsorted.aBoolean2146 = 1 == var0.readUnsignedByte();
                   }
 
                   if(8 <= var2) {
-                     Class15.aBoolean346 = var0.getByteB() == 1;
+                     Class15.aBoolean346 = var0.readUnsignedByte() == 1;
                   }
 
                   if(9 <= var2) {
-                     Class3_Sub20.anInt2488 = var0.getByteB();
+                     Class3_Sub20.anInt2488 = var0.readUnsignedByte();
                   }
 
                   if(10 <= var2) {
-                     Class73.aBoolean1080 = 0 != var0.getByteB();
+                     Class73.aBoolean1080 = 0 != var0.readUnsignedByte();
                   }
 
                   if(var2 >= 11) {
-                     Class163_Sub3.aBoolean3004 = var0.getByteB() != 0;
+                     Class163_Sub3.aBoolean3004 = var0.readUnsignedByte() != 0;
                   }
 
                }

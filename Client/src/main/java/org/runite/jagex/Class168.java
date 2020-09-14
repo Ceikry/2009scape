@@ -721,7 +721,7 @@ final class Class168 {
    final void method2274(RSByteBuffer var2, int var3) {
       try {
          while(true) {
-            int var4 = var2.getByteB();
+            int var4 = var2.readUnsignedByte();
             if(var4 == 0) {
 
                return;
@@ -945,7 +945,7 @@ final class Class168 {
          if(var2 == 1) {
             this.anInt2103 = RSInterface.method869(116, var3.getTriByte((byte)83));
          } else if (var2 == 2) {
-            this.anInt2095 = var3.getByteB();
+            this.anInt2095 = var3.readUnsignedByte();
          } else if (3 == var2) {
             this.anInt2095 = var3.getShort();
             if (this.anInt2095 == '\uffff') {
@@ -962,13 +962,13 @@ final class Class168 {
          } else if (var2 == 10) {
             this.aBoolean2093 = false;
          } else if (var2 == 11) {
-            this.anInt2100 = var3.getByteB();
+            this.anInt2100 = var3.readUnsignedByte();
          } else if (12 == var2) {
             this.aBoolean2092 = true;
          } else if (13 == var2) {
             this.anInt2094 = var3.getTriByte((byte) 110);
          } else if (var2 == 14) {
-            this.anInt2101 = var3.getByteB();
+            this.anInt2101 = var3.readUnsignedByte();
          }
 
       } catch (RuntimeException var6) {

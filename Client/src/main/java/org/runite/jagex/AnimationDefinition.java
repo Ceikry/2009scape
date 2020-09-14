@@ -49,7 +49,7 @@ final class AnimationDefinition {
 		try {
 			//	System.out.print("Animation " + animId + " - parsed [");
 			while(true) {
-				int var3 = var1.getByteB();
+				int var3 = var1.readUnsignedByte();
 				if(var3 == 0) {
 					//System.out.println("].");
 					return;
@@ -338,29 +338,29 @@ final class AnimationDefinition {
 				this.anInt1865 = var3.getShort();
 			} else if(var1 == 3) {
 				this.aBooleanArray1855 = new boolean[256];
-				var4 = var3.getByteB();
+				var4 = var3.readUnsignedByte();
 
 				for(var5 = 0; var5 < var4; ++var5) {
-					this.aBooleanArray1855[var3.getByteB()] = true;
+					this.aBooleanArray1855[var3.readUnsignedByte()] = true;
 				}
 			} else if (var1 == 4) {
 				this.aBoolean1859 = true;
 			} else if (var1 == 5) {
-				this.anInt1857 = var3.getByteB();
+				this.anInt1857 = var3.readUnsignedByte();
 			} else if (6 == var1) {
 				this.anInt1854 = var3.getShort();
 			} else if (var1 == 7) {
 				this.anInt1849 = var3.getShort();
 			} else if (8 == var1) {
-				this.anInt1861 = var3.getByteB();
+				this.anInt1861 = var3.readUnsignedByte();
 			} else if (9 == var1) {
-				this.anInt1866 = var3.getByteB();
+				this.anInt1866 = var3.readUnsignedByte();
 			} else if (10 == var1) {
-				this.anInt1850 = var3.getByteB();
+				this.anInt1850 = var3.readUnsignedByte();
 			} else if (var1 == 11) {
-				this.anInt1845 = var3.getByteB();
+				this.anInt1845 = var3.readUnsignedByte();
 			} else if (12 == var1) {
-				var4 = var3.getByteB();
+				var4 = var3.readUnsignedByte();
 				this.anIntArray1870 = new int[var4];
 
 				for (var5 = 0; var5 < var4; ++var5) {
@@ -375,7 +375,7 @@ final class AnimationDefinition {
 				this.anIntArrayArray1867 = new int[var4][];
 
 				for (var5 = 0; var5 < var4; ++var5) {
-					int var6 = var3.getByteB();
+					int var6 = var3.readUnsignedByte();
 					if (var6 > 0) {
 						this.anIntArrayArray1867[var5] = new int[var6];
 						this.anIntArrayArray1867[var5][0] = var3.getTriByte((byte) 102);

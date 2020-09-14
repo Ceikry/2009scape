@@ -1,11 +1,11 @@
 package org.runite.jagex;
 
-final class Class105 {
+public final class Bzip2Decompressor {
 
-   private static Class9 aClass9_1438 = new Class9();
+   private static Bzip2Context context = new Bzip2Context();
 
 
-   private static int method1633(int var0, Class9 var1) {
+   private static int method1633(int var0, Bzip2Context var1) {
       while(var1.anInt128 < var0) {
          var1.anInt140 = var1.anInt140 << 8 | var1.aByteArray127[var1.anInt116] & 255;
          var1.anInt128 += 8;
@@ -18,7 +18,7 @@ final class Class105 {
       return var3;
    }
 
-   private static void method1634(Class9 var0) {
+   private static void method1634(Bzip2Context var0) {
       byte var2 = var0.aByte111;
       int var3 = var0.anInt143;
       int var4 = var0.anInt131;
@@ -179,7 +179,7 @@ final class Class105 {
 
    }
 
-   private static void method1636(Class9 var0) {
+   private static void method1636(Bzip2Context var0) {
       var0.anInt137 = 0;
 
       for(int var1 = 0; var1 < 256; ++var1) {
@@ -191,11 +191,11 @@ final class Class105 {
 
    }
 
-   private static byte method1637(Class9 var0) {
+   private static byte method1637(Bzip2Context var0) {
       return (byte)method1633(8, var0);
    }
 
-   private static void method1638(Class9 var0) {
+   private static void method1638(Bzip2Context var0) {
       int var22;
       int[] var23;
       int[] var24;
@@ -528,26 +528,26 @@ final class Class105 {
 
    }
 
-   private static byte method1639(Class9 var0) {
+   private static byte method1639(Bzip2Context var0) {
       return (byte)method1633(1, var0);
    }
 
-   static void method1640(byte[] var0, int var1, byte[] var2) {
-      Class9 var5 = aClass9_1438;
-      synchronized(var5) {
-         aClass9_1438.aByteArray127 = var2;
-         aClass9_1438.anInt116 = 9;
-         aClass9_1438.aByteArray117 = var0;
-         aClass9_1438.anInt118 = 0;
-         aClass9_1438.anInt126 = var1;
-         aClass9_1438.anInt128 = 0;
-         aClass9_1438.anInt140 = 0;
-         aClass9_1438.anInt147 = 0;
-         aClass9_1438.anInt141 = 0;
-         method1638(aClass9_1438);
-         var1 -= aClass9_1438.anInt126;
-         aClass9_1438.aByteArray127 = null;
-         aClass9_1438.aByteArray117 = null;
+   public static void decompress(byte[] var0, int var1, byte[] var2) {
+      Bzip2Context context = Bzip2Decompressor.context;
+      synchronized(context) {
+         Bzip2Decompressor.context.aByteArray127 = var2;
+         Bzip2Decompressor.context.anInt116 = 9;
+         Bzip2Decompressor.context.aByteArray117 = var0;
+         Bzip2Decompressor.context.anInt118 = 0;
+         Bzip2Decompressor.context.anInt126 = var1;
+         Bzip2Decompressor.context.anInt128 = 0;
+         Bzip2Decompressor.context.anInt140 = 0;
+         Bzip2Decompressor.context.anInt147 = 0;
+         Bzip2Decompressor.context.anInt141 = 0;
+         method1638(Bzip2Decompressor.context);
+         var1 -= Bzip2Decompressor.context.anInt126;
+         Bzip2Decompressor.context.aByteArray127 = null;
+         Bzip2Decompressor.context.aByteArray117 = null;
       }
    }
 

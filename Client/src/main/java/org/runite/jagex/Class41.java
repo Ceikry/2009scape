@@ -58,9 +58,9 @@ final class Class41 {
 
          if(var1 >= 1 && var4 >= 1 && 102 >= var1 && var4 <= 102) {
             int var8;
-            if(!NPC.method1986(41) && 0 == (2 & Class9.aByteArrayArrayArray113[0][var1][var4])) {
+            if(!NPC.method1986(41) && 0 == (2 & Unsorted.aByteArrayArrayArray113[0][var1][var4])) {
                var8 = var2;
-               if((8 & Class9.aByteArrayArrayArray113[var2][var1][var4]) != 0) {
+               if((8 & Unsorted.aByteArrayArrayArray113[var2][var1][var4]) != 0) {
                   var8 = 0;
                }
 
@@ -70,7 +70,7 @@ final class Class41 {
             }
 
             var8 = var2;
-            if(var2 < 3 && (2 & Class9.aByteArrayArrayArray113[1][var1][var4]) == 2) {
+            if(var2 < 3 && (2 & Unsorted.aByteArrayArrayArray113[1][var1][var4]) == 2) {
                var8 = var2 + 1;
             }
 

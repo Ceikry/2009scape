@@ -20,16 +20,16 @@ final class Class75_Sub4 extends Class75 {
          for(i = 0; Class66.maskUpdateCount > i; ++i) {
             int mask = Class21.maskUpdateIndexes[i];
             NPC npc = Class3_Sub13_Sub24.npcs[mask];
-            int var4 = GraphicDefinition.incomingBuffer.getByteB();
+            int var4 = GraphicDefinition.incomingBuffer.readUnsignedByte();
             if((var4 & 8) != 0) {
-               var4 += GraphicDefinition.incomingBuffer.getByteB() << 8;
+               var4 += GraphicDefinition.incomingBuffer.readUnsignedByte() << 8;
             }
 
             int var5;
             int var6;
             //Ordinal: 0 Hit
             if((64 & var4) != 0) {
-               var5 = GraphicDefinition.incomingBuffer.getByteB();
+               var5 = GraphicDefinition.incomingBuffer.readUnsignedByte();
                var6 = GraphicDefinition.incomingBuffer.getByteC();
                npc.method1970(var6, Class44.anInt719, var5);
                npc.anInt2781 = 300 + Class44.anInt719;
@@ -46,7 +46,7 @@ final class Class75_Sub4 extends Class75 {
             //Ordinal: 2 Animation
             if((var4 & 16) != 0) {
                var5 = GraphicDefinition.incomingBuffer.getShort();
-               var6 = GraphicDefinition.incomingBuffer.getByteB();
+               var6 = GraphicDefinition.incomingBuffer.readUnsignedByte();
                if('\uffff' == var5) {
                   var5 = -1;
                }

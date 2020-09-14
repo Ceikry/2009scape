@@ -34,7 +34,7 @@ final class Class3_Sub28_Sub4 extends Node {
    final void method546(RSByteBuffer var1) {
       try {
          while(true) {
-            int var3 = var1.getByteB();
+            int var3 = var1.readUnsignedByte();
             if(0 == var3) {
 
                return;
@@ -134,14 +134,14 @@ final class Class3_Sub28_Sub4 extends Node {
             int var4;
             int var5;
             if(var2 == 2) {
-               var4 = var1.getByteB();
+               var4 = var1.readUnsignedByte();
                this.anIntArray3567 = new int[var4];
 
                for(var5 = 0; var5 < var4; ++var5) {
                   this.anIntArray3567[var5] = var1.getShort();
                }
             } else if (var2 == 3) {
-               var4 = var1.getByteB();
+               var4 = var1.readUnsignedByte();
                this.anIntArray3566 = new int[var4];
                this.anIntArrayArray3570 = new int[var4][];
 

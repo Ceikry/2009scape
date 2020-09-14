@@ -22,8 +22,8 @@ final class Class45 {
 			//Ordinal: 0 Chat
 			if(0 != (var0 & 128)) {
 				var4 = GraphicDefinition.incomingBuffer.getLEShort((byte) -79 + -47);
-				chatIcon = GraphicDefinition.incomingBuffer.getByteB();
-				int var6 = GraphicDefinition.incomingBuffer.getByteB();
+				chatIcon = GraphicDefinition.incomingBuffer.readUnsignedByte();
+				int var6 = GraphicDefinition.incomingBuffer.readUnsignedByte();
 				var7 = GraphicDefinition.incomingBuffer.index;
 				boolean var8 = ('\u8000' & var4) != 0;
 				if(null != var3.displayName && var3.class52 != null) {
@@ -89,7 +89,7 @@ final class Class45 {
 					var4 = -1;
 				}
 
-				chatIcon = GraphicDefinition.incomingBuffer.getByteB();
+				chatIcon = GraphicDefinition.incomingBuffer.readUnsignedByte();
 				Class3_Sub28_Sub14.method628(chatIcon, var4, var3);
 			}
 
@@ -114,9 +114,9 @@ final class Class45 {
 			//Ordinal: 5 Force movement
 			if((1024 & var0) != 0) {
 				var3.anInt2784 = GraphicDefinition.incomingBuffer.getByteC();
-				var3.anInt2835 = GraphicDefinition.incomingBuffer.getByteB();
+				var3.anInt2835 = GraphicDefinition.incomingBuffer.readUnsignedByte();
 				var3.anInt2823 = GraphicDefinition.incomingBuffer.getByteA((byte)-106);
-				var3.anInt2798 = GraphicDefinition.incomingBuffer.getByteB();
+				var3.anInt2798 = GraphicDefinition.incomingBuffer.readUnsignedByte();
 				var3.anInt2800 = GraphicDefinition.incomingBuffer.getLEShort(-90) + Class44.anInt719;
 				var3.anInt2790 = GraphicDefinition.incomingBuffer.getLEShort(-99) - -Class44.anInt719;
 				var3.anInt2840 = GraphicDefinition.incomingBuffer.getByteC();
@@ -243,7 +243,7 @@ final class Class45 {
 			var2.index = -(8 * Class95.anInt1338) + var0.length - 7;
 			Class3_Sub15.anInt2426 = var2.getShort();
 			Class133.anInt1748 = var2.getShort();
-			int var3 = (var2.getByteB() & 255) - -1;
+			int var3 = (var2.readUnsignedByte() & 255) - -1;
 
 			int var4;
 			for(var4 = 0; Class95.anInt1338 > var4; ++var4) {
@@ -287,7 +287,7 @@ final class Class45 {
 				Class163_Sub1.aByteArrayArray2987[var4] = var8;
 				byte[] var9 = new byte[var7];
 				Class163_Sub3.aByteArrayArray3005[var4] = var9;
-				int var11 = var2.getByteB();
+				int var11 = var2.readUnsignedByte();
 				int var12;
 				if((1 & var11) == 0) {
 					for(var12 = 0; var12 < var7; ++var12) {

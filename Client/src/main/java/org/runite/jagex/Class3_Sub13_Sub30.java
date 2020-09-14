@@ -236,7 +236,7 @@ final class Class3_Sub13_Sub30 extends Class3_Sub13 {
                int var16 = 63 & var14;
                int var17 = var14 >> 6 & 63;
                int var18 = var14 >> 12;
-               int var19 = var11.getByteB();
+               int var19 = var11.readUnsignedByte();
                int var20 = var19 >> 2;
                int var21 = 3 & var19;
                if(var18 == var3 && var8 <= var17 && var17 < 8 + var8 && var9 <= var16 && 8 + var9 > var16) {
@@ -247,7 +247,7 @@ final class Class3_Sub13_Sub30 extends Class3_Sub13 {
                      Class91 var25 = null;
                      if(!var7) {
                         int var26 = var1;
-                        if(2 == (Class9.aByteArrayArrayArray113[1][var23][var24] & 2)) {
+                        if(2 == (Unsorted.aByteArrayArrayArray113[1][var23][var24] & 2)) {
                            var26 = var1 - 1;
                         }
 

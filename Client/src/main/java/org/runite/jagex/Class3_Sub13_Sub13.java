@@ -55,9 +55,9 @@ final class Class3_Sub13_Sub13 extends Class3_Sub13 {
          }
 
          if(var1 == 0) {
-            this.anInt3149 = var2.getByteB();
+            this.anInt3149 = var2.readUnsignedByte();
          } else if(1 == var1) {
-            this.anInt3147 = var2.getByteB();
+            this.anInt3147 = var2.readUnsignedByte();
          }
 
       } catch (RuntimeException var5) {
@@ -150,7 +150,7 @@ final class Class3_Sub13_Sub13 extends Class3_Sub13 {
             aClass153_3154 = (CacheIndex)null;
          }
 
-         NPC.anInt4001 = var1.getArchiveForName(Class9.aClass94_119);
+         NPC.anInt4001 = var1.getArchiveForName(Unsorted.aClass94_119);
       } catch (RuntimeException var3) {
          throw Class44.clientError(var3, "gg.R(" + var0 + ',' + (var1 != null?"{...}":"null") + ')');
       }
@@ -414,7 +414,7 @@ final class Class3_Sub13_Sub13 extends Class3_Sub13 {
                      Class60.method1207();
                      Class3_Sub13_Sub4.method189();
                      if(Class3_Sub28_Sub3.aClass11_3551 != null) {
-                        Class9.method848();
+                        Unsorted.method848();
                      }
 
                      for(var1 = Class3_Sub5.method115(true); var1 != -1; var1 = Class3_Sub5.method115(false)) {

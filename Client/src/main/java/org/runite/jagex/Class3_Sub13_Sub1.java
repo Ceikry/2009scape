@@ -156,11 +156,11 @@ final class Class3_Sub13_Sub1 extends Class3_Sub13 {
 			}
 
 			if(var1 == 0) {
-				this.anInt3038 = var2.getByteB();
+				this.anInt3038 = var2.readUnsignedByte();
 			} else if (1 == var1) {
-				this.anInt3036 = var2.getByteB();
+				this.anInt3036 = var2.readUnsignedByte();
 			} else if (var1 == 3) {
-				this.anInt3037 = var2.getByteB();
+				this.anInt3037 = var2.readUnsignedByte();
 			}
 
 		} catch (RuntimeException var5) {

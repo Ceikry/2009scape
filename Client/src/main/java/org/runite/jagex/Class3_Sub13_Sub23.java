@@ -46,10 +46,10 @@ class Class3_Sub13_Sub23 extends Class3_Sub13 {
    static boolean handleWorldListUpdate(byte[] buf) {
       try {
          RSByteBuffer buffer = new RSByteBuffer(buf);
-         int opcode = buffer.getByteB();
+         int opcode = buffer.readUnsignedByte();
          //System.out.println(opcode);
          if(1 == opcode) {
-            boolean updated = buffer.getByteB() == 1;
+            boolean updated = buffer.readUnsignedByte() == 1;
             if(updated) {
                Class53.parseWorldList(buffer);
             }

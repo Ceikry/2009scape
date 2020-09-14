@@ -166,7 +166,7 @@ final class Class8 {
 
    static Class75_Sub1 method843(int var0, RSByteBuffer var1) {
       try {
-         return var0 != -5232?(Class75_Sub1)null:new Class75_Sub1(var1.getShort((byte)46), var1.getShort((byte)109), var1.getShort((byte)68), var1.getShort((byte)127), var1.getTriByte((byte)91), var1.getByteB());
+         return var0 != -5232?(Class75_Sub1)null:new Class75_Sub1(var1.getShort((byte)46), var1.getShort((byte)109), var1.getShort((byte)68), var1.getShort((byte)127), var1.getTriByte((byte)91), var1.readUnsignedByte());
       } catch (RuntimeException var3) {
          throw Class44.clientError(var3, "al.D(" + var0 + ',' + (var1 != null?"{...}":"null") + ')');
       }
@@ -233,8 +233,8 @@ final class Class8 {
             this.aClass3_Sub30_99.index = 5 + var3 * 8;
             if(this.aClass3_Sub30_99.buffer.length > this.aClass3_Sub30_99.index) {
                if(null == this.aClass151_Sub1Array107[var3]) {
-                  int var6 = this.aClass3_Sub30_99.getInt();
-                  int var7 = this.aClass3_Sub30_99.getInt();
+                  int var6 = this.aClass3_Sub30_99.readInt();
+                  int var7 = this.aClass3_Sub30_99.readInt();
                   Class151_Sub1 var8 = new Class151_Sub1(var3, var1, var5, this.aClass66_102, this.aClass73_103, var6, var7);
                   this.aClass151_Sub1Array107[var3] = var8;
                   return var8;

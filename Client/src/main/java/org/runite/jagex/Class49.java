@@ -2,12 +2,10 @@ package org.runite.jagex;
 import java.io.DataInputStream;
 import java.net.URL;
 import java.util.Random;
-import java.util.zip.Inflater;
 
 final class Class49 {
 
    static Class3_Sub28_Sub16 aClass3_Sub28_Sub16_812;
-   private Inflater anInflater813;
    static boolean[][] aBooleanArrayArray814;
    static int anInt815 = 0;
    static int anInt817;
@@ -288,32 +286,6 @@ final class Class49 {
          }
       } catch (RuntimeException var3) {
          throw Class44.clientError(var3, "ha.G(" + var0 + ')');
-      }
-   }
-
-   final void method1128(byte[] out, RSByteBuffer buffer) {
-      try {
-
-         if(buffer.buffer[buffer.index] == 31 && buffer.buffer[buffer.index + 1] == -117) {
-            if(this.anInflater813 == null) {
-               this.anInflater813 = new Inflater(true);
-            }
-
-            try {
-               this.anInflater813.setInput(buffer.buffer, buffer.index + 10, -8 - (10 + buffer.index) + buffer.buffer.length);
-               this.anInflater813.inflate(out);
-            } catch (Exception var5) {
-               this.anInflater813.reset();
-               throw new RuntimeException("Invalid GZIP compressed data!");
-            }
-
-            this.anInflater813.reset();
-         } else {
-            throw new RuntimeException("Invalid GZIP header!");
-         }
-      } catch (RuntimeException var6) {
-//    	  var6.printStackTrace();
-         throw Class44.clientError(var6, "ha.D(" + (out != null?"{...}":"null") + ',' + (buffer != null?"{...}":"null") + ',' + false + ')');
       }
    }
 

@@ -95,7 +95,7 @@ final class Class3_Sub27 extends Class3 {
 
    private Class3_Sub27(RSByteBuffer var1) {
       var1.index = var1.buffer.length - 3;
-      int var2 = var1.getByteB();
+      int var2 = var1.readUnsignedByte();
       int var3 = var1.getShort();
       int var4 = 14 + var2 * 10;
       var1.index = 0;
@@ -115,7 +115,7 @@ final class Class3_Sub27 extends Class3 {
          var14 = -1;
 
          while(true) {
-            var15 = var1.getByteB();
+            var15 = var1.readUnsignedByte();
             if(var15 != var14) {
                ++var4;
             }
@@ -178,7 +178,7 @@ final class Class3_Sub27 extends Class3 {
 
       int var29;
       for(var29 = 0; var29 < var6; ++var29) {
-         var28 = var28 + var1.getByteB() & 127;
+         var28 = var28 + var1.readUnsignedByte() & 127;
          if(var28 == 0 || var28 == 32) {
             ++var12;
          } else if (var28 == 1) {

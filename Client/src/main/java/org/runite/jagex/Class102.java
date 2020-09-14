@@ -497,30 +497,30 @@ final class Class102 implements Interface2 {
 
          int var8;
          for(var8 = 0; var8 < var7; ++var8) {
-            aBooleanArray2133[var8] = 1 == var6.getByteB();
+            aBooleanArray2133[var8] = 1 == var6.readUnsignedByte();
          }
 
          for(var8 = 0; var8 < var7; ++var8) {
             if(aBooleanArray2133[var8]) {
-               this.aBooleanArray2124[var8] = var6.getByteB() == 1;
+               this.aBooleanArray2124[var8] = var6.readUnsignedByte() == 1;
             }
          }
 
          for(var8 = 0; var7 > var8; ++var8) {
             if(aBooleanArray2133[var8]) {
-               this.aBooleanArray2128[var8] = 1 == var6.getByteB();
+               this.aBooleanArray2128[var8] = 1 == var6.readUnsignedByte();
             }
          }
 
          for(var8 = 0; var7 > var8; ++var8) {
             if(aBooleanArray2133[var8]) {
-               this.aBooleanArray2122[var8] = var6.getByteB() == 1;
+               this.aBooleanArray2122[var8] = var6.readUnsignedByte() == 1;
             }
          }
 
          for(var8 = 0; var8 < var7; ++var8) {
             if(aBooleanArray2133[var8]) {
-               this.aBooleanArray2135[var8] = var6.getByteB() == 1;
+               this.aBooleanArray2135[var8] = var6.readUnsignedByte() == 1;
             }
          }
 

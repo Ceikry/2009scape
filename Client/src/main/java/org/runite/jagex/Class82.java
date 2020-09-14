@@ -643,7 +643,7 @@ final class Class82 {
 
    Class82(RSByteBuffer var1) {
       try {
-         int var2 = var1.getByteB();
+         int var2 = var1.readUnsignedByte();
          this.aClass3_Sub13Array1147 = new Class3_Sub13[var2];
          int[][] var5 = new int[var2][];
          int var4 = 0;
@@ -667,7 +667,7 @@ final class Class82 {
             var5[var6] = new int[var8];
 
             for(var9 = 0; var9 < var8; ++var9) {
-               var5[var6][var9] = var1.getByteB();
+               var5[var6][var9] = var1.readUnsignedByte();
             }
 
             this.aClass3_Sub13Array1147[var6] = var7;
@@ -699,8 +699,8 @@ final class Class82 {
             var5[var6] = null;
          }
 
-         this.aClass3_Sub13_1145 = this.aClass3_Sub13Array1147[var1.getByteB()];
-          this.aClass3_Sub13_1148 = this.aClass3_Sub13Array1147[var1.getByteB()];
+         this.aClass3_Sub13_1145 = this.aClass3_Sub13Array1147[var1.readUnsignedByte()];
+          this.aClass3_Sub13_1148 = this.aClass3_Sub13Array1147[var1.readUnsignedByte()];
       } catch (RuntimeException var11) {
          throw Class44.clientError(var11, "lc.<init>(" + (var1 != null?"{...}":"null") + ')');
       }

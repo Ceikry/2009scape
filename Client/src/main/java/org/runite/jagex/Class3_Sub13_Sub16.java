@@ -178,19 +178,19 @@ final class Class3_Sub13_Sub16 extends Class3_Sub13 {
          }
 
          if(var1 == 0) {
-            this.anInt3203 = this.anInt3204 = var2.getByteB();
+            this.anInt3203 = this.anInt3204 = var2.readUnsignedByte();
          } else if(var1 == 1) {
-            this.anInt3197 = var2.getByteB();
+            this.anInt3197 = var2.readUnsignedByte();
          } else if(2 == var1) {
             this.anInt3193 = var2.getShort();
          } else if (var1 == 3) {
-             this.anInt3191 = var2.getByteB();
+             this.anInt3191 = var2.readUnsignedByte();
          } else if (var1 == 4) {
-             this.anInt3194 = var2.getByteB();
+             this.anInt3194 = var2.readUnsignedByte();
          } else if (var1 == 5) {
-             this.anInt3203 = var2.getByteB();
+             this.anInt3203 = var2.readUnsignedByte();
          } else if (var1 == 6) {
-             this.anInt3204 = var2.getByteB();
+             this.anInt3204 = var2.readUnsignedByte();
          }
 
       } catch (RuntimeException var5) {

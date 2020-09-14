@@ -53,7 +53,7 @@ final class Class29 {
    final void method970(RSByteBuffer var2) {
       try {
          while(true) {
-            int var3 = var2.getByteB();
+            int var3 = var2.readUnsignedByte();
             if(0 == var3) {
 
                 return;

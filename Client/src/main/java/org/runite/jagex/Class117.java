@@ -47,7 +47,7 @@ final class Class117 {
             if(var3 == !var2) {
                if(var2) {
                   Class129.anInt1691 = KeyboardListener.anInt1912;
-                  if(Class9.anInt120 == 0) {
+                  if(Unsorted.anInt120 == 0) {
                      NodeList.method882();
                   } else {
                      Class151.method2099(KeyboardListener.anInt1912, Class75_Sub2.aClass153_2645, 255);

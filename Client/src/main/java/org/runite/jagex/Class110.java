@@ -29,8 +29,8 @@ final class Class110 {
    static void method1683(int var0, boolean var1, int var2, boolean var3, Class91 var4, int objectId, int type, int var7, int var9, int var10) {
       try {
     	 var2 %= 4;
-         if(var1 && !NPC.method1986(103) && 0 == (2 & Class9.aByteArrayArrayArray113[0][var7][var9])) {
-            if(0 != (16 & Class9.aByteArrayArrayArray113[var2][var7][var9])) {
+         if(var1 && !NPC.method1986(103) && 0 == (2 & Unsorted.aByteArrayArrayArray113[0][var7][var9])) {
+            if(0 != (16 & Unsorted.aByteArrayArrayArray113[var2][var7][var9])) {
                return;
             }
 

@@ -33,8 +33,8 @@ final class Class124 {
 
    static Class3_Sub28_Sub3 method1747(RSByteBuffer var0) {
       try {
-         Class3_Sub28_Sub3 var2 = new Class3_Sub28_Sub3(var0.getString(), var0.getString(), var0.getShort(), var0.getShort(), var0.getInt(), var0.getByteB() == 1, var0.getByteB());
-         int var3 = var0.getByteB();
+         Class3_Sub28_Sub3 var2 = new Class3_Sub28_Sub3(var0.getString(), var0.getString(), var0.getShort(), var0.getShort(), var0.readInt(), var0.readUnsignedByte() == 1, var0.readUnsignedByte());
+         int var3 = var0.readUnsignedByte();
 
          for(int var4 = 0; var3 > var4; ++var4) {
             var2.aClass61_3560.method1215(new Class3_Sub21(var0.getShort(), var0.getShort(), var0.getShort(), var0.getShort()));

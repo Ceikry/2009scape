@@ -1,6 +1,6 @@
 package org.runite.jagex;
 
-final class Class3_Sub28_Sub13 extends Node {
+public final class Class3_Sub28_Sub13 extends Node {
 
    static int anInt3657;
    int anInt3658;
@@ -17,24 +17,24 @@ final class Class3_Sub28_Sub13 extends Node {
       try {
 
          if(var1 == 1) {
-            this.anInt3662 = var2.getByteB();
+            this.anInt3662 = var2.readUnsignedByte();
          } else if (var1 == 2) {
-            this.anInt3658 = var2.getByteB();
+            this.anInt3658 = var2.readUnsignedByte();
          } else if (3 == var1) {
             this.aClass94_3664 = var2.getString();
          } else if (var1 == 4) {
-            this.anInt3667 = var2.getInt();
+            this.anInt3667 = var2.readInt();
          } else if (5 == var1 || var1 == 6) {
             int var4 = var2.getShort();
             this.aClass130_3663 = new Class130(Class95.method1585((byte) 94, var4));
 
             for (int var5 = 0; var5 < var4; ++var5) {
-               int var6 = var2.getInt();
+               int var6 = var2.readInt();
                Object var7;
                if (var1 == 5) {
                   var7 = new Class3_Sub29(var2.getString());
                } else {
-                  var7 = new Class3_Sub18(var2.getInt());
+                  var7 = new Class3_Sub18(var2.readInt());
                }
 
                this.aClass130_3663.method1779((Class3) var7, (long) var6);
@@ -147,44 +147,10 @@ final class Class3_Sub28_Sub13 extends Node {
       }
    }
 
-   static byte[] decodeContainer(byte[] data) {
-      try {
-         RSByteBuffer buffer = new RSByteBuffer(data);
-         int compression = buffer.getByteB();
-         int size = buffer.getInt();
-         if(0 <= size && (Class75.anInt1108 == 0 || size <= Class75.anInt1108)) {
-            if(compression == 0) {
-               byte[] uncompressed = new byte[size];
-               buffer.method764(size, uncompressed);
-               return uncompressed;
-            } else {
-               int var5 = buffer.getInt();
-               if(0 <= var5 && (Class75.anInt1108 == 0 || var5 <= Class75.anInt1108)) {
-                  byte[] uncompressed = new byte[var5];
-                  if(compression == 1) {
-                     Class105.method1640(uncompressed, var5, data);
-                  } else {
-                     Class3_Sub22.aClass49_2505.method1128(uncompressed, buffer);
-                  }
-
-                  return uncompressed;
-               } else {
-                  throw new RuntimeException("Error G-zip unpacking!");
-               }
-            }
-         } else {
-            throw new RuntimeException();
-         }
-      } catch (Throwable var7) {
-//    	  return new byte[0];
-         throw Class44.clientError(var7, "ml.R("+(data != null?"{...}":"null") + ')');
-      }
-   }
-
    final void method625(RSByteBuffer var1) {
       try {
          while(true) {
-            int var3 = var1.getByteB();
+            int var3 = var1.readUnsignedByte();
             if(var3 == 0) {
                return;
             }

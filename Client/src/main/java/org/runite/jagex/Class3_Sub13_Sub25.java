@@ -330,7 +330,7 @@ final class Class3_Sub13_Sub25 extends Class3_Sub13 {
          }
 
          if(var1 == 0) {
-            this.anInt3312 = var2.getByteB();
+            this.anInt3312 = var2.readUnsignedByte();
          } else if (var1 == 1) {
              this.anInt3300 = var2.getShort();
          } else if (2 == var1) {
@@ -342,7 +342,7 @@ final class Class3_Sub13_Sub25 extends Class3_Sub13 {
          } else if (var1 == 5) {
              this.anInt3303 = var2.getShort();
          } else if (var1 == 6) {
-             this.anInt3309 = var2.getByteB();
+             this.anInt3309 = var2.readUnsignedByte();
          } else if (var1 == 7) {
              this.anInt3299 = var2.getShort();
          } else if (var1 == 8) {

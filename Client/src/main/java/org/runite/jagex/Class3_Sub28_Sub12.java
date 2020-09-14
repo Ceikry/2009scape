@@ -52,7 +52,7 @@ public final class Class3_Sub28_Sub12 extends Node {
    final void method610(RSByteBuffer var1) {
       try {
          while(true) {
-            int var3 = var1.getByteB();
+            int var3 = var1.readUnsignedByte();
             if(0 == var3) {
                return;
             }

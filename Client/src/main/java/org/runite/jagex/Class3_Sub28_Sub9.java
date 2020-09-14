@@ -49,9 +49,9 @@ final class Class3_Sub28_Sub9 extends Node {
    private void method579(int var1, RSByteBuffer var2) {
       try {
          if(var1 == 1) {
-            this.anInt3617 = var2.getByteB();
+            this.anInt3617 = var2.readUnsignedByte();
          } else if (var1 == 2) {
-            this.anInt3614 = var2.getInt();
+            this.anInt3614 = var2.readInt();
          } else if (var1 == 5) {
             this.aClass94_3619 = var2.getString();
          }
@@ -100,7 +100,7 @@ final class Class3_Sub28_Sub9 extends Node {
    final void method583(RSByteBuffer var2) {
       try {
          while(true) {
-            int var3 = var2.getByteB();
+            int var3 = var2.readUnsignedByte();
             if(var3 == 0) {
                return;
             }

@@ -231,7 +231,7 @@ final class Class121 {
                int var7 = 127 & var2;
                int var8 = var3 & 127;
                int var6 = var0;
-               if(3 > var0 && (2 & Class9.aByteArrayArrayArray113[1][var4][var5]) == 2) {
+               if(3 > var0 && (2 & Unsorted.aByteArrayArrayArray113[1][var4][var5]) == 2) {
                   var6 = var0 + 1;
                }
 

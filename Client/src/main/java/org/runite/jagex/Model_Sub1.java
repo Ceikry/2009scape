@@ -511,15 +511,15 @@ final class Model_Sub1 extends GameObject {
       var2.index = var1.length - 23;
       int var9 = var2.getShort();
       int var10 = var2.getShort();
-      int var11 = var2.getByteB();
-      int var12 = var2.getByteB();
+      int var11 = var2.readUnsignedByte();
+      int var12 = var2.readUnsignedByte();
       boolean var13 = (var12 & 1) == 1;
       boolean var14 = (var12 & 2) == 2;
-      int var15 = var2.getByteB();
-      int var16 = var2.getByteB();
-      int var17 = var2.getByteB();
-      int var18 = var2.getByteB();
-      int var19 = var2.getByteB();
+      int var15 = var2.readUnsignedByte();
+      int var16 = var2.readUnsignedByte();
+      int var17 = var2.readUnsignedByte();
+      int var18 = var2.readUnsignedByte();
+      int var19 = var2.readUnsignedByte();
       int var20 = var2.getShort();
       int var21 = var2.getShort();
       int var22 = var2.getShort();
@@ -680,7 +680,7 @@ final class Model_Sub1 extends GameObject {
       int var57;
       int var56;
       for(var53 = 0; var53 < var9; ++var53) {
-         var54 = var2.getByteB();
+         var54 = var2.readUnsignedByte();
          var55 = 0;
          if((var54 & 1) != 0) {
             var55 = var3.getSmart(-21208);
@@ -703,7 +703,7 @@ final class Model_Sub1 extends GameObject {
          var51 = this.anIntArray2881[var53];
          var52 = this.anIntArray2892[var53];
          if(var19 == 1) {
-            this.anIntArray2860[var53] = var6.getByteB();
+            this.anIntArray2860[var53] = var6.readUnsignedByte();
          }
       }
 
@@ -730,7 +730,7 @@ final class Model_Sub1 extends GameObject {
          }
 
          if(var17 == 1) {
-            this.anIntArray2847[var53] = var6.getByteB();
+            this.anIntArray2847[var53] = var6.readUnsignedByte();
          }
 
          if(var18 == 1) {
@@ -741,7 +741,7 @@ final class Model_Sub1 extends GameObject {
             if(this.aShortArray2858[var53] == -1) {
                this.aByteArray2866[var53] = -1;
             } else {
-               this.aByteArray2866[var53] = (byte)(var8.getByteB() - 1);
+               this.aByteArray2866[var53] = (byte)(var8.readUnsignedByte() - 1);
             }
          }
       }
@@ -755,7 +755,7 @@ final class Model_Sub1 extends GameObject {
 
       int var58;
       for(var57 = 0; var57 < var10; ++var57) {
-         var58 = var3.getByteB();
+         var58 = var3.readUnsignedByte();
          if(var58 == 1) {
             var53 = var2.getSmart(-21208) + var56;
             var54 = var2.getSmart(-21208) + var53;
@@ -852,12 +852,12 @@ final class Model_Sub1 extends GameObject {
 
       if(var14) {
          var2.index = var28;
-         var57 = var2.getByteB();
+         var57 = var2.readUnsignedByte();
          if(var57 > 0) {
             var2.index += 4 * var57;
          }
 
-         var58 = var2.getByteB();
+         var58 = var2.readUnsignedByte();
          if(var58 > 0) {
             var2.index += 4 * var58;
          }
@@ -1215,12 +1215,12 @@ final class Model_Sub1 extends GameObject {
       var4.index = var1.length - 18;
       int var9 = var4.getShort();
       int var10 = var4.getShort();
-      int var11 = var4.getByteB();
-      int var12 = var4.getByteB();
-      int var13 = var4.getByteB();
-      int var14 = var4.getByteB();
-      int var15 = var4.getByteB();
-      int var16 = var4.getByteB();
+      int var11 = var4.readUnsignedByte();
+      int var12 = var4.readUnsignedByte();
+      int var13 = var4.readUnsignedByte();
+      int var14 = var4.readUnsignedByte();
+      int var15 = var4.readUnsignedByte();
+      int var16 = var4.readUnsignedByte();
       int var17 = var4.getShort();
       int var18 = var4.getShort();
       var4.getShort();
@@ -1320,7 +1320,7 @@ final class Model_Sub1 extends GameObject {
       int var40;
       int var41;
       for(var38 = 0; var38 < var9; ++var38) {
-         var39 = var4.getByteB();
+         var39 = var4.readUnsignedByte();
          var40 = 0;
          if((var39 & 1) != 0) {
             var40 = var5.getSmart(-21208);
@@ -1343,7 +1343,7 @@ final class Model_Sub1 extends GameObject {
          var36 = this.anIntArray2881[var38];
          var37 = this.anIntArray2892[var38];
          if(var16 == 1) {
-            this.anIntArray2860[var38] = var8.getByteB();
+            this.anIntArray2860[var38] = var8.readUnsignedByte();
          }
       }
 
@@ -1356,7 +1356,7 @@ final class Model_Sub1 extends GameObject {
       for(var38 = 0; var38 < var10; ++var38) {
          this.aShortArray2870[var38] = (short)var4.getShort();
          if(var12 == 1) {
-            var39 = var5.getByteB();
+            var39 = var5.readUnsignedByte();
             if((var39 & 1) == 1) {
                this.aByteArray2859[var38] = 1;
                var2 = true;
@@ -1386,7 +1386,7 @@ final class Model_Sub1 extends GameObject {
          }
 
          if(var15 == 1) {
-            this.anIntArray2847[var38] = var8.getByteB();
+            this.anIntArray2847[var38] = var8.readUnsignedByte();
          }
       }
 
@@ -1400,7 +1400,7 @@ final class Model_Sub1 extends GameObject {
       int var43;
       int var44;
       for(var42 = 0; var42 < var10; ++var42) {
-         var43 = var5.getByteB();
+         var43 = var5.readUnsignedByte();
          if(var43 == 1) {
             var38 = var4.getSmart(-21208) + var41;
             var39 = var4.getSmart(-21208) + var38;

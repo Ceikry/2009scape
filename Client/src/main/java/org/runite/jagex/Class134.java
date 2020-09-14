@@ -22,8 +22,8 @@ final class Class134 {
          } else {
 
              if(var1 == 5000 && MouseListeningClass.anInt1927 > 0) {
-               var2 = Class9.aByteArrayArray125[--MouseListeningClass.anInt1927];
-               Class9.aByteArrayArray125[MouseListeningClass.anInt1927] = null;
+               var2 = Unsorted.aByteArrayArray125[--MouseListeningClass.anInt1927];
+               Unsorted.aByteArrayArray125[MouseListeningClass.anInt1927] = null;
                return var2;
             } else if(var1 == 30000 && 0 < Class3_Sub28_Sub18.anInt3766) {
                var2 = Class140_Sub3.aByteArrayArray2747[--Class3_Sub28_Sub18.anInt3766];

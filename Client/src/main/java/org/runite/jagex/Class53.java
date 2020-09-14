@@ -120,15 +120,15 @@ final class Class53 {
          for(var3 = 0; var3 < Class57.activeWorldListSize; ++var3) {
             int worldId = buffer.getSmart();
             WorldListEntry var5 = Class117.worldList[worldId] = new WorldListEntry();
-            var5.countryIndex = buffer.getByteB();
-            var5.settings = buffer.getInt();
+            var5.countryIndex = buffer.readUnsignedByte();
+            var5.settings = buffer.readInt();
             var5.worldId = worldId - -Class3_Sub13_Sub4.worldListOffset;
             var5.activity = buffer.getGJString2(98);
             var5.address = buffer.getGJString2(79);
             GameLaunch.SETTINGS.setWorld(worldId);
             System.out.println(GameLaunch.SETTINGS.getWorld());
          }
-         Class3_Sub28_Sub7.updateStamp = buffer.getInt();
+         Class3_Sub28_Sub7.updateStamp = buffer.readInt();
          Class30.loadedWorldList = true;
       } catch (RuntimeException var6) {
          throw Class44.clientError(var6, "hi.B(" + (buffer != null?"{...}":"null") + ',' + -88 + ')');

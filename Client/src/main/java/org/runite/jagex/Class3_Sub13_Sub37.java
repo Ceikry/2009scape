@@ -232,15 +232,15 @@ final class Class3_Sub13_Sub37 extends Class3_Sub13 {
       try {
          if(var3) {
             if(var1 == 0) {
-               int var4 = var2.getByteB();
+               int var4 = var2.readUnsignedByte();
                if(var4 == 0) {
-                  this.anIntArrayArray3438 = new int[var2.getByteB()][4];
+                  this.anIntArrayArray3438 = new int[var2.readUnsignedByte()][4];
 
                   for(int var5 = 0; var5 < this.anIntArrayArray3438.length; ++var5) {
                      this.anIntArrayArray3438[var5][0] = var2.getShort();
-                     this.anIntArrayArray3438[var5][1] = var2.getByteB() << 4;
-                     this.anIntArrayArray3438[var5][2] = var2.getByteB() << 4;
-                     this.anIntArrayArray3438[var5][3] = var2.getByteB() << 4;
+                     this.anIntArrayArray3438[var5][1] = var2.readUnsignedByte() << 4;
+                     this.anIntArrayArray3438[var5][2] = var2.readUnsignedByte() << 4;
+                     this.anIntArrayArray3438[var5][3] = var2.readUnsignedByte() << 4;
                   }
                } else {
                   this.method345(var4);

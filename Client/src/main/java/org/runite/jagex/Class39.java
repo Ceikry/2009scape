@@ -277,7 +277,7 @@ final class Class39 {
 				var3 = var1 & 3;
 				var2 = var1 >> 2;
 				var4 = Class75.anIntArray1107[var2];
-				var5 = GraphicDefinition.incomingBuffer.getByteB();
+				var5 = GraphicDefinition.incomingBuffer.readUnsignedByte();
 				var6 = ((125 & var5) >> 4) + Class65.currentChunkX;
 				var7 = (7 & var5) + Class107.currentChunkY;
 				if(0 <= var6 && var7 >= 0 && var6 < 104 && 104 > var7) {
@@ -286,7 +286,7 @@ final class Class39 {
 
 			} else if(Unsorted.incomingOpcode == 33) {
 				var1 = GraphicDefinition.incomingBuffer.getLEShort(-58);
-				var2 = GraphicDefinition.incomingBuffer.getByteB();
+				var2 = GraphicDefinition.incomingBuffer.readUnsignedByte();
 				var4 = (7 & var2) + Class107.currentChunkY;
 				var3 = ((120 & var2) >> 4) + Class65.currentChunkX;
 				var5 = GraphicDefinition.incomingBuffer.getShortA(-108);
@@ -311,23 +311,23 @@ final class Class39 {
 				int var35;
 				Class140_Sub6 var36;
 				if(Unsorted.incomingOpcode == 121) {
-					var1 = GraphicDefinition.incomingBuffer.getByteB();
+					var1 = GraphicDefinition.incomingBuffer.readUnsignedByte();
 					var2 = 2 * Class65.currentChunkX + (15 & var1 >> 4);
 					var3 = (15 & var1) + 2 * Class107.currentChunkY;
 					var4 = var2 - -GraphicDefinition.incomingBuffer.getByte();
 					var5 = GraphicDefinition.incomingBuffer.getByte() + var3;
 					var6 = GraphicDefinition.incomingBuffer.getShort((byte)73);
 					var7 = GraphicDefinition.incomingBuffer.getShort();
-					var8 = GraphicDefinition.incomingBuffer.getByteB() * 4;
-					var28 = GraphicDefinition.incomingBuffer.getByteB() * 4;
+					var8 = GraphicDefinition.incomingBuffer.readUnsignedByte() * 4;
+					var28 = GraphicDefinition.incomingBuffer.readUnsignedByte() * 4;
 					var10 = GraphicDefinition.incomingBuffer.getShort();
 					var11 = GraphicDefinition.incomingBuffer.getShort();
-					var35 = GraphicDefinition.incomingBuffer.getByteB();
+					var35 = GraphicDefinition.incomingBuffer.readUnsignedByte();
 					if(var35 == 255) {
 						var35 = -1;
 					}
 
-					var13 = GraphicDefinition.incomingBuffer.getByteB();
+					var13 = GraphicDefinition.incomingBuffer.readUnsignedByte();
 					if(0 <= var2 && 0 <= var3 && 208 > var2 && 208 > var3 && var4 >= 0 && 0 <= var5 && var4 < 208 && var5 < 208 && var7 != '\uffff') {
 						var5 *= 64;
 						var4 = 64 * var4;
@@ -339,11 +339,11 @@ final class Class39 {
 					}
 
 				} else if(Unsorted.incomingOpcode == 17) {
-					var1 = GraphicDefinition.incomingBuffer.getByteB();
+					var1 = GraphicDefinition.incomingBuffer.readUnsignedByte();
 					var2 = Class65.currentChunkX + (var1 >> 4 & 7);
 					var3 = Class107.currentChunkY - -(var1 & 7);
 					var4 = GraphicDefinition.incomingBuffer.getShort();
-					var5 = GraphicDefinition.incomingBuffer.getByteB();
+					var5 = GraphicDefinition.incomingBuffer.readUnsignedByte();
 					var6 = GraphicDefinition.incomingBuffer.getShort();
 					if(var2 >= 0 && var3 >= 0 && var2 < 104 && var3 < 104) {
 						var2 = var2 * 128 - -64;
@@ -357,7 +357,7 @@ final class Class39 {
 					var2 = var1 >> 2;
 					var3 = 3 & var1;
 					var4 = Class75.anIntArray1107[var2];
-					var5 = GraphicDefinition.incomingBuffer.getByteB();
+					var5 = GraphicDefinition.incomingBuffer.readUnsignedByte();
 					var6 = Class65.currentChunkX - -((var5 & 125) >> 4);
 					var7 = (7 & var5) + Class107.currentChunkY;
 					var8 = GraphicDefinition.incomingBuffer.getShortA(117);
@@ -382,10 +382,10 @@ final class Class39 {
 				} else {
 					int var14;
 					if(202 == Unsorted.incomingOpcode) {
-						var1 = GraphicDefinition.incomingBuffer.getByteB();
+						var1 = GraphicDefinition.incomingBuffer.readUnsignedByte();
 						var2 = var1 >> 2;
 						var3 = var1 & 3;
-						var4 = GraphicDefinition.incomingBuffer.getByteB();
+						var4 = GraphicDefinition.incomingBuffer.readUnsignedByte();
 						var5 = (var4 >> 4 & 7) + Class65.currentChunkX;
 						var6 = (7 & var4) + Class107.currentChunkY;
 						byte var25 = GraphicDefinition.incomingBuffer.method789();
@@ -402,7 +402,7 @@ final class Class39 {
 					}
 
 					if(Unsorted.incomingOpcode == 14) {
-						var1 = GraphicDefinition.incomingBuffer.getByteB();
+						var1 = GraphicDefinition.incomingBuffer.readUnsignedByte();
 						var3 = Class107.currentChunkY + (var1 & 7);
 						var2 = ((var1 & 119) >> 4) + Class65.currentChunkX;
 						var4 = GraphicDefinition.incomingBuffer.getShort();
@@ -444,19 +444,19 @@ final class Class39 {
 
 					} else if(var0 <= -67) {
 						if(16 == Unsorted.incomingOpcode) {
-							var1 = GraphicDefinition.incomingBuffer.getByteB();
+							var1 = GraphicDefinition.incomingBuffer.readUnsignedByte();
 							var2 = Class65.currentChunkX - -(var1 >> 4 & 7);
 							var3 = (var1 & 7) + Class107.currentChunkY;
 							var4 = var2 + GraphicDefinition.incomingBuffer.getByte();
 							var5 = GraphicDefinition.incomingBuffer.getByte() + var3;
 							var6 = GraphicDefinition.incomingBuffer.getShort((byte)67);
 							var7 = GraphicDefinition.incomingBuffer.getShort();
-							var8 = 4 * GraphicDefinition.incomingBuffer.getByteB();
-							var28 = GraphicDefinition.incomingBuffer.getByteB() * 4;
+							var8 = 4 * GraphicDefinition.incomingBuffer.readUnsignedByte();
+							var28 = GraphicDefinition.incomingBuffer.readUnsignedByte() * 4;
 							var10 = GraphicDefinition.incomingBuffer.getShort();
 							var11 = GraphicDefinition.incomingBuffer.getShort();
-							var35 = GraphicDefinition.incomingBuffer.getByteB();
-							var13 = GraphicDefinition.incomingBuffer.getByteB();
+							var35 = GraphicDefinition.incomingBuffer.readUnsignedByte();
+							var13 = GraphicDefinition.incomingBuffer.readUnsignedByte();
 							if(255 == var35) {
 								var35 = -1;
 							}
@@ -472,7 +472,7 @@ final class Class39 {
 							}
 
 						} else if (Unsorted.incomingOpcode == 104) {
-							var1 = GraphicDefinition.incomingBuffer.getByteB();
+							var1 = GraphicDefinition.incomingBuffer.readUnsignedByte();
 							var3 = 2 * Class107.currentChunkY + (var1 & 15);
 							var2 = 2 * Class65.currentChunkX - -(var1 >> 4 & 15);
 							var4 = GraphicDefinition.incomingBuffer.getByte() + var2;
@@ -481,11 +481,11 @@ final class Class39 {
 							var7 = GraphicDefinition.incomingBuffer.getShort((byte) 12);
 							var8 = GraphicDefinition.incomingBuffer.getShort();
 							var28 = GraphicDefinition.incomingBuffer.getByte();
-							var10 = 4 * GraphicDefinition.incomingBuffer.getByteB();
+							var10 = 4 * GraphicDefinition.incomingBuffer.readUnsignedByte();
 							var11 = GraphicDefinition.incomingBuffer.getShort();
 							var35 = GraphicDefinition.incomingBuffer.getShort();
-							var13 = GraphicDefinition.incomingBuffer.getByteB();
-							var14 = GraphicDefinition.incomingBuffer.getByteB();
+							var13 = GraphicDefinition.incomingBuffer.readUnsignedByte();
+							var14 = GraphicDefinition.incomingBuffer.readUnsignedByte();
 							if (255 == var13) {
 								var13 = -1;
 							}
@@ -538,7 +538,7 @@ final class Class39 {
 							}
 
 						} else if (97 == Unsorted.incomingOpcode) {
-							var1 = GraphicDefinition.incomingBuffer.getByteB();
+							var1 = GraphicDefinition.incomingBuffer.readUnsignedByte();
 							var2 = Class65.currentChunkX + (7 & var1 >> 4);
 							var3 = Class107.currentChunkY + (var1 & 7);
 							var4 = GraphicDefinition.incomingBuffer.getShort();
@@ -546,9 +546,9 @@ final class Class39 {
 								var4 = -1;
 							}
 
-							var5 = GraphicDefinition.incomingBuffer.getByteB();
+							var5 = GraphicDefinition.incomingBuffer.readUnsignedByte();
 							var6 = (242 & var5) >> 4;
-							var8 = GraphicDefinition.incomingBuffer.getByteB();
+							var8 = GraphicDefinition.incomingBuffer.readUnsignedByte();
 							var7 = 7 & var5;
 							if (var2 >= 0 && var3 >= 0 && var2 < 104 && var3 < 104) {
 								var28 = 1 + var6;

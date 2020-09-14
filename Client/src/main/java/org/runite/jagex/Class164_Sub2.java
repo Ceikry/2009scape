@@ -167,7 +167,7 @@ class Class164_Sub2 extends Class164 {
                   }
 
                   if(var8 == 11) {
-                     var9 = Class9.anInt136;
+                     var9 = Unsorted.anInt136;
                   }
 
                   if(12 == var8) {

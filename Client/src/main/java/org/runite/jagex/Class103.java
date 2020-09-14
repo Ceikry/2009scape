@@ -13,7 +13,7 @@ final class Class103 {
 
 
    final void method1620(RSByteBuffer var1, Class34 var2) {
-      int var3 = var1.getByteB();
+      int var3 = var1.readUnsignedByte();
       this.anIntArray1434[0] = var3 >> 4;
       this.anIntArray1434[1] = var3 & 15;
       if(var3 == 0) {
@@ -21,7 +21,7 @@ final class Class103 {
       } else {
          this.anIntArray1437[0] = var1.getShort();
          this.anIntArray1437[1] = var1.getShort();
-         int var4 = var1.getByteB();
+         int var4 = var1.readUnsignedByte();
 
          int var5;
          int var6;

@@ -334,7 +334,7 @@ final class ObjectDefinition {
    final void method1692(int var1, RSByteBuffer var2) {
       try {
          while(true) {
-            int var3 = var2.getByteB();
+            int var3 = var2.readUnsignedByte();
             if(var3 == 0) {
                if(var1 != 6219) {
                   this.method1696(105, -55, (int[][])((int[][])null), -39, 71, (int[][])((int[][])null), true, (LDIndexedSprite)null, (byte)-117, false, -25);
@@ -356,7 +356,7 @@ final class ObjectDefinition {
          int var4;
          int var5;
          if(1 == opcode) {
-            var4 = buffer.getByteB();
+            var4 = buffer.readUnsignedByte();
             if(var4 > 0) {
                if(this.models == null || Class47.aBoolean742) {
                   this.configuration = new int[var4];
@@ -364,7 +364,7 @@ final class ObjectDefinition {
 
                   for(var5 = 0; var4 > var5; ++var5) {
                      this.models[var5] = buffer.getShort();
-                     this.configuration[var5] = buffer.getByteB();
+                     this.configuration[var5] = buffer.readUnsignedByte();
                   }
                } else {
                   buffer.index += var4 * 3;
@@ -373,7 +373,7 @@ final class ObjectDefinition {
          } else if(opcode == 2) {
             this.name = buffer.getString();
          } else if(opcode == 5) {
-            var4 = buffer.getByteB();
+            var4 = buffer.readUnsignedByte();
             if(var4 > 0) {
                if(null == this.models || Class47.aBoolean742) {
                   this.models = new int[var4];
@@ -387,16 +387,16 @@ final class ObjectDefinition {
                }
             }
          } else if (opcode == 14) {
-            this.SizeX = buffer.getByteB();
+            this.SizeX = buffer.readUnsignedByte();
          } else if (opcode == 15) {
-            this.SizeY = buffer.getByteB();
+            this.SizeY = buffer.readUnsignedByte();
          } else if (opcode == 17) {
             this.ClipType = 0;
             this.ProjectileClipped = false;
          } else if (18 == opcode) {
             this.ProjectileClipped = false;
          } else if (opcode == 19) {
-            this.SecondInt = buffer.getByteB();
+            this.SecondInt = buffer.readUnsignedByte();
          } else if (opcode == 21) {
             this.aByte1505 = 1;
          } else if (opcode == 22) {
@@ -411,7 +411,7 @@ final class ObjectDefinition {
          } else if (opcode == 27) {
             this.ClipType = 1;
          } else if (28 == opcode) {
-            this.anInt1528 = buffer.getByteB();
+            this.anInt1528 = buffer.readUnsignedByte();
          } else if (opcode == 29) {
             this.anInt1494 = buffer.getByte();
          } else if (39 == opcode) {
@@ -422,7 +422,7 @@ final class ObjectDefinition {
                this.options[-30 + opcode] = null;
             }
          } else if (opcode == 40) {
-            var4 = buffer.getByteB();
+            var4 = buffer.readUnsignedByte();
             this.OriginalColors = new short[var4];
             this.ModifiedColors = new short[var4];
 
@@ -431,7 +431,7 @@ final class ObjectDefinition {
                this.ModifiedColors[var5] = (short) buffer.getShort();
             }
          } else if (opcode == 41) {
-            var4 = buffer.getByteB();
+            var4 = buffer.readUnsignedByte();
             this.aShortArray1495 = new short[var4];
             this.aShortArray1476 = new short[var4];
 
@@ -440,7 +440,7 @@ final class ObjectDefinition {
                this.aShortArray1495[var5] = (short) buffer.getShort();
             }
          } else if (opcode == 42) {
-            var4 = buffer.getByteB();
+            var4 = buffer.readUnsignedByte();
             this.aByteArray1513 = new byte[var4];
 
             for (var5 = 0; var4 > var5; ++var5) {
@@ -459,7 +459,7 @@ final class ObjectDefinition {
          } else if (opcode == 67) {
             this.anInt1481 = buffer.getShort();
          } else if (opcode == 69) {
-            this.WalkingFlag = buffer.getByteB();
+            this.WalkingFlag = buffer.readUnsignedByte();
          } else if (70 == opcode) {
             this.anInt1496 = buffer.getShort((byte) 123);
          } else if (71 == opcode) {
@@ -471,7 +471,7 @@ final class ObjectDefinition {
          } else if (opcode == 74) {
             this.NotClipped = true;
          } else if (75 == opcode) {
-            this.anInt1540 = buffer.getByteB();
+            this.anInt1540 = buffer.readUnsignedByte();
          } else if (opcode == 77 || opcode == 92) {
             var4 = -1;
             this.ConfigFileId = buffer.getShort();
@@ -491,7 +491,7 @@ final class ObjectDefinition {
                }
             }
 
-            var5 = buffer.getByteB();
+            var5 = buffer.readUnsignedByte();
             this.ChildrenIds = new int[var5 - -2];
 
             for (int var6 = 0; var5 >= var6; ++var6) {
@@ -504,12 +504,12 @@ final class ObjectDefinition {
             this.ChildrenIds[1 + var5] = var4;
          } else if (78 == opcode) {
             this.anInt1512 = buffer.getShort();
-            this.anInt1484 = buffer.getByteB();
+            this.anInt1484 = buffer.readUnsignedByte();
          } else if (opcode == 79) {
             this.anInt1518 = buffer.getShort();
             this.anInt1515 = buffer.getShort();
-            this.anInt1484 = buffer.getByteB();
-            var4 = buffer.getByteB();
+            this.anInt1484 = buffer.readUnsignedByte();
+            var4 = buffer.readUnsignedByte();
             this.anIntArray1539 = new int[var4];
 
             for (var5 = 0; var5 < var4; ++var5) {
@@ -517,7 +517,7 @@ final class ObjectDefinition {
             }
          } else if (81 == opcode) {
             this.aByte1505 = 2;
-            this.aShort1500 = (short) (256 * buffer.getByteB());
+            this.aShort1500 = (short) (256 * buffer.readUnsignedByte());
          } else if (opcode == 82) {
             this.aBoolean1530 = true;
          } else if (opcode == 88) {
@@ -542,30 +542,30 @@ final class ObjectDefinition {
          } else if (opcode == 98) {
             this.aBoolean1510 = true;
          } else if (opcode == 99) {
-            this.anInt1493 = buffer.getByteB();
+            this.anInt1493 = buffer.readUnsignedByte();
             this.anInt1517 = buffer.getShort();
          } else if (opcode == 100) {
-            this.anInt1520 = buffer.getByteB();
+            this.anInt1520 = buffer.readUnsignedByte();
             this.anInt1522 = buffer.getShort();
          } else if (opcode == 101) {
-            this.anInt1478 = buffer.getByteB();
+            this.anInt1478 = buffer.readUnsignedByte();
          } else if (opcode == 102) {
             this.anInt1516 = buffer.getShort();
          } else if (249 == opcode) {
-            var4 = buffer.getByteB();
+            var4 = buffer.readUnsignedByte();
             if (null == this.aClass130_1501) {
                var5 = Class95.method1585((byte) 83, var4);
                this.aClass130_1501 = new Class130(var5);
             }
 
             for (var5 = 0; var4 > var5; ++var5) {
-               boolean var10 = buffer.getByteB() == 1;
+               boolean var10 = buffer.readUnsignedByte() == 1;
                int var7 = buffer.getTriByte((byte) 122);
                Object var8;
                if (var10) {
                   var8 = new Class3_Sub29(buffer.getString());
                } else {
-                  var8 = new Class3_Sub18(buffer.getInt());
+                  var8 = new Class3_Sub18(buffer.readInt());
                }
 
                this.aClass130_1501.method1779((Class3) var8, (long) var7);

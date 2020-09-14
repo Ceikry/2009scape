@@ -33,7 +33,7 @@ final class Class2 {
 	final void method74(byte var1, RSByteBuffer var2, int var3) {
 		try {
 			while(true) {
-				int var4 = var2.getByteB();
+				int var4 = var2.readUnsignedByte();
 				if(var4 == 0) {
 					if(var1 > -108) {
 						this.method74((byte)85, (RSByteBuffer)null, 63);

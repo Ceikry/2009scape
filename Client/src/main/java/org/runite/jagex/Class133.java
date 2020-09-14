@@ -51,10 +51,10 @@ final class Class133 {
       try {
          this.aByte1742 = var1.getByte();
          this.anInt1752 = var1.getShort();
-         this.anInt1757 = var1.getInt();
-         this.anInt1747 = var1.getInt();
-         this.anInt1746 = var1.getInt();
-         this.anInt1750 = var1.getInt();
+         this.anInt1757 = var1.readInt();
+         this.anInt1747 = var1.readInt();
+         this.anInt1746 = var1.readInt();
+         this.anInt1750 = var1.readInt();
       } catch (RuntimeException var3) {
          throw Class44.clientError(var3, "sg.<init>(" + (var1 != null?"{...}":"null") + ')');
       }

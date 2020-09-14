@@ -79,14 +79,14 @@ final class Class15 implements Runnable {
             int var7 = 0;
             var6 = 0;
             boolean var5 = false;
-            if(var1.getByteB() == 1) {
-               var6 = var1.getByteB();
-               var7 = var1.getByteB();
+            if(var1.readUnsignedByte() == 1) {
+               var6 = var1.readUnsignedByte();
+               var7 = var1.readUnsignedByte();
                var5 = true;
             }
 
-            int var8 = var1.getByteB();
-            int var9 = var1.getByteB();
+            int var8 = var1.readUnsignedByte();
+            int var9 = var1.readUnsignedByte();
             int var10 = -Class3_Sub13_Sub21.anInt3256 + var8 * 64;
             int var11 = -1 + Class108.anInt1460 - var9 * 64 + Class2.anInt65;
             if(var10 >= 0 && 0 <= -63 + var11 && Class23.anInt455 > var10 - -63 && var11 < Class108.anInt1460) {

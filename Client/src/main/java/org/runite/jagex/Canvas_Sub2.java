@@ -68,9 +68,9 @@ final class Canvas_Sub2 extends Canvas {
           while(var1 < Class66.maskUpdateCount) {
             int var2 = Class21.maskUpdateIndexes[var1];
             Player var3 = Class3_Sub13_Sub22.players[var2];
-            int var4 = GraphicDefinition.incomingBuffer.getByteB();
+            int var4 = GraphicDefinition.incomingBuffer.readUnsignedByte();
             if((16 & var4) != 0) {
-               var4 += GraphicDefinition.incomingBuffer.getByteB() << 8;
+               var4 += GraphicDefinition.incomingBuffer.readUnsignedByte() << 8;
             }
 
             Class45.parsePlayerMask(var4, var2, var3);
@@ -131,7 +131,7 @@ final class Canvas_Sub2 extends Canvas {
          int var22;
          int var29;
          while(var25.index < var25.buffer.length) {
-            var14 = var25.getByteB();
+            var14 = var25.readUnsignedByte();
             if(var14 != 129) {
                --var25.index;
                break;
@@ -209,7 +209,7 @@ final class Canvas_Sub2 extends Canvas {
             Class86 var26 = null;
 
             while(var25.buffer.length > var25.index) {
-               var15 = var25.getByteB();
+               var15 = var25.readUnsignedByte();
                if(var15 == 0) {
                   var26 = new Class86(var25);
                } else {
@@ -217,7 +217,7 @@ final class Canvas_Sub2 extends Canvas {
                      throw new IllegalStateException();
                   }
 
-                  var28 = var25.getByteB();
+                  var28 = var25.readUnsignedByte();
                   if(var28 > 0) {
                      for(var17 = 0; var28 > var17; ++var17) {
                         Class43 var30 = new Class43(var25);
@@ -236,7 +236,7 @@ final class Canvas_Sub2 extends Canvas {
                            var29 = var30.anInt703 >> 7;
                            var20 = var30.anInt708 >> 7;
                            if(var29 >= 0 && var20 >= 0 && 104 > var29 && var20 < 104) {
-                              var30.aBoolean696 = (2 & Class9.aByteArrayArrayArray113[1][var29][var20]) != 0;
+                              var30.aBoolean696 = (2 & Unsorted.aByteArrayArrayArray113[1][var29][var20]) != 0;
                               var30.anInt697 = Class44.anIntArrayArrayArray723[var30.anInt704][var29][var20] - var30.anInt697;
                               Class68.method1264(var30);
                            }

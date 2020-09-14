@@ -18,7 +18,7 @@ final class ClientErrorException extends RuntimeException {
          Class3_Sub29.anInt2587 = var1;
          Class3_Sub13_Sub8.anInt3103 = var5;
          Class140_Sub7.anInt2938 = var0;
-         Class9.anInt144 = var3;
+         Unsorted.anInt144 = var3;
          Class69.anInt3695 = var2;
       } catch (RuntimeException var7) {
          throw Class44.clientError(var7, "ld.B(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ',' + false + ',' + var5 + ')');

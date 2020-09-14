@@ -68,10 +68,10 @@ final class Class3_Sub13_Sub33 extends Class3_Sub13 {
    final void method157(int var1, RSByteBuffer var2, boolean var3) {
       try {
          if(var1 == 0) {
-            this.aClass75Array3392 = new Class75[var2.getByteB()];
+            this.aClass75Array3392 = new Class75[var2.readUnsignedByte()];
 
             for(int var4 = 0; var4 < this.aClass75Array3392.length; ++var4) {
-               int var5 = var2.getByteB();
+               int var5 = var2.readUnsignedByte();
                if(var5 == 0) {
                   this.aClass75Array3392[var4] = Class8.method843(-5232, var2);
                } else if(var5 == 1) {
@@ -83,7 +83,7 @@ final class Class3_Sub13_Sub33 extends Class3_Sub13 {
                }
             }
          } else if(1 == var1) {
-            this.aBoolean2375 = var2.getByteB() == 1;
+            this.aBoolean2375 = var2.readUnsignedByte() == 1;
          }
 
          if(!var3) {

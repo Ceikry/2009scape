@@ -111,8 +111,8 @@ final class Class167 {
 
    static void method2266(int var0, int var1) {
       try {
-         if(Class9.anInt120 != 0 && var1 != -1) {
-            Class70.method1285(Node.aClass153_2573, var1, Class9.anInt120);
+         if(Unsorted.anInt120 != 0 && var1 != -1) {
+            Class70.method1285(Node.aClass153_2573, var1, Unsorted.anInt120);
             Class83.aBoolean1158 = true;
          }
       } catch (RuntimeException var4) {
@@ -125,11 +125,11 @@ final class Class167 {
          int var9;
          if(var5 >= 0 && var5 < 104 && var4 >= 0 && var4 < 104) {
             if(!var2) {
-               Class9.aByteArrayArrayArray113[var8][var5][var4] = 0;
+               Unsorted.aByteArrayArrayArray113[var8][var5][var4] = 0;
             }
 
             while(true) {
-               var9 = var3.getByteB();
+               var9 = var3.readUnsignedByte();
                if(var9 == 0) {
                   if(var2) {
                      Class44.anIntArrayArrayArray723[0][var5][var4] = Class58.anIntArrayArrayArray914[0][var5][var4];
@@ -142,7 +142,7 @@ final class Class167 {
                }
 
                if(var9 == 1) {
-                  int var10 = var3.getByteB();
+                  int var10 = var3.readUnsignedByte();
                   if(var2) {
                      Class44.anIntArrayArrayArray723[0][var5][var4] = Class58.anIntArrayArrayArray914[0][var5][var4] - -(var10 * 8);
                   } else {
@@ -166,23 +166,23 @@ final class Class167 {
                } else if(var9 > 81) {
                   Class3_Sub13_Sub36.aByteArrayArrayArray3430[var8][var5][var4] = (byte)(-81 + var9);
                } else if(!var2) {
-                  Class9.aByteArrayArrayArray113[var8][var5][var4] = (byte)(var9 - 49);
+                  Unsorted.aByteArrayArrayArray113[var8][var5][var4] = (byte)(var9 - 49);
                }
             }
          } else {
             while(true) {
-               var9 = var3.getByteB();
+               var9 = var3.readUnsignedByte();
                if(var9 == 0) {
                   break;
                }
 
                if(var9 == 1) {
-                  var3.getByteB();
+                  var3.readUnsignedByte();
                   break;
                }
 
                if(var9 <= 49) {
-                  var3.getByteB();
+                  var3.readUnsignedByte();
                }
             }
          }

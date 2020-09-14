@@ -45,7 +45,7 @@ final class Class3_Sub28_Sub11 extends Node {
    private void method601(RSByteBuffer var1, int var2) {
       try {
          if(249 == var2) {
-            int var4 = var1.getByteB();
+            int var4 = var1.readUnsignedByte();
             int var5;
             if(this.aClass130_3636 == null) {
                var5 = Class95.method1585((byte)105, var4);
@@ -53,13 +53,13 @@ final class Class3_Sub28_Sub11 extends Node {
             }
 
             for(var5 = 0; var4 > var5; ++var5) {
-               boolean var6 = 1 == var1.getByteB();
+               boolean var6 = 1 == var1.readUnsignedByte();
                int var7 = var1.getTriByte((byte)95);
                Object var8;
                if(var6) {
                   var8 = new Class3_Sub29(var1.getString());
                } else {
-                  var8 = new Class3_Sub18(var1.getInt());
+                  var8 = new Class3_Sub18(var1.readInt());
                }
 
                this.aClass130_3636.method1779((Class3)var8, (long)var7);
@@ -260,7 +260,7 @@ final class Class3_Sub28_Sub11 extends Node {
    final void method608(RSByteBuffer var2) {
       try {
          while(true) {
-            int var3 = var2.getByteB();
+            int var3 = var2.readUnsignedByte();
             if(0 == var3) {
 
                return;

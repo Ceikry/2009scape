@@ -229,7 +229,7 @@ final class Class116 {
       this.aClass34_1589.method1010(var1);
       this.aClass34_1587 = new Class34();
       this.aClass34_1587.method1010(var1);
-      int var2 = var1.getByteB();
+      int var2 = var1.readUnsignedByte();
       if(var2 != 0) {
          --var1.index;
          this.aClass34_1608 = new Class34();
@@ -238,7 +238,7 @@ final class Class116 {
          this.aClass34_1607.method1010(var1);
       }
 
-      var2 = var1.getByteB();
+      var2 = var1.readUnsignedByte();
       if(var2 != 0) {
          --var1.index;
          this.aClass34_1595 = new Class34();
@@ -247,7 +247,7 @@ final class Class116 {
          this.aClass34_1584.method1010(var1);
       }
 
-      var2 = var1.getByteB();
+      var2 = var1.readUnsignedByte();
       if(var2 != 0) {
          --var1.index;
          this.aClass34_1585 = new Class34();

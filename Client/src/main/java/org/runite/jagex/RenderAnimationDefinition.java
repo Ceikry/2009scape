@@ -257,7 +257,7 @@ final class RenderAnimationDefinition {
       try {
 
          while(true) {
-            int opcode = var2.getByteB();
+            int opcode = var2.readUnsignedByte();
             if(opcode == 0) {
                return;
             }
@@ -298,37 +298,37 @@ final class RenderAnimationDefinition {
          } else if (var1 == 9) {
             this.anInt375 = var3.getShort();
          } else if (var1 == 26) {
-            this.anInt395 = (short) (4 * var3.getByteB());
-            this.anInt381 = (short) (4 * var3.getByteB());
+            this.anInt395 = (short) (4 * var3.readUnsignedByte());
+            this.anInt381 = (short) (4 * var3.readUnsignedByte());
          } else if (var1 == 27) {
             if (this.anIntArrayArray359 == null) {
                this.anIntArrayArray359 = new int[12][];
             }
 
-            int var4 = var3.getByteB();
+            int var4 = var3.readUnsignedByte();
             this.anIntArrayArray359[var4] = new int[6];
 
             for (int var5 = 0; var5 < 6; ++var5) {
                this.anIntArrayArray359[var4][var5] = var3.getShort((byte) 85);
             }
          } else if (var1 == 29) {
-            this.anInt369 = var3.getByteB();
+            this.anInt369 = var3.readUnsignedByte();
          } else if (var1 == 30) {
             this.anInt357 = var3.getShort();
          } else if (var1 == 31) {
-            this.anInt387 = var3.getByteB();
+            this.anInt387 = var3.readUnsignedByte();
          } else if (32 == var1) {
             this.anInt370 = var3.getShort();
          } else if (33 == var1) {
             this.anInt400 = var3.getShort((byte) 41);
          } else if (34 == var1) {
-            this.anInt403 = var3.getByteB();
+            this.anInt403 = var3.readUnsignedByte();
          } else if (var1 == 35) {
             this.anInt399 = var3.getShort();
          } else if (var1 == 36) {
             this.anInt371 = var3.getShort((byte) 122);
          } else if (var1 == 37) {
-            this.anInt360 = var3.getByteB();
+            this.anInt360 = var3.readUnsignedByte();
          } else if (var1 == 38) {
             this.anInt367 = var3.getShort();
          } else if (39 == var1) {

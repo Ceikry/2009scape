@@ -25,7 +25,7 @@ final class PacketParser {
                 aShort83 = -91;
             }
 
-            return (8 & Class9.aByteArrayArrayArray113[var3][var1][var0]) == 0 ? (var3 > 0 && (Class9.aByteArrayArrayArray113[1][var1][var0] & 2) != 0 ? -1 + var3 : var3) : 0;
+            return (8 & Unsorted.aByteArrayArrayArray113[var3][var1][var0]) == 0 ? (var3 > 0 && (Unsorted.aByteArrayArrayArray113[1][var1][var0] & 2) != 0 ? -1 + var3 : var3) : 0;
         } catch (RuntimeException var5) {
             throw Class44.clientError(var5, "ac.G(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ')');
         }
@@ -133,11 +133,11 @@ final class PacketParser {
                                     if (115 == playerName.charAt(counter, (byte) -45)) {
                                         var71[1 + counter] = GraphicDefinition.incomingBuffer.getString();
                                     } else {
-                                        var71[1 + counter] = GraphicDefinition.incomingBuffer.getInt();
+                                        var71[1 + counter] = GraphicDefinition.incomingBuffer.readInt();
                                     }
                                 }
 
-                                var71[0] = GraphicDefinition.incomingBuffer.getInt();
+                                var71[0] = GraphicDefinition.incomingBuffer.readInt();
                                 Class146.updateInterfacePacketCounter(nodeModelId);
                                 CS2Script var66 = new CS2Script();
                                 var66.arguments = var71;
@@ -296,7 +296,7 @@ final class PacketParser {
                                         Class65.currentChunkX = GraphicDefinition.incomingBuffer.getByteS();
 
                                         while (GraphicDefinition.incomingBuffer.index < Class130.incomingPacketLength) {
-                                            Unsorted.incomingOpcode = GraphicDefinition.incomingBuffer.getByteB();
+                                            Unsorted.incomingOpcode = GraphicDefinition.incomingBuffer.readUnsignedByte();
                                             Class39.parseChunkPacket((byte) -82);
                                         }
 
@@ -329,7 +329,7 @@ final class PacketParser {
                                                 nameAsLong = GraphicDefinition.incomingBuffer.getLong((byte) -83 ^ 54);
                                                 var29 = GraphicDefinition.incomingBuffer.getShort();
                                                 var36 = GraphicDefinition.incomingBuffer.getTriByte((byte) 104);
-                                                clanChatIcon = GraphicDefinition.incomingBuffer.getByteB();
+                                                clanChatIcon = GraphicDefinition.incomingBuffer.readUnsignedByte();
                                                 boolean var63 = false;
                                                 var11 = GraphicDefinition.incomingBuffer.getShort();
                                                 long var55 = (var29 << 32) + var36;
@@ -392,7 +392,7 @@ final class PacketParser {
                                                         RSInterface.aClass94_251 = Class41.method1052(nameAsLong);
                                                         Class161.aClass94_2035 = Class41.method1052(var2);
                                                         Player.aByte3953 = GraphicDefinition.incomingBuffer.getByte();
-                                                        var6 = GraphicDefinition.incomingBuffer.getByteB();
+                                                        var6 = GraphicDefinition.incomingBuffer.readUnsignedByte();
                                                         if (255 != var6) {
                                                             Node.clanSize = var6;
                                                             Class3_Sub19[] var7 = new Class3_Sub19[100];
@@ -453,9 +453,9 @@ final class PacketParser {
                                                     Unsorted.incomingOpcode = -1;
                                                     return true;
                                                 } else if (232 == Unsorted.incomingOpcode) {
-                                                    Class3_Sub13_Sub8.anInt3101 = GraphicDefinition.incomingBuffer.getByteB();
-                                                    Class24.anInt467 = GraphicDefinition.incomingBuffer.getByteB();
-                                                    Class45.anInt734 = GraphicDefinition.incomingBuffer.getByteB();
+                                                    Class3_Sub13_Sub8.anInt3101 = GraphicDefinition.incomingBuffer.readUnsignedByte();
+                                                    Class24.anInt467 = GraphicDefinition.incomingBuffer.readUnsignedByte();
+                                                    Class45.anInt734 = GraphicDefinition.incomingBuffer.readUnsignedByte();
                                                     Unsorted.incomingOpcode = -1;
                                                     return true;
                                                 } else {
@@ -466,8 +466,8 @@ final class PacketParser {
                                                             nodeModelId = -1;
                                                         }
 
-                                                        var19 = GraphicDefinition.incomingBuffer.getByteB();
-                                                        modelId = GraphicDefinition.incomingBuffer.getByteB();
+                                                        var19 = GraphicDefinition.incomingBuffer.readUnsignedByte();
+                                                        modelId = GraphicDefinition.incomingBuffer.readUnsignedByte();
                                                         var56 = GraphicDefinition.incomingBuffer.getString();
                                                         if (1 <= modelId && modelId <= 8) {
                                                             if (var56.equals(-121, TextCore.HasNull)) {
@@ -482,7 +482,7 @@ final class PacketParser {
                                                         Unsorted.incomingOpcode = -1;
                                                         return true;
                                                     } else if (Unsorted.incomingOpcode == 226) {
-                                                        nodeModelId = GraphicDefinition.incomingBuffer.getInt();
+                                                        nodeModelId = GraphicDefinition.incomingBuffer.readInt();
                                                         var19 = GraphicDefinition.incomingBuffer.getShortA(-112);
                                                         Class3_Sub13_Sub23.method281(nodeModelId, var19);
                                                         Unsorted.incomingOpcode = -1;
@@ -517,7 +517,7 @@ final class PacketParser {
                                                         return true;
                                                     } else if (Unsorted.incomingOpcode == 69) {
                                                         nodeModelId = GraphicDefinition.incomingBuffer.getLEShortA((byte) -113);
-                                                        var19 = GraphicDefinition.incomingBuffer.getInt();
+                                                        var19 = GraphicDefinition.incomingBuffer.readInt();
                                                         modelId = GraphicDefinition.incomingBuffer.getShortA(-107);
                                                         Class146.updateInterfacePacketCounter(nodeModelId);
                                                         Class3_Sub13_Sub18.method255(modelId, var19, 1);
@@ -543,11 +543,11 @@ final class PacketParser {
                                                         return true;
                                                     } else if (Unsorted.incomingOpcode == 125) {//camera rotation
                                                         nodeModelId = GraphicDefinition.incomingBuffer.getShort();
-                                                        var19 = GraphicDefinition.incomingBuffer.getByteB();
-                                                        modelId = GraphicDefinition.incomingBuffer.getByteB();
+                                                        var19 = GraphicDefinition.incomingBuffer.readUnsignedByte();
+                                                        modelId = GraphicDefinition.incomingBuffer.readUnsignedByte();
                                                         counter = GraphicDefinition.incomingBuffer.getShort();
-                                                        var6 = GraphicDefinition.incomingBuffer.getByteB();
-                                                        var30 = GraphicDefinition.incomingBuffer.getByteB();
+                                                        var6 = GraphicDefinition.incomingBuffer.readUnsignedByte();
+                                                        var30 = GraphicDefinition.incomingBuffer.readUnsignedByte();
                                                         Class146.updateInterfacePacketCounter(nodeModelId);
                                                         Class164_Sub1.method2238(counter, modelId, var6, var19, var30);
 
@@ -704,7 +704,7 @@ final class PacketParser {
                                                                 Class3_Sub30_Sub1.method819();
                                                                 nodeModelId = GraphicDefinition.incomingBuffer.getByteA((byte) -111);
                                                                 var19 = GraphicDefinition.incomingBuffer.getIntA(-1);
-                                                                modelId = GraphicDefinition.incomingBuffer.getByteB();
+                                                                modelId = GraphicDefinition.incomingBuffer.readUnsignedByte();
                                                                 Class133.anIntArray1743[modelId] = var19;
                                                                 Class3_Sub13_Sub15.anIntArray3185[modelId] = nodeModelId;
                                                                 Class3_Sub20.anIntArray2480[modelId] = 1;
@@ -736,7 +736,7 @@ final class PacketParser {
                                                                         return true;
                                                                     } else if (Unsorted.incomingOpcode == 149) {
                                                                 nodeModelId = GraphicDefinition.incomingBuffer.getShort();
-                                                                var19 = GraphicDefinition.incomingBuffer.getInt();
+                                                                var19 = GraphicDefinition.incomingBuffer.readInt();
                                                                 Class146.updateInterfacePacketCounter(nodeModelId);
                                                                 Class3_Sub31 var67 = (Class3_Sub31) Class3_Sub13_Sub17.aClass130_3208.method1780(var19);
                                                                 if (null != var67) {
@@ -772,14 +772,14 @@ final class PacketParser {
                                                                 var19 = GraphicDefinition.incomingBuffer.getShortA(31);
                                                                 modelId = GraphicDefinition.incomingBuffer.getLEShortA((byte) -117);
                                                                 counter = GraphicDefinition.incomingBuffer.getLEShortA((byte) -90);
-                                                                var6 = GraphicDefinition.incomingBuffer.getInt();
+                                                                var6 = GraphicDefinition.incomingBuffer.readInt();
                                                                 Class146.updateInterfacePacketCounter(var19);
                                                                 CacheIndex.method2143((byte) -124, modelId, var6, counter, nodeModelId);
 
                                                                 Unsorted.incomingOpcode = -1;
                                                                 return true;
                                                             } else if (112 == Unsorted.incomingOpcode) {
-                                                                Class65.currentChunkX = GraphicDefinition.incomingBuffer.getByteB();
+                                                                Class65.currentChunkX = GraphicDefinition.incomingBuffer.readUnsignedByte();
                                                                 Class107.currentChunkY = GraphicDefinition.incomingBuffer.getByteC();
 
                                                                 for (nodeModelId = Class65.currentChunkX; nodeModelId < 8 + Class65.currentChunkX; ++nodeModelId) {
@@ -825,13 +825,13 @@ final class PacketParser {
                                                                 Unsorted.incomingOpcode = -1;
                                                                 return true;
                                                             } else if (Unsorted.incomingOpcode == 192) {
-                                                                Class161.anInt2028 = GraphicDefinition.incomingBuffer.getByteB();
+                                                                Class161.anInt2028 = GraphicDefinition.incomingBuffer.readUnsignedByte();
                                                                 Unsorted.incomingOpcode = -1;
                                                                 return true;
                                                             } else if (Unsorted.incomingOpcode == 13) {
                                                                 nodeModelId = GraphicDefinition.incomingBuffer.getByteS();
                                                                 var19 = GraphicDefinition.incomingBuffer.getByteA((byte) 108);
-                                                                modelId = GraphicDefinition.incomingBuffer.getByteB();
+                                                                modelId = GraphicDefinition.incomingBuffer.readUnsignedByte();
                                                                 WorldListCountry.localPlane = var19 >> 1;
                                                                 Class102.player.method1981(nodeModelId, (var19 & 1) == 1, modelId);
                                                                 Unsorted.incomingOpcode = -1;
@@ -843,7 +843,7 @@ final class PacketParser {
                                                                 if (Unsorted.incomingOpcode == 62) {
                                                                     var2 = GraphicDefinition.incomingBuffer.getLong(-127);
                                                                     modelId = GraphicDefinition.incomingBuffer.getShort();
-                                                                    counter = GraphicDefinition.incomingBuffer.getByteB();
+                                                                    counter = GraphicDefinition.incomingBuffer.readUnsignedByte();
                                                                     isIgnored = true;
                                                                     if (var2 < 0L) {
                                                                         var2 &= Long.MAX_VALUE;
@@ -949,11 +949,11 @@ final class PacketParser {
                                                                     return true;
                                                                 } else if (Unsorted.incomingOpcode == 154) {//camera position
                                                                     nodeModelId = GraphicDefinition.incomingBuffer.getShort();
-                                                                    var19 = GraphicDefinition.incomingBuffer.getByteB();
-                                                                    modelId = GraphicDefinition.incomingBuffer.getByteB();
+                                                                    var19 = GraphicDefinition.incomingBuffer.readUnsignedByte();
+                                                                    modelId = GraphicDefinition.incomingBuffer.readUnsignedByte();
                                                                     counter = GraphicDefinition.incomingBuffer.getShort();
-                                                                    var6 = GraphicDefinition.incomingBuffer.getByteB();
-                                                                    var30 = GraphicDefinition.incomingBuffer.getByteB();
+                                                                    var6 = GraphicDefinition.incomingBuffer.readUnsignedByte();
+                                                                    var30 = GraphicDefinition.incomingBuffer.readUnsignedByte();
                                                                     Class146.updateInterfacePacketCounter(nodeModelId);
                                                                     Class3_Sub20.method390(true, var6, counter, var30, (byte) -124, modelId, var19);
 
@@ -963,7 +963,7 @@ final class PacketParser {
                                                                     var2 = GraphicDefinition.incomingBuffer.getLong(-115);
                                                                     nameAsLong = GraphicDefinition.incomingBuffer.getShort();
                                                                     var29 = GraphicDefinition.incomingBuffer.getTriByte((byte) 77);
-                                                                    chatIcon = GraphicDefinition.incomingBuffer.getByteB();
+                                                                    chatIcon = GraphicDefinition.incomingBuffer.readUnsignedByte();
                                                                     var33 = GraphicDefinition.incomingBuffer.getShort();
                                                                     boolean var49 = false;
                                                                     long var51 = (nameAsLong << 32) - -var29;
@@ -1044,10 +1044,10 @@ final class PacketParser {
                                                                         return true;
                                                                     } else if (Unsorted.incomingOpcode == 27) {
                                                                         nodeModelId = GraphicDefinition.incomingBuffer.getShort();
-                                                                        var19 = GraphicDefinition.incomingBuffer.getByteB();
-                                                                        modelId = GraphicDefinition.incomingBuffer.getByteB();
-                                                                        counter = GraphicDefinition.incomingBuffer.getByteB();
-                                                                        var6 = GraphicDefinition.incomingBuffer.getByteB();
+                                                                        var19 = GraphicDefinition.incomingBuffer.readUnsignedByte();
+                                                                        modelId = GraphicDefinition.incomingBuffer.readUnsignedByte();
+                                                                        counter = GraphicDefinition.incomingBuffer.readUnsignedByte();
+                                                                        var6 = GraphicDefinition.incomingBuffer.readUnsignedByte();
                                                                         var30 = GraphicDefinition.incomingBuffer.getShort();
                                                                         Class146.updateInterfacePacketCounter(nodeModelId);
                                                                         Class104.aBooleanArray2169[var19] = true;
@@ -1087,7 +1087,7 @@ final class PacketParser {
                                                                         return true;
                                                                     } else if (Unsorted.incomingOpcode == 234) {
                                                                         Class3_Sub30_Sub1.method819();
-                                                                        Class9.anInt136 = GraphicDefinition.incomingBuffer.getByteB();
+                                                                        Unsorted.anInt136 = GraphicDefinition.incomingBuffer.readUnsignedByte();
                                                                         Class140_Sub6.anInt2905 = Class3_Sub13_Sub17.anInt3213;
                                                                         Unsorted.incomingOpcode = -1;
                                                                         return true;
@@ -1163,7 +1163,7 @@ final class PacketParser {
                                                                         Unsorted.incomingOpcode = -1;
                                                                         return true;
                                                                     } else if (Unsorted.incomingOpcode == 155) {
-                                                                        nodeModelId = GraphicDefinition.incomingBuffer.getByteB();
+                                                                        nodeModelId = GraphicDefinition.incomingBuffer.readUnsignedByte();
                                                                         var19 = GraphicDefinition.incomingBuffer.getIntB((byte) -51);
                                                                         modelId = GraphicDefinition.incomingBuffer.getShortA((byte) -83 + 163);
                                                                         counter = GraphicDefinition.incomingBuffer.getShort();
@@ -1193,11 +1193,11 @@ final class PacketParser {
                                                                         Unsorted.incomingOpcode = -1;
                                                                         return true;
                                                                     } else if (Unsorted.incomingOpcode == 217) {
-                                                                        nodeModelId = GraphicDefinition.incomingBuffer.getByteB();
+                                                                        nodeModelId = GraphicDefinition.incomingBuffer.readUnsignedByte();
                                                                         Class96 var48 = new Class96();
                                                                         var19 = nodeModelId >> 6;
                                                                         var48.anInt1360 = nodeModelId & 63;
-                                                                        var48.anInt1351 = GraphicDefinition.incomingBuffer.getByteB();
+                                                                        var48.anInt1351 = GraphicDefinition.incomingBuffer.readUnsignedByte();
                                                                         if (var48.anInt1351 >= 0 && Class166.aClass3_Sub28_Sub16Array2072.length > var48.anInt1351) {
                                                                             if (var48.anInt1360 == 1 || 10 == var48.anInt1360) {
                                                                                 var48.anInt1359 = GraphicDefinition.incomingBuffer.getShort();
@@ -1231,7 +1231,7 @@ final class PacketParser {
                                                                                 var48.anInt1360 = 2;
                                                                                 var48.anInt1356 = GraphicDefinition.incomingBuffer.getShort();
                                                                                 var48.anInt1347 = GraphicDefinition.incomingBuffer.getShort();
-                                                                                var48.anInt1353 = GraphicDefinition.incomingBuffer.getByteB();
+                                                                                var48.anInt1353 = GraphicDefinition.incomingBuffer.readUnsignedByte();
                                                                             }
 
                                                                             var48.anInt1355 = GraphicDefinition.incomingBuffer.getShort();
@@ -1276,7 +1276,7 @@ final class PacketParser {
                                                                         modelId = 3 & nodeModelId;
                                                                         counter = Class75.anIntArray1107[var19];
                                                                         var6 = GraphicDefinition.incomingBuffer.getShort();
-                                                                        var30 = GraphicDefinition.incomingBuffer.getInt();
+                                                                        var30 = GraphicDefinition.incomingBuffer.readInt();
                                                                         if ('\uffff' == var6) {
                                                                             var6 = -1;
                                                                         }
@@ -1293,7 +1293,7 @@ final class PacketParser {
                                                                         var2 = GraphicDefinition.incomingBuffer.getLong(-85);
                                                                         nameAsLong = GraphicDefinition.incomingBuffer.getShort();
                                                                         var29 = GraphicDefinition.incomingBuffer.getTriByte((byte) 93);
-                                                                        chatIcon = GraphicDefinition.incomingBuffer.getByteB();
+                                                                        chatIcon = GraphicDefinition.incomingBuffer.readUnsignedByte();
                                                                         boolean var42 = false;
                                                                         long var35 = var29 + (nameAsLong << 32);
                                                                         var12 = 0;
@@ -1345,7 +1345,7 @@ final class PacketParser {
                                                                         var29 = GraphicDefinition.incomingBuffer.getShort();
                                                                         var36 = GraphicDefinition.incomingBuffer.getTriByte((byte) 81);
                                                                         long var44 = (var29 << 32) + var36;
-                                                                        clanChatIcon = GraphicDefinition.incomingBuffer.getByteB();
+                                                                        clanChatIcon = GraphicDefinition.incomingBuffer.readUnsignedByte();
                                                                         boolean var13 = false;
                                                                         int var14 = 0;
 
@@ -1398,7 +1398,7 @@ final class PacketParser {
                                                                         return true;
                                                                     } else if (Unsorted.incomingOpcode == 172) {
                                                                         nodeModelId = GraphicDefinition.incomingBuffer.getShort();
-                                                                        var19 = GraphicDefinition.incomingBuffer.getByteB();
+                                                                        var19 = GraphicDefinition.incomingBuffer.readUnsignedByte();
                                                                         if (nodeModelId == 65535) {
                                                                             nodeModelId = -1;
                                                                         }
@@ -1438,7 +1438,7 @@ final class PacketParser {
                                                                     } else {
                                                                         RSInterface var25;
                                                                         if (Unsorted.incomingOpcode == 22) {
-                                                                            nodeModelId = GraphicDefinition.incomingBuffer.getInt();
+                                                                            nodeModelId = GraphicDefinition.incomingBuffer.readInt();
                                                                             var19 = GraphicDefinition.incomingBuffer.getShort();
                                                                             if (nodeModelId < -70000) {
                                                                                 var19 += '\u8000';
@@ -1455,9 +1455,9 @@ final class PacketParser {
                                                                                 var6 = GraphicDefinition.incomingBuffer.getShort();
                                                                                 var30 = 0;
                                                                                 if (var6 != 0) {
-                                                                                    var30 = GraphicDefinition.incomingBuffer.getByteB();
+                                                                                    var30 = GraphicDefinition.incomingBuffer.readUnsignedByte();
                                                                                     if (var30 == 255) {
-                                                                                        var30 = GraphicDefinition.incomingBuffer.getInt();
+                                                                                        var30 = GraphicDefinition.incomingBuffer.readInt();
                                                                                     }
                                                                                 }
 
@@ -1487,8 +1487,8 @@ final class PacketParser {
                                                                             Unsorted.incomingOpcode = -1;
                                                                             return false;
                                                                         } else if (116 == Unsorted.incomingOpcode) {
-                                                                            nodeModelId = GraphicDefinition.incomingBuffer.getByteB();
-                                                                            if (GraphicDefinition.incomingBuffer.getByteB() == 0) {
+                                                                            nodeModelId = GraphicDefinition.incomingBuffer.readUnsignedByte();
+                                                                            if (GraphicDefinition.incomingBuffer.readUnsignedByte() == 0) {
                                                                                 Class3_Sub13_Sub33.aClass133Array3393[nodeModelId] = new Class133();
                                                                             } else {
                                                                                 --GraphicDefinition.incomingBuffer.index;
@@ -1522,7 +1522,7 @@ final class PacketParser {
                                                                                 var19 = -1;
                                                                             }
 
-                                                                            modelId = GraphicDefinition.incomingBuffer.getInt();
+                                                                            modelId = GraphicDefinition.incomingBuffer.readInt();
                                                                             counter = GraphicDefinition.incomingBuffer.getShortA(23);
                                                                             var6 = GraphicDefinition.incomingBuffer.getIntA(-1);
                                                                             if (counter == 65535) {
@@ -1550,7 +1550,7 @@ final class PacketParser {
                                                                             Unsorted.incomingOpcode = -1;
                                                                             return true;
                                                                         } else if (Unsorted.incomingOpcode == 197) {
-                                                                            Class96.anInt1357 = GraphicDefinition.incomingBuffer.getByteB();
+                                                                            Class96.anInt1357 = GraphicDefinition.incomingBuffer.readUnsignedByte();
                                                                             Class110.anInt1472 = Class3_Sub13_Sub17.anInt3213;
                                                                             Unsorted.incomingOpcode = -1;
                                                                             return true;
@@ -1634,7 +1634,7 @@ final class PacketParser {
                                                                             Class167.anInt2087 = Class3_Sub13_Sub17.anInt3213;
                                                                             return true;
                                                                         } else if (50 == Unsorted.incomingOpcode) {
-                                                                            nodeModelId = GraphicDefinition.incomingBuffer.getInt();
+                                                                            nodeModelId = GraphicDefinition.incomingBuffer.readInt();
                                                                             var19 = GraphicDefinition.incomingBuffer.getIntB((byte) -79);
                                                                             modelId = GraphicDefinition.incomingBuffer.getLEShortA((byte) -118);
                                                                             if ('\uffff' == modelId) {
@@ -1669,7 +1669,7 @@ final class PacketParser {
                                                                             Unsorted.incomingOpcode = -1;
                                                                             return true;
                                                                         } else if (Unsorted.incomingOpcode == 105) {
-                                                                            nodeModelId = GraphicDefinition.incomingBuffer.getInt();
+                                                                            nodeModelId = GraphicDefinition.incomingBuffer.readInt();
                                                                             var19 = GraphicDefinition.incomingBuffer.getShort();
                                                                             if (nodeModelId < -70000) {
                                                                                 var19 += '\u8000';
@@ -1694,7 +1694,7 @@ final class PacketParser {
                                                                             for (var6 = 0; counter > var6; ++var6) {
                                                                                 var30 = GraphicDefinition.incomingBuffer.getByteS();
                                                                                 if (255 == var30) {
-                                                                                    var30 = GraphicDefinition.incomingBuffer.getInt();
+                                                                                    var30 = GraphicDefinition.incomingBuffer.readInt();
                                                                                 }
 
                                                                                 chatIcon = GraphicDefinition.incomingBuffer.getShort();
@@ -1720,7 +1720,7 @@ final class PacketParser {
                                                                             return true;
                                                                         } else if (Unsorted.incomingOpcode == 26) {
                                                                             Class65.currentChunkX = GraphicDefinition.incomingBuffer.getByteC();
-                                                                            Class107.currentChunkY = GraphicDefinition.incomingBuffer.getByteB();
+                                                                            Class107.currentChunkY = GraphicDefinition.incomingBuffer.readUnsignedByte();
                                                                             Unsorted.incomingOpcode = -1;
                                                                             return true;
                                                                         } else if (4 == Unsorted.incomingOpcode) {

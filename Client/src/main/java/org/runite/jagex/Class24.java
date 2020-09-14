@@ -100,7 +100,7 @@ final class Class24 {
                      break;
                   }
 
-                  buffer.getByteB();
+                  buffer.readUnsignedByte();
                } else {
             	   if (buffer.index == buffer.buffer.length) {
             		   break;
@@ -115,7 +115,7 @@ final class Class24 {
                   int var13 = (4088 & var9) >> 6;
                   int var16 = var2 + var12;
                   int var15 = var1 + var13;
-                  int var14 = buffer.getByteB() >> 2;
+                  int var14 = buffer.readUnsignedByte() >> 2;
                   if(var15 > 0 && var16 > 0 && 103 > var15 && 103 > var16) {
                      ObjectDefinition var17 = Class162.getObjectDefinition(var7);
                      if(var14 != 22 || KeyboardListener.aBoolean1905 || 0 != var17.SecondInt || var17.ClipType == 1 || var17.aBoolean1483) {
@@ -209,12 +209,12 @@ final class Class24 {
       try {
 
           if(var3 == 1) {
-            this.anInt466 = var2.getByteB();
+            this.anInt466 = var2.readUnsignedByte();
          } else {
             int var4;
             int var5;
             if(var3 == 2) {
-               var4 = var2.getByteB();
+               var4 = var2.readUnsignedByte();
                this.anIntArray474 = new int[var4];
 
                for(var5 = 0; var4 > var5; ++var5) {
@@ -223,7 +223,7 @@ final class Class24 {
             } else if(var3 == 3) {
                this.aBoolean476 = true;
             } else if(var3 == 40) {
-               var4 = var2.getByteB();
+               var4 = var2.readUnsignedByte();
                this.aShortArray460 = new short[var4];
                this.aShortArray464 = new short[var4];
 
@@ -232,7 +232,7 @@ final class Class24 {
                   this.aShortArray460[var5] = (short)var2.getShort();
                }
             } else if (var3 == 41) {
-               var4 = var2.getByteB();
+               var4 = var2.readUnsignedByte();
                this.aShortArray471 = new short[var4];
                this.aShortArray470 = new short[var4];
 
@@ -379,7 +379,7 @@ final class Class24 {
    final void method952(RSByteBuffer var2) {
       try {
           while(true) {
-             int var3 = var2.getByteB();
+             int var3 = var2.readUnsignedByte();
              if(0 == var3) {
                 return;
              }

@@ -40,8 +40,8 @@ final class Class3_Sub13_Sub29 extends Class3_Sub13 {
    static void method305(Signlink var0, RSByteBuffer var1, int var2) {
       try {
          Class3_Sub8 var4 = new Class3_Sub8();
-         var4.anInt2296 = var1.getByteB();
-         var4.anInt2305 = var1.getInt();
+         var4.anInt2296 = var1.readUnsignedByte();
+         var4.anInt2305 = var1.readInt();
          var4.aClass64Array2298 = new Class64[var4.anInt2296];
          var4.anIntArray2300 = new int[var4.anInt2296];
          var4.aByteArrayArrayArray2302 = new byte[var4.anInt2296][][];
@@ -51,7 +51,7 @@ final class Class3_Sub13_Sub29 extends Class3_Sub13 {
 
          for(int var6 = 0; var4.anInt2296 > var6; ++var6) {
             try {
-               int var7 = var1.getByteB();
+               int var7 = var1.readUnsignedByte();
                String var8;
                String var9;
                int var10;
@@ -60,7 +60,7 @@ final class Class3_Sub13_Sub29 extends Class3_Sub13 {
                   var10 = 0;
                   var9 = new String(var1.getString().method1568());
                   if(var7 == 1) {
-                     var10 = var1.getInt();
+                     var10 = var1.readInt();
                   }
 
                   var4.anIntArray2301[var6] = var7;
@@ -70,7 +70,7 @@ final class Class3_Sub13_Sub29 extends Class3_Sub13 {
                   if(var7 == 3 || var7 == 4) {
                      var8 = new String(var1.getString().method1568());
                      var9 = new String(var1.getString().method1568());
-                     var10 = var1.getByteB();
+                     var10 = var1.readUnsignedByte();
                      String[] var11 = new String[var10];
 
                      for(int var12 = 0; var10 > var12; ++var12) {
@@ -81,7 +81,7 @@ final class Class3_Sub13_Sub29 extends Class3_Sub13 {
                      int var14;
                      if(3 == var7) {
                         for(int var13 = 0; var13 < var10; ++var13) {
-                           var14 = var1.getInt();
+                           var14 = var1.readInt();
                            var21[var13] = new byte[var14];
                            var1.method764(var14, var21[var13]);
                         }

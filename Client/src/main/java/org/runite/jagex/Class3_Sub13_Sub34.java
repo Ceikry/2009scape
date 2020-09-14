@@ -26,14 +26,14 @@ final class Class3_Sub13_Sub34 extends Class3_Sub13 {
             int var4 = 0;
             boolean var3 = false;
             int var5 = 0;
-            if(var1.getByteB() == 1) {
+            if(var1.readUnsignedByte() == 1) {
                var3 = true;
-               var4 = var1.getByteB();
-               var5 = var1.getByteB();
+               var4 = var1.readUnsignedByte();
+               var5 = var1.readUnsignedByte();
             }
 
-            int var6 = var1.getByteB();
-            int var7 = var1.getByteB();
+            int var6 = var1.readUnsignedByte();
+            int var7 = var1.readUnsignedByte();
             int var8 = -Class3_Sub13_Sub21.anInt3256 + var6 * 64;
             int var9 = Class108.anInt1460 + -1 - -Class2.anInt65 - 64 * var7;
             byte var2;

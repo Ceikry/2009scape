@@ -144,10 +144,10 @@ final class Class66 {
 							if(var5 <= this.aClass3_Sub30_1008.index) {
 								if(this.aClass3_Sub28_Sub10_Sub2_1012 == null) {
 									this.aClass3_Sub30_1008.index = 0;
-									var7 = this.aClass3_Sub30_1008.getByteB();
+									var7 = this.aClass3_Sub30_1008.readUnsignedByte();
 									var8 = this.aClass3_Sub30_1008.getShort();
-									int var9 = this.aClass3_Sub30_1008.getByteB();
-									int var10 = this.aClass3_Sub30_1008.getInt();
+									int var9 = this.aClass3_Sub30_1008.readUnsignedByte();
+									int var10 = this.aClass3_Sub30_1008.readInt();
 									int var11 = 127 & var9;
 									boolean var12 = (var9 & 128) != 0;
 									Class3_Sub28_Sub10_Sub2 var15;

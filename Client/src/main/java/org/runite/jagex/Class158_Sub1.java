@@ -8,7 +8,6 @@ import java.awt.image.DirectColorModel;
 import java.awt.image.ImageConsumer;
 import java.awt.image.ImageObserver;
 import java.awt.image.ImageProducer;
-import java.util.Hashtable;
 
 final class Class158_Sub1 extends Class158 implements ImageProducer, ImageObserver {
 
@@ -117,9 +116,9 @@ final class Class158_Sub1 extends Class158 implements ImageProducer, ImageObserv
             for(var4 = 0; var4 < 4; ++var4) {
                for(var5 = 0; var5 < 104; ++var5) {
                   for(int var6 = 0; var6 < 104; ++var6) {
-                     if((1 & Class9.aByteArrayArrayArray113[var4][var5][var6]) == 1) {
+                     if((1 & Unsorted.aByteArrayArrayArray113[var4][var5][var6]) == 1) {
                         int var7 = var4;
-                        if((2 & Class9.aByteArrayArrayArray113[1][var5][var6]) == 2) {
+                        if((2 & Unsorted.aByteArrayArrayArray113[1][var5][var6]) == 2) {
                            var7 = var4 - 1;
                         }
 
@@ -304,7 +303,7 @@ final class Class158_Sub1 extends Class158 implements ImageProducer, ImageObserv
             for(var10 = 1; var10 < 103; ++var10) {
                label754:
                for(var11 = 1; var11 < 103; ++var11) {
-                  if(var1 || NPC.method1986(66) || (2 & Class9.aByteArrayArrayArray113[0][var10][var11]) != 0 || (16 & Class9.aByteArrayArrayArray113[var8][var10][var11]) == 0 && PacketParser.method823(var11, var10, -87, var8) == Class140_Sub3.anInt2745) {
+                  if(var1 || NPC.method1986(66) || (2 & Unsorted.aByteArrayArrayArray113[0][var10][var11]) != 0 || (16 & Unsorted.aByteArrayArrayArray113[var8][var10][var11]) == 0 && PacketParser.method823(var11, var10, -87, var8) == Class140_Sub3.anInt2745) {
                      if(var8 < Class85.anInt1174) {
                         Class85.anInt1174 = var8;
                      }
@@ -478,11 +477,11 @@ final class Class158_Sub1 extends Class158 implements ImageProducer, ImageObserv
 
                Class3_Sub11[] var50;
                if(var1) {
-                  var50 = Class3_Sub13_Sub27.method298(Class9.aByteArrayArrayArray113, Class93.aByteArrayArrayArray1328[var8], Class3_Sub13_Sub36.aByteArrayArrayArray3430[var8], var35, var40, Class3_Sub13_Sub9.anIntArrayArray3115, Class139.aByteArrayArrayArray1828[var8], PacketParser.aByteArrayArrayArray81[var8], var38, var8, var43, var34, Class44.anIntArrayArrayArray723[var8], Class58.anIntArrayArrayArray914[0]);
+                  var50 = Class3_Sub13_Sub27.method298(Unsorted.aByteArrayArrayArray113, Class93.aByteArrayArrayArray1328[var8], Class3_Sub13_Sub36.aByteArrayArrayArray3430[var8], var35, var40, Class3_Sub13_Sub9.anIntArrayArray3115, Class139.aByteArrayArrayArray1828[var8], PacketParser.aByteArrayArrayArray81[var8], var38, var8, var43, var34, Class44.anIntArrayArrayArray723[var8], Class58.anIntArrayArrayArray914[0]);
                   Class61.method1213(var8, var50);
                } else {
-                  var50 = Class3_Sub13_Sub27.method298(Class9.aByteArrayArrayArray113, Class93.aByteArrayArrayArray1328[var8], Class3_Sub13_Sub36.aByteArrayArrayArray3430[var8], var35, var40, (int[][])null, Class139.aByteArrayArrayArray1828[var8], PacketParser.aByteArrayArrayArray81[var8], var38, var8, var43, var34, Class44.anIntArrayArrayArray723[var8], (int[][])null);
-                  Class3_Sub11[] var46 = Class1.method70(var40, var38, Class44.anIntArrayArrayArray723[var8], var8, var43, PacketParser.aByteArrayArrayArray81[var8], var35, Class93.aByteArrayArrayArray1328[var8], Class3_Sub13_Sub36.aByteArrayArrayArray3430[var8], Class139.aByteArrayArrayArray1828[var8], Class9.aByteArrayArrayArray113);
+                  var50 = Class3_Sub13_Sub27.method298(Unsorted.aByteArrayArrayArray113, Class93.aByteArrayArrayArray1328[var8], Class3_Sub13_Sub36.aByteArrayArrayArray3430[var8], var35, var40, (int[][])null, Class139.aByteArrayArrayArray1828[var8], PacketParser.aByteArrayArrayArray81[var8], var38, var8, var43, var34, Class44.anIntArrayArrayArray723[var8], (int[][])null);
+                  Class3_Sub11[] var46 = Class1.method70(var40, var38, Class44.anIntArrayArrayArray723[var8], var8, var43, PacketParser.aByteArrayArrayArray81[var8], var35, Class93.aByteArrayArrayArray1328[var8], Class3_Sub13_Sub36.aByteArrayArrayArray3430[var8], Class139.aByteArrayArrayArray1828[var8], Unsorted.aByteArrayArrayArray113);
                   Class3_Sub11[] var49 = new Class3_Sub11[var50.length - -var46.length];
 
                   for(var44 = 0; var44 < var50.length; ++var44) {
@@ -514,7 +513,7 @@ final class Class158_Sub1 extends Class158 implements ImageProducer, ImageObserv
             int var36;
             for(var8 = 0; 104 > var8; ++var8) {
                for(var36 = 0; var36 < 104; ++var36) {
-                  if((Class9.aByteArrayArrayArray113[1][var8][var36] & 2) == 2) {
+                  if((Unsorted.aByteArrayArrayArray113[1][var8][var36] & 2) == 2) {
                      Class3_Sub28_Sub18.method709(var8, var36);
                   }
                }

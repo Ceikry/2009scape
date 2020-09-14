@@ -100,16 +100,16 @@ final class Class3_Sub14 extends Class3 {
 
    private void method360(byte[] var1) {
       RSByteBuffer var2 = new RSByteBuffer(var1);
-      this.anInt2408 = var2.getInt();
-      this.anInt2390 = var2.getInt();
-      this.anInt2397 = var2.getInt();
-      this.anInt2401 = var2.getInt();
+      this.anInt2408 = var2.readInt();
+      this.anInt2390 = var2.readInt();
+      this.anInt2397 = var2.readInt();
+      this.anInt2401 = var2.readInt();
       if(this.anInt2401 < 0) {
          this.anInt2401 = ~this.anInt2401;
          this.aBoolean2395 = true;
       }
 
-      int var3 = var2.getInt();
+      int var3 = var2.readInt();
       this.aByteArrayArray2410 = new byte[var3][];
 
       for(int var4 = 0; var4 < var3; ++var4) {
@@ -117,7 +117,7 @@ final class Class3_Sub14 extends Class3 {
 
          int var6;
          do {
-            var6 = var2.getByteB();
+            var6 = var2.readUnsignedByte();
             var5 += var6;
          } while(var6 >= 255);
 

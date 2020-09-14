@@ -16,7 +16,7 @@ final class Class57 {
    final void method1190(RSByteBuffer var2, int var3) {
       try {
          while(true) {
-            int var4 = var2.getByteB();
+            int var4 = var2.readUnsignedByte();
             if(var4 == 0) {
                return;
             }
@@ -31,7 +31,7 @@ final class Class57 {
    private void method1191(int var1, RSByteBuffer var2, int var3) {
       try {
          if(1 == var1) {
-            this.anInt896 = var2.getByteB();
+            this.anInt896 = var2.readUnsignedByte();
          } else if (var1 == 2) {
             this.anInt908 = var2.getShort();
          } else if (var1 == 3) {

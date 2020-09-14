@@ -33,13 +33,13 @@ final class InputStream_Sub1 extends InputStream {
 
    static Class3_Sub13 method63(RSByteBuffer var1) {
       try {
-         var1.getByteB();
-         int var2 = var1.getByteB();
+         var1.readUnsignedByte();
+         int var2 = var1.readUnsignedByte();
          Class3_Sub13 var3 = Class130.method1777(var2);
-         Objects.requireNonNull(var3).anInt2381 = var1.getByteB();
-         int var4 = var1.getByteB();
+         Objects.requireNonNull(var3).anInt2381 = var1.readUnsignedByte();
+         int var4 = var1.readUnsignedByte();
          for(int var5 = 0; var5 < var4; ++var5) {
-            int var6 = var1.getByteB();
+            int var6 = var1.readUnsignedByte();
             var3.method157(var6, var1, true);
          }
 

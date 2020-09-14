@@ -52,7 +52,7 @@ final class Player extends Class140_Sub4 {
    final void parseAppearance(int var1, RSByteBuffer buffer) {
       try {
          buffer.index = 0;
-         int var3 = buffer.getByteB();
+         int var3 = buffer.readUnsignedByte();
          int npcId = -1;
          int var4 = 1 & var3;
          boolean var6 = (var3 & 4) != 0;
@@ -71,15 +71,15 @@ final class Player extends Class140_Sub4 {
          int outfit;
          int var14;
          for(int var10 = 0; var10 < 12; ++var10) {
-            var11 = buffer.getByteB();
+            var11 = buffer.readUnsignedByte();
             if(var11 == 0) {
                look[var10] = 0;
             } else {
-               var12 = buffer.getByteB();
+               var12 = buffer.readUnsignedByte();
                outfit = (var11 << 8) + var12;
                if(var10 == 0 && outfit == 65535) {
                   npcId = buffer.getShort();
-                  this.teamId = buffer.getByteB();
+                  this.teamId = buffer.readUnsignedByte();
                   break;
                }
 
@@ -104,7 +104,7 @@ final class Player extends Class140_Sub4 {
          int[] colors = new int[5];
 
          for(var11 = 0; var11 < 5; ++var11) {
-            var12 = buffer.getByteB();
+            var12 = buffer.readUnsignedByte();
             if(var12 < 0 || var12 >= Class15.aShortArrayArray344[var11].length) {
                var12 = 0;
             }
@@ -115,22 +115,22 @@ final class Player extends Class140_Sub4 {
          this.renderAnimationId = buffer.getShort();
          long var20 = buffer.getLong(-99);
          this.displayName = Objects.requireNonNull(Class41.method1052(var20)).method1545();
-         this.COMBAT_LEVEL = buffer.getByteB();
+         this.COMBAT_LEVEL = buffer.readUnsignedByte();
          if(var6) {
             this.anInt3974 = buffer.getShort();
             this.combatLevel = this.COMBAT_LEVEL;
             this.anInt3970 = -1;
          } else {
             this.anInt3974 = 0;
-            this.combatLevel = buffer.getByteB();
-            this.anInt3970 = buffer.getByteB();
+            this.combatLevel = buffer.readUnsignedByte();
+            this.anInt3970 = buffer.readUnsignedByte();
             if(this.anInt3970 == 255) {
                this.anInt3970 = -1;
             }
          }
 
          outfit = this.anInt3969;
-         this.anInt3969 = buffer.getByteB();
+         this.anInt3969 = buffer.readUnsignedByte();
          if(this.anInt3969 == 0) {
             Class162.method2203(this);
          } else {

@@ -62,11 +62,11 @@ final class Class3_Sub13_Sub7 extends Class3_Sub13 {
    final void method157(int var1, RSByteBuffer var2, boolean var3) {
       try {
          if(var1 == 0) {
-            this.anInt3085 = var2.getByteB();
+            this.anInt3085 = var2.readUnsignedByte();
          } else if(var1 == 1) {
             this.anInt3093 = var2.getShort();
          } else if (var1 == 2) {
-            this.anInt3086 = var2.getByteB();
+            this.anInt3086 = var2.readUnsignedByte();
          }
 
          if(!var3) {

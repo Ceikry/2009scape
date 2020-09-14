@@ -421,12 +421,12 @@ final class Class3_Sub8 extends Class3 {
          }
 
          if(Class83.aBoolean1158 && Class79.method1391(-1)) {
-            if(0 != Class9.anInt120 && Class129.anInt1691 != -1) {
-               Class70.method1285(Class75_Sub2.aClass153_2645, Class129.anInt1691, Class9.anInt120);
+            if(0 != Unsorted.anInt120 && Class129.anInt1691 != -1) {
+               Class70.method1285(Class75_Sub2.aClass153_2645, Class129.anInt1691, Unsorted.anInt120);
             }
 
             Class83.aBoolean1158 = false;
-         } else if(Class9.anInt120 != 0 && Class129.anInt1691 != -1 && Class79.method1391(var0 + 91)) {
+         } else if(Unsorted.anInt120 != 0 && Class129.anInt1691 != -1 && Class79.method1391(var0 + 91)) {
             Class3_Sub13_Sub1.outgoingBuffer.putOpcode(137);
             Class3_Sub13_Sub1.outgoingBuffer.putInt(-127, Class129.anInt1691);
             Class129.anInt1691 = -1;

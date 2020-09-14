@@ -14,7 +14,7 @@ final class Class3_Sub19 extends Class3 {
    static Class75_Sub2 method384(RSByteBuffer var0) {
       try {
 
-         return new Class75_Sub2(var0.getShort((byte)38), var0.getShort((byte)51), var0.getShort((byte)66), var0.getShort((byte)68), var0.getTriByte((byte)86), var0.getTriByte((byte)86), var0.getByteB());
+         return new Class75_Sub2(var0.getShort((byte)38), var0.getShort((byte)51), var0.getShort((byte)66), var0.getShort((byte)68), var0.getTriByte((byte)86), var0.getTriByte((byte)86), var0.readUnsignedByte());
       } catch (RuntimeException var3) {
          throw Class44.clientError(var3, "kl.C(" + (var0 != null?"{...}":"null") + ',' + (byte) 80 + ')');
       }
@@ -45,11 +45,11 @@ final class Class3_Sub19 extends Class3 {
                var7 = 4 * 512 * (var3 + 103 + -var6) + 24628;
 
                for(var8 = 1; 104 + -1 > var8; ++var8) {
-                  if((Class9.aByteArrayArrayArray113[var1][var8][var6] & 24) == 0) {
+                  if((Unsorted.aByteArrayArrayArray113[var1][var8][var6] & 24) == 0) {
                      IOHandler.method1469(var4, var7, 512, var1, var8, var6);
                   }
 
-                  if(var1 < 3 && 0 != (Class9.aByteArrayArrayArray113[1 + var1][var8][var6] & 8)) {
+                  if(var1 < 3 && 0 != (Unsorted.aByteArrayArrayArray113[1 + var1][var8][var6] & 8)) {
                      IOHandler.method1469(var4, var7, 512, var1 + 1, var8, var6);
                   }
 
@@ -120,7 +120,7 @@ final class Class3_Sub19 extends Class3 {
 
          for(var6 = 1; var6 < 103; ++var6) {
             for(var7 = 1; 103 > var7; ++var7) {
-               if(0 == (Class9.aByteArrayArrayArray113[var1][var7][var6 - -var3] & 24) && !Unsorted.method1529(var3, var7, var18, var6, var5, var1)) {
+               if(0 == (Unsorted.aByteArrayArrayArray113[var1][var7][var6 - -var3] & 24) && !Unsorted.method1529(var3, var7, var18, var6, var5, var1)) {
                   if(HDToolKit.highDetail) {
                      Class74.anIntArray1100 = null;
                   } else {
@@ -130,7 +130,7 @@ final class Class3_Sub19 extends Class3 {
                   return false;
                }
 
-               if(var1 < 3 && (Class9.aByteArrayArrayArray113[1 + var1][var7][var6 + var3] & 8) != 0 && !Unsorted.method1529(var3, var7, var18, var6, var5, 1 + var1)) {
+               if(var1 < 3 && (Unsorted.aByteArrayArrayArray113[1 + var1][var7][var6 + var3] & 8) != 0 && !Unsorted.method1529(var3, var7, var18, var6, var5, 1 + var1)) {
                   if(HDToolKit.highDetail) {
                      Class74.anIntArray1100 = null;
                   } else {

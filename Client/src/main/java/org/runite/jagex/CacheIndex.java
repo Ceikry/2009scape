@@ -1,5 +1,6 @@
 package org.runite.jagex;
 
+import org.rs09.client.filestore.compression.Container;
 import org.rs09.client.util.ArrayUtils;
 import org.rs09.client.util.CRC;
 
@@ -363,7 +364,7 @@ final class CacheIndex {
 
                byte[] var23;
                try {
-                  var23 = Class3_Sub28_Sub13.decodeContainer(var21);
+                  var23 = Container.INSTANCE.decode(var21);//Class3_Sub28_Sub13.decodeContainer(var21);
                } catch (Throwable var19) {
                   throw Class44.clientError(var19, "T3 - " + (xteaKeys != null) + "," + archive + "," + Objects.requireNonNull(var21).length + "," + CRC.INSTANCE.crc32(var21, var21.length) + "," + CRC.INSTANCE.crc32(var21, var21.length - 2) + "," + this.aReferenceTable_1949.archiveCRCs[archive] + "," + this.aReferenceTable_1949.crc);
                }
@@ -388,7 +389,7 @@ final class CacheIndex {
                      var15 = 0;
 
                      for (var16 = 0; var16 < var4; ++var16) {
-                        var15 += var12.getInt();
+                        var15 += var12.readInt();
 
                         var13[var16] += var15;
                      }
@@ -409,7 +410,7 @@ final class CacheIndex {
                      var17 = 0;
 
                      for (int var18 = 0; var18 < var4; ++var18) {
-                        var17 += var12.getInt();
+                        var17 += var12.readInt();
                         ArrayUtils.arraycopy(var23, var15, var24[var18], var13[var18], var17);
                         var15 += var17;
                         var13[var18] += var17;

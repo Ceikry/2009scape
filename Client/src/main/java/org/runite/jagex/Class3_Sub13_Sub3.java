@@ -46,7 +46,7 @@ final class Class3_Sub13_Sub3 extends Class3_Sub13 {
          if(0 == var1) {
             this.anInt3047 = var2.getShort();
          } else if(var1 == 1) {
-            this.aBoolean3050 = var2.getByteB() == 1;
+            this.aBoolean3050 = var2.readUnsignedByte() == 1;
          }
 
       } catch (RuntimeException var5) {

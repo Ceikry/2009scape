@@ -14,6 +14,13 @@ public class Unsorted {
    static int anInt944 = 0;
    static int anInt952;
    static int anInt963;
+   public static int anInt144;
+   public static int anInt136 = 0;
+   public static RSString aClass94_132 = RSString.of("::");
+   public static byte[][] aByteArrayArray125 = new byte[250][];
+   public static RSString aClass94_119 = RSString.of("runes");
+   public static int anInt120 = 255;
+   public static byte[][][] aByteArrayArrayArray113 = new byte[4][104][104];
 
    static void method2086() {
        try {
@@ -432,4 +439,48 @@ public class Unsorted {
             throw Class44.clientError(var4, "ii.D(" + 18074 + ')');
       }
    }
+
+    static void method848() {
+       try {
+          if(Class44.aFloat727 < NPC.aFloat3979) {
+             Class44.aFloat727 = (float)((double)Class44.aFloat727 + (double)Class44.aFloat727 / 30.0D);
+             if(NPC.aFloat3979 < Class44.aFloat727) {
+                Class44.aFloat727 = NPC.aFloat3979;
+             }
+
+             Class3_Sub5.method117();
+          } else if(NPC.aFloat3979 < Class44.aFloat727) {
+             Class44.aFloat727 = (float)((double)Class44.aFloat727 - (double)Class44.aFloat727 / 30.0D);
+             if(NPC.aFloat3979 > Class44.aFloat727) {
+                Class44.aFloat727 = NPC.aFloat3979;
+             }
+
+             Class3_Sub5.method117();
+          }
+
+          if(Class82.anInt1150 != -1 && -1 != Class3_Sub13_Sub30.anInt3362) {
+             int var1 = -Class3_Sub28_Sub1.anInt3536 + Class82.anInt1150;
+             if(2 > var1 || var1 > 2) {
+                var1 >>= 4;
+             }
+
+             int var2 = -Class3_Sub4.anInt2251 + Class3_Sub13_Sub30.anInt3362;
+             if(var2 < 2 || var2 > 2) {
+                var2 >>= 4;
+             }
+
+             Class3_Sub4.anInt2251 -= -var2;
+             Class3_Sub28_Sub1.anInt3536 += var1;
+             if(0 == var1 && 0 == var2) {
+                Class82.anInt1150 = -1;
+                Class3_Sub13_Sub30.anInt3362 = -1;
+             }
+
+             Class3_Sub5.method117();
+          }
+
+       } catch (RuntimeException var3) {
+          throw Class44.clientError(var3, "bb.A(" + 4 + ')');
+       }
+    }
 }

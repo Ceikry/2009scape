@@ -23,7 +23,7 @@ final class Class3_Sub28_Sub2 extends Node {
    static Class75_Sub3 method536(RSByteBuffer var1) {
       try {
 
-          return new Class75_Sub3(var1.getShort((byte)25), var1.getShort((byte)73), var1.getShort((byte)114), var1.getShort((byte)33), var1.getShort((byte)78), var1.getShort((byte)91), var1.getShort((byte)120), var1.getShort((byte)113), var1.getTriByte((byte)115), var1.getByteB());
+          return new Class75_Sub3(var1.getShort((byte)25), var1.getShort((byte)73), var1.getShort((byte)114), var1.getShort((byte)33), var1.getShort((byte)78), var1.getShort((byte)91), var1.getShort((byte)120), var1.getShort((byte)113), var1.getTriByte((byte)115), var1.readUnsignedByte());
       } catch (RuntimeException var3) {
          throw Class44.clientError(var3, "bk.C(" + (byte) 54 + ',' + (var1 != null?"{...}":"null") + ')');
       }

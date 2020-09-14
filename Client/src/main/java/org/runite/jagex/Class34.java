@@ -42,7 +42,7 @@ final class Class34 {
    }
 
    final void method1009(RSByteBuffer var1) {
-      this.anInt600 = var1.getByteB();
+      this.anInt600 = var1.readUnsignedByte();
       this.anIntArray604 = new int[this.anInt600];
       this.anIntArray602 = new int[this.anInt600];
 
@@ -54,9 +54,9 @@ final class Class34 {
    }
 
    final void method1010(RSByteBuffer var1) {
-      this.anInt601 = var1.getByteB();
-      this.anInt603 = var1.getInt();
-      this.anInt605 = var1.getInt();
+      this.anInt601 = var1.readUnsignedByte();
+      this.anInt603 = var1.readInt();
+      this.anInt605 = var1.readInt();
       this.method1009(var1);
    }
 

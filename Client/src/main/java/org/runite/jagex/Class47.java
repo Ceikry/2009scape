@@ -1119,7 +1119,7 @@ final class Class47 {
             for(var5 = -4 + var1; var1 - -4 >= var5; ++var5) {
                for(int var6 = -4 + var2; var6 <= 4 + var2; ++var6) {
                   int var7 = WorldListCountry.localPlane;
-                  if(3 > var7 && 2 == (2 & Class9.aByteArrayArrayArray113[1][var5][var6])) {
+                  if(3 > var7 && 2 == (2 & Unsorted.aByteArrayArrayArray113[1][var5][var6])) {
                      ++var7;
                   }
 

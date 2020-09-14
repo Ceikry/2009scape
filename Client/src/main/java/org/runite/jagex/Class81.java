@@ -157,7 +157,7 @@ final class Class81 {
                var5.aByteArray1730[var6] = var7.getByte();
                var5.aShortArray1727[var6] = (short)var7.getShort();
                var5.aShortArray1718[var6] = (short)var7.getShort();
-               var5.anIntArray1725[var6] = var7.getInt();
+               var5.anIntArray1725[var6] = var7.readInt();
             }
 
             return var5;

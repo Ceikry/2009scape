@@ -191,7 +191,7 @@ final class Class40 {
                for(var12 = 0; var12 < 4; ++var12) {
                   for(var4 = 0; var4 < 104; ++var4) {
                      for(var5 = 0; var5 < 104; ++var5) {
-                        Class9.aByteArrayArrayArray113[var12][var4][var5] = 0;
+                        Unsorted.aByteArrayArrayArray113[var12][var4][var5] = 0;
                      }
                   }
                }

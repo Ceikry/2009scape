@@ -37,7 +37,7 @@ final class Class3_Sub13_Sub10 extends Class3_Sub13 {
          } else if (var1 == 1) {
             this.anInt3127 = var2.getShort();
          } else if (var1 == 2) {
-            this.aBoolean2375 = var2.getByteB() == 1;
+            this.aBoolean2375 = var2.readUnsignedByte() == 1;
          }
 
          if(!var3) {

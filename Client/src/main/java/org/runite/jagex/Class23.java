@@ -40,7 +40,7 @@ final class Class23 {
          var1.putByte((byte)-78, Class3_Sub28_Sub9.anInt3622);
          var1.putByte((byte)-118, !Class3_Sub13_Sub15.aBoolean3184?0:1);
          var1.putByte((byte)-119, CS2Script.anInt2453);
-         var1.putByte((byte)-70, Class9.anInt120);
+         var1.putByte((byte)-70, Unsorted.anInt120);
          var1.putByte((byte)-9, Class14.anInt340);
          var1.putShort(Class3_Sub13.anInt2378);
          var1.putShort(Class3_Sub13_Sub5.anInt3071);

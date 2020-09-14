@@ -41,7 +41,7 @@ abstract class Class3_Sub28_Sub7 extends Node {
          Class80.anInt1137 = 2;
          Class3_Sub13_Sub22.aBoolean3275 = true;
          Class106.aBoolean1441 = true;
-         Class9.anInt120 = 255;
+         Unsorted.anInt120 = 255;
          Class25.aBoolean488 = true;
          Class3_Sub28_Sub14.anInt3671 = 0;
          Class122 var2 = null;

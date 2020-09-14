@@ -211,8 +211,8 @@ final class Class3_Sub13_Sub39 extends Class3_Sub13 {
    final void method157(int var1, RSByteBuffer var2, boolean var3) {
       try {
          if(0 == var1) {
-            this.anInt3462 = var2.getByteB();
-            this.anIntArrayArray3469 = new int[var2.getByteB()][2];
+            this.anInt3462 = var2.readUnsignedByte();
+            this.anIntArrayArray3469 = new int[var2.readUnsignedByte()][2];
 
             for(int var4 = 0; var4 < this.anIntArrayArray3469.length; ++var4) {
                this.anIntArrayArray3469[var4][0] = var2.getShort();

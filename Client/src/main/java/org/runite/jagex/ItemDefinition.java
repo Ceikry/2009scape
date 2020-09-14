@@ -121,12 +121,12 @@ final class ItemDefinition {
 			  int var5 = var4.getShort();
 			  int var6 = -12 + var4.buffer.length + -2 - var5;
 			  var4.index = var6;
-			  int var7 = var4.getInt();
+			  int var7 = var4.readInt();
 			  var2.numberOfIntsToCopy = var4.getShort();
 			  var2.numberOfRSStringsToCopy = var4.getShort();
 			  var2.numberOfIntArguments = var4.getShort();
 			  var2.numberOfStringArguments = var4.getShort();
-			  int var8 = var4.getByteB();
+			  int var8 = var4.readUnsignedByte();
 			  int var9;
 			  int var10;
 			  if(var8 > 0) {
@@ -138,8 +138,8 @@ final class ItemDefinition {
 					var2.switchHashTable[var9] = var11;
 
 					while(var10-- > 0) {
-					   int var12 = var4.getInt();
-					   int var13 = var4.getInt();
+					   int var12 = var4.readInt();
+					   int var13 = var4.readInt();
 					   var11.method1779(new Class3_Sub18(var13), (long)var12);
 					}
 				 }
@@ -156,9 +156,9 @@ final class ItemDefinition {
 				 if(var10 == 3) {
 					var2.stringInstructionOperands[var9] = var4.getString();
 				 } else if (var10 < 100 && 21 != var10 && var10 != 38 && 39 != var10) {
-					var2.instructionOperands[var9] = var4.getInt();
+					var2.instructionOperands[var9] = var4.readInt();
 				 } else {
-					var2.instructionOperands[var9] = var4.getByteB();
+					var2.instructionOperands[var9] = var4.readUnsignedByte();
 				 }
 			  }
 			  Class56.aClass47_885.method1097(var2, (long)methodID, (byte)-87);
@@ -1065,7 +1065,7 @@ final class ItemDefinition {
 														continue;
 													}
 													if (3321 == opcode) {
-														intsStack[iStackCounter++] = Class9.anInt136;
+														intsStack[iStackCounter++] = Unsorted.anInt136;
 														continue;
 													}
 													if (opcode == 3322) {
@@ -1672,7 +1672,7 @@ final class ItemDefinition {
 																	}
 																	if (opcode == 5008) {//Used for a lot of things involving :: || More prefixes can be added by using || and listing said added way, ie ;; can be used instead of ::
 																		RSString class94_18 = stringsStack[--sStackCounter];
-																		if (class94_18.method1558(Class9.aClass94_132) || class94_18.method1558(RSString.of(";;")))
+																		if (class94_18.method1558(Unsorted.aClass94_132) || class94_18.method1558(RSString.of(";;")))
 																			Class73.ClientCommands(class94_18);
 																		else if (Class3_Sub13_Sub26.rights != 0 || (!Class3_Sub15.aBoolean2433 || Class121.aBoolean1641) && !Class3_Sub13_Sub14.aBoolean3166) {
 																			RSString class94_47 = class94_18.method1534();
@@ -2679,8 +2679,8 @@ final class ItemDefinition {
 																				k35 = 0;
 																			if (k35 > 255)
 																				k35 = 255;
-																			if (Class9.anInt120 != k35) {
-																				if (Class9.anInt120 == 0 && Class129.anInt1691 != -1) {
+																			if (Unsorted.anInt120 != k35) {
+																				if (Unsorted.anInt120 == 0 && Class129.anInt1691 != -1) {
 																					Class70.method1285(Class75_Sub2.aClass153_2645, Class129.anInt1691, k35);
 																					Class83.aBoolean1158 = false;
 																				} else if (k35 == 0) {
@@ -2689,7 +2689,7 @@ final class ItemDefinition {
 																				} else {
 																					Class3_Sub29.method736(k35, 115);
 																				}
-																				Class9.anInt120 = k35;
+																				Unsorted.anInt120 = k35;
 																			}
 																			Class119.method1730(Class38.aClass87_665);
 																			Class140_Sub2.aBoolean2705 = false;
@@ -2808,7 +2808,7 @@ final class ItemDefinition {
 																			continue;
 																		}
 																		if (6119 == opcode) {
-																			intsStack[iStackCounter++] = Class9.anInt120;
+																			intsStack[iStackCounter++] = Unsorted.anInt120;
 																			continue;
 																		}
 																		if (opcode == 6120) {
@@ -4183,7 +4183,7 @@ final class ItemDefinition {
 	final void parseDefinitions(RSByteBuffer buffer) {
 		try {
 			while(true) {
-				int opcode = buffer.getByteB();
+				int opcode = buffer.readUnsignedByte();
 				if(0 == opcode) {
 
 					return;
@@ -4221,7 +4221,7 @@ final class ItemDefinition {
 			} else if (opcode == 11) {
 				this.stackingType = 1;
 			} else if (opcode == 12) {
-				this.value = buffer.getInt();
+				this.value = buffer.readInt();
 			} else if (opcode == 16) {
 				this.membersItem = true;
 			} else if (23 == opcode) {
@@ -4243,7 +4243,7 @@ final class ItemDefinition {
 				int var5;
 				int var6;
 				if (opcode == 40) {
-					var5 = buffer.getByteB();
+					var5 = buffer.readUnsignedByte();
 					this.aShortArray772 = new short[var5];
 					this.aShortArray774 = new short[var5];
 
@@ -4252,7 +4252,7 @@ final class ItemDefinition {
 						this.aShortArray772[var6] = (short) buffer.getShort();
 					}
 				} else if (opcode == 41) {
-					var5 = buffer.getByteB();
+					var5 = buffer.readUnsignedByte();
 					this.aShortArray751 = new short[var5];
 					this.aShortArray765 = new short[var5];
 
@@ -4261,7 +4261,7 @@ final class ItemDefinition {
 						this.aShortArray751[var6] = (short) buffer.getShort();
 					}
 				} else if (42 == opcode) {
-					var5 = buffer.getByteB();
+					var5 = buffer.readUnsignedByte();
 					this.aByteArray785 = new byte[var5];
 
 					for (var6 = 0; var5 > var6; ++var6) {
@@ -4284,7 +4284,7 @@ final class ItemDefinition {
 				} else if (opcode == 95) {
 					this.anInt768 = buffer.getShort();
 				} else if (opcode == 96) {
-					this.anInt800 = buffer.getByteB();
+					this.anInt800 = buffer.readUnsignedByte();
 				} else if (opcode == 97) {
 					this.anInt789 = buffer.getShort();
 				} else if (opcode == 98) {
@@ -4308,7 +4308,7 @@ final class ItemDefinition {
 				} else if (opcode == 114) {
 					this.anInt790 = 5 * buffer.getByte();
 				} else if (opcode == 115) {
-					this.teamId = buffer.getByteB();
+					this.teamId = buffer.readUnsignedByte();
 				} else if (opcode == 121) {
 					this.anInt795 = buffer.getShort();
 				} else if (opcode == 122) {
@@ -4322,32 +4322,32 @@ final class ItemDefinition {
 					this.anInt802 = buffer.getByte();
 					this.anInt752 = buffer.getByte();
 				} else if (opcode == 127) {
-					this.anInt767 = buffer.getByteB();
+					this.anInt767 = buffer.readUnsignedByte();
 					this.anInt758 = buffer.getShort();
 				} else if (opcode == 128) {
-					this.anInt788 = buffer.getByteB();
+					this.anInt788 = buffer.readUnsignedByte();
 					this.anInt756 = buffer.getShort();
 				} else if (opcode == 129) {
-					buffer.getByteB();
+					buffer.readUnsignedByte();
 					buffer.getShort();
 				} else if (opcode == 130) {
-					buffer.getByteB();
+					buffer.readUnsignedByte();
 					buffer.getShort();
 				} else if (249 == opcode) {
-					var5 = buffer.getByteB();
+					var5 = buffer.readUnsignedByte();
 					if (null == this.aClass130_798) {
 						var6 = Class95.method1585((byte) 97, var5);
 						this.aClass130_798 = new Class130(var6);
 					}
 
 					for (var6 = 0; var6 < var5; ++var6) {
-						boolean var7 = buffer.getByteB() == 1;
+						boolean var7 = buffer.readUnsignedByte() == 1;
 						int var8 = buffer.getTriByte((byte) 122);
 						Object var9;
 						if (var7) {
 							var9 = new Class3_Sub29(buffer.getString());
 						} else {
-							var9 = new Class3_Sub18(buffer.getInt());
+							var9 = new Class3_Sub18(buffer.readInt());
 						}
 
 						this.aClass130_798.method1779((Class3) var9, (long) var8);

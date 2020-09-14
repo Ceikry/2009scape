@@ -26,14 +26,14 @@ final class Class96 {
                boolean var18 = false;
                int var5 = 0;
                int var6 = 0;
-               if(var1.getByteB() == 1) {
-                  var5 = var1.getByteB();
+               if(var1.readUnsignedByte() == 1) {
+                  var5 = var1.readUnsignedByte();
                   var18 = true;
-                  var6 = var1.getByteB();
+                  var6 = var1.readUnsignedByte();
                }
 
-               int var7 = var1.getByteB();
-               int var8 = var1.getByteB();
+               int var7 = var1.readUnsignedByte();
+               int var8 = var1.readUnsignedByte();
                int var9 = -Class3_Sub13_Sub21.anInt3256 + 64 * var7;
                int var10 = -(var8 * 64) - (-Class2.anInt65 - -1) + Class108.anInt1460;
                int var11;
@@ -50,11 +50,11 @@ final class Class96 {
 
                      for(int var14 = 0; var14 < 64; ++var14) {
                         if(!var18 || var13 >= 8 * var5 && 8 * var5 - -8 > var13 && 8 * var6 <= var14 && var14 < var6 * 8 - -8) {
-                           int var15 = var1.getByteB();
+                           int var15 = var1.readUnsignedByte();
                            if(0 != var15) {
                               int var2;
                               if(1 == (1 & var15)) {
-                                 var2 = var1.getByteB();
+                                 var2 = var1.readUnsignedByte();
                                  if(Class36.aByteArrayArrayArray640[var11][var12] == null) {
                                     Class36.aByteArrayArrayArray640[var11][var12] = new byte[4096];
                                  }
@@ -108,7 +108,7 @@ final class Class96 {
                      continue label134;
                   }
 
-                  var12 = var1.getByteB();
+                  var12 = var1.readUnsignedByte();
                   if(var12 != 0) {
                      if((var12 & 1) == 1) {
                         ++var1.index;
