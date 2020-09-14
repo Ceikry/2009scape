@@ -1,4 +1,5 @@
 package org.runite.jagex;
+import org.rs09.client.console.DeveloperConsole;
 import org.runite.Configurations;
 import org.runite.GameLaunch;
 
@@ -195,6 +196,9 @@ public final class Client extends GameShell {
 					Class119.method1730(Class38.aClass87_665);
 				}
 
+//				if (DeveloperConsole.INSTANCE.getOpen()) {
+//					System.out.println("Draw developer console");
+//				}
 			}
 		} catch (RuntimeException var9) {
 			throw Class44.clientError(var9, "client.K(" + 40 + ')');

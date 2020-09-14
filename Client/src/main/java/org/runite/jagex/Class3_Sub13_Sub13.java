@@ -748,7 +748,7 @@ final class Class3_Sub13_Sub13 extends Class3_Sub13 {
                                        }
 
                                        if(Class133.anInt1753 == 1) {
-                                          KeyboardListener.method2086();
+                                          Unsorted.method2086();
                                        } else if(Class133.anInt1753 == 2) {
                                           CS2Script.method379();
                                        } else {
