@@ -118,7 +118,7 @@ final class Class56 {
       int var16;
       for(int var15 = var1; var15 < var1 + var3; ++var15) {
          for(var16 = var2; var16 < var2 + var4; ++var16) {
-            if(var15 < 0 || var16 < 0 || var15 >= IOHandler.anInt1234 || var16 >= Class3_Sub13_Sub15.anInt3179) {
+            if(var15 < 0 || var16 < 0 || var15 >= Unsorted.anInt1234 || var16 >= Class3_Sub13_Sub15.anInt3179) {
                return false;
             }
 

@@ -69,7 +69,7 @@ final class Class3_Sub13_Sub22 extends Class3_Sub13 {
                            var12.anInt1891 = 1;
                            var12.anInt1897 = 0;
                            var12.anInt1900 = var8;
-                           IOHandler.method1470(var2.anInt2829, var10, 183921384, var2.anInt2819, false, 0);
+                           Unsorted.method1470(var2.anInt2829, var10, 183921384, var2.anInt2819, false, 0);
                         } else if(var11 == 2) {
                            var12.anInt1894 = 0;
                         }
@@ -83,7 +83,7 @@ final class Class3_Sub13_Sub22 extends Class3_Sub13 {
                         var12.animationId = var6;
                         var12.anInt1894 = 0;
                         var12.anInt1893 = 0;
-                        IOHandler.method1470(var2.anInt2829, var10, 183921384, var2.anInt2819, false, 0);
+                        Unsorted.method1470(var2.anInt2829, var10, 183921384, var2.anInt2819, false, 0);
                      }
                   }
                }

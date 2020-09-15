@@ -47,6 +47,18 @@ public class Unsorted {
    public static boolean aBoolean47 = false;
    public static int anInt48 = 2;
    public static int[] anIntArray49;
+   public static int anInt1234;
+   public static Class33 aClass33_1238;
+   public static Class61 aClass61_1242 = new Class61();
+   public static int anInt1244 = -1;
+   public static RSString aClass94_1932 = RSString.of(")4a=");
+   public static RSInterface aClass11_1933;
+   public static float[] aFloatArray1934 = new float[]{0.073F, 0.169F, 0.24F, 1.0F};
+   public static RSString COMMAND_BREAK_CLIENT_CONNECTION = RSString.of("::clientdrop");
+   public static Class8 aClass8_1936;
+   public static Class3_Sub30_Sub1 aClass3_Sub30_Sub1_2942 = new Class3_Sub30_Sub1();
+   public static int[] anIntArray2952 = new int[128];
+   public static int anInt2958 = 0;
 
    static void method2086() {
        try {
@@ -585,7 +597,7 @@ public class Unsorted {
             Class3_Sub13_Sub30.anInt3362 = -1;
             Class75_Sub2.aClass33_2648 = null;
             Class91.aClass33_1305 = null;
-            IOHandler.aClass33_1238 = null;
+            aClass33_1238 = null;
             Class161.aClass33_2034 = null;
             Class164_Sub2.aClass33_3019 = null;
             Class99.aClass33_1399 = null;
@@ -787,5 +799,240 @@ public class Unsorted {
       } catch (RuntimeException var4) {
          throw Class44.clientError(var4, "vg.C(" + var0 + ',' + 2279 + ',' + (var2 != null?"{...}":"null") + ')');
       }
+   }
+
+   public static void method1470(int var0, AnimationDefinition var1, int var2, int var3, boolean var4, int var5) {
+       try {
+           if(Class113.anInt1552 < 50) {
+               if(var1.anIntArrayArray1867 != null && var1.anIntArrayArray1867.length > var5 && null != var1.anIntArrayArray1867[var5]) {
+                   int var6 = var1.anIntArrayArray1867[var5][0];
+                   int var7 = var6 >> 8;
+                   int var10;
+                   if(1 < var1.anIntArrayArray1867[var5].length) {
+                       var10 = (int)((double)var1.anIntArrayArray1867[var5].length * Math.random());
+                       if(0 < var10) {
+                           var7 = var1.anIntArrayArray1867[var5][var10];
+                       }
+                   }
+
+                   int var8 = var6 >> 5 & 7;
+                   int var9 = var6 & 31;
+                   if(var9 == 0) {
+                       if(var4) {
+                           Class3_Sub13_Sub6.method199(var8, var7, 0);
+                       }
+
+                   } else if (0 != Class14.anInt340) {
+                       Class3_Sub25.anIntArray2550[Class113.anInt1552] = var7;
+                       Class166.anIntArray2068[Class113.anInt1552] = var8;
+                       int var11 = (-64 + var0) / 128;
+                       var10 = (var3 + -64) / 128;
+                       anIntArray2157[Class113.anInt1552] = 0;
+                       Class102.aClass135Array2131[Class113.anInt1552] = null;
+                       Class3_Sub13_Sub6.anIntArray3083[Class113.anInt1552] = var9 + (var10 << 16) + (var11 << 8);
+                       if (var2 != 183921384) {
+                           aClass33_1238 = (Class33) null;
+                       }
+
+                       ++Class113.anInt1552;
+                   }
+               }
+           }
+       } catch (RuntimeException var12) {
+           throw Class44.clientError(var12, "ma.C(" + var0 + ',' + (var1 != null?"{...}":"null") + ',' + var2 + ',' + var3 + ',' + var4 + ',' + var5 + ')');
+       }
+   }
+
+   public static void method1460(int var0, int var1, int var3, int var4, int var5, int var6) {
+       try {
+           if(Class101.anInt1425 <= var5 - var4 && Class3_Sub28_Sub18.anInt3765 >= var5 - -var4 && Class159.anInt2020 <= -var4 + var1 && Class57.anInt902 >= var4 + var1) {
+               Class3_Sub13_Sub2.method175(var6, var0, var1, var3, var4, var5);
+           } else {
+               Class168.method2275(var3, var1, var4, var6, var0, var5);
+           }
+
+       } catch (RuntimeException var8) {
+           throw Class44.clientError(var8, "ma.A(" + var0 + ',' + var1 + ',' + (byte) -113 + ',' + var3 + ',' + var4 + ',' + var5 + ',' + var6 + ')');
+       }
+   }
+
+   public static void method1469(int[] var0, int var1, int var2, int var3, int var4, int var5) {
+       Class3_Sub2 var6 = Class75_Sub2.aClass3_Sub2ArrayArrayArray2638[var3][var4][var5];
+       if(var6 != null) {
+           Class126 var7 = var6.aClass126_2240;
+           int var9;
+           if(var7 == null) {
+               Class35 var8 = var6.aClass35_2226;
+               if(var8 != null) {
+                   var9 = var8.anInt611;
+                   int var10 = var8.anInt612;
+                   int var11 = var8.anInt626;
+                   int var12 = var8.anInt621;
+                   int[] var13 = Class3_Sub13_Sub18.anIntArrayArray3215[var9];
+                   int[] var14 = Class162.anIntArrayArray2039[var10];
+                   int var15 = 0;
+                   int var16;
+                   if(var11 == 0) {
+                       for(var16 = 0; var16 < 4; ++var16) {
+                           if(var13[var14[var15++]] != 0) {
+                               var0[var1] = var12;
+                           }
+
+                           if(var13[var14[var15++]] != 0) {
+                               var0[var1 + 1] = var12;
+                           }
+
+                           if(var13[var14[var15++]] != 0) {
+                               var0[var1 + 2] = var12;
+                           }
+
+                           if(var13[var14[var15++]] != 0) {
+                               var0[var1 + 3] = var12;
+                           }
+
+                           var1 += var2;
+                       }
+                   } else {
+                       for(var16 = 0; var16 < 4; ++var16) {
+                           var0[var1] = var13[var14[var15++]] == 0?var11:var12;
+                           var0[var1 + 1] = var13[var14[var15++]] == 0?var11:var12;
+                           var0[var1 + 2] = var13[var14[var15++]] == 0?var11:var12;
+                           var0[var1 + 3] = var13[var14[var15++]] == 0?var11:var12;
+                           var1 += var2;
+                       }
+                   }
+
+               }
+           } else {
+               int var17 = var7.anInt1673;
+               if(var17 != 0) {
+                   for(var9 = 0; var9 < 4; ++var9) {
+                       var0[var1] = var17;
+                       var0[var1 + 1] = var17;
+                       var0[var1 + 2] = var17;
+                       var0[var1 + 3] = var17;
+                       var1 += var2;
+                   }
+
+               }
+           }
+       }
+   }
+
+   public static boolean method2096(int var0, int var1, int var2, long var3) {
+      Class3_Sub2 var5 = Class75_Sub2.aClass3_Sub2ArrayArrayArray2638[var0][var1][var2];
+      if(var5 == null) {
+         return false;
+      } else if(var5.aClass70_2234 != null && var5.aClass70_2234.aLong1048 == var3) {
+         return true;
+      } else if(var5.aClass19_2233 != null && var5.aClass19_2233.aLong428 == var3) {
+         return true;
+      } else if(var5.aClass12_2230 != null && var5.aClass12_2230.aLong328 == var3) {
+         return true;
+      } else {
+         for(int var6 = 0; var6 < var5.anInt2223; ++var6) {
+            if(var5.aClass25Array2221[var6].aLong498 == var3) {
+               return true;
+            }
+         }
+
+         return false;
+      }
+   }
+
+   public static void method2099(int var1, CacheIndex var3, int var5) {
+      try {
+         Class101.aClass153_1423 = var3;
+         Class132.anInt1741 = 0;
+         Class3_Sub13_Sub39.anInt3463 = var1;
+         Class3_Sub9.aBoolean2311 = false;
+         Class10.anInt154 = 1;
+         GraphicDefinition.anInt546 = 2;
+
+         Class3_Sub13_Sub36.anInt3423 = var5;
+      } catch (RuntimeException var8) {
+         throw Class44.clientError(var8, "v.Q(" + true + ',' + var1 + ',' + 0 + ',' + (var3 != null?"{...}":"null") + ',' + false + ',' + var5 + ',' + 2 + ')');
+      }
+   }
+
+   public static void updateLocalPosition() {
+       try {
+           GraphicDefinition.incomingBuffer.setBitAccess((byte) 118);
+           int opcode = GraphicDefinition.incomingBuffer.getBits(1);
+           if (opcode != 0) {
+               int type = GraphicDefinition.incomingBuffer.getBits(2);
+               if (0 == type) {
+                   Class21.maskUpdateIndexes[maskUpdateCount++] = 2047;
+               } else {
+                   int var4;
+                   int var5;
+                   if (type == 1) { //Walk
+                       var4 = GraphicDefinition.incomingBuffer.getBits(3);
+                       Class102.player.walkStep(1, (byte) -128, var4);
+                       var5 = GraphicDefinition.incomingBuffer.getBits(1);
+                       if (var5 == 1) {
+                           Class21.maskUpdateIndexes[maskUpdateCount++] = 2047;
+                       }
+
+                   } else if (2 == type) {
+                       if (GraphicDefinition.incomingBuffer.getBits(1) == 1) {
+                           var4 = GraphicDefinition.incomingBuffer.getBits(3);
+                           Class102.player.walkStep(2, (byte) -104, var4);
+                           var5 = GraphicDefinition.incomingBuffer.getBits(3);
+                           Class102.player.walkStep(2, (byte) -126, var5);
+                       } else {
+                           var4 = GraphicDefinition.incomingBuffer.getBits(3);
+                           Class102.player.walkStep(0, (byte) -109, var4);
+                       }
+
+                       var4 = GraphicDefinition.incomingBuffer.getBits(1);
+                       if (var4 == 1) {
+                           Class21.maskUpdateIndexes[maskUpdateCount++] = 2047;
+                       }
+
+                   } else if (type == 3) {
+                       var4 = GraphicDefinition.incomingBuffer.getBits(7);
+                       var5 = GraphicDefinition.incomingBuffer.getBits(1);
+                       WorldListCountry.localPlane = GraphicDefinition.incomingBuffer.getBits(2);
+                       int var6 = GraphicDefinition.incomingBuffer.getBits(1);
+                       if (var6 == 1) {
+                           Class21.maskUpdateIndexes[maskUpdateCount++] = 2047;
+                       }
+
+                       int var7 = GraphicDefinition.incomingBuffer.getBits(7);
+                       Class102.player.method1981(var7, var5 == 1, var4);
+                   }
+               }
+           }
+       } catch (RuntimeException var8) {
+           throw Class44.clientError(var8, "bg.G(" + (byte) 81 + ')');
+       }
+   }
+
+   public static boolean method2103(int var0, int var1) {
+       try {
+           return var1 >= -78 || (var0 == 198 || 230 == var0 || var0 == 156 || var0 == 140 || 223 == var0);
+       } catch (RuntimeException var3) {
+           throw Class44.clientError(var3, "bg.P(" + var0 + ',' + var1 + ')');
+       }
+   }
+
+   public static void method2104(RSInterface var0, boolean var1, int var2) {
+       try {
+           int var4 = var0.anInt240 != 0 ? var0.anInt240 : var0.anInt168;
+           int var5 = var0.anInt252 != 0 ? var0.anInt252 : var0.anInt193;
+           Class158.method2183(var0.anInt279, var1, var4, var5, GameObject.aClass11ArrayArray1834[var0.anInt279 >> 16]);
+           if (var0.aClass11Array262 != null) {
+               Class158.method2183(var0.anInt279, var1, var4, var5, var0.aClass11Array262);
+           }
+
+           Class3_Sub31 var6 = (Class3_Sub31) Class3_Sub13_Sub17.aClass130_3208.method1780((long) var0.anInt279);
+           if (var6 != null) {
+               Class75_Sub4.method1352(var5, var1, var6.anInt2602, var4);
+           }
+
+       } catch (RuntimeException var7) {
+           throw Class44.clientError(var7, "bg.N(" + (var0 != null ? "{...}" : "null") + ',' + var1 + ',' + var2 + ')');
+       }
    }
 }

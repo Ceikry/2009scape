@@ -221,7 +221,7 @@ final class Class167 {
    static void method2269(byte var0) {
       try {
          if(null != Class3_Sub15.aClass89_2429) {
-            Class3_Sub15.aClass89_2429.close(14821);
+            Class3_Sub15.aClass89_2429.close();
             Class3_Sub15.aClass89_2429 = null;
          }
 

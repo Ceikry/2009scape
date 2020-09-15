@@ -141,7 +141,7 @@ final class Class121 {
                   Class3_Sub21.aClass155_2491.method2159(101);
                }
 
-               var2 = Class3_Sub15.aClass89_2429.readByte(0);
+               var2 = Class3_Sub15.aClass89_2429.readByte();
                //System.out.println(var2); //Not sure what this was debugging
                if(WorldListEntry.aClass155_2627 != null) {
                   WorldListEntry.aClass155_2627.method2159(55);
@@ -159,20 +159,20 @@ final class Class121 {
             }
 
             if(Class43.anInt692 == 2) {
-               if(2 > Class3_Sub15.aClass89_2429.availableBytes(-18358)) {
+               if(2 > Class3_Sub15.aClass89_2429.availableBytes()) {
                   return -1;
                }
 
-               Unsorted.wlPacketSize = Class3_Sub15.aClass89_2429.readByte(0);
+               Unsorted.wlPacketSize = Class3_Sub15.aClass89_2429.readByte();
                Unsorted.wlPacketSize <<= 8;
-               Unsorted.wlPacketSize += Class3_Sub15.aClass89_2429.readByte(0);
+               Unsorted.wlPacketSize += Class3_Sub15.aClass89_2429.readByte();
                Class43.anInt692 = 3;
                Class3_Sub20.wlPacketIndex = 0;
                Class3_Sub13_Sub33.aByteArray3396 = new byte[Unsorted.wlPacketSize];
             }
 
             if(Class43.anInt692 == 3) {
-               wlUpdateStamp = Class3_Sub15.aClass89_2429.availableBytes(29984 + -48342);
+               wlUpdateStamp = Class3_Sub15.aClass89_2429.availableBytes();
                if(1 > wlUpdateStamp) {
                   return -1;
                }
@@ -181,7 +181,7 @@ final class Class121 {
                   wlUpdateStamp = Unsorted.wlPacketSize + -Class3_Sub20.wlPacketIndex;
                }
 
-               Class3_Sub15.aClass89_2429.readBytes(Class3_Sub20.wlPacketIndex, wlUpdateStamp, Class3_Sub13_Sub33.aByteArray3396);
+               Class3_Sub15.aClass89_2429.readBytes(Class3_Sub13_Sub33.aByteArray3396, Class3_Sub20.wlPacketIndex, wlUpdateStamp);
                Class3_Sub20.wlPacketIndex += wlUpdateStamp;
                if(Class3_Sub20.wlPacketIndex >= Unsorted.wlPacketSize) {
                   if(Class3_Sub13_Sub23.handleWorldListUpdate(Class3_Sub13_Sub33.aByteArray3396)) {
@@ -196,7 +196,7 @@ final class Class121 {
                         //System.out.println("world = " +var4.worldId);
                      }
 
-                     Class3_Sub15.aClass89_2429.close(14821);
+                     Class3_Sub15.aClass89_2429.close();
                      Class3_Sub15.aClass89_2429 = null;
                      Class73.anInt1088 = 0;
                      Class43.anInt692 = 0;

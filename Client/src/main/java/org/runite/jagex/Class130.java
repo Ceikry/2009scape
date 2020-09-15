@@ -31,7 +31,7 @@ final class Class130 {
                var3.anInt2760 = 0;
                var3.anInt2773 = 0;
                var3.anInt2828 = plane;
-               IOHandler.method1470(var3.anInt2829, var4, 183921384, var3.anInt2819, false, var3.anInt2832);
+               Unsorted.method1470(var3.anInt2829, var4, 183921384, var3.anInt2819, false, var3.anInt2832);
             }
 
             if(var5 == 2) {
@@ -46,7 +46,7 @@ final class Class130 {
             var3.anInt2811 = var3.anInt2816;
             var3.anInt2832 = 0;
             if(var3.anInt2771 != -1) {
-               IOHandler.method1470(var3.anInt2829, Client.getAnimationDefinition(var3.anInt2771), dummy + 183921345, var3.anInt2819, false, var3.anInt2832);
+               Unsorted.method1470(var3.anInt2829, Client.getAnimationDefinition(var3.anInt2771), dummy + 183921345, var3.anInt2819, false, var3.anInt2832);
             }
          }
 

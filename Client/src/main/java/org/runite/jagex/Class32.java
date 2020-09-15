@@ -39,7 +39,7 @@ final class Class32 {
       int var2;
       if(Class3_Sub28_Sub10_Sub2.aClass3_Sub2ArrayArrayArray4070 != null) {
          for(var0 = 0; var0 < Class3_Sub28_Sub10_Sub2.aClass3_Sub2ArrayArrayArray4070.length; ++var0) {
-            for(var1 = 0; var1 < IOHandler.anInt1234; ++var1) {
+            for(var1 = 0; var1 < Unsorted.anInt1234; ++var1) {
                for(var2 = 0; var2 < Class3_Sub13_Sub15.anInt3179; ++var2) {
                   Class3_Sub28_Sub10_Sub2.aClass3_Sub2ArrayArrayArray4070[var0][var1][var2] = null;
                }
@@ -50,7 +50,7 @@ final class Class32 {
       Client.aClass3_Sub11ArrayArray2199 = (Class3_Sub11[][])null;
       if(Class166.aClass3_Sub2ArrayArrayArray2065 != null) {
          for(var0 = 0; var0 < Class166.aClass3_Sub2ArrayArrayArray2065.length; ++var0) {
-            for(var1 = 0; var1 < IOHandler.anInt1234; ++var1) {
+            for(var1 = 0; var1 < Unsorted.anInt1234; ++var1) {
                for(var2 = 0; var2 < Class3_Sub13_Sub15.anInt3179; ++var2) {
                   Class166.aClass3_Sub2ArrayArrayArray2065[var0][var1][var2] = null;
                }
@@ -95,7 +95,7 @@ final class Class32 {
                Class3_Sub13.anInt2384 = Class133.anInt1744;
             } else {
                while(Class3_Sub13.anInt2384 != Class133.anInt1744) {
-                  var2 = Class151_Sub1.anIntArray2952[Class133.anInt1744];
+                  var2 = Unsorted.anIntArray2952[Class133.anInt1744];
                   Class133.anInt1744 = 127 & 1 + Class133.anInt1744;
                   if(0 <= var2) {
                      ObjectDefinition.aBooleanArray1490[var2] = true;

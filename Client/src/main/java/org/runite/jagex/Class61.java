@@ -87,7 +87,7 @@ final class Class61 {
          byte var6;
          RenderAnimationDefinition var7;
          int var8;
-         for(var5 = (Class3_Sub9)IOHandler.aClass61_1242.method1222(); var5 != null; var5 = (Class3_Sub9)IOHandler.aClass61_1242.method1221()) {
+         for(var5 = (Class3_Sub9) Unsorted.aClass61_1242.method1222(); var5 != null; var5 = (Class3_Sub9) Unsorted.aClass61_1242.method1221()) {
             var6 = 1;
             var7 = var5.aClass140_Sub4_Sub2_2324.method1965();
             if(var5.aClass140_Sub4_Sub2_2324.anInt2764 == var7.anInt368) {

@@ -196,7 +196,7 @@ final class Class45 {
 						if(var7 != -1) {
 							AnimationDefinition var24 = Client.getAnimationDefinition(var7);
 							if(var24.frames != null) {
-								IOHandler.method1470(var3.anInt2829, var24, 183921384, var3.anInt2819, var3 == Class102.player, 0);
+								Unsorted.method1470(var3.anInt2829, var24, 183921384, var3.anInt2819, var3 == Class102.player, 0);
 							}
 						}
 					}

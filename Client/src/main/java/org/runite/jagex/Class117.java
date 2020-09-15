@@ -20,7 +20,7 @@ final class Class117 {
 
             boolean var2 = var0 == 5 || var0 == 10 || var0 == 28;
             if(40 != var0 && null != Class163_Sub2_Sub1.aClass89_4012) {
-               Class163_Sub2_Sub1.aClass89_4012.close(14821);
+               Class163_Sub2_Sub1.aClass89_4012.close();
                Class163_Sub2_Sub1.aClass89_4012 = null;
             }
 
@@ -50,7 +50,7 @@ final class Class117 {
                   if(Unsorted.anInt120 == 0) {
                      NodeList.method882();
                   } else {
-                     Class151.method2099(KeyboardListener.anInt1912, Class75_Sub2.aClass153_2645, 255);
+                     Unsorted.method2099(KeyboardListener.anInt1912, Class75_Sub2.aClass153_2645, 255);
                   }
 
                   Class58.aClass66_917.method1247(false);

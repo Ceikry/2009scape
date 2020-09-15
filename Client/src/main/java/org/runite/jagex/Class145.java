@@ -54,8 +54,8 @@ final class Class145 {
                if(Class3_Sub28_Sub7.anIntArrayArrayArray3605 == Class44.anIntArrayArrayArray723) {
                   var9 = Class3_Sub13_Sub9.anIntArrayArray3115[var3][var4];
                   var10 = var9 & 16777215;
-                  if(var10 != IOHandler.anInt1244) {
-                     IOHandler.anInt1244 = var10;
+                  if(var10 != Unsorted.anInt1244) {
+                     Unsorted.anInt1244 = var10;
                      Class3_Sub28_Sub2.method535((byte)56, var10);
                      Class92.method1512(Class72.method1297());
                   }
@@ -411,14 +411,14 @@ final class Class145 {
                               } else if(var27 == 1) {
                                  var11 += 64;
                                  var12 += 64;
-                                 if(var12 < -var11 && var3 < IOHandler.anInt1234 - 1 && var4 < Class3_Sub13_Sub15.anInt3179 - 1) {
+                                 if(var12 < -var11 && var3 < Unsorted.anInt1234 - 1 && var4 < Class3_Sub13_Sub15.anInt3179 - 1) {
                                     Class68.method1268(Class129_Sub1.anInt2697, Class3_Sub28_Sub13.anInt3657, Class3_Sub13_Sub30.anInt3363, var5, var3 + 1, var4 + 1);
                                     break label736;
                                  }
                               } else if(var27 == 2) {
                                  var11 += 64;
                                  var12 -= 64;
-                                 if(var12 > var11 && var3 < IOHandler.anInt1234 - 1 && var4 > 0) {
+                                 if(var12 > var11 && var3 < Unsorted.anInt1234 - 1 && var4 > 0) {
                                     Class68.method1268(Class129_Sub1.anInt2697, Class3_Sub28_Sub13.anInt3657, Class3_Sub13_Sub30.anInt3363, var5, var3 + 1, var4 - 1);
                                     break label736;
                                  }

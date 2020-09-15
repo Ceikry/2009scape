@@ -63,7 +63,7 @@ abstract class Class158 {
                }
 
                if(var7.type == 0) {
-                  Class151_Sub1.method2104(var7, var1, 235 + -343);
+                  Unsorted.method2104(var7, var1, 235 + -343);
                }
             }
          }

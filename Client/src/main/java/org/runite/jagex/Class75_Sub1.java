@@ -53,7 +53,7 @@ final class Class75_Sub1 extends Class75 {
                               var12.anInt1893 = 0;
                               var12.anInt1900 = var8;
                               var12.anInt1897 = 0;
-                              IOHandler.method1470(var2.anInt2829, var10, 183921384, var2.anInt2819, var2 == Class102.player, 0);
+                              Unsorted.method1470(var2.anInt2829, var10, 183921384, var2.anInt2819, var2 == Class102.player, 0);
                            } else if (var11 == 2) {
                               var12.anInt1894 = 0;
                            }
@@ -70,7 +70,7 @@ final class Class75_Sub1 extends Class75 {
                         var12.anInt1900 = var8;
                         var12.anInt1893 = 0;
                         var12.anInt1894 = 0;
-                        IOHandler.method1470(var2.anInt2829, var10, 183921384, var2.anInt2819, var2 == Class102.player, 0);
+                        Unsorted.method1470(var2.anInt2829, var10, 183921384, var2.anInt2819, var2 == Class102.player, 0);
                      }
                   }
                }

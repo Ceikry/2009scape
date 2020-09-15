@@ -241,9 +241,9 @@ final class Class72 {
          float var4 = (float)(('\uff59' & var2) >> 8) / 255.0F;
          float var6 = 0.58823526F;
          float var5 = (float)(255 & var2) / 255.0F;
-         MouseListeningClass.aFloatArray1919[2] = Class151.aFloatArray1934[2] * var5 * var6 * var1;
-         MouseListeningClass.aFloatArray1919[0] = Class151.aFloatArray1934[0] * var3 * var6 * var1;
-         MouseListeningClass.aFloatArray1919[1] = var1 * var6 * var4 * Class151.aFloatArray1934[1];
+         MouseListeningClass.aFloatArray1919[2] = Unsorted.aFloatArray1934[2] * var5 * var6 * var1;
+         MouseListeningClass.aFloatArray1919[0] = Unsorted.aFloatArray1934[0] * var3 * var6 * var1;
+         MouseListeningClass.aFloatArray1919[1] = var1 * var6 * var4 * Unsorted.aFloatArray1934[1];
          return MouseListeningClass.aFloatArray1919;
       } catch (RuntimeException var7) {
          throw Class44.clientError(var7, "jj.A(" + (byte) -50 + ')');

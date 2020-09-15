@@ -200,7 +200,7 @@ class Class164_Sub1 extends Class164 {
          }
 
          if(var1) {
-            for(var3 = (Class3_Sub9)IOHandler.aClass61_1242.method1222(); null != var3; var3 = (Class3_Sub9)IOHandler.aClass61_1242.method1221()) {
+            for(var3 = (Class3_Sub9) Unsorted.aClass61_1242.method1222(); null != var3; var3 = (Class3_Sub9) Unsorted.aClass61_1242.method1221()) {
                if(null != var3.aClass3_Sub24_Sub1_2312) {
                   Class3_Sub26.aClass3_Sub24_Sub2_2563.method461(var3.aClass3_Sub24_Sub1_2312);
                   var3.aClass3_Sub24_Sub1_2312 = null;

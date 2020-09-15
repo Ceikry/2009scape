@@ -47,7 +47,7 @@ final class Class163_Sub1_Sub1 extends Class163_Sub1 {
             try {
                if(1500 < ++Class3_Sub2.anInt2246) {
                   if(null != Class3_Sub15.aClass89_2429) {
-                     Class3_Sub15.aClass89_2429.close(14821);
+                     Class3_Sub15.aClass89_2429.close();
                      Class3_Sub15.aClass89_2429 = null;
                   }
 
@@ -92,7 +92,7 @@ final class Class163_Sub1_Sub1 extends Class163_Sub1 {
                      Class3_Sub21.aClass155_2491.method2159(120);
                   }
 
-                  var1 = Class3_Sub15.aClass89_2429.readByte(0);
+                  var1 = Class3_Sub15.aClass89_2429.readByte();
                   if(WorldListEntry.aClass155_2627 != null) {
                      WorldListEntry.aClass155_2627.method2159(59);
                   }
@@ -104,7 +104,7 @@ final class Class163_Sub1_Sub1 extends Class163_Sub1 {
                   if(var1 != 101) {
                      Class158.anInt2005 = var1;
                      Class3_Sub13_Sub31.anInt3375 = 0;
-                     Class3_Sub15.aClass89_2429.close(14821);
+                     Class3_Sub15.aClass89_2429.close();
                      Class3_Sub15.aClass89_2429 = null;
                      return;
                   }
@@ -113,29 +113,29 @@ final class Class163_Sub1_Sub1 extends Class163_Sub1 {
                }
 
                if(Class3_Sub13_Sub31.anInt3375 == 3) {
-                  if(Class3_Sub15.aClass89_2429.availableBytes(-18358) < 2) {
+                  if(Class3_Sub15.aClass89_2429.availableBytes() < 2) {
                      return;
                   }
 
-                  var1 = Class3_Sub15.aClass89_2429.readByte(0) << 8 | Class3_Sub15.aClass89_2429.readByte(0);
+                  var1 = Class3_Sub15.aClass89_2429.readByte() << 8 | Class3_Sub15.aClass89_2429.readByte();
                   Class104.method1627(var1, (byte)-16);
                   if(CS2Script.anInt2451 == -1) {
                      Class3_Sub13_Sub31.anInt3375 = 0;
                      Class158.anInt2005 = 6;
-                     Class3_Sub15.aClass89_2429.close(14821);
+                     Class3_Sub15.aClass89_2429.close();
                      Class3_Sub15.aClass89_2429 = null;
                      return;
                   }
 
                   Class3_Sub13_Sub31.anInt3375 = 0;
-                  Class3_Sub15.aClass89_2429.close((byte) 81 + 14740);
+                  Class3_Sub15.aClass89_2429.close();
                   Class3_Sub15.aClass89_2429 = null;
                   Class24.method951();
                   return;
                }
             } catch (IOException var2) {
                if(null != Class3_Sub15.aClass89_2429) {
-                  Class3_Sub15.aClass89_2429.close(14821);
+                  Class3_Sub15.aClass89_2429.close();
                   Class3_Sub15.aClass89_2429 = null;
                }
 

@@ -111,7 +111,7 @@ final class Class104 implements Interface5 {
              if(var25 != var26) {
                 var25 = var26;
                 int var18;
-                if(var14 == 2 && Class151.method2096(WorldListCountry.localPlane, var12, var27, var26)) {
+                if(var14 == 2 && Unsorted.method2096(WorldListCountry.localPlane, var12, var27, var26)) {
                    ObjectDefinition var16 = Class162.getObjectDefinition(var15);
                    if(null != var16.ChildrenIds) {
                       var16 = var16.method1685(0);

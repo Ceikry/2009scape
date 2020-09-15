@@ -89,19 +89,19 @@ final class Class3_Sub4 extends Class3 {
 	}
 
 	static void method110(int var3, boolean var4) {
-		IOHandler.anInt1234 = 104;
+		Unsorted.anInt1234 = 104;
 		Class3_Sub13_Sub15.anInt3179 = 104;
 		Class3_Sub13_Sub39.anInt3466 = var3;
-		Class3_Sub28_Sub10_Sub2.aClass3_Sub2ArrayArrayArray4070 = new Class3_Sub2[4][IOHandler.anInt1234][Class3_Sub13_Sub15.anInt3179];
-		Class58.anIntArrayArrayArray914 = new int[4][IOHandler.anInt1234 + 1][Class3_Sub13_Sub15.anInt3179 + 1];
+		Class3_Sub28_Sub10_Sub2.aClass3_Sub2ArrayArrayArray4070 = new Class3_Sub2[4][Unsorted.anInt1234][Class3_Sub13_Sub15.anInt3179];
+		Class58.anIntArrayArrayArray914 = new int[4][Unsorted.anInt1234 + 1][Class3_Sub13_Sub15.anInt3179 + 1];
 		if(HDToolKit.highDetail) {
 			Client.aClass3_Sub11ArrayArray2199 = new Class3_Sub11[4][];
 		}
 
 		if(var4) {
-			Class166.aClass3_Sub2ArrayArrayArray2065 = new Class3_Sub2[1][IOHandler.anInt1234][Class3_Sub13_Sub15.anInt3179];
-			Class3_Sub13_Sub9.anIntArrayArray3115 = new int[IOHandler.anInt1234][Class3_Sub13_Sub15.anInt3179];
-			Class3_Sub28_Sub7.anIntArrayArrayArray3605 = new int[1][IOHandler.anInt1234 + 1][Class3_Sub13_Sub15.anInt3179 + 1];
+			Class166.aClass3_Sub2ArrayArrayArray2065 = new Class3_Sub2[1][Unsorted.anInt1234][Class3_Sub13_Sub15.anInt3179];
+			Class3_Sub13_Sub9.anIntArrayArray3115 = new int[Unsorted.anInt1234][Class3_Sub13_Sub15.anInt3179];
+			Class3_Sub28_Sub7.anIntArrayArrayArray3605 = new int[1][Unsorted.anInt1234 + 1][Class3_Sub13_Sub15.anInt3179 + 1];
 			if(HDToolKit.highDetail) {
 				Class3_Sub13_Sub28.aClass3_Sub11ArrayArray3346 = new Class3_Sub11[1][];
 			}
@@ -117,13 +117,13 @@ final class Class3_Sub4 extends Class3 {
 		anInt2249 = 0;
 		Class145.aClass113Array1895 = new Class113[500];
 		Class126.anInt1672 = 0;
-		Class81.anIntArrayArrayArray1142 = new int[4][IOHandler.anInt1234 + 1][Class3_Sub13_Sub15.anInt3179 + 1];
+		Class81.anIntArrayArrayArray1142 = new int[4][Unsorted.anInt1234 + 1][Class3_Sub13_Sub15.anInt3179 + 1];
 		AnimationDefinition.aClass25Array1868 = new Class25[5000];
 		Class3_Sub13_Sub5.anInt3070 = 0;
 		Class3_Sub28_Sub10_Sub1.aClass25Array4060 = new Class25[100];
 		Class23.aBooleanArrayArray457 = new boolean[Class3_Sub13_Sub39.anInt3466 + Class3_Sub13_Sub39.anInt3466 + 1][Class3_Sub13_Sub39.anInt3466 + Class3_Sub13_Sub39.anInt3466 + 1];
 		Class49.aBooleanArrayArray814 = new boolean[Class3_Sub13_Sub39.anInt3466 + Class3_Sub13_Sub39.anInt3466 + 2][Class3_Sub13_Sub39.anInt3466 + Class3_Sub13_Sub39.anInt3466 + 2];
-		Class136.aByteArrayArrayArray1774 = new byte[4][IOHandler.anInt1234][Class3_Sub13_Sub15.anInt3179];
+		Class136.aByteArrayArrayArray1774 = new byte[4][Unsorted.anInt1234][Class3_Sub13_Sub15.anInt3179];
 	}
 
 }

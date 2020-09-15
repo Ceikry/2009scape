@@ -52,11 +52,11 @@ final class Class65 {
    static void method1235(int var0, int var1, int var2, int var3) {
       try {
          if(Class36.anInt638 == 1) {
-            Class139.aClass3_Sub28_Sub16Array1825[Class151_Sub1.anInt2958 / 100].method643(-8 + Class70.anInt1053, -8 + Class3_Sub28_Sub10_Sub1.anInt4062);
+            Class139.aClass3_Sub28_Sub16Array1825[Unsorted.anInt2958 / 100].method643(-8 + Class70.anInt1053, -8 + Class3_Sub28_Sub10_Sub1.anInt4062);
          }
 
           if(Class36.anInt638 == 2) {
-            Class139.aClass3_Sub28_Sub16Array1825[4 + Class151_Sub1.anInt2958 / 100].method643(Class70.anInt1053 + -8, -8 + Class3_Sub28_Sub10_Sub1.anInt4062);
+            Class139.aClass3_Sub28_Sub16Array1825[4 + Unsorted.anInt2958 / 100].method643(Class70.anInt1053 + -8, -8 + Class3_Sub28_Sub10_Sub1.anInt4062);
          }
 
          Class3_Sub13_Sub37.method347();

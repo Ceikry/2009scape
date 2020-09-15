@@ -137,7 +137,7 @@ final class Class163_Sub2_Sub1 extends Class163_Sub2 {
          }
 
          Class3_Sub28_Sub10_Sub1.anInt4062 = Class38_Sub1.anInt2614;
-         Class151_Sub1.anInt2958 = 0;
+         Unsorted.anInt2958 = 0;
          Class36.anInt638 = 2;
          Class70.anInt1053 = Class163_Sub1.anInt2993;
       } catch (RuntimeException var12) {

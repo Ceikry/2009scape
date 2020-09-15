@@ -646,7 +646,7 @@ final class ItemDefinition {
 							Class20.method909(122, class11_2);
 							Class3_Sub13_Sub12.method225(class11_2);
 							if (class11_2.type == 0)
-								Class151_Sub1.method2104(class11_2, false, 32);
+								Unsorted.method2104(class11_2, false, 32);
 							continue;
 						}
 						if (opcode == 1003) {
@@ -666,7 +666,7 @@ final class ItemDefinition {
 							Class20.method909(-99, class11_2);
 							Class3_Sub13_Sub12.method225(class11_2);
 							if (class11_2.type == 0)
-								Class151_Sub1.method2104(class11_2, false, -127);
+								Unsorted.method2104(class11_2, false, -127);
 							continue;
 						}
 						if (opcode != 1005)
@@ -3902,7 +3902,7 @@ final class ItemDefinition {
 						class11_16.anInt252 = intsStack[1 + iStackCounter];
 						Class20.method909(117, class11_16);
 						if (class11_16.type == 0)
-							Class151_Sub1.method2104(class11_16, false, -116);
+							Unsorted.method2104(class11_16, false, -116);
 						continue;
 					}
 					if (opcode == 1121) {

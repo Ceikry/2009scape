@@ -18,7 +18,7 @@ class Class127 {
             try {
                if(++Class50.anInt820 > 2000) {
                   if(Class3_Sub15.aClass89_2429 != null) {
-                     Class3_Sub15.aClass89_2429.close(14821);
+                     Class3_Sub15.aClass89_2429.close();
                      Class3_Sub15.aClass89_2429 = null;
                   }
 
@@ -68,7 +68,7 @@ class Class127 {
                      Class3_Sub21.aClass155_2491.method2159(var0 + 88);
                   }
 
-                  int var4 = Class3_Sub15.aClass89_2429.readByte(var0 ^ -9);
+                  int var4 = Class3_Sub15.aClass89_2429.readByte();
                   if(WorldListEntry.aClass155_2627 != null) {
                      WorldListEntry.aClass155_2627.method2159(68);
                   }
@@ -80,7 +80,7 @@ class Class127 {
                   if(var4 != 0) {
                      Class158.anInt2005 = var4;
                      Class3_Sub13_Sub25.loginStage = 0;
-                     Class3_Sub15.aClass89_2429.close(var0 + 14830);
+                     Class3_Sub15.aClass89_2429.close();
                      Class3_Sub15.aClass89_2429 = null;
                      return;
                   }
@@ -89,11 +89,11 @@ class Class127 {
                }
 
                if(Class3_Sub13_Sub25.loginStage == 3) {
-                  if(Class3_Sub15.aClass89_2429.availableBytes(-18358) < 8) {
+                  if(Class3_Sub15.aClass89_2429.availableBytes() < 8) {
                      return;
                   }
 
-                  Class3_Sub15.aClass89_2429.readBytes(0, 8, GraphicDefinition.incomingBuffer.buffer);
+                  Class3_Sub15.aClass89_2429.readBytes(GraphicDefinition.incomingBuffer.buffer, 0, 8);
                   GraphicDefinition.incomingBuffer.index = 0;
                   Class3_Sub13_Sub27.isaacServerKey = GraphicDefinition.incomingBuffer.getLong(-88);
                   int[] var9 = new int[4];
@@ -111,59 +111,59 @@ class Class127 {
                   Class3_Sub13_Sub1.outgoingBuffer.putString(Class3_Sub28_Sub14.password);
                   Class3_Sub13_Sub1.method229();
                   Class3_Sub13_Sub1.outgoingBuffer.encryptRSA(Class3_Sub13_Sub14.aBigInteger3162, Class3_Sub13_Sub37.aBigInteger3441);
-                  Class151_Sub1.aClass3_Sub30_Sub1_2942.index = 0;
+                  Unsorted.aClass3_Sub30_Sub1_2942.index = 0;
                   if(40 == Class143.loadingStage) {
-                     Class151_Sub1.aClass3_Sub30_Sub1_2942.putByte((byte)-81, 18);
+                     Unsorted.aClass3_Sub30_Sub1_2942.putByte((byte)-81, 18);
                   } else {
-                     Class151_Sub1.aClass3_Sub30_Sub1_2942.putByte((byte)-100, 16);
+                     Unsorted.aClass3_Sub30_Sub1_2942.putByte((byte)-100, 16);
                   }
 
-                  Class151_Sub1.aClass3_Sub30_Sub1_2942.putShort(Class3_Sub13_Sub1.outgoingBuffer.index + 163 - -Class3_Sub13_Sub33.method326((byte)111, Class163_Sub2.aClass94_2996));
-                  Class151_Sub1.aClass3_Sub30_Sub1_2942.putInt(var0 ^ 113, 530);
-                  Class151_Sub1.aClass3_Sub30_Sub1_2942.putByte((byte)-114, Class7.anInt2161);
-                  Class151_Sub1.aClass3_Sub30_Sub1_2942.putByte((byte)-122, !Class3_Sub28_Sub19.aBoolean3779?0:1);
-                  Class151_Sub1.aClass3_Sub30_Sub1_2942.putByte((byte)-103, 1);
-                  Class151_Sub1.aClass3_Sub30_Sub1_2942.putByte((byte)-88, Class83.method1411(0));
-                  Class151_Sub1.aClass3_Sub30_Sub1_2942.putShort(Class23.anInt454);
-                  Class151_Sub1.aClass3_Sub30_Sub1_2942.putShort(Class140_Sub7.anInt2934);
-                  Class151_Sub1.aClass3_Sub30_Sub1_2942.putByte((byte)-39, Class3_Sub28_Sub14.anInt3671);
-                  Class81.putRandomDataFile(Class151_Sub1.aClass3_Sub30_Sub1_2942, true);
-                  Class151_Sub1.aClass3_Sub30_Sub1_2942.putString(Class163_Sub2.aClass94_2996);
-                  Class151_Sub1.aClass3_Sub30_Sub1_2942.putInt(var0 ^ 118, Class3_Sub26.anInt2554);
-                  Class151_Sub1.aClass3_Sub30_Sub1_2942.putInt(-121, Class84.method1421());
+                  Unsorted.aClass3_Sub30_Sub1_2942.putShort(Class3_Sub13_Sub1.outgoingBuffer.index + 163 - -Class3_Sub13_Sub33.method326((byte)111, Class163_Sub2.aClass94_2996));
+                  Unsorted.aClass3_Sub30_Sub1_2942.putInt(var0 ^ 113, 530);
+                  Unsorted.aClass3_Sub30_Sub1_2942.putByte((byte)-114, Class7.anInt2161);
+                  Unsorted.aClass3_Sub30_Sub1_2942.putByte((byte)-122, !Class3_Sub28_Sub19.aBoolean3779?0:1);
+                  Unsorted.aClass3_Sub30_Sub1_2942.putByte((byte)-103, 1);
+                  Unsorted.aClass3_Sub30_Sub1_2942.putByte((byte)-88, Class83.method1411(0));
+                  Unsorted.aClass3_Sub30_Sub1_2942.putShort(Class23.anInt454);
+                  Unsorted.aClass3_Sub30_Sub1_2942.putShort(Class140_Sub7.anInt2934);
+                  Unsorted.aClass3_Sub30_Sub1_2942.putByte((byte)-39, Class3_Sub28_Sub14.anInt3671);
+                  Class81.putRandomDataFile(Unsorted.aClass3_Sub30_Sub1_2942, true);
+                  Unsorted.aClass3_Sub30_Sub1_2942.putString(Class163_Sub2.aClass94_2996);
+                  Unsorted.aClass3_Sub30_Sub1_2942.putInt(var0 ^ 118, Class3_Sub26.anInt2554);
+                  Unsorted.aClass3_Sub30_Sub1_2942.putInt(-121, Class84.method1421());
                   Class140_Sub2.aBoolean2705 = true;
-                  Class151_Sub1.aClass3_Sub30_Sub1_2942.putShort(Class113.interfacePacketCounter);
-                  Class151_Sub1.aClass3_Sub30_Sub1_2942.putInt(-122, Class75_Sub3.aClass153_2660.getCRCValue((byte)-126));
-                  Class151_Sub1.aClass3_Sub30_Sub1_2942.putInt(var0 ^ 115, Class3_Sub28_Sub19.aClass153_3772.getCRCValue((byte)-125));
-                  Class151_Sub1.aClass3_Sub30_Sub1_2942.putInt(-123, Class164.aClass153_2052.getCRCValue((byte)-128));
-                  Class151_Sub1.aClass3_Sub30_Sub1_2942.putInt(-123, Class140_Sub3.aClass153_2727.getCRCValue((byte)-128));
-                  Class151_Sub1.aClass3_Sub30_Sub1_2942.putInt(-123, Class146.aClass153_1902.getCRCValue((byte)-125));
-                  Class151_Sub1.aClass3_Sub30_Sub1_2942.putInt(-125, Class3_Sub13_Sub6.aClass153_3077.getCRCValue((byte)-123));
-                  Class151_Sub1.aClass3_Sub30_Sub1_2942.putInt(-122, Class75_Sub2.aClass153_2645.getCRCValue((byte)-126));
-                  Class151_Sub1.aClass3_Sub30_Sub1_2942.putInt(-121, Class159.aClass153_2019.getCRCValue((byte)-125));
-                  Class151_Sub1.aClass3_Sub30_Sub1_2942.putInt(var0 ^ 127, Class140_Sub6.spritesCacheIndex.getCRCValue((byte)-125));
-                  Class151_Sub1.aClass3_Sub30_Sub1_2942.putInt(var0 ^ 117, Class3_Sub13_Sub28.aClass153_3352.getCRCValue((byte)-127));
-                  Class151_Sub1.aClass3_Sub30_Sub1_2942.putInt(-123, Class3_Sub13_Sub25.aClass153_3304.getCRCValue((byte)-127));
-                  Class151_Sub1.aClass3_Sub30_Sub1_2942.putInt(-124, Node.aClass153_2573.getCRCValue((byte)-118));
-                  Class151_Sub1.aClass3_Sub30_Sub1_2942.putInt(-126, Class3_Sub1.interfaceScriptsIndex.getCRCValue((byte)-122));
-                  Class151_Sub1.aClass3_Sub30_Sub1_2942.putInt(var0 ^ 115, CacheIndex.aClass153_1948.getCRCValue((byte)-118));
-                  Class151_Sub1.aClass3_Sub30_Sub1_2942.putInt(-122, Class3_Sub19.aClass153_2474.getCRCValue((byte)-124));
-                  Class151_Sub1.aClass3_Sub30_Sub1_2942.putInt(-121, NPC.aClass153_3994.getCRCValue((byte)-122));
-                  Class151_Sub1.aClass3_Sub30_Sub1_2942.putInt(-124, Class168.aClass153_2097.getCRCValue((byte)-123));
-                  Class151_Sub1.aClass3_Sub30_Sub1_2942.putInt(var0 + -117, NPC.aClass153_3993.getCRCValue((byte)-124));
-                  Class151_Sub1.aClass3_Sub30_Sub1_2942.putInt(-128, Class101.aClass153_1428.getCRCValue((byte)-122));
-                  Class151_Sub1.aClass3_Sub30_Sub1_2942.putInt(-124, Class100.aClass153_1410.getCRCValue((byte)-127));
-                  Class151_Sub1.aClass3_Sub30_Sub1_2942.putInt(-120, Class3_Sub13_Sub36.aClass153_3429.getCRCValue((byte)-123));
-                  Class151_Sub1.aClass3_Sub30_Sub1_2942.putInt(-120, Class70.aClass153_1058.getCRCValue((byte)-117));
-                  Class151_Sub1.aClass3_Sub30_Sub1_2942.putInt(var0 ^ 127, Class3_Sub22.aClass153_2528.getCRCValue((byte)-117));
-                  Class151_Sub1.aClass3_Sub30_Sub1_2942.putInt(-125, Class133.aClass153_1751.getCRCValue((byte)-122));
-                  Class151_Sub1.aClass3_Sub30_Sub1_2942.putInt(-127, Class140_Sub7.aClass153_2939.getCRCValue((byte)-118));
-                  Class151_Sub1.aClass3_Sub30_Sub1_2942.putInt(-126, Class3_Sub4.aClass153_2258.getCRCValue((byte)-128));
-                  Class151_Sub1.aClass3_Sub30_Sub1_2942.putInt(-120, Class97.aClass153_1376.getCRCValue((byte)-123));
-                  Class151_Sub1.aClass3_Sub30_Sub1_2942.putInt(-120, Class132.aClass153_1735.getCRCValue((byte)-124));
-                  Class151_Sub1.aClass3_Sub30_Sub1_2942.putInt(-120, Class132.libIndex.getCRCValue((byte)-124));
-                  Class151_Sub1.aClass3_Sub30_Sub1_2942.putBytes(Class3_Sub13_Sub1.outgoingBuffer.buffer, Class3_Sub13_Sub1.outgoingBuffer.index, var0 + 117);
-                  Class3_Sub15.aClass89_2429.sendBytes(Class151_Sub1.aClass3_Sub30_Sub1_2942.buffer, Class151_Sub1.aClass3_Sub30_Sub1_2942.index);
+                  Unsorted.aClass3_Sub30_Sub1_2942.putShort(Class113.interfacePacketCounter);
+                  Unsorted.aClass3_Sub30_Sub1_2942.putInt(-122, Class75_Sub3.aClass153_2660.getCRCValue((byte)-126));
+                  Unsorted.aClass3_Sub30_Sub1_2942.putInt(var0 ^ 115, Class3_Sub28_Sub19.aClass153_3772.getCRCValue((byte)-125));
+                  Unsorted.aClass3_Sub30_Sub1_2942.putInt(-123, Class164.aClass153_2052.getCRCValue((byte)-128));
+                  Unsorted.aClass3_Sub30_Sub1_2942.putInt(-123, Class140_Sub3.aClass153_2727.getCRCValue((byte)-128));
+                  Unsorted.aClass3_Sub30_Sub1_2942.putInt(-123, Class146.aClass153_1902.getCRCValue((byte)-125));
+                  Unsorted.aClass3_Sub30_Sub1_2942.putInt(-125, Class3_Sub13_Sub6.aClass153_3077.getCRCValue((byte)-123));
+                  Unsorted.aClass3_Sub30_Sub1_2942.putInt(-122, Class75_Sub2.aClass153_2645.getCRCValue((byte)-126));
+                  Unsorted.aClass3_Sub30_Sub1_2942.putInt(-121, Class159.aClass153_2019.getCRCValue((byte)-125));
+                  Unsorted.aClass3_Sub30_Sub1_2942.putInt(var0 ^ 127, Class140_Sub6.spritesCacheIndex.getCRCValue((byte)-125));
+                  Unsorted.aClass3_Sub30_Sub1_2942.putInt(var0 ^ 117, Class3_Sub13_Sub28.aClass153_3352.getCRCValue((byte)-127));
+                  Unsorted.aClass3_Sub30_Sub1_2942.putInt(-123, Class3_Sub13_Sub25.aClass153_3304.getCRCValue((byte)-127));
+                  Unsorted.aClass3_Sub30_Sub1_2942.putInt(-124, Node.aClass153_2573.getCRCValue((byte)-118));
+                  Unsorted.aClass3_Sub30_Sub1_2942.putInt(-126, Class3_Sub1.interfaceScriptsIndex.getCRCValue((byte)-122));
+                  Unsorted.aClass3_Sub30_Sub1_2942.putInt(var0 ^ 115, CacheIndex.aClass153_1948.getCRCValue((byte)-118));
+                  Unsorted.aClass3_Sub30_Sub1_2942.putInt(-122, Class3_Sub19.aClass153_2474.getCRCValue((byte)-124));
+                  Unsorted.aClass3_Sub30_Sub1_2942.putInt(-121, NPC.aClass153_3994.getCRCValue((byte)-122));
+                  Unsorted.aClass3_Sub30_Sub1_2942.putInt(-124, Class168.aClass153_2097.getCRCValue((byte)-123));
+                  Unsorted.aClass3_Sub30_Sub1_2942.putInt(var0 + -117, NPC.aClass153_3993.getCRCValue((byte)-124));
+                  Unsorted.aClass3_Sub30_Sub1_2942.putInt(-128, Class101.aClass153_1428.getCRCValue((byte)-122));
+                  Unsorted.aClass3_Sub30_Sub1_2942.putInt(-124, Class100.aClass153_1410.getCRCValue((byte)-127));
+                  Unsorted.aClass3_Sub30_Sub1_2942.putInt(-120, Class3_Sub13_Sub36.aClass153_3429.getCRCValue((byte)-123));
+                  Unsorted.aClass3_Sub30_Sub1_2942.putInt(-120, Class70.aClass153_1058.getCRCValue((byte)-117));
+                  Unsorted.aClass3_Sub30_Sub1_2942.putInt(var0 ^ 127, Class3_Sub22.aClass153_2528.getCRCValue((byte)-117));
+                  Unsorted.aClass3_Sub30_Sub1_2942.putInt(-125, Class133.aClass153_1751.getCRCValue((byte)-122));
+                  Unsorted.aClass3_Sub30_Sub1_2942.putInt(-127, Class140_Sub7.aClass153_2939.getCRCValue((byte)-118));
+                  Unsorted.aClass3_Sub30_Sub1_2942.putInt(-126, Class3_Sub4.aClass153_2258.getCRCValue((byte)-128));
+                  Unsorted.aClass3_Sub30_Sub1_2942.putInt(-120, Class97.aClass153_1376.getCRCValue((byte)-123));
+                  Unsorted.aClass3_Sub30_Sub1_2942.putInt(-120, Class132.aClass153_1735.getCRCValue((byte)-124));
+                  Unsorted.aClass3_Sub30_Sub1_2942.putInt(-120, Class132.libIndex.getCRCValue((byte)-124));
+                  Unsorted.aClass3_Sub30_Sub1_2942.putBytes(Class3_Sub13_Sub1.outgoingBuffer.buffer, Class3_Sub13_Sub1.outgoingBuffer.index, var0 + 117);
+                  Class3_Sub15.aClass89_2429.sendBytes(Unsorted.aClass3_Sub30_Sub1_2942.buffer, Unsorted.aClass3_Sub30_Sub1_2942.index);
                   Class3_Sub13_Sub1.outgoingBuffer.method814(var9);
 
                   for(int var2 = 0; var2 < 4; ++var2) {
@@ -175,11 +175,11 @@ class Class127 {
                }
 
                if(Class3_Sub13_Sub25.loginStage == 4) {
-                  if(Class3_Sub15.aClass89_2429.availableBytes(-18358) < 1) {
+                  if(Class3_Sub15.aClass89_2429.availableBytes() < 1) {
                      return;
                   }
 
-                  int opcode = Class3_Sub15.aClass89_2429.readByte(0);
+                  int opcode = Class3_Sub15.aClass89_2429.readByte();
                   if(opcode == 21) {
                      Class3_Sub13_Sub25.loginStage = 7;
                   } else if (opcode == 29) {
@@ -197,14 +197,14 @@ class Class127 {
                               Class3_Sub13_Sub25.loginStage = 1;
                               ++Class166.anInt2079;
                               Class50.anInt820 = 0;
-                              Class3_Sub15.aClass89_2429.close(14821);
+                              Class3_Sub15.aClass89_2429.close();
                               Class3_Sub15.aClass89_2429 = null;
                               return;
                            }
 
                            Class158.anInt2005 = opcode;
                            Class3_Sub13_Sub25.loginStage = 0;
-                           Class3_Sub15.aClass89_2429.close(var0 + 14830);
+                           Class3_Sub15.aClass89_2429.close();
                            Class3_Sub15.aClass89_2429 = null;
                            return;
                         }
@@ -227,11 +227,11 @@ class Class127 {
                }
 
                if(Class3_Sub13_Sub25.loginStage == 7) {
-                  if(Class3_Sub15.aClass89_2429.availableBytes(var0 + -18349) >= 1) {
-                     Class3_Sub13_Sub34.anInt3413 = 60 * (3 + Class3_Sub15.aClass89_2429.readByte(var0 + 9));
+                  if(Class3_Sub15.aClass89_2429.availableBytes() >= 1) {
+                     Class3_Sub13_Sub34.anInt3413 = 60 * (3 + Class3_Sub15.aClass89_2429.readByte());
                      Class3_Sub13_Sub25.loginStage = 0;
                      Class158.anInt2005 = 21;
-                     Class3_Sub15.aClass89_2429.close(var0 + 14830);
+                     Class3_Sub15.aClass89_2429.close();
                      Class3_Sub15.aClass89_2429 = null;
                      return;
                   }
@@ -240,11 +240,11 @@ class Class127 {
                }
 
                if(Class3_Sub13_Sub25.loginStage == 10) {
-                  if(1 <= Class3_Sub15.aClass89_2429.availableBytes(var0 + -18349)) {
-                     Class3_Sub26.anInt2561 = Class3_Sub15.aClass89_2429.readByte(var0 ^ -9);
+                  if(1 <= Class3_Sub15.aClass89_2429.availableBytes()) {
+                     Class3_Sub26.anInt2561 = Class3_Sub15.aClass89_2429.readByte();
                      Class3_Sub13_Sub25.loginStage = 0;
                      Class158.anInt2005 = 29;
-                     Class3_Sub15.aClass89_2429.close(14821);
+                     Class3_Sub15.aClass89_2429.close();
                      Class3_Sub15.aClass89_2429 = null;
                      return;
                   }
@@ -253,11 +253,11 @@ class Class127 {
                }
 
                if(Class3_Sub13_Sub25.loginStage == 8) {
-                  if(Class3_Sub15.aClass89_2429.availableBytes(-18358) < 14) {
+                  if(Class3_Sub15.aClass89_2429.availableBytes() < 14) {
                      return;
                   }
 
-                  Class3_Sub15.aClass89_2429.readBytes(0, 14, GraphicDefinition.incomingBuffer.buffer);
+                  Class3_Sub15.aClass89_2429.readBytes(GraphicDefinition.incomingBuffer.buffer, 0, 14);
                   GraphicDefinition.incomingBuffer.index = 0;
                   Class3_Sub13_Sub26.rights = GraphicDefinition.incomingBuffer.readUnsignedByte();
                   Class3_Sub28_Sub19.anInt3775 = GraphicDefinition.incomingBuffer.readUnsignedByte();
@@ -292,12 +292,12 @@ class Class127 {
                }
 
                if(Class3_Sub13_Sub25.loginStage == 9) {
-                  if(Class130.incomingPacketLength > Class3_Sub15.aClass89_2429.availableBytes(-18358)) {
+                  if(Class130.incomingPacketLength > Class3_Sub15.aClass89_2429.availableBytes()) {
                      return;
                   }
 
                   GraphicDefinition.incomingBuffer.index = 0;
-                  Class3_Sub15.aClass89_2429.readBytes(0, Class130.incomingPacketLength, GraphicDefinition.incomingBuffer.buffer);
+                  Class3_Sub15.aClass89_2429.readBytes(GraphicDefinition.incomingBuffer.buffer, 0, Class130.incomingPacketLength);
                   Class158.anInt2005 = 2;
                   Class3_Sub13_Sub25.loginStage = 0;
                   AnimationDefinition.resetAll();
@@ -312,7 +312,7 @@ class Class127 {
                }
             } catch (IOException var7) {
                if(null != Class3_Sub15.aClass89_2429) {
-                  Class3_Sub15.aClass89_2429.close(14821);
+                  Class3_Sub15.aClass89_2429.close();
                   Class3_Sub15.aClass89_2429 = null;
                }
 

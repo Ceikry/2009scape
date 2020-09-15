@@ -256,7 +256,7 @@ final class RSInterface {
             var2 = RenderAnimationDefinition.method903(new RSString[]{Class3_Sub28_Sub11.aClass94_3637, Class163_Sub2.aClass94_2996}, (byte)-64);
          }
 
-         return RenderAnimationDefinition.method903(new RSString[]{Class30.aClass94_577, var1, Class3_Sub28_Sub7.aClass94_3601, Class72.method1298((byte)9, Class3_Sub20.language), Class151.aClass94_1932, Class72.method1298((byte)9, Class3_Sub26.anInt2554), var2, Class140_Sub3.aClass94_2735}, (byte)-61);
+         return RenderAnimationDefinition.method903(new RSString[]{Class30.aClass94_577, var1, Class3_Sub28_Sub7.aClass94_3601, Class72.method1298((byte)9, Class3_Sub20.language), Unsorted.aClass94_1932, Class72.method1298((byte)9, Class3_Sub26.anInt2554), var2, Class140_Sub3.aClass94_2735}, (byte)-61);
       } catch (RuntimeException var3) {
          throw Class44.clientError(var3, "be.N(" + true + ')');
       }

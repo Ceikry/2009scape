@@ -127,7 +127,7 @@ final class KeyboardListener implements KeyListener, FocusListener {
              * Controls arrow key mouse movement
              */
             if(Class3_Sub13.anInt2384 >= 0 && var2 >= 0) {
-               Class151_Sub1.anIntArray2952[Class3_Sub13.anInt2384] = var2;
+               Unsorted.anIntArray2952[Class3_Sub13.anInt2384] = var2;
                Class3_Sub13.anInt2384 = 127 & Class3_Sub13.anInt2384 - -1;
                if(Class3_Sub13.anInt2384 == Class133.anInt1744) {
                   Class3_Sub13.anInt2384 = -1;
@@ -208,7 +208,7 @@ final class KeyboardListener implements KeyListener, FocusListener {
             }
 
             if(Class3_Sub13.anInt2384 >= 0 && var2 >= 0) {
-               Class151_Sub1.anIntArray2952[Class3_Sub13.anInt2384] = ~var2;
+               Unsorted.anIntArray2952[Class3_Sub13.anInt2384] = ~var2;
                Class3_Sub13.anInt2384 = 127 & 1 + Class3_Sub13.anInt2384;
                if(Class3_Sub13.anInt2384 == Class133.anInt1744) {
                   Class3_Sub13.anInt2384 = -1;

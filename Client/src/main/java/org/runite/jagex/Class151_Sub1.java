@@ -1,12 +1,12 @@
 package org.runite.jagex;
 
 import org.rs09.client.filestore.ReferenceTable;
+import org.rs09.client.filestore.ResourceProvider;
 
 import java.util.Objects;
 
-final class Class151_Sub1 extends Class151 {
+final class Class151_Sub1 extends ResourceProvider {
 
-    static Class3_Sub30_Sub1 aClass3_Sub30_Sub1_2942 = new Class3_Sub30_Sub1();
     private final Class41 aClass41_2943;
     private ReferenceTable aReferenceTable_2944;
     private final Class130 aClass130_2946 = new Class130(16);
@@ -14,13 +14,11 @@ final class Class151_Sub1 extends Class151 {
     private int anInt2948 = 0;
     private byte[] aByteArray2949;
     private Class3_Sub28_Sub10 aClass3_Sub28_Sub10_2950;
-    static int[] anIntArray2952 = new int[128];
     private final Class66 aClass66_2953;
     Class41 aClass41_2954;
     private final int anInt2955;
     private final Class73 aClass73_2956;
     private final int anInt2957;
-    static int anInt2958 = 0;
     private boolean aBoolean2962;
     private final Class61 aClass61_2963 = new Class61();
     private int anInt2964 = 0;
@@ -30,61 +28,7 @@ final class Class151_Sub1 extends Class151 {
     private final boolean aBoolean2968;
 
 
-    static void updateLocalPosition() {
-        try {
-            GraphicDefinition.incomingBuffer.setBitAccess((byte) 118);
-            int opcode = GraphicDefinition.incomingBuffer.getBits(1);
-            if (opcode != 0) {
-                int type = GraphicDefinition.incomingBuffer.getBits(2);
-                if (0 == type) {
-                    Class21.maskUpdateIndexes[Unsorted.maskUpdateCount++] = 2047;
-                } else {
-                    int var4;
-                    int var5;
-                    if (type == 1) { //Walk
-                        var4 = GraphicDefinition.incomingBuffer.getBits(3);
-                        Class102.player.walkStep(1, (byte) -128, var4);
-                        var5 = GraphicDefinition.incomingBuffer.getBits(1);
-                        if (var5 == 1) {
-                            Class21.maskUpdateIndexes[Unsorted.maskUpdateCount++] = 2047;
-                        }
-
-                    } else if (2 == type) {
-                        if (GraphicDefinition.incomingBuffer.getBits(1) == 1) {
-                            var4 = GraphicDefinition.incomingBuffer.getBits(3);
-                            Class102.player.walkStep(2, (byte) -104, var4);
-                            var5 = GraphicDefinition.incomingBuffer.getBits(3);
-                            Class102.player.walkStep(2, (byte) -126, var5);
-                        } else {
-                            var4 = GraphicDefinition.incomingBuffer.getBits(3);
-                            Class102.player.walkStep(0, (byte) -109, var4);
-                        }
-
-                        var4 = GraphicDefinition.incomingBuffer.getBits(1);
-                        if (var4 == 1) {
-                            Class21.maskUpdateIndexes[Unsorted.maskUpdateCount++] = 2047;
-                        }
-
-                    } else if (type == 3) {
-                        var4 = GraphicDefinition.incomingBuffer.getBits(7);
-                        var5 = GraphicDefinition.incomingBuffer.getBits(1);
-                        WorldListCountry.localPlane = GraphicDefinition.incomingBuffer.getBits(2);
-                        int var6 = GraphicDefinition.incomingBuffer.getBits(1);
-                        if (var6 == 1) {
-                            Class21.maskUpdateIndexes[Unsorted.maskUpdateCount++] = 2047;
-                        }
-
-                        int var7 = GraphicDefinition.incomingBuffer.getBits(7);
-                        Class102.player.method1981(var7, var5 == 1, var4);
-                    }
-                }
-            }
-        } catch (RuntimeException var8) {
-            throw Class44.clientError(var8, "bg.G(" + (byte) 81 + ')');
-        }
-    }
-
-    final void method2095(int var1) {
+    public final void request(int var1) {
         try {
             if (null != this.aClass41_2954) {
                 Class3 var3;
@@ -102,7 +46,7 @@ final class Class151_Sub1 extends Class151 {
         }
     }
 
-    final ReferenceTable method2094() {
+    public final ReferenceTable getReferenceTable() {
         try {
             if (this.aReferenceTable_2944 == null) {
                 if (null == this.aClass3_Sub28_Sub10_2950) {
@@ -200,33 +144,6 @@ final class Class151_Sub1 extends Class151 {
         }
     }
 
-    static boolean method2103(int var0, int var1) {
-        try {
-            return var1 >= -78 || (var0 == 198 || 230 == var0 || var0 == 156 || var0 == 140 || 223 == var0);
-        } catch (RuntimeException var3) {
-            throw Class44.clientError(var3, "bg.P(" + var0 + ',' + var1 + ')');
-        }
-    }
-
-    static void method2104(RSInterface var0, boolean var1, int var2) {
-        try {
-            int var4 = var0.anInt240 != 0 ? var0.anInt240 : var0.anInt168;
-            int var5 = var0.anInt252 != 0 ? var0.anInt252 : var0.anInt193;
-            Class158.method2183(var0.anInt279, var1, var4, var5, GameObject.aClass11ArrayArray1834[var0.anInt279 >> 16]);
-            if (var0.aClass11Array262 != null) {
-                Class158.method2183(var0.anInt279, var1, var4, var5, var0.aClass11Array262);
-            }
-
-            Class3_Sub31 var6 = (Class3_Sub31) Class3_Sub13_Sub17.aClass130_3208.method1780((long) var0.anInt279);
-            if (var6 != null) {
-                Class75_Sub4.method1352(var5, var1, var6.anInt2602, var4);
-            }
-
-        } catch (RuntimeException var7) {
-            throw Class44.clientError(var7, "bg.N(" + (var0 != null ? "{...}" : "null") + ',' + var1 + ',' + var2 + ')');
-        }
-    }
-
     final int method2106() {
         try {
             if (null == this.aReferenceTable_2944) {
@@ -250,7 +167,7 @@ final class Class151_Sub1 extends Class151 {
     final void method2107() {
         try {
             if (null != this.aClass61_2966) {
-                if (this.method2094() == null) {
+                if (this.getReferenceTable() == null) {
                     return;
                 }
 
@@ -372,13 +289,9 @@ final class Class151_Sub1 extends Class151 {
         }
     }
 
-    final int method2097(int var1, int var2) {
-        try {
+    public final int percentComplete(int var1) {
             Class3_Sub28_Sub10 var3 = (Class3_Sub28_Sub10) this.aClass130_2946.method1780((long) var1);
             return null != var3 ? var3.method586() : 0;
-        } catch (RuntimeException var4) {
-            throw Class44.clientError(var4, "bg.L(" + var1 + ',' + var2 + ')');
-        }
     }
 
     final int method2108() {
@@ -559,7 +472,7 @@ final class Class151_Sub1 extends Class151 {
     final void method2110() {
         try {
             if (this.aClass61_2966 != null) {
-                if (null != this.method2094()) {
+                if (null != this.getReferenceTable()) {
                     for (Class3 var2 = this.aClass61_2963.method1222(); null != var2; var2 = this.aClass61_2963.method1221()) {
                         int var3 = (int) var2.aLong71;
                         if (0 <= var3 && this.aReferenceTable_2944.getArchiveAmount() > var3 && this.aReferenceTable_2944.archiveFileLengths[var3] != 0) {
@@ -588,13 +501,13 @@ final class Class151_Sub1 extends Class151 {
 
     final int method2111() {
         try {
-            return null != this.method2094() ? 100 : (null == this.aClass3_Sub28_Sub10_2950 ? 0 : this.aClass3_Sub28_Sub10_2950.method586());
+            return null != this.getReferenceTable() ? 100 : (null == this.aClass3_Sub28_Sub10_2950 ? 0 : this.aClass3_Sub28_Sub10_2950.method586());
         } catch (RuntimeException var3) {
             throw Class44.clientError(var3, "bg.E(" + -61 + ')');
         }
     }
 
-    final byte[] method2098(int var1) {
+    public final byte[] get(int var1) {
         try {
             Class3_Sub28_Sub10 var3 = this.method2109(0, var1, 103);
             if (var3 == null) {

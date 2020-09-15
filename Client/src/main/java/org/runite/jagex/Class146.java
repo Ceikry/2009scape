@@ -110,14 +110,14 @@ abstract class Class146 {
             Class3_Sub28_Sub4.method551(-1, 3);
             Class3_Sub13_Sub17.aBoolean3207 = true;
             Class165.method2254();
-            IOHandler.anInt1244 = -1;
+            Unsorted.anInt1244 = -1;
             Class3_Sub13_Sub5.anInt3072 = -1;
 
             for(var14 = 0; var14 < Class3_Sub23.aClass3_Sub11ArrayArray2542[0].length; ++var14) {
                Class3_Sub11 var28 = Class3_Sub23.aClass3_Sub11ArrayArray2542[0][var14];
                float var26 = 251.5F - (var28.aBoolean2364?1.0F:0.5F);
-               if(var28.anInt2355 != IOHandler.anInt1244) {
-                  IOHandler.anInt1244 = var28.anInt2355;
+               if(var28.anInt2355 != Unsorted.anInt1244) {
+                  Unsorted.anInt1244 = var28.anInt2355;
                   Class3_Sub28_Sub2.method535((byte)56, var28.anInt2355);
                   Class92.method1512(Class72.method1297());
                }

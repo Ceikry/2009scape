@@ -266,7 +266,7 @@ final class Class140_Sub3 extends GameObject {
             }
 
             while(this.aClass142_2722.duration[this.anInt2726] < var4) {
-               IOHandler.method1470(var1, this.aClass142_2722, 183921384, var2, false, this.anInt2726);
+               Unsorted.method1470(var1, this.aClass142_2722, 183921384, var2, false, this.anInt2726);
                var4 -= this.aClass142_2722.duration[this.anInt2726];
                ++this.anInt2726;
                if(this.anInt2726 >= this.aClass142_2722.frames.length) {

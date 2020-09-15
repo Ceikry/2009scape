@@ -355,7 +355,7 @@ final class RSString implements Interface3 {
                 ++var9;
             }
 
-            if (Class151_Sub1.method2103(var3, -116)) {
+            if (Unsorted.method2103(var3, -116)) {
                 ++var7;
             } else {
                 --var5;
@@ -372,7 +372,7 @@ final class RSString implements Interface3 {
                 ++var10;
             }
 
-            if (Class151_Sub1.method2103(var4, -86)) {
+            if (Unsorted.method2103(var4, -86)) {
                 ++var8;
             } else {
                 --var6;

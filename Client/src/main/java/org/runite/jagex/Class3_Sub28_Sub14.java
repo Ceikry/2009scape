@@ -117,7 +117,7 @@ final class Class3_Sub28_Sub14 extends Node {
                   Class163_Sub1.method2210(true);
                   Class75_Sub4.method1355();
                } else if (Class140_Sub3.anInt2737 == 73) {
-                  IOHandler.aClass33_1238 = new Class33(12, Class3_Sub28_Sub12.aCanvas3648);
+                  Unsorted.aClass33_1238 = new Class33(12, Class3_Sub28_Sub12.aCanvas3648);
                   Class140_Sub3.anInt2737 = 76;
                   Class163_Sub1.method2210(true);
                   Class75_Sub4.method1355();
@@ -180,7 +180,7 @@ final class Class3_Sub28_Sub14 extends Node {
                var3.anInt2776 = 1;
                var3.anInt2832 = 0;
                var3.anInt2773 = 0;
-               IOHandler.method1470(var3.anInt2829, var4, 183921384, var3.anInt2819, Class102.player == var3, var3.anInt2832);
+               Unsorted.method1470(var3.anInt2829, var4, 183921384, var3.anInt2819, Class102.player == var3, var3.anInt2832);
             }
 
             if(var5 == 2) {
@@ -195,7 +195,7 @@ final class Class3_Sub28_Sub14 extends Node {
             var3.anInt2760 = 0;
             var3.anInt2771 = var2;
             if(var3.anInt2771 != -1) {
-               IOHandler.method1470(var3.anInt2829, Client.getAnimationDefinition(var3.anInt2771), 183921384, var3.anInt2819, var3 == Class102.player, var3.anInt2832);
+               Unsorted.method1470(var3.anInt2829, Client.getAnimationDefinition(var3.anInt2771), 183921384, var3.anInt2819, var3 == Class102.player, var3.anInt2832);
             }
          }
 

@@ -91,7 +91,7 @@ final class Class75_Sub4 extends Class75 {
                      if(var8 != -1) {
                         AnimationDefinition var9 = Client.getAnimationDefinition(var8);
                         if(var9.frames != null) {
-                           IOHandler.method1470(npc.anInt2829, var9, 183921384, npc.anInt2819, false, 0);
+                           Unsorted.method1470(npc.anInt2829, var9, 183921384, npc.anInt2819, false, 0);
                         }
                      }
                   }

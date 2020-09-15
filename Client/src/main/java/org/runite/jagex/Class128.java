@@ -130,7 +130,7 @@ final class Class128 {
 
    static void method1764() {
       for(int var3 = 0; var3 < Class3_Sub17.anInt2456; ++var3) {
-         for(int var4 = 0; var4 < IOHandler.anInt1234; ++var4) {
+         for(int var4 = 0; var4 < Unsorted.anInt1234; ++var4) {
             for(int var5 = 0; var5 < Class3_Sub13_Sub15.anInt3179; ++var5) {
                Class3_Sub2 var6 = Class75_Sub2.aClass3_Sub2ArrayArrayArray2638[var3][var4][var5];
                if(var6 != null) {

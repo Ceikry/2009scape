@@ -385,7 +385,7 @@ static boolean aBoolean1080 = false;
                System.out.println("oncard_texture:" + Class31.anInt580);
             }
 
-            if(command.equals(60, Class151.COMMAND_BREAK_CLIENT_CONNECTION)) {
+            if(command.equals(60, Unsorted.COMMAND_BREAK_CLIENT_CONNECTION)) {
                Class3_Sub13_Sub24.method289();
             }
 

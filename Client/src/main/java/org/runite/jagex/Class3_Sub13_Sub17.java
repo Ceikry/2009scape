@@ -151,7 +151,7 @@ final class Class3_Sub13_Sub17 extends Class3_Sub13 {
             }
          }
 
-         for(var1 = (Class3_Sub9)IOHandler.aClass61_1242.method1222(); null != var1; var1 = (Class3_Sub9)IOHandler.aClass61_1242.method1221()) {
+         for(var1 = (Class3_Sub9) Unsorted.aClass61_1242.method1222(); null != var1; var1 = (Class3_Sub9) Unsorted.aClass61_1242.method1221()) {
             if(var1.aBoolean2329) {
                var1.method134();
             }

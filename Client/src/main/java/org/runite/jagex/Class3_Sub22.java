@@ -35,8 +35,8 @@ final class Class3_Sub22 extends Class3 {
    static void method398(int var0, int var1, int var2, int var3, int var4, byte[][][] var5, int[] var6, int[] var7, int[] var8, int[] var9, int[] var10, int var11, byte var12, int var13, int var14) {
       if(var0 < 0) {
          var0 = 0;
-      } else if(var0 >= IOHandler.anInt1234 * 128) {
-         var0 = IOHandler.anInt1234 * 128 - 1;
+      } else if(var0 >= Unsorted.anInt1234 * 128) {
+         var0 = Unsorted.anInt1234 * 128 - 1;
       }
 
       if(var2 < 0) {
@@ -65,8 +65,8 @@ final class Class3_Sub22 extends Class3 {
       }
 
       Class2.anInt67 = Class97.anInt1375 + Class3_Sub13_Sub39.anInt3466;
-      if(Class2.anInt67 > IOHandler.anInt1234) {
-         Class2.anInt67 = IOHandler.anInt1234;
+      if(Class2.anInt67 > Unsorted.anInt1234) {
+         Class2.anInt67 = Unsorted.anInt1234;
       }
 
       Class126.anInt1665 = Class3_Sub13_Sub27.anInt3340 + Class3_Sub13_Sub39.anInt3466;
@@ -89,7 +89,7 @@ final class Class3_Sub22 extends Class3 {
             int var19 = (var17 - Class3_Sub13_Sub39.anInt3466 << 7) - (Class3_Sub13_Sub30.anInt3363 & 127);
             int var20 = Class97.anInt1375 - Class3_Sub13_Sub39.anInt3466 + var16;
             int var21 = Class3_Sub13_Sub27.anInt3340 - Class3_Sub13_Sub39.anInt3466 + var17;
-            if(var20 >= 0 && var21 >= 0 && var20 < IOHandler.anInt1234 && var21 < Class3_Sub13_Sub15.anInt3179) {
+            if(var20 >= 0 && var21 >= 0 && var20 < Unsorted.anInt1234 && var21 < Class3_Sub13_Sub15.anInt3179) {
                int var22;
                if(Class3_Sub28_Sub7.anIntArrayArrayArray3605 == null) {
                   var22 = Class58.anIntArrayArrayArray914[0][var20][var21] - Class3_Sub28_Sub13.anInt3657 + 128;

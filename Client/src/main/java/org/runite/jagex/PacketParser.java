@@ -73,13 +73,13 @@ final class PacketParser {
             if (Class3_Sub15.aClass89_2429 == null) {
                 return false;
             } else {
-                int var1 = Class3_Sub15.aClass89_2429.availableBytes(-18358);
+                int var1 = Class3_Sub15.aClass89_2429.availableBytes();
                 if (0 == var1) {
                     return false;
                 } else {
                     if (Unsorted.incomingOpcode == -1) {
                         --var1;
-                        Class3_Sub15.aClass89_2429.readBytes(0, 1, GraphicDefinition.incomingBuffer.buffer);
+                        Class3_Sub15.aClass89_2429.readBytes(GraphicDefinition.incomingBuffer.buffer, 0, 1);
                         GraphicDefinition.incomingBuffer.index = 0;
                         Unsorted.incomingOpcode = GraphicDefinition.incomingBuffer.getOpcode();
                         Class130.incomingPacketLength = Class75_Sub4.anIntArray2668[Unsorted.incomingOpcode];
@@ -90,7 +90,7 @@ final class PacketParser {
                             return false;
                         }
 
-                        Class3_Sub15.aClass89_2429.readBytes(0, 1, GraphicDefinition.incomingBuffer.buffer);
+                        Class3_Sub15.aClass89_2429.readBytes(GraphicDefinition.incomingBuffer.buffer, 0, 1);
                         --var1;
                         Class130.incomingPacketLength = GraphicDefinition.incomingBuffer.buffer[0] & 255;
                     }
@@ -101,7 +101,7 @@ final class PacketParser {
                         }
 
                         var1 -= 2;
-                        Class3_Sub15.aClass89_2429.readBytes(0, 2, GraphicDefinition.incomingBuffer.buffer);
+                        Class3_Sub15.aClass89_2429.readBytes(GraphicDefinition.incomingBuffer.buffer, 0, 2);
                         GraphicDefinition.incomingBuffer.index = 0;
                         Class130.incomingPacketLength = GraphicDefinition.incomingBuffer.getShort();
                     }
@@ -110,7 +110,7 @@ final class PacketParser {
                         return false;
                     } else {
                         GraphicDefinition.incomingBuffer.index = 0;
-                        Class3_Sub15.aClass89_2429.readBytes(0, Class130.incomingPacketLength, GraphicDefinition.incomingBuffer.buffer);
+                        Class3_Sub15.aClass89_2429.readBytes(GraphicDefinition.incomingBuffer.buffer, 0, Class130.incomingPacketLength);
                         Class24.anInt469 = Class7.anInt2166;
                         Class7.anInt2166 = Class3_Sub29.anInt2582;
                         Class3_Sub29.anInt2582 = Unsorted.incomingOpcode;
@@ -631,7 +631,7 @@ final class PacketParser {
                                                                                     if (var33 != -1) {
                                                                                         var53 = Client.getAnimationDefinition(var33);
                                                                                         if (null != var53.frames) {
-                                                                                            IOHandler.method1470(var62.anInt2829, var53, 183921384, var62.anInt2819, false, 0);
+                                                                                            Unsorted.method1470(var62.anInt2829, var53, 183921384, var62.anInt2819, false, 0);
                                                                                         }
                                                                                     }
                                                                                 }
@@ -669,7 +669,7 @@ final class PacketParser {
                                                                                     if (var33 != -1) {
                                                                                         var53 = Client.getAnimationDefinition(var33);
                                                                                         if (null != var53.frames) {
-                                                                                            IOHandler.method1470(var60.anInt2829, var53, 183921384, var60.anInt2819, var60 == Class102.player, 0);
+                                                                                            Unsorted.method1470(var60.anInt2829, var53, 183921384, var60.anInt2819, var60 == Class102.player, 0);
                                                                                         }
                                                                                     }
                                                                                 }
@@ -1033,7 +1033,7 @@ final class PacketParser {
                                                                         var27 = Class7.getRSInterface(modelId);
                                                                         if (null != var27) {
                                                                             Class20.method909(119, var27);
-                                                                            Class151_Sub1.method2104(var27, true, 48);
+                                                                            Unsorted.method2104(var27, true, 48);
                                                                         }
 
                                                                         if (Class3_Sub28_Sub12.anInt3655 != -1) {

@@ -40,7 +40,7 @@ final class Class3_Sub30_Sub1 extends RSByteBuffer {
 					if(null != var8) {
 						Class3_Sub28_Sub9.method582(Class102.player.anIntArray2755[0], 0, 1, false, 0, 2, var8.anIntArray2767[0], 1, 0, 2, var8.anIntArray2755[0], Class102.player.anIntArray2767[0]);
 						Class36.anInt638 = 2;
-						Class151_Sub1.anInt2958 = 0;
+						Unsorted.anInt2958 = 0;
 						Class70.anInt1053 = Class163_Sub1.anInt2993;
 						Class3_Sub28_Sub10_Sub1.anInt4062 = Class38_Sub1.anInt2614;
 						Class3_Sub13_Sub1.outgoingBuffer.putOpcode(71);
@@ -65,7 +65,7 @@ final class Class3_Sub30_Sub1 extends RSByteBuffer {
 					Class3_Sub13_Sub1.outgoingBuffer.putLEShortA(Class164.anInt2050);
 					Class3_Sub13_Sub1.outgoingBuffer.putLEShortA(var5);
 					Class3_Sub9.anInt2330 = 0;
-					Class151.aClass11_1933 = Class7.getRSInterface(var3);
+					Unsorted.aClass11_1933 = Class7.getRSInterface(var3);
 					KeyboardListener.anInt1918 = var2;
 					System.out.println(Class110.anInt1473 + ", " + var3 + ", " + var2 + ", " + Class3_Sub28_Sub18.anInt3764 + ", " + Class164.anInt2050 + ", " + var5);
 				}
@@ -77,7 +77,7 @@ final class Class3_Sub30_Sub1 extends RSByteBuffer {
 						Class3_Sub28_Sub9.method582(Class102.player.anIntArray2755[0], 0, 1, false, 0, 2, var11.anIntArray2767[0], 1, 0, 2, var11.anIntArray2755[0], Class102.player.anIntArray2767[0]);
 						Class70.anInt1053 = Class163_Sub1.anInt2993;
 						Class36.anInt638 = 2;
-						Class151_Sub1.anInt2958 = 0;
+						Unsorted.anInt2958 = 0;
 						Class3_Sub28_Sub10_Sub1.anInt4062 = Class38_Sub1.anInt2614;
 						Class3_Sub13_Sub1.outgoingBuffer.putOpcode(30);
 						Class3_Sub13_Sub1.outgoingBuffer.putShort(var5);
@@ -89,7 +89,7 @@ final class Class3_Sub30_Sub1 extends RSByteBuffer {
 					if(var11 != null) {
 						Class3_Sub28_Sub9.method582(Class102.player.anIntArray2755[0], 0, 1, false, 0, 2, var11.anIntArray2767[0], 1, 0, 2, var11.anIntArray2755[0], Class102.player.anIntArray2767[0]);
 						Class70.anInt1053 = Class163_Sub1.anInt2993;
-						Class151_Sub1.anInt2958 = 0;
+						Unsorted.anInt2958 = 0;
 						Class36.anInt638 = 2;
 						Class3_Sub28_Sub10_Sub1.anInt4062 = Class38_Sub1.anInt2614;
 						Class3_Sub13_Sub1.outgoingBuffer.putOpcode(78);
@@ -104,7 +104,7 @@ final class Class3_Sub30_Sub1 extends RSByteBuffer {
 						Class70.anInt1053 = Class163_Sub1.anInt2993;
 						Class36.anInt638 = 2;
 						Class3_Sub28_Sub10_Sub1.anInt4062 = Class38_Sub1.anInt2614;
-						Class151_Sub1.anInt2958 = 0;
+						Unsorted.anInt2958 = 0;
 						Class3_Sub13_Sub1.outgoingBuffer.putOpcode(133);
 						Class3_Sub13_Sub1.outgoingBuffer.putLEShort(var5);
 					}
@@ -116,7 +116,7 @@ final class Class3_Sub30_Sub1 extends RSByteBuffer {
 					Class3_Sub13_Sub1.outgoingBuffer.putShortA(var2);
 					Class3_Sub13_Sub1.outgoingBuffer.putIntB(-68, var3);
 					Class3_Sub9.anInt2330 = 0;
-					Class151.aClass11_1933 = Class7.getRSInterface(var3);
+					Unsorted.aClass11_1933 = Class7.getRSInterface(var3);
 					KeyboardListener.anInt1918 = var2;
 				}
 
@@ -138,7 +138,7 @@ final class Class3_Sub30_Sub1 extends RSByteBuffer {
 						Class3_Sub28_Sub9.method582(Class102.player.anIntArray2755[0], 0, 1, false, 0, 2, var11.anIntArray2767[0], 1, 0, 2, var11.anIntArray2755[0], Class102.player.anIntArray2767[0]);
 						Class70.anInt1053 = Class163_Sub1.anInt2993;
 						Class36.anInt638 = 2;
-						Class151_Sub1.anInt2958 = 0;
+						Unsorted.anInt2958 = 0;
 						Class3_Sub28_Sub10_Sub1.anInt4062 = Class38_Sub1.anInt2614;
 						Class3_Sub13_Sub1.outgoingBuffer.putOpcode(239);
 						Class3_Sub13_Sub1.outgoingBuffer.putLEInt(anInt872, (byte)-123);
@@ -159,7 +159,7 @@ final class Class3_Sub30_Sub1 extends RSByteBuffer {
 					}
 
 					Class70.anInt1053 = Class163_Sub1.anInt2993;
-					Class151_Sub1.anInt2958 = 0;
+					Unsorted.anInt2958 = 0;
 					Class36.anInt638 = 2;
 					Class3_Sub28_Sub10_Sub1.anInt4062 = Class38_Sub1.anInt2614;
 					Class3_Sub13_Sub1.outgoingBuffer.putOpcode(66);
@@ -180,7 +180,7 @@ final class Class3_Sub30_Sub1 extends RSByteBuffer {
 					Class36.anInt638 = 2;
 					Class70.anInt1053 = Class163_Sub1.anInt2993;
 					Class3_Sub28_Sub10_Sub1.anInt4062 = Class38_Sub1.anInt2614;
-					Class151_Sub1.anInt2958 = 0;
+					Unsorted.anInt2958 = 0;
 					Class3_Sub13_Sub1.outgoingBuffer.putOpcode(92);
 					Class3_Sub13_Sub1.outgoingBuffer.putLEShortA(var5);
 				}
@@ -196,7 +196,7 @@ final class Class3_Sub30_Sub1 extends RSByteBuffer {
 					}
 
 					Class3_Sub9.anInt2330 = 0;
-					Class151.aClass11_1933 = Class7.getRSInterface(var3);
+					Unsorted.aClass11_1933 = Class7.getRSInterface(var3);
 					KeyboardListener.anInt1918 = var2;
 				}
 
@@ -223,7 +223,7 @@ final class Class3_Sub30_Sub1 extends RSByteBuffer {
 				}
 
 				if(1007 == var4) {
-					Class151_Sub1.anInt2958 = 0;
+					Unsorted.anInt2958 = 0;
 					Class36.anInt638 = 2;
 					Class3_Sub28_Sub10_Sub1.anInt4062 = Class38_Sub1.anInt2614;
 					Class70.anInt1053 = Class163_Sub1.anInt2993;
@@ -249,7 +249,7 @@ final class Class3_Sub30_Sub1 extends RSByteBuffer {
 							Class3_Sub13_Sub1.outgoingBuffer.putShortA(var2);
 							Class3_Sub13_Sub1.outgoingBuffer.putIntB(-68, var3);
 							Class3_Sub9.anInt2330 = 0;
-							Class151.aClass11_1933 = Class7.getRSInterface(var3);
+							Unsorted.aClass11_1933 = Class7.getRSInterface(var3);
 
 
 					} else {
@@ -258,7 +258,7 @@ final class Class3_Sub30_Sub1 extends RSByteBuffer {
 					Class3_Sub13_Sub1.outgoingBuffer.putShortA(var5);
 					Class3_Sub13_Sub1.outgoingBuffer.putLEInt(var3, (byte)-120);
 					Class3_Sub9.anInt2330 = 0;
-					Class151.aClass11_1933 = Class7.getRSInterface(var3);
+					Unsorted.aClass11_1933 = Class7.getRSInterface(var3);
 					}
 					KeyboardListener.anInt1918 = var2;
 				}
@@ -271,7 +271,7 @@ final class Class3_Sub30_Sub1 extends RSByteBuffer {
 					Class3_Sub13_Sub1.outgoingBuffer.putShortA(var5);
 					Class3_Sub13_Sub1.outgoingBuffer.putLEShort(RSInterface.anInt278);
 					Class3_Sub9.anInt2330 = 0;
-					Class151.aClass11_1933 = Class7.getRSInterface(var3);
+					Unsorted.aClass11_1933 = Class7.getRSInterface(var3);
 					KeyboardListener.anInt1918 = var2;
 				}
 
@@ -282,7 +282,7 @@ final class Class3_Sub30_Sub1 extends RSByteBuffer {
 						Class36.anInt638 = 2;
 						Class3_Sub28_Sub10_Sub1.anInt4062 = Class38_Sub1.anInt2614;
 						Class70.anInt1053 = Class163_Sub1.anInt2993;
-						Class151_Sub1.anInt2958 = 0;
+						Unsorted.anInt2958 = 0;
 						Class3_Sub13_Sub1.outgoingBuffer.putOpcode(4);
 						Class3_Sub13_Sub1.outgoingBuffer.putLEShort(var5);
 					}
@@ -308,7 +308,7 @@ final class Class3_Sub30_Sub1 extends RSByteBuffer {
 					Class3_Sub13_Sub1.outgoingBuffer.putLEShort(var2);//data
 					Class3_Sub13_Sub1.outgoingBuffer.putLEInt(var3, (byte)-127);//slot
 					Class3_Sub9.anInt2330 = 0;
-					Class151.aClass11_1933 = Class7.getRSInterface(var3);
+					Unsorted.aClass11_1933 = Class7.getRSInterface(var3);
 					KeyboardListener.anInt1918 = var2;
 				}
 
@@ -327,7 +327,7 @@ final class Class3_Sub30_Sub1 extends RSByteBuffer {
 					var8 = Class3_Sub13_Sub22.players[var5];
 					if(var8 != null) {
 						Class3_Sub28_Sub9.method582(Class102.player.anIntArray2755[0], 0, 1, false, 0, 2, var8.anIntArray2767[0], 1, 0, 2, var8.anIntArray2755[0], Class102.player.anIntArray2767[0]);
-						Class151_Sub1.anInt2958 = 0;
+						Unsorted.anInt2958 = 0;
 						Class36.anInt638 = 2;
 						Class3_Sub28_Sub10_Sub1.anInt4062 = Class38_Sub1.anInt2614;
 						Class70.anInt1053 = Class163_Sub1.anInt2993;
@@ -347,7 +347,7 @@ final class Class3_Sub30_Sub1 extends RSByteBuffer {
 							Class3_Sub13_Sub1.outgoingBuffer.putShortA(var2);
 							Class3_Sub13_Sub1.outgoingBuffer.putIntB(-68, var3);
 							Class3_Sub9.anInt2330 = 0;
-							Class151.aClass11_1933 = Class7.getRSInterface(var3);
+							Unsorted.aClass11_1933 = Class7.getRSInterface(var3);
 
 					} else {
 					Class3_Sub13_Sub1.outgoingBuffer.putOpcode(55);
@@ -355,7 +355,7 @@ final class Class3_Sub30_Sub1 extends RSByteBuffer {
 					Class3_Sub13_Sub1.outgoingBuffer.putShortA(var2);
 					Class3_Sub13_Sub1.outgoingBuffer.putIntA(var3);
 					Class3_Sub9.anInt2330 = 0;
-					Class151.aClass11_1933 = Class7.getRSInterface(var3);
+					Unsorted.aClass11_1933 = Class7.getRSInterface(var3);
 
 					}
 					KeyboardListener.anInt1918 = var2;
@@ -373,7 +373,7 @@ final class Class3_Sub30_Sub1 extends RSByteBuffer {
 
 					Class36.anInt638 = 2;
 					Class70.anInt1053 = Class163_Sub1.anInt2993;
-					Class151_Sub1.anInt2958 = 0;
+					Unsorted.anInt2958 = 0;
 					Class3_Sub28_Sub10_Sub1.anInt4062 = Class38_Sub1.anInt2614;
 					Class3_Sub13_Sub1.outgoingBuffer.putOpcode(228);
 					Class3_Sub13_Sub1.outgoingBuffer.putShort(var5);
@@ -386,7 +386,7 @@ final class Class3_Sub30_Sub1 extends RSByteBuffer {
 					if(var11 != null) {
 						Class3_Sub28_Sub9.method582(Class102.player.anIntArray2755[0], 0, 1, false, 0, 2, var11.anIntArray2767[0], 1, 0, 2, var11.anIntArray2755[0], Class102.player.anIntArray2767[0]);
 						Class36.anInt638 = 2;
-						Class151_Sub1.anInt2958 = 0;
+						Unsorted.anInt2958 = 0;
 						Class3_Sub28_Sub10_Sub1.anInt4062 = Class38_Sub1.anInt2614;
 						Class70.anInt1053 = Class163_Sub1.anInt2993;
 						Class3_Sub13_Sub1.outgoingBuffer.putOpcode(148);
@@ -419,7 +419,7 @@ final class Class3_Sub30_Sub1 extends RSByteBuffer {
 						if(null != var8) {
 							Class3_Sub28_Sub9.method582(Class102.player.anIntArray2755[0], 0, 1, false, 0, 2, var8.anIntArray2767[0], 1, 0, 2, var8.anIntArray2755[0], Class102.player.anIntArray2767[0]);
 							Class3_Sub28_Sub10_Sub1.anInt4062 = Class38_Sub1.anInt2614;
-							Class151_Sub1.anInt2958 = 0;
+							Unsorted.anInt2958 = 0;
 							Class36.anInt638 = 2;
 							Class70.anInt1053 = Class163_Sub1.anInt2993;
 							Class3_Sub13_Sub1.outgoingBuffer.putOpcode(180);
@@ -433,7 +433,7 @@ final class Class3_Sub30_Sub1 extends RSByteBuffer {
 						Class3_Sub13_Sub1.outgoingBuffer.putLEShortA(var5);
 						Class3_Sub13_Sub1.outgoingBuffer.putLEShortA(var2);
 						Class3_Sub9.anInt2330 = 0;
-						Class151.aClass11_1933 = Class7.getRSInterface(var3);
+						Unsorted.aClass11_1933 = Class7.getRSInterface(var3);
 						KeyboardListener.anInt1918 = var2;
 					}
 
@@ -441,7 +441,7 @@ final class Class3_Sub30_Sub1 extends RSByteBuffer {
 						var8 = Class3_Sub13_Sub22.players[var5];
 						if(var8 != null) {
 							Class3_Sub28_Sub9.method582(Class102.player.anIntArray2755[0], 0, 1, false, 0, 2, var8.anIntArray2767[0], 1, 0, 2, var8.anIntArray2755[0], Class102.player.anIntArray2767[0]);
-							Class151_Sub1.anInt2958 = 0;
+							Unsorted.anInt2958 = 0;
 							Class36.anInt638 = 2;
 							Class70.anInt1053 = Class163_Sub1.anInt2993;
 							Class3_Sub28_Sub10_Sub1.anInt4062 = Class38_Sub1.anInt2614;
@@ -465,7 +465,7 @@ final class Class3_Sub30_Sub1 extends RSByteBuffer {
 						Class70.anInt1053 = Class163_Sub1.anInt2993;
 						Class36.anInt638 = 2;
 						Class3_Sub28_Sub10_Sub1.anInt4062 = Class38_Sub1.anInt2614;
-						Class151_Sub1.anInt2958 = 0;
+						Unsorted.anInt2958 = 0;
 						Class3_Sub13_Sub1.outgoingBuffer.putOpcode(109);
 						Class3_Sub13_Sub1.outgoingBuffer.putLEShort(var3 - -Class82.anInt1152);
 						Class3_Sub13_Sub1.outgoingBuffer.putShort(var2 + Class131.anInt1716);
@@ -478,7 +478,7 @@ final class Class3_Sub30_Sub1 extends RSByteBuffer {
 						Class3_Sub13_Sub1.outgoingBuffer.putShort(var5);
 						Class3_Sub13_Sub1.outgoingBuffer.putIntA(var3);
 						Class3_Sub9.anInt2330 = 0;
-						Class151.aClass11_1933 = Class7.getRSInterface(var3);
+						Unsorted.aClass11_1933 = Class7.getRSInterface(var3);
 						KeyboardListener.anInt1918 = var2;
 					}
 
@@ -489,7 +489,7 @@ final class Class3_Sub30_Sub1 extends RSByteBuffer {
 							Class3_Sub28_Sub10_Sub1.anInt4062 = Class38_Sub1.anInt2614;
 							Class36.anInt638 = 2;
 							Class70.anInt1053 = Class163_Sub1.anInt2993;
-							Class151_Sub1.anInt2958 = 0;
+							Unsorted.anInt2958 = 0;
 							Class3_Sub13_Sub1.outgoingBuffer.putOpcode(218);
 							Class3_Sub13_Sub1.outgoingBuffer.putLEShort(var5);
 						}
@@ -514,7 +514,7 @@ final class Class3_Sub30_Sub1 extends RSByteBuffer {
 						if(var11 != null) {
 							Class3_Sub28_Sub9.method582(Class102.player.anIntArray2755[0], 0, 1, false, 0, 2, var11.anIntArray2767[0], 1, 0, 2, var11.anIntArray2755[0], Class102.player.anIntArray2767[0]);
 							Class36.anInt638 = 2;
-							Class151_Sub1.anInt2958 = 0;
+							Unsorted.anInt2958 = 0;
 							Class3_Sub28_Sub10_Sub1.anInt4062 = Class38_Sub1.anInt2614;
 							Class70.anInt1053 = Class163_Sub1.anInt2993;
 							Class3_Sub13_Sub1.outgoingBuffer.putOpcode(115);//Item on NPC
@@ -544,7 +544,7 @@ final class Class3_Sub30_Sub1 extends RSByteBuffer {
 						}
 
 						Class70.anInt1053 = Class163_Sub1.anInt2993;
-						Class151_Sub1.anInt2958 = 0;
+						Unsorted.anInt2958 = 0;
 						Class3_Sub28_Sub10_Sub1.anInt4062 = Class38_Sub1.anInt2614;
 						Class36.anInt638 = 2;
 						Class3_Sub13_Sub1.outgoingBuffer.putOpcode(101);
@@ -557,7 +557,7 @@ final class Class3_Sub30_Sub1 extends RSByteBuffer {
 					}
 
 					if(var4 == 1004) {
-						Class151_Sub1.anInt2958 = 0;
+						Unsorted.anInt2958 = 0;
 						Class70.anInt1053 = Class163_Sub1.anInt2993;
 						Class36.anInt638 = 2;
 						Class3_Sub28_Sub10_Sub1.anInt4062 = Class38_Sub1.anInt2614;
@@ -595,7 +595,7 @@ final class Class3_Sub30_Sub1 extends RSByteBuffer {
 						var8 = Class3_Sub13_Sub22.players[var5];
 						if(var8 != null) {
 							Class3_Sub28_Sub9.method582(Class102.player.anIntArray2755[0], 0, 1, false, 0, 2, var8.anIntArray2767[0], 1, 0, 2, var8.anIntArray2755[0], Class102.player.anIntArray2767[0]);
-							Class151_Sub1.anInt2958 = 0;
+							Unsorted.anInt2958 = 0;
 							Class3_Sub28_Sub10_Sub1.anInt4062 = Class38_Sub1.anInt2614;
 							Class36.anInt638 = 2;
 							Class70.anInt1053 = Class163_Sub1.anInt2993;
@@ -613,7 +613,7 @@ final class Class3_Sub30_Sub1 extends RSByteBuffer {
 						Class3_Sub13_Sub1.outgoingBuffer.putShort(var2);
 						Class3_Sub13_Sub1.outgoingBuffer.putShortA(var5);
 						Class3_Sub9.anInt2330 = 0;
-						Class151.aClass11_1933 = Class7.getRSInterface(var3);
+						Unsorted.aClass11_1933 = Class7.getRSInterface(var3);
 						KeyboardListener.anInt1918 = var2;
 					}
 
@@ -630,7 +630,7 @@ final class Class3_Sub30_Sub1 extends RSByteBuffer {
 						Class36.anInt638 = 2;
 						Class3_Sub28_Sub10_Sub1.anInt4062 = Class38_Sub1.anInt2614;
 						Class70.anInt1053 = Class163_Sub1.anInt2993;
-						Class151_Sub1.anInt2958 = 0;
+						Unsorted.anInt2958 = 0;
 						Class3_Sub13_Sub1.outgoingBuffer.putOpcode(48);
 						Class3_Sub13_Sub1.outgoingBuffer.putShortA(var2 - -Class131.anInt1716);
 						Class3_Sub13_Sub1.outgoingBuffer.putLEShortA(var5);
@@ -653,7 +653,7 @@ final class Class3_Sub30_Sub1 extends RSByteBuffer {
 						Class3_Sub13_Sub1.outgoingBuffer.putShortA(var2);
 						Class3_Sub13_Sub1.outgoingBuffer.putLEShort(var5);
 						Class3_Sub9.anInt2330 = 0;
-						Class151.aClass11_1933 = Class7.getRSInterface(var3);
+						Unsorted.aClass11_1933 = Class7.getRSInterface(var3);
 						KeyboardListener.anInt1918 = var2;
 					}
 
@@ -664,7 +664,7 @@ final class Class3_Sub30_Sub1 extends RSByteBuffer {
 							Class36.anInt638 = 2;
 							Class3_Sub28_Sub10_Sub1.anInt4062 = Class38_Sub1.anInt2614;
 							Class70.anInt1053 = Class163_Sub1.anInt2993;
-							Class151_Sub1.anInt2958 = 0;
+							Unsorted.anInt2958 = 0;
 							Class3_Sub13_Sub1.outgoingBuffer.putOpcode(175);
 							Class3_Sub13_Sub1.outgoingBuffer.putShortA(var5);
 						}
@@ -678,7 +678,7 @@ final class Class3_Sub30_Sub1 extends RSByteBuffer {
 							Class3_Sub13_Sub1.outgoingBuffer.putShortA(var2);
 							Class3_Sub13_Sub1.outgoingBuffer.putIntB(-68, var3);
 							Class3_Sub9.anInt2330 = 0;
-							Class151.aClass11_1933 = Class7.getRSInterface(var3);
+							Unsorted.aClass11_1933 = Class7.getRSInterface(var3);
 							KeyboardListener.anInt1918 = var2;
 
 						} else {
@@ -710,7 +710,7 @@ final class Class3_Sub30_Sub1 extends RSByteBuffer {
 							Class3_Sub13_Sub1.outgoingBuffer.putIntA(var3);
 							Class3_Sub13_Sub1.outgoingBuffer.putLEShortA(var5);
 							Class3_Sub9.anInt2330 = 0;
-							Class151.aClass11_1933 = Class7.getRSInterface(var3);
+							Unsorted.aClass11_1933 = Class7.getRSInterface(var3);
 							KeyboardListener.anInt1918 = var2;
 						}
 
@@ -718,7 +718,7 @@ final class Class3_Sub30_Sub1 extends RSByteBuffer {
 							var8 = Class3_Sub13_Sub22.players[var5];
 							if(null != var8) {
 								Class3_Sub28_Sub9.method582(Class102.player.anIntArray2755[0], 0, 1, false, 0, 2, var8.anIntArray2767[0], 1, 0, 2, var8.anIntArray2755[0], Class102.player.anIntArray2767[0]);
-								Class151_Sub1.anInt2958 = 0;
+								Unsorted.anInt2958 = 0;
 								Class70.anInt1053 = Class163_Sub1.anInt2993;
 								Class3_Sub28_Sub10_Sub1.anInt4062 = Class38_Sub1.anInt2614;
 								Class36.anInt638 = 2;
@@ -733,7 +733,7 @@ final class Class3_Sub30_Sub1 extends RSByteBuffer {
 							Class3_Sub13_Sub1.outgoingBuffer.putLEShort(var2);
 							Class3_Sub13_Sub1.outgoingBuffer.putLEShort(var5);
 							Class3_Sub9.anInt2330 = 0;
-							Class151.aClass11_1933 = Class7.getRSInterface(var3);
+							Unsorted.aClass11_1933 = Class7.getRSInterface(var3);
 							KeyboardListener.anInt1918 = var2;
 						}
 
@@ -746,7 +746,7 @@ final class Class3_Sub30_Sub1 extends RSByteBuffer {
 							Class3_Sub28_Sub10_Sub1.anInt4062 = Class38_Sub1.anInt2614;
 							Class70.anInt1053 = Class163_Sub1.anInt2993;
 							Class36.anInt638 = 2;
-							Class151_Sub1.anInt2958 = 0;
+							Unsorted.anInt2958 = 0;
 							Class3_Sub13_Sub1.outgoingBuffer.putOpcode(73);
 							Class3_Sub13_Sub1.outgoingBuffer.putIntA(anInt872);
 							Class3_Sub13_Sub1.outgoingBuffer.putShort(Class82.anInt1152 + var3);
@@ -781,7 +781,7 @@ final class Class3_Sub30_Sub1 extends RSByteBuffer {
 							if(var8 != null) {
 								Class3_Sub28_Sub9.method582(Class102.player.anIntArray2755[0], 0, 1, false, 0, 2, var8.anIntArray2767[0], 1, 0, 2, var8.anIntArray2755[0], Class102.player.anIntArray2767[0]);
 								Class3_Sub28_Sub10_Sub1.anInt4062 = Class38_Sub1.anInt2614;
-								Class151_Sub1.anInt2958 = 0;
+								Unsorted.anInt2958 = 0;
 								Class36.anInt638 = 2;
 								Class70.anInt1053 = Class163_Sub1.anInt2993;
 								Class3_Sub13_Sub1.outgoingBuffer.putOpcode(106);
@@ -800,7 +800,7 @@ final class Class3_Sub30_Sub1 extends RSByteBuffer {
 							}
 
 							Class3_Sub28_Sub10_Sub1.anInt4062 = Class38_Sub1.anInt2614;
-							Class151_Sub1.anInt2958 = 0;
+							Unsorted.anInt2958 = 0;
 							Class70.anInt1053 = Class163_Sub1.anInt2993;
 							Class36.anInt638 = 2;
 							Class3_Sub13_Sub1.outgoingBuffer.putOpcode(33);
@@ -814,7 +814,7 @@ final class Class3_Sub30_Sub1 extends RSByteBuffer {
 							if(null != var11) {
 								Class3_Sub28_Sub9.method582(Class102.player.anIntArray2755[0], 0, 1, false, 0, 2, var11.anIntArray2767[0], 1, 0, 2, var11.anIntArray2755[0], Class102.player.anIntArray2767[0]);
 								Class70.anInt1053 = Class163_Sub1.anInt2993;
-								Class151_Sub1.anInt2958 = 0;
+								Unsorted.anInt2958 = 0;
 								Class3_Sub28_Sub10_Sub1.anInt4062 = Class38_Sub1.anInt2614;
 								Class36.anInt638 = 2;
 								Class3_Sub13_Sub1.outgoingBuffer.putOpcode(3);
@@ -831,8 +831,8 @@ final class Class3_Sub30_Sub1 extends RSByteBuffer {
 							Class25.method958((byte)-36);
 						}
 
-						if(Class151.aClass11_1933 != null && Class3_Sub9.anInt2330 == 0) {
-							Class20.method909(-106, Class151.aClass11_1933);
+						if(Unsorted.aClass11_1933 != null && Class3_Sub9.anInt2330 == 0) {
+							Class20.method909(-106, Unsorted.aClass11_1933);
 						}
 
 					}

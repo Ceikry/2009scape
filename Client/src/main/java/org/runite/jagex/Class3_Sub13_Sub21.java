@@ -52,7 +52,7 @@ final class Class3_Sub13_Sub21 extends Class3_Sub13 {
             try {
                if(++Class132.anInt1734 > 2000) {
                   if(null != Class3_Sub15.aClass89_2429) {
-                     Class3_Sub15.aClass89_2429.close(14821);
+                     Class3_Sub15.aClass89_2429.close();
                      Class3_Sub15.aClass89_2429 = null;
                   }
 
@@ -95,7 +95,7 @@ final class Class3_Sub13_Sub21 extends Class3_Sub13 {
                   if(null != Class3_Sub21.aClass155_2491) {
                      Class3_Sub21.aClass155_2491.method2159(66);
                   }
-                  response = Class3_Sub15.aClass89_2429.readByte(0);
+                  response = Class3_Sub15.aClass89_2429.readByte();
                   System.out.println("Response = " + response);
                   if(WorldListEntry.aClass155_2627 != null) {
                      WorldListEntry.aClass155_2627.method2159(64);
@@ -106,7 +106,7 @@ final class Class3_Sub13_Sub21 extends Class3_Sub13 {
                   if(response != 21) {
                      Class130.anInt1711 = response;
                      Canvas_Sub1.registryStage = 0;
-                     Class3_Sub15.aClass89_2429.close(14821);
+                     Class3_Sub15.aClass89_2429.close();
                      Class3_Sub15.aClass89_2429 = null;
                      return;
                   }
@@ -118,21 +118,21 @@ final class Class3_Sub13_Sub21 extends Class3_Sub13 {
                }
 
                if(3 == Canvas_Sub1.registryStage) {
-                  if(Class3_Sub15.aClass89_2429.availableBytes(-18358) < 1) {
+                  if(Class3_Sub15.aClass89_2429.availableBytes() < 1) {
                      return;
                   }
 
-                  Class3_Sub13_Sub33.aClass94Array3391 = new RSString[Class3_Sub15.aClass89_2429.readByte(0)];
+                  Class3_Sub13_Sub33.aClass94Array3391 = new RSString[Class3_Sub15.aClass89_2429.readByte()];
                   Canvas_Sub1.registryStage = 4;
                }
 
                if(Canvas_Sub1.registryStage == 4) {
-                  if(8 * Class3_Sub13_Sub33.aClass94Array3391.length > Class3_Sub15.aClass89_2429.availableBytes(-18358)) {
+                  if(8 * Class3_Sub13_Sub33.aClass94Array3391.length > Class3_Sub15.aClass89_2429.availableBytes()) {
                      return;
                   }
 
                   GraphicDefinition.incomingBuffer.index = 0;
-                  Class3_Sub15.aClass89_2429.readBytes(0, 8 * Class3_Sub13_Sub33.aClass94Array3391.length, GraphicDefinition.incomingBuffer.buffer);
+                  Class3_Sub15.aClass89_2429.readBytes(GraphicDefinition.incomingBuffer.buffer, 0, 8 * Class3_Sub13_Sub33.aClass94Array3391.length);
 
                   for(response = 0; response < Class3_Sub13_Sub33.aClass94Array3391.length; ++response) {
                      Class3_Sub13_Sub33.aClass94Array3391[response] = Class41.method1052(GraphicDefinition.incomingBuffer.getLong(-125));
@@ -140,13 +140,13 @@ final class Class3_Sub13_Sub21 extends Class3_Sub13 {
 
                   Class130.anInt1711 = 21;
                   Canvas_Sub1.registryStage = 0;
-                  Class3_Sub15.aClass89_2429.close(14821);
+                  Class3_Sub15.aClass89_2429.close();
                   Class3_Sub15.aClass89_2429 = null;
                   return;
                }
             } catch (IOException var2) {
                if(Class3_Sub15.aClass89_2429 != null) {
-                  Class3_Sub15.aClass89_2429.close(14821);
+                  Class3_Sub15.aClass89_2429.close();
                   Class3_Sub15.aClass89_2429 = null;
                }
 

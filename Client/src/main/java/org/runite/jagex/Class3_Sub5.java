@@ -36,7 +36,7 @@ final class Class3_Sub5 extends Class3 {
                      }
 
                      if(4.0D == (double)Class44.aFloat727) {
-                        var16 = IOHandler.aClass33_1238;
+                        var16 = Unsorted.aClass33_1238;
                      }
 
                      if((double)Class44.aFloat727 == 6.0D) {

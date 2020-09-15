@@ -11,7 +11,7 @@ final class Class3_Sub13_Sub12 extends Class3_Sub13 {
    static void method223(int var1, int var2, int var3, int var4, int var5, int var6, int var7) {
       try {
          if(var7 == var4) {
-            IOHandler.method1460(var1, var3, var6, var7, var2, var5);
+            Unsorted.method1460(var1, var3, var6, var7, var2, var5);
          } else {
 
             if(Class101.anInt1425 <= var2 - var7 && var7 + var2 <= Class3_Sub28_Sub18.anInt3765 && var3 - var4 >= Class159.anInt2020 && Class57.anInt902 >= var3 + var4) {

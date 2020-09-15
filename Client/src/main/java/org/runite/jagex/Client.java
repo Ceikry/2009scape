@@ -242,7 +242,7 @@ public final class Client extends GameShell {
 
             Class106.aClass67_1443 = null;
             if (Class3_Sub15.aClass89_2429 != null) {
-                Class3_Sub15.aClass89_2429.close(14821);
+                Class3_Sub15.aClass89_2429.close();
                 Class3_Sub15.aClass89_2429 = null;
             }
 
@@ -721,13 +721,13 @@ public final class Client extends GameShell {
                 }
 
                 if (3 == PacketParser.anInt80) {
-                    if (Class143.loadingStage != 0 && Class143.loadingStage != 5 && 0 >= Unsorted.js5Connection.availableBytes(-31379 ^ 15655)) {
+                    if (Class143.loadingStage != 0 && Class143.loadingStage != 5 && 0 >= Unsorted.js5Connection.availableBytes()) {
                         if (Class5.method830((byte) -55) + -Class3_Sub13_Sub30.aLong3366 > 30000) {
                             this.method46(1001);
                             return;
                         }
                     } else {
-                        int var5 = Unsorted.js5Connection.readByte(0);
+                        int var5 = Unsorted.js5Connection.readByte();
                         if (var5 != 0) {
                             this.method46(var5);
                             return;
@@ -1389,11 +1389,11 @@ public final class Client extends GameShell {
                         Class96.anInt1354 = 30;
                         Class3_Sub17.aClass94_2464 = TextCore.CreatedWorld;
                     } else if (Class96.anInt1354 == 30) {
-                        if (Class151.aClass8_1936 == null) {
-                            Class151.aClass8_1936 = new Class8(Class58.aClass66_917, Class3_Sub13_Sub14.aClass73_3159);
+                        if (Unsorted.aClass8_1936 == null) {
+                            Unsorted.aClass8_1936 = new Class8(Class58.aClass66_917, Class3_Sub13_Sub14.aClass73_3159);
                         }
 
-                        if (Class151.aClass8_1936.method837()) {
+                        if (Unsorted.aClass8_1936.method837()) {
                             Class75_Sub3.aClass153_2660 = Class8.getCacheIndex(false, true, true, 0);
                             Class3_Sub28_Sub19.aClass153_3772 = Class8.getCacheIndex(false, true, true, 1);
                             Class164.aClass153_2052 = Class8.getCacheIndex(true, true, false, 2);
@@ -1698,8 +1698,8 @@ public final class Client extends GameShell {
                 }
 
                 this.method48();
-                if (Class151.aClass8_1936 != null) {
-                    Class151.aClass8_1936.method838();
+                if (Unsorted.aClass8_1936 != null) {
+                    Unsorted.aClass8_1936.method838();
                 }
 
                 Class3_Sub29.method728();

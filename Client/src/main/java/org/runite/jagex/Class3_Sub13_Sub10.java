@@ -146,7 +146,7 @@ final class Class3_Sub13_Sub10 extends Class3_Sub13 {
       for(int var11 = var1; var11 <= var1 + 1; ++var11) {
          if(var11 != Class3_Sub17.anInt2456) {
             for(int var12 = var7; var12 <= var8; ++var12) {
-               if(var12 >= 0 && var12 < IOHandler.anInt1234) {
+               if(var12 >= 0 && var12 < Unsorted.anInt1234) {
                   for(int var13 = var9; var13 <= var10; ++var13) {
                      if(var13 >= 0 && var13 < Class3_Sub13_Sub15.anInt3179 && (!var6 || var12 >= var8 || var13 >= var10 || var13 < var3 && var12 != var2)) {
                         Class3_Sub2 var14 = Class75_Sub2.aClass3_Sub2ArrayArrayArray2638[var11][var12][var13];

@@ -46,11 +46,11 @@ final class Class3_Sub19 extends Class3 {
 
                for(var8 = 1; 104 + -1 > var8; ++var8) {
                   if((Unsorted.aByteArrayArrayArray113[var1][var8][var6] & 24) == 0) {
-                     IOHandler.method1469(var4, var7, 512, var1, var8, var6);
+                     Unsorted.method1469(var4, var7, 512, var1, var8, var6);
                   }
 
                   if(var1 < 3 && 0 != (Unsorted.aByteArrayArrayArray113[1 + var1][var8][var6] & 8)) {
-                     IOHandler.method1469(var4, var7, 512, var1 + 1, var8, var6);
+                     Unsorted.method1469(var4, var7, 512, var1 + 1, var8, var6);
                   }
 
                   var7 += 4;

@@ -38,7 +38,7 @@ final class Class66 {
                 this.anInt1006 += var4;
                 if (30000 < this.anInt1006) {
                     try {
-                        this.aClass89_1005.close(14821);
+                        this.aClass89_1005.close();
                     } catch (Exception var18) {
                     }
 
@@ -71,7 +71,7 @@ final class Class66 {
                     }
 
                     for (int var3 = 0; 100 > var3; ++var3) {
-                        var4 = this.aClass89_1005.availableBytes(-18358);
+                        var4 = this.aClass89_1005.availableBytes();
                         if (var4 < 0) {
                             throw new IOException();
                         }
@@ -102,7 +102,7 @@ final class Class66 {
                                 var7 = var4;
                             }
 
-                            this.aClass89_1005.readBytes(this.aClass3_Sub28_Sub10_Sub2_1012.aClass3_Sub30_4069.index, var7, this.aClass3_Sub28_Sub10_Sub2_1012.aClass3_Sub30_4069.buffer);
+                            this.aClass89_1005.readBytes(this.aClass3_Sub28_Sub10_Sub2_1012.aClass3_Sub30_4069.buffer, this.aClass3_Sub28_Sub10_Sub2_1012.aClass3_Sub30_4069.index, var7);
                             if (this.aByte1009 != 0) {
                                 for (var8 = 0; var8 < var7; ++var8) {
                                     this.aClass3_Sub28_Sub10_Sub2_1012.aClass3_Sub30_4069.buffer[this.aClass3_Sub28_Sub10_Sub2_1012.aClass3_Sub30_4069.index - -var8] = (byte) Class93.bitwiseXOR(this.aClass3_Sub28_Sub10_Sub2_1012.aClass3_Sub30_4069.buffer[this.aClass3_Sub28_Sub10_Sub2_1012.aClass3_Sub30_4069.index + var8], this.aByte1009);
@@ -124,7 +124,7 @@ final class Class66 {
                                 var6 = var4;
                             }
 
-                            this.aClass89_1005.readBytes(this.aClass3_Sub30_1008.index, var6, this.aClass3_Sub30_1008.buffer);
+                            this.aClass89_1005.readBytes(this.aClass3_Sub30_1008.buffer, this.aClass3_Sub30_1008.index, var6);
                             if (0 != this.aByte1009) {
                                 for (var7 = 0; var7 < var6; ++var7) {
                                     this.aClass3_Sub30_1008.buffer[var7 + this.aClass3_Sub30_1008.index] = (byte) Class93.bitwiseXOR(this.aClass3_Sub30_1008.buffer[var7 + this.aClass3_Sub30_1008.index], this.aByte1009);
@@ -182,7 +182,7 @@ final class Class66 {
                 } catch (IOException var19) {
                     var19.printStackTrace();
                     try {
-                        this.aClass89_1005.close(14821);
+                        this.aClass89_1005.close();
                     } catch (Exception var17) {
                     }
 
@@ -209,7 +209,7 @@ final class Class66 {
                 } catch (IOException var5) {
                     var5.printStackTrace();
                     try {
-                        this.aClass89_1005.close(14821);
+                        this.aClass89_1005.close();
                     } catch (Exception var4) {
                         var4.printStackTrace();
                     }
@@ -240,7 +240,7 @@ final class Class66 {
                 } catch (IOException var6) {
                     var6.printStackTrace();
                     try {
-                        this.aClass89_1005.close(14821);
+                        this.aClass89_1005.close();
                     } catch (Exception var5) {
                     }
 
@@ -264,7 +264,7 @@ final class Class66 {
     final void method1249(boolean var1, IOHandler stream) {
         if (null != this.aClass89_1005) {
             try {
-                this.aClass89_1005.close(14821);
+                this.aClass89_1005.close();
             } catch (Exception var8) {
             }
 
@@ -293,7 +293,7 @@ final class Class66 {
                             } catch (IOException var7) {
                                 var7.printStackTrace();
                                 try {
-                                    this.aClass89_1005.close(14821);
+                                    this.aClass89_1005.close();
                                 } catch (Exception var6) {
                                 }
 
@@ -322,7 +322,7 @@ final class Class66 {
 
     final void method1252() {
         try {
-            this.aClass89_1005.close(14821);
+            this.aClass89_1005.close();
         } catch (Exception var4) {
         }
 
@@ -338,7 +338,7 @@ final class Class66 {
 
     final void method1254() {
         if (this.aClass89_1005 != null) {
-            this.aClass89_1005.close(14821);
+            this.aClass89_1005.close();
         }
     }
 
@@ -375,7 +375,7 @@ final class Class66 {
             } catch (IOException var5) {
                 var5.printStackTrace();
                 try {
-                    this.aClass89_1005.close(14821);
+                    this.aClass89_1005.close();
                 } catch (Exception var4) {
                 }
 
