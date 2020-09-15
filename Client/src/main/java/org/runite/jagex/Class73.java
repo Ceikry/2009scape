@@ -1,5 +1,6 @@
 package org.runite.jagex;
 import org.runite.Properties;
+import org.rs09.client.collections.Queue;
 
 import java.nio.charset.StandardCharsets;
 import java.util.Objects;

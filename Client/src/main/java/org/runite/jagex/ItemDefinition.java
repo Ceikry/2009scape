@@ -1,6 +1,7 @@
 package org.runite.jagex;
 import org.rs09.client.Linkable;
 import org.rs09.client.collections.HashTable;
+import org.rs09.client.collections.Queue;
 
 import java.awt.Component;
 import java.nio.charset.StandardCharsets;

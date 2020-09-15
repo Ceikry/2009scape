@@ -1,4 +1,6 @@
 package org.runite.jagex;
+import org.rs09.client.collections.Queue;
+
 import java.awt.event.ActionEvent;
 import java.io.IOException;
 import java.util.Objects;
