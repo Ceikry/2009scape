@@ -461,7 +461,7 @@ public final class Client extends GameShell {
     }
 
     static Class3_Sub1 method44(RSInterface var0) {
-        Class3_Sub1 var1 = (Class3_Sub1) Class124.aHashTable_1659.get(((long) var0.anInt279 << 32) + (long) var0.anInt191);
+        Class3_Sub1 var1 = (Class3_Sub1) Class124.aHashTable_1659.get(((long) var0.componentHash << 32) + (long) var0.anInt191);
         return var1 != null ? var1 : var0.aClass3_Sub1_257;
     }
 
@@ -836,8 +836,8 @@ public final class Client extends GameShell {
                     var14 = var4;
                     var15 = var5;
                 } else {
-                    int var16 = var10 + inter.anInt168;
-                    int var17 = var11 + inter.anInt193;
+                    int var16 = var10 + inter.width;
+                    int var17 = var11 + inter.height;
                     if (inter.type == 9) {
                         ++var16;
                         ++var17;
@@ -903,7 +903,7 @@ public final class Client extends GameShell {
                                 } else if (inter.anIntArray310 == null || Class44.anInt719 >= inter.anIntArray310[var19]) {
                                     byte var20 = inter.aByteArray231[var19];
                                     if (var20 == 0 || ((var20 & 2) == 0 || ObjectDefinition.aBooleanArray1490[86]) && ((var20 & 1) == 0 || ObjectDefinition.aBooleanArray1490[82]) && ((var20 & 4) == 0 || ObjectDefinition.aBooleanArray1490[81])) {
-                                        Unsorted.method66(Class3_Sub28_Sub14.aClass94_3672, -1, var19 + 1, (byte) -29, inter.anInt279);
+                                        Unsorted.method66(Class3_Sub28_Sub14.aClass94_3672, -1, var19 + 1, (byte) -29, inter.componentHash);
                                         var21 = inter.anIntArray299[var19];
                                         if (inter.anIntArray310 == null) {
                                             inter.anIntArray310 = new int[inter.aByteArray263.length];
@@ -923,7 +923,7 @@ public final class Client extends GameShell {
                             Class3_Sub28_Sub6.a(Class38_Sub1.anInt2614 - var11, Class163_Sub1.anInt2993 - var10, 97, inter);
                         }
 
-                        if (Class56.aClass11_886 != null && Class56.aClass11_886 != inter && var26 && (method44(inter).method98() || (inter.anInt279 == 49938505 && Class56.aClass11_886.anInt279 == 49938505))) {
+                        if (Class56.aClass11_886 != null && Class56.aClass11_886 != inter && var26 && (method44(inter).method98() || (inter.componentHash == 49938505 && Class56.aClass11_886.componentHash == 49938505))) {
                             Class27.aClass11_526 = inter;
                         }
                         if (inter == PacketParser.aClass11_88) {
@@ -969,8 +969,8 @@ public final class Client extends GameShell {
                                     Class3_Sub28_Sub3.aClass11_3551 = inter;
                                     if (var18) {
                                         if (ObjectDefinition.aBooleanArray1490[82] && Class3_Sub13_Sub26.rights > 0) {
-                                            var19 = (int) ((double) (Class163_Sub1.anInt2993 - var10 - inter.anInt168 / 2) * 2.0D / (double) Class44.aFloat727);
-                                            var29 = (int) ((double) (Class38_Sub1.anInt2614 - var11 - inter.anInt193 / 2) * 2.0D / (double) Class44.aFloat727);
+                                            var19 = (int) ((double) (Class163_Sub1.anInt2993 - var10 - inter.width / 2) * 2.0D / (double) Class44.aFloat727);
+                                            var29 = (int) ((double) (Class38_Sub1.anInt2614 - var11 - inter.height / 2) * 2.0D / (double) Class44.aFloat727);
                                             var21 = Class3_Sub28_Sub1.anInt3536 + var19;
                                             int var32 = Class3_Sub4.anInt2251 + var29;
                                             int var23 = var21 + Class3_Sub13_Sub21.anInt3256;
@@ -1006,7 +1006,7 @@ public final class Client extends GameShell {
 
                                 if (inter.anInt189 == 1401) {
                                     if (var25) {
-                                        Class3_Sub13_Sub17.method253(inter.anInt168, Unsorted.anInt1709 - var11, Class126.anInt1676 - var10, inter.anInt193);
+                                        Class3_Sub13_Sub17.method253(inter.width, Unsorted.anInt1709 - var11, Class126.anInt1676 - var10, inter.height);
                                     }
                                     continue;
                                 }
@@ -1308,18 +1308,18 @@ public final class Client extends GameShell {
                             Class20.aClass11_439 = inter;
                         }
 
-                        if (inter.anInt252 > inter.anInt193) {
-                            Class137.method1819(Unsorted.anInt1709, inter.anInt193, inter, Class126.anInt1676, var10 + inter.anInt168, var11, inter.anInt252);
+                        if (inter.anInt252 > inter.height) {
+                            Class137.method1819(Unsorted.anInt1709, inter.height, inter, Class126.anInt1676, var10 + inter.width, var11, inter.anInt252);
                         }
                     }
 
                     if (inter.type == 0) {
-                        handleItemSwitch(interfaces, inter.anInt279, var12, var13, var14, var15, var10 - inter.anInt247, var11 - inter.anInt208);
+                        handleItemSwitch(interfaces, inter.componentHash, var12, var13, var14, var15, var10 - inter.anInt247, var11 - inter.anInt208);
                         if (inter.aClass11Array262 != null) {
-                            handleItemSwitch(inter.aClass11Array262, inter.anInt279, var12, var13, var14, var15, var10 - inter.anInt247, var11 - inter.anInt208);
+                            handleItemSwitch(inter.aClass11Array262, inter.componentHash, var12, var13, var14, var15, var10 - inter.anInt247, var11 - inter.anInt208);
                         }
 
-                        Class3_Sub31 var28 = (Class3_Sub31) Class3_Sub13_Sub17.aHashTable_3208.get((long) inter.anInt279);
+                        Class3_Sub31 var28 = (Class3_Sub31) Class3_Sub13_Sub17.aHashTable_3208.get((long) inter.componentHash);
                         if (var28 != null) {
                             GraphicDefinition.method967(var10, var13, var11, var14, var28.anInt2602, var12, var15);
                         }

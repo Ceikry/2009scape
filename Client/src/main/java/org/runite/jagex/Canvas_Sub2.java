@@ -35,12 +35,12 @@ final class Canvas_Sub2 extends Canvas {
                      if(null == GameObject.aClass11ArrayArray1834[archive][fileId]) { 
                         byte[] var4 = Class3_Sub13_Sub29.aClass153_3361.getFile(archive, fileId);
                         if(var4 != null) {
-                           RSInterface var5 = GameObject.aClass11ArrayArray1834[archive][fileId] = new RSInterface();
-                           var5.anInt279 = fileId + (archive << 16);
-                           if(-1 == var4[0]) {
-                              var5.decodeScriptFormat(new DataBuffer(var4));
+                           RSInterface iface = GameObject.aClass11ArrayArray1834[archive][fileId] = new RSInterface();
+                           iface.componentHash = fileId + (archive << 16);
+                           if(var4[0] == -1) {
+                              iface.decodeScriptFormat(new DataBuffer(var4));
                            } else {
-                              var5.decodeNoScripts(-115, new DataBuffer(var4));
+                              iface.decodeNoScripts(new DataBuffer(var4));
                            }
                         }
                      }

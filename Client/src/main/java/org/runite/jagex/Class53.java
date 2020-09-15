@@ -22,7 +22,7 @@ final class Class53 {
       try {
          int var7 = var3 * var3 + var4 * var4;
          if(var7 <= 360000) {
-            int var8 = Math.min(var5.anInt168 / 2, var5.anInt193 / 2);
+            int var8 = Math.min(var5.width / 2, var5.height / 2);
 
             if(var8 * var8 >= var7) {
                Class38_Sub1.method1030(var5, Class129_Sub1.aClass3_Sub28_Sub16Array2690[var0], var4, var3, var1, var2);
@@ -39,9 +39,9 @@ final class Class53 {
                int var16 = (int)(Math.sin(var14) * (double)var8);
                int var17 = (int)(Math.cos(var14) * (double)var8);
                if(HDToolKit.highDetail) {
-                  ((Class3_Sub28_Sub16_Sub1)Class3_Sub13_Sub39.aClass3_Sub28_Sub16Array3458[var0]).method648(240, 240, (var5.anInt168 / 2 + var2 + var16) * 16, 16 * (-var17 + var5.anInt193 / 2 + var1), (int)(10430.378D * var14));
+                  ((Class3_Sub28_Sub16_Sub1)Class3_Sub13_Sub39.aClass3_Sub28_Sub16Array3458[var0]).method648(240, 240, (var5.width / 2 + var2 + var16) * 16, 16 * (-var17 + var5.height / 2 + var1), (int)(10430.378D * var14));
                } else {
-                  ((Class3_Sub28_Sub16_Sub2)Class3_Sub13_Sub39.aClass3_Sub28_Sub16Array3458[var0]).method660(-10 + var16 + var5.anInt168 / 2 + var2, -10 + var5.anInt193 / 2 + var1 + -var17, var14);
+                  ((Class3_Sub28_Sub16_Sub2)Class3_Sub13_Sub39.aClass3_Sub28_Sub16Array3458[var0]).method660(-10 + var16 + var5.width / 2 + var2, -10 + var5.height / 2 + var1 + -var17, var14);
                }
             }
 

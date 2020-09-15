@@ -486,8 +486,8 @@ final class Class3_Sub13_Sub13 extends Class3_Sub13 {
                                  var20.anInt308 = var16.anInt3597;
                                  if (-1 != var20.anInt192) {
                                     if (var20.anInt184 <= 0) {
-                                       if (var20.width > 0) {
-                                          var20.anInt164 = 32 * var20.anInt164 / var20.width;
+                                       if (var20.defWidth > 0) {
+                                          var20.anInt164 = 32 * var20.anInt164 / var20.defWidth;
                                        }
                                     } else {
                                        var20.anInt164 = var20.anInt164 * 32 / var20.anInt184;
@@ -513,17 +513,17 @@ final class Class3_Sub13_Sub13 extends Class3_Sub13 {
                               }
                            } else if (var3 == 11) {
                               var20 = Class7.getRSInterface(var4);
-                              Objects.requireNonNull(var20).anInt306 = var20.x = var16.anInt3598;
-                              var20.aByte273 = 0;
-                              var20.aByte162 = 0;
-                              var20.anInt210 = var20.y = var16.anInt3597;
+                              Objects.requireNonNull(var20).anInt306 = var20.defX = var16.anInt3598;
+                              var20.horizontalPos = 0;
+                              var20.verticalPos = 0;
+                              var20.anInt210 = var20.defY = var16.anInt3597;
                               Class20.method909(110, var20);
                            } else if (var3 == 12) {
                               var20 = Class7.getRSInterface(var4);
                               var6 = var16.anInt3598;
                               if (null != var20 && 0 == var20.type) {
-                                 if (var6 > var20.anInt252 + -var20.anInt193) {
-                                    var6 = var20.anInt252 + -var20.anInt193;
+                                 if (var6 > var20.anInt252 + -var20.height) {
+                                    var6 = var20.anInt252 + -var20.height;
                                  }
 
                                  if (0 > var6) {
@@ -592,20 +592,20 @@ final class Class3_Sub13_Sub13 extends Class3_Sub13 {
 
                                     while (var6 != var5) {
                                        if (var5 > var6) {
-                                          var17.method864(-1 + var5, var5, -71);
+                                          var17.method864(-1 + var5, var5);
                                           --var5;
                                        } else {
-                                          var17.method864(1 + var5, var5, -95);
+                                          var17.method864(1 + var5, var5);
                                           ++var5;
                                        }
                                     }
                                  } else {
-                                    var17.method864(Class140_Sub2.anInt2701, PacketParser.anInt86, -93);
+                                    var17.method864(Class140_Sub2.anInt2701, PacketParser.anInt86);
                                  }
 
                                  Class3_Sub13_Sub1.outgoingBuffer.putOpcode(231);
                                  Class3_Sub13_Sub1.outgoingBuffer.putShort(PacketParser.anInt86);
-                                 Class3_Sub13_Sub1.outgoingBuffer.putLEInt(Class67.aClass11_1017.anInt279, (byte)-125);
+                                 Class3_Sub13_Sub1.outgoingBuffer.putLEInt(Class67.aClass11_1017.componentHash, (byte)-125);
                                  Class3_Sub13_Sub1.outgoingBuffer.putShortA(Class140_Sub2.anInt2701);
                                  Class3_Sub13_Sub1.outgoingBuffer.putByteS(var18);
                               }

@@ -19,7 +19,7 @@ final class Class38_Sub1 extends Class38 {
 
              int var9 = var3 * var3 - -(var2 * var2);
             int var7 = 2047 & Class3_Sub13_Sub8.anInt3102 + GraphicDefinition.CAMERA_DIRECTION;
-            int var8 = Math.max(var0.anInt168 / 2, var0.anInt193 / 2) - -10;
+            int var8 = Math.max(var0.width / 2, var0.height / 2) - -10;
             if(var8 * var8 >= var9) {
                int var10 = Class51.anIntArray840[var7];
                var10 = var10 * 256 / (Class164_Sub2.anInt3020 - -256);
@@ -28,9 +28,9 @@ final class Class38_Sub1 extends Class38 {
                int var12 = var10 * var2 - -(var3 * var11) >> 16;
                int var13 = var11 * var2 + -(var3 * var10) >> 16;
                if(HDToolKit.highDetail) {
-                  ((Class3_Sub28_Sub16_Sub1)var1).method645(var0.anInt168 / 2 + var6 + var12 - var1.anInt3697 / 2, var0.anInt193 / 2 + var4 - (var13 + var1.anInt3706 / 2), (Class3_Sub28_Sub16_Sub1)var0.method866(false));
+                  ((Class3_Sub28_Sub16_Sub1)var1).method645(var0.width / 2 + var6 + var12 - var1.anInt3697 / 2, var0.height / 2 + var4 - (var13 + var1.anInt3706 / 2), (Class3_Sub28_Sub16_Sub1)var0.method866(false));
                } else {
-                  ((Class3_Sub28_Sub16_Sub2)var1).method666(var0.anInt168 / 2 + var6 - -var12 + -(var1.anInt3697 / 2), -(var1.anInt3706 / 2) + var0.anInt193 / 2 + var4 + -var13, var0.anIntArray207, var0.anIntArray291);
+                  ((Class3_Sub28_Sub16_Sub2)var1).method666(var0.width / 2 + var6 - -var12 + -(var1.anInt3697 / 2), -(var1.anInt3706 / 2) + var0.height / 2 + var4 + -var13, var0.anIntArray207, var0.anIntArray291);
                }
 
             }

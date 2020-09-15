@@ -102,25 +102,25 @@ abstract class Class3_Sub28_Sub7 extends Node {
       try {
          Class82.anInt1150 = -Class3_Sub13_Sub21.anInt3256 + var1;
 
-         int var3 = -((int)((float)Class3_Sub28_Sub3.aClass11_3551.anInt168 / Class44.aFloat727)) + Class82.anInt1150;
-         int var4 = Class82.anInt1150 + (int)((float)Class3_Sub28_Sub3.aClass11_3551.anInt168 / Class44.aFloat727);
+         int var3 = -((int)((float)Class3_Sub28_Sub3.aClass11_3551.width / Class44.aFloat727)) + Class82.anInt1150;
+         int var4 = Class82.anInt1150 + (int)((float)Class3_Sub28_Sub3.aClass11_3551.width / Class44.aFloat727);
          if(var3 < 0) {
-            Class82.anInt1150 = (int)((float)Class3_Sub28_Sub3.aClass11_3551.anInt168 / Class44.aFloat727);
+            Class82.anInt1150 = (int)((float)Class3_Sub28_Sub3.aClass11_3551.width / Class44.aFloat727);
          }
 
          Class3_Sub13_Sub30.anInt3362 = Class108.anInt1460 + -1 + Class2.anInt65 + -var2;
-         int var6 = (int)((float)Class3_Sub28_Sub3.aClass11_3551.anInt193 / Class44.aFloat727) + Class3_Sub13_Sub30.anInt3362;
-         int var5 = Class3_Sub13_Sub30.anInt3362 - (int)((float)Class3_Sub28_Sub3.aClass11_3551.anInt193 / Class44.aFloat727);
+         int var6 = (int)((float)Class3_Sub28_Sub3.aClass11_3551.height / Class44.aFloat727) + Class3_Sub13_Sub30.anInt3362;
+         int var5 = Class3_Sub13_Sub30.anInt3362 - (int)((float)Class3_Sub28_Sub3.aClass11_3551.height / Class44.aFloat727);
          if(Class23.anInt455 < var4) {
-            Class82.anInt1150 = Class23.anInt455 + -((int)((float)Class3_Sub28_Sub3.aClass11_3551.anInt168 / Class44.aFloat727));
+            Class82.anInt1150 = Class23.anInt455 + -((int)((float)Class3_Sub28_Sub3.aClass11_3551.width / Class44.aFloat727));
          }
 
          if(var5 < 0) {
-            Class3_Sub13_Sub30.anInt3362 = (int)((float)Class3_Sub28_Sub3.aClass11_3551.anInt193 / Class44.aFloat727);
+            Class3_Sub13_Sub30.anInt3362 = (int)((float)Class3_Sub28_Sub3.aClass11_3551.height / Class44.aFloat727);
          }
 
          if(var6 > Class108.anInt1460) {
-            Class3_Sub13_Sub30.anInt3362 = -((int)((float)Class3_Sub28_Sub3.aClass11_3551.anInt193 / Class44.aFloat727)) + Class108.anInt1460;
+            Class3_Sub13_Sub30.anInt3362 = -((int)((float)Class3_Sub28_Sub3.aClass11_3551.height / Class44.aFloat727)) + Class108.anInt1460;
          }
 
       } catch (RuntimeException var7) {

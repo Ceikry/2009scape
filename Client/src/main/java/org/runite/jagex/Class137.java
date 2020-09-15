@@ -47,7 +47,7 @@ final class Class137 {
          }
 
          if(Class29.anInt561 != 0) {
-            var8 = var2.anInt168;
+            var8 = var2.width;
             if(var4 >= -var8 + var5 && var0 >= var6 && var4 < 16 + var5 && var1 + var6 >= var0) {
                var2.anInt208 += 45 * Class29.anInt561;
                Class20.method909(-116, var2);

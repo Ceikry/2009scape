@@ -462,53 +462,48 @@ public class Unsorted {
        }
     }
 
-   static void method1224(RSInterface var0, int var2, int var3) {
-      try {
-            if (0 == var0.aByte162) {
-               var0.anInt210 = var0.y;
-            } else if (var0.aByte162 == 1) {
-               var0.anInt210 = (var2 - var0.anInt193) / 2 + var0.y;
-            } else if (2 == var0.aByte162) {
-               var0.anInt210 = var2 - var0.anInt193 - var0.y;
-            } else if (var0.aByte162 == 3) {
-               var0.anInt210 = var0.y * var2 >> 14;
-            } else if (4 == var0.aByte162) {
-               var0.anInt210 = (var2 * var0.y >> 14) + (-var0.anInt193 + var2) / 2;
-            } else {
-               var0.anInt210 = -(var2 * var0.y >> 14) + -var0.anInt193 + var2;
+   static void calculateInterfacePosition(RSInterface iface, int parentWidth, int parentHeight) {
+         if (iface.verticalPos == 0) {
+            iface.anInt210 = iface.defY;
+         } else if (iface.verticalPos == 1) {
+            iface.anInt210 = (parentHeight - iface.height) / 2 + iface.defY;
+         } else if (iface.verticalPos == 2) {
+            iface.anInt210 = parentHeight - iface.height - iface.defY;
+         } else if (iface.verticalPos == 3) {
+            iface.anInt210 = iface.defY * parentHeight >> 14;
+         } else if (iface.verticalPos == 4) {
+            iface.anInt210 = (parentHeight * iface.defY >> 14) + (-iface.height + parentHeight) / 2;
+         } else {
+            iface.anInt210 = -(parentHeight * iface.defY >> 14) + -iface.height + parentHeight;
+         }
+
+         if (0 == iface.horizontalPos) {
+            iface.anInt306 = iface.defX;
+         } else if (iface.horizontalPos == 1) {
+            iface.anInt306 = iface.defX + (parentWidth - iface.width) / 2;
+         } else if (iface.horizontalPos == 2) {
+            iface.anInt306 = -iface.defX + -iface.width + parentWidth;
+         } else if (3 == iface.horizontalPos) {
+            iface.anInt306 = iface.defX * parentWidth >> 14;
+         } else if (4 == iface.horizontalPos) {
+            iface.anInt306 = (iface.defX * parentWidth >> 14) + (parentWidth - iface.width) / 2;
+         } else {
+            iface.anInt306 = -(parentWidth * iface.defX >> 14) + parentWidth + -iface.width;
+         }
+
+         if (aBoolean1040 && (Client.method44(iface).anInt2205 != 0 || iface.type == 0)) {
+            if (iface.anInt210 < 0) {
+               iface.anInt210 = 0;
+            } else if (iface.height + iface.anInt210 > parentHeight) {
+               iface.anInt210 = parentHeight + -iface.height;
             }
 
-            if (0 == var0.aByte273) {
-               var0.anInt306 = var0.x;
-            } else if (var0.aByte273 == 1) {
-               var0.anInt306 = var0.x + (var3 - var0.anInt168) / 2;
-            } else if (var0.aByte273 == 2) {
-               var0.anInt306 = -var0.x + -var0.anInt168 + var3;
-            } else if (3 == var0.aByte273) {
-               var0.anInt306 = var0.x * var3 >> 14;
-            } else if (4 == var0.aByte273) {
-               var0.anInt306 = (var0.x * var3 >> 14) + (var3 - var0.anInt168) / 2;
-            } else {
-               var0.anInt306 = -(var3 * var0.x >> 14) + var3 + -var0.anInt168;
+            if (0 > iface.anInt306) {
+               iface.anInt306 = 0;
+            } else if (parentWidth < iface.anInt306 - -iface.width) {
+               iface.anInt306 = parentWidth + -iface.width;
             }
-
-            if (aBoolean1040 && (Client.method44(var0).anInt2205 != 0 || var0.type == 0)) {
-               if (var0.anInt210 < 0) {
-                  var0.anInt210 = 0;
-               } else if (var0.anInt193 + var0.anInt210 > var2) {
-                  var0.anInt210 = var2 + -var0.anInt193;
-               }
-
-               if (0 > var0.anInt306) {
-                  var0.anInt306 = 0;
-               } else if (var3 < var0.anInt306 - -var0.anInt168) {
-                  var0.anInt306 = var3 + -var0.anInt168;
-               }
-            }
-
-      } catch (RuntimeException var5) {
-            throw Class44.clientError(var5, "ii.B(" + (var0 != null ? "{...}" : "null") + ',' + 23730 + ',' + var2 + ',' + var3 + ')');
-      }
+         }
    }
 
    static void method1225() {
@@ -1072,14 +1067,14 @@ public class Unsorted {
 
    public static void method2104(RSInterface var0, boolean var1, int var2) {
        try {
-           int var4 = var0.anInt240 != 0 ? var0.anInt240 : var0.anInt168;
-           int var5 = var0.anInt252 != 0 ? var0.anInt252 : var0.anInt193;
-           Class158.method2183(var0.anInt279, var1, var4, var5, GameObject.aClass11ArrayArray1834[var0.anInt279 >> 16]);
+           int var4 = var0.anInt240 != 0 ? var0.anInt240 : var0.width;
+           int var5 = var0.anInt252 != 0 ? var0.anInt252 : var0.height;
+           Class158.method2183(var0.componentHash, var1, var4, var5, GameObject.aClass11ArrayArray1834[var0.componentHash >> 16]);
            if (var0.aClass11Array262 != null) {
-               Class158.method2183(var0.anInt279, var1, var4, var5, var0.aClass11Array262);
+               Class158.method2183(var0.componentHash, var1, var4, var5, var0.aClass11Array262);
            }
 
-           Class3_Sub31 var6 = (Class3_Sub31) Class3_Sub13_Sub17.aHashTable_3208.get((long) var0.anInt279);
+           Class3_Sub31 var6 = (Class3_Sub31) Class3_Sub13_Sub17.aHashTable_3208.get((long) var0.componentHash);
            if (var6 != null) {
                Class75_Sub4.method1352(var5, var1, var6.anInt2602, var4);
            }

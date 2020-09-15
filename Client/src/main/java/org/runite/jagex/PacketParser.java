@@ -1779,8 +1779,8 @@ final class PacketParser {
                 }
 
                 int var2 = Unsorted.anInt1709;
-                if (var1 - -Class56.aClass11_886.anInt168 > Class3_Sub13_Sub13.anInt3156 + aClass11_88.anInt168) {
-                    var1 = -Class56.aClass11_886.anInt168 + Class3_Sub13_Sub13.anInt3156 + aClass11_88.anInt168;
+                if (var1 - -Class56.aClass11_886.width > Class3_Sub13_Sub13.anInt3156 + aClass11_88.width) {
+                    var1 = -Class56.aClass11_886.width + Class3_Sub13_Sub13.anInt3156 + aClass11_88.width;
                 }
 
                 var2 -= Class95.anInt1336;
@@ -1788,8 +1788,8 @@ final class PacketParser {
                     var2 = Class134.anInt1761;
                 }
 
-                if (Class134.anInt1761 - -aClass11_88.anInt193 < var2 - -Class56.aClass11_886.anInt193) {
-                    var2 = Class134.anInt1761 + aClass11_88.anInt193 + -Class56.aClass11_886.anInt193;
+                if (Class134.anInt1761 - -aClass11_88.height < var2 - -Class56.aClass11_886.height) {
+                    var2 = Class134.anInt1761 + aClass11_88.height + -Class56.aClass11_886.height;
                 }
 
                 int var4 = var2 - Class3_Sub2.anInt2218;
@@ -1827,9 +1827,9 @@ final class PacketParser {
                             withInter = Class56.aClass11_886;
                         }
                         Class3_Sub13_Sub1.outgoingBuffer.putOpcode(79);
-                        Class3_Sub13_Sub1.outgoingBuffer.putIntB(-93, Class56.aClass11_886.anInt279);
+                        Class3_Sub13_Sub1.outgoingBuffer.putIntB(-93, Class56.aClass11_886.componentHash);
                         Class3_Sub13_Sub1.outgoingBuffer.putLEShort(withInter.anInt191);
-                        Class3_Sub13_Sub1.outgoingBuffer.putInt(-125, withInter.anInt279);
+                        Class3_Sub13_Sub1.outgoingBuffer.putInt(-125, withInter.componentHash);
                         Class3_Sub13_Sub1.outgoingBuffer.putLEShort(Class56.aClass11_886.anInt191);
 
                         // && client.method42(Class56.aClass11_886) != null) {

@@ -176,31 +176,31 @@ final class Class3_Sub24_Sub4 extends Class3_Sub24 {
       try {
 
          if(var3.anInt318 == 1) {
-            method1177(-1, 0L, (byte)-78, Class3_Sub28_Sub14.aClass94_3672, 0, (short)8, var3.aClass94_289, var3.anInt279);
+            method1177(-1, 0L, (byte)-78, Class3_Sub28_Sub14.aClass94_3672, 0, (short)8, var3.aClass94_289, var3.componentHash);
          }
 
          RSString var4;
          if(var3.anInt318 == 2 && !GameObject.aBoolean1837) {
             var4 = Class53.method1174(var3, (byte)-31);
             if(null != var4) {
-               method1177(-1, 0L, (byte)-120, RenderAnimationDefinition.method903(new RSString[]{RSString.of("<col=00ff00>"), var3.aClass94_243}, (byte)-94), -1, (short)32, var4, var3.anInt279);
+               method1177(-1, 0L, (byte)-120, RenderAnimationDefinition.method903(new RSString[]{RSString.of("<col=00ff00>"), var3.aClass94_243}, (byte)-94), -1, (short)32, var4, var3.componentHash);
             }
          }
 
          if(var3.anInt318 == 3) {
-            method1177(-1, 0L, (byte)-59, Class3_Sub28_Sub14.aClass94_3672, 0, (short)28, TextCore.HasClose, var3.anInt279);
+            method1177(-1, 0L, (byte)-59, Class3_Sub28_Sub14.aClass94_3672, 0, (short)28, TextCore.HasClose, var3.componentHash);
          }
 
          if(var3.anInt318 == 4) {
-            method1177(-1, 0L, (byte)-71, Class3_Sub28_Sub14.aClass94_3672, 0, (short)59, var3.aClass94_289, var3.anInt279);
+            method1177(-1, 0L, (byte)-71, Class3_Sub28_Sub14.aClass94_3672, 0, (short)59, var3.aClass94_289, var3.componentHash);
          }
 
          if(var3.anInt318 == 5) {
-            method1177(-1, 0L, (byte)-92, Class3_Sub28_Sub14.aClass94_3672, 0, (short)51, var3.aClass94_289, var3.anInt279);
+            method1177(-1, 0L, (byte)-92, Class3_Sub28_Sub14.aClass94_3672, 0, (short)51, var3.aClass94_289, var3.componentHash);
          }
 
          if(var3.anInt318 == 6 && Class3_Sub13_Sub7.aClass11_3087 == null) {
-            method1177(-1, 0L, (byte)-100, Class3_Sub28_Sub14.aClass94_3672, -1, (short)41, var3.aClass94_289, var3.anInt279);
+            method1177(-1, 0L, (byte)-100, Class3_Sub28_Sub14.aClass94_3672, -1, (short)41, var3.aClass94_289, var3.componentHash);
          }
 
          int var5;
@@ -208,8 +208,8 @@ final class Class3_Sub24_Sub4 extends Class3_Sub24 {
          if(var3.type == 2) {
             var15 = 0;
 
-            for(var5 = 0; var3.height > var5; ++var5) {
-               for(int var6 = 0; var6 < var3.width; ++var6) {
+            for(var5 = 0; var3.defHeight > var5; ++var5) {
+               for(int var6 = 0; var6 < var3.defWidth; ++var6) {
                   int var7 = (32 - -var3.anInt285) * var6;
                   int var8 = (32 + var3.anInt290) * var5;
                   if(var15 < 20) {
@@ -224,13 +224,13 @@ final class Class3_Sub24_Sub4 extends Class3_Sub24 {
                         Class3_Sub1 var9 = Client.method44(var3);
                         ItemDefinition var10 = Class38.getItemDefinition(var3.itemAmounts[var15] + -1, (byte)69);
                         if(1 == Class164_Sub1.anInt3012 && var9.method99()) {
-                           if(var3.anInt279 != Class3_Sub28_Sub18.anInt3764 || var15 != Class110.anInt1473) {
-                              method1177(-1, (long)var10.itemId, (byte)-91, RenderAnimationDefinition.method903(new RSString[]{RenderAnimationDefinition.aClass94_378, ColorCore.BankItemColor, var10.name}, (byte)-59), var15, (short)40, TextCore.HasUse, var3.anInt279);
+                           if(var3.componentHash != Class3_Sub28_Sub18.anInt3764 || var15 != Class110.anInt1473) {
+                              method1177(-1, (long)var10.itemId, (byte)-91, RenderAnimationDefinition.method903(new RSString[]{RenderAnimationDefinition.aClass94_378, ColorCore.BankItemColor, var10.name}, (byte)-59), var15, (short)40, TextCore.HasUse, var3.componentHash);
                            }
                         } else if(GameObject.aBoolean1837 && var9.method99()) {
                            Class3_Sub28_Sub9 var18 = Unsorted.anInt1038 != -1 ?Class61.method1210(Unsorted.anInt1038):null;
                            if(0 != (16 & Class164.anInt2051) && (var18 == null || var18.anInt3614 != var10.method1115(var18.anInt3614, 103, Unsorted.anInt1038))) {
-                              method1177(Class144.anInt1887, (long)var10.itemId, (byte)-89, RenderAnimationDefinition.method903(new RSString[]{Class40.aClass94_676, ColorCore.BankItemColor, var10.name}, (byte)-122), var15, (short)3, Class3_Sub28_Sub9.aClass94_3621, var3.anInt279);
+                              method1177(Class144.anInt1887, (long)var10.itemId, (byte)-89, RenderAnimationDefinition.method903(new RSString[]{Class40.aClass94_676, ColorCore.BankItemColor, var10.name}, (byte)-122), var15, (short)3, Class3_Sub28_Sub9.aClass94_3621, var3.componentHash);
                            }
                         } else {
                            RSString[] inventoryOptions = var10.inventoryOptions;
@@ -259,13 +259,13 @@ final class Class3_Sub24_Sub4 extends Class3_Sub24 {
                                     } else {
                                        var13 = 58;
                                     }
-                                    method1177(-1, (long)var10.itemId, (byte)-65, RenderAnimationDefinition.method903(new RSString[]{ColorCore.ItemBackpackColor, var10.name}, (byte)-66), var15, var13, inventoryOptions[var12], var3.anInt279);
+                                    method1177(-1, (long)var10.itemId, (byte)-65, RenderAnimationDefinition.method903(new RSString[]{ColorCore.ItemBackpackColor, var10.name}, (byte)-66), var15, var13, inventoryOptions[var12], var3.componentHash);
                                  }
                               }
                            }
 
                            if(var9.method96()) {
-                              method1177(Class99.anInt1403, (long)var10.itemId, (byte)-96, RenderAnimationDefinition.method903(new RSString[]{ColorCore.ItemBackpackColor, var10.name}, (byte)-66), var15, (short)22, TextCore.HasUse, var3.anInt279);
+                              method1177(Class99.anInt1403, (long)var10.itemId, (byte)-96, RenderAnimationDefinition.method903(new RSString[]{ColorCore.ItemBackpackColor, var10.name}, (byte)-66), var15, (short)22, TextCore.HasUse, var3.componentHash);
                            }
 
                            if(var9.method99()) {
@@ -284,7 +284,7 @@ final class Class3_Sub24_Sub4 extends Class3_Sub24 {
                                        var13 = 43;
                                     }
 
-                                    method1177(-1, (long)var10.itemId, (byte)-82, RenderAnimationDefinition.method903(new RSString[]{ColorCore.ItemBackpackColor, var10.name}, (byte)-119), var15, var13, inventoryOptions[var12], var3.anInt279);
+                                    method1177(-1, (long)var10.itemId, (byte)-82, RenderAnimationDefinition.method903(new RSString[]{ColorCore.ItemBackpackColor, var10.name}, (byte)-119), var15, var13, inventoryOptions[var12], var3.componentHash);
                                  }
                               }
                            }
@@ -319,12 +319,12 @@ final class Class3_Sub24_Sub4 extends Class3_Sub24 {
                                     }
 
                                     method1177(-1, (long)var10.itemId, (byte)-51, RenderAnimationDefinition.method903(new RSString[]{
-                                            ColorCore.ItemBackpackColor, var10.name}, (byte)-77), var15, var13, inventoryOptions[var12], var3.anInt279);
+                                            ColorCore.ItemBackpackColor, var10.name}, (byte)-77), var15, var13, inventoryOptions[var12], var3.componentHash);
                                  }
                               }
                            }
 
-                           method1177(Class131.anInt1719, (long)var10.itemId, (byte)-98, RenderAnimationDefinition.method903(new RSString[]{ColorCore.ItemBackpackColor, var10.name}, (byte)-78), var15, (short)1006, TextCore.HasExamine, var3.anInt279);
+                           method1177(Class131.anInt1719, (long)var10.itemId, (byte)-98, RenderAnimationDefinition.method903(new RSString[]{ColorCore.ItemBackpackColor, var10.name}, (byte)-78), var15, (short)1006, TextCore.HasExamine, var3.componentHash);
                         }
                      }
                   }
@@ -339,30 +339,30 @@ final class Class3_Sub24_Sub4 extends Class3_Sub24 {
                if(Client.method44(var3).method97() && (32 & Class164.anInt2051) != 0) {
                   method1177(Class144.anInt1887, 0L, (byte)-113, RenderAnimationDefinition.method903(new RSString[]{
                           Class40.aClass94_676, Class3_Sub28_Sub16.aClass94_3703, var3.aClass94_277
-                  }, (byte)-90), var3.anInt191, (short)12, Class3_Sub28_Sub9.aClass94_3621, var3.anInt279);
+                  }, (byte)-90), var3.anInt191, (short)12, Class3_Sub28_Sub9.aClass94_3621, var3.componentHash);
                }
             } else {
                for(var15 = 9; var15 >= 5; --var15) {
                   RSString var16 = Class120.method1732(var3, (byte)-71, var15);
                   if(null != var16) {
-                     method1177(Class3_Sub13_Sub2.method173((byte)126, var15, var3), (long)(var15 + 1), (byte)-85, var3.aClass94_277, var3.anInt191, (short)1003, var16, var3.anInt279);
+                     method1177(Class3_Sub13_Sub2.method173((byte)126, var15, var3), (long)(var15 + 1), (byte)-85, var3.aClass94_277, var3.anInt191, (short)1003, var16, var3.componentHash);
                   }
                }
 
                var4 = Class53.method1174(var3, (byte)-101);
                if(var4 != null) {
-                  method1177(-1, 0L, (byte)-116, var3.aClass94_277, var3.anInt191, (short)32, var4, var3.anInt279);
+                  method1177(-1, 0L, (byte)-116, var3.aClass94_277, var3.anInt191, (short)32, var4, var3.componentHash);
                }
 
                for(var5 = 4; var5 >= 0; --var5) {
                   RSString var17 = Class120.method1732(var3, (byte)-65, var5);
                   if(var17 != null) {
-                     method1177(Class3_Sub13_Sub2.method173((byte)53, var5, var3), (long)(var5 - -1), (byte)-48, var3.aClass94_277, var3.anInt191, (short)9, var17, var3.anInt279);
+                     method1177(Class3_Sub13_Sub2.method173((byte)53, var5, var3), (long)(var5 - -1), (byte)-48, var3.aClass94_277, var3.anInt191, (short)9, var17, var3.componentHash);
                   }
                }
 
                if(Client.method44(var3).method95()) {
-                  method1177(-1, 0L, (byte)-74, Class3_Sub28_Sub14.aClass94_3672, var3.anInt191, (short)41, TextCore.HasContinue, var3.anInt279);
+                  method1177(-1, 0L, (byte)-74, Class3_Sub28_Sub14.aClass94_3672, var3.anInt191, (short)41, TextCore.HasContinue, var3.componentHash);
                }
             }
          }

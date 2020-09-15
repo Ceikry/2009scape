@@ -352,7 +352,7 @@ final class Class24 {
                   var7 = Class168.aClass3_Sub28_Sub17_2096;
                }
 
-               var7.method702(var4, var3, var2, var0.anInt168, var0.anInt193, var0.anInt218, var0.anInt287, var0.anInt194, var0.anInt225, Class3_Sub13_Sub7.aRandom3088, Class38_Sub1.anInt2618, Player.anIntArray3951);
+               var7.method702(var4, var3, var2, var0.width, var0.height, var0.anInt218, var0.anInt287, var0.anInt194, var0.anInt225, Class3_Sub13_Sub7.aRandom3088, Class38_Sub1.anInt2618, Player.anIntArray3951);
                Class75.method1340(Player.anIntArray3951[0], Player.anIntArray3951[2], Player.anIntArray3951[1], Player.anIntArray3951[3]);
             }
 

@@ -37,9 +37,9 @@ final class Class3_Sub8 extends Linkable {
       try {
          Class58.method1194();
          if(HDToolKit.highDetail) {
-            Class22.method935(var3, var2, var3 + var4.anInt168, var2 + var4.anInt193);
+            Class22.method935(var3, var2, var3 + var4.width, var2 + var4.height);
          } else {
-            Class74.method1324(var3, var2, var3 - -var4.anInt168, var2 + var4.anInt193);
+            Class74.method1324(var3, var2, var3 - -var4.width, var2 + var4.height);
          }
 
          if(2 != Class161.anInt2028 && 5 != Class161.anInt2028 && Class49.aClass3_Sub28_Sub16_812 != null) {
@@ -47,9 +47,9 @@ final class Class3_Sub8 extends Linkable {
             int var6 = Class102.player.anInt2819 / 32 + 48;
             int var7 = -(Class102.player.anInt2829 / 32) + 464;
             if(HDToolKit.highDetail) {
-               ((Class3_Sub28_Sub16_Sub1)Class49.aClass3_Sub28_Sub16_812).method647(var3, var2, var4.anInt168, var4.anInt193, var6, var7, var19, Class164_Sub2.anInt3020 + 256, (Class3_Sub28_Sub16_Sub1)var4.method866(false));
+               ((Class3_Sub28_Sub16_Sub1)Class49.aClass3_Sub28_Sub16_812).method647(var3, var2, var4.width, var4.height, var6, var7, var19, Class164_Sub2.anInt3020 + 256, (Class3_Sub28_Sub16_Sub1)var4.method866(false));
             } else {
-               ((Class3_Sub28_Sub16_Sub2)Class49.aClass3_Sub28_Sub16_812).method664(var3, var2, var4.anInt168, var4.anInt193, var6, var7, var19, 256 - -Class164_Sub2.anInt3020, var4.anIntArray207, var4.anIntArray291);
+               ((Class3_Sub28_Sub16_Sub2)Class49.aClass3_Sub28_Sub16_812).method664(var3, var2, var4.width, var4.height, var6, var7, var19, 256 - -Class164_Sub2.anInt3020, var4.anIntArray207, var4.anIntArray291);
             }
 
             int var9;
@@ -82,7 +82,7 @@ final class Class3_Sub8 extends Linkable {
                      var13 = var11 * var10 - -(var12 * var9) >> 16;
                      var16 = var15.method680(Class3_Sub13_Sub35.aClass131_3421.aClass94Array1721[var8], 100);
                      var13 -= var16 / 2;
-                     if(-var4.anInt168 <= var13 && var13 <= var4.anInt168 && var14 >= -var4.anInt193 && var14 <= var4.anInt193) {
+                     if(-var4.width <= var13 && var13 <= var4.width && var14 >= -var4.height && var14 <= var4.height) {
                         var17 = 16777215;
                         if(Class3_Sub13_Sub35.aClass131_3421.anIntArray1725[var8] != -1) {
                            var17 = Class3_Sub13_Sub35.aClass131_3421.anIntArray1725[var8];
@@ -94,7 +94,7 @@ final class Class3_Sub8 extends Linkable {
                            Class74.method1314(var4.anIntArray207, var4.anIntArray291);
                         }
 
-                        var15.method693(Class3_Sub13_Sub35.aClass131_3421.aClass94Array1721[var8], var3 + var13 + var4.anInt168 / 2, var2 + var4.anInt193 / 2 + -var14, var16, 50, var17, 0, 1, 0, 0);
+                        var15.method693(Class3_Sub13_Sub35.aClass131_3421.aClass94Array1721[var8], var3 + var13 + var4.width / 2, var2 + var4.height / 2 + -var14, var16, 50, var17, 0, 1, 0, 0);
                         if(HDToolKit.highDetail) {
                            Class22.method921();
                         } else {
@@ -229,9 +229,9 @@ final class Class3_Sub8 extends Linkable {
             }
 
             if(HDToolKit.highDetail) {
-               Class22.method934(-1 + (var3 - -(var4.anInt168 / 2)), -1 + var2 - -(var4.anInt193 / 2), 3, 3, 16777215);
+               Class22.method934(-1 + (var3 - -(var4.width / 2)), -1 + var2 - -(var4.height / 2), 3, 3, 16777215);
             } else {
-               Class74.method1323(-1 + var4.anInt168 / 2 + var3, -1 + var4.anInt193 / 2 + var2, 3, 3, 16777215);
+               Class74.method1323(-1 + var4.width / 2 + var3, -1 + var4.height / 2 + var2, 3, 3, 16777215);
             }
          } else if(HDToolKit.highDetail) {
             Class3_Sub28_Sub16 var5 = var4.method866(false);

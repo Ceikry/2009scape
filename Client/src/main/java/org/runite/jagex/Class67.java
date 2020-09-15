@@ -63,12 +63,12 @@ final class Class67 implements Runnable {
                      continue;
                   }
 
-                  method1260(var0, var4.anInt279, var2);
+                  method1260(var0, var4.componentHash, var2);
                   if(var4.aClass11Array262 != null) {
-                     method1260(23206, var4.anInt279, var4.aClass11Array262);
+                     method1260(23206, var4.componentHash, var4.aClass11Array262);
                   }
 
-                  Class3_Sub31 var5 = (Class3_Sub31)Class3_Sub13_Sub17.aHashTable_3208.get((long)var4.anInt279);
+                  Class3_Sub31 var5 = (Class3_Sub31)Class3_Sub13_Sub17.aHashTable_3208.get((long)var4.componentHash);
                   if(var5 != null) {
                      Class52.method1160(-111, var5.anInt2602);
                   }

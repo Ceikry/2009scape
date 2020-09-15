@@ -9,7 +9,8 @@ final class Class80<T extends Linkable> {
     private int anInt1132 = 0;
     private final HashTable<T> table;
 
-    final Linkable method1392() {
+    @SuppressWarnings("unchecked")
+    final T method1392() {
         Linkable var2;
         if (this.anInt1132 > 0 && this.table.getBuckets()[this.anInt1132 + -1] != this.aClass3_1130) {
             var2 = this.aClass3_1130;
@@ -24,10 +25,10 @@ final class Class80<T extends Linkable> {
 
         }
         this.aClass3_1130 = var2.next;
-        return var2;
+        return (T) var2;
     }
 
-    final Linkable method1393() {
+    final T method1393() {
         this.anInt1132 = 0;
         return this.method1392();
     }

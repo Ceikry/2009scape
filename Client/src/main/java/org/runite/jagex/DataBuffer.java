@@ -611,21 +611,13 @@ public class DataBuffer extends Linkable {
     }
 
     final int getShort(byte var1) {
-        try {
-            this.index += 2;
-            int var2 = (this.buffer[-1 + this.index] & 255) + ((255 & this.buffer[this.index + -2]) << 8);
-            if (var1 < 4) {
-                return -83;
-            } else {
-                if (var2 > 32767) {
-                    var2 -= 65536;
-                }
-
-                return var2;
-            }
-        } catch (RuntimeException var3) {
-            throw Class44.clientError(var3, "wa.TC(" + var1 + ')');
+        this.index += 2;
+        int var2 = (this.buffer[-1 + this.index] & 255) + ((255 & this.buffer[this.index + -2]) << 8);
+        if (var2 > 32767) {
+            var2 -= 65536;
         }
+
+        return var2;
     }
 
 

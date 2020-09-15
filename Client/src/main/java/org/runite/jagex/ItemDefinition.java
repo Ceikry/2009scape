@@ -273,13 +273,13 @@ final class ItemDefinition {
 					if (k2 == 0x80000002)
 						k2 = script.scrollbarScrollAmount;
 					if (k2 == 0x80000003)
-						k2 = null == script.aClass11_2449 ? -1 : script.aClass11_2449.anInt279;
+						k2 = null == script.aClass11_2449 ? -1 : script.aClass11_2449.componentHash;
 					if (k2 == 0x80000004)
 						k2 = script.interfaceButtons;
 					if (k2 == 0x80000005)
 						k2 = null == script.aClass11_2449 ? -1 : script.aClass11_2449.anInt191;
 					if (k2 == 0x80000006)
-						k2 = null == script.aClass11_2438 ? -1 : script.aClass11_2438.anInt279;
+						k2 = null == script.aClass11_2438 ? -1 : script.aClass11_2438.componentHash;
 					if (k2 == 0x80000007)
 						k2 = script.aClass11_2438 != null ? script.aClass11_2438.anInt191 : -1;
 					if (k2 == 0x80000008)
@@ -535,7 +535,7 @@ final class ItemDefinition {
 						RSInterface class11_23 = new RSInterface();
 						class11_23.usingScripts = true;
 						class11_23.anInt191 = k66;
-						class11_23.parentId = class11_23.anInt279 = class11_21.anInt279;
+						class11_23.parentId = class11_23.componentHash = class11_21.componentHash;
 						class11_23.type = i44;
 						class11_21.aClass11Array262[k66] = class11_23;
 						if (flag)
@@ -552,7 +552,7 @@ final class ItemDefinition {
 								throw new RuntimeException("Tried to cc_delete static active-component!");
 							else
 								throw new RuntimeException("Tried to .cc_delete static .active-component!");
-						RSInterface class11_17 = Class7.getRSInterface(class11.anInt279);
+						RSInterface class11_17 = Class7.getRSInterface(class11.componentHash);
 						class11_17.aClass11Array262[class11.anInt191] = null;
 						Class20.method909(-8, class11_17);
 						continue;
@@ -605,8 +605,8 @@ final class ItemDefinition {
 						}
 						if (opcode == 1000) {
 							iStackCounter -= 4;
-							class11_2.x = intsStack[iStackCounter];
-							class11_2.y = intsStack[iStackCounter + 1];
+							class11_2.defX = intsStack[iStackCounter];
+							class11_2.defY = intsStack[iStackCounter + 1];
 							int l66 = intsStack[3 + iStackCounter];
 							if (l66 < 0)
 								l66 = 0;
@@ -619,18 +619,18 @@ final class ItemDefinition {
 							} else {
 								k44 = 0;
 							}
-							class11_2.aByte162 = (byte) l66;
-							class11_2.aByte273 = (byte) k44;
+							class11_2.verticalPos = (byte) l66;
+							class11_2.horizontalPos = (byte) k44;
 							Class20.method909(109, class11_2);
 							Class3_Sub13_Sub12.method225(class11_2);
 							if (class11_2.anInt191 == -1)
-								Class168.method2280(class11_2.anInt279);
+								Class168.method2280(class11_2.componentHash);
 							continue;
 						}
 						if (opcode == 1001) {
 							iStackCounter -= 4;
-							class11_2.width = intsStack[iStackCounter];
-							class11_2.height = intsStack[1 + iStackCounter];
+							class11_2.defWidth = intsStack[iStackCounter];
+							class11_2.defHeight = intsStack[1 + iStackCounter];
 							class11_2.anInt184 = 0;
 							class11_2.anInt312 = 0;
 							int l44 = intsStack[iStackCounter + 2];
@@ -641,12 +641,12 @@ final class ItemDefinition {
 							} else {
 								i67 = 0;
 							}
-							class11_2.aByte241 = (byte) i67;
+							class11_2.verticalResize = (byte) i67;
 							if (l44 < 0)
 								l44 = 0;
 							else if (l44 > 4)
 								l44 = 4;
-							class11_2.aByte304 = (byte) l44;
+							class11_2.horizontalResize = (byte) l44;
 							Class20.method909(122, class11_2);
 							Class3_Sub13_Sub12.method225(class11_2);
 							if (class11_2.type == 0)
@@ -660,7 +660,7 @@ final class ItemDefinition {
 								Class20.method909(-103, class11_2);
 							}
 							if (-1 == class11_2.anInt191)
-								Class3_Sub28_Sub7_Sub1.method569(class11_2.anInt279);
+								Class3_Sub28_Sub7_Sub1.method569(class11_2.componentHash);
 							continue;
 						}
 						if (opcode == 1004) {
@@ -752,11 +752,11 @@ final class ItemDefinition {
 										continue;
 									}
 									if (opcode == 1502) {
-										intsStack[iStackCounter++] = class11_4.anInt168;
+										intsStack[iStackCounter++] = class11_4.width;
 										continue;
 									}
 									if (opcode == 1503) {
-										intsStack[iStackCounter++] = class11_4.anInt193;
+										intsStack[iStackCounter++] = class11_4.height;
 										continue;
 									}
 									if (opcode == 1504) {
@@ -858,11 +858,11 @@ final class ItemDefinition {
 											continue;
 										}
 										if (2502 == opcode) {
-											intsStack[iStackCounter++] = class11_7.anInt168;
+											intsStack[iStackCounter++] = class11_7.width;
 											continue;
 										}
 										if (opcode == 2503) {
-											intsStack[iStackCounter++] = class11_7.anInt193;
+											intsStack[iStackCounter++] = class11_7.height;
 											continue;
 										}
 										if (2504 == opcode) {
@@ -3050,7 +3050,7 @@ final class ItemDefinition {
 																		continue;
 																	}
 																	if (opcode == 6203) {
-																		Class65.method1239(Class168.aClass11_2091.anInt168, 81, 0, Class168.aClass11_2091.anInt193, 0, false);
+																		Class65.method1239(Class168.aClass11_2091.width, 81, 0, Class168.aClass11_2091.height, 0, false);
 																		intsStack[iStackCounter++] = Class96.anInt1358;
 																		intsStack[iStackCounter++] = Canvas_Sub2.anInt31;
 																		continue;
@@ -3695,9 +3695,9 @@ final class ItemDefinition {
 							int j75 = intsStack[1 + iStackCounter];
 							int k65 = intsStack[iStackCounter];
 							if (-1 == class11_15.anInt191) {
-								MouseListeningClass.method2092(class11_15.anInt279);
-								Class3_Sub13_Sub19.method265(class11_15.anInt279);
-								Class107.method1649(class11_15.anInt279, -101);
+								MouseListeningClass.method2092(class11_15.componentHash);
+								Class3_Sub13_Sub19.method265(class11_15.componentHash);
+								Class107.method1649(class11_15.componentHash, -101);
 							}
 							if (-1 == k65) {
 								class11_15.itemId = -1;
@@ -3715,8 +3715,8 @@ final class ItemDefinition {
 								class11_15.anInt164 = class48_4.anInt810;
 								if (class11_15.anInt184 > 0)
 									class11_15.anInt164 = (class11_15.anInt164 * 32) / class11_15.anInt184;
-								else if (class11_15.width > 0)
-									class11_15.anInt164 = (class11_15.anInt164 * 32) / class11_15.width;
+								else if (class11_15.defWidth > 0)
+									class11_15.anInt164 = (class11_15.anInt164 * 32) / class11_15.defWidth;
 								class11_15.aBoolean227 = 1205 != opcode;
 							}
 							continue;
@@ -3725,21 +3725,21 @@ final class ItemDefinition {
 							class11_15.modelType = 2;
 							class11_15.itemId = intsStack[--iStackCounter];
 							if (class11_15.anInt191 == -1)
-								Class162.method2206(class11_15.anInt279);
+								Class162.method2206(class11_15.componentHash);
 							continue;
 						}
 						if (opcode == 1202) {
 							class11_15.modelType = 3;
 							class11_15.itemId = Class102.player.class52.method1163();
 							if (class11_15.anInt191 == -1)
-								Class162.method2206(class11_15.anInt279);
+								Class162.method2206(class11_15.componentHash);
 							continue;
 						}
 						if (1203 == opcode) {
 							class11_15.modelType = 6;
 							class11_15.itemId = intsStack[--iStackCounter];
 							if (class11_15.anInt191 == -1)
-								Class162.method2206(class11_15.anInt279);
+								Class162.method2206(class11_15.componentHash);
 							continue;
 						}
 						if (opcode != 1204)
@@ -3747,7 +3747,7 @@ final class ItemDefinition {
 						class11_15.modelType = 5;
 						class11_15.itemId = intsStack[--iStackCounter];
 						if (class11_15.anInt191 == -1)
-							Class162.method2206(class11_15.anInt279);
+							Class162.method2206(class11_15.componentHash);
 						continue;
 					}
 					RSInterface class11_16;
@@ -3760,25 +3760,25 @@ final class ItemDefinition {
 					if (opcode == 1100) {
 						iStackCounter -= 2;
 						class11_16.anInt247 = intsStack[iStackCounter];
-						if (class11_16.anInt240 + -class11_16.anInt168 < class11_16.anInt247)
-							class11_16.anInt247 = class11_16.anInt240 + -class11_16.anInt168;
+						if (class11_16.anInt240 + -class11_16.width < class11_16.anInt247)
+							class11_16.anInt247 = class11_16.anInt240 + -class11_16.width;
 						if (class11_16.anInt247 < 0)
 							class11_16.anInt247 = 0;
 						class11_16.anInt208 = intsStack[iStackCounter + 1];
-						if (class11_16.anInt208 > class11_16.anInt252 + -class11_16.anInt193)
-							class11_16.anInt208 = class11_16.anInt252 + -class11_16.anInt193;
+						if (class11_16.anInt208 > class11_16.anInt252 + -class11_16.height)
+							class11_16.anInt208 = class11_16.anInt252 + -class11_16.height;
 						if (class11_16.anInt208 < 0)
 							class11_16.anInt208 = 0;
 						Class20.method909(111, class11_16);
 						if (-1 == class11_16.anInt191)
-							Class67.method1259(class11_16.anInt279);
+							Class67.method1259(class11_16.componentHash);
 						continue;
 					}
 					if (1101 == opcode) {
 						class11_16.anInt218 = intsStack[--iStackCounter];
 						Class20.method909(-123, class11_16);
 						if (class11_16.anInt191 == -1)
-							Canvas_Sub2.method56(class11_16.anInt279);
+							Canvas_Sub2.method56(class11_16.componentHash);
 						continue;
 					}
 					if (opcode == 1102) {
@@ -3816,7 +3816,7 @@ final class ItemDefinition {
 						class11_16.itemId = intsStack[--iStackCounter];
 						Class20.method909(2, class11_16);
 						if (class11_16.anInt191 == -1)
-							Class162.method2206(class11_16.anInt279);
+							Class162.method2206(class11_16.componentHash);
 						continue;
 					}
 					if (opcode == 1109) {
@@ -3829,8 +3829,8 @@ final class ItemDefinition {
 						class11_16.anInt164 = intsStack[5 + iStackCounter];
 						Class20.method909(-59, class11_16);
 						if (class11_16.anInt191 == -1) {
-							Class3_Sub13_Sub19.method265(class11_16.anInt279);
-							Class107.method1649(class11_16.anInt279, -106);
+							Class3_Sub13_Sub19.method265(class11_16.componentHash);
+							Class107.method1649(class11_16.componentHash, -106);
 						}
 						continue;
 					}
@@ -3844,7 +3844,7 @@ final class ItemDefinition {
 							Class20.method909(116, class11_16);
 						}
 						if (class11_16.anInt191 == -1)
-							Class108.method1657(class11_16.anInt279);
+							Class108.method1657(class11_16.componentHash);
 						continue;
 					}
 					if (opcode == 1111) {
@@ -3859,7 +3859,7 @@ final class ItemDefinition {
 							Class20.method909(117, class11_16);
 						}
 						if (class11_16.anInt191 == -1)
-							Class93.method1516(class11_16.anInt279, 91);
+							Class93.method1516(class11_16.componentHash, 91);
 						continue;
 					}
 					if (opcode == 1113) {
@@ -3926,7 +3926,7 @@ final class ItemDefinition {
 					class11_16.anInt164 = intsStack[--iStackCounter];
 					Class20.method909(-126, class11_16);
 					if (class11_16.anInt191 == -1)
-						Class3_Sub13_Sub19.method265(class11_16.anInt279);
+						Class3_Sub13_Sub19.method265(class11_16.componentHash);
 					continue;
 				}
 				if (opcode == 403) {

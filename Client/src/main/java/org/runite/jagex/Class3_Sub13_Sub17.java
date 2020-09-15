@@ -7,7 +7,7 @@ import java.util.Objects;
 final class Class3_Sub13_Sub17 extends Class3_Sub13 {
 
    static boolean aBoolean3207 = false;
-   static HashTable aHashTable_3208 = new HashTable(8);
+   static HashTable<Class3_Sub31> aHashTable_3208 = new HashTable<>(8);
    static RSString aClass94_3209 = RSString.of("showingVideoAd");
    static CacheIndex aClass153_3210;
    static int[] anIntArray3212;
