@@ -1,5 +1,7 @@
 package org.runite.jagex;
 
+import org.rs09.client.Linkable;
+
 abstract class AbstractIndexedSprite {
 
    int anInt1461;
@@ -13,16 +15,16 @@ abstract class AbstractIndexedSprite {
    int anInt1470;
 
 
-   static void method1662(Class3 var0, Class3 var1) {
+   static void method1662(Linkable var0, Linkable var1) {
       try {
-         if(null != var0.aClass3_76) {
-            var0.method86(-1024);
+         if(null != var0.previous) {
+            var0.unlink();
          }
 
-         var0.aClass3_74 = var1;
-         var0.aClass3_76 = var1.aClass3_76;
-         var0.aClass3_76.aClass3_74 = var0;
-         var0.aClass3_74.aClass3_76 = var0;
+         var0.next = var1;
+         var0.previous = var1.previous;
+         var0.previous.next = var0;
+         var0.next.previous = var0;
       } catch (RuntimeException var4) {
          throw Class44.clientError(var4, "ok.C(" + (var0 != null?"{...}":"null") + ',' + (var1 != null?"{...}":"null") + ',' + -16 + ')');
       }

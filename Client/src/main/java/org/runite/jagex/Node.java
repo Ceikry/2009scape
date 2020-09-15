@@ -1,6 +1,8 @@
 package org.runite.jagex;
 
-class Node extends Class3 {
+import org.rs09.client.Linkable;
+
+class Node extends Linkable {
 
    static RSString[] aClass94Array2566 = new RSString[200];
    static int anInt2567 = -1;

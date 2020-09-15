@@ -1,5 +1,7 @@
 package org.runite.jagex;
 
+import org.rs09.client.Linkable;
+
 public final class Class3_Sub28_Sub13 extends Node {
 
    static int anInt3657;
@@ -37,7 +39,7 @@ public final class Class3_Sub28_Sub13 extends Node {
                   var7 = new Class3_Sub18(var2.readInt());
                }
 
-               this.aClass130_3663.method1779((Class3) var7, (long) var6);
+               this.aClass130_3663.method1779((Linkable) var7, (long) var6);
             }
          }
 
@@ -85,7 +87,7 @@ public final class Class3_Sub28_Sub13 extends Node {
          this.aClass130_3666 = new Class130(this.aClass130_3663.method1785(81));
          Class3_Sub29 var2 = (Class3_Sub29)this.aClass130_3663.method1776(88);
          while(var2 != null) {
-            Class3_Sub10 var3 = new Class3_Sub10(var2.aClass94_2586, (int)var2.aLong71);
+            Class3_Sub10 var3 = new Class3_Sub10(var2.aClass94_2586, (int)var2.linkableKey);
             this.aClass130_3666.method1779(var3, var2.aClass94_2586.method1538(61));
             var2 = (Class3_Sub29)this.aClass130_3663.method1778(-99);
          }
@@ -138,7 +140,7 @@ public final class Class3_Sub28_Sub13 extends Node {
          this.aClass130_3666 = new Class130(this.aClass130_3663.method1785(93));
 
          for(Class3_Sub18 var2 = (Class3_Sub18)this.aClass130_3663.method1776(123); null != var2; var2 = (Class3_Sub18)this.aClass130_3663.method1778(-88)) {
-            Class3_Sub18 var4 = new Class3_Sub18((int)var2.aLong71);
+            Class3_Sub18 var4 = new Class3_Sub18((int)var2.linkableKey);
             this.aClass130_3666.method1779(var4, (long)var2.anInt2467);
          }
 

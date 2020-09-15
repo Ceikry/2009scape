@@ -185,7 +185,7 @@ class Class164_Sub1 extends Class164 {
    static void method2241(byte var0, boolean var1) {
       try {
          Class3_Sub9 var3;
-         for(var3 = (Class3_Sub9)Class3.aClass61_78.method1222(); var3 != null; var3 = (Class3_Sub9)Class3.aClass61_78.method1221()) {
+         for(var3 = (Class3_Sub9) Unsorted.aClass61_78.method1222(); var3 != null; var3 = (Class3_Sub9) Unsorted.aClass61_78.method1221()) {
             if(null != var3.aClass3_Sub24_Sub1_2312) {
                Class3_Sub26.aClass3_Sub24_Sub2_2563.method461(var3.aClass3_Sub24_Sub1_2312);
                var3.aClass3_Sub24_Sub1_2312 = null;
@@ -196,7 +196,7 @@ class Class164_Sub1 extends Class164 {
                var3.aClass3_Sub24_Sub1_2315 = null;
             }
 
-            var3.method86(-1024);
+            var3.unlink();
          }
 
          if(var1) {
@@ -206,7 +206,7 @@ class Class164_Sub1 extends Class164 {
                   var3.aClass3_Sub24_Sub1_2312 = null;
                }
 
-               var3.method86(-1024);
+               var3.unlink();
             }
 
             for(var3 = (Class3_Sub9)Class3_Sub28_Sub7_Sub1.aClass130_4046.method1776(68); null != var3; var3 = (Class3_Sub9)Class3_Sub28_Sub7_Sub1.aClass130_4046.method1778(-66)) {
@@ -215,7 +215,7 @@ class Class164_Sub1 extends Class164 {
                   var3.aClass3_Sub24_Sub1_2312 = null;
                }
 
-               var3.method86(-1024);
+               var3.unlink();
             }
          }
 

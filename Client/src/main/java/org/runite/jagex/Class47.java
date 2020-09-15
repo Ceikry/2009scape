@@ -1,5 +1,7 @@
 package org.runite.jagex;
 
+import org.rs09.client.Linkable;
+
 import java.util.Objects;
 
 final class Class47 {
@@ -164,7 +166,7 @@ final class Class47 {
       }
    }
 
-   final Class3 method1094() {
+   final Linkable method1094() {
       try {
          return this.aClass130_745.method1776(38);
       } catch (RuntimeException var3) {
@@ -1077,11 +1079,11 @@ final class Class47 {
       try {
          if(this.anInt749 == 0) {
             Node var5 = this.aClass13_747.method877();
-            Objects.requireNonNull(var5).method86(-1024);
+            Objects.requireNonNull(var5).unlink();
             var5.method524();
             if(this.aClass3_Sub28_744 == var5) {
                var5 = this.aClass13_747.method877();
-               Objects.requireNonNull(var5).method86(-1024);
+               Objects.requireNonNull(var5).unlink();
                var5.method524();
             }
          } else {
@@ -1153,7 +1155,7 @@ final class Class47 {
       }
    }
 
-   final Class3 method1099() {
+   final Linkable method1099() {
       try {
 
          return this.aClass130_745.method1778(-119);

@@ -1,8 +1,9 @@
 package org.runite.jagex;
 
+import org.rs09.client.Linkable;
 import org.rs09.client.util.ArrayUtils;
 
-final class Class3_Sub25 extends Class3 {
+final class Class3_Sub25 extends Linkable {
 
    int[] anIntArray2547 = new int[]{-1};
    static short[] aShortArray2548;

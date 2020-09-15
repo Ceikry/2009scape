@@ -112,7 +112,7 @@ final class Class3_Sub28_Sub6 extends Node {
             this.anInt3598 = -47;
          }
 
-         return (int)(255L & this.aLong71 >>> 32);
+         return (int)(255L & this.linkableKey >>> 32);
       } catch (RuntimeException var3) {
          throw Class44.clientError(var3, "da.D(" + var1 + ')');
       }
@@ -120,7 +120,7 @@ final class Class3_Sub28_Sub6 extends Node {
 
    final int f() {
       try {
-         return (int)this.aLong71;
+         return (int)this.linkableKey;
       } catch (RuntimeException var3) {
          throw Class44.clientError(var3, "da.P(" + (byte) 117 + ')');
       }
@@ -220,7 +220,7 @@ final class Class3_Sub28_Sub6 extends Node {
 
    Class3_Sub28_Sub6(int var1, int var2) {
       try {
-         this.aLong71 = (long)var1 << 32 | (long)var2;
+         this.linkableKey = (long)var1 << 32 | (long)var2;
       } catch (RuntimeException var4) {
          throw Class44.clientError(var4, "da.<init>(" + var1 + ',' + var2 + ')');
       }

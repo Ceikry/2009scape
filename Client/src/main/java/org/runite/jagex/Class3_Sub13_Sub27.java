@@ -263,7 +263,7 @@ final class Class3_Sub13_Sub27 extends Class3_Sub13 {
                      Node.aClass94Array2566[var4] = Node.aClass94Array2566[1 + var4];
                      Class50.aLongArray826[var4] = Class50.aLongArray826[1 + var4];
                      Class57.anIntArray904[var4] = Class57.anIntArray904[var4 - -1];
-                     aBooleanArray73[var4] = aBooleanArray73[1 + var4];
+                     Unsorted.aBooleanArray73[var4] = Unsorted.aBooleanArray73[1 + var4];
                   }
 
                   Class110.anInt1472 = Class3_Sub13_Sub17.anInt3213;
@@ -529,7 +529,7 @@ final class Class3_Sub13_Sub27 extends Class3_Sub13 {
 
          for(var54 = (Class3_Sub11)var52.method1776(54); var54 != null; var54 = (Class3_Sub11)var52.method1778(-62)) {
             if(var54.anInt2343 == 0) {
-               var54.method86(-1024);
+               var54.unlink();
             } else {
                var54.method148();
             }
@@ -541,7 +541,7 @@ final class Class3_Sub13_Sub27 extends Class3_Sub13 {
          long[] var55 = new long[var17];
 
          for(var20 = 0; var17 > var20; ++var20) {
-            var55[var20] = var59[var20].aLong71;
+            var55[var20] = var59[var20].linkableKey;
          }
 
          PacketParser.method824(var55, var59, -86);

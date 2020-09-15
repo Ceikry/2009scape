@@ -1,5 +1,7 @@
 package org.runite.jagex;
 
+import org.rs09.client.Linkable;
+
 import java.util.Objects;
 
 final class Class3_Sub28_Sub11 extends Node {
@@ -62,7 +64,7 @@ final class Class3_Sub28_Sub11 extends Node {
                   var8 = new Class3_Sub18(var1.readInt());
                }
 
-               this.aClass130_3636.method1779((Class3)var8, (long)var7);
+               this.aClass130_3636.method1779((Linkable)var8, (long)var7);
             }
          }
 
@@ -220,7 +222,7 @@ final class Class3_Sub28_Sub11 extends Node {
 
                   if(null != var1.aClass3_Sub24_Sub1_2315) {
                      var1.aClass3_Sub24_Sub1_2315.method419(var7);
-                     if(!var1.aClass3_Sub24_Sub1_2315.method82()) {
+                     if(!var1.aClass3_Sub24_Sub1_2315.isLinked()) {
                         var1.aClass3_Sub24_Sub1_2315 = null;
                      }
                   } else if(var1.anIntArray2333 != null && ((var1.anInt2316 -= var3) <= 0)) {

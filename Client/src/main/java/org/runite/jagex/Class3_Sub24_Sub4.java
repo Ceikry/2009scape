@@ -67,7 +67,7 @@ final class Class3_Sub24_Sub4 extends Class3_Sub24 {
          int[] var7;
          var7 = new int[]{22050};
          for(Class3_Sub6 var9 = (Class3_Sub6)var1.aClass130_2564.method1776(20); var9 != null; var9 = (Class3_Sub6)var1.aClass130_2564.method1778(-107)) {
-            int var10 = (int)var9.aLong71;
+            int var10 = (int)var9.linkableKey;
             Class3_Sub15 var11 = (Class3_Sub15)this.aClass130_3508.method1780((long)var10);
             if(null == var11) {
                var11 = Unsorted.method1245(var3, var10);
@@ -440,7 +440,7 @@ final class Class3_Sub24_Sub4 extends Class3_Sub24 {
                   this.aClass3_Sub22ArrayArray3512[var4.anInt2514][var4.anInt2520] = null;
                }
 
-               var4.method86(-1024);
+               var4.unlink();
             }
          }
 
@@ -491,7 +491,7 @@ final class Class3_Sub24_Sub4 extends Class3_Sub24 {
    final synchronized void method485() {
       try {
          for(Class3_Sub15 var2 = (Class3_Sub15)this.aClass130_3508.method1776(63); var2 != null; var2 = (Class3_Sub15)this.aClass130_3508.method1778(-106)) {
-            var2.method86(-1024);
+            var2.unlink();
          }
 
       } catch (RuntimeException var4) {
@@ -827,7 +827,7 @@ final class Class3_Sub24_Sub4 extends Class3_Sub24 {
          var3.anInt2512 = Class21.anInt443 / 100;
          if(var3.anInt2506 >= 0 && (var3.aClass3_Sub24_Sub1_2507 == null || var3.aClass3_Sub24_Sub1_2507.method444())) {
             var3.method401();
-            var3.method86(-1024);
+            var3.unlink();
             if(var3.anInt2517 > 0 && var3 == this.aClass3_Sub22ArrayArray3513[var3.anInt2514][var3.anInt2517]) {
                this.aClass3_Sub22ArrayArray3513[var3.anInt2514][var3.anInt2517] = null;
             }
@@ -909,7 +909,7 @@ final class Class3_Sub24_Sub4 extends Class3_Sub24 {
 
                var3.method401();
                if(var3.anInt2506 >= 0) {
-                  var3.method86((byte) 14 + -1038);
+                  var3.unlink();
                   if(var3.anInt2517 > 0 && this.aClass3_Sub22ArrayArray3513[var3.anInt2514][var3.anInt2517] == var3) {
                      this.aClass3_Sub22ArrayArray3513[var3.anInt2514][var3.anInt2517] = null;
                   }
@@ -1204,7 +1204,7 @@ final class Class3_Sub24_Sub4 extends Class3_Sub24 {
       try {
          if(var1.aClass3_Sub24_Sub1_2507 == null) {
             if(var1.anInt2506 >= 0) {
-               var1.method86(-1024);
+               var1.unlink();
                if(var1.anInt2517 > 0 && this.aClass3_Sub22ArrayArray3513[var1.anInt2514][var1.anInt2517] == var1) {
                   this.aClass3_Sub22ArrayArray3513[var1.anInt2514][var1.anInt2517] = null;
                }

@@ -13,10 +13,10 @@ final class Class3_Sub13_Sub18 extends Class3_Sub13 {
 
    static void method254(boolean var0, Class3_Sub31 var1) {
       try {
-         int var4 = (int)var1.aLong71;
+         int var4 = (int)var1.linkableKey;
 
          int var3 = var1.anInt2602;
-         var1.method86(-1024);
+         var1.unlink();
          if(var0) {
             Class60.method1208((byte)79, var3);
          }

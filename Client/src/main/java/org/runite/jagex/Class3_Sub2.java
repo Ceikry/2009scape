@@ -1,6 +1,8 @@
 package org.runite.jagex;
 
-final class Class3_Sub2 extends Class3 {
+import org.rs09.client.Linkable;
+
+final class Class3_Sub2 extends Linkable {
 
    static int anInt2217 = 2;
    static int anInt2218 = -1;

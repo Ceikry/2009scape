@@ -29,13 +29,13 @@ abstract class Class144 {
                if(Class44.anInt719 >= var2.anInt2703) {
                   var2.method1955(Class106.anInt1446);
                   if(var2.aBoolean2718) {
-                     var1.method86(-1024);
+                     var1.unlink();
                   } else {
                      Class20.method907(var2.anInt2717, var2.anInt2716, var2.anInt2710, var2.anInt2712, 60, var2, 0, -1L, false);
                   }
                }
             } else {
-               var1.method86(-1024);
+               var1.unlink();
             }
          }
 

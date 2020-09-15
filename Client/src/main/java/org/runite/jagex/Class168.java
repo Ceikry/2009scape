@@ -705,7 +705,7 @@ final class Class168 {
 
             for(Class3_Sub31 var2 = (Class3_Sub31)var4.method1393(); null != var2; var2 = (Class3_Sub31)var4.method1392()) {
                if(var2.anInt2602 == var3) {
-                  return Class7.getRSInterface((int)var2.aLong71);
+                  return Class7.getRSInterface((int)var2.linkableKey);
                }
             }
 

@@ -1,9 +1,11 @@
 package org.runite.jagex;
+import org.rs09.client.Linkable;
+
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import javax.media.opengl.GL;
 
-final class Class3_Sub11 extends Class3 {
+final class Class3_Sub11 extends Linkable {
 
    int anInt2342 = 0;
    int anInt2343 = 0;

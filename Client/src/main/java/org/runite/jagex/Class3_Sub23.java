@@ -1,8 +1,10 @@
 package org.runite.jagex;
 
+import org.rs09.client.Linkable;
+
 import java.util.Objects;
 
-final class Class3_Sub23 extends Class3 {
+final class Class3_Sub23 extends Linkable {
 
    static int anInt2530 = 2301979;
    int anInt2531;

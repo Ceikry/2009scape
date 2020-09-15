@@ -37,7 +37,7 @@ final class Class3_Sub24_Sub1 extends Class3_Sub24 {
          if(this.anInt3474 < 0) {
             if(this.anInt3470 <= 0) {
                this.method439();
-               this.method86(-1024);
+               this.unlink();
                return;
             }
 
@@ -47,7 +47,7 @@ final class Class3_Sub24_Sub1 extends Class3_Sub24 {
          if(this.anInt3474 >= var7) {
             if(this.anInt3470 >= 0) {
                this.method439();
-               this.method86(-1024);
+               this.unlink();
                return;
             }
 
@@ -184,14 +184,14 @@ final class Class3_Sub24_Sub1 extends Class3_Sub24 {
                if(this.anInt3474 < 0) {
                   this.anInt3474 = -1;
                   this.method439();
-                  this.method86(-1024);
+                  this.unlink();
                }
             } else {
                this.method418(var1, var9, var7, var3, 0);
                if(this.anInt3474 >= var7) {
                   this.anInt3474 = var7;
                   this.method439();
-                  this.method86(-1024);
+                  this.unlink();
                }
             }
 
@@ -216,7 +216,7 @@ final class Class3_Sub24_Sub1 extends Class3_Sub24 {
          if(this.anInt3471 == Integer.MIN_VALUE) {
             this.anInt3471 = 0;
             this.anInt3476 = this.anInt3484 = this.anInt3481 = 0;
-            this.method86(-1024);
+            this.unlink();
             return false;
          } else {
             this.method449();
@@ -268,12 +268,12 @@ final class Class3_Sub24_Sub1 extends Class3_Sub24 {
    final synchronized void method417(int var1) {
       if(var1 == 0) {
          this.method430();
-         this.method86(-1024);
+         this.unlink();
       } else if(this.anInt3484 == 0 && this.anInt3481 == 0) {
          this.anInt3480 = 0;
          this.anInt3471 = 0;
          this.anInt3476 = 0;
-         this.method86(-1024);
+         this.unlink();
       } else {
          int var2 = -this.anInt3476;
          if(this.anInt3476 > var2) {
@@ -719,7 +719,7 @@ final class Class3_Sub24_Sub1 extends Class3_Sub24 {
             if(this.anInt3471 == Integer.MIN_VALUE) {
                this.anInt3471 = 0;
                this.anInt3476 = this.anInt3484 = this.anInt3481 = 0;
-               this.method86(-1024);
+               this.unlink();
                var1 = this.anInt3480;
             }
 
@@ -745,7 +745,7 @@ final class Class3_Sub24_Sub1 extends Class3_Sub24 {
       if(this.anInt3474 < 0) {
          if(this.anInt3470 <= 0) {
             this.method439();
-            this.method86(-1024);
+            this.unlink();
             return;
          }
 
@@ -755,7 +755,7 @@ final class Class3_Sub24_Sub1 extends Class3_Sub24 {
       if(this.anInt3474 >= var5) {
          if(this.anInt3470 >= 0) {
             this.method439();
-            this.method86(-1024);
+            this.unlink();
             return;
          }
 
@@ -874,12 +874,12 @@ final class Class3_Sub24_Sub1 extends Class3_Sub24 {
             if(this.anInt3474 < 0) {
                this.anInt3474 = -1;
                this.method439();
-               this.method86(-1024);
+               this.unlink();
             }
          } else if(this.anInt3474 >= var5) {
             this.anInt3474 = var5;
             this.method439();
-            this.method86(-1024);
+            this.unlink();
          }
 
       }

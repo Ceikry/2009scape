@@ -274,7 +274,7 @@ final class Class163_Sub2_Sub1 extends Class163_Sub2 {
 
             var0.method793(var5);
             var0.method769((byte)-127, var0.index - var5);
-            var3.method86(-1024);
+            var3.unlink();
          }
       } catch (RuntimeException var25) {
          throw Class44.clientError(var25, "t.I(" + (var0 != null?"{...}":"null") + ',' + var1 + ',' + var2 + ')');

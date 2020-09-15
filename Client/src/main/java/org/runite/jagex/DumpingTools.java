@@ -1,5 +1,7 @@
 package org.runite.jagex;
 
+import org.rs09.client.Linkable;
+
 import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -77,9 +79,9 @@ public class DumpingTools {
                     fileData.put((byte) am.switchHashTable.length);
                     for (Class130 sw : am.switchHashTable) {
                         fileData.putShort((short) sw.aClass3Array1697.length);
-                        for (Class3 singleSwitch : sw.aClass3Array1697) {
-                            int l1 = (int) (singleSwitch.aLong71);
-                            int l2 = (int) (singleSwitch.aLong71 >> 32);
+                        for (Linkable singleSwitch : sw.aClass3Array1697) {
+                            int l1 = (int) (singleSwitch.linkableKey);
+                            int l2 = (int) (singleSwitch.linkableKey >> 32);
                             fileData.putInt(l1);
                             fileData.putInt(l2);
                         }

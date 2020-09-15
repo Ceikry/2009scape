@@ -1,5 +1,7 @@
 package org.runite.jagex;
 
+import org.rs09.client.Linkable;
+
 import java.util.Objects;
 
 class Class164_Sub2 extends Class164 {
@@ -241,11 +243,11 @@ class Class164_Sub2 extends Class164 {
 
    static void method2249(int var1) {
       try {
-         Class3 var2 = Class124.aClass130_1659.method1776((byte) 83 + -6);
+         Linkable var2 = Class124.aClass130_1659.method1776((byte) 83 + -6);
 
           for(; var2 != null; var2 = Class124.aClass130_1659.method1778(-97)) {
-            if((long) var1 == (65535L & var2.aLong71 >> 48)) {
-               var2.method86(-1024);
+            if((long) var1 == (65535L & var2.linkableKey >> 48)) {
+               var2.unlink();
             }
          }
 

@@ -1,6 +1,8 @@
 package org.runite.jagex;
 
-final class Class3_Sub14 extends Class3 {
+import org.rs09.client.Linkable;
+
+final class Class3_Sub14 extends Linkable {
 
    private static float[] aFloatArray2387;
    private static float[] aFloatArray2388;

@@ -1,6 +1,8 @@
 package org.runite.jagex;
 
-final class Class3_Sub7 extends Class3 {
+import org.rs09.client.Linkable;
+
+final class Class3_Sub7 extends Linkable {
 
    static int[] anIntArray2292 = new int[1000];
    static int anInt2293 = -1;

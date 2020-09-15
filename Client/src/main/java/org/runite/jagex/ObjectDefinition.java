@@ -1,5 +1,7 @@
 package org.runite.jagex;
 
+import org.rs09.client.Linkable;
+
 import java.util.Objects;
 
 final class ObjectDefinition {
@@ -568,7 +570,7 @@ final class ObjectDefinition {
                   var8 = new Class3_Sub18(buffer.readInt());
                }
 
-               this.aClass130_1501.method1779((Class3) var8, (long) var7);
+               this.aClass130_1501.method1779((Linkable) var8, (long) var7);
             }
          }
       } catch (RuntimeException var9) {

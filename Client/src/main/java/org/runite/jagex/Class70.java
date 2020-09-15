@@ -66,7 +66,7 @@ final class Class70 {
                var8.anInt2316 = var8.anInt2310 - -((int)(Math.random() * (double)(-var8.anInt2310 + var8.anInt2325)));
             }
 
-            Class3.aClass61_78.method1215(var8);
+            Unsorted.aClass61_78.method1215(var8);
          } else if(null != var4) {
             var8.aClass140_Sub4_Sub2_2324 = var4;
             NPCDefinition var12 = var4.definition;

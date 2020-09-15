@@ -315,7 +315,7 @@ public final class Client extends GameShell {
             } catch (Exception var10) {
                 Class3_Sub20.language = 0;
             }
-            Class3.method87(-31, Class3_Sub20.language);
+            Unsorted.method87(-31, Class3_Sub20.language);
 
             String var2 = this.getParameter("objecttag");
             Class163_Sub2_Sub1.aBoolean4018 = var2 != null && var2.equals("1");
@@ -791,7 +791,7 @@ public final class Client extends GameShell {
                     Class3_Sub20.language = var1;
                 }
 
-                Class3.method87(-78, Class3_Sub20.language);
+                Unsorted.method87(-78, Class3_Sub20.language);
                 Class163_Sub2_Sub1.aBoolean4018 = false;
                 Class3_Sub28_Sub11.aBoolean3641 = false;
                 if (var0[3].equals("game0")) {
@@ -863,7 +863,7 @@ public final class Client extends GameShell {
                         if (inter.aBoolean219 && Class126.anInt1676 >= var12 && Class130.anInt1709 >= var13 && Class126.anInt1676 < var14 && Class130.anInt1709 < var15) {
                             for (CS2Script var27 = (CS2Script) Class110.aClass61_1471.method1222(); var27 != null; var27 = (CS2Script) Class110.aClass61_1471.method1221()) {
                                 if (var27.aBoolean2446) {
-                                    var27.method86(-1024);
+                                    var27.unlink();
                                     var27.aClass11_2449.aBoolean163 = false;
                                 }
                             }
@@ -1533,7 +1533,7 @@ public final class Client extends GameShell {
                             Class158.method2180(Class159.aClass153_2019, Class70.aClass153_1058);
                             Class107.method1648(Class3_Sub22.aClass153_2528);
                             Class3_Sub29.method731(Class164.aClass153_2052);
-                            Class3.method89(CacheIndex.aClass153_1948, Class140_Sub6.spritesCacheIndex, Class140_Sub3.aClass153_2727, Class159.aClass153_2019);
+                            Unsorted.method89(CacheIndex.aClass153_1948, Class140_Sub6.spritesCacheIndex, Class140_Sub3.aClass153_2727, Class159.aClass153_2019);
                             Class3_Sub13_Sub17.method250(Class164.aClass153_2052);
                             Class46.method1086(NPC.aClass153_3993);
                             Class3_Sub13_Sub8.method205(Class3_Sub4.aClass153_2258, Class140_Sub7.aClass153_2939, new Class7());

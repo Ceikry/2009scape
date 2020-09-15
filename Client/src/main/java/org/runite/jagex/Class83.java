@@ -380,7 +380,7 @@ final class Class83 {
             if(null == var8) {
                return null;
             } else {
-               var9.method86(-1024);
+               var9.unlink();
                this.aClass130_1159.method1779(var8, var6);
 
                return var8;

@@ -1,7 +1,9 @@
 package org.runite.jagex;
+import org.rs09.client.Linkable;
+
 import java.awt.Graphics;
 
-abstract class Class3_Sub13 extends Class3 {
+abstract class Class3_Sub13 extends Linkable {
 
    boolean aBoolean2375;
    Class97 aClass97_2376;

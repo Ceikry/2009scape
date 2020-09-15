@@ -1,10 +1,11 @@
 package org.runite.jagex;
 
+import org.rs09.client.Linkable;
 import org.runite.GameLaunch;
 
 import java.util.Objects;
 
-final class Class3_Sub8 extends Class3 {
+final class Class3_Sub8 extends Linkable {
 
    int anInt2296;
    Class64[] aClass64Array2298;
@@ -167,7 +168,7 @@ final class Class3_Sub8 extends Class3 {
                   boolean var31 = false;
 
                   for(var17 = 0; Node.clanSize > var17; ++var17) {
-                     if(var29 == PacketParser.aClass3_Sub19Array3694[var17].aLong71) {
+                     if(var29 == PacketParser.aClass3_Sub19Array3694[var17].linkableKey) {
                         var31 = true;
                         break;
                      }

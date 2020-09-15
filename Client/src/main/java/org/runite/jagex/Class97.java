@@ -110,7 +110,7 @@ final class Class97 {
                   Class3_Sub20 var5 = (Class3_Sub20) this.aClass61_1366.method1212();
                   var4 = new Class3_Sub20(var2, Objects.requireNonNull(var5).anInt2483);
                   this.aClass3_Sub20Array1371[var5.anInt2489] = null;
-                  var5.method86(-1024);
+                  var5.unlink();
                }
 
                this.aClass3_Sub20Array1371[var2] = var4;

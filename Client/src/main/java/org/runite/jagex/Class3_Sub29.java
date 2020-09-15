@@ -1,7 +1,9 @@
 package org.runite.jagex;
+import org.rs09.client.Linkable;
+
 import java.nio.charset.StandardCharsets;
 
-final class Class3_Sub29 extends Class3 {
+final class Class3_Sub29 extends Linkable {
 
    static int anInt2579 = 1;
    static RSString[] aClass94Array2580 = new RSString[100];

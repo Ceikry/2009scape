@@ -1,6 +1,8 @@
 package org.runite.jagex;
 
 
+import org.rs09.client.Linkable;
+
 import java.util.Objects;
 
 final class NPCDefinition {
@@ -796,7 +798,7 @@ final class NPCDefinition {
                      var8 = new Class3_Sub18(buffer.readInt());
                   }
 
-                  this.aClass130_1272.method1779((Class3) var8, (long) var10);
+                  this.aClass130_1272.method1779((Linkable) var8, (long) var10);
                }
             }
          }

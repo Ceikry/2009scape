@@ -881,7 +881,7 @@ final class Class3_Sub30_Sub1 extends RSByteBuffer {
 				Class155.anInt1971 = Class3_Sub28_Sub12.anInt3652;
 				Class100.anInt1407 = Class41.anInt689;
 				RSInterface.aFloat246 = var9;
-				Class3.anInt72 = 0;
+				Unsorted.anInt72 = 0;
 				Class3_Sub13_Sub23_Sub1.anInt4037 = CacheIndex.anInt1950;
 				Class132.anInt1736 = var11;
 				Class3_Sub13_Sub2.aFloat3044 = var8;
@@ -889,17 +889,17 @@ final class Class3_Sub30_Sub1 extends RSByteBuffer {
 				Class110.aFloat1475 = Class12.aFloat319;
 			}
 
-			if(65536 > Class3.anInt72) {
-				Class3.anInt72 += 250 * var0;
-				if(Class3.anInt72 >= 65536) {
-					Class3.anInt72 = 65536;
+			if(65536 > Unsorted.anInt72) {
+				Unsorted.anInt72 += 250 * var0;
+				if(Unsorted.anInt72 >= 65536) {
+					Unsorted.anInt72 = 65536;
 				}
 
-				float var15 = (float)Class3.anInt72 / 65536.0F;
-				int var13 = Class3.anInt72 >> 8;
-				int var12 = -Class3.anInt72 + 65536 >> 8;
+				float var15 = (float) Unsorted.anInt72 / 65536.0F;
+				int var13 = Unsorted.anInt72 >> 8;
+				int var12 = -Unsorted.anInt72 + 65536 >> 8;
 				Class3_Sub28_Sub12.anInt3652 = (-16711936 & var13 * (Class96.anInt1345 & 16711935) + (16711935 & Class155.anInt1971) * var12) + (16711680 & var12 * (Class155.anInt1971 & '\uff00') + ('\uff00' & Class96.anInt1345) * var13) >> 8;
-				float var14 = (float)(65536 - Class3.anInt72) / 65536.0F;
+				float var14 = (float)(65536 - Unsorted.anInt72) / 65536.0F;
 				Class30.aFloat578 = var14 * Class3_Sub13_Sub8.aFloat3105 + var15 * Class3_Sub17.aFloat2457;
 				Class3_Sub13_Sub36.aFloat3424 = Class3_Sub13_Sub36.aFloat3435 * var14 + var15 * Class3_Sub13_Sub2.aFloat3044;
 				Class12.aFloat319 = var15 * RSInterface.aFloat246 + var14 * Class110.aFloat1475;
@@ -1036,7 +1036,7 @@ final class Class3_Sub30_Sub1 extends RSByteBuffer {
 					}
 
 					if(!var3) {
-						var5 = (int)var1.aLong71;
+						var5 = (int)var1.linkableKey;
 						RSInterface var6 = Class7.getRSInterface(var5);
 						if(null != var6) {
 							Class20.method909(117, var6);

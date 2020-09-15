@@ -1,4 +1,6 @@
 package org.runite.jagex;
+import org.rs09.client.Linkable;
+
 import java.awt.Color;
 import java.awt.Container;
 import java.awt.Graphics;
@@ -6,7 +8,7 @@ import java.awt.Insets;
 
 final class Class80 {
 
-   private Class3 aClass3_1130;
+   private Linkable aClass3_1130;
    static Class93 aClass93_1131 = new Class93(5);
    private int anInt1132 = 0;
    static RSString aClass94_1133 = RSString.of(")4j");
@@ -17,10 +19,10 @@ final class Class80 {
    static int[] anIntArray1138;
 
 
-   final Class3 method1392() {
+   final Linkable method1392() {
       try {
 
-          Class3 var2;
+          Linkable var2;
          if(this.anInt1132 > 0 && this.aClass130_1134.aClass3Array1697[this.anInt1132 + -1] != this.aClass3_1130) {
             var2 = this.aClass3_1130;
          } else {
@@ -29,18 +31,18 @@ final class Class80 {
                   return null;
                }
 
-               var2 = this.aClass130_1134.aClass3Array1697[this.anInt1132++].aClass3_74;
+               var2 = this.aClass130_1134.aClass3Array1697[this.anInt1132++].next;
             } while(var2 == this.aClass130_1134.aClass3Array1697[-1 + this.anInt1132]);
 
          }
-         this.aClass3_1130 = var2.aClass3_74;
+         this.aClass3_1130 = var2.next;
          return var2;
       } catch (RuntimeException var3) {
          throw Class44.clientError(var3, "l.D(" + 0 + ')');
       }
    }
 
-   final Class3 method1393() {
+   final Linkable method1393() {
       try {
 
           this.anInt1132 = 0;

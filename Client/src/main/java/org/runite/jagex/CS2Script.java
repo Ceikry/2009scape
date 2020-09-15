@@ -1,6 +1,8 @@
 package org.runite.jagex;
 
-final class CS2Script extends Class3 {
+import org.rs09.client.Linkable;
+
+final class CS2Script extends Linkable {
 
    RSInterface aClass11_2438;
    RSString aClass94_2439;

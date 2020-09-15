@@ -1,22 +1,24 @@
 package org.runite.jagex;
+import org.rs09.client.Linkable;
+
 import java.awt.Component;
 import java.util.Objects;
 
 final class Class130 {
 
-   Class3[] aClass3Array1697;
+   Linkable[] aClass3Array1697;
    static RSString aClass94_1698 = RSString.of("(R");
    int anInt1700;
    static boolean[] aBooleanArray1703;
    static int incomingPacketLength = 0;
    static int anInt1705 = 0;
-   private Class3 aClass3_1706;
+   private Linkable aClass3_1706;
    
    private long aLong1708;
    static int anInt1709 = 0;
    static int anInt1711 = -2;
    static boolean[] aBooleanArray1712 = new boolean[100];
-   private Class3 aClass3_1713;
+   private Linkable aClass3_1713;
    private int anInt1715 = 0;
 
 
@@ -64,16 +66,16 @@ final class Class130 {
          int var2 = 0;
 
          while(var2 < this.anInt1700) {
-            Class3 var3 = this.aClass3Array1697[var2];
+            Linkable var3 = this.aClass3Array1697[var2];
 
             while(true) {
-               Class3 var4 = var3.aClass3_74;
+               Linkable var4 = var3.next;
                if(var3 == var4) {
                   ++var2;
                   break;
                }
 
-               var4.method86(-1024);
+               var4.unlink();
             }
          }
 
@@ -94,10 +96,10 @@ final class Class130 {
       Class3_Sub13_Sub5.anInt3070 = 0;
    }
 
-   final Class3 method1776(int var1) {
+   final Linkable method1776(int var1) {
       try {
          this.anInt1715 = 0;
-         return var1 < 11?(Class3)null:this.method1778(-66);
+         return var1 < 11?(Linkable)null:this.method1778(-66);
       } catch (RuntimeException var3) {
          throw Class44.clientError(var3, "sc.B(" + var1 + ')');
       }
@@ -194,9 +196,9 @@ final class Class130 {
       }
    }
 
-   final Class3 method1778(int var1) {
+   final Linkable method1778(int var1) {
       try {
-         Class3 var2;
+         Linkable var2;
          if(this.anInt1715 > 0 && this.aClass3_1713 != this.aClass3Array1697[this.anInt1715 - 1]) {
             var2 = this.aClass3_1713;
          } else {
@@ -209,29 +211,29 @@ final class Class130 {
                   return null;
                }
 
-               var2 = this.aClass3Array1697[this.anInt1715++].aClass3_74;
+               var2 = this.aClass3Array1697[this.anInt1715++].next;
             } while(this.aClass3Array1697[this.anInt1715 + -1] == var2);
 
          }
-         this.aClass3_1713 = var2.aClass3_74;
+         this.aClass3_1713 = var2.next;
          return var2;
       } catch (RuntimeException var3) {
          throw Class44.clientError(var3, "sc.K(" + var1 + ')');
       }
    }
 
-   final void method1779(Class3 var2, long var3) {
+   final void method1779(Linkable var2, long var3) {
       try {
-         if(null != var2.aClass3_76) {
-            var2.method86(1 + -1025);
+         if(null != var2.previous) {
+            var2.unlink();
          }
 
-         Class3 var5 = this.aClass3Array1697[(int)(var3 & (long)(this.anInt1700 - 1))];
-         var2.aClass3_74 = var5;
-         var2.aLong71 = var3;
-         var2.aClass3_76 = var5.aClass3_76;
-         var2.aClass3_76.aClass3_74 = var2;
-         var2.aClass3_74.aClass3_76 = var2;
+         Linkable var5 = this.aClass3Array1697[(int)(var3 & (long)(this.anInt1700 - 1))];
+         var2.next = var5;
+         var2.linkableKey = var3;
+         var2.previous = var5.previous;
+         var2.previous.next = var2;
+         var2.next.previous = var2;
       } catch (RuntimeException var6) {
          throw Class44.clientError(var6, "sc.E(" + 1 + ',' + (var2 != null?"{...}":"null") + ',' + var3 + ')');
       }
@@ -239,13 +241,13 @@ final class Class130 {
 
    Class130(int var1) {
       try {
-         this.aClass3Array1697 = new Class3[var1];
+         this.aClass3Array1697 = new Linkable[var1];
          this.anInt1700 = var1;
 
          for(int var2 = 0; var2 < var1; ++var2) {
-            Class3 var3 = this.aClass3Array1697[var2] = new Class3();
-            var3.aClass3_76 = var3;
-            var3.aClass3_74 = var3;
+            Linkable var3 = this.aClass3Array1697[var2] = new Linkable();
+            var3.previous = var3;
+            var3.next = var3;
          }
 
       } catch (RuntimeException var4) {
@@ -253,15 +255,15 @@ final class Class130 {
       }
    }
 
-   final Class3 method1780(long var1) {
+   final Linkable method1780(long var1) {
       try {
          this.aLong1708 = var1;
-         Class3 var4 = Objects.requireNonNull(this.aClass3Array1697)[(int)(var1 & (long)(-1 + this.anInt1700))];
+         Linkable var4 = Objects.requireNonNull(this.aClass3Array1697)[(int)(var1 & (long)(-1 + this.anInt1700))];
 
-         for(this.aClass3_1706 = var4.aClass3_74; var4 != this.aClass3_1706; this.aClass3_1706 = this.aClass3_1706.aClass3_74) {
-            if(this.aClass3_1706.aLong71 == var1) {
-               Class3 var5 = this.aClass3_1706;
-               this.aClass3_1706 = this.aClass3_1706.aClass3_74;
+         for(this.aClass3_1706 = var4.next; var4 != this.aClass3_1706; this.aClass3_1706 = this.aClass3_1706.next) {
+            if(this.aClass3_1706.linkableKey == var1) {
+               Linkable var5 = this.aClass3_1706;
+               this.aClass3_1706 = this.aClass3_1706.next;
                return var5;
             }
          }
@@ -278,10 +280,10 @@ final class Class130 {
          int var3 = 0;
 
          for(int var4 = 0; var4 < this.anInt1700; ++var4) {
-            Class3 var5 = this.aClass3Array1697[var4];
+            Linkable var5 = this.aClass3Array1697[var4];
 
-            for(Class3 var6 = var5.aClass3_74; var6 != var5; ++var3) {
-               var6 = var6.aClass3_74;
+            for(Linkable var6 = var5.next; var6 != var5; ++var3) {
+               var6 = var6.next;
             }
          }
 
@@ -291,14 +293,14 @@ final class Class130 {
       }
    }
 
-   final void method1782(Class3[] var1, int var2) {
+   final void method1782(Linkable[] var1, int var2) {
       try {
          int var3 = 0;
 
          for(int var4 = 0; var4 < this.anInt1700; ++var4) {
-            Class3 var5 = this.aClass3Array1697[var4];
+            Linkable var5 = this.aClass3Array1697[var4];
 
-            for(Class3 var6 = var5.aClass3_74; var6 != var5; var6 = var6.aClass3_74) {
+            for(Linkable var6 = var5.next; var6 != var5; var6 = var6.next) {
                var1[var3++] = var6;
             }
          }
@@ -319,19 +321,19 @@ final class Class130 {
       }
    }
 
-   final Class3 method1784() {
+   final Linkable method1784() {
       try {
          if (null != this.aClass3_1706) {
-            Class3 var2 = this.aClass3Array1697[(int) (this.aLong1708 & (long) (-1 + this.anInt1700))];
+            Linkable var2 = this.aClass3Array1697[(int) (this.aLong1708 & (long) (-1 + this.anInt1700))];
 
             while (var2 != this.aClass3_1706) {
-               if (this.aClass3_1706.aLong71 == this.aLong1708) {
-                  Class3 var3 = this.aClass3_1706;
-                  this.aClass3_1706 = this.aClass3_1706.aClass3_74;
+               if (this.aClass3_1706.linkableKey == this.aLong1708) {
+                  Linkable var3 = this.aClass3_1706;
+                  this.aClass3_1706 = this.aClass3_1706.next;
                   return var3;
                }
 
-               this.aClass3_1706 = this.aClass3_1706.aClass3_74;
+               this.aClass3_1706 = this.aClass3_1706.next;
             }
 
             this.aClass3_1706 = null;

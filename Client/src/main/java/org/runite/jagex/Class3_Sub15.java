@@ -1,6 +1,8 @@
 package org.runite.jagex;
 
-final class Class3_Sub15 extends Class3 {
+import org.rs09.client.Linkable;
+
+final class Class3_Sub15 extends Linkable {
 
    static int anInt2421 = -1;
    byte[] aByteArray2422;

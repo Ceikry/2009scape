@@ -145,7 +145,7 @@ final class Class3_Sub13_Sub17 extends Class3_Sub13 {
    static void method252() {
       try {
          Class3_Sub9 var1;
-         for(var1 = (Class3_Sub9) aClass61_78.method1222(); null != var1; var1 = (Class3_Sub9) aClass61_78.method1221()) {
+         for(var1 = (Class3_Sub9) Unsorted.aClass61_78.method1222(); null != var1; var1 = (Class3_Sub9) Unsorted.aClass61_78.method1221()) {
             if(var1.aBoolean2329) {
                var1.method134();
             }

@@ -161,7 +161,7 @@ static boolean aBoolean1080 = false;
                var27.anInt2248 -= var10;
                var27.anInt2264 -= var9;
                if(0 > var27.anInt2264 || var27.anInt2248 < 0 || var27.anInt2264 >= 104 || var27.anInt2248 >= 104) {
-                  var27.method86(-1024);
+                  var27.unlink();
                }
             }
 
@@ -209,13 +209,13 @@ static boolean aBoolean1080 = false;
                   return null;
                }
 
-               var1.method86(-1024);
+               var1.unlink();
                var1.method524();
             } while((Long.MIN_VALUE & var1.aLong2569) == 0L);
 
             return var1;
          } else {
-            var1.method86(-1024);
+            var1.unlink();
             var1.method524();
             return var1;
          }

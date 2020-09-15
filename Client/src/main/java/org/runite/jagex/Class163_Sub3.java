@@ -85,7 +85,7 @@ final class Class163_Sub3 extends Class163 {
                   Class55.anIntArray882[Class8.anInt104] = 0;
                   Node.aClass94Array2566[Class8.anInt104] = Class3_Sub28_Sub14.aClass94_3672;
                   Class57.anIntArray904[Class8.anInt104] = 0;
-                  Class3.aBooleanArray73[Class8.anInt104] = false;
+                  Unsorted.aBooleanArray73[Class8.anInt104] = false;
                   ++Class8.anInt104;
                   Class110.anInt1472 = Class3_Sub13_Sub17.anInt3213;
                   Class3_Sub13_Sub1.outgoingBuffer.putOpcode(120);

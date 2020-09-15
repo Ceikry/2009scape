@@ -22,7 +22,7 @@ final class Class93 {
 
          if(this.anInt1327 == 0) {
             Class3_Sub28_Sub7 var5 = (Class3_Sub28_Sub7)this.aClass13_1329.method877();
-            Objects.requireNonNull(var5).method86(-1024);
+            Objects.requireNonNull(var5).unlink();
             var5.method524();
          } else {
             --this.anInt1327;
@@ -79,7 +79,7 @@ final class Class93 {
          Class3_Sub28_Sub7 var4 = (Class3_Sub28_Sub7)this.aClass130_1332.method1780(var1);
          if(var3 == -124) {
             if(null != var4) {
-               var4.method86(-1024);
+               var4.unlink();
                var4.method524();
                ++this.anInt1327;
             }
@@ -121,13 +121,13 @@ final class Class93 {
                if(!var3.method568()) {
                   if(++var3.aLong2569 > (long)var2) {
                      Class3_Sub28_Sub7 var4 = Class3_Sub28_Sub20.aClass118_3794.method1725(var3);
-                     this.aClass130_1332.method1779(var4, var3.aLong71);
+                     this.aClass130_1332.method1779(var4, var3.linkableKey);
                      Class45.method1084(var3, var4);
-                     var3.method86(-1024);
+                     var3.unlink();
                      var3.method524();
                   }
                } else if(null == var3.method567()) {
-                  var3.method86(-1024);
+                  var3.unlink();
                   var3.method524();
                   ++this.anInt1327;
                }
@@ -147,7 +147,7 @@ final class Class93 {
       try {
          for(Class3_Sub28_Sub7 var2 = (Class3_Sub28_Sub7)this.aClass13_1329.method876((byte)52); var2 != null; var2 = (Class3_Sub28_Sub7)this.aClass13_1329.method878(-43)) {
             if(var2.method568()) {
-               var2.method86(-1024);
+               var2.unlink();
                var2.method524();
                ++this.anInt1327;
             }
@@ -212,17 +212,17 @@ final class Class93 {
          } else {
             Object var5 = var4.method567();
             if(var5 == null) {
-               var4.method86(-1024);
+               var4.unlink();
                var4.method524();
                ++this.anInt1327;
                return null;
             } else {
                if(var4.method568()) {
                   Class3_Sub28_Sub7_Sub1 var6 = new Class3_Sub28_Sub7_Sub1(var5);
-                  this.aClass130_1332.method1779(var6, var4.aLong71);
+                  this.aClass130_1332.method1779(var6, var4.linkableKey);
                   this.aClass13_1329.method879(var6);
                   var6.aLong2569 = 0L;
-                  var4.method86(-1024);
+                  var4.unlink();
                   var4.method524();
                } else {
                   this.aClass13_1329.method879(var4);

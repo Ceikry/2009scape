@@ -137,7 +137,7 @@ final class Class3_Sub13_Sub28 extends Class3_Sub13 {
                   Class20.method907(WorldListCountry.localPlane, (int)var2.aDouble2920, (int)var2.aDouble2900, (int)var2.aDouble2914, 60, var2, var2.anInt2924, -1L, false);
                }
             } else {
-               var1.method86(-1024);
+               var1.unlink();
             }
          }
 

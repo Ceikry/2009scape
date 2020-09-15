@@ -148,7 +148,7 @@ final class Class3_Sub28_Sub1 extends Node {
       try {
          Class3_Sub25 var2 = (Class3_Sub25)Class3_Sub2.aClass130_2220.method1780((long)var0);
          if(null != var2) {
-            var2.method86(-1024);
+            var2.unlink();
          }
       } catch (RuntimeException var3) {
          throw Class44.clientError(var3, "bc.A(" + var0 + ',' + -28236 + ')');

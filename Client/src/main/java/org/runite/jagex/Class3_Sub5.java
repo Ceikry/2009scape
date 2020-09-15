@@ -1,6 +1,8 @@
 package org.runite.jagex;
 
-final class Class3_Sub5 extends Class3 {
+import org.rs09.client.Linkable;
+
+final class Class3_Sub5 extends Linkable {
 
    int anInt2266;
 
@@ -182,13 +184,13 @@ final class Class3_Sub5 extends Class3 {
          for(Class3_Sub7 var4 = !var0?(Class3_Sub7) Class86.aClass130_3679.method1778(-123):(Class3_Sub7) Class86.aClass130_3679.method1776(-1 + 56); var4 != null; var4 = (Class3_Sub7) Class86.aClass130_3679.method1778(-64)) {
             if((4611686018427387903L & var4.aLong2295) < var2) {
                if((4611686018427387904L & var4.aLong2295) != 0) {
-                  int var5 = (int)var4.aLong71;
+                  int var5 = (int)var4.linkableKey;
                   ItemDefinition.ram[var5] = Class57.anIntArray898[var5];
-                  var4.method86(-1024);
+                  var4.unlink();
                   return var5;
                }
 
-               var4.method86(~1023);
+               var4.unlink();
             }
          }
 

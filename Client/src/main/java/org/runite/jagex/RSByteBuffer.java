@@ -1,12 +1,13 @@
 package org.runite.jagex;
 
+import org.rs09.client.Linkable;
 import org.rs09.client.util.CRC;
 import org.runite.Configurations;
 
 import java.math.BigInteger;
 import java.util.Objects;
 
-public class RSByteBuffer extends Class3 {
+public class RSByteBuffer extends Linkable {
 
     byte[] buffer;
     int index;

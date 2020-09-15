@@ -24,7 +24,7 @@ final class Class3_Sub28_Sub8 extends Node {
                   var2.aClass3_Sub24_Sub1_2312 = null;
                }
 
-               var2.method86(-1024);
+               var2.unlink();
                return;
             }
          }

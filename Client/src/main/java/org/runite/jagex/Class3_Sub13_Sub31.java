@@ -28,7 +28,7 @@ final class Class3_Sub13_Sub31 extends Class3_Sub13 {
                var1.anInt2261 = 0;
                Class132.method1798(56, var1);
             } else {
-               var1.method86(-1024);
+               var1.unlink();
             }
          }
 

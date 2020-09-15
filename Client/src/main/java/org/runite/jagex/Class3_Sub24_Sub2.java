@@ -1,5 +1,7 @@
 package org.runite.jagex;
 
+import org.rs09.client.Linkable;
+
 import java.util.Objects;
 
 final class Class3_Sub24_Sub2 extends Class3_Sub24 {
@@ -11,9 +13,9 @@ final class Class3_Sub24_Sub2 extends Class3_Sub24 {
 
 
    private void method456(Class3_Sub3 var1) {
-      var1.method86(-1024);
+      var1.unlink();
       var1.method106();
-      Class3 var2 = this.aClass61_3486.aClass3_940.aClass3_74;
+      Linkable var2 = this.aClass61_3486.aClass3_940.next;
       if(var2 == this.aClass61_3486.aClass3_940) {
          this.anInt3488 = -1;
       } else {
@@ -53,7 +55,7 @@ final class Class3_Sub24_Sub2 extends Class3_Sub24 {
                this.method456(var5);
             } else {
                var5.anInt2247 = var7;
-               this.method462(var5.aClass3_74, var5);
+               this.method462(var5.next, var5);
             }
          }
       } while(var3 != 0);
@@ -91,7 +93,7 @@ final class Class3_Sub24_Sub2 extends Class3_Sub24 {
    }
 
    final synchronized void method461(Class3_Sub24 var1) {
-      var1.method86(-1024);
+      var1.unlink();
    }
 
    final int method409() {
@@ -124,7 +126,7 @@ final class Class3_Sub24_Sub2 extends Class3_Sub24 {
                this.method456(var3);
             } else {
                var3.anInt2247 = var5;
-               this.method462(var3.aClass3_74, var3);
+               this.method462(var3.next, var3);
             }
          }
       } while(var1 != 0);
@@ -135,13 +137,13 @@ final class Class3_Sub24_Sub2 extends Class3_Sub24 {
       return (Class3_Sub24)this.aClass61_3485.method1221();
    }
 
-   private void method462(Class3 var1, Class3_Sub3 var2) {
+   private void method462(Linkable var1, Class3_Sub3 var2) {
       while(var1 != this.aClass61_3486.aClass3_940 && ((Class3_Sub3)var1).anInt2247 <= var2.anInt2247) {
-         var1 = var1.aClass3_74;
+         var1 = var1.next;
       }
 
       AbstractIndexedSprite.method1662(var2, var1);
-      this.anInt3488 = ((Class3_Sub3)this.aClass61_3486.aClass3_940.aClass3_74).anInt2247;
+      this.anInt3488 = ((Class3_Sub3)this.aClass61_3486.aClass3_940.next).anInt2247;
    }
 
 }

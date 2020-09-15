@@ -20,13 +20,13 @@ final class Class106 {
              long var3 = var1.toLong();
             int var2 = 0;
             if(var3 != 0L) {
-               while(PacketParser.aClass3_Sub19Array3694.length > var2 && var3 != PacketParser.aClass3_Sub19Array3694[var2].aLong71) {
+               while(PacketParser.aClass3_Sub19Array3694.length > var2 && var3 != PacketParser.aClass3_Sub19Array3694[var2].linkableKey) {
                   ++var2;
                }
 
                if(var2 < PacketParser.aClass3_Sub19Array3694.length && null != PacketParser.aClass3_Sub19Array3694[var2]) {
                   Class3_Sub13_Sub1.outgoingBuffer.putOpcode(162);
-                  Class3_Sub13_Sub1.outgoingBuffer.putLong(PacketParser.aClass3_Sub19Array3694[var2].aLong71, -2037491440);
+                  Class3_Sub13_Sub1.outgoingBuffer.putLong(PacketParser.aClass3_Sub19Array3694[var2].linkableKey, -2037491440);
                }
             }
          }

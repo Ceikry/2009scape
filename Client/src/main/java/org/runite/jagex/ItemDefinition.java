@@ -1,4 +1,6 @@
 package org.runite.jagex;
+import org.rs09.client.Linkable;
+
 import java.awt.Component;
 import java.nio.charset.StandardCharsets;
 import java.util.Calendar;
@@ -1390,7 +1392,7 @@ final class ItemDefinition {
 														if (Class96.anInt1357 != 2 || 0 > j16 || Class8.anInt104 <= j16)
 															intsStack[iStackCounter++] = 0;
 														else
-															intsStack[iStackCounter++] = Class3.aBooleanArray73[j16] ? 1 : 0;
+															intsStack[iStackCounter++] = Unsorted.aBooleanArray73[j16] ? 1 : 0;
 														continue;
 													}
 													if (opcode == 3628) {
@@ -2080,7 +2082,7 @@ final class ItemDefinition {
 																		continue;
 																	}
 																	if (5203 == opcode) {
-																		Class3.method84(stringsStack[--sStackCounter], -801);
+																		Unsorted.method84(stringsStack[--sStackCounter], -801);
 																		continue;
 																	}
 																	if (5204 == opcode) {
@@ -2241,13 +2243,13 @@ final class ItemDefinition {
 																		continue;
 																	}
 																	if (5302 == opcode) {
-																		Class106[] aclass106 = Class3.method88();
+																		Class106[] aclass106 = Unsorted.method88();
 																		intsStack[iStackCounter++] = aclass106.length;
 																		continue;
 																	}
 																	if (5303 == opcode) {
 																		int i32 = intsStack[--iStackCounter];
-																		Class106[] aclass106_1 = Class3.method88();
+																		Class106[] aclass106_1 = Unsorted.method88();
 																		intsStack[iStackCounter++] = aclass106_1[i32].anInt1447;
 																		intsStack[iStackCounter++] = aclass106_1[i32].anInt1449;
 																		continue;
@@ -2256,7 +2258,7 @@ final class ItemDefinition {
 																		int j59 = Class3_Sub13_Sub5.anInt3071;
 																		int j32 = Class3_Sub13.anInt2378;
 																		int j71 = -1;
-																		Class106[] aclass106_2 = Class3.method88();
+																		Class106[] aclass106_2 = Unsorted.method88();
 																		int i80 = 0;
 																		do {
 																			if (aclass106_2.length <= i80)
@@ -4350,7 +4352,7 @@ final class ItemDefinition {
 							var9 = new Class3_Sub18(buffer.readInt());
 						}
 
-						this.aClass130_798.method1779((Class3) var9, (long) var8);
+						this.aClass130_798.method1779((Linkable) var9, (long) var8);
 					}
 				}
 			}

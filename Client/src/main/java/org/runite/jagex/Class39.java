@@ -572,7 +572,7 @@ final class Class39 {
 								if (var24 != null) {
 									for (Class3_Sub28_Sub14 var26 = (Class3_Sub28_Sub14) var24.method1222(); var26 != null; var26 = (Class3_Sub28_Sub14) var24.method1221()) {
 										if (var26.aClass140_Sub7_3676.anInt2936 == (var4 & 32767)) {
-											var26.method86(-1024);
+											var26.unlink();
 											break;
 										}
 									}

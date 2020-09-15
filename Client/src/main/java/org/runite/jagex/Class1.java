@@ -577,7 +577,7 @@ final class Class1 {
 
          for(var56 = (Class3_Sub11)var12.method1776(62); null != var56; var56 = (Class3_Sub11)var12.method1778(-80)) {
             if(var56.anInt2343 == 0) {
-               var56.method86(-1024);
+               var56.unlink();
             } else {
                var56.method148();
             }
@@ -589,7 +589,7 @@ final class Class1 {
          var12.method1782(var57, 83);
 
          for(var16 = 0; var16 < var13; ++var16) {
-            var59[var16] = var57[var16].aLong71;
+            var59[var16] = var57[var16].linkableKey;
          }
 
          PacketParser.method824(var59, var57, -27);

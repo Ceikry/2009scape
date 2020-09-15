@@ -1,8 +1,10 @@
 package org.runite.jagex;
 
+import org.rs09.client.Linkable;
+
 import javax.media.opengl.GL;
 
-final class Class3_Sub22 extends Class3 {
+final class Class3_Sub22 extends Linkable {
 
    static int anInt2500;
    int anInt2501;

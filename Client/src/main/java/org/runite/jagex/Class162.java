@@ -18,7 +18,7 @@ final class Class162 {
                var2.aClass3_Sub24_Sub1_2312 = null;
             }
 
-            var2.method86(8 ^ -1016);
+            var2.unlink();
          }
 
       } catch (RuntimeException var3) {

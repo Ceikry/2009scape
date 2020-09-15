@@ -89,7 +89,7 @@ final class Class3_Sub24_Sub3 extends Class3_Sub24 {
          Class3_Sub28_Sub6 var3 = (Class3_Sub28_Sub6)Client.aClass130_2194.method1780((long)var2 | (long)var1 << 32);
          if(null == var3) {
             var3 = new Class3_Sub28_Sub6(var1, var2);
-            Client.aClass130_2194.method1779(var3, var3.aLong71);
+            Client.aClass130_2194.method1779(var3, var3.linkableKey);
          }
 
          return var3;

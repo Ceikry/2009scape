@@ -102,7 +102,7 @@ final class Class114 {
                   Class3_Sub26 var4 = (Class3_Sub26) this.aClass61_1577.method1212();
                   var3 = new Class3_Sub26(var2, Objects.requireNonNull(var4).anInt2555);
                   this.aClass3_Sub26Array1571[var4.anInt2553] = null;
-                  var4.method86(-1024);
+                  var4.unlink();
                }
 
                this.aClass3_Sub26Array1571[var2] = var3;

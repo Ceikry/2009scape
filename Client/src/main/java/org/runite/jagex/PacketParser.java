@@ -399,12 +399,12 @@ final class PacketParser {
 
                                                             for (chatIcon = 0; chatIcon < Node.clanSize; ++chatIcon) {
                                                                 var7[chatIcon] = new Class3_Sub19();
-                                                                var7[chatIcon].aLong71 = GraphicDefinition.incomingBuffer.getLong((byte) -83 + 4);
-                                                                var7[chatIcon].aClass94_2476 = Class41.method1052(var7[chatIcon].aLong71);
+                                                                var7[chatIcon].linkableKey = GraphicDefinition.incomingBuffer.getLong((byte) -83 + 4);
+                                                                var7[chatIcon].aClass94_2476 = Class41.method1052(var7[chatIcon].linkableKey);
                                                                 var7[chatIcon].anInt2478 = GraphicDefinition.incomingBuffer.getShort();
                                                                 var7[chatIcon].aByte2472 = GraphicDefinition.incomingBuffer.getByte();
                                                                 var7[chatIcon].aClass94_2473 = GraphicDefinition.incomingBuffer.getString();
-                                                                if (var7[chatIcon].aLong71 == Class3_Sub13_Sub16.aLong3202) {
+                                                                if (var7[chatIcon].linkableKey == Class3_Sub13_Sub16.aLong3202) {
                                                                     Class91.aByte1308 = var7[chatIcon].aByte2472;
                                                                 }
                                                             }
@@ -585,7 +585,7 @@ final class PacketParser {
                                                                 var47 = (Class3_Sub1) Class124.aClass130_1659.method1780(var36);
                                                                 if (null != var47) {
                                                                     var38 = new Class3_Sub1(var47.anInt2205, nodeModelId);
-                                                                    var47.method86(-1024);
+                                                                    var47.unlink();
                                                                 } else if (var30 == -1) {
                                                                     var38 = new Class3_Sub1(Objects.requireNonNull(Class7.getRSInterface(var19)).aClass3_Sub1_257.anInt2205, nodeModelId);
                                                                 } else {
@@ -873,7 +873,7 @@ final class PacketParser {
                                                                             Node.aClass94Array2566[var33] = var41;
                                                                             Class57.anIntArray904[var33] = counter;
                                                                             var46 = null;
-                                                                            Class3.aBooleanArray73[var33] = isIgnored;
+                                                                            Unsorted.aBooleanArray73[var33] = isIgnored;
                                                                             break;
                                                                         }
                                                                     }
@@ -885,7 +885,7 @@ final class PacketParser {
                                                                         Class55.anIntArray882[Class8.anInt104] = modelId;
                                                                         Node.aClass94Array2566[Class8.anInt104] = var41;
                                                                         Class57.anIntArray904[Class8.anInt104] = counter;
-                                                                        Class3.aBooleanArray73[Class8.anInt104] = isIgnored;
+                                                                        Unsorted.aBooleanArray73[Class8.anInt104] = isIgnored;
                                                                         ++Class8.anInt104;
                                                                     }
 
@@ -914,9 +914,9 @@ final class PacketParser {
                                                                                 int var17 = Class57.anIntArray904[var11];
                                                                                 Class57.anIntArray904[var11] = Class57.anIntArray904[var11 - -1];
                                                                                 Class57.anIntArray904[1 + var11] = var17;
-                                                                                boolean var18 = Class3.aBooleanArray73[var11];
-                                                                                Class3.aBooleanArray73[var11] = Class3.aBooleanArray73[var11 - -1];
-                                                                                Class3.aBooleanArray73[var11 - -1] = var18;
+                                                                                boolean var18 = Unsorted.aBooleanArray73[var11];
+                                                                                Unsorted.aBooleanArray73[var11] = Unsorted.aBooleanArray73[var11 - -1];
+                                                                                Unsorted.aBooleanArray73[var11 - -1] = var18;
                                                                             }
                                                                         }
 
@@ -1021,7 +1021,7 @@ final class PacketParser {
                                                                         }
 
                                                                         if (null != var23) {
-                                                                            var23.method86(-1024);
+                                                                            var23.unlink();
                                                                             Class3_Sub13_Sub17.aClass130_3208.method1779(var23, modelId);
                                                                         }
 
@@ -1541,7 +1541,7 @@ final class PacketParser {
                                                                                     }
                                                                                 } else {
                                                                                     var38 = new Class3_Sub1(var6, var47.anInt2202);
-                                                                                    var47.method86(-1024);
+                                                                                    var47.unlink();
                                                                                 }
 
                                                                                 Class124.aClass130_1659.method1779(var38, var36);
@@ -1568,7 +1568,7 @@ final class PacketParser {
 
                                                                                 var2 &= Long.MAX_VALUE;
 
-                                                                                for (var30 = 0; var30 < Node.clanSize && (var2 != aClass3_Sub19Array3694[var30].aLong71 || aClass3_Sub19Array3694[var30].anInt2478 != modelId); ++var30) {
+                                                                                for (var30 = 0; var30 < Node.clanSize && (var2 != aClass3_Sub19Array3694[var30].linkableKey || aClass3_Sub19Array3694[var30].anInt2478 != modelId); ++var30) {
                                                                                 }
 
                                                                                 if (var30 < Node.clanSize) {
@@ -1583,8 +1583,8 @@ final class PacketParser {
                                                                             } else {
                                                                                 var41 = GraphicDefinition.incomingBuffer.getString();
                                                                                 Class3_Sub19 var40 = new Class3_Sub19();
-                                                                                var40.aLong71 = var2;
-                                                                                var40.aClass94_2476 = Class41.method1052(var40.aLong71);
+                                                                                var40.linkableKey = var2;
+                                                                                var40.aClass94_2476 = Class41.method1052(var40.linkableKey);
                                                                                 var40.aByte2472 = var28;
                                                                                 var40.aClass94_2473 = var41;
                                                                                 var40.anInt2478 = modelId;
