@@ -47,7 +47,7 @@ final class Class3_Sub10 extends Linkable {
 
             def = new RenderAnimationDefinition();
             if(var3 != null) {
-               def.parse(new RSByteBuffer(var3));
+               def.parse(new DataBuffer(var3));
             }
 
             def.method899();

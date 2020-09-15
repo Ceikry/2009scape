@@ -17,7 +17,7 @@ final class Class3_Sub28_Sub4 extends Node {
    static RSString aClass94_3577 = RSString.of(": ");
    static Class83 aClass83_3579;
 
-   final void method545(RSByteBuffer var1, int[] var2) {
+   final void method545(DataBuffer var1, int[] var2) {
       try {
          if(this.anIntArray3566 != null) {
             for(int var4 = 0; var4 < this.anIntArray3566.length && var2.length > var4; ++var4) {
@@ -33,7 +33,7 @@ final class Class3_Sub28_Sub4 extends Node {
       }
    }
 
-   final void method546(RSByteBuffer var1) {
+   final void method546(DataBuffer var1) {
       try {
          while(true) {
             int var3 = var1.readUnsignedByte();
@@ -127,7 +127,7 @@ final class Class3_Sub28_Sub4 extends Node {
       }
    }
 
-   private void method553(RSByteBuffer var1, int var2) {
+   private void method553(DataBuffer var1, int var2) {
       try {
 
          if(var2 == 1) {
@@ -186,7 +186,7 @@ final class Class3_Sub28_Sub4 extends Node {
       }
    }
 
-   final RSString method555(RSByteBuffer var2) {
+   final RSString method555(DataBuffer var2) {
       try {
 
          RSString var3 = Class47.method1090((byte)-125, 80);

@@ -81,7 +81,7 @@ abstract class Class3_Sub28_Sub7 extends Node {
                   }
                }
 
-               Class79.method1390(new RSByteBuffer(var4));
+               Class79.method1390(new DataBuffer(var4));
             }
          } catch (Exception var8) {
          }

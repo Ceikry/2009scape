@@ -20,7 +20,6 @@ public class Unsorted {
    public static int anInt144;
    public static int anInt136 = 0;
    public static RSString aClass94_132 = RSString.of("::");
-   public static byte[][] aByteArrayArray125 = new byte[250][];
    public static RSString aClass94_119 = RSString.of("runes");
    public static int anInt120 = 255;
    public static byte[][][] aByteArrayArrayArray113 = new byte[4][104][104];
@@ -98,6 +97,11 @@ public class Unsorted {
    static int[] anIntArray2574 = new int[14];
    static int anInt2575;
    static int anInt2577 = 0;
+   public static int[] anIntArray2591;
+   public static RSString[] aClass94Array2596 = null;
+   public static RSString aClass94_2598 = RSString.of("<br>");
+   public static Class3_Sub28_Sub3 aClass3_Sub28_Sub3_2600;
+   public static Class151_Sub1[] aClass151_Sub1Array2601 = new Class151_Sub1[29]; //TODO
 
    static void method2086() {
        try {
@@ -574,7 +578,7 @@ public class Unsorted {
           LDIndexedSprite[] var1 = new LDIndexedSprite[Class95.anInt1338];
 
           for(int var2 = 0; Class95.anInt1338 > var2; ++var2) {
-             var1[var2] = new LDIndexedSprite(Class3_Sub15.anInt2426, Class133.anInt1748, Class164.anIntArray2048[var2], RSByteBuffer.anIntArray2591[var2], Class140_Sub7.anIntArray2931[var2], Class3_Sub13_Sub6.anIntArray3076[var2], Class163_Sub1.aByteArrayArray2987[var2], Class3_Sub13_Sub38.spritePalette);
+             var1[var2] = new LDIndexedSprite(Class3_Sub15.anInt2426, Class133.anInt1748, Class164.anIntArray2048[var2], anIntArray2591[var2], Class140_Sub7.anIntArray2931[var2], Class3_Sub13_Sub6.anIntArray3076[var2], Class163_Sub1.aByteArrayArray2987[var2], Class3_Sub13_Sub38.spritePalette);
           }
 
           Class39.method1035((byte)116);
@@ -619,8 +623,8 @@ public class Unsorted {
             RenderAnimationDefinition.aByteArrayArrayArray383 = (byte[][][])null;
             Class84.anIntArray1161 = null;
             CS2Script.aByteArrayArrayArray2452 = (byte[][][])null;
-            if(var1 && null != RSByteBuffer.aClass3_Sub28_Sub3_2600) {
-               Class3_Sub13_Sub19.aClass94_3220 = RSByteBuffer.aClass3_Sub28_Sub3_2600.aClass94_3561;
+            if(var1 && null != aClass3_Sub28_Sub3_2600) {
+               Class3_Sub13_Sub19.aClass94_3220 = aClass3_Sub28_Sub3_2600.aClass94_3561;
             } else {
                Class3_Sub13_Sub19.aClass94_3220 = null;
             }
@@ -630,7 +634,7 @@ public class Unsorted {
             Class29.anIntArrayArrayArray558 = (int[][][])null;
             Class146.anIntArrayArrayArray1903 = (int[][][])null;
             Class140_Sub3.anInt2737 = 0;
-            RSByteBuffer.aClass3_Sub28_Sub3_2600 = null;
+            aClass3_Sub28_Sub3_2600 = null;
             Class84.aClass61_1162.method1211(-108);
             Class119.aClass131_1624 = null;
             Class3_Sub13_Sub30.anInt3362 = -1;
@@ -670,7 +674,7 @@ public class Unsorted {
       }
    }
 
-   public static Class3_Sub13 method63(RSByteBuffer var1) {
+   public static Class3_Sub13 method63(DataBuffer var1) {
       try {
          var1.readUnsignedByte();
          int var2 = var1.readUnsignedByte();
@@ -1819,9 +1823,9 @@ public class Unsorted {
            } else {
                Object var2;
                if (HDToolKit.highDetail) {
-                   var2 = new Class3_Sub28_Sub17_Sub2(var1, Class164.anIntArray2048, RSByteBuffer.anIntArray2591, Class140_Sub7.anIntArray2931, Class3_Sub13_Sub6.anIntArray3076, Class163_Sub1.aByteArrayArray2987);
+                   var2 = new Class3_Sub28_Sub17_Sub2(var1, Class164.anIntArray2048, anIntArray2591, Class140_Sub7.anIntArray2931, Class3_Sub13_Sub6.anIntArray3076, Class163_Sub1.aByteArrayArray2987);
                } else {
-                   var2 = new Class3_Sub28_Sub17_Sub1(var1, Class164.anIntArray2048, RSByteBuffer.anIntArray2591, Class140_Sub7.anIntArray2931, Class3_Sub13_Sub6.anIntArray3076, Class163_Sub1.aByteArrayArray2987);
+                   var2 = new Class3_Sub28_Sub17_Sub1(var1, Class164.anIntArray2048, anIntArray2591, Class140_Sub7.anIntArray2931, Class3_Sub13_Sub6.anIntArray3076, Class163_Sub1.aByteArrayArray2987);
                }
 
                Class39.method1035((byte) 106);
@@ -1922,7 +1926,7 @@ public class Unsorted {
 
    static Class3_Sub28_Sub3 method520(byte var0) {
       try {
-         return RSByteBuffer.aClass3_Sub28_Sub3_2600;
+         return aClass3_Sub28_Sub3_2600;
       } catch (RuntimeException var2) {
          throw Class44.clientError(var2, "rg.OA(" + var0 + ')');
       }
@@ -1937,7 +1941,7 @@ public class Unsorted {
 
             def.npcId = var0;
             if(null != var3) {
-               def.method1478(new RSByteBuffer(var3));
+               def.method1478(new DataBuffer(var3));
             }
             Class3_Sub28_Sub7_Sub1.aClass93_4043.put((byte)-95, def, (long)var0);
          }
@@ -1957,5 +1961,367 @@ public class Unsorted {
       } catch (RuntimeException var13) {
          throw Class44.clientError(var13, "rg.SA(" + var0 + ',' + var1 + ',' + 0 + ',' + var3 + ',' + var4 + ',' + var5 + ',' + var6 + ',' + var7 + ',' + var8 + ')');
       }
+   }
+
+   public static void method744() {
+       try {
+
+           ++KeyboardListener.anInt1908;
+       } catch (RuntimeException var2) {
+           throw Class44.clientError(var2, "wa.HA(" + true + ')');
+       }
+   }
+
+   public static void method746(byte var0) {
+       try {
+           Class67.aClass93_1013.method1524();
+       } catch (RuntimeException var2) {
+           throw Class44.clientError(var2, "wa.VC(" + var0 + ')');
+       }
+   }
+
+   public static void method777(Class91[] var0, boolean var1, int var2, int var3, int var5, int var6, byte[] var7) {
+       try {
+           int var10;
+           int var11;
+           if (!var1) {
+               for (int var9 = 0; 4 > var9; ++var9) {
+                   for (var10 = 0; var10 < 64; ++var10) {
+                       for (var11 = 0; var11 < 64; ++var11) {
+                           if (var5 - -var10 > 0 && var10 + var5 < 103 && var3 + var11 > 0 && var11 + var3 < 103) {
+                               var0[var9].anIntArrayArray1304[var10 + var5][var3 - -var11] = bitwiseAnd(var0[var9].anIntArrayArray1304[var10 + var5][var3 - -var11], -16777217);
+                           }
+                       }
+                   }
+               }
+           }
+
+           DataBuffer var20 = new DataBuffer(var7);
+           byte var8;
+           if (var1) {
+               var8 = 1;
+           } else {
+               var8 = 4;
+           }
+
+           int var12;
+           for (var10 = 0; var8 > var10; ++var10) {
+               for (var11 = 0; var11 < 64; ++var11) {
+                   for (var12 = 0; 64 > var12; ++var12) {
+                       Class167.method2267(var2, var6, var1, var20, var12 - -var3, var5 + var11, (byte) 91, 0, var10);
+                   }
+               }
+           }
+
+           int var14;
+           int var15;
+           int var17;
+           boolean var21;
+           int var24;
+           for (var21 = false; var20.index < var20.buffer.length; var21 = true) {
+               var11 = var20.readUnsignedByte();
+               if (var11 != 129) {
+                   --var20.index;
+                   break;
+               }
+
+               for (var12 = 0; var12 < 4; ++var12) {
+                   byte var13 = var20.getByte();
+                   if (0 == var13) {
+                       var14 = var5;
+                       if (var5 >= 0) {
+                           if (var5 >= 104) {
+                               var14 = 104;
+                           }
+                       } else {
+                           var14 = 0;
+                       }
+
+                       var24 = var3;
+                       if (var3 < 0) {
+                           var24 = 0;
+                       } else if (var3 >= 104) {
+                           var24 = 104;
+                       }
+
+                       var15 = 64 + var5;
+                       var17 = var3 + 64;
+                       if (var17 >= 0) {
+                           if (var17 >= 104) {
+                               var17 = 104;
+                           }
+                       } else {
+                           var17 = 0;
+                       }
+
+                       if (var15 < 0) {
+                           var15 = 0;
+                       } else if (var15 >= 104) {
+                           var15 = 104;
+                       }
+
+                       while (var15 > var14) {
+                           while (var24 < var17) {
+                               Class136.aByteArrayArrayArray1774[var12][var14][var24] = 0;
+                               ++var24;
+                           }
+
+                           ++var14;
+                       }
+                   } else if (1 == var13) {
+                       for (var14 = 0; var14 < 64; var14 += 4) {
+                           for (var15 = 0; var15 < 64; var15 += 4) {
+                               byte var16 = var20.getByte();
+
+                               for (var17 = var14 + var5; 4 + var5 + var14 > var17; ++var17) {
+                                   for (int var18 = var3 + var15; 4 + var3 + var15 > var18; ++var18) {
+                                       if (var17 >= 0 && var17 < 104 && 0 <= var18 && var18 < 104) {
+                                           Class136.aByteArrayArrayArray1774[var12][var17][var18] = var16;
+                                       }
+                                   }
+                               }
+                           }
+                       }
+                   } else if (var13 == 2 && var12 > 0) {
+                       var15 = var5 + 64;
+                       var24 = var3;
+                       var17 = var3 + 64;
+                       if (var15 < 0) {
+                           var15 = 0;
+                       } else if (104 <= var15) {
+                           var15 = 104;
+                       }
+
+                       if (var3 >= 0) {
+                           if (var3 >= 104) {
+                               var24 = 104;
+                           }
+                       } else {
+                           var24 = 0;
+                       }
+
+                       if (var17 >= 0) {
+                           if (var17 >= 104) {
+                               var17 = 104;
+                           }
+                       } else {
+                           var17 = 0;
+                       }
+
+                       var14 = var5;
+                       if (var5 >= 0) {
+                           if (104 <= var5) {
+                               var14 = 104;
+                           }
+                       } else {
+                           var14 = 0;
+                       }
+
+                       while (var15 > var14) {
+                           while (var17 > var24) {
+                               Class136.aByteArrayArrayArray1774[var12][var14][var24] = Class136.aByteArrayArrayArray1774[var12 + -1][var14][var24];
+                               ++var24;
+                           }
+
+                           ++var14;
+                       }
+                   }
+               }
+           }
+
+           int var23;
+           if (HDToolKit.highDetail && !var1) {
+               Class86 var22 = null;
+
+               while (var20.buffer.length > var20.index) {
+                   var12 = var20.readUnsignedByte();
+                   if (var12 == 0) {
+                       var22 = new Class86(var20);
+                   } else {
+                       if (var12 != 1) {
+//								throw
+                           new IllegalStateException().printStackTrace();
+                           return;//
+                       }
+
+                       var23 = var20.readUnsignedByte();
+                       if (0 < var23) {
+                           for (var14 = 0; var23 > var14; ++var14) {
+                               Class43 var25 = new Class43(var20);
+                               if (var25.anInt705 == 31) {
+                                   Class57 var26 = Class81.method1401(var20.getShort());
+                                   var25.method1060((byte) -67, var26.anInt896, var26.anInt908, var26.anInt899, var26.anInt907);
+                               }
+
+                               var25.anInt708 += var3 << 7;
+                               var25.anInt703 += var5 << 7;
+                               var17 = var25.anInt708 >> 7;
+                               var24 = var25.anInt703 >> 7;
+                               if (var24 >= 0 && 0 <= var17 && var24 < 104 && var17 < 104) {
+                                   var25.aBoolean696 = 0 != (aByteArrayArrayArray113[1][var24][var17] & 2);
+                                   var25.anInt697 = Class44.anIntArrayArrayArray723[var25.anInt704][var24][var17] + -var25.anInt697;
+                                   Class68.method1264(var25);
+                               }
+                           }
+                       }
+                   }
+               }
+
+               if (var22 == null) {
+                   var22 = new Class86();
+               }
+
+               for (var12 = 0; var12 < 8; ++var12) {
+                   for (var23 = 0; var23 < 8; ++var23) {
+                       var14 = var12 + (var5 >> 3);
+                       var15 = (var3 >> 3) + var23;
+                       if (0 <= var14 && var14 < 13 && var15 >= 0 && var15 < 13) {
+                           Class115.aClass86ArrayArray1581[var14][var15] = var22;
+                       }
+                   }
+               }
+           }
+
+           if (!var21) {
+               for (var11 = 0; var11 < 4; ++var11) {
+                   for (var12 = 0; 16 > var12; ++var12) {
+                       for (var23 = 0; var23 < 16; ++var23) {
+                           var14 = (var5 >> 2) - -var12;
+                           var15 = var23 + (var3 >> 2);
+                           if (0 <= var14 && 26 > var14 && 0 <= var15 && var15 < 26) {
+                               Class136.aByteArrayArrayArray1774[var11][var14][var15] = 0;
+                           }
+                       }
+                   }
+               }
+           }
+
+       } catch (RuntimeException var19) {
+           throw Class44.clientError(var19, "wa.OA(" + (var0 != null ? "{...}" : "null") + ',' + var1 + ',' + var2 + ',' + var3 + ',' + 4 + ',' + var5 + ',' + var6 + ',' + (var7 != null ? "{...}" : "null") + ')');
+       }
+   }
+
+   public static Class12 method784(int var0, int var1, int var2) {
+       Class3_Sub2 var3 = Class75_Sub2.aClass3_Sub2ArrayArrayArray2638[var0][var1][var2];
+       return var3 != null && var3.aClass12_2230 != null ? var3.aClass12_2230 : null;
+   }
+
+   public static void method792() {
+       try {
+           int var1 = Class137.method1817();
+           if (0 == var1) {
+               Class158.aByteArrayArrayArray2008 = (byte[][][]) null;
+               Class136.method1816(0, -7);
+           } else if (var1 == 1) {
+               Class3_Sub5.method112((byte) 0);
+               Class136.method1816(512, -7);
+               Class3_Sub13_Sub18.method257();
+           } else {
+               Class3_Sub5.method112((byte) (-4 + Class79.anInt1127 & 255));
+               Class136.method1816(2, -7);
+           }
+
+       } catch (RuntimeException var2) {
+           throw Class44.clientError(var2, "wa.AA(" + 9179409 + ')');
+       }
+   }
+
+   public static void method795() {
+       try {
+
+           CS2Script.aClass93_2450.method1522((byte) 14 ^ -114, 5);
+       } catch (RuntimeException var3) {
+           throw Class44.clientError(var3, "wa.OC(" + (byte) 14 + ',' + 5 + ')');
+       }
+   }
+
+   public static void method799(int var0, int var2, int var3, int var4) {
+       try {
+           if (Class140_Sub3.anInt2737 < 100) {
+               Class3_Sub28_Sub14.method626();
+           }
+
+           if (HDToolKit.highDetail) {
+               Class22.method935(var0, var2, var0 + var4, var3 + var2);
+           } else {
+               Class74.method1324(var0, var2, var0 + var4, var3 + var2);
+           }
+
+           int var6;
+           int var7;
+           if (Class140_Sub3.anInt2737 >= 100) {
+               Class17.anInt410 = (int) ((float) (var3 * 2) / Class44.aFloat727);
+               Class60.anInt930 = Class3_Sub28_Sub1.anInt3536 + -((int) ((float) var4 / Class44.aFloat727));
+               int var15 = -((int) ((float) var4 / Class44.aFloat727)) + Class3_Sub28_Sub1.anInt3536;
+               var6 = Class3_Sub4.anInt2251 - (int) ((float) var3 / Class44.aFloat727);
+               Class60.anInt934 = Class3_Sub4.anInt2251 + -((int) ((float) var3 / Class44.aFloat727));
+               int var8 = Class3_Sub4.anInt2251 + (int) ((float) var3 / Class44.aFloat727);
+               var7 = (int) ((float) var4 / Class44.aFloat727) + Class3_Sub28_Sub1.anInt3536;
+               Class49.anInt817 = (int) ((float) (var4 * 2) / Class44.aFloat727);
+
+               if (HDToolKit.highDetail) {
+                   if (Class3_Sub13_Sub19.aClass3_Sub28_Sub16_Sub2_3221 == null || var4 != Class3_Sub13_Sub19.aClass3_Sub28_Sub16_Sub2_3221.anInt3707 || var3 != Class3_Sub13_Sub19.aClass3_Sub28_Sub16_Sub2_3221.anInt3696) {
+                       Class3_Sub13_Sub19.aClass3_Sub28_Sub16_Sub2_3221 = null;
+                       Class3_Sub13_Sub19.aClass3_Sub28_Sub16_Sub2_3221 = new Class3_Sub28_Sub16_Sub2(var4, var3);
+                   }
+
+                   Class74.method1319(Class3_Sub13_Sub19.aClass3_Sub28_Sub16_Sub2_3221.anIntArray4081, var4, var3);
+                   method523(var4, 0, var7, var6, 0, var8, var3, var15);
+                   Class23.method938(var4, 0, var7, var8, var3, 0, var15, var6);
+                   Class3_Sub5.method111((byte) -54, 0, 0, var15, var4, var8, var6, var7, var3);
+                   Class22.method926(Class3_Sub13_Sub19.aClass3_Sub28_Sub16_Sub2_3221.anIntArray4081, var0, var2, var4, var3);
+                   Class74.anIntArray1100 = null;
+               } else {
+                   method523(var4 + var0, var2, var7, var6, var0, var8, var2 - -var3, var15);
+                   Class23.method938(var0 + var4, var0, var7, var8, var3 + var2, var2, var15, var6);
+                   Class3_Sub5.method111((byte) -100, var0, var2, var15, var0 - -var4, var8, var6, var7, var3 + var2);
+               }
+
+               if (0 < Class3_Sub28_Sub16.anInt3704) {
+                   --Class3_Sub28_Sub8.anInt3611;
+                   if (Class3_Sub28_Sub8.anInt3611 == 0) {
+                       Class3_Sub28_Sub8.anInt3611 = 20;
+                       --Class3_Sub28_Sub16.anInt3704;
+                   }
+               }
+
+               if (Class20.aBoolean438) {
+                   int var10 = -8 + var2 - -var3;
+                   int var9 = -5 + (var0 - -var4);
+                   Class126.aClass3_Sub28_Sub17_1669.method688(RenderAnimationDefinition.method903(new RSString[]{Class65.aClass94_985, Class72.method1298((byte) 9, AnimationDefinition.anInt1862)}, (byte) -62), var9, var10, 16776960, -1);
+                   Runtime var11 = Runtime.getRuntime();
+                   int var12 = (int) ((var11.totalMemory() - var11.freeMemory()) / 1024L);
+                   int var13 = 16776960;
+                   var10 -= 15;
+                   if (var12 > 65536) {
+                       var13 = 16711680;
+                   }
+
+                   Class126.aClass3_Sub28_Sub17_1669.method688(RenderAnimationDefinition.method903(new RSString[]{Class119.aClass94_1630, Class72.method1298((byte) 9, var12), Class3_Sub13_Sub4.aClass94_3055}, (byte) -108), var9, var10, var13, -1);
+               }
+
+           } else {
+               byte var5 = 20;
+               var6 = var0 - -(var4 / 2);
+               var7 = var3 / 2 + (var2 - 18) + -var5;
+               if (HDToolKit.highDetail) {
+                   Class22.method934(var0, var2, var4, var3, 0);
+                   Class22.method927(var6 - 152, var7, 304, 34, 9179409);
+                   Class22.method927(var6 + -151, var7 + 1, 302, 32, 0);
+                   Class22.method934(-150 + var6, var7 + 2, 3 * Class140_Sub3.anInt2737, 30, 9179409);
+                   Class22.method934(-150 + var6 + Class140_Sub3.anInt2737 * 3, var7 - -2, 300 + -(3 * Class140_Sub3.anInt2737), 30, 0);
+               } else {
+                   Class74.method1323(var0, var2, var4, var3, 0);
+                   Class74.method1311(var6 + -152, var7, 304, 34, 9179409);
+                   Class74.method1311(var6 + -151, 1 + var7, 302, 32, 0);
+                   Class74.method1323(var6 + -150, var7 + 2, Class140_Sub3.anInt2737 * 3, 30, 9179409);
+                   Class74.method1323(3 * Class140_Sub3.anInt2737 + -150 + var6, var7 - -2, -(Class140_Sub3.anInt2737 * 3) + 300, 30, 0);
+               }
+
+               Class168.aClass3_Sub28_Sub17_2096.method699(TextCore.LoadingGeneral, var6, var5 + var7, 16777215, -1);
+           }
+       } catch (RuntimeException var14) {
+           throw Class44.clientError(var14, "wa.FA(" + var0 + ',' + 64 + ',' + var2 + ',' + var3 + ',' + var4 + ')');
+       }
    }
 }

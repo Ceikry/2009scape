@@ -101,7 +101,7 @@ final class Class3_Sub14 extends Linkable {
    }
 
    private void method360(byte[] var1) {
-      RSByteBuffer var2 = new RSByteBuffer(var1);
+      DataBuffer var2 = new DataBuffer(var1);
       this.anInt2408 = var2.readInt();
       this.anInt2390 = var2.readInt();
       this.anInt2397 = var2.readInt();

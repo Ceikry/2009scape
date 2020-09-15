@@ -50,7 +50,7 @@ final class Class29 {
       }
    }
 
-   final void method970(RSByteBuffer var2) {
+   final void method970(DataBuffer var2) {
       try {
          while(true) {
             int var3 = var2.readUnsignedByte();
@@ -187,7 +187,7 @@ final class Class29 {
       }
    }
 
-   private void method972(RSByteBuffer var1, int var3) {
+   private void method972(DataBuffer var1, int var3) {
       try {
 
           if(var3 == 5) {

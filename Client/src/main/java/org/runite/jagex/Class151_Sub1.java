@@ -16,7 +16,7 @@ final class Class151_Sub1 extends ResourceProvider {
     private int anInt2948 = 0;
     private byte[] aByteArray2949;
     private ResourceRequest aResourceRequest_2950;
-    private final Class66 aClass66_2953;
+    private final Js5Worker aJs5Worker_2953;
     Class41 aClass41_2954;
     private final int anInt2955;
     private final Class73 aClass73_2956;
@@ -52,11 +52,11 @@ final class Class151_Sub1 extends ResourceProvider {
         try {
             if (this.aReferenceTable_2944 == null) {
                 if (null == this.aResourceRequest_2950) {
-                    if (this.aClass66_2953.method1251()) {
+                    if (this.aJs5Worker_2953.method1251()) {
                         return null;
                     }
 
-                    this.aResourceRequest_2950 = this.aClass66_2953.addJS5Request(255, (byte) 0, this.anInt2957, true);
+                    this.aResourceRequest_2950 = this.aJs5Worker_2953.addJS5Request(255, (byte) 0, this.anInt2957, true);
                 }
 
                 if (this.aResourceRequest_2950.waiting) {
@@ -75,10 +75,10 @@ final class Class151_Sub1 extends ResourceProvider {
                             }
                         } catch (RuntimeException var4) {
                             this.aReferenceTable_2944 = null;
-                            if (this.aClass66_2953.method1251()) {
+                            if (this.aJs5Worker_2953.method1251()) {
                                 this.aResourceRequest_2950 = null;
                             } else {
-                                this.aResourceRequest_2950 = this.aClass66_2953.addJS5Request(255, (byte) 0, this.anInt2957, true);
+                                this.aResourceRequest_2950 = this.aJs5Worker_2953.addJS5Request(255, (byte) 0, this.anInt2957, true);
                             }
 
                             return null;
@@ -91,12 +91,12 @@ final class Class151_Sub1 extends ResourceProvider {
 
                             this.aReferenceTable_2944 = new ReferenceTable(var2, this.anInt2955);
                         } catch (RuntimeException var5) {
-                            this.aClass66_2953.method1252();
+                            this.aJs5Worker_2953.method1252();
                             this.aReferenceTable_2944 = null;
-                            if (this.aClass66_2953.method1251()) {
+                            if (this.aJs5Worker_2953.method1251()) {
                                 this.aResourceRequest_2950 = null;
                             } else {
-                                this.aResourceRequest_2950 = this.aClass66_2953.addJS5Request(255, (byte) 0, this.anInt2957, true);
+                                this.aResourceRequest_2950 = this.aJs5Worker_2953.addJS5Request(255, (byte) 0, this.anInt2957, true);
                             }
 
                             return null;
@@ -238,7 +238,7 @@ final class Class151_Sub1 extends ResourceProvider {
                         if (this.aReferenceTable_2944.archiveFileLengths[this.anInt2964] == 0) {
                             ++this.anInt2964;
                         } else {
-                            if (this.aClass66_2953.method1241()) {
+                            if (this.aJs5Worker_2953.method1241()) {
                                 var2 = false;
                                 break;
                             }
@@ -320,11 +320,11 @@ final class Class151_Sub1 extends ResourceProvider {
             if (null == var4) {
                 if (0 == var1) {
                     if (null == this.aClass41_2954 || this.aByteArray2949[archiveIndex] == -1) {
-                        if (this.aClass66_2953.method1251()) {
+                        if (this.aJs5Worker_2953.method1251()) {
                             return null;
                         }
 
-                        var4 = this.aClass66_2953.addJS5Request(this.anInt2957, (byte) 2, archiveIndex, true);
+                        var4 = this.aJs5Worker_2953.addJS5Request(this.anInt2957, (byte) 2, archiveIndex, true);
                     } else {
                         var4 = this.aClass73_2956.method1309(this.aClass41_2954, (byte) 106, archiveIndex);
                     }
@@ -347,11 +347,11 @@ final class Class151_Sub1 extends ResourceProvider {
                         throw new RuntimeException();
                     }
 
-                    if (this.aClass66_2953.method1241()) {
+                    if (this.aJs5Worker_2953.method1241()) {
                         return null;
                     }
 
-                    var4 = this.aClass66_2953.addJS5Request(this.anInt2957, (byte) 2, archiveIndex, false);
+                    var4 = this.aJs5Worker_2953.addJS5Request(this.anInt2957, (byte) 2, archiveIndex, false);
                 }
 
                 this.aHashTable_2946.put(archiveIndex, var4);
@@ -407,8 +407,8 @@ final class Class151_Sub1 extends ResourceProvider {
 //            	   var9.printStackTrace();
                         this.aByteArray2949[archiveIndex] = -1;
                         var4.unlink();
-                        if (var4.aBoolean3628 && !this.aClass66_2953.method1251()) {
-                            var12 = this.aClass66_2953.addJS5Request(this.anInt2957, (byte) 2, archiveIndex, true);
+                        if (var4.aBoolean3628 && !this.aJs5Worker_2953.method1251()) {
+                            var12 = this.aJs5Worker_2953.addJS5Request(this.anInt2957, (byte) 2, archiveIndex, true);
                             this.aHashTable_2946.put(archiveIndex, var12);
                         }
 
@@ -434,14 +434,14 @@ final class Class151_Sub1 extends ResourceProvider {
                             }
                         }
 
-                        this.aClass66_2953.anInt1011 = 0;
-                        this.aClass66_2953.anInt1010 = 0;
+                        this.aJs5Worker_2953.anInt1011 = 0;
+                        this.aJs5Worker_2953.anInt1010 = 0;
                     } catch (RuntimeException var10) {
                         var10.printStackTrace();
-                        this.aClass66_2953.method1252();
+                        this.aJs5Worker_2953.method1252();
                         var4.unlink();
-                        if (var4.aBoolean3628 && !this.aClass66_2953.method1251()) {
-                            var12 = this.aClass66_2953.addJS5Request(this.anInt2957, (byte) 2, archiveIndex, true);
+                        if (var4.aBoolean3628 && !this.aJs5Worker_2953.method1251()) {
+                            var12 = this.aJs5Worker_2953.addJS5Request(this.anInt2957, (byte) 2, archiveIndex, true);
                             this.aHashTable_2946.put(archiveIndex, var12);
                         }
 
@@ -524,7 +524,7 @@ final class Class151_Sub1 extends ResourceProvider {
         }
     }
 
-    Class151_Sub1(int var1, Class41 var2, Class41 var3, Class66 var4, Class73 var5, int var6, int var7) {
+    Class151_Sub1(int var1, Class41 var2, Class41 var3, Js5Worker var4, Class73 var5, int var6, int var7) {
         try {
             this.anInt2957 = var1;
             this.aClass41_2954 = var2;
@@ -539,7 +539,7 @@ final class Class151_Sub1 extends ResourceProvider {
             this.anInt2955 = var6;
             this.aBoolean2968 = true;
             this.aClass41_2943 = var3;
-            this.aClass66_2953 = var4;
+            this.aJs5Worker_2953 = var4;
             this.anInt2947 = var7;
             if (null != this.aClass41_2943) {
                 this.aResourceRequest_2950 = this.aClass73_2956.method1309(this.aClass41_2943, (byte) 113, this.anInt2957);

@@ -133,7 +133,7 @@ final class Class131 {
             Class117.anInt1616 = 0;
             Class158.anInt2005 = -3;
             Class3_Sub13_Sub31.anInt3375 = 1;
-            RSByteBuffer var4 = new RSByteBuffer(128);
+            DataBuffer var4 = new DataBuffer(128);
             var4.putByte((byte) -97, 10);
             var4.putShort((int) (Math.random() * 99999.0D));
             var4.putShort(530);

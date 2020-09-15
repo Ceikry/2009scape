@@ -252,10 +252,10 @@ final class Class55 {
       }
    }
 
-   final void method1182(RSByteBuffer var1, int var2, byte var3) {
+   final void method1182(DataBuffer var1, int var2, byte var3) {
       try {
          if(var3 < 75) {
-            this.method1182((RSByteBuffer)null, -111, (byte)47);
+            this.method1182((DataBuffer)null, -111, (byte)47);
          }
 
          while(true) {
@@ -271,7 +271,7 @@ final class Class55 {
       }
    }
 
-   private void method1183(int var2, int var3, RSByteBuffer var4) {
+   private void method1183(int var2, int var3, DataBuffer var4) {
       try {
 
           if(var3 == 1) {

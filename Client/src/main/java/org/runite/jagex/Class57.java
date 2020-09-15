@@ -13,7 +13,7 @@ final class Class57 {
    int anInt908 = 2048;
 
 
-   final void method1190(RSByteBuffer var2, int var3) {
+   final void method1190(DataBuffer var2, int var3) {
       try {
          while(true) {
             int var4 = var2.readUnsignedByte();
@@ -28,7 +28,7 @@ final class Class57 {
       }
    }
 
-   private void method1191(int var1, RSByteBuffer var2, int var3) {
+   private void method1191(int var1, DataBuffer var2, int var3) {
       try {
          if(1 == var1) {
             this.anInt896 = var2.readUnsignedByte();

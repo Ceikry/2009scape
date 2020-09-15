@@ -3,7 +3,7 @@ package org.runite.jagex;
 import java.util.Arrays;
 import java.util.Objects;
 
-final class Class3_Sub30_Sub1 extends RSByteBuffer {
+final class Class3_Sub30_Sub1 extends DataBuffer {
 
 	static RSString[] aClass94Array3802;
     static int anInt872;

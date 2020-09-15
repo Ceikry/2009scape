@@ -28,7 +28,7 @@ final class Class3_Sub11 extends Linkable {
    private int anInt2359 = 0;
    private int[][] anIntArrayArray2360;
    private static ByteBuffer aByteBuffer2361;
-   private static RSByteBuffer aClass3_Sub30_2362;
+   private static DataBuffer aClass3_Sub30_2362;
    private Class156 aClass156_2363;
    boolean aBoolean2364;
    private float[] aFloatArray2365;
@@ -38,7 +38,7 @@ final class Class3_Sub11 extends Linkable {
    private float[] aFloatArray2369;
    private boolean[] aBooleanArray2370;
    private int[] anIntArray2371;
-   private static RSByteBuffer aClass3_Sub30_2372;
+   private static DataBuffer aClass3_Sub30_2372;
    private final float aFloat2373;
 
 
@@ -106,7 +106,7 @@ final class Class3_Sub11 extends Linkable {
    }
 
    final void method148() {
-      RSByteBuffer var1 = new RSByteBuffer((this.aBoolean2347?40:36) * this.anInt2343);
+      DataBuffer var1 = new DataBuffer((this.aBoolean2347?40:36) * this.anInt2343);
 
       for(int var2 = 0; var2 < this.anInt2343; ++var2) {
          if(HDToolKit.aBoolean1790) {
@@ -163,18 +163,18 @@ final class Class3_Sub11 extends Linkable {
       if(aClass3_Sub30_2372 != null && aClass3_Sub30_2372.buffer.length >= this.anInt2359 * 4) {
          aClass3_Sub30_2372.index = 0;
       } else {
-         aClass3_Sub30_2372 = new RSByteBuffer(this.anInt2359 * 4);
+         aClass3_Sub30_2372 = new DataBuffer(this.anInt2359 * 4);
       }
 
       if(aClass3_Sub30_2362 != null && aClass3_Sub30_2362.buffer.length >= this.anInt2356 * 4) {
          aClass3_Sub30_2362.index = 0;
       } else {
-         aClass3_Sub30_2362 = new RSByteBuffer(this.anInt2356 * 4);
+         aClass3_Sub30_2362 = new DataBuffer(this.anInt2356 * 4);
       }
 
       int var4;
       Class3_Sub2 var5;
-      RSByteBuffer var6;
+      DataBuffer var6;
       int[] var7;
       int[] var8;
       int var9;

@@ -24,7 +24,6 @@ final class Class140_Sub3 extends GameObject {
    static volatile int anInt2743 = 0;
    static int anInt2745 = 0;
    private int anInt2746;
-   static byte[][] aByteArrayArray2747 = new byte[50][];
    private int anInt2748 = 0;
    private int anInt2749;
    private int anInt2750 = -1;

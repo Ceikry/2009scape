@@ -1,23 +1,17 @@
 package org.runite.jagex;
 
 import org.rs09.client.Linkable;
+import org.rs09.client.util.ByteArrayPool;
 import org.rs09.client.util.CRC;
 import org.runite.Configurations;
 
 import java.math.BigInteger;
 import java.util.Objects;
 
-public class RSByteBuffer extends Linkable {
+public class DataBuffer extends Linkable {
 
     byte[] buffer;
     int index;
-
-    static int[] anIntArray2591;
-    static RSString[] aClass94Array2596 = null;
-    static RSString aClass94_2598 = RSString.of("<br>");
-    static Class3_Sub28_Sub3 aClass3_Sub28_Sub3_2600;
-    static Class151_Sub1[] aClass151_Sub1Array2601 = new Class151_Sub1[29]; //TODO
-
 
     final int getShort() {
         try {
@@ -114,29 +108,12 @@ public class RSByteBuffer extends Linkable {
         }
     }
 
-    static void method744() {
-        try {
-
-            ++KeyboardListener.anInt1908;
-        } catch (RuntimeException var2) {
-            throw Class44.clientError(var2, "wa.HA(" + true + ')');
-        }
-    }
-
     final void putString(RSString var2) {
         try {
             this.index += var2.method1580(this.buffer, this.index, var2.length(-65));
             this.buffer[this.index++] = 0;
         } catch (RuntimeException var4) {
             throw Class44.clientError(var4, "wa.LA(" + 0 + ',' + (var2 != null ? "{...}" : "null") + ')');
-        }
-    }
-
-    static void method746(byte var0) {
-        try {
-            Class67.aClass93_1013.method1524();
-        } catch (RuntimeException var2) {
-            throw Class44.clientError(var2, "wa.VC(" + var0 + ')');
         }
     }
 
@@ -289,9 +266,9 @@ public class RSByteBuffer extends Linkable {
         }
     }
 
-    public RSByteBuffer(int var1) {
+    public DataBuffer(int var1) {
         try {
-            this.buffer = Class134.method1807(var1);
+            this.buffer = ByteArrayPool.INSTANCE.getByteArray(var1);
             this.index = 0;
         } catch (RuntimeException var3) {
             throw Class44.clientError(var3, "wa.<init>(" + var1 + ')');
@@ -532,227 +509,6 @@ public class RSByteBuffer extends Linkable {
         }
     }
 
-    static void method777(Class91[] var0, boolean var1, int var2, int var3, int var5, int var6, byte[] var7) {
-        try {
-            int var10;
-            int var11;
-            if (!var1) {
-                for (int var9 = 0; 4 > var9; ++var9) {
-                    for (var10 = 0; var10 < 64; ++var10) {
-                        for (var11 = 0; var11 < 64; ++var11) {
-                            if (var5 - -var10 > 0 && var10 + var5 < 103 && var3 + var11 > 0 && var11 + var3 < 103) {
-                                var0[var9].anIntArrayArray1304[var10 + var5][var3 - -var11] = Unsorted.bitwiseAnd(var0[var9].anIntArrayArray1304[var10 + var5][var3 - -var11], -16777217);
-                            }
-                        }
-                    }
-                }
-            }
-
-            RSByteBuffer var20 = new RSByteBuffer(var7);
-            byte var8;
-            if (var1) {
-                var8 = 1;
-            } else {
-                var8 = 4;
-            }
-
-            int var12;
-            for (var10 = 0; var8 > var10; ++var10) {
-                for (var11 = 0; var11 < 64; ++var11) {
-                    for (var12 = 0; 64 > var12; ++var12) {
-                        Class167.method2267(var2, var6, var1, var20, var12 - -var3, var5 + var11, (byte) 91, 0, var10);
-                    }
-                }
-            }
-
-            int var14;
-            int var15;
-            int var17;
-            boolean var21;
-            int var24;
-            for (var21 = false; var20.index < var20.buffer.length; var21 = true) {
-                var11 = var20.readUnsignedByte();
-                if (var11 != 129) {
-                    --var20.index;
-                    break;
-                }
-
-                for (var12 = 0; var12 < 4; ++var12) {
-                    byte var13 = var20.getByte();
-                    if (0 == var13) {
-                        var14 = var5;
-                        if (var5 >= 0) {
-                            if (var5 >= 104) {
-                                var14 = 104;
-                            }
-                        } else {
-                            var14 = 0;
-                        }
-
-                        var24 = var3;
-                        if (var3 < 0) {
-                            var24 = 0;
-                        } else if (var3 >= 104) {
-                            var24 = 104;
-                        }
-
-                        var15 = 64 + var5;
-                        var17 = var3 + 64;
-                        if (var17 >= 0) {
-                            if (var17 >= 104) {
-                                var17 = 104;
-                            }
-                        } else {
-                            var17 = 0;
-                        }
-
-                        if (var15 < 0) {
-                            var15 = 0;
-                        } else if (var15 >= 104) {
-                            var15 = 104;
-                        }
-
-                        while (var15 > var14) {
-                            while (var24 < var17) {
-                                Class136.aByteArrayArrayArray1774[var12][var14][var24] = 0;
-                                ++var24;
-                            }
-
-                            ++var14;
-                        }
-                    } else if (1 == var13) {
-                        for (var14 = 0; var14 < 64; var14 += 4) {
-                            for (var15 = 0; var15 < 64; var15 += 4) {
-                                byte var16 = var20.getByte();
-
-                                for (var17 = var14 + var5; 4 + var5 + var14 > var17; ++var17) {
-                                    for (int var18 = var3 + var15; 4 + var3 + var15 > var18; ++var18) {
-                                        if (var17 >= 0 && var17 < 104 && 0 <= var18 && var18 < 104) {
-                                            Class136.aByteArrayArrayArray1774[var12][var17][var18] = var16;
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    } else if (var13 == 2 && var12 > 0) {
-                        var15 = var5 + 64;
-                        var24 = var3;
-                        var17 = var3 + 64;
-                        if (var15 < 0) {
-                            var15 = 0;
-                        } else if (104 <= var15) {
-                            var15 = 104;
-                        }
-
-                        if (var3 >= 0) {
-                            if (var3 >= 104) {
-                                var24 = 104;
-                            }
-                        } else {
-                            var24 = 0;
-                        }
-
-                        if (var17 >= 0) {
-                            if (var17 >= 104) {
-                                var17 = 104;
-                            }
-                        } else {
-                            var17 = 0;
-                        }
-
-                        var14 = var5;
-                        if (var5 >= 0) {
-                            if (104 <= var5) {
-                                var14 = 104;
-                            }
-                        } else {
-                            var14 = 0;
-                        }
-
-                        while (var15 > var14) {
-                            while (var17 > var24) {
-                                Class136.aByteArrayArrayArray1774[var12][var14][var24] = Class136.aByteArrayArrayArray1774[var12 + -1][var14][var24];
-                                ++var24;
-                            }
-
-                            ++var14;
-                        }
-                    }
-                }
-            }
-
-            int var23;
-            if (HDToolKit.highDetail && !var1) {
-                Class86 var22 = null;
-
-                while (var20.buffer.length > var20.index) {
-                    var12 = var20.readUnsignedByte();
-                    if (var12 == 0) {
-                        var22 = new Class86(var20);
-                    } else {
-                        if (var12 != 1) {
-//								throw
-                            new IllegalStateException().printStackTrace();
-                            return;//
-                        }
-
-                        var23 = var20.readUnsignedByte();
-                        if (0 < var23) {
-                            for (var14 = 0; var23 > var14; ++var14) {
-                                Class43 var25 = new Class43(var20);
-                                if (var25.anInt705 == 31) {
-                                    Class57 var26 = Class81.method1401(var20.getShort());
-                                    var25.method1060((byte) -67, var26.anInt896, var26.anInt908, var26.anInt899, var26.anInt907);
-                                }
-
-                                var25.anInt708 += var3 << 7;
-                                var25.anInt703 += var5 << 7;
-                                var17 = var25.anInt708 >> 7;
-                                var24 = var25.anInt703 >> 7;
-                                if (var24 >= 0 && 0 <= var17 && var24 < 104 && var17 < 104) {
-                                    var25.aBoolean696 = 0 != (Unsorted.aByteArrayArrayArray113[1][var24][var17] & 2);
-                                    var25.anInt697 = Class44.anIntArrayArrayArray723[var25.anInt704][var24][var17] + -var25.anInt697;
-                                    Class68.method1264(var25);
-                                }
-                            }
-                        }
-                    }
-                }
-
-                if (var22 == null) {
-                    var22 = new Class86();
-                }
-
-                for (var12 = 0; var12 < 8; ++var12) {
-                    for (var23 = 0; var23 < 8; ++var23) {
-                        var14 = var12 + (var5 >> 3);
-                        var15 = (var3 >> 3) + var23;
-                        if (0 <= var14 && var14 < 13 && var15 >= 0 && var15 < 13) {
-                            Class115.aClass86ArrayArray1581[var14][var15] = var22;
-                        }
-                    }
-                }
-            }
-
-            if (!var21) {
-                for (var11 = 0; var11 < 4; ++var11) {
-                    for (var12 = 0; 16 > var12; ++var12) {
-                        for (var23 = 0; var23 < 16; ++var23) {
-                            var14 = (var5 >> 2) - -var12;
-                            var15 = var23 + (var3 >> 2);
-                            if (0 <= var14 && 26 > var14 && 0 <= var15 && var15 < 26) {
-                                Class136.aByteArrayArrayArray1774[var11][var14][var15] = 0;
-                            }
-                        }
-                    }
-                }
-            }
-
-        } catch (RuntimeException var19) {
-            throw Class44.clientError(var19, "wa.OA(" + (var0 != null ? "{...}" : "null") + ',' + var1 + ',' + var2 + ',' + var3 + ',' + 4 + ',' + var5 + ',' + var6 + ',' + (var7 != null ? "{...}" : "null") + ')');
-        }
-    }
-
     final int getSmart() {
         try {
 
@@ -823,12 +579,7 @@ public class RSByteBuffer extends Linkable {
         }
     }
 
-    static Class12 method784(int var0, int var1, int var2) {
-        Class3_Sub2 var3 = Class75_Sub2.aClass3_Sub2ArrayArrayArray2638[var0][var1][var2];
-        return var3 != null && var3.aClass12_2230 != null ? var3.aClass12_2230 : null;
-    }
-
-    public RSByteBuffer(byte[] var1) {
+    public DataBuffer(byte[] var1) {
         try {
             this.index = 0;
             this.buffer = var1;
@@ -925,26 +676,6 @@ public class RSByteBuffer extends Linkable {
     }
 
 
-    static void method792() {
-        try {
-            int var1 = Class137.method1817();
-            if (0 == var1) {
-                Class158.aByteArrayArrayArray2008 = (byte[][][]) null;
-                Class136.method1816(0, -7);
-            } else if (var1 == 1) {
-                Class3_Sub5.method112((byte) 0);
-                Class136.method1816(512, -7);
-                Class3_Sub13_Sub18.method257();
-            } else {
-                Class3_Sub5.method112((byte) (-4 + Class79.anInt1127 & 255));
-                Class136.method1816(2, -7);
-            }
-
-        } catch (RuntimeException var2) {
-            throw Class44.clientError(var2, "wa.AA(" + 9179409 + ')');
-        }
-    }
-
     final void method793(int var2) {
         try {
             int var3 = CRC.INSTANCE.crc32(this.buffer, var2, this.index);
@@ -964,15 +695,6 @@ public class RSByteBuffer extends Linkable {
             return (16711680 & this.buffer[this.index + -3] << 16) + (('\uff00' & this.buffer[-2 + this.index] << 8) - -(this.buffer[this.index + -1] & 255));
         } catch (RuntimeException var3) {
             throw Class44.clientError(var3, "wa.GB(" + var1 + ')');
-        }
-    }
-
-    static void method795() {
-        try {
-
-            CS2Script.aClass93_2450.method1522((byte) 14 ^ -114, 5);
-        } catch (RuntimeException var3) {
-            throw Class44.clientError(var3, "wa.OC(" + (byte) 14 + ',' + 5 + ')');
         }
     }
 
@@ -1005,96 +727,6 @@ public class RSByteBuffer extends Linkable {
             return ((this.buffer[-3 + this.index] & 255) << 24) - -(16711680 & this.buffer[this.index + -4] << 16) + (((this.buffer[this.index + -1] & 255) << 8) - -(255 & this.buffer[this.index + -2]));
         } catch (RuntimeException var3) {
             throw Class44.clientError(var3, "wa.NC(" + var1 + ')');
-        }
-    }
-
-    static void method799(int var0, int var2, int var3, int var4) {
-        try {
-            if (Class140_Sub3.anInt2737 < 100) {
-                Class3_Sub28_Sub14.method626();
-            }
-
-            if (HDToolKit.highDetail) {
-                Class22.method935(var0, var2, var0 + var4, var3 + var2);
-            } else {
-                Class74.method1324(var0, var2, var0 + var4, var3 + var2);
-            }
-
-            int var6;
-            int var7;
-            if (Class140_Sub3.anInt2737 >= 100) {
-                Class17.anInt410 = (int) ((float) (var3 * 2) / Class44.aFloat727);
-                Class60.anInt930 = Class3_Sub28_Sub1.anInt3536 + -((int) ((float) var4 / Class44.aFloat727));
-                int var15 = -((int) ((float) var4 / Class44.aFloat727)) + Class3_Sub28_Sub1.anInt3536;
-                var6 = Class3_Sub4.anInt2251 - (int) ((float) var3 / Class44.aFloat727);
-                Class60.anInt934 = Class3_Sub4.anInt2251 + -((int) ((float) var3 / Class44.aFloat727));
-                int var8 = Class3_Sub4.anInt2251 + (int) ((float) var3 / Class44.aFloat727);
-                var7 = (int) ((float) var4 / Class44.aFloat727) + Class3_Sub28_Sub1.anInt3536;
-                Class49.anInt817 = (int) ((float) (var4 * 2) / Class44.aFloat727);
-
-                if (HDToolKit.highDetail) {
-                    if (Class3_Sub13_Sub19.aClass3_Sub28_Sub16_Sub2_3221 == null || var4 != Class3_Sub13_Sub19.aClass3_Sub28_Sub16_Sub2_3221.anInt3707 || var3 != Class3_Sub13_Sub19.aClass3_Sub28_Sub16_Sub2_3221.anInt3696) {
-                        Class3_Sub13_Sub19.aClass3_Sub28_Sub16_Sub2_3221 = null;
-                        Class3_Sub13_Sub19.aClass3_Sub28_Sub16_Sub2_3221 = new Class3_Sub28_Sub16_Sub2(var4, var3);
-                    }
-
-                    Class74.method1319(Class3_Sub13_Sub19.aClass3_Sub28_Sub16_Sub2_3221.anIntArray4081, var4, var3);
-                    Unsorted.method523(var4, 0, var7, var6, 0, var8, var3, var15);
-                    Class23.method938(var4, 0, var7, var8, var3, 0, var15, var6);
-                    Class3_Sub5.method111((byte) -54, 0, 0, var15, var4, var8, var6, var7, var3);
-                    Class22.method926(Class3_Sub13_Sub19.aClass3_Sub28_Sub16_Sub2_3221.anIntArray4081, var0, var2, var4, var3);
-                    Class74.anIntArray1100 = null;
-                } else {
-                    Unsorted.method523(var4 + var0, var2, var7, var6, var0, var8, var2 - -var3, var15);
-                    Class23.method938(var0 + var4, var0, var7, var8, var3 + var2, var2, var15, var6);
-                    Class3_Sub5.method111((byte) -100, var0, var2, var15, var0 - -var4, var8, var6, var7, var3 + var2);
-                }
-
-                if (0 < Class3_Sub28_Sub16.anInt3704) {
-                    --Class3_Sub28_Sub8.anInt3611;
-                    if (Class3_Sub28_Sub8.anInt3611 == 0) {
-                        Class3_Sub28_Sub8.anInt3611 = 20;
-                        --Class3_Sub28_Sub16.anInt3704;
-                    }
-                }
-
-                if (Class20.aBoolean438) {
-                    int var10 = -8 + var2 - -var3;
-                    int var9 = -5 + (var0 - -var4);
-                    Class126.aClass3_Sub28_Sub17_1669.method688(RenderAnimationDefinition.method903(new RSString[]{Class65.aClass94_985, Class72.method1298((byte) 9, AnimationDefinition.anInt1862)}, (byte) -62), var9, var10, 16776960, -1);
-                    Runtime var11 = Runtime.getRuntime();
-                    int var12 = (int) ((var11.totalMemory() - var11.freeMemory()) / 1024L);
-                    int var13 = 16776960;
-                    var10 -= 15;
-                    if (var12 > 65536) {
-                        var13 = 16711680;
-                    }
-
-                    Class126.aClass3_Sub28_Sub17_1669.method688(RenderAnimationDefinition.method903(new RSString[]{Class119.aClass94_1630, Class72.method1298((byte) 9, var12), Class3_Sub13_Sub4.aClass94_3055}, (byte) -108), var9, var10, var13, -1);
-                }
-
-            } else {
-                byte var5 = 20;
-                var6 = var0 - -(var4 / 2);
-                var7 = var3 / 2 + (var2 - 18) + -var5;
-                if (HDToolKit.highDetail) {
-                    Class22.method934(var0, var2, var4, var3, 0);
-                    Class22.method927(var6 - 152, var7, 304, 34, 9179409);
-                    Class22.method927(var6 + -151, var7 + 1, 302, 32, 0);
-                    Class22.method934(-150 + var6, var7 + 2, 3 * Class140_Sub3.anInt2737, 30, 9179409);
-                    Class22.method934(-150 + var6 + Class140_Sub3.anInt2737 * 3, var7 - -2, 300 + -(3 * Class140_Sub3.anInt2737), 30, 0);
-                } else {
-                    Class74.method1323(var0, var2, var4, var3, 0);
-                    Class74.method1311(var6 + -152, var7, 304, 34, 9179409);
-                    Class74.method1311(var6 + -151, 1 + var7, 302, 32, 0);
-                    Class74.method1323(var6 + -150, var7 + 2, Class140_Sub3.anInt2737 * 3, 30, 9179409);
-                    Class74.method1323(3 * Class140_Sub3.anInt2737 + -150 + var6, var7 - -2, -(Class140_Sub3.anInt2737 * 3) + 300, 30, 0);
-                }
-
-                Class168.aClass3_Sub28_Sub17_2096.method699(TextCore.LoadingGeneral, var6, var5 + var7, 16777215, -1);
-            }
-        } catch (RuntimeException var14) {
-            throw Class44.clientError(var14, "wa.FA(" + var0 + ',' + 64 + ',' + var2 + ',' + var3 + ',' + var4 + ')');
         }
     }
 

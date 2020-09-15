@@ -38,9 +38,9 @@ final class Canvas_Sub2 extends Canvas {
                            RSInterface var5 = GameObject.aClass11ArrayArray1834[archive][fileId] = new RSInterface();
                            var5.anInt279 = fileId + (archive << 16);
                            if(-1 == var4[0]) {
-                              var5.decodeScriptFormat(new RSByteBuffer(var4));
+                              var5.decodeScriptFormat(new DataBuffer(var4));
                            } else {
-                              var5.decodeNoScripts(-115, new RSByteBuffer(var4));
+                              var5.decodeNoScripts(-115, new DataBuffer(var4));
                            }
                         }
                      }
@@ -109,7 +109,7 @@ final class Canvas_Sub2 extends Canvas {
             var11 = 4;
          }
 
-         RSByteBuffer var25 = new RSByteBuffer(var6);
+         DataBuffer var25 = new DataBuffer(var6);
 
          int var14;
          int var15;

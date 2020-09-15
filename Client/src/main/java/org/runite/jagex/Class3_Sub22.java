@@ -183,7 +183,7 @@ final class Class3_Sub22 extends Linkable {
       HDToolKit.method1830();
    }
 
-   static Class75_Sub4 method404(RSByteBuffer var1) {
+   static Class75_Sub4 method404(DataBuffer var1) {
       try {
          return new Class75_Sub4(var1.getShort((byte)93), var1.getShort((byte)55), var1.getShort((byte)81), var1.getShort((byte)95), var1.getTriByte((byte)124), var1.getTriByte((byte)120), var1.readUnsignedByte());
       } catch (RuntimeException var3) {

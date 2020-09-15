@@ -543,9 +543,9 @@ final class Class140_Sub1_Sub2 extends Model {
             var13.aShortArray3871 = this.aShortArray3871;
             var13.aBoolean2699 = this.aBoolean2699;
             if(var1 == 3) {
-               var13.anIntArray3885 = Class65.method1233(this.anIntArray3885, 2);
-               var13.anIntArray3883 = Class65.method1233(this.anIntArray3883, 2);
-               var13.anIntArray3895 = Class65.method1233(this.anIntArray3895, 2);
+               var13.anIntArray3885 = Class65.method1233(this.anIntArray3885);
+               var13.anIntArray3883 = Class65.method1233(this.anIntArray3883);
+               var13.anIntArray3895 = Class65.method1233(this.anIntArray3895);
             } else {
                var13.anIntArray3885 = this.anIntArray3885;
                var13.anIntArray3883 = new int[var13.anInt3891];

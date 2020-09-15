@@ -76,7 +76,7 @@ final class Class3_Sub17 extends Linkable {
 	Class3_Sub17(int var1, byte[] var2) {
 		try {
 			this.anInt2454 = var1;
-			RSByteBuffer var3 = new RSByteBuffer(var2);
+			DataBuffer var3 = new DataBuffer(var2);
 			this.anInt2462 = var3.readUnsignedByte();
 			this.anIntArrayArray2460 = new int[this.anInt2462][];
 			this.anIntArray2466 = new int[this.anInt2462];
@@ -116,7 +116,7 @@ final class Class3_Sub17 extends Linkable {
 	private void loadNewHeader(int var1, byte[] var2) {
 		this.anInt2454 = var1;
 		System.out.println("Loaded new header!");
-		RSByteBuffer var3 = new RSByteBuffer(var2);
+		DataBuffer var3 = new DataBuffer(var2);
 		this.anInt2462 = var3.readUnsignedByte();
 		this.anIntArrayArray2460 = new int[this.anInt2462][];
 		this.anIntArray2466 = new int[this.anInt2462];

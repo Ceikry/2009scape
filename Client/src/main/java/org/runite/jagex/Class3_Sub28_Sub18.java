@@ -13,7 +13,6 @@ final class Class3_Sub28_Sub18 extends Node {
    private final int anInt3760;
    static int anInt3764;
    static int anInt3765 = 100;
-   static int anInt3766 = 0;
    private int anInt3767 = 0;
    static int[] anIntArray3768 = new int[100];
    static boolean aBoolean3769 = false;

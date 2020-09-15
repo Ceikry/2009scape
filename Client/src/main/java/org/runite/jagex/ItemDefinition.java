@@ -120,7 +120,7 @@ final class ItemDefinition {
 		   } else {
 			  var2 = new AssembledMethod();
 
-			  RSByteBuffer var4 = new RSByteBuffer(var3);
+			  DataBuffer var4 = new DataBuffer(var3);
 			  var4.index = -2 + var4.buffer.length;
 			  int var5 = var4.getShort();
 			  int var6 = -12 + var4.buffer.length + -2 - var5;
@@ -2316,7 +2316,7 @@ final class ItemDefinition {
 																		iStackCounter -= 2;
 																		Class3_Sub13_Sub38.aShortArray3455[intsStack[iStackCounter]] = (short) Class56.method1186(intsStack[iStackCounter + 1]);
 																		GameShell.method28();
-																		RSByteBuffer.method746((byte) -29);
+																		Unsorted.method746((byte) -29);
 																		Class167.method2265();
 																		WorldListEntry.method1076();
 																		Class47.method1093(false);
@@ -2545,7 +2545,7 @@ final class ItemDefinition {
 																				if (!Class106.aBoolean1441)
 																					Class84.method1417(104);
 																			}
-																			RSByteBuffer.method746((byte) -29);
+																			Unsorted.method746((byte) -29);
 																			Class119.method1730(Class38.aClass87_665);
 																			Class140_Sub2.aBoolean2705 = false;
 																			continue;
@@ -2554,14 +2554,14 @@ final class ItemDefinition {
 																			Class25.method957(1 == intsStack[--iStackCounter]);
 																			Class3_Sub10.method139(66);
 																			Class84.method1417(101);
-																			RSByteBuffer.method792();
+																			Unsorted.method792();
 																			Class119.method1730(Class38.aClass87_665);
 																			Class140_Sub2.aBoolean2705 = false;
 																			continue;
 																		}
 																		if (opcode == 6003) {
 																			Class3_Sub28_Sub7.aBoolean3604 = intsStack[--iStackCounter] == 1;
-																			RSByteBuffer.method792();
+																			Unsorted.method792();
 																			Class119.method1730(Class38.aClass87_665);
 																			Class140_Sub2.aBoolean2705 = false;
 																			continue;
@@ -2712,7 +2712,7 @@ final class ItemDefinition {
 																		}
 																		if (opcode == 6021) {
 																			Class73.aBoolean1084 = intsStack[--iStackCounter] == 1;
-																			RSByteBuffer.method792();
+																			Unsorted.method792();
 																			continue;
 																		}
 																		if (opcode == 6023) {
@@ -4184,7 +4184,7 @@ final class ItemDefinition {
 		}
 	}
 
-	final void parseDefinitions(RSByteBuffer buffer) {
+	final void parseDefinitions(DataBuffer buffer) {
 		try {
 			while(true) {
 				int opcode = buffer.readUnsignedByte();
@@ -4200,7 +4200,7 @@ final class ItemDefinition {
 		}
 	}
 
-	private void parseOpcode(RSByteBuffer buffer, int opcode) {
+	private void parseOpcode(DataBuffer buffer, int opcode) {
 		try {
 			if(opcode == 1) {
 				this.anInt755 = buffer.getShort();

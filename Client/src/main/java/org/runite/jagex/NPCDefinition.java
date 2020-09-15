@@ -369,7 +369,7 @@ final class NPCDefinition {
 
                var22 = -1;
                if(var3 > -63) {
-                  this.parseOpcode(79, 73, (RSByteBuffer)null);
+                  this.parseOpcode(79, 73, (DataBuffer)null);
                }
 
                var42 = -1;
@@ -460,7 +460,7 @@ final class NPCDefinition {
       }
    }
 
-   final void method1478(RSByteBuffer var1) {
+   final void method1478(DataBuffer var1) {
       try {
          while(true) {
             int var3 = var1.readUnsignedByte();
@@ -607,7 +607,7 @@ final class NPCDefinition {
       }
    }
 
-   private void parseOpcode(int var1, int opcode, RSByteBuffer buffer) {
+   private void parseOpcode(int var1, int opcode, DataBuffer buffer) {
       try {
          int var4;
          int var5;

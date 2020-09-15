@@ -232,7 +232,7 @@ final class Class102 implements Interface2 {
             if(null == var4) {
                return null;
             } else {
-               RSByteBuffer var5 = new RSByteBuffer(var4);
+               DataBuffer var5 = new DataBuffer(var4);
                var3 = new Class3_Sub28_Sub20(var5);
                this.aClass47_2142.method1097(var3, (long)var1, (byte)-118);
                return var3;
@@ -482,7 +482,7 @@ final class Class102 implements Interface2 {
             this.aClass47_2138 = null;
          }
 
-         RSByteBuffer var6 = new RSByteBuffer(var2.getFile(0, 0));
+         DataBuffer var6 = new DataBuffer(var2.getFile(0, 0));
          int var7 = var6.getShort();
          this.aByteArray2143 = new byte[var7];
          this.aByteArray2129 = new byte[var7];

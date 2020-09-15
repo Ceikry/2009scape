@@ -228,7 +228,7 @@ final class Class3_Sub13_Sub37 extends Class3_Sub13 {
       super(1, false);
    }
 
-   final void method157(int var1, RSByteBuffer var2, boolean var3) {
+   final void method157(int var1, DataBuffer var2, boolean var3) {
       try {
          if(var3) {
             if(var1 == 0) {
@@ -350,7 +350,7 @@ final class Class3_Sub13_Sub37 extends Class3_Sub13 {
       try {
          int[][] var3 = this.aClass97_2376.method1594((byte)90, var2);
          if(var1 != -1) {
-            this.method157(-71, (RSByteBuffer)null, false);
+            this.method157(-71, (DataBuffer)null, false);
          }
 
          if(this.aClass97_2376.aBoolean1379) {
@@ -458,7 +458,7 @@ final class Class3_Sub13_Sub37 extends Class3_Sub13 {
             byte[] var4 = Class3_Sub28_Sub5.aClass153_3580.getFile(4, var1);
             var2 = new Class168();
             if(var4 != null) {
-               var2.method2274(new RSByteBuffer(var4), var1);
+               var2.method2274(new DataBuffer(var4), var1);
             }
 
             Class163_Sub2_Sub1.aClass93_4015.put((byte)-109, var2, (long)var1);

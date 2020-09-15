@@ -58,7 +58,7 @@ final class Class50 {
 				}
 
 				if(var5 == 3) {
-					Class12 var13 = RSByteBuffer.method784(var0, var6, var4);
+					Class12 var13 = Unsorted.method784(var0, var6, var4);
 					if(null != var13) {
 						var13.object = new Class140_Sub3(Integer.MAX_VALUE & (int)(var13.aLong328 >>> 32), 22, var2, var0, var6, var4, var7, false, var13.object);
 					}

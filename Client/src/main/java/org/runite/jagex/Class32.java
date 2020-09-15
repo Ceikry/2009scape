@@ -6,7 +6,7 @@ final class Class32 {
    static RSString aClass94_592 = RSString.of("<img=0>");
 
 
-   static RSString method992(RSByteBuffer var0) {
+   static RSString method992(DataBuffer var0) {
       try {
 
          return Class140_Sub7.method2033(var0);

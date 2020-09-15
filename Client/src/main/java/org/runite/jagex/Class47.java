@@ -114,7 +114,7 @@ final class Class47 {
             var8 = var3[var5];
             if(null != var8) {
                Class58.method1194();
-               RSByteBuffer.method777(Class86.aClass91Array1182, var0, -48 + 8 * Class3_Sub28_Sub7.anInt3606, var7, var6, (Class3_Sub7.anInt2294 + -6) * 8, var8);
+               Unsorted.method777(Class86.aClass91Array1182, var0, -48 + 8 * Class3_Sub28_Sub7.anInt3606, var7, var6, (Class3_Sub7.anInt2294 + -6) * 8, var8);
             }
          }
 
@@ -364,7 +364,7 @@ final class Class47 {
                         }
 
                         if (var11.anInt189 == 1400) {
-                           RSByteBuffer.method799(var13, var14, var11.anInt193, var11.anInt168);
+                           Unsorted.method799(var13, var14, var11.anInt193, var11.anInt168);
                            Class3_Sub28_Sub14.aBooleanArray3674[var12] = true;
                            Class163_Sub1_Sub1.aBooleanArray4008[var12] = true;
                            if (HDToolKit.highDetail) {
@@ -431,9 +431,9 @@ final class Class47 {
                            var26 = 0;
 
                            for (var28 = 0; var28 < 29; ++var28) { //TODO:
-                              var25 += RSByteBuffer.aClass151_Sub1Array2601[var28].method2108();
-                              var26 += RSByteBuffer.aClass151_Sub1Array2601[var28].method2102();
-                              var47 += RSByteBuffer.aClass151_Sub1Array2601[var28].method2106();
+                              var25 += Unsorted.aClass151_Sub1Array2601[var28].method2108();
+                              var26 += Unsorted.aClass151_Sub1Array2601[var28].method2102();
+                              var47 += Unsorted.aClass151_Sub1Array2601[var28].method2106();
                            }
 
                            var29 = 10000 * var26 / var25;
@@ -977,7 +977,7 @@ final class Class47 {
 
                                        RSString var44;
                                        while (var43.length(-58) > 0) {
-                                          var25 = var43.indexOf(RSByteBuffer.aClass94_2598, 62);
+                                          var25 = var43.indexOf(Unsorted.aClass94_2598, 62);
                                           if (var25 == -1) {
                                              var44 = var43;
                                              var43 = Class3_Sub28_Sub14.aClass94_3672;
@@ -1021,7 +1021,7 @@ final class Class47 {
                                        var47 = 2 + (var26 - -var35.anInt3727);
 
                                        for (var43 = Class73.method1303(var11, var43); var43.length(-102) > 0; var47 += var35.anInt3727 + 1) {
-                                          var28 = var43.indexOf(RSByteBuffer.aClass94_2598, 86);
+                                          var28 = var43.indexOf(Unsorted.aClass94_2598, 86);
                                           if (var28 == -1) {
                                              var44 = var43;
                                              var43 = Class3_Sub28_Sub14.aClass94_3672;

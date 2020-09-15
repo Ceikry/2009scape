@@ -100,7 +100,7 @@ final class Class53 {
       }
    }
 
-   static void parseWorldList(RSByteBuffer buffer) {
+   static void parseWorldList(DataBuffer buffer) {
       try {
          int var2 = buffer.getSmart();
          Class119.countries = new WorldListCountry[var2];

@@ -163,7 +163,7 @@ final class Class3_Sub13_Sub36 extends Class3_Sub13 {
          Class7.anInt2162 = var7;
          NPC.anInt3995 = var6;
          Class3_Sub13_Sub25.anInt3315 = var10;
-         if(Class3_Sub13_Sub4.aBoolean3064 && Class58.aClass66_917.method1253() == 0) {
+         if(Class3_Sub13_Sub4.aBoolean3064 && Class58.aJs5Worker_917.method1253() == 0) {
             Class3_Sub13_Sub4.aBoolean3064 = false;
          }
 
@@ -255,7 +255,7 @@ final class Class3_Sub13_Sub36 extends Class3_Sub13 {
       }
    }
 
-   final void method157(int var1, RSByteBuffer var2, boolean var3) {
+   final void method157(int var1, DataBuffer var2, boolean var3) {
       try {
          if(!var3) {
             aClass153_3429 = (CacheIndex)null;
@@ -291,7 +291,7 @@ final class Class3_Sub13_Sub36 extends Class3_Sub13 {
             var2 = new Class3_Sub28_Sub13();
 
             if(null != var3) {
-               var2.method625(new RSByteBuffer(var3));
+               var2.method625(new DataBuffer(var3));
             }
 
             Class129_Sub1.aClass47_2686.method1097(var2, (long)var0, (byte)-115);
@@ -308,9 +308,9 @@ final class Class3_Sub13_Sub36 extends Class3_Sub13 {
 
 	         for(int var2 = 0; var2 < Class95.anInt1338; ++var2) {
 	            if(HDToolKit.highDetail) {
-	               var1[var2] = new HDIndexedSprite(Class3_Sub15.anInt2426, Class133.anInt1748, Class164.anIntArray2048[var2], RSByteBuffer.anIntArray2591[var2], Class140_Sub7.anIntArray2931[var2], Class3_Sub13_Sub6.anIntArray3076[var2], Class163_Sub1.aByteArrayArray2987[var2], Class3_Sub13_Sub38.spritePalette);
+	               var1[var2] = new HDIndexedSprite(Class3_Sub15.anInt2426, Class133.anInt1748, Class164.anIntArray2048[var2], Unsorted.anIntArray2591[var2], Class140_Sub7.anIntArray2931[var2], Class3_Sub13_Sub6.anIntArray3076[var2], Class163_Sub1.aByteArrayArray2987[var2], Class3_Sub13_Sub38.spritePalette);
 	            } else {
-	               var1[var2] = new LDIndexedSprite(Class3_Sub15.anInt2426, Class133.anInt1748, Class164.anIntArray2048[var2], RSByteBuffer.anIntArray2591[var2], Class140_Sub7.anIntArray2931[var2], Class3_Sub13_Sub6.anIntArray3076[var2], Class163_Sub1.aByteArrayArray2987[var2], Class3_Sub13_Sub38.spritePalette);
+	               var1[var2] = new LDIndexedSprite(Class3_Sub15.anInt2426, Class133.anInt1748, Class164.anIntArray2048[var2], Unsorted.anIntArray2591[var2], Class140_Sub7.anIntArray2931[var2], Class3_Sub13_Sub6.anIntArray3076[var2], Class163_Sub1.aByteArrayArray2987[var2], Class3_Sub13_Sub38.spritePalette);
 	            }
              }
 	         Class39.method1035((byte)113);

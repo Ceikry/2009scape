@@ -82,7 +82,7 @@ final class Class3_Sub13_Sub1 extends Class3_Sub13 {
 	}
 
 	static void method229() {
-		RSByteBuffer buffer = outgoingBuffer;
+		DataBuffer buffer = outgoingBuffer;
 		buffer.putString(aClass2323);
 		for (char c : aString2324.toCharArray()) {
 			if (c == '-') {
@@ -149,7 +149,7 @@ final class Class3_Sub13_Sub1 extends Class3_Sub13 {
 		}
 	}
 
-	final void method157(int var1, RSByteBuffer var2, boolean var3) {
+	final void method157(int var1, DataBuffer var2, boolean var3) {
 		try {
 			if(!var3) {
 				this.method158(10);

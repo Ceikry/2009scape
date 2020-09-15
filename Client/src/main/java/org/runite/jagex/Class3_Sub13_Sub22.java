@@ -25,7 +25,7 @@ final class Class3_Sub13_Sub22 extends Class3_Sub13 {
       }
    }
 
-   final void method157(int var1, RSByteBuffer var2, boolean var3) {
+   final void method157(int var1, DataBuffer var2, boolean var3) {
       try {
          if(!var3) {
             this.method154(121, (byte)52);

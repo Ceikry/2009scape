@@ -353,7 +353,7 @@ final class CacheIndex {
                     byte[] var21;
                     if (null != xteaKeys && (xteaKeys[0] != 0 || 0 != xteaKeys[1] || 0 != xteaKeys[2] || xteaKeys[3] != 0)) {
                         var21 = NPC.method1985(this.files[archive], true);
-                        RSByteBuffer var22 = new RSByteBuffer(var21);
+                        DataBuffer var22 = new DataBuffer(var21);
                         var22.method770(xteaKeys, var22.buffer.length);
                     } else {
                         var21 = NPC.method1985(this.files[archive], false);
@@ -376,7 +376,7 @@ final class CacheIndex {
                         --var10;
                         int var11 = 255 & var23[var10];
                         var10 -= var4 * var11 * 4;
-                        RSByteBuffer var12 = new RSByteBuffer(var23);
+                        DataBuffer var12 = new DataBuffer(var23);
                         var12.index = var10;
                         int[] var13 = new int[var4];
 

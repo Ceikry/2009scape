@@ -19,7 +19,7 @@ final class Class3_Sub13_Sub21 extends Class3_Sub13 {
    private int anInt3266 = 8192;
 
 
-   final void method157(int var1, RSByteBuffer var2, boolean var3) {
+   final void method157(int var1, DataBuffer var2, boolean var3) {
       try {
          if(var1 == 0) {
             this.anInt3265 = var2.getShort();
@@ -283,7 +283,7 @@ final class Class3_Sub13_Sub21 extends Class3_Sub13 {
                }
 
                int var5 = 0;
-               RSByteBuffer var16 = new RSByteBuffer(Class3_Sub13_Sub26.aByteArrayArray3335[var2]);
+               DataBuffer var16 = new DataBuffer(Class3_Sub13_Sub26.aByteArrayArray3335[var2]);
 
                while(Class3_Sub13_Sub26.aByteArrayArray3335[var2].length > var16.index && 511 > var5) {
                   int var6 = var5++ << 6 | var3;

@@ -65,7 +65,7 @@ final class Class115 {
                      var12 = var23.aClass140_479;
                   }
                } else if (var13 == 3) {
-                  Class12 var24 = RSByteBuffer.method784(WorldListCountry.localPlane, var1.anInt2271, var1.anInt2282);
+                  Class12 var24 = Unsorted.method784(WorldListCountry.localPlane, var1.anInt2271, var1.anInt2282);
                   if (null != var24) {
                      var12 = var24.object;
                   }

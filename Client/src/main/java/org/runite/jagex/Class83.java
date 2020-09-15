@@ -77,14 +77,14 @@ final class Class83 {
                         if(0 <= var28 && var41.length + -1 >= var28 && null != var41[var28]) {
                            var32 = var41[var28][var31];
                         } else {
-                           if(RSByteBuffer.aClass3_Sub28_Sub3_2600.anInt3550 == -1) {
+                           if(Unsorted.aClass3_Sub28_Sub3_2600.anInt3550 == -1) {
                               if((var6 + var13 & 4) == (4 & var24 + var3)) {
                                  var32 = Class84.anIntArray1161[1 + Class3_Sub13_Sub6.anInt3081];
                               } else {
                                  var32 = 4936552;
                               }
                            } else {
-                              var32 = RSByteBuffer.aClass3_Sub28_Sub3_2600.anInt3550;
+                              var32 = Unsorted.aClass3_Sub28_Sub3_2600.anInt3550;
                            }
 
                            if(var28 < 0 || var28 > var41.length + -1) {
@@ -207,8 +207,8 @@ final class Class83 {
                   var14 += var5;
 
                   for(int var18 = 0; var18 < var12; ++var18) {
-                     if(-1 != RSByteBuffer.aClass3_Sub28_Sub3_2600.anInt3550) {
-                        var19 = RSByteBuffer.aClass3_Sub28_Sub3_2600.anInt3550;
+                     if(-1 != Unsorted.aClass3_Sub28_Sub3_2600.anInt3550) {
+                        var19 = Unsorted.aClass3_Sub28_Sub3_2600.anInt3550;
                      } else if((var13 - -var6 & 4) == (4 & var18 + var3)) {
                         var19 = Class84.anIntArray1161[1 + Class3_Sub13_Sub6.anInt3081];
                      } else {

@@ -73,7 +73,7 @@ final class Class24 {
       try {
          boolean var5 = true;
          int var7 = -1;
-         RSByteBuffer buffer = new RSByteBuffer(var3);
+         DataBuffer buffer = new DataBuffer(var3);
 
     	 if (buffer.buffer.length == 0) {
 //    		 System.out.println("No object mapping found!");
@@ -205,7 +205,7 @@ final class Class24 {
       }
    }
 
-   private void method946(RSByteBuffer var2, int var3) {
+   private void method946(DataBuffer var2, int var3) {
       try {
 
           if(var3 == 1) {
@@ -376,7 +376,7 @@ final class Class24 {
       }
    }
 
-   final void method952(RSByteBuffer var2) {
+   final void method952(DataBuffer var2) {
       try {
           while(true) {
              int var3 = var2.readUnsignedByte();

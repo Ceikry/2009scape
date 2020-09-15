@@ -20,9 +20,9 @@ final class Class23 {
       }
    }
 
-   static RSByteBuffer method939() {
+   static DataBuffer method939() {
       try {
-         RSByteBuffer var1 = new RSByteBuffer(34);
+         DataBuffer var1 = new DataBuffer(34);
          var1.putByte((byte)-40, 11);
          var1.putByte((byte)-42, Unsorted.anInt3625);
          var1.putByte((byte)-81, !Class3_Sub28_Sub13.aBoolean3665?0:1);

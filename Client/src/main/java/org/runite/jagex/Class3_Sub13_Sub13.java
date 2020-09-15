@@ -48,7 +48,7 @@ final class Class3_Sub13_Sub13 extends Class3_Sub13 {
       super(1, false);
    }
 
-   final void method157(int var1, RSByteBuffer var2, boolean var3) {
+   final void method157(int var1, DataBuffer var2, boolean var3) {
       try {
          if(!var3) {
             anInt3148 = -117;
@@ -81,7 +81,7 @@ final class Class3_Sub13_Sub13 extends Class3_Sub13 {
             byte[] var3 = Class127.aClass153_1680.getFile(3, var0);
             var2 = new Class24();
             if(null != var3) {
-               var2.method952(new RSByteBuffer(var3));
+               var2.method952(new DataBuffer(var3));
             }
 
             Class140_Sub4.aClass93_2792.put((byte)-89, var2, (long)var0);

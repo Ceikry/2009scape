@@ -54,7 +54,7 @@ static RSString[] aClass94Array3238 = new RSString[]{aClass94_3237, aClass94_324
       }
    }
 
-   final void method157(int var1, RSByteBuffer var2, boolean var3) {
+   final void method157(int var1, DataBuffer var2, boolean var3) {
       try {
          if(0 == var1) {
             this.anInt3242 = var2.readUnsignedByte();

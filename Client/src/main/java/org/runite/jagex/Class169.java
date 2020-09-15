@@ -17,7 +17,7 @@ final class Class169 {
 
 
    final void method2281(int[][] var1, int var2, int var3) {
-      RSByteBuffer var4 = new RSByteBuffer(1620);
+      DataBuffer var4 = new DataBuffer(1620);
 
       int var6;
       for(int var5 = 0; var5 <= 8; ++var5) {
@@ -48,7 +48,7 @@ final class Class169 {
          this.aByteBuffer2109.flip();
       }
 
-      RSByteBuffer var8 = new RSByteBuffer(1536);
+      DataBuffer var8 = new DataBuffer(1536);
 
       for(var6 = 0; var6 < 8; ++var6) {
          for(int var7 = 0; var7 < 8; ++var7) {

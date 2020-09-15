@@ -718,7 +718,7 @@ final class Class168 {
       }
    }
 
-   final void method2274(RSByteBuffer var2, int var3) {
+   final void method2274(DataBuffer var2, int var3) {
       try {
          while(true) {
             int var4 = var2.readUnsignedByte();
@@ -940,7 +940,7 @@ final class Class168 {
       }
    }
 
-   private void method2279(int var2, RSByteBuffer var3, int var4) {
+   private void method2279(int var2, DataBuffer var3, int var4) {
       try {
          if(var2 == 1) {
             this.anInt2103 = RSInterface.method869(116, var3.getTriByte((byte)83));

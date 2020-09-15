@@ -30,7 +30,7 @@ final class Class3_Sub13_Sub10 extends Class3_Sub13 {
       }
    }
 
-   final void method157(int var1, RSByteBuffer var2, boolean var3) {
+   final void method157(int var1, DataBuffer var2, boolean var3) {
       try {
          if(var1 == 0) {
             this.anInt3128 = var2.getShort();
@@ -41,7 +41,7 @@ final class Class3_Sub13_Sub10 extends Class3_Sub13 {
          }
 
          if(!var3) {
-            this.method157(56, (RSByteBuffer)null, true);
+            this.method157(56, (DataBuffer)null, true);
          }
 
       } catch (RuntimeException var5) {
@@ -276,7 +276,7 @@ final class Class3_Sub13_Sub10 extends Class3_Sub13 {
       super(1, false);
    }
 
-   static void method216(RSByteBuffer var0) {
+   static void method216(DataBuffer var0) {
       try {
          for(int var2 = 0; var2 < Class57.activeWorldListSize; ++var2) {
             int var3 = var0.getSmart();

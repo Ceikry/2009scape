@@ -61,7 +61,7 @@ abstract class Class3_Sub13 extends Linkable {
       }
    }
 
-   void method157(int var1, RSByteBuffer var2, boolean var3) {
+   void method157(int var1, DataBuffer var2, boolean var3) {
       try {
          if(!var3) {
             this.aClass3_Sub13Array2377 = (Class3_Sub13[])null;
@@ -150,7 +150,7 @@ abstract class Class3_Sub13 extends Linkable {
             return null;
          } else {
 
-            Class3_Sub28_Sub17_Sub1 var2 = new Class3_Sub28_Sub17_Sub1(var0, Class164.anIntArray2048, RSByteBuffer.anIntArray2591, Class140_Sub7.anIntArray2931, Class3_Sub13_Sub6.anIntArray3076, Class163_Sub1.aByteArrayArray2987);
+            Class3_Sub28_Sub17_Sub1 var2 = new Class3_Sub28_Sub17_Sub1(var0, Class164.anIntArray2048, Unsorted.anIntArray2591, Class140_Sub7.anIntArray2931, Class3_Sub13_Sub6.anIntArray3076, Class163_Sub1.aByteArrayArray2987);
             Class39.method1035((byte)126);
             return var2;
          }

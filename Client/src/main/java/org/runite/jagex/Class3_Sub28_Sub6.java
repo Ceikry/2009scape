@@ -136,7 +136,7 @@ final class Class3_Sub28_Sub6 extends Node {
 
             var2 = new Class2();
             if(var3 != null) {
-               var2.method74((byte)-115, new RSByteBuffer(var3), var0);
+               var2.method74((byte)-115, new DataBuffer(var3), var0);
             }
 
             Class3_Sub13_Sub34.aClass93_3412.put((byte)-86, var2, (long)var0);
@@ -179,7 +179,7 @@ final class Class3_Sub28_Sub6 extends Node {
    static void a(int var0, int var2, int var3, RSString var4, long var5, int var7, RSString name) {
       try {
     	  System.out.println("Class3_Sub28_Sub6 " + var0 + ", " + 10603 + ", " + var2 + ", " + var3 + ", " + var4 + ", " + var5 + ", " + var7);
-         RSByteBuffer var8 = new RSByteBuffer(128);
+         DataBuffer var8 = new DataBuffer(128);
          var8.putByte((byte)-101, 10);
          var8.putShort((int)(Math.random() * 99999.0D));
          var8.putShort(530);

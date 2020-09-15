@@ -12,7 +12,7 @@ final class Class103 {
    private final int[] anIntArray1437 = new int[2];
 
 
-   final void method1620(RSByteBuffer var1, Class34 var2) {
+   final void method1620(DataBuffer var1, Class34 var2) {
       int var3 = var1.readUnsignedByte();
       this.anIntArray1434[0] = var3 >> 4;
       this.anIntArray1434[1] = var3 & 15;

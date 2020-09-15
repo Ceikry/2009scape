@@ -37,7 +37,7 @@ final class Class3_Sub13_Sub29 extends Class3_Sub13 {
       }
    }
 
-   static void method305(Signlink var0, RSByteBuffer var1, int var2) {
+   static void method305(Signlink var0, DataBuffer var1, int var2) {
       try {
          Class3_Sub8 var4 = new Class3_Sub8();
          var4.anInt2296 = var1.readUnsignedByte();
@@ -180,7 +180,7 @@ final class Class3_Sub13_Sub29 extends Class3_Sub13 {
 
             var2 = new Class55();
             if(var3 != null) {
-               var2.method1182(new RSByteBuffer(var3), var0, (byte)85);
+               var2.method1182(new DataBuffer(var3), var0, (byte)85);
             }
 
             Unsorted.aClass93_684.put((byte)-112, var2, (long)var0);

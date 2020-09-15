@@ -224,7 +224,7 @@ final class Class116 {
       return anIntArray1598;
    }
 
-   final void method1718(RSByteBuffer var1) {
+   final void method1718(DataBuffer var1) {
       this.aClass34_1589 = new Class34();
       this.aClass34_1589.method1010(var1);
       this.aClass34_1587 = new Class34();

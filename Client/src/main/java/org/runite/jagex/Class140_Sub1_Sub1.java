@@ -18,7 +18,7 @@ final class Class140_Sub1_Sub1 extends Model {
    private Class121 aClass121_3815;
    private byte[] aByteArray3816;
    private Class121 aClass121_3817;
-   private static RSByteBuffer aClass3_Sub30_3818 = new RSByteBuffer(10000);
+   private static DataBuffer aClass3_Sub30_3818 = new DataBuffer(10000);
    private short aShort3819;
    private byte[] aByteArray3820;
    private static long[] aLongArray3821;
@@ -1375,7 +1375,7 @@ final class Class140_Sub1_Sub1 extends Model {
 
    private void method1912() {
       if(aClass3_Sub30_3818.buffer.length < this.anInt3833 * 12) {
-         aClass3_Sub30_3818 = new RSByteBuffer((this.anInt3833 + 100) * 12);
+         aClass3_Sub30_3818 = new DataBuffer((this.anInt3833 + 100) * 12);
       } else {
          aClass3_Sub30_3818.index = 0;
       }
@@ -1803,7 +1803,7 @@ final class Class140_Sub1_Sub1 extends Model {
 
       if(var6 != 0) {
          if(aClass3_Sub30_3818.buffer.length < this.anInt3833 * var6) {
-            aClass3_Sub30_3818 = new RSByteBuffer((this.anInt3833 + 100) * var6);
+            aClass3_Sub30_3818 = new DataBuffer((this.anInt3833 + 100) * var6);
          } else {
             aClass3_Sub30_3818.index = 0;
          }
@@ -2341,14 +2341,14 @@ final class Class140_Sub1_Sub1 extends Model {
          var12.anIntArray3822 = this.anIntArray3822;
          var12.anIntArray3848 = this.anIntArray3848;
       } else {
-         var12.anIntArray3822 = Class65.method1233(this.anIntArray3822, 2);
-         var12.anIntArray3848 = Class65.method1233(this.anIntArray3848, 2);
+         var12.anIntArray3822 = Class65.method1233(this.anIntArray3822);
+         var12.anIntArray3848 = Class65.method1233(this.anIntArray3848);
       }
 
       if(var2) {
          var12.anIntArray3845 = this.anIntArray3845;
       } else {
-         var12.anIntArray3845 = Class65.method1233(this.anIntArray3845, 2);
+         var12.anIntArray3845 = Class65.method1233(this.anIntArray3845);
       }
 
       if(var1 && var2) {

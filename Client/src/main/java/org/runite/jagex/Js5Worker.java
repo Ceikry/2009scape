@@ -4,12 +4,12 @@ import org.rs09.client.collections.Queue;
 
 import java.io.IOException;
 
-final class Class66 {
+final class Js5Worker {
 
-    private final Queue highPriorityRequests = new Queue();
-    private final Queue aClass13_1000 = new Queue();
-    private final Queue lowPriorityRequests = new Queue();
-    private final Queue aClass13_1003 = new Queue();
+    private final Queue<Js5ResourceRequest> highPriorityRequests = new Queue<>();
+    private final Queue<Js5ResourceRequest> aClass13_1000 = new Queue<>();
+    private final Queue<Js5ResourceRequest> lowPriorityRequests = new Queue<>();
+    private final Queue<Js5ResourceRequest> aClass13_1003 = new Queue<>();
 
     private long aLong1004;
     private IOHandler aClass89_1005;
@@ -19,8 +19,8 @@ final class Class66 {
     volatile int anInt1011 = 0;
     private Js5ResourceRequest aJs5ResourceRequest_1012;
 
-    private final RSByteBuffer aClass3_Sub30_1007 = new RSByteBuffer(4);
-    private final RSByteBuffer aClass3_Sub30_1008 = new RSByteBuffer(8);
+    private final DataBuffer aClass3_Sub30_1007 = new DataBuffer(4);
+    private final DataBuffer aClass3_Sub30_1008 = new DataBuffer(8);
 
     final boolean method1241() {
         return 20 <= this.method1246();
@@ -55,7 +55,7 @@ final class Class66 {
                     this.aClass89_1005.method1466();
 
                     Js5ResourceRequest var21;
-                    for (var21 = (Js5ResourceRequest) this.highPriorityRequests.getFront(); null != var21; var21 = (Js5ResourceRequest) this.highPriorityRequests.next()) {
+                    for (var21 = this.highPriorityRequests.getFront(); null != var21; var21 = this.highPriorityRequests.next()) {
                         this.aClass3_Sub30_1007.index = 0;
                         this.aClass3_Sub30_1007.putByte((byte) -26, 1); //High priority JS5 request
                         this.aClass3_Sub30_1007.putTriByte((int) var21.nodeKey);
@@ -64,7 +64,7 @@ final class Class66 {
                         this.aClass13_1000.offer(var21);
                     }
 
-                    for (var21 = (Js5ResourceRequest) this.lowPriorityRequests.getFront(); var21 != null; var21 = (Js5ResourceRequest) this.lowPriorityRequests.next()) {
+                    for (var21 = this.lowPriorityRequests.getFront(); var21 != null; var21 = this.lowPriorityRequests.next()) {
                         this.aClass3_Sub30_1007.index = 0;
                         this.aClass3_Sub30_1007.putByte((byte) -22, 0); //Low priority JS5 request
                         this.aClass3_Sub30_1007.putTriByte((int) var21.nodeKey);
@@ -144,12 +144,12 @@ final class Class66 {
                                     int var11 = 127 & var9;
                                     boolean var12 = (var9 & 128) != 0;
                                     Js5ResourceRequest var15;
-                                    long var13 = (long) ((var7 << 16) - -var8);
+                                    long var13 = (var7 << 16) - -var8;
                                     if (var12) {
-                                        for (var15 = (Js5ResourceRequest) this.aClass13_1003.getFront(); null != var15 && var13 != var15.nodeKey; var15 = (Js5ResourceRequest) this.aClass13_1003.next()) {
+                                        for (var15 = this.aClass13_1003.getFront(); null != var15 && var13 != var15.nodeKey; var15 = this.aClass13_1003.next()) {
                                         }
                                     } else {
-                                        for (var15 = (Js5ResourceRequest) this.aClass13_1000.getFront(); var15 != null && var15.nodeKey != var13; var15 = (Js5ResourceRequest) this.aClass13_1000.next()) {
+                                        for (var15 = this.aClass13_1000.getFront(); var15 != null && var15.nodeKey != var13; var15 = this.aClass13_1000.next()) {
                                         }
                                     }
 
@@ -159,7 +159,7 @@ final class Class66 {
 
                                     int var16 = var11 != 0 ? 9 : 5;
                                     this.aJs5ResourceRequest_1012 = var15;
-                                    this.aJs5ResourceRequest_1012.aClass3_Sub30_4069 = new RSByteBuffer(var10 - (-var16 - this.aJs5ResourceRequest_1012.aByte4064));
+                                    this.aJs5ResourceRequest_1012.aClass3_Sub30_4069 = new DataBuffer(var10 - (-var16 - this.aJs5ResourceRequest_1012.aByte4064));
                                     this.aJs5ResourceRequest_1012.aClass3_Sub30_4069.putByte((byte) -127, var11);
                                     this.aJs5ResourceRequest_1012.aClass3_Sub30_4069.putInt(-125, var10);
                                     this.aJs5ResourceRequest_1012.anInt4067 = 8;
@@ -280,10 +280,10 @@ final class Class66 {
         this.aJs5ResourceRequest_1012 = null;
 
         while (true) {
-            Js5ResourceRequest var4 = (Js5ResourceRequest) this.aClass13_1000.poll();
+            Js5ResourceRequest var4 = this.aClass13_1000.poll();
             if (null == var4) {
                 while (true) {
-                    var4 = (Js5ResourceRequest) this.aClass13_1003.poll();
+                    var4 = this.aClass13_1003.poll();
                     if (var4 == null) {
                         if (this.aByte1009 != 0) {
                             try {

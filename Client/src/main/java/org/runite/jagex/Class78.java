@@ -2,7 +2,7 @@ package org.runite.jagex;
 
 final class Class78 {
 
-   private final RSByteBuffer aClass3_Sub30_1113 = new RSByteBuffer((byte[])null);
+   private final DataBuffer aClass3_Sub30_1113 = new DataBuffer((byte[])null);
    int[] anIntArray1114;
    private int[] anIntArray1115;
    int anInt1116;

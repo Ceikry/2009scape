@@ -4,10 +4,10 @@ import java.util.Objects;
 
 final class Class8 {
 
-   private RSByteBuffer aClass3_Sub30_99;
+   private DataBuffer aClass3_Sub30_99;
    private Js5ResourceRequest aJs5ResourceRequest_100;
    static int anInt101;
-   private final Class66 aClass66_102;
+   private final Js5Worker aJs5Worker_102;
    private final Class73 aClass73_103;
    static int anInt104 = 0;
    static CacheIndex aClass153_105;
@@ -20,17 +20,17 @@ final class Class8 {
          if(null == this.aClass3_Sub30_99) {
 
             if(this.aJs5ResourceRequest_100 == null) {
-               if(this.aClass66_102.method1251()) {
+               if(this.aJs5Worker_102.method1251()) {
                   return false;
                }
 
-               this.aJs5ResourceRequest_100 = this.aClass66_102.addJS5Request(255, (byte)0, 255, true);
+               this.aJs5ResourceRequest_100 = this.aJs5Worker_102.addJS5Request(255, (byte)0, 255, true);
             }
 
             if(this.aJs5ResourceRequest_100.waiting) {
                return false;
             } else {
-               this.aClass3_Sub30_99 = new RSByteBuffer(this.aJs5ResourceRequest_100.getData());
+               this.aClass3_Sub30_99 = new DataBuffer(this.aJs5ResourceRequest_100.getData());
                this.aClass151_Sub1Array107 = new Class151_Sub1[(this.aClass3_Sub30_99.buffer.length + -5) / 8];
                return true;
             }
@@ -154,17 +154,17 @@ final class Class8 {
             var5 = new Class41(var3, Class101.aClass30_1422, Class163_Sub2.aClass30Array2998[var3], 1000000);
          }
 
-         RSByteBuffer.aClass151_Sub1Array2601[var3] = Unsorted.aClass8_1936.method839(var3, Class86.aClass41_1186, var5);
+         Unsorted.aClass151_Sub1Array2601[var3] = Unsorted.aClass8_1936.method839(var3, Class86.aClass41_1186, var5);
          if(var1) {
-            RSByteBuffer.aClass151_Sub1Array2601[var3].method2101();
+            Unsorted.aClass151_Sub1Array2601[var3].method2101();
          }
-         return new CacheIndex(RSByteBuffer.aClass151_Sub1Array2601[var3], var0, var2);
+         return new CacheIndex(Unsorted.aClass151_Sub1Array2601[var3], var0, var2);
       } catch (RuntimeException var6) {
          throw Class44.clientError(var6, "al.B(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ',' + true + ')');
       }
    }
 
-   static Class75_Sub1 method843(int var0, RSByteBuffer var1) {
+   static Class75_Sub1 method843(int var0, DataBuffer var1) {
       try {
          return var0 != -5232?(Class75_Sub1)null:new Class75_Sub1(var1.getShort((byte)46), var1.getShort((byte)109), var1.getShort((byte)68), var1.getShort((byte)127), var1.getTriByte((byte)91), var1.readUnsignedByte());
       } catch (RuntimeException var3) {
@@ -235,7 +235,7 @@ final class Class8 {
                if(null == this.aClass151_Sub1Array107[var3]) {
                   int var6 = this.aClass3_Sub30_99.readInt();
                   int var7 = this.aClass3_Sub30_99.readInt();
-                  Class151_Sub1 var8 = new Class151_Sub1(var3, var1, var5, this.aClass66_102, this.aClass73_103, var6, var7);
+                  Class151_Sub1 var8 = new Class151_Sub1(var3, var1, var5, this.aJs5Worker_102, this.aClass73_103, var6, var7);
                   this.aClass151_Sub1Array107[var3] = var8;
                   return var8;
                } else {
@@ -250,12 +250,12 @@ final class Class8 {
       }
    }
 
-   Class8(Class66 var1, Class73 var2) {
+   Class8(Js5Worker var1, Class73 var2) {
       try {
          this.aClass73_103 = var2;
-         this.aClass66_102 = var1;
-         if(!this.aClass66_102.method1251()) {
-            this.aJs5ResourceRequest_100 = this.aClass66_102.addJS5Request(255, (byte)0, 255, true);
+         this.aJs5Worker_102 = var1;
+         if(!this.aJs5Worker_102.method1251()) {
+            this.aJs5ResourceRequest_100 = this.aJs5Worker_102.addJS5Request(255, (byte)0, 255, true);
          }
 
       } catch (RuntimeException var4) {

@@ -47,7 +47,7 @@ final class AnimationDefinition {
 		}
 	}
 
-	final void method2053(RSByteBuffer var1) {
+	final void method2053(DataBuffer var1) {
 		try {
 			//	System.out.print("Animation " + animId + " - parsed [");
 			while(true) {
@@ -315,7 +315,7 @@ final class AnimationDefinition {
 		}
 	}
 
-	private void method2060(int var1, RSByteBuffer var3) {
+	private void method2060(int var1, DataBuffer var3) {
 		try {
 			int var4;
 			int var5;

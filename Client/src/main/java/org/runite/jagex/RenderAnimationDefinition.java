@@ -62,7 +62,7 @@ final class RenderAnimationDefinition {
             }
 
             if(null != var3) {
-               def.parse(new RSByteBuffer(var3));
+               def.parse(new DataBuffer(var3));
             }
 
             Class3_Sub31.aClass93_2604.put((byte)-109, def, (long)graphicId);
@@ -253,7 +253,7 @@ final class RenderAnimationDefinition {
       }
    }
 
-   final void parse(RSByteBuffer var2) {
+   final void parse(DataBuffer var2) {
       try {
 
          while(true) {
@@ -269,7 +269,7 @@ final class RenderAnimationDefinition {
       }
    }
 
-   private void parseOpcode(int var1, RSByteBuffer var3) {
+   private void parseOpcode(int var1, DataBuffer var3) {
       try {
          if(var1 == 1) {
             this.anInt368 = var3.getShort();

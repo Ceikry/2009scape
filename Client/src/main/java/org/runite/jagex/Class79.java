@@ -38,7 +38,7 @@ final class Class79 {
       }
    }
 
-   final void method1387(RSByteBuffer var1) {
+   final void method1387(DataBuffer var1) {
       try {
          while(true) {
             int var3 = var1.readUnsignedByte();
@@ -53,7 +53,7 @@ final class Class79 {
       }
    }
 
-   private void method1389(RSByteBuffer var1, int var3) {
+   private void method1389(DataBuffer var1, int var3) {
       try {
          if(1 == var3) {
             this.anInt1128 = var1.getShort();
@@ -66,7 +66,7 @@ final class Class79 {
       }
    }
 
-   static void method1390(RSByteBuffer var0) {
+   static void method1390(DataBuffer var0) {
       try {
          if(-var0.index + var0.buffer.length >= 1) {
             int var2 = var0.readUnsignedByte();

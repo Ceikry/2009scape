@@ -22,7 +22,7 @@ final class GraphicDefinition {
 	static int anInt548 = 0;
 	static volatile int anInt549 = 0;
 
-	final void parse(RSByteBuffer var1) {
+	final void parse(DataBuffer var1) {
 		try {
 
             while(true) {
@@ -38,7 +38,7 @@ final class GraphicDefinition {
 		}
 	}
 
-	private void method965(RSByteBuffer var1, int var2) {
+	private void method965(DataBuffer var1, int var2) {
 		try {
 			if(var2 == 1) {
 				this.anInt541 = var1.getShort();

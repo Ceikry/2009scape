@@ -16,7 +16,7 @@ final class Class3_Sub13_Sub9 extends Class3_Sub13 {
       super(0, true);
    }
 
-   final void method157(int var1, RSByteBuffer var2, boolean var3) {
+   final void method157(int var1, DataBuffer var2, boolean var3) {
       try {
          if(var3) {
             if(var1 == 0) {

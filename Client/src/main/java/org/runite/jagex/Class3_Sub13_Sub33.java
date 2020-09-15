@@ -65,7 +65,7 @@ final class Class3_Sub13_Sub33 extends Class3_Sub13 {
       }
    }
 
-   final void method157(int var1, RSByteBuffer var2, boolean var3) {
+   final void method157(int var1, DataBuffer var2, boolean var3) {
       try {
          if(var1 == 0) {
             this.aClass75Array3392 = new Class75[var2.readUnsignedByte()];

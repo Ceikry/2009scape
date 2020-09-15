@@ -50,7 +50,7 @@ final class CS2Script extends Linkable {
                byte[] var3 = Class101.aClass153_1420.getFile(Class140_Sub7.method2032(var0), var0 & 1023);
                var2 = new Class79();
                if(var3 != null) {
-                  var2.method1387(new RSByteBuffer(var3));
+                  var2.method1387(new DataBuffer(var3));
                }
 
                aClass93_2450.put((byte)-84, var2, (long)var0);

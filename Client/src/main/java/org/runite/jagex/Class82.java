@@ -641,7 +641,7 @@ final class Class82 {
       }
    }
 
-   Class82(RSByteBuffer var1) {
+   Class82(DataBuffer var1) {
       try {
          int var2 = var1.readUnsignedByte();
          this.aClass3_Sub13Array1147 = new Class3_Sub13[var2];

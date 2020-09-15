@@ -136,7 +136,7 @@ final class Class3_Sub13_Sub18 extends Class3_Sub13 {
       }
    }
 
-   final void method157(int var1, RSByteBuffer var2, boolean var3) {
+   final void method157(int var1, DataBuffer var2, boolean var3) {
       try {
          if(var1 == 0) {
             this.anInt3217 = var2.getShort() << 4;

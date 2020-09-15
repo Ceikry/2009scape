@@ -116,8 +116,8 @@ final class AnimationHeader {
 //	}
 		   AnimationHeader(byte[] bs, Class3_Sub17 skin) {
 		      this.skins = skin;
-		      RSByteBuffer buffer = new RSByteBuffer(bs);
-		      RSByteBuffer parent = new RSByteBuffer(bs);
+		      DataBuffer buffer = new DataBuffer(bs);
+		      DataBuffer parent = new DataBuffer(bs);
 		      buffer.index = 2;
 		      int size = buffer.readUnsignedByte();
 		      int var6 = 0;

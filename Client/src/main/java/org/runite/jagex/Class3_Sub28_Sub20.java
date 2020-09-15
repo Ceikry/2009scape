@@ -422,7 +422,7 @@ final class Class3_Sub28_Sub20 extends Node {
       }
    }
 
-   Class3_Sub28_Sub20(RSByteBuffer var1) {
+   Class3_Sub28_Sub20(DataBuffer var1) {
       try {
          this.aClass82_3790 = new Class82(var1);
          this.aBoolean3789 = var1.readUnsignedByte() == 1;

@@ -95,7 +95,7 @@ final class Class100 {
       }
    }
 
-   final void method1601(int var1, RSByteBuffer var2) {
+   final void method1601(int var1, DataBuffer var2) {
       try {
          while(true) {
             int var4 = var2.readUnsignedByte();
@@ -150,7 +150,7 @@ final class Class100 {
       }
    }
 
-   private void method1604(int var2, RSByteBuffer var3, int var4) {
+   private void method1604(int var2, DataBuffer var3, int var4) {
       try {
          if(var2 == 1) {
             int anInt1404 = var3.getTriByte((byte) 93);

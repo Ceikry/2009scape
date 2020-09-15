@@ -24,7 +24,7 @@ final class Class72 {
             byte[] var3 = Class12.aClass153_322.getFile(26, var1);
             var2 = new Class3_Sub28_Sub11();
             if(var3 != null) {
-               var2.method608(new RSByteBuffer(var3));
+               var2.method608(new DataBuffer(var3));
             }
 
             Class3_Sub13_Sub34.aClass47_3407.method1097(var2, (long)var1, (byte)59);

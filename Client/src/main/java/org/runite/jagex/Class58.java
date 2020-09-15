@@ -13,7 +13,7 @@ final class Class58 {
    static int[][][] anIntArrayArrayArray914;
    static Interface4 anInterface4_915 = null;
    static int anInt916;
-   static Class66 aClass66_917;
+   static Js5Worker aJs5Worker_917;
 
 
    static void method1194() {

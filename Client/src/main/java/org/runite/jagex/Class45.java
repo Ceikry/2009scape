@@ -99,7 +99,7 @@ final class Class45 {
 			if(0 != (4 & var0)) {
 				var4 = GraphicDefinition.incomingBuffer.getByteA((byte)-118);
 				byte[] var16 = new byte[var4];
-				RSByteBuffer var19 = new RSByteBuffer(var16);
+				DataBuffer var19 = new DataBuffer(var16);
 				GraphicDefinition.incomingBuffer.method764(var4, var16);
 				Class65.aClass3_Sub30Array986[var1] = var19;
 				var3.parseAppearance(-15, var19);
@@ -232,7 +232,7 @@ final class Class45 {
 
 	static void method1082(byte[] var0, int var1) {
 		try {
-			RSByteBuffer var2 = new RSByteBuffer(var0);
+			DataBuffer var2 = new DataBuffer(var0);
 			var2.index = -2 + var0.length;
 			Class95.anInt1338 = var2.getShort();
 			Class3_Sub13_Sub6.anIntArray3076 = new int[Class95.anInt1338];
@@ -240,7 +240,7 @@ final class Class45 {
 			Class164.anIntArray2048 = new int[Class95.anInt1338];
 			Class3_Sub13_Sub22.aBooleanArray3272 = new boolean[Class95.anInt1338];
 			Class163_Sub3.aByteArrayArray3005 = new byte[Class95.anInt1338][];
-			RSByteBuffer.anIntArray2591 = new int[Class95.anInt1338];
+			Unsorted.anIntArray2591 = new int[Class95.anInt1338];
 			Class163_Sub1.aByteArrayArray2987 = new byte[Class95.anInt1338][];
 			var2.index = -(8 * Class95.anInt1338) + var0.length - 7;
 			Class3_Sub15.anInt2426 = var2.getShort();
@@ -257,7 +257,7 @@ final class Class45 {
 			}
 
 			for(var4 = 0; Class95.anInt1338 > var4; ++var4) {
-				RSByteBuffer.anIntArray2591[var4] = var2.getShort();
+				Unsorted.anIntArray2591[var4] = var2.getShort();
 			}
 
 			for(var4 = 0; Class95.anInt1338 > var4; ++var4) {

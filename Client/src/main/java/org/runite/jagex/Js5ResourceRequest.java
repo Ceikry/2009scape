@@ -4,7 +4,7 @@ final class Js5ResourceRequest extends ResourceRequest {
 
     byte aByte4064;
     int anInt4067;
-    RSByteBuffer aClass3_Sub30_4069;
+    DataBuffer aClass3_Sub30_4069;
 
     final int getCompletion() {
         try {

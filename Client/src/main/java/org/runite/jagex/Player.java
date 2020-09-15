@@ -49,7 +49,7 @@ final class Player extends Class140_Sub4 {
       }
    }
 
-   final void parseAppearance(int var1, RSByteBuffer buffer) {
+   final void parseAppearance(int var1, DataBuffer buffer) {
       try {
          buffer.index = 0;
          int var3 = buffer.readUnsignedByte();

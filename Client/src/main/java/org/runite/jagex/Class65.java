@@ -5,29 +5,24 @@ import org.rs09.client.util.ArrayUtils;
 final class Class65 {
 
    static Class61 aClass61_983 = new Class61();
-   static int anInt984 = 0;
    static RSString aClass94_985 = RSString.of("Fps:");
-   static RSByteBuffer[] aClass3_Sub30Array986 = new RSByteBuffer[2048];
+   static DataBuffer[] aClass3_Sub30Array986 = new DataBuffer[2048];
    static int anInt987 = 0;
    static int currentChunkX;
    static int anInt991 = -1;
 
 
-   static int[] method1233(int[] var0, int var1) {
+   static int[] method1233(int[] var0) {
       try {
          if(null == var0) {
             return null;
          } else {
-            if(var1 != 2) {
-               anInt984 = 113;
-            }
-
             int[] var2 = new int[var0.length];
             ArrayUtils.arraycopy(var0, 0, var2, 0, var0.length);
             return var2;
          }
       } catch (RuntimeException var3) {
-         throw Class44.clientError(var3, "ja.H(" + "{...}" + ',' + var1 + ')');
+         throw Class44.clientError(var3, "ja.H(" + "{...}" + ',' + 2 + ')');
       }
    }
 
@@ -156,10 +151,6 @@ final class Class65 {
 
          Class96.anInt1358 = (short)var0;
          Canvas_Sub2.anInt31 = (short)var3;
-         if(var1 < 11) {
-            method1233((int[])null, 18);
-         }
-
          Class3_Sub28_Sub3.anInt3564 = var2;
          Class163_Sub1.anInt2989 = var4;
       } catch (RuntimeException var11) {

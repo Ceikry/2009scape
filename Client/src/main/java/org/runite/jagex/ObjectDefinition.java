@@ -285,7 +285,7 @@ final class ObjectDefinition {
          }
 
          if(var1 != -2116) {
-            this.method1692(67, (RSByteBuffer)null);
+            this.method1692(67, (DataBuffer)null);
          }
 
          if(-1 == this.anInt1540) {
@@ -334,7 +334,7 @@ final class ObjectDefinition {
       }
    }
 
-   final void method1692(int var1, RSByteBuffer var2) {
+   final void method1692(int var1, DataBuffer var2) {
       try {
          while(true) {
             int var3 = var2.readUnsignedByte();
@@ -353,7 +353,7 @@ final class ObjectDefinition {
       }
    }
 
-   private void parseOpcode(RSByteBuffer buffer, int opcode) {
+   private void parseOpcode(DataBuffer buffer, int opcode) {
       try {
 
          int var4;

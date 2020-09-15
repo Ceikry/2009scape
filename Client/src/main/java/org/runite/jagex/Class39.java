@@ -170,7 +170,7 @@ final class Class39 {
 	static void method1035(byte var0) {
 		try {
 			Class140_Sub7.anIntArray2931 = null;
-			RSByteBuffer.anIntArray2591 = null;
+			Unsorted.anIntArray2591 = null;
 			if(var0 <= 103) {
 				method1037(46, 44, 46);
 			}

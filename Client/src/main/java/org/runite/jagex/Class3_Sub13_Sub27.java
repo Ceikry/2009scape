@@ -108,7 +108,7 @@ final class Class3_Sub13_Sub27 extends Class3_Sub13 {
    final int[][] method166(int var1, int var2) {
       try {
          if(var1 != -1) {
-            this.method157(-8, (RSByteBuffer)null, false);
+            this.method157(-8, (DataBuffer)null, false);
          }
 
          int[][] var3 = this.aClass97_2376.method1594((byte)-125, var2);
@@ -603,7 +603,7 @@ final class Class3_Sub13_Sub27 extends Class3_Sub13 {
       }
    }
 
-   final void method157(int var1, RSByteBuffer var2, boolean var3) {
+   final void method157(int var1, DataBuffer var2, boolean var3) {
       try {
          if(var1 == 0) {
             this.anInt3343 = var2.readUnsignedByte();

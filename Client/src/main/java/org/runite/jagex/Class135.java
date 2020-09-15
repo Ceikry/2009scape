@@ -46,7 +46,7 @@ final class Class135 {
 
    static Class135 method1811(CacheIndex var0, int var1, int var2) {
       byte[] var3 = var0.getFile(var1, var2);
-      return var3 == null?null:new Class135(new RSByteBuffer(var3));
+      return var3 == null?null:new Class135(new DataBuffer(var3));
    }
 
    final Class3_Sub12_Sub1 method1812() {
@@ -86,7 +86,7 @@ final class Class135 {
       }
    }
 
-   private Class135(RSByteBuffer var1) {
+   private Class135(DataBuffer var1) {
       for(int var2 = 0; var2 < 10; ++var2) {
          int var3 = var1.readUnsignedByte();
          if(var3 != 0) {

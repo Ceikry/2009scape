@@ -13,7 +13,7 @@ final class Class3_Sub19 extends Linkable {
    int anInt2478;
 
 
-   static Class75_Sub2 method384(RSByteBuffer var0) {
+   static Class75_Sub2 method384(DataBuffer var0) {
       try {
 
          return new Class75_Sub2(var0.getShort((byte)38), var0.getShort((byte)51), var0.getShort((byte)66), var0.getShort((byte)68), var0.getTriByte((byte)86), var0.getTriByte((byte)86), var0.readUnsignedByte());

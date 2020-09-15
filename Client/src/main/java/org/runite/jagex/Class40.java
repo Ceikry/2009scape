@@ -306,7 +306,7 @@ final class Class40 {
                   }
                }
 
-               RSByteBuffer.method792();
+               Unsorted.method792();
                Class58.method1194();
                Class3_Sub13_Sub31.method318();
                Class3_Sub13_Sub30.method313((byte)100);

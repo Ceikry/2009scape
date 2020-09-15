@@ -81,7 +81,7 @@ final class Class119 {
 
             if(var3.anInt978 == 1) {
                var2 = (Class122)var3.anObject974;
-               RSByteBuffer var4 = Class23.method939();
+               DataBuffer var4 = Class23.method939();
                var2.method1738(116, var4.buffer, var4.index, 0);
             }
          } catch (Exception var6) {

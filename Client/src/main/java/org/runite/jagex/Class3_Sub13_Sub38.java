@@ -28,7 +28,7 @@ final class Class3_Sub13_Sub38 extends Class3_Sub13 {
       }
    }
 
-   final void method157(int var1, RSByteBuffer var2, boolean var3) {
+   final void method157(int var1, DataBuffer var2, boolean var3) {
       try {
          if(var1 == 0) {
             this.anInt3454 = var2.readUnsignedByte();

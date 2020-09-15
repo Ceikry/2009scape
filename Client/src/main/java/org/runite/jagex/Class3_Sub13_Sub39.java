@@ -5,7 +5,6 @@ final class Class3_Sub13_Sub39 extends Class3_Sub13 {
    private int[] anIntArray3457;
    static Class3_Sub28_Sub16[] aClass3_Sub28_Sub16Array3458;
    static int anInt3460 = 0;
-   static byte[][] aByteArrayArray3461 = new byte[1000][];
    private int anInt3462 = 0;
    static int anInt3463;
    static int anInt3464 = 0;
@@ -208,7 +207,7 @@ final class Class3_Sub13_Sub39 extends Class3_Sub13 {
       }
    }
 
-   final void method157(int var1, RSByteBuffer var2, boolean var3) {
+   final void method157(int var1, DataBuffer var2, boolean var3) {
       try {
          if(0 == var1) {
             this.anInt3462 = var2.readUnsignedByte();

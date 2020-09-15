@@ -366,9 +366,9 @@ final class Model_Sub1 extends GameObject {
          var14.aClass120Array2886 = this.aClass120Array2886;
          var14.aClass50Array2883 = this.aClass50Array2883;
          if(var1 == 3) {
-            var14.anIntArray2885 = Class65.method1233(this.anIntArray2885, 2);
-            var14.anIntArray2881 = Class65.method1233(this.anIntArray2881, 2);
-            var14.anIntArray2892 = Class65.method1233(this.anIntArray2892, 2);
+            var14.anIntArray2885 = Class65.method1233(this.anIntArray2885);
+            var14.anIntArray2881 = Class65.method1233(this.anIntArray2881);
+            var14.anIntArray2892 = Class65.method1233(this.anIntArray2892);
          } else {
             var14.anIntArray2885 = this.anIntArray2885;
             var14.anIntArray2881 = new int[var14.anInt2887];
@@ -501,13 +501,13 @@ final class Model_Sub1 extends GameObject {
    }
 
    private void method2003(byte[] var1) {
-      RSByteBuffer var2 = new RSByteBuffer(var1);
-      RSByteBuffer var3 = new RSByteBuffer(var1);
-      RSByteBuffer var4 = new RSByteBuffer(var1);
-      RSByteBuffer var5 = new RSByteBuffer(var1);
-      RSByteBuffer var6 = new RSByteBuffer(var1);
-      RSByteBuffer var7 = new RSByteBuffer(var1);
-      RSByteBuffer var8 = new RSByteBuffer(var1);
+      DataBuffer var2 = new DataBuffer(var1);
+      DataBuffer var3 = new DataBuffer(var1);
+      DataBuffer var4 = new DataBuffer(var1);
+      DataBuffer var5 = new DataBuffer(var1);
+      DataBuffer var6 = new DataBuffer(var1);
+      DataBuffer var7 = new DataBuffer(var1);
+      DataBuffer var8 = new DataBuffer(var1);
       var2.index = var1.length - 23;
       int var9 = var2.getShort();
       int var10 = var2.getShort();
@@ -1207,11 +1207,11 @@ final class Model_Sub1 extends GameObject {
    private void method2017(byte[] var1) {
       boolean var2 = false;
       boolean var3 = false;
-      RSByteBuffer var4 = new RSByteBuffer(var1);
-      RSByteBuffer var5 = new RSByteBuffer(var1);
-      RSByteBuffer var6 = new RSByteBuffer(var1);
-      RSByteBuffer var7 = new RSByteBuffer(var1);
-      RSByteBuffer var8 = new RSByteBuffer(var1);
+      DataBuffer var4 = new DataBuffer(var1);
+      DataBuffer var5 = new DataBuffer(var1);
+      DataBuffer var6 = new DataBuffer(var1);
+      DataBuffer var7 = new DataBuffer(var1);
+      DataBuffer var8 = new DataBuffer(var1);
       var4.index = var1.length - 18;
       int var9 = var4.getShort();
       int var10 = var4.getShort();

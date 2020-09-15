@@ -62,7 +62,7 @@ final class Class15 implements Runnable {
       }
    }
 
-   static void method889(byte var0, RSByteBuffer var1) {
+   static void method889(byte var0, DataBuffer var1) {
       try {
          if(var0 != 105) {
             localNPCIndexes = (int[])null;
@@ -274,9 +274,9 @@ final class Class15 implements Runnable {
             }
 
             if(HDToolKit.highDetail) {
-               var1[var2] = new Class3_Sub28_Sub16_Sub1(Class3_Sub15.anInt2426, Class133.anInt1748, Class164.anIntArray2048[var2], RSByteBuffer.anIntArray2591[var2], Class140_Sub7.anIntArray2931[var2], Class3_Sub13_Sub6.anIntArray3076[var2], var5);
+               var1[var2] = new Class3_Sub28_Sub16_Sub1(Class3_Sub15.anInt2426, Class133.anInt1748, Class164.anIntArray2048[var2], Unsorted.anIntArray2591[var2], Class140_Sub7.anIntArray2931[var2], Class3_Sub13_Sub6.anIntArray3076[var2], var5);
             } else {
-               var1[var2] = new Class3_Sub28_Sub16_Sub2(Class3_Sub15.anInt2426, Class133.anInt1748, Class164.anIntArray2048[var2], RSByteBuffer.anIntArray2591[var2], Class140_Sub7.anIntArray2931[var2], Class3_Sub13_Sub6.anIntArray3076[var2], var5);
+               var1[var2] = new Class3_Sub28_Sub16_Sub2(Class3_Sub15.anInt2426, Class133.anInt1748, Class164.anIntArray2048[var2], Unsorted.anIntArray2591[var2], Class140_Sub7.anIntArray2931[var2], Class3_Sub13_Sub6.anIntArray3076[var2], var5);
             }
          }
 
@@ -294,7 +294,7 @@ final class Class15 implements Runnable {
          int var4 = Class3_Sub28_Sub5.aCalendar3581.get(Calendar.DATE);
          int var5 = Class3_Sub28_Sub5.aCalendar3581.get(Calendar.MONTH);
          if(var2 < 9) {
-            method889((byte)7, (RSByteBuffer)null);
+            method889((byte)7, (DataBuffer)null);
          }
 
          int var6 = Class3_Sub28_Sub5.aCalendar3581.get(Calendar.YEAR);

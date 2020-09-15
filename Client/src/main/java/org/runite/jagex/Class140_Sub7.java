@@ -243,7 +243,7 @@ final class Class140_Sub7 extends GameObject {
       }
    }
 
-   static RSString method2033(RSByteBuffer var0) {
+   static RSString method2033(DataBuffer var0) {
       try {
          try {
             int var3 = var0.getSmart();

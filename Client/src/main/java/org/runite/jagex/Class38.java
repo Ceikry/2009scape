@@ -22,7 +22,7 @@ class Class38 {
             var2 = new ItemDefinition();
             var2.itemId = itemId;
             if(var3 != null) {
-               var2.parseDefinitions(new RSByteBuffer(var3));
+               var2.parseDefinitions(new DataBuffer(var3));
             }
 
             var2.method1112();
@@ -39,7 +39,7 @@ class Class38 {
                var2.teamId = 0;
                var2.inventoryOptions = ClientErrorException.aClass94Array2119;
                var2.aBoolean807 = false;
-               var2.groundOptions = RSByteBuffer.aClass94Array2596;
+               var2.groundOptions = Unsorted.aClass94Array2596;
             }
 
             Class3_Sub28_Sub4.aClass93_3572.put((byte)-107, var2, (long)itemId);

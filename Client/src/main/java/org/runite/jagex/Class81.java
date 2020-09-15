@@ -11,7 +11,7 @@ final class Class81 {
    static int[][][] anIntArrayArrayArray1142;
 
 
-   static void putRandomDataFile(RSByteBuffer var0, boolean var1) {
+   static void putRandomDataFile(DataBuffer var0, boolean var1) {
       try {
          if(!var1) {
             anIntArrayArrayArray1142 = (int[][][])((int[][][])null);
@@ -131,7 +131,7 @@ final class Class81 {
             byte[] var3 = Class46.aClass153_737.getFile(31, var1);
             var2 = new Class57();
             if(var3 != null) {
-               var2.method1190(new RSByteBuffer(var3), var1);
+               var2.method1190(new DataBuffer(var3), var1);
             }
 
             Class128.aClass93_1683.put((byte)-75, var2, (long)var1);
@@ -154,7 +154,7 @@ final class Class81 {
             Class131 var5 = new Class131(Objects.requireNonNull(var4).length);
 
             for(int var6 = 0; var5.anInt1720 > var6; ++var6) {
-               RSByteBuffer var7 = new RSByteBuffer(var2.getFile(var3, var4[var6]));
+               DataBuffer var7 = new DataBuffer(var2.getFile(var3, var4[var6]));
                var5.aClass94Array1721[var6] = var7.getString();
                var5.aByteArray1730[var6] = var7.getByte();
                var5.aShortArray1727[var6] = (short)var7.getShort();

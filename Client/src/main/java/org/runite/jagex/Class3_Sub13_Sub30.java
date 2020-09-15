@@ -215,7 +215,7 @@ final class Class3_Sub13_Sub30 extends Class3_Sub13 {
    static void parseObjectMapping(Class91[] var0, int var1, byte[] var2, int var3, int var4, int var5, int var6, boolean var7, int var8, int var9) {
       try {
          int var12 = -1;
-         RSByteBuffer var11 = new RSByteBuffer(var2);
+         DataBuffer var11 = new DataBuffer(var2);
 
          while(true) {
             int var13 = var11.method773((byte)-127);

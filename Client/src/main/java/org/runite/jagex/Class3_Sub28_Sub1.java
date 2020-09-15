@@ -54,7 +54,7 @@ final class Class3_Sub28_Sub1 extends Node {
       }
    }
 
-   private void method527(RSByteBuffer var1, int var3) {
+   private void method527(DataBuffer var1, int var3) {
       try {
 
          if(var3 == 1) {
@@ -104,7 +104,7 @@ final class Class3_Sub28_Sub1 extends Node {
       }
    }
 
-   final void method530(RSByteBuffer var1) {
+   final void method530(DataBuffer var1) {
       try {
 
          while(true) {

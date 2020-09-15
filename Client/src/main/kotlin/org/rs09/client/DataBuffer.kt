@@ -1,6 +1,6 @@
 package org.rs09.client
 
-class DataBuffer(val buffer: ByteArray, var index: Int) {
+class DataBuffer(@JvmField val buffer: ByteArray, @JvmField var index: Int): Linkable() {
     constructor(buffer: ByteArray) : this(buffer, 0)
     constructor(length: Int) : this(ByteArray(length), 0)
 

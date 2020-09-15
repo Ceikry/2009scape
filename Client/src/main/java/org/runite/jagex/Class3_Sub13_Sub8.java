@@ -14,7 +14,7 @@ final class Class3_Sub13_Sub8 extends Class3_Sub13 {
 	static float aFloat3105;
 
 
-	final void method157(int var1, RSByteBuffer var2, boolean var3) {
+	final void method157(int var1, DataBuffer var2, boolean var3) {
 		try {
 			if(!var3) {
 				method207(18, false, -19, 102L);

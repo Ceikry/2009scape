@@ -93,7 +93,7 @@ final class Class3_Sub15 extends Linkable {
 
    static void method374(int var0, boolean var1, byte[] var2, int var3, Class91[] var5) {
       try {
-         RSByteBuffer var6 = new RSByteBuffer(var2);
+         DataBuffer var6 = new DataBuffer(var2);
          int objectId = -1;
 
          while(var6.buffer.length > 0) {
@@ -156,8 +156,8 @@ final class Class3_Sub15 extends Linkable {
          int var3 = 0;
          this.aByteArray2425 = new byte[128];
 
-         RSByteBuffer var2;
-         for(var2 = new RSByteBuffer(var1); var2.buffer[var3 + var2.index] != 0; ++var3) {
+         DataBuffer var2;
+         for(var2 = new DataBuffer(var1); var2.buffer[var3 + var2.index] != 0; ++var3) {
          }
 
          byte[] var4 = new byte[var3];

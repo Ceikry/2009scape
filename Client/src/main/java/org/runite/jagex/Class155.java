@@ -259,7 +259,7 @@ class Class155 {
       }
    }
 
-   static Class10 method2156(RSByteBuffer var1) {
+   static Class10 method2156(DataBuffer var1) {
       try {
          Class10 var2 = new Class10();
          var2.anInt149 = var1.getShort();

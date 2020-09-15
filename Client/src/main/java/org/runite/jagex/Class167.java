@@ -120,7 +120,7 @@ final class Class167 {
       }
    }
 
-   static void method2267(int var0, int var1, boolean var2, RSByteBuffer var3, int var4, int var5, byte var6, int var7, int var8) {
+   static void method2267(int var0, int var1, boolean var2, DataBuffer var3, int var4, int var5, byte var6, int var7, int var8) {
       try {
          int var9;
          if(var5 >= 0 && var5 < 104 && var4 >= 0 && var4 < 104) {

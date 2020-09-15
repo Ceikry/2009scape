@@ -391,17 +391,17 @@ static boolean aBoolean1080 = false;
             }
 
             if(command.equals(-118, Class3_Sub31.COMMAND_BREAK_JS5_CLIENT_CONNECTION)) {
-               Class58.aClass66_917.method1254();
+               Class58.aJs5Worker_917.method1254();
             }
 
             if(command.equals(33, Class110.COMMAND_BREAK_JS5_SERVER_CONNECTION)) {
-               Class58.aClass66_917.method1244();
+               Class58.aJs5Worker_917.method1244();
             }
 
             if(command.equals(-110, Class95.COMMAND_BREAK_CONNECTION)) {
                Class38.aClass87_665.method1431(0);
                Class3_Sub15.aClass89_2429.method1467();
-               Class58.aClass66_917.method1248();
+               Class58.aJs5Worker_917.method1248();
             }
 
             if(command.equals(-115, Class3_Sub13.COMMAND_REPLACE_CANVAS)) {

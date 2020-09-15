@@ -14,7 +14,6 @@ final class MouseListeningClass implements MouseListener, MouseMotionListener, F
 	  static int anInt1924 = 0;
 	  static int anInt1925 = 0;
 	  static int anInt1926;
-	  static int anInt1927 = 0;
 
 	public final synchronized void mouseMoved(MouseEvent var1)
 	  {

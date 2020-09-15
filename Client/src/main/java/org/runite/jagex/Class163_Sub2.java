@@ -21,7 +21,7 @@ class Class163_Sub2 extends Class163 {
       return null;
    }
 
-   static void method2219(RSByteBuffer var0) {
+   static void method2219(DataBuffer var0) {
       try {
 
           while(var0.buffer.length > var0.index) {

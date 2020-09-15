@@ -7,7 +7,7 @@ final class Class161 {
    static int anInt2027 = -1;
    static int anInt2028 = 0;
    static RSString aClass94_2029 = RSString.of("l");
-   static RSByteBuffer aClass3_Sub30_2030 = new RSByteBuffer(new byte[5000]);
+   static DataBuffer aClass3_Sub30_2030 = new DataBuffer(new byte[5000]);
    static RSString aClass94_2033 = RSString.of("Memory after cleanup=");
    static Class33 aClass33_2034;
    static RSString aClass94_2035 = null;

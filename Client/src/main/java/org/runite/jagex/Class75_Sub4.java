@@ -239,7 +239,7 @@ final class Class75_Sub4 extends Class75 {
          int[] var4 = Class3_Sub13_Sub17.aClass153_3210.getFileIds(var3);
 
          for(int var5 = 0; var5 < Objects.requireNonNull(var4).length; ++var5) {
-            Class134.aClass61_1758.method1215(Class124.method1747(new RSByteBuffer(Class3_Sub13_Sub17.aClass153_3210.getFile(var3, var4[var5]))));
+            Class134.aClass61_1758.method1215(Class124.method1747(new DataBuffer(Class3_Sub13_Sub17.aClass153_3210.getFile(var3, var4[var5]))));
          }
 
       } catch (RuntimeException var6) {

@@ -25,7 +25,7 @@ final class Class3_Sub13_Sub25 extends Class3_Sub13 {
    final void method158(int var1) {
       try {
          if(var1 != 16251) {
-            this.method157(-7, (RSByteBuffer)null, true);
+            this.method157(-7, (DataBuffer)null, true);
          }
 
       } catch (RuntimeException var3) {
@@ -323,7 +323,7 @@ final class Class3_Sub13_Sub25 extends Class3_Sub13 {
       }
    }
 
-   final void method157(int var1, RSByteBuffer var2, boolean var3) {
+   final void method157(int var1, DataBuffer var2, boolean var3) {
       try {
          if(!var3) {
             this.anInt3301 = 4;

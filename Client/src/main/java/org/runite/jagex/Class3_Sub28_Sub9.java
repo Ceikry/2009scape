@@ -31,7 +31,7 @@ final class Class3_Sub28_Sub9 extends Node {
                var5[var6] = Class3_Sub13_Sub29.bitwiseOr(Unsorted.bitwiseAnd(var4[var6] << 24, -16777216), Class3_Sub13_Sub38.spritePalette[Unsorted.bitwiseAnd(255, var2[var6])]);
             }
 
-            var3 = new Class3_Sub28_Sub16_Sub2_Sub1(Class3_Sub15.anInt2426, Class133.anInt1748, Class164.anIntArray2048[0], RSByteBuffer.anIntArray2591[0], Class140_Sub7.anIntArray2931[0], Class3_Sub13_Sub6.anIntArray3076[0], var5);
+            var3 = new Class3_Sub28_Sub16_Sub2_Sub1(Class3_Sub15.anInt2426, Class133.anInt1748, Class164.anIntArray2048[0], Unsorted.anIntArray2591[0], Class140_Sub7.anIntArray2931[0], Class3_Sub13_Sub6.anIntArray3076[0], var5);
          } else {
             int[] var8 = new int[var1];
 
@@ -39,7 +39,7 @@ final class Class3_Sub28_Sub9 extends Node {
                var8[var9] = Class3_Sub13_Sub38.spritePalette[Unsorted.bitwiseAnd(var2[var9], 255)];
             }
 
-            var3 = new Class3_Sub28_Sub16_Sub2(Class3_Sub15.anInt2426, Class133.anInt1748, Class164.anIntArray2048[0], RSByteBuffer.anIntArray2591[0], Class140_Sub7.anIntArray2931[0], Class3_Sub13_Sub6.anIntArray3076[0], var8);
+            var3 = new Class3_Sub28_Sub16_Sub2(Class3_Sub15.anInt2426, Class133.anInt1748, Class164.anIntArray2048[0], Unsorted.anIntArray2591[0], Class140_Sub7.anIntArray2931[0], Class3_Sub13_Sub6.anIntArray3076[0], var8);
          }
 
          Class39.method1035((byte)127);
@@ -49,7 +49,7 @@ final class Class3_Sub28_Sub9 extends Node {
       }
    }
 
-   private void method579(int var1, RSByteBuffer var2) {
+   private void method579(int var1, DataBuffer var2) {
       try {
          if(var1 == 1) {
             this.anInt3617 = var2.readUnsignedByte();
@@ -100,7 +100,7 @@ final class Class3_Sub28_Sub9 extends Node {
       }
    }
 
-   final void method583(RSByteBuffer var2) {
+   final void method583(DataBuffer var2) {
       try {
          while(true) {
             int var3 = var2.readUnsignedByte();

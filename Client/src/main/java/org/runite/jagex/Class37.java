@@ -86,8 +86,8 @@ final class Class37 {
    }
 
    final void method1019() {
-      RSByteBuffer var1 = new RSByteBuffer(this.anInt655 * 4);
-      RSByteBuffer var2 = new RSByteBuffer(this.anInt653 * 16);
+      DataBuffer var1 = new DataBuffer(this.anInt655 * 4);
+      DataBuffer var2 = new DataBuffer(this.anInt653 * 16);
       int var3;
       if(HDToolKit.aBoolean1790) {
          for(var3 = 0; var3 < this.anInt653; ++var3) {

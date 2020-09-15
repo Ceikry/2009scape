@@ -51,7 +51,7 @@ public final class Class3_Sub28_Sub12 extends Node {
       }
    }
 
-   final void method610(RSByteBuffer var1) {
+   final void method610(DataBuffer var1) {
       try {
          while(true) {
             int var3 = var1.readUnsignedByte();
@@ -96,7 +96,7 @@ public final class Class3_Sub28_Sub12 extends Node {
       }
    }
 
-   private void method614(RSByteBuffer var1, int var2) {
+   private void method614(DataBuffer var1, int var2) {
       try {
 
           if(var2 == 2) {

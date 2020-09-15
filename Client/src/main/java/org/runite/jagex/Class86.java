@@ -86,7 +86,7 @@ final class Class86 {
       }
    }
 
-   Class86(RSByteBuffer var1) {
+   Class86(DataBuffer var1) {
       try {
          int var2 = var1.readUnsignedByte();
          if((var2 & 1) == 0) {

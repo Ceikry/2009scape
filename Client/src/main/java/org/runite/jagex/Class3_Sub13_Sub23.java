@@ -45,7 +45,7 @@ class Class3_Sub13_Sub23 extends Class3_Sub13 {
 
    static boolean handleWorldListUpdate(byte[] buf) {
       try {
-         RSByteBuffer buffer = new RSByteBuffer(buf);
+         DataBuffer buffer = new DataBuffer(buf);
          int opcode = buffer.readUnsignedByte();
          //System.out.println(opcode);
          if(1 == opcode) {
@@ -156,7 +156,7 @@ class Class3_Sub13_Sub23 extends Class3_Sub13 {
       }
    }
 
-   final void method157(int var1, RSByteBuffer var2, boolean var3) {
+   final void method157(int var1, DataBuffer var2, boolean var3) {
       try {
          if(var1 == 0) {
             this.anInt3278 = var2.getShort();

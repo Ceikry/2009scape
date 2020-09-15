@@ -133,7 +133,7 @@ public final class Client extends GameShell {
                     if (Class143.loadingStage == 30) {
                         Class49.method1127(0);
                     } else if (40 == Class143.loadingStage) {
-                        Class3_Sub13.method164((byte) -95, false, RenderAnimationDefinition.method903(new RSString[]{TextCore.ConxLost, RSByteBuffer.aClass94_2598, TextCore.AttemptingReestablish}, (byte) -67));
+                        Class3_Sub13.method164((byte) -95, false, RenderAnimationDefinition.method903(new RSString[]{TextCore.ConxLost, Unsorted.aClass94_2598, TextCore.AttemptingReestablish}, (byte) -67));
                     }
                 } else if (Class163_Sub2_Sub1.anInt4019 == 1) {
                     if (Class3_Sub13_Sub24.anInt3293 > Class3_Sub29.anInt2579) {
@@ -264,7 +264,7 @@ public final class Client extends GameShell {
                 Class3_Sub21.aClass155_2491.method2163();
             }
 
-            Class58.aClass66_917.method1254();
+            Class58.aJs5Worker_917.method1254();
             Class3_Sub13_Sub14.aClass73_3159.method1304();
 
             try {
@@ -365,7 +365,7 @@ public final class Client extends GameShell {
         try {
             Class119.method1729();
             Class3_Sub13_Sub14.aClass73_3159 = new Class73();
-            Class58.aClass66_917 = new Class66();
+            Class58.aJs5Worker_917 = new Js5Worker();
             if (Class3_Sub13_Sub13.anInt3148 != 0) {
                 Class3_Sub6.aByteArrayArray2287 = new byte[50][];
             }
@@ -474,7 +474,7 @@ public final class Client extends GameShell {
                 var2 = new AnimationDefinition();
                 var2.animId = var0;
                 if (var3 != null) {
-                    var2.method2053(new RSByteBuffer(var3));
+                    var2.method2053(new DataBuffer(var3));
                 }
 
                 var2.method2058();
@@ -488,10 +488,10 @@ public final class Client extends GameShell {
 
     private void method46(int var2) {
         try {
-            ++Class58.aClass66_917.anInt1011;
+            ++Class58.aJs5Worker_917.anInt1011;
             Class17.aClass64_413 = null;
 
-            Class58.aClass66_917.anInt1010 = var2;
+            Class58.aJs5Worker_917.anInt1010 = var2;
             Unsorted.js5Connection = null;
             PacketParser.anInt80 = 0;
         } catch (RuntimeException var4) {
@@ -553,7 +553,7 @@ public final class Client extends GameShell {
             }
 
             if (!HDToolKit.highDetail) {
-                RSByteBuffer.method744();
+                Unsorted.method744();
             } else if (0 == Class3_Sub13_Sub25.loginStage && 0 == Canvas_Sub1.registryStage) {
                 if (Class133.anInt1753 == 2) {
                     CS2Script.method379();
@@ -639,7 +639,7 @@ public final class Client extends GameShell {
 
     private void method48() {
         try {
-            boolean var2 = Class58.aClass66_917.method1243();
+            boolean var2 = Class58.aJs5Worker_917.method1243();
             if (!var2) {
                 this.method49();
             }
@@ -650,8 +650,8 @@ public final class Client extends GameShell {
     }
 
     private void method49() {
-        if (Class58.aClass66_917.anInt1011 > Class163_Sub2_Sub1.anInt4026) {
-            Class3_Sub13_Sub5.anInt3068 = 5 * 50 * (Class58.aClass66_917.anInt1011 + -1);
+        if (Class58.aJs5Worker_917.anInt1011 > Class163_Sub2_Sub1.anInt4026) {
+            Class3_Sub13_Sub5.anInt3068 = 5 * 50 * (Class58.aJs5Worker_917.anInt1011 + -1);
 
             if (Class162.anInt2036 == Class140_Sub6.accRegistryPort) {
                 Class140_Sub6.accRegistryPort = currentPort;
@@ -663,22 +663,22 @@ public final class Client extends GameShell {
                 Class3_Sub13_Sub5.anInt3068 = 3000;
             }
 
-            if (Class58.aClass66_917.anInt1011 >= 2 && Class58.aClass66_917.anInt1010 == 6) {
+            if (Class58.aJs5Worker_917.anInt1011 >= 2 && Class58.aJs5Worker_917.anInt1010 == 6) {
                 this.method31("js5connect_outofdate");
                 Class143.loadingStage = 1000;
                 return;
             }
 
-            if (Class58.aClass66_917.anInt1011 >= 4 && Class58.aClass66_917.anInt1010 == -1) {
+            if (Class58.aJs5Worker_917.anInt1011 >= 4 && Class58.aJs5Worker_917.anInt1010 == -1) {
                 this.method31("js5crc");
                 Class143.loadingStage = 1000;
                 return;
             }
 
-            if (Class58.aClass66_917.anInt1011 >= 4 && (Class143.loadingStage == 0 || Class143.loadingStage == 5)) {
-                if (Class58.aClass66_917.anInt1010 == 7 || Class58.aClass66_917.anInt1010 == 9) {
+            if (Class58.aJs5Worker_917.anInt1011 >= 4 && (Class143.loadingStage == 0 || Class143.loadingStage == 5)) {
+                if (Class58.aJs5Worker_917.anInt1010 == 7 || Class58.aJs5Worker_917.anInt1010 == 9) {
                     this.method31("js5connect_full");
-                } else if (Class58.aClass66_917.anInt1010 > 0) {
+                } else if (Class58.aJs5Worker_917.anInt1010 > 0) {
                     this.method31("js5connect");
                 } else {
                     this.method31("js5io");
@@ -689,7 +689,7 @@ public final class Client extends GameShell {
             }
         }
 
-        Class163_Sub2_Sub1.anInt4026 = Class58.aClass66_917.anInt1011;
+        Class163_Sub2_Sub1.anInt4026 = Class58.aJs5Worker_917.anInt1011;
         if (Class3_Sub13_Sub5.anInt3068 > 0) {
             --Class3_Sub13_Sub5.anInt3068;
         } else {
@@ -712,7 +712,7 @@ public final class Client extends GameShell {
 
                 if (2 == PacketParser.anInt80) {
                     Unsorted.js5Connection = new IOHandler((Socket) Objects.requireNonNull(Class17.aClass64_413).anObject974, Class38.aClass87_665);
-                    RSByteBuffer var2 = new RSByteBuffer(9);
+                    DataBuffer var2 = new DataBuffer(9);
                     var2.putByte((byte) -69, 15); //JS5 handshake
                     var2.putInt(-31379 + 31252, Configurations.CLIENT_BUILD);
                     var2.putInt(-31379 + 31252, Configurations.SUB_BUILD);
@@ -740,7 +740,7 @@ public final class Client extends GameShell {
 
                 if (PacketParser.anInt80 == 4) {
                     boolean var6 = Class143.loadingStage == 5 || Class143.loadingStage == 10 || Class143.loadingStage == 28;
-                    Class58.aClass66_917.method1249(!var6, Unsorted.js5Connection);
+                    Class58.aJs5Worker_917.method1249(!var6, Unsorted.js5Connection);
                     Unsorted.js5Connection = null;
                     Class17.aClass64_413 = null;
                     PacketParser.anInt80 = 0;
@@ -1391,7 +1391,7 @@ public final class Client extends GameShell {
                         Class3_Sub17.aClass94_2464 = TextCore.CreatedWorld;
                     } else if (Class96.anInt1354 == 30) {
                         if (Unsorted.aClass8_1936 == null) {
-                            Unsorted.aClass8_1936 = new Class8(Class58.aClass66_917, Class3_Sub13_Sub14.aClass73_3159);
+                            Unsorted.aClass8_1936 = new Class8(Class58.aJs5Worker_917, Class3_Sub13_Sub14.aClass73_3159);
                         }
 
                         if (Unsorted.aClass8_1936.method837()) {
@@ -1435,7 +1435,7 @@ public final class Client extends GameShell {
                         var2 = 0;
 
                         for (var3 = 0; var3 < 29; ++var3) { //TODO
-                            var2 += RSByteBuffer.aClass151_Sub1Array2601[var3].method2111() * Class3_Sub13_Sub23.anIntArray3288[var3] / 100;
+                            var2 += Unsorted.aClass151_Sub1Array2601[var3].method2111() * Class3_Sub13_Sub23.anIntArray3288[var3] / 100;
                         }
 
                         if (var2 < 100) { //!= 100

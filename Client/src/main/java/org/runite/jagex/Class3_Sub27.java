@@ -93,10 +93,10 @@ final class Class3_Sub27 extends Linkable {
 
    static Class3_Sub27 method517(CacheIndex var0, int var1, int var2) {
       byte[] var3 = var0.getFile(var1, var2);
-      return var3 == null?null:new Class3_Sub27(new RSByteBuffer(var3));
+      return var3 == null?null:new Class3_Sub27(new DataBuffer(var3));
    }
 
-   private Class3_Sub27(RSByteBuffer var1) {
+   private Class3_Sub27(DataBuffer var1) {
       var1.index = var1.buffer.length - 3;
       int var2 = var1.readUnsignedByte();
       int var3 = var1.getShort();
@@ -255,7 +255,7 @@ final class Class3_Sub27 extends Linkable {
       int var50 = var1.index;
       var1.index += var5 * 3;
       this.aByteArray2565 = new byte[var4];
-      RSByteBuffer var51 = new RSByteBuffer(this.aByteArray2565);
+      DataBuffer var51 = new DataBuffer(this.aByteArray2565);
       var51.putInt(-121, 1297377380);
       var51.putInt(-128, 6);
       var51.putShort(var2 > 1?1:0);

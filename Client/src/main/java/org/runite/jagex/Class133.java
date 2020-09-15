@@ -47,7 +47,7 @@ final class Class133 {
 
    public Class133() {}
 
-   Class133(RSByteBuffer var1) {
+   Class133(DataBuffer var1) {
       try {
          this.aByte1742 = var1.getByte();
          this.anInt1752 = var1.getShort();

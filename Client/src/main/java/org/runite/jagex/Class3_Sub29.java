@@ -155,7 +155,7 @@ final class Class3_Sub29 extends Linkable {
             var2 = new Class3_Sub28_Sub4();
 
             if(var3 != null) {
-               var2.method546(new RSByteBuffer(var3));
+               var2.method546(new DataBuffer(var3));
             }
 
             if(var1 >= '\u8000') {

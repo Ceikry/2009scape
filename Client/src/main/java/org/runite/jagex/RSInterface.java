@@ -279,7 +279,7 @@ final class RSInterface {
       }
    }
 
-   final void decodeNoScripts(int var1, RSByteBuffer var2) {
+   final void decodeNoScripts(int var1, DataBuffer var2) {
       try {
          if(var1 >= -94) {
             this.anInt214 = -74;
@@ -585,7 +585,7 @@ final class RSInterface {
       }
    }
 
-   private Object[] method862(RSByteBuffer var2) {
+   private Object[] method862(DataBuffer var2) {
       try {
          int var3 = var2.readUnsignedByte();
          if(var3 == 0) {
@@ -610,7 +610,7 @@ final class RSInterface {
       }
    }
 
-   private int[] method863(RSByteBuffer var1) {
+   private int[] method863(DataBuffer var1) {
       try {
          int var3 = var1.readUnsignedByte();
          if(var3 == 0) {
@@ -634,7 +634,7 @@ final class RSInterface {
          int var4 = this.itemAmounts[var2];
          this.itemAmounts[var2] = this.itemAmounts[var1];
          if(var3 > -66) {
-            this.decodeNoScripts(36, (RSByteBuffer)null);
+            this.decodeNoScripts(36, (DataBuffer)null);
          }
 
          this.itemAmounts[var1] = var4;
@@ -817,7 +817,7 @@ final class RSInterface {
       }
    }
 
-   final void decodeScriptFormat(RSByteBuffer buffer) {
+   final void decodeScriptFormat(DataBuffer buffer) {
       try {
          this.usingScripts = true;
          ++buffer.index;

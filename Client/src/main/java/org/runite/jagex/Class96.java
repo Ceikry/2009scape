@@ -18,7 +18,7 @@ final class Class96 {
    int anInt1359;
    int anInt1360;
 
-   static void method1587(RSByteBuffer var1) {
+   static void method1587(DataBuffer var1) {
       try {
          label134:
          while(true) {

@@ -9,7 +9,7 @@ final class Class3_Sub13_Sub20 extends Class3_Sub13 {
    private int anInt3250 = 4096;
    private int anInt3252 = 4096;
 
-   final void method157(int var1, RSByteBuffer var2, boolean var3) {
+   final void method157(int var1, DataBuffer var2, boolean var3) {
       try {
          if(var1 == 0) {
             this.anInt3252 = var2.getShort();

@@ -146,7 +146,7 @@ final class Class125 implements Interface5 {
           this.anInt2184 = var1[0];
           int[][] var3 = Class15.method895(0, (byte)-73);
           int[][] var4 = Class15.method895(8, (byte)-109);
-          RSByteBuffer var5 = new RSByteBuffer(262144);
+          DataBuffer var5 = new DataBuffer(262144);
 
           for(int var6 = 0; var6 < 256; ++var6) {
              int[] var7 = var3[var6];

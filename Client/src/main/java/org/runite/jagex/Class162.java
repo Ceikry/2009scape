@@ -26,7 +26,7 @@ final class Class162 {
       }
    }
 
-   static void method2204(RSByteBuffer var0) {
+   static void method2204(DataBuffer var0) {
       try {
          if(null != Unsorted.aClass30_1039) {
             try {
@@ -61,7 +61,7 @@ final class Class162 {
             var2 = new ObjectDefinition();
             var2.objectId = objectId;
             if(null != var3) {
-               var2.method1692(6219, new RSByteBuffer(var3));
+               var2.method1692(6219, new DataBuffer(var3));
             }
 
             var2.method1689(4 + -2120);

@@ -28,7 +28,7 @@ final class Class61 {
             byte[] var3 = Class3_Sub13_Sub7.aClass153_3098.getFile(11, var1);
             var2 = new Class3_Sub28_Sub9();
             if(var3 != null) {
-               var2.method583(new RSByteBuffer(var3));
+               var2.method583(new DataBuffer(var3));
             }
 
             Class163.aClass47_2041.method1097(var2, (long)var1, (byte)98);

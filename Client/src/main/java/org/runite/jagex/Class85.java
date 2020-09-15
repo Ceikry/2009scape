@@ -10,7 +10,7 @@ final class Class85 {
    static int anInt1174 = 99;
 
 
-   static void method1423(RSByteBuffer var1, RSString var2) {
+   static void method1423(DataBuffer var1, RSString var2) {
       try {
          byte[] var4 = var2.method1568();
          var1.method768(-32769, var4.length);
