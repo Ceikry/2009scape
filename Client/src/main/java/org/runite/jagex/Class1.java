@@ -1,6 +1,7 @@
 package org.runite.jagex;
 
 import org.runite.Configurations;
+import org.rs09.client.collections.HashTable;
 
 final class Class1 {
 
@@ -27,7 +28,7 @@ final class Class1 {
 
    static Class3_Sub11[] method70(float[][] var0, float[][] var1, int[][] var2, int var3, float[][] var4, byte[][] var5, int[][] var6, byte[][] var8, byte[][] var9, byte[][] var10, byte[][][] var11) {
       try {
-         Class130 var12 = new Class130(128);
+         HashTable var12 = new HashTable(128);
 
          int var13;
          int var14;
@@ -283,7 +284,7 @@ final class Class1 {
          }
 
          Class3_Sub11 var56;
-         for(var56 = (Class3_Sub11)var12.method1776(36); null != var56; var56 = (Class3_Sub11)var12.method1778(-117)) {
+         for(var56 = (Class3_Sub11)var12.first(); null != var56; var56 = (Class3_Sub11)var12.next()) {
             var56.method145();
          }
 
@@ -575,7 +576,7 @@ final class Class1 {
             }
          }
 
-         for(var56 = (Class3_Sub11)var12.method1776(62); null != var56; var56 = (Class3_Sub11)var12.method1778(-80)) {
+         for(var56 = (Class3_Sub11)var12.first(); null != var56; var56 = (Class3_Sub11)var12.next()) {
             if(var56.anInt2343 == 0) {
                var56.unlink();
             } else {
@@ -583,10 +584,10 @@ final class Class1 {
             }
          }
 
-         var13 = var12.method1781(97);
+         var13 = var12.size();
          Class3_Sub11[] var57 = new Class3_Sub11[var13];
          long[] var59 = new long[var13];
-         var12.method1782(var57, 83);
+         var12.values(var57);
 
          for(var16 = 0; var16 < var13; ++var16) {
             var59[var16] = var57[var16].linkableKey;

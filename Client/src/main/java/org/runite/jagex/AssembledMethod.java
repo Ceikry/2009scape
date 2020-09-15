@@ -1,5 +1,7 @@
 package org.runite.jagex;
 
+import org.rs09.client.collections.HashTable;
+
 final class AssembledMethod extends Node {
 
    // The ints are loaded in this order
@@ -10,6 +12,6 @@ final class AssembledMethod extends Node {
 
    int[] assemblyInstructions;
    int[] instructionOperands;
-   Class130[] switchHashTable;
+   HashTable[] switchHashTable;
    RSString[] stringInstructionOperands;
 }

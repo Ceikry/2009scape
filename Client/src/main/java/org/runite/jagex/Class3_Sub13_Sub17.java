@@ -1,11 +1,13 @@
 package org.runite.jagex;
 
+import org.rs09.client.collections.HashTable;
+
 import java.util.Objects;
 
 final class Class3_Sub13_Sub17 extends Class3_Sub13 {
 
    static boolean aBoolean3207 = false;
-   static Class130 aClass130_3208 = new Class130(8);
+   static HashTable aHashTable_3208 = new HashTable(8);
    static RSString aClass94_3209 = RSString.of("showingVideoAd");
    static CacheIndex aClass153_3210;
    static int[] anIntArray3212;
@@ -41,7 +43,7 @@ final class Class3_Sub13_Sub17 extends Class3_Sub13 {
          Class107.method1650();
          MouseListeningClass.method2089();
          Class3_Sub13_Sub11.aClass93_3130.method1523((byte)-103);
-         Class80.aClass93_1135.method1523((byte)-122);
+         Unsorted.aClass93_1135.method1523((byte)-122);
       } catch (RuntimeException var2) {
          throw Class44.clientError(var2, "je.O(" + var0 + ')');
       }

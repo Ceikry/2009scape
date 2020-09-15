@@ -154,7 +154,7 @@ final class Class3_Sub13_Sub30 extends Class3_Sub13 {
 
          Class108.method1659();
          Class3_Sub10.method142();
-         Class80.aClass93_1135.method1524();
+         Unsorted.aClass93_1135.method1524();
          if(!HDToolKit.highDetail) {
             ((Class102)Class51.anInterface2_838).method1618();
          }

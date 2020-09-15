@@ -37,7 +37,7 @@ final class Class163_Sub3 extends Class163 {
             }
          }
 
-         if(GraphicDefinition.incomingBuffer.index == Class130.incomingPacketLength) {
+         if(GraphicDefinition.incomingBuffer.index == Unsorted.incomingPacketLength) {
             for(var1 = 0; var1 < Class159.localPlayerCount; ++var1) {
                if(null == Class3_Sub13_Sub22.players[Class56.localPlayerIndexes[var1]]) {
 //                     throw new RuntimeException("gpp2 pos:" + var1 + " size:" + Class159.anInt2022);

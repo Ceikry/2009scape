@@ -1,5 +1,7 @@
 package org.runite.jagex;
 
+import org.rs09.client.collections.HashTable;
+
 import java.util.Objects;
 
 final class Class93 {
@@ -10,14 +12,14 @@ final class Class93 {
    static byte[][][] aByteArrayArrayArray1328;
    private final NodeList aClass13_1329 = new NodeList();
    private int anInt1331;
-   private Class130 aClass130_1332;
+   private HashTable aHashTable_1332;
 
 
    final void put(byte var1, Object var2, long var3) {
       try {
          this.method1518(var3, (byte)-124);
          if(var1 > -72) {
-            this.aClass130_1332 = (Class130)null;
+            this.aHashTable_1332 = (HashTable)null;
          }
 
          if(this.anInt1327 == 0) {
@@ -29,7 +31,7 @@ final class Class93 {
          }
 
          Class3_Sub28_Sub7_Sub1 var7 = new Class3_Sub28_Sub7_Sub1(var2);
-         this.aClass130_1332.method1779(var7, var3);
+         this.aHashTable_1332.put(var3, var7);
          this.aClass13_1329.method879(var7);
          var7.aLong2569 = 0L;
       } catch (RuntimeException var6) {
@@ -76,7 +78,7 @@ final class Class93 {
 
    final void method1518(long var1, byte var3) {
       try {
-         Class3_Sub28_Sub7 var4 = (Class3_Sub28_Sub7)this.aClass130_1332.method1780(var1);
+         Class3_Sub28_Sub7 var4 = (Class3_Sub28_Sub7)this.aHashTable_1332.get(var1);
          if(var3 == -124) {
             if(null != var4) {
                var4.unlink();
@@ -121,7 +123,7 @@ final class Class93 {
                if(!var3.method568()) {
                   if(++var3.aLong2569 > (long)var2) {
                      Class3_Sub28_Sub7 var4 = Class3_Sub28_Sub20.aClass118_3794.method1725(var3);
-                     this.aClass130_1332.method1779(var4, var3.linkableKey);
+                     this.aHashTable_1332.put(var3.linkableKey, var4);
                      Class45.method1084(var3, var4);
                      var3.unlink();
                      var3.method524();
@@ -165,7 +167,7 @@ final class Class93 {
    final void method1524() {
       try {
          this.aClass13_1329.method883();
-         this.aClass130_1332.method1773(114);
+         this.aHashTable_1332.clear();
          this.anInt1327 = this.anInt1331;
       } catch (RuntimeException var3) {
          throw Class44.clientError(var3, "n.H(" + 3 + ')');
@@ -181,7 +183,7 @@ final class Class93 {
          }
 
          this.anInt1327 = var1;
-         this.aClass130_1332 = new Class130(var2);
+         this.aHashTable_1332 = new HashTable(var2);
       } catch (RuntimeException var3) {
          throw Class44.clientError(var3, "n.<init>(" + var1 + ')');
       }
@@ -206,7 +208,7 @@ final class Class93 {
 
    final Object get(long key) {
       try {
-         Class3_Sub28_Sub7 var4 = (Class3_Sub28_Sub7)this.aClass130_1332.method1780(key);
+         Class3_Sub28_Sub7 var4 = (Class3_Sub28_Sub7)this.aHashTable_1332.get(key);
          if(null == var4) {
             return null;
          } else {
@@ -219,7 +221,7 @@ final class Class93 {
             } else {
                if(var4.method568()) {
                   Class3_Sub28_Sub7_Sub1 var6 = new Class3_Sub28_Sub7_Sub1(var5);
-                  this.aClass130_1332.method1779(var6, var4.linkableKey);
+                  this.aHashTable_1332.put(var4.linkableKey, var6);
                   this.aClass13_1329.method879(var6);
                   var6.aLong2569 = 0L;
                   var4.unlink();

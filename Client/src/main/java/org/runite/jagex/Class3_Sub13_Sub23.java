@@ -174,10 +174,10 @@ class Class3_Sub13_Sub23 extends Class3_Sub13 {
    static void method281(int var1, int var2) {
       try {
          Class57.anIntArray898[var2] = var1;
-         Class3_Sub7 var3 = (Class3_Sub7) Class86.aClass130_3679.method1780((long)var2);
+         Class3_Sub7 var3 = (Class3_Sub7) Class86.aHashTable_3679.get((long)var2);
          if(null == var3) {
             var3 = new Class3_Sub7(4611686018427387905L);
-            Class86.aClass130_3679.method1779(var3, (long)var2);
+            Class86.aHashTable_3679.put((long)var2, var3);
          } else if (var3.aLong2295 != 4611686018427387905L) {
             var3.aLong2295 = Class5.method830((byte) -55) + 500L | 4611686018427387904L;
          }

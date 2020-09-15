@@ -1,6 +1,7 @@
 package org.runite.jagex;
 
 import org.rs09.client.Linkable;
+import org.rs09.client.collections.HashTable;
 
 import java.util.Objects;
 
@@ -31,7 +32,7 @@ final class ObjectDefinition {
    boolean NotClipped;
    RSString[] options;
    private short aShort1500;
-   private Class130 aClass130_1501;
+   private HashTable aHashTable_1501;
    boolean aBoolean1502 = false;
    boolean aBoolean1503;
    RSString name;
@@ -322,10 +323,10 @@ final class ObjectDefinition {
       try {
          if(var3 <= 76) {
             return -40;
-         } else if(this.aClass130_1501 == null) {
+         } else if(this.aHashTable_1501 == null) {
             return var1;
          } else {
-            Class3_Sub18 var4 = (Class3_Sub18)this.aClass130_1501.method1780((long)var2);
+            Class3_Sub18 var4 = (Class3_Sub18)this.aHashTable_1501.get((long)var2);
             return var4 != null?var4.anInt2467:var1;
          }
       } catch (RuntimeException var5) {
@@ -555,9 +556,9 @@ final class ObjectDefinition {
             this.anInt1516 = buffer.getShort();
          } else if (249 == opcode) {
             var4 = buffer.readUnsignedByte();
-            if (null == this.aClass130_1501) {
+            if (null == this.aHashTable_1501) {
                var5 = Class95.method1585((byte) 83, var4);
-               this.aClass130_1501 = new Class130(var5);
+               this.aHashTable_1501 = new HashTable(var5);
             }
 
             for (var5 = 0; var4 > var5; ++var5) {
@@ -570,7 +571,7 @@ final class ObjectDefinition {
                   var8 = new Class3_Sub18(buffer.readInt());
                }
 
-               this.aClass130_1501.method1779((Linkable) var8, (long) var7);
+               this.aHashTable_1501.put((long) var7, (Linkable) var8);
             }
          }
       } catch (RuntimeException var9) {
@@ -964,10 +965,10 @@ final class ObjectDefinition {
    final RSString method1698(RSString var1, int var3) {
       try {
 
-         if(null == this.aClass130_1501) {
+         if(null == this.aHashTable_1501) {
             return var1;
          } else {
-            Class3_Sub29 var4 = (Class3_Sub29)this.aClass130_1501.method1780((long)var3);
+            Class3_Sub29 var4 = (Class3_Sub29)this.aHashTable_1501.get((long)var3);
             return var4 == null?var1:var4.aClass94_2586;
          }
       } catch (RuntimeException var5) {

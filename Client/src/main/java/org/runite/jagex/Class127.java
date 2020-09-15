@@ -287,17 +287,17 @@ class Class127 {
 
                   Unsorted.incomingOpcode = GraphicDefinition.incomingBuffer.getOpcode();
                   dynamic = Unsorted.incomingOpcode == 214;
-                  Class130.incomingPacketLength = GraphicDefinition.incomingBuffer.getShort();
+                  Unsorted.incomingPacketLength = GraphicDefinition.incomingBuffer.getShort();
                   Class3_Sub13_Sub25.loginStage = 9;
                }
 
                if(Class3_Sub13_Sub25.loginStage == 9) {
-                  if(Class130.incomingPacketLength > Class3_Sub15.aClass89_2429.availableBytes()) {
+                  if(Unsorted.incomingPacketLength > Class3_Sub15.aClass89_2429.availableBytes()) {
                      return;
                   }
 
                   GraphicDefinition.incomingBuffer.index = 0;
-                  Class3_Sub15.aClass89_2429.readBytes(GraphicDefinition.incomingBuffer.buffer, 0, Class130.incomingPacketLength);
+                  Class3_Sub15.aClass89_2429.readBytes(GraphicDefinition.incomingBuffer.buffer, 0, Unsorted.incomingPacketLength);
                   Class158.anInt2005 = 2;
                   Class3_Sub13_Sub25.loginStage = 0;
                   AnimationDefinition.resetAll();

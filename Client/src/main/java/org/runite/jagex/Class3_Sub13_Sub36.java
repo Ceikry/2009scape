@@ -103,7 +103,7 @@ final class Class3_Sub13_Sub36 extends Class3_Sub13 {
                var16 = Class45.aFloat730 * 360.0F / 6.2831855F;
             }
 
-            HDToolKit.method1844(var3, var5, var4, var1, var4 / 2 + var3, var5 - -(var1 / 2), var17, var16, Class130.anInt1705, Class130.anInt1705);
+            HDToolKit.method1844(var3, var5, var4, var1, var4 / 2 + var3, var5 - -(var1 / 2), var17, var16, Unsorted.anInt1705, Unsorted.anInt1705);
          } else {
             Class74.method1324(var3, var5, var4 + var3, var1 + var5);
             Class51.method1134();
@@ -144,14 +144,14 @@ final class Class3_Sub13_Sub36 extends Class3_Sub13 {
             Class68.method1265();
             ClientErrorException.method2285(0, 0, 0, 0, 0);
             Class58.method1194();
-            Class130.method1775();
-            Class82.method1405(var5, var4, var3, Class130.anInt1705, var1, Class130.anInt1705, -7397);
-            Class163_Sub2_Sub1.method2221(var4, var3, var1, Class130.anInt1705, Class130.anInt1705, var5);
+            Unsorted.method1775();
+            Class82.method1405(var5, var4, var3, Unsorted.anInt1705, var1, Unsorted.anInt1705, -7397);
+            Class163_Sub2_Sub1.method2221(var4, var3, var1, Unsorted.anInt1705, Unsorted.anInt1705, var5);
          } else {
             Class74.method1323(var3, var5, var4, var1, 0);
             Class3_Sub22.method398(NPC.anInt3995, Class7.anInt2162, Class77.anInt1111, Class139.anInt1823, Class3_Sub13_Sub25.anInt3315, Class158.aByteArrayArrayArray2008, Class41.anIntArray686, Class129_Sub1.anIntArray2696, Class159.anIntArray2021, Player.anIntArray3959, AnimationDefinition.anIntArray1871, WorldListCountry.localPlane - -1, var19, Class102.player.anInt2819 >> 7, Class102.player.anInt2829 >> 7);
             Class58.method1194();
-            Class130.method1775();
+            Unsorted.method1775();
             Class82.method1405(var5, var4, var3, 256, var1, 256, -6403 + -994);
             Class163_Sub2_Sub1.method2221(var4, var3, var1, 256, 256, var5);
          }

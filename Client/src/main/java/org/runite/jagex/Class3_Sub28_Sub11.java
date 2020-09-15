@@ -1,12 +1,13 @@
 package org.runite.jagex;
 
 import org.rs09.client.Linkable;
+import org.rs09.client.collections.HashTable;
 
 import java.util.Objects;
 
 final class Class3_Sub28_Sub11 extends Node {
 
-   private Class130 aClass130_3636;
+   private HashTable aHashTable_3636;
    static RSString aClass94_3637 = RSString.of(")4p=");
    static boolean aBoolean3641 = false;
    static int anInt3642 = 0;
@@ -32,11 +33,11 @@ final class Class3_Sub28_Sub11 extends Node {
 
    final int method600(int var1, int var2) {
       try {
-         if(this.aClass130_3636 == null) {
+         if(this.aHashTable_3636 == null) {
             return var2;
          } else {
 
-            Class3_Sub18 var4 = (Class3_Sub18)this.aClass130_3636.method1780((long)var1);
+            Class3_Sub18 var4 = (Class3_Sub18)this.aHashTable_3636.get((long)var1);
             return null == var4?var2:var4.anInt2467;
          }
       } catch (RuntimeException var5) {
@@ -49,9 +50,9 @@ final class Class3_Sub28_Sub11 extends Node {
          if(249 == var2) {
             int var4 = var1.readUnsignedByte();
             int var5;
-            if(this.aClass130_3636 == null) {
+            if(this.aHashTable_3636 == null) {
                var5 = Class95.method1585((byte)105, var4);
-               this.aClass130_3636 = new Class130(var5);
+               this.aHashTable_3636 = new HashTable(var5);
             }
 
             for(var5 = 0; var4 > var5; ++var5) {
@@ -64,7 +65,7 @@ final class Class3_Sub28_Sub11 extends Node {
                   var8 = new Class3_Sub18(var1.readInt());
                }
 
-               this.aClass130_3636.method1779((Linkable)var8, (long)var7);
+               this.aHashTable_3636.put((long)var7, (Linkable)var8);
             }
          }
 
@@ -167,10 +168,10 @@ final class Class3_Sub28_Sub11 extends Node {
 
    final RSString method604(RSString var1, int var3) {
       try {
-         if(this.aClass130_3636 == null) {
+         if(this.aHashTable_3636 == null) {
             return var1;
          } else {
-            Class3_Sub29 var4 = (Class3_Sub29)this.aClass130_3636.method1780((long)var3);
+            Class3_Sub29 var4 = (Class3_Sub29)this.aHashTable_3636.get((long)var3);
 
             return null != var4?var4.aClass94_2586:var1;
          }

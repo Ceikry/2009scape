@@ -1,5 +1,7 @@
 package org.runite.jagex;
 
+import org.rs09.client.collections.HashTable;
+
 final class Class3_Sub13_Sub11 extends Class3_Sub13 {
 
    private int anInt3129;
@@ -65,12 +67,12 @@ final class Class3_Sub13_Sub11 extends Class3_Sub13 {
                Class60.method1208((byte)-128, Class3_Sub28_Sub12.anInt3655);
             }
 
-            for(Class3_Sub31 var2 = (Class3_Sub31)Class3_Sub13_Sub17.aClass130_3208.method1776(3000 + -2908); null != var2; var2 = (Class3_Sub31)Class3_Sub13_Sub17.aClass130_3208.method1778(-122)) {
+            for(Class3_Sub31 var2 = (Class3_Sub31)Class3_Sub13_Sub17.aHashTable_3208.first(); null != var2; var2 = (Class3_Sub31)Class3_Sub13_Sub17.aHashTable_3208.next()) {
                Class3_Sub13_Sub18.method254(true, var2);
             }
 
             Class3_Sub28_Sub12.anInt3655 = -1;
-            Class3_Sub13_Sub17.aClass130_3208 = new Class130(8);
+            Class3_Sub13_Sub17.aHashTable_3208 = new HashTable(8);
             Class3_Sub7.method122(3000 + -2918);
             Class3_Sub28_Sub12.anInt3655 = Class3_Sub22.anInt2529;
             Class124.method1746(false, (byte)-36);

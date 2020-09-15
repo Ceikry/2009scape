@@ -138,7 +138,7 @@ abstract class Class146 {
                   var25.method149(Class75_Sub2.aClass3_Sub2ArrayArrayArray2638, var33, false);
                }
 
-               if(var14 == 0 && Class80.anInt1137 > 0) {
+               if(var14 == 0 && Unsorted.anInt1137 > 0) {
                   HDToolKit.method1832(101.5F);
                   Class141.method2038(Class97.anInt1375, Class3_Sub13_Sub27.anInt3340, Class3_Sub13_Sub39.anInt3466, Class23.aBooleanArrayArray457);
                }

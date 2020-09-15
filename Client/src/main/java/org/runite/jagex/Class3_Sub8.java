@@ -125,7 +125,7 @@ final class Class3_Sub8 extends Linkable {
                   if(null != var25) {
                      var12 = 2 + var9 * 4 + -(Class102.player.anInt2819 / 32);
                      var13 = -(Class102.player.anInt2829 / 32) + 2 + 4 * var10;
-                     Class38_Sub1.method1030(var4, Class80.aClass3_Sub28_Sub16Array1136[0], var13, var12, var2, var3);
+                     Class38_Sub1.method1030(var4, Unsorted.aClass3_Sub28_Sub16Array1136[0], var13, var12, var2, var3);
                   }
                }
             }
@@ -142,7 +142,7 @@ final class Class3_Sub8 extends Linkable {
                      var12 = var21.anInt2819 / 32 - Class102.player.anInt2819 / 32;
                      var13 = var21.anInt2829 / 32 + -(Class102.player.anInt2829 / 32);
                      if(var22.anInt1283 == -1) {
-                        Class38_Sub1.method1030(var4, Class80.aClass3_Sub28_Sub16Array1136[1], var13, var12, var2, var3);
+                        Class38_Sub1.method1030(var4, Unsorted.aClass3_Sub28_Sub16Array1136[1], var13, var12, var2, var3);
                      } else {
                         Class38_Sub1.method1030(var4, Class140_Sub4.aClass3_Sub28_Sub16Array2839[var22.anInt1283], var13, var12, var2, var3);
                      }
@@ -180,13 +180,13 @@ final class Class3_Sub8 extends Linkable {
                   }
 
                   if(var28) {
-                     Class38_Sub1.method1030(var4, Class80.aClass3_Sub28_Sub16Array1136[3], var12, var11, var2, var3);
+                     Class38_Sub1.method1030(var4, Unsorted.aClass3_Sub28_Sub16Array1136[3], var12, var11, var2, var3);
                   } else if(var31) {
-                     Class38_Sub1.method1030(var4, Class80.aClass3_Sub28_Sub16Array1136[5], var12, var11, var2, var3);
+                     Class38_Sub1.method1030(var4, Unsorted.aClass3_Sub28_Sub16Array1136[5], var12, var11, var2, var3);
                   } else if (var32) {
-                     Class38_Sub1.method1030(var4, Class80.aClass3_Sub28_Sub16Array1136[4], var12, var11, var2, var3);
+                     Class38_Sub1.method1030(var4, Unsorted.aClass3_Sub28_Sub16Array1136[4], var12, var11, var2, var3);
                   } else {
-                     Class38_Sub1.method1030(var4, Class80.aClass3_Sub28_Sub16Array1136[2], var12, var11, var2, var3);
+                     Class38_Sub1.method1030(var4, Unsorted.aClass3_Sub28_Sub16Array1136[2], var12, var11, var2, var3);
                   }
                }
             }

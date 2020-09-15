@@ -27,7 +27,7 @@ final class Class132 {
 
          int var6 = 0;
          if(var1.anInt2263 == 1) {
-            var2 = Class80.method1395(var1.anInt2250, var1.anInt2264, var1.anInt2248);
+            var2 = Unsorted.method1395(var1.anInt2250, var1.anInt2264, var1.anInt2248);
          }
 
          if(var1.anInt2263 == 2) {

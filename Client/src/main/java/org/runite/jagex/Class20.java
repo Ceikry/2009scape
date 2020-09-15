@@ -58,7 +58,7 @@ final class Class20 {
          if(var4 == 0) {
             var7 = Class157.method2174(var3, var2, var1);
          } else if(var4 == 1) {
-            var7 = Class80.method1395(var3, var2, var1);
+            var7 = Unsorted.method1395(var3, var2, var1);
          } else if (var4 == 2) {
             var7 = Class3_Sub28_Sub5.method557(var3, var2, var1);
          } else if (3 == var4) {

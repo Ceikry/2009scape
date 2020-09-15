@@ -1,13 +1,14 @@
 package org.runite.jagex;
 
 import org.rs09.client.Linkable;
+import org.rs09.client.collections.HashTable;
 
 final class Class3_Sub2 extends Linkable {
 
    static int anInt2217 = 2;
    static int anInt2218 = -1;
    static short[] aShortArray2219 = new short[]{(short)-4160, (short)-4163, (short)-8256, (short)-8259, (short)22461};
-   static Class130 aClass130_2220 = new Class130(32);
+   static HashTable aHashTable_2220 = new HashTable(32);
    Class25[] aClass25Array2221 = new Class25[5];
    boolean aBoolean2222;
    int anInt2223;
@@ -45,7 +46,7 @@ final class Class3_Sub2 extends Linkable {
 
    static void method103() {
       try {
-         Client.aClass130_2194.method1773(122);
+         Client.aHashTable_2194.clear();
          Class81.aClass13_1139.method883();
          Class126.aClass13_1666.method883();
       } catch (RuntimeException var2) {

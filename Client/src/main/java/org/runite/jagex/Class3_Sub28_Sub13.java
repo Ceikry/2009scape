@@ -1,6 +1,7 @@
 package org.runite.jagex;
 
 import org.rs09.client.Linkable;
+import org.rs09.client.collections.HashTable;
 
 public final class Class3_Sub28_Sub13 extends Node {
 
@@ -8,10 +9,10 @@ public final class Class3_Sub28_Sub13 extends Node {
    int anInt3658;
    static int anInt3660 = 0;
    int anInt3662;
-   Class130 aClass130_3663;
+   HashTable aHashTable_3663;
    private RSString aClass94_3664;
    static boolean aBoolean3665 = true;
-   private Class130 aClass130_3666;
+   private HashTable aHashTable_3666;
    private int anInt3667;
 
 
@@ -28,7 +29,7 @@ public final class Class3_Sub28_Sub13 extends Node {
             this.anInt3667 = var2.readInt();
          } else if (5 == var1 || var1 == 6) {
             int var4 = var2.getShort();
-            this.aClass130_3663 = new Class130(Class95.method1585((byte) 94, var4));
+            this.aHashTable_3663 = new HashTable(Class95.method1585((byte) 94, var4));
 
             for (int var5 = 0; var5 < var4; ++var5) {
                int var6 = var2.readInt();
@@ -39,7 +40,7 @@ public final class Class3_Sub28_Sub13 extends Node {
                   var7 = new Class3_Sub18(var2.readInt());
                }
 
-               this.aClass130_3663.method1779((Linkable) var7, (long) var6);
+               this.aHashTable_3663.put((long) var6, (Linkable) var7);
             }
          }
 
@@ -50,10 +51,10 @@ public final class Class3_Sub28_Sub13 extends Node {
 
    final RSString method616(int var1, byte var2) {
       try {
-         if(null == this.aClass130_3663) {
+         if(null == this.aHashTable_3663) {
             return this.aClass94_3664;
          } else {
-            Class3_Sub29 var4 = (Class3_Sub29)this.aClass130_3663.method1780((long)var1);
+            Class3_Sub29 var4 = (Class3_Sub29)this.aHashTable_3663.get((long)var1);
             return null == var4?this.aClass94_3664:var4.aClass94_2586;
          }
       } catch (RuntimeException var5) {
@@ -63,13 +64,13 @@ public final class Class3_Sub28_Sub13 extends Node {
 
    final boolean method617(RSString var1) {
       try {
-         if (null != this.aClass130_3663) {
+         if (null != this.aHashTable_3663) {
 
-            if (null == this.aClass130_3666) {
+            if (null == this.aHashTable_3666) {
                this.method618();
             }
 
-            for (Class3_Sub10 var3 = (Class3_Sub10) this.aClass130_3666.method1780(var1.method1538(23)); var3 != null; var3 = (Class3_Sub10) this.aClass130_3666.method1784()) {
+            for (Class3_Sub10 var3 = (Class3_Sub10) this.aHashTable_3666.get(var1.method1538(23)); var3 != null; var3 = (Class3_Sub10) this.aHashTable_3666.nextInBucket()) {
                if (var3.aClass94_2341.equalsString(var1)) {
                   return true;
                }
@@ -84,12 +85,12 @@ public final class Class3_Sub28_Sub13 extends Node {
 
    private void method618() {
       try {
-         this.aClass130_3666 = new Class130(this.aClass130_3663.method1785(81));
-         Class3_Sub29 var2 = (Class3_Sub29)this.aClass130_3663.method1776(88);
+         this.aHashTable_3666 = new HashTable(this.aHashTable_3663.capacity());
+         Class3_Sub29 var2 = (Class3_Sub29)this.aHashTable_3663.first();
          while(var2 != null) {
             Class3_Sub10 var3 = new Class3_Sub10(var2.aClass94_2586, (int)var2.linkableKey);
-            this.aClass130_3666.method1779(var3, var2.aClass94_2586.method1538(61));
-            var2 = (Class3_Sub29)this.aClass130_3663.method1778(-99);
+            this.aHashTable_3666.put(var2.aClass94_2586.method1538(61), var3);
+            var2 = (Class3_Sub29)this.aHashTable_3663.next();
          }
 
       } catch (RuntimeException var4) {
@@ -107,10 +108,10 @@ public final class Class3_Sub28_Sub13 extends Node {
 
    final int method620(int var2) {
       try {
-         if(this.aClass130_3663 == null) {
+         if(this.aHashTable_3663 == null) {
             return this.anInt3667;
          } else {
-            Class3_Sub18 var3 = (Class3_Sub18)this.aClass130_3663.method1780((long)var2);
+            Class3_Sub18 var3 = (Class3_Sub18)this.aHashTable_3663.get((long)var2);
             return var3 != null?var3.anInt2467:this.anInt3667;
          }
       } catch (RuntimeException var4) {
@@ -120,14 +121,14 @@ public final class Class3_Sub28_Sub13 extends Node {
 
    final boolean method621(int var2) {
       try {
-         if(null == this.aClass130_3663) {
+         if(null == this.aHashTable_3663) {
             return false;
          } else {
-            if(this.aClass130_3666 == null) {
+            if(this.aHashTable_3666 == null) {
                this.method622();
             }
 
-            Class3_Sub18 var3 = (Class3_Sub18)this.aClass130_3666.method1780((long)var2);
+            Class3_Sub18 var3 = (Class3_Sub18)this.aHashTable_3666.get((long)var2);
             return var3 != null;
          }
       } catch (RuntimeException var4) {
@@ -137,11 +138,11 @@ public final class Class3_Sub28_Sub13 extends Node {
 
    private void method622() {
       try {
-         this.aClass130_3666 = new Class130(this.aClass130_3663.method1785(93));
+         this.aHashTable_3666 = new HashTable(this.aHashTable_3663.capacity());
 
-         for(Class3_Sub18 var2 = (Class3_Sub18)this.aClass130_3663.method1776(123); null != var2; var2 = (Class3_Sub18)this.aClass130_3663.method1778(-88)) {
+         for(Class3_Sub18 var2 = (Class3_Sub18)this.aHashTable_3663.first(); null != var2; var2 = (Class3_Sub18)this.aHashTable_3663.next()) {
             Class3_Sub18 var4 = new Class3_Sub18((int)var2.linkableKey);
-            this.aClass130_3666.method1779(var4, (long)var2.anInt2467);
+            this.aHashTable_3666.put((long)var2.anInt2467, var4);
          }
 
       } catch (RuntimeException var5) {

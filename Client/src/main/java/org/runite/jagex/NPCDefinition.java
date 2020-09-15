@@ -2,6 +2,7 @@ package org.runite.jagex;
 
 
 import org.rs09.client.Linkable;
+import org.rs09.client.collections.HashTable;
 
 import java.util.Objects;
 
@@ -34,7 +35,7 @@ final class NPCDefinition {
    int anInt1269;
    boolean aBoolean1270 = true;
    private short[] aShortArray1271;
-   private Class130 aClass130_1272;
+   private HashTable aHashTable_1272;
    RSString aClass94_1273;
    int anInt1274;
    byte aByte1275;
@@ -134,10 +135,10 @@ final class NPCDefinition {
 
    final int method1475(int var1, int var3) {
       try {
-         if(null == this.aClass130_1272) {
+         if(null == this.aHashTable_1272) {
             return var3;
          } else {
-            Class3_Sub18 var4 = (Class3_Sub18)this.aClass130_1272.method1780((long)var1);
+            Class3_Sub18 var4 = (Class3_Sub18)this.aHashTable_1272.get((long)var1);
             return var4 != null?var4.anInt2467:var3;
          }
       } catch (RuntimeException var5) {
@@ -448,10 +449,10 @@ final class NPCDefinition {
 
    final RSString method1477(int var1, RSString var2) {
       try {
-         if(null == this.aClass130_1272) {
+         if(null == this.aHashTable_1272) {
             return var2;
          } else {
-            Class3_Sub29 var4 = (Class3_Sub29)this.aClass130_1272.method1780((long)var1);
+            Class3_Sub29 var4 = (Class3_Sub29)this.aHashTable_1272.get((long)var1);
             return (null == var4?var2:var4.aClass94_2586);
          }
       } catch (RuntimeException var5) {
@@ -783,9 +784,9 @@ final class NPCDefinition {
                this.anInt1298 = buffer.getShort();
             } else if (opcode == 249) {
                var4 = buffer.readUnsignedByte();
-               if (null == this.aClass130_1272) {
+               if (null == this.aHashTable_1272) {
                   var5 = Class95.method1585((byte) 109, var4);
-                  this.aClass130_1272 = new Class130(var5);
+                  this.aHashTable_1272 = new HashTable(var5);
                }
 
                for (var5 = 0; var4 > var5; ++var5) {
@@ -798,7 +799,7 @@ final class NPCDefinition {
                      var8 = new Class3_Sub18(buffer.readInt());
                   }
 
-                  this.aClass130_1272.method1779((Linkable) var8, (long) var10);
+                  this.aHashTable_1272.put((long) var10, (Linkable) var8);
                }
             }
          }

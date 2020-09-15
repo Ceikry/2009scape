@@ -1,6 +1,8 @@
 package org.runite.jagex;
 
 
+import org.rs09.client.collections.HashTable;
+
 final class AnimationDefinition {
 
 	int anInt1845 = 2;
@@ -30,13 +32,13 @@ final class AnimationDefinition {
 	boolean aBoolean1872 = false;
 
 
-	static Class3_Sub11 method2052(Class130 var0, Class168 var2) {
+	static Class3_Sub11 method2052(HashTable var0, Class168 var2) {
 		try {
 			long var3 = (long)((var2.anInt2095 - -1 << 16) + var2.anInt2090) + (((long)var2.anInt2100 << 56) - -((long)var2.anInt2094 << 32));
-			Class3_Sub11 var5 = (Class3_Sub11)var0.method1780(var3);
+			Class3_Sub11 var5 = (Class3_Sub11)var0.get(var3);
 			if(null == var5) {
 				var5 = new Class3_Sub11(var2.anInt2095, (float)var2.anInt2090, true, false, var2.anInt2094);
-				var0.method1779(var5, var3);
+				var0.put(var3, var5);
 			}
 
 			return var5;
@@ -492,12 +494,12 @@ final class AnimationDefinition {
 				Class60.method1208((byte)-128, Class3_Sub28_Sub12.anInt3655);
 			}
 
-			for(Class3_Sub31 var7 = (Class3_Sub31)Class3_Sub13_Sub17.aClass130_3208.method1776(82); var7 != null; var7 = (Class3_Sub31)Class3_Sub13_Sub17.aClass130_3208.method1778(-104)) {
+			for(Class3_Sub31 var7 = (Class3_Sub31)Class3_Sub13_Sub17.aHashTable_3208.first(); var7 != null; var7 = (Class3_Sub31)Class3_Sub13_Sub17.aHashTable_3208.next()) {
 				Class3_Sub13_Sub18.method254(true, var7);
 			}
 
 			Class3_Sub28_Sub12.anInt3655 = -1;
-			Class3_Sub13_Sub17.aClass130_3208 = new Class130(8);
+			Class3_Sub13_Sub17.aHashTable_3208 = new HashTable(8);
 			Class3_Sub7.method122(-113);
 			Class3_Sub13_Sub7.aClass11_3087 = null;
 			Class38_Sub1.aBoolean2615 = false;

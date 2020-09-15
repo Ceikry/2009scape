@@ -1,5 +1,7 @@
 package org.runite.jagex;
 
+import org.rs09.client.collections.HashTable;
+
 import java.util.Objects;
 
 final class Class3_Sub24_Sub4 extends Class3_Sub24 {
@@ -15,7 +17,7 @@ final class Class3_Sub24_Sub4 extends Class3_Sub24 {
    private final Class78 aClass78_3505 = new Class78();
    private final int[] anIntArray3506 = new int[16];
    static int anInt3507;
-   private final Class130 aClass130_3508;
+   private final HashTable aHashTable_3508;
    int[] anIntArray3509 = new int[16];
    private final int[] anIntArray3510 = new int[16];
    private final int anInt3511 = 1000000;
@@ -66,9 +68,9 @@ final class Class3_Sub24_Sub4 extends Class3_Sub24 {
          boolean var6 = true;
          int[] var7;
          var7 = new int[]{22050};
-         for(Class3_Sub6 var9 = (Class3_Sub6)var1.aClass130_2564.method1776(20); var9 != null; var9 = (Class3_Sub6)var1.aClass130_2564.method1778(-107)) {
+         for(Class3_Sub6 var9 = (Class3_Sub6)var1.aHashTable_2564.first(); var9 != null; var9 = (Class3_Sub6)var1.aHashTable_2564.next()) {
             int var10 = (int)var9.linkableKey;
-            Class3_Sub15 var11 = (Class3_Sub15)this.aClass130_3508.method1780((long)var10);
+            Class3_Sub15 var11 = (Class3_Sub15)this.aHashTable_3508.get((long)var10);
             if(null == var11) {
                var11 = Unsorted.method1245(var3, var10);
                if(null == var11) {
@@ -76,7 +78,7 @@ final class Class3_Sub24_Sub4 extends Class3_Sub24 {
                   continue;
                }
 
-               this.aClass130_3508.method1779(var11, (long)var10);
+               this.aHashTable_3508.put((long)var10, var11);
             }
 
             if(!var11.method373(var7, var4, var9.aByteArray2289)) {
@@ -96,7 +98,7 @@ final class Class3_Sub24_Sub4 extends Class3_Sub24 {
 
    final synchronized void method471() {
       try {
-         for(Class3_Sub15 var2 = (Class3_Sub15)this.aClass130_3508.method1776(75); var2 != null; var2 = (Class3_Sub15)this.aClass130_3508.method1778(-117)) {
+         for(Class3_Sub15 var2 = (Class3_Sub15)this.aHashTable_3508.first(); var2 != null; var2 = (Class3_Sub15)this.aHashTable_3508.next()) {
             var2.method369();
          }
 
@@ -490,7 +492,7 @@ final class Class3_Sub24_Sub4 extends Class3_Sub24 {
 
    final synchronized void method485() {
       try {
-         for(Class3_Sub15 var2 = (Class3_Sub15)this.aClass130_3508.method1776(63); var2 != null; var2 = (Class3_Sub15)this.aClass130_3508.method1778(-106)) {
+         for(Class3_Sub15 var2 = (Class3_Sub15)this.aHashTable_3508.first(); var2 != null; var2 = (Class3_Sub15)this.aHashTable_3508.next()) {
             var2.unlink();
          }
 
@@ -517,7 +519,7 @@ final class Class3_Sub24_Sub4 extends Class3_Sub24 {
             }
          }
 
-         Class3_Sub15 var11 = (Class3_Sub15)this.aClass130_3508.method1780((long)this.anIntArray3515[var2]);
+         Class3_Sub15 var11 = (Class3_Sub15)this.aHashTable_3508.get((long)this.anIntArray3515[var2]);
          if(var11 != null) {
             Class3_Sub12_Sub1 var12 = var11.aClass3_Sub12_Sub1Array2431[var4];
             if(var12 != null) {
@@ -1311,7 +1313,7 @@ final class Class3_Sub24_Sub4 extends Class3_Sub24 {
 
    public Class3_Sub24_Sub4() {
       try {
-         this.aClass130_3508 = new Class130(128);
+         this.aHashTable_3508 = new HashTable(128);
          this.method483();
          this.method500(true, (byte)-40);
       } catch (RuntimeException var2) {

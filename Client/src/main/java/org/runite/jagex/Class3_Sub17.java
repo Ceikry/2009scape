@@ -40,7 +40,7 @@ final class Class3_Sub17 extends Linkable {
 					Class163_Sub1_Sub1.aBooleanArray4008[var1] = true;
 				}
 
-				Class130.aBooleanArray1712[var1] = Class3_Sub28_Sub14.aBooleanArray3674[var1];
+				Unsorted.aBooleanArray1712[var1] = Class3_Sub28_Sub14.aBooleanArray3674[var1];
 				Class3_Sub28_Sub14.aBooleanArray3674[var1] = false;
 			}
 

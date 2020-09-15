@@ -51,7 +51,7 @@ final class Class75_Sub4 extends Class75 {
                   var5 = -1;
                }
 
-               Class130.method1772(var6, var5, 39, npc);
+               Unsorted.method1772(var6, var5, 39, npc);
             }
 
             //Ordinal: 3 Face entity

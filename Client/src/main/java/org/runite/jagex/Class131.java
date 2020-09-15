@@ -18,7 +18,7 @@ final class Class131 {
    static void addLocalPlayers() {
       try {
          while(true) {
-            if(GraphicDefinition.incomingBuffer.method815(Class130.incomingPacketLength) >= 11) {
+            if(GraphicDefinition.incomingBuffer.method815(Unsorted.incomingPacketLength) >= 11) {
                int index = GraphicDefinition.incomingBuffer.getBits(11);
                if(index != 2047) {
                   boolean var2 = false;

@@ -25,7 +25,7 @@ final class Class60 {
    static void method1208(byte var0, int var1) {
       try {
          if(-1 != var1) {
-            if(Class130.aBooleanArray1703[var1]) {
+            if(Unsorted.aBooleanArray1703[var1]) {
                Class3_Sub13_Sub29.aClass153_3361.method2128(var1);
                if(null != GameObject.aClass11ArrayArray1834[var1]) {
                   boolean var2 = true;
@@ -44,7 +44,7 @@ final class Class60 {
                      GameObject.aClass11ArrayArray1834[var1] = null;
                   }
 
-                  Class130.aBooleanArray1703[var1] = false;
+                  Unsorted.aBooleanArray1703[var1] = false;
                }
             }
          }

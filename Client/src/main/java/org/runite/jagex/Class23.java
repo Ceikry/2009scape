@@ -33,7 +33,7 @@ final class Class23 {
          var1.putByte((byte)-78, !WorldListEntry.aBoolean2623?0:1);
          var1.putByte((byte)-30, Class3_Sub13_Sub22.aBoolean3275?1:0);
          var1.putByte((byte)-6, !Class140_Sub6.aBoolean2910?0:1);
-         var1.putByte((byte)-83, Class80.anInt1137);
+         var1.putByte((byte)-83, Unsorted.anInt1137);
          var1.putByte((byte)-29, !Class106.aBoolean1441?0:1);
          var1.putByte((byte) -116, Class128.aBoolean1685?1:0);
          var1.putByte((byte)-45, Class38.aBoolean661?1:0);

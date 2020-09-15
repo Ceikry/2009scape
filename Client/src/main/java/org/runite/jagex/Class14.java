@@ -30,7 +30,7 @@ final class Class14 {
          Class129_Sub1.aClass3_Sub28_Sub16Array2690 = Class140_Sub6.getSprites(Class129_Sub1.anInt2689, var1);
          Class45.aClass3_Sub28_Sub16_736 = Class3_Sub28_Sub11.method602(0, Class3_Sub13_Sub4.anInt3061, (byte)-18, var1);
          Class139.aClass3_Sub28_Sub16Array1825 = Class3_Sub13_Sub23_Sub1.method286(Class75_Sub1.anInt2633, var1);
-         Class80.aClass3_Sub28_Sub16Array1136 = Class3_Sub13_Sub23_Sub1.method286(Class40.anInt678, var1);
+         Unsorted.aClass3_Sub28_Sub16Array1136 = Class3_Sub13_Sub23_Sub1.method286(Class40.anInt678, var1);
          GameObject.aClass109Array1831 = Class85.method1424(var1, Class3_Sub15.anInt2436);
          Class3_Sub13_Sub22.aClass109Array3270 = Class85.method1424(var1, Class3_Sub28_Sub18.anInt3757);
          Class3_Sub13.aClass3_Sub28_Sub17_2379.method697(Class3_Sub13_Sub22.aClass109Array3270, (int[])null);

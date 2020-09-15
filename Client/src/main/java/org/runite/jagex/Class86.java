@@ -1,8 +1,10 @@
 package org.runite.jagex;
 
+import org.rs09.client.collections.HashTable;
+
 final class Class86 {
 
-    static Class130 aClass130_3679 = new Class130(16);
+    static HashTable aHashTable_3679 = new HashTable(16);
     int anInt1175;
    int anInt1177;
    int anInt1178;
@@ -17,7 +19,7 @@ final class Class86 {
    float aFloat1190;
    static int anInt1191;
    static Class3_Sub24_Sub4 aClass3_Sub24_Sub4_1193;
-   static Class130 aClass130_1194;
+   static HashTable aHashTable_1194;
    static int anInt1195;
 
    static void method1427(int var1) {
@@ -36,10 +38,10 @@ final class Class86 {
    static void method1428(int var0, int var2) {
       try {
          ItemDefinition.ram[var0] = var2;
-         Class3_Sub7 var3 = (Class3_Sub7) aClass130_3679.method1780((long)var0);
+         Class3_Sub7 var3 = (Class3_Sub7) aHashTable_3679.get((long)var0);
          if(var3 == null) {
             var3 = new Class3_Sub7(Class5.method830((byte)-55) - -500L);
-            aClass130_3679.method1779(var3, (long)var0);
+            aHashTable_3679.put((long)var0, var3);
          } else {
             var3.aLong2295 = 500L + Class5.method830((byte)-55);
          }
@@ -52,12 +54,12 @@ final class Class86 {
    static Class3_Sub28_Sub17_Sub1 method1430(int var0, int var1) {
       try {
          if(var0 == -28922) {
-            Class3_Sub28_Sub17_Sub1 var2 = (Class3_Sub28_Sub17_Sub1)Class80.aClass93_1135.get((long)var1);
+            Class3_Sub28_Sub17_Sub1 var2 = (Class3_Sub28_Sub17_Sub1) Unsorted.aClass93_1135.get((long)var1);
             if(var2 == null) {
                byte[] var3 = CacheIndex.aClass153_1948.getFile(var1, 0);
                var2 = new Class3_Sub28_Sub17_Sub1(var3);
                var2.method697(Class3_Sub13_Sub22.aClass109Array3270, (int[])null);
-               Class80.aClass93_1135.put((byte)-96, var2, (long)var1);
+               Unsorted.aClass93_1135.put((byte)-96, var2, (long)var1);
             }
             return var2;
          } else {

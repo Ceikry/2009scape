@@ -116,9 +116,9 @@ final class Class79 {
                   WorldListEntry.aBoolean2623 = var0.readUnsignedByte() == 1;
                   Class3_Sub13_Sub22.aBoolean3275 = var0.readUnsignedByte() == 1;
                   Class140_Sub6.aBoolean2910 = 1 == var0.readUnsignedByte();
-                  Class80.anInt1137 = var0.readUnsignedByte();
-                  if(2 < Class80.anInt1137) {
-                     Class80.anInt1137 = 2;
+                  Unsorted.anInt1137 = var0.readUnsignedByte();
+                  if(2 < Unsorted.anInt1137) {
+                     Unsorted.anInt1137 = 2;
                   }
 
                   if(var2 < 2) {

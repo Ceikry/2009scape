@@ -351,7 +351,7 @@ final class Class140_Sub3 extends GameObject {
             int var11 = (var8 >> 1) + this.anInt2730;
             int var12 = (var8 - -1 >> 1) + this.anInt2730;
             this.method1961(128 * var11, var9 * 128);
-            boolean var13 = !var3 && var4.aBoolean1503 && (var4.objectId != this.anInt2750 || (this.anInt2752 != this.anInt2726 || this.aClass142_2722 != null && (this.aClass142_2722.aBoolean1872 || Class3_Sub26.aBoolean2558) && this.anInt2733 != this.anInt2726) && Class80.anInt1137 >= 2);
+            boolean var13 = !var3 && var4.aBoolean1503 && (var4.objectId != this.anInt2750 || (this.anInt2752 != this.anInt2726 || this.aClass142_2722 != null && (this.aClass142_2722.aBoolean1872 || Class3_Sub26.aBoolean2558) && this.anInt2733 != this.anInt2726) && Unsorted.anInt1137 >= 2);
             if(var1 && !var13) {
                return null;
             } else {

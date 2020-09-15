@@ -701,7 +701,7 @@ final class Class168 {
 
          if(var0.parentId == -1) {
             int var3 = var0.anInt279 >>> 16;
-            Class80 var4 = new Class80(Class3_Sub13_Sub17.aClass130_3208);
+            Class80 var4 = new Class80(Class3_Sub13_Sub17.aHashTable_3208);
 
             for(Class3_Sub31 var2 = (Class3_Sub31)var4.method1393(); null != var2; var2 = (Class3_Sub31)var4.method1392()) {
                if(var2.anInt2602 == var3) {
@@ -866,10 +866,10 @@ final class Class168 {
 
    static void method2277(int var0, int var1, int var2, int var3, byte var4) {
       try {
-         Class3_Sub25 var5 = (Class3_Sub25)Class3_Sub2.aClass130_2220.method1780((long)var3);
+         Class3_Sub25 var5 = (Class3_Sub25)Class3_Sub2.aHashTable_2220.get((long)var3);
          if(var5 == null) {
             var5 = new Class3_Sub25();
-            Class3_Sub2.aClass130_2220.method1779(var5, (long)var3);
+            Class3_Sub2.aHashTable_2220.put((long)var3, var5);
          }
 
          if(var4 > 16) {

@@ -1,11 +1,13 @@
 package org.runite.jagex;
 
+import org.rs09.client.collections.HashTable;
+
 final class Class3_Sub28_Sub7_Sub1 extends Class3_Sub28_Sub7 {
 
    static Class93 aClass93_4043 = new Class93(64);
    private final Object anObject4044;
    static volatile int anInt4045 = 0;
-   static Class130 aClass130_4046 = new Class130(16);
+   static HashTable aHashTable_4046 = new HashTable(16);
    static MouseListeningClass aClass149_4047 = new MouseListeningClass();
    static CacheIndex aClass153_4048;
    static RSString aClass94_4049 = RSString.of("");

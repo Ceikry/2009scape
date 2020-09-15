@@ -112,7 +112,7 @@ final class Class115 {
       try {
          KeyboardListener.aClass93_1911.method1523((byte)-112);
 
-          Class80.aClass93_1131.method1523((byte)-100);
+          Unsorted.aClass93_1131.method1523((byte)-100);
       } catch (RuntimeException var2) {
          throw Class44.clientError(var2, "ph.C(" + (byte) -6 + ')');
       }

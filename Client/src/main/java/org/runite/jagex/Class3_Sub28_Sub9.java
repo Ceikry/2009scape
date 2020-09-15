@@ -1,4 +1,6 @@
 package org.runite.jagex;
+import org.rs09.client.collections.HashTable;
+
 import java.util.Calendar;
 
 final class Class3_Sub28_Sub9 extends Node {
@@ -67,7 +69,7 @@ final class Class3_Sub28_Sub9 extends Node {
             method582(88, 85, -8, true, 72, 12, 29, 96, 6, 57, -13, 15);
          }
 
-         Class3_Sub2.aClass130_2220 = new Class130(32);
+         Class3_Sub2.aHashTable_2220 = new HashTable(32);
       } catch (RuntimeException var2) {
          throw Class44.clientError(var2, "hn.B(" + var0 + ')');
       }

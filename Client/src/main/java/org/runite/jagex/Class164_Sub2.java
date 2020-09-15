@@ -243,9 +243,9 @@ class Class164_Sub2 extends Class164 {
 
    static void method2249(int var1) {
       try {
-         Linkable var2 = Class124.aClass130_1659.method1776((byte) 83 + -6);
+         Linkable var2 = Class124.aHashTable_1659.first();
 
-          for(; var2 != null; var2 = Class124.aClass130_1659.method1778(-97)) {
+          for(; var2 != null; var2 = Class124.aHashTable_1659.next()) {
             if((long) var1 == (65535L & var2.linkableKey >> 48)) {
                var2.unlink();
             }

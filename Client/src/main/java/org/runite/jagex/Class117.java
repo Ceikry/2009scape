@@ -74,7 +74,7 @@ final class Class117 {
    static void method1720(boolean var0, int var1) {
       try {
          Class129.anIntArray1695 = new int[104];
-         Class80.anIntArray1138 = new int[104];
+         Unsorted.anIntArray1138 = new int[104];
          Class85.anInt1174 = 99;
          MouseListeningClass.anIntArray1920 = new int[104];
          byte var2;

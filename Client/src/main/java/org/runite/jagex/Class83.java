@@ -1,14 +1,16 @@
 package org.runite.jagex;
 
+import org.rs09.client.collections.HashTable;
+
 final class Class83 {
 
    private final CacheIndex aClass153_1153;
    static Class3_Sub27 aClass3_Sub27_1154;
-   private final Class130 aClass130_1155 = new Class130(256);
+   private final HashTable aHashTable_1155 = new HashTable(256);
    static int anInt1156 = 0;
    private final CacheIndex aClass153_1157;
    static boolean aBoolean1158 = false;
-   private final Class130 aClass130_1159 = new Class130(256);
+   private final HashTable aHashTable_1159 = new HashTable(256);
 
 
    static void method1410(int var0, int var1, int var2, int var3, int var4, int var5, int var6, int var7, int var8, int var9, int var10) {
@@ -316,7 +318,7 @@ final class Class83 {
          int var5 = var4 ^ (var3 >>> 12 | var3 << 4 & '\ufff3');
          var5 |= var3 << 16;
          long var6 = (long)var5;
-         Class3_Sub12_Sub1 var8 = (Class3_Sub12_Sub1)this.aClass130_1159.method1780(var6);
+         Class3_Sub12_Sub1 var8 = (Class3_Sub12_Sub1)this.aHashTable_1159.get(var6);
          if(var8 != null) {
             return var8;
          } else if(null != var1 && var1[0] <= 0) {
@@ -327,7 +329,7 @@ final class Class83 {
                return null;
             } else {
                var8 = var9.method1812();
-               this.aClass130_1159.method1779(var8, var6);
+               this.aHashTable_1159.put(var6, var8);
                if(var1 != null) {
                   var1[0] -= var8.aByteArray3030.length;
                }
@@ -360,20 +362,20 @@ final class Class83 {
          int var5 = var3 ^ (var1 >>> 12 | '\ufff3' & var1 << 4);
          var5 |= var1 << 16;
          long var6 = (long)var5 ^ 4294967296L;
-         Class3_Sub12_Sub1 var8 = (Class3_Sub12_Sub1)this.aClass130_1159.method1780(var6);
+         Class3_Sub12_Sub1 var8 = (Class3_Sub12_Sub1)this.aHashTable_1159.get(var6);
          if(null != var8) {
             return var8;
          } else if(var2 != null && var2[0] <= 0) {
             return null;
          } else {
-            Class3_Sub14 var9 = (Class3_Sub14)this.aClass130_1155.method1780(var6);
+            Class3_Sub14 var9 = (Class3_Sub14)this.aHashTable_1155.get(var6);
             if(null == var9) {
                var9 = Class3_Sub14.method363(this.aClass153_1157, var1, var3);
                if(null == var9) {
                   return null;
                }
 
-               this.aClass130_1155.method1779(var9, var6);
+               this.aHashTable_1155.put(var6, var9);
             }
 
             var8 = var9.method359(var2);
@@ -381,7 +383,7 @@ final class Class83 {
                return null;
             } else {
                var9.unlink();
-               this.aClass130_1159.method1779(var8, var6);
+               this.aHashTable_1159.put(var6, var8);
 
                return var8;
             }

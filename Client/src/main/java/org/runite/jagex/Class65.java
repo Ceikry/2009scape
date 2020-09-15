@@ -151,7 +151,7 @@ final class Class65 {
                }
             }
 
-            Class130.anInt1705 = var7 * var3 / 334;
+            Unsorted.anInt1705 = var7 * var3 / 334;
          }
 
          Class96.anInt1358 = (short)var0;
@@ -180,7 +180,7 @@ final class Class65 {
          NPC.aClass3_Sub28_Sub16Array3977 = null;
          Class168.aClass3_Sub28_Sub17_2096 = null;
          Class57.aClass3_Sub28_Sub16_895 = null;
-         Class80.aClass3_Sub28_Sub16Array1136 = null;
+         Unsorted.aClass3_Sub28_Sub16Array1136 = null;
          Class3_Sub13.aClass3_Sub28_Sub17_2379 = null;
          Class45.aClass3_Sub28_Sub16_736 = null;
          Unsorted.aClass3_Sub28_Sub16Array996 = null;

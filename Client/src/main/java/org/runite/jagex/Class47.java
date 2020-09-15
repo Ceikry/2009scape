@@ -1,6 +1,7 @@
 package org.runite.jagex;
 
 import org.rs09.client.Linkable;
+import org.rs09.client.collections.HashTable;
 
 import java.util.Objects;
 
@@ -9,7 +10,7 @@ final class Class47 {
    static boolean aBoolean742 = false;
    static Class93 aClass93_743 = new Class93(20);
    private Node aClass3_Sub28_744 = new Node();
-   private final Class130 aClass130_745;
+   private final HashTable aHashTable_745;
    private final int anInt746;
    private final NodeList aClass13_747 = new NodeList();
    static CacheIndex quickChatMessages;
@@ -140,7 +141,7 @@ final class Class47 {
 
    final Node getNodeByID(long nodeID) {
       try {
-         Node var4 = (Node)this.aClass130_745.method1780(nodeID);
+         Node var4 = (Node)this.aHashTable_745.get(nodeID);
          if(null != var4) {
             this.aClass13_747.method879(var4);
          }
@@ -168,7 +169,7 @@ final class Class47 {
 
    final Linkable method1094() {
       try {
-         return this.aClass130_745.method1776(38);
+         return this.aHashTable_745.first();
       } catch (RuntimeException var3) {
          throw Class44.clientError(var3, "gn.A(" + 0 + ')');
       }
@@ -221,7 +222,7 @@ final class Class47 {
                      }
 
                      if (NPC.aBoolean3975 && Class85.aBoolean1167) {
-                        var17 = Class130.anInt1709;
+                        var17 = Unsorted.anInt1709;
                         var16 = Class126.anInt1676;
                         var17 -= Class95.anInt1336;
                         if (var17 < Class134.anInt1761) {
@@ -484,7 +485,7 @@ final class Class47 {
                            method1095(var16, -var11.anInt208 + var14, -var11.anInt247 + var13, var11.aClass11Array262, var18, var11.anInt279, var17, var19, (byte) 52, var12);
                         }
 
-                        Class3_Sub31 var36 = (Class3_Sub31) Class3_Sub13_Sub17.aClass130_3208.method1780((long) var11.anInt279);
+                        Class3_Sub31 var36 = (Class3_Sub31) Class3_Sub13_Sub17.aHashTable_3208.get((long) var11.anInt279);
                         if (var36 != null) {
                            if (var36.anInt2603 == 0 && !Class38_Sub1.aBoolean2615 && NPCDefinition.anInt1297 >= var16 && Class38_Sub1.anInt2612 >= var17 && NPCDefinition.anInt1297 < var18 && Class38_Sub1.anInt2612 < var19 && !Unsorted.aBoolean1040) {
                               Class140_Sub7.aClass94Array2935[0] = TextCore.HasCancel;
@@ -505,7 +506,7 @@ final class Class47 {
                         }
                      }
 
-                     if (Class130.aBooleanArray1712[var12] || Client.anInt3689 > 1) {
+                     if (Unsorted.aBooleanArray1712[var12] || Client.anInt3689 > 1) {
                         if (var11.type == 0 && !var11.usingScripts && var11.anInt252 > var11.anInt193) {
                            Class3_Sub13_Sub12.method224(var11.anInt208, var11.anInt252, var11.anInt168 + var13, var14, var11.anInt193);
                         }
@@ -554,7 +555,7 @@ final class Class47 {
                                              Class20.method909(-106, var11);
                                           } else if (Class67.aClass11_1017 == var11 && var20 == PacketParser.anInt86) {
                                              var25 = Class126.anInt1676 - Class129_Sub1.anInt2693;
-                                             var26 = -Unsorted.anInt40 + Class130.anInt1709;
+                                             var26 = -Unsorted.anInt40 + Unsorted.anInt1709;
                                              if (var26 < 5 && var26 > -5) {
                                                 var26 = 0;
                                              }
@@ -1090,7 +1091,7 @@ final class Class47 {
             --this.anInt749;
          }
 
-         this.aClass130_745.method1779(var1, var2);
+         this.aHashTable_745.put(var2, var1);
          this.aClass13_747.method879(var1);
       } catch (RuntimeException var6) {
          throw Class44.clientError(var6, "gn.L(" + (var1 != null?"{...}":"null") + ',' + var2 + ',' + var4 + ')');
@@ -1158,7 +1159,7 @@ final class Class47 {
    final Linkable method1099() {
       try {
 
-         return this.aClass130_745.method1778(-119);
+         return this.aHashTable_745.next();
       } catch (RuntimeException var3) {
          throw Class44.clientError(var3, "gn.F(" + -1 + ')');
       }
@@ -1189,7 +1190,7 @@ final class Class47 {
    final void method1101() {
       try {
          this.aClass13_747.method883();
-         this.aClass130_745.method1773(-112);
+         this.aHashTable_745.clear();
          this.aClass3_Sub28_744 = new Node();
 
          this.anInt749 = this.anInt746;
@@ -1206,7 +1207,7 @@ final class Class47 {
          }
 
          this.anInt746 = var1;
-         this.aClass130_745 = new Class130(var2);
+         this.aHashTable_745 = new HashTable(var2);
       } catch (RuntimeException var3) {
          throw Class44.clientError(var3, "gn.<init>(" + var1 + ')');
       }

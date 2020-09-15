@@ -186,7 +186,7 @@ final class Class49 {
                Class38_Sub1.anInt2612 = Class168.anInt2099;
             } else if(Class3_Sub28_Sub11.anInt3644 == 0) {
                NPCDefinition.anInt1297 = Class126.anInt1676;
-               Class38_Sub1.anInt2612 = Class130.anInt1709;
+               Class38_Sub1.anInt2612 = Unsorted.anInt1709;
             } else {
                NPCDefinition.anInt1297 = Class163_Sub1.anInt2993;
                Class38_Sub1.anInt2612 = Class38_Sub1.anInt2614;
@@ -210,7 +210,7 @@ final class Class49 {
                   Class163_Sub1_Sub1.aBooleanArray4008[var1] = true;
                }
 
-               Class130.aBooleanArray1712[var1] = Class3_Sub28_Sub14.aBooleanArray3674[var1];
+               Unsorted.aBooleanArray1712[var1] = Class3_Sub28_Sub14.aBooleanArray3674[var1];
                Class3_Sub28_Sub14.aBooleanArray3674[var1] = false;
             }
 
@@ -265,7 +265,7 @@ final class Class49 {
 
             if(Client.anInt3689 == 3) {
                for(int var2 = 0; Class3_Sub28_Sub3.anInt3557 > var2; ++var2) {
-                  if(!Class130.aBooleanArray1712[var2]) {
+                  if(!Unsorted.aBooleanArray1712[var2]) {
                      if(Class163_Sub1_Sub1.aBooleanArray4008[var2]) {
                         if(HDToolKit.highDetail) {
                            Class22.method930(Class155.anIntArray1969[var2], Player.anIntArray3954[var2], Class3_Sub28_Sub18.anIntArray3768[var2], Class140_Sub4.anIntArray2794[var2], 16711680, 128);

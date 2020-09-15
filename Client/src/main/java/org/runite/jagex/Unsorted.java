@@ -2,6 +2,7 @@ package org.runite.jagex;
 
 import org.rs09.client.util.ArrayUtils;
 
+import java.awt.*;
 import java.util.Objects;
 
 public class Unsorted {
@@ -62,6 +63,19 @@ public class Unsorted {
    public static Class61 aClass61_78 = new Class61();
    public static int anInt72 = 0;
    public static boolean[] aBooleanArray73 = new boolean[200];
+   public static RSString aClass94_1698 = RSString.of("(R");
+   public static boolean[] aBooleanArray1703;
+   public static int incomingPacketLength = 0;
+   public static int anInt1705 = 0;
+   public static int anInt1709 = 0;
+   public static int anInt1711 = -2;
+   public static boolean[] aBooleanArray1712 = new boolean[100];
+   public static Class93 aClass93_1131 = new Class93(5);
+   public static RSString aClass94_1133 = RSString.of(")4j");
+   public static Class93 aClass93_1135 = new Class93(4);
+   public static Class3_Sub28_Sub16[] aClass3_Sub28_Sub16Array1136;
+   public static int anInt1137 = 2;
+   public static int[] anIntArray1138;
 
    static void method2086() {
        try {
@@ -468,7 +482,7 @@ public class Unsorted {
 
                Class3_Sub13_Sub5.anInt3069 = GraphicDefinition.anInt549;
                Class126.anInt1676 = Class3_Sub21.anInt2493;
-               Class130.anInt1709 = Class95.anInt1340;
+               anInt1709 = Class95.anInt1340;
                Class3_Sub28_Sub11.anInt3644 = Class140_Sub3.anInt2743;
                Class163_Sub1.anInt2993 = RenderAnimationDefinition.anInt362;
                ++Class3_Sub28_Sub7_Sub1.anInt4045;
@@ -638,7 +652,7 @@ public class Unsorted {
       try {
          var1.readUnsignedByte();
          int var2 = var1.readUnsignedByte();
-         Class3_Sub13 var3 = Class130.method1777(var2);
+         Class3_Sub13 var3 = method1777(var2);
          Objects.requireNonNull(var3).anInt2381 = var1.readUnsignedByte();
          int var4 = var1.readUnsignedByte();
          for(int var5 = 0; var5 < var4; ++var5) {
@@ -1029,7 +1043,7 @@ public class Unsorted {
                Class158.method2183(var0.anInt279, var1, var4, var5, var0.aClass11Array262);
            }
 
-           Class3_Sub31 var6 = (Class3_Sub31) Class3_Sub13_Sub17.aClass130_3208.method1780((long) var0.anInt279);
+           Class3_Sub31 var6 = (Class3_Sub31) Class3_Sub13_Sub17.aHashTable_3208.get((long) var0.anInt279);
            if (var6 != null) {
                Class75_Sub4.method1352(var5, var1, var6.anInt2602, var4);
            }
@@ -1126,9 +1140,216 @@ public class Unsorted {
          Class119.aClass153_1628 = var4;
 
          GameObject.aClass11ArrayArray1834 = new RSInterface[Class3_Sub13_Sub29.aClass153_3361.method2121()][];
-         Class130.aBooleanArray1703 = new boolean[Class3_Sub13_Sub29.aClass153_3361.method2121()];
+         aBooleanArray1703 = new boolean[Class3_Sub13_Sub29.aClass153_3361.method2121()];
       } catch (RuntimeException var6) {
          throw Class44.clientError(var6, "ab.J(" + true + ',' + (var1 != null?"{...}":"null") + ',' + (var2 != null?"{...}":"null") + ',' + (var3 != null?"{...}":"null") + ',' + (var4 != null?"{...}":"null") + ')');
+      }
+   }
+
+   public static void method1772(int plane, int animId, int dummy, NPC var3) {
+      try {
+         if(var3.anInt2771 == animId && -1 != animId) {
+            AnimationDefinition var4 = Client.getAnimationDefinition(animId);
+            int var5 = var4.anInt1845;
+            if(var5 == 1) {
+               var3.anInt2776 = 1;
+               var3.anInt2832 = 0;
+               var3.anInt2760 = 0;
+               var3.anInt2773 = 0;
+               var3.anInt2828 = plane;
+               method1470(var3.anInt2829, var4, 183921384, var3.anInt2819, false, var3.anInt2832);
+            }
+
+            if(var5 == 2) {
+               var3.anInt2773 = 0;
+            }
+         } else if(animId == -1 || -1 == var3.anInt2771 || Client.getAnimationDefinition(animId).anInt1857 >= Client.getAnimationDefinition(var3.anInt2771).anInt1857) {
+            var3.anInt2760 = 0;
+            var3.anInt2771 = animId;
+            var3.anInt2776 = 1;
+            var3.anInt2773 = 0;
+            var3.anInt2828 = plane;
+            var3.anInt2811 = var3.anInt2816;
+            var3.anInt2832 = 0;
+            if(var3.anInt2771 != -1) {
+               method1470(var3.anInt2829, Client.getAnimationDefinition(var3.anInt2771), dummy + 183921345, var3.anInt2819, false, var3.anInt2832);
+            }
+         }
+
+         if(dummy != 39) {
+            anInt1711 = 41;
+         }
+
+      } catch (RuntimeException var6) {
+         throw Class44.clientError(var6, "sc.J(" + plane + ',' + animId + ',' + dummy + ',' + (var3 != null?"{...}":"null") + ')');
+      }
+   }
+
+   public static void method1775() {
+      for(int var0 = 0; var0 < Class3_Sub13_Sub5.anInt3070; ++var0) {
+         Class25 var1 = AnimationDefinition.aClass25Array1868[var0];
+         Class158.method2186(var1);
+         AnimationDefinition.aClass25Array1868[var0] = null;
+      }
+
+      Class3_Sub13_Sub5.anInt3070 = 0;
+   }
+
+   public static Class3_Sub13 method1777(int var0) {
+      try {
+         if(var0 == 0) {
+            return new Class3_Sub13_Sub22();
+         } else if(var0 == 1) {
+            return new Class3_Sub13_Sub11();
+         } else if (2 == var0) {
+            return new Class3_Sub13_Sub31();
+         } else if (var0 == 3) {
+            return new Class3_Sub13_Sub29();
+         } else if (var0 == 4) {
+            return new Class3_Sub13_Sub19();
+         } else if (var0 == 5) {
+            return new Class3_Sub13_Sub24();
+         } else if (var0 == 6) {
+            return new Class3_Sub13_Sub2();
+         } else if (var0 == 7) {
+            return new Class3_Sub13_Sub27();
+         } else if (var0 == 8) {
+            return new Class3_Sub13_Sub39();
+         } else if (9 == var0) {
+            return new Class3_Sub13_Sub8();
+         } else if (10 == var0) {
+            return new Class3_Sub13_Sub37();
+         } else if (var0 == 11) {
+            return new Class3_Sub13_Sub20();
+         } else if (var0 == 12) {
+            return new Class3_Sub13_Sub1();
+         } else if (var0 == 13) {
+            return new Class3_Sub13_Sub30();
+         } else if (14 == var0) {
+            return new Class3_Sub13_Sub32();
+         } else if (var0 == 15) {
+            return new Class3_Sub13_Sub16();
+         } else if (var0 == 16) {
+            return new Class3_Sub13_Sub9();
+         } else if (17 == var0) {
+            return new Class3_Sub13_Sub15();
+         } else if (var0 == 18) {
+            return new Class3_Sub13_Sub23_Sub1();
+         } else if (var0 == 19) {
+            return new Class3_Sub13_Sub18();
+         } else if (var0 == 20) {
+            return new Class3_Sub13_Sub13();
+         } else if (21 == var0) {
+            return new Class3_Sub13_Sub5();
+         } else if (22 == var0) {
+            return new Class3_Sub13_Sub35();
+         } else if (var0 == 23) {
+            return new Class3_Sub13_Sub17();
+         } else if (24 == var0) {
+            return new Class3_Sub13_Sub12();
+         } else if (var0 == 25) {
+            return new Class3_Sub13_Sub34();
+         } else if (var0 == 26) {
+            return new Class3_Sub13_Sub6();
+         } else if (27 == var0) {
+            return new Class3_Sub13_Sub7();
+         } else if (var0 == 28) {
+            return new Class3_Sub13_Sub25();
+         } else if (var0 == 29) {
+            return new Class3_Sub13_Sub33();
+         } else if (var0 == 30) {
+            return new Class3_Sub13_Sub10();
+         } else if (31 == var0) {
+            return new Class3_Sub13_Sub14();
+         } else if (32 == var0) {
+            return new Class3_Sub13_Sub28();
+         } else if (33 == var0) {
+            return new Class3_Sub13_Sub3();
+         } else if (var0 == 34) {
+            return new Class3_Sub13_Sub4();
+         } else if (var0 == 35) {
+            return new Class3_Sub13_Sub26();
+         } else if (var0 == 36) {
+            return new Class3_Sub13_Sub36();
+         } else if (var0 == 37) {
+            return new Class3_Sub13_Sub21();
+         } else if (38 == var0) {
+            return new Class3_Sub13_Sub38();
+         } else if (39 == var0) {
+            return new Class3_Sub13_Sub23();
+         } else {
+
+            return null;
+         }
+      } catch (RuntimeException var3) {
+         throw Class44.clientError(var3, "sc.I(" + var0 + ')');
+      }
+   }
+
+   public static void method1783(Component var1) {
+      try {
+         var1.removeMouseListener(Class3_Sub28_Sub7_Sub1.aClass149_4047);
+         var1.removeMouseMotionListener(Class3_Sub28_Sub7_Sub1.aClass149_4047);
+         var1.removeFocusListener(Class3_Sub28_Sub7_Sub1.aClass149_4047);
+         GraphicDefinition.anInt549 = 0;
+      } catch (RuntimeException var3) {
+         throw Class44.clientError(var3, "sc.M(" + (var1 != null?"{...}":"null") + ')');
+      }
+   }
+
+   public static long method1395(int var0, int var1, int var2) {
+      Class3_Sub2 var3 = Class75_Sub2.aClass3_Sub2ArrayArrayArray2638[var0][var1][var2];
+      return var3 != null && var3.aClass19_2233 != null?var3.aClass19_2233.aLong428:0L;
+   }
+
+   public static void method1396(int var0) {
+      try {
+         int var2 = Class106.anInt1442;
+         int var1 = Class84.anInt1164;
+         int var4 = -Class140_Sub7.anInt2934 + (Class70.anInt1047 - var2);
+         int var3 = -var1 + Class3_Sub9.anInt2334 - Class23.anInt454;
+         if(~var1 < var0 || var3 > 0 || var2 > 0 || var4 > 0) {
+            try {
+               Object var5;
+               if(null != Class3_Sub13_Sub10.aFrame3121) {
+                  var5 = Class3_Sub13_Sub10.aFrame3121;
+               } else if(GameShell.frame == null) {
+                  var5 = Class38.aClass87_665.anApplet1219;
+               } else {
+                  var5 = GameShell.frame;
+               }
+
+               int var7 = 0;
+               int var6 = 0;
+               if(GameShell.frame == var5) {
+                  Insets var8 = GameShell.frame.getInsets();
+                  var6 = var8.left;
+                  var7 = var8.top;
+               }
+
+               Graphics var11 = ((Container)var5).getGraphics();
+               var11.setColor(Color.black);
+               if(var1 > 0) {
+                  var11.fillRect(var6, var7, var1, Class70.anInt1047);
+               }
+
+               if(0 < var2) {
+                  var11.fillRect(var6, var7, Class3_Sub9.anInt2334, var2);
+               }
+
+               if(var3 > 0) {
+                  var11.fillRect(-var3 + var6 + Class3_Sub9.anInt2334, var7, var3, Class70.anInt1047);
+               }
+
+               if(var4 > 0) {
+                  var11.fillRect(var6, -var4 + var7 + Class70.anInt1047, Class3_Sub9.anInt2334, var4);
+               }
+            } catch (Exception var9) {
+            }
+         }
+
+      } catch (RuntimeException var10) {
+         throw Class44.clientError(var10, "l.A(" + var0 + ')');
       }
    }
 }

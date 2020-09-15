@@ -161,7 +161,7 @@ static RSString[] aClass94Array3238 = new RSString[]{aClass94_3237, aClass94_324
       try {
          Class3_Sub13_Sub1.outgoingBuffer.putOpcode(184);
 
-         for(Class3_Sub31 var1 = (Class3_Sub31)Class3_Sub13_Sub17.aClass130_3208.method1776(124); null != var1; var1 = (Class3_Sub31)Class3_Sub13_Sub17.aClass130_3208.method1778(-79)) {
+         for(Class3_Sub31 var1 = (Class3_Sub31)Class3_Sub13_Sub17.aHashTable_3208.first(); null != var1; var1 = (Class3_Sub31)Class3_Sub13_Sub17.aHashTable_3208.next()) {
             if(var1.anInt2603 == 0) {
                Class3_Sub13_Sub18.method254(true, var1);
             }

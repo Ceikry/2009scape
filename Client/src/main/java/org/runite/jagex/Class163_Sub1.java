@@ -48,7 +48,7 @@ class Class163_Sub1 extends Class163 {
                   if(Class38_Sub1.aBoolean2615) {
                      int var11;
                      if(var1 != 1) {
-                        var3 = Class130.anInt1709;
+                        var3 = Unsorted.anInt1709;
                         var11 = Class126.anInt1676;
                         if(AbstractIndexedSprite.anInt1462 - 10 > var11 || Class3_Sub28_Sub3.anInt3552 + (AbstractIndexedSprite.anInt1462 - -10) < var11 || var3 < -10 + Class3_Sub13_Sub33.anInt3395 || Class3_Sub28_Sub1.anInt3537 + (Class3_Sub13_Sub33.anInt3395 - -10) < var3) {
                            Class38_Sub1.aBoolean2615 = false;

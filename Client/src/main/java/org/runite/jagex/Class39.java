@@ -46,7 +46,7 @@ final class Class39 {
 				}
 
 				GraphicDefinition.incomingBuffer.method818();
-				var6 = (-GraphicDefinition.incomingBuffer.index + Class130.incomingPacketLength) / 16;
+				var6 = (-GraphicDefinition.incomingBuffer.index + Unsorted.incomingPacketLength) / 16;
 				Class3_Sub9.regionXteaKeys = new int[var6][4];
 
 				for(var7 = 0; var6 > var7; ++var7) {
@@ -105,7 +105,7 @@ final class Class39 {
 				Class73.method1301(plane, var7, var3, var5, false, sceneX);
 			} else {
 				sceneX = GraphicDefinition.incomingBuffer.getShortA(-128);
-				var3 = (Class130.incomingPacketLength - GraphicDefinition.incomingBuffer.index) / 16;
+				var3 = (Unsorted.incomingPacketLength - GraphicDefinition.incomingBuffer.index) / 16;
 				Class3_Sub9.regionXteaKeys = new int[var3][4];
 
 				for(plane = 0; var3 > plane; ++plane) {

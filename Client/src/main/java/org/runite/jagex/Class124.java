@@ -1,8 +1,10 @@
 package org.runite.jagex;
 
+import org.rs09.client.collections.HashTable;
+
 final class Class124 {
 
-   static Class130 aClass130_1659 = new Class130(512);
+   static HashTable aHashTable_1659 = new HashTable(512);
    static CacheIndex aClass153_1661;
 
 

@@ -103,7 +103,7 @@ final class Class56 {
          Class67.aByteArrayArrayArray1014 = (byte[][][])null;
          Class139.aByteArrayArrayArray1828 = (byte[][][])null;
          Class3_Sub13_Sub36.aByteArrayArrayArray3430 = (byte[][][])null;
-         Class80.anIntArray1138 = null;
+         Unsorted.anIntArray1138 = null;
          Class129.anIntArray1695 = null;
          Class3_Sub31.anIntArray2606 = null;
       } catch (RuntimeException var2) {

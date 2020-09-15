@@ -20,7 +20,7 @@ final class Class3_Sub29 extends Linkable {
    static void method727() {
       try {
          KeyboardListener.aClass93_1911.method1524();
-         Class80.aClass93_1131.method1524();
+         Unsorted.aClass93_1131.method1524();
       } catch (RuntimeException var2) {
          throw Class44.clientError(var2, "sj.O(" + 91 + ')');
       }
@@ -184,7 +184,7 @@ final class Class3_Sub29 extends Linkable {
                   var4 = RenderAnimationDefinition.method903(new RSString[]{var4, TextCore.HasExpires, Class15.method894(94608000000L + Class5.method830((byte)-55), (byte)52), TextCore.HasMaxAge, Class3_Sub28_Sub12.method612(94608000L, (byte)102)}, (byte)-80);
                }
 
-               RenderAnimationDefinition.method903(new RSString[]{Class129.aClass94_1694, var4, Class130.aClass94_1698}, (byte)-84).method1554(Class38.aClass87_665.anApplet1219);
+               RenderAnimationDefinition.method903(new RSString[]{Class129.aClass94_1694, var4, Unsorted.aClass94_1698}, (byte)-84).method1554(Class38.aClass87_665.anApplet1219);
             } catch (Throwable var5) {
             }
 

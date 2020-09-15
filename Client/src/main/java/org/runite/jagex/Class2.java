@@ -59,7 +59,7 @@ final class Class2 {
 							method75(var4.aClass11Array262, var2);
 						}
 
-						Class3_Sub31 var5 = (Class3_Sub31)Class3_Sub13_Sub17.aClass130_3208.method1780((long)var4.anInt279);
+						Class3_Sub31 var5 = (Class3_Sub31)Class3_Sub13_Sub17.aHashTable_3208.get((long)var4.anInt279);
 						if(null != var5) {
 							Class3_Sub8.method124(49, var2, var5.anInt2602);
 						}

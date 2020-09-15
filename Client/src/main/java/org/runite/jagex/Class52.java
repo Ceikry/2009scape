@@ -23,7 +23,7 @@ final class Class52 {
       try {
 
          long var9 = (long)var3 | (long)(var7 << 16) | (long)var2 << 32;
-         Model var11 = (Model)Class80.aClass93_1131.get(var9);
+         Model var11 = (Model) Unsorted.aClass93_1131.get(var9);
          if(null == var11) {
             Model_Sub1[] var12 = new Model_Sub1[3];
             int var13 = 0;
@@ -53,7 +53,7 @@ final class Class52 {
             }
 
             var11 = var14.method2008(64, 768, -50, -10, -50);
-            Class80.aClass93_1131.put((byte)-111, var11, var9);
+            Unsorted.aClass93_1131.put((byte)-111, var11, var9);
          }
 
          if(null != var5) {
@@ -818,7 +818,7 @@ final class Class52 {
    final Model method1167(int var1, AnimationDefinition var3, int var4, int var5) {
       try {
          if(this.pnpcId == -1) {
-            Model var6 = (Model)Class80.aClass93_1131.get(this.aLong860);
+            Model var6 = (Model) Unsorted.aClass93_1131.get(this.aLong860);
 
             if(var6 == null) {
                boolean var7 = false;
@@ -872,7 +872,7 @@ final class Class52 {
                }
 
                var6 = var15.method2008(64, 768, -50, -10, -50);
-               Class80.aClass93_1131.put((byte)-102, var6, this.aLong860);
+               Unsorted.aClass93_1131.put((byte)-102, var6, this.aLong860);
             }
 
             if(var3 != null) {

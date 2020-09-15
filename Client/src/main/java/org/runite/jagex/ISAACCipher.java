@@ -247,7 +247,7 @@ final class ISAACCipher {
             Class74.method1312(var1, 20 + var2, var3, -20 + var4, Class3_Sub28_Sub6.anInt3600, -Unsorted.anInt963 + 256);
          }
 
-         var6 = Class130.anInt1709;
+         var6 = Unsorted.anInt1709;
          var5 = Class126.anInt1676;
          int var7;
          int var8;

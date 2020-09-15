@@ -1,5 +1,6 @@
 package org.runite.jagex;
 import org.rs09.client.Linkable;
+import org.rs09.client.collections.HashTable;
 
 import java.awt.Component;
 import java.nio.charset.StandardCharsets;
@@ -72,7 +73,7 @@ final class ItemDefinition {
 	int anInt795;
 	private int anInt796;
 	private int anInt797;
-	Class130 aClass130_798;
+	HashTable aHashTable_798;
 	int anInt799;
 	int anInt800;
 	RSString[] groundOptions;
@@ -132,17 +133,17 @@ final class ItemDefinition {
 			  int var9;
 			  int var10;
 			  if(var8 > 0) {
-				 var2.switchHashTable = new Class130[var8];
+				 var2.switchHashTable = new HashTable[var8];
 
 				 for(var9 = 0; var9 < var8; ++var9) {
 					var10 = var4.getShort();
-					Class130 var11 = new Class130(Class95.method1585((byte)119, var10));
+					HashTable var11 = new HashTable(Class95.method1585((byte)119, var10));
 					var2.switchHashTable[var9] = var11;
 
 					while(var10-- > 0) {
 					   int var12 = var4.readInt();
 					   int var13 = var4.readInt();
-					   var11.method1779(new Class3_Sub18(var13), (long)var12);
+					   var11.put((long)var12, new Class3_Sub18(var13));
 					}
 				 }
 			  }
@@ -501,8 +502,8 @@ final class ItemDefinition {
 						continue;
 					}
 					if (opcode == 51) {
-						Class130 class130 = currentMethod.switchHashTable[instructionOperands[programCounter]];
-						Class3_Sub18 class3_sub18 = (Class3_Sub18) class130.method1780(intsStack[--iStackCounter]);
+						HashTable hashTable = currentMethod.switchHashTable[instructionOperands[programCounter]];
+						Class3_Sub18 class3_sub18 = (Class3_Sub18) hashTable.get(intsStack[--iStackCounter]);
 						if (null != class3_sub18)
 							programCounter += class3_sub18.anInt2467;
 						continue;
@@ -1204,7 +1205,7 @@ final class ItemDefinition {
 														break;
 													int k13 = intsStack[--iStackCounter];
 													Class3_Sub28_Sub13 class3_sub28_sub13 = Class3_Sub13_Sub36.method342(k13);
-													intsStack[iStackCounter++] = class3_sub28_sub13.aClass130_3663.method1781(79);
+													intsStack[iStackCounter++] = class3_sub28_sub13.aHashTable_3663.size();
 													continue;
 												}
 												if (3700 > opcode) {
@@ -2606,7 +2607,7 @@ final class ItemDefinition {
 																			int l34 = intsStack[--iStackCounter];
 																			if (l34 < 0 || l34 > 2)
 																				l34 = 0;
-																			Class80.anInt1137 = l34;
+																			Unsorted.anInt1137 = l34;
 																			Class119.method1730(Class38.aClass87_665);
 																			Class140_Sub2.aBoolean2705 = false;
 																			continue;
@@ -2782,7 +2783,7 @@ final class ItemDefinition {
 																			continue;
 																		}
 																		if (opcode == 6111) {
-																			intsStack[iStackCounter++] = Class80.anInt1137;
+																			intsStack[iStackCounter++] = Unsorted.anInt1137;
 																			continue;
 																		}
 																		if (6112 == opcode) {
@@ -3104,7 +3105,7 @@ final class ItemDefinition {
 																}
 																if (opcode == 5606) {
 																	if (Canvas_Sub1.registryStage == 0)
-																		Class130.anInt1711 = -2;
+																		Unsorted.anInt1711 = -2;
 																	continue;
 																}
 																if (opcode == 5607) {
@@ -3116,7 +3117,7 @@ final class ItemDefinition {
 																	continue;
 																}
 																if (5609 == opcode) {
-																	intsStack[iStackCounter++] = Class130.anInt1711;
+																	intsStack[iStackCounter++] = Unsorted.anInt1711;
 																	continue;
 																}
 																if (opcode == 5610) {
@@ -3473,7 +3474,7 @@ final class ItemDefinition {
 										}
 										if (opcode == 2702) {
 											int l42 = intsStack[--iStackCounter];
-											Class3_Sub31 class3_sub31 = (Class3_Sub31) Class3_Sub13_Sub17.aClass130_3208.method1780(l42);
+											Class3_Sub31 class3_sub31 = (Class3_Sub31) Class3_Sub13_Sub17.aHashTable_3208.get(l42);
 											if (class3_sub31 == null)
 												intsStack[iStackCounter++] = 0;
 											else
@@ -3505,7 +3506,7 @@ final class ItemDefinition {
 										iStackCounter -= 2;
 										int i43 = intsStack[iStackCounter];
 										int j65 = intsStack[iStackCounter + 1];
-										Class3_Sub31 class3_sub31_1 = (Class3_Sub31) Class3_Sub13_Sub17.aClass130_3208.method1780(i43);
+										Class3_Sub31 class3_sub31_1 = (Class3_Sub31) Class3_Sub13_Sub17.aHashTable_3208.get(i43);
 										if (class3_sub31_1 == null || class3_sub31_1.anInt2602 != j65)
 											intsStack[iStackCounter++] = 0;
 										else
@@ -3975,11 +3976,11 @@ final class ItemDefinition {
 
 	private RSString method1105(RSString var2, int var3) {
 		try {
-			if(this.aClass130_798 == null) {
+			if(this.aHashTable_798 == null) {
 				return var2;
 			} else {
 
-				Class3_Sub29 var4 = (Class3_Sub29)this.aClass130_798.method1780((long)var3);
+				Class3_Sub29 var4 = (Class3_Sub29)this.aHashTable_798.get((long)var3);
 				return null != var4?var4.aClass94_2586:var2;
 			}
 		} catch (RuntimeException var5) {
@@ -4063,7 +4064,7 @@ final class ItemDefinition {
 		try {
 			this.aByteArray785 = var2.aByteArray785;
 			this.wornModelPositionZ = var2.wornModelPositionZ;
-			this.aClass130_798 = var2.aClass130_798;
+			this.aHashTable_798 = var2.aHashTable_798;
 			this.anInt769 = var2.anInt769;
 			this.anInt761 = var2.anInt761;
 			this.wornModelPositionY = var2.wornModelPositionY;
@@ -4337,9 +4338,9 @@ final class ItemDefinition {
 					buffer.getShort();
 				} else if (249 == opcode) {
 					var5 = buffer.readUnsignedByte();
-					if (null == this.aClass130_798) {
+					if (null == this.aHashTable_798) {
 						var6 = Class95.method1585((byte) 97, var5);
-						this.aClass130_798 = new Class130(var6);
+						this.aHashTable_798 = new HashTable(var6);
 					}
 
 					for (var6 = 0; var6 < var5; ++var6) {
@@ -4352,7 +4353,7 @@ final class ItemDefinition {
 							var9 = new Class3_Sub18(buffer.readInt());
 						}
 
-						this.aClass130_798.method1779((Linkable) var9, (long) var8);
+						this.aHashTable_798.put((long) var8, (Linkable) var9);
 					}
 				}
 			}
@@ -4364,10 +4365,10 @@ final class ItemDefinition {
 
 	final int method1115(int var1, int var2, int var3) {
 		try {
-			if(this.aClass130_798 == null) {
+			if(this.aHashTable_798 == null) {
 				return var1;
 			} else {
-				Class3_Sub18 var5 = (Class3_Sub18)this.aClass130_798.method1780((long)var3);
+				Class3_Sub18 var5 = (Class3_Sub18)this.aHashTable_798.get((long)var3);
 				return null != var5?var5.anInt2467:var1;
 			}
 		} catch (RuntimeException var6) {

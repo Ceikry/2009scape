@@ -16,7 +16,7 @@ final class Class21 {
          Class3_Sub13_Sub1.outgoingBuffer.index = 0;
          Class7.anInt2166 = -1;
          Class38_Sub1.aBoolean2615 = false;
-         Class130.incomingPacketLength = 0;
+         Unsorted.incomingPacketLength = 0;
          Class65.anInt987 = 0;
          Class3_Sub13_Sub34.anInt3415 = 0;
          Class3_Sub29.anInt2582 = -1;
@@ -71,7 +71,7 @@ final class Class21 {
          Class3_Sub31 var4 = new Class3_Sub31();
          var4.anInt2603 = walkable;
          var4.anInt2602 = interfaceId;
-         Class3_Sub13_Sub17.aClass130_3208.method1779(var4, (long)interfaceHash);
+         Class3_Sub13_Sub17.aHashTable_3208.put((long)interfaceHash, var4);
          Class3_Sub13_Sub13.method232(interfaceId);
          RSInterface var5 = Class7.getRSInterface(interfaceHash);
          if(var5 == null) {

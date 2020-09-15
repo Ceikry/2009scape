@@ -3,6 +3,7 @@ package org.runite.jagex;
 import org.rs09.client.Linkable;
 import org.rs09.client.filestore.ReferenceTable;
 import org.rs09.client.filestore.ResourceProvider;
+import org.rs09.client.collections.HashTable;
 
 import java.util.Objects;
 
@@ -10,7 +11,7 @@ final class Class151_Sub1 extends ResourceProvider {
 
     private final Class41 aClass41_2943;
     private ReferenceTable aReferenceTable_2944;
-    private final Class130 aClass130_2946 = new Class130(16);
+    private final HashTable aHashTable_2946 = new HashTable(16);
     private final int anInt2947;
     private int anInt2948 = 0;
     private byte[] aByteArray2949;
@@ -267,7 +268,7 @@ final class Class151_Sub1 extends ResourceProvider {
             }
 
             if (this.aBoolean2968 && this.aLong2967 <= Class5.method830((byte) -55)) {
-                for (Class3_Sub28_Sub10 var6 = (Class3_Sub28_Sub10) this.aClass130_2946.method1776(71); var6 != null; var6 = (Class3_Sub28_Sub10) this.aClass130_2946.method1778(-115)) {
+                for (Class3_Sub28_Sub10 var6 = (Class3_Sub28_Sub10) this.aHashTable_2946.first(); var6 != null; var6 = (Class3_Sub28_Sub10) this.aHashTable_2946.next()) {
                     if (!var6.aBoolean3632) {
                         if (var6.aBoolean3635) {
                             if (!var6.aBoolean3628) {
@@ -291,7 +292,7 @@ final class Class151_Sub1 extends ResourceProvider {
     }
 
     public final int percentComplete(int var1) {
-            Class3_Sub28_Sub10 var3 = (Class3_Sub28_Sub10) this.aClass130_2946.method1780((long) var1);
+            Class3_Sub28_Sub10 var3 = (Class3_Sub28_Sub10) this.aHashTable_2946.get((long) var1);
             return null != var3 ? var3.method586() : 0;
     }
 
@@ -310,7 +311,7 @@ final class Class151_Sub1 extends ResourceProvider {
 
     private Class3_Sub28_Sub10 method2109(int var1, int archiveIndex, int var3) {
         try {
-            Object var4 = this.aClass130_2946.method1780((long) archiveIndex);
+            Object var4 = this.aHashTable_2946.get((long) archiveIndex);
             if (null != var4 && var1 == 0 && !((Class3_Sub28_Sub10) var4).aBoolean3628 && ((Class3_Sub28_Sub10) var4).aBoolean3632) {
                 ((Class3_Sub28_Sub10) var4).unlink();
                 var4 = null;
@@ -353,7 +354,7 @@ final class Class151_Sub1 extends ResourceProvider {
                     var4 = this.aClass66_2953.addJS5Request(this.anInt2957, (byte) 2, archiveIndex, false);
                 }
 
-                this.aClass130_2946.method1779((Linkable) var4, (long) archiveIndex);
+                this.aHashTable_2946.put((long) archiveIndex, (Linkable) var4);
             }
 
             if (((Class3_Sub28_Sub10) Objects.requireNonNull(var4)).aBoolean3632) {
@@ -408,7 +409,7 @@ final class Class151_Sub1 extends ResourceProvider {
                         ((Class3_Sub28_Sub10) var4).unlink();
                         if (((Class3_Sub28_Sub10) var4).aBoolean3628 && !this.aClass66_2953.method1251()) {
                             var12 = this.aClass66_2953.addJS5Request(this.anInt2957, (byte) 2, archiveIndex, true);
-                            this.aClass130_2946.method1779(var12, (long) archiveIndex);
+                            this.aHashTable_2946.put((long) archiveIndex, var12);
                         }
 
                         return null;
@@ -441,7 +442,7 @@ final class Class151_Sub1 extends ResourceProvider {
                         ((Class3_Sub28_Sub10) var4).unlink();
                         if (((Class3_Sub28_Sub10) var4).aBoolean3628 && !this.aClass66_2953.method1251()) {
                             var12 = this.aClass66_2953.addJS5Request(this.anInt2957, (byte) 2, archiveIndex, true);
-                            this.aClass130_2946.method1779(var12, (long) archiveIndex);
+                            this.aHashTable_2946.put((long) archiveIndex, var12);
                         }
 
                         return null;

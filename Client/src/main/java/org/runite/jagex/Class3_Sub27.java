@@ -1,20 +1,21 @@
 package org.runite.jagex;
 
 import org.rs09.client.Linkable;
+import org.rs09.client.collections.HashTable;
 
 final class Class3_Sub27 extends Linkable {
 
-   Class130 aClass130_2564;
+   HashTable aHashTable_2564;
    byte[] aByteArray2565;
 
 
    final void method515() {
-      this.aClass130_2564 = null;
+      this.aHashTable_2564 = null;
    }
 
    final void method516() {
-      if(this.aClass130_2564 == null) {
-         this.aClass130_2564 = new Class130(16);
+      if(this.aHashTable_2564 == null) {
+         this.aHashTable_2564 = new HashTable(16);
          int[] var1 = new int[16];
          int[] var2 = new int[16];
          var1[9] = var2[9] = 128;
@@ -73,10 +74,10 @@ final class Class3_Sub27 extends Linkable {
                   var11 = var7 >> 16 & 127;
                   if(var11 > 0) {
                      int var12 = var2[var9];
-                     Class3_Sub6 var13 = (Class3_Sub6)this.aClass130_2564.method1780((long)var12);
+                     Class3_Sub6 var13 = (Class3_Sub6)this.aHashTable_2564.get((long)var12);
                      if(var13 == null) {
                         var13 = new Class3_Sub6(new byte[128]);
-                        this.aClass130_2564.method1779(var13, (long)var12);
+                        this.aHashTable_2564.put((long)var12, var13);
                      }
 
                      var13.aByteArray2289[var10] = 1;

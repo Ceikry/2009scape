@@ -2,6 +2,7 @@ package org.runite.jagex;
 
 import org.runite.GameLaunch;
 import org.rs09.client.util.ArrayUtils;
+import org.rs09.client.collections.HashTable;
 
 import java.applet.Applet;
 import java.awt.FontMetrics;
@@ -914,10 +915,10 @@ final class RSString implements Interface3 {
             Class<RSString> var4 = RSString.class;
             synchronized (var4) {
                 Class3_Sub29 var5;
-                if (Class86.aClass130_1194 == null) {
-                    Class86.aClass130_1194 = new Class130(4096);
+                if (Class86.aHashTable_1194 == null) {
+                    Class86.aHashTable_1194 = new HashTable(4096);
                 } else {
-                    for (var5 = (Class3_Sub29) Class86.aClass130_1194.method1780(var2); null != var5; var5 = (Class3_Sub29) Class86.aClass130_1194.method1784()) {
+                    for (var5 = (Class3_Sub29) Class86.aHashTable_1194.get(var2); null != var5; var5 = (Class3_Sub29) Class86.aHashTable_1194.nextInBucket()) {
                         if (this.equalsString(var5.aClass94_2586)) {
                             return var5.aClass94_2586;
                         }
@@ -928,7 +929,7 @@ final class RSString implements Interface3 {
 
                 var5.aClass94_2586 = this;
                 this.aBoolean2152 = false;
-                Class86.aClass130_1194.method1779(var5, var2);
+                Class86.aHashTable_1194.put(var2, var5);
             }
 
             return this;

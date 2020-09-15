@@ -111,7 +111,7 @@ final class Class3_Sub28_Sub10_Sub2 extends Class3_Sub28_Sub10 {
 
 	            if(var0) {
 	               Class163_Sub1_Sub1.method2215(Class3_Sub28_Sub12.aCanvas3648);
-	               Class130.method1783(Class3_Sub28_Sub12.aCanvas3648);
+	               Unsorted.method1783(Class3_Sub28_Sub12.aCanvas3648);
 	               if(null != Class38.aClass146_668) {
 	                  Class38.aClass146_668.method2082(Class3_Sub28_Sub12.aCanvas3648);
 	               }
@@ -159,7 +159,7 @@ final class Class3_Sub28_Sub10_Sub2 extends Class3_Sub28_Sub10 {
 	                  } catch (Exception var9) {
 					   }
 
-	                  Class80.method1396(-1);
+	                  Unsorted.method1396(-1);
 	                  if(var3 == 0) {
 	                     Class164_Sub1.aClass158_3009 = Class3_Sub13_Sub23_Sub1.method285(503, 765, Class3_Sub28_Sub12.aCanvas3648);
 	                  } else {

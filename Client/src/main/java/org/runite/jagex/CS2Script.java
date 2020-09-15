@@ -34,7 +34,7 @@ final class CS2Script extends Linkable {
          Class132.anInt1734 = 0;
          GraphicDefinition.anInt548 = 0;
          Canvas_Sub1.registryStage = 1;
-         Class130.anInt1711 = -3;
+         Unsorted.anInt1711 = -3;
       } catch (RuntimeException var6) {
          throw Class44.clientError(var6, "jl.C(" + year + ',' + country + ',' + day + ',' + month + ',' + 1 + ')');
       }

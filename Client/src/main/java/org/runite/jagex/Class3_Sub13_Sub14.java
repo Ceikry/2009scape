@@ -70,7 +70,7 @@ final class Class3_Sub13_Sub14 extends Class3_Sub13 {
             renderNPCs(96);
          }
 
-         if(Class130.incomingPacketLength == GraphicDefinition.incomingBuffer.index) {
+         if(Unsorted.incomingPacketLength == GraphicDefinition.incomingBuffer.index) {
             for(var1 = 0; var1 < Class163.localNPCCount; ++var1) {
                if(null == Class3_Sub13_Sub24.npcs[Class15.localNPCIndexes[var1]]) {
 //            	   System.err.println("gnp2 pos:" + var1 + " size:" + Class163.anInt2046);

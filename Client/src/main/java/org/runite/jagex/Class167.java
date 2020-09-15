@@ -9,7 +9,7 @@ final class Class167 {
    static void addLocalNPCs() {
       try {
          while(true) {
-            if(GraphicDefinition.incomingBuffer.method815(Class130.incomingPacketLength) >= 27) {
+            if(GraphicDefinition.incomingBuffer.method815(Unsorted.incomingPacketLength) >= 27) {
                int var1 = GraphicDefinition.incomingBuffer.getBits(15);
                if(32767 != var1) {
                   boolean var2 = false;
@@ -198,7 +198,7 @@ final class Class167 {
 
    static int method2268(byte var0, int var1, int var2) {
       try {
-         Class3_Sub25 var3 = (Class3_Sub25)Class3_Sub2.aClass130_2220.method1780((long)var1);
+         Class3_Sub25 var3 = (Class3_Sub25)Class3_Sub2.aHashTable_2220.get((long)var1);
          if(var3 == null) {
             return 0;
          } else if (var2 == -1) {

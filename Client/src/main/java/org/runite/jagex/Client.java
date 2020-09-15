@@ -2,6 +2,7 @@ package org.runite.jagex;
 
 import org.runite.Configurations;
 import org.runite.GameLaunch;
+import org.rs09.client.collections.HashTable;
 
 import java.awt.*;
 import java.io.IOException;
@@ -17,7 +18,7 @@ public final class Client extends GameShell {
      *
      */
     private static final long serialVersionUID = 8336806252605101745L;
-    static Class130 aClass130_2194 = new Class130(16);
+    static HashTable aHashTable_2194 = new HashTable(16);
     static int anInt2195;
     static Class3_Sub11[][] aClass3_Sub11ArrayArray2199;
     static int[] anIntArray2200;
@@ -112,7 +113,7 @@ public final class Client extends GameShell {
                 }
 
                 if (var10) {
-                    Class80.method1396(40 ^ -41);
+                    Unsorted.method1396(40 ^ -41);
                 }
 
                 if (HDToolKit.highDetail) {
@@ -247,7 +248,7 @@ public final class Client extends GameShell {
             }
 
             Class163_Sub1_Sub1.method2215(Class3_Sub28_Sub12.aCanvas3648);
-            Class130.method1783(Class3_Sub28_Sub12.aCanvas3648);
+            Unsorted.method1783(Class3_Sub28_Sub12.aCanvas3648);
             if (null != Class38.aClass146_668) {
                 Class38.aClass146_668.method2082(Class3_Sub28_Sub12.aCanvas3648);
             }
@@ -460,7 +461,7 @@ public final class Client extends GameShell {
     }
 
     static Class3_Sub1 method44(RSInterface var0) {
-        Class3_Sub1 var1 = (Class3_Sub1) Class124.aClass130_1659.method1780(((long) var0.anInt279 << 32) + (long) var0.anInt191);
+        Class3_Sub1 var1 = (Class3_Sub1) Class124.aHashTable_1659.get(((long) var0.anInt279 << 32) + (long) var0.anInt191);
         return var1 != null ? var1 : var0.aClass3_Sub1_257;
     }
 
@@ -860,7 +861,7 @@ public final class Client extends GameShell {
                             continue;
                         }
 
-                        if (inter.aBoolean219 && Class126.anInt1676 >= var12 && Class130.anInt1709 >= var13 && Class126.anInt1676 < var14 && Class130.anInt1709 < var15) {
+                        if (inter.aBoolean219 && Class126.anInt1676 >= var12 && Unsorted.anInt1709 >= var13 && Class126.anInt1676 < var14 && Unsorted.anInt1709 < var15) {
                             for (CS2Script var27 = (CS2Script) Class110.aClass61_1471.method1222(); var27 != null; var27 = (CS2Script) Class110.aClass61_1471.method1221()) {
                                 if (var27.aBoolean2446) {
                                     var27.unlink();
@@ -879,7 +880,7 @@ public final class Client extends GameShell {
 
                     if (inter.usingScripts) {
                         boolean var26;
-                        var26 = Class126.anInt1676 >= var12 && Class130.anInt1709 >= var13 && Class126.anInt1676 < var14 && Class130.anInt1709 < var15;
+                        var26 = Class126.anInt1676 >= var12 && Unsorted.anInt1709 >= var13 && Class126.anInt1676 < var14 && Unsorted.anInt1709 < var15;
 
                         boolean var25 = false;
                         if (Class3_Sub13_Sub5.anInt3069 == 1 && var26) {
@@ -981,12 +982,12 @@ public final class Client extends GameShell {
 
                                         Class3_Sub19.anInt2475 = 1;
                                         Class144.anInt1881 = Class126.anInt1676;
-                                        Class95.anInt1336 = Class130.anInt1709;
+                                        Class95.anInt1336 = Unsorted.anInt1709;
                                         continue;
                                     }
 
                                     if (var25 && Class3_Sub19.anInt2475 > 0) {
-                                        if (Class3_Sub19.anInt2475 == 1 && (Class144.anInt1881 != Class126.anInt1676 || Class95.anInt1336 != Class130.anInt1709)) {
+                                        if (Class3_Sub19.anInt2475 == 1 && (Class144.anInt1881 != Class126.anInt1676 || Class95.anInt1336 != Unsorted.anInt1709)) {
                                             Class3_Sub28_Sub10_Sub2.anInt4073 = Class3_Sub28_Sub1.anInt3536;
                                             Class38.anInt660 = Class3_Sub4.anInt2251;
                                             Class3_Sub19.anInt2475 = 2;
@@ -994,7 +995,7 @@ public final class Client extends GameShell {
 
                                         if (Class3_Sub19.anInt2475 == 2) {
                                             method1175(Class3_Sub28_Sub10_Sub2.anInt4073 + (int) ((double) (Class144.anInt1881 - Class126.anInt1676) * 2.0D / (double) NPC.aFloat3979));
-                                            Class3_Sub13_Sub39.method354(Class38.anInt660 + (int) ((double) (Class95.anInt1336 - Class130.anInt1709) * 2.0D / (double) NPC.aFloat3979));
+                                            Class3_Sub13_Sub39.method354(Class38.anInt660 + (int) ((double) (Class95.anInt1336 - Unsorted.anInt1709) * 2.0D / (double) NPC.aFloat3979));
                                         }
                                         continue;
                                     }
@@ -1005,7 +1006,7 @@ public final class Client extends GameShell {
 
                                 if (inter.anInt189 == 1401) {
                                     if (var25) {
-                                        Class3_Sub13_Sub17.method253(inter.anInt168, Class130.anInt1709 - var11, Class126.anInt1676 - var10, inter.anInt193);
+                                        Class3_Sub13_Sub17.method253(inter.anInt168, Unsorted.anInt1709 - var11, Class126.anInt1676 - var10, inter.anInt193);
                                     }
                                     continue;
                                 }
@@ -1036,7 +1037,7 @@ public final class Client extends GameShell {
                                 var30.aBoolean2446 = true;
                                 var30.aClass11_2449 = inter;
                                 var30.worldSelectCursorPositionX = Class126.anInt1676 - var10;
-                                var30.scrollbarScrollAmount = Class130.anInt1709 - var11;
+                                var30.scrollbarScrollAmount = Unsorted.anInt1709 - var11;
                                 var30.arguments = inter.anObjectArray170;
                                 Class110.aClass61_1471.method1215(var30);
                             }
@@ -1048,7 +1049,7 @@ public final class Client extends GameShell {
                                     var30.aBoolean2446 = true;
                                     var30.aClass11_2449 = inter;
                                     var30.worldSelectCursorPositionX = Class126.anInt1676 - var10;
-                                    var30.scrollbarScrollAmount = Class130.anInt1709 - var11;
+                                    var30.scrollbarScrollAmount = Unsorted.anInt1709 - var11;
                                     var30.arguments = inter.anObjectArray239;
                                     Class65.aClass61_983.method1215(var30);
                                 }
@@ -1059,7 +1060,7 @@ public final class Client extends GameShell {
                                 var30.aBoolean2446 = true;
                                 var30.aClass11_2449 = inter;
                                 var30.worldSelectCursorPositionX = Class126.anInt1676 - var10;
-                                var30.scrollbarScrollAmount = Class130.anInt1709 - var11;
+                                var30.scrollbarScrollAmount = Unsorted.anInt1709 - var11;
                                 var30.arguments = inter.anObjectArray180;
                                 Class110.aClass61_1471.method1215(var30);
                             }
@@ -1071,7 +1072,7 @@ public final class Client extends GameShell {
                                     var30.aBoolean2446 = true;
                                     var30.aClass11_2449 = inter;
                                     var30.worldSelectCursorPositionX = Class126.anInt1676 - var10;
-                                    var30.scrollbarScrollAmount = Class130.anInt1709 - var11;
+                                    var30.scrollbarScrollAmount = Unsorted.anInt1709 - var11;
                                     var30.arguments = inter.anObjectArray248;
                                     Class110.aClass61_1471.method1215(var30);
                                 }
@@ -1082,7 +1083,7 @@ public final class Client extends GameShell {
                                 var30.aBoolean2446 = true;
                                 var30.aClass11_2449 = inter;
                                 var30.worldSelectCursorPositionX = Class126.anInt1676 - var10;
-                                var30.scrollbarScrollAmount = Class130.anInt1709 - var11;
+                                var30.scrollbarScrollAmount = Unsorted.anInt1709 - var11;
                                 var30.arguments = inter.anObjectArray276;
                                 Class110.aClass61_1471.method1215(var30);
                             }
@@ -1094,7 +1095,7 @@ public final class Client extends GameShell {
                                     var30.aBoolean2446 = true;
                                     var30.aClass11_2449 = inter;
                                     var30.worldSelectCursorPositionX = Class126.anInt1676 - var10;
-                                    var30.scrollbarScrollAmount = Class130.anInt1709 - var11;
+                                    var30.scrollbarScrollAmount = Unsorted.anInt1709 - var11;
                                     var30.arguments = inter.anObjectArray281;
                                     Class65.aClass61_983.method1215(var30);
                                 }
@@ -1295,7 +1296,7 @@ public final class Client extends GameShell {
                     }
 
                     if (!inter.usingScripts && Class56.aClass11_886 == null && Class67.aClass11_1017 == null && !Class38_Sub1.aBoolean2615) {
-                        if ((inter.anInt212 >= 0 || inter.anInt228 != 0) && Class126.anInt1676 >= var12 && Class130.anInt1709 >= var13 && Class126.anInt1676 < var14 && Class130.anInt1709 < var15) {
+                        if ((inter.anInt212 >= 0 || inter.anInt228 != 0) && Class126.anInt1676 >= var12 && Unsorted.anInt1709 >= var13 && Class126.anInt1676 < var14 && Unsorted.anInt1709 < var15) {
                             if (inter.anInt212 >= 0) {
                                 Class107.aClass11_1453 = interfaces[inter.anInt212];
                             } else {
@@ -1303,12 +1304,12 @@ public final class Client extends GameShell {
                             }
                         }
 
-                        if (inter.type == 8 && Class126.anInt1676 >= var12 && Class130.anInt1709 >= var13 && Class126.anInt1676 < var14 && Class130.anInt1709 < var15) {
+                        if (inter.type == 8 && Class126.anInt1676 >= var12 && Unsorted.anInt1709 >= var13 && Class126.anInt1676 < var14 && Unsorted.anInt1709 < var15) {
                             Class20.aClass11_439 = inter;
                         }
 
                         if (inter.anInt252 > inter.anInt193) {
-                            Class137.method1819(Class130.anInt1709, inter.anInt193, inter, Class126.anInt1676, var10 + inter.anInt168, var11, inter.anInt252);
+                            Class137.method1819(Unsorted.anInt1709, inter.anInt193, inter, Class126.anInt1676, var10 + inter.anInt168, var11, inter.anInt252);
                         }
                     }
 
@@ -1318,7 +1319,7 @@ public final class Client extends GameShell {
                             handleItemSwitch(inter.aClass11Array262, inter.anInt279, var12, var13, var14, var15, var10 - inter.anInt247, var11 - inter.anInt208);
                         }
 
-                        Class3_Sub31 var28 = (Class3_Sub31) Class3_Sub13_Sub17.aClass130_3208.method1780((long) inter.anInt279);
+                        Class3_Sub31 var28 = (Class3_Sub31) Class3_Sub13_Sub17.aHashTable_3208.get((long) inter.anInt279);
                         if (var28 != null) {
                             GraphicDefinition.method967(var10, var13, var11, var14, var28.anInt2602, var12, var15);
                         }

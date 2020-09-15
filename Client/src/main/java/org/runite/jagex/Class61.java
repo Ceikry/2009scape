@@ -123,7 +123,7 @@ final class Class61 {
             Class3_Sub28_Sub11.method606(var1, var5, var3, var0, var2, 1 ^ 113);
          }
 
-         for(var5 = (Class3_Sub9)Class3_Sub28_Sub7_Sub1.aClass130_4046.method1776(88); var5 != null; var5 = (Class3_Sub9)Class3_Sub28_Sub7_Sub1.aClass130_4046.method1778(1 ^ -92)) {
+         for(var5 = (Class3_Sub9)Class3_Sub28_Sub7_Sub1.aHashTable_4046.first(); var5 != null; var5 = (Class3_Sub9)Class3_Sub28_Sub7_Sub1.aHashTable_4046.next()) {
             var6 = 1;
             var7 = var5.aClass140_Sub4_Sub1_2327.method1965();
             if(var5.aClass140_Sub4_Sub1_2327.anInt2764 == var7.anInt368) {

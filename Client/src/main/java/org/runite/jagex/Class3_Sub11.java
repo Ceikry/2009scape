@@ -1,5 +1,6 @@
 package org.runite.jagex;
 import org.rs09.client.Linkable;
+import org.rs09.client.collections.HashTable;
 
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
@@ -18,7 +19,7 @@ final class Class3_Sub11 extends Linkable {
    private int[] anIntArray2350;
    int anInt2351;
    private int[] anIntArray2352;
-   private Class130 aClass130_2353;
+   private HashTable aHashTable_2353;
    private float[] aFloatArray2354;
    int anInt2355;
    private int anInt2356 = 0;
@@ -64,7 +65,7 @@ final class Class3_Sub11 extends Linkable {
       this.anIntArray2349 = new int[this.anInt2344];
       this.anIntArray2367 = new int[this.anInt2344];
       this.anIntArrayArray2357 = new int[this.anInt2344][];
-      this.aClass130_2353 = new Class130(Class95.method1585((byte)123, this.anInt2342));
+      this.aHashTable_2353 = new HashTable(Class95.method1585((byte)123, this.anInt2342));
       if(this.aBoolean2364) {
          this.anIntArrayArray2360 = new int[this.anInt2344][];
          this.aBooleanArray2370 = new boolean[this.anInt2344];
@@ -76,7 +77,7 @@ final class Class3_Sub11 extends Linkable {
       long var9 = 0L;
       if((var1 & 127) == 0 || (var3 & 127) == 0) {
          var9 = (long)(var1 + (var3 << 16)) + ((long)var7 << 32);
-         Class3_Sub18 var11 = (Class3_Sub18)this.aClass130_2353.method1780(var9);
+         Class3_Sub18 var11 = (Class3_Sub18)this.aHashTable_2353.get(var9);
          if(var11 != null) {
             if(var2 < this.anIntArray2358[var11.anInt2467]) {
                this.anIntArray2358[var11.anInt2467] = var2;
@@ -98,7 +99,7 @@ final class Class3_Sub11 extends Linkable {
       this.aFloatArray2354[this.anInt2343] = var6;
       this.anIntArray2348[this.anInt2343] = var7;
       if(var9 != 0L) {
-         this.aClass130_2353.method1779(new Class3_Sub18(this.anInt2343), var9);
+         this.aHashTable_2353.put(var9, new Class3_Sub18(this.anInt2343));
       }
 
       return this.anInt2343++;
@@ -154,7 +155,7 @@ final class Class3_Sub11 extends Linkable {
       this.aFloatArray2369 = null;
       this.aFloatArray2365 = null;
       this.aFloatArray2354 = null;
-      this.aClass130_2353 = null;
+      this.aHashTable_2353 = null;
       this.aFloatArray2346 = null;
    }
 

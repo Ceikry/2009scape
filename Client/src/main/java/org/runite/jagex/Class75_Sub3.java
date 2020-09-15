@@ -51,7 +51,7 @@ final class Class75_Sub3 extends Class75 {
          Class3_Sub13_Sub21.method269(-5, 5);
          Class77.method1366();
          Class3_Sub13_Sub11.aClass93_3130.method1522(-125, 5);
-         Class80.aClass93_1135.method1522(26211 ^ -26142, 5);
+         Unsorted.aClass93_1135.method1522(26211 ^ -26142, 5);
       } catch (RuntimeException var2) {
          throw Class44.clientError(var2, "re.K(" + 26211 + ')');
       }

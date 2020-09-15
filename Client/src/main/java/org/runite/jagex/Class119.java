@@ -62,7 +62,7 @@ final class Class119 {
             Class124.method1746(true, (byte)-125);
          }
 
-         Class80.method1396(-1);
+         Unsorted.method1396(-1);
       } catch (RuntimeException var3) {
          throw Class44.clientError(var3, "qh.C(" + true + ')');
       }

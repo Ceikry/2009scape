@@ -561,7 +561,7 @@ final class Class3_Sub13_Sub13 extends Class3_Sub13 {
                      RSInterface var17;
                      if(Class67.aClass11_1017 != null) {
                         Class20.method909(117, Class67.aClass11_1017);
-                        if(Class126.anInt1676 > 5 + Class129_Sub1.anInt2693 || Class126.anInt1676 < -5 + Class129_Sub1.anInt2693 || Class130.anInt1709 > Unsorted.anInt40 + 5 || -5 + Unsorted.anInt40 > Class130.anInt1709) {
+                        if(Class126.anInt1676 > 5 + Class129_Sub1.anInt2693 || Class126.anInt1676 < -5 + Class129_Sub1.anInt2693 || Unsorted.anInt1709 > Unsorted.anInt40 + 5 || -5 + Unsorted.anInt40 > Unsorted.anInt1709) {
                            Class72.aBoolean1074 = true;
                         }
 
