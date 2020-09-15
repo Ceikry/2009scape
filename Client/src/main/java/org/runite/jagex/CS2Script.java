@@ -69,48 +69,48 @@ final class CS2Script extends Linkable {
          int var2 = Class146.anInt1904 * 128 - -64;
          int var1 = 128 * Canvas_Sub2.anInt30 + 64;
          int var3 = Class121.method1736(WorldListCountry.localPlane, 1, var1, var2) - Class3_Sub13_Sub34.anInt3414;
-         if(100 <= Class3_Sub28_Sub10.anInt3631) {
+         if(100 <= Unsorted.anInt3631) {
             NPC.anInt3995 = 64 + Canvas_Sub2.anInt30 * 128;
             Class77.anInt1111 = 64 + Class146.anInt1904 * 128;
             Class7.anInt2162 = Class121.method1736(WorldListCountry.localPlane, 1024 + -1023, NPC.anInt3995, Class77.anInt1111) + -Class3_Sub13_Sub34.anInt3414;
          } else {
             if(NPC.anInt3995 < var1) {
-               NPC.anInt3995 += Class163_Sub2_Sub1.anInt4021 + Class3_Sub28_Sub10.anInt3631 * (-NPC.anInt3995 + var1) / 1000;
+               NPC.anInt3995 += Class163_Sub2_Sub1.anInt4021 + Unsorted.anInt3631 * (-NPC.anInt3995 + var1) / 1000;
                if(var1 < NPC.anInt3995) {
                   NPC.anInt3995 = var1;
                }
             }
 
             if(var3 > Class7.anInt2162) {
-               Class7.anInt2162 += (-Class7.anInt2162 + var3) * Class3_Sub28_Sub10.anInt3631 / 1000 + Class163_Sub2_Sub1.anInt4021;
+               Class7.anInt2162 += (-Class7.anInt2162 + var3) * Unsorted.anInt3631 / 1000 + Class163_Sub2_Sub1.anInt4021;
                if(Class7.anInt2162 > var3) {
                   Class7.anInt2162 = var3;
                }
             }
 
             if(var1 < NPC.anInt3995) {
-               NPC.anInt3995 -= Class163_Sub2_Sub1.anInt4021 + (NPC.anInt3995 + -var1) * Class3_Sub28_Sub10.anInt3631 / 1000;
+               NPC.anInt3995 -= Class163_Sub2_Sub1.anInt4021 + (NPC.anInt3995 + -var1) * Unsorted.anInt3631 / 1000;
                if(NPC.anInt3995 < var1) {
                   NPC.anInt3995 = var1;
                }
             }
 
             if(Class77.anInt1111 < var2) {
-               Class77.anInt1111 += Class163_Sub2_Sub1.anInt4021 + Class3_Sub28_Sub10.anInt3631 * (var2 - Class77.anInt1111) / 1000;
+               Class77.anInt1111 += Class163_Sub2_Sub1.anInt4021 + Unsorted.anInt3631 * (var2 - Class77.anInt1111) / 1000;
                if(Class77.anInt1111 > var2) {
                   Class77.anInt1111 = var2;
                }
             }
 
             if(var3 < Class7.anInt2162) {
-               Class7.anInt2162 -= (Class7.anInt2162 - var3) * Class3_Sub28_Sub10.anInt3631 / 1000 + Class163_Sub2_Sub1.anInt4021;
+               Class7.anInt2162 -= (Class7.anInt2162 - var3) * Unsorted.anInt3631 / 1000 + Class163_Sub2_Sub1.anInt4021;
                if(Class7.anInt2162 < var3) {
                   Class7.anInt2162 = var3;
                }
             }
 
             if(var2 < Class77.anInt1111) {
-               Class77.anInt1111 -= Class163_Sub2_Sub1.anInt4021 - -((-var2 + Class77.anInt1111) * Class3_Sub28_Sub10.anInt3631 / 1000);
+               Class77.anInt1111 -= Class163_Sub2_Sub1.anInt4021 - -((-var2 + Class77.anInt1111) * Unsorted.anInt3631 / 1000);
                if(Class77.anInt1111 < var2) {
                   Class77.anInt1111 = var2;
                }

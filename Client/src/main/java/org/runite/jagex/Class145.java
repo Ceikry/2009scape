@@ -487,7 +487,7 @@ final class Class145 {
                            }
                         }
 
-                        Class3_Sub28_Sub10_Sub1.aClass25Array4060[var10++] = var25;
+                        Unsorted.aClass25Array4060[var10++] = var25;
                         var27 = Class97.anInt1375 - var25.anInt483;
                         var14 = var25.anInt495 - Class97.anInt1375;
                         if(var14 > var27) {
@@ -509,7 +509,7 @@ final class Class145 {
                      var12 = -1;
 
                      for(var27 = 0; var27 < var10; ++var27) {
-                        Class25 var34 = Class3_Sub28_Sub10_Sub1.aClass25Array4060[var27];
+                        Class25 var34 = Unsorted.aClass25Array4060[var27];
                         if(var34.anInt490 != Class3_Sub28_Sub1.anInt3539) {
                            if(var34.anInt487 > var11) {
                               var11 = var34.anInt487;
@@ -517,8 +517,8 @@ final class Class145 {
                            } else if(var34.anInt487 == var11) {
                               var15 = var34.anInt482 - Class129_Sub1.anInt2697;
                               var16 = var34.anInt484 - Class3_Sub13_Sub30.anInt3363;
-                              var17 = Class3_Sub28_Sub10_Sub1.aClass25Array4060[var12].anInt482 - Class129_Sub1.anInt2697;
-                              var18 = Class3_Sub28_Sub10_Sub1.aClass25Array4060[var12].anInt484 - Class3_Sub13_Sub30.anInt3363;
+                              var17 = Unsorted.aClass25Array4060[var12].anInt482 - Class129_Sub1.anInt2697;
+                              var18 = Unsorted.aClass25Array4060[var12].anInt484 - Class3_Sub13_Sub30.anInt3363;
                               if(var15 * var15 + var16 * var16 > var17 * var17 + var18 * var18) {
                                  var12 = var27;
                               }
@@ -530,7 +530,7 @@ final class Class145 {
                         break;
                      }
 
-                     Class25 var32 = Class3_Sub28_Sub10_Sub1.aClass25Array4060[var12];
+                     Class25 var32 = Unsorted.aClass25Array4060[var12];
                      var32.anInt490 = Class3_Sub28_Sub1.anInt3539;
                      if(!Class3_Sub13_Sub11.method222(var6, var32.anInt483, var32.anInt495, var32.anInt478, var32.anInt481, var32.aClass140_479.method1871())) {
                         if(HDToolKit.highDetail) {

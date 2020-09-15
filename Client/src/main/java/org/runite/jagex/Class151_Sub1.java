@@ -11,11 +11,11 @@ final class Class151_Sub1 extends ResourceProvider {
 
     private final Class41 aClass41_2943;
     private ReferenceTable aReferenceTable_2944;
-    private final HashTable aHashTable_2946 = new HashTable(16);
+    private final HashTable<ResourceRequest> aHashTable_2946 = new HashTable<>(16);
     private final int anInt2947;
     private int anInt2948 = 0;
     private byte[] aByteArray2949;
-    private Class3_Sub28_Sub10 aClass3_Sub28_Sub10_2950;
+    private ResourceRequest aResourceRequest_2950;
     private final Class66 aClass66_2953;
     Class41 aClass41_2954;
     private final int anInt2955;
@@ -40,7 +40,7 @@ final class Class151_Sub1 extends ResourceProvider {
                     }
                 }
                 var3 = new Linkable();
-                var3.linkableKey = (long) var1;
+                var3.linkableKey = var1;
                 this.aClass61_2963.method1215(var3);
             }
         } catch (RuntimeException var5) {
@@ -51,19 +51,19 @@ final class Class151_Sub1 extends ResourceProvider {
     public final ReferenceTable getReferenceTable() {
         try {
             if (this.aReferenceTable_2944 == null) {
-                if (null == this.aClass3_Sub28_Sub10_2950) {
+                if (null == this.aResourceRequest_2950) {
                     if (this.aClass66_2953.method1251()) {
                         return null;
                     }
 
-                    this.aClass3_Sub28_Sub10_2950 = this.aClass66_2953.addJS5Request(255, (byte) 0, this.anInt2957, true);
+                    this.aResourceRequest_2950 = this.aClass66_2953.addJS5Request(255, (byte) 0, this.anInt2957, true);
                 }
 
-                if (this.aClass3_Sub28_Sub10_2950.aBoolean3632) {
+                if (this.aResourceRequest_2950.waiting) {
                     return null;
                 } else {
-                    byte[] var2 = this.aClass3_Sub28_Sub10_2950.method587();
-                    if (this.aClass3_Sub28_Sub10_2950 instanceof Class3_Sub28_Sub10_Sub1) {
+                    byte[] var2 = this.aResourceRequest_2950.getData();
+                    if (this.aResourceRequest_2950 instanceof CacheResourceRequest) {
                         try {
                             if (var2 == null) {
                                 throw new RuntimeException();
@@ -76,9 +76,9 @@ final class Class151_Sub1 extends ResourceProvider {
                         } catch (RuntimeException var4) {
                             this.aReferenceTable_2944 = null;
                             if (this.aClass66_2953.method1251()) {
-                                this.aClass3_Sub28_Sub10_2950 = null;
+                                this.aResourceRequest_2950 = null;
                             } else {
-                                this.aClass3_Sub28_Sub10_2950 = this.aClass66_2953.addJS5Request(255, (byte) 0, this.anInt2957, true);
+                                this.aResourceRequest_2950 = this.aClass66_2953.addJS5Request(255, (byte) 0, this.anInt2957, true);
                             }
 
                             return null;
@@ -94,9 +94,9 @@ final class Class151_Sub1 extends ResourceProvider {
                             this.aClass66_2953.method1252();
                             this.aReferenceTable_2944 = null;
                             if (this.aClass66_2953.method1251()) {
-                                this.aClass3_Sub28_Sub10_2950 = null;
+                                this.aResourceRequest_2950 = null;
                             } else {
-                                this.aClass3_Sub28_Sub10_2950 = this.aClass66_2953.addJS5Request(255, (byte) 0, this.anInt2957, true);
+                                this.aResourceRequest_2950 = this.aClass66_2953.addJS5Request(255, (byte) 0, this.anInt2957, true);
                             }
 
                             return null;
@@ -112,7 +112,7 @@ final class Class151_Sub1 extends ResourceProvider {
                         this.anInt2948 = 0;
                     }
 
-                    this.aClass3_Sub28_Sub10_2950 = null;
+                    this.aResourceRequest_2950 = null;
                     return this.aReferenceTable_2944;
                 }
             } else {
@@ -206,7 +206,7 @@ final class Class151_Sub1 extends ResourceProvider {
                             if (this.aByteArray2949[this.anInt2964] == 0) {
                                 var2 = false;
                                 var3 = new Linkable();
-                                var3.linkableKey = (long) this.anInt2964;
+                                var3.linkableKey = this.anInt2964;
                                 this.aClass61_2966.method1215(var3);
                             }
 
@@ -249,7 +249,7 @@ final class Class151_Sub1 extends ResourceProvider {
 
                             if (this.aByteArray2949[this.anInt2964] != 1) {
                                 var3 = new Linkable();
-                                var3.linkableKey = (long) this.anInt2964;
+                                var3.linkableKey = this.anInt2964;
                                 this.aClass61_2966.method1215(var3);
                                 var2 = false;
                             }
@@ -268,8 +268,8 @@ final class Class151_Sub1 extends ResourceProvider {
             }
 
             if (this.aBoolean2968 && this.aLong2967 <= Class5.method830((byte) -55)) {
-                for (Class3_Sub28_Sub10 var6 = (Class3_Sub28_Sub10) this.aHashTable_2946.first(); var6 != null; var6 = (Class3_Sub28_Sub10) this.aHashTable_2946.next()) {
-                    if (!var6.aBoolean3632) {
+                for (ResourceRequest var6 = this.aHashTable_2946.first(); var6 != null; var6 = this.aHashTable_2946.next()) {
+                    if (!var6.waiting) {
                         if (var6.aBoolean3635) {
                             if (!var6.aBoolean3628) {
                                 throw new RuntimeException();
@@ -292,8 +292,8 @@ final class Class151_Sub1 extends ResourceProvider {
     }
 
     public final int percentComplete(int var1) {
-            Class3_Sub28_Sub10 var3 = (Class3_Sub28_Sub10) this.aHashTable_2946.get((long) var1);
-            return null != var3 ? var3.method586() : 0;
+            ResourceRequest var3 = this.aHashTable_2946.get(var1);
+            return null != var3 ? var3.getCompletion() : 0;
     }
 
     final int method2108() {
@@ -309,11 +309,11 @@ final class Class151_Sub1 extends ResourceProvider {
         }
     }
 
-    private Class3_Sub28_Sub10 method2109(int var1, int archiveIndex, int var3) {
+    private ResourceRequest method2109(int var1, int archiveIndex, int var3) {
         try {
-            Object var4 = this.aHashTable_2946.get((long) archiveIndex);
-            if (null != var4 && var1 == 0 && !((Class3_Sub28_Sub10) var4).aBoolean3628 && ((Class3_Sub28_Sub10) var4).aBoolean3632) {
-                ((Class3_Sub28_Sub10) var4).unlink();
+            ResourceRequest var4 = this.aHashTable_2946.get(archiveIndex);
+            if (null != var4 && var1 == 0 && !var4.aBoolean3628 && var4.waiting) {
+                var4.unlink();
                 var4 = null;
             }
 
@@ -354,16 +354,16 @@ final class Class151_Sub1 extends ResourceProvider {
                     var4 = this.aClass66_2953.addJS5Request(this.anInt2957, (byte) 2, archiveIndex, false);
                 }
 
-                this.aHashTable_2946.put((long) archiveIndex, (Linkable) var4);
+                this.aHashTable_2946.put(archiveIndex, var4);
             }
 
-            if (((Class3_Sub28_Sub10) Objects.requireNonNull(var4)).aBoolean3632) {
+            if (Objects.requireNonNull(var4).waiting) {
                 return null;
             } else {
-                byte[] var5 = ((Class3_Sub28_Sub10) var4).method587();
+                byte[] var5 = var4.getData();
                 int expectedCRC;
-                Class3_Sub28_Sub10_Sub2 var12;
-                if (var4 instanceof Class3_Sub28_Sub10_Sub1) {
+                Js5ResourceRequest var12;
+                if (var4 instanceof CacheResourceRequest) {
                     try {
                         if (var5 != null && var5.length > 2) {
                             Class3_Sub13_Sub12.CRC32.reset();
@@ -378,11 +378,11 @@ final class Class151_Sub1 extends ResourceProvider {
                                         this.aByteArray2949[archiveIndex] = 1;
                                     }
 
-                                    if (!((Class3_Sub28_Sub10) var4).aBoolean3628) {
-                                        ((Class3_Sub28_Sub10) var4).unlink();
+                                    if (!var4.aBoolean3628) {
+                                        var4.unlink();
                                     }
 
-                                    return (Class3_Sub28_Sub10) var4;
+                                    return var4;
                                 } else {
                                     System.err.println("CRC mismatch - [entry=" + this.aReferenceTable_2944.archiveRevisions[archiveIndex] + ", pass=" + var8 + "]!");
                                     throw new RuntimeException();
@@ -406,10 +406,10 @@ final class Class151_Sub1 extends ResourceProvider {
                     } catch (Exception var9) {
 //            	   var9.printStackTrace();
                         this.aByteArray2949[archiveIndex] = -1;
-                        ((Class3_Sub28_Sub10) var4).unlink();
-                        if (((Class3_Sub28_Sub10) var4).aBoolean3628 && !this.aClass66_2953.method1251()) {
+                        var4.unlink();
+                        if (var4.aBoolean3628 && !this.aClass66_2953.method1251()) {
                             var12 = this.aClass66_2953.addJS5Request(this.anInt2957, (byte) 2, archiveIndex, true);
-                            this.aHashTable_2946.put((long) archiveIndex, var12);
+                            this.aHashTable_2946.put(archiveIndex, var12);
                         }
 
                         return null;
@@ -439,10 +439,10 @@ final class Class151_Sub1 extends ResourceProvider {
                     } catch (RuntimeException var10) {
                         var10.printStackTrace();
                         this.aClass66_2953.method1252();
-                        ((Class3_Sub28_Sub10) var4).unlink();
-                        if (((Class3_Sub28_Sub10) var4).aBoolean3628 && !this.aClass66_2953.method1251()) {
+                        var4.unlink();
+                        if (var4.aBoolean3628 && !this.aClass66_2953.method1251()) {
                             var12 = this.aClass66_2953.addJS5Request(this.anInt2957, (byte) 2, archiveIndex, true);
-                            this.aHashTable_2946.put((long) archiveIndex, var12);
+                            this.aHashTable_2946.put(archiveIndex, var12);
                         }
 
                         return null;
@@ -458,11 +458,11 @@ final class Class151_Sub1 extends ResourceProvider {
                         }
                     }
 
-                    if (!((Class3_Sub28_Sub10) var4).aBoolean3628) {
-                        ((Class3_Sub28_Sub10) var4).unlink();
+                    if (!var4.aBoolean3628) {
+                        var4.unlink();
                     }
 
-                    return (Class3_Sub28_Sub10) var4;
+                    return var4;
                 }
             }
         } catch (RuntimeException var11) {
@@ -503,7 +503,7 @@ final class Class151_Sub1 extends ResourceProvider {
 
     final int method2111() {
         try {
-            return null != this.getReferenceTable() ? 100 : (null == this.aClass3_Sub28_Sub10_2950 ? 0 : this.aClass3_Sub28_Sub10_2950.method586());
+            return null != this.getReferenceTable() ? 100 : (null == this.aResourceRequest_2950 ? 0 : this.aResourceRequest_2950.getCompletion());
         } catch (RuntimeException var3) {
             throw Class44.clientError(var3, "bg.E(" + -61 + ')');
         }
@@ -511,11 +511,11 @@ final class Class151_Sub1 extends ResourceProvider {
 
     public final byte[] get(int var1) {
         try {
-            Class3_Sub28_Sub10 var3 = this.method2109(0, var1, 103);
+            ResourceRequest var3 = this.method2109(0, var1, 103);
             if (var3 == null) {
                 return null;
             } else {
-                byte[] var4 = var3.method587();
+                byte[] var4 = var3.getData();
                 var3.unlink();
                 return var4;
             }
@@ -542,7 +542,7 @@ final class Class151_Sub1 extends ResourceProvider {
             this.aClass66_2953 = var4;
             this.anInt2947 = var7;
             if (null != this.aClass41_2943) {
-                this.aClass3_Sub28_Sub10_2950 = this.aClass73_2956.method1309(this.aClass41_2943, (byte) 113, this.anInt2957);
+                this.aResourceRequest_2950 = this.aClass73_2956.method1309(this.aClass41_2943, (byte) 113, this.anInt2957);
             }
 
         } catch (RuntimeException var10) {

@@ -1,5 +1,7 @@
 package org.runite.jagex;
 
+import org.rs09.client.Node;
+
 abstract class Class3_Sub28_Sub16 extends Node {
 
    int anInt3696;

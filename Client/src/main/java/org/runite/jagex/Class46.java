@@ -31,7 +31,7 @@ final class Class46 {
          if(var2 != 0) {
             int var3 = ItemDefinition.ram[var1];
             if(6 == var2) {
-               Class41.anInt688 = var3;
+               Unsorted.anInt688 = var3;
             }
 
             if(var2 == 5) {

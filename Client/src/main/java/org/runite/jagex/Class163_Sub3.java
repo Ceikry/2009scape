@@ -60,7 +60,7 @@ final class Class163_Sub3 extends Class163 {
       try {
          if(var0 != 0) {
             if((100 > Class8.anInt104 || Class3_Sub13_Sub29.disableGEBoxes) && Class8.anInt104 < 200) {
-               RSString var3 = Objects.requireNonNull(Class41.method1052(var0)).method1545();
+               RSString var3 = Objects.requireNonNull(Unsorted.method1052(var0)).method1545();
 
                int var4;
                for(var4 = 0; Class8.anInt104 > var4; ++var4) {
@@ -83,7 +83,7 @@ final class Class163_Sub3 extends Class163 {
                   Class70.aClass94Array1046[Class8.anInt104] = var3;
                   Class50.aLongArray826[Class8.anInt104] = var0;
                   Class55.anIntArray882[Class8.anInt104] = 0;
-                  Node.aClass94Array2566[Class8.anInt104] = Class3_Sub28_Sub14.aClass94_3672;
+                  Unsorted.aClass94Array2566[Class8.anInt104] = Class3_Sub28_Sub14.aClass94_3672;
                   Class57.anIntArray904[Class8.anInt104] = 0;
                   Unsorted.aBooleanArray73[Class8.anInt104] = false;
                   ++Class8.anInt104;

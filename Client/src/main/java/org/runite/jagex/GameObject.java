@@ -58,7 +58,7 @@ abstract class GameObject {
             var6 = true;
          }
 
-         Class3_Sub28_Sub10_Sub2.method598(var0, var1, var6, var5, false, var3, var4);
+         Unsorted.method598(var0, var1, var6, var5, false, var3, var4);
       } catch (RuntimeException var7) {
          throw Class44.clientError(var7, "th.EC(" + var0 + ',' + var1 + ',' + -8914 + ',' + var3 + ',' + var4 + ')');
       }

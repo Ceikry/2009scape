@@ -13,18 +13,18 @@ static boolean aBoolean1080 = false;
    static int anInt1082;
    static int[] anIntArray1083;
    static boolean aBoolean1084 = false;
-   private final NodeList aClass13_1086 = new NodeList();
+   private final Queue aClass13_1086 = new Queue();
    int anInt1087 = 0;
    static int anInt1088 = 0;
    private Thread aThread1090;
    private boolean aBoolean1091 = false;
 
 
-   private void method1299(Class3_Sub28_Sub10_Sub1 var1) {
+   private void method1299(CacheResourceRequest var1) {
       try {
          synchronized(this.aClass13_1086) {
 
-            this.aClass13_1086.method879(var1);
+            this.aClass13_1086.offer(var1);
             ++this.anInt1087;
             this.aClass13_1086.notifyAll();
          }
@@ -39,7 +39,7 @@ static boolean aBoolean1080 = false;
             aBoolean1080 = false;
          }
          //System.out.println("Class 73 " + var1);
-         return !Class75_Sub4.method1351(var3, 0, var1, -30901)?null:NodeList.method880(var4.getFile(var1, 0));
+         return !Class75_Sub4.method1351(var3, 0, var1, -30901)?null: Unsorted.method880(var4.getFile(var1, 0));
       } catch (RuntimeException var6) {
          throw Class44.clientError(var6, "k.C(" + 0 + ',' + var1 + ',' + var2 + ',' + (var3 != null?"{...}":"null") + ',' + (var4 != null?"{...}":"null") + ')');
       }
@@ -66,7 +66,7 @@ static boolean aBoolean1080 = false;
             int var7 = Class131.anInt1716;
             Class82.anInt1152 = var1 * 8 - 48;
             Class131.anInt1716 = 8 * (-6 + var2);
-            Class3_Sub13_Sub21.aClass3_Sub28_Sub3_3264 = NodeList.method884(8 * Class3_Sub28_Sub7.anInt3606, (byte)88, 8 * Class3_Sub7.anInt2294);
+            Class3_Sub13_Sub21.aClass3_Sub28_Sub3_3264 = Unsorted.method884(8 * Class3_Sub28_Sub7.anInt3606, (byte)88, 8 * Class3_Sub7.anInt2294);
             int var10 = -var8 + Class82.anInt1152;
             int var9 = Class131.anInt1716 + -var7;
             Class3_Sub13_Sub35.aClass131_3421 = null;
@@ -197,10 +197,10 @@ static boolean aBoolean1080 = false;
 
    static Class3_Sub28_Sub6 method1302() {
       try {
-         Class3_Sub28_Sub6 var1 = (Class3_Sub28_Sub6)Class126.aClass13_1666.method876((byte)100);
+         Class3_Sub28_Sub6 var1 = (Class3_Sub28_Sub6)Class126.aClass13_1666.getFront();
          if(var1 == null) {
             do {
-               var1 = (Class3_Sub28_Sub6)Class81.aClass13_1139.method876((byte)63);
+               var1 = (Class3_Sub28_Sub6)Class81.aClass13_1139.getFront();
                if(var1 == null) {
                   return null;
                }
@@ -210,13 +210,13 @@ static boolean aBoolean1080 = false;
                }
 
                var1.unlink();
-               var1.method524();
-            } while((Long.MIN_VALUE & var1.aLong2569) == 0L);
+               var1.unlinkNode();
+            } while((Long.MIN_VALUE & var1.nodeKey) == 0L);
 
             return var1;
          } else {
             var1.unlink();
-            var1.method524();
+            var1.unlinkNode();
             return var1;
          }
       } catch (RuntimeException var2) {
@@ -309,26 +309,26 @@ static boolean aBoolean1080 = false;
 
    final void method1305(Class41 var1, byte[] var3, int var4) {
       try {
-         Class3_Sub28_Sub10_Sub1 var5 = new Class3_Sub28_Sub10_Sub1();
-         var5.aByteArray4059 = var3;
+         CacheResourceRequest var5 = new CacheResourceRequest();
+         var5.data = var3;
          var5.aBoolean3628 = false;
-         var5.aLong2569 = (long)var4;
-         var5.aClass41_4056 = var1;
-         var5.anInt4061 = 2;
+         var5.nodeKey = (long)var4;
+         var5.cache = var1;
+         var5.type = 2;
          this.method1299(var5);
       } catch (RuntimeException var6) {
          throw Class44.clientError(var6, "k.A(" + (var1 != null?"{...}":"null") + ',' + 2 + ',' + (var3 != null?"{...}":"null") + ',' + var4 + ')');
       }
    }
 
-   final Class3_Sub28_Sub10_Sub1 method1307(int var1, Class41 var3) {
+   final CacheResourceRequest method1307(int var1, Class41 var3) {
       try {
-         Class3_Sub28_Sub10_Sub1 var4 = new Class3_Sub28_Sub10_Sub1();
-         var4.aClass41_4056 = var3;
-         var4.anInt4061 = 3;
+         CacheResourceRequest var4 = new CacheResourceRequest();
+         var4.cache = var3;
+         var4.type = 3;
          var4.aBoolean3628 = false;
 
-         var4.aLong2569 = (long)var1;
+         var4.nodeKey = (long)var1;
          this.method1299(var4);
          return var4;
       } catch (RuntimeException var5) {
@@ -503,31 +503,31 @@ static boolean aBoolean1080 = false;
       }
    }
 
-   final Class3_Sub28_Sub10_Sub1 method1309(Class41 var1, byte var2, int var3) {
+   final CacheResourceRequest method1309(Class41 var1, byte var2, int var3) {
       try {
-         Class3_Sub28_Sub10_Sub1 var4 = new Class3_Sub28_Sub10_Sub1();
-         var4.anInt4061 = 1;
+         CacheResourceRequest var4 = new CacheResourceRequest();
+         var4.type = 1;
          synchronized(this.aClass13_1086) {
             if(var2 < 39) {
-               return (Class3_Sub28_Sub10_Sub1)null;
+               return (CacheResourceRequest)null;
             }
 
-            Class3_Sub28_Sub10_Sub1 var6 = (Class3_Sub28_Sub10_Sub1)this.aClass13_1086.method876((byte)100);
+            CacheResourceRequest var6 = (CacheResourceRequest)this.aClass13_1086.getFront();
 
             while (var6 != null) {
 
-               if ((long) var3 == var6.aLong2569 && var6.aClass41_4056 == var1 && var6.anInt4061 == 2) {
-                  var4.aByteArray4059 = var6.aByteArray4059;
-                  var4.aBoolean3632 = false;
+               if ((long) var3 == var6.nodeKey && var6.cache == var1 && var6.type == 2) {
+                  var4.data = var6.data;
+                  var4.waiting = false;
                   return var4;
                }
 
-               var6 = (Class3_Sub28_Sub10_Sub1) this.aClass13_1086.method878(29);
+               var6 = (CacheResourceRequest) this.aClass13_1086.next();
             }
          }
 
-         var4.aByteArray4059 = var1.method1051(var3, (byte)85);
-         var4.aBoolean3632 = false;
+         var4.data = var1.method1051(var3, (byte)85);
+         var4.waiting = false;
          var4.aBoolean3628 = true;
          return var4;
       } catch (RuntimeException var9) {
@@ -538,9 +538,9 @@ static boolean aBoolean1080 = false;
    public final void run() {
       try {
          while(!this.aBoolean1091) {
-            Class3_Sub28_Sub10_Sub1 var1;
+            CacheResourceRequest var1;
             synchronized(this.aClass13_1086) {
-               var1 = (Class3_Sub28_Sub10_Sub1)this.aClass13_1086.method877();
+               var1 = (CacheResourceRequest)this.aClass13_1086.poll();
                if(null == var1) {
                   try {
                      this.aClass13_1086.wait();
@@ -553,16 +553,16 @@ static boolean aBoolean1080 = false;
             }
 
             try {
-               if(var1.anInt4061 == 2) {
-                  var1.aClass41_4056.method1050((int)var1.aLong2569, var1.aByteArray4059.length, var1.aByteArray4059);
-               } else if (var1.anInt4061 == 3) {
-                  var1.aByteArray4059 = var1.aClass41_4056.method1051((int) var1.aLong2569, (byte) -77);
+               if(var1.type == 2) {
+                  var1.cache.method1050((int)var1.nodeKey, var1.data.length, var1.data);
+               } else if (var1.type == 3) {
+                  var1.data = var1.cache.method1051((int) var1.nodeKey, (byte) -77);
                }
             } catch (Exception var5) {
                Class49.method1125((String)null, var5, (byte)111);
             }
 
-            var1.aBoolean3632 = false;
+            var1.waiting = false;
          }
 
       } catch (RuntimeException var8) {

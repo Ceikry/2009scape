@@ -1,5 +1,7 @@
 package org.runite.jagex;
 
+import org.rs09.client.Node;
+
 final class Class3_Sub28_Sub2 extends Node {
 
    Class140_Sub2 aClass140_Sub2_3545;

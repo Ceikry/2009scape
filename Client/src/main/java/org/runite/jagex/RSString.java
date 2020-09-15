@@ -1057,7 +1057,7 @@ final class RSString implements Interface3 {
 
     final RSString method1579() {
         try {
-            RSString var2 = Class41.method1052(this.toLong());
+            RSString var2 = Unsorted.method1052(this.toLong());
             return null == var2 ? Class134.aClass94_1760 : var2;
         } catch (RuntimeException var3) {
             throw Class44.clientError(var3, "na.Q(" + -17 + ')');

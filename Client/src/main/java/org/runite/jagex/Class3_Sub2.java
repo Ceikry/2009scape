@@ -47,8 +47,8 @@ final class Class3_Sub2 extends Linkable {
    static void method103() {
       try {
          Client.aHashTable_2194.clear();
-         Class81.aClass13_1139.method883();
-         Class126.aClass13_1666.method883();
+         Class81.aClass13_1139.clear();
+         Class126.aClass13_1666.clear();
       } catch (RuntimeException var2) {
          throw Class44.clientError(var2, "bj.B(" + (byte) 24 + ')');
       }

@@ -117,7 +117,7 @@ final class Canvas_Sub2 extends Canvas {
             for(var14 = 0; var14 < 64; ++var14) {
                for(var15 = 0; var15 < 64; ++var15) {
                   if(var13 == var7 && var9 <= var14 && 8 + var9 > var14 && var8 <= var15 && var15 < 8 + var8) {
-                     Class167.method2267(0, 0, var10, var25, Class3_Sub13_Sub29.method310(var0, (byte)-117, 7 & var14, 7 & var15) + var4, Node.method519(var0, var15 & 7, var14 & 7) + var1, (byte)63, var0, var2);
+                     Class167.method2267(0, 0, var10, var25, Class3_Sub13_Sub29.method310(var0, (byte)-117, 7 & var14, 7 & var15) + var4, Unsorted.method519(var0, var15 & 7, var14 & 7) + var1, (byte)63, var0, var2);
                   } else {
                      Class167.method2267(0, 0, var10, var25, -1, -1, (byte)123, 0, 0);
                   }
@@ -149,7 +149,7 @@ final class Canvas_Sub2 extends Canvas {
                               for(var20 = var17; var17 + 4 > var20; ++var20) {
                                  for(var21 = var18; var21 < 4 + var18; ++var21) {
                                     if(var9 <= var20 && 8 + var9 > var20 && var8 <= var21) {
-                                       var22 = var1 - -Node.method519(var0, var21 & 7, var20 & 7);
+                                       var22 = var1 - -Unsorted.method519(var0, var21 & 7, var20 & 7);
                                        int var23 = Class3_Sub13_Sub29.method310(var0, (byte)-97, 7 & var20, var21 & 7) + var4;
                                        if(0 <= var22 && 104 > var22 && var23 >= 0 && var23 < 104) {
                                           Class136.aByteArrayArrayArray1774[var2][var22][var23] = var19;

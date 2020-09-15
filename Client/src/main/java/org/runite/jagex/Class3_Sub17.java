@@ -51,7 +51,7 @@ final class Class3_Sub17 extends Linkable {
 				Unsorted.aBoolean47 = true;
 			}
 
-			Node.anInt2567 = -1;
+			Unsorted.anInt2567 = -1;
 			if(!var0) {
 				method380(-78);
 			}

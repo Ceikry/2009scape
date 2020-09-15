@@ -103,7 +103,7 @@ public final class Client extends GameShell {
                 }
 
                 if (Class3_Sub13_Sub10.aFrame3121 != null && !Class3_Sub13_Sub6.aBoolean3078 && (30 == Class143.loadingStage || 10 == Class143.loadingStage)) {
-                    GameObject.graphicsSettings(false, Node.anInt2577, -1, -1);
+                    GameObject.graphicsSettings(false, Unsorted.anInt2577, -1, -1);
                 }
 
                 boolean var10 = false;
@@ -229,7 +229,7 @@ public final class Client extends GameShell {
             }
 
             if (null != Class3_Sub13_Sub10.aFrame3121) {
-                Class3_Sub28_Sub10_Sub1.method593(Class3_Sub13_Sub10.aFrame3121, Class38.aClass87_665);
+                Unsorted.method593(Class3_Sub13_Sub10.aFrame3121, Class38.aClass87_665);
                 Class3_Sub13_Sub10.aFrame3121 = null;
             }
 
@@ -501,7 +501,7 @@ public final class Client extends GameShell {
 
     private void method47() {
         try {
-            for (Class3_Sub23.anInt2537 = 0; Class3_Sub28_Sub10_Sub1.method591(83) && Class3_Sub23.anInt2537 < 128; ++Class3_Sub23.anInt2537) {
+            for (Class3_Sub23.anInt2537 = 0; Unsorted.method591(83) && Class3_Sub23.anInt2537 < 128; ++Class3_Sub23.anInt2537) {
                 Class133.inputTextCodeArray[Class3_Sub23.anInt2537] = Class3_Sub28_Sub9.anInt3624;
                 Class120.anIntArray1638[Class3_Sub23.anInt2537] = Class3_Sub13_Sub27.anInt3342;
             }
@@ -988,13 +988,13 @@ public final class Client extends GameShell {
 
                                     if (var25 && Class3_Sub19.anInt2475 > 0) {
                                         if (Class3_Sub19.anInt2475 == 1 && (Class144.anInt1881 != Class126.anInt1676 || Class95.anInt1336 != Unsorted.anInt1709)) {
-                                            Class3_Sub28_Sub10_Sub2.anInt4073 = Class3_Sub28_Sub1.anInt3536;
+                                            Unsorted.anInt4073 = Class3_Sub28_Sub1.anInt3536;
                                             Class38.anInt660 = Class3_Sub4.anInt2251;
                                             Class3_Sub19.anInt2475 = 2;
                                         }
 
                                         if (Class3_Sub19.anInt2475 == 2) {
-                                            method1175(Class3_Sub28_Sub10_Sub2.anInt4073 + (int) ((double) (Class144.anInt1881 - Class126.anInt1676) * 2.0D / (double) NPC.aFloat3979));
+                                            method1175(Unsorted.anInt4073 + (int) ((double) (Class144.anInt1881 - Class126.anInt1676) * 2.0D / (double) NPC.aFloat3979));
                                             Class3_Sub13_Sub39.method354(Class38.anInt660 + (int) ((double) (Class95.anInt1336 - Unsorted.anInt1709) * 2.0D / (double) NPC.aFloat3979));
                                         }
                                         continue;
@@ -1347,7 +1347,7 @@ public final class Client extends GameShell {
     private void method52(int var1) {
         try {
             if (!Unsorted.aBoolean2146) {
-                while (Class3_Sub28_Sub10_Sub1.method591(107)) {
+                while (Unsorted.method591(107)) {
                     if (Class3_Sub13_Sub27.anInt3342 == 115 || Class3_Sub13_Sub27.anInt3342 == 83) {
                         Unsorted.aBoolean2146 = true;
                     }
@@ -1406,7 +1406,7 @@ public final class Client extends GameShell {
                             Class140_Sub6.spritesCacheIndex = Class8.getCacheIndex(false, true, true, 8);
                             Class3_Sub13_Sub28.aClass153_3352 = Class8.getCacheIndex(false, true, true, 9);
                             Class3_Sub13_Sub25.aClass153_3304 = Class8.getCacheIndex(false, true, true, 10);
-                            Node.aClass153_2573 = Class8.getCacheIndex(false, true, true, 11);
+                            Unsorted.aClass153_2573 = Class8.getCacheIndex(false, true, true, 11);
                             Class3_Sub1.interfaceScriptsIndex = Class8.getCacheIndex(false, true, true, 12);
                             CacheIndex.aClass153_1948 = Class8.getCacheIndex(false, true, true, 13);
                             Class3_Sub19.aClass153_2474 = Class8.getCacheIndex(false, false, true, 14);
@@ -1530,7 +1530,7 @@ public final class Client extends GameShell {
                             GameObject.method1864(Class100.aClass153_1410, Class157.aClass3_Sub28_Sub17_Sub1_2000, Class159.aClass153_2019);
                             Class29.method969(Class164.aClass153_2052, 59);
                             Class3_Sub20.method392(Class3_Sub28_Sub19.aClass153_3772, Class3_Sub13_Sub36.aClass153_3429, Class75_Sub3.aClass153_2660);
-                            Class41.method1053(Class164.aClass153_2052);
+                            Unsorted.method1053(Class164.aClass153_2052);
                             Class158.method2180(Class159.aClass153_2019, Class70.aClass153_1058);
                             Class107.method1648(Class3_Sub22.aClass153_2528);
                             Class3_Sub29.method731(Class164.aClass153_2052);
@@ -1632,13 +1632,13 @@ public final class Client extends GameShell {
                                 if (Unsorted.aBoolean2146) {
                                     Class3_Sub28_Sub9.anInt3622 = 0;
                                     Class3_Sub28_Sub14.anInt3671 = 0;
-                                    Node.anInt2577 = 0;
+                                    Unsorted.anInt2577 = 0;
                                     Class3_Sub20.anInt2488 = 0;
                                 }
 
                                 Unsorted.aBoolean2146 = true;
                                 Class119.method1730(Class38.aClass87_665);
-                                GameObject.graphicsSettings(false, Node.anInt2577, -1, -1);
+                                GameObject.graphicsSettings(false, Unsorted.anInt2577, -1, -1);
                                 LoadingStageNumber = 100;
                                 Class96.anInt1354 = 160;
                                 Class3_Sub17.aClass94_2464 = TextCore.Started3DLibrary;
@@ -1658,19 +1658,19 @@ public final class Client extends GameShell {
                     } else if (Class97.aClass153_1376.method2113()) {
                         Class102 var8 = new Class102(Class3_Sub13_Sub28.aClass153_3352, Class97.aClass153_1376, Class140_Sub6.spritesCacheIndex, !Class25.aBoolean488);
                         Class51.method1140(var8);
-                        if (Class3_Sub28_Sub10.anInt3625 == 1) {
+                        if (Unsorted.anInt3625 == 1) {
                             Class51.method1137(0.9F);
                         }
 
-                        if (2 == Class3_Sub28_Sub10.anInt3625) {
+                        if (2 == Unsorted.anInt3625) {
                             Class51.method1137(0.8F);
                         }
 
-                        if (Class3_Sub28_Sub10.anInt3625 == 3) {
+                        if (Unsorted.anInt3625 == 3) {
                             Class51.method1137(0.7F);
                         }
 
-                        if (Class3_Sub28_Sub10.anInt3625 == 4) {
+                        if (Unsorted.anInt3625 == 4) {
                             Class51.method1137(0.6F);
                         }
 

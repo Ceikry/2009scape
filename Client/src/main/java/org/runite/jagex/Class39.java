@@ -281,7 +281,7 @@ final class Class39 {
 				var6 = ((125 & var5) >> 4) + Class65.currentChunkX;
 				var7 = (7 & var5) + Class107.currentChunkY;
 				if(0 <= var6 && var7 >= 0 && var6 < 104 && 104 > var7) {
-					NodeList.method881(WorldListCountry.localPlane, var7, -101, var3, var6, -1, -1, var4, var2, 0);
+					Unsorted.method881(WorldListCountry.localPlane, var7, -101, var3, var6, -1, -1, var4, var2, 0);
 				}
 
 			} else if(Unsorted.incomingOpcode == 33) {
@@ -362,7 +362,7 @@ final class Class39 {
 					var7 = (7 & var5) + Class107.currentChunkY;
 					var8 = GraphicDefinition.incomingBuffer.getShortA(117);
 					if(var6 >= 0 && var7 >= 0 && var6 < 104 && var7 < 104) {
-						NodeList.method881(WorldListCountry.localPlane, var7, -91, var3, var6, -1, var8, var4, var2, 0);
+						Unsorted.method881(WorldListCountry.localPlane, var7, -91, var3, var6, -1, var8, var4, var2, 0);
 					}
 
 				} else if(Unsorted.incomingOpcode == 20) {
@@ -602,7 +602,7 @@ final class Class39 {
 			Class168.anInt2104 = var1.getArchiveForName(RSString.of("mapfunction"));
 			Class3_Sub13_Sub23_Sub1.hitMarkIndex = var1.getArchiveForName(RSString.of("hitmarks"));
 			Client.anInt2195 = var1.getArchiveForName(RSString.of("hitbar_default"));
-			Node.anInt2575 = var1.getArchiveForName(RSString.of("headicons_pk"));
+			Unsorted.anInt2575 = var1.getArchiveForName(RSString.of("headicons_pk"));
 
             RenderAnimationDefinition.anInt380 = var1.getArchiveForName(RSString.of("headicons_prayer"));
 			Class3_Sub13_Sub29.anInt3356 = var1.getArchiveForName(RSString.of("hint_headicons"));

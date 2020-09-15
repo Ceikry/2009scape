@@ -48,9 +48,9 @@ final class MouseListeningClass implements MouseListener, MouseMotionListener, F
 	          if (var1.anInt2261 > 0) {
 	            var1.anInt2261 -= 1;
 	          }
-	          if ((var1.anInt2261 == 0) && (1 <= var1.anInt2264) && (1 <= var1.anInt2248) && (102 >= var1.anInt2264) && (var1.anInt2248 <= 102) && ((var1.anInt2265 < 0) || (Class3_Sub28_Sub10.method590((byte)-34, var1.anInt2265, var1.anInt2262))))
+	          if ((var1.anInt2261 == 0) && (1 <= var1.anInt2264) && (1 <= var1.anInt2248) && (102 >= var1.anInt2264) && (var1.anInt2248 <= 102) && ((var1.anInt2265 < 0) || (Unsorted.method590((byte)-34, var1.anInt2265, var1.anInt2262))))
 	          {
-	            Class41.method1048(var1.anInt2265, var1.anInt2264, var1.anInt2250, var1.anInt2256, var1.anInt2248, -65, var1.anInt2262, var1.anInt2263);
+	            Unsorted.method1048(var1.anInt2265, var1.anInt2264, var1.anInt2250, var1.anInt2256, var1.anInt2248, -65, var1.anInt2262, var1.anInt2263);
 	            var1.anInt2261 = -1;
 	            if ((var1.anInt2265 == var1.anInt2254) && (var1.anInt2254 == -1)) {
 	              var1.unlink();
@@ -59,9 +59,9 @@ final class MouseListeningClass implements MouseListener, MouseMotionListener, F
 	            }
 	          }
 	        }
-	        else if ((var1.anInt2254 < 0) || (Class3_Sub28_Sub10.method590((byte)-66, var1.anInt2254, var1.anInt2253)))
+	        else if ((var1.anInt2254 < 0) || (Unsorted.method590((byte)-66, var1.anInt2254, var1.anInt2253)))
 	        {
-	          Class41.method1048(var1.anInt2254, var1.anInt2264, var1.anInt2250, var1.anInt2257, var1.anInt2248, -71, var1.anInt2253, var1.anInt2263);
+	          Unsorted.method1048(var1.anInt2254, var1.anInt2264, var1.anInt2250, var1.anInt2257, var1.anInt2248, -71, var1.anInt2253, var1.anInt2263);
 	          var1.unlink();
 	        }
 	      }

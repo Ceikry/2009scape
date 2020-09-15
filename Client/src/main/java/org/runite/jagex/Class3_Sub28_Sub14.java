@@ -1,5 +1,7 @@
 package org.runite.jagex;
 
+import org.rs09.client.Node;
+
 final class Class3_Sub28_Sub14 extends Node {
 
    static boolean aBoolean3668 = false;

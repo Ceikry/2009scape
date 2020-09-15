@@ -136,7 +136,7 @@ final class Class163_Sub2_Sub1 extends Class163_Sub2 {
             Class3_Sub28_Sub9.method582(Class102.player.anIntArray2755[0], var6, 0, true, 0, 2, var4, 0, 1 + var5, 2, var3, Class102.player.anIntArray2767[0]);
          }
 
-         Class3_Sub28_Sub10_Sub1.anInt4062 = Class38_Sub1.anInt2614;
+         Unsorted.anInt4062 = Class38_Sub1.anInt2614;
          Unsorted.anInt2958 = 0;
          Class36.anInt638 = 2;
          Class70.anInt1053 = Class163_Sub1.anInt2993;

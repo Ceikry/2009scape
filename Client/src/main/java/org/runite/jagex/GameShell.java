@@ -63,7 +63,7 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
       try {
 
          int var2 = Class100.method1602(var0);
-         return var2 != -1?Class119.aClass131_1624.aClass94Array1721[var2].method1560(Class3_Sub13_Sub16.aClass94_3192, Class3_Sub28_Sub10_Sub2.aClass94_4066):Class3_Sub28_Sub7_Sub1.aClass94_4049;
+         return var2 != -1?Class119.aClass131_1624.aClass94Array1721[var2].method1560(Class3_Sub13_Sub16.aClass94_3192, Unsorted.aClass94_4066):Class3_Sub28_Sub7_Sub1.aClass94_4049;
       } catch (RuntimeException var3) {
          throw Class44.clientError(var3, "rc.V(" + (var0 != null?"{...}":"null") + ',' + true + ')');
       }

@@ -4,10 +4,10 @@ import java.io.IOException;
 
 final class Class66 {
 
-    private final NodeList highPriorityRequests = new NodeList();
-    private final NodeList aClass13_1000 = new NodeList();
-    private final NodeList lowPriorityRequests = new NodeList();
-    private final NodeList aClass13_1003 = new NodeList();
+    private final Queue highPriorityRequests = new Queue();
+    private final Queue aClass13_1000 = new Queue();
+    private final Queue lowPriorityRequests = new Queue();
+    private final Queue aClass13_1003 = new Queue();
 
     private long aLong1004;
     private IOHandler aClass89_1005;
@@ -15,7 +15,7 @@ final class Class66 {
     private byte aByte1009 = 0;
     volatile int anInt1010 = 0;
     volatile int anInt1011 = 0;
-    private Class3_Sub28_Sub10_Sub2 aClass3_Sub28_Sub10_Sub2_1012;
+    private Js5ResourceRequest aJs5ResourceRequest_1012;
 
     private final RSByteBuffer aClass3_Sub30_1007 = new RSByteBuffer(4);
     private final RSByteBuffer aClass3_Sub30_1008 = new RSByteBuffer(8);
@@ -52,22 +52,22 @@ final class Class66 {
                 try {
                     this.aClass89_1005.method1466();
 
-                    Class3_Sub28_Sub10_Sub2 var21;
-                    for (var21 = (Class3_Sub28_Sub10_Sub2) this.highPriorityRequests.method876((byte) 125); null != var21; var21 = (Class3_Sub28_Sub10_Sub2) this.highPriorityRequests.method878(119)) {
+                    Js5ResourceRequest var21;
+                    for (var21 = (Js5ResourceRequest) this.highPriorityRequests.getFront(); null != var21; var21 = (Js5ResourceRequest) this.highPriorityRequests.next()) {
                         this.aClass3_Sub30_1007.index = 0;
                         this.aClass3_Sub30_1007.putByte((byte) -26, 1); //High priority JS5 request
-                        this.aClass3_Sub30_1007.putTriByte((int) var21.aLong2569);
+                        this.aClass3_Sub30_1007.putTriByte((int) var21.nodeKey);
 
                         this.aClass89_1005.sendBytes(this.aClass3_Sub30_1007.buffer, 4);
-                        this.aClass13_1000.method879(var21);
+                        this.aClass13_1000.offer(var21);
                     }
 
-                    for (var21 = (Class3_Sub28_Sub10_Sub2) this.lowPriorityRequests.method876((byte) 51); var21 != null; var21 = (Class3_Sub28_Sub10_Sub2) this.lowPriorityRequests.method878(-53)) {
+                    for (var21 = (Js5ResourceRequest) this.lowPriorityRequests.getFront(); var21 != null; var21 = (Js5ResourceRequest) this.lowPriorityRequests.next()) {
                         this.aClass3_Sub30_1007.index = 0;
                         this.aClass3_Sub30_1007.putByte((byte) -22, 0); //Low priority JS5 request
-                        this.aClass3_Sub30_1007.putTriByte((int) var21.aLong2569);
+                        this.aClass3_Sub30_1007.putTriByte((int) var21.nodeKey);
                         this.aClass89_1005.sendBytes(this.aClass3_Sub30_1007.buffer, 4);
-                        this.aClass13_1003.method879(var21);
+                        this.aClass13_1003.offer(var21);
                     }
 
                     for (int var3 = 0; 100 > var3; ++var3) {
@@ -82,9 +82,9 @@ final class Class66 {
 
                         this.anInt1006 = 0;
                         byte var5 = 0;
-                        if (null == this.aClass3_Sub28_Sub10_Sub2_1012) {
+                        if (null == this.aJs5ResourceRequest_1012) {
                             var5 = 8;
-                        } else if (this.aClass3_Sub28_Sub10_Sub2_1012.anInt4067 == 0) {
+                        } else if (this.aJs5ResourceRequest_1012.anInt4067 == 0) {
                             var5 = 1;
                         }
 
@@ -92,31 +92,31 @@ final class Class66 {
                         int var7;
                         int var8;
                         if (0 >= var5) {
-                            var6 = -this.aClass3_Sub28_Sub10_Sub2_1012.aByte4064 + this.aClass3_Sub28_Sub10_Sub2_1012.aClass3_Sub30_4069.buffer.length;
-                            var7 = -this.aClass3_Sub28_Sub10_Sub2_1012.anInt4067 + 512;
-                            if (var7 > -this.aClass3_Sub28_Sub10_Sub2_1012.aClass3_Sub30_4069.index + var6) {
-                                var7 = -this.aClass3_Sub28_Sub10_Sub2_1012.aClass3_Sub30_4069.index + var6;
+                            var6 = -this.aJs5ResourceRequest_1012.aByte4064 + this.aJs5ResourceRequest_1012.aClass3_Sub30_4069.buffer.length;
+                            var7 = -this.aJs5ResourceRequest_1012.anInt4067 + 512;
+                            if (var7 > -this.aJs5ResourceRequest_1012.aClass3_Sub30_4069.index + var6) {
+                                var7 = -this.aJs5ResourceRequest_1012.aClass3_Sub30_4069.index + var6;
                             }
 
                             if (var4 < var7) {
                                 var7 = var4;
                             }
 
-                            this.aClass89_1005.readBytes(this.aClass3_Sub28_Sub10_Sub2_1012.aClass3_Sub30_4069.buffer, this.aClass3_Sub28_Sub10_Sub2_1012.aClass3_Sub30_4069.index, var7);
+                            this.aClass89_1005.readBytes(this.aJs5ResourceRequest_1012.aClass3_Sub30_4069.buffer, this.aJs5ResourceRequest_1012.aClass3_Sub30_4069.index, var7);
                             if (this.aByte1009 != 0) {
                                 for (var8 = 0; var8 < var7; ++var8) {
-                                    this.aClass3_Sub28_Sub10_Sub2_1012.aClass3_Sub30_4069.buffer[this.aClass3_Sub28_Sub10_Sub2_1012.aClass3_Sub30_4069.index - -var8] = (byte) Class93.bitwiseXOR(this.aClass3_Sub28_Sub10_Sub2_1012.aClass3_Sub30_4069.buffer[this.aClass3_Sub28_Sub10_Sub2_1012.aClass3_Sub30_4069.index + var8], this.aByte1009);
+                                    this.aJs5ResourceRequest_1012.aClass3_Sub30_4069.buffer[this.aJs5ResourceRequest_1012.aClass3_Sub30_4069.index - -var8] = (byte) Class93.bitwiseXOR(this.aJs5ResourceRequest_1012.aClass3_Sub30_4069.buffer[this.aJs5ResourceRequest_1012.aClass3_Sub30_4069.index + var8], this.aByte1009);
                                 }
                             }
 
-                            this.aClass3_Sub28_Sub10_Sub2_1012.anInt4067 += var7;
-                            this.aClass3_Sub28_Sub10_Sub2_1012.aClass3_Sub30_4069.index += var7;
-                            if (var6 == this.aClass3_Sub28_Sub10_Sub2_1012.aClass3_Sub30_4069.index) {
-                                this.aClass3_Sub28_Sub10_Sub2_1012.method524();
-                                this.aClass3_Sub28_Sub10_Sub2_1012.aBoolean3632 = false;
-                                this.aClass3_Sub28_Sub10_Sub2_1012 = null;
-                            } else if (this.aClass3_Sub28_Sub10_Sub2_1012.anInt4067 == 512) {
-                                this.aClass3_Sub28_Sub10_Sub2_1012.anInt4067 = 0;
+                            this.aJs5ResourceRequest_1012.anInt4067 += var7;
+                            this.aJs5ResourceRequest_1012.aClass3_Sub30_4069.index += var7;
+                            if (var6 == this.aJs5ResourceRequest_1012.aClass3_Sub30_4069.index) {
+                                this.aJs5ResourceRequest_1012.unlinkNode();
+                                this.aJs5ResourceRequest_1012.waiting = false;
+                                this.aJs5ResourceRequest_1012 = null;
+                            } else if (this.aJs5ResourceRequest_1012.anInt4067 == 512) {
+                                this.aJs5ResourceRequest_1012.anInt4067 = 0;
                             }
                         } else {
                             var6 = -this.aClass3_Sub30_1008.index + var5;
@@ -133,7 +133,7 @@ final class Class66 {
 
                             this.aClass3_Sub30_1008.index += var6;
                             if (var5 <= this.aClass3_Sub30_1008.index) {
-                                if (this.aClass3_Sub28_Sub10_Sub2_1012 == null) {
+                                if (this.aJs5ResourceRequest_1012 == null) {
                                     this.aClass3_Sub30_1008.index = 0;
                                     var7 = this.aClass3_Sub30_1008.readUnsignedByte();
                                     var8 = this.aClass3_Sub30_1008.getShort();
@@ -141,13 +141,13 @@ final class Class66 {
                                     int var10 = this.aClass3_Sub30_1008.readInt();
                                     int var11 = 127 & var9;
                                     boolean var12 = (var9 & 128) != 0;
-                                    Class3_Sub28_Sub10_Sub2 var15;
+                                    Js5ResourceRequest var15;
                                     long var13 = (long) ((var7 << 16) - -var8);
                                     if (var12) {
-                                        for (var15 = (Class3_Sub28_Sub10_Sub2) this.aClass13_1003.method876((byte) 76); null != var15 && var13 != var15.aLong2569; var15 = (Class3_Sub28_Sub10_Sub2) this.aClass13_1003.method878(122)) {
+                                        for (var15 = (Js5ResourceRequest) this.aClass13_1003.getFront(); null != var15 && var13 != var15.nodeKey; var15 = (Js5ResourceRequest) this.aClass13_1003.next()) {
                                         }
                                     } else {
-                                        for (var15 = (Class3_Sub28_Sub10_Sub2) this.aClass13_1000.method876((byte) 65); var15 != null && var15.aLong2569 != var13; var15 = (Class3_Sub28_Sub10_Sub2) this.aClass13_1000.method878(-15)) {
+                                        for (var15 = (Js5ResourceRequest) this.aClass13_1000.getFront(); var15 != null && var15.nodeKey != var13; var15 = (Js5ResourceRequest) this.aClass13_1000.next()) {
                                         }
                                     }
 
@@ -156,22 +156,22 @@ final class Class66 {
                                     }
 
                                     int var16 = var11 != 0 ? 9 : 5;
-                                    this.aClass3_Sub28_Sub10_Sub2_1012 = var15;
-                                    this.aClass3_Sub28_Sub10_Sub2_1012.aClass3_Sub30_4069 = new RSByteBuffer(var10 - (-var16 - this.aClass3_Sub28_Sub10_Sub2_1012.aByte4064));
-                                    this.aClass3_Sub28_Sub10_Sub2_1012.aClass3_Sub30_4069.putByte((byte) -127, var11);
-                                    this.aClass3_Sub28_Sub10_Sub2_1012.aClass3_Sub30_4069.putInt(-125, var10);
-                                    this.aClass3_Sub28_Sub10_Sub2_1012.anInt4067 = 8;
+                                    this.aJs5ResourceRequest_1012 = var15;
+                                    this.aJs5ResourceRequest_1012.aClass3_Sub30_4069 = new RSByteBuffer(var10 - (-var16 - this.aJs5ResourceRequest_1012.aByte4064));
+                                    this.aJs5ResourceRequest_1012.aClass3_Sub30_4069.putByte((byte) -127, var11);
+                                    this.aJs5ResourceRequest_1012.aClass3_Sub30_4069.putInt(-125, var10);
+                                    this.aJs5ResourceRequest_1012.anInt4067 = 8;
                                     this.aClass3_Sub30_1008.index = 0;
                                 } else {
-                                    if (this.aClass3_Sub28_Sub10_Sub2_1012.anInt4067 != 0) {
+                                    if (this.aJs5ResourceRequest_1012.anInt4067 != 0) {
                                         throw new IOException();
                                     }
 
                                     if (this.aClass3_Sub30_1008.buffer[0] == -1) {
-                                        this.aClass3_Sub28_Sub10_Sub2_1012.anInt4067 = 1;
+                                        this.aJs5ResourceRequest_1012.anInt4067 = 1;
                                         this.aClass3_Sub30_1008.index = 0;
                                     } else {
-                                        this.aClass3_Sub28_Sub10_Sub2_1012 = null;
+                                        this.aJs5ResourceRequest_1012 = null;
                                     }
                                 }
                             }
@@ -226,7 +226,7 @@ final class Class66 {
     }
 
     private int method1246() {
-        return this.lowPriorityRequests.method874() - -this.aClass13_1003.method874();
+        return this.lowPriorityRequests.size() - -this.aClass13_1003.size();
     }
 
     final void method1247(boolean var1) {
@@ -275,13 +275,13 @@ final class Class66 {
         this.method1256();
         this.method1247(var1);
         this.aClass3_Sub30_1008.index = 0;
-        this.aClass3_Sub28_Sub10_Sub2_1012 = null;
+        this.aJs5ResourceRequest_1012 = null;
 
         while (true) {
-            Class3_Sub28_Sub10_Sub2 var4 = (Class3_Sub28_Sub10_Sub2) this.aClass13_1000.method877();
+            Js5ResourceRequest var4 = (Js5ResourceRequest) this.aClass13_1000.poll();
             if (null == var4) {
                 while (true) {
-                    var4 = (Class3_Sub28_Sub10_Sub2) this.aClass13_1003.method877();
+                    var4 = (Js5ResourceRequest) this.aClass13_1003.poll();
                     if (var4 == null) {
                         if (this.aByte1009 != 0) {
                             try {
@@ -308,11 +308,11 @@ final class Class66 {
                         return;
                     }
 
-                    this.lowPriorityRequests.method879(var4);
+                    this.lowPriorityRequests.offer(var4);
                 }
             }
 
-            this.highPriorityRequests.method879(var4);
+            this.highPriorityRequests.offer(var4);
         }
     }
 
@@ -333,7 +333,7 @@ final class Class66 {
     }
 
     final int method1253() {
-        return this.highPriorityRequests.method874() - -this.aClass13_1000.method874();
+        return this.highPriorityRequests.size() - -this.aClass13_1000.size();
     }
 
     final void method1254() {
@@ -342,24 +342,24 @@ final class Class66 {
         }
     }
 
-    final Class3_Sub28_Sub10_Sub2 addJS5Request(int index, byte var3, int archive, boolean highPriority) {
-        Class3_Sub28_Sub10_Sub2 var8 = new Class3_Sub28_Sub10_Sub2();
+    final Js5ResourceRequest addJS5Request(int index, byte var3, int archive, boolean highPriority) {
+        Js5ResourceRequest var8 = new Js5ResourceRequest();
         long var6 = archive + (index << 16);
         var8.aBoolean3628 = highPriority;
-        var8.aLong2569 = var6;
+        var8.nodeKey = var6;
         var8.aByte4064 = var3;
         if (highPriority) {
             if (this.method1253() >= 20) {
                 throw new RuntimeException();
             }
 
-            this.highPriorityRequests.method879(var8);
+            this.highPriorityRequests.offer(var8);
         } else {
             if (this.method1246() >= 20) {
                 throw new RuntimeException();
             }
 
-            this.lowPriorityRequests.method879(var8);
+            this.lowPriorityRequests.offer(var8);
         }
 
         return var8;

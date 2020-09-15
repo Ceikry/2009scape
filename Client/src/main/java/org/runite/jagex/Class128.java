@@ -1,4 +1,6 @@
 package org.runite.jagex;
+import org.rs09.client.Node;
+
 import java.util.Arrays;
 
 
@@ -172,8 +174,8 @@ final class Class128 {
 
          for(int var2 = 0; 8 > var2; ++var2) {
             Node var3 = aClass3_Sub28Array1684[var2] = new Node();
-            var3.aClass3_Sub28_2570 = var3;
-            var3.aClass3_Sub28_2578 = var3;
+            var3.previousNode = var3;
+            var3.nextNode = var3;
          }
 
       } catch (RuntimeException var4) {

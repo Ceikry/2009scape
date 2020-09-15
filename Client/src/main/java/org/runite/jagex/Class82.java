@@ -344,7 +344,7 @@ final class Class82 {
             Class32.anInt590 = Class3_Sub13_Sub26.anIntArray3319[var7];
             Class3_Sub1.anInt2208 = Class3_Sub13_Sub26.anIntArray3337[var7] = var19;
             RSString var33 = Class3_Sub13_Sub26.aClass94Array3317[var7];
-            if(Class41.anInt688 == 0) {
+            if(Unsorted.anInt688 == 0) {
                var32 = 16776960;
                if(Class3_Sub13_Sub26.anIntArray3331[var7] < 6) {
                   var32 = Class3_Sub1.anIntArray2213[Class3_Sub13_Sub26.anIntArray3331[var7]];

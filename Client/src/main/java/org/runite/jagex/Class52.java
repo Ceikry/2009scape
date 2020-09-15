@@ -163,7 +163,7 @@ final class Class52 {
    final int method1163() {
       try {
 
-         return this.pnpcId != -1?305419896 + Node.method522(this.pnpcId).npcId:(this.lookInfo[8] << 10) + ((this.anIntArray862[0] << 25) - -(this.anIntArray862[4] << 20)) - (-(this.lookInfo[0] << 15) - ((this.lookInfo[11] << 5) + this.lookInfo[1]));
+         return this.pnpcId != -1?305419896 + Unsorted.method522(this.pnpcId).npcId:(this.lookInfo[8] << 10) + ((this.anIntArray862[0] << 25) - -(this.anIntArray862[4] << 20)) - (-(this.lookInfo[0] << 15) - ((this.lookInfo[11] << 5) + this.lookInfo[1]));
       } catch (RuntimeException var3) {
          throw Class44.clientError(var3, "hh.E(" + -24861 + ')');
       }
@@ -506,7 +506,7 @@ final class Class52 {
                return var51;
             }
          } else {
-            return Node.method522(this.pnpcId).method1476(var1, var6, (byte)-128, var11, var2, var8, var10, var3, var5, var4);
+            return Unsorted.method522(this.pnpcId).method1476(var1, var6, (byte)-128, var11, var2, var8, var10, var3, var5, var4);
          }
       } catch (RuntimeException var36) {
          throw Class44.clientError(var36, "hh.D(" + (var1 != null?"{...}":"null") + ',' + var2 + ',' + (var3 != null?"{...}":"null") + ',' + (var4 != null?"{...}":"null") + ',' + var5 + ',' + var6 + ',' + var7 + ',' + var8 + ',' + true + ',' + var10 + ',' + var11 + ')');
@@ -881,7 +881,7 @@ final class Class52 {
 
             return var6;
          } else {
-            return Node.method522(this.pnpcId).getChatModel(var3, var1, var5, -109, var4);
+            return Unsorted.method522(this.pnpcId).getChatModel(var3, var1, var5, -109, var4);
          }
       } catch (RuntimeException var13) {
          throw Class44.clientError(var13, "hh.F(" + var1 + ',' + (byte) 127 + ',' + (var3 != null?"{...}":"null") + ',' + var4 + ',' + var5 + ')');

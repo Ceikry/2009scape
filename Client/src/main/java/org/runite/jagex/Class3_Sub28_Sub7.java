@@ -1,4 +1,6 @@
 package org.runite.jagex;
+import org.rs09.client.Node;
+
 import java.io.IOException;
 
 abstract class Class3_Sub28_Sub7 extends Node {
@@ -24,7 +26,7 @@ abstract class Class3_Sub28_Sub7 extends Node {
 
    static void method564(Signlink var0) {
       try {
-         Class3_Sub28_Sub10.anInt3625 = 3;
+         Unsorted.anInt3625 = 3;
          Class25.method957(true);
          aBoolean3604 = true;
          Class3_Sub13_Sub15.aBoolean3184 = true;
@@ -58,7 +60,7 @@ abstract class Class3_Sub28_Sub7 extends Node {
          Class163_Sub3.aBoolean3004 = true;
          Unsorted.aBoolean2146 = false;
          Class73.aBoolean1080 = false;
-         anInt2577 = 0;
+         Unsorted.anInt2577 = 0;
 
          try {
             Class64 var3 = var0.method1433("runescape", 12);

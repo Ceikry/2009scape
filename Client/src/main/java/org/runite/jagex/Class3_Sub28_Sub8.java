@@ -1,5 +1,7 @@
 package org.runite.jagex;
 
+import org.rs09.client.Node;
+
 final class Class3_Sub28_Sub8 extends Node {
 
    static int anInt3609;
@@ -52,7 +54,7 @@ final class Class3_Sub28_Sub8 extends Node {
             return -1;
          } else {
             for (int var2 = 0; var2 < Class119.aClass131_1624.anInt1720; ++var2) {
-               if (Class119.aClass131_1624.aClass94Array1721[var2].method1560(Class3_Sub13_Sub16.aClass94_3192, Class3_Sub28_Sub10_Sub2.aClass94_4066).equalsString(var0)) {
+               if (Class119.aClass131_1624.aClass94Array1721[var2].method1560(Class3_Sub13_Sub16.aClass94_3192, Unsorted.aClass94_4066).equalsString(var0)) {
                   return var2;
                }
             }

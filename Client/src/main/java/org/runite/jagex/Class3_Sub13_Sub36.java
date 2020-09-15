@@ -130,16 +130,16 @@ final class Class3_Sub13_Sub36 extends Class3_Sub13 {
             HDToolKit.method1831(true);
             HDToolKit.method1827(true);
             if(Class143.loadingStage == 10) {
-               var12 = Class3_Sub30_Sub1.method809(Class106.anInt1446, Class77.anInt1111 >> 10, Class3_Sub28_Sub10.anInt3625, NPC.anInt3995 >> 10);
+               var12 = Class3_Sub30_Sub1.method809(Class106.anInt1446, Class77.anInt1111 >> 10, Unsorted.anInt3625, NPC.anInt3995 >> 10);
             } else {
-               var12 = Class3_Sub30_Sub1.method809(Class106.anInt1446, Class102.player.anIntArray2755[0] >> 3, Class3_Sub28_Sub10.anInt3625, Class102.player.anIntArray2767[0] >> 3);
+               var12 = Class3_Sub30_Sub1.method809(Class106.anInt1446, Class102.player.anIntArray2755[0] >> 3, Unsorted.anInt3625, Class102.player.anIntArray2767[0] >> 3);
             }
 
             Class68.method1269(Class44.anInt719, !WorldListEntry.aBoolean2623);
             HDToolKit.method1849(var12);
             ClientErrorException.method2285(Class139.anInt1823, Class77.anInt1111, Class7.anInt2162, NPC.anInt3995, Class3_Sub13_Sub25.anInt3315);
             HDToolKit.anInt1791 = Class44.anInt719;
-            Class3_Sub22.method398(NPC.anInt3995, Class7.anInt2162, Class77.anInt1111, Class139.anInt1823, Class3_Sub13_Sub25.anInt3315, Class158.aByteArrayArrayArray2008, Class41.anIntArray686, Class129_Sub1.anIntArray2696, Class159.anIntArray2021, Player.anIntArray3959, AnimationDefinition.anIntArray1871, WorldListCountry.localPlane + 1, var19, Class102.player.anInt2819 >> 7, Class102.player.anInt2829 >> 7);
+            Class3_Sub22.method398(NPC.anInt3995, Class7.anInt2162, Class77.anInt1111, Class139.anInt1823, Class3_Sub13_Sub25.anInt3315, Class158.aByteArrayArrayArray2008, Unsorted.anIntArray686, Class129_Sub1.anIntArray2696, Class159.anIntArray2021, Player.anIntArray3959, AnimationDefinition.anIntArray1871, WorldListCountry.localPlane + 1, var19, Class102.player.anInt2819 >> 7, Class102.player.anInt2829 >> 7);
             Unsorted.aBoolean47 = true;
             Class68.method1265();
             ClientErrorException.method2285(0, 0, 0, 0, 0);
@@ -149,7 +149,7 @@ final class Class3_Sub13_Sub36 extends Class3_Sub13 {
             Class163_Sub2_Sub1.method2221(var4, var3, var1, Unsorted.anInt1705, Unsorted.anInt1705, var5);
          } else {
             Class74.method1323(var3, var5, var4, var1, 0);
-            Class3_Sub22.method398(NPC.anInt3995, Class7.anInt2162, Class77.anInt1111, Class139.anInt1823, Class3_Sub13_Sub25.anInt3315, Class158.aByteArrayArrayArray2008, Class41.anIntArray686, Class129_Sub1.anIntArray2696, Class159.anIntArray2021, Player.anIntArray3959, AnimationDefinition.anIntArray1871, WorldListCountry.localPlane - -1, var19, Class102.player.anInt2819 >> 7, Class102.player.anInt2829 >> 7);
+            Class3_Sub22.method398(NPC.anInt3995, Class7.anInt2162, Class77.anInt1111, Class139.anInt1823, Class3_Sub13_Sub25.anInt3315, Class158.aByteArrayArrayArray2008, Unsorted.anIntArray686, Class129_Sub1.anIntArray2696, Class159.anIntArray2021, Player.anIntArray3959, AnimationDefinition.anIntArray1871, WorldListCountry.localPlane - -1, var19, Class102.player.anInt2819 >> 7, Class102.player.anInt2829 >> 7);
             Class58.method1194();
             Unsorted.method1775();
             Class82.method1405(var5, var4, var3, 256, var1, 256, -6403 + -994);

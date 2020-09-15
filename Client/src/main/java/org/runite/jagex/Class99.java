@@ -48,7 +48,7 @@ final class Class99 {
       try {
          if(var5.method1432(false)) {
             if(0 == var2) {
-               Class106[] var6 = Class3_Sub28_Sub10_Sub2.method596(var5);
+               Class106[] var6 = Unsorted.method596(var5);
 
                boolean var7 = false;
 
@@ -74,7 +74,7 @@ final class Class99 {
             if(null == var11) {
                return null;
             } else if (2 == var10.anInt978) {
-               Class3_Sub28_Sub10_Sub1.method593(var11, var5);
+               Unsorted.method593(var11, var5);
                return null;
             } else {
                return var11;

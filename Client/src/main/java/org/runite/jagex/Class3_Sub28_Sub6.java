@@ -1,5 +1,7 @@
 package org.runite.jagex;
 
+import org.rs09.client.Node;
+
 final class Class3_Sub28_Sub6 extends Node {
 
    static boolean aBoolean3594;
@@ -12,8 +14,8 @@ final class Class3_Sub28_Sub6 extends Node {
 
    final void a() {
       try {
-         this.aLong2569 = Class5.method830((byte)-55) - -500L | Long.MIN_VALUE & this.aLong2569;
-         Class81.aClass13_1139.method879(this);
+         this.nodeKey = Class5.method830((byte)-55) - -500L | Long.MIN_VALUE & this.nodeKey;
+         Class81.aClass13_1139.offer(this);
       } catch (RuntimeException var3) {
          throw Class44.clientError(var3, "da.U(" + true + ')');
       }
@@ -92,7 +94,7 @@ final class Class3_Sub28_Sub6 extends Node {
    final long b() {
       try {
 
-         return this.aLong2569 & Long.MAX_VALUE;
+         return this.nodeKey & Long.MAX_VALUE;
       } catch (RuntimeException var3) {
          throw Class44.clientError(var3, "da.A(" + true + ')');
       }
@@ -208,9 +210,9 @@ final class Class3_Sub28_Sub6 extends Node {
 
    final void g() {
       try {
-         this.aLong2569 |= Long.MIN_VALUE;
+         this.nodeKey |= Long.MIN_VALUE;
          if(this.b() == 0) {
-            Class126.aClass13_1666.method879(this);
+            Class126.aClass13_1666.offer(this);
          }
 
       } catch (RuntimeException var3) {

@@ -483,7 +483,7 @@ final class AnimationDefinition {
 			Canvas_Sub2.anInt30 = 0;
 			GraphicDefinition.anInt529 = 0;
 			MouseListeningClass.anInt1923 = 0;
-			Class3_Sub28_Sub10.anInt3631 = 0;
+			Unsorted.anInt3631 = 0;
 			Class163_Sub2_Sub1.anInt4021 = 0;
 
 			for(var1 = 0; var1 < NPCDefinition.anIntArray1277.length; ++var1) {
@@ -519,7 +519,7 @@ final class AnimationDefinition {
 				Class3_Sub28_Sub14.aBooleanArray3674[var1] = true;
 			}
 
-			Node.clanSize = 0;
+			Unsorted.clanSize = 0;
 			PacketParser.aClass3_Sub19Array3694 = null;
 			RSInterface.aClass94_251 = null;
 
@@ -537,7 +537,7 @@ final class AnimationDefinition {
 				Class3_Sub13_Sub14.method236();
 			}
 
-			Class3_Sub28_Sub10_Sub2.aBoolean4068 = true;
+			Unsorted.aBoolean4068 = true;
 			Class113.interfacePacketCounter = 0;
 			Class3_Sub13_Sub28.aClass94_3353 = TextCore.HasWalkHere;
 			Class73.aBoolean1084 = false;

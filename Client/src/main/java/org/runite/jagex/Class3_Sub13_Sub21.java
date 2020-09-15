@@ -135,7 +135,7 @@ final class Class3_Sub13_Sub21 extends Class3_Sub13 {
                   Class3_Sub15.aClass89_2429.readBytes(GraphicDefinition.incomingBuffer.buffer, 0, 8 * Class3_Sub13_Sub33.aClass94Array3391.length);
 
                   for(response = 0; response < Class3_Sub13_Sub33.aClass94Array3391.length; ++response) {
-                     Class3_Sub13_Sub33.aClass94Array3391[response] = Class41.method1052(GraphicDefinition.incomingBuffer.getLong(-125));
+                     Class3_Sub13_Sub33.aClass94Array3391[response] = Unsorted.method1052(GraphicDefinition.incomingBuffer.getLong(-125));
                   }
 
                   Unsorted.anInt1711 = 21;
@@ -293,7 +293,7 @@ final class Class3_Sub13_Sub21 extends Class3_Sub13 {
                   int var11 = var9 + 64 * (Class3_Sub24_Sub3.anIntArray3494[var2] >> 8) - Class131.anInt1716;
                   int var10 = var7 & 63;
                   int var12 = var10 + -Class82.anInt1152 + 64 * (255 & Class3_Sub24_Sub3.anIntArray3494[var2]);
-                  NPCDefinition var13 = Node.method522(var16.getShort());
+                  NPCDefinition var13 = Unsorted.method522(var16.getShort());
                   if(Class3_Sub13_Sub24.npcs[var6] == null && (var13.aByte1267 & 1) > 0 && Class140_Sub3.anInt2745 == var8 && var11 >= 0 && 104 > var13.size + var11 && var12 >= 0 && 104 > var12 - -var13.size) {
                      Class3_Sub13_Sub24.npcs[var6] = new NPC();
                      NPC npc = Class3_Sub13_Sub24.npcs[var6];

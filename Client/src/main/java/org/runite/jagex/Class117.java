@@ -48,14 +48,14 @@ final class Class117 {
                if(var2) {
                   Class129.anInt1691 = KeyboardListener.anInt1912;
                   if(Unsorted.anInt120 == 0) {
-                     NodeList.method882();
+                     Unsorted.method882();
                   } else {
                      Unsorted.method2099(KeyboardListener.anInt1912, Class75_Sub2.aClass153_2645, 255);
                   }
 
                   Class58.aClass66_917.method1247(false);
                } else {
-                  NodeList.method882();
+                  Unsorted.method882();
                   Class58.aClass66_917.method1247(true);
                }
             }

@@ -1,6 +1,7 @@
 package org.runite.jagex;
 
 import org.rs09.client.Linkable;
+import org.rs09.client.Node;
 import org.rs09.client.collections.HashTable;
 
 import java.util.Objects;
@@ -12,7 +13,7 @@ final class Class47 {
    private Node aClass3_Sub28_744 = new Node();
    private final HashTable aHashTable_745;
    private final int anInt746;
-   private final NodeList aClass13_747 = new NodeList();
+   private final Queue aClass13_747 = new Queue();
    static CacheIndex quickChatMessages;
    private int anInt749;
    static RSString aClass94_750 = RSString.of("null");
@@ -143,7 +144,7 @@ final class Class47 {
       try {
          Node var4 = (Node)this.aHashTable_745.get(nodeID);
          if(null != var4) {
-            this.aClass13_747.method879(var4);
+            this.aClass13_747.offer(var4);
          }
 
          return var4;
@@ -286,7 +287,7 @@ final class Class47 {
                      if (var11.anInt189 != 0) {
                         if (var11.anInt189 == 1337 || var11.anInt189 == 1403 && HDToolKit.highDetail) {
                            Class168.aClass11_2091 = var11;
-                           Node.anInt2567 = var14;
+                           Unsorted.anInt2567 = var14;
                            Class53.anInt865 = var13;
                            Class3_Sub13_Sub36.method338(var11.anInt193, var11.anInt189 == 1403, var13, var11.anInt168, var14);
                            if (HDToolKit.highDetail) {
@@ -410,7 +411,7 @@ final class Class47 {
                               var24 = 16711680;
                            }
 
-                           Class126.aClass3_Sub28_Sub17_1669.method688(RenderAnimationDefinition.method903(new RSString[]{Class3_Sub28_Sub10_Sub1.aClass94_4057, Class72.method1298((byte) 9, var23), TextCore.Memoryk}, (byte) -128), var20, var21, var24, -1);
+                           Class126.aClass3_Sub28_Sub17_1669.method688(RenderAnimationDefinition.method903(new RSString[]{Unsorted.aClass94_4057, Class72.method1298((byte) 9, var23), TextCore.Memoryk}, (byte) -128), var20, var21, var24, -1);
                            var21 += 15;
                            if (HDToolKit.highDetail) {
                               var24 = 16776960;
@@ -885,7 +886,7 @@ final class Class47 {
                                           HDToolKit.method1846();
                                           HDToolKit.method1831(true);
                                           HDToolKit.method1827(false);
-                                          Class3_Sub13_Sub33.method324(Class3_Sub28_Sub10.anInt3625);
+                                          Class3_Sub13_Sub33.method324(Unsorted.anInt3625);
                                           if (Unsorted.aBoolean47) {
                                              Class22.method925();
                                              HDToolKit.method1841();
@@ -1079,20 +1080,20 @@ final class Class47 {
    final void method1097(Node var1, long var2, byte var4) {
       try {
          if(this.anInt749 == 0) {
-            Node var5 = this.aClass13_747.method877();
+            Node var5 = this.aClass13_747.poll();
             Objects.requireNonNull(var5).unlink();
-            var5.method524();
+            var5.unlinkNode();
             if(this.aClass3_Sub28_744 == var5) {
-               var5 = this.aClass13_747.method877();
+               var5 = this.aClass13_747.poll();
                Objects.requireNonNull(var5).unlink();
-               var5.method524();
+               var5.unlinkNode();
             }
          } else {
             --this.anInt749;
          }
 
          this.aHashTable_745.put(var2, var1);
-         this.aClass13_747.method879(var1);
+         this.aClass13_747.offer(var1);
       } catch (RuntimeException var6) {
          throw Class44.clientError(var6, "gn.L(" + (var1 != null?"{...}":"null") + ',' + var2 + ',' + var4 + ')');
       }
@@ -1189,7 +1190,7 @@ final class Class47 {
 
    final void method1101() {
       try {
-         this.aClass13_747.method883();
+         this.aClass13_747.clear();
          this.aHashTable_745.clear();
          this.aClass3_Sub28_744 = new Node();
 

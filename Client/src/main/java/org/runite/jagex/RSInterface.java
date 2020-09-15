@@ -686,7 +686,7 @@ final class RSInterface {
 
                return var10;
             } else if (var8 == 2) {
-               var10 = Node.method522(var9).getChatModel(var2, var5, var1, 27, var3);
+               var10 = Unsorted.method522(var9).getChatModel(var2, var5, var1, 27, var3);
                if (null == var10) {
                   GameShell.aBoolean6 = true;
                   return null;
@@ -704,7 +704,7 @@ final class RSInterface {
                      return var17;
                   }
                } else if (var8 == 6) {
-                  var10 = Node.method522(var9).method1476((Class145[]) null, 0, (byte) -120, 0, var1, var5, var3, (AnimationDefinition) null, 0, var2);
+                  var10 = Unsorted.method522(var9).method1476((Class145[]) null, 0, (byte) -120, 0, var1, var5, var3, (AnimationDefinition) null, 0, var2);
                   if (null == var10) {
                      GameShell.aBoolean6 = true;
                      return null;

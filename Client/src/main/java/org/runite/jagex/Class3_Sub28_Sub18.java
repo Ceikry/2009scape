@@ -1,5 +1,7 @@
 package org.runite.jagex;
 
+import org.rs09.client.Node;
+
 import javax.media.opengl.GL;
 import java.lang.reflect.Method;
 import java.nio.ByteBuffer;

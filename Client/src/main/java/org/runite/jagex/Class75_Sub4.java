@@ -104,7 +104,7 @@ final class Class75_Sub4 extends Class75 {
                   Class3_Sub28_Sub8.method574(npc);
                }
 
-               npc.setDefinitions(Node.method522(GraphicDefinition.incomingBuffer.getLEShort(-84)));
+               npc.setDefinitions(Unsorted.method522(GraphicDefinition.incomingBuffer.getLEShort(-84)));
                npc.setSize(npc.definition.size, 2);
                npc.renderAnimationId = npc.definition.renderAnimationId;
                if(npc.definition.method1474()) {

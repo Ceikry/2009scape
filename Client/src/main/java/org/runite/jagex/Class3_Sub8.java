@@ -167,7 +167,7 @@ final class Class3_Sub8 extends Linkable {
 
                   boolean var31 = false;
 
-                  for(var17 = 0; Node.clanSize > var17; ++var17) {
+                  for(var17 = 0; Unsorted.clanSize > var17; ++var17) {
                      if(var29 == PacketParser.aClass3_Sub19Array3694[var17].linkableKey) {
                         var31 = true;
                         break;

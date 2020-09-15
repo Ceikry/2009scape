@@ -160,7 +160,7 @@ final class Class3_Sub13_Sub3 extends Class3_Sub13 {
    static void method183() {
       try {
 
-         Class41.aClass93_684.method1524();
+         Unsorted.aClass93_684.method1524();
          Class163_Sub1.aClass93_2984.method1524();
       } catch (RuntimeException var2) {
          throw Class44.clientError(var2, "an.O(" + -108 + ')');

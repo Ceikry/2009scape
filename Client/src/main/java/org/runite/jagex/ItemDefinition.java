@@ -1278,7 +1278,7 @@ final class ItemDefinition {
 													if (opcode == 3610) {
 														int k14 = intsStack[--iStackCounter];
 														if (Class96.anInt1357 == 2 && Class8.anInt104 > k14)
-															stringsStack[sStackCounter++] = Node.aClass94Array2566[k14];
+															stringsStack[sStackCounter++] = Unsorted.aClass94Array2566[k14];
 														else
 															stringsStack[sStackCounter++] = Class3_Sub9.aClass94_2331;
 														continue;
@@ -1292,14 +1292,14 @@ final class ItemDefinition {
 													}
 													if (opcode == 3612) {
 														if (null != RSInterface.aClass94_251)
-															intsStack[iStackCounter++] = Node.clanSize;
+															intsStack[iStackCounter++] = Unsorted.clanSize;
 														else
 															intsStack[iStackCounter++] = 0;
 														continue;
 													}
 													if (opcode == 3613) {
 														int l14 = intsStack[--iStackCounter];
-														if (RSInterface.aClass94_251 == null || l14 >= Node.clanSize)
+														if (RSInterface.aClass94_251 == null || l14 >= Unsorted.clanSize)
 															stringsStack[sStackCounter++] = Class3_Sub9.aClass94_2331;
 														else
 															stringsStack[sStackCounter++] = PacketParser.aClass3_Sub19Array3694[l14].aClass94_2476.method1545();
@@ -1307,7 +1307,7 @@ final class ItemDefinition {
 													}
 													if (opcode == 3614) {
 														int i15 = intsStack[--iStackCounter];
-														if (RSInterface.aClass94_251 == null || i15 >= Node.clanSize)
+														if (RSInterface.aClass94_251 == null || i15 >= Unsorted.clanSize)
 															intsStack[iStackCounter++] = 0;
 														else
 															intsStack[iStackCounter++] = PacketParser.aClass3_Sub19Array3694[i15].anInt2478;
@@ -1315,7 +1315,7 @@ final class ItemDefinition {
 													}
 													if (3615 == opcode) {
 														int j15 = intsStack[--iStackCounter];
-														if (null == RSInterface.aClass94_251 || j15 >= Node.clanSize)
+														if (null == RSInterface.aClass94_251 || j15 >= Unsorted.clanSize)
 															intsStack[iStackCounter++] = 0;
 														else
 															intsStack[iStackCounter++] = PacketParser.aClass3_Sub19Array3694[j15].aByte2472;
@@ -1355,7 +1355,7 @@ final class ItemDefinition {
 														if (Class96.anInt1357 == 0 || Class3_Sub28_Sub5.anInt3591 <= k15)
 															stringsStack[sStackCounter++] = Class3_Sub9.aClass94_2331;
 														else
-															stringsStack[sStackCounter++] = Class41.method1052(Class114.ignores[k15]).method1545();
+															stringsStack[sStackCounter++] = Unsorted.method1052(Class114.ignores[k15]).method1545();
 														continue;
 													}
 													if (3623 == opcode) {
@@ -1367,7 +1367,7 @@ final class ItemDefinition {
 													}
 													if (opcode == 3624) {
 														int l15 = intsStack[--iStackCounter];
-														if (null != PacketParser.aClass3_Sub19Array3694 && l15 < Node.clanSize && PacketParser.aClass3_Sub19Array3694[l15].aClass94_2476.equals(-118, Class102.player.displayName))
+														if (null != PacketParser.aClass3_Sub19Array3694 && l15 < Unsorted.clanSize && PacketParser.aClass3_Sub19Array3694[l15].aClass94_2476.equals(-118, Class102.player.displayName))
 															intsStack[iStackCounter++] = 1;
 														else
 															intsStack[iStackCounter++] = 0;
@@ -1382,7 +1382,7 @@ final class ItemDefinition {
 													}
 													if (3626 == opcode) {
 														int i16 = intsStack[--iStackCounter];
-														if (RSInterface.aClass94_251 == null || i16 >= Node.clanSize)
+														if (RSInterface.aClass94_251 == null || i16 >= Unsorted.clanSize)
 															stringsStack[sStackCounter++] = Class3_Sub9.aClass94_2331;
 														else
 															stringsStack[sStackCounter++] = PacketParser.aClass3_Sub19Array3694[i16].aClass94_2473;
@@ -1617,9 +1617,9 @@ final class ItemDefinition {
 															int i55 = intsStack[1 + iStackCounter];
 															Class3_Sub28_Sub9 class3_sub28_sub9 = Class61.method1210(i55);
 															if (!class3_sub28_sub9.method585())
-																intsStack[iStackCounter++] = Node.method522(k23).method1475(i55, class3_sub28_sub9.anInt3614);
+																intsStack[iStackCounter++] = Unsorted.method522(k23).method1475(i55, class3_sub28_sub9.anInt3614);
 															else
-																stringsStack[sStackCounter++] = Node.method522(k23).method1477(i55, class3_sub28_sub9.aClass94_3619);
+																stringsStack[sStackCounter++] = Unsorted.method522(k23).method1477(i55, class3_sub28_sub9.aClass94_3619);
 															continue;
 														}
 														if (opcode >= 4500) {
@@ -2096,7 +2096,7 @@ final class ItemDefinition {
 																	}
 																	if (opcode == 5206) {
 																		int i30 = intsStack[--iStackCounter];
-																		Class3_Sub28_Sub3 class3_sub28_sub3_4 = NodeList.method884(0x3fff & i30 >> 14, (byte) 111, 0x3fff & i30);
+																		Class3_Sub28_Sub3 class3_sub28_sub3_4 = Unsorted.method884(0x3fff & i30 >> 14, (byte) 111, 0x3fff & i30);
 																		if (class3_sub28_sub3_4 != null)
 																			stringsStack[sStackCounter++] = class3_sub28_sub3_4.aClass94_3561;
 																		else
@@ -2122,7 +2122,7 @@ final class ItemDefinition {
 																		continue;
 																	}
 																	if (opcode == 5210) {
-																		Class3_Sub28_Sub3 class3_sub28_sub3_1 = Node.method520((byte) -82);
+																		Class3_Sub28_Sub3 class3_sub28_sub3_1 = Unsorted.method520((byte) -82);
 																		if (class3_sub28_sub3_1 == null) {
 																			intsStack[iStackCounter++] = 0;
 																			intsStack[iStackCounter++] = 0;
@@ -2133,7 +2133,7 @@ final class ItemDefinition {
 																		continue;
 																	}
 																	if (opcode == 5211) {
-																		Class3_Sub28_Sub3 class3_sub28_sub3_2 = Node.method520((byte) -121);
+																		Class3_Sub28_Sub3 class3_sub28_sub3_2 = Unsorted.method520((byte) -121);
 																		if (class3_sub28_sub3_2 == null) {
 																			intsStack[iStackCounter++] = 0;
 																			intsStack[iStackCounter++] = 0;
@@ -2182,8 +2182,8 @@ final class ItemDefinition {
 																		int i31 = intsStack[--iStackCounter];
 																		RSString class94_53 = stringsStack[--sStackCounter];
 																		boolean flag10 = false;
-																		NodeList class13 = AbstractIndexedSprite.method1664(0x3fff & i31 >> 14, 0x3fff & i31);
-																		Class3_Sub28_Sub3 class3_sub28_sub3_5 = (Class3_Sub28_Sub3) class13.method876((byte) 116);
+																		Queue class13 = AbstractIndexedSprite.method1664(0x3fff & i31 >> 14, 0x3fff & i31);
+																		Class3_Sub28_Sub3 class3_sub28_sub3_5 = (Class3_Sub28_Sub3) class13.getFront();
 																		do {
 																			if (class3_sub28_sub3_5 == null)
 																				break;
@@ -2191,7 +2191,7 @@ final class ItemDefinition {
 																				flag10 = true;
 																				break;
 																			}
-																			class3_sub28_sub3_5 = (Class3_Sub28_Sub3) class13.method878(125);
+																			class3_sub28_sub3_5 = (Class3_Sub28_Sub3) class13.next();
 																		} while (true);
 																		if (!flag10)
 																			intsStack[iStackCounter++] = 0;
@@ -2213,7 +2213,7 @@ final class ItemDefinition {
 																		continue;
 																	}
 																	if (opcode == 5218) {
-																		Class3_Sub28_Sub3 class3_sub28_sub3_3 = Node.method520((byte) -124);
+																		Class3_Sub28_Sub3 class3_sub28_sub3_3 = Unsorted.method520((byte) -124);
 																		if (null != class3_sub28_sub3_3)
 																			intsStack[iStackCounter++] = class3_sub28_sub3_3.anInt3563;
 																		else
@@ -2240,7 +2240,7 @@ final class ItemDefinition {
 																	}
 																	if (opcode == 5301) {
 																		if (null != Class3_Sub13_Sub10.aFrame3121)
-																			GameObject.graphicsSettings(false, Node.anInt2577, -1, -1);
+																			GameObject.graphicsSettings(false, Unsorted.anInt2577, -1, -1);
 																		continue;
 																	}
 																	if (5302 == opcode) {
@@ -2286,7 +2286,7 @@ final class ItemDefinition {
 																		continue;
 																	}
 																	if (5308 == opcode) {
-																		intsStack[iStackCounter++] = Node.anInt2577;
+																		intsStack[iStackCounter++] = Unsorted.anInt2577;
 																		continue;
 																	}
 																	if (5309 != opcode)
@@ -2294,7 +2294,7 @@ final class ItemDefinition {
 																	int l32 = intsStack[--iStackCounter];
 																	if (l32 < 0 || l32 > 2)
 																		l32 = 0;
-																	Node.anInt2577 = l32;
+																	Unsorted.anInt2577 = l32;
 																	Class119.method1730(Class38.aClass87_665);
 																	continue;
 																}
@@ -2355,7 +2355,7 @@ final class ItemDefinition {
 																	}
 																	if (opcode == 5411) {
 																		if (Class3_Sub13_Sub10.aFrame3121 != null)
-																			GameObject.graphicsSettings(false, Node.anInt2577, -1, -1);
+																			GameObject.graphicsSettings(false, Unsorted.anInt2577, -1, -1);
 																		if (null == GameShell.frame)
 																			Class99.method1596(RSInterface.method856(), (byte) 126, false);
 																		else
@@ -2381,7 +2381,7 @@ final class ItemDefinition {
 																	}
 																	if (opcode == 5421) {
 																		if (null != Class3_Sub13_Sub10.aFrame3121)
-																			GameObject.graphicsSettings(false, Node.anInt2577, -1, -1);
+																			GameObject.graphicsSettings(false, Unsorted.anInt2577, -1, -1);
 																		boolean flag5 = 1 == intsStack[--iStackCounter];
 																		RSString class94_25 = stringsStack[--sStackCounter];
 																		RSString class94_64 = RenderAnimationDefinition.method903(new RSString[]{
@@ -2528,15 +2528,15 @@ final class ItemDefinition {
 																				k34 = 1;
 																			if (k34 > 4)
 																				k34 = 4;
-																			Class3_Sub28_Sub10.anInt3625 = k34;
+																			Unsorted.anInt3625 = k34;
 																			if (!HDToolKit.highDetail || !Class106.aBoolean1441) {
-																				if (Class3_Sub28_Sub10.anInt3625 == 1)
+																				if (Unsorted.anInt3625 == 1)
 																					Class51.method1137(0.9F);
-																				if (Class3_Sub28_Sub10.anInt3625 == 2)
+																				if (Unsorted.anInt3625 == 2)
 																					Class51.method1137(0.8F);
-																				if (3 == Class3_Sub28_Sub10.anInt3625)
+																				if (3 == Unsorted.anInt3625)
 																					Class51.method1137(0.7F);
-																				if (Class3_Sub28_Sub10.anInt3625 == 4)
+																				if (Unsorted.anInt3625 == 4)
 																					Class51.method1137(0.6F);
 																			}
 																			if (HDToolKit.highDetail) {
@@ -2619,13 +2619,13 @@ final class ItemDefinition {
 																			if (HDToolKit.highDetail && Class106.aBoolean1441) {
 																				Class51.method1137(0.7F);
 																			} else {
-																				if (Class3_Sub28_Sub10.anInt3625 == 1)
+																				if (Unsorted.anInt3625 == 1)
 																					Class51.method1137(0.9F);
-																				if (Class3_Sub28_Sub10.anInt3625 == 2)
+																				if (Unsorted.anInt3625 == 2)
 																					Class51.method1137(0.8F);
-																				if (Class3_Sub28_Sub10.anInt3625 == 3)
+																				if (Unsorted.anInt3625 == 3)
 																					Class51.method1137(0.7F);
-																				if (Class3_Sub28_Sub10.anInt3625 == 4)
+																				if (Unsorted.anInt3625 == 4)
 																					Class51.method1137(0.6F);
 																			}
 																			Class84.method1417(108);
@@ -2747,7 +2747,7 @@ final class ItemDefinition {
 																	}
 																	if (opcode < 6200) {
 																		if (opcode == 6101) {
-																			intsStack[iStackCounter++] = Class3_Sub28_Sub10.anInt3625;
+																			intsStack[iStackCounter++] = Unsorted.anInt3625;
 																			continue;
 																		}
 																		if (opcode == 6102) {

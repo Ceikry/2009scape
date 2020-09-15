@@ -52,11 +52,11 @@ final class Class65 {
    static void method1235(int var0, int var1, int var2, int var3) {
       try {
          if(Class36.anInt638 == 1) {
-            Class139.aClass3_Sub28_Sub16Array1825[Unsorted.anInt2958 / 100].method643(-8 + Class70.anInt1053, -8 + Class3_Sub28_Sub10_Sub1.anInt4062);
+            Class139.aClass3_Sub28_Sub16Array1825[Unsorted.anInt2958 / 100].method643(-8 + Class70.anInt1053, -8 + Unsorted.anInt4062);
          }
 
           if(Class36.anInt638 == 2) {
-            Class139.aClass3_Sub28_Sub16Array1825[4 + Unsorted.anInt2958 / 100].method643(Class70.anInt1053 + -8, -8 + Class3_Sub28_Sub10_Sub1.anInt4062);
+            Class139.aClass3_Sub28_Sub16Array1825[4 + Unsorted.anInt2958 / 100].method643(Class70.anInt1053 + -8, -8 + Unsorted.anInt4062);
          }
 
          Class3_Sub13_Sub37.method347();
@@ -68,7 +68,7 @@ final class Class65 {
    static void method1236(CacheIndex var0, CacheIndex var1) {
       try {
          Class47.quickChatMessages = var1;
-         NodeList.aClass153_332 = var0;
+         Unsorted.aClass153_332 = var0;
       } catch (RuntimeException var4) {
          throw Class44.clientError(var4, "ja.F(" + (var0 != null?"{...}":"null") + ',' + (var1 != null?"{...}":"null") + ',' + -117 + ')');
       }

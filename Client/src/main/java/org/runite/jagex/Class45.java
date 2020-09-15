@@ -1,5 +1,7 @@
 package org.runite.jagex;
 
+import org.rs09.client.Node;
+
 import java.util.Objects;
 
 final class Class45 {
@@ -336,15 +338,15 @@ final class Class45 {
 
 	static void method1084(Node var0, Node var1) {
 		try {
-			if(var1.aClass3_Sub28_2570 != null) {
-				var1.method524();
+			if(var1.previousNode != null) {
+				var1.unlinkNode();
 			}
 
-			var1.aClass3_Sub28_2570 = var0;
-			var1.aClass3_Sub28_2578 = var0.aClass3_Sub28_2578;
-			var1.aClass3_Sub28_2570.aClass3_Sub28_2578 = var1;
+			var1.previousNode = var0;
+			var1.nextNode = var0.nextNode;
+			var1.previousNode.nextNode = var1;
 
-			var1.aClass3_Sub28_2578.aClass3_Sub28_2570 = var1;
+			var1.nextNode.previousNode = var1;
 		} catch (RuntimeException var4) {
 			throw Class44.clientError(var4, "gk.D(" + (var0 != null?"{...}":"null") + ',' + (var1 != null?"{...}":"null") + ',' + (byte) 121 + ')');
 		}

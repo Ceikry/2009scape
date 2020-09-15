@@ -5,7 +5,7 @@ import java.util.Objects;
 
 final class Class81 {
 
-   static NodeList aClass13_1139 = new NodeList();
+   static Queue aClass13_1139 = new Queue();
    static int[][][] anIntArrayArrayArray1142;
 
 
@@ -66,7 +66,7 @@ final class Class81 {
       try {
          if(var1 != 0L) {
             if(Class3_Sub28_Sub5.anInt3591 < 100) {
-               RSString var4 = Objects.requireNonNull(Class41.method1052(var1)).method1545();
+               RSString var4 = Objects.requireNonNull(Unsorted.method1052(var1)).method1545();
 
                int var5;
                for(var5 = 0; var5 < Class3_Sub28_Sub5.anInt3591; ++var5) {
@@ -87,7 +87,7 @@ final class Class81 {
                   Class3_Sub30_Sub1.addChatMessage(Class3_Sub28_Sub14.aClass94_3672, 0, TextCore.HasOnOwnIgnoreList, -1);
                } else {
                   Class114.ignores[Class3_Sub28_Sub5.anInt3591] = var1;
-                  Class3_Sub13_Sub27.aClass94Array3341[Class3_Sub28_Sub5.anInt3591++] = Class41.method1052(var1);
+                  Class3_Sub13_Sub27.aClass94Array3341[Class3_Sub28_Sub5.anInt3591++] = Unsorted.method1052(var1);
                   Class110.anInt1472 = Class3_Sub13_Sub17.anInt3213;
                   Class3_Sub13_Sub1.outgoingBuffer.putOpcode(34);
                   Class3_Sub13_Sub1.outgoingBuffer.putLong(var1, -2037491440);

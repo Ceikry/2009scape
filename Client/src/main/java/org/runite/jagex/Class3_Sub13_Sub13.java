@@ -367,17 +367,17 @@ final class Class3_Sub13_Sub13 extends Class3_Sub13 {
                   for(var1 = 0; Class3_Sub23.anInt2537 > var1; ++var1) {
                      var2 = Class133.inputTextCodeArray[var1];
                      if(98 == var2 || var2 == 99 || var2 == 96 || var2 == 97) {
-                        Class3_Sub28_Sub10_Sub2.aBoolean4068 = true;
+                        Unsorted.aBoolean4068 = true;
                         break;
                      }
                   }
                } else if(ObjectDefinition.aBooleanArray1490[96] || ObjectDefinition.aBooleanArray1490[97] || ObjectDefinition.aBooleanArray1490[98] || ObjectDefinition.aBooleanArray1490[99]) {
-                  Class3_Sub28_Sub10_Sub2.aBoolean4068 = true;
+                  Unsorted.aBoolean4068 = true;
                }
 
-               if(Class3_Sub28_Sub10_Sub2.aBoolean4068 && 0 >= Class3_Sub1.anInt2212) {
+               if(Unsorted.aBoolean4068 && 0 >= Class3_Sub1.anInt2212) {
                   Class3_Sub1.anInt2212 = 20;
-                  Class3_Sub28_Sub10_Sub2.aBoolean4068 = false;
+                  Unsorted.aBoolean4068 = false;
                   Class3_Sub13_Sub1.outgoingBuffer.putOpcode(21);
                   Class3_Sub13_Sub1.outgoingBuffer.putShortA(Class3_Sub9.anInt2309);
                   Class3_Sub13_Sub1.outgoingBuffer.putLEShort(GraphicDefinition.CAMERA_DIRECTION);
@@ -629,7 +629,7 @@ final class Class3_Sub13_Sub13 extends Class3_Sub13 {
                      Class107.aClass11_1453 = null;
                      RSInterface var21 = Class20.aClass11_439;
 
-                     for(Class20.aClass11_439 = null; Class3_Sub28_Sub10_Sub1.method591(72) && 128 > Class3_Sub23.anInt2537; ++Class3_Sub23.anInt2537) {
+                     for(Class20.aClass11_439 = null; Unsorted.method591(72) && 128 > Class3_Sub23.anInt2537; ++Class3_Sub23.anInt2537) {
                         Class133.inputTextCodeArray[Class3_Sub23.anInt2537] = Class3_Sub28_Sub9.anInt3624;
                         Class120.anIntArray1638[Class3_Sub23.anInt2537] = Class3_Sub13_Sub27.anInt3342;
                      }
@@ -687,7 +687,7 @@ final class Class3_Sub13_Sub13 extends Class3_Sub13 {
                                              Class3_Sub13_Sub1.outgoingBuffer.putShortA(Unsorted.anInt999 + Class82.anInt1152);
                                              Class36.anInt638 = 1;
                                              Unsorted.anInt2958 = 0;
-                                             Class3_Sub28_Sub10_Sub1.anInt4062 = Class38_Sub1.anInt2614;
+                                             Unsorted.anInt4062 = Class38_Sub1.anInt2614;
                                              Class70.anInt1053 = Class163_Sub1.anInt2993;
                                           }
 
@@ -700,14 +700,14 @@ final class Class3_Sub13_Sub13 extends Class3_Sub13 {
                                              Unsorted.anInt2958 = 0;
                                              Class36.anInt638 = 1;
                                              Class70.anInt1053 = Class163_Sub1.anInt2993;
-                                             Class3_Sub28_Sub10_Sub1.anInt4062 = Class38_Sub1.anInt2614;
+                                             Unsorted.anInt4062 = Class38_Sub1.anInt2614;
                                           }
 
                                           ObjectDefinition.anInt1521 = 0;
                                        } else if(-1 != Class27.anInt515 && 0 == CS2Script.anInt2440 && ObjectDefinition.anInt1521 == 0) {
                                           boolean var27 = Class3_Sub28_Sub9.method582(Class102.player.anIntArray2755[0], 0, 0, true, 0, 2, Class27.anInt515, 0, 0, 0, Unsorted.anInt999, Class102.player.anIntArray2767[0]);
                                           if(var27) {
-                                             Class3_Sub28_Sub10_Sub1.anInt4062 = Class38_Sub1.anInt2614;
+                                             Unsorted.anInt4062 = Class38_Sub1.anInt2614;
                                              Unsorted.anInt2958 = 0;
                                              Class70.anInt1053 = Class163_Sub1.anInt2993;
                                              Class36.anInt638 = 1;

@@ -169,7 +169,7 @@ final class Class3_Sub13_Sub30 extends Class3_Sub13 {
          Class159.aClass153_2019.method2137((byte)56);
          Class140_Sub6.spritesCacheIndex.method2137((byte)56);
          Class3_Sub13_Sub25.aClass153_3304.method2137((byte)56);
-         Node.aClass153_2573.method2137((byte)56);
+         Unsorted.aClass153_2573.method2137((byte)56);
          Class3_Sub1.interfaceScriptsIndex.method2137((byte)56);
          Class3_Sub13_Sub11.aClass93_3130.method1524();
       } catch (RuntimeException var2) {

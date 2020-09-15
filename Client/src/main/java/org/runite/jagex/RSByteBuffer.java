@@ -1039,13 +1039,13 @@ public class RSByteBuffer extends Linkable {
                     }
 
                     Class74.method1319(Class3_Sub13_Sub19.aClass3_Sub28_Sub16_Sub2_3221.anIntArray4081, var4, var3);
-                    Node.method523(var4, 0, var7, var6, 0, var8, var3, var15);
+                    Unsorted.method523(var4, 0, var7, var6, 0, var8, var3, var15);
                     Class23.method938(var4, 0, var7, var8, var3, 0, var15, var6);
                     Class3_Sub5.method111((byte) -54, 0, 0, var15, var4, var8, var6, var7, var3);
                     Class22.method926(Class3_Sub13_Sub19.aClass3_Sub28_Sub16_Sub2_3221.anIntArray4081, var0, var2, var4, var3);
                     Class74.anIntArray1100 = null;
                 } else {
-                    Node.method523(var4 + var0, var2, var7, var6, var0, var8, var2 - -var3, var15);
+                    Unsorted.method523(var4 + var0, var2, var7, var6, var0, var8, var2 - -var3, var15);
                     Class23.method938(var0 + var4, var0, var7, var8, var3 + var2, var2, var15, var6);
                     Class3_Sub5.method111((byte) -100, var0, var2, var15, var0 - -var4, var8, var6, var7, var3 + var2);
                 }

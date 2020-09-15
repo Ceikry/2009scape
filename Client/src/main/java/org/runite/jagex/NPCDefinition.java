@@ -75,10 +75,10 @@ final class NPCDefinition {
 
          int var3;
          if(0 <= var2 && -1 + this.childNPCs.length > var2 && this.childNPCs[var2] != -1) {
-             return Node.method522(this.childNPCs[var2]);
+             return Unsorted.method522(this.childNPCs[var2]);
          } else {
             var3 = this.childNPCs[-1 + this.childNPCs.length];
-            return var3 == -1 ?null:Node.method522(var3);
+            return var3 == -1 ?null: Unsorted.method522(var3);
          }
       } catch (RuntimeException var4) {
          throw Class44.clientError(var4, "me.G(" + var1 + ')');
@@ -119,7 +119,7 @@ final class NPCDefinition {
          } else {
             for(int var2 = 0; var2 < this.childNPCs.length; ++var2) {
                if(this.childNPCs[var2] != -1) {
-                  NPCDefinition var3 = Node.method522(this.childNPCs[var2]);
+                  NPCDefinition var3 = Unsorted.method522(this.childNPCs[var2]);
                   if(var3.anInt1262 != -1 || var3.anInt1293 != -1 || var3.anInt1276 != -1) {
                      return true;
                   }
@@ -306,7 +306,7 @@ final class NPCDefinition {
 
                      if((def.aBoolean1846 || Class3_Sub26.aBoolean2558) && var20 != -1 && var20 < def.frames.length) {
                         Class38.anIntArray664[var17] = def.duration[var19];
-                        Node.anIntArray2574[var17] = var1[var17].anInt1897;
+                        Unsorted.anIntArray2574[var17] = var1[var17].anInt1897;
                         var22 = def.frames[var20];
                         Class3_Sub13_Sub23_Sub1.aClass3_Sub28_Sub5Array4031[var17] = Class3_Sub9.method133(var22 >>> 16);
                         var22 &= '\uffff';
@@ -317,7 +317,7 @@ final class NPCDefinition {
                         }
                      } else {
                         Class38.anIntArray664[var17] = 0;
-                        Node.anIntArray2574[var17] = 0;
+                        Unsorted.anIntArray2574[var17] = 0;
                         Class3_Sub13_Sub23_Sub1.aClass3_Sub28_Sub5Array4031[var17] = null;
                         Class30.anIntArray574[var17] = -1;
                      }
@@ -410,7 +410,7 @@ final class NPCDefinition {
 
                for(var28 = 0; var28 < var16; ++var28) {
                   if(Class3_Sub13_Sub1.aClass3_Sub28_Sub5Array3041[var28] != null) {
-                     var45.method1887(Class3_Sub13_Sub1.aClass3_Sub28_Sub5Array3041[var28], Class58.anIntArray912[var28], Class3_Sub13_Sub23_Sub1.aClass3_Sub28_Sub5Array4031[var28], Class30.anIntArray574[var28], -1 + Node.anIntArray2574[var28], Class38.anIntArray664[var28], var29, Class85.aClass142Array1168[var28].aBoolean1848, this.anIntArrayArray1258[var28]);
+                     var45.method1887(Class3_Sub13_Sub1.aClass3_Sub28_Sub5Array3041[var28], Class58.anIntArray912[var28], Class3_Sub13_Sub23_Sub1.aClass3_Sub28_Sub5Array4031[var28], Class30.anIntArray574[var28], -1 + Unsorted.anIntArray2574[var28], Class38.anIntArray664[var28], var29, Class85.aClass142Array1168[var28].aBoolean1848, this.anIntArrayArray1258[var28]);
                   }
 
                   var29 <<= 1;

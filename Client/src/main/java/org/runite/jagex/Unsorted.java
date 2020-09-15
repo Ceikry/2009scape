@@ -76,6 +76,28 @@ public class Unsorted {
    public static Class3_Sub28_Sub16[] aClass3_Sub28_Sub16Array1136;
    public static int anInt1137 = 2;
    public static int[] anIntArray1138;
+    public static int anInt3625 = 3;
+    public static int anInt3631;
+   public static RSString aClass94_4057 = RSString.of("Mem:");
+   public static Class25[] aClass25Array4060;
+   public static int anInt4062 = 0;
+   public static boolean aBoolean4063 = false;
+   public static RSString aClass94_4066 = RSString.of("<br>");
+   public static boolean aBoolean4068 = true;
+   public static Class3_Sub2[][][] aClass3_Sub2ArrayArrayArray4070;
+   public static int anInt4073;
+   static Class93 aClass93_684 = new Class93(64);
+   static int[] anIntArray686 = new int[2];
+   static int anInt688 = 0;
+   static int anInt689;
+   public static CacheIndex aClass153_332;
+   static RSString[] aClass94Array2566 = new RSString[200];
+   static int anInt2567 = -1;
+   static int clanSize;
+   static CacheIndex aClass153_2573;
+   static int[] anIntArray2574 = new int[14];
+   static int anInt2575;
+   static int anInt2577 = 0;
 
    static void method2086() {
        try {
@@ -1091,7 +1113,7 @@ public class Unsorted {
       try {
 
          if(Class56.aClass106Array890 == null) {
-            Class106[] var1 = Class3_Sub28_Sub10_Sub2.method596(Class38.aClass87_665);
+            Class106[] var1 = method596(Class38.aClass87_665);
             Class106[] var2 = new Class106[var1.length];
             int var3 = 0;
 
@@ -1350,6 +1372,590 @@ public class Unsorted {
 
       } catch (RuntimeException var10) {
          throw Class44.clientError(var10, "l.A(" + var0 + ')');
+      }
+   }
+
+    public static void method589(int var0, int var1, int var2) {
+       Class3_Sub13_Sub21.aBoolean3261 = true;
+       Class91.anInt1302 = var0;
+       Class49.anInt819 = var1;
+       Class3_Sub13_Sub23_Sub1.anInt4039 = var2;
+       Class27.anInt515 = -1;
+       anInt999 = -1;
+    }
+
+    public static boolean method590(byte var0, int var1, int var2) {
+       try {
+          if(11 == var2) {
+             var2 = 10;
+          }
+
+          if(var2 >= 5 && var2 <= 8) {
+             var2 = 4;
+          }
+
+          ObjectDefinition var4 = Class162.getObjectDefinition(var1);
+          return var4.method1684(var2);
+       } catch (RuntimeException var5) {
+          throw Class44.clientError(var5, "il.D(" + var0 + ',' + var1 + ',' + var2 + ')');
+       }
+    }
+
+   public static boolean method591(int var0) {
+      try {
+         KeyboardListener var1 = Class3_Sub13_Sub3.aClass148_3049;
+         synchronized(var1) {
+            if(Class3_Sub28_Sub9.anInt3620 == Class134.anInt1762) {
+               return false;
+            } else {
+               Class3_Sub28_Sub9.anInt3624 = Class129.anIntArray1693[Class3_Sub28_Sub9.anInt3620];
+               Class3_Sub13_Sub27.anInt3342 = Class155.anIntArray1978[Class3_Sub28_Sub9.anInt3620];
+               Class3_Sub28_Sub9.anInt3620 = 1 + Class3_Sub28_Sub9.anInt3620 & 127;
+               if(var0 < 58) {
+                  method591(68);
+               }
+
+               return true;
+            }
+         }
+      } catch (RuntimeException var4) {
+         throw Class44.clientError(var4, "c.F(" + var0 + ')');
+      }
+   }
+
+   public static void method592(byte var0) {
+      try {
+         aClass25Array4060 = null;
+         aClass94_4057 = null;
+      } catch (RuntimeException var2) {
+         throw Class44.clientError(var2, "c.P(" + var0 + ')');
+      }
+   }
+
+   public static void method593(Frame var0, Signlink var2) {
+      try {
+
+         while(true) {
+            Class64 var3 = var2.method1436(var0, 86);
+
+            while(var3.anInt978 == 0) {
+               Class3_Sub13_Sub34.sleep(10L);
+            }
+
+            if(1 == var3.anInt978) {
+               var0.setVisible(false);
+               var0.dispose();
+               return;
+            }
+
+            Class3_Sub13_Sub34.sleep(100L);
+         }
+      } catch (RuntimeException var4) {
+         throw Class44.clientError(var4, "c.R(" + (var0 != null?"{...}":"null") + ',' + true + ',' + (var2 != null?"{...}":"null") + ')');
+      }
+   }
+
+   public static void method594(int var0, int var1) {
+      try {
+         if(var0 < 83) {
+            method592((byte)122);
+         }
+
+         Class128.aClass93_1683.method1522(-127, var1);
+      } catch (RuntimeException var3) {
+         throw Class44.clientError(var3, "c.Q(" + var0 + ',' + var1 + ')');
+      }
+   }
+
+   public static void method595() {
+      try {
+         aClass93_684.method1522(-128, 5);
+         Class163_Sub1.aClass93_2984.method1522(-125, 5);
+      } catch (RuntimeException var3) {
+         throw Class44.clientError(var3, "c.O(" + 5 + ',' + 109 + ')');
+      }
+   }
+
+   public static Class106[] method596(Signlink var1) {
+      try {
+         if(var1.method1432(false)) {
+            Class64 var2 = var1.method1453((byte)8);
+
+            while(0 == var2.anInt978) {
+               Class3_Sub13_Sub34.sleep(10L);
+            }
+
+            if(2 == var2.anInt978) {
+               return new Class106[0];
+            } else {
+               int[] var3 = (int[])((int[])var2.anObject974);
+               Class106[] var4 = new Class106[var3.length >> 2];
+
+               for(int var5 = 0; var5 < var4.length; ++var5) {
+                  Class106 var6 = new Class106();
+                  var4[var5] = var6;
+                  var6.anInt1447 = var3[var5 << 2];
+                  var6.anInt1449 = var3[(var5 << 2) + 1];
+                  var6.anInt1450 = var3[(var5 << 2) - -2];
+			   }
+
+				return var4;
+            }
+         } else {
+            return new Class106[0];
+         }
+	  } catch (RuntimeException var7) {
+         throw Class44.clientError(var7, "pm.P(" + 10 + ',' + (var1 != null?"{...}":"null") + ')');
+      }
+   }
+
+   public static void method598(boolean var0, int var1, boolean var2, int var3, boolean var4, int var5, int var6) {
+	      try {
+	         if(var2) {
+	            HDToolKit.method1842();
+	         }
+
+	         if(null != Class3_Sub13_Sub10.aFrame3121 && (3 != var1 || Class3_Sub13.anInt2378 != var5 || Class3_Sub13_Sub5.anInt3071 != var6)) {
+	            method593(Class3_Sub13_Sub10.aFrame3121, Class38.aClass87_665);
+	            Class3_Sub13_Sub10.aFrame3121 = null;
+	         }
+
+	         if(3 == var1 && null == Class3_Sub13_Sub10.aFrame3121) {
+	            Class3_Sub13_Sub10.aFrame3121 = Class99.method1597(0, var6, var5, Class38.aClass87_665);
+	            if(null != Class3_Sub13_Sub10.aFrame3121) {
+	               Class3_Sub13_Sub5.anInt3071 = var6;
+	               Class3_Sub13.anInt2378 = var5;
+	               Class119.method1730(Class38.aClass87_665);
+	            }
+	         }
+
+	         if(var1 == 3 && Class3_Sub13_Sub10.aFrame3121 == null) {
+	            method598(true, anInt2577, true, var3, var4, -1, -1);
+	         } else {
+	            Object var7;
+	            if(null == Class3_Sub13_Sub10.aFrame3121) {
+	               if(null == GameShell.frame) {
+	                  var7 = Class38.aClass87_665.anApplet1219;
+	               } else {
+	                  var7 = GameShell.frame;
+	               }
+				} else {
+	               var7 = Class3_Sub13_Sub10.aFrame3121;
+	            }
+
+	            Class3_Sub9.anInt2334 = ((Container)var7).getSize().width;
+	            Class70.anInt1047 = ((Container)var7).getSize().height;
+	            Insets var8;
+	            if(GameShell.frame == var7) {
+	               var8 = GameShell.frame.getInsets();
+	               Class3_Sub9.anInt2334 -= var8.right + var8.left;
+	               Class70.anInt1047 -= var8.bottom + var8.top;
+	            }
+
+	            if(var1 >= 2) {
+	               Class23.anInt454 = Class3_Sub9.anInt2334;
+	               Class140_Sub7.anInt2934 = Class70.anInt1047;
+	               Class84.anInt1164 = 0;
+	               Class106.anInt1442 = 0;
+	            } else {
+	               Class106.anInt1442 = 0;
+	               Class84.anInt1164 = (Class3_Sub9.anInt2334 + -765) / 2;
+	               Class23.anInt454 = 765;
+	               Class140_Sub7.anInt2934 = 503;
+	            }
+
+	            if(var0) {
+	               Class163_Sub1_Sub1.method2215(Class3_Sub28_Sub12.aCanvas3648);
+	               method1783(Class3_Sub28_Sub12.aCanvas3648);
+	               if(null != Class38.aClass146_668) {
+	                  Class38.aClass146_668.method2082(Class3_Sub28_Sub12.aCanvas3648);
+	               }
+
+	               Class126.aClient1671.method30((byte)97);
+	               Class3_Sub13_Sub4.method193((byte)97, Class3_Sub28_Sub12.aCanvas3648);
+	               ItemDefinition.method1119(Class3_Sub28_Sub12.aCanvas3648, var4);
+	               if(Class38.aClass146_668 != null) {
+	                  Class38.aClass146_668.method2084(Class3_Sub28_Sub12.aCanvas3648, -103);
+	               }
+	            } else {
+	               if(HDToolKit.highDetail) {
+	                  HDToolKit.method1854(Class23.anInt454, Class140_Sub7.anInt2934);
+	               }
+
+	               Class3_Sub28_Sub12.aCanvas3648.setSize(Class23.anInt454, Class140_Sub7.anInt2934);
+	               if(GameShell.frame == var7) {
+	                  var8 = GameShell.frame.getInsets();
+	                  Class3_Sub28_Sub12.aCanvas3648.setLocation(var8.left - -Class84.anInt1164, var8.top + Class106.anInt1442);
+	               } else {
+	                  Class3_Sub28_Sub12.aCanvas3648.setLocation(Class84.anInt1164, Class106.anInt1442);
+	               }
+	            }
+
+				 if(0 == var1 && var3 > 0) {
+	               HDToolKit.method1834(Class3_Sub28_Sub12.aCanvas3648);
+	            }
+
+	            if(var2 && var1 > 0) {
+	               Class3_Sub28_Sub12.aCanvas3648.setIgnoreRepaint(true);
+	               if(!GameShell.aBoolean11) {
+	                  Class32.method995();
+	                  Class164_Sub1.aClass158_3009 = null;
+	                  Class164_Sub1.aClass158_3009 = Class3_Sub13_Sub23_Sub1.method285(Class140_Sub7.anInt2934, Class23.anInt454, Class3_Sub28_Sub12.aCanvas3648);
+	                  Class74.method1320();
+	                  if(5 == Class143.loadingStage) {
+	                     Class3_Sub23.method406((byte)122, true, Class168.aClass3_Sub28_Sub17_2096);
+	                  } else {
+	                     Class3_Sub13.method164((byte)-20, false, TextCore.LoadingPleaseWait2);
+	                  }
+
+					   try {
+	                     Graphics var11 = Class3_Sub28_Sub12.aCanvas3648.getGraphics();
+	                     Class164_Sub1.aClass158_3009.method2179(var11);
+	                  } catch (Exception var9) {
+					   }
+
+	                  method1396(-1);
+	                  if(var3 == 0) {
+	                     Class164_Sub1.aClass158_3009 = Class3_Sub13_Sub23_Sub1.method285(503, 765, Class3_Sub28_Sub12.aCanvas3648);
+	                  } else {
+	                     Class164_Sub1.aClass158_3009 = null;
+	                  }
+
+					   Class64 var13 = Class38.aClass87_665.method1444(-43, Class126.aClient1671.getClass());
+
+	                  while(var13.anInt978 == 0) {
+	                     Class3_Sub13_Sub34.sleep(100L);
+	                  }
+
+	                  if(1 == var13.anInt978) {
+	                     GameShell.aBoolean11 = true;
+	                  }
+	               }
+
+	               if(GameShell.aBoolean11) {
+	                  HDToolKit.method1853(Class3_Sub28_Sub12.aCanvas3648, 2 * Class3_Sub28_Sub14.anInt3671);
+	               }
+	            }
+
+	            if(!HDToolKit.highDetail && 0 < var1) {
+	               method598(true, 0, true, var3, false, -1, -1);
+	            } else {
+	               if(var1 > 0 && var3 == 0) {
+	                  Class17.aThread409.setPriority(5);
+	                  Class164_Sub1.aClass158_3009 = null;
+	                  Class140_Sub1_Sub2.method1935();
+	                  ((Class102)Class51.anInterface2_838).method1619(200);
+	                  if(Class106.aBoolean1441) {
+	                     Class51.method1137(0.7F);
+	                  }
+
+	                  Class3_Sub13.method165();
+	               } else if(0 == var1 && var3 > 0) {
+	                  Class17.aThread409.setPriority(1);
+	                  Class164_Sub1.aClass158_3009 = Class3_Sub13_Sub23_Sub1.method285(503, 765, Class3_Sub28_Sub12.aCanvas3648);
+	                  Class140_Sub1_Sub2.method1938();
+	                  ((Class102)Class51.anInterface2_838).method1619(20);
+	                  if(Class106.aBoolean1441) {
+	                     if(1 == anInt3625) {
+	                        Class51.method1137(0.9F);
+	                     }
+
+	                     if(anInt3625 == 2) {
+	                        Class51.method1137(0.8F);
+	                     }
+
+	                     if(3 == anInt3625) {
+	                        Class51.method1137(0.7F);
+	                     }
+
+	                     if(anInt3625 == 4) {
+	                        Class51.method1137(0.6F);
+	                     }
+	                  }
+
+	                  Class3_Sub11.method144();
+	                  Class3_Sub13.method165();
+	               }
+
+	               Class47.aBoolean742 = !NPC.method1986(89);
+	               if(var2) {
+	                  Class3_Sub20.method389();
+	               }
+
+					Class3_Sub15.aBoolean2427 = var1 >= 2;
+
+	               if(-1 != Class3_Sub28_Sub12.anInt3655) {
+	                  Class124.method1746(true, (byte)-107);
+	               }
+
+	               if(null != Class3_Sub15.aClass89_2429 && (Class143.loadingStage == 30 || Class143.loadingStage == 25)) {
+	                  Class3_Sub13_Sub8.method204(-3);
+	               }
+
+	               for(int var12 = 0; var12 < 100; ++var12) {
+	                  Class3_Sub28_Sub14.aBooleanArray3674[var12] = true;
+	               }
+
+	               Class3_Sub13_Sub10.aBoolean3116 = true;
+	            }
+	         }
+	      } catch (RuntimeException var10) {
+	         throw Class44.clientError(var10, "pm.F(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ',' + var5 + ',' + var6 + ')');
+	      }
+	   }
+
+   static void method1047(int var0, int var1, int var2, boolean var3, int var4, boolean var5) {
+      try {
+         if(var2 > var4) {
+            int var7 = (var2 + var4) / 2;
+            int var8 = var4;
+            WorldListEntry var9 = Class3_Sub13_Sub16.aClass44_Sub1Array3201[var7];
+            Class3_Sub13_Sub16.aClass44_Sub1Array3201[var7] = Class3_Sub13_Sub16.aClass44_Sub1Array3201[var2];
+            Class3_Sub13_Sub16.aClass44_Sub1Array3201[var2] = var9;
+
+            for(int var10 = var4; var10 < var2; ++var10) {
+               if(method1535(var9, Class3_Sub13_Sub16.aClass44_Sub1Array3201[var10], 5730, var0, var1, var3, var5) <= 0) {
+                  WorldListEntry var11 = Class3_Sub13_Sub16.aClass44_Sub1Array3201[var10];
+                  Class3_Sub13_Sub16.aClass44_Sub1Array3201[var10] = Class3_Sub13_Sub16.aClass44_Sub1Array3201[var8];
+                  Class3_Sub13_Sub16.aClass44_Sub1Array3201[var8++] = var11;
+               }
+            }
+
+            Class3_Sub13_Sub16.aClass44_Sub1Array3201[var2] = Class3_Sub13_Sub16.aClass44_Sub1Array3201[var8];
+            Class3_Sub13_Sub16.aClass44_Sub1Array3201[var8] = var9;
+            method1047(var0, var1, -1 + var8, var3, var4, var5);
+            method1047(var0, var1, var2, var3, var8 - -1, var5);
+         }
+
+      } catch (RuntimeException var12) {
+         throw Class44.clientError(var12, "ge.A(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ',' + var5 + ',' + false + ')');
+      }
+   }
+
+   static void method1048(int var0, int var1, int var2, int var3, int var4, int var5, int var6, int var7) {
+      try {
+         if(var5 > -15) {
+            anInt688 = -64;
+         }
+
+         if(var1 >= 1 && var4 >= 1 && 102 >= var1 && var4 <= 102) {
+            int var8;
+            if(!NPC.method1986(41) && 0 == (2 & aByteArrayArrayArray113[0][var1][var4])) {
+               var8 = var2;
+               if((8 & aByteArrayArrayArray113[var2][var1][var4]) != 0) {
+                  var8 = 0;
+               }
+
+               if(var8 != Class140_Sub3.anInt2745) {
+                  return;
+               }
+            }
+
+            var8 = var2;
+            if(var2 < 3 && (2 & aByteArrayArrayArray113[1][var1][var4]) == 2) {
+               var8 = var2 + 1;
+            }
+
+            Class20.method910(var4, var1, var2, var7, var8, Class86.aClass91Array1182[var2]);
+            if(0 <= var0) {
+               boolean var9 = KeyboardListener.aBoolean1905;
+               KeyboardListener.aBoolean1905 = true;
+               Class110.method1683(var8, false, var2, false, Class86.aClass91Array1182[var2], var0, var6, var1, var4, var3);
+               KeyboardListener.aBoolean1905 = var9;
+            }
+         }
+
+      } catch (RuntimeException var10) {
+         throw Class44.clientError(var10, "ge.H(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ',' + var5 + ',' + var6 + ',' + var7 + ')');
+      }
+   }
+
+   static RSString method1052(long var1) {
+      try {
+         if(var1 > 0 && var1 < 6582952005840035281L) {
+            if(var1 % 37L == 0) {
+               return null;
+            } else {
+               int var3 = 0;
+
+               for(long var4 = var1; var4 != 0L; ++var3) {
+                  var4 /= 37L;
+               }
+
+               byte[] var6 = new byte[var3];
+
+               while(0L != var1) {
+                  long var7 = var1;
+                  var1 /= 37L;
+                  --var3;
+                  var6[var3] = Class163_Sub1_Sub1.aByteArray4005[(int)(-(var1 * 37L) + var7)];
+               }
+
+               RSString var10 = new RSString();
+               var10.buffer = var6;
+               var10.length = var6.length;
+               return var10;
+            }
+         } else {
+            return null;
+         }
+      } catch (RuntimeException var9) {
+         throw Class44.clientError(var9, "ge.B(" + -29664 + ',' + var1 + ')');
+      }
+   }
+
+   static void method1053(CacheIndex var1) {
+      try {
+         Class97.aClass153_1372 = var1;
+      } catch (RuntimeException var3) {
+         throw Class44.clientError(var3, "ge.F(" + (byte) -117 + ',' + (var1 != null?"{...}":"null") + ')');
+      }
+   }
+
+   public static Class3_Sub28_Sub17 method880(byte[] var1) {
+       try {
+           if (null == var1) {
+               return null;
+           } else {
+               Object var2;
+               if (HDToolKit.highDetail) {
+                   var2 = new Class3_Sub28_Sub17_Sub2(var1, Class164.anIntArray2048, RSByteBuffer.anIntArray2591, Class140_Sub7.anIntArray2931, Class3_Sub13_Sub6.anIntArray3076, Class163_Sub1.aByteArrayArray2987);
+               } else {
+                   var2 = new Class3_Sub28_Sub17_Sub1(var1, Class164.anIntArray2048, RSByteBuffer.anIntArray2591, Class140_Sub7.anIntArray2931, Class3_Sub13_Sub6.anIntArray3076, Class163_Sub1.aByteArrayArray2987);
+               }
+
+               Class39.method1035((byte) 106);
+               return (Class3_Sub28_Sub17) var2;
+           }
+       } catch (RuntimeException var3) {
+           throw Class44.clientError(var3, "ce.G(" + -22376 + ',' + "{...}" + ')');
+       }
+   }
+
+   public static void method881(int var0, int var1, int var2, int var3, int var4, int var5, int var6, int var7, int var8, int var9) {
+       try {
+           if (var2 <= -65) {
+               Class3_Sub4 var10 = null;
+
+               for (Class3_Sub4 var11 = (Class3_Sub4) Class3_Sub13_Sub6.aClass61_3075.method1222(); var11 != null; var11 = (Class3_Sub4) Class3_Sub13_Sub6.aClass61_3075.method1221()) {
+                   if (var11.anInt2250 == var0 && var11.anInt2264 == var4 && var11.anInt2248 == var1 && var11.anInt2263 == var7) {
+                       var10 = var11;
+                       break;
+                   }
+               }
+
+               if (null == var10) {
+                   var10 = new Class3_Sub4();
+                   var10.anInt2264 = var4;
+                   var10.anInt2248 = var1;
+                   var10.anInt2250 = var0;
+                   var10.anInt2263 = var7;
+                   Class132.method1798(72, var10);
+                   Class3_Sub13_Sub6.aClass61_3075.method1215(var10);
+               }
+
+               var10.anInt2262 = var8;
+               var10.anInt2261 = var9;
+               var10.anInt2259 = var5;
+               var10.anInt2265 = var6;
+               var10.anInt2256 = var3;
+           }
+       } catch (RuntimeException var12) {
+           throw Class44.clientError(var12, "ce.J(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ',' + var5 + ',' + var6 + ',' + var7 + ',' + var8 + ',' + var9 + ')');
+       }
+   }
+
+   public static void method882() {
+       try {
+           Class3_Sub13_Sub36.anInt3423 = 0;
+           Class132.anInt1741 = -1;
+           Class10.anInt154 = 1;
+           GraphicDefinition.anInt546 = 2;
+           Class3_Sub9.aBoolean2311 = false;
+           Class101.aClass153_1423 = null;
+           Class3_Sub13_Sub39.anInt3463 = -1;
+       } catch (RuntimeException var3) {
+           throw Class44.clientError(var3, "ce.F(" + -1 + ',' + 2 + ')');
+       }
+   }
+
+   public static Class3_Sub28_Sub3 method884(int var0, byte var1, int var2) {
+       try {
+           Class3_Sub28_Sub3 var3 = (Class3_Sub28_Sub3) Class134.aClass61_1758.method1222();
+
+           for (; var3 != null; var3 = (Class3_Sub28_Sub3) Class134.aClass61_1758.method1221()) {
+               if (var3.aBoolean3553 && var3.method537(var2, var0)) {
+                   return var3;
+               }
+           }
+
+           return null;
+       } catch (RuntimeException var5) {
+           throw Class44.clientError(var5, "ce.D(" + var0 + ',' + var1 + ',' + var2 + ')');
+       }
+   }
+
+   static void method518(Player var0) {
+      try {
+         Class3_Sub9 var2 = (Class3_Sub9)Class3_Sub28_Sub7_Sub1.aHashTable_4046.get(var0.displayName.toLong());
+
+         if(var2 == null) {
+            Class70.method1286(var0.anIntArray2755[0], (ObjectDefinition)null, 0, (NPC)null, var0.anIntArray2767[0], WorldListCountry.localPlane, var0);
+         } else {
+            var2.method134();
+         }
+
+      } catch (RuntimeException var3) {
+         throw Class44.clientError(var3, "rg.UA(" + (var0 != null?"{...}":"null") + ',' + -110 + ')');
+      }
+   }
+
+   static int method519(int var0, int var2, int var3) {
+      try {
+         var0 &= 3;
+
+         return 0 != var0?(var0 != 1 ?(var0 == 2 ?-var3 + 7:-var2 + 7):var2):var3;
+      } catch (RuntimeException var5) {
+         throw Class44.clientError(var5, "rg.RA(" + var0 + ',' + true + ',' + var2 + ',' + var3 + ')');
+      }
+   }
+
+   static Class3_Sub28_Sub3 method520(byte var0) {
+      try {
+         return RSByteBuffer.aClass3_Sub28_Sub3_2600;
+      } catch (RuntimeException var2) {
+         throw Class44.clientError(var2, "rg.OA(" + var0 + ')');
+      }
+   }
+
+   static NPCDefinition method522(int var0) {
+      try {
+         NPCDefinition def = (NPCDefinition)Class3_Sub28_Sub7_Sub1.aClass93_4043.get((long)var0);
+         if(null == def) {
+            byte[] var3 = Class29.aClass153_557.getFile(Class38_Sub1.method1031(var0), Canvas_Sub1.method54(var0));
+            def = new NPCDefinition();
+
+            def.npcId = var0;
+            if(null != var3) {
+               def.method1478(new RSByteBuffer(var3));
+            }
+            Class3_Sub28_Sub7_Sub1.aClass93_4043.put((byte)-95, def, (long)var0);
+         }
+         return def;
+      } catch (RuntimeException var4) {
+         throw Class44.clientError(var4, "rg.PA(" + var0 + ',' + 27112 + ')');
+      }
+   }
+
+   static void method523(int var0, int var1, int var3, int var4, int var5, int var6, int var7, int var8) {
+      try {
+         int var9 = var3 - var8;
+         int var11 = (-var5 + var0 << 16) / var9;
+         int var10 = -var4 + var6;
+         int var12 = (var7 + -var1 << 16) / var10;
+         Class83.method1410(var1, 0, var6, var4, var3, var5, var8, var12, var11, 0, -12541);
+      } catch (RuntimeException var13) {
+         throw Class44.clientError(var13, "rg.SA(" + var0 + ',' + var1 + ',' + 0 + ',' + var3 + ',' + var4 + ',' + var5 + ',' + var6 + ',' + var7 + ',' + var8 + ')');
       }
    }
 }

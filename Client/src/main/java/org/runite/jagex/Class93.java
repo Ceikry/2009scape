@@ -10,7 +10,7 @@ final class Class93 {
    static RSString aClass94_1326 = RSString.of(")2");
    private int anInt1327;
    static byte[][][] aByteArrayArrayArray1328;
-   private final NodeList aClass13_1329 = new NodeList();
+   private final Queue aClass13_1329 = new Queue();
    private int anInt1331;
    private HashTable aHashTable_1332;
 
@@ -23,17 +23,17 @@ final class Class93 {
          }
 
          if(this.anInt1327 == 0) {
-            Class3_Sub28_Sub7 var5 = (Class3_Sub28_Sub7)this.aClass13_1329.method877();
+            Class3_Sub28_Sub7 var5 = (Class3_Sub28_Sub7)this.aClass13_1329.poll();
             Objects.requireNonNull(var5).unlink();
-            var5.method524();
+            var5.unlinkNode();
          } else {
             --this.anInt1327;
          }
 
          Class3_Sub28_Sub7_Sub1 var7 = new Class3_Sub28_Sub7_Sub1(var2);
          this.aHashTable_1332.put(var3, var7);
-         this.aClass13_1329.method879(var7);
-         var7.aLong2569 = 0L;
+         this.aClass13_1329.offer(var7);
+         var7.nodeKey = 0L;
       } catch (RuntimeException var6) {
          throw Class44.clientError(var6, "n.F(" + var1 + ',' + (var2 != null?"{...}":"null") + ',' + var3 + ')');
       }
@@ -82,7 +82,7 @@ final class Class93 {
          if(var3 == -124) {
             if(null != var4) {
                var4.unlink();
-               var4.method524();
+               var4.unlinkNode();
                ++this.anInt1327;
             }
 
@@ -104,7 +104,7 @@ final class Class93 {
       try {
          int var2 = 0;
 
-         for(Class3_Sub28_Sub7 var3 = (Class3_Sub28_Sub7)this.aClass13_1329.method876((byte)70); var3 != null; var3 = (Class3_Sub28_Sub7)this.aClass13_1329.method878(-12623 + 12744)) {
+         for(Class3_Sub28_Sub7 var3 = (Class3_Sub28_Sub7)this.aClass13_1329.getFront(); var3 != null; var3 = (Class3_Sub28_Sub7)this.aClass13_1329.next()) {
             if(!var3.method568()) {
                ++var2;
             }
@@ -119,18 +119,18 @@ final class Class93 {
    final void method1522(int var1, int var2) {
       try {
          if(null != Class3_Sub28_Sub20.aClass118_3794) {
-            for(Class3_Sub28_Sub7 var3 = (Class3_Sub28_Sub7)this.aClass13_1329.method876((byte)42); null != var3; var3 = (Class3_Sub28_Sub7)this.aClass13_1329.method878(-48)) {
+            for(Class3_Sub28_Sub7 var3 = (Class3_Sub28_Sub7)this.aClass13_1329.getFront(); null != var3; var3 = (Class3_Sub28_Sub7)this.aClass13_1329.next()) {
                if(!var3.method568()) {
-                  if(++var3.aLong2569 > (long)var2) {
+                  if(++var3.nodeKey > (long)var2) {
                      Class3_Sub28_Sub7 var4 = Class3_Sub28_Sub20.aClass118_3794.method1725(var3);
                      this.aHashTable_1332.put(var3.linkableKey, var4);
                      Class45.method1084(var3, var4);
                      var3.unlink();
-                     var3.method524();
+                     var3.unlinkNode();
                   }
                } else if(null == var3.method567()) {
                   var3.unlink();
-                  var3.method524();
+                  var3.unlinkNode();
                   ++this.anInt1327;
                }
             }
@@ -147,10 +147,10 @@ final class Class93 {
 
    final void method1523(byte var1) {
       try {
-         for(Class3_Sub28_Sub7 var2 = (Class3_Sub28_Sub7)this.aClass13_1329.method876((byte)52); var2 != null; var2 = (Class3_Sub28_Sub7)this.aClass13_1329.method878(-43)) {
+         for(Class3_Sub28_Sub7 var2 = (Class3_Sub28_Sub7)this.aClass13_1329.getFront(); var2 != null; var2 = (Class3_Sub28_Sub7)this.aClass13_1329.next()) {
             if(var2.method568()) {
                var2.unlink();
-               var2.method524();
+               var2.unlinkNode();
                ++this.anInt1327;
             }
          }
@@ -166,7 +166,7 @@ final class Class93 {
 
    final void method1524() {
       try {
-         this.aClass13_1329.method883();
+         this.aClass13_1329.clear();
          this.aHashTable_1332.clear();
          this.anInt1327 = this.anInt1331;
       } catch (RuntimeException var3) {
@@ -215,20 +215,20 @@ final class Class93 {
             Object var5 = var4.method567();
             if(var5 == null) {
                var4.unlink();
-               var4.method524();
+               var4.unlinkNode();
                ++this.anInt1327;
                return null;
             } else {
                if(var4.method568()) {
                   Class3_Sub28_Sub7_Sub1 var6 = new Class3_Sub28_Sub7_Sub1(var5);
                   this.aHashTable_1332.put(var4.linkableKey, var6);
-                  this.aClass13_1329.method879(var6);
-                  var6.aLong2569 = 0L;
+                  this.aClass13_1329.offer(var6);
+                  var6.nodeKey = 0L;
                   var4.unlink();
-                  var4.method524();
+                  var4.unlinkNode();
                } else {
-                  this.aClass13_1329.method879(var4);
-                  var4.aLong2569 = 0L;
+                  this.aClass13_1329.offer(var4);
+                  var4.nodeKey = 0L;
                }
 
                return var5;

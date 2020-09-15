@@ -37,7 +37,7 @@ final class Class167 {
                   }
 
                   int var7 = GraphicDefinition.incomingBuffer.getBits(5);
-                  var3.setDefinitions(Node.method522(GraphicDefinition.incomingBuffer.getBits(14)));
+                  var3.setDefinitions(Unsorted.method522(GraphicDefinition.incomingBuffer.getBits(14)));
                   if(15 < var7) {
                      var7 -= 32;
                   }
@@ -93,7 +93,7 @@ final class Class167 {
          Class44.anIntArrayArrayArray723 = Class3_Sub28_Sub7.anIntArrayArrayArray3605;
          Class3_Sub23.aClass3_Sub11ArrayArray2542 = Class3_Sub13_Sub28.aClass3_Sub11ArrayArray3346;
       } else {
-         Class75_Sub2.aClass3_Sub2ArrayArrayArray2638 = Class3_Sub28_Sub10_Sub2.aClass3_Sub2ArrayArrayArray4070;
+         Class75_Sub2.aClass3_Sub2ArrayArrayArray2638 = Unsorted.aClass3_Sub2ArrayArrayArray4070;
          Class44.anIntArrayArrayArray723 = Class58.anIntArrayArrayArray914;
          Class3_Sub23.aClass3_Sub11ArrayArray2542 = Client.aClass3_Sub11ArrayArray2199;
       }
@@ -112,7 +112,7 @@ final class Class167 {
    static void method2266(int var0, int var1) {
       try {
          if(Unsorted.anInt120 != 0 && var1 != -1) {
-            Class70.method1285(Node.aClass153_2573, var1, Unsorted.anInt120);
+            Class70.method1285(Unsorted.aClass153_2573, var1, Unsorted.anInt120);
             Class83.aBoolean1158 = true;
          }
       } catch (RuntimeException var4) {
@@ -235,7 +235,7 @@ final class Class167 {
 
          Unsorted.method1250(62, false);
          System.gc();
-         NodeList.method882();
+         Unsorted.method882();
          Class83.aBoolean1158 = false;
          Class129.anInt1691 = -1;
          Class164_Sub1.method2241((byte)-77, true);

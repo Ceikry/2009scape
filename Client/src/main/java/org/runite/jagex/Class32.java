@@ -37,11 +37,11 @@ final class Class32 {
       int var0;
       int var1;
       int var2;
-      if(Class3_Sub28_Sub10_Sub2.aClass3_Sub2ArrayArrayArray4070 != null) {
-         for(var0 = 0; var0 < Class3_Sub28_Sub10_Sub2.aClass3_Sub2ArrayArrayArray4070.length; ++var0) {
+      if(Unsorted.aClass3_Sub2ArrayArrayArray4070 != null) {
+         for(var0 = 0; var0 < Unsorted.aClass3_Sub2ArrayArrayArray4070.length; ++var0) {
             for(var1 = 0; var1 < Unsorted.anInt1234; ++var1) {
                for(var2 = 0; var2 < Class3_Sub13_Sub15.anInt3179; ++var2) {
-                  Class3_Sub28_Sub10_Sub2.aClass3_Sub2ArrayArrayArray4070[var0][var1][var2] = null;
+                  Unsorted.aClass3_Sub2ArrayArrayArray4070[var0][var1][var2] = null;
                }
             }
          }
@@ -71,9 +71,9 @@ final class Class32 {
          Class3_Sub13_Sub5.anInt3070 = 0;
       }
 
-      if(Class3_Sub28_Sub10_Sub1.aClass25Array4060 != null) {
-         for(var0 = 0; var0 < Class3_Sub28_Sub10_Sub1.aClass25Array4060.length; ++var0) {
-            Class3_Sub28_Sub10_Sub1.aClass25Array4060[var0] = null;
+      if(Unsorted.aClass25Array4060 != null) {
+         for(var0 = 0; var0 < Unsorted.aClass25Array4060.length; ++var0) {
+            Unsorted.aClass25Array4060[var0] = null;
          }
       }
 

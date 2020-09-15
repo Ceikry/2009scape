@@ -1,4 +1,6 @@
 package org.runite.jagex;
+import org.rs09.client.Node;
+
 import java.util.Calendar;
 import java.util.Objects;
 import java.util.TimeZone;

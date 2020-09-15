@@ -36,7 +36,7 @@ final class Class3_Sub4 extends Linkable {
 				++var2;
 			}
 
-			if(var0.method2144(Node.anInt2575)) {
+			if(var0.method2144(Unsorted.anInt2575)) {
 				++var2;
 			}
 
@@ -94,7 +94,7 @@ final class Class3_Sub4 extends Linkable {
 		Unsorted.anInt1234 = 104;
 		Class3_Sub13_Sub15.anInt3179 = 104;
 		Class3_Sub13_Sub39.anInt3466 = var3;
-		Class3_Sub28_Sub10_Sub2.aClass3_Sub2ArrayArrayArray4070 = new Class3_Sub2[4][Unsorted.anInt1234][Class3_Sub13_Sub15.anInt3179];
+		Unsorted.aClass3_Sub2ArrayArrayArray4070 = new Class3_Sub2[4][Unsorted.anInt1234][Class3_Sub13_Sub15.anInt3179];
 		Class58.anIntArrayArrayArray914 = new int[4][Unsorted.anInt1234 + 1][Class3_Sub13_Sub15.anInt3179 + 1];
 		if(HDToolKit.highDetail) {
 			Client.aClass3_Sub11ArrayArray2199 = new Class3_Sub11[4][];
@@ -122,7 +122,7 @@ final class Class3_Sub4 extends Linkable {
 		Class81.anIntArrayArrayArray1142 = new int[4][Unsorted.anInt1234 + 1][Class3_Sub13_Sub15.anInt3179 + 1];
 		AnimationDefinition.aClass25Array1868 = new Class25[5000];
 		Class3_Sub13_Sub5.anInt3070 = 0;
-		Class3_Sub28_Sub10_Sub1.aClass25Array4060 = new Class25[100];
+		Unsorted.aClass25Array4060 = new Class25[100];
 		Class23.aBooleanArrayArray457 = new boolean[Class3_Sub13_Sub39.anInt3466 + Class3_Sub13_Sub39.anInt3466 + 1][Class3_Sub13_Sub39.anInt3466 + Class3_Sub13_Sub39.anInt3466 + 1];
 		Class49.aBooleanArrayArray814 = new boolean[Class3_Sub13_Sub39.anInt3466 + Class3_Sub13_Sub39.anInt3466 + 2][Class3_Sub13_Sub39.anInt3466 + Class3_Sub13_Sub39.anInt3466 + 2];
 		Class136.aByteArrayArrayArray1774 = new byte[4][Unsorted.anInt1234][Class3_Sub13_Sub15.anInt3179];

@@ -5,7 +5,7 @@ import java.util.Objects;
 final class Class8 {
 
    private RSByteBuffer aClass3_Sub30_99;
-   private Class3_Sub28_Sub10_Sub2 aClass3_Sub28_Sub10_Sub2_100;
+   private Js5ResourceRequest aJs5ResourceRequest_100;
    static int anInt101;
    private final Class66 aClass66_102;
    private final Class73 aClass73_103;
@@ -19,18 +19,18 @@ final class Class8 {
       try {
          if(null == this.aClass3_Sub30_99) {
 
-            if(this.aClass3_Sub28_Sub10_Sub2_100 == null) {
+            if(this.aJs5ResourceRequest_100 == null) {
                if(this.aClass66_102.method1251()) {
                   return false;
                }
 
-               this.aClass3_Sub28_Sub10_Sub2_100 = this.aClass66_102.addJS5Request(255, (byte)0, 255, true);
+               this.aJs5ResourceRequest_100 = this.aClass66_102.addJS5Request(255, (byte)0, 255, true);
             }
 
-            if(this.aClass3_Sub28_Sub10_Sub2_100.aBoolean3632) {
+            if(this.aJs5ResourceRequest_100.waiting) {
                return false;
             } else {
-               this.aClass3_Sub30_99 = new RSByteBuffer(this.aClass3_Sub28_Sub10_Sub2_100.method587());
+               this.aClass3_Sub30_99 = new RSByteBuffer(this.aJs5ResourceRequest_100.getData());
                this.aClass151_Sub1Array107 = new Class151_Sub1[(this.aClass3_Sub30_99.buffer.length + -5) / 8];
                return true;
             }
@@ -255,7 +255,7 @@ final class Class8 {
          this.aClass73_103 = var2;
          this.aClass66_102 = var1;
          if(!this.aClass66_102.method1251()) {
-            this.aClass3_Sub28_Sub10_Sub2_100 = this.aClass66_102.addJS5Request(255, (byte)0, 255, true);
+            this.aJs5ResourceRequest_100 = this.aClass66_102.addJS5Request(255, (byte)0, 255, true);
          }
 
       } catch (RuntimeException var4) {

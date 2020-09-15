@@ -44,8 +44,8 @@ final class Class75_Sub3 extends Class75 {
          Class3_Sub28_Sub3.method539();
          Class3_Sub13_Sub4.method188(5, 0);
          Class166.method2260();
-         Class3_Sub28_Sub10_Sub1.method594(26211 + -26090, 5);
-         Class3_Sub28_Sub10_Sub1.method595();
+         Unsorted.method594(26211 + -26090, 5);
+         Unsorted.method595();
          Class3_Sub31.method820(5, 64);
          Class25.method953();
          Class3_Sub13_Sub21.method269(-5, 5);

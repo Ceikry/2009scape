@@ -1,4 +1,6 @@
 package org.runite.jagex;
+import org.rs09.client.Node;
+
 import java.awt.*;
 import java.awt.image.ImageObserver;
 

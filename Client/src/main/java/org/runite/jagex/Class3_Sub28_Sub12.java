@@ -1,4 +1,6 @@
 package org.runite.jagex;
+import org.rs09.client.Node;
+
 import java.awt.Canvas;
 
 public final class Class3_Sub28_Sub12 extends Node {

@@ -144,7 +144,7 @@ class Class127 {
                   Unsorted.aClass3_Sub30_Sub1_2942.putInt(var0 ^ 127, Class140_Sub6.spritesCacheIndex.getCRCValue((byte)-125));
                   Unsorted.aClass3_Sub30_Sub1_2942.putInt(var0 ^ 117, Class3_Sub13_Sub28.aClass153_3352.getCRCValue((byte)-127));
                   Unsorted.aClass3_Sub30_Sub1_2942.putInt(-123, Class3_Sub13_Sub25.aClass153_3304.getCRCValue((byte)-127));
-                  Unsorted.aClass3_Sub30_Sub1_2942.putInt(-124, Node.aClass153_2573.getCRCValue((byte)-118));
+                  Unsorted.aClass3_Sub30_Sub1_2942.putInt(-124, Unsorted.aClass153_2573.getCRCValue((byte)-118));
                   Unsorted.aClass3_Sub30_Sub1_2942.putInt(-126, Class3_Sub1.interfaceScriptsIndex.getCRCValue((byte)-122));
                   Unsorted.aClass3_Sub30_Sub1_2942.putInt(var0 ^ 115, CacheIndex.aClass153_1948.getCRCValue((byte)-118));
                   Unsorted.aClass3_Sub30_Sub1_2942.putInt(-122, Class3_Sub19.aClass153_2474.getCRCValue((byte)-124));
@@ -263,7 +263,7 @@ class Class127 {
                   Class3_Sub28_Sub19.anInt3775 = GraphicDefinition.incomingBuffer.readUnsignedByte();
                   Class3_Sub15.aBoolean2433 = GraphicDefinition.incomingBuffer.readUnsignedByte() == 1;
                   Class121.aBoolean1641 = 1 == GraphicDefinition.incomingBuffer.readUnsignedByte();
-                  Class3_Sub28_Sub10_Sub1.aBoolean4063 = GraphicDefinition.incomingBuffer.readUnsignedByte() == 1;
+                  Unsorted.aBoolean4063 = GraphicDefinition.incomingBuffer.readUnsignedByte() == 1;
                   Class3_Sub13_Sub14.aBoolean3166 = 1 == GraphicDefinition.incomingBuffer.readUnsignedByte();
                   Canvas_Sub2.aBoolean29 = GraphicDefinition.incomingBuffer.readUnsignedByte() == 1;
                   Class3_Sub1.localIndex = GraphicDefinition.incomingBuffer.getShort();
@@ -272,7 +272,7 @@ class Class127 {
                   Class113.method1702(Class2.isMember);
                   Class8.method845(Class2.isMember);
                   if(!Class3_Sub28_Sub19.aBoolean3779) {
-                     if((!Class3_Sub15.aBoolean2433 || Class3_Sub28_Sub10_Sub1.aBoolean4063) && !Class3_Sub13_Sub29.disableGEBoxes) {
+                     if((!Class3_Sub15.aBoolean2433 || Unsorted.aBoolean4063) && !Class3_Sub13_Sub29.disableGEBoxes) {
                         try {
                            Class27.aClass94_516.method1577(Class38.aClass87_665.anApplet1219);
                         } catch (Throwable var5) {

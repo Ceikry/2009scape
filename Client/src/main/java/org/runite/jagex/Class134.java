@@ -40,7 +40,7 @@ final class Class134 {
 
    static void method1808(int var0, boolean var1, int var3, boolean var4) {
       try {
-         Class41.method1047(var0, var3, Class3_Sub13_Sub16.aClass44_Sub1Array3201.length - 1, var4, 0, var1);
+         Unsorted.method1047(var0, var3, Class3_Sub13_Sub16.aClass44_Sub1Array3201.length - 1, var4, 0, var1);
 
       } catch (RuntimeException var6) {
          throw Class44.clientError(var6, "sh.C(" + var0 + ',' + var1 + ',' + (byte) 30 + ',' + var3 + ',' + var4 + ')');

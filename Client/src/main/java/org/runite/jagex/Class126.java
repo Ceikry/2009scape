@@ -5,7 +5,7 @@ final class Class126 {
    int anInt1663;
    int anInt1664;
    static int anInt1665;
-   static NodeList aClass13_1666 = new NodeList();
+   static Queue aClass13_1666 = new Queue();
    int anInt1667;
    static int anInt1668 = -1;
    static Class3_Sub28_Sub17 aClass3_Sub28_Sub17_1669;

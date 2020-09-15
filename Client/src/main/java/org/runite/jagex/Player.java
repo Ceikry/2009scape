@@ -33,7 +33,7 @@ final class Player extends Class140_Sub4 {
 
             return super.getSize();
          } else {
-            return Node.method522(this.class52.pnpcId).size;
+            return Unsorted.method522(this.class52.pnpcId).size;
          }
       } catch (RuntimeException var3) {
          throw Class44.clientError(var3, "e.H(" + (byte) 114 + ')');
@@ -114,7 +114,7 @@ final class Player extends Class140_Sub4 {
 
          this.renderAnimationId = buffer.getShort();
          long var20 = buffer.getLong(-99);
-         this.displayName = Objects.requireNonNull(Class41.method1052(var20)).method1545();
+         this.displayName = Objects.requireNonNull(Unsorted.method1052(var20)).method1545();
          this.COMBAT_LEVEL = buffer.readUnsignedByte();
          if(var6) {
             this.anInt3974 = buffer.getShort();
@@ -143,7 +143,7 @@ final class Player extends Class140_Sub4 {
             this.anInt3963 = buffer.getShort();
             this.anInt3973 = buffer.getShort();
             if(this.anInt3969 != outfit || var14 != this.anInt3952 || var15 != this.anInt3966 || var16 != this.anInt3963 || var17 != this.anInt3973) {
-               Node.method518(this);
+               Unsorted.method518(this);
             }
          }
 
@@ -188,7 +188,7 @@ final class Player extends Class140_Sub4 {
             if(var15 != null) {
                this.anInt2820 = var15.method1871();
                Model var23;
-               if(Class140_Sub6.aBoolean2910 && (-1 == this.class52.pnpcId || Node.method522(this.class52.pnpcId).aBoolean1249)) {
+               if(Class140_Sub6.aBoolean2910 && (-1 == this.class52.pnpcId || Unsorted.method522(this.class52.pnpcId).aBoolean1249)) {
                   var23 = Class140_Sub3.method1957(160, this.aBoolean2810, var14 == null?var13:var14, this.anInt2819, 0, this.anInt2829, 0, 1, var15, var1, null != var14?this.anInt2813:this.anInt2832, this.anInt2831, 240);
                   if(HDToolKit.highDetail) {
                      float var18 = HDToolKit.method1852();

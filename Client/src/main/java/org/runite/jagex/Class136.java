@@ -91,7 +91,7 @@ final class Class136 {
             Class159.anIntArray2021 = new int[var0];
             AnimationDefinition.anIntArray1871 = new int[var0];
             Player.anIntArray3959 = new int[var0];
-            Class41.anIntArray686 = new int[var0];
+            Unsorted.anIntArray686 = new int[var0];
          }
       } catch (RuntimeException var3) {
          throw Class44.clientError(var3, "sm.C(" + var0 + ',' + var1 + ')');

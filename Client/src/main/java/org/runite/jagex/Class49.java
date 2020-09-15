@@ -216,7 +216,7 @@ final class Class49 {
 
             Class3_Sub28_Sub16.aClass11_3708 = null;
             Class53.anInt865 = -1;
-            Node.anInt2567 = -1;
+            Unsorted.anInt2567 = -1;
             Class99.aClass11_1402 = null;
             if(HDToolKit.highDetail) {
                Unsorted.aBoolean47 = true;
@@ -243,7 +243,7 @@ final class Class49 {
                }
             } else if(null == Class3_Sub28_Sub16.aClass11_3708) {
                if(Class53.anInt865 != -1) {
-                  Class24.method950((RSInterface)null, -86, Node.anInt2567, Class53.anInt865);
+                  Class24.method950((RSInterface)null, -86, Unsorted.anInt2567, Class53.anInt865);
                }
             } else {
                Class24.method950(Class3_Sub28_Sub16.aClass11_3708, -120, ClientErrorException.anInt2115, Class3_Sub13_Sub23_Sub1.anInt4041);

@@ -130,8 +130,8 @@ final class Class140_Sub7 extends GameObject {
                }
 
                if(var15) {
-                  if(Class44.anIntArrayArrayArray723[WorldListCountry.localPlane - -1][var9][var12] > Class41.anIntArray686[var5]) {
-                     Class41.anIntArray686[var5] = Class44.anIntArrayArrayArray723[WorldListCountry.localPlane + 1][var9][var12];
+                  if(Class44.anIntArrayArrayArray723[WorldListCountry.localPlane - -1][var9][var12] > Unsorted.anIntArray686[var5]) {
+                     Unsorted.anIntArray686[var5] = Class44.anIntArrayArrayArray723[WorldListCountry.localPlane + 1][var9][var12];
                   }
 
                   var16 = var9 << 7;
@@ -217,8 +217,8 @@ final class Class140_Sub7 extends GameObject {
                }
             }
 
-            if(-1000000 != Class41.anIntArray686[var5]) {
-               Class41.anIntArray686[var5] += 10;
+            if(-1000000 != Unsorted.anIntArray686[var5]) {
+               Unsorted.anIntArray686[var5] += 10;
                Class129_Sub1.anIntArray2696[var5] -= 50;
                Class159.anIntArray2021[var5] += 50;
                Player.anIntArray3959[var5] += 50;

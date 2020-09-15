@@ -99,13 +99,13 @@ final class Class79 {
                }
 
                if(var3 <= var0.buffer.length - var0.index) {
-                  Class3_Sub28_Sub10.anInt3625 = var0.readUnsignedByte();
-                  if(Class3_Sub28_Sub10.anInt3625 >= 1) {
-                     if(Class3_Sub28_Sub10.anInt3625 > 4) {
-                        Class3_Sub28_Sub10.anInt3625 = 4;
+                  Unsorted.anInt3625 = var0.readUnsignedByte();
+                  if(Unsorted.anInt3625 >= 1) {
+                     if(Unsorted.anInt3625 > 4) {
+                        Unsorted.anInt3625 = 4;
                      }
                   } else {
-                     Class3_Sub28_Sub10.anInt3625 = 1;
+                     Unsorted.anInt3625 = 1;
                   }
 
                   Class25.method957(1 == var0.readUnsignedByte());
@@ -171,7 +171,7 @@ final class Class79 {
                   }
 
                   if(6 <= var2) {
-                     Node.anInt2577 = var0.readUnsignedByte();
+                     Unsorted.anInt2577 = var0.readUnsignedByte();
                   }
 
                   if(var2 >= 7) {

@@ -1,5 +1,7 @@
 package org.runite.jagex;
 
+import org.rs09.client.Node;
+
 import javax.media.opengl.GL;
 import javax.media.opengl.glu.GLU;
 import java.nio.ByteBuffer;
@@ -307,7 +309,7 @@ final class Class3_Sub28_Sub20 extends Node {
 
             if(WorldListCountry.localPlane != 3) {
                for(var4 = 0; var4 < 2; ++var4) {
-                  Class41.anIntArray686[var4] = -1000000;
+                  Unsorted.anIntArray686[var4] = -1000000;
                   Class129_Sub1.anIntArray2696[var4] = 1000000;
                   Class159.anIntArray2021[var4] = 0;
                   AnimationDefinition.anIntArray1871[var4] = 1000000;

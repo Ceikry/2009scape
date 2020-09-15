@@ -24,7 +24,7 @@ final class Class23 {
       try {
          RSByteBuffer var1 = new RSByteBuffer(34);
          var1.putByte((byte)-40, 11);
-         var1.putByte((byte)-42, Class3_Sub28_Sub10.anInt3625);
+         var1.putByte((byte)-42, Unsorted.anInt3625);
          var1.putByte((byte)-81, !Class3_Sub28_Sub13.aBoolean3665?0:1);
          var1.putByte((byte)-57, Class3_Sub28_Sub7.aBoolean3604?1:0);
          var1.putByte((byte)-12, KeyboardListener.aBoolean1905?1:0);
@@ -46,7 +46,7 @@ final class Class23 {
          var1.putShort(Class3_Sub13_Sub5.anInt3071);
          var1.putByte((byte)-53, Class127_Sub1.method1757());
          var1.putInt(-123, Unsorted.anInt2148);
-         var1.putByte((byte)-19, Node.anInt2577);
+         var1.putByte((byte)-19, Unsorted.anInt2577);
          var1.putByte((byte)-117, Unsorted.aBoolean2146?1:0);
          var1.putByte((byte)-9, !Class15.aBoolean346?0:1);
          var1.putByte((byte)-39, Class3_Sub20.anInt2488);
