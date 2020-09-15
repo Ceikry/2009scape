@@ -172,7 +172,7 @@ static RSString[] aClass94Array3238 = new RSString[]{aClass94_3237, aClass94_324
          }
 
          if(null != Class3_Sub13_Sub7.aClass11_3087) {
-            Class20.method909(125, Class3_Sub13_Sub7.aClass11_3087);
+            Class20.method909(Class3_Sub13_Sub7.aClass11_3087);
             Class3_Sub13_Sub7.aClass11_3087 = null;
          }
 

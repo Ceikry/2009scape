@@ -542,7 +542,7 @@ final class ItemDefinition {
 							Class164.aClass11_2055 = class11_23;
 						else
 							Class133.aClass11_1749 = class11_23;
-						Class20.method909(110, class11_21);
+						Class20.method909(class11_21);
 						continue;
 					}
 					if (opcode == 101) {
@@ -554,13 +554,13 @@ final class ItemDefinition {
 								throw new RuntimeException("Tried to .cc_delete static .active-component!");
 						RSInterface class11_17 = Class7.getRSInterface(class11.componentHash);
 						class11_17.aClass11Array262[class11.anInt191] = null;
-						Class20.method909(-8, class11_17);
+						Class20.method909(class11_17);
 						continue;
 					}
 					if (opcode == 102) {
 						RSInterface class11_1 = Class7.getRSInterface(intsStack[--iStackCounter]);
 						class11_1.aClass11Array262 = null;
-						Class20.method909(-50, class11_1);
+						Class20.method909(class11_1);
 						continue;
 					}
 					if (opcode == 200) {
@@ -621,7 +621,7 @@ final class ItemDefinition {
 							}
 							class11_2.verticalPos = (byte) l66;
 							class11_2.horizontalPos = (byte) k44;
-							Class20.method909(109, class11_2);
+							Class20.method909(class11_2);
 							Class3_Sub13_Sub12.method225(class11_2);
 							if (class11_2.anInt191 == -1)
 								Class168.method2280(class11_2.componentHash);
@@ -647,7 +647,7 @@ final class ItemDefinition {
 							else if (l44 > 4)
 								l44 = 4;
 							class11_2.horizontalResize = (byte) l44;
-							Class20.method909(122, class11_2);
+							Class20.method909(class11_2);
 							Class3_Sub13_Sub12.method225(class11_2);
 							if (class11_2.type == 0)
 								Unsorted.method2104(class11_2, false, 32);
@@ -657,7 +657,7 @@ final class ItemDefinition {
 							boolean flag3 = intsStack[--iStackCounter] == 1;
 							if (flag3 == (!class11_2.hidden)) {
 								class11_2.hidden = flag3;
-								Class20.method909(-103, class11_2);
+								Class20.method909(class11_2);
 							}
 							if (-1 == class11_2.anInt191)
 								Class3_Sub28_Sub7_Sub1.method569(class11_2.componentHash);
@@ -667,7 +667,7 @@ final class ItemDefinition {
 							iStackCounter -= 2;
 							class11_2.anInt216 = intsStack[iStackCounter];
 							class11_2.anInt160 = intsStack[iStackCounter - -1];
-							Class20.method909(-99, class11_2);
+							Class20.method909(class11_2);
 							Class3_Sub13_Sub12.method225(class11_2);
 							if (class11_2.type == 0)
 								Unsorted.method2104(class11_2, false, -127);
@@ -779,7 +779,7 @@ final class ItemDefinition {
 										continue;
 									}
 									if (opcode == 1602) {
-										stringsStack[sStackCounter++] = class11_5.aClass94_232;
+										stringsStack[sStackCounter++] = class11_5.text;
 										continue;
 									}
 									if (opcode == 1603) {
@@ -988,7 +988,7 @@ final class ItemDefinition {
 													}
 													if (3304 == opcode) {
 														int l8 = intsStack[--iStackCounter];
-														intsStack[iStackCounter++] = Class144.method2069(l8, -127).anInt3647;
+														intsStack[iStackCounter++] = Unsorted.method2069(l8, -127).anInt3647;
 														continue;
 													}
 													if (opcode == 3305) {
@@ -2435,12 +2435,12 @@ final class ItemDefinition {
 																		Class140_Sub6.spritesCacheIndex.method2144(Class46.anInt739);
 																		Class140_Sub6.spritesCacheIndex.method2144(Class79.anInt1126);
 																		Class140_Sub6.spritesCacheIndex.method2144(Class140_Sub7.anInt2937);
-																		CacheIndex.aBoolean1951 = true;
+																		Unsorted.aBoolean1951 = true;
 																		continue;
 																	}
 																	if (opcode == 5425) {
 																		Class3_Sub13.method165();
-																		CacheIndex.aBoolean1951 = false;
+																		Unsorted.aBoolean1951 = false;
 																		continue;
 																	}
 																	if (opcode == 5426) {
@@ -3524,7 +3524,7 @@ final class ItemDefinition {
 										continue;
 									}
 									if (opcode == 2602) {
-										stringsStack[sStackCounter++] = class11_12.aClass94_232;
+										stringsStack[sStackCounter++] = class11_12.text;
 										continue;
 									}
 									if (opcode == 2603) {
@@ -3689,7 +3689,7 @@ final class ItemDefinition {
 							class11_15 = Class7.getRSInterface(intsStack[--iStackCounter]);
 							opcode -= 1000;
 						}
-						Class20.method909(-21, class11_15);
+						Class20.method909(class11_15);
 						if (opcode == 1200 || 1205 == opcode) {
 							iStackCounter -= 2;
 							int j75 = intsStack[1 + iStackCounter];
@@ -3769,52 +3769,52 @@ final class ItemDefinition {
 							class11_16.anInt208 = class11_16.anInt252 + -class11_16.height;
 						if (class11_16.anInt208 < 0)
 							class11_16.anInt208 = 0;
-						Class20.method909(111, class11_16);
+						Class20.method909(class11_16);
 						if (-1 == class11_16.anInt191)
 							Class67.method1259(class11_16.componentHash);
 						continue;
 					}
 					if (1101 == opcode) {
 						class11_16.anInt218 = intsStack[--iStackCounter];
-						Class20.method909(-123, class11_16);
+						Class20.method909(class11_16);
 						if (class11_16.anInt191 == -1)
 							Canvas_Sub2.method56(class11_16.componentHash);
 						continue;
 					}
 					if (opcode == 1102) {
 						class11_16.aBoolean226 = intsStack[--iStackCounter] == 1;
-						Class20.method909(107, class11_16);
+						Class20.method909(class11_16);
 						continue;
 					}
 					if (1103 == opcode) {
 						class11_16.anInt223 = intsStack[--iStackCounter];
-						Class20.method909(-64, class11_16);
+						Class20.method909(class11_16);
 						continue;
 					}
 					if (opcode == 1104) {
 						class11_16.anInt250 = intsStack[--iStackCounter];
-						Class20.method909(-52, class11_16);
+						Class20.method909(class11_16);
 						continue;
 					}
 					if (opcode == 1105) {
 						class11_16.spriteArchiveId = intsStack[--iStackCounter];
-						Class20.method909(-122, class11_16);
+						Class20.method909(class11_16);
 						continue;
 					}
 					if (1106 == opcode) {
 						class11_16.anInt301 = intsStack[--iStackCounter];
-						Class20.method909(-33, class11_16);
+						Class20.method909(class11_16);
 						continue;
 					}
 					if (1107 == opcode) {
 						class11_16.aBoolean186 = intsStack[--iStackCounter] == 1;
-						Class20.method909(114, class11_16);
+						Class20.method909(class11_16);
 						continue;
 					}
 					if (opcode == 1108) {
 						class11_16.modelType = 1;
 						class11_16.itemId = intsStack[--iStackCounter];
-						Class20.method909(2, class11_16);
+						Class20.method909(class11_16);
 						if (class11_16.anInt191 == -1)
 							Class162.method2206(class11_16.componentHash);
 						continue;
@@ -3827,7 +3827,7 @@ final class ItemDefinition {
 						class11_16.anInt308 = intsStack[iStackCounter - -3];
 						class11_16.anInt280 = intsStack[iStackCounter - -4];
 						class11_16.anInt164 = intsStack[5 + iStackCounter];
-						Class20.method909(-59, class11_16);
+						Class20.method909(class11_16);
 						if (class11_16.anInt191 == -1) {
 							Class3_Sub13_Sub19.method265(class11_16.componentHash);
 							Class107.method1649(class11_16.componentHash, -106);
@@ -3841,7 +3841,7 @@ final class ItemDefinition {
 							class11_16.anInt283 = 0;
 							class11_16.anInt267 = 0;
 							class11_16.anInt260 = 1;
-							Class20.method909(116, class11_16);
+							Class20.method909(class11_16);
 						}
 						if (class11_16.anInt191 == -1)
 							Class108.method1657(class11_16.componentHash);
@@ -3849,14 +3849,14 @@ final class ItemDefinition {
 					}
 					if (opcode == 1111) {
 						class11_16.aBoolean181 = 1 == intsStack[--iStackCounter];
-						Class20.method909(118, class11_16);
+						Class20.method909(class11_16);
 						continue;
 					}
 					if (1112 == opcode) {
-						RSString class94_63 = stringsStack[--sStackCounter];
-						if (!class94_63.equalsString(class11_16.aClass94_232)) {
-							class11_16.aClass94_232 = class94_63;
-							Class20.method909(117, class11_16);
+						RSString newText = stringsStack[--sStackCounter];
+						if (!newText.equalsString(class11_16.text)) {
+							class11_16.text = newText;
+							Class20.method909(class11_16);
 						}
 						if (class11_16.anInt191 == -1)
 							Class93.method1516(class11_16.componentHash, 91);
@@ -3864,7 +3864,7 @@ final class ItemDefinition {
 					}
 					if (opcode == 1113) {
 						class11_16.anInt270 = intsStack[--iStackCounter];
-						Class20.method909(111, class11_16);
+						Class20.method909(class11_16);
 						continue;
 					}
 					if (opcode == 1114) {
@@ -3872,39 +3872,39 @@ final class ItemDefinition {
 						class11_16.anInt194 = intsStack[iStackCounter];
 						class11_16.anInt225 = intsStack[1 + iStackCounter];
 						class11_16.anInt205 = intsStack[2 + iStackCounter];
-						Class20.method909(113, class11_16);
+						Class20.method909(class11_16);
 						continue;
 					}
 					if (1115 == opcode) {
 						class11_16.aBoolean215 = 1 == intsStack[--iStackCounter];
-						Class20.method909(-33, class11_16);
+						Class20.method909(class11_16);
 						continue;
 					}
 					if (opcode == 1116) {
 						class11_16.anInt288 = intsStack[--iStackCounter];
-						Class20.method909(-26, class11_16);
+						Class20.method909(class11_16);
 						continue;
 					}
 					if (opcode == 1117) {
 						class11_16.anInt287 = intsStack[--iStackCounter];
-						Class20.method909(117, class11_16);
+						Class20.method909(class11_16);
 						continue;
 					}
 					if (opcode == 1118) {
 						class11_16.aBoolean178 = intsStack[--iStackCounter] == 1;
-						Class20.method909(123, class11_16);
+						Class20.method909(class11_16);
 						continue;
 					}
 					if (opcode == 1119) {
 						class11_16.aBoolean199 = intsStack[--iStackCounter] == 1;
-						Class20.method909(-20, class11_16);
+						Class20.method909(class11_16);
 						continue;
 					}
 					if (opcode == 1120) {
 						iStackCounter -= 2;
 						class11_16.anInt240 = intsStack[iStackCounter];
 						class11_16.anInt252 = intsStack[1 + iStackCounter];
-						Class20.method909(117, class11_16);
+						Class20.method909(class11_16);
 						if (class11_16.type == 0)
 							Unsorted.method2104(class11_16, false, -116);
 						continue;
@@ -3913,18 +3913,18 @@ final class ItemDefinition {
 						iStackCounter -= 2;
 						class11_16.aShort293 = (short) intsStack[iStackCounter];
 						class11_16.aShort169 = (short) intsStack[iStackCounter + 1];
-						Class20.method909(126, class11_16);
+						Class20.method909(class11_16);
 						continue;
 					}
 					if (1122 == opcode) {
 						class11_16.aBoolean157 = intsStack[--iStackCounter] == 1;
-						Class20.method909(-66, class11_16);
+						Class20.method909(class11_16);
 						continue;
 					}
 					if (opcode != 1123)
 						break;
 					class11_16.anInt164 = intsStack[--iStackCounter];
-					Class20.method909(-126, class11_16);
+					Class20.method909(class11_16);
 					if (class11_16.anInt191 == -1)
 						Class3_Sub13_Sub19.method265(class11_16.componentHash);
 					continue;

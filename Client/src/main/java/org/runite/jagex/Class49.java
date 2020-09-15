@@ -236,7 +236,7 @@ final class Class49 {
 
             Class168.method2278(var0 + 122);
             if(Class38_Sub1.aBoolean2615) {
-               if(CacheIndex.aBoolean1951) {
+               if(Unsorted.aBoolean1951) {
                   ISAACCipher.method1230((byte)116);
                } else {
                   Class84.method1419();

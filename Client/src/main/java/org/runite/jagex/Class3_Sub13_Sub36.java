@@ -28,7 +28,7 @@ final class Class3_Sub13_Sub36 extends Class3_Sub13 {
             Class3_Sub13_Sub28.method302(2);
          }
 
-         Class144.method2067();
+         Unsorted.method2067();
          if(HDToolKit.highDetail) {
             Class65.method1239(var4, 125, var5, var1, var3, true);
             var3 = Class163_Sub1.anInt2989;

@@ -116,7 +116,7 @@ final class Class25 {
 
             GameObject.aBoolean1837 = false;
             Class3_Sub28_Sub5.anInt3590 = -1;
-            Class20.method909(-107, var1);
+            Class20.method909(var1);
          }
       } catch (RuntimeException var4) {
          throw Class44.clientError(var4, "ec.E(" + var0 + ')');

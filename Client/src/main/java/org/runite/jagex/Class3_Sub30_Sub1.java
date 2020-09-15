@@ -291,7 +291,7 @@ final class Class3_Sub30_Sub1 extends DataBuffer {
 				if(41 == var4 && Class3_Sub13_Sub7.aClass11_3087 == null) {
 					Class2.method78(var2, var3);
 					Class3_Sub13_Sub7.aClass11_3087 = Class3_Sub28_Sub16.method638(var3, var2);
-					Class20.method909(2597 + -2470, Class3_Sub13_Sub7.aClass11_3087);
+					Class20.method909(Class3_Sub13_Sub7.aClass11_3087);
 				}
 
 				if(49 == var4) {
@@ -689,7 +689,7 @@ final class Class3_Sub30_Sub1 extends DataBuffer {
 							Class110.anInt1473 = var2;
 							Class164_Sub1.anInt3012 = 1;
 							Class164.anInt2050 = var5;
-							Class20.method909(2597 ^ -2612, var13);
+							Class20.method909(var13);
 							RenderAnimationDefinition.aClass94_378 = RenderAnimationDefinition.method903(new RSString[]{
 									ColorCore.ContextColor2, Class38.getItemDefinition(var5, (byte)109).name, ColorCore.ContextColor
 							}, (byte)-113);
@@ -824,7 +824,7 @@ final class Class3_Sub30_Sub1 extends DataBuffer {
 
 						if(Class164_Sub1.anInt3012 != 0) {
 							Class164_Sub1.anInt3012 = 0;
-							Class20.method909(120, Class7.getRSInterface(Class3_Sub28_Sub18.anInt3764));
+							Class20.method909(Class7.getRSInterface(Class3_Sub28_Sub18.anInt3764));
 						}
 
 						if(GameObject.aBoolean1837) {
@@ -832,7 +832,7 @@ final class Class3_Sub30_Sub1 extends DataBuffer {
 						}
 
 						if(Unsorted.aClass11_1933 != null && Class3_Sub9.anInt2330 == 0) {
-							Class20.method909(-106, Unsorted.aClass11_1933);
+							Class20.method909(Unsorted.aClass11_1933);
 						}
 
 					}
@@ -882,7 +882,7 @@ final class Class3_Sub30_Sub1 extends DataBuffer {
 				Class100.anInt1407 = Unsorted.anInt689;
 				RSInterface.aFloat246 = var9;
 				Unsorted.anInt72 = 0;
-				Class3_Sub13_Sub23_Sub1.anInt4037 = CacheIndex.anInt1950;
+				Class3_Sub13_Sub23_Sub1.anInt4037 = Unsorted.anInt1950;
 				Class132.anInt1736 = var11;
 				Class3_Sub13_Sub2.aFloat3044 = var8;
 				Class96.anInt1345 = var10;
@@ -903,11 +903,11 @@ final class Class3_Sub30_Sub1 extends DataBuffer {
 				Class30.aFloat578 = var14 * Class3_Sub13_Sub8.aFloat3105 + var15 * Class3_Sub17.aFloat2457;
 				Class3_Sub13_Sub36.aFloat3424 = Class3_Sub13_Sub36.aFloat3435 * var14 + var15 * Class3_Sub13_Sub2.aFloat3044;
 				Class12.aFloat319 = var15 * RSInterface.aFloat246 + var14 * Class110.aFloat1475;
-				CacheIndex.anInt1950 = (16711680 & (Class60.anInt932 & '\uff00') * var13 + var12 * (Class3_Sub13_Sub23_Sub1.anInt4037 & '\uff00')) + ((16711935 & Class3_Sub13_Sub23_Sub1.anInt4037) * var12 - -((Class60.anInt932 & 16711935) * var13) & -16711936) >> 8;
+				Unsorted.anInt1950 = (16711680 & (Class60.anInt932 & '\uff00') * var13 + var12 * (Class3_Sub13_Sub23_Sub1.anInt4037 & '\uff00')) + ((16711935 & Class3_Sub13_Sub23_Sub1.anInt4037) * var12 - -((Class60.anInt932 & 16711935) * var13) & -16711936) >> 8;
 				Unsorted.anInt689 = var13 * Class132.anInt1736 + var12 * Class100.anInt1407 >> 8;
 			}
 
-			Class92.setLightParams(CacheIndex.anInt1950, Class30.aFloat578, Class3_Sub13_Sub36.aFloat3424, Class12.aFloat319);
+			Class92.setLightParams(Unsorted.anInt1950, Class30.aFloat578, Class3_Sub13_Sub36.aFloat3424, Class12.aFloat319);
 			Class92.setFogValues(Class3_Sub28_Sub12.anInt3652, Unsorted.anInt689);
 
 			Class92.setLightPosition((float)Class46.anInt741, (float)Class3_Sub13_Sub22.anInt3274, (float)Class86.anInt1191);
@@ -1039,7 +1039,7 @@ final class Class3_Sub30_Sub1 extends DataBuffer {
 						var5 = (int)var1.linkableKey;
 						RSInterface var6 = Class7.getRSInterface(var5);
 						if(null != var6) {
-							Class20.method909(117, var6);
+							Class20.method909(var6);
 						}
 					}
 				}

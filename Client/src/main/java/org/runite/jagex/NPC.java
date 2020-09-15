@@ -50,7 +50,7 @@ final class NPC extends Class140_Sub4 {
 			} else {
 				if(var1 instanceof Class144) {
 					Class144 var3 = (Class144)var1;
-					return var3.method2064();
+					return var3.getBytes();
 				} else {
 					throw new IllegalArgumentException();
 				}

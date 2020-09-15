@@ -286,8 +286,8 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
    private void method36() {
 	      try {
 	         long var2 = TimeUtils.time();
-	         Class134.aLongArray1766[CacheIndex.anInt1953] = var2;
-	         CacheIndex.anInt1953 = 31 & CacheIndex.anInt1953 - -1;
+	         Class134.aLongArray1766[Unsorted.anInt1953] = var2;
+	         Unsorted.anInt1953 = 31 & Unsorted.anInt1953 - -1;
 	         synchronized(this) {
 
                 Class3_Sub13_Sub6.aBoolean3078 = Class163_Sub2_Sub1.aBoolean4013;

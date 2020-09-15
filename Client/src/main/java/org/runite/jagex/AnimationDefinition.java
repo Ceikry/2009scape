@@ -543,7 +543,7 @@ final class AnimationDefinition {
 			Unsorted.aBoolean1084 = false;
 			Class3_Sub13_Sub38.aShortArray3455 = Class3_Sub13_Sub9.aShortArray3110 = Class136.aShortArray1779 = Class3_Sub13_Sub38.aShortArray3453 = new short[256];
 			Class3_Sub13.method165();
-			CacheIndex.aBoolean1951 = false;
+			Unsorted.aBoolean1951 = false;
 			Class3_Sub13_Sub8.method204(-3);
 		} catch (RuntimeException var6) {
 			throw Class44.clientError(var6, "tk.A(" + true + ')');

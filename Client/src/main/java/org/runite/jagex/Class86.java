@@ -56,7 +56,7 @@ final class Class86 {
             if (var0 == -28922) {
                 Class3_Sub28_Sub17_Sub1 var2 = (Class3_Sub28_Sub17_Sub1) Unsorted.aClass93_1135.get((long) var1);
                 if (var2 == null) {
-                    byte[] var3 = CacheIndex.aClass153_1948.getFile(var1, 0);
+                    byte[] var3 = Unsorted.aClass153_1948.getFile(var1, 0);
                     var2 = new Class3_Sub28_Sub17_Sub1(var3);
                     var2.method697(Class3_Sub13_Sub22.aClass109Array3270, (int[]) null);
                     Unsorted.aClass93_1135.put((byte) -96, var2, (long) var1);

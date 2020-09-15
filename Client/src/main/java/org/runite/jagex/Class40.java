@@ -83,7 +83,7 @@ final class Class40 {
             }
 
             if(-1 != Class101.anIntArray1426[var2] && null == Class3_Sub22.aByteArrayArray2521[var2]) {
-               Class3_Sub22.aByteArrayArray2521[var2] = Class3_Sub13_Sub6.aClass153_3077.getFile(Class101.anIntArray1426[var2], Class3_Sub9.regionXteaKeys[var2], 0);
+               Class3_Sub22.aByteArrayArray2521[var2] = Class3_Sub13_Sub6.aClass153_3077.getFile(Class101.anIntArray1426[var2], 0, Class3_Sub9.regionXteaKeys[var2]);
                if(null == Class3_Sub22.aByteArrayArray2521[var2]) {
                   var1 = false;
                   ++Class3_Sub13_Sub24.anInt3293;
@@ -109,7 +109,7 @@ final class Class40 {
             }
 
             if(null != Class3_Sub13_Sub24.npcSpawnCacheIndices && null == Class3_Sub13_Sub26.aByteArrayArray3335[var2] && Class3_Sub13_Sub24.npcSpawnCacheIndices[var2] != -1) {
-               Class3_Sub13_Sub26.aByteArrayArray3335[var2] = Class3_Sub13_Sub6.aClass153_3077.getFile(Class3_Sub13_Sub24.npcSpawnCacheIndices[var2], Class3_Sub9.regionXteaKeys[var2], 0);
+               Class3_Sub13_Sub26.aByteArrayArray3335[var2] = Class3_Sub13_Sub6.aClass153_3077.getFile(Class3_Sub13_Sub24.npcSpawnCacheIndices[var2], 0, Class3_Sub9.regionXteaKeys[var2]);
                if(Class3_Sub13_Sub26.aByteArrayArray3335[var2] == null) {
                   ++Class3_Sub13_Sub24.anInt3293;
                   var1 = false;

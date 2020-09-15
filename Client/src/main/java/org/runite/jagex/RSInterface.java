@@ -79,7 +79,7 @@ final class RSInterface {
     Object[] anObjectArray229;
     int anInt230 = 0;
     byte[] aByteArray231;
-    RSString aClass94_232;
+    RSString text;
     boolean usingScripts;
     int anInt234;
     Object[] anObjectArray235;
@@ -419,7 +419,7 @@ final class RSInterface {
         }
 
         if (this.type == 4) {
-            this.aClass94_232 = buffer.getString();
+            this.text = buffer.getString();
             this.aClass94_172 = buffer.getString();
         }
 
@@ -498,7 +498,7 @@ final class RSInterface {
         }
 
         if (8 == this.type) {
-            this.aClass94_232 = buffer.getString();
+            this.text = buffer.getString();
         }
 
         if (this.anInt318 == 2 || this.type == 2) {
@@ -884,7 +884,7 @@ final class RSInterface {
                 this.anInt270 = -1;
             }
 
-            this.aClass94_232 = buffer.getString();
+            this.text = buffer.getString();
             this.anInt205 = buffer.readUnsignedByte();
             this.anInt194 = buffer.readUnsignedByte();
             this.anInt225 = buffer.readUnsignedByte();
@@ -1055,7 +1055,7 @@ final class RSInterface {
         this.usingScripts = false;
         this.aClass3_Sub1_257 = Class158_Sub1.aClass3_Sub1_2980;
         this.anInt253 = 0;
-        this.aClass94_232 = Class104.aClass94_2171;
+        this.text = Class104.aClass94_2171;
         this.width = 0;
         this.anInt247 = 0;
         this.aBoolean219 = false;

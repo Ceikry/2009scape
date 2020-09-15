@@ -101,7 +101,7 @@ final class Class3_Sub13_Sub30 extends Class3_Sub13 {
                      }
                   }
                } else if((8 & Class164.anInt2051) != 0) {
-                  Class3_Sub24_Sub4.method1177(Class144.anInt1887, (long)var0, (byte)-58, RenderAnimationDefinition.method903(new RSString[]{Class40.aClass94_676, Class56.aClass94_892, var5}, (byte)-116), var4, (short)15, Class3_Sub28_Sub9.aClass94_3621, var2);
+                  Class3_Sub24_Sub4.method1177(Unsorted.anInt1887, (long)var0, (byte)-58, RenderAnimationDefinition.method903(new RSString[]{Class40.aClass94_676, Class56.aClass94_892, var5}, (byte)-116), var4, (short)15, Class3_Sub28_Sub9.aClass94_3621, var2);
                }
 
                if(var1 <= 0) {

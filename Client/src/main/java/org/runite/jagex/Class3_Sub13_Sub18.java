@@ -24,7 +24,7 @@ final class Class3_Sub13_Sub18 extends Class3_Sub13 {
          Class164_Sub2.method2249(var3);
          RSInterface var5 = Class7.getRSInterface(var4);
          if(null != var5) {
-            Class20.method909(107, var5);
+            Class20.method909(var5);
          }
 
          int var6 = Class3_Sub13_Sub34.anInt3415;
@@ -50,7 +50,7 @@ final class Class3_Sub13_Sub18 extends Class3_Sub13 {
                }
             }
 
-            Class3_Sub28_Sub1.anInt3537 = Class3_Sub13_Sub34.anInt3415 * 15 + (CacheIndex.aBoolean1951?26:22);
+            Class3_Sub28_Sub1.anInt3537 = Class3_Sub13_Sub34.anInt3415 * 15 + (Unsorted.aBoolean1951?26:22);
             Class3_Sub28_Sub3.anInt3552 = var7 + 8;
          }
 

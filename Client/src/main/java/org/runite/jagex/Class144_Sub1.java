@@ -1,26 +1,22 @@
 package org.runite.jagex;
+
 import java.nio.ByteBuffer;
 
 final class Class144_Sub1 extends Class144 {
 
-   private ByteBuffer aByteBuffer2940;
+    private ByteBuffer wrapped;
 
+    final void setBytes(byte[] bytes) {
+        this.wrapped = ByteBuffer.allocateDirect(bytes.length);
+        this.wrapped.position(0);
+        this.wrapped.put(bytes);
+    }
 
-   final void method2066(int var1, byte[] var2) {
-      this.aByteBuffer2940 = ByteBuffer.allocateDirect(var2.length);
-      this.aByteBuffer2940.position(0);
-      if(var1 != 400) {
-         this.method2066(44, (byte[])null);
-      }
-
-      this.aByteBuffer2940.put(var2);
-   }
-
-   final byte[] method2064() {
-      byte[] var2 = new byte[this.aByteBuffer2940.capacity()];
-      this.aByteBuffer2940.position(0);
-       this.aByteBuffer2940.get(var2);
-       return var2;
-   }
+    final byte[] getBytes() {
+        byte[] bytes = new byte[this.wrapped.capacity()];
+        this.wrapped.position(0);
+        this.wrapped.get(bytes);
+        return bytes;
+    }
 
 }

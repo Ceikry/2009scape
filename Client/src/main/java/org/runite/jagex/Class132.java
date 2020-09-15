@@ -99,7 +99,7 @@ final class Class132 {
 
          if(Class3_Sub28_Sub13.anInt3660 == 1) {
             if(Class3_Sub13_Sub39.anInt3460 == NPCDefinition.anInt1297 && Class38_Sub1.anInt2612 == Class168.anInt2099) {
-               Class3_Sub28_Sub1.anInt3537 = Class3_Sub13_Sub34.anInt3415 * 15 - -(!CacheIndex.aBoolean1951?22:26);
+               Class3_Sub28_Sub1.anInt3537 = Class3_Sub13_Sub34.anInt3415 * 15 - -(!Unsorted.aBoolean1951?22:26);
                Class3_Sub28_Sub13.anInt3660 = 0;
                Class3_Sub13_Sub33.anInt3395 = var4;
                AbstractIndexedSprite.anInt1462 = var3;
@@ -111,7 +111,7 @@ final class Class132 {
             Class3_Sub28_Sub13.anInt3660 = 0;
             Class3_Sub28_Sub3.anInt3552 = var1;
             Class3_Sub13_Sub33.anInt3395 = var4;
-            Class3_Sub28_Sub1.anInt3537 = (CacheIndex.aBoolean1951?26:22) + Class3_Sub13_Sub34.anInt3415 * 15;
+            Class3_Sub28_Sub1.anInt3537 = (Unsorted.aBoolean1951?26:22) + Class3_Sub13_Sub34.anInt3415 * 15;
             Class38_Sub1.aBoolean2615 = true;
          } else {
             Class168.anInt2099 = Class38_Sub1.anInt2614;

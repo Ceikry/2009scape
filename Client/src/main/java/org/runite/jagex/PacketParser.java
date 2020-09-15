@@ -744,7 +744,7 @@ final class PacketParser {
                                                                 }
 
                                                                 if (null != Class3_Sub13_Sub7.aClass11_3087) {
-                                                                    Class20.method909(115, Class3_Sub13_Sub7.aClass11_3087);
+                                                                    Class20.method909(Class3_Sub13_Sub7.aClass11_3087);
                                                                     Class3_Sub13_Sub7.aClass11_3087 = null;
                                                                 }
 
@@ -774,7 +774,7 @@ final class PacketParser {
                                                                 counter = GraphicDefinition.incomingBuffer.getLEShortA((byte) -90);
                                                                 var6 = GraphicDefinition.incomingBuffer.readInt();
                                                                 Class146.updateInterfacePacketCounter(var19);
-                                                                CacheIndex.method2143((byte) -124, modelId, var6, counter, nodeModelId);
+                                                                Unsorted.method2143((byte) -124, modelId, var6, counter, nodeModelId);
 
                                                                 Unsorted.incomingOpcode = -1;
                                                                 return true;
@@ -808,7 +808,7 @@ final class PacketParser {
                                                                     var65.itemAmounts[modelId] = 0;
                                                                 }
 
-                                                                Class20.method909(123, var65);
+                                                                Class20.method909(var65);
                                                                 Unsorted.incomingOpcode = -1;
                                                                 return true;
                                                             } else if (Unsorted.incomingOpcode == 130) {
@@ -1027,12 +1027,12 @@ final class PacketParser {
 
                                                                         RSInterface var27 = Class7.getRSInterface(nodeModelId);
                                                                         if (var27 != null) {
-                                                                            Class20.method909((byte) -83 + 57, var27);
+                                                                            Class20.method909(var27);
                                                                         }
 
                                                                         var27 = Class7.getRSInterface(modelId);
                                                                         if (null != var27) {
-                                                                            Class20.method909(119, var27);
+                                                                            Class20.method909(var27);
                                                                             Unsorted.method2104(var27, true, 48);
                                                                         }
 
@@ -1468,7 +1468,7 @@ final class PacketParser {
                                                                             }
 
                                                                             if (var25 != null) {
-                                                                                Class20.method909(-128, var25);
+                                                                                Class20.method909(var25);
                                                                             }
 
                                                                             Class3_Sub30_Sub1.method819();
@@ -1648,7 +1648,7 @@ final class PacketParser {
                                                                             if (Objects.requireNonNull(var34).usingScripts) {
                                                                                 Class140_Sub6.method2026(var19, nodeModelId, modelId);
                                                                                 var43 = Class38.getItemDefinition(modelId, (byte) 70);
-                                                                                CacheIndex.method2143((byte) -128, var43.anInt810, var19, var43.anInt799, var43.anInt786);
+                                                                                Unsorted.method2143((byte) -128, var43.anInt810, var19, var43.anInt799, var43.anInt786);
                                                                                 Class84.method1420(var19, var43.anInt768, var43.anInt754, var43.anInt792, (byte) -85);
                                                                             } else {
                                                                                 if (-1 == modelId) {
@@ -1663,7 +1663,7 @@ final class PacketParser {
                                                                                 var34.modelType = 4;
                                                                                 var34.itemId = modelId;
                                                                                 var34.anInt308 = var43.anInt799;
-                                                                                Class20.method909(117, var34);
+                                                                                Class20.method909(var34);
                                                                             }
 
                                                                             Unsorted.incomingOpcode = -1;
@@ -1707,7 +1707,7 @@ final class PacketParser {
                                                                             }
 
                                                                             if (var25 != null) {
-                                                                                Class20.method909(-9, var25);
+                                                                                Class20.method909(var25);
                                                                             }
 
                                                                             Class3_Sub30_Sub1.method819();
@@ -1769,11 +1769,11 @@ final class PacketParser {
 
     static void method829() {
         try {
-            Class20.method909(-1 + 111, Class56.aClass11_886);
+            Class20.method909(Class56.aClass11_886);
             ++Class75_Sub3.anInt2658;
             if (Class21.aBoolean440 && Class85.aBoolean1167) {
                 int var1 = Class126.anInt1676;
-                var1 -= Class144.anInt1881;
+                var1 -= Unsorted.anInt1881;
                 if (Class3_Sub13_Sub13.anInt3156 > var1) {
                     var1 = Class3_Sub13_Sub13.anInt3156;
                 }

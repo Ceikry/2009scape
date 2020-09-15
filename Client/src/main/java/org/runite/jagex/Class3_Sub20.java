@@ -55,7 +55,7 @@ final class Class3_Sub20 extends Linkable {
 	            Class127_Sub1.method1755();
 	         }
 
-	         Class3_Sub28_Sub9.method581(CacheIndex.aClass153_1948, Class140_Sub6.spritesCacheIndex);
+	         Class3_Sub28_Sub9.method581(Unsorted.aClass153_1948, Class140_Sub6.spritesCacheIndex);
 	         Class14.method887(Class140_Sub6.spritesCacheIndex);
 	         Class3_Sub26.aClass3_Sub28_Sub16_2560 = null;
 	         Class3_Sub13_Sub7.aClass3_Sub28_Sub16_3099 = null;

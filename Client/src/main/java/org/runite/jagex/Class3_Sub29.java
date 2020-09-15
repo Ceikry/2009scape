@@ -176,7 +176,7 @@ final class Class3_Sub29 extends Linkable {
          if(null != Class38.aClass87_665.applet) {
             try {
                RSString var2 = Class163.aClass94_2044.method1573((byte)125, Class38.aClass87_665.applet);
-               RSString var3 = Class144.aClass94_1885.method1573((byte)126, Class38.aClass87_665.applet);
+               RSString var3 = Unsorted.aClass94_1885.method1573((byte)126, Class38.aClass87_665.applet);
                RSString var4 = RenderAnimationDefinition.method903(new RSString[]{var2, Class82.aClass94_1151, var1, Class166.aClass94_2074, var3}, (byte)-119);
                if(0 == var1.length(-84)) {
                   var4 = RenderAnimationDefinition.method903(new RSString[]{var4, TextCore.HasAgeExpire}, (byte)-60);

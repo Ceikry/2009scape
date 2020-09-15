@@ -77,11 +77,11 @@ final class Class21 {
          if(var5 == null) {
         	 System.out.println("Invalid interface opened - [window=" + (interfaceHash >> 16) + ", child=" + (interfaceHash & 0xFF) + ", id=" + interfaceId + "]");
          } else {
-            Class20.method909(120, var5);
+            Class20.method909(var5);
          }
 
          if(null != Class3_Sub13_Sub7.aClass11_3087) {
-            Class20.method909(117, Class3_Sub13_Sub7.aClass11_3087);
+            Class20.method909(Class3_Sub13_Sub7.aClass11_3087);
             Class3_Sub13_Sub7.aClass11_3087 = null;
          }
 
@@ -109,7 +109,7 @@ final class Class21 {
             }
 
             Class3_Sub28_Sub3.anInt3552 = 8 + var7;
-            Class3_Sub28_Sub1.anInt3537 = 15 * Class3_Sub13_Sub34.anInt3415 + (!CacheIndex.aBoolean1951?22:26);
+            Class3_Sub28_Sub1.anInt3537 = 15 * Class3_Sub13_Sub34.anInt3415 + (!Unsorted.aBoolean1951?22:26);
          }
 
          if(var5 != null) {

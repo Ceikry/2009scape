@@ -9,7 +9,6 @@ final class Class45 {
 	static int[] anIntArray729 = new int[4096];
 	static float aFloat730;
 	static CacheIndex aClass153_731;
-	static boolean aBoolean732 = false;
 	static int anInt733 = 0;
 	static int anInt734 = 0;
 	static int anInt735;

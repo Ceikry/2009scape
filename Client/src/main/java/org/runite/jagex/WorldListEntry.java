@@ -35,7 +35,7 @@ final class WorldListEntry extends Class44 {
          } else {
             Class3_Sub25 var2 = (Class3_Sub25)Class3_Sub2.aHashTable_2220.get((long)var0);
             if(var2 == null) {
-               return Objects.requireNonNull(Class144.method2069(var0, -126)).anInt3647;
+               return Objects.requireNonNull(Unsorted.method2069(var0, -126)).anInt3647;
             } else {
                int var3 = 0;
 
@@ -45,7 +45,7 @@ final class WorldListEntry extends Class44 {
                   }
                }
 
-               var3 += Objects.requireNonNull(Class144.method2069(var0, -100)).anInt3647 + -var2.anIntArray2547.length;
+               var3 += Objects.requireNonNull(Unsorted.method2069(var0, -100)).anInt3647 + -var2.anIntArray2547.length;
                return var3;
             }
          }

@@ -436,9 +436,9 @@ final class Class3_Sub13_Sub13 extends Class3_Sub13 {
                            RSInterface var20;
                            if(var3 == 3) {
                               var20 = Class7.getRSInterface(var4);
-                              if(!var16.aClass94_3599.equalsString(Objects.requireNonNull(var20).aClass94_232)) {
-                                 var20.aClass94_232 = var16.aClass94_3599;
-                                 Class20.method909(107, var20);
+                              if(!var16.aClass94_3599.equalsString(Objects.requireNonNull(var20).text)) {
+                                 var20.text = var16.aClass94_3599;
+                                 Class20.method909(var20);
                               }
                            } else if (var3 == 4) {
                               var20 = Class7.getRSInterface(var4);
@@ -449,7 +449,7 @@ final class Class3_Sub13_Sub13 extends Class3_Sub13 {
                                  var20.itemId = nodeModelID;
                                  var20.anInt265 = var8;
                                  var20.modelType = var6;
-                                 Class20.method909(120, var20);
+                                 Class20.method909(var20);
                               }
                            } else if (var3 == 5) {
                               var20 = Class7.getRSInterface(var4);
@@ -458,7 +458,7 @@ final class Class3_Sub13_Sub13 extends Class3_Sub13 {
                                  var20.anInt267 = 0;
                                  var20.animationId = var16.anInt3598;
                                  var20.anInt283 = 0;
-                                 Class20.method909(-117, var20);
+                                 Class20.method909(var20);
                               }
                            } else if (var3 == 6) {
                               var5 = var16.anInt3598;
@@ -469,14 +469,14 @@ final class Class3_Sub13_Sub13 extends Class3_Sub13 {
                               var9 = (var8 << 3) + (nodeModelID << 11) + (var6 << 19);
                               if (Objects.requireNonNull(var10).anInt218 != var9) {
                                  var10.anInt218 = var9;
-                                 Class20.method909(123, var10);
+                                 Class20.method909(var10);
                               }
                            } else if (var3 == 7) {
                               var20 = Class7.getRSInterface(var4);
                               boolean var24 = var16.anInt3598 == 1;
                               if (var20 != null && var24 == !var20.hidden) {
                                  var20.hidden = var24;
-                                 Class20.method909(119, var20);
+                                 Class20.method909(var20);
                               }
                            } else if (var3 == 8) {
                               var20 = Class7.getRSInterface(var4);
@@ -494,14 +494,14 @@ final class Class3_Sub13_Sub13 extends Class3_Sub13 {
                                     }
                                  }
 
-                                 Class20.method909(112, var20);
+                                 Class20.method909(var20);
                               }
                            } else if (var3 == 9) {
                               var20 = Class7.getRSInterface(var4);
                               if (Objects.requireNonNull(var20).anInt192 != var16.anInt3598 || var20.anInt271 != var16.anInt3597) {
                                  var20.anInt192 = var16.anInt3598;
                                  var20.anInt271 = var16.anInt3597;
-                                 Class20.method909(127, var20);
+                                 Class20.method909(var20);
                               }
                            } else if (var3 == 10) {
                               var20 = Class7.getRSInterface(var4);
@@ -509,7 +509,7 @@ final class Class3_Sub13_Sub13 extends Class3_Sub13 {
                                  var20.anInt264 = var16.anInt3597;
                                  var20.anInt280 = var16.anInt3596;
                                  var20.anInt258 = var16.anInt3598;
-                                 Class20.method909(-69, var20);
+                                 Class20.method909(var20);
                               }
                            } else if (var3 == 11) {
                               var20 = Class7.getRSInterface(var4);
@@ -517,7 +517,7 @@ final class Class3_Sub13_Sub13 extends Class3_Sub13 {
                               var20.horizontalPos = 0;
                               var20.verticalPos = 0;
                               var20.anInt210 = var20.defY = var16.anInt3597;
-                              Class20.method909(110, var20);
+                              Class20.method909(var20);
                            } else if (var3 == 12) {
                               var20 = Class7.getRSInterface(var4);
                               var6 = var16.anInt3598;
@@ -532,7 +532,7 @@ final class Class3_Sub13_Sub13 extends Class3_Sub13 {
 
                                  if (var6 != var20.anInt208) {
                                     var20.anInt208 = var6;
-                                    Class20.method909(-71, var20);
+                                    Class20.method909(var20);
                                  }
                               }
                            } else if (var3 == 13) {
@@ -553,14 +553,14 @@ final class Class3_Sub13_Sub13 extends Class3_Sub13 {
                      if(Unsorted.aClass11_1933 != null) {
                         ++Class3_Sub9.anInt2330;
                         if(15 <= Class3_Sub9.anInt2330) {
-                           Class20.method909(-30, Unsorted.aClass11_1933);
+                           Class20.method909(Unsorted.aClass11_1933);
                            Unsorted.aClass11_1933 = null;
                         }
                      }
 
                      RSInterface var17;
                      if(Class67.aClass11_1017 != null) {
-                        Class20.method909(117, Class67.aClass11_1017);
+                        Class20.method909(Class67.aClass11_1017);
                         if(Class126.anInt1676 > 5 + Class129_Sub1.anInt2693 || Class126.anInt1676 < -5 + Class129_Sub1.anInt2693 || Unsorted.anInt1709 > Unsorted.anInt40 + 5 || -5 + Unsorted.anInt40 > Unsorted.anInt1709) {
                            Class72.aBoolean1074 = true;
                         }
@@ -718,21 +718,21 @@ final class Class3_Sub13_Sub13 extends Class3_Sub13 {
                                        Class163_Sub1.method2211(-48);
                                        if(Class107.aClass11_1453 != var17) {
                                           if(var17 != null) {
-                                             Class20.method909(-52, var17);
+                                             Class20.method909(var17);
                                           }
 
                                           if(null != Class107.aClass11_1453) {
-                                             Class20.method909(119, Class107.aClass11_1453);
+                                             Class20.method909(Class107.aClass11_1453);
                                           }
                                        }
 
                                        if(var21 != Class20.aClass11_439 && Class75.anInt1109 == Class3_Sub13_Sub26.anInt3323) {
                                           if(null != var21) {
-                                             Class20.method909(112, var21);
+                                             Class20.method909(var21);
                                           }
 
                                           if(null != Class20.aClass11_439) {
-                                             Class20.method909(-22, Class20.aClass11_439);
+                                             Class20.method909(Class20.aClass11_439);
                                           }
                                        }
 
@@ -743,7 +743,7 @@ final class Class3_Sub13_Sub13 extends Class3_Sub13 {
                                        } else if(Class75.anInt1109 < Class3_Sub13_Sub26.anInt3323) {
                                           ++Class75.anInt1109;
                                           if(Class3_Sub13_Sub26.anInt3323 == Class75.anInt1109) {
-                                             Class20.method909(-48, Class20.aClass11_439);
+                                             Class20.method909(Class20.aClass11_439);
                                           }
                                        }
 

@@ -745,9 +745,9 @@ final class Class145 {
          Class3_Sub30_Sub1.anInt872 = var0;
          Class164.anInt2051 = var2;
          GameObject.aBoolean1837 = true;
-         Class144.anInt1887 = var4;
+         Unsorted.anInt1887 = var4;
          Class3_Sub28_Sub5.anInt3590 = var6;
-         Class20.method909(126, var7);
+         Class20.method909(var7);
       } catch (RuntimeException var9) {
          throw Class44.clientError(var9, "ub.C(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ',' + -120 + ',' + var6 + ')');
       }

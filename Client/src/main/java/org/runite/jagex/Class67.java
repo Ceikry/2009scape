@@ -86,7 +86,7 @@ final class Class67 implements Runnable {
 
                      if(var6 != -1) {
                         AnimationDefinition var7 = Client.getAnimationDefinition(var6);
-                        for(var4.anInt267 += Class106.anInt1446; var7.duration[var4.anInt283] < var4.anInt267; Class20.method909(115, var4)) {
+                        for(var4.anInt267 += Class106.anInt1446; var7.duration[var4.anInt283] < var4.anInt267; Class20.method909(var4)) {
                            var4.anInt267 -= var7.duration[var4.anInt283];
                            ++var4.anInt283;
                            if(var7.frames.length <= var4.anInt283) {
@@ -114,7 +114,7 @@ final class Class67 implements Runnable {
                      var4.anInt182 = 2047 & var10 + var4.anInt182;
                      var6 *= Class106.anInt1446;
                      var4.anInt308 = var4.anInt308 - -var6 & 2047;
-                     Class20.method909(117, var4);
+                     Class20.method909(var4);
                   }
                }
             }

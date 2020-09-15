@@ -165,7 +165,7 @@ final class Class3_Sub28_Sub6 extends Node {
             if(null != var3 && Class49.method1122(var3) != null) {
                Class56.aClass11_886 = var3;
                PacketParser.aClass11_88 = Class49.method1122(var3);
-               Class144.anInt1881 = var1;
+               Unsorted.anInt1881 = var1;
                NPC.aBoolean3975 = false;
                Class75_Sub3.anInt2658 = 0;
                Class95.anInt1336 = var0;

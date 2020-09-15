@@ -28,10 +28,10 @@ final class Class137 {
          if(Class3_Sub13_Sub5.anInt3069 != 0) {
             if(var4 >= var5 && var4 < var5 + 16 && var0 >= var6 && var6 - -16 > var0) {
                var2.anInt208 -= 4;
-               Class20.method909(113, var2);
+               Class20.method909(var2);
             } else if(var4 >= var5 && 16 + var5 > var4 && var1 + (var6 - 16) <= var0 && var0 < var1 + var6) {
                var2.anInt208 += 4;
-               Class20.method909(112, var2);
+               Class20.method909(var2);
             } else if(var5 - Class19.anInt433 <= var4 && var4 < var5 + 16 + Class19.anInt433 && var0 >= 16 + var6 && var1 + var6 - 16 > var0) {
                var8 = var1 * (-32 + var1) / var7;
                if(8 > var8) {
@@ -41,7 +41,7 @@ final class Class137 {
                int var10 = -32 + (var1 - var8);
                int var9 = -(var8 / 2) + -16 + -var6 + var0;
                var2.anInt208 = (-var1 + var7) * var9 / var10;
-               Class20.method909(-48, var2);
+               Class20.method909(var2);
                Class158_Sub1.aBoolean2981 = true;
             }
          }
@@ -50,7 +50,7 @@ final class Class137 {
             var8 = var2.width;
             if(var4 >= -var8 + var5 && var0 >= var6 && var4 < 16 + var5 && var1 + var6 >= var0) {
                var2.anInt208 += 45 * Class29.anInt561;
-               Class20.method909(-116, var2);
+               Class20.method909(var2);
             }
          }
 

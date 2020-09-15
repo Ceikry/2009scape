@@ -236,7 +236,7 @@ final class Class47 {
                         }
 
                         var14 = var17;
-                        var16 -= Class144.anInt1881;
+                        var16 -= Unsorted.anInt1881;
                         if (Class3_Sub13_Sub13.anInt3156 > var16) {
                            var16 = Class3_Sub13_Sub13.anInt3156;
                         }
@@ -338,7 +338,7 @@ final class Class47 {
                               if (null == var53) {
                                  Class25.method958((byte) -91);
                               } else {
-                                 Class3_Sub24_Sub4.method1177(Class144.anInt1887, 1L, (byte) -49, Class131.aClass94_1724, var28, (short) 11, Class3_Sub28_Sub9.aClass94_3621, var29);
+                                 Class3_Sub24_Sub4.method1177(Unsorted.anInt1887, 1L, (byte) -49, Class131.aClass94_1724, var28, (short) 11, Class3_Sub28_Sub9.aClass94_3621, var29);
                               }
                               continue;
                            }
@@ -533,7 +533,7 @@ final class Class47 {
                                           Class3_Sub28_Sub16 var58 = var11.method859(var20);
                                           if (null == var58) {
                                              if (GameShell.aBoolean6) {
-                                                Class20.method909(125, var11);
+                                                Class20.method909(var11);
                                              }
                                           } else {
                                              var58.method643(var23, var24);
@@ -554,7 +554,7 @@ final class Class47 {
                                           }
 
                                           if (null == var54) {
-                                             Class20.method909(-106, var11);
+                                             Class20.method909(var11);
                                           } else if (Class67.aClass11_1017 == var11 && var20 == PacketParser.anInt86) {
                                              var25 = Class126.anInt1676 - Class129_Sub1.anInt2693;
                                              var26 = -Unsorted.anInt40 + Unsorted.anInt1709;
@@ -597,7 +597,7 @@ final class Class47 {
 
                                                    var51.anInt208 -= var32;
                                                    Unsorted.anInt40 += var32;
-                                                   Class20.method909(121, var51);
+                                                   Class20.method909(var51);
                                                 }
 
                                                 if (var31 < 32 + var26 + var24 && var51.anInt208 < -var51.height + var51.anInt252) {
@@ -612,7 +612,7 @@ final class Class47 {
 
                                                    var51.anInt208 += var32;
                                                    Unsorted.anInt40 -= var32;
-                                                   Class20.method909(-81, var51);
+                                                   Class20.method909(var51);
                                                 }
                                              }
                                           } else if (var11 == Unsorted.aClass11_1933 && var20 == KeyboardListener.anInt1918) {
@@ -667,7 +667,7 @@ final class Class47 {
                               if (var11.type == 4) {
                                  var34 = var11.method868(Class3_Sub13_Sub22.aClass109Array3270);
                                  if (var34 != null) {
-                                    RSString var45 = var11.aClass94_232;
+                                    RSString var45 = var11.text;
                                     if (Class3_Sub28_Sub12.method609(var11, 97)) {
                                        var21 = var11.anInt253;
                                        if (Class107.aClass11_1453 == var11 && var11.anInt222 != 0) {
@@ -707,7 +707,7 @@ final class Class47 {
 
                                     var34.method676(var45, var13, var14, var11.width, var11.height, var21, !var11.aBoolean215 ? -1 : 0, var11.anInt194, var11.anInt225, var11.anInt205);
                                  } else if (GameShell.aBoolean6) {
-                                    Class20.method909(-13, var11);
+                                    Class20.method909(var11);
                                  }
                               } else if (5 == var11.type) {
                                  Class3_Sub28_Sub16 var37;
@@ -721,7 +721,7 @@ final class Class47 {
 
                                     if (var37 == null) {
                                        if (GameShell.aBoolean6) {
-                                          Class20.method909(-40, var11);
+                                          Class20.method909(var11);
                                        }
                                     } else {
                                        var21 = var37.anInt3697;
@@ -808,7 +808,7 @@ final class Class47 {
                                     if (null != var37) {
                                        var37.method643(var13, var14);
                                     } else if (GameShell.aBoolean6) {
-                                       Class20.method909(118, var11);
+                                       Class20.method909(var11);
                                     }
                                  }
                               } else {
@@ -829,7 +829,7 @@ final class Class47 {
                                        AnimationDefinition var52 = var21 == -1 ? null : Client.getAnimationDefinition(var21);
                                        var38 = var42.method1110(100, var11.anInt260, var11.anInt267, var52, 1, var11.anInt283);
                                        if (var38 == null) {
-                                          Class20.method909(116, var11);
+                                          Class20.method909(var11);
                                        } else {
                                           var23 = -var38.method1871() / 2;
                                        }
@@ -837,13 +837,13 @@ final class Class47 {
                                        if (var21 == -1) {
                                           var38 = var11.method865(-1, (AnimationDefinition) null, -1, 126, 0, var41, Class102.player.class52);
                                           if (null == var38 && GameShell.aBoolean6) {
-                                             Class20.method909(122, var11);
+                                             Class20.method909(var11);
                                           }
                                        } else {
                                           AnimationDefinition var48 = Client.getAnimationDefinition(var21);
                                           var38 = var11.method865(var11.anInt260, var48, var11.anInt283, 127, var11.anInt267, var41, Class102.player.class52);
                                           if (null == var38 && GameShell.aBoolean6) {
-                                             Class20.method909(3, var11);
+                                             Class20.method909(var11);
                                           }
                                        }
                                     } else if (-1 == var11.itemId) {
@@ -930,7 +930,7 @@ final class Class47 {
                                        var34 = var11.method868(Class3_Sub13_Sub22.aClass109Array3270);
                                        if (var34 == null) {
                                           if (GameShell.aBoolean6) {
-                                             Class20.method909(-115, var11);
+                                             Class20.method909(var11);
                                           }
                                           continue;
                                        }
@@ -971,7 +971,7 @@ final class Class47 {
                                     if (var11.type == 8 && Class20.aClass11_439 == var11 && Class3_Sub13_Sub26.anInt3323 == Class75.anInt1109) {
                                        var21 = 0;
                                        var20 = 0;
-                                       RSString var43 = var11.aClass94_232;
+                                       RSString var43 = var11.text;
                                        Class3_Sub28_Sub17 var35 = Class126.aClass3_Sub28_Sub17_1669;
                                        var43 = Unsorted.method1303(var11, var43);
 
@@ -1017,7 +1017,7 @@ final class Class47 {
                                           Class74.method1311(var25, var26, var20, var21, 0);
                                        }
 
-                                       var43 = var11.aClass94_232;
+                                       var43 = var11.text;
                                        var47 = 2 + (var26 - -var35.anInt3727);
 
                                        for (var43 = Unsorted.method1303(var11, var43); var43.length(-102) > 0; var47 += var35.anInt3727 + 1) {

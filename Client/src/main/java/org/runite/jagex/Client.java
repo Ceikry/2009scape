@@ -953,7 +953,7 @@ public final class Client extends GameShell {
                             if (inter.anInt189 != 0) {
                                 if (inter.anInt189 == 1337) {
                                     Class168.aClass11_2091 = inter;
-                                    Class20.method909(124, inter);
+                                    Class20.method909(inter);
                                     continue;
                                 }
 
@@ -981,20 +981,20 @@ public final class Client extends GameShell {
                                         }
 
                                         Class3_Sub19.anInt2475 = 1;
-                                        Class144.anInt1881 = Class126.anInt1676;
+                                        Unsorted.anInt1881 = Class126.anInt1676;
                                         Class95.anInt1336 = Unsorted.anInt1709;
                                         continue;
                                     }
 
                                     if (var25 && Class3_Sub19.anInt2475 > 0) {
-                                        if (Class3_Sub19.anInt2475 == 1 && (Class144.anInt1881 != Class126.anInt1676 || Class95.anInt1336 != Unsorted.anInt1709)) {
+                                        if (Class3_Sub19.anInt2475 == 1 && (Unsorted.anInt1881 != Class126.anInt1676 || Class95.anInt1336 != Unsorted.anInt1709)) {
                                             Unsorted.anInt4073 = Class3_Sub28_Sub1.anInt3536;
                                             Class38.anInt660 = Class3_Sub4.anInt2251;
                                             Class3_Sub19.anInt2475 = 2;
                                         }
 
                                         if (Class3_Sub19.anInt2475 == 2) {
-                                            method1175(Unsorted.anInt4073 + (int) ((double) (Class144.anInt1881 - Class126.anInt1676) * 2.0D / (double) NPC.aFloat3979));
+                                            method1175(Unsorted.anInt4073 + (int) ((double) (Unsorted.anInt1881 - Class126.anInt1676) * 2.0D / (double) NPC.aFloat3979));
                                             Class3_Sub13_Sub39.method354(Class38.anInt660 + (int) ((double) (Class95.anInt1336 - Unsorted.anInt1709) * 2.0D / (double) NPC.aFloat3979));
                                         }
                                         continue;
@@ -1013,7 +1013,7 @@ public final class Client extends GameShell {
 
                                 if (inter.anInt189 == 1402) {
                                     if (!HDToolKit.highDetail) {
-                                        Class20.method909(113, inter);
+                                        Class20.method909(inter);
                                     }
                                     continue;
                                 }
@@ -1408,7 +1408,7 @@ public final class Client extends GameShell {
                             Class3_Sub13_Sub25.aClass153_3304 = Class8.getCacheIndex(false, true, true, 10);
                             Unsorted.aClass153_2573 = Class8.getCacheIndex(false, true, true, 11);
                             Class3_Sub1.interfaceScriptsIndex = Class8.getCacheIndex(false, true, true, 12);
-                            CacheIndex.aClass153_1948 = Class8.getCacheIndex(false, true, true, 13);
+                            Unsorted.aClass153_1948 = Class8.getCacheIndex(false, true, true, 13);
                             Class3_Sub19.aClass153_2474 = Class8.getCacheIndex(false, false, true, 14);
                             NPC.aClass153_3994 = Class8.getCacheIndex(false, true, true, 15);
                             Class168.aClass153_2097 = Class8.getCacheIndex(false, true, true, 16);
@@ -1468,7 +1468,7 @@ public final class Client extends GameShell {
                         Class96.anInt1354 = 50;
                         Class3_Sub17.aClass94_2464 = TextCore.PreparedSoundEngine;
                     } else if (Class96.anInt1354 == 50) {
-                        var2 = Class3_Sub13_Sub12.method228(Class140_Sub6.spritesCacheIndex, CacheIndex.aClass153_1948, false);
+                        var2 = Class3_Sub13_Sub12.method228(Class140_Sub6.spritesCacheIndex, Unsorted.aClass153_1948, false);
                         var3 = 6;
                         if (var3 <= var2) {
                             Class3_Sub17.aClass94_2464 = TextCore.LoadedFonts;
@@ -1489,7 +1489,7 @@ public final class Client extends GameShell {
                         }
                         LoadingStageNumber = 40;
                     } else if (Class96.anInt1354 == 65) {
-                        Class3_Sub28_Sub9.method581(CacheIndex.aClass153_1948, Class140_Sub6.spritesCacheIndex);
+                        Class3_Sub28_Sub9.method581(Unsorted.aClass153_1948, Class140_Sub6.spritesCacheIndex);
                         LoadingStageNumber = 45;
                         Class3_Sub17.aClass94_2464 = TextCore.OpenedTitleScreen;
                         Class117.method1719(5);
@@ -1534,13 +1534,13 @@ public final class Client extends GameShell {
                             Class158.method2180(Class159.aClass153_2019, Class70.aClass153_1058);
                             Class107.method1648(Class3_Sub22.aClass153_2528);
                             Class3_Sub29.method731(Class164.aClass153_2052);
-                            Unsorted.method89(CacheIndex.aClass153_1948, Class140_Sub6.spritesCacheIndex, Class140_Sub3.aClass153_2727, Class159.aClass153_2019);
+                            Unsorted.method89(Unsorted.aClass153_1948, Class140_Sub6.spritesCacheIndex, Class140_Sub3.aClass153_2727, Class159.aClass153_2019);
                             Class3_Sub13_Sub17.method250(Class164.aClass153_2052);
                             Class46.method1086(NPC.aClass153_3993);
                             Class3_Sub13_Sub8.method205(Class3_Sub4.aClass153_2258, Class140_Sub7.aClass153_2939, new Class7());
                             Class65.method1236(Class3_Sub4.aClass153_2258, Class140_Sub7.aClass153_2939);
                             Class58.method1197(Class164.aClass153_2052);
-                            Class144.method2065(Class164.aClass153_2052, Class140_Sub6.spritesCacheIndex);
+                            Unsorted.method2065(Class164.aClass153_2052, Class140_Sub6.spritesCacheIndex);
                             Class107.method1645(Class164.aClass153_2052, Class140_Sub6.spritesCacheIndex);
                             LoadingStageNumber = 50;
                             Class3_Sub17.aClass94_2464 = TextCore.LoadedConfig;
@@ -1577,7 +1577,7 @@ public final class Client extends GameShell {
                             if (Class96.anInt1354 == 130) {
                                 if (Class140_Sub3.aClass153_2727.method2113()) {
                                     if (Class3_Sub1.interfaceScriptsIndex.method2113()) {
-                                        if (CacheIndex.aClass153_1948.method2113()) {
+                                        if (Unsorted.aClass153_1948.method2113()) {
                                             if (Class133.aClass153_1751.method2127(Class95.aClass94_1342)) {
                                                 Class75_Sub4.method1353(Class102.aClass3_Sub28_Sub16_Sub2Array2140, Class133.aClass153_1751);
                                                 LoadingStageNumber = 95;
@@ -1588,7 +1588,7 @@ public final class Client extends GameShell {
                                                 LoadingStageNumber = 85;
                                             }
                                         } else {
-                                            Class3_Sub17.aClass94_2464 = RenderAnimationDefinition.method903(new RSString[]{TextCore.LoadingInterfaces, Class72.method1298((byte) 9, 85 - -(CacheIndex.aClass153_1948.method2136((byte) -124) / 20)), Class24.aClass94_468}, (byte) -107);
+                                            Class3_Sub17.aClass94_2464 = RenderAnimationDefinition.method903(new RSString[]{TextCore.LoadingInterfaces, Class72.method1298((byte) 9, 85 - -(Unsorted.aClass153_1948.method2136((byte) -124) / 20)), Class24.aClass94_468}, (byte) -107);
                                             LoadingStageNumber = 85;
                                         }
                                     } else {
@@ -1620,7 +1620,7 @@ public final class Client extends GameShell {
                                 Class3_Sub13_Sub6.aClass153_3077.method2115(-9, false);
                                 Class75_Sub2.aClass153_2645.method2115(111, true);
                                 Class140_Sub6.spritesCacheIndex.method2115(-76, true);
-                                CacheIndex.aClass153_1948.method2115(91, true);
+                                Unsorted.aClass153_1948.method2115(91, true);
                                 Class3_Sub13_Sub25.aClass153_3304.method2115(-116, true);
                                 Class140_Sub3.aClass153_2727.method2115(99, true);
                                 LoadingStageNumber = 97;

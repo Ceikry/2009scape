@@ -204,32 +204,6 @@ final class Class15 implements Runnable {
       }
    }
 
-   static Object method890(int var1, byte[] var2) {
-      try {
-         if(var2 == null) {
-            return null;
-         } else {
-            if(var1 >= -67) {
-               method891(19);
-            }
-
-            if(var2.length > 136 && !Class45.aBoolean732) {
-               try {
-                  Class144 var3 = (Class144)Class.forName(Configurations.PACKAGE_JAGEX + ".Class144_Sub1").newInstance();
-                  var3.method2066(400, var2);
-                  return var3;
-               } catch (Throwable var4) {
-                  Class45.aBoolean732 = true;
-               }
-            }
-
-            return var2;
-         }
-      } catch (RuntimeException var5) {
-         throw Class44.clientError(var5, "cj.E(" + ',' + var1 + ',' + "{...}" + ')');
-      }
-   }
-
    public final void run() {
       try {
          this.aBoolean353 = true;

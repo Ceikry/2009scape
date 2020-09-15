@@ -3,14 +3,13 @@ package org.rs09.client.collections
 import org.rs09.client.Linkable
 import java.util.*
 
-class HashTable<T : Linkable?>(capacity: Int) {
+class HashTable<T : Linkable?>(var capacity: Int) {
     private var retrievalLinkable: Linkable? = null
     private var iterationLinkable: Linkable? = null
     private var retrievalKey: Long = 0
     private var iterationIndex = 0
 
-    var buckets: Array<Linkable?>
-    var capacity: Int
+    var buckets: Array<Linkable?> = arrayOfNulls(capacity)
 
     fun clear() {
         var i = 0
@@ -125,8 +124,6 @@ class HashTable<T : Linkable?>(capacity: Int) {
     }
 
     init {
-        buckets = arrayOfNulls(capacity)
-        this.capacity = capacity
         for (i in 0 until capacity) {
             val bucket = Linkable()
             buckets[i] = bucket
