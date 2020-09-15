@@ -114,7 +114,7 @@ final class Class3_Sub22 extends Linkable {
       }
 
       Class3_Sub13_Sub2.anIntArray3045 = var6;
-      Class73.anIntArray1083 = var7;
+      Unsorted.anIntArray1083 = var7;
       Class52.anIntArray859 = var8;
       Class75_Sub4.anIntArray2663 = var9;
       Unsorted.anIntArray39 = var10;

@@ -46,7 +46,7 @@ abstract class Class3_Sub28_Sub7 extends Node {
          Unsorted.anInt120 = 255;
          Class25.aBoolean488 = true;
          Class3_Sub28_Sub14.anInt3671 = 0;
-         Class122 var2 = null;
+         RandomAccessFileWrapper var2 = null;
          CS2Script.anInt2453 = 127;
          if(Class3_Sub24_Sub3.anInt3492 >= 96) {
             Class127_Sub1.method1758(2);
@@ -59,23 +59,23 @@ abstract class Class3_Sub28_Sub7 extends Node {
          Class15.aBoolean346 = false;
          Class163_Sub3.aBoolean3004 = true;
          Unsorted.aBoolean2146 = false;
-         Class73.aBoolean1080 = false;
+         Unsorted.aBoolean1080 = false;
          Unsorted.anInt2577 = 0;
 
          try {
             Class64 var3 = var0.method1433("runescape", 12);
 
             while(0 == var3.anInt978) {
-               Class3_Sub13_Sub34.sleep(1L);
+               TimeUtils.sleep(1L);
             }
 
             if(var3.anInt978 == 1) {
-               var2 = (Class122)var3.anObject974;
-               byte[] var4 = new byte[(int)var2.method1741(-1)];
+               var2 = (RandomAccessFileWrapper)var3.anObject974;
+               byte[] var4 = new byte[(int)var2.getLength()];
 
                int var6;
                for(int var5 = 0; var4.length > var5; var5 += var6) {
-                  var6 = var2.method1739(var5, 0, var4.length - var5, var4);
+                  var6 = var2.read(var4, var5, var4.length - var5, 0);
                   if(var6 == -1) {
                      throw new IOException("EOF");
                   }
@@ -88,7 +88,7 @@ abstract class Class3_Sub28_Sub7 extends Node {
 
          try {
             if(var2 != null) {
-               var2.close(1);
+               var2.close();
             }
          } catch (Exception var7) {
          }

@@ -14,7 +14,7 @@ final class Class3_Sub28_Sub6 extends Node {
 
    final void a() {
       try {
-         this.nodeKey = Class5.method830((byte)-55) - -500L | Long.MIN_VALUE & this.nodeKey;
+         this.nodeKey = TimeUtils.time() - -500L | Long.MIN_VALUE & this.nodeKey;
          Class81.aClass13_1139.offer(this);
       } catch (RuntimeException var3) {
          throw Class44.clientError(var3, "da.U(" + true + ')');
@@ -39,7 +39,7 @@ final class Class3_Sub28_Sub6 extends Node {
 
             if(var0 == '\uffff') {
                float var2 = (float)Class163_Sub2_Sub1.anInt4020 / 65535.0F;
-               int var4 = Class73.anInt1081 * 2;
+               int var4 = Unsorted.anInt1081 * 2;
 
                int var6;
                int var7;

@@ -8,7 +8,7 @@ class Class155 {
    static int[] anIntArray1969 = new int[100];
    static RSString char_colon = RSString.of(":");
    static int anInt1971;
-   private long aLong1972 = Class5.method830((byte)-55);
+   private long aLong1972 = TimeUtils.time();
    private Class3_Sub24 aClass3_Sub24_1973;
    int[] anIntArray1975;
    static int[] anIntArray1976 = new int[]{1, 0, 0, 0, 1, 0, 2, 1, 1, 1, 0, 2, 0, 0, 1, 0};
@@ -135,13 +135,13 @@ class Class155 {
          this.aClass3_Sub24_1973.method413(var1, 0, 256);
       }
 
-      this.aLong1972 = Class5.method830((byte)-55);
+      this.aLong1972 = TimeUtils.time();
    }
 
    final synchronized void method2153() {
       try {
          if(null != this.anIntArray1975) {
-            long var2 = Class5.method830((byte)-55);
+            long var2 = TimeUtils.time();
 
             try {
                if(0L != this.aLong1982) {
@@ -287,7 +287,7 @@ class Class155 {
             this.method2151();
          } catch (Exception var3) {
             this.method2160();
-            this.aLong1982 = Class5.method830((byte)-55) + 2000L;
+            this.aLong1982 = TimeUtils.time() + 2000L;
          }
       } catch (RuntimeException var4) {
          throw Class44.clientError(var4, "vh.L(" + (byte) -78 + ')');
@@ -374,7 +374,7 @@ class Class155 {
                Class38_Sub1.aClass15_2613.aBoolean345 = true;
 
                while(Class38_Sub1.aClass15_2613.aBoolean353) {
-                  Class3_Sub13_Sub34.sleep(50L);
+                  TimeUtils.sleep(50L);
                }
 
                Class38_Sub1.aClass15_2613 = null;

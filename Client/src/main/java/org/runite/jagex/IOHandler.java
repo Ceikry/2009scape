@@ -136,7 +136,7 @@ final class IOHandler implements Runnable {
                     }
 
                     if (this.aClass64_1237 == null) {
-                        this.aClass64_1237 = this.signlink.method1451(0, 3, this);
+                        this.aClass64_1237 = this.signlink.method1451(3, this);
                     }
 
                     this.notifyAll();
@@ -180,7 +180,7 @@ final class IOHandler implements Runnable {
 
             if (this.aClass64_1237 != null) {
                 while (this.aClass64_1237.anInt978 == 0) {
-                    Class3_Sub13_Sub34.sleep(1L);
+                    TimeUtils.sleep(1L);
                 }
 
                 if (this.aClass64_1237.anInt978 == 1) {

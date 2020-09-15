@@ -78,15 +78,15 @@ final class Class3_Sub28_Sub9 extends Node {
 
    static void method581(CacheIndex var0, CacheIndex var2) {
       try {
-         Class3_Sub13.aClass3_Sub28_Sub17_2379 = Class73.method1300(Class96.anInt1352, (byte)124, var2, var0);
+         Class3_Sub13.aClass3_Sub28_Sub17_2379 = Unsorted.method1300(Class96.anInt1352, (byte)124, var2, var0);
          if(HDToolKit.highDetail) {
             Class157.aClass3_Sub28_Sub17_Sub1_2000 = Class70.method1287(Class96.anInt1352, var0, var2);
          } else {
             Class157.aClass3_Sub28_Sub17_Sub1_2000 = (Class3_Sub28_Sub17_Sub1)Class3_Sub13.aClass3_Sub28_Sub17_2379;
          }
 
-         Class126.aClass3_Sub28_Sub17_1669 = Class73.method1300(Class75_Sub2.anInt2643, (byte)125, var2, var0);
-         Class168.aClass3_Sub28_Sub17_2096 = Class73.method1300(Class3_Sub13_Sub11.anInt3132, (byte)124, var2, var0);
+         Class126.aClass3_Sub28_Sub17_1669 = Unsorted.method1300(Class75_Sub2.anInt2643, (byte)125, var2, var0);
+         Class168.aClass3_Sub28_Sub17_2096 = Unsorted.method1300(Class3_Sub13_Sub11.anInt3132, (byte)124, var2, var0);
       } catch (RuntimeException var4) {
          throw Class44.clientError(var4, "hn.D(" + (var0 != null?"{...}":"null") + ',' + 0 + ',' + (var2 != null?"{...}":"null") + ')');
       }

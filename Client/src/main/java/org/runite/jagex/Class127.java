@@ -274,12 +274,12 @@ class Class127 {
                   if(!Class3_Sub28_Sub19.aBoolean3779) {
                      if((!Class3_Sub15.aBoolean2433 || Unsorted.aBoolean4063) && !Class3_Sub13_Sub29.disableGEBoxes) {
                         try {
-                           Class27.aClass94_516.method1577(Class38.aClass87_665.anApplet1219);
+                           Class27.aClass94_516.method1577(Class38.aClass87_665.applet);
                         } catch (Throwable var5) {
                         }
                      } else {
                         try {
-                           Class97.aClass94_1374.method1577(Class38.aClass87_665.anApplet1219);
+                           Class97.aClass94_1374.method1577(Class38.aClass87_665.applet);
                         } catch (Throwable var6) {
                         }
                      }

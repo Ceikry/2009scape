@@ -195,7 +195,7 @@ final class MouseListeningClass implements MouseListener, MouseMotionListener, F
 	        Class3_Sub28_Sub7_Sub1.anInt4045 = 0;
 	        RenderAnimationDefinition.anInt362 = var1.getX();
 	        Class3_Sub13_Sub32.anInt3389 = var1.getY();
-	        Class140_Sub6.aLong2926 = Class5.method830((byte)-55);
+	        Class140_Sub6.aLong2926 = TimeUtils.time();
 	        if (var1.getButton() == MouseEvent.BUTTON3) // SwingUtilities.isRightMouseButton(var1)
 	        {
 				Class140_Sub3.anInt2743 = 2;

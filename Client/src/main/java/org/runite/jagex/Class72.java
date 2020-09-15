@@ -58,7 +58,7 @@ final class Class72 {
          int var2;
          if(Class3_Sub13_Sub2.anIntArray3045 != null) {
             for(var2 = 0; var2 < Class3_Sub13_Sub2.anIntArray3045.length; ++var2) {
-               if(Class3_Sub13_Sub2.anIntArray3045[var2] != -1000000 && (var1.anInt1544 <= Class3_Sub13_Sub2.anIntArray3045[var2] || var1.anInt1548 <= Class3_Sub13_Sub2.anIntArray3045[var2]) && (var1.anInt1562 <= Class52.anIntArray859[var2] || var1.anInt1545 <= Class52.anIntArray859[var2]) && (var1.anInt1562 >= Class73.anIntArray1083[var2] || var1.anInt1545 >= Class73.anIntArray1083[var2]) && (var1.anInt1560 <= Class75_Sub4.anIntArray2663[var2] || var1.anInt1550 <= Class75_Sub4.anIntArray2663[var2]) && (var1.anInt1560 >= Unsorted.anIntArray39[var2] || var1.anInt1550 >= Unsorted.anIntArray39[var2])) {
+               if(Class3_Sub13_Sub2.anIntArray3045[var2] != -1000000 && (var1.anInt1544 <= Class3_Sub13_Sub2.anIntArray3045[var2] || var1.anInt1548 <= Class3_Sub13_Sub2.anIntArray3045[var2]) && (var1.anInt1562 <= Class52.anIntArray859[var2] || var1.anInt1545 <= Class52.anIntArray859[var2]) && (var1.anInt1562 >= Unsorted.anIntArray1083[var2] || var1.anInt1545 >= Unsorted.anIntArray1083[var2]) && (var1.anInt1560 <= Class75_Sub4.anIntArray2663[var2] || var1.anInt1550 <= Class75_Sub4.anIntArray2663[var2]) && (var1.anInt1560 >= Unsorted.anIntArray39[var2] || var1.anInt1550 >= Unsorted.anIntArray39[var2])) {
                   continue label188;
                }
             }

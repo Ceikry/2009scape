@@ -24,7 +24,7 @@ final class Class47 {
       try {
          if(Class3_Sub28_Sub11.aBoolean3641) {
             try {
-               Class8.aClass94_106.method1577(Class38.aClass87_665.anApplet1219);
+               Class8.aClass94_106.method1577(Class38.aClass87_665.applet);
                return true;
             } catch (Throwable var2) {
             }
@@ -218,7 +218,7 @@ final class Class47 {
                   if (var11 == Class56.aClass11_886) {
                      if (var5 != -1412584499 && !var11.aBoolean200) {
                         Class3_Sub28_Sub7.anInt3602 = var2;
-                        Class73.anInt1082 = var1;
+                        Unsorted.anInt1082 = var1;
                         GameObject.aClass11Array1836 = var3;
                         continue;
                      }
@@ -702,7 +702,7 @@ final class Class47 {
                                     }
 
                                     if (!var11.usingScripts) {
-                                       var45 = Class73.method1303(var11, var45);
+                                       var45 = Unsorted.method1303(var11, var45);
                                     }
 
                                     var34.method676(var45, var13, var14, var11.anInt168, var11.anInt193, var21, !var11.aBoolean215 ? -1 : 0, var11.anInt194, var11.anInt225, var11.anInt205);
@@ -973,7 +973,7 @@ final class Class47 {
                                        var20 = 0;
                                        RSString var43 = var11.aClass94_232;
                                        Class3_Sub28_Sub17 var35 = Class126.aClass3_Sub28_Sub17_1669;
-                                       var43 = Class73.method1303(var11, var43);
+                                       var43 = Unsorted.method1303(var11, var43);
 
                                        RSString var44;
                                        while (var43.length(-58) > 0) {
@@ -1020,7 +1020,7 @@ final class Class47 {
                                        var43 = var11.aClass94_232;
                                        var47 = 2 + (var26 - -var35.anInt3727);
 
-                                       for (var43 = Class73.method1303(var11, var43); var43.length(-102) > 0; var47 += var35.anInt3727 + 1) {
+                                       for (var43 = Unsorted.method1303(var11, var43); var43.length(-102) > 0; var47 += var35.anInt3727 + 1) {
                                           var28 = var43.indexOf(Unsorted.aClass94_2598, 86);
                                           if (var28 == -1) {
                                              var44 = var43;

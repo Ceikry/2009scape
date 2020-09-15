@@ -17,7 +17,7 @@ final class Class129_Sub2 extends Class129 {
             var6 = var4;
          }
 
-         Class3_Sub13_Sub34.sleep(var6 / 1000000L);
+         TimeUtils.sleep(var6 / 1000000L);
          int var10 = 0;
 
          long var8;

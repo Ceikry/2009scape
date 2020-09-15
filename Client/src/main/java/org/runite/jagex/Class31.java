@@ -76,9 +76,9 @@ final class Class31 {
                         while(true) {
                            var2 = (Class3_Sub18)aClass61_588.method1220();
                            if(var2 == null) {
-                              if(anInt585 + memory2D + anInt580 > 100663296 && Class5.method830((byte)-55) > aLong583 + 60000L) {
+                              if(anInt585 + memory2D + anInt580 > 100663296 && TimeUtils.time() > aLong583 + 60000L) {
                                  System.gc();
-                                 aLong583 = Class5.method830((byte)-55);
+                                 aLong583 = TimeUtils.time();
                               }
 
                               return;

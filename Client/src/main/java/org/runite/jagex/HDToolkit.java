@@ -594,7 +594,7 @@ final class HDToolKit {
                   return;
                }
 
-               Class3_Sub13_Sub34.sleep(1000L);
+               TimeUtils.sleep(1000L);
             }
 
             gl = aGLContext1800.getGL();
@@ -619,7 +619,7 @@ final class HDToolKit {
                         return;
                      }
 
-                     Class3_Sub13_Sub34.sleep(100L);
+                     TimeUtils.sleep(100L);
                   }
                }
 

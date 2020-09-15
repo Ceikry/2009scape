@@ -20,7 +20,7 @@ final class KeyboardListener implements KeyListener, FocusListener {
 
    static void adjustKeyCodeMap() {
          if(!Signlink.javaVendor.toLowerCase().contains("microsoft")) {
-            if(null == Signlink.aMethod1222) {
+            if(null == Signlink.setTraversalKeysEnabled) {
                KEY_CODE_MAP[192] = 58;
                KEY_CODE_MAP[222] = 59;
             } else {
@@ -107,12 +107,12 @@ final class KeyboardListener implements KeyListener, FocusListener {
              * Tab to reply
              */
 			if (var1.getKeyCode() == KeyEvent.VK_TAB) {
-				Class73.ClientCommands(RSString.of("::reply"));
+				Unsorted.ClientCommands(RSString.of("::reply"));
 			}
 
 			if (var1.getKeyCode() == KeyEvent.VK_ESCAPE)
             {
-               Class73.ClientCommands(RSString.of("::shutdowninterface"));
+               Unsorted.ClientCommands(RSString.of("::shutdowninterface"));
             }
 			
 			//causing issues when in other interfaces, such as GE interface. My quick thing impl didn't work - Jamix77

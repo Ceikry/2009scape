@@ -540,7 +540,7 @@ final class AnimationDefinition {
 			Unsorted.aBoolean4068 = true;
 			Class113.interfacePacketCounter = 0;
 			Class3_Sub13_Sub28.aClass94_3353 = TextCore.HasWalkHere;
-			Class73.aBoolean1084 = false;
+			Unsorted.aBoolean1084 = false;
 			Class3_Sub13_Sub38.aShortArray3455 = Class3_Sub13_Sub9.aShortArray3110 = Class136.aShortArray1779 = Class3_Sub13_Sub38.aShortArray3453 = new short[256];
 			Class3_Sub13.method165();
 			CacheIndex.aBoolean1951 = false;

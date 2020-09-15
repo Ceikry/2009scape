@@ -187,7 +187,7 @@ final class Class79 {
                   }
 
                   if(10 <= var2) {
-                     Class73.aBoolean1080 = 0 != var0.readUnsignedByte();
+                     Unsorted.aBoolean1080 = 0 != var0.readUnsignedByte();
                   }
 
                   if(var2 >= 11) {

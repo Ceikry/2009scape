@@ -22,7 +22,7 @@ final class Class99 {
          if(var2) {
             if(HDToolKit.highDetail && Class3_Sub28_Sub6.aBoolean3594) {
                try {
-                  Class42.method1056(Class38.aClass87_665.anApplet1219, new Object[]{var0.method1547(Class3_Sub29.anApplet_Sub1_2588.getCodeBase()).toString()});
+                  Class42.method1056(Class38.aClass87_665.applet, new Object[]{var0.method1547(Class3_Sub29.anApplet_Sub1_2588.getCodeBase()).toString()});
                   return;
                } catch (Throwable var6) {
                }
@@ -67,7 +67,7 @@ final class Class99 {
             Class64 var10 = var5.method1450(0, var2, var3, var4);
 
             while(0 == var10.anInt978) {
-               Class3_Sub13_Sub34.sleep(10L);
+               TimeUtils.sleep(10L);
             }
 
             Frame var11 = (Frame)var10.anObject974;

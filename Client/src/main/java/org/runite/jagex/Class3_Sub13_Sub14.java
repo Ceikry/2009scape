@@ -4,7 +4,7 @@ import java.math.BigInteger;
 final class Class3_Sub13_Sub14 extends Class3_Sub13 {
 
    static int anInt3158 = -8 + (int)(17.0D * Math.random());
-   static Class73 aClass73_3159;
+   static CacheResourceWorker aCacheResourceWorker_3159;
    private int anInt3160 = 0;
    static RSString aClass94_3161 = RSString.of("_");
    static BigInteger aBigInteger3162 = new BigInteger("58778699976184461502525193738213253649000149147835990136706041084440742975821");

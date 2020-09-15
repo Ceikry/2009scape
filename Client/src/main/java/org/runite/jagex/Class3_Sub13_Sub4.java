@@ -397,7 +397,7 @@ final class Class3_Sub13_Sub4 extends Class3_Sub13 {
             worldListOffset = 85;
          }
 
-         Method var2 = Signlink.aMethod1222;
+         Method var2 = Signlink.setTraversalKeysEnabled;
          if(null != var2) {
             try {
                var2.invoke(var1, new Object[]{Boolean.FALSE});

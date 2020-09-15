@@ -40,7 +40,7 @@ final class Class129_Sub1 extends Class129 {
          int var4 = this.anInt2688;
          this.anInt2688 = 300;
          this.anInt2691 = 1;
-         this.aLong2683 = Class5.method830((byte)-55);
+         this.aLong2683 = TimeUtils.time();
          if(this.aLongArray2694[this.anInt2685] == 0L) {
             this.anInt2688 = var4;
             this.anInt2691 = var5;
@@ -76,7 +76,7 @@ final class Class129_Sub1 extends Class129 {
             this.anInt2691 = var2;
          }
 
-         Class3_Sub13_Sub34.sleep((long)this.anInt2691);
+         TimeUtils.sleep((long)this.anInt2691);
 
          for(var6 = 0; 256 > this.anInt2692; ++var6) {
             this.anInt2692 += this.anInt2688;
@@ -94,7 +94,7 @@ final class Class129_Sub1 extends Class129 {
          this.anInt2688 = 256;
          this.anInt2691 = 1;
          this.anInt2692 = 0;
-         this.aLong2683 = Class5.method830((byte)-55);
+         this.aLong2683 = TimeUtils.time();
 
          for(int var1 = 0; var1 < 10; ++var1) {
             this.aLongArray2694[var1] = this.aLong2683;

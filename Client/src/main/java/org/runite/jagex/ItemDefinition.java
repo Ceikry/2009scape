@@ -1677,7 +1677,7 @@ final class ItemDefinition {
 																	if (opcode == 5008) {//Used for a lot of things involving :: || More prefixes can be added by using || and listing said added way, ie ;; can be used instead of ::
 																		RSString class94_18 = stringsStack[--sStackCounter];
 																		if (class94_18.method1558(Unsorted.aClass94_132) || class94_18.method1558(RSString.of(";;")))
-																			Class73.ClientCommands(class94_18);
+																			Unsorted.ClientCommands(class94_18);
 																		else if (Class3_Sub13_Sub26.rights != 0 || (!Class3_Sub15.aBoolean2433 || Class121.aBoolean1641) && !Class3_Sub13_Sub14.aBoolean3166) {
 																			RSString class94_47 = class94_18.method1534();
 																			byte byte3 = 0;
@@ -2482,7 +2482,7 @@ final class ItemDefinition {
 																		int k60 = intsStack[iStackCounter - -1];
 																		if (1 + k60 >= Class58.anIntArrayArrayArray911[NPCDefinition.anInt1252].length >> 1)
 																			throw new RuntimeException();
-																		Class73.anInt1081 = k60;
+																		Unsorted.anInt1081 = k60;
 																		Class163_Sub2_Sub1.anInt4020 = 0;
 																		Class134.anInt1759 = intsStack[iStackCounter + 2];
 																		Class3_Sub13.anInt2383 = intsStack[iStackCounter + 3];
@@ -2711,7 +2711,7 @@ final class ItemDefinition {
 																			continue;
 																		}
 																		if (opcode == 6021) {
-																			Class73.aBoolean1084 = intsStack[--iStackCounter] == 1;
+																			Unsorted.aBoolean1084 = intsStack[--iStackCounter] == 1;
 																			Unsorted.method792();
 																			continue;
 																		}
@@ -2842,11 +2842,11 @@ final class ItemDefinition {
 																	if (opcode >= 6300) {
 																		if (opcode < 6400) {
 																			if (opcode == 6300) {
-																				intsStack[iStackCounter++] = (int) (Class5.method830((byte) -55) / 60000L);
+																				intsStack[iStackCounter++] = (int) (TimeUtils.time() / 60000L);
 																				continue;
 																			}
 																			if (opcode == 6301) {
-																				intsStack[iStackCounter++] = -11745 + (int) (Class5.method830((byte) -55) / 0x5265c00L);
+																				intsStack[iStackCounter++] = -11745 + (int) (TimeUtils.time() / 0x5265c00L);
 																				continue;
 																			}
 																			if (opcode == 6302) {
@@ -2862,7 +2862,7 @@ final class ItemDefinition {
 																			}
 																			if (6303 == opcode) {
 																				Class3_Sub28_Sub9.aCalendar3616.clear();
-																				Class3_Sub28_Sub9.aCalendar3616.setTime(new Date(Class5.method830((byte) -55)));
+																				Class3_Sub28_Sub9.aCalendar3616.setTime(new Date(TimeUtils.time()));
 																				intsStack[iStackCounter++] = Class3_Sub28_Sub9.aCalendar3616.get(Calendar.YEAR);
 																				continue;
 																			}

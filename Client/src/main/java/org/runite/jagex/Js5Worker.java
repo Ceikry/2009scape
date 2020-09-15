@@ -30,7 +30,7 @@ final class Js5Worker {
         try {
             int var4;
             if (null != this.aClass89_1005) {
-                long var2 = Class5.method830((byte) -55);
+                long var2 = TimeUtils.time();
                 var4 = (int) (-this.aLong1004 + var2);
                 this.aLong1004 = var2;
                 if (var4 > 200) {
@@ -306,7 +306,7 @@ final class Js5Worker {
                         }
 
                         this.anInt1006 = 0;
-                        this.aLong1004 = Class5.method830((byte) -55);
+                        this.aLong1004 = TimeUtils.time();
                         return;
                     }
 
@@ -347,7 +347,7 @@ final class Js5Worker {
     final Js5ResourceRequest addJS5Request(int index, byte var3, int archive, boolean highPriority) {
         Js5ResourceRequest var8 = new Js5ResourceRequest();
         long var6 = archive + (index << 16);
-        var8.aBoolean3628 = highPriority;
+        var8.priority = highPriority;
         var8.nodeKey = var6;
         var8.aByte4064 = var3;
         if (highPriority) {

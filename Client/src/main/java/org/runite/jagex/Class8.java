@@ -8,7 +8,7 @@ final class Class8 {
    private Js5ResourceRequest aJs5ResourceRequest_100;
    static int anInt101;
    private final Js5Worker aJs5Worker_102;
-   private final Class73 aClass73_103;
+   private final CacheResourceWorker aCacheResourceWorker_103;
    static int anInt104 = 0;
    static CacheIndex aClass153_105;
    static RSString aClass94_106 = RSString.of("showVideoAd");
@@ -138,7 +138,7 @@ final class Class8 {
          GameObject.aClass11Array1836 = null;
          Class3_Sub13_Sub1.method171(-101, Class3_Sub28_Sub12.anInt3655, 0, Class23.anInt454, 0, -1, Class140_Sub7.anInt2934, 0, 0);
          if(GameObject.aClass11Array1836 != null) {
-            Class47.method1095(0, Class73.anInt1082, Class3_Sub28_Sub7.anInt3602, GameObject.aClass11Array1836, Class23.anInt454, -1412584499, 0, Class140_Sub7.anInt2934, (byte)73, PacketParser.aClass11_88.anInt292);
+            Class47.method1095(0, Unsorted.anInt1082, Class3_Sub28_Sub7.anInt3602, GameObject.aClass11Array1836, Class23.anInt454, -1412584499, 0, Class140_Sub7.anInt2934, (byte)73, PacketParser.aClass11_88.anInt292);
             GameObject.aClass11Array1836 = null;
          }
 
@@ -235,7 +235,7 @@ final class Class8 {
                if(null == this.aClass151_Sub1Array107[var3]) {
                   int var6 = this.aClass3_Sub30_99.readInt();
                   int var7 = this.aClass3_Sub30_99.readInt();
-                  Class151_Sub1 var8 = new Class151_Sub1(var3, var1, var5, this.aJs5Worker_102, this.aClass73_103, var6, var7);
+                  Class151_Sub1 var8 = new Class151_Sub1(var3, var1, var5, this.aJs5Worker_102, this.aCacheResourceWorker_103, var6, var7);
                   this.aClass151_Sub1Array107[var3] = var8;
                   return var8;
                } else {
@@ -250,9 +250,9 @@ final class Class8 {
       }
    }
 
-   Class8(Js5Worker var1, Class73 var2) {
+   Class8(Js5Worker var1, CacheResourceWorker var2) {
       try {
-         this.aClass73_103 = var2;
+         this.aCacheResourceWorker_103 = var2;
          this.aJs5Worker_102 = var1;
          if(!this.aJs5Worker_102.method1251()) {
             this.aJs5ResourceRequest_100 = this.aJs5Worker_102.addJS5Request(255, (byte)0, 255, true);

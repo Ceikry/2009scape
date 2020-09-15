@@ -15,7 +15,7 @@ final class Class67 implements Runnable {
 
    public final void run() {
       try {
-         for(; this.aBoolean1015; Class3_Sub13_Sub34.sleep(50L)) {
+         for(; this.aBoolean1015; TimeUtils.sleep(50L)) {
             Object var1 = this.anObject1016;
             synchronized(var1) {
                if(this.anInt1018 < 500) {

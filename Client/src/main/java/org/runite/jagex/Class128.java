@@ -68,18 +68,6 @@ final class Class128 {
       }
    }
 
-   static void method1762(long var0, byte var2) {
-      try {
-         try {
-            Thread.sleep(var0);
-         } catch (InterruptedException var4) {
-         }
-
-      } catch (RuntimeException var5) {
-         throw Class44.clientError(var5, "rm.B(" + var0 + ',' + var2 + ')');
-      }
-   }
-
    static Model method1763(int var1, int var2, int var3, int var4, Model var5, int var6) {
       try {
          Model var9 = (Model)Class61.aClass93_939.get((long)var3);

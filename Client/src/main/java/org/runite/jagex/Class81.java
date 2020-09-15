@@ -109,13 +109,13 @@ final class Class81 {
             anIntArrayArrayArray1142 = (int[][][])((int[][][])null);
          }
 
-         if(null != var0.anEventQueue1199) {
-            for(int var3 = 0; var3 < 50 && null != var0.anEventQueue1199.peekEvent(); ++var3) {
-               Class3_Sub13_Sub34.sleep(1L);
+         if(null != var0.systemEventQueue) {
+            for(int var3 = 0; var3 < 50 && null != var0.systemEventQueue.peekEvent(); ++var3) {
+               TimeUtils.sleep(1L);
             }
 
             if(var1 != null) {
-               var0.anEventQueue1199.postEvent(new ActionEvent(var1, 1001, "dummy"));
+               var0.systemEventQueue.postEvent(new ActionEvent(var1, 1001, "dummy"));
             }
 
          }

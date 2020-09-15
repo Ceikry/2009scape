@@ -68,7 +68,7 @@ public final class Client extends GameShell {
                     WorldListEntry.aClass155_2627.method2158();
                 }
 
-                if ((Class143.loadingStage == 30 || Class143.loadingStage == 10) && (Class3_Sub28_Sub5.aBoolean3593 || Class53.aLong866 != 0 && Class53.aLong866 < Class5.method830((byte) -55))) {
+                if ((Class143.loadingStage == 30 || Class143.loadingStage == 10) && (Class3_Sub28_Sub5.aBoolean3593 || Class53.aLong866 != 0 && Class53.aLong866 < TimeUtils.time())) {
                     GameObject.graphicsSettings(Class3_Sub28_Sub5.aBoolean3593, Class83.method1411(0), Class3_Sub13.anInt2378, Class3_Sub13_Sub5.anInt3071);
                 }
 
@@ -77,7 +77,7 @@ public final class Client extends GameShell {
                 if (null == Class3_Sub13_Sub10.aFrame3121) {
                     Object var3;
                     if (GameShell.frame == null) {
-                        var3 = Class38.aClass87_665.anApplet1219;
+                        var3 = Class38.aClass87_665.applet;
                     } else {
                         var3 = GameShell.frame;
                     }
@@ -98,7 +98,7 @@ public final class Client extends GameShell {
                             Class119.method1729();
                         }
 
-                        Class53.aLong866 = Class5.method830((byte) -55) - -500L;
+                        Class53.aLong866 = TimeUtils.time() - -500L;
                     }
                 }
 
@@ -265,7 +265,7 @@ public final class Client extends GameShell {
             }
 
             Class58.aJs5Worker_917.method1254();
-            Class3_Sub13_Sub14.aClass73_3159.method1304();
+            Class3_Sub13_Sub14.aCacheResourceWorker_3159.stop();
 
             try {
                 if (Class101.aClass30_1422 != null) {
@@ -364,7 +364,7 @@ public final class Client extends GameShell {
     final void method39() {
         try {
             Class119.method1729();
-            Class3_Sub13_Sub14.aClass73_3159 = new Class73();
+            Class3_Sub13_Sub14.aCacheResourceWorker_3159 = new CacheResourceWorker();
             Class58.aJs5Worker_917 = new Js5Worker();
             if (Class3_Sub13_Sub13.anInt3148 != 0) {
                 Class3_Sub6.aByteArrayArray2287 = new byte[50][];
@@ -424,20 +424,20 @@ public final class Client extends GameShell {
             }
 
             try {
-                if (Class38.aClass87_665.aClass122_1198 != null) {
-                    Class101.aClass30_1422 = new Class30(Class38.aClass87_665.aClass122_1198, 5200);
+                if (Class38.aClass87_665.cacheDataFile != null) {
+                    Class101.aClass30_1422 = new Class30(Class38.aClass87_665.cacheDataFile, 5200);
 
                     for (int var2 = 0; var2 < 29; ++var2) {
-                        Class163_Sub2.aClass30Array2998[var2] = new Class30(Class38.aClass87_665.aClass122Array1197[var2], 6000);
+                        Class163_Sub2.aClass30Array2998[var2] = new Class30(Class38.aClass87_665.cacheIndicesFiles[var2], 6000);
                     }
 
-                    Class114.aClass30_1572 = new Class30(Class38.aClass87_665.aClass122_1204, 6000);
+                    Class114.aClass30_1572 = new Class30(Class38.aClass87_665.cacheChecksumFile, 6000);
                     Class86.aClass41_1186 = new Class41(255, Class101.aClass30_1422, Class114.aClass30_1572, 500000);
-                    Unsorted.aClass30_1039 = new Class30(Class38.aClass87_665.aClass122_1207, 24);
-                    Class38.aClass87_665.aClass122Array1197 = null;
-                    Class38.aClass87_665.aClass122_1204 = null;
-                    Class38.aClass87_665.aClass122_1207 = null;
-                    Class38.aClass87_665.aClass122_1198 = null;
+                    Unsorted.aClass30_1039 = new Class30(Class38.aClass87_665.randomDatFile, 24);
+                    Class38.aClass87_665.cacheIndicesFiles = null;
+                    Class38.aClass87_665.cacheChecksumFile = null;
+                    Class38.aClass87_665.randomDatFile = null;
+                    Class38.aClass87_665.cacheDataFile = null;
                 }
             } catch (IOException var3) {
                 Unsorted.aClass30_1039 = null;
@@ -718,12 +718,12 @@ public final class Client extends GameShell {
                     var2.putInt(-31379 + 31252, Configurations.SUB_BUILD);
                     Unsorted.js5Connection.sendBytes(var2.buffer, 9);
                     ++PacketParser.anInt80;
-                    Class3_Sub13_Sub30.aLong3366 = Class5.method830((byte) -55);
+                    Class3_Sub13_Sub30.aLong3366 = TimeUtils.time();
                 }
 
                 if (3 == PacketParser.anInt80) {
                     if (Class143.loadingStage != 0 && Class143.loadingStage != 5 && 0 >= Unsorted.js5Connection.availableBytes()) {
-                        if (Class5.method830((byte) -55) + -Class3_Sub13_Sub30.aLong3366 > 30000) {
+                        if (TimeUtils.time() + -Class3_Sub13_Sub30.aLong3366 > 30000) {
                             this.method46(1001);
                             return;
                         }
@@ -1359,7 +1359,7 @@ public final class Client extends GameShell {
                 if (Class96.anInt1354 == 0) {
                     Runtime var10 = Runtime.getRuntime();
                     var3 = (int) ((var10.totalMemory() - var10.freeMemory()) / 1024L);
-                    long var4 = Class5.method830((byte) -55);
+                    long var4 = TimeUtils.time();
                     if (Class3_Sub13_Sub24.aLong3296 == 0) {
                         Class3_Sub13_Sub24.aLong3296 = var4;
                     }
@@ -1391,7 +1391,7 @@ public final class Client extends GameShell {
                         Class3_Sub17.aClass94_2464 = TextCore.CreatedWorld;
                     } else if (Class96.anInt1354 == 30) {
                         if (Unsorted.aClass8_1936 == null) {
-                            Unsorted.aClass8_1936 = new Class8(Class58.aJs5Worker_917, Class3_Sub13_Sub14.aClass73_3159);
+                            Unsorted.aClass8_1936 = new Class8(Class58.aJs5Worker_917, Class3_Sub13_Sub14.aCacheResourceWorker_3159);
                         }
 
                         if (Unsorted.aClass8_1936.method837()) {
@@ -1569,7 +1569,7 @@ public final class Client extends GameShell {
                             }
                         } else if (Class96.anInt1354 == 110) {
                             Class106.aClass67_1443 = new Class67();
-                            Class38.aClass87_665.method1451(0, 10, Class106.aClass67_1443);
+                            Class38.aClass87_665.method1451(10, Class106.aClass67_1443);
                             Class3_Sub17.aClass94_2464 = TextCore.LoadedInputHandler;
                             LoadingStageNumber = 75;
                             Class96.anInt1354 = 120;

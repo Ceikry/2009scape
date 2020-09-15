@@ -14,7 +14,7 @@ final class Class41 {
         return "Cache:" + this.cacheIndex;
     }
 
-    final void method1050(int var1, int var2, byte[] var3) {
+    final void write(int var1, int var2, byte[] var3) {
         synchronized (this.aClass30_681) {
             if (0 <= var2 && var2 <= this.anInt687) {
                 boolean var6 = this.method1054((byte) 87, var2, var1, var3, true);
@@ -28,7 +28,7 @@ final class Class41 {
         }
     }
 
-    final byte[] method1051(int var1, byte var2) {
+    final byte[] read(int var1) {
         synchronized (this.aClass30_681) {
             Object var10000;
             try {

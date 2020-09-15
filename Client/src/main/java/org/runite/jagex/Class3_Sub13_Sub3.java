@@ -62,10 +62,10 @@ final class Class3_Sub13_Sub3 extends Class3_Sub13 {
                Class3_Sub15.aClass89_2429 = null;
             }
 
-            ++Class73.anInt1088;
-            if(Class73.anInt1088 > 4) {
+            ++Unsorted.anInt1088;
+            if(Unsorted.anInt1088 > 4) {
                Class43.anInt692 = 0;
-               Class73.anInt1088 = 0;
+               Unsorted.anInt1088 = 0;
                return var1;
             } else {
                Class43.anInt692 = 0;

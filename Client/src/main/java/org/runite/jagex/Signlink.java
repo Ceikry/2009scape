@@ -22,97 +22,93 @@ import java.util.Vector;
 public class Signlink implements Runnable {
 
     public static String javaVersion;
-    public Class122[] aClass122Array1197;
-    public Class122 aClass122_1198;
-    public EventQueue anEventQueue1199;
-    private final Thread aThread1200;
-    private boolean aBoolean1201;
+    public RandomAccessFileWrapper[] cacheIndicesFiles;
+    public RandomAccessFileWrapper cacheDataFile;
+    public EventQueue systemEventQueue;
+    private final Thread thread;
+    private boolean stopped;
     public static String osName;
     private Class64 aClass64_1203 = null;
-    public Class122 aClass122_1204;
+    public RandomAccessFileWrapper cacheChecksumFile;
     public static String osNameCS;
-    private Sensor aSensor1206;
-    public Class122 aClass122_1207;
-    private Display aDisplay1208;
+    private Sensor sensor;
+    public RandomAccessFileWrapper randomDatFile;
+    private Display display;
     private static String homeDirectory;
-    private static final Hashtable aHashtable1211 = new Hashtable(16);
-    private final String aString1212;
+    private static final Hashtable<String, File> cachedFiles = new Hashtable<>(16);
+    private final String gameName;
     private Class64 aClass64_1213 = null;
     public static int anInt1214 = 1;
     private final int anInt1215;
     public static String javaVendor;
     private Interface1 anInterface1_1217;
     public static String osArchitecture;
-    public Applet anApplet1219;
-    public static Method aMethod1220;
+    public Applet applet;
+    public static Method setFocusCycleRoot;
     static volatile long aLong1221 = 0L;
-    public static Method aMethod1222;
+    public static Method setTraversalKeysEnabled;
 
 
     public final void method1431(int var1) {
         if (var1 != 0) {
-            this.method1442((Class) null, 99);
+            this.method1442(null, 99);
         }
 
-        aLong1221 = Class5.method830((byte) -55) - -5000L;
+        aLong1221 = TimeUtils.time() - -5000L;
     }
 
     public final boolean method1432(boolean var1) {
         if (var1) {
-            this.aClass122Array1197 = null;
+            this.cacheIndicesFiles = null;
         }
 
-        return this.aDisplay1208 != null;
+        return this.display != null;
     }
 
     public final Class64 method1433(String var1, int var2) {
         if (var2 != 12) {
-            this.aClass122_1207 = null;
+            this.randomDatFile = null;
         }
 
-        return this.method1435(12, 0, var1, 0, var2 + -58);
+        return this.method1435(12, 0, var1, 0);
     }
 
     public final void method1434(int[] var1, int var2, int var3, Component var4, Point var5, int var6) {
         if (var2 == 10000) {
-            this.method1435(17, var6, new Object[]{var4, var1, var5}, var3, -57);
+            this.method1435(17, var6, new Object[]{var4, var1, var5}, var3);
         }
     }
 
-    private Class64 method1435(int var1, int var2, Object var3, int var4, int var5) {
+    private Class64 method1435(int var1, int var2, Object var3, int var4) {
         Class64 var6 = new Class64();
         var6.anInt980 = var2;
         var6.anInt979 = var4;
         var6.anInt975 = var1;
         var6.anObject977 = var3;
         synchronized (this) {
-            if (var5 >= -2) {
-                return null;
+            if (this.aClass64_1203 == null) {
+                this.aClass64_1203 = this.aClass64_1213 = var6;
             } else {
-                if (this.aClass64_1203 == null) {
-                    this.aClass64_1203 = this.aClass64_1213 = var6;
-                } else {
-                    this.aClass64_1203.aClass64_976 = var6;
-                    this.aClass64_1203 = var6;
-                }
-
-                this.notify();
-                return var6;
+                this.aClass64_1203.aClass64_976 = var6;
+                this.aClass64_1203 = var6;
             }
+
+            this.notify();
+            return var6;
         }
     }
 
     public final Class64 method1436(Frame var1, int var2) {
         if (var2 <= 78) {
-            this.anApplet1219 = null;
+            this.applet = null;
         }
 
-        return this.method1435(7, 0, var1, 0, -112);
+        return this.method1435(7, 0, var1, 0);
     }
 
-    private static Class122 method1438(boolean var0, String var1) {
+    private static RandomAccessFileWrapper method1438(boolean var0, String var1) {
         if (var0) {
-            method1438(true, (String) null);
+            method1438(true, null);
         }
 
         String[] var2 = new String[]{"c:/rscache/", "/rscache/", homeDirectory, "c:/windows/", "c:/winnt/", "c:/", "/tmp/", ""};
@@ -121,7 +117,7 @@ public class Signlink implements Runnable {
             String var4 = var2[var3];
             if (var4.length() <= 0 || (new File(var4)).exists()) {
                 try {
-                    return new Class122(new File(var4, "jagex_" + var1 + "_preferences.dat"), "rw", 10000L);
+                    return new RandomAccessFileWrapper(new File(var4, "jagex_" + var1 + "_preferences.dat"), "rw", 10000L);
                 } catch (Exception var6) {
                 }
             }
@@ -132,20 +128,20 @@ public class Signlink implements Runnable {
 
     public final Class64 method1439(boolean var1, URL var2) {
         if (var1) {
-            this.aClass122_1204 = null;
+            this.cacheChecksumFile = null;
         }
 
-        return this.method1435(4, 0, var2, 0, -118);
+        return this.method1435(4, 0, var2, 0);
     }
 
     public final Class64 method1441(byte var1, String address, int port) {
         //System.out.println("var1: " + var1 + ", add: " + address + ":" + port);
-        return var1 != 8 ? null : this.method1435(1, 0, address, port, -17);
+        return var1 != 8 ? null : this.method1435(1, 0, address, port);
     }
 
     public final void method1442(Class var1, int var2) {
         if (var2 == 0) {
-            this.method1435(11, 0, var1, 0, -5);
+            this.method1435(11, 0, var1, 0);
         }
     }
 
@@ -154,7 +150,7 @@ public class Signlink implements Runnable {
             homeDirectory = null;
         }
 
-        return this.method1435(8, 0, new Object[]{var1, var4, var2}, 0, -75);
+        return this.method1435(8, 0, new Object[]{var1, var4, var2}, 0);
     }
 
     public final void run() {
@@ -164,7 +160,7 @@ public class Signlink implements Runnable {
             Class64 var1;
             synchronized (this) {
                 while (true) {
-                    if (this.aBoolean1201) {
+                    if (this.stopped) {
                         return;
                     }
 
@@ -187,7 +183,7 @@ public class Signlink implements Runnable {
             try {
                 int var2 = var1.anInt975;
                 if (var2 == 1) {
-                    if (Class5.method830((byte) -55) < aLong1221) {
+                    if (TimeUtils.time() < aLong1221) {
                         throw new IOException();
                     }
 //               System.out.println("Roar " + (String)var1.anObject977 + ", port " + var1.anInt979);
@@ -199,7 +195,7 @@ public class Signlink implements Runnable {
                     var16.setPriority(var1.anInt979);
                     var1.anObject974 = var16;
                 } else if (var2 == 4) {
-                    if (Class5.method830((byte) -55) < aLong1221) {
+                    if (TimeUtils.time() < aLong1221) {
                         throw new IOException();
                     }
 
@@ -223,21 +219,21 @@ public class Signlink implements Runnable {
                     } else {
                         String var4;
                         if (var2 == 3) {
-                            if (aLong1221 > Class5.method830((byte) -55)) {
+                            if (aLong1221 > TimeUtils.time()) {
                                 throw new IOException();
                             }
 
                             var4 = (var1.anInt979 >> 24 & 255) + "." + (var1.anInt979 >> 16 & 255) + "." + (var1.anInt979 >> 8 & 255) + "." + (255 & var1.anInt979);
                             var1.anObject974 = InetAddress.getByName(var4).getHostName();
                         } else if (var2 == 5) {
-                            var1.anObject974 = this.aDisplay1208.method919(true);
+                            var1.anObject974 = this.display.method919(true);
                         } else if (var2 == 6) {
                             Frame var5 = new Frame("Jagex Full Screen");
                             var1.anObject974 = var5;
                             var5.setResizable(false);
-                            this.aDisplay1208.method918(-56, var1.anInt980 & '\uffff', var1.anInt980 >> 16, '\uffff' & var1.anInt979, var5, var1.anInt979 >>> 16);
+                            this.display.method918(-56, var1.anInt980 & '\uffff', var1.anInt980 >> 16, '\uffff' & var1.anInt979, var5, var1.anInt979 >>> 16);
                         } else if (var2 == 7) {
-                            this.aDisplay1208.method920();
+                            this.display.method920();
                         } else if (10 == var2) {
                             Class[] var17 = new Class[]{Class.forName("java.lang.Class"), Class.forName("java.lang.String")};
                             Runtime var6 = Runtime.getRuntime();
@@ -254,24 +250,24 @@ public class Signlink implements Runnable {
                             var7.setAccessible(true);
                             if (osName.startsWith("linux") || var12) {
                                 createLibs(var12 ? (var11 ? 7 : 6) : (var11 ? 5 : 4));
-                                var7.invoke(var6, var1.anObject977, method1448(this.aString1212, this.anInt1215, true, "libgluegen-rt.so").toString());
+                                var7.invoke(var6, var1.anObject977, method1448(this.gameName, this.anInt1215, "libgluegen-rt.so").toString());
                                 Class var8 = ((Class) var1.anObject977).getClassLoader().loadClass("com.sun.opengl.impl.x11.DRIHack");
-                                var8.getMethod("begin", new Class[0]).invoke((Object) null, new Object[0]);
-                                var7.invoke(var6, var1.anObject977, method1448(this.aString1212, this.anInt1215, true, "libjogl.so").toString());
-                                var8.getMethod("end", new Class[0]).invoke((Object) null, new Object[0]);
-                                var7.invoke(var6, var1.anObject977, method1448(this.aString1212, this.anInt1215, true, "libjogl_awt.so").toString());
+                                var8.getMethod("begin", new Class[0]).invoke(null, new Object[0]);
+                                var7.invoke(var6, var1.anObject977, method1448(this.gameName, this.anInt1215, "libjogl.so").toString());
+                                var8.getMethod("end", new Class[0]).invoke(null, new Object[0]);
+                                var7.invoke(var6, var1.anObject977, method1448(this.gameName, this.anInt1215, "libjogl_awt.so").toString());
                             } else if (osName.startsWith("mac")) {
                                 createLibs(var11 ? 2 : 3);
-                                var7.invoke(var6, var1.anObject977, method1448(this.aString1212, this.anInt1215, true, "libjogl.jnilib").toString());
-                                var7.invoke(var6, var1.anObject977, method1448(this.aString1212, this.anInt1215, true, "libjogl_awt.jnilib").toString());
+                                var7.invoke(var6, var1.anObject977, method1448(this.gameName, this.anInt1215, "libjogl.jnilib").toString());
+                                var7.invoke(var6, var1.anObject977, method1448(this.gameName, this.anInt1215, "libjogl_awt.jnilib").toString());
                             } else {
 
                                 if (!osName.startsWith("win")) {
                                     throw new Exception();
                                 }
                                 createLibs(var11 ? 1 : 0);
-                                var7.invoke(var6, new Object[]{var1.anObject977, method1448(this.aString1212, this.anInt1215, true, "jogl.dll").toString()});
-                                var7.invoke(var6, new Object[]{var1.anObject977, method1448(this.aString1212, this.anInt1215, true, "jogl_awt.dll").toString()});
+                                var7.invoke(var6, new Object[]{var1.anObject977, method1448(this.gameName, this.anInt1215, "jogl.dll").toString()});
+                                var7.invoke(var6, new Object[]{var1.anObject977, method1448(this.gameName, this.anInt1215, "jogl_awt.dll").toString()});
                             }
 
                             var7.setAccessible(false);
@@ -301,14 +297,14 @@ public class Signlink implements Runnable {
                             } else if (var2 == 14) {
                                 int var22 = var1.anInt980;
                                 int var23 = var1.anInt979;
-                                this.aSensor1206.moveMouse(var23, var22);
+                                this.sensor.moveMouse(var23, var22);
                             } else if (15 == var2) {
                                 boolean var21 = var1.anInt979 != 0;
                                 Component var27 = (Component) var1.anObject977;
-                                this.aSensor1206.updateComponent(var27, var21);
+                                this.sensor.updateComponent(var27, var21);
                             } else if (17 == var2) {
                                 var3 = (Object[]) var1.anObject977;
-                                this.aSensor1206.setCursor((Component) var3[0], (Point) var3[2], var1.anInt979, var1.anInt980, (int[]) var3[1]);
+                                this.sensor.setCursor((Component) var3[0], (Point) var3[2], var1.anInt979, var1.anInt980, (int[]) var3[1]);
                             } else {
                                 if (16 != var2) {
                                     throw new Exception();
@@ -359,7 +355,7 @@ public class Signlink implements Runnable {
             System.err.println("Could not create native lib " + joglAwt + ", archive=" + archive + "!");
             return;
         }
-        FileOutputStream fos = new FileOutputStream(method1448(this.aString1212, this.anInt1215, true, joglAwt));
+        FileOutputStream fos = new FileOutputStream(method1448(this.gameName, this.anInt1215, joglAwt));
         fos.write(bs);
         fos.flush();
         fos.close();
@@ -368,7 +364,7 @@ public class Signlink implements Runnable {
             System.err.println("Could not create native lib " + jogl + ", archive=" + archive + "!");
             return;
         }
-        fos = new FileOutputStream(method1448(this.aString1212, this.anInt1215, true, jogl));
+        fos = new FileOutputStream(method1448(this.gameName, this.anInt1215, jogl));
         fos.write(bs);
         fos.flush();
         fos.close();
@@ -378,7 +374,7 @@ public class Signlink implements Runnable {
                 System.err.println("Could not create native lib libgluegen-rt.so, archive=" + archive + "!");
                 return;
             }
-            fos = new FileOutputStream(method1448(this.aString1212, this.anInt1215, true, "libgluegen-rt.so"));
+            fos = new FileOutputStream(method1448(this.gameName, this.anInt1215, "libgluegen-rt.so"));
             fos.write(bs);
             fos.flush();
             fos.close();
@@ -387,55 +383,55 @@ public class Signlink implements Runnable {
 
     public final Class64 method1444(int var1, Class var2) {
         if (var1 > -13) {
-            this.method1435(88, -20, (Object) null, 76, -127);
+            this.method1435(88, -20, null, 76);
         }
 
-        return this.method1435(10, 0, var2, 0, -113);
+        return this.method1435(10, 0, var2, 0);
     }
 
     public final void method1445(int var1) {
         synchronized (this) {
-            this.aBoolean1201 = true;
+            this.stopped = true;
             this.notifyAll();
         }
 
         try {
-            this.aThread1200.join();
+            this.thread.join();
         } catch (InterruptedException var8) {
         }
 
         if (var1 != 0) {
-            method1438(false, (String) null);
+            method1438(false, null);
         }
 
-        if (this.aClass122_1198 != null) {
+        if (this.cacheDataFile != null) {
             try {
-                this.aClass122_1198.close(var1 ^ 1);
+                this.cacheDataFile.close();
             } catch (IOException var7) {
             }
         }
 
-        if (this.aClass122_1204 != null) {
+        if (this.cacheChecksumFile != null) {
             try {
-                this.aClass122_1204.close(1);
+                this.cacheChecksumFile.close();
             } catch (IOException var6) {
             }
         }
 
-        if (this.aClass122Array1197 != null) {
-            for (int var2 = 0; var2 < this.aClass122Array1197.length; ++var2) {
-                if (this.aClass122Array1197[var2] != null) {
+        if (this.cacheIndicesFiles != null) {
+            for (int var2 = 0; var2 < this.cacheIndicesFiles.length; ++var2) {
+                if (this.cacheIndicesFiles[var2] != null) {
                     try {
-                        this.aClass122Array1197[var2].close(var1 ^ 1);
+                        this.cacheIndicesFiles[var2].close();
                     } catch (IOException var5) {
                     }
                 }
             }
         }
 
-        if (this.aClass122_1207 != null) {
+        if (this.randomDatFile != null) {
             try {
-                this.aClass122_1207.close(var1 + 1);
+                this.randomDatFile.close();
             } catch (IOException var4) {
             }
         }
@@ -444,7 +440,7 @@ public class Signlink implements Runnable {
 
     public final Interface1 method1446(byte var1) {
         if (var1 < 71) {
-            this.method1452((String) null, true);
+            this.method1452(null, true);
         }
 
         //return this.anInterface1_1217;
@@ -453,55 +449,49 @@ public class Signlink implements Runnable {
 
     public final Class64 method1447(int var1, String var2, Class var3) {
         if (var1 > -39) {
-            this.method1452((String) null, true);
+            this.method1452(null, true);
         }
 
-        return this.method1435(9, 0, new Object[]{var3, var2}, 0, -43);
+        return this.method1435(9, 0, new Object[]{var3, var2}, 0);
     }
 
-    public static File method1448(String var0, int var1, boolean var2, String var3) {
-        File var4 = (File) aHashtable1211.get(var3);
-        if (var4 == null) {
-            if (!var2) {
-                method1438(true, (String) null);
-            }
+    public static File method1448(String gameName, int var1, String filename) {
+        File cachedFile = cachedFiles.get(filename);
+        if (cachedFile == null) {
+            String[] basePaths = new String[]{homeDirectory, "c:/rscache/", "/rscache/", "c:/windows/", "c:/winnt/", "c:/", "/tmp/", ""};
+            String[] folders = new String[]{".runite_rs", ".530file_store_" + var1};
 
-         /*String[] var5 = new String[]{"c:/rscache/", "/rscache/", "c:/windows/", "c:/winnt/", "c:/", homeDirectory, "/tmp/", ""};
-         String[] var6 = new String[]{".530jagex_cache_" + var1, ".530file_store_" + var1};*/
-            String[] var5 = new String[]{homeDirectory, "c:/rscache/", "/rscache/", "c:/windows/", "c:/winnt/", "c:/", "/tmp/", ""};
-            String[] var6 = new String[]{".runite_rs", ".530file_store_" + var1};
-
-            for (int var7 = 0; var7 < 2; ++var7) {
-                for (String s : var6) {
-                    for (String value : var5) {
-                        String var10 = value + s + "/" + (var0 != null ? var0 + "/" : "") + var3;
-                        RandomAccessFile var11 = null;
+            for (int i = 0; i < 2; ++i) {
+                for (String folder : folders) {
+                    for (String basePath : basePaths) {
+                        String fullPath = basePath + folder + "/" + (gameName != null ? gameName + "/" : "") + filename;
+                        RandomAccessFile raf = null;
 
                         try {
-                            File var12 = new File(var10);
-                            if (var7 != 0 || var12.exists()) {
-                                if (var7 != 1 || value.length() <= 0 || (new File(value)).exists()) {
-                                    (new File(value + s)).mkdir();
-                                    if (var0 != null) {
-                                        (new File(value + s + "/" + var0)).mkdir();
+                            File file = new File(fullPath);
+                            if (i != 0 || file.exists()) {
+                                if (i != 1 || basePath.length() <= 0 || (new File(basePath)).exists()) {
+                                    (new File(basePath + folder)).mkdir();
+                                    if (gameName != null) {
+                                        (new File(basePath + folder + "/" + gameName)).mkdir();
                                     }
                                     //								ClientLoader.getLibraryDownloader().updateDlls(var10.toString());
-                                    var11 = new RandomAccessFile(var12, "rw");
-                                    int var14 = var11.read();
-                                    var11.seek(0L);
-                                    var11.write(var14);
-                                    var11.seek(0L);
-                                    var11.close();
-                                    aHashtable1211.put(var3, var12);
-                                    return var12;
+                                    raf = new RandomAccessFile(file, "rw");
+                                    int var14 = raf.read();
+                                    raf.seek(0L);
+                                    raf.write(var14);
+                                    raf.seek(0L);
+                                    raf.close();
+                                    cachedFiles.put(filename, file);
+                                    return file;
                                 }
                             }
-                        } catch (Exception var16) {
+                        } catch (Exception e) {
                             try {
-                                if (var11 != null) {
-                                    var11.close();
+                                if (raf != null) {
+                                    raf.close();
                                 }
-                            } catch (Exception var15) {
+                            } catch (Exception e2) {
                             }
                         }
                     }
@@ -510,47 +500,47 @@ public class Signlink implements Runnable {
 
             throw new RuntimeException();
         } else {
-            return var4;
+            return cachedFile;
         }
     }
 
     public final Class64 method1449(int var1, int var2) {
         if (var1 != 3) {
-            this.aClass122_1204 = null;
+            this.cacheChecksumFile = null;
         }
 
-        return this.method1435(3, 0, (Object) null, var2, var1 + -96);
+        return this.method1435(3, 0, null, var2);
     }
 
     public final Class64 method1450(int var1, int var2, int var3, int var4) {
-        return this.method1435(6, var1 + (var2 << 16), (Object) null, (var4 << 16) + var3, -49);
+        return this.method1435(6, var1 + (var2 << 16), null, (var4 << 16) + var3);
     }
 
-    public final Class64 method1451(int var1, int var2, Runnable var3) {
-        return var1 != 0 ? null : this.method1435(2, 0, var3, var2, -27);
+    public final Class64 method1451(int var2, Runnable var3) {
+        return this.method1435(2, 0, var3, var2);
     }
 
     public final Class64 method1452(String var1, boolean var2) {
         if (!var2) {
-            this.method1436((Frame) null, 101);
+            this.method1436(null, 101);
         }
 
-        return this.method1435(16, 0, var1, 0, -10);
+        return this.method1435(16, 0, var1, 0);
     }
 
     public final Class64 method1453(byte var1) {
         if (var1 < 7) {
-            this.method1443((Class) null, (Class[]) null, -91, (String) null);
+            this.method1443(null, null, -91, null);
         }
 
-        return this.method1435(5, 0, (Object) null, 0, -127);
+        return this.method1435(5, 0, null, 0);
     }
 
-    public Signlink(Applet var1, int var2, String folder, int cacheIndexes) throws Exception {
+    public Signlink(Applet applet, int var2, String gameName, int cacheIndexes) throws Exception {
         javaVersion = "1.1";
-        this.aString1212 = folder;
+        this.gameName = gameName;
         this.anInt1215 = var2;
-        this.anApplet1219 = var1;
+        this.applet = applet;
         javaVendor = "Unknown";
 
         try {
@@ -586,67 +576,67 @@ public class Signlink implements Runnable {
         }
 
         try {
-            this.anEventQueue1199 = Toolkit.getDefaultToolkit().getSystemEventQueue();
+            this.systemEventQueue = Toolkit.getDefaultToolkit().getSystemEventQueue();
         } catch (Throwable var12) {
         }
 
         try {
-            if (var1 == null) {
-                aMethod1222 = Class.forName("java.awt.Component").getDeclaredMethod("setFocusTraversalKeysEnabled", new Class[]{Boolean.TYPE});
+            if (applet == null) {
+                setTraversalKeysEnabled = Class.forName("java.awt.Component").getDeclaredMethod("setFocusTraversalKeysEnabled", new Class[]{Boolean.TYPE});
             } else {
-                aMethod1222 = var1.getClass().getMethod("setFocusTraversalKeysEnabled", new Class[]{Boolean.TYPE});
+                setTraversalKeysEnabled = applet.getClass().getMethod("setFocusTraversalKeysEnabled", new Class[]{Boolean.TYPE});
             }
         } catch (Exception var11) {
         }
 
         try {
-            if (var1 == null) {
-                aMethod1220 = Class.forName("java.awt.Container").getDeclaredMethod("setFocusCycleRoot", new Class[]{Boolean.TYPE});
+            if (applet == null) {
+                setFocusCycleRoot = Class.forName("java.awt.Container").getDeclaredMethod("setFocusCycleRoot", new Class[]{Boolean.TYPE});
             } else {
-                aMethod1220 = var1.getClass().getMethod("setFocusCycleRoot", new Class[]{Boolean.TYPE});
+                setFocusCycleRoot = applet.getClass().getMethod("setFocusCycleRoot", new Class[]{Boolean.TYPE});
             }
         } catch (Exception var10) {
         }
 
-        this.aClass122_1207 = new Class122(method1448((String) null, this.anInt1215, true, "random.dat"), "rw", 25L);
-        this.aClass122_1198 = new Class122(method1448(this.aString1212, this.anInt1215, true, "main_file_cache.dat2"), "rw", 104857600L);
-        this.aClass122_1204 = new Class122(method1448(this.aString1212, this.anInt1215, true, "main_file_cache.idx255"), "rw", 1048576L);
-        this.aClass122Array1197 = new Class122[cacheIndexes];
+        this.randomDatFile = new RandomAccessFileWrapper(method1448(null, this.anInt1215, "random.dat"), "rw", 25L);
+        this.cacheDataFile = new RandomAccessFileWrapper(method1448(this.gameName, this.anInt1215, "main_file_cache.dat2"), "rw", 104857600L);
+        this.cacheChecksumFile = new RandomAccessFileWrapper(method1448(this.gameName, this.anInt1215, "main_file_cache.idx255"), "rw", 1048576L);
+        this.cacheIndicesFiles = new RandomAccessFileWrapper[cacheIndexes];
 
-        for (int var5 = 0; var5 < cacheIndexes; ++var5) {
-            this.aClass122Array1197[var5] = new Class122(method1448(this.aString1212, this.anInt1215, true, "main_file_cache.idx" + var5), "rw", 1048576L);
+        for (int i = 0; i < cacheIndexes; ++i) {
+            this.cacheIndicesFiles[i] = new RandomAccessFileWrapper(method1448(this.gameName, this.anInt1215, "main_file_cache.idx" + i), "rw", 1048576L);
         }
 
         try {
-            this.aDisplay1208 = new Display();
+            this.display = new Display();
         } catch (Throwable var9) {
             var9.printStackTrace();
         }
 
         try {
-            this.aSensor1206 = new Sensor();
+            this.sensor = new Sensor();
         } catch (Throwable var8) {
         }
 
-        ThreadGroup var18 = Thread.currentThread().getThreadGroup();
+        ThreadGroup threadGroup = Thread.currentThread().getThreadGroup();
 
-        for (ThreadGroup var6 = var18.getParent(); var6 != null; var6 = var6.getParent()) {
-            var18 = var6;
+        for (ThreadGroup parent = threadGroup.getParent(); parent != null; parent = parent.getParent()) {
+            threadGroup = parent;
         }
 
-        Thread[] var19 = new Thread[1000];
-        var18.enumerate(var19);
+        Thread[] threads = new Thread[1000];
+        threadGroup.enumerate(threads);
 
-        for (int var7 = 0; var7 < var19.length; ++var7) {
-            if (var19[var7] != null && var19[var7].getName().startsWith("AWT")) {
-                var19[var7].setPriority(1);
+        for (int i = 0; i < threads.length; ++i) {
+            if (threads[i] != null && threads[i].getName().startsWith("AWT")) {
+                threads[i].setPriority(1);
             }
         }
 
-        this.aBoolean1201 = false;
-        this.aThread1200 = new Thread(this);
-        this.aThread1200.setPriority(10);
-        this.aThread1200.setDaemon(true);
-        this.aThread1200.start();
+        this.stopped = false;
+        this.thread = new Thread(this);
+        this.thread.setPriority(10);
+        this.thread.setDaemon(true);
+        this.thread.start();
     }
 }

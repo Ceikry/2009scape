@@ -17,7 +17,7 @@ final class Class119 {
          Object var1;
          if(null == Class3_Sub13_Sub10.aFrame3121) {
             if(GameShell.frame == null) {
-               var1 = Class38.aClass87_665.anApplet1219;
+               var1 = Class38.aClass87_665.applet;
             } else {
                var1 = GameShell.frame;
             }
@@ -70,26 +70,26 @@ final class Class119 {
 
    static void method1730(Signlink var0) {
       try {
-         Class122 var2 = null;
+         RandomAccessFileWrapper var2 = null;
 
          try {
             Class64 var3 = var0.method1433("runescape", 12);
 
             while(0 == var3.anInt978) {
-               Class3_Sub13_Sub34.sleep(1L);
+               TimeUtils.sleep(1L);
             }
 
             if(var3.anInt978 == 1) {
-               var2 = (Class122)var3.anObject974;
+               var2 = (RandomAccessFileWrapper)var3.anObject974;
                DataBuffer var4 = Class23.method939();
-               var2.method1738(116, var4.buffer, var4.index, 0);
+               var2.write(var4.buffer, var4.index, 0);
             }
          } catch (Exception var6) {
          }
 
          try {
             if(var2 != null) {
-               var2.close(1);
+               var2.close();
             }
          } catch (Exception var5) {
          }

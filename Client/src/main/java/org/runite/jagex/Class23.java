@@ -50,7 +50,7 @@ final class Class23 {
          var1.putByte((byte)-117, Unsorted.aBoolean2146?1:0);
          var1.putByte((byte)-9, !Class15.aBoolean346?0:1);
          var1.putByte((byte)-39, Class3_Sub20.anInt2488);
-         var1.putByte((byte)-78, Class73.aBoolean1080?1:0);
+         var1.putByte((byte)-78, Unsorted.aBoolean1080?1:0);
          var1.putByte((byte)-79, Class163_Sub3.aBoolean3004?1:0);
          return var1;
       } catch (RuntimeException var2) {

@@ -68,7 +68,7 @@ final class Class3_Sub13_Sub6 extends Class3_Sub13 {
             Class3_Sub28_Sub5.anIntArray3587[var7] = -1;
          }
 
-         Class73.method1301(var3, var2, var1, var5, true, var4);
+         Unsorted.method1301(var3, var2, var1, var5, true, var4);
       } catch (RuntimeException var10) {
          throw Class44.clientError(var10, "ca.F(" + 20479 + ')');
       }

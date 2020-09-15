@@ -102,7 +102,7 @@ final class Class39 {
 				}
 
 								// plane, regY, regX, sceneY, .....sceneX
-				Class73.method1301(plane, var7, var3, var5, false, sceneX);
+				Unsorted.method1301(plane, var7, var3, var5, false, sceneX);
 			} else {
 				sceneX = GraphicDefinition.incomingBuffer.getShortA(-128);
 				var3 = (Unsorted.incomingPacketLength - GraphicDefinition.incomingBuffer.index) / 16;
@@ -159,7 +159,7 @@ final class Class39 {
 						++var3;
 					}
 				}
-				Class73.method1301(plane, var6, var5, var7, false, sceneX);
+				Unsorted.method1301(plane, var6, var5, var7, false, sceneX);
 			}
 
 		} catch (RuntimeException var17) {

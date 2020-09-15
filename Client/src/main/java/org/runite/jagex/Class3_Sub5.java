@@ -179,7 +179,7 @@ final class Class3_Sub5 extends Linkable {
 
    static int method115(boolean var0) {
       try {
-         long var2 = Class5.method830((byte)-55);
+         long var2 = TimeUtils.time();
 
          for(Class3_Sub7 var4 = !var0?(Class3_Sub7) Class86.aHashTable_3679.next():(Class3_Sub7) Class86.aHashTable_3679.first(); var4 != null; var4 = (Class3_Sub7) Class86.aHashTable_3679.next()) {
             if((4611686018427387903L & var4.aLong2295) < var2) {

@@ -1035,7 +1035,7 @@ final class RSInterface {
          } else {
             Class3_Sub28_Sub17 var3 = (Class3_Sub28_Sub17)Class47.aClass93_743.get((long)this.anInt270);
             if(null == var3) {
-               var3 = Class73.method1300(this.anInt270, (byte)127, Class12.aClass153_323, Class97.aClass153_1378);
+               var3 = Unsorted.method1300(this.anInt270, (byte)127, Class12.aClass153_323, Class97.aClass153_1378);
                if(null == var3) {
                   GameShell.aBoolean6 = true;
                } else {

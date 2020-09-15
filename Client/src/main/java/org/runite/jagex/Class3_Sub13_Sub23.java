@@ -179,7 +179,7 @@ class Class3_Sub13_Sub23 extends Class3_Sub13 {
             var3 = new Class3_Sub7(4611686018427387905L);
             Class86.aHashTable_3679.put((long)var2, var3);
          } else if (var3.aLong2295 != 4611686018427387905L) {
-            var3.aLong2295 = Class5.method830((byte) -55) + 500L | 4611686018427387904L;
+            var3.aLong2295 = TimeUtils.time() + 500L | 4611686018427387904L;
          }
 
       } catch (RuntimeException var4) {

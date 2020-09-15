@@ -4,7 +4,7 @@ import org.rs09.client.Node;
 
 abstract class ResourceRequest extends Node {
 
-   boolean aBoolean3628;
+   boolean priority;
    boolean aBoolean3635;
    volatile boolean waiting = true;
 

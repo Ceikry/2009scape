@@ -98,16 +98,16 @@ final class Class121 {
       try {
          try {
             if(Class43.anInt692 == 0) {
-               if(Class3_Sub13_Sub34.aLong3411 > Class5.method830((byte) -55) + -5000L) {
+               if(Class3_Sub13_Sub34.aLong3411 > TimeUtils.time() + -5000L) {
                   return 0;
                }
 
                Class3_Sub9.aClass64_2318 = Class38.aClass87_665.method1441((byte)8, Configurations.MS_IP, ClientLoader.WLPORT);//, Class123.anInt1658);
-               RSInterface.aLong261 = Class5.method830((byte)-55);
+               RSInterface.aLong261 = TimeUtils.time();
                Class43.anInt692 = 1;
             }
 
-            if(30000L + RSInterface.aLong261 < Class5.method830((byte)-55)) {
+            if(30000L + RSInterface.aLong261 < TimeUtils.time()) {
                return Class3_Sub13_Sub3.method179((byte)92, 1000);
             }
 
@@ -198,10 +198,10 @@ final class Class121 {
 
                      Class3_Sub15.aClass89_2429.close();
                      Class3_Sub15.aClass89_2429 = null;
-                     Class73.anInt1088 = 0;
+                     Unsorted.anInt1088 = 0;
                      Class43.anInt692 = 0;
                      Class3_Sub13_Sub33.aByteArray3396 = null;
-                     Class3_Sub13_Sub34.aLong3411 = Class5.method830((byte)-55);
+                     Class3_Sub13_Sub34.aLong3411 = TimeUtils.time();
                      return 0;
                   }
 

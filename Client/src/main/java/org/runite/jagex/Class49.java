@@ -149,14 +149,14 @@ final class Class49 {
          var3 = Class3_Sub28_Sub6.a("@", "%40", var3);
          var3 = Class3_Sub28_Sub6.a("&", "%26", var3);
          var3 = Class3_Sub28_Sub6.a("#", "%23", var3);
-         if(Class3_Sub13_Sub10.aClass87_3125.anApplet1219 == null) {
+         if(Class3_Sub13_Sub10.aClass87_3125.applet == null) {
             return;
          }
 
-         Class64 var4 = Class3_Sub13_Sub10.aClass87_3125.method1439(false, new URL(Class3_Sub13_Sub10.aClass87_3125.anApplet1219.getCodeBase(), "clienterror.ws?c=" + Class3_Sub13_Sub23_Sub1.anInt4033 + "&u=" + Class3_Sub13_Sub16.aLong3202 + "&v1=" + Signlink.javaVendor + "&v2=" + Signlink.javaVersion + "&e=" + var3));
+         Class64 var4 = Class3_Sub13_Sub10.aClass87_3125.method1439(false, new URL(Class3_Sub13_Sub10.aClass87_3125.applet.getCodeBase(), "clienterror.ws?c=" + Class3_Sub13_Sub23_Sub1.anInt4033 + "&u=" + Class3_Sub13_Sub16.aLong3202 + "&v1=" + Signlink.javaVendor + "&v2=" + Signlink.javaVersion + "&e=" + var3));
 
          while(var4.anInt978 == 0) {
-            Class3_Sub13_Sub34.sleep(1L);
+            TimeUtils.sleep(1L);
          }
 
          if(var4.anInt978 == 1) {

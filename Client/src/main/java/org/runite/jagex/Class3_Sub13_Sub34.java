@@ -310,17 +310,6 @@ public final class Class3_Sub13_Sub34 extends Class3_Sub13 {
         super(1, false);
     }
 
-    public static void sleep(long var0) {
-        if (0L < var0) {
-            if (0L == var0 % 10L) {
-                Class128.method1762(var0 + -1L, (byte) -123);
-                Class128.method1762(1L, (byte) 24);
-            } else {
-                Class128.method1762(var0, (byte) -128);
-            }
-        }
-    }
-
     static int method332(int var0, int var1) {
         try {
             if (var0 != 2) {
