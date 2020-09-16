@@ -2649,17 +2649,17 @@ public class Unsorted {
             }
 
             if (command.equalsStringIgnoreCase(Class3_Sub31.COMMAND_BREAK_JS5_CLIENT_CONNECTION)) {
-                Class58.aJs5Worker_917.method1254();
+                Class58.aJs5Worker_917.close();
             }
 
             if (command.equalsStringIgnoreCase(Class110.COMMAND_BREAK_JS5_SERVER_CONNECTION)) {
-                Class58.aJs5Worker_917.method1244();
+                Class58.aJs5Worker_917.requestTermination();
             }
 
             if (command.equalsStringIgnoreCase(Class95.COMMAND_BREAK_CONNECTION)) {
                 Class38.aClass87_665.method1431(0);
                 Class3_Sub15.activeConnection.applyDummyStreams();
-                Class58.aJs5Worker_917.method1248();
+                Class58.aJs5Worker_917.applyDummyStreams();
             }
 
             if (command.equalsStringIgnoreCase(Class3_Sub13.COMMAND_REPLACE_CANVAS)) {

@@ -53,10 +53,10 @@ final class Class117 {
                      Unsorted.method2099(KeyboardListener.anInt1912, Class75_Sub2.aClass153_2645, 255);
                   }
 
-                  Class58.aJs5Worker_917.method1247(false);
+                  Class58.aJs5Worker_917.sendLoginState(false);
                } else {
                   Unsorted.method882();
-                  Class58.aJs5Worker_917.method1247(true);
+                  Class58.aJs5Worker_917.sendLoginState(true);
                }
             }
 

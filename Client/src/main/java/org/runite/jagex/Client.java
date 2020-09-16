@@ -273,7 +273,7 @@ public final class Client extends GameShell {
                 Class3_Sub21.aClass155_2491.method2163();
             }
 
-            Class58.aJs5Worker_917.method1254();
+            Class58.aJs5Worker_917.close();
             Class3_Sub13_Sub14.aCacheResourceWorker_3159.stop();
 
             try {
@@ -496,10 +496,10 @@ public final class Client extends GameShell {
 
     private void method46(int var2) {
         try {
-            ++Class58.aJs5Worker_917.anInt1011;
+            ++Class58.aJs5Worker_917.errors;
             Class17.aClass64_413 = null;
 
-            Class58.aJs5Worker_917.anInt1010 = var2;
+            Class58.aJs5Worker_917.status = var2;
             Unsorted.js5Connection = null;
             PacketParser.anInt80 = 0;
         } catch (RuntimeException var4) {
@@ -647,7 +647,7 @@ public final class Client extends GameShell {
 
     private void method48() {
         try {
-            boolean var2 = Class58.aJs5Worker_917.method1243();
+            boolean var2 = Class58.aJs5Worker_917.process();
             if (!var2) {
                 this.method49();
             }
@@ -658,8 +658,8 @@ public final class Client extends GameShell {
     }
 
     private void method49() {
-        if (Class58.aJs5Worker_917.anInt1011 > Class163_Sub2_Sub1.anInt4026) {
-            Class3_Sub13_Sub5.anInt3068 = 5 * 50 * (Class58.aJs5Worker_917.anInt1011 + -1);
+        if (Class58.aJs5Worker_917.errors > Class163_Sub2_Sub1.anInt4026) {
+            Class3_Sub13_Sub5.anInt3068 = 5 * 50 * (Class58.aJs5Worker_917.errors + -1);
 
             if (Class162.anInt2036 == Class140_Sub6.accRegistryPort) {
                 Class140_Sub6.accRegistryPort = currentPort;
@@ -671,22 +671,22 @@ public final class Client extends GameShell {
                 Class3_Sub13_Sub5.anInt3068 = 3000;
             }
 
-            if (Class58.aJs5Worker_917.anInt1011 >= 2 && Class58.aJs5Worker_917.anInt1010 == 6) {
+            if (Class58.aJs5Worker_917.errors >= 2 && Class58.aJs5Worker_917.status == 6) {
                 this.method31("js5connect_outofdate");
                 Class143.loadingStage = 1000;
                 return;
             }
 
-            if (Class58.aJs5Worker_917.anInt1011 >= 4 && Class58.aJs5Worker_917.anInt1010 == -1) {
+            if (Class58.aJs5Worker_917.errors >= 4 && Class58.aJs5Worker_917.status == -1) {
                 this.method31("js5crc");
                 Class143.loadingStage = 1000;
                 return;
             }
 
-            if (Class58.aJs5Worker_917.anInt1011 >= 4 && (Class143.loadingStage == 0 || Class143.loadingStage == 5)) {
-                if (Class58.aJs5Worker_917.anInt1010 == 7 || Class58.aJs5Worker_917.anInt1010 == 9) {
+            if (Class58.aJs5Worker_917.errors >= 4 && (Class143.loadingStage == 0 || Class143.loadingStage == 5)) {
+                if (Class58.aJs5Worker_917.status == 7 || Class58.aJs5Worker_917.status == 9) {
                     this.method31("js5connect_full");
-                } else if (Class58.aJs5Worker_917.anInt1010 > 0) {
+                } else if (Class58.aJs5Worker_917.status > 0) {
                     this.method31("js5connect");
                 } else {
                     this.method31("js5io");
@@ -697,7 +697,7 @@ public final class Client extends GameShell {
             }
         }
 
-        Class163_Sub2_Sub1.anInt4026 = Class58.aJs5Worker_917.anInt1011;
+        Class163_Sub2_Sub1.anInt4026 = Class58.aJs5Worker_917.errors;
         if (Class3_Sub13_Sub5.anInt3068 > 0) {
             --Class3_Sub13_Sub5.anInt3068;
         } else {
@@ -748,7 +748,7 @@ public final class Client extends GameShell {
 
                 if (PacketParser.anInt80 == 4) {
                     boolean var6 = Class143.loadingStage == 5 || Class143.loadingStage == 10 || Class143.loadingStage == 28;
-                    Class58.aJs5Worker_917.method1249(!var6, Unsorted.js5Connection);
+                    Class58.aJs5Worker_917.connect(!var6, Unsorted.js5Connection);
                     Unsorted.js5Connection = null;
                     Class17.aClass64_413 = null;
                     PacketParser.anInt80 = 0;

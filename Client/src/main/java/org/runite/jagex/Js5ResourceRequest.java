@@ -1,29 +1,20 @@
 package org.runite.jagex;
 
-final class Js5ResourceRequest extends ResourceRequest {
+public final class Js5ResourceRequest extends ResourceRequest {
 
-    byte aByte4064;
-    int anInt4067;
-    DataBuffer aClass3_Sub30_4069;
+    protected byte padding;
+    protected int anInt4067;
+    protected DataBuffer data;
 
-    final int getCompletion() {
-        try {
-            return (this.aClass3_Sub30_4069 == null ? 0 : this.aClass3_Sub30_4069.index * 100 / (-this.aByte4064 + this.aClass3_Sub30_4069.buffer.length));
-        } catch (RuntimeException var3) {
-            throw Class44.clientError(var3, "pm.A(" + false + ')');
-        }
+    public final int getCompletion() {
+        return (this.data == null ? 0 : this.data.index * 100 / (-this.padding + this.data.buffer.length));
     }
 
-    final byte[] getData() {
-        try {
-            if (!this.waiting && -this.aByte4064 + this.aClass3_Sub30_4069.buffer.length <= this.aClass3_Sub30_4069.index) {
-
-                return this.aClass3_Sub30_4069.buffer;
-            } else {
-                throw new RuntimeException();
-            }
-        } catch (RuntimeException var3) {
-            throw Class44.clientError(var3, "pm.E(" + false + ')');
+    public final byte[] getData() {
+        if (!this.waiting && this.data.buffer.length - this.padding <= this.data.index) {
+            return this.data.buffer;
+        } else {
+            throw new RuntimeException();
         }
     }
 

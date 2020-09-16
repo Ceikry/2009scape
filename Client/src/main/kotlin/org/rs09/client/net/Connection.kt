@@ -146,7 +146,7 @@ class Connection(val socket: Socket, val signlink: Signlink) : Runnable {
         }
     }
 
-    fun method1466() {
+    fun checkErrors() {
         if (closed || !writeFailed) return
 
         writeFailed = false

@@ -163,7 +163,7 @@ final class Class3_Sub13_Sub36 extends Class3_Sub13 {
          Class7.anInt2162 = var7;
          NPC.anInt3995 = var6;
          Class3_Sub13_Sub25.anInt3315 = var10;
-         if(Class3_Sub13_Sub4.aBoolean3064 && Class58.aJs5Worker_917.method1253() == 0) {
+         if(Class3_Sub13_Sub4.aBoolean3064 && Class58.aJs5Worker_917.countPriorityRequests() == 0) {
             Class3_Sub13_Sub4.aBoolean3064 = false;
          }
 

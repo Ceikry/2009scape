@@ -51,11 +51,11 @@ final class Class151_Sub1 extends ResourceProvider {
     public final ReferenceTable getReferenceTable() {
         if (this.table == null) {
             if (null == this.aResourceRequest_2950) {
-                if (this.aJs5Worker_2953.method1251()) {
+                if (this.aJs5Worker_2953.priorityRequestsFull()) {
                     return null;
                 }
 
-                this.aResourceRequest_2950 = this.aJs5Worker_2953.addJS5Request(255, (byte) 0, this.anInt2957, true);
+                this.aResourceRequest_2950 = this.aJs5Worker_2953.request(255, this.anInt2957, (byte) 0, true);
             }
 
             if (this.aResourceRequest_2950.waiting) {
@@ -74,10 +74,10 @@ final class Class151_Sub1 extends ResourceProvider {
                         }
                     } catch (RuntimeException var4) {
                         this.table = null;
-                        if (this.aJs5Worker_2953.method1251()) {
+                        if (this.aJs5Worker_2953.priorityRequestsFull()) {
                             this.aResourceRequest_2950 = null;
                         } else {
-                            this.aResourceRequest_2950 = this.aJs5Worker_2953.addJS5Request(255, (byte) 0, this.anInt2957, true);
+                            this.aResourceRequest_2950 = this.aJs5Worker_2953.request(255, this.anInt2957, (byte) 0, true);
                         }
 
                         return null;
@@ -90,12 +90,12 @@ final class Class151_Sub1 extends ResourceProvider {
 
                         this.table = new ReferenceTable(var2, this.anInt2955);
                     } catch (RuntimeException var5) {
-                        this.aJs5Worker_2953.method1252();
+                        this.aJs5Worker_2953.closeWithError();
                         this.table = null;
-                        if (this.aJs5Worker_2953.method1251()) {
+                        if (this.aJs5Worker_2953.priorityRequestsFull()) {
                             this.aResourceRequest_2950 = null;
                         } else {
-                            this.aResourceRequest_2950 = this.aJs5Worker_2953.addJS5Request(255, (byte) 0, this.anInt2957, true);
+                            this.aResourceRequest_2950 = this.aJs5Worker_2953.request(255, this.anInt2957, (byte) 0, true);
                         }
 
                         return null;
@@ -234,7 +234,7 @@ final class Class151_Sub1 extends ResourceProvider {
                         if (this.table.archiveFileLengths[this.anInt2964] == 0) {
                             ++this.anInt2964;
                         } else {
-                            if (this.aJs5Worker_2953.method1241()) {
+                            if (this.aJs5Worker_2953.normalRequestsFull()) {
                                 var2 = false;
                                 break;
                             }
@@ -316,11 +316,11 @@ final class Class151_Sub1 extends ResourceProvider {
             if (null == var4) {
                 if (0 == var1) {
                     if (null == this.aClass41_2954 || this.aByteArray2949[archiveIndex] == -1) {
-                        if (this.aJs5Worker_2953.method1251()) {
+                        if (this.aJs5Worker_2953.priorityRequestsFull()) {
                             return null;
                         }
 
-                        var4 = this.aJs5Worker_2953.addJS5Request(this.anInt2957, (byte) 2, archiveIndex, true);
+                        var4 = this.aJs5Worker_2953.request(this.anInt2957, archiveIndex, (byte) 2, true);
                     } else {
                         var4 = this.cacheResourceWorker.priorityRead(this.aClass41_2954, archiveIndex);
                     }
@@ -343,11 +343,11 @@ final class Class151_Sub1 extends ResourceProvider {
                         throw new RuntimeException();
                     }
 
-                    if (this.aJs5Worker_2953.method1241()) {
+                    if (this.aJs5Worker_2953.normalRequestsFull()) {
                         return null;
                     }
 
-                    var4 = this.aJs5Worker_2953.addJS5Request(this.anInt2957, (byte) 2, archiveIndex, false);
+                    var4 = this.aJs5Worker_2953.request(this.anInt2957, archiveIndex, (byte) 2, false);
                 }
 
                 this.aHashTable_2946.put(archiveIndex, var4);
@@ -403,8 +403,8 @@ final class Class151_Sub1 extends ResourceProvider {
 //            	   var9.printStackTrace();
                         this.aByteArray2949[archiveIndex] = -1;
                         var4.unlink();
-                        if (var4.priority && !this.aJs5Worker_2953.method1251()) {
-                            var12 = this.aJs5Worker_2953.addJS5Request(this.anInt2957, (byte) 2, archiveIndex, true);
+                        if (var4.priority && !this.aJs5Worker_2953.priorityRequestsFull()) {
+                            var12 = this.aJs5Worker_2953.request(this.anInt2957, archiveIndex, (byte) 2, true);
                             this.aHashTable_2946.put(archiveIndex, var12);
                         }
 
@@ -430,14 +430,14 @@ final class Class151_Sub1 extends ResourceProvider {
                             }
                         }
 
-                        this.aJs5Worker_2953.anInt1011 = 0;
-                        this.aJs5Worker_2953.anInt1010 = 0;
+                        this.aJs5Worker_2953.errors = 0;
+                        this.aJs5Worker_2953.status = 0;
                     } catch (RuntimeException var10) {
                         var10.printStackTrace();
-                        this.aJs5Worker_2953.method1252();
+                        this.aJs5Worker_2953.closeWithError();
                         var4.unlink();
-                        if (var4.priority && !this.aJs5Worker_2953.method1251()) {
-                            var12 = this.aJs5Worker_2953.addJS5Request(this.anInt2957, (byte) 2, archiveIndex, true);
+                        if (var4.priority && !this.aJs5Worker_2953.priorityRequestsFull()) {
+                            var12 = this.aJs5Worker_2953.request(this.anInt2957, archiveIndex, (byte) 2, true);
                             this.aHashTable_2946.put(archiveIndex, var12);
                         }
 

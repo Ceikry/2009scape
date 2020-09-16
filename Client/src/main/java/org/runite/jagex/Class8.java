@@ -20,11 +20,11 @@ final class Class8 {
          if(null == this.aClass3_Sub30_99) {
 
             if(this.aJs5ResourceRequest_100 == null) {
-               if(this.aJs5Worker_102.method1251()) {
+               if(this.aJs5Worker_102.priorityRequestsFull()) {
                   return false;
                }
 
-               this.aJs5ResourceRequest_100 = this.aJs5Worker_102.addJS5Request(255, (byte)0, 255, true);
+               this.aJs5ResourceRequest_100 = this.aJs5Worker_102.request(255, 255, (byte)0, true);
             }
 
             if(this.aJs5ResourceRequest_100.waiting) {
@@ -254,8 +254,8 @@ final class Class8 {
       try {
          this.aCacheResourceWorker_103 = var2;
          this.aJs5Worker_102 = var1;
-         if(!this.aJs5Worker_102.method1251()) {
-            this.aJs5ResourceRequest_100 = this.aJs5Worker_102.addJS5Request(255, (byte)0, 255, true);
+         if(!this.aJs5Worker_102.priorityRequestsFull()) {
+            this.aJs5ResourceRequest_100 = this.aJs5Worker_102.request(255, 255, (byte)0, true);
          }
 
       } catch (RuntimeException var4) {
