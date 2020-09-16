@@ -12,7 +12,7 @@ import javax.media.opengl.GLDrawable;
 import javax.media.opengl.GLDrawableFactory;
 import javax.media.opengl.glu.GLU;
 
-final class HDToolKit {
+public final class HDToolKit {
 
    private static String aString1785;
    private static String aString1786;
@@ -34,7 +34,7 @@ final class HDToolKit {
    private static int anInt1803 = -1;
    static GL gl;
    private static boolean aBoolean1805 = true;
-   static boolean highDetail = false;
+   public static boolean highDetail = false;
    private static float[] aFloatArray1808 = new float[16];
    static boolean aBoolean1809;
    static int anInt1810;

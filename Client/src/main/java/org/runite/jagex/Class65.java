@@ -150,7 +150,7 @@ final class Class65 {
          }
 
          Class96.anInt1358 = (short)var0;
-         Canvas_Sub2.anInt31 = (short)var3;
+         Unsorted.anInt31 = (short)var3;
          Class3_Sub28_Sub3.anInt3564 = var2;
          Class163_Sub1.anInt2989 = var4;
       } catch (RuntimeException var11) {

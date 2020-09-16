@@ -28,13 +28,13 @@ final class Class3_Sub13_Sub13 extends Class3_Sub13 {
                 if(null == var3) {
                    var0 = -1;
                 } else {
-                   Class38.aClass87_665.method1434(var3.method655(), 10000, var3.anInt3697, Class3_Sub28_Sub12.aCanvas3648, new Point(var2.anInt881, var2.anInt879), var3.anInt3706);
+                   Class38.aClass87_665.method1434(var3.method655(), 10000, var3.anInt3697, Class3_Sub28_Sub12.canvas, new Point(var2.anInt881, var2.anInt879), var3.anInt3706);
                    Class65.anInt991 = var0;
                 }
              }
 
              if(var0 == -1 && Class65.anInt991 != -1) {
-                Class38.aClass87_665.method1434((int[])null, 10000, -1, Class3_Sub28_Sub12.aCanvas3648, new Point(), -1);
+                Class38.aClass87_665.method1434((int[])null, 10000, -1, Class3_Sub28_Sub12.canvas, new Point(), -1);
                 Class65.anInt991 = -1;
              }
 
@@ -95,7 +95,7 @@ final class Class3_Sub13_Sub13 extends Class3_Sub13 {
 
    static void method232(int var0) {
       try {
-         if(Canvas_Sub2.loadInterface(var0)) {
+         if(Unsorted.loadInterface(var0)) {
             RSInterface[] var2 = GameObject.aClass11ArrayArray1834[var0];
 
             for(int var3 = 0; var3 < var2.length; ++var3) {
@@ -232,7 +232,7 @@ final class Class3_Sub13_Sub13 extends Class3_Sub13 {
                int var8;
                int var9;
                synchronized(var14) {
-                  if(Canvas_Sub2.aBoolean29) {
+                  if(Unsorted.aBoolean29) {
                      if(Class3_Sub28_Sub11.anInt3644 != 0 || Class106.aClass67_1443.anInt1018 >= 40) {
                         Class3_Sub13_Sub1.outgoingBuffer.putOpcode(123);
                         var3 = 0;
@@ -264,15 +264,15 @@ final class Class3_Sub13_Sub13 extends Class3_Sub13 {
                               var6 = -1;
                            }
 
-                           if(Class155.anInt1977 == var6 && var5 == Canvas_Sub1.anInt14) {
+                           if(Class155.anInt1977 == var6 && var5 == Unsorted.anInt14) {
                               if(2047 > Class3_Sub26.anInt2556) {
                                  ++Class3_Sub26.anInt2556;
                               }
                            } else {
                               var8 = -Class155.anInt1977 + var6;
                               Class155.anInt1977 = var6;
-                              var9 = var5 + -Canvas_Sub1.anInt14;
-                              Canvas_Sub1.anInt14 = var5;
+                              var9 = var5 + -Unsorted.anInt14;
+                              Unsorted.anInt14 = var5;
                               if(Class3_Sub26.anInt2556 < 8 && var8 >= -32 && 31 >= var8 && -32 <= var9 && var9 <= 31) {
                                  var9 += 32;
                                  var8 += 32;
@@ -571,7 +571,7 @@ final class Class3_Sub13_Sub13 extends Class3_Sub13 {
                               if(Class67.aClass11_1017 == Class99.aClass11_1402 && PacketParser.anInt86 != Class140_Sub2.anInt2701) {
                                  var17 = Class67.aClass11_1017;
                                  byte var18 = 0;
-                                 if(1 == Canvas_Sub1.anInt15 && 206 == var17.anInt189) {
+                                 if(1 == Unsorted.anInt15 && 206 == var17.anInt189) {
                                     var18 = 1;
                                  }
 
@@ -804,7 +804,7 @@ final class Class3_Sub13_Sub13 extends Class3_Sub13 {
                                           }
 
                                           if((2 & nodeModelID) == 2) {
-                                             Class164_Sub2.anInt3020 += Canvas_Sub1.anInt25;
+                                             Class164_Sub2.anInt3020 += Unsorted.anInt25;
                                           }
                                        }
 
@@ -817,7 +817,7 @@ final class Class3_Sub13_Sub13 extends Class3_Sub13 {
                                        }
 
                                        if(Class164_Sub2.anInt3020 < -20) {
-                                          Canvas_Sub1.anInt25 = 1;
+                                          Unsorted.anInt25 = 1;
                                        }
 
                                        if(-55 > Unsorted.anInt42) {
@@ -841,7 +841,7 @@ final class Class3_Sub13_Sub13 extends Class3_Sub13 {
                                        }
 
                                        if(10 < Class164_Sub2.anInt3020) {
-                                          Canvas_Sub1.anInt25 = -1;
+                                          Unsorted.anInt25 = -1;
                                        }
 
                                        if(60 < Class3_Sub13_Sub8.anInt3102) {

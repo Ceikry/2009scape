@@ -3,7 +3,7 @@ package org.runite.jagex;
 import java.nio.IntBuffer;
 import javax.media.opengl.GL;
 
-final class Class22 {
+public final class Class22 {
 
    static Class3_Sub28_Sub16_Sub1 aClass3_Sub28_Sub16_Sub1_447 = null;
    static int anInt448 = 0;
@@ -148,7 +148,7 @@ final class Class22 {
       }
    }
 
-   static void method930(int var0, int var1, int var2, int var3, int var4, int var5) {
+   public static void method930(int var0, int var1, int var2, int var3, int var4, int var5) {
       HDToolKit.method1835();
       float var6 = (float)var0;
       float var7 = var6 + (float)var2;

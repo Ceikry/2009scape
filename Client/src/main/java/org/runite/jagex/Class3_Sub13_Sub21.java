@@ -48,7 +48,7 @@ final class Class3_Sub13_Sub21 extends Class3_Sub13 {
 
    static void method267(byte var0) {
 	  try {
-         if(Canvas_Sub1.registryStage != 0) {
+         if(Unsorted.registryStage != 0) {
             try {
                if(++Class132.anInt1734 > 2000) {
                   if(null != Class3_Sub15.aClass89_2429) {
@@ -58,11 +58,11 @@ final class Class3_Sub13_Sub21 extends Class3_Sub13 {
 
                   if(GraphicDefinition.anInt548 >= 1) {
                      Unsorted.anInt1711 = -5;
-                     Canvas_Sub1.registryStage = 0;
+                     Unsorted.registryStage = 0;
                      return;
                   }
 
-                  Canvas_Sub1.registryStage = 1;
+                  Unsorted.registryStage = 1;
                   Class132.anInt1734 = 0;
                   ++GraphicDefinition.anInt548;
                   if(Class140_Sub6.accRegistryPort == Class162.anInt2036) {
@@ -72,14 +72,14 @@ final class Class3_Sub13_Sub21 extends Class3_Sub13 {
                   }
                }
 
-               if(Canvas_Sub1.registryStage == 1) {
+               if(Unsorted.registryStage == 1) {
             	   //Ip & Port
                   Class3_Sub9.aClass64_2318 = Class38.aClass87_665.method1441((byte)8, Class38_Sub1.accRegistryIp, Class140_Sub6.accRegistryPort);
-                  Canvas_Sub1.registryStage = 2;
+                  Unsorted.registryStage = 2;
                }
 
                int response;
-               if(Canvas_Sub1.registryStage == 2) {
+               if(Unsorted.registryStage == 2) {
                   if(Objects.requireNonNull(Class3_Sub9.aClass64_2318).anInt978 == 2) {
                      throw new IOException();
                   }
@@ -105,28 +105,28 @@ final class Class3_Sub13_Sub21 extends Class3_Sub13 {
                   }
                   if(response != 21) {
                      Unsorted.anInt1711 = response;
-                     Canvas_Sub1.registryStage = 0;
+                     Unsorted.registryStage = 0;
                      Class3_Sub15.aClass89_2429.close();
                      Class3_Sub15.aClass89_2429 = null;
                      return;
                   }
-                  Canvas_Sub1.registryStage = 3;
+                  Unsorted.registryStage = 3;
                }
 
                if(var0 <= 26) {
                   method269(-75, 44);
                }
 
-               if(3 == Canvas_Sub1.registryStage) {
+               if(3 == Unsorted.registryStage) {
                   if(Class3_Sub15.aClass89_2429.availableBytes() < 1) {
                      return;
                   }
 
                   Class3_Sub13_Sub33.aClass94Array3391 = new RSString[Class3_Sub15.aClass89_2429.readByte()];
-                  Canvas_Sub1.registryStage = 4;
+                  Unsorted.registryStage = 4;
                }
 
-               if(Canvas_Sub1.registryStage == 4) {
+               if(Unsorted.registryStage == 4) {
                   if(8 * Class3_Sub13_Sub33.aClass94Array3391.length > Class3_Sub15.aClass89_2429.availableBytes()) {
                      return;
                   }
@@ -139,7 +139,7 @@ final class Class3_Sub13_Sub21 extends Class3_Sub13 {
                   }
 
                   Unsorted.anInt1711 = 21;
-                  Canvas_Sub1.registryStage = 0;
+                  Unsorted.registryStage = 0;
                   Class3_Sub15.aClass89_2429.close();
                   Class3_Sub15.aClass89_2429 = null;
                   return;
@@ -159,10 +159,10 @@ final class Class3_Sub13_Sub21 extends Class3_Sub13 {
                   }
 
                   Class132.anInt1734 = 0;
-                  Canvas_Sub1.registryStage = 1;
+                  Unsorted.registryStage = 1;
                } else {
                   Unsorted.anInt1711 = -4;
-                  Canvas_Sub1.registryStage = 0;
+                  Unsorted.registryStage = 0;
                }
             }
 

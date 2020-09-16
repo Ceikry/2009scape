@@ -480,7 +480,7 @@ final class AnimationDefinition {
 			Class157.anInt1996 = 0;
 			Class3_Sub13_Sub34.anInt3414 = 0;
 			Class146.anInt1904 = 0;
-			Canvas_Sub2.anInt30 = 0;
+			Unsorted.anInt30 = 0;
 			GraphicDefinition.anInt529 = 0;
 			MouseListeningClass.anInt1923 = 0;
 			Unsorted.anInt3631 = 0;

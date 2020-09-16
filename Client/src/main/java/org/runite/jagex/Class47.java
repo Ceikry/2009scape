@@ -580,8 +580,8 @@ final class Class47 {
                                                    var31 = Class22.anInt451;
                                                    var30 = Class22.anInt448;
                                                 } else {
-                                                   var30 = Class74.anInt1095;
-                                                   var31 = Class74.anInt1099;
+                                                   var30 = Class74.clipTop;
+                                                   var31 = Class74.clipBottom;
                                                 }
 
                                                 int var32;
@@ -627,6 +627,7 @@ final class Class47 {
                                  }
                               }
                            } else if (3 == var11.type) {
+                              // TODO DRAWRECT
                               if (Class3_Sub28_Sub12.method609(var11, 26)) {
                                  var20 = var11.anInt253;
                                  if (Class107.aClass11_1453 == var11 && 0 != var11.anInt222) {
@@ -644,7 +645,7 @@ final class Class47 {
                                     if (HDToolKit.highDetail) {
                                        Class22.method930(var13, var14, var11.width, var11.height, var20, 256 - (var15 & 255));
                                     } else {
-                                       Class74.method1312(var13, var14, var11.width, var11.height, var20, 256 + -(255 & var15));
+                                       Class74.fillRectangle(var13, var14, var11.width, var11.height, var20, 256 + -(255 & var15));
                                     }
                                  } else if (HDToolKit.highDetail) {
                                     Class22.method928(var13, var14, var11.width, var11.height, var20, 256 + -(var15 & 255));

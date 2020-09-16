@@ -46,7 +46,7 @@ abstract class Class129 {
 
             int var9;
             for(var9 = var8; var9 < 128; ++var9) {
-               int var11 = Class74.anIntArray1100[var5++ + var0];
+               int var11 = Class74.buffer[var5++ + var0];
                int var10 = Class127.anIntArray1681[var4++];
                if(var10 == 0) {
                   Class97.aClass3_Sub28_Sub16_Sub2_1381.anIntArray4081[var6++] = var11;
@@ -67,7 +67,7 @@ abstract class Class129 {
             }
 
             for(var9 = 0; var9 < var8; ++var9) {
-               Class97.aClass3_Sub28_Sub16_Sub2_1381.anIntArray4081[var6++] = Class74.anIntArray1100[var0 + var5++];
+               Class97.aClass3_Sub28_Sub16_Sub2_1381.anIntArray4081[var6++] = Class74.buffer[var0 + var5++];
             }
 
             var5 += Class74.anInt1092 + -128;

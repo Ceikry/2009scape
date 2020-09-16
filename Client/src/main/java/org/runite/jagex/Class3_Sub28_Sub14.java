@@ -114,42 +114,42 @@ final class Class3_Sub28_Sub14 extends Node {
                   Class140_Sub3.anInt2737 = 70;
                   Class75_Sub4.method1355();
                } else if (Class140_Sub3.anInt2737 == 70) {
-                  Class164_Sub2.aClass33_3019 = new Class33(11, Class3_Sub28_Sub12.aCanvas3648);
+                  Class164_Sub2.aClass33_3019 = new Class33(11, Class3_Sub28_Sub12.canvas);
                   Class140_Sub3.anInt2737 = 73;
                   Class163_Sub1.method2210(true);
                   Class75_Sub4.method1355();
                } else if (Class140_Sub3.anInt2737 == 73) {
-                  Unsorted.aClass33_1238 = new Class33(12, Class3_Sub28_Sub12.aCanvas3648);
+                  Unsorted.aClass33_1238 = new Class33(12, Class3_Sub28_Sub12.canvas);
                   Class140_Sub3.anInt2737 = 76;
                   Class163_Sub1.method2210(true);
                   Class75_Sub4.method1355();
                } else if (Class140_Sub3.anInt2737 == 76) {
-                  Class99.aClass33_1399 = new Class33(14, Class3_Sub28_Sub12.aCanvas3648);
+                  Class99.aClass33_1399 = new Class33(14, Class3_Sub28_Sub12.canvas);
                   Class140_Sub3.anInt2737 = 79;
                   Class163_Sub1.method2210(true);
                   Class75_Sub4.method1355();
                } else if (Class140_Sub3.anInt2737 == 79) {
-                  Class75_Sub2.aClass33_2637 = new Class33(17, Class3_Sub28_Sub12.aCanvas3648);
+                  Class75_Sub2.aClass33_2637 = new Class33(17, Class3_Sub28_Sub12.canvas);
                   Class140_Sub3.anInt2737 = 82;
                   Class163_Sub1.method2210(true);
                   Class75_Sub4.method1355();
                } else if (Class140_Sub3.anInt2737 == 82) {
-                  Class119.aClass33_1626 = new Class33(19, Class3_Sub28_Sub12.aCanvas3648);
+                  Class119.aClass33_1626 = new Class33(19, Class3_Sub28_Sub12.canvas);
                   Class140_Sub3.anInt2737 = 85;
                   Class163_Sub1.method2210(true);
                   Class75_Sub4.method1355();
                } else if (85 == Class140_Sub3.anInt2737) {
-                  Class75_Sub2.aClass33_2648 = new Class33(22, Class3_Sub28_Sub12.aCanvas3648);
+                  Class75_Sub2.aClass33_2648 = new Class33(22, Class3_Sub28_Sub12.canvas);
                   Class140_Sub3.anInt2737 = 88;
                   Class163_Sub1.method2210(true);
                   Class75_Sub4.method1355();
                } else if (88 == Class140_Sub3.anInt2737) {
-                  Class161.aClass33_2034 = new Class33(26, Class3_Sub28_Sub12.aCanvas3648);
+                  Class161.aClass33_2034 = new Class33(26, Class3_Sub28_Sub12.canvas);
                   Class140_Sub3.anInt2737 = 91;
                   Class163_Sub1.method2210(true);
                   Class75_Sub4.method1355();
                } else {
-                  Class91.aClass33_1305 = new Class33(30, Class3_Sub28_Sub12.aCanvas3648);
+                  Class91.aClass33_1305 = new Class33(30, Class3_Sub28_Sub12.canvas);
                   Class140_Sub3.anInt2737 = 100;
                   Class163_Sub1.method2210(true);
                   Class75_Sub4.method1355();

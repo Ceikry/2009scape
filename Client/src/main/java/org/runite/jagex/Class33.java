@@ -71,30 +71,30 @@ final class Class33 {
       int var12 = Class74.anInt1092 - var8;
       int var13 = 0;
       int var14;
-      if(var7 < Class74.anInt1095) {
-         var14 = Class74.anInt1095 - var7;
+      if(var7 < Class74.clipTop) {
+         var14 = Class74.clipTop - var7;
          var9 -= var14;
-         var7 = Class74.anInt1095;
+         var7 = Class74.clipTop;
          var10 += var14 * var8;
          var11 += var14 * Class74.anInt1092;
       }
 
-      if(var7 + var9 >= Class74.anInt1099) {
-         var9 -= var7 + var9 - Class74.anInt1099 + 1;
+      if(var7 + var9 >= Class74.clipBottom) {
+         var9 -= var7 + var9 - Class74.clipBottom + 1;
       }
 
-      if(var6 < Class74.anInt1093) {
-         var14 = Class74.anInt1093 - var6;
+      if(var6 < Class74.clipLeft) {
+         var14 = Class74.clipLeft - var6;
          var8 -= var14;
-         var6 = Class74.anInt1093;
+         var6 = Class74.clipLeft;
          var10 += var14;
          var11 += var14;
          var13 += var14;
          var12 += var14;
       }
 
-      if(var6 + var8 >= Class74.anInt1096) {
-         var14 = var6 + var8 - Class74.anInt1096 + 1;
+      if(var6 + var8 >= Class74.clipRight) {
+         var14 = var6 + var8 - Class74.clipRight + 1;
          var8 -= var14;
          var13 += var14;
          var12 += var14;
@@ -102,9 +102,9 @@ final class Class33 {
 
       if(var8 > 0 && var9 > 0) {
          if(this.aBoolean595) {
-            this.method1000(Class74.anIntArray1100, var5, var4, var10, var11, var8, var9, var12, var13);
+            this.method1000(Class74.buffer, var5, var4, var10, var11, var8, var9, var12, var13);
          } else {
-            this.method1002(Class74.anIntArray1100, var5, var4, var10, var11, var8, var9, var12, var13);
+            this.method1002(Class74.buffer, var5, var4, var10, var11, var8, var9, var12, var13);
          }
       }
 
@@ -159,9 +159,9 @@ final class Class33 {
    final void method1003(RSString var1, int var2, int var3, int var4) {
       int var6 = this.method1005(var1) / 2;
       int var7 = this.method1006();
-      if(var2 - var6 <= Class74.anInt1096) {
-         if(var2 + var6 >= Class74.anInt1093) {
-            if(var3 - var7 <= Class74.anInt1099) {
+      if(var2 - var6 <= Class74.clipRight) {
+         if(var2 + var6 >= Class74.clipLeft) {
+            if(var3 - var7 <= Class74.clipBottom) {
                if(var3 >= 0) {
                   this.method997(var1, var2 - var6, var3, var4, true);
                }
@@ -189,7 +189,7 @@ final class Class33 {
       int var8 = var2.getMaxAscent();
       int var9 = var2.getMaxAscent() + var2.getMaxDescent();
       int var10 = var2.getHeight();
-      Image var11 = Class3_Sub28_Sub12.aCanvas3648.createImage(var6, var9);
+      Image var11 = Class3_Sub28_Sub12.canvas.createImage(var6, var9);
       Graphics var12 = var11.getGraphics();
       var12.setColor(Color.black);
       var12.fillRect(0, 0, var6, var9);

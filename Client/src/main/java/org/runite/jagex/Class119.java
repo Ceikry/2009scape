@@ -50,12 +50,12 @@ final class Class119 {
             HDToolKit.method1854(Class23.anInt454, Class140_Sub7.anInt2934);
          }
 
-         Class3_Sub28_Sub12.aCanvas3648.setSize(Class23.anInt454, Class140_Sub7.anInt2934);
+         Class3_Sub28_Sub12.canvas.setSize(Class23.anInt454, Class140_Sub7.anInt2934);
          if(var1 == GameShell.frame) {
             var2 = GameShell.frame.getInsets();
-            Class3_Sub28_Sub12.aCanvas3648.setLocation(var2.left + Class84.anInt1164, Class106.anInt1442 + var2.top);
+            Class3_Sub28_Sub12.canvas.setLocation(var2.left + Class84.anInt1164, Class106.anInt1442 + var2.top);
          } else {
-            Class3_Sub28_Sub12.aCanvas3648.setLocation(Class84.anInt1164, Class106.anInt1442);
+            Class3_Sub28_Sub12.canvas.setLocation(Class84.anInt1164, Class106.anInt1442);
          }
 
          if(Class3_Sub28_Sub12.anInt3655 != -1) {

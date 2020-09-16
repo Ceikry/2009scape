@@ -131,7 +131,7 @@ final class Class3_Sub24_Sub4 extends Class3_Sub24 {
 
    static void method474() {
       try {
-         Canvas_Sub1.aClass93_21.method1522(-125, 5);
+         Unsorted.aClass93_21.method1522(-125, 5);
          Class99.aClass93_1401.method1522(-126, 5);
 
          Class3_Sub28_Sub7_Sub1.aClass93_4051.method1522(2 ^ -127, 5);

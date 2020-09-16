@@ -6,7 +6,7 @@ import java.awt.Canvas;
 public final class Class3_Sub28_Sub12 extends Node {
 
    int anInt3647 = 0;
-   public static Canvas aCanvas3648;
+   public static Canvas canvas;
    static RSString aClass94_3651 = RSString.of("::mm");
    static int anInt3652;
    static RSString aClass94_3653 = RSString.of("Shift)2click disabled)3");

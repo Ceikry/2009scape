@@ -94,7 +94,7 @@ final class Class3_Sub13_Sub12 extends Class3_Sub13 {
                     method228((CacheIndex) null, (CacheIndex) null, true);
                 }
 
-                if (Canvas_Sub2.loadInterface(var0)) {
+                if (Unsorted.loadInterface(var0)) {
                     RSInterface[] var2 = GameObject.aClass11ArrayArray1834[var0];
 
                     for (int var3 = 0; var3 < var2.length; ++var3) {

@@ -21,7 +21,7 @@ final class Class3_Sub10 extends Linkable {
    static void method139(int var0) {
       try {
          if(var0 >= 63) {
-            Canvas_Sub1.aClass93_21.method1524();
+            Unsorted.aClass93_21.method1524();
             Class99.aClass93_1401.method1524();
             Class3_Sub28_Sub7_Sub1.aClass93_4051.method1524();
             Class154.aClass93_1965.method1524();

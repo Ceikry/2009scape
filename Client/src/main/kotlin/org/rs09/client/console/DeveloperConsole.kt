@@ -1,5 +1,7 @@
 package org.rs09.client.console
 
+import org.rs09.client.rendering.RenderingUtils
+
 object DeveloperConsole {
 
     var open = false
@@ -10,7 +12,9 @@ object DeveloperConsole {
     }
 
     fun draw() {
+        if (!open) return
 
+        RenderingUtils.fillRect(0, 0, RenderingUtils.width, 200, 255, 128)
     }
 
 }

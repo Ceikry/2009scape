@@ -107,7 +107,7 @@ final class Class52 {
 
    static void method1160(int var0, int var1) {
       try {
-         if(Canvas_Sub2.loadInterface(var1)) {
+         if(Unsorted.loadInterface(var1)) {
             if(var0 > -100) {
                method1168(52);
             }

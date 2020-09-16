@@ -55,7 +55,7 @@ final class Class162 {
       try {
           //36873, 24065, 22418
 
-         ObjectDefinition var2 = (ObjectDefinition)Canvas_Sub1.aClass93_21.get((long)objectId);
+         ObjectDefinition var2 = (ObjectDefinition) Unsorted.aClass93_21.get((long)objectId);
          if(var2 == null) {
             byte[] var3 = Class85.aClass153_1171.getFile(Class3_Sub13_Sub36.method340(objectId), objectId & 255);
             var2 = new ObjectDefinition();
@@ -74,7 +74,7 @@ final class Class162 {
                var2.ProjectileClipped = false;
             }
 
-            Canvas_Sub1.aClass93_21.put((byte)-114, var2, (long)objectId);
+            Unsorted.aClass93_21.put((byte)-114, var2, (long)objectId);
          }
          return var2;
       } catch (RuntimeException var4) {

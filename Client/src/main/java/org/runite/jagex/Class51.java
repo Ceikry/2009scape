@@ -23,7 +23,7 @@ final class Class51 {
 
 
    static void method1134() {
-      method1151(Class74.anInt1093, Class74.anInt1095, Class74.anInt1096, Class74.anInt1099);
+      method1151(Class74.clipLeft, Class74.clipTop, Class74.clipRight, Class74.clipBottom);
    }
 
    static void method1135(int var0, int var1, int var2, int var3, int var4, int var5, int var6, int var7, int var8, int var9, int var10, int var11, int var12, int var13, int var14, int var15, int var16, int var17, int var18) {
@@ -120,7 +120,7 @@ final class Class51 {
                                     return;
                                  }
 
-                                 method1143(Class74.anIntArray1100, var19, var0, var4 >> 16, var5 >> 16, var6, var30, var32, var35, var38, var33, var36, var39);
+                                 method1143(Class74.buffer, var19, var0, var4 >> 16, var5 >> 16, var6, var30, var32, var35, var38, var33, var36, var39);
                                  var5 += var28;
                                  var4 += var27;
                                  var6 += var31;
@@ -131,7 +131,7 @@ final class Class51 {
                               }
                            }
 
-                           method1143(Class74.anIntArray1100, var19, var0, var3 >> 16, var5 >> 16, var6, var30, var32, var35, var38, var33, var36, var39);
+                           method1143(Class74.buffer, var19, var0, var3 >> 16, var5 >> 16, var6, var30, var32, var35, var38, var33, var36, var39);
                            var5 += var28;
                            var3 += var26;
                            var6 += var31;
@@ -154,7 +154,7 @@ final class Class51 {
                                     return;
                                  }
 
-                                 method1143(Class74.anIntArray1100, var19, var0, var5 >> 16, var4 >> 16, var6, var30, var32, var35, var38, var33, var36, var39);
+                                 method1143(Class74.buffer, var19, var0, var5 >> 16, var4 >> 16, var6, var30, var32, var35, var38, var33, var36, var39);
                                  var5 += var28;
                                  var4 += var27;
                                  var6 += var31;
@@ -165,7 +165,7 @@ final class Class51 {
                               }
                            }
 
-                           method1143(Class74.anIntArray1100, var19, var0, var5 >> 16, var3 >> 16, var6, var30, var32, var35, var38, var33, var36, var39);
+                           method1143(Class74.buffer, var19, var0, var5 >> 16, var3 >> 16, var6, var30, var32, var35, var38, var33, var36, var39);
                            var5 += var28;
                            var3 += var26;
                            var6 += var31;
@@ -208,7 +208,7 @@ final class Class51 {
                                     return;
                                  }
 
-                                 method1143(Class74.anIntArray1100, var19, var0, var3 >> 16, var5 >> 16, var6, var30, var32, var35, var38, var33, var36, var39);
+                                 method1143(Class74.buffer, var19, var0, var3 >> 16, var5 >> 16, var6, var30, var32, var35, var38, var33, var36, var39);
                                  var5 += var27;
                                  var3 += var26;
                                  var6 += var31;
@@ -219,7 +219,7 @@ final class Class51 {
                               }
                            }
 
-                           method1143(Class74.anIntArray1100, var19, var0, var3 >> 16, var4 >> 16, var6, var30, var32, var35, var38, var33, var36, var39);
+                           method1143(Class74.buffer, var19, var0, var3 >> 16, var4 >> 16, var6, var30, var32, var35, var38, var33, var36, var39);
                            var4 += var28;
                            var3 += var26;
                            var6 += var31;
@@ -242,7 +242,7 @@ final class Class51 {
                                     return;
                                  }
 
-                                 method1143(Class74.anIntArray1100, var19, var0, var5 >> 16, var3 >> 16, var6, var30, var32, var35, var38, var33, var36, var39);
+                                 method1143(Class74.buffer, var19, var0, var5 >> 16, var3 >> 16, var6, var30, var32, var35, var38, var33, var36, var39);
                                  var5 += var27;
                                  var3 += var26;
                                  var6 += var31;
@@ -253,7 +253,7 @@ final class Class51 {
                               }
                            }
 
-                           method1143(Class74.anIntArray1100, var19, var0, var4 >> 16, var3 >> 16, var6, var30, var32, var35, var38, var33, var36, var39);
+                           method1143(Class74.buffer, var19, var0, var4 >> 16, var3 >> 16, var6, var30, var32, var35, var38, var33, var36, var39);
                            var4 += var28;
                            var3 += var26;
                            var6 += var31;
@@ -309,7 +309,7 @@ final class Class51 {
                                     return;
                                  }
 
-                                 method1143(Class74.anIntArray1100, var19, var1, var5 >> 16, var3 >> 16, var7, var30, var32, var35, var38, var33, var36, var39);
+                                 method1143(Class74.buffer, var19, var1, var5 >> 16, var3 >> 16, var7, var30, var32, var35, var38, var33, var36, var39);
                                  var3 += var26;
                                  var5 += var28;
                                  var7 += var31;
@@ -320,7 +320,7 @@ final class Class51 {
                               }
                            }
 
-                           method1143(Class74.anIntArray1100, var19, var1, var4 >> 16, var3 >> 16, var7, var30, var32, var35, var38, var33, var36, var39);
+                           method1143(Class74.buffer, var19, var1, var4 >> 16, var3 >> 16, var7, var30, var32, var35, var38, var33, var36, var39);
                            var3 += var26;
                            var4 += var27;
                            var7 += var31;
@@ -343,7 +343,7 @@ final class Class51 {
                                     return;
                                  }
 
-                                 method1143(Class74.anIntArray1100, var19, var1, var3 >> 16, var5 >> 16, var7, var30, var32, var35, var38, var33, var36, var39);
+                                 method1143(Class74.buffer, var19, var1, var3 >> 16, var5 >> 16, var7, var30, var32, var35, var38, var33, var36, var39);
                                  var3 += var26;
                                  var5 += var28;
                                  var7 += var31;
@@ -354,7 +354,7 @@ final class Class51 {
                               }
                            }
 
-                           method1143(Class74.anIntArray1100, var19, var1, var3 >> 16, var4 >> 16, var7, var30, var32, var35, var38, var33, var36, var39);
+                           method1143(Class74.buffer, var19, var1, var3 >> 16, var4 >> 16, var7, var30, var32, var35, var38, var33, var36, var39);
                            var3 += var26;
                            var4 += var27;
                            var7 += var31;
@@ -397,7 +397,7 @@ final class Class51 {
                                     return;
                                  }
 
-                                 method1143(Class74.anIntArray1100, var19, var1, var3 >> 16, var4 >> 16, var7, var30, var32, var35, var38, var33, var36, var39);
+                                 method1143(Class74.buffer, var19, var1, var3 >> 16, var4 >> 16, var7, var30, var32, var35, var38, var33, var36, var39);
                                  var3 += var28;
                                  var4 += var27;
                                  var7 += var31;
@@ -408,7 +408,7 @@ final class Class51 {
                               }
                            }
 
-                           method1143(Class74.anIntArray1100, var19, var1, var5 >> 16, var4 >> 16, var7, var30, var32, var35, var38, var33, var36, var39);
+                           method1143(Class74.buffer, var19, var1, var5 >> 16, var4 >> 16, var7, var30, var32, var35, var38, var33, var36, var39);
                            var5 += var26;
                            var4 += var27;
                            var7 += var31;
@@ -431,7 +431,7 @@ final class Class51 {
                                     return;
                                  }
 
-                                 method1143(Class74.anIntArray1100, var19, var1, var4 >> 16, var3 >> 16, var7, var30, var32, var35, var38, var33, var36, var39);
+                                 method1143(Class74.buffer, var19, var1, var4 >> 16, var3 >> 16, var7, var30, var32, var35, var38, var33, var36, var39);
                                  var3 += var28;
                                  var4 += var27;
                                  var7 += var31;
@@ -442,7 +442,7 @@ final class Class51 {
                               }
                            }
 
-                           method1143(Class74.anIntArray1100, var19, var1, var4 >> 16, var5 >> 16, var7, var30, var32, var35, var38, var33, var36, var39);
+                           method1143(Class74.buffer, var19, var1, var4 >> 16, var5 >> 16, var7, var30, var32, var35, var38, var33, var36, var39);
                            var5 += var26;
                            var4 += var27;
                            var7 += var31;
@@ -497,7 +497,7 @@ final class Class51 {
                                  return;
                               }
 
-                              method1143(Class74.anIntArray1100, var19, var2, var4 >> 16, var3 >> 16, var8, var30, var32, var35, var38, var33, var36, var39);
+                              method1143(Class74.buffer, var19, var2, var4 >> 16, var3 >> 16, var8, var30, var32, var35, var38, var33, var36, var39);
                               var4 += var27;
                               var3 += var26;
                               var8 += var31;
@@ -508,7 +508,7 @@ final class Class51 {
                            }
                         }
 
-                        method1143(Class74.anIntArray1100, var19, var2, var4 >> 16, var5 >> 16, var8, var30, var32, var35, var38, var33, var36, var39);
+                        method1143(Class74.buffer, var19, var2, var4 >> 16, var5 >> 16, var8, var30, var32, var35, var38, var33, var36, var39);
                         var4 += var27;
                         var5 += var28;
                         var8 += var31;
@@ -531,7 +531,7 @@ final class Class51 {
                                  return;
                               }
 
-                              method1143(Class74.anIntArray1100, var19, var2, var3 >> 16, var4 >> 16, var8, var30, var32, var35, var38, var33, var36, var39);
+                              method1143(Class74.buffer, var19, var2, var3 >> 16, var4 >> 16, var8, var30, var32, var35, var38, var33, var36, var39);
                               var4 += var27;
                               var3 += var26;
                               var8 += var31;
@@ -542,7 +542,7 @@ final class Class51 {
                            }
                         }
 
-                        method1143(Class74.anIntArray1100, var19, var2, var5 >> 16, var4 >> 16, var8, var30, var32, var35, var38, var33, var36, var39);
+                        method1143(Class74.buffer, var19, var2, var5 >> 16, var4 >> 16, var8, var30, var32, var35, var38, var33, var36, var39);
                         var4 += var27;
                         var5 += var28;
                         var8 += var31;
@@ -585,7 +585,7 @@ final class Class51 {
                                  return;
                               }
 
-                              method1143(Class74.anIntArray1100, var19, var2, var4 >> 16, var5 >> 16, var8, var30, var32, var35, var38, var33, var36, var39);
+                              method1143(Class74.buffer, var19, var2, var4 >> 16, var5 >> 16, var8, var30, var32, var35, var38, var33, var36, var39);
                               var4 += var26;
                               var5 += var28;
                               var8 += var31;
@@ -596,7 +596,7 @@ final class Class51 {
                            }
                         }
 
-                        method1143(Class74.anIntArray1100, var19, var2, var3 >> 16, var5 >> 16, var8, var30, var32, var35, var38, var33, var36, var39);
+                        method1143(Class74.buffer, var19, var2, var3 >> 16, var5 >> 16, var8, var30, var32, var35, var38, var33, var36, var39);
                         var3 += var27;
                         var5 += var28;
                         var8 += var31;
@@ -619,7 +619,7 @@ final class Class51 {
                                  return;
                               }
 
-                              method1143(Class74.anIntArray1100, var19, var2, var5 >> 16, var4 >> 16, var8, var30, var32, var35, var38, var33, var36, var39);
+                              method1143(Class74.buffer, var19, var2, var5 >> 16, var4 >> 16, var8, var30, var32, var35, var38, var33, var36, var39);
                               var4 += var26;
                               var5 += var28;
                               var8 += var31;
@@ -630,7 +630,7 @@ final class Class51 {
                            }
                         }
 
-                        method1143(Class74.anIntArray1100, var19, var2, var5 >> 16, var3 >> 16, var8, var30, var32, var35, var38, var33, var36, var39);
+                        method1143(Class74.buffer, var19, var2, var5 >> 16, var3 >> 16, var8, var30, var32, var35, var38, var33, var36, var39);
                         var3 += var27;
                         var5 += var28;
                         var8 += var31;
@@ -753,7 +753,7 @@ final class Class51 {
                                     return;
                                  }
 
-                                 method1142(Class74.anIntArray1100, var19, var0, var4 >> 16, var5 >> 16, var6, var30, var32, var35, var38, var33, var36, var39);
+                                 method1142(Class74.buffer, var19, var0, var4 >> 16, var5 >> 16, var6, var30, var32, var35, var38, var33, var36, var39);
                                  var5 += var28;
                                  var4 += var27;
                                  var6 += var31;
@@ -764,7 +764,7 @@ final class Class51 {
                               }
                            }
 
-                           method1142(Class74.anIntArray1100, var19, var0, var3 >> 16, var5 >> 16, var6, var30, var32, var35, var38, var33, var36, var39);
+                           method1142(Class74.buffer, var19, var0, var3 >> 16, var5 >> 16, var6, var30, var32, var35, var38, var33, var36, var39);
                            var5 += var28;
                            var3 += var26;
                            var6 += var31;
@@ -787,7 +787,7 @@ final class Class51 {
                                     return;
                                  }
 
-                                 method1142(Class74.anIntArray1100, var19, var0, var5 >> 16, var4 >> 16, var6, var30, var32, var35, var38, var33, var36, var39);
+                                 method1142(Class74.buffer, var19, var0, var5 >> 16, var4 >> 16, var6, var30, var32, var35, var38, var33, var36, var39);
                                  var5 += var28;
                                  var4 += var27;
                                  var6 += var31;
@@ -798,7 +798,7 @@ final class Class51 {
                               }
                            }
 
-                           method1142(Class74.anIntArray1100, var19, var0, var5 >> 16, var3 >> 16, var6, var30, var32, var35, var38, var33, var36, var39);
+                           method1142(Class74.buffer, var19, var0, var5 >> 16, var3 >> 16, var6, var30, var32, var35, var38, var33, var36, var39);
                            var5 += var28;
                            var3 += var26;
                            var6 += var31;
@@ -841,7 +841,7 @@ final class Class51 {
                                     return;
                                  }
 
-                                 method1142(Class74.anIntArray1100, var19, var0, var3 >> 16, var5 >> 16, var6, var30, var32, var35, var38, var33, var36, var39);
+                                 method1142(Class74.buffer, var19, var0, var3 >> 16, var5 >> 16, var6, var30, var32, var35, var38, var33, var36, var39);
                                  var5 += var27;
                                  var3 += var26;
                                  var6 += var31;
@@ -852,7 +852,7 @@ final class Class51 {
                               }
                            }
 
-                           method1142(Class74.anIntArray1100, var19, var0, var3 >> 16, var4 >> 16, var6, var30, var32, var35, var38, var33, var36, var39);
+                           method1142(Class74.buffer, var19, var0, var3 >> 16, var4 >> 16, var6, var30, var32, var35, var38, var33, var36, var39);
                            var4 += var28;
                            var3 += var26;
                            var6 += var31;
@@ -875,7 +875,7 @@ final class Class51 {
                                     return;
                                  }
 
-                                 method1142(Class74.anIntArray1100, var19, var0, var5 >> 16, var3 >> 16, var6, var30, var32, var35, var38, var33, var36, var39);
+                                 method1142(Class74.buffer, var19, var0, var5 >> 16, var3 >> 16, var6, var30, var32, var35, var38, var33, var36, var39);
                                  var5 += var27;
                                  var3 += var26;
                                  var6 += var31;
@@ -886,7 +886,7 @@ final class Class51 {
                               }
                            }
 
-                           method1142(Class74.anIntArray1100, var19, var0, var4 >> 16, var3 >> 16, var6, var30, var32, var35, var38, var33, var36, var39);
+                           method1142(Class74.buffer, var19, var0, var4 >> 16, var3 >> 16, var6, var30, var32, var35, var38, var33, var36, var39);
                            var4 += var28;
                            var3 += var26;
                            var6 += var31;
@@ -942,7 +942,7 @@ final class Class51 {
                                     return;
                                  }
 
-                                 method1142(Class74.anIntArray1100, var19, var1, var5 >> 16, var3 >> 16, var7, var30, var32, var35, var38, var33, var36, var39);
+                                 method1142(Class74.buffer, var19, var1, var5 >> 16, var3 >> 16, var7, var30, var32, var35, var38, var33, var36, var39);
                                  var3 += var26;
                                  var5 += var28;
                                  var7 += var31;
@@ -953,7 +953,7 @@ final class Class51 {
                               }
                            }
 
-                           method1142(Class74.anIntArray1100, var19, var1, var4 >> 16, var3 >> 16, var7, var30, var32, var35, var38, var33, var36, var39);
+                           method1142(Class74.buffer, var19, var1, var4 >> 16, var3 >> 16, var7, var30, var32, var35, var38, var33, var36, var39);
                            var3 += var26;
                            var4 += var27;
                            var7 += var31;
@@ -976,7 +976,7 @@ final class Class51 {
                                     return;
                                  }
 
-                                 method1142(Class74.anIntArray1100, var19, var1, var3 >> 16, var5 >> 16, var7, var30, var32, var35, var38, var33, var36, var39);
+                                 method1142(Class74.buffer, var19, var1, var3 >> 16, var5 >> 16, var7, var30, var32, var35, var38, var33, var36, var39);
                                  var3 += var26;
                                  var5 += var28;
                                  var7 += var31;
@@ -987,7 +987,7 @@ final class Class51 {
                               }
                            }
 
-                           method1142(Class74.anIntArray1100, var19, var1, var3 >> 16, var4 >> 16, var7, var30, var32, var35, var38, var33, var36, var39);
+                           method1142(Class74.buffer, var19, var1, var3 >> 16, var4 >> 16, var7, var30, var32, var35, var38, var33, var36, var39);
                            var3 += var26;
                            var4 += var27;
                            var7 += var31;
@@ -1030,7 +1030,7 @@ final class Class51 {
                                     return;
                                  }
 
-                                 method1142(Class74.anIntArray1100, var19, var1, var3 >> 16, var4 >> 16, var7, var30, var32, var35, var38, var33, var36, var39);
+                                 method1142(Class74.buffer, var19, var1, var3 >> 16, var4 >> 16, var7, var30, var32, var35, var38, var33, var36, var39);
                                  var3 += var28;
                                  var4 += var27;
                                  var7 += var31;
@@ -1041,7 +1041,7 @@ final class Class51 {
                               }
                            }
 
-                           method1142(Class74.anIntArray1100, var19, var1, var5 >> 16, var4 >> 16, var7, var30, var32, var35, var38, var33, var36, var39);
+                           method1142(Class74.buffer, var19, var1, var5 >> 16, var4 >> 16, var7, var30, var32, var35, var38, var33, var36, var39);
                            var5 += var26;
                            var4 += var27;
                            var7 += var31;
@@ -1064,7 +1064,7 @@ final class Class51 {
                                     return;
                                  }
 
-                                 method1142(Class74.anIntArray1100, var19, var1, var4 >> 16, var3 >> 16, var7, var30, var32, var35, var38, var33, var36, var39);
+                                 method1142(Class74.buffer, var19, var1, var4 >> 16, var3 >> 16, var7, var30, var32, var35, var38, var33, var36, var39);
                                  var3 += var28;
                                  var4 += var27;
                                  var7 += var31;
@@ -1075,7 +1075,7 @@ final class Class51 {
                               }
                            }
 
-                           method1142(Class74.anIntArray1100, var19, var1, var4 >> 16, var5 >> 16, var7, var30, var32, var35, var38, var33, var36, var39);
+                           method1142(Class74.buffer, var19, var1, var4 >> 16, var5 >> 16, var7, var30, var32, var35, var38, var33, var36, var39);
                            var5 += var26;
                            var4 += var27;
                            var7 += var31;
@@ -1130,7 +1130,7 @@ final class Class51 {
                                  return;
                               }
 
-                              method1142(Class74.anIntArray1100, var19, var2, var4 >> 16, var3 >> 16, var8, var30, var32, var35, var38, var33, var36, var39);
+                              method1142(Class74.buffer, var19, var2, var4 >> 16, var3 >> 16, var8, var30, var32, var35, var38, var33, var36, var39);
                               var4 += var27;
                               var3 += var26;
                               var8 += var31;
@@ -1141,7 +1141,7 @@ final class Class51 {
                            }
                         }
 
-                        method1142(Class74.anIntArray1100, var19, var2, var4 >> 16, var5 >> 16, var8, var30, var32, var35, var38, var33, var36, var39);
+                        method1142(Class74.buffer, var19, var2, var4 >> 16, var5 >> 16, var8, var30, var32, var35, var38, var33, var36, var39);
                         var4 += var27;
                         var5 += var28;
                         var8 += var31;
@@ -1164,7 +1164,7 @@ final class Class51 {
                                  return;
                               }
 
-                              method1142(Class74.anIntArray1100, var19, var2, var3 >> 16, var4 >> 16, var8, var30, var32, var35, var38, var33, var36, var39);
+                              method1142(Class74.buffer, var19, var2, var3 >> 16, var4 >> 16, var8, var30, var32, var35, var38, var33, var36, var39);
                               var4 += var27;
                               var3 += var26;
                               var8 += var31;
@@ -1175,7 +1175,7 @@ final class Class51 {
                            }
                         }
 
-                        method1142(Class74.anIntArray1100, var19, var2, var5 >> 16, var4 >> 16, var8, var30, var32, var35, var38, var33, var36, var39);
+                        method1142(Class74.buffer, var19, var2, var5 >> 16, var4 >> 16, var8, var30, var32, var35, var38, var33, var36, var39);
                         var4 += var27;
                         var5 += var28;
                         var8 += var31;
@@ -1218,7 +1218,7 @@ final class Class51 {
                                  return;
                               }
 
-                              method1142(Class74.anIntArray1100, var19, var2, var4 >> 16, var5 >> 16, var8, var30, var32, var35, var38, var33, var36, var39);
+                              method1142(Class74.buffer, var19, var2, var4 >> 16, var5 >> 16, var8, var30, var32, var35, var38, var33, var36, var39);
                               var4 += var26;
                               var5 += var28;
                               var8 += var31;
@@ -1229,7 +1229,7 @@ final class Class51 {
                            }
                         }
 
-                        method1142(Class74.anIntArray1100, var19, var2, var3 >> 16, var5 >> 16, var8, var30, var32, var35, var38, var33, var36, var39);
+                        method1142(Class74.buffer, var19, var2, var3 >> 16, var5 >> 16, var8, var30, var32, var35, var38, var33, var36, var39);
                         var3 += var27;
                         var5 += var28;
                         var8 += var31;
@@ -1252,7 +1252,7 @@ final class Class51 {
                                  return;
                               }
 
-                              method1142(Class74.anIntArray1100, var19, var2, var5 >> 16, var4 >> 16, var8, var30, var32, var35, var38, var33, var36, var39);
+                              method1142(Class74.buffer, var19, var2, var5 >> 16, var4 >> 16, var8, var30, var32, var35, var38, var33, var36, var39);
                               var4 += var26;
                               var5 += var28;
                               var8 += var31;
@@ -1263,7 +1263,7 @@ final class Class51 {
                            }
                         }
 
-                        method1142(Class74.anIntArray1100, var19, var2, var5 >> 16, var3 >> 16, var8, var30, var32, var35, var38, var33, var36, var39);
+                        method1142(Class74.buffer, var19, var2, var5 >> 16, var3 >> 16, var8, var30, var32, var35, var38, var33, var36, var39);
                         var3 += var27;
                         var5 += var28;
                         var8 += var31;
@@ -2046,14 +2046,14 @@ final class Class51 {
                               return;
                            }
 
-                           method1149(Class74.anIntArray1100, var0, var6, var4 >> 16, var5 >> 16);
+                           method1149(Class74.buffer, var0, var6, var4 >> 16, var5 >> 16);
                            var5 += var9;
                            var4 += var8;
                            var0 += Class74.anInt1092;
                         }
                      }
 
-                     method1149(Class74.anIntArray1100, var0, var6, var3 >> 16, var5 >> 16);
+                     method1149(Class74.buffer, var0, var6, var3 >> 16, var5 >> 16);
                      var5 += var9;
                      var3 += var7;
                      var0 += Class74.anInt1092;
@@ -2072,14 +2072,14 @@ final class Class51 {
                               return;
                            }
 
-                           method1149(Class74.anIntArray1100, var0, var6, var5 >> 16, var4 >> 16);
+                           method1149(Class74.buffer, var0, var6, var5 >> 16, var4 >> 16);
                            var5 += var9;
                            var4 += var8;
                            var0 += Class74.anInt1092;
                         }
                      }
 
-                     method1149(Class74.anIntArray1100, var0, var6, var5 >> 16, var3 >> 16);
+                     method1149(Class74.buffer, var0, var6, var5 >> 16, var3 >> 16);
                      var5 += var9;
                      var3 += var7;
                      var0 += Class74.anInt1092;
@@ -2113,14 +2113,14 @@ final class Class51 {
                               return;
                            }
 
-                           method1149(Class74.anIntArray1100, var0, var6, var3 >> 16, var5 >> 16);
+                           method1149(Class74.buffer, var0, var6, var3 >> 16, var5 >> 16);
                            var5 += var8;
                            var3 += var7;
                            var0 += Class74.anInt1092;
                         }
                      }
 
-                     method1149(Class74.anIntArray1100, var0, var6, var3 >> 16, var4 >> 16);
+                     method1149(Class74.buffer, var0, var6, var3 >> 16, var4 >> 16);
                      var4 += var9;
                      var3 += var7;
                      var0 += Class74.anInt1092;
@@ -2139,14 +2139,14 @@ final class Class51 {
                               return;
                            }
 
-                           method1149(Class74.anIntArray1100, var0, var6, var5 >> 16, var3 >> 16);
+                           method1149(Class74.buffer, var0, var6, var5 >> 16, var3 >> 16);
                            var5 += var8;
                            var3 += var7;
                            var0 += Class74.anInt1092;
                         }
                      }
 
-                     method1149(Class74.anIntArray1100, var0, var6, var4 >> 16, var3 >> 16);
+                     method1149(Class74.buffer, var0, var6, var4 >> 16, var3 >> 16);
                      var4 += var9;
                      var3 += var7;
                      var0 += Class74.anInt1092;
@@ -2192,14 +2192,14 @@ final class Class51 {
                               return;
                            }
 
-                           method1149(Class74.anIntArray1100, var1, var6, var5 >> 16, var3 >> 16);
+                           method1149(Class74.buffer, var1, var6, var5 >> 16, var3 >> 16);
                            var3 += var7;
                            var5 += var9;
                            var1 += Class74.anInt1092;
                         }
                      }
 
-                     method1149(Class74.anIntArray1100, var1, var6, var4 >> 16, var3 >> 16);
+                     method1149(Class74.buffer, var1, var6, var4 >> 16, var3 >> 16);
                      var3 += var7;
                      var4 += var8;
                      var1 += Class74.anInt1092;
@@ -2218,14 +2218,14 @@ final class Class51 {
                               return;
                            }
 
-                           method1149(Class74.anIntArray1100, var1, var6, var3 >> 16, var5 >> 16);
+                           method1149(Class74.buffer, var1, var6, var3 >> 16, var5 >> 16);
                            var3 += var7;
                            var5 += var9;
                            var1 += Class74.anInt1092;
                         }
                      }
 
-                     method1149(Class74.anIntArray1100, var1, var6, var3 >> 16, var4 >> 16);
+                     method1149(Class74.buffer, var1, var6, var3 >> 16, var4 >> 16);
                      var3 += var7;
                      var4 += var8;
                      var1 += Class74.anInt1092;
@@ -2259,14 +2259,14 @@ final class Class51 {
                               return;
                            }
 
-                           method1149(Class74.anIntArray1100, var1, var6, var3 >> 16, var4 >> 16);
+                           method1149(Class74.buffer, var1, var6, var3 >> 16, var4 >> 16);
                            var3 += var9;
                            var4 += var8;
                            var1 += Class74.anInt1092;
                         }
                      }
 
-                     method1149(Class74.anIntArray1100, var1, var6, var5 >> 16, var4 >> 16);
+                     method1149(Class74.buffer, var1, var6, var5 >> 16, var4 >> 16);
                      var5 += var7;
                      var4 += var8;
                      var1 += Class74.anInt1092;
@@ -2285,14 +2285,14 @@ final class Class51 {
                               return;
                            }
 
-                           method1149(Class74.anIntArray1100, var1, var6, var4 >> 16, var3 >> 16);
+                           method1149(Class74.buffer, var1, var6, var4 >> 16, var3 >> 16);
                            var3 += var9;
                            var4 += var8;
                            var1 += Class74.anInt1092;
                         }
                      }
 
-                     method1149(Class74.anIntArray1100, var1, var6, var4 >> 16, var5 >> 16);
+                     method1149(Class74.buffer, var1, var6, var4 >> 16, var5 >> 16);
                      var5 += var7;
                      var4 += var8;
                      var1 += Class74.anInt1092;
@@ -2337,14 +2337,14 @@ final class Class51 {
                            return;
                         }
 
-                        method1149(Class74.anIntArray1100, var2, var6, var4 >> 16, var3 >> 16);
+                        method1149(Class74.buffer, var2, var6, var4 >> 16, var3 >> 16);
                         var4 += var8;
                         var3 += var7;
                         var2 += Class74.anInt1092;
                      }
                   }
 
-                  method1149(Class74.anIntArray1100, var2, var6, var4 >> 16, var5 >> 16);
+                  method1149(Class74.buffer, var2, var6, var4 >> 16, var5 >> 16);
                   var4 += var8;
                   var5 += var9;
                   var2 += Class74.anInt1092;
@@ -2363,14 +2363,14 @@ final class Class51 {
                            return;
                         }
 
-                        method1149(Class74.anIntArray1100, var2, var6, var3 >> 16, var4 >> 16);
+                        method1149(Class74.buffer, var2, var6, var3 >> 16, var4 >> 16);
                         var4 += var8;
                         var3 += var7;
                         var2 += Class74.anInt1092;
                      }
                   }
 
-                  method1149(Class74.anIntArray1100, var2, var6, var5 >> 16, var4 >> 16);
+                  method1149(Class74.buffer, var2, var6, var5 >> 16, var4 >> 16);
                   var4 += var8;
                   var5 += var9;
                   var2 += Class74.anInt1092;
@@ -2404,14 +2404,14 @@ final class Class51 {
                            return;
                         }
 
-                        method1149(Class74.anIntArray1100, var2, var6, var4 >> 16, var5 >> 16);
+                        method1149(Class74.buffer, var2, var6, var4 >> 16, var5 >> 16);
                         var4 += var7;
                         var5 += var9;
                         var2 += Class74.anInt1092;
                      }
                   }
 
-                  method1149(Class74.anIntArray1100, var2, var6, var3 >> 16, var5 >> 16);
+                  method1149(Class74.buffer, var2, var6, var3 >> 16, var5 >> 16);
                   var3 += var8;
                   var5 += var9;
                   var2 += Class74.anInt1092;
@@ -2430,14 +2430,14 @@ final class Class51 {
                            return;
                         }
 
-                        method1149(Class74.anIntArray1100, var2, var6, var5 >> 16, var4 >> 16);
+                        method1149(Class74.buffer, var2, var6, var5 >> 16, var4 >> 16);
                         var4 += var7;
                         var5 += var9;
                         var2 += Class74.anInt1092;
                      }
                   }
 
-                  method1149(Class74.anIntArray1100, var2, var6, var5 >> 16, var3 >> 16);
+                  method1149(Class74.buffer, var2, var6, var5 >> 16, var3 >> 16);
                   var3 += var8;
                   var5 += var9;
                   var2 += Class74.anInt1092;
@@ -3259,7 +3259,7 @@ final class Class51 {
                                  return;
                               }
 
-                              method1146(Class74.anIntArray1100, var0, var4 >> 16, var5 >> 16, var6, var19);
+                              method1146(Class74.buffer, var0, var4 >> 16, var5 >> 16, var6, var19);
                               var5 += var17;
                               var4 += var15;
                               var6 += var20;
@@ -3267,7 +3267,7 @@ final class Class51 {
                            }
                         }
 
-                        method1146(Class74.anIntArray1100, var0, var3 >> 16, var5 >> 16, var6, var19);
+                        method1146(Class74.buffer, var0, var3 >> 16, var5 >> 16, var6, var19);
                         var5 += var17;
                         var3 += var16;
                         var6 += var20;
@@ -3287,7 +3287,7 @@ final class Class51 {
                                  return;
                               }
 
-                              method1146(Class74.anIntArray1100, var0, var5 >> 16, var4 >> 16, var6, var19);
+                              method1146(Class74.buffer, var0, var5 >> 16, var4 >> 16, var6, var19);
                               var5 += var17;
                               var4 += var15;
                               var6 += var20;
@@ -3295,7 +3295,7 @@ final class Class51 {
                            }
                         }
 
-                        method1146(Class74.anIntArray1100, var0, var5 >> 16, var3 >> 16, var6, var19);
+                        method1146(Class74.buffer, var0, var5 >> 16, var3 >> 16, var6, var19);
                         var5 += var17;
                         var3 += var16;
                         var6 += var20;
@@ -3331,7 +3331,7 @@ final class Class51 {
                                  return;
                               }
 
-                              method1146(Class74.anIntArray1100, var0, var3 >> 16, var5 >> 16, var6, var19);
+                              method1146(Class74.buffer, var0, var3 >> 16, var5 >> 16, var6, var19);
                               var5 += var15;
                               var3 += var16;
                               var6 += var20;
@@ -3339,7 +3339,7 @@ final class Class51 {
                            }
                         }
 
-                        method1146(Class74.anIntArray1100, var0, var3 >> 16, var4 >> 16, var6, var19);
+                        method1146(Class74.buffer, var0, var3 >> 16, var4 >> 16, var6, var19);
                         var4 += var17;
                         var3 += var16;
                         var6 += var20;
@@ -3359,7 +3359,7 @@ final class Class51 {
                                  return;
                               }
 
-                              method1146(Class74.anIntArray1100, var0, var5 >> 16, var3 >> 16, var6, var19);
+                              method1146(Class74.buffer, var0, var5 >> 16, var3 >> 16, var6, var19);
                               var5 += var15;
                               var3 += var16;
                               var6 += var20;
@@ -3367,7 +3367,7 @@ final class Class51 {
                            }
                         }
 
-                        method1146(Class74.anIntArray1100, var0, var4 >> 16, var3 >> 16, var6, var19);
+                        method1146(Class74.buffer, var0, var4 >> 16, var3 >> 16, var6, var19);
                         var4 += var17;
                         var3 += var16;
                         var6 += var20;
@@ -3416,7 +3416,7 @@ final class Class51 {
                                  return;
                               }
 
-                              method1146(Class74.anIntArray1100, var1, var5 >> 16, var3 >> 16, var7, var19);
+                              method1146(Class74.buffer, var1, var5 >> 16, var3 >> 16, var7, var19);
                               var3 += var16;
                               var5 += var17;
                               var7 += var20;
@@ -3424,7 +3424,7 @@ final class Class51 {
                            }
                         }
 
-                        method1146(Class74.anIntArray1100, var1, var4 >> 16, var3 >> 16, var7, var19);
+                        method1146(Class74.buffer, var1, var4 >> 16, var3 >> 16, var7, var19);
                         var3 += var16;
                         var4 += var15;
                         var7 += var20;
@@ -3444,7 +3444,7 @@ final class Class51 {
                                  return;
                               }
 
-                              method1146(Class74.anIntArray1100, var1, var3 >> 16, var5 >> 16, var7, var19);
+                              method1146(Class74.buffer, var1, var3 >> 16, var5 >> 16, var7, var19);
                               var3 += var16;
                               var5 += var17;
                               var7 += var20;
@@ -3452,7 +3452,7 @@ final class Class51 {
                            }
                         }
 
-                        method1146(Class74.anIntArray1100, var1, var3 >> 16, var4 >> 16, var7, var19);
+                        method1146(Class74.buffer, var1, var3 >> 16, var4 >> 16, var7, var19);
                         var3 += var16;
                         var4 += var15;
                         var7 += var20;
@@ -3488,7 +3488,7 @@ final class Class51 {
                                  return;
                               }
 
-                              method1146(Class74.anIntArray1100, var1, var3 >> 16, var4 >> 16, var7, var19);
+                              method1146(Class74.buffer, var1, var3 >> 16, var4 >> 16, var7, var19);
                               var3 += var17;
                               var4 += var15;
                               var7 += var20;
@@ -3496,7 +3496,7 @@ final class Class51 {
                            }
                         }
 
-                        method1146(Class74.anIntArray1100, var1, var5 >> 16, var4 >> 16, var7, var19);
+                        method1146(Class74.buffer, var1, var5 >> 16, var4 >> 16, var7, var19);
                         var5 += var16;
                         var4 += var15;
                         var7 += var20;
@@ -3516,7 +3516,7 @@ final class Class51 {
                                  return;
                               }
 
-                              method1146(Class74.anIntArray1100, var1, var4 >> 16, var3 >> 16, var7, var19);
+                              method1146(Class74.buffer, var1, var4 >> 16, var3 >> 16, var7, var19);
                               var3 += var17;
                               var4 += var15;
                               var7 += var20;
@@ -3524,7 +3524,7 @@ final class Class51 {
                            }
                         }
 
-                        method1146(Class74.anIntArray1100, var1, var4 >> 16, var5 >> 16, var7, var19);
+                        method1146(Class74.buffer, var1, var4 >> 16, var5 >> 16, var7, var19);
                         var5 += var16;
                         var4 += var15;
                         var7 += var20;
@@ -3572,7 +3572,7 @@ final class Class51 {
                               return;
                            }
 
-                           method1146(Class74.anIntArray1100, var2, var4 >> 16, var3 >> 16, var8, var19);
+                           method1146(Class74.buffer, var2, var4 >> 16, var3 >> 16, var8, var19);
                            var4 += var15;
                            var3 += var16;
                            var8 += var20;
@@ -3580,7 +3580,7 @@ final class Class51 {
                         }
                      }
 
-                     method1146(Class74.anIntArray1100, var2, var4 >> 16, var5 >> 16, var8, var19);
+                     method1146(Class74.buffer, var2, var4 >> 16, var5 >> 16, var8, var19);
                      var4 += var15;
                      var5 += var17;
                      var8 += var20;
@@ -3600,7 +3600,7 @@ final class Class51 {
                               return;
                            }
 
-                           method1146(Class74.anIntArray1100, var2, var3 >> 16, var4 >> 16, var8, var19);
+                           method1146(Class74.buffer, var2, var3 >> 16, var4 >> 16, var8, var19);
                            var4 += var15;
                            var3 += var16;
                            var8 += var20;
@@ -3608,7 +3608,7 @@ final class Class51 {
                         }
                      }
 
-                     method1146(Class74.anIntArray1100, var2, var5 >> 16, var4 >> 16, var8, var19);
+                     method1146(Class74.buffer, var2, var5 >> 16, var4 >> 16, var8, var19);
                      var4 += var15;
                      var5 += var17;
                      var8 += var20;
@@ -3644,7 +3644,7 @@ final class Class51 {
                               return;
                            }
 
-                           method1146(Class74.anIntArray1100, var2, var4 >> 16, var5 >> 16, var8, var19);
+                           method1146(Class74.buffer, var2, var4 >> 16, var5 >> 16, var8, var19);
                            var4 += var16;
                            var5 += var17;
                            var8 += var20;
@@ -3652,7 +3652,7 @@ final class Class51 {
                         }
                      }
 
-                     method1146(Class74.anIntArray1100, var2, var3 >> 16, var5 >> 16, var8, var19);
+                     method1146(Class74.buffer, var2, var3 >> 16, var5 >> 16, var8, var19);
                      var3 += var15;
                      var5 += var17;
                      var8 += var20;
@@ -3672,7 +3672,7 @@ final class Class51 {
                               return;
                            }
 
-                           method1146(Class74.anIntArray1100, var2, var5 >> 16, var4 >> 16, var8, var19);
+                           method1146(Class74.buffer, var2, var5 >> 16, var4 >> 16, var8, var19);
                            var4 += var16;
                            var5 += var17;
                            var8 += var20;
@@ -3680,7 +3680,7 @@ final class Class51 {
                         }
                      }
 
-                     method1146(Class74.anIntArray1100, var2, var5 >> 16, var3 >> 16, var8, var19);
+                     method1146(Class74.buffer, var2, var5 >> 16, var3 >> 16, var8, var19);
                      var3 += var15;
                      var5 += var17;
                      var8 += var20;

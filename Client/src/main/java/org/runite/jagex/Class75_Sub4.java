@@ -221,7 +221,7 @@ final class Class75_Sub4 extends Class75 {
 
    static void method1352(int var0, boolean var1, int var3, int var4) {
       try {
-         if(Canvas_Sub2.loadInterface(var3)) {
+         if(Unsorted.loadInterface(var3)) {
             Class158.method2183(-1, var1, var4, var0, GameObject.aClass11ArrayArray1834[var3]);
          }
       } catch (RuntimeException var6) {

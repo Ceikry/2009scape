@@ -23,7 +23,7 @@ final class Class163_Sub3 extends Class163 {
          PLAYER_RENDER_LOG[1] = GraphicDefinition.incomingBuffer.index;
          Class131.addLocalPlayers();
          PLAYER_RENDER_LOG[2] = GraphicDefinition.incomingBuffer.index;
-         Canvas_Sub2.parsePlayerMasks();
+         Unsorted.parsePlayerMasks();
          PLAYER_RENDER_LOG[3] = GraphicDefinition.incomingBuffer.index;
          int var1;
          for(var1 = 0; Class139.anInt1829 > var1; ++var1) {

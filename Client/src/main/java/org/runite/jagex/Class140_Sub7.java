@@ -1,16 +1,16 @@
 package org.runite.jagex;
 
-final class Class140_Sub7 extends GameObject {
+public final class Class140_Sub7 extends GameObject {
 
    static RSString aClass94_2928 = RSString.of("null");
    int anInt2930;
    static int[] anIntArray2931;
    private int anInt2932 = -32768;
    static int[] anIntArray2933 = new int[]{2, 0, 0, 2, 0, 0, 0, 4, 4};
-   static int anInt2934;
+   public static int anInt2934;
    static RSString[] aClass94Array2935 = new RSString[500];
    int anInt2936;
-   static int anInt2937;
+   public static int anInt2937;
    static int anInt2938;
    static CacheIndex aClass153_2939;
 

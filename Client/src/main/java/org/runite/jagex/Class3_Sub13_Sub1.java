@@ -135,7 +135,7 @@ final class Class3_Sub13_Sub1 extends Class3_Sub13 {
 				method167(-46);
 			}
 
-			if(Canvas_Sub2.loadInterface(var1)) {
+			if(Unsorted.loadInterface(var1)) {
 				Class47.method1095(var2, var8, var4, GameObject.aClass11ArrayArray1834[var1], var3, -1, var7, var6, (byte)119, var5);
 			} else if (var5 == -1) {
 				for (int var9 = 0; var9 < 100; ++var9) {

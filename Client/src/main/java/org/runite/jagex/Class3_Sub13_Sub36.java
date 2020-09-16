@@ -34,7 +34,7 @@ final class Class3_Sub13_Sub36 extends Class3_Sub13 {
             var3 = Class163_Sub1.anInt2989;
             var5 = Class3_Sub28_Sub3.anInt3564;
             var4 = Class96.anInt1358;
-            var1 = Canvas_Sub2.anInt31;
+            var1 = Unsorted.anInt31;
          }
 
          int var6;

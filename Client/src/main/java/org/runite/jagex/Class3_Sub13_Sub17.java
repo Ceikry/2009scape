@@ -23,7 +23,7 @@ final class Class3_Sub13_Sub17 extends Class3_Sub13 {
          Class3_Sub28_Sub20.method724();
          Class3_Sub28_Sub18.method710();
          Class108.method1654(var0 ^ -15455);
-         Canvas_Sub1.method55();
+         Unsorted.method55();
          Class163_Sub2_Sub1.method2222();
          Class3_Sub30_Sub1.method813();
          Class133.method1803();

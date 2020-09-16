@@ -1023,7 +1023,7 @@ final class Class3_Sub30_Sub1 extends DataBuffer {
 			Class3_Sub31 var1 = (Class3_Sub31)Class3_Sub13_Sub17.aHashTable_3208.first();
 			for(; var1 != null; var1 = (Class3_Sub31)Class3_Sub13_Sub17.aHashTable_3208.next()) {
 				int var2 = var1.anInt2602;
-				if(Canvas_Sub2.loadInterface(var2)) {
+				if(Unsorted.loadInterface(var2)) {
 					boolean var3 = true;
 					RSInterface[] var4 = GameObject.aClass11ArrayArray1834[var2];
 

@@ -1,5 +1,6 @@
 package org.runite.jagex;
 
+import org.rs09.client.console.DeveloperConsole;
 import org.runite.Configurations;
 import org.runite.GameLaunch;
 import org.rs09.client.collections.HashTable;
@@ -153,6 +154,8 @@ public final class Client extends GameShell {
                     Class3_Sub13.method164((byte) -73, false, TextCore.LoadingPleaseWait2);
                 }
 
+                DeveloperConsole.INSTANCE.draw();
+
                 if (HDToolKit.highDetail && Class143.loadingStage != 0) {
                     HDToolKit.method1826();
 
@@ -163,7 +166,7 @@ public final class Client extends GameShell {
                     Graphics var11;
                     if ((Class143.loadingStage == 30 || 10 == Class143.loadingStage) && anInt3689 == 0 && !var10) {
                         try {
-                            var11 = Class3_Sub28_Sub12.aCanvas3648.getGraphics();
+                            var11 = Class3_Sub28_Sub12.canvas.getGraphics();
 
                             for (var5 = 0; Class3_Sub28_Sub3.anInt3557 > var5; ++var5) {
                                 if (Class163_Sub1_Sub1.aBooleanArray4008[var5]) {
@@ -172,18 +175,18 @@ public final class Client extends GameShell {
                                 }
                             }
                         } catch (Exception var8) {
-                            Class3_Sub28_Sub12.aCanvas3648.repaint();
+                            Class3_Sub28_Sub12.canvas.repaint();
                         }
                     } else if (0 != Class143.loadingStage) {
                         try {
-                            var11 = Class3_Sub28_Sub12.aCanvas3648.getGraphics();
+                            var11 = Class3_Sub28_Sub12.canvas.getGraphics();
                             Class164_Sub1.aClass158_3009.method2179(var11);
 
                             for (var5 = 0; var5 < Class3_Sub28_Sub3.anInt3557; ++var5) {
                                 Class163_Sub1_Sub1.aBooleanArray4008[var5] = false;
                             }
                         } catch (Exception var7) {
-                            Class3_Sub28_Sub12.aCanvas3648.repaint();
+                            Class3_Sub28_Sub12.canvas.repaint();
                         }
                     }
                 }
@@ -198,7 +201,8 @@ public final class Client extends GameShell {
                 }
 
 //				if (DeveloperConsole.INSTANCE.getOpen()) {
-//					System.out.println("Draw developer console");
+//				    DeveloperConsole.INSTANCE.draw();
+////					System.out.println("Draw developer console");
 //				}
             }
         } catch (RuntimeException var9) {
@@ -247,10 +251,10 @@ public final class Client extends GameShell {
                 Class3_Sub15.aClass89_2429 = null;
             }
 
-            Class163_Sub1_Sub1.method2215(Class3_Sub28_Sub12.aCanvas3648);
-            Unsorted.method1783(Class3_Sub28_Sub12.aCanvas3648);
+            Class163_Sub1_Sub1.method2215(Class3_Sub28_Sub12.canvas);
+            Unsorted.method1783(Class3_Sub28_Sub12.canvas);
             if (null != Class38.aClass146_668) {
-                Class38.aClass146_668.method2082(Class3_Sub28_Sub12.aCanvas3648);
+                Class38.aClass146_668.method2082(Class3_Sub28_Sub12.canvas);
             }
 
             Class3_Sub13_Sub1.method167(0);
@@ -289,7 +293,6 @@ public final class Client extends GameShell {
                 }
             } catch (IOException var3) {
             }
-
         } catch (RuntimeException var4) {
             throw Class44.clientError(var4, "client.F(" + (byte) 23 + ')');
         }
@@ -416,11 +419,11 @@ public final class Client extends GameShell {
             }
 
             KeyboardListener.adjustKeyCodeMap();
-            Class3_Sub13_Sub4.method193((byte) 115, Class3_Sub28_Sub12.aCanvas3648);
-            ItemDefinition.method1119(Class3_Sub28_Sub12.aCanvas3648, false);
+            Class3_Sub13_Sub4.method193((byte) 115, Class3_Sub28_Sub12.canvas);
+            ItemDefinition.method1119(Class3_Sub28_Sub12.canvas, false);
             Class38.aClass146_668 = Class21.method916();
             if (null != Class38.aClass146_668) {
-                Class38.aClass146_668.method2084(Class3_Sub28_Sub12.aCanvas3648, -97);
+                Class38.aClass146_668.method2084(Class3_Sub28_Sub12.canvas, -97);
             }
 
             try {
@@ -554,7 +557,7 @@ public final class Client extends GameShell {
 
             if (!HDToolKit.highDetail) {
                 Unsorted.method744();
-            } else if (0 == Class3_Sub13_Sub25.loginStage && 0 == Canvas_Sub1.registryStage) {
+            } else if (0 == Class3_Sub13_Sub25.loginStage && 0 == Unsorted.registryStage) {
                 if (Class133.anInt1753 == 2) {
                     CS2Script.method379();
                 } else {
@@ -1456,10 +1459,10 @@ public final class Client extends GameShell {
                         Class140_Sub3.method1959(Class3_Sub13_Sub15.aBoolean3184);
                         Class86.aClass3_Sub24_Sub4_1193 = new Class3_Sub24_Sub4();
                         Class86.aClass3_Sub24_Sub4_1193.method479();
-                        WorldListEntry.aClass155_2627 = Class58.method1195(22050, Class38.aClass87_665, Class3_Sub28_Sub12.aCanvas3648, 0);
+                        WorldListEntry.aClass155_2627 = Class58.method1195(22050, Class38.aClass87_665, Class3_Sub28_Sub12.canvas, 0);
                         WorldListEntry.aClass155_2627.method2154(-116, Class86.aClass3_Sub24_Sub4_1193);
                         RenderAnimationDefinition.method897(17770, Class86.aClass3_Sub24_Sub4_1193, NPC.aClass153_3994, Class3_Sub19.aClass153_2474, Class146.aClass153_1902);
-                        Class3_Sub21.aClass155_2491 = Class58.method1195(2048, Class38.aClass87_665, Class3_Sub28_Sub12.aCanvas3648, 1);
+                        Class3_Sub21.aClass155_2491 = Class58.method1195(2048, Class38.aClass87_665, Class3_Sub28_Sub12.canvas, 1);
                         Class3_Sub26.aClass3_Sub24_Sub2_2563 = new Class3_Sub24_Sub2();
                         Class3_Sub21.aClass155_2491.method2154(-128, Class3_Sub26.aClass3_Sub24_Sub2_2563);
                         Class27.aClass157_524 = new Class157(22050, Class21.anInt443);

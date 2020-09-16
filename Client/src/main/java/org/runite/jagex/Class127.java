@@ -265,7 +265,7 @@ class Class127 {
                   Class121.aBoolean1641 = 1 == GraphicDefinition.incomingBuffer.readUnsignedByte();
                   Unsorted.aBoolean4063 = GraphicDefinition.incomingBuffer.readUnsignedByte() == 1;
                   Class3_Sub13_Sub14.aBoolean3166 = 1 == GraphicDefinition.incomingBuffer.readUnsignedByte();
-                  Canvas_Sub2.aBoolean29 = GraphicDefinition.incomingBuffer.readUnsignedByte() == 1;
+                  Unsorted.aBoolean29 = GraphicDefinition.incomingBuffer.readUnsignedByte() == 1;
                   Class3_Sub1.localIndex = GraphicDefinition.incomingBuffer.getShort();
                   Class3_Sub13_Sub29.disableGEBoxes = GraphicDefinition.incomingBuffer.readUnsignedByte() == 1;
                   Class2.isMember = GraphicDefinition.incomingBuffer.readUnsignedByte() == 1;

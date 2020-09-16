@@ -223,7 +223,7 @@ final class ISAACCipher {
             } else if(HDToolKit.highDetail) {
                Class22.method930(var1, var2, var3, 20, Class3_Sub28_Sub6.anInt3600, -Unsorted.anInt963 + 256);
             } else {
-               Class74.method1312(var1, var2, var3, 20, Class3_Sub28_Sub6.anInt3600, -Unsorted.anInt963 + 256);
+               Class74.fillRectangle(var1, var2, var3, 20, Class3_Sub28_Sub6.anInt3600, -Unsorted.anInt963 + 256);
             }
          }
 
@@ -244,7 +244,7 @@ final class ISAACCipher {
          if(HDToolKit.highDetail) {
             Class22.method930(var1, 20 + var2, var3, var4 - 20, Class3_Sub28_Sub6.anInt3600, -Unsorted.anInt963 + 256);
          } else {
-            Class74.method1312(var1, 20 + var2, var3, -20 + var4, Class3_Sub28_Sub6.anInt3600, -Unsorted.anInt963 + 256);
+            Class74.fillRectangle(var1, 20 + var2, var3, -20 + var4, Class3_Sub28_Sub6.anInt3600, -Unsorted.anInt963 + 256);
          }
 
          var6 = Unsorted.anInt1709;
@@ -257,7 +257,7 @@ final class ISAACCipher {
                if(HDToolKit.highDetail) {
                   Class22.method930(var1, var8 + -13, var3, 16, MouseListeningClass.anInt1926, -Class136.anInt1771 + 256);
                } else {
-                  Class74.method1312(var1, var8 + -13, var3, 16, MouseListeningClass.anInt1926, -Class136.anInt1771 + 256);
+                  Class74.fillRectangle(var1, var8 + -13, var3, 16, MouseListeningClass.anInt1926, -Class136.anInt1771 + 256);
                }
             }
          }

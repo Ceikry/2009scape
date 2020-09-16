@@ -160,8 +160,8 @@ final class Class3_Sub28_Sub1 extends Node {
    static void updateLoadingBar(Color var0, boolean var2, RSString var3, int var4) {
       try {
          try {
-            Graphics var5 = Class3_Sub28_Sub12.aCanvas3648.getGraphics();
-            Class139.aFontMetrics1822 = Class3_Sub28_Sub12.aCanvas3648.getFontMetrics(TextCore.Helvetica);
+            Graphics var5 = Class3_Sub28_Sub12.canvas.getGraphics();
+            Class139.aFontMetrics1822 = Class3_Sub28_Sub12.canvas.getFontMetrics(TextCore.Helvetica);
             if(var2) {
                var5.setColor(Color.black);
                var5.fillRect(0, 0, Class23.anInt454, Class140_Sub7.anInt2934);
@@ -173,7 +173,7 @@ final class Class3_Sub28_Sub1 extends Node {
 
             try {
                if(null == Class129_Sub1.anImage2695) {
-                  Class129_Sub1.anImage2695 = Class3_Sub28_Sub12.aCanvas3648.createImage(304, 34);
+                  Class129_Sub1.anImage2695 = Class3_Sub28_Sub12.canvas.createImage(304, 34);
                }
 
                Graphics var6 = Class129_Sub1.anImage2695.getGraphics();
@@ -207,7 +207,7 @@ final class Class3_Sub28_Sub1 extends Node {
                Class167.aClass94_2083.drawString(Class23.anInt454 / 2 - Class167.aClass94_2083.method1575(Class139.aFontMetrics1822) / 2, Class140_Sub7.anInt2934 / 2 - 26, var5);
             }
          } catch (Exception var10) {
-            Class3_Sub28_Sub12.aCanvas3648.repaint();
+            Class3_Sub28_Sub12.canvas.repaint();
          }
 
       } catch (RuntimeException var11) {

@@ -56,8 +56,8 @@ final class Class3_Sub28_Sub17_Sub1 extends Class3_Sub28_Sub17 {
    }
 
    private static void method705(byte[] var1, int var2, int var3, int var4, int var5, int var6, int var7, int var8, int var9, int var10, int[] var11, int[] var12) {
-      int var13 = var2 - Class74.anInt1093;
-      int var14 = var3 - Class74.anInt1095;
+      int var13 = var2 - Class74.clipLeft;
+      int var14 = var3 - Class74.clipTop;
 
       for(int var15 = var14; var15 < var14 + var5; ++var15) {
          int var16 = var11[var15];
@@ -97,7 +97,7 @@ final class Class3_Sub28_Sub17_Sub1 extends Class3_Sub28_Sub17 {
             if(var1[var7++] == 0) {
                ++var8;
             } else {
-               Class74.anIntArray1100[var8++] = var6;
+               Class74.buffer[var8++] = var6;
             }
          }
 
@@ -133,37 +133,37 @@ final class Class3_Sub28_Sub17_Sub1 extends Class3_Sub28_Sub17 {
       int var11 = 0;
       int var12 = 0;
       int var13;
-      if(var3 < Class74.anInt1095) {
-         var13 = Class74.anInt1095 - var3;
+      if(var3 < Class74.clipTop) {
+         var13 = Class74.clipTop - var3;
          var5 -= var13;
-         var3 = Class74.anInt1095;
+         var3 = Class74.clipTop;
          var12 += var13 * var4;
          var9 += var13 * Class74.anInt1092;
       }
 
-      if(var3 + var5 > Class74.anInt1099) {
-         var5 -= var3 + var5 - Class74.anInt1099;
+      if(var3 + var5 > Class74.clipBottom) {
+         var5 -= var3 + var5 - Class74.clipBottom;
       }
 
-      if(var2 < Class74.anInt1093) {
-         var13 = Class74.anInt1093 - var2;
+      if(var2 < Class74.clipLeft) {
+         var13 = Class74.clipLeft - var2;
          var4 -= var13;
-         var2 = Class74.anInt1093;
+         var2 = Class74.clipLeft;
          var12 += var13;
          var9 += var13;
          var11 += var13;
          var10 += var13;
       }
 
-      if(var2 + var4 > Class74.anInt1096) {
-         var13 = var2 + var4 - Class74.anInt1096;
+      if(var2 + var4 > Class74.clipRight) {
+         var13 = var2 + var4 - Class74.clipRight;
          var4 -= var13;
          var11 += var13;
          var10 += var13;
       }
 
       if(var4 > 0 && var5 > 0) {
-         method706(Class74.anIntArray1100, this.aByteArrayArray4082[var1], var6, var12, var9, var4, var5, var10, var11, var7);
+         method706(Class74.buffer, this.aByteArrayArray4082[var1], var6, var12, var9, var4, var5, var10, var11, var7);
       }
    }
 
@@ -178,30 +178,30 @@ final class Class3_Sub28_Sub17_Sub1 extends Class3_Sub28_Sub17 {
       int var10 = 0;
       int var11 = 0;
       int var12;
-      if(var3 < Class74.anInt1095) {
-         var12 = Class74.anInt1095 - var3;
+      if(var3 < Class74.clipTop) {
+         var12 = Class74.clipTop - var3;
          var5 -= var12;
-         var3 = Class74.anInt1095;
+         var3 = Class74.clipTop;
          var11 += var12 * var4;
          var8 += var12 * Class74.anInt1092;
       }
 
-      if(var3 + var5 > Class74.anInt1099) {
-         var5 -= var3 + var5 - Class74.anInt1099;
+      if(var3 + var5 > Class74.clipBottom) {
+         var5 -= var3 + var5 - Class74.clipBottom;
       }
 
-      if(var2 < Class74.anInt1093) {
-         var12 = Class74.anInt1093 - var2;
+      if(var2 < Class74.clipLeft) {
+         var12 = Class74.clipLeft - var2;
          var4 -= var12;
-         var2 = Class74.anInt1093;
+         var2 = Class74.clipLeft;
          var11 += var12;
          var8 += var12;
          var10 += var12;
          var9 += var12;
       }
 
-      if(var2 + var4 > Class74.anInt1096) {
-         var12 = var2 + var4 - Class74.anInt1096;
+      if(var2 + var4 > Class74.clipRight) {
+         var12 = var2 + var4 - Class74.clipRight;
          var4 -= var12;
          var10 += var12;
          var9 += var12;
@@ -209,7 +209,7 @@ final class Class3_Sub28_Sub17_Sub1 extends Class3_Sub28_Sub17 {
 
       if(var4 > 0 && var5 > 0) {
          if(Class74.anIntArray1097 == null) {
-            method704(Class74.anIntArray1100, this.aByteArrayArray4082[var1], var6, var11, var8, var4, var5, var9, var10);
+            method704(Class74.buffer, this.aByteArrayArray4082[var1], var6, var11, var8, var4, var5, var9, var10);
          } else {
             method705(this.aByteArrayArray4082[var1], var2, var3, var4, var5, var6, var11, var8, var9, var10, Class74.anIntArray1097, Class74.anIntArray1098);
          }

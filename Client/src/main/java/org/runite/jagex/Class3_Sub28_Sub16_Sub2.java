@@ -69,37 +69,37 @@ class Class3_Sub28_Sub16_Sub2 extends Class3_Sub28_Sub16 {
       int var7 = Class74.anInt1092 - var6;
       int var8 = 0;
       int var9;
-      if(var2 < Class74.anInt1095) {
-         var9 = Class74.anInt1095 - var2;
+      if(var2 < Class74.clipTop) {
+         var9 = Class74.clipTop - var2;
          var5 -= var9;
-         var2 = Class74.anInt1095;
+         var2 = Class74.clipTop;
          var4 += var9 * var6;
          var3 += var9 * Class74.anInt1092;
       }
 
-      if(var2 + var5 > Class74.anInt1099) {
-         var5 -= var2 + var5 - Class74.anInt1099;
+      if(var2 + var5 > Class74.clipBottom) {
+         var5 -= var2 + var5 - Class74.clipBottom;
       }
 
-      if(var1 < Class74.anInt1093) {
-         var9 = Class74.anInt1093 - var1;
+      if(var1 < Class74.clipLeft) {
+         var9 = Class74.clipLeft - var1;
          var6 -= var9;
-         var1 = Class74.anInt1093;
+         var1 = Class74.clipLeft;
          var4 += var9;
          var3 += var9;
          var8 += var9;
          var7 += var9;
       }
 
-      if(var1 + var6 > Class74.anInt1096) {
-         var9 = var1 + var6 - Class74.anInt1096;
+      if(var1 + var6 > Class74.clipRight) {
+         var9 = var1 + var6 - Class74.clipRight;
          var6 -= var9;
          var8 += var9;
          var7 += var9;
       }
 
       if(var6 > 0 && var5 > 0) {
-         method659(Class74.anIntArray1100, this.anIntArray4081, var4, var3, var6, var5, var7, var8);
+         method659(Class74.buffer, this.anIntArray4081, var4, var3, var6, var5, var7, var8);
       }
    }
 
@@ -250,20 +250,20 @@ class Class3_Sub28_Sub16_Sub2 extends Class3_Sub28_Sub16 {
          var20 = var20 + 15 >> 4;
          var21 >>= 4;
          var22 = var22 + 15 >> 4;
-         if(var19 < Class74.anInt1093) {
-            var19 = Class74.anInt1093;
+         if(var19 < Class74.clipLeft) {
+            var19 = Class74.clipLeft;
          }
 
-         if(var20 > Class74.anInt1096) {
-            var20 = Class74.anInt1096;
+         if(var20 > Class74.clipRight) {
+            var20 = Class74.clipRight;
          }
 
-         if(var21 < Class74.anInt1095) {
-            var21 = Class74.anInt1095;
+         if(var21 < Class74.clipTop) {
+            var21 = Class74.clipTop;
          }
 
-         if(var22 > Class74.anInt1099) {
-            var22 = Class74.anInt1099;
+         if(var22 > Class74.clipBottom) {
+            var22 = Class74.clipBottom;
          }
 
          var20 = var19 - var20;
@@ -298,7 +298,7 @@ class Class3_Sub28_Sub16_Sub2 extends Class3_Sub28_Sub16 {
                               if(var38 == 0) {
                                  ++var34;
                               } else {
-                                 Class74.anIntArray1100[var34++] = var38;
+                                 Class74.buffer[var34++] = var38;
                               }
                            }
                         }
@@ -328,7 +328,7 @@ class Class3_Sub28_Sub16_Sub2 extends Class3_Sub28_Sub16 {
                               if(var38 == 0) {
                                  ++var34;
                               } else {
-                                 Class74.anIntArray1100[var34++] = var38;
+                                 Class74.buffer[var34++] = var38;
                               }
 
                                var36 += var26;
@@ -362,7 +362,7 @@ class Class3_Sub28_Sub16_Sub2 extends Class3_Sub28_Sub16 {
                               if(var38 == 0) {
                                  ++var34;
                               } else {
-                                 Class74.anIntArray1100[var34++] = var38;
+                                 Class74.buffer[var34++] = var38;
                               }
 
                                var36 += var26;
@@ -398,7 +398,7 @@ class Class3_Sub28_Sub16_Sub2 extends Class3_Sub28_Sub16 {
                               if(var38 == 0) {
                                  ++var34;
                               } else {
-                                 Class74.anIntArray1100[var34++] = var38;
+                                 Class74.buffer[var34++] = var38;
                               }
 
                                var35 += var27;
@@ -444,7 +444,7 @@ class Class3_Sub28_Sub16_Sub2 extends Class3_Sub28_Sub16 {
                            if(var38 == 0) {
                               ++var34;
                            } else {
-                              Class74.anIntArray1100[var34++] = var38;
+                              Class74.buffer[var34++] = var38;
                            }
 
                             var35 += var27;
@@ -491,7 +491,7 @@ class Class3_Sub28_Sub16_Sub2 extends Class3_Sub28_Sub16 {
                            if(var38 == 0) {
                               ++var34;
                            } else {
-                              Class74.anIntArray1100[var34++] = var38;
+                              Class74.buffer[var34++] = var38;
                            }
 
                             var35 += var27;
@@ -527,7 +527,7 @@ class Class3_Sub28_Sub16_Sub2 extends Class3_Sub28_Sub16 {
                            if(var38 == 0) {
                               ++var34;
                            } else {
-                              Class74.anIntArray1100[var34++] = var38;
+                              Class74.buffer[var34++] = var38;
                            }
 
                             var35 += var27;
@@ -573,7 +573,7 @@ class Class3_Sub28_Sub16_Sub2 extends Class3_Sub28_Sub16 {
                         if(var38 == 0) {
                            ++var34;
                         } else {
-                           Class74.anIntArray1100[var34++] = var38;
+                           Class74.buffer[var34++] = var38;
                         }
 
                          var35 += var27;
@@ -620,7 +620,7 @@ class Class3_Sub28_Sub16_Sub2 extends Class3_Sub28_Sub16 {
                         if(var38 == 0) {
                            ++var34;
                         } else {
-                           Class74.anIntArray1100[var34++] = var38;
+                           Class74.buffer[var34++] = var38;
                         }
 
                          var35 += var27;
@@ -761,7 +761,7 @@ class Class3_Sub28_Sub16_Sub2 extends Class3_Sub28_Sub16 {
                if(var20 == 0) {
                   ++var17;
                } else {
-                  Class74.anIntArray1100[var17++] = var20;
+                  Class74.buffer[var17++] = var20;
                }
 
                 var18 += var13;
@@ -787,37 +787,37 @@ class Class3_Sub28_Sub16_Sub2 extends Class3_Sub28_Sub16 {
       int var7 = Class74.anInt1092 - var6;
       int var8 = var6 + var6;
       int var9;
-      if(var2 < Class74.anInt1095) {
-         var9 = Class74.anInt1095 - var2;
+      if(var2 < Class74.clipTop) {
+         var9 = Class74.clipTop - var2;
          var5 -= var9;
-         var2 = Class74.anInt1095;
+         var2 = Class74.clipTop;
          var4 += var9 * var6;
          var3 += var9 * Class74.anInt1092;
       }
 
-      if(var2 + var5 > Class74.anInt1099) {
-         var5 -= var2 + var5 - Class74.anInt1099;
+      if(var2 + var5 > Class74.clipBottom) {
+         var5 -= var2 + var5 - Class74.clipBottom;
       }
 
-      if(var1 < Class74.anInt1093) {
-         var9 = Class74.anInt1093 - var1;
+      if(var1 < Class74.clipLeft) {
+         var9 = Class74.clipLeft - var1;
          var6 -= var9;
-         var1 = Class74.anInt1093;
+         var1 = Class74.clipLeft;
          var4 -= var9;
          var3 += var9;
          var8 -= var9;
          var7 += var9;
       }
 
-      if(var1 + var6 > Class74.anInt1096) {
-         var9 = var1 + var6 - Class74.anInt1096;
+      if(var1 + var6 > Class74.clipRight) {
+         var9 = var1 + var6 - Class74.clipRight;
          var6 -= var9;
          var8 -= var9;
          var7 += var9;
       }
 
       if(var6 > 0 && var5 > 0) {
-         method656(Class74.anIntArray1100, this.anIntArray4081, var4, var3, var6, var5, var7, var8);
+         method656(Class74.buffer, this.anIntArray4081, var4, var3, var6, var5, var7, var8);
       }
    }
 
@@ -841,37 +841,37 @@ class Class3_Sub28_Sub16_Sub2 extends Class3_Sub28_Sub16 {
       int var8 = Class74.anInt1092 - var7;
       int var9 = 0;
       int var10;
-      if(var2 < Class74.anInt1095) {
-         var10 = Class74.anInt1095 - var2;
+      if(var2 < Class74.clipTop) {
+         var10 = Class74.clipTop - var2;
          var6 -= var10;
-         var2 = Class74.anInt1095;
+         var2 = Class74.clipTop;
          var5 += var10 * var7;
          var4 += var10 * Class74.anInt1092;
       }
 
-      if(var2 + var6 > Class74.anInt1099) {
-         var6 -= var2 + var6 - Class74.anInt1099;
+      if(var2 + var6 > Class74.clipBottom) {
+         var6 -= var2 + var6 - Class74.clipBottom;
       }
 
-      if(var1 < Class74.anInt1093) {
-         var10 = Class74.anInt1093 - var1;
+      if(var1 < Class74.clipLeft) {
+         var10 = Class74.clipLeft - var1;
          var7 -= var10;
-         var1 = Class74.anInt1093;
+         var1 = Class74.clipLeft;
          var5 += var10;
          var4 += var10;
          var9 += var10;
          var8 += var10;
       }
 
-      if(var1 + var7 > Class74.anInt1096) {
-         var10 = var1 + var7 - Class74.anInt1096;
+      if(var1 + var7 > Class74.clipRight) {
+         var10 = var1 + var7 - Class74.clipRight;
          var7 -= var10;
          var9 += var10;
          var8 += var10;
       }
 
       if(var7 > 0 && var6 > 0) {
-         method662(Class74.anIntArray1100, this.anIntArray4081, var5, var4, var7, var6, var8, var9, var3);
+         method662(Class74.buffer, this.anIntArray4081, var5, var4, var7, var6, var8, var9, var3);
       }
    }
 
@@ -931,37 +931,37 @@ class Class3_Sub28_Sub16_Sub2 extends Class3_Sub28_Sub16 {
       int var7 = Class74.anInt1092 - var6;
       int var8 = 0;
       int var9;
-      if(var2 < Class74.anInt1095) {
-         var9 = Class74.anInt1095 - var2;
+      if(var2 < Class74.clipTop) {
+         var9 = Class74.clipTop - var2;
          var5 -= var9;
-         var2 = Class74.anInt1095;
+         var2 = Class74.clipTop;
          var4 += var9 * var6;
          var3 += var9 * Class74.anInt1092;
       }
 
-      if(var2 + var5 > Class74.anInt1099) {
-         var5 -= var2 + var5 - Class74.anInt1099;
+      if(var2 + var5 > Class74.clipBottom) {
+         var5 -= var2 + var5 - Class74.clipBottom;
       }
 
-      if(var1 < Class74.anInt1093) {
-         var9 = Class74.anInt1093 - var1;
+      if(var1 < Class74.clipLeft) {
+         var9 = Class74.clipLeft - var1;
          var6 -= var9;
-         var1 = Class74.anInt1093;
+         var1 = Class74.clipLeft;
          var4 += var9;
          var3 += var9;
          var8 += var9;
          var7 += var9;
       }
 
-      if(var1 + var6 > Class74.anInt1096) {
-         var9 = var1 + var6 - Class74.anInt1096;
+      if(var1 + var6 > Class74.clipRight) {
+         var9 = var1 + var6 - Class74.clipRight;
          var6 -= var9;
          var8 += var9;
          var7 += var9;
       }
 
       if(var6 > 0 && var5 > 0) {
-         method654(Class74.anIntArray1100, this.anIntArray4081, var4, var3, var6, var5, var7, var8);
+         method654(Class74.buffer, this.anIntArray4081, var4, var3, var6, var5, var7, var8);
       }
    }
 
@@ -998,7 +998,7 @@ class Class3_Sub28_Sub16_Sub2 extends Class3_Sub28_Sub16 {
             int var21 = var16 - var13 * var18;
 
             for(var1 = -var10[var2]; var1 < 0; ++var1) {
-               Class74.anIntArray1100[var19++] = this.anIntArray4081[(var20 >> 16) + (var21 >> 16) * this.anInt3707];
+               Class74.buffer[var19++] = this.anIntArray4081[(var20 >> 16) + (var21 >> 16) * this.anInt3707];
                var20 += var14;
                var21 -= var13;
             }
@@ -1031,7 +1031,7 @@ class Class3_Sub28_Sub16_Sub2 extends Class3_Sub28_Sub16 {
    }
 
    final void method666(int var1, int var2, int[] var3, int[] var4) {
-      if(Class74.anInt1099 - Class74.anInt1095 == var3.length) {
+      if(Class74.clipBottom - Class74.clipTop == var3.length) {
          var1 += this.anInt3701;
          var2 += this.anInt3698;
          int var5 = 0;
@@ -1041,38 +1041,38 @@ class Class3_Sub28_Sub16_Sub2 extends Class3_Sub28_Sub16 {
          int var9 = 0;
          int var10 = var1 + var2 * Class74.anInt1092;
          int var11;
-         if(var2 < Class74.anInt1095) {
-            var11 = Class74.anInt1095 - var2;
+         if(var2 < Class74.clipTop) {
+            var11 = Class74.clipTop - var2;
             var6 -= var11;
-            var2 = Class74.anInt1095;
+            var2 = Class74.clipTop;
             var5 += var11 * var7;
             var10 += var11 * Class74.anInt1092;
          }
 
-         if(var2 + var6 > Class74.anInt1099) {
-            var6 -= var2 + var6 - Class74.anInt1099;
+         if(var2 + var6 > Class74.clipBottom) {
+            var6 -= var2 + var6 - Class74.clipBottom;
          }
 
-         if(var1 < Class74.anInt1093) {
-            var11 = Class74.anInt1093 - var1;
+         if(var1 < Class74.clipLeft) {
+            var11 = Class74.clipLeft - var1;
             var7 -= var11;
-            var1 = Class74.anInt1093;
+            var1 = Class74.clipLeft;
             var5 += var11;
             var10 += var11;
             var9 += var11;
             var8 += var11;
          }
 
-         if(var1 + var7 > Class74.anInt1096) {
-            var11 = var1 + var7 - Class74.anInt1096;
+         if(var1 + var7 > Class74.clipRight) {
+            var11 = var1 + var7 - Class74.clipRight;
             var7 -= var11;
             var9 += var11;
             var8 += var11;
          }
 
          if(var7 > 0 && var6 > 0) {
-            var11 = var1 - Class74.anInt1093;
-            int var12 = var2 - Class74.anInt1095;
+            var11 = var1 - Class74.clipLeft;
+            int var12 = var2 - Class74.clipTop;
 
             for(int var13 = var12; var13 < var12 + var6; ++var13) {
                int var14 = var3[var13];
@@ -1113,7 +1113,7 @@ class Class3_Sub28_Sub16_Sub2 extends Class3_Sub28_Sub16 {
                   if(var19 == 0) {
                      ++var10;
                   } else {
-                     Class74.anIntArray1100[var10++] = var19;
+                     Class74.buffer[var10++] = var19;
                   }
                }
 
@@ -1157,7 +1157,7 @@ class Class3_Sub28_Sub16_Sub2 extends Class3_Sub28_Sub16 {
                if(var22 == 0) {
                   ++var19;
                } else {
-                  Class74.anIntArray1100[var19++] = var22;
+                  Class74.buffer[var19++] = var22;
                }
 
                 var20 += var14;
@@ -1219,33 +1219,33 @@ class Class3_Sub28_Sub16_Sub2 extends Class3_Sub28_Sub16 {
 
          var14 = var1 + var2 * Class74.anInt1092;
          int var15 = Class74.anInt1092 - var3;
-         if(var2 + var4 > Class74.anInt1099) {
-            var4 -= var2 + var4 - Class74.anInt1099;
+         if(var2 + var4 > Class74.clipBottom) {
+            var4 -= var2 + var4 - Class74.clipBottom;
          }
 
          int var16;
-         if(var2 < Class74.anInt1095) {
-            var16 = Class74.anInt1095 - var2;
+         if(var2 < Class74.clipTop) {
+            var16 = Class74.clipTop - var2;
             var4 -= var16;
             var14 += var16 * Class74.anInt1092;
             var9 += var13 * var16;
          }
 
-         if(var1 + var3 > Class74.anInt1096) {
-            var16 = var1 + var3 - Class74.anInt1096;
+         if(var1 + var3 > Class74.clipRight) {
+            var16 = var1 + var3 - Class74.clipRight;
             var3 -= var16;
             var15 += var16;
          }
 
-         if(var1 < Class74.anInt1093) {
-            var16 = Class74.anInt1093 - var1;
+         if(var1 < Class74.clipLeft) {
+            var16 = Class74.clipLeft - var1;
             var3 -= var16;
             var14 += var16;
             var8 += var12 * var16;
             var15 += var16;
          }
 
-         method661(Class74.anIntArray1100, this.anIntArray4081, var8, var9, var14, var15, var3, var4, var12, var13, var6, var5);
+         method661(Class74.buffer, this.anIntArray4081, var8, var9, var14, var15, var3, var4, var12, var13, var6, var5);
       }
    }
 
@@ -1316,33 +1316,33 @@ class Class3_Sub28_Sub16_Sub2 extends Class3_Sub28_Sub16 {
 
          var13 = var1 + var2 * Class74.anInt1092;
          int var14 = Class74.anInt1092 - var3;
-         if(var2 + var4 > Class74.anInt1099) {
-            var4 -= var2 + var4 - Class74.anInt1099;
+         if(var2 + var4 > Class74.clipBottom) {
+            var4 -= var2 + var4 - Class74.clipBottom;
          }
 
          int var15;
-         if(var2 < Class74.anInt1095) {
-            var15 = Class74.anInt1095 - var2;
+         if(var2 < Class74.clipTop) {
+            var15 = Class74.clipTop - var2;
             var4 -= var15;
             var13 += var15 * Class74.anInt1092;
             var8 += var12 * var15;
          }
 
-         if(var1 + var3 > Class74.anInt1096) {
-            var15 = var1 + var3 - Class74.anInt1096;
+         if(var1 + var3 > Class74.clipRight) {
+            var15 = var1 + var3 - Class74.clipRight;
             var3 -= var15;
             var14 += var15;
          }
 
-         if(var1 < Class74.anInt1093) {
-            var15 = Class74.anInt1093 - var1;
+         if(var1 < Class74.clipLeft) {
+            var15 = Class74.clipLeft - var1;
             var3 -= var15;
             var13 += var15;
             var7 += var11 * var15;
             var14 += var15;
          }
 
-         method670(Class74.anIntArray1100, this.anIntArray4081, var7, var8, var13, var14, var3, var4, var11, var12, var5);
+         method670(Class74.buffer, this.anIntArray4081, var7, var8, var13, var14, var3, var4, var11, var12, var5);
       }
    }
 

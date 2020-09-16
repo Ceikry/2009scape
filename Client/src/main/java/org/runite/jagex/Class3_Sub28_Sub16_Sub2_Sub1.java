@@ -21,10 +21,10 @@ final class Class3_Sub28_Sub16_Sub2_Sub1 extends Class3_Sub28_Sub16_Sub2 {
 
             for(var1 = -20; var1 < 0; ++var1) {
                int var20 = this.anIntArray4081[(var18 >> 16) + (var19 >> 16) * this.anInt3707];
-               int var21 = Class74.anIntArray1100[var17];
+               int var21 = Class74.buffer[var17];
                int var22 = var20 >>> 24;
                int var23 = 256 - var22;
-               Class74.anIntArray1100[var17++] = ((var20 & 16711935) * var22 + (var21 & 16711935) * var23 & -16711936) + ((var20 & '\uff00') * var22 + (var21 & '\uff00') * var23 & 16711680) >>> 8;
+               Class74.buffer[var17++] = ((var20 & 16711935) * var22 + (var21 & 16711935) * var23 & -16711936) + ((var20 & '\uff00') * var22 + (var21 & '\uff00') * var23 & 16711680) >>> 8;
                var18 += var13;
                var19 -= var12;
             }
@@ -48,37 +48,37 @@ final class Class3_Sub28_Sub16_Sub2_Sub1 extends Class3_Sub28_Sub16_Sub2 {
       int var7 = Class74.anInt1092 - var6;
       int var8 = 0;
       int var9;
-      if(var2 < Class74.anInt1095) {
-         var9 = Class74.anInt1095 - var2;
+      if(var2 < Class74.clipTop) {
+         var9 = Class74.clipTop - var2;
          var5 -= var9;
-         var2 = Class74.anInt1095;
+         var2 = Class74.clipTop;
          var4 += var9 * var6;
          var3 += var9 * Class74.anInt1092;
       }
 
-      if(var2 + var5 > Class74.anInt1099) {
-         var5 -= var2 + var5 - Class74.anInt1099;
+      if(var2 + var5 > Class74.clipBottom) {
+         var5 -= var2 + var5 - Class74.clipBottom;
       }
 
-      if(var1 < Class74.anInt1093) {
-         var9 = Class74.anInt1093 - var1;
+      if(var1 < Class74.clipLeft) {
+         var9 = Class74.clipLeft - var1;
          var6 -= var9;
-         var1 = Class74.anInt1093;
+         var1 = Class74.clipLeft;
          var4 += var9;
          var3 += var9;
          var8 += var9;
          var7 += var9;
       }
 
-      if(var1 + var6 > Class74.anInt1096) {
-         var9 = var1 + var6 - Class74.anInt1096;
+      if(var1 + var6 > Class74.clipRight) {
+         var9 = var1 + var6 - Class74.clipRight;
          var6 -= var9;
          var8 += var9;
          var7 += var9;
       }
 
       if(var6 > 0 && var5 > 0) {
-         method673(Class74.anIntArray1100, this.anIntArray4081, var4, var3, var6, var5, var7, var8);
+         method673(Class74.buffer, this.anIntArray4081, var4, var3, var6, var5, var7, var8);
       }
    }
 
@@ -92,37 +92,37 @@ final class Class3_Sub28_Sub16_Sub2_Sub1 extends Class3_Sub28_Sub16_Sub2 {
       int var7 = Class74.anInt1092 - var6;
       int var8 = 0;
       int var9;
-      if(var2 < Class74.anInt1095) {
-         var9 = Class74.anInt1095 - var2;
+      if(var2 < Class74.clipTop) {
+         var9 = Class74.clipTop - var2;
          var5 -= var9;
-         var2 = Class74.anInt1095;
+         var2 = Class74.clipTop;
          var4 += var9 * var6;
          var3 += var9 * Class74.anInt1092;
       }
 
-      if(var2 + var5 > Class74.anInt1099) {
-         var5 -= var2 + var5 - Class74.anInt1099;
+      if(var2 + var5 > Class74.clipBottom) {
+         var5 -= var2 + var5 - Class74.clipBottom;
       }
 
-      if(var1 < Class74.anInt1093) {
-         var9 = Class74.anInt1093 - var1;
+      if(var1 < Class74.clipLeft) {
+         var9 = Class74.clipLeft - var1;
          var6 -= var9;
-         var1 = Class74.anInt1093;
+         var1 = Class74.clipLeft;
          var4 += var9;
          var3 += var9;
          var8 += var9;
          var7 += var9;
       }
 
-      if(var1 + var6 > Class74.anInt1096) {
-         var9 = var1 + var6 - Class74.anInt1096;
+      if(var1 + var6 > Class74.clipRight) {
+         var9 = var1 + var6 - Class74.clipRight;
          var6 -= var9;
          var8 += var9;
          var7 += var9;
       }
 
       if(var6 > 0 && var5 > 0) {
-         method673(Class74.anIntArray1100, this.anIntArray4081, var4, var3, var6, var5, var7, var8);
+         method673(Class74.buffer, this.anIntArray4081, var4, var3, var6, var5, var7, var8);
       }
    }
 
@@ -227,20 +227,20 @@ final class Class3_Sub28_Sub16_Sub2_Sub1 extends Class3_Sub28_Sub16_Sub2 {
          var20 = var20 + 15 >> 4;
          var21 >>= 4;
          var22 = var22 + 15 >> 4;
-         if(var19 < Class74.anInt1093) {
-            var19 = Class74.anInt1093;
+         if(var19 < Class74.clipLeft) {
+            var19 = Class74.clipLeft;
          }
 
-         if(var20 > Class74.anInt1096) {
-            var20 = Class74.anInt1096;
+         if(var20 > Class74.clipRight) {
+            var20 = Class74.clipRight;
          }
 
-         if(var21 < Class74.anInt1095) {
-            var21 = Class74.anInt1095;
+         if(var21 < Class74.clipTop) {
+            var21 = Class74.clipTop;
          }
 
-         if(var22 > Class74.anInt1099) {
-            var22 = Class74.anInt1099;
+         if(var22 > Class74.clipBottom) {
+            var22 = Class74.clipBottom;
          }
 
          var20 = var19 - var20;
@@ -275,10 +275,10 @@ final class Class3_Sub28_Sub16_Sub2_Sub1 extends Class3_Sub28_Sub16_Sub2 {
                         if(var30 >= 0 && var31 >= 0 && var30 - (this.anInt3707 << 12) < 0 && var31 - (this.anInt3696 << 12) < 0) {
                            while(var37 < 0) {
                               var38 = this.anIntArray4081[(var36 >> 12) * this.anInt3707 + (var35 >> 12)];
-                              var39 = Class74.anIntArray1100[var34];
+                              var39 = Class74.buffer[var34];
                               var40 = var38 >>> 24;
                               var41 = 256 - var40;
-                              Class74.anIntArray1100[var34++] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & '\uff00') * var40 + (var39 & '\uff00') * var41 & 16711680) >>> 8;
+                              Class74.buffer[var34++] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & '\uff00') * var40 + (var39 & '\uff00') * var41 & 16711680) >>> 8;
                               ++var37;
                            }
                         }
@@ -305,10 +305,10 @@ final class Class3_Sub28_Sub16_Sub2_Sub1 extends Class3_Sub28_Sub16_Sub2 {
 
                            while(var37 < 0) {
                               var38 = this.anIntArray4081[(var36 >> 12) * this.anInt3707 + (var35 >> 12)];
-                              var39 = Class74.anIntArray1100[var34];
+                              var39 = Class74.buffer[var34];
                               var40 = var38 >>> 24;
                               var41 = 256 - var40;
-                              Class74.anIntArray1100[var34++] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & '\uff00') * var40 + (var39 & '\uff00') * var41 & 16711680) >>> 8;
+                              Class74.buffer[var34++] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & '\uff00') * var40 + (var39 & '\uff00') * var41 & 16711680) >>> 8;
                               var36 += var26;
                               ++var37;
                            }
@@ -337,10 +337,10 @@ final class Class3_Sub28_Sub16_Sub2_Sub1 extends Class3_Sub28_Sub16_Sub2 {
 
                            while(var37 < 0) {
                               var38 = this.anIntArray4081[(var36 >> 12) * this.anInt3707 + (var35 >> 12)];
-                              var39 = Class74.anIntArray1100[var34];
+                              var39 = Class74.buffer[var34];
                               var40 = var38 >>> 24;
                               var41 = 256 - var40;
-                              Class74.anIntArray1100[var34++] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & '\uff00') * var40 + (var39 & '\uff00') * var41 & 16711680) >>> 8;
+                              Class74.buffer[var34++] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & '\uff00') * var40 + (var39 & '\uff00') * var41 & 16711680) >>> 8;
                               var36 += var26;
                               ++var37;
                            }
@@ -371,10 +371,10 @@ final class Class3_Sub28_Sub16_Sub2_Sub1 extends Class3_Sub28_Sub16_Sub2 {
 
                            while(var37 < 0) {
                               var38 = this.anIntArray4081[(var36 >> 12) * this.anInt3707 + (var35 >> 12)];
-                              var39 = Class74.anIntArray1100[var34];
+                              var39 = Class74.buffer[var34];
                               var40 = var38 >>> 24;
                               var41 = 256 - var40;
-                              Class74.anIntArray1100[var34++] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & '\uff00') * var40 + (var39 & '\uff00') * var41 & 16711680) >>> 8;
+                              Class74.buffer[var34++] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & '\uff00') * var40 + (var39 & '\uff00') * var41 & 16711680) >>> 8;
                               var35 += var27;
                               ++var37;
                            }
@@ -415,10 +415,10 @@ final class Class3_Sub28_Sub16_Sub2_Sub1 extends Class3_Sub28_Sub16_Sub2 {
 
                         while(var37 < 0) {
                            var38 = this.anIntArray4081[(var36 >> 12) * this.anInt3707 + (var35 >> 12)];
-                           var39 = Class74.anIntArray1100[var34];
+                           var39 = Class74.buffer[var34];
                            var40 = var38 >>> 24;
                            var41 = 256 - var40;
-                           Class74.anIntArray1100[var34++] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & '\uff00') * var40 + (var39 & '\uff00') * var41 & 16711680) >>> 8;
+                           Class74.buffer[var34++] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & '\uff00') * var40 + (var39 & '\uff00') * var41 & 16711680) >>> 8;
                            var35 += var27;
                            var36 += var26;
                            ++var37;
@@ -460,10 +460,10 @@ final class Class3_Sub28_Sub16_Sub2_Sub1 extends Class3_Sub28_Sub16_Sub2 {
 
                         while(var37 < 0) {
                            var38 = this.anIntArray4081[(var36 >> 12) * this.anInt3707 + (var35 >> 12)];
-                           var39 = Class74.anIntArray1100[var34];
+                           var39 = Class74.buffer[var34];
                            var40 = var38 >>> 24;
                            var41 = 256 - var40;
-                           Class74.anIntArray1100[var34++] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & '\uff00') * var40 + (var39 & '\uff00') * var41 & 16711680) >>> 8;
+                           Class74.buffer[var34++] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & '\uff00') * var40 + (var39 & '\uff00') * var41 & 16711680) >>> 8;
                            var35 += var27;
                            var36 += var26;
                            ++var37;
@@ -494,10 +494,10 @@ final class Class3_Sub28_Sub16_Sub2_Sub1 extends Class3_Sub28_Sub16_Sub2 {
 
                         while(var37 < 0) {
                            var38 = this.anIntArray4081[(var36 >> 12) * this.anInt3707 + (var35 >> 12)];
-                           var39 = Class74.anIntArray1100[var34];
+                           var39 = Class74.buffer[var34];
                            var40 = var38 >>> 24;
                            var41 = 256 - var40;
-                           Class74.anIntArray1100[var34++] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & '\uff00') * var40 + (var39 & '\uff00') * var41 & 16711680) >>> 8;
+                           Class74.buffer[var34++] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & '\uff00') * var40 + (var39 & '\uff00') * var41 & 16711680) >>> 8;
                            var35 += var27;
                            ++var37;
                         }
@@ -538,10 +538,10 @@ final class Class3_Sub28_Sub16_Sub2_Sub1 extends Class3_Sub28_Sub16_Sub2 {
 
                      while(var37 < 0) {
                         var38 = this.anIntArray4081[(var36 >> 12) * this.anInt3707 + (var35 >> 12)];
-                        var39 = Class74.anIntArray1100[var34];
+                        var39 = Class74.buffer[var34];
                         var40 = var38 >>> 24;
                         var41 = 256 - var40;
-                        Class74.anIntArray1100[var34++] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & '\uff00') * var40 + (var39 & '\uff00') * var41 & 16711680) >>> 8;
+                        Class74.buffer[var34++] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & '\uff00') * var40 + (var39 & '\uff00') * var41 & 16711680) >>> 8;
                         var35 += var27;
                         var36 += var26;
                         ++var37;
@@ -583,10 +583,10 @@ final class Class3_Sub28_Sub16_Sub2_Sub1 extends Class3_Sub28_Sub16_Sub2 {
 
                      while(var37 < 0) {
                         var38 = this.anIntArray4081[(var36 >> 12) * this.anInt3707 + (var35 >> 12)];
-                        var39 = Class74.anIntArray1100[var34];
+                        var39 = Class74.buffer[var34];
                         var40 = var38 >>> 24;
                         var41 = 256 - var40;
-                        Class74.anIntArray1100[var34++] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & '\uff00') * var40 + (var39 & '\uff00') * var41 & 16711680) >>> 8;
+                        Class74.buffer[var34++] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & '\uff00') * var40 + (var39 & '\uff00') * var41 & 16711680) >>> 8;
                         var35 += var27;
                         var36 += var26;
                         ++var37;
@@ -623,10 +623,10 @@ final class Class3_Sub28_Sub16_Sub2_Sub1 extends Class3_Sub28_Sub16_Sub2 {
 
             for(var1 = -var10[var2]; var1 < 0; ++var1) {
                int var22 = this.anIntArray4081[(var20 >> 16) + (var21 >> 16) * this.anInt3707];
-               int var23 = Class74.anIntArray1100[var19];
+               int var23 = Class74.buffer[var19];
                int var24 = var22 >>> 24;
                int var25 = 256 - var24;
-               Class74.anIntArray1100[var19++] = ((var22 & 16711935) * var24 + (var23 & 16711935) * var25 & -16711936) + ((var22 & '\uff00') * var24 + (var23 & '\uff00') * var25 & 16711680) >>> 8;
+               Class74.buffer[var19++] = ((var22 & 16711935) * var24 + (var23 & 16711935) * var25 & -16711936) + ((var22 & '\uff00') * var24 + (var23 & '\uff00') * var25 & 16711680) >>> 8;
                var20 += var14;
                var21 -= var13;
             }
@@ -660,10 +660,10 @@ final class Class3_Sub28_Sub16_Sub2_Sub1 extends Class3_Sub28_Sub16_Sub2 {
 
             for(var1 = -var10[var2]; var1 < 0; ++var1) {
                int var22 = this.anIntArray4081[(var20 >> 16) + (var21 >> 16) * this.anInt3707];
-               int var23 = Class74.anIntArray1100[var19];
+               int var23 = Class74.buffer[var19];
                int var24 = var22 >>> 24;
                int var25 = 256 - var24;
-               Class74.anIntArray1100[var19++] = ((var22 & 16711935) * var24 + (var23 & 16711935) * var25 & -16711936) + ((var22 & '\uff00') * var24 + (var23 & '\uff00') * var25 & 16711680) >>> 8;
+               Class74.buffer[var19++] = ((var22 & 16711935) * var24 + (var23 & 16711935) * var25 & -16711936) + ((var22 & '\uff00') * var24 + (var23 & '\uff00') * var25 & 16711680) >>> 8;
                var20 += var14;
                var21 -= var13;
             }
@@ -710,33 +710,33 @@ final class Class3_Sub28_Sub16_Sub2_Sub1 extends Class3_Sub28_Sub16_Sub2 {
 
          var14 = var1 + var2 * Class74.anInt1092;
          int var15 = Class74.anInt1092 - var3;
-         if(var2 + var4 > Class74.anInt1099) {
-            var4 -= var2 + var4 - Class74.anInt1099;
+         if(var2 + var4 > Class74.clipBottom) {
+            var4 -= var2 + var4 - Class74.clipBottom;
          }
 
          int var16;
-         if(var2 < Class74.anInt1095) {
-            var16 = Class74.anInt1095 - var2;
+         if(var2 < Class74.clipTop) {
+            var16 = Class74.clipTop - var2;
             var4 -= var16;
             var14 += var16 * Class74.anInt1092;
             var9 += var13 * var16;
          }
 
-         if(var1 + var3 > Class74.anInt1096) {
-            var16 = var1 + var3 - Class74.anInt1096;
+         if(var1 + var3 > Class74.clipRight) {
+            var16 = var1 + var3 - Class74.clipRight;
             var3 -= var16;
             var15 += var16;
          }
 
-         if(var1 < Class74.anInt1093) {
-            var16 = Class74.anInt1093 - var1;
+         if(var1 < Class74.clipLeft) {
+            var16 = Class74.clipLeft - var1;
             var3 -= var16;
             var14 += var16;
             var8 += var12 * var16;
             var15 += var16;
          }
 
-         method671(Class74.anIntArray1100, this.anIntArray4081, var8, var9, var14, var15, var3, var4, var12, var13, var6, var5);
+         method671(Class74.buffer, this.anIntArray4081, var8, var9, var14, var15, var3, var4, var12, var13, var6, var5);
       }
    }
 
@@ -799,33 +799,33 @@ final class Class3_Sub28_Sub16_Sub2_Sub1 extends Class3_Sub28_Sub16_Sub2 {
 
          var13 = var1 + var2 * Class74.anInt1092;
          int var14 = Class74.anInt1092 - var3;
-         if(var2 + var4 > Class74.anInt1099) {
-            var4 -= var2 + var4 - Class74.anInt1099;
+         if(var2 + var4 > Class74.clipBottom) {
+            var4 -= var2 + var4 - Class74.clipBottom;
          }
 
          int var15;
-         if(var2 < Class74.anInt1095) {
-            var15 = Class74.anInt1095 - var2;
+         if(var2 < Class74.clipTop) {
+            var15 = Class74.clipTop - var2;
             var4 -= var15;
             var13 += var15 * Class74.anInt1092;
             var8 += var12 * var15;
          }
 
-         if(var1 + var3 > Class74.anInt1096) {
-            var15 = var1 + var3 - Class74.anInt1096;
+         if(var1 + var3 > Class74.clipRight) {
+            var15 = var1 + var3 - Class74.clipRight;
             var3 -= var15;
             var14 += var15;
          }
 
-         if(var1 < Class74.anInt1093) {
-            var15 = Class74.anInt1093 - var1;
+         if(var1 < Class74.clipLeft) {
+            var15 = Class74.clipLeft - var1;
             var3 -= var15;
             var13 += var15;
             var7 += var11 * var15;
             var14 += var15;
          }
 
-         method675(Class74.anIntArray1100, this.anIntArray4081, var7, var8, var13, var14, var3, var4, var11, var12, var5);
+         method675(Class74.buffer, this.anIntArray4081, var7, var8, var13, var14, var3, var4, var11, var12, var5);
       }
    }
 
@@ -839,37 +839,37 @@ final class Class3_Sub28_Sub16_Sub2_Sub1 extends Class3_Sub28_Sub16_Sub2 {
       int var7 = Class74.anInt1092 - var6;
       int var8 = var6 + var6;
       int var9;
-      if(var2 < Class74.anInt1095) {
-         var9 = Class74.anInt1095 - var2;
+      if(var2 < Class74.clipTop) {
+         var9 = Class74.clipTop - var2;
          var5 -= var9;
-         var2 = Class74.anInt1095;
+         var2 = Class74.clipTop;
          var4 += var9 * var6;
          var3 += var9 * Class74.anInt1092;
       }
 
-      if(var2 + var5 > Class74.anInt1099) {
-         var5 -= var2 + var5 - Class74.anInt1099;
+      if(var2 + var5 > Class74.clipBottom) {
+         var5 -= var2 + var5 - Class74.clipBottom;
       }
 
-      if(var1 < Class74.anInt1093) {
-         var9 = Class74.anInt1093 - var1;
+      if(var1 < Class74.clipLeft) {
+         var9 = Class74.clipLeft - var1;
          var6 -= var9;
-         var1 = Class74.anInt1093;
+         var1 = Class74.clipLeft;
          var4 -= var9;
          var3 += var9;
          var8 -= var9;
          var7 += var9;
       }
 
-      if(var1 + var6 > Class74.anInt1096) {
-         var9 = var1 + var6 - Class74.anInt1096;
+      if(var1 + var6 > Class74.clipRight) {
+         var9 = var1 + var6 - Class74.clipRight;
          var6 -= var9;
          var8 -= var9;
          var7 += var9;
       }
 
       if(var6 > 0 && var5 > 0) {
-         method672(Class74.anIntArray1100, this.anIntArray4081, var4, var3, var6, var5, var7, var8);
+         method672(Class74.buffer, this.anIntArray4081, var4, var3, var6, var5, var7, var8);
       }
    }
 
@@ -883,37 +883,37 @@ final class Class3_Sub28_Sub16_Sub2_Sub1 extends Class3_Sub28_Sub16_Sub2 {
       int var8 = Class74.anInt1092 - var7;
       int var9 = 0;
       int var10;
-      if(var2 < Class74.anInt1095) {
-         var10 = Class74.anInt1095 - var2;
+      if(var2 < Class74.clipTop) {
+         var10 = Class74.clipTop - var2;
          var6 -= var10;
-         var2 = Class74.anInt1095;
+         var2 = Class74.clipTop;
          var5 += var10 * var7;
          var4 += var10 * Class74.anInt1092;
       }
 
-      if(var2 + var6 > Class74.anInt1099) {
-         var6 -= var2 + var6 - Class74.anInt1099;
+      if(var2 + var6 > Class74.clipBottom) {
+         var6 -= var2 + var6 - Class74.clipBottom;
       }
 
-      if(var1 < Class74.anInt1093) {
-         var10 = Class74.anInt1093 - var1;
+      if(var1 < Class74.clipLeft) {
+         var10 = Class74.clipLeft - var1;
          var7 -= var10;
-         var1 = Class74.anInt1093;
+         var1 = Class74.clipLeft;
          var5 += var10;
          var4 += var10;
          var9 += var10;
          var8 += var10;
       }
 
-      if(var1 + var7 > Class74.anInt1096) {
-         var10 = var1 + var7 - Class74.anInt1096;
+      if(var1 + var7 > Class74.clipRight) {
+         var10 = var1 + var7 - Class74.clipRight;
          var7 -= var10;
          var9 += var10;
          var8 += var10;
       }
 
       if(var7 > 0 && var6 > 0) {
-         method674(Class74.anIntArray1100, this.anIntArray4081, var5, var4, var7, var6, var8, var9, var3);
+         method674(Class74.buffer, this.anIntArray4081, var5, var4, var7, var6, var8, var9, var3);
       }
    }
 

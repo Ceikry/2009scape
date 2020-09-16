@@ -39,7 +39,7 @@ final class Class46 {
             }
 
             if(var2 == 9) {
-               Canvas_Sub1.anInt15 = var3;
+               Unsorted.anInt15 = var3;
             }
 
          }

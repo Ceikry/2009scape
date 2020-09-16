@@ -23,7 +23,7 @@ final class Class7 implements Interface4 {
         	 return null;
          }
          if(GameObject.aClass11ArrayArray1834[windowId] == null || GameObject.aClass11ArrayArray1834[windowId].length <= componentId || null == GameObject.aClass11ArrayArray1834[windowId][componentId]) {
-            boolean var4 = Canvas_Sub2.loadInterface(windowId);
+            boolean var4 = Unsorted.loadInterface(windowId);
             if(!var4) {
                return null;
             }

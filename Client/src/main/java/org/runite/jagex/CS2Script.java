@@ -33,7 +33,7 @@ final class CS2Script extends Linkable {
          Class3_Sub13_Sub1.outgoingBuffer.putShort(country);
          Class132.anInt1734 = 0;
          GraphicDefinition.anInt548 = 0;
-         Canvas_Sub1.registryStage = 1;
+         Unsorted.registryStage = 1;
          Unsorted.anInt1711 = -3;
       } catch (RuntimeException var6) {
          throw Class44.clientError(var6, "jl.C(" + year + ',' + country + ',' + day + ',' + month + ',' + 1 + ')');
@@ -67,10 +67,10 @@ final class CS2Script extends Linkable {
    static void method379() {
       try {
          int var2 = Class146.anInt1904 * 128 - -64;
-         int var1 = 128 * Canvas_Sub2.anInt30 + 64;
+         int var1 = 128 * Unsorted.anInt30 + 64;
          int var3 = Class121.method1736(WorldListCountry.localPlane, 1, var1, var2) - Class3_Sub13_Sub34.anInt3414;
          if(100 <= Unsorted.anInt3631) {
-            NPC.anInt3995 = 64 + Canvas_Sub2.anInt30 * 128;
+            NPC.anInt3995 = 64 + Unsorted.anInt30 * 128;
             Class77.anInt1111 = 64 + Class146.anInt1904 * 128;
             Class7.anInt2162 = Class121.method1736(WorldListCountry.localPlane, 1024 + -1023, NPC.anInt3995, Class77.anInt1111) + -Class3_Sub13_Sub34.anInt3414;
          } else {

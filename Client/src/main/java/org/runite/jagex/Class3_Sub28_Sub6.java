@@ -200,7 +200,7 @@ final class Class3_Sub28_Sub6 extends Node {
          Class3_Sub13_Sub1.outgoingBuffer.putByte((byte)-41, var8.index);
          Class3_Sub13_Sub1.outgoingBuffer.putBytes(var8.buffer, var8.index, 115);
          Unsorted.anInt1711 = -3;
-         Canvas_Sub1.registryStage = 1;
+         Unsorted.registryStage = 1;
          Class132.anInt1734 = 0;
          GraphicDefinition.anInt548 = 0;
       } catch (RuntimeException var9) {

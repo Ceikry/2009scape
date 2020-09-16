@@ -83,11 +83,11 @@ final class Class3_Sub20 extends Linkable {
       try {
          Unsorted.anInt3631 = var3;
          Class3_Sub13_Sub34.anInt3414 = var2;
-         Canvas_Sub2.anInt30 = var6;
+         Unsorted.anInt30 = var6;
          Class163_Sub2_Sub1.anInt4021 = var1;
          Class146.anInt1904 = var5;
          if(var0 && Unsorted.anInt3631 >= 100) {
-            NPC.anInt3995 = 128 * Canvas_Sub2.anInt30 + 64;
+            NPC.anInt3995 = 128 * Unsorted.anInt30 + 64;
             Class77.anInt1111 = 128 * Class146.anInt1904 + 64;
             Class7.anInt2162 = Class121.method1736(WorldListCountry.localPlane, 1, NPC.anInt3995, Class77.anInt1111) + -Class3_Sub13_Sub34.anInt3414;
          }

@@ -258,7 +258,11 @@ public class Signlink implements Runnable {
                                 var7.invoke(var6, var1.anObject977, method1448(this.gameName, this.anInt1215, "libjogl_awt.so").toString());
                             } else if (osName.startsWith("mac")) {
                                 createLibs(var11 ? 2 : 3);
-                                var7.invoke(var6, var1.anObject977, method1448(this.gameName, this.anInt1215, "libjogl.jnilib").toString());
+                                try {
+                                    var7.invoke(var6, var1.anObject977, method1448(this.gameName, this.anInt1215, "libjogl.jnilib").toString());
+                                } catch (Exception e) {
+                                    e.printStackTrace();
+                                }
                                 var7.invoke(var6, var1.anObject977, method1448(this.gameName, this.anInt1215, "libjogl_awt.jnilib").toString());
                             } else {
 

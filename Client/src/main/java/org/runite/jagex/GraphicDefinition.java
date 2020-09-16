@@ -144,7 +144,7 @@ final class GraphicDefinition {
 
 	static void method967(int var0, int var1, int var3, int var4, int var5, int var6, int var7) {
 		try {
-			if(Canvas_Sub2.loadInterface(var5)) {
+			if(Unsorted.loadInterface(var5)) {
                 Client.handleItemSwitch(GameObject.aClass11ArrayArray1834[var5], -1, var6, var1, var4, var7, var0, var3);
             }
 		} catch (RuntimeException var9) {

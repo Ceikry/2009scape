@@ -182,10 +182,10 @@ abstract class Class3_Sub13 extends Linkable {
                   HDToolKit.method1826();
                } else {
                   try {
-                     Graphics var8 = Class3_Sub28_Sub12.aCanvas3648.getGraphics();
+                     Graphics var8 = Class3_Sub28_Sub12.canvas.getGraphics();
                      Class164_Sub1.aClass158_3009.method2179(var8);
                   } catch (Exception var9) {
-                     Class3_Sub28_Sub12.aCanvas3648.repaint();
+                     Class3_Sub28_Sub12.canvas.repaint();
                   }
                }
             } else {

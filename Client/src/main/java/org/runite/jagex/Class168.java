@@ -70,25 +70,25 @@ final class Class168 {
     static void method2272(int[] var0, int var1, int var2, int var3, int var4, int var5, int var6, int var7, int var8, boolean var9) {
         try {
             int var11 = var2;
-            if (var2 < Class74.anInt1096) {
-                if (Class74.anInt1093 > var2) {
-                    var11 = Class74.anInt1093;
+            if (var2 < Class74.clipRight) {
+                if (Class74.clipLeft > var2) {
+                    var11 = Class74.clipLeft;
                 }
 
                 int var12 = var7 + var2;
-                if (Class74.anInt1093 < var12) {
-                    if (Class74.anInt1096 < var12) {
-                        var12 = Class74.anInt1096;
+                if (Class74.clipLeft < var12) {
+                    if (Class74.clipRight < var12) {
+                        var12 = Class74.clipRight;
                     }
 
                     int var13 = var8;
-                    if (var8 < Class74.anInt1099) {
+                    if (var8 < Class74.clipBottom) {
                         int var14 = var8 + var6;
-                        if (Class74.anInt1095 > var8) {
-                            var13 = Class74.anInt1095;
+                        if (Class74.clipTop > var8) {
+                            var13 = Class74.clipTop;
                         }
 
-                        if (var14 > Class74.anInt1095) {
+                        if (var14 > Class74.clipTop) {
                             int var15 = var11 + Class74.anInt1092 * var13;
                             if (var5 == 9) {
                                 var3 = 3 & var3 - -1;
@@ -98,8 +98,8 @@ final class Class168 {
                             int var16 = -var12 + var11 + Class74.anInt1092;
                             var13 -= var8;
                             int var20 = var6 + -var13;
-                            if (Class74.anInt1099 < var14) {
-                                var14 = Class74.anInt1099;
+                            if (Class74.clipBottom < var14) {
+                                var14 = Class74.clipBottom;
                             }
 
                             if (var5 == 10) {

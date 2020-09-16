@@ -25,7 +25,7 @@ final class Class3_Sub8 extends Linkable {
             aClass94_2306 = (RSString)null;
          }
 
-         if(Canvas_Sub2.loadInterface(var2)) {
+         if(Unsorted.loadInterface(var2)) {
             Class2.method75(GameObject.aClass11ArrayArray1834[var2], var1);
          }
       } catch (RuntimeException var4) {

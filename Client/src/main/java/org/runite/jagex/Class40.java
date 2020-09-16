@@ -27,7 +27,7 @@ final class Class40 {
          Class3_Sub13_Sub1.outgoingBuffer.putByte((byte)-33, 186);
          Class3_Sub13_Sub1.outgoingBuffer.putString(name);
         // Class3_Sub13_Sub1.outgoingBuffer.putLong(var0, var2 + -2037463204);
-         Canvas_Sub1.registryStage = 1;
+         Unsorted.registryStage = 1;
          Class132.anInt1734 = 0;
          GraphicDefinition.anInt548 = 0;
          Unsorted.anInt1711 = -3;

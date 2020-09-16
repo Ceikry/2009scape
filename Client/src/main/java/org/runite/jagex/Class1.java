@@ -622,7 +622,7 @@ final class Class1 {
                }
 
                if(HDToolKit.highDetail) {
-                  Class74.anIntArray1100 = null;
+                  Class74.buffer = null;
                } else {
                   Class164_Sub1.aClass158_3009.method2182();
                }
@@ -643,7 +643,7 @@ final class Class1 {
                Class22.method930(var15, var6, var7, var8, var9, 128);
                Class22.method927(var15, var6, var7, var8, var9);
             } else {
-               Class74.method1312(var15, var6, var7, var8, var9, 128);
+               Class74.fillRectangle(var15, var6, var7, var8, var9, 128);
                Class74.method1311(var15, var6, var7, var8, var9);
             }
 
@@ -662,7 +662,7 @@ final class Class1 {
                      if(HDToolKit.highDetail) {
                         Class22.method930(-2 + var12, -2 + var13, 4, 4, 16776960, var10);
                      } else {
-                        Class74.method1312(var12 + -2, -2 + var13, 4, 4, 16776960, var10);
+                        Class74.fillRectangle(var12 + -2, -2 + var13, 4, 4, 16776960, var10);
                      }
                   }
                }
