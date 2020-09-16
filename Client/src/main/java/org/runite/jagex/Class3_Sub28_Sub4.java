@@ -168,7 +168,7 @@ final class Class3_Sub28_Sub4 extends Node {
 
    final RSString method554() {
       try {
-         RSString var2 = Class47.method1090((byte)-118, 80);
+         RSString var2 = Class47.emptyString(80);
          if(null == this.aClass94Array3571) {
             return Class3_Sub13_Sub29.aClass94_3357;
          } else {
@@ -189,7 +189,7 @@ final class Class3_Sub28_Sub4 extends Node {
    final RSString method555(DataBuffer var2) {
       try {
 
-         RSString var3 = Class47.method1090((byte)-125, 80);
+         RSString var3 = Class47.emptyString(80);
          if(this.anIntArray3566 != null) {
             for(int var4 = 0; var4 < this.anIntArray3566.length; ++var4) {
                Objects.requireNonNull(var3).method1533(this.aClass94Array3571[var4]);

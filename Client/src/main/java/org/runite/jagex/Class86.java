@@ -51,22 +51,18 @@ final class Class86 {
         }
     }
 
-    static Class3_Sub28_Sub17_Sub1 method1430(int var0, int var1) {
+    static Class3_Sub28_Sub17_Sub1 method1430(int var1) {
         try {
-            if (var0 == -28922) {
-                Class3_Sub28_Sub17_Sub1 var2 = (Class3_Sub28_Sub17_Sub1) Unsorted.aClass93_1135.get((long) var1);
-                if (var2 == null) {
-                    byte[] var3 = Unsorted.aClass153_1948.getFile(var1, 0);
-                    var2 = new Class3_Sub28_Sub17_Sub1(var3);
-                    var2.method697(Class3_Sub13_Sub22.aClass109Array3270, (int[]) null);
-                    Unsorted.aClass93_1135.put((byte) -96, var2, (long) var1);
-                }
-                return var2;
-            } else {
-                return (Class3_Sub28_Sub17_Sub1) null;
+            Class3_Sub28_Sub17_Sub1 var2 = (Class3_Sub28_Sub17_Sub1) Unsorted.aClass93_1135.get((long) var1);
+            if (var2 == null) {
+                byte[] var3 = Unsorted.aClass153_1948.getFile(var1, 0);
+                var2 = new Class3_Sub28_Sub17_Sub1(var3);
+                var2.method697(Class3_Sub13_Sub22.aClass109Array3270, (int[]) null);
+                Unsorted.aClass93_1135.put((byte) -96, var2, (long) var1);
             }
+            return var2;
         } catch (RuntimeException var4) {
-            throw Class44.clientError(var4, "li.A(" + var0 + ',' + var1 + ')');
+            throw Class44.clientError(var4, "li.A(" + -28922 + ',' + var1 + ')');
         }
     }
 

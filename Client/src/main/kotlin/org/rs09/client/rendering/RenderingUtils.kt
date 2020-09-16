@@ -26,7 +26,16 @@ object RenderingUtils {
      */
 
     fun fillRect(x: Int, y: Int, w: Int, h: Int, rgb: Int, alpha: Int) {
-        if (hd) Class22.method930(x, y, w, h, rgb, alpha)
+        if (hd) Class22.fillRectangle(x, y, w, h, rgb, alpha)
         else Class74.fillRectangle(x, y, w, h, rgb, alpha)
+    }
+
+    fun drawHorizontalLine(x: Int, y: Int, w: Int, rgb: Int) {
+        if (hd) Class22.drawHorizontalLine(x, y, w, rgb)
+        else Class74.drawHorizontalLine(x, y, w, rgb)
+    }
+
+    fun drawText(str: String, x: Int, y: Int, rgb: Int) {
+        Class126.aClass3_Sub28_Sub17_1669.method681(RSString.of(str), x, y, rgb, -1)
     }
 }

@@ -69,8 +69,10 @@ final class KeyboardListener implements KeyListener, FocusListener {
                break;
             case 192:
                DeveloperConsole.INSTANCE.toggle();
-               break;
+               return;
          }
+         if (DeveloperConsole.INSTANCE.getOpen()) return;
+
          if(null != Class3_Sub13_Sub3.aClass148_3049) {
             Class3_Sub13_Sub33.anInt3398 = 0;
             int var2 = var1.getKeyCode();
@@ -156,6 +158,11 @@ final class KeyboardListener implements KeyListener, FocusListener {
    }
 
    public final void keyTyped(KeyEvent var1) {
+      if (DeveloperConsole.INSTANCE.getOpen()) {
+         DeveloperConsole.INSTANCE.handleKey(var1);
+         return;
+      }
+
       try {
     	 
          if(Class3_Sub13_Sub3.aClass148_3049 != null) {
@@ -177,17 +184,14 @@ final class KeyboardListener implements KeyListener, FocusListener {
    }
 
    public final synchronized void focusLost(FocusEvent var1) {
-      try {
-         if(null != Class3_Sub13_Sub3.aClass148_3049) {
-            Class3_Sub13.anInt2384 = -1;
-         }
-
-      } catch (RuntimeException var3) {
-         throw Class44.clientError(var3, "uf.focusLost(" + (var1 != null?"{...}":"null") + ')');
+      if(Class3_Sub13_Sub3.aClass148_3049 != null) {
+         Class3_Sub13.anInt2384 = -1;
       }
    }
 
    public final synchronized void keyReleased(KeyEvent var1) {
+      if (DeveloperConsole.INSTANCE.getOpen()) return;
+
       switch (var1.getKeyCode())
       {
          case 16:

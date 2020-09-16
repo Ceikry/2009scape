@@ -11,7 +11,7 @@ public final class Class74 {
    static int[] anIntArray1097;
    static int[] anIntArray1098;
    static int clipBottom = 0;
-   static int[] buffer;
+   public static int[] buffer;
 
 
    static void method1310() {
@@ -20,8 +20,8 @@ public final class Class74 {
    }
 
    static void method1311(int var0, int var1, int var2, int var3, int var4) {
-      method1317(var0, var1, var2, var4);
-      method1317(var0, var1 + var3 - 1, var2, var4);
+      drawHorizontalLine(var0, var1, var2, var4);
+      drawHorizontalLine(var0, var1 + var3 - 1, var2, var4);
       method1318(var0, var1, var3, var4);
       method1318(var0 + var2 - 1, var1, var3, var4);
    }
@@ -95,21 +95,21 @@ public final class Class74 {
       method1310();
    }
 
-   static void method1317(int var0, int var1, int var2, int var3) {
-      if(var1 >= clipTop && var1 < clipBottom) {
-         if(var0 < clipLeft) {
-            var2 -= clipLeft - var0;
-            var0 = clipLeft;
+   public static void drawHorizontalLine(int x, int y, int width, int rgb) {
+      if(y >= clipTop && y < clipBottom) {
+         if(x < clipLeft) {
+            width -= clipLeft - x;
+            x = clipLeft;
          }
 
-         if(var0 + var2 > clipRight) {
-            var2 = clipRight - var0;
+         if(x + width > clipRight) {
+            width = clipRight - x;
          }
 
-         int var4 = var0 + var1 * anInt1092;
+         int var4 = x + y * anInt1092;
 
-         for(int var5 = 0; var5 < var2; ++var5) {
-            buffer[var4 + var5] = var3;
+         for(int var5 = 0; var5 < width; ++var5) {
+            buffer[var4 + var5] = rgb;
          }
 
       }
@@ -346,9 +346,9 @@ public final class Class74 {
       var3 -= var1;
       if(var3 == 0) {
          if(var2 >= 0) {
-            method1317(var0, var1, var2 + 1, var4);
+            drawHorizontalLine(var0, var1, var2 + 1, var4);
          } else {
-            method1317(var0 + var2, var1, -var2 + 1, var4);
+            drawHorizontalLine(var0 + var2, var1, -var2 + 1, var4);
          }
 
       } else if(var2 == 0) {

@@ -46,23 +46,23 @@ final class Class3_Sub13_Sub12 extends Class3_Sub13 {
                 Class22.method934(var3, 16 + var4 + var7, 16, var6, Class25.anInt486);
                 Class22.method924(var3, var7 + (var4 - -16), var6, Class3_Sub13_Sub31.anInt3377);
                 Class22.method924(var3 + 1, var7 + 16 + var4, var6, Class3_Sub13_Sub31.anInt3377);
-                Class22.method922(var3, var7 + 16 + var4, 16, Class3_Sub13_Sub31.anInt3377);
-                Class22.method922(var3, var7 + var4 + 17, 16, Class3_Sub13_Sub31.anInt3377);
+                Class22.drawHorizontalLine(var3, var7 + 16 + var4, 16, Class3_Sub13_Sub31.anInt3377);
+                Class22.drawHorizontalLine(var3, var7 + var4 + 17, 16, Class3_Sub13_Sub31.anInt3377);
                 Class22.method924(15 + var3, var4 + (16 - -var7), var6, Class3_Sub2.anInt2243);
                 Class22.method924(14 + var3, 17 + (var4 - -var7), -1 + var6, Class3_Sub2.anInt2243);
-                Class22.method922(var3, var6 + 15 + var4 + var7, 16, Class3_Sub2.anInt2243);
-                Class22.method922(var3 + 1, var4 + 14 - -var7 + var6, 15, Class3_Sub2.anInt2243);
+                Class22.drawHorizontalLine(var3, var6 + 15 + var4 + var7, 16, Class3_Sub2.anInt2243);
+                Class22.drawHorizontalLine(var3 + 1, var4 + 14 - -var7 + var6, 15, Class3_Sub2.anInt2243);
             } else {
                 Class74.method1323(var3, 16 + var4, 16, -32 + var5, Class3_Sub23.anInt2530);
                 Class74.method1323(var3, var7 + (var4 - -16), 16, var6, Class25.anInt486);
                 Class74.method1318(var3, var7 + var4 + 16, var6, Class3_Sub13_Sub31.anInt3377);
                 Class74.method1318(var3 + 1, var7 + 16 + var4, var6, Class3_Sub13_Sub31.anInt3377);
-                Class74.method1317(var3, var4 + (16 - -var7), 16, Class3_Sub13_Sub31.anInt3377);
-                Class74.method1317(var3, 17 + var4 + var7, 16, Class3_Sub13_Sub31.anInt3377);
+                Class74.drawHorizontalLine(var3, var4 + (16 - -var7), 16, Class3_Sub13_Sub31.anInt3377);
+                Class74.drawHorizontalLine(var3, 17 + var4 + var7, 16, Class3_Sub13_Sub31.anInt3377);
                 Class74.method1318(var3 - -15, var7 + 16 + var4, var6, Class3_Sub2.anInt2243);
                 Class74.method1318(14 + var3, var4 - -17 - -var7, -1 + var6, Class3_Sub2.anInt2243);
-                Class74.method1317(var3, var6 + 15 + var4 + var7, 16, Class3_Sub2.anInt2243);
-                Class74.method1317(1 + var3, var6 + var4 - (-14 + -var7), 15, Class3_Sub2.anInt2243);
+                Class74.drawHorizontalLine(var3, var6 + 15 + var4 + var7, 16, Class3_Sub2.anInt2243);
+                Class74.drawHorizontalLine(1 + var3, var6 + var4 - (-14 + -var7), 15, Class3_Sub2.anInt2243);
             }
 
         } catch (RuntimeException var9) {

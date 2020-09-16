@@ -2,7 +2,7 @@ package org.runite.jagex;
 
 import org.rs09.client.collections.Queue;
 
-final class Class126 {
+public final class Class126 {
 
    int anInt1663;
    int anInt1664;
@@ -10,7 +10,7 @@ final class Class126 {
    static Queue aClass13_1666 = new Queue();
    int anInt1667;
    static int anInt1668 = -1;
-   static Class3_Sub28_Sub17 aClass3_Sub28_Sub17_1669;
+   public static Class3_Sub28_Sub17 aClass3_Sub28_Sub17_1669;
    int anInt1670;
    static Client aClient1671;
    static int anInt1672 = 0;

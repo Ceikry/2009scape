@@ -3315,7 +3315,7 @@ final class ItemDefinition {
 													iStackCounter -= 2;
 													int l73 = intsStack[iStackCounter - -1];
 													int i63 = intsStack[iStackCounter];
-													intsStack[iStackCounter++] = Class86.method1430(-28922, l73).method684(class94_34, i63);
+													intsStack[iStackCounter++] = Class86.method1430(l73).method684(class94_34, i63);
 													continue;
 												}
 												if (opcode == 4109) {
@@ -3323,7 +3323,7 @@ final class ItemDefinition {
 													RSString class94_35 = stringsStack[--sStackCounter];
 													int i74 = intsStack[1 + iStackCounter];
 													int j63 = intsStack[iStackCounter];
-													intsStack[iStackCounter++] = Class86.method1430(-28922, i74).method680(class94_35, j63);
+													intsStack[iStackCounter++] = Class86.method1430(i74).method680(class94_35, j63);
 													continue;
 												}
 												if (opcode == 4110) {
@@ -3387,7 +3387,7 @@ final class ItemDefinition {
 												}
 												if (opcode == 4119) {
 													RSString class94_41 = stringsStack[--sStackCounter];
-													RSString class94_60 = Class47.method1090((byte) -87, class94_41.length(-44));
+													RSString class94_60 = Class47.emptyString(class94_41.length(-44));
 													boolean flag9 = false;
 													for (int l78 = 0; class94_41.length(-113) > l78; l78++) {
 														int l80 = class94_41.charAt(l78, (byte) -40);

@@ -268,13 +268,13 @@ final class Class49 {
                   if(!Unsorted.aBooleanArray1712[var2]) {
                      if(Class163_Sub1_Sub1.aBooleanArray4008[var2]) {
                         if(HDToolKit.highDetail) {
-                           Class22.method930(Class155.anIntArray1969[var2], Player.anIntArray3954[var2], Class3_Sub28_Sub18.anIntArray3768[var2], Class140_Sub4.anIntArray2794[var2], 16711680, 128);
+                           Class22.fillRectangle(Class155.anIntArray1969[var2], Player.anIntArray3954[var2], Class3_Sub28_Sub18.anIntArray3768[var2], Class140_Sub4.anIntArray2794[var2], 16711680, 128);
                         } else {
                            Class74.fillRectangle(Class155.anIntArray1969[var2], Player.anIntArray3954[var2], Class3_Sub28_Sub18.anIntArray3768[var2], Class140_Sub4.anIntArray2794[var2], 16711680, 128);
                         }
                      }
                   } else if(HDToolKit.highDetail) {
-                     Class22.method930(Class155.anIntArray1969[var2], Player.anIntArray3954[var2], Class3_Sub28_Sub18.anIntArray3768[var2], Class140_Sub4.anIntArray2794[var2], 16711935, 128);
+                     Class22.fillRectangle(Class155.anIntArray1969[var2], Player.anIntArray3954[var2], Class3_Sub28_Sub18.anIntArray3768[var2], Class140_Sub4.anIntArray2794[var2], 16711935, 128);
                   } else {
                      Class74.fillRectangle(Class155.anIntArray1969[var2], Player.anIntArray3954[var2], Class3_Sub28_Sub18.anIntArray3768[var2], Class140_Sub4.anIntArray2794[var2], 16711935, 128);
                   }

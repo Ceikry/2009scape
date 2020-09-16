@@ -3,7 +3,7 @@ package org.runite.jagex;
 import javax.media.opengl.GL;
 import java.nio.ByteBuffer;
 
-final class Class3_Sub28_Sub17_Sub2 extends Class3_Sub28_Sub17 {
+public final class Class3_Sub28_Sub17_Sub2 extends Class3_Sub28_Sub17 {
 
    private int anInt4083 = 0;
    private int anInt4084 = -1;

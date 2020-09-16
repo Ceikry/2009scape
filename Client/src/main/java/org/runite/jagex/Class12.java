@@ -2,12 +2,12 @@ package org.runite.jagex;
 
 import org.rs09.client.util.ArrayUtils;
 
-final class Class12 {
+public final class Class12 {
 
    static float aFloat319;
    GameObject object;
    static CacheIndex aClass153_322;
-   static CacheIndex aClass153_323;
+   public static CacheIndex aClass153_323;
    int anInt324;
    int anInt326;
    long aLong328;

@@ -154,6 +154,7 @@ public final class Client extends GameShell {
                     Class3_Sub13.method164((byte) -73, false, TextCore.LoadingPleaseWait2);
                 }
 
+                DeveloperConsole.INSTANCE.preDraw();
                 DeveloperConsole.INSTANCE.draw();
 
                 if (HDToolKit.highDetail && Class143.loadingStage != 0) {
@@ -186,6 +187,7 @@ public final class Client extends GameShell {
                                 Class163_Sub1_Sub1.aBooleanArray4008[var5] = false;
                             }
                         } catch (Exception var7) {
+                            var7.printStackTrace();
                             Class3_Sub28_Sub12.canvas.repaint();
                         }
                     }
@@ -199,6 +201,8 @@ public final class Client extends GameShell {
                     Unsorted.aBoolean2146 = false;
                     Class119.method1730(Class38.aClass87_665);
                 }
+
+                DeveloperConsole.INSTANCE.postDraw();
 
 //				if (DeveloperConsole.INSTANCE.getOpen()) {
 //				    DeveloperConsole.INSTANCE.draw();

@@ -640,7 +640,7 @@ final class Class1 {
             }
 
             if(HDToolKit.highDetail) {
-               Class22.method930(var15, var6, var7, var8, var9, 128);
+               Class22.fillRectangle(var15, var6, var7, var8, var9, 128);
                Class22.method927(var15, var6, var7, var8, var9);
             } else {
                Class74.fillRectangle(var15, var6, var7, var8, var9, 128);
@@ -660,7 +660,7 @@ final class Class1 {
                      int var13 = var4 - -(var11.anInt2539 * var1 / Class108.anInt1460);
                      int var12 = var2 * var11.anInt2531 / Class23.anInt455 + var0;
                      if(HDToolKit.highDetail) {
-                        Class22.method930(-2 + var12, -2 + var13, 4, 4, 16776960, var10);
+                        Class22.fillRectangle(-2 + var12, -2 + var13, 4, 4, 16776960, var10);
                      } else {
                         Class74.fillRectangle(var12 + -2, -2 + var13, 4, 4, 16776960, var10);
                      }

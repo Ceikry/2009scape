@@ -2,7 +2,7 @@ package org.runite.jagex;
 
 import java.util.Objects;
 
-final class Class97 {
+public final class Class97 {
 
    private int[][][] anIntArrayArrayArray1362;
    static byte[] aByteArray1364 = new byte['\u8080'];
@@ -18,7 +18,7 @@ final class Class97 {
    static RSString aClass94_1374;
    static int anInt1375;
    static CacheIndex aClass153_1376;
-   static CacheIndex aClass153_1378;
+   public static CacheIndex aClass153_1378;
    boolean aBoolean1379 = false;
    static RSString aClass94_1380;
    static Class3_Sub28_Sub16_Sub2 aClass3_Sub28_Sub16_Sub2_1381;

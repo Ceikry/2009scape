@@ -53,7 +53,7 @@ final class Class3_Sub23 extends Linkable {
 
    static RSString method407(int var0, boolean var1, int var2, long var3) {
       try {
-         RSString var6 = Class47.method1090((byte)-99, 0);
+         RSString var6 = Class47.emptyString(0);
          if(var3 < 0) {
             var3 = -var3;
             Objects.requireNonNull(var6).method1533(Class3_Sub13_Sub11.aClass94_3133);
@@ -76,7 +76,7 @@ final class Class3_Sub23 extends Linkable {
             var7 = Class143.aClass94_1880;
          }
 
-         RSString var10 = Class47.method1090((byte)-99, 0);
+         RSString var10 = Class47.emptyString(0);
 
          int var11;
          for(var11 = 0; var2 > var11; ++var11) {
@@ -90,7 +90,7 @@ final class Class3_Sub23 extends Linkable {
             var9 = Class3_Sub13_Sub1.aClass94_3039;
          } else {
             RSString var12;
-            for(var12 = Class47.method1090((byte)-102, 0); var3 > 0L; var3 /= 10L) {
+            for(var12 = Class47.emptyString(0); var3 > 0L; var3 /= 10L) {
                if(var1 && var11 != 0 && var11 % 3 == 0) {
                   var12.method1533(var8);
                }

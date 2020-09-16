@@ -1,6 +1,6 @@
 package org.runite.jagex;
 
-final class Class3_Sub28_Sub17_Sub1 extends Class3_Sub28_Sub17 {
+public final class Class3_Sub28_Sub17_Sub1 extends Class3_Sub28_Sub17 {
 
    private byte[][] aByteArrayArray4082 = new byte[256][];
 

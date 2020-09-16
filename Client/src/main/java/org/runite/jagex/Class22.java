@@ -16,14 +16,14 @@ public final class Class22 {
       aClass3_Sub28_Sub16_Sub1_447 = null;
    }
 
-   static void method922(int var0, int var1, int var2, int var3) {
+   public static void drawHorizontalLine(int x, int y, int width, int rgb) {
       HDToolKit.method1835();
-      float var4 = (float)var0 + 0.3F;
-      float var5 = var4 + (float)var2;
-      float var6 = (float)HDToolKit.anInt1811 - ((float)var1 + 0.3F);
+      float var4 = (float)x + 0.3F;
+      float var5 = var4 + (float)width;
+      float var6 = (float)HDToolKit.anInt1811 - ((float)y + 0.3F);
       GL var7 = HDToolKit.gl;
       var7.glBegin(1);
-      var7.glColor3ub((byte)(var3 >> 16), (byte)(var3 >> 8), (byte)var3);
+      var7.glColor3ub((byte)(rgb >> 16), (byte)(rgb >> 8), (byte)rgb);
       var7.glVertex2f(var4, var6);
       var7.glVertex2f(var5, var6);
       var7.glEnd();
@@ -148,7 +148,7 @@ public final class Class22 {
       }
    }
 
-   public static void method930(int var0, int var1, int var2, int var3, int var4, int var5) {
+   public static void fillRectangle(int var0, int var1, int var2, int var3, int var4, int var5) {
       HDToolKit.method1835();
       float var6 = (float)var0;
       float var7 = var6 + (float)var2;

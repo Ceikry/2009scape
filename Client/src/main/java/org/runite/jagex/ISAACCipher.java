@@ -221,7 +221,7 @@ final class ISAACCipher {
                   }
                }
             } else if(HDToolKit.highDetail) {
-               Class22.method930(var1, var2, var3, 20, Class3_Sub28_Sub6.anInt3600, -Unsorted.anInt963 + 256);
+               Class22.fillRectangle(var1, var2, var3, 20, Class3_Sub28_Sub6.anInt3600, -Unsorted.anInt963 + 256);
             } else {
                Class74.fillRectangle(var1, var2, var3, 20, Class3_Sub28_Sub6.anInt3600, -Unsorted.anInt963 + 256);
             }
@@ -242,7 +242,7 @@ final class ISAACCipher {
 
          Class168.aClass3_Sub28_Sub17_2096.method681(TextCore.HasChooseOptions, var1 - -3, 14 + var2, Class3_Sub13_Sub28.anInt3351, -1);
          if(HDToolKit.highDetail) {
-            Class22.method930(var1, 20 + var2, var3, var4 - 20, Class3_Sub28_Sub6.anInt3600, -Unsorted.anInt963 + 256);
+            Class22.fillRectangle(var1, 20 + var2, var3, var4 - 20, Class3_Sub28_Sub6.anInt3600, -Unsorted.anInt963 + 256);
          } else {
             Class74.fillRectangle(var1, 20 + var2, var3, -20 + var4, Class3_Sub28_Sub6.anInt3600, -Unsorted.anInt963 + 256);
          }
@@ -255,7 +255,7 @@ final class ISAACCipher {
             var8 = (-var7 + Class3_Sub13_Sub34.anInt3415 - 1) * 15 + var2 + 35;
             if(var1 < var5 && var5 < var1 - -var3 && -13 + var8 < var6 && var8 + 3 > var6) {
                if(HDToolKit.highDetail) {
-                  Class22.method930(var1, var8 + -13, var3, 16, MouseListeningClass.anInt1926, -Class136.anInt1771 + 256);
+                  Class22.fillRectangle(var1, var8 + -13, var3, 16, MouseListeningClass.anInt1926, -Class136.anInt1771 + 256);
                } else {
                   Class74.fillRectangle(var1, var8 + -13, var3, 16, MouseListeningClass.anInt1926, -Class136.anInt1771 + 256);
                }

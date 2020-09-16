@@ -12,7 +12,7 @@ import java.net.URL;
 import java.nio.charset.StandardCharsets;
 import java.util.Objects;
 
-final class RSString implements Interface3 {
+public final class RSString implements Interface3 {
 
     private boolean aBoolean2152 = true;
     byte[] buffer;
@@ -605,7 +605,7 @@ final class RSString implements Interface3 {
                 int var7 = this.method1566(var3, var6);
                 if (0 > var7) {
                     var6 = 0;
-                    RSString var10 = Class47.method1090((byte) -104, var4);
+                    RSString var10 = Class47.emptyString(var4);
 
                     while (true) {
                         int var8 = this.method1566(var3, var6);
