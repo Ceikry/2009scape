@@ -153,7 +153,7 @@ final class PacketParser {
                                 if (Unsorted.incomingOpcode == 70) {
                                     RSString message = GraphicDefinition.incomingBuffer.readString();
                                     if (message.endsWith(TextCore.HasTradeRequest)) {
-                                        playerName = message.method1557(message.indexOf(Class155.char_colon, 65), 0, 0);
+                                        playerName = message.substring(0, message.indexOf(Class155.char_colon, 65), 0);
                                         nameAsLong = playerName.toLong();
                                         isIgnored = false;
 
@@ -168,7 +168,7 @@ final class PacketParser {
                                             Class3_Sub30_Sub1.addChatMessage(playerName, 4, TextCore.HasWishToTrade, (byte) -83 + 82);
                                         }
                                     } else if (message.endsWith(Class30.cmdChalReq)) {
-                                        playerName = message.method1557(message.indexOf(Class155.char_colon, 75), 0, 0);
+                                        playerName = message.substring(0, message.indexOf(Class155.char_colon, 75), 0);
                                         nameAsLong = playerName.toLong();
                                         isIgnored = false;
 
@@ -180,12 +180,12 @@ final class PacketParser {
                                         }
 
                                         if (!isIgnored && inTutorialIsland == 0) {
-                                            var41 = message.method1557(message.length((byte) -83 + -16) + -9, (byte) -83 ^ -83, 1 + message.indexOf(Class155.char_colon, 101));
+                                            var41 = message.substring(1 + message.indexOf(Class155.char_colon, 101), message.length((byte) -83 + -16) + -9, (byte) -83 ^ -83);
                                             Class3_Sub30_Sub1.addChatMessage(playerName, 8, var41, (byte) -83 ^ 82);
                                         }
                                     } else if (message.endsWith(TextCore.HasAssistRequest)) {
                                         isIgnored = false;
-                                        playerName = message.method1557(message.indexOf(Class155.char_colon, 96), 0, 0);
+                                        playerName = message.substring(0, message.indexOf(Class155.char_colon, 96), 0);
                                         nameAsLong = playerName.toLong();
 
                                         for (var30 = 0; var30 < Class3_Sub28_Sub5.anInt3591; ++var30) {
@@ -199,21 +199,21 @@ final class PacketParser {
                                             Class3_Sub30_Sub1.addChatMessage(playerName, 10, Class3_Sub28_Sub14.aClass94_3672, -1);
                                         }
                                     } else if (message.endsWith(TextCore.HasClan)) {
-                                        playerName = message.method1557(message.indexOf(TextCore.HasClan, (byte) -83 ^ -50), 0, 0);
+                                        playerName = message.substring(0, message.indexOf(TextCore.HasClan, (byte) -83 ^ -50), 0);
                                         Class3_Sub30_Sub1.addChatMessage(Class3_Sub28_Sub14.aClass94_3672, 11, playerName, -1);
                                     } else if (message.endsWith(TextCore.HasTrade)) {
-                                        playerName = message.method1557(message.indexOf(TextCore.HasTrade, 102), 0, 0);
+                                        playerName = message.substring(0, message.indexOf(TextCore.HasTrade, 102), 0);
                                         if (0 == inTutorialIsland) {
                                             Class3_Sub30_Sub1.addChatMessage(Class3_Sub28_Sub14.aClass94_3672, 12, playerName, -1);
                                         }
                                     } else if (message.endsWith(TextCore.HasAssist)) {
-                                        playerName = message.method1557(message.indexOf(TextCore.HasAssist, 121), 0, 0);
+                                        playerName = message.substring(0, message.indexOf(TextCore.HasAssist, 121), 0);
                                         if (inTutorialIsland == 0) {
                                             Class3_Sub30_Sub1.addChatMessage(Class3_Sub28_Sub14.aClass94_3672, 13, playerName, -1);
                                         }
                                     } else if (message.endsWith(TextCore.HasDuelStake)) {
                                         isIgnored = false;
-                                        playerName = message.method1557(message.indexOf(Class155.char_colon, 115), 0, 0);
+                                        playerName = message.substring(0, message.indexOf(Class155.char_colon, 115), 0);
                                         nameAsLong = playerName.toLong();
 
                                         for (var30 = 0; Class3_Sub28_Sub5.anInt3591 > var30; ++var30) {
@@ -227,7 +227,7 @@ final class PacketParser {
                                             Class3_Sub30_Sub1.addChatMessage(playerName, 14, Class3_Sub28_Sub14.aClass94_3672, -1);
                                         }
                                     } else if (message.endsWith(TextCore.HasDuelFriend)) {
-                                        playerName = message.method1557(message.indexOf(Class155.char_colon, 118), 0, 0);
+                                        playerName = message.substring(0, message.indexOf(Class155.char_colon, 118), 0);
                                         isIgnored = false;
                                         nameAsLong = playerName.toLong();
 
@@ -242,7 +242,7 @@ final class PacketParser {
                                             Class3_Sub30_Sub1.addChatMessage(playerName, 15, Class3_Sub28_Sub14.aClass94_3672, -1);
                                         }
                                     } else if (message.endsWith(TextCore.HasClanRequest)) {
-                                        playerName = message.method1557(message.indexOf(Class155.char_colon, (byte) -83 + 138), 0, 0);
+                                        playerName = message.substring(0, message.indexOf(Class155.char_colon, (byte) -83 + 138), 0);
                                         nameAsLong = playerName.toLong();
                                         isIgnored = false;
 
@@ -257,7 +257,7 @@ final class PacketParser {
                                             Class3_Sub30_Sub1.addChatMessage(playerName, 16, Class3_Sub28_Sub14.aClass94_3672, -1);
                                         }
                                     } else if (message.endsWith(TextCore.HasAllyReq)) {
-                                        playerName = message.method1557(message.indexOf(Class155.char_colon, (byte) -83 + 189), (byte) -83 + 83, 0);
+                                        playerName = message.substring(0, message.indexOf(Class155.char_colon, (byte) -83 + 189), (byte) -83 + 83);
                                         isIgnored = false;
                                         nameAsLong = playerName.toLong();
 
@@ -269,7 +269,7 @@ final class PacketParser {
                                         }
 
                                         if (!isIgnored && inTutorialIsland == 0) {
-                                            var41 = message.method1557(message.length(-32) - 9, (byte) -83 ^ -83, 1 + message.indexOf(Class155.char_colon, 92));
+                                            var41 = message.substring(1 + message.indexOf(Class155.char_colon, 92), message.length(-32) - 9, (byte) -83 ^ -83);
                                             Class3_Sub30_Sub1.addChatMessage(playerName, 21, var41, -1);
                                         }
                                     } else {

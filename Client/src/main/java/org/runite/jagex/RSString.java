@@ -441,16 +441,8 @@ public final class RSString implements Interface3 {
         }
     }
 
-    final int method1552(byte var1) {
-        try {
-            if (var1 > -89) {
-                this.method1557(33, 31, -79);
-            }
-
-            return this.parseInt(10);
-        } catch (RuntimeException var3) {
-            throw Class44.clientError(var3, "na.T(" + var1 + ')');
-        }
+    public final int parseInt() {
+        return this.parseInt(10);
     }
 
     final void method1553(int var1) {
@@ -512,43 +504,31 @@ public final class RSString implements Interface3 {
         }
     }
 
-    final RSString method1556(int var1) {
-        try {
-
-            return this.method1557(this.length, (byte) -74 ^ -74, var1);
-        } catch (RuntimeException var4) {
-            throw Class44.clientError(var4, "na.CA(" + var1 + ',' + (byte) -74 + ')');
-        }
+    final RSString substring(int start) {
+        return this.substring(start, this.length, (byte) -74 ^ -74);
     }
 
-    final RSString method1557(int var1, int var2, int var3) {
-        try {
-            RSString var4 = new RSString();
-            var4.length = -var3 + var1;
-            var4.buffer = new byte[-var3 + var1];
-            ArrayUtils.arraycopy(this.buffer, var3, var4.buffer, var2, var4.length);
-            return var4;
-        } catch (RuntimeException var5) {
-            throw Class44.clientError(var5, "na.U(" + var1 + ',' + var2 + ',' + var3 + ')');
-        }
+    // TODO Why is `dstpos` a thing? what good does it serve?
+    public final RSString substring(int start, int end, int dstpos) {
+        RSString subs = new RSString();
+        subs.length = end - start;
+        subs.buffer = new byte[end - start];
+        ArrayUtils.arraycopy(this.buffer, start, subs.buffer, dstpos, subs.length);
+        return subs;
     }
 
-    final boolean method1558(RSString var1) {
-        try {
-            if (var1.length <= this.length) {
-                for (int var3 = 0; var3 < var1.length; ++var3) {
-                    if (var1.buffer[var3] != this.buffer[var3]) {
-                        return false;
-                    }
-                }
+    final boolean startsWith(RSString other) {
+        if (other.length > this.length) {
+            return false;
+        }
 
-                return true;
-            } else {
+        for (int i = 0; i < other.length; ++i) {
+            if (other.buffer[i] != this.buffer[i]) {
                 return false;
             }
-        } catch (RuntimeException var4) {
-            throw Class44.clientError(var4, "na.UA(" + (var1 != null ? "{...}" : "null") + ',' + 0 + ')');
         }
+
+        return true;
     }
 
     public final boolean equals(Object var1) {
@@ -879,11 +859,11 @@ public final class RSString implements Interface3 {
                     for (var9 = 0; this.buffer[var9 + var6] != var1; ++var9) {
                     }
 
-                    var11[var5++] = this.method1557(var6 - -var9, 0, var6);
+                    var11[var5++] = this.substring(var6, var6 - -var9, 0);
                     var6 += 1 + var9;
                 }
 
-                var11[var3] = this.method1557(this.length, 0, var6);
+                var11[var3] = this.substring(var6, this.length, 0);
             }
             return var11;
         } catch (RuntimeException var10) {
@@ -964,7 +944,7 @@ public final class RSString implements Interface3 {
     final RSString method1573(byte var1, Applet var2) {
         try {
             if (var1 < 124) {
-                this.method1552((byte) -82);
+                this.parseInt();
             }
 
             String var3 = new String(this.buffer, 0, this.length);

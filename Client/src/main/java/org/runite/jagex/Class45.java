@@ -129,7 +129,7 @@ final class Class45 {
 			if((var0 & 32) != 0) {
 				var3.textSpoken = GraphicDefinition.incomingBuffer.readString();
 				if(var3.textSpoken.charAt(0, (byte) -45) == 126) {
-					var3.textSpoken = var3.textSpoken.method1556(1);
+					var3.textSpoken = var3.textSpoken.substring(1);
 					Class3_Sub30_Sub1.addChatMessage(var3.getName(), 2, var3.textSpoken, (byte) -79 ^ 78);
 				} else if(var3 == Class102.player) {
 					Class3_Sub30_Sub1.addChatMessage(var3.getName(), 2, var3.textSpoken, (byte) -79 + 78);

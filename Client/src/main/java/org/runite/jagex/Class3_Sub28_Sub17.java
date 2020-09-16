@@ -76,7 +76,7 @@ public abstract class Class3_Sub28_Sub17 extends Node {
             } else {
                 int var10;
                 if (var8 == 62 && var4 != -1) {
-                    RSString var9 = var1.method1557(var7, 0, var4 + 1);
+                    RSString var9 = var1.substring(var4 + 1, var7, 0);
                     var4 = -1;
                     if (var9.equalsString(aClass94_3712)) {
                         var8 = 60;
@@ -94,9 +94,9 @@ public abstract class Class3_Sub28_Sub17 extends Node {
                         var8 = 169;
                     } else {
                         if (!var9.equalsString(aClass94_3743)) {
-                            if (var9.method1558(aClass94_3739)) {
+                            if (var9.startsWith(aClass94_3739)) {
                                 try {
-                                    var10 = var9.method1556(4).method1552((byte) -98);
+                                    var10 = var9.substring(4).parseInt();
                                     AbstractIndexedSprite var15 = this.aClass109Array3740[var10];
                                     int var12 = this.anIntArray3723 != null ? this.anIntArray3723[var10] : var15.anInt1467;
                                     if (anInt3750 == 256) {
@@ -108,6 +108,8 @@ public abstract class Class3_Sub28_Sub17 extends Node {
                                     var2 += var15.anInt1469;
                                     var5 = 0;
                                 } catch (Exception var13) {
+                                    // TODO Added by Tech to figure out the weird issue
+                                    var13.printStackTrace();
                                 }
                             } else {
                                 this.method685(var9);
@@ -211,7 +213,7 @@ public abstract class Class3_Sub28_Sub17 extends Node {
                     var2 = var6;
                 } else {
                     if (var7 == 62 && var2 != -1) {
-                        RSString var8 = var1.method1557(var6, 0, var2 + 1);
+                        RSString var8 = var1.substring(var2 + 1, var6, 0);
                         var2 = -1;
                         if (var8.equalsString(aClass94_3712)) {
                             var7 = 60;
@@ -229,9 +231,9 @@ public abstract class Class3_Sub28_Sub17 extends Node {
                             var7 = 169;
                         } else {
                             if (!var8.equalsString(aClass94_3743)) {
-                                if (var8.method1558(aClass94_3739)) {
+                                if (var8.startsWith(aClass94_3739)) {
                                     try {
-                                        int var9 = var8.method1556(4).method1552((byte) -101);
+                                        int var9 = var8.substring(4).parseInt();
                                         var4 += this.aClass109Array3740[var9].anInt1469;
                                         var3 = 0;
                                     } catch (Exception var10) {
@@ -287,28 +289,28 @@ public abstract class Class3_Sub28_Sub17 extends Node {
 
     private void method685(RSString var1) {
         try {
-            if (var1.method1558(aClass94_3725)) {
-                anInt3755 = var1.method1556(4).parseInt(16);
+            if (var1.startsWith(aClass94_3725)) {
+                anInt3755 = var1.substring(4).parseInt(16);
             } else if (var1.equalsString(aClass94_3720)) {
                 anInt3755 = anInt3749;
-            } else if (var1.method1558(aClass94_3715)) {
-                anInt3750 = var1.method1556(6).method1552((byte) -95);
+            } else if (var1.startsWith(aClass94_3715)) {
+                anInt3750 = var1.substring(6).parseInt();
             } else if (var1.equalsString(aClass94_3731)) {
                 anInt3750 = anInt3751;
-            } else if (var1.method1558(aClass94_3717)) {
-                anInt3746 = var1.method1556(4).parseInt(16);
+            } else if (var1.startsWith(aClass94_3717)) {
+                anInt3746 = var1.substring(4).parseInt(16);
             } else if (var1.equalsString(aClass94_3744)) {
                 anInt3746 = 8388608;
             } else if (var1.equalsString(aClass94_3742)) {
                 anInt3746 = -1;
-            } else if (var1.method1558(aClass94_3716)) {
-                anInt3747 = var1.method1556(2).parseInt(16);
+            } else if (var1.startsWith(aClass94_3716)) {
+                anInt3747 = var1.substring(2).parseInt(16);
             } else if (var1.equalsString(aClass94_3728)) {
                 anInt3747 = 0;
             } else if (var1.equalsString(aClass94_3735)) {
                 anInt3747 = -1;
-            } else if (var1.method1558(aClass94_3713)) {
-                anInt3754 = var1.method1556(5).parseInt(16);
+            } else if (var1.startsWith(aClass94_3713)) {
+                anInt3754 = var1.substring(5).parseInt(16);
             } else if (var1.equalsString(aClass94_3738)) {
                 anInt3754 = 0;
             } else if (var1.equalsString(aClass94_3724)) {
@@ -403,14 +405,14 @@ public abstract class Class3_Sub28_Sub17 extends Node {
                     var9 = var13;
                 } else {
                     if (var14 == 62 && var9 != -1) {
-                        RSString var15 = var1.method1557(var13, 0, var9 + 1);
+                        RSString var15 = var1.substring(var9 + 1, var13, 0);
                         var9 = -1;
                         aClass94_3745.appendCharacter(60);
                         aClass94_3745.method1533(var15);
                         aClass94_3745.appendCharacter(62);
                         if (var15.equalsString(aClass94_3737)) {
                             if (var3[var11] == null) {
-                                var3[var11] = aClass94_3745.method1563(101).method1557(aClass94_3745.length(-91), 0, var5);
+                                var3[var11] = aClass94_3745.method1563(101).substring(var5, aClass94_3745.length(-91), 0);
                             } else {
                                 var3[var11].method1553(0);
                                 var3[var11].method1542(aClass94_3745, var5, aClass94_3745.length(-72));
@@ -477,9 +479,9 @@ public abstract class Class3_Sub28_Sub17 extends Node {
                             }
 
                             var10 = 174;
-                        } else if (var15.method1558(aClass94_3739)) {
+                        } else if (var15.startsWith(aClass94_3739)) {
                             try {
-                                int var16 = var15.method1556(4).method1552((byte) -102);
+                                int var16 = var15.substring(4).parseInt();
                                 var4 += this.aClass109Array3740[var16].anInt1469;
                                 var10 = 0;
                             } catch (Exception var17) {
@@ -508,7 +510,7 @@ public abstract class Class3_Sub28_Sub17 extends Node {
 
                         if (var2 != null && var4 > var2[var11 < var2.length ? var11 : var2.length - 1] && var6 >= 0) {
                             if (var3[var11] == null) {
-                                var3[var11] = aClass94_3745.method1563(88).method1557(var6 - var8, 0, var5);
+                                var3[var11] = aClass94_3745.method1563(88).substring(var5, var6 - var8, 0);
                             } else {
                                 var3[var11].method1553(0);
                                 var3[var11] = var3[var11].method1542(aClass94_3745, var5, var6 - var8);
@@ -532,7 +534,7 @@ public abstract class Class3_Sub28_Sub17 extends Node {
 
             if (aClass94_3745.length(-78) > var5) {
                 if (var3[var11] == null) {
-                    var3[var11] = aClass94_3745.method1563(94).method1557(aClass94_3745.length(-89), 0, var5);
+                    var3[var11] = aClass94_3745.method1563(94).substring(var5, aClass94_3745.length(-89), 0);
                 } else {
                     var3[var11].method1553(0);
                     var3[var11] = var3[var11].method1542(aClass94_3745, var5, aClass94_3745.length(-64));
@@ -891,7 +893,7 @@ public abstract class Class3_Sub28_Sub17 extends Node {
                 int var14;
                 int var15;
                 if (var11 == 62 && var6 != -1) {
-                    RSString var12 = var1.method1557(var10, 0, var6 + 1);
+                    RSString var12 = var1.substring(var6 + 1, var10, 0);
                     var6 = -1;
                     if (var12.equalsString(aClass94_3712)) {
                         var11 = 60;
@@ -909,7 +911,7 @@ public abstract class Class3_Sub28_Sub17 extends Node {
                         var11 = 169;
                     } else {
                         if (!var12.equalsString(aClass94_3743)) {
-                            if (var12.method1558(aClass94_3739)) {
+                            if (var12.startsWith(aClass94_3739)) {
                                 try {
                                     if (var4 == null) {
                                         var13 = 0;
@@ -924,7 +926,7 @@ public abstract class Class3_Sub28_Sub17 extends Node {
                                     }
 
                                     ++var8;
-                                    var15 = var12.method1556(4).method1552((byte) -97);
+                                    var15 = var12.substring(4).parseInt();
                                     AbstractIndexedSprite var20 = this.aClass109Array3740[var15];
                                     int var17 = this.anIntArray3723 != null ? this.anIntArray3723[var15] : var20.anInt1467;
                                     if (anInt3750 == 256) {

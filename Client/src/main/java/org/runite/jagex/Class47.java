@@ -973,8 +973,8 @@ final class Class47 {
                                                             var44 = var43;
                                                             var43 = Class3_Sub28_Sub14.aClass94_3672;
                                                         } else {
-                                                            var44 = var43.method1557(var25, 0, 0);
-                                                            var43 = var43.method1556(var25 + 4);
+                                                            var44 = var43.substring(0, var25, 0);
+                                                            var43 = var43.substring(var25 + 4);
                                                         }
 
                                                         var26 = var35.method682(var44);
@@ -1017,8 +1017,8 @@ final class Class47 {
                                                             var44 = var43;
                                                             var43 = Class3_Sub28_Sub14.aClass94_3672;
                                                         } else {
-                                                            var44 = var43.method1557(var28, 0, 0);
-                                                            var43 = var43.method1556(4 + var28);
+                                                            var44 = var43.substring(0, var28, 0);
+                                                            var43 = var43.substring(4 + var28);
                                                         }
 
                                                         var35.method681(var44, 3 + var25, var47, 0, -1);

@@ -2566,27 +2566,27 @@ public class Unsorted {
                                                                 }
                                                             }
 
-                                                            var1 = RenderAnimationDefinition.method903(new RSString[]{var1.method1557(var3, 0, 0), var4, var1.method1556(4 + var3)});
+                                                            var1 = RenderAnimationDefinition.method903(new RSString[]{var1.substring(0, var3, 0), var4, var1.substring(4 + var3)});
                                                         }
                                                     }
 
-                                                    var1 = RenderAnimationDefinition.method903(new RSString[]{var1.method1557(var3, 0, 0), Class154.method2148(Class164_Sub2.method2247((byte) -4, 4, var0)), var1.method1556(var3 - -2)});
+                                                    var1 = RenderAnimationDefinition.method903(new RSString[]{var1.substring(0, var3, 0), Class154.method2148(Class164_Sub2.method2247((byte) -4, 4, var0)), var1.substring(var3 - -2)});
                                                 }
                                             }
 
-                                            var1 = RenderAnimationDefinition.method903(new RSString[]{var1.method1557(var3, 0, 0), Class154.method2148(Class164_Sub2.method2247((byte) -109, 3, var0)), var1.method1556(2 + var3)});
+                                            var1 = RenderAnimationDefinition.method903(new RSString[]{var1.substring(0, var3, 0), Class154.method2148(Class164_Sub2.method2247((byte) -109, 3, var0)), var1.substring(2 + var3)});
                                         }
                                     }
 
-                                    var1 = RenderAnimationDefinition.method903(new RSString[]{var1.method1557(var3, 0, 0), Class154.method2148(Class164_Sub2.method2247((byte) 111, 2, var0)), var1.method1556(2 + var3)});
+                                    var1 = RenderAnimationDefinition.method903(new RSString[]{var1.substring(0, var3, 0), Class154.method2148(Class164_Sub2.method2247((byte) 111, 2, var0)), var1.substring(2 + var3)});
                                 }
                             }
 
-                            var1 = RenderAnimationDefinition.method903(new RSString[]{var1.method1557(var3, 0, 0), Class154.method2148(Class164_Sub2.method2247((byte) 23, 1, var0)), var1.method1556(var3 + 2)});
+                            var1 = RenderAnimationDefinition.method903(new RSString[]{var1.substring(0, var3, 0), Class154.method2148(Class164_Sub2.method2247((byte) 23, 1, var0)), var1.substring(var3 + 2)});
                         }
                     }
 
-                    var1 = RenderAnimationDefinition.method903(new RSString[]{var1.method1557(var3, 0, 0), Class154.method2148(Class164_Sub2.method2247((byte) 107, 0, var0)), var1.method1556(2 + var3)});
+                    var1 = RenderAnimationDefinition.method903(new RSString[]{var1.substring(0, var3, 0), Class154.method2148(Class164_Sub2.method2247((byte) 107, 0, var0)), var1.substring(2 + var3)});
                 }
             }
         } catch (RuntimeException var7) {
@@ -2715,22 +2715,22 @@ public class Unsorted {
                 }
             }
 
-            if (command.method1558(GameObject.COMMAND_SET_PARTICLES)) {
-                Class127_Sub1.method1758(command.method1556(15).method1552((byte) -124));
+            if (command.startsWith(GameObject.COMMAND_SET_PARTICLES)) {
+                Class127_Sub1.method1758(command.substring(15).parseInt());
                 Class119.method1730(Class38.aClass87_665);
                 Class140_Sub2.aBoolean2705 = false;
             }
 
-            if (command.method1558(Class3_Sub13_Sub23.aClass94_3289) && Class44.anInt718 != 0) {
-                Class65.method1237(command.method1556(6).method1552((byte) -106));
+            if (command.startsWith(Class3_Sub13_Sub23.aClass94_3289) && Class44.anInt718 != 0) {
+                Class65.method1237(command.substring(6).parseInt());
             }
 
             if (command.equals(34, Class163.COMMAND_ERROR_TEST)) {
                 throw new RuntimeException();
             }
 
-            if (command.method1558(GameShell.aClass94_10)) {
-                Client.anInt3689 = command.method1556(12).trim(1).method1552((byte) -120);
+            if (command.startsWith(GameShell.aClass94_10)) {
+                Client.anInt3689 = command.substring(12).trim(1).parseInt();
                 Class3_Sub30_Sub1.addChatMessage((RSString) null, 0, RenderAnimationDefinition.method903(new RSString[]{Class166.aClass94_2075, Class72.method1298((byte) 9, Client.anInt3689)}), -1);
             }
 
@@ -2754,7 +2754,7 @@ public class Unsorted {
 
             Class3_Sub13_Sub1.outgoingBuffer.putOpcode(44);
             Class3_Sub13_Sub1.outgoingBuffer.writeByte(command.length(-83) + -1);
-            Class3_Sub13_Sub1.outgoingBuffer.writeString(command.method1556(2));
+            Class3_Sub13_Sub1.outgoingBuffer.writeString(command.substring(2));
 
         } catch (RuntimeException var5) {
             throw Class44.clientError(var5, "k.H(" + (command != null ? "{...}" : "null") + ',' + false + ')');

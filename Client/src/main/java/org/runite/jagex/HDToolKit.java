@@ -354,8 +354,8 @@ public final class HDToolKit {
 
             for(int var8 = 0; var8 < var7.length; ++var8) {
                RSString var9 = var7[var8];
-               if(var9.length(-125) >= 4 && var9.method1557(4, 0, 0).isInteger()) {
-                  var6 = var9.method1557(4, 0, 0).method1552((byte)-113);
+               if(var9.length(-125) >= 4 && var9.substring(0, 4, 0).isInteger()) {
+                  var6 = var9.substring(0, 4, 0).parseInt();
                   break;
                }
             }

@@ -896,7 +896,7 @@ final class ItemDefinition {
 														RSString class94_4 = stringsStack[--sStackCounter];
 														int i46 = 0;
 														if (class94_4.isInteger())
-															i46 = class94_4.method1552((byte) -104);
+															i46 = class94_4.parseInt();
 														Class3_Sub13_Sub1.outgoingBuffer.putOpcode(23);
 														Class3_Sub13_Sub1.outgoingBuffer.writeInt(i46);
 														continue;
@@ -1271,8 +1271,8 @@ final class ItemDefinition {
 													}
 													if (opcode == 3609) {
 														RSString class94_12 = stringsStack[--sStackCounter];
-														if (class94_12.method1558(Class3_Sub9.aClass94_2323) || class94_12.method1558(Class3_Sub13_Sub16.aClass94_3190))
-															class94_12 = class94_12.method1556(7);
+														if (class94_12.startsWith(Class3_Sub9.aClass94_2323) || class94_12.startsWith(Class3_Sub13_Sub16.aClass94_3190))
+															class94_12 = class94_12.substring(7);
 														intsStack[iStackCounter++] = method1176(class94_12) ? 1 : 0;
 														continue;
 													}
@@ -1361,8 +1361,8 @@ final class ItemDefinition {
 													}
 													if (3623 == opcode) {
 														RSString class94_15 = stringsStack[--sStackCounter];
-														if (class94_15.method1558(Class3_Sub9.aClass94_2323) || class94_15.method1558(Class3_Sub13_Sub16.aClass94_3190))
-															class94_15 = class94_15.method1556(7);
+														if (class94_15.startsWith(Class3_Sub9.aClass94_2323) || class94_15.startsWith(Class3_Sub13_Sub16.aClass94_3190))
+															class94_15 = class94_15.substring(7);
 														intsStack[iStackCounter++] = Class3_Sub24_Sub3.method467(class94_15) ? 1 : 0;
 														continue;
 													}
@@ -1399,8 +1399,8 @@ final class ItemDefinition {
 													}
 													if (opcode == 3628) {
 														RSString class94_16 = stringsStack[--sStackCounter];
-														if (class94_16.method1558(Class3_Sub9.aClass94_2323) || class94_16.method1558(Class3_Sub13_Sub16.aClass94_3190))
-															class94_16 = class94_16.method1556(7);
+														if (class94_16.startsWith(Class3_Sub9.aClass94_2323) || class94_16.startsWith(Class3_Sub13_Sub16.aClass94_3190))
+															class94_16 = class94_16.substring(7);
 														intsStack[iStackCounter++] = PacketParser.method826(class94_16, -1);
 														continue;
 													}
@@ -1676,117 +1676,117 @@ final class ItemDefinition {
 																	}
 																	if (opcode == 5008) {//Used for a lot of things involving :: || More prefixes can be added by using || and listing said added way, ie ;; can be used instead of ::
 																		RSString class94_18 = stringsStack[--sStackCounter];
-																		if (class94_18.method1558(Unsorted.aClass94_132) || class94_18.method1558(RSString.of(";;")))
+																		if (class94_18.startsWith(Unsorted.aClass94_132) || class94_18.startsWith(RSString.of(";;")))
 																			Unsorted.ClientCommands(class94_18);
 																		else if (Class3_Sub13_Sub26.rights != 0 || (!Class3_Sub15.aBoolean2433 || Class121.aBoolean1641) && !Class3_Sub13_Sub14.aBoolean3166) {
 																			RSString class94_47 = class94_18.method1534();
 																			byte byte3 = 0;
-																			if (class94_47.method1558(TextCore.TextColorYellow)) {
+																			if (class94_47.startsWith(TextCore.TextColorYellow)) {
 																				byte3 = 0;
-																				class94_18 = class94_18.method1556(TextCore.TextColorYellow.length(-54));
-																			} else if (class94_47.method1558(TextCore.TextColorRed)) {
-																				class94_18 = class94_18.method1556(TextCore.TextColorRed.length(-102));
+																				class94_18 = class94_18.substring(TextCore.TextColorYellow.length(-54));
+																			} else if (class94_47.startsWith(TextCore.TextColorRed)) {
+																				class94_18 = class94_18.substring(TextCore.TextColorRed.length(-102));
 																				byte3 = 1;
-																			} else if (class94_47.method1558(TextCore.TextColorGreen)) {
-																				class94_18 = class94_18.method1556(TextCore.TextColorGreen.length(-115));
+																			} else if (class94_47.startsWith(TextCore.TextColorGreen)) {
+																				class94_18 = class94_18.substring(TextCore.TextColorGreen.length(-115));
 																				byte3 = 2;
-																			} else if (class94_47.method1558(TextCore.TextColorCyan)) {
+																			} else if (class94_47.startsWith(TextCore.TextColorCyan)) {
 																				byte3 = 3;
-																				class94_18 = class94_18.method1556(TextCore.TextColorCyan.length(-108));
-																			} else if (class94_47.method1558(TextCore.TextColorPurple)) {
-																				class94_18 = class94_18.method1556(TextCore.TextColorPurple.length(-62));
+																				class94_18 = class94_18.substring(TextCore.TextColorCyan.length(-108));
+																			} else if (class94_47.startsWith(TextCore.TextColorPurple)) {
+																				class94_18 = class94_18.substring(TextCore.TextColorPurple.length(-62));
 																				byte3 = 4;
-																			} else if (class94_47.method1558(TextCore.TextColorWhite)) {
-																				class94_18 = class94_18.method1556(TextCore.TextColorWhite.length(-46));
+																			} else if (class94_47.startsWith(TextCore.TextColorWhite)) {
+																				class94_18 = class94_18.substring(TextCore.TextColorWhite.length(-46));
 																				byte3 = 5;
-																			} else if (class94_47.method1558(TextCore.TextFlashOne)) {
+																			} else if (class94_47.startsWith(TextCore.TextFlashOne)) {
 																				byte3 = 6;
-																				class94_18 = class94_18.method1556(TextCore.TextFlashOne.length(-63));
-																			} else if (class94_47.method1558(TextCore.TextFlashTwo)) {
+																				class94_18 = class94_18.substring(TextCore.TextFlashOne.length(-63));
+																			} else if (class94_47.startsWith(TextCore.TextFlashTwo)) {
 																				byte3 = 7;
-																				class94_18 = class94_18.method1556(TextCore.TextFlashTwo.length(-83));
-																			} else if (class94_47.method1558(TextCore.TextFlashThree)) {
-																				class94_18 = class94_18.method1556(TextCore.TextFlashThree.length(-92));
+																				class94_18 = class94_18.substring(TextCore.TextFlashTwo.length(-83));
+																			} else if (class94_47.startsWith(TextCore.TextFlashThree)) {
+																				class94_18 = class94_18.substring(TextCore.TextFlashThree.length(-92));
 																				byte3 = 8;
-																			} else if (class94_47.method1558(TextCore.TextGlowOne)) {
+																			} else if (class94_47.startsWith(TextCore.TextGlowOne)) {
 																				byte3 = 9;
-																				class94_18 = class94_18.method1556(TextCore.TextGlowOne.length(-34));
-																			} else if (class94_47.method1558(TextCore.TextGlowTwo)) {
+																				class94_18 = class94_18.substring(TextCore.TextGlowOne.length(-34));
+																			} else if (class94_47.startsWith(TextCore.TextGlowTwo)) {
 																				byte3 = 10;
-																				class94_18 = class94_18.method1556(TextCore.TextGlowTwo.length(-126));
-																			} else if (class94_47.method1558(TextCore.TextGlowThree)) {
-																				class94_18 = class94_18.method1556(TextCore.TextGlowThree.length(-50));
+																				class94_18 = class94_18.substring(TextCore.TextGlowTwo.length(-126));
+																			} else if (class94_47.startsWith(TextCore.TextGlowThree)) {
+																				class94_18 = class94_18.substring(TextCore.TextGlowThree.length(-50));
 																				byte3 = 11;
 																			} else if (0 != Class3_Sub20.language)
-																				if (class94_47.method1558(TextCore.TextColorYellow)) {
+																				if (class94_47.startsWith(TextCore.TextColorYellow)) {
 																					byte3 = 0;
-																					class94_18 = class94_18.method1556(TextCore.TextColorYellow.length(-116));
-																				} else if (class94_47.method1558(TextCore.TextColorRed)) {
-																					class94_18 = class94_18.method1556(TextCore.TextColorRed.length(-80));
+																					class94_18 = class94_18.substring(TextCore.TextColorYellow.length(-116));
+																				} else if (class94_47.startsWith(TextCore.TextColorRed)) {
+																					class94_18 = class94_18.substring(TextCore.TextColorRed.length(-80));
 																					byte3 = 1;
-																				} else if (class94_47.method1558(TextCore.TextColorGreen)) {
-																					class94_18 = class94_18.method1556(TextCore.TextColorGreen.length(-90));
+																				} else if (class94_47.startsWith(TextCore.TextColorGreen)) {
+																					class94_18 = class94_18.substring(TextCore.TextColorGreen.length(-90));
 																					byte3 = 2;
-																				} else if (class94_47.method1558(TextCore.TextColorCyan)) {
-																					class94_18 = class94_18.method1556(TextCore.TextColorCyan.length(-34));
+																				} else if (class94_47.startsWith(TextCore.TextColorCyan)) {
+																					class94_18 = class94_18.substring(TextCore.TextColorCyan.length(-34));
 																					byte3 = 3;
-																				} else if (class94_47.method1558(TextCore.TextColorPurple)) {
-																					class94_18 = class94_18.method1556(TextCore.TextColorPurple.length(-52));
+																				} else if (class94_47.startsWith(TextCore.TextColorPurple)) {
+																					class94_18 = class94_18.substring(TextCore.TextColorPurple.length(-52));
 																					byte3 = 4;
-																				} else if (class94_47.method1558(TextCore.TextColorWhite)) {
+																				} else if (class94_47.startsWith(TextCore.TextColorWhite)) {
 																					byte3 = 5;
-																					class94_18 = class94_18.method1556(TextCore.TextColorWhite.length(-90));
-																				} else if (class94_47.method1558(TextCore.TextFlashOne)) {
-																					class94_18 = class94_18.method1556(TextCore.TextFlashOne.length(-100));
+																					class94_18 = class94_18.substring(TextCore.TextColorWhite.length(-90));
+																				} else if (class94_47.startsWith(TextCore.TextFlashOne)) {
+																					class94_18 = class94_18.substring(TextCore.TextFlashOne.length(-100));
 																					byte3 = 6;
-																				} else if (class94_47.method1558(TextCore.TextFlashTwo)) {
+																				} else if (class94_47.startsWith(TextCore.TextFlashTwo)) {
 																					byte3 = 7;
-																					class94_18 = class94_18.method1556(TextCore.TextFlashTwo.length(-30));
-																				} else if (class94_47.method1558(TextCore.TextFlashThree)) {
+																					class94_18 = class94_18.substring(TextCore.TextFlashTwo.length(-30));
+																				} else if (class94_47.startsWith(TextCore.TextFlashThree)) {
 																					byte3 = 8;
-																					class94_18 = class94_18.method1556(TextCore.TextFlashThree.length(-101));
-																				} else if (class94_47.method1558(TextCore.TextGlowOne)) {
+																					class94_18 = class94_18.substring(TextCore.TextFlashThree.length(-101));
+																				} else if (class94_47.startsWith(TextCore.TextGlowOne)) {
 																					byte3 = 9;
-																					class94_18 = class94_18.method1556(TextCore.TextGlowOne.length(-55));
-																				} else if (class94_47.method1558(TextCore.TextGlowTwo)) {
-																					class94_18 = class94_18.method1556(TextCore.TextGlowTwo.length(-115));
+																					class94_18 = class94_18.substring(TextCore.TextGlowOne.length(-55));
+																				} else if (class94_47.startsWith(TextCore.TextGlowTwo)) {
+																					class94_18 = class94_18.substring(TextCore.TextGlowTwo.length(-115));
 																					byte3 = 10;
-																				} else if (class94_47.method1558(TextCore.TextGlowThree)) {
-																					class94_18 = class94_18.method1556(TextCore.TextGlowThree.length(-84));
+																				} else if (class94_47.startsWith(TextCore.TextGlowThree)) {
+																					class94_18 = class94_18.substring(TextCore.TextGlowThree.length(-84));
 																					byte3 = 11;
 																				}
 																			byte byte4 = 0;
 																			class94_47 = class94_18.method1534();
-																			if (class94_47.method1558(TextCore.TextWave)) {
-																				class94_18 = class94_18.method1556(TextCore.TextWave.length(-105));
+																			if (class94_47.startsWith(TextCore.TextWave)) {
+																				class94_18 = class94_18.substring(TextCore.TextWave.length(-105));
 																				byte4 = 1;
-																			} else if (class94_47.method1558(TextCore.TextWaveTwo)) {
+																			} else if (class94_47.startsWith(TextCore.TextWaveTwo)) {
 																				byte4 = 2;
-																				class94_18 = class94_18.method1556(TextCore.TextWaveTwo.length(-117));
-																			} else if (class94_47.method1558(TextCore.TextShake)) {
-																				class94_18 = class94_18.method1556(TextCore.TextShake.length(-37));
+																				class94_18 = class94_18.substring(TextCore.TextWaveTwo.length(-117));
+																			} else if (class94_47.startsWith(TextCore.TextShake)) {
+																				class94_18 = class94_18.substring(TextCore.TextShake.length(-37));
 																				byte4 = 3;
-																			} else if (class94_47.method1558(TextCore.HasScroll)) {
+																			} else if (class94_47.startsWith(TextCore.HasScroll)) {
 																				byte4 = 4;
-																				class94_18 = class94_18.method1556(TextCore.HasScroll.length(-37));
-																			} else if (class94_47.method1558(TextCore.TextSlide)) {
+																				class94_18 = class94_18.substring(TextCore.HasScroll.length(-37));
+																			} else if (class94_47.startsWith(TextCore.TextSlide)) {
 																				byte4 = 5;
-																				class94_18 = class94_18.method1556(TextCore.TextSlide.length(-17));
+																				class94_18 = class94_18.substring(TextCore.TextSlide.length(-17));
 																			} else if (0 != Class3_Sub20.language)
-																				if (class94_47.method1558(TextCore.TextWave)) {
-																					class94_18 = class94_18.method1556(TextCore.TextWave.length(-74));
+																				if (class94_47.startsWith(TextCore.TextWave)) {
+																					class94_18 = class94_18.substring(TextCore.TextWave.length(-74));
 																					byte4 = 1;
-																				} else if (class94_47.method1558(TextCore.TextWaveTwo)) {
+																				} else if (class94_47.startsWith(TextCore.TextWaveTwo)) {
 																					byte4 = 2;
-																					class94_18 = class94_18.method1556(TextCore.TextWaveTwo.length(-106));
-																				} else if (class94_47.method1558(TextCore.TextShake)) {
+																					class94_18 = class94_18.substring(TextCore.TextWaveTwo.length(-106));
+																				} else if (class94_47.startsWith(TextCore.TextShake)) {
 																					byte4 = 3;
-																					class94_18 = class94_18.method1556(TextCore.TextShake.length(-45));
-																				} else if (class94_47.method1558(TextCore.HasScroll)) {
+																					class94_18 = class94_18.substring(TextCore.TextShake.length(-45));
+																				} else if (class94_47.startsWith(TextCore.HasScroll)) {
 																					byte4 = 4;
-																					class94_18 = class94_18.method1556(TextCore.HasScroll.length(-92));
-																				} else if (class94_47.method1558(TextCore.TextSlide)) {
-																					class94_18 = class94_18.method1556(TextCore.TextSlide.length(-124));
+																					class94_18 = class94_18.substring(TextCore.HasScroll.length(-92));
+																				} else if (class94_47.startsWith(TextCore.TextSlide)) {
+																					class94_18 = class94_18.substring(TextCore.TextSlide.length(-124));
 																					byte4 = 5;
 																				}
 																			Class3_Sub13_Sub1.outgoingBuffer.putOpcode(237);
@@ -3382,7 +3382,7 @@ final class ItemDefinition {
 													RSString class94_40 = stringsStack[--sStackCounter];
 													int i64 = intsStack[iStackCounter];
 													int j74 = intsStack[1 + iStackCounter];
-													stringsStack[sStackCounter++] = class94_40.method1557(j74, 0, i64);
+													stringsStack[sStackCounter++] = class94_40.substring(i64, j74, 0);
 													continue;
 												}
 												if (opcode == 4119) {
@@ -3600,7 +3600,7 @@ final class ItemDefinition {
 										while (i79-- > 0)
 											ai3[i79] = intsStack[--iStackCounter];
 									}
-									class94_62 = class94_62.method1557(class94_62.length(-79) - 1, 0, 0);
+									class94_62 = class94_62.substring(0, class94_62.length(-79) - 1, 0);
 								}
 								Object[] aobj1 = new Object[class94_62.length(-48) - -1];
 								for (int i81 = -1 + aobj1.length; 1 <= i81; i81--)
