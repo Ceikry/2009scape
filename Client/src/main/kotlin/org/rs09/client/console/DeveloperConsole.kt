@@ -9,7 +9,6 @@ import java.util.*
 
 
 // TODO Escape characters in the string rendering - is this something we can do using RSString / the text renders?
-// TODO Support for scrolling up & down in the console
 object DeveloperConsole {
 
     private val LOCK = Any()
@@ -27,11 +26,6 @@ object DeveloperConsole {
     private var str: String = ""
 
     var open = false
-
-    init {
-        for(i in 0 until 110)
-        lines.addFirst(RSString.of("Line $i"))
-    }
 
     fun toggle() {
         open = !open
