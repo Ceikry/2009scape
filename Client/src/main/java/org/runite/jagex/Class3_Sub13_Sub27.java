@@ -270,7 +270,7 @@ final class Class3_Sub13_Sub27 extends Class3_Sub13 {
 
                   Class110.anInt1472 = Class3_Sub13_Sub17.anInt3213;
                   Class3_Sub13_Sub1.outgoingBuffer.putOpcode(57);
-                  Class3_Sub13_Sub1.outgoingBuffer.putLong(var0, -2037491440);
+                  Class3_Sub13_Sub1.outgoingBuffer.writeLong(var0);
                   break;
                }
             }
@@ -573,29 +573,29 @@ final class Class3_Sub13_Sub27 extends Class3_Sub13 {
          int var5 = Class45.anIntArray729[var1];
          if(0 == var2) {
             Class3_Sub13_Sub1.outgoingBuffer.putOpcode(215);
-            Class3_Sub13_Sub1.outgoingBuffer.putByte((byte)-25, var3 - -var3 + 3);
+            Class3_Sub13_Sub1.outgoingBuffer.writeByte(var3 - -var3 + 3);
          }
 
          if(var2 == 1) {
             Class3_Sub13_Sub1.outgoingBuffer.putOpcode(39);
-            Class3_Sub13_Sub1.outgoingBuffer.putByte((byte)-111, 3 + var3 - (-var3 - 14));
+            Class3_Sub13_Sub1.outgoingBuffer.writeByte(3 + var3 - (-var3 - 14));
          }
 
          if(var2 == 2) {
             Class3_Sub13_Sub1.outgoingBuffer.putOpcode(77);
-            Class3_Sub13_Sub1.outgoingBuffer.putByte((byte)-70, var3 + var3 - -3);
+            Class3_Sub13_Sub1.outgoingBuffer.writeByte(var3 + var3 - -3);
          }
 
-         Class3_Sub13_Sub1.outgoingBuffer.putByteA(ObjectDefinition.aBooleanArray1490[82]?1:0);
-         Class3_Sub13_Sub1.outgoingBuffer.putShort(Class131.anInt1716 + var4);
+         Class3_Sub13_Sub1.outgoingBuffer.writeByte128(ObjectDefinition.aBooleanArray1490[82]?1:0);
+         Class3_Sub13_Sub1.outgoingBuffer.writeShort(Class131.anInt1716 + var4);
          Class3_Sub13_Sub1.outgoingBuffer.putShortA(Class82.anInt1152 + var5);
          Class45.anInt733 = Class45.anIntArray729[0];
          Class65.anInt987 = Class3_Sub13_Sub38.anIntArray3456[0];
 
          for(int var6 = 1; var3 > var6; ++var6) {
             --var1;
-            Class3_Sub13_Sub1.outgoingBuffer.putByteA(-var4 + Class3_Sub13_Sub38.anIntArray3456[var1]);
-            Class3_Sub13_Sub1.outgoingBuffer.putByteS(Class45.anIntArray729[var1] + -var5);
+            Class3_Sub13_Sub1.outgoingBuffer.writeByte128(-var4 + Class3_Sub13_Sub38.anIntArray3456[var1]);
+            Class3_Sub13_Sub1.outgoingBuffer.write128Byte(Class45.anIntArray729[var1] + -var5);
          }
 
       } catch (RuntimeException var7) {

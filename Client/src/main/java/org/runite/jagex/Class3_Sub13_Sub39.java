@@ -214,8 +214,8 @@ final class Class3_Sub13_Sub39 extends Class3_Sub13 {
             this.anIntArrayArray3469 = new int[var2.readUnsignedByte()][2];
 
             for(int var4 = 0; var4 < this.anIntArrayArray3469.length; ++var4) {
-               this.anIntArrayArray3469[var4][0] = var2.getShort();
-               this.anIntArrayArray3469[var4][1] = var2.getShort();
+               this.anIntArrayArray3469[var4][0] = var2.readUnsignedShort();
+               this.anIntArrayArray3469[var4][1] = var2.readUnsignedShort();
             }
          }
 

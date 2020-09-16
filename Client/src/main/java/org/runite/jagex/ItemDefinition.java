@@ -122,14 +122,14 @@ final class ItemDefinition {
 
 			  DataBuffer var4 = new DataBuffer(var3);
 			  var4.index = -2 + var4.buffer.length;
-			  int var5 = var4.getShort();
+			  int var5 = var4.readUnsignedShort();
 			  int var6 = -12 + var4.buffer.length + -2 - var5;
 			  var4.index = var6;
 			  int var7 = var4.readInt();
-			  var2.numberOfIntsToCopy = var4.getShort();
-			  var2.numberOfRSStringsToCopy = var4.getShort();
-			  var2.numberOfIntArguments = var4.getShort();
-			  var2.numberOfStringArguments = var4.getShort();
+			  var2.numberOfIntsToCopy = var4.readUnsignedShort();
+			  var2.numberOfRSStringsToCopy = var4.readUnsignedShort();
+			  var2.numberOfIntArguments = var4.readUnsignedShort();
+			  var2.numberOfStringArguments = var4.readUnsignedShort();
 			  int var8 = var4.readUnsignedByte();
 			  int var9;
 			  int var10;
@@ -137,7 +137,7 @@ final class ItemDefinition {
 				 var2.switchHashTable = new HashTable[var8];
 
 				 for(var9 = 0; var9 < var8; ++var9) {
-					var10 = var4.getShort();
+					var10 = var4.readUnsignedShort();
 					HashTable var11 = new HashTable(Class95.method1585((byte)119, var10));
 					var2.switchHashTable[var9] = var11;
 
@@ -156,9 +156,9 @@ final class ItemDefinition {
 			  var9 = 0;
 
 			  for(var2.instructionOperands = new int[var7]; var4.index < var6; var2.assemblyInstructions[var9++] = var10) {
-				 var10 = var4.getShort();
+				 var10 = var4.readUnsignedShort();
 				 if(var10 == 3) {
-					var2.stringInstructionOperands[var9] = var4.getString();
+					var2.stringInstructionOperands[var9] = var4.readString();
 				 } else if (var10 < 100 && 21 != var10 && var10 != 38 && 39 != var10) {
 					var2.instructionOperands[var9] = var4.readInt();
 				 } else {
@@ -898,20 +898,20 @@ final class ItemDefinition {
 														if (class94_4.isInteger())
 															i46 = class94_4.method1552((byte) -104);
 														Class3_Sub13_Sub1.outgoingBuffer.putOpcode(23);
-														Class3_Sub13_Sub1.outgoingBuffer.putInt(-124, i46);
+														Class3_Sub13_Sub1.outgoingBuffer.writeInt(i46);
 														continue;
 													}
 													if (opcode == 3105) {
 														RSString class94_5 = stringsStack[--sStackCounter];
 														Class3_Sub13_Sub1.outgoingBuffer.putOpcode(244);
-														Class3_Sub13_Sub1.outgoingBuffer.putLong(class94_5.toLong(), 0x868e5910);
+														Class3_Sub13_Sub1.outgoingBuffer.writeLong(class94_5.toLong());
 														continue;
 													}
 													if (opcode == 3106) {
 														RSString class94_6 = stringsStack[--sStackCounter];
 														Class3_Sub13_Sub1.outgoingBuffer.putOpcode(65);
-														Class3_Sub13_Sub1.outgoingBuffer.putByte((byte) -17, 1 + class94_6.length(-84));
-														Class3_Sub13_Sub1.outgoingBuffer.putString(class94_6);
+														Class3_Sub13_Sub1.outgoingBuffer.writeByte(1 + class94_6.length(-84));
+														Class3_Sub13_Sub1.outgoingBuffer.writeString(class94_6);
 														continue;
 													}
 													if (opcode == 3107) {
@@ -941,7 +941,7 @@ final class ItemDefinition {
 														break;
 													int l7 = intsStack[--iStackCounter];
 													Class3_Sub13_Sub1.outgoingBuffer.putOpcode(111);
-													Class3_Sub13_Sub1.outgoingBuffer.putShort(l7);
+													Class3_Sub13_Sub1.outgoingBuffer.writeShort(l7);
 													continue;
 												}
 												if (opcode < 3300) {
@@ -1636,9 +1636,9 @@ final class ItemDefinition {
 																		Class24.anInt467 = intsStack[1 + iStackCounter];
 																		Class45.anInt734 = intsStack[2 + iStackCounter];
 																		Class3_Sub13_Sub1.outgoingBuffer.putOpcode(157);
-																		Class3_Sub13_Sub1.outgoingBuffer.putByte((byte) -8, Class3_Sub13_Sub8.anInt3101);
-																		Class3_Sub13_Sub1.outgoingBuffer.putByte((byte) -126, Class24.anInt467);
-																		Class3_Sub13_Sub1.outgoingBuffer.putByte((byte) -82, Class45.anInt734);
+																		Class3_Sub13_Sub1.outgoingBuffer.writeByte(Class3_Sub13_Sub8.anInt3101);
+																		Class3_Sub13_Sub1.outgoingBuffer.writeByte(Class24.anInt467);
+																		Class3_Sub13_Sub1.outgoingBuffer.writeByte(Class45.anInt734);
 																		continue;
 																	}
 																	if (opcode == 5002) {
@@ -1647,9 +1647,9 @@ final class ItemDefinition {
 																		int j55 = intsStack[iStackCounter];
 																		int j69 = intsStack[1 + iStackCounter];
 																		Class3_Sub13_Sub1.outgoingBuffer.putOpcode(99);
-																		Class3_Sub13_Sub1.outgoingBuffer.putLong(class94_17.toLong(), 0x868e5910);
-																		Class3_Sub13_Sub1.outgoingBuffer.putByte((byte) -33, j55 - 1);
-																		Class3_Sub13_Sub1.outgoingBuffer.putByte((byte) -104, j69);
+																		Class3_Sub13_Sub1.outgoingBuffer.writeLong(class94_17.toLong());
+																		Class3_Sub13_Sub1.outgoingBuffer.writeByte(j55 - 1);
+																		Class3_Sub13_Sub1.outgoingBuffer.writeByte(j69);
 																		continue;
 																	}
 																	if (opcode == 5003) {
@@ -1790,12 +1790,12 @@ final class ItemDefinition {
 																					byte4 = 5;
 																				}
 																			Class3_Sub13_Sub1.outgoingBuffer.putOpcode(237);
-																			Class3_Sub13_Sub1.outgoingBuffer.putByte((byte) -11, 0);
+																			Class3_Sub13_Sub1.outgoingBuffer.writeByte(0);
 																			int k79 = Class3_Sub13_Sub1.outgoingBuffer.index;
-																			Class3_Sub13_Sub1.outgoingBuffer.putByte((byte) -34, byte3);
-																			Class3_Sub13_Sub1.outgoingBuffer.putByte((byte) -117, byte4);
+																			Class3_Sub13_Sub1.outgoingBuffer.writeByte(byte3);
+																			Class3_Sub13_Sub1.outgoingBuffer.writeByte(byte4);
 																			Class85.method1423(Class3_Sub13_Sub1.outgoingBuffer, class94_18);
-																			Class3_Sub13_Sub1.outgoingBuffer.method769((byte) -127, -k79 + Class3_Sub13_Sub1.outgoingBuffer.index);
+																			Class3_Sub13_Sub1.outgoingBuffer.method769(-k79 + Class3_Sub13_Sub1.outgoingBuffer.index);
 																		}
 																		continue;
 																	}
@@ -1805,11 +1805,11 @@ final class ItemDefinition {
 																		RSString class94_19 = stringsStack[sStackCounter];
 																		if (Class3_Sub13_Sub26.rights != 0 || (!Class3_Sub15.aBoolean2433 || Class121.aBoolean1641) && !Class3_Sub13_Sub14.aBoolean3166) {
 																			Class3_Sub13_Sub1.outgoingBuffer.putOpcode(201);
-																			Class3_Sub13_Sub1.outgoingBuffer.putByte((byte) -121, 0);
+																			Class3_Sub13_Sub1.outgoingBuffer.writeByte(0);
 																			int k69 = Class3_Sub13_Sub1.outgoingBuffer.index;
-																			Class3_Sub13_Sub1.outgoingBuffer.putLong(class94_19.toLong(), 0x868e5910);
+																			Class3_Sub13_Sub1.outgoingBuffer.writeLong(class94_19.toLong());
 																			Class85.method1423(Class3_Sub13_Sub1.outgoingBuffer, class94_48);
-																			Class3_Sub13_Sub1.outgoingBuffer.method769((byte) -127, Class3_Sub13_Sub1.outgoingBuffer.index - k69);
+																			Class3_Sub13_Sub1.outgoingBuffer.method769(Class3_Sub13_Sub1.outgoingBuffer.index - k69);
 																		}
 																		continue;
 																	}
@@ -1927,33 +1927,33 @@ final class ItemDefinition {
 																	}
 																	if (5059 == opcode) {
 																		Class3_Sub13_Sub1.outgoingBuffer.putOpcode(167);
-																		Class3_Sub13_Sub1.outgoingBuffer.putByte((byte) -105, 0);
+																		Class3_Sub13_Sub1.outgoingBuffer.writeByte(0);
 																		int j27 = Class3_Sub13_Sub1.outgoingBuffer.index;
-																		Class3_Sub13_Sub1.outgoingBuffer.putByte((byte) -61, 0);
-																		Class3_Sub13_Sub1.outgoingBuffer.putShort(Class70.aClass10_1056.anInt149);
+																		Class3_Sub13_Sub1.outgoingBuffer.writeByte(0);
+																		Class3_Sub13_Sub1.outgoingBuffer.writeShort(Class70.aClass10_1056.anInt149);
 																		Class70.aClass10_1056.aClass3_Sub28_Sub4_151.method545(Class3_Sub13_Sub1.outgoingBuffer, Class70.aClass10_1056.anIntArray153);
-																		Class3_Sub13_Sub1.outgoingBuffer.method769((byte) -126, -j27 + Class3_Sub13_Sub1.outgoingBuffer.index);
+																		Class3_Sub13_Sub1.outgoingBuffer.method769(-j27 + Class3_Sub13_Sub1.outgoingBuffer.index);
 																		continue;
 																	}
 																	if (5060 == opcode) {
 																		RSString class94_21 = stringsStack[--sStackCounter];
 																		Class3_Sub13_Sub1.outgoingBuffer.putOpcode(178);
-																		Class3_Sub13_Sub1.outgoingBuffer.putByte((byte) -108, 0);
+																		Class3_Sub13_Sub1.outgoingBuffer.writeByte(0);
 																		int l56 = Class3_Sub13_Sub1.outgoingBuffer.index;
-																		Class3_Sub13_Sub1.outgoingBuffer.putLong(class94_21.toLong(), 0x868e5910);
-																		Class3_Sub13_Sub1.outgoingBuffer.putShort(Class70.aClass10_1056.anInt149);
+																		Class3_Sub13_Sub1.outgoingBuffer.writeLong(class94_21.toLong());
+																		Class3_Sub13_Sub1.outgoingBuffer.writeShort(Class70.aClass10_1056.anInt149);
 																		Class70.aClass10_1056.aClass3_Sub28_Sub4_151.method545(Class3_Sub13_Sub1.outgoingBuffer, Class70.aClass10_1056.anIntArray153);
-																		Class3_Sub13_Sub1.outgoingBuffer.method769((byte) 108, Class3_Sub13_Sub1.outgoingBuffer.index + -l56);
+																		Class3_Sub13_Sub1.outgoingBuffer.method769(Class3_Sub13_Sub1.outgoingBuffer.index + -l56);
 																		continue;
 																	}
 																	if (opcode == 5061) {
 																		Class3_Sub13_Sub1.outgoingBuffer.putOpcode(167);
-																		Class3_Sub13_Sub1.outgoingBuffer.putByte((byte) -62, 0);
+																		Class3_Sub13_Sub1.outgoingBuffer.writeByte(0);
 																		int k27 = Class3_Sub13_Sub1.outgoingBuffer.index;
-																		Class3_Sub13_Sub1.outgoingBuffer.putByte((byte) -88, 1);
-																		Class3_Sub13_Sub1.outgoingBuffer.putShort(Class70.aClass10_1056.anInt149);
+																		Class3_Sub13_Sub1.outgoingBuffer.writeByte(1);
+																		Class3_Sub13_Sub1.outgoingBuffer.writeShort(Class70.aClass10_1056.anInt149);
 																		Class70.aClass10_1056.aClass3_Sub28_Sub4_151.method545(Class3_Sub13_Sub1.outgoingBuffer, Class70.aClass10_1056.anIntArray153);
-																		Class3_Sub13_Sub1.outgoingBuffer.method769((byte) -126, -k27 + Class3_Sub13_Sub1.outgoingBuffer.index);
+																		Class3_Sub13_Sub1.outgoingBuffer.method769(-k27 + Class3_Sub13_Sub1.outgoingBuffer.index);
 																		continue;
 																	}
 																	if (opcode == 5062) {
@@ -2306,10 +2306,10 @@ final class ItemDefinition {
 																		RSString class94_54 = stringsStack[sStackCounter - -1];
 																		int k71 = intsStack[--iStackCounter];
 																		Class3_Sub13_Sub1.outgoingBuffer.putOpcode(117);
-																		Class3_Sub13_Sub1.outgoingBuffer.putByte((byte) -91, Class3_Sub13_Sub33.method326((byte) 39, class94_23) - (-Class3_Sub13_Sub33.method326((byte) 102, class94_54) + -1));
-																		Class3_Sub13_Sub1.outgoingBuffer.putString(class94_23);
-																		Class3_Sub13_Sub1.outgoingBuffer.putString(class94_54);
-																		Class3_Sub13_Sub1.outgoingBuffer.putByte((byte) -79, k71);
+																		Class3_Sub13_Sub1.outgoingBuffer.writeByte(Class3_Sub13_Sub33.method326((byte) 39, class94_23) - (-Class3_Sub13_Sub33.method326((byte) 102, class94_54) + -1));
+																		Class3_Sub13_Sub1.outgoingBuffer.writeString(class94_23);
+																		Class3_Sub13_Sub1.outgoingBuffer.writeString(class94_54);
+																		Class3_Sub13_Sub1.outgoingBuffer.writeByte(k71);
 																		continue;
 																	}
 																	if (opcode == 5401) {
@@ -2387,7 +2387,7 @@ final class ItemDefinition {
 																		RSString class94_25 = stringsStack[--sStackCounter];
 																		RSString class94_64 = RenderAnimationDefinition.method903(new RSString[]{
 																				RSInterface.method856(), class94_25
-																		}, (byte) -71);
+																		});
 																		if (null == GameShell.frame && (!flag5 || Signlink.anInt1214 == 3 || !Signlink.osName.startsWith("win") || Class106.hasInternetExplorer6)) {
 																			Class99.method1596(class94_64, (byte) 127, flag5);
 																		} else {
@@ -3253,7 +3253,7 @@ final class ItemDefinition {
 													int k62 = intsStack[--iStackCounter];
 													stringsStack[sStackCounter++] = RenderAnimationDefinition.method903(new RSString[]{
 															class94_29, Class72.method1298((byte) 9, k62)
-													}, (byte) -94);
+													});
 													continue;
 												}
 												if (opcode == 4101) {
@@ -3262,7 +3262,7 @@ final class ItemDefinition {
 													RSString class94_30 = stringsStack[sStackCounter];
 													stringsStack[sStackCounter++] = RenderAnimationDefinition.method903(new RSString[]{
 															class94_30, class94_57
-													}, (byte) -106);
+													});
 													continue;
 												}
 												if (4102 == opcode) {
@@ -3270,7 +3270,7 @@ final class ItemDefinition {
 													int l62 = intsStack[--iStackCounter];
 													stringsStack[sStackCounter++] = RenderAnimationDefinition.method903(new RSString[]{
 															class94_31, Class61.method1218(l62)
-													}, (byte) -119);
+													});
 													continue;
 												}
 												if (opcode == 4103) {
@@ -3287,7 +3287,7 @@ final class ItemDefinition {
 													int i82 = Class3_Sub28_Sub9.aCalendar3616.get(Calendar.YEAR);
 													stringsStack[sStackCounter++] = RenderAnimationDefinition.method903(new RSString[]{
 															Class72.method1298((byte) 9, k78), Class93.aClass94_1326, TextCore.MonthsOfTheYear[k80], Class93.aClass94_1326, Class72.method1298((byte) 9, i82)
-													}, (byte) -122);
+													});
 													continue;
 												}
 												if (4105 == opcode) {
@@ -4203,22 +4203,22 @@ final class ItemDefinition {
 	private void parseOpcode(DataBuffer buffer, int opcode) {
 		try {
 			if(opcode == 1) {
-				this.anInt755 = buffer.getShort();
+				this.anInt755 = buffer.readUnsignedShort();
 			} else if (opcode == 2) {
-				this.name = buffer.getString();
+				this.name = buffer.readString();
 			} else if (opcode == 4) {
-				this.anInt810 = buffer.getShort();
+				this.anInt810 = buffer.readUnsignedShort();
 			} else if (opcode == 5) {
-				this.anInt786 = buffer.getShort();
+				this.anInt786 = buffer.readUnsignedShort();
 			} else if (opcode == 6) {
-				this.anInt799 = buffer.getShort();
+				this.anInt799 = buffer.readUnsignedShort();
 			} else if (opcode == 7) {
-				this.anInt792 = buffer.getShort();
+				this.anInt792 = buffer.readUnsignedShort();
 				if (this.anInt792 > 32767) {
 					this.anInt792 -= 65536;
 				}
 			} else if (opcode == 8) {
-				this.anInt754 = buffer.getShort();
+				this.anInt754 = buffer.readUnsignedShort();
 				if (this.anInt754 > 32767) {
 					this.anInt754 -= 65536;
 				}
@@ -4229,20 +4229,20 @@ final class ItemDefinition {
 			} else if (opcode == 16) {
 				this.membersItem = true;
 			} else if (23 == opcode) {
-				this.anInt793 = buffer.getShort();
+				this.anInt793 = buffer.readUnsignedShort();
 			} else if (opcode == 24) {
-				this.anInt771 = buffer.getShort();
+				this.anInt771 = buffer.readUnsignedShort();
 			} else if (opcode == 25) {
-				this.anInt761 = buffer.getShort();
+				this.anInt761 = buffer.readUnsignedShort();
 			} else if (opcode == 26) {
-				this.anInt794 = buffer.getShort();
+				this.anInt794 = buffer.readUnsignedShort();
 			} else if (opcode >= 30 && opcode < 35) {
-				this.groundOptions[-30 + opcode] = buffer.getString();
+				this.groundOptions[-30 + opcode] = buffer.readString();
 				if (this.groundOptions[opcode + -30].equals(25, TextCore.HasHidden)) {
 					this.groundOptions[-30 + opcode] = null;
 				}
 			} else if (35 <= opcode && 40 > opcode) {
-				this.inventoryOptions[-35 + opcode] = buffer.getString();
+				this.inventoryOptions[-35 + opcode] = buffer.readString();
 			} else {
 				int var5;
 				int var6;
@@ -4252,8 +4252,8 @@ final class ItemDefinition {
 					this.aShortArray774 = new short[var5];
 
 					for (var6 = 0; var5 > var6; ++var6) {
-						this.aShortArray774[var6] = (short) buffer.getShort();
-						this.aShortArray772[var6] = (short) buffer.getShort();
+						this.aShortArray774[var6] = (short) buffer.readUnsignedShort();
+						this.aShortArray772[var6] = (short) buffer.readUnsignedShort();
 					}
 				} else if (opcode == 41) {
 					var5 = buffer.readUnsignedByte();
@@ -4261,82 +4261,82 @@ final class ItemDefinition {
 					this.aShortArray765 = new short[var5];
 
 					for (var6 = 0; var6 < var5; ++var6) {
-						this.aShortArray765[var6] = (short) buffer.getShort();
-						this.aShortArray751[var6] = (short) buffer.getShort();
+						this.aShortArray765[var6] = (short) buffer.readUnsignedShort();
+						this.aShortArray751[var6] = (short) buffer.readUnsignedShort();
 					}
 				} else if (42 == opcode) {
 					var5 = buffer.readUnsignedByte();
 					this.aByteArray785 = new byte[var5];
 
 					for (var6 = 0; var5 > var6; ++var6) {
-						this.aByteArray785[var6] = buffer.getByte();
+						this.aByteArray785[var6] = buffer.readSignedByte();
 					}
 				} else if (opcode == 65) {
 					this.aBoolean807 = true;
 				} else if (opcode == 78) {
-					this.anInt769 = buffer.getShort();
+					this.anInt769 = buffer.readUnsignedShort();
 				} else if (opcode == 79) {
-					this.anInt776 = buffer.getShort();
+					this.anInt776 = buffer.readUnsignedShort();
 				} else if (90 == opcode) {
-					this.anInt803 = buffer.getShort();
+					this.anInt803 = buffer.readUnsignedShort();
 				} else if (opcode == 91) {
-					this.anInt773 = buffer.getShort();
+					this.anInt773 = buffer.readUnsignedShort();
 				} else if (opcode == 92) {
-					this.anInt796 = buffer.getShort();
+					this.anInt796 = buffer.readUnsignedShort();
 				} else if (opcode == 93) {
-					this.anInt753 = buffer.getShort();
+					this.anInt753 = buffer.readUnsignedShort();
 				} else if (opcode == 95) {
-					this.anInt768 = buffer.getShort();
+					this.anInt768 = buffer.readUnsignedShort();
 				} else if (opcode == 96) {
 					this.anInt800 = buffer.readUnsignedByte();
 				} else if (opcode == 97) {
-					this.anInt789 = buffer.getShort();
+					this.anInt789 = buffer.readUnsignedShort();
 				} else if (opcode == 98) {
-					this.anInt791 = buffer.getShort();
+					this.anInt791 = buffer.readUnsignedShort();
 				} else if (opcode >= 100 && opcode < 110) {
 					if (null == this.anIntArray804) {
 						this.anIntArray804 = new int[10];
 						this.anIntArray766 = new int[10];
 					}
 
-					this.anIntArray804[-100 + opcode] = buffer.getShort();
-					this.anIntArray766[opcode + -100] = buffer.getShort();
+					this.anIntArray804[-100 + opcode] = buffer.readUnsignedShort();
+					this.anIntArray766[opcode + -100] = buffer.readUnsignedShort();
 				} else if (110 == opcode) {
-					this.anInt805 = buffer.getShort();
+					this.anInt805 = buffer.readUnsignedShort();
 				} else if (opcode == 111) {
-					this.anInt780 = buffer.getShort();
+					this.anInt780 = buffer.readUnsignedShort();
 				} else if (opcode == 112) {
-					this.anInt797 = buffer.getShort();
+					this.anInt797 = buffer.readUnsignedShort();
 				} else if (opcode == 113) {
-					this.anInt784 = buffer.getByte();
+					this.anInt784 = buffer.readSignedByte();
 				} else if (opcode == 114) {
-					this.anInt790 = 5 * buffer.getByte();
+					this.anInt790 = 5 * buffer.readSignedByte();
 				} else if (opcode == 115) {
 					this.teamId = buffer.readUnsignedByte();
 				} else if (opcode == 121) {
-					this.anInt795 = buffer.getShort();
+					this.anInt795 = buffer.readUnsignedShort();
 				} else if (opcode == 122) {
-					this.anInt762 = buffer.getShort();
+					this.anInt762 = buffer.readUnsignedShort();
 				} else if (125 == opcode) {
-					this.wornModelPositionX = buffer.getByte();
-					this.wornModelPositionZ = buffer.getByte();
-					this.wornModelPositionY = buffer.getByte();
+					this.wornModelPositionX = buffer.readSignedByte();
+					this.wornModelPositionZ = buffer.readSignedByte();
+					this.wornModelPositionY = buffer.readSignedByte();
 				} else if (opcode == 126) {
-					this.anInt777 = buffer.getByte();
-					this.anInt802 = buffer.getByte();
-					this.anInt752 = buffer.getByte();
+					this.anInt777 = buffer.readSignedByte();
+					this.anInt802 = buffer.readSignedByte();
+					this.anInt752 = buffer.readSignedByte();
 				} else if (opcode == 127) {
 					this.anInt767 = buffer.readUnsignedByte();
-					this.anInt758 = buffer.getShort();
+					this.anInt758 = buffer.readUnsignedShort();
 				} else if (opcode == 128) {
 					this.anInt788 = buffer.readUnsignedByte();
-					this.anInt756 = buffer.getShort();
+					this.anInt756 = buffer.readUnsignedShort();
 				} else if (opcode == 129) {
 					buffer.readUnsignedByte();
-					buffer.getShort();
+					buffer.readUnsignedShort();
 				} else if (opcode == 130) {
 					buffer.readUnsignedByte();
-					buffer.getShort();
+					buffer.readUnsignedShort();
 				} else if (249 == opcode) {
 					var5 = buffer.readUnsignedByte();
 					if (null == this.aHashTable_798) {
@@ -4346,10 +4346,10 @@ final class ItemDefinition {
 
 					for (var6 = 0; var6 < var5; ++var6) {
 						boolean var7 = buffer.readUnsignedByte() == 1;
-						int var8 = buffer.getTriByte((byte) 122);
+						int var8 = buffer.readMedium();
 						Object var9;
 						if (var7) {
-							var9 = new Class3_Sub29(buffer.getString());
+							var9 = new Class3_Sub29(buffer.readString());
 						} else {
 							var9 = new Class3_Sub18(buffer.readInt());
 						}

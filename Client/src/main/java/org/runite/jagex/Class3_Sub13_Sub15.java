@@ -24,11 +24,11 @@ final class Class3_Sub13_Sub15 extends Class3_Sub13 {
    final void method157(int var1, DataBuffer var2, boolean var3) {
       try {
          if(var1 == 0) {
-            this.anInt3175 = var2.getShort((byte)18);
+            this.anInt3175 = var2.readSignedShort();
          } else if(var1 == 1) {
-            this.anInt3178 = (var2.getByte() << 12) / 100;
+            this.anInt3178 = (var2.readSignedByte() << 12) / 100;
          } else if (var1 == 2) {
-             this.anInt3176 = (var2.getByte() << 12) / 100;
+             this.anInt3176 = (var2.readSignedByte() << 12) / 100;
          }
 
          if(!var3) {

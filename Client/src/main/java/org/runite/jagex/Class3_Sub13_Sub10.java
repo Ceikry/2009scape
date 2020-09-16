@@ -33,9 +33,9 @@ final class Class3_Sub13_Sub10 extends Class3_Sub13 {
    final void method157(int var1, DataBuffer var2, boolean var3) {
       try {
          if(var1 == 0) {
-            this.anInt3128 = var2.getShort();
+            this.anInt3128 = var2.readUnsignedShort();
          } else if (var1 == 1) {
-            this.anInt3127 = var2.getShort();
+            this.anInt3127 = var2.readUnsignedShort();
          } else if (var1 == 2) {
             this.aBoolean2375 = var2.readUnsignedByte() == 1;
          }
@@ -94,7 +94,7 @@ final class Class3_Sub13_Sub10 extends Class3_Sub13 {
 
                   Class110.anInt1472 = Class3_Sub13_Sub17.anInt3213;
                   Class3_Sub13_Sub1.outgoingBuffer.putOpcode(213);
-                  Class3_Sub13_Sub1.outgoingBuffer.putLong(var0, -2037491440);
+                  Class3_Sub13_Sub1.outgoingBuffer.writeLong(var0);
                   break;
                }
             }
@@ -280,7 +280,7 @@ final class Class3_Sub13_Sub10 extends Class3_Sub13 {
       try {
          for(int var2 = 0; var2 < Class57.activeWorldListSize; ++var2) {
             int var3 = var0.getSmart();
-            int var4 = var0.getShort();
+            int var4 = var0.readUnsignedShort();
             if(var4 == 65535) {
                var4 = -1;
             }

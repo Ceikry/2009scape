@@ -49,8 +49,8 @@ final class Class133 {
 
    Class133(DataBuffer var1) {
       try {
-         this.aByte1742 = var1.getByte();
-         this.anInt1752 = var1.getShort();
+         this.aByte1742 = var1.readSignedByte();
+         this.anInt1752 = var1.readUnsignedShort();
          this.anInt1757 = var1.readInt();
          this.anInt1747 = var1.readInt();
          this.anInt1746 = var1.readInt();

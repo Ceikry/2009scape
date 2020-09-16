@@ -30,22 +30,22 @@ final class Class75_Sub4 extends Class75 {
             //Ordinal: 0 Hit
             if((64 & var4) != 0) {
                var5 = GraphicDefinition.incomingBuffer.readUnsignedByte();
-               var6 = GraphicDefinition.incomingBuffer.getByteC();
+               var6 = GraphicDefinition.incomingBuffer.readUnsignedNegativeByte();
                npc.method1970(var6, Class44.anInt719, var5);
                npc.anInt2781 = 300 + Class44.anInt719;
-               npc.anInt2775 = GraphicDefinition.incomingBuffer.getByteS();
+               npc.anInt2775 = GraphicDefinition.incomingBuffer.readUnsigned128Byte();
             }
 
             //Ordinal: 1 Hit 2
             if((var4 & 2) != 0) {
-               var5 = GraphicDefinition.incomingBuffer.getByteC();
-               var6 = GraphicDefinition.incomingBuffer.getByteS();
+               var5 = GraphicDefinition.incomingBuffer.readUnsignedNegativeByte();
+               var6 = GraphicDefinition.incomingBuffer.readUnsigned128Byte();
                npc.method1970(var6, Class44.anInt719, var5);
             }
 
             //Ordinal: 2 Animation
             if((var4 & 16) != 0) {
-               var5 = GraphicDefinition.incomingBuffer.getShort();
+               var5 = GraphicDefinition.incomingBuffer.readUnsignedShort();
                var6 = GraphicDefinition.incomingBuffer.readUnsignedByte();
                if('\uffff' == var5) {
                   var5 = -1;
@@ -56,7 +56,7 @@ final class Class75_Sub4 extends Class75 {
 
             //Ordinal: 3 Face entity
             if((var4 & 4) != 0) {
-               npc.anInt2772 = GraphicDefinition.incomingBuffer.getShortA(-117);
+               npc.anInt2772 = GraphicDefinition.incomingBuffer.readUnsignedShort128();
                if(npc.anInt2772 == 65535) {
                   npc.anInt2772 = -1;
                }
@@ -64,12 +64,12 @@ final class Class75_Sub4 extends Class75 {
 
             //Ordinal: 4 Graphic
             if(0 != (var4 & 128)) {
-               var5 = GraphicDefinition.incomingBuffer.getShortA(46);
+               var5 = GraphicDefinition.incomingBuffer.readUnsignedShort128();
                if(var5 == '\uffff') {
                   var5 = -1;
                }
 
-               var6 = GraphicDefinition.incomingBuffer.getLEInt(-46);
+               var6 = GraphicDefinition.incomingBuffer.readIntLE();
                boolean var7 = true;
                if(var5 != -1 && npc.anInt2842 != -1 && Client.getAnimationDefinition(RenderAnimationDefinition.getGraphicDefinition((byte)42, var5).anInt542).anInt1857 < Client.getAnimationDefinition(RenderAnimationDefinition.getGraphicDefinition((byte)42, npc.anInt2842).anInt542).anInt1857) {
                   var7 = false;
@@ -104,7 +104,7 @@ final class Class75_Sub4 extends Class75 {
                   Class3_Sub28_Sub8.method574(npc);
                }
 
-               npc.setDefinitions(Unsorted.method522(GraphicDefinition.incomingBuffer.getLEShort(-84)));
+               npc.setDefinitions(Unsorted.method522(GraphicDefinition.incomingBuffer.readUnsignedShortLE()));
                npc.setSize(npc.definition.size, 2);
                npc.renderAnimationId = npc.definition.renderAnimationId;
                if(npc.definition.method1474()) {
@@ -114,26 +114,26 @@ final class Class75_Sub4 extends Class75 {
 
             //Ordinal: 6 Force chat
             if((var4 & 32) != 0) {
-               npc.textSpoken = GraphicDefinition.incomingBuffer.getString();
+               npc.textSpoken = GraphicDefinition.incomingBuffer.readString();
                npc.textCycle = 100;
             }
 
             //Ordinal: 7
             if((256 & var4) != 0) {
-               var5 = GraphicDefinition.incomingBuffer.getByteC();
+               var5 = GraphicDefinition.incomingBuffer.readUnsignedNegativeByte();
                int[] var12 = new int[var5];
                int[] var13 = new int[var5];
                int[] var14 = new int[var5];
 
                for(int var15 = 0; var5 > var15; ++var15) {
-                  int var10 = GraphicDefinition.incomingBuffer.getLEShort(-101);
+                  int var10 = GraphicDefinition.incomingBuffer.readUnsignedShortLE();
                   if(var10 == '\uffff') {
                      var10 = -1;
                   }
 
                   var12[var15] = var10;
-                  var13[var15] = GraphicDefinition.incomingBuffer.getByteS();
-                  var14[var15] = GraphicDefinition.incomingBuffer.getShort();
+                  var13[var15] = GraphicDefinition.incomingBuffer.readUnsigned128Byte();
+                  var14[var15] = GraphicDefinition.incomingBuffer.readUnsignedShort();
                }
 
                Class3_Sub13_Sub22.method273(var14, npc, var13, var12);
@@ -141,8 +141,8 @@ final class Class75_Sub4 extends Class75 {
 
             //Ordinal: 8 Face location
             if((var4 & 512) != 0) {
-               npc.anInt2786 = GraphicDefinition.incomingBuffer.getShortA(-103);
-               npc.anInt2762 = GraphicDefinition.incomingBuffer.getShort();
+               npc.anInt2786 = GraphicDefinition.incomingBuffer.readUnsignedShort128();
+               npc.anInt2762 = GraphicDefinition.incomingBuffer.readUnsignedShort();
             }
          }
 

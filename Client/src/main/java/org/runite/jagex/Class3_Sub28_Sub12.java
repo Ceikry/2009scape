@@ -100,7 +100,7 @@ public final class Class3_Sub28_Sub12 extends Node {
       try {
 
           if(var2 == 2) {
-            this.anInt3647 = var1.getShort();
+            this.anInt3647 = var1.readUnsignedShort();
          }
 
       } catch (RuntimeException var5) {

@@ -47,14 +47,14 @@ class Class163_Sub2 extends Class163 {
                for(int var12 = 0; var12 < 64; ++var12) {
                   for(int var13 = 0; var13 < 64; ++var13) {
                      if(!var3 || (8 * var4) <= var12 && var12 < 8 + var4 * 8 && var13 >= var5 * 8 && (8 + var5 * 8) > var13) {
-                        var2 = var0.getByte();
+                        var2 = var0.readSignedByte();
                         if(var2 != 0) {
                            if(RenderAnimationDefinition.aByteArrayArrayArray383[var10][var11] == null) {
                               RenderAnimationDefinition.aByteArrayArrayArray383[var10][var11] = new byte[4096];
                            }
 
                            RenderAnimationDefinition.aByteArrayArrayArray383[var10][var11][var12 + (-var13 + 63 << 6)] = var2;
-                           byte var14 = var0.getByte();
+                           byte var14 = var0.readSignedByte();
                            if(Class3_Sub10.aByteArrayArrayArray2339[var10][var11] == null) {
                               Class3_Sub10.aByteArrayArrayArray2339[var10][var11] = new byte[4096];
                            }
@@ -66,7 +66,7 @@ class Class163_Sub2 extends Class163 {
                }
             } else {
                for(var10 = 0; var10 < (var3 ? 64 : 4096); ++var10) {
-                  var2 = var0.getByte();
+                  var2 = var0.readSignedByte();
                   if(0 != var2) {
                      ++var0.index;
                   }

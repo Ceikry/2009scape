@@ -41,15 +41,15 @@ final class GraphicDefinition {
 	private void method965(DataBuffer var1, int var2) {
 		try {
 			if(var2 == 1) {
-				this.anInt541 = var1.getShort();
+				this.anInt541 = var1.readUnsignedShort();
 			} else if(2 == var2) {
-				this.anInt542 = var1.getShort();
+				this.anInt542 = var1.readUnsignedShort();
 			} else if(var2 == 4) {
-				this.anInt530 = var1.getShort();
+				this.anInt530 = var1.readUnsignedShort();
 			} else if (var2 == 5) {
-				this.anInt540 = var1.getShort();
+				this.anInt540 = var1.readUnsignedShort();
 			} else if (6 == var2) {
-				this.anInt543 = var1.getShort();
+				this.anInt543 = var1.readUnsignedShort();
 			} else if (var2 == 7) {
 				this.anInt538 = var1.readUnsignedByte();
 			} else if (var2 == 8) {
@@ -65,8 +65,8 @@ final class GraphicDefinition {
 					this.aShortArray545 = new short[var4];
 
 					for (var5 = 0; var4 > var5; ++var5) {
-						this.aShortArray533[var5] = (short) var1.getShort();
-						this.aShortArray545[var5] = (short) var1.getShort();
+						this.aShortArray533[var5] = (short) var1.readUnsignedShort();
+						this.aShortArray545[var5] = (short) var1.readUnsignedShort();
 					}
 				} else if (41 == var2) {
 					var4 = var1.readUnsignedByte();
@@ -74,8 +74,8 @@ final class GraphicDefinition {
 					this.aShortArray535 = new short[var4];
 
 					for (var5 = 0; var5 < var4; ++var5) {
-						this.aShortArray534[var5] = (short) var1.getShort();
-						this.aShortArray535[var5] = (short) var1.getShort();
+						this.aShortArray534[var5] = (short) var1.readUnsignedShort();
+						this.aShortArray535[var5] = (short) var1.readUnsignedShort();
 					}
 				}
 			}

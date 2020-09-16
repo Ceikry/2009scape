@@ -93,7 +93,7 @@ final class Class3_Sub17 extends Linkable {
 			}
 
 			for(var4 = 0; var4 < this.anInt2462; ++var4) {
-				this.anIntArray2455[var4] = var3.getShort();
+				this.anIntArray2455[var4] = var3.readUnsignedShort();
 			}
 
 			for(var4 = 0; var4 < this.anInt2462; ++var4) {

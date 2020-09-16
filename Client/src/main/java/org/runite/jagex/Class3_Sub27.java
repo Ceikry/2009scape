@@ -99,7 +99,7 @@ final class Class3_Sub27 extends Linkable {
    private Class3_Sub27(DataBuffer var1) {
       var1.index = var1.buffer.length - 3;
       int var2 = var1.readUnsignedByte();
-      int var3 = var1.getShort();
+      int var3 = var1.readUnsignedShort();
       int var4 = 14 + var2 * 10;
       var1.index = 0;
       int var5 = 0;
@@ -160,7 +160,7 @@ final class Class3_Sub27 extends Linkable {
       var14 = var2 + var5 + var6 + var7 + var8 + var9 + var10 + var11 + var12;
 
       for(var15 = 0; var15 < var14; ++var15) {
-         var1.method741((byte)127);
+         var1.method741();
       }
 
       var4 += var1.index - var13;
@@ -256,11 +256,11 @@ final class Class3_Sub27 extends Linkable {
       var1.index += var5 * 3;
       this.aByteArray2565 = new byte[var4];
       DataBuffer var51 = new DataBuffer(this.aByteArray2565);
-      var51.putInt(-121, 1297377380);
-      var51.putInt(-128, 6);
-      var51.putShort(var2 > 1?1:0);
-      var51.putShort(var2);
-      var51.putShort(var3);
+      var51.writeInt(1297377380);
+      var51.writeInt(6);
+      var51.writeShort(var2 > 1?1:0);
+      var51.writeShort(var2);
+      var51.writeShort(var3);
       var1.index = var13;
       int var52 = 0;
       int var53 = 0;
@@ -274,24 +274,24 @@ final class Class3_Sub27 extends Linkable {
       int var60 = 0;
 
       while(var60 < var2) {
-         var51.putInt(-125, 1297379947);
+         var51.writeInt(1297379947);
          var51.index += 4;
          int var61 = var51.index;
          int var62 = -1;
 
          while(true) {
-            int var63 = var1.method741((byte)113);
+            int var63 = var1.method741();
             var51.method771(var63);
             int var64 = var1.buffer[var29++] & 255;
             boolean var65 = var64 != var62;
             var62 = var64 & 15;
             if(var64 == 7) {
                if(var65) {
-                  var51.putByte((byte)-121, 255);
+                  var51.writeByte(255);
                }
 
-               var51.putByte((byte)-45, 47);
-               var51.putByte((byte)-72, 0);
+               var51.writeByte(47);
+               var51.writeByte(0);
                var51.method742(var51.index - var61);
                ++var60;
                break;
@@ -299,41 +299,41 @@ final class Class3_Sub27 extends Linkable {
 
             if(var64 == 23) {
                if(var65) {
-                  var51.putByte((byte)-49, 255);
+                  var51.writeByte(255);
                }
 
-               var51.putByte((byte)-54, 81);
-               var51.putByte((byte)-16, 3);
-               var51.putByte((byte)-126, var1.buffer[var50++]);
-               var51.putByte((byte)-99, var1.buffer[var50++]);
-               var51.putByte((byte)-76, var1.buffer[var50++]);
+               var51.writeByte(81);
+               var51.writeByte(3);
+               var51.writeByte(var1.buffer[var50++]);
+               var51.writeByte(var1.buffer[var50++]);
+               var51.writeByte(var1.buffer[var50++]);
             } else {
                var52 ^= var64 >> 4;
                if(var62 == 0) {
                   if(var65) {
-                     var51.putByte((byte)-60, 144 + var52);
+                     var51.writeByte(144 + var52);
                   }
 
                   var53 += var1.buffer[var37++];
                   var54 += var1.buffer[var38++];
-                  var51.putByte((byte)-98, var53 & 127);
-                  var51.putByte((byte)-112, var54 & 127);
+                  var51.writeByte(var53 & 127);
+                  var51.writeByte(var54 & 127);
                } else if(var62 == 1) {
                   if(var65) {
-                     var51.putByte((byte)-55, 128 + var52);
+                     var51.writeByte(128 + var52);
                   }
 
                   var53 += var1.buffer[var37++];
                   var55 += var1.buffer[var40++];
-                  var51.putByte((byte)-76, var53 & 127);
-                  var51.putByte((byte)-57, var55 & 127);
+                  var51.writeByte(var53 & 127);
+                  var51.writeByte(var55 & 127);
                } else if(var62 == 2) {
                   if(var65) {
-                     var51.putByte((byte)-81, 176 + var52);
+                     var51.writeByte(176 + var52);
                   }
 
                   var28 = var28 + var1.buffer[var15++] & 127;
-                  var51.putByte((byte)-17, var28);
+                  var51.writeByte(var28);
                   byte var66;
                   if(var28 == 0 || var28 == 32) {
                      var66 = var1.buffer[var44++];
@@ -365,42 +365,42 @@ final class Class3_Sub27 extends Linkable {
 
                    int var67 = var66 + var59[var28];
                   var59[var28] = var67;
-                  var51.putByte((byte)-13, var67 & 127);
+                  var51.writeByte(var67 & 127);
                } else if(var62 == 3) {
                   if(var65) {
-                     var51.putByte((byte)-59, 224 + var52);
+                     var51.writeByte(224 + var52);
                   }
 
                   var56 += var1.buffer[var45++];
                   var56 += var1.buffer[var33++] << 7;
-                  var51.putByte((byte)-48, var56 & 127);
-                  var51.putByte((byte)-33, var56 >> 7 & 127);
+                  var51.writeByte(var56 & 127);
+                  var51.writeByte(var56 >> 7 & 127);
                } else if(var62 == 4) {
                   if(var65) {
-                     var51.putByte((byte)-33, 208 + var52);
+                     var51.writeByte(208 + var52);
                   }
 
                   var57 += var1.buffer[var32++];
-                  var51.putByte((byte)-35, var57 & 127);
+                  var51.writeByte(var57 & 127);
                } else if(var62 == 5) {
                   if(var65) {
-                     var51.putByte((byte)-24, 160 + var52);
+                     var51.writeByte(160 + var52);
                   }
 
                   var53 += var1.buffer[var37++];
                   var58 += var1.buffer[var31++];
-                  var51.putByte((byte)-106, var53 & 127);
-                  var51.putByte((byte)-83, var58 & 127);
+                  var51.writeByte(var53 & 127);
+                  var51.writeByte(var58 & 127);
                } else {
                   if(var62 != 6) {
                      throw new RuntimeException();
                   }
 
                   if(var65) {
-                     var51.putByte((byte)-45, 192 + var52);
+                     var51.writeByte(192 + var52);
                   }
 
-                  var51.putByte((byte)-89, var1.buffer[var44++]);
+                  var51.writeByte(var1.buffer[var44++]);
                }
             }
          }

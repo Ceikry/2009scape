@@ -13,7 +13,7 @@ final class Class85 {
    static void method1423(DataBuffer var1, RSString var2) {
       try {
          byte[] var4 = var2.method1568();
-         var1.method768(-32769, var4.length);
+         var1.method768(var4.length);
          var1.index += Class3_Sub13_Sub9.aClass36_3112.method1015(var4.length, var1.buffer, var4, 0, var1.index);
       } catch (RuntimeException var5) {
          throw Class44.clientError(var5, "lg.A(" + false + ',' + (var1 != null?"{...}":"null") + ',' + (var2 != null?"{...}":"null") + ')');

@@ -53,26 +53,26 @@ final class Class166 {
                Class3_Sub28_Sub9.method582(Class102.player.anIntArray2755[0], 0, 1, false, 0, 2, var6.anIntArray2767[0], 1, 0, 2, var6.anIntArray2755[0], Class102.player.anIntArray2767[0]);
                if(1 == var0) {
                   Class3_Sub13_Sub1.outgoingBuffer.putOpcode(68);
-                  Class3_Sub13_Sub1.outgoingBuffer.putLEShortA(Class56.localPlayerIndexes[var5]);
+                  Class3_Sub13_Sub1.outgoingBuffer.writeShort128LE(Class56.localPlayerIndexes[var5]);
                } else if(4 == var0) {
                   Class3_Sub13_Sub1.outgoingBuffer.putOpcode(180);
-                  Class3_Sub13_Sub1.outgoingBuffer.putLEShortA(Class56.localPlayerIndexes[var5]);
+                  Class3_Sub13_Sub1.outgoingBuffer.writeShort128LE(Class56.localPlayerIndexes[var5]);
                } else if (5 == var0) {
                   Class3_Sub13_Sub1.outgoingBuffer.putOpcode(4);
-                  Class3_Sub13_Sub1.outgoingBuffer.putLEShort(Class56.localPlayerIndexes[var5]);
+                  Class3_Sub13_Sub1.outgoingBuffer.writeShortLE(Class56.localPlayerIndexes[var5]);
                } else if (var0 == 6) {
                   Class3_Sub13_Sub1.outgoingBuffer.putOpcode(133);
-                  Class3_Sub13_Sub1.outgoingBuffer.putLEShort(Class56.localPlayerIndexes[var5]);
+                  Class3_Sub13_Sub1.outgoingBuffer.writeShortLE(Class56.localPlayerIndexes[var5]);
                } else if (var0 == 7) {
                   Class3_Sub13_Sub1.outgoingBuffer.putOpcode(114);
-                  Class3_Sub13_Sub1.outgoingBuffer.putLEShortA(Class56.localPlayerIndexes[var5]);
+                  Class3_Sub13_Sub1.outgoingBuffer.writeShort128LE(Class56.localPlayerIndexes[var5]);
                }
                break;
             }
          }
 
          if(!var4) {
-            Class3_Sub30_Sub1.addChatMessage(Class3_Sub28_Sub14.aClass94_3672, 0, RenderAnimationDefinition.method903(new RSString[]{TextCore.HasUnableFind, var3}, (byte)-77), -1);
+            Class3_Sub30_Sub1.addChatMessage(Class3_Sub28_Sub14.aClass94_3672, 0, RenderAnimationDefinition.method903(new RSString[]{TextCore.HasUnableFind, var3}), -1);
          }
 
       } catch (RuntimeException var7) {

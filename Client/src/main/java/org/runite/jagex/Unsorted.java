@@ -458,7 +458,7 @@ public class Unsorted {
     static RSString method802(int var0) {
         try {
 
-            return Class163_Sub2_Sub1.aClass94Array4016[var0].length(-26) > 0 ? RenderAnimationDefinition.method903(new RSString[]{Class140_Sub7.aClass94Array2935[var0], TextCore.Spacer, Class163_Sub2_Sub1.aClass94Array4016[var0]}, (byte) -86) : Class140_Sub7.aClass94Array2935[var0];
+            return Class163_Sub2_Sub1.aClass94Array4016[var0].length(-26) > 0 ? RenderAnimationDefinition.method903(new RSString[]{Class140_Sub7.aClass94Array2935[var0], TextCore.Spacer, Class163_Sub2_Sub1.aClass94Array4016[var0]}) : Class140_Sub7.aClass94Array2935[var0];
         } catch (RuntimeException var3) {
             throw Class44.clientError(var3, "wa.RB(" + var0 + ',' + true + ')');
         }
@@ -758,63 +758,63 @@ public class Unsorted {
                     if (Client.method44(var5).method92(var2 - 1, (byte) -108)) {
                         if (1 == var2) {
                             Class3_Sub13_Sub1.outgoingBuffer.putOpcode(155);
-                            Class3_Sub13_Sub1.outgoingBuffer.putInt(-120, var4);
-                            Class3_Sub13_Sub1.outgoingBuffer.putShort(var1);
+                            Class3_Sub13_Sub1.outgoingBuffer.writeInt(var4);
+                            Class3_Sub13_Sub1.outgoingBuffer.writeShort(var1);
                         }
 
                         if (var3 < -7) {
                             if (var2 == 2) {
                                 Class3_Sub13_Sub1.outgoingBuffer.putOpcode(196);
-                                Class3_Sub13_Sub1.outgoingBuffer.putInt(-122, var4);
-                                Class3_Sub13_Sub1.outgoingBuffer.putShort(var1);
+                                Class3_Sub13_Sub1.outgoingBuffer.writeInt(var4);
+                                Class3_Sub13_Sub1.outgoingBuffer.writeShort(var1);
                             }
 
                             if (var2 == 3) {
                                 Class3_Sub13_Sub1.outgoingBuffer.putOpcode(124);
-                                Class3_Sub13_Sub1.outgoingBuffer.putInt(-122, var4);
-                                Class3_Sub13_Sub1.outgoingBuffer.putShort(var1);
+                                Class3_Sub13_Sub1.outgoingBuffer.writeInt(var4);
+                                Class3_Sub13_Sub1.outgoingBuffer.writeShort(var1);
                             }
 
                             if (var2 == 4) {
                                 Class3_Sub13_Sub1.outgoingBuffer.putOpcode(199);
-                                Class3_Sub13_Sub1.outgoingBuffer.putInt(-126, var4);
-                                Class3_Sub13_Sub1.outgoingBuffer.putShort(var1);
+                                Class3_Sub13_Sub1.outgoingBuffer.writeInt(var4);
+                                Class3_Sub13_Sub1.outgoingBuffer.writeShort(var1);
                             }
 
                             if (var2 == 5) {
                                 Class3_Sub13_Sub1.outgoingBuffer.putOpcode(234);
-                                Class3_Sub13_Sub1.outgoingBuffer.putInt(-123, var4);
-                                Class3_Sub13_Sub1.outgoingBuffer.putShort(var1);
+                                Class3_Sub13_Sub1.outgoingBuffer.writeInt(var4);
+                                Class3_Sub13_Sub1.outgoingBuffer.writeShort(var1);
                             }
 
                             if (6 == var2) {
                                 Class3_Sub13_Sub1.outgoingBuffer.putOpcode(168);
-                                Class3_Sub13_Sub1.outgoingBuffer.putInt(-120, var4);
-                                Class3_Sub13_Sub1.outgoingBuffer.putShort(var1);
+                                Class3_Sub13_Sub1.outgoingBuffer.writeInt(var4);
+                                Class3_Sub13_Sub1.outgoingBuffer.writeShort(var1);
                             }
 
                             if (var2 == 7) {
                                 Class3_Sub13_Sub1.outgoingBuffer.putOpcode(166);
-                                Class3_Sub13_Sub1.outgoingBuffer.putInt(-123, var4);
-                                Class3_Sub13_Sub1.outgoingBuffer.putShort(var1);
+                                Class3_Sub13_Sub1.outgoingBuffer.writeInt(var4);
+                                Class3_Sub13_Sub1.outgoingBuffer.writeShort(var1);
                             }
 
                             if (var2 == 8) {
                                 Class3_Sub13_Sub1.outgoingBuffer.putOpcode(64);
-                                Class3_Sub13_Sub1.outgoingBuffer.putInt(-127, var4);
-                                Class3_Sub13_Sub1.outgoingBuffer.putShort(var1);
+                                Class3_Sub13_Sub1.outgoingBuffer.writeInt(var4);
+                                Class3_Sub13_Sub1.outgoingBuffer.writeShort(var1);
                             }
 
                             if (var2 == 9) {
                                 Class3_Sub13_Sub1.outgoingBuffer.putOpcode(53);
-                                Class3_Sub13_Sub1.outgoingBuffer.putInt(-123, var4);
-                                Class3_Sub13_Sub1.outgoingBuffer.putShort(var1);
+                                Class3_Sub13_Sub1.outgoingBuffer.writeInt(var4);
+                                Class3_Sub13_Sub1.outgoingBuffer.writeShort(var1);
                             }
 
                             if (var2 == 10) {
                                 Class3_Sub13_Sub1.outgoingBuffer.putOpcode(9);
-                                Class3_Sub13_Sub1.outgoingBuffer.putInt(-125, var4);
-                                Class3_Sub13_Sub1.outgoingBuffer.putShort(var1);
+                                Class3_Sub13_Sub1.outgoingBuffer.writeInt(var4);
+                                Class3_Sub13_Sub1.outgoingBuffer.writeShort(var1);
                             }
 
                         }
@@ -2047,7 +2047,7 @@ public class Unsorted {
                 }
 
                 for (var12 = 0; var12 < 4; ++var12) {
-                    byte var13 = var20.getByte();
+                    byte var13 = var20.readSignedByte();
                     if (0 == var13) {
                         var14 = var5;
                         if (var5 >= 0) {
@@ -2092,7 +2092,7 @@ public class Unsorted {
                     } else if (1 == var13) {
                         for (var14 = 0; var14 < 64; var14 += 4) {
                             for (var15 = 0; var15 < 64; var15 += 4) {
-                                byte var16 = var20.getByte();
+                                byte var16 = var20.readSignedByte();
 
                                 for (var17 = var14 + var5; 4 + var5 + var14 > var17; ++var17) {
                                     for (int var18 = var3 + var15; 4 + var3 + var15 > var18; ++var18) {
@@ -2170,7 +2170,7 @@ public class Unsorted {
                             for (var14 = 0; var23 > var14; ++var14) {
                                 Class43 var25 = new Class43(var20);
                                 if (var25.anInt705 == 31) {
-                                    Class57 var26 = Class81.method1401(var20.getShort());
+                                    Class57 var26 = Class81.method1401(var20.readUnsignedShort());
                                     var25.method1060((byte) -67, var26.anInt896, var26.anInt908, var26.anInt899, var26.anInt907);
                                 }
 
@@ -2309,7 +2309,7 @@ public class Unsorted {
                 if (Class20.aBoolean438) {
                     int var10 = -8 + var2 - -var3;
                     int var9 = -5 + (var0 - -var4);
-                    Class126.aClass3_Sub28_Sub17_1669.method688(RenderAnimationDefinition.method903(new RSString[]{Class65.aClass94_985, Class72.method1298((byte) 9, AnimationDefinition.anInt1862)}, (byte) -62), var9, var10, 16776960, -1);
+                    Class126.aClass3_Sub28_Sub17_1669.method688(RenderAnimationDefinition.method903(new RSString[]{Class65.aClass94_985, Class72.method1298((byte) 9, AnimationDefinition.anInt1862)}), var9, var10, 16776960, -1);
                     Runtime var11 = Runtime.getRuntime();
                     int var12 = (int) ((var11.totalMemory() - var11.freeMemory()) / 1024L);
                     int var13 = 16776960;
@@ -2318,7 +2318,7 @@ public class Unsorted {
                         var13 = 16711680;
                     }
 
-                    Class126.aClass3_Sub28_Sub17_1669.method688(RenderAnimationDefinition.method903(new RSString[]{Class119.aClass94_1630, Class72.method1298((byte) 9, var12), Class3_Sub13_Sub4.aClass94_3055}, (byte) -108), var9, var10, var13, -1);
+                    Class126.aClass3_Sub28_Sub17_1669.method688(RenderAnimationDefinition.method903(new RSString[]{Class119.aClass94_1630, Class72.method1298((byte) 9, var12), Class3_Sub13_Sub4.aClass94_3055}), var9, var10, var13, -1);
                 }
 
             } else {
@@ -2566,27 +2566,27 @@ public class Unsorted {
                                                                 }
                                                             }
 
-                                                            var1 = RenderAnimationDefinition.method903(new RSString[]{var1.method1557(var3, 0, 0), var4, var1.method1556(4 + var3)}, (byte) -94);
+                                                            var1 = RenderAnimationDefinition.method903(new RSString[]{var1.method1557(var3, 0, 0), var4, var1.method1556(4 + var3)});
                                                         }
                                                     }
 
-                                                    var1 = RenderAnimationDefinition.method903(new RSString[]{var1.method1557(var3, 0, 0), Class154.method2148(Class164_Sub2.method2247((byte) -4, 4, var0)), var1.method1556(var3 - -2)}, (byte) -107);
+                                                    var1 = RenderAnimationDefinition.method903(new RSString[]{var1.method1557(var3, 0, 0), Class154.method2148(Class164_Sub2.method2247((byte) -4, 4, var0)), var1.method1556(var3 - -2)});
                                                 }
                                             }
 
-                                            var1 = RenderAnimationDefinition.method903(new RSString[]{var1.method1557(var3, 0, 0), Class154.method2148(Class164_Sub2.method2247((byte) -109, 3, var0)), var1.method1556(2 + var3)}, (byte) -70);
+                                            var1 = RenderAnimationDefinition.method903(new RSString[]{var1.method1557(var3, 0, 0), Class154.method2148(Class164_Sub2.method2247((byte) -109, 3, var0)), var1.method1556(2 + var3)});
                                         }
                                     }
 
-                                    var1 = RenderAnimationDefinition.method903(new RSString[]{var1.method1557(var3, 0, 0), Class154.method2148(Class164_Sub2.method2247((byte) 111, 2, var0)), var1.method1556(2 + var3)}, (byte) -74);
+                                    var1 = RenderAnimationDefinition.method903(new RSString[]{var1.method1557(var3, 0, 0), Class154.method2148(Class164_Sub2.method2247((byte) 111, 2, var0)), var1.method1556(2 + var3)});
                                 }
                             }
 
-                            var1 = RenderAnimationDefinition.method903(new RSString[]{var1.method1557(var3, 0, 0), Class154.method2148(Class164_Sub2.method2247((byte) 23, 1, var0)), var1.method1556(var3 + 2)}, (byte) -80);
+                            var1 = RenderAnimationDefinition.method903(new RSString[]{var1.method1557(var3, 0, 0), Class154.method2148(Class164_Sub2.method2247((byte) 23, 1, var0)), var1.method1556(var3 + 2)});
                         }
                     }
 
-                    var1 = RenderAnimationDefinition.method903(new RSString[]{var1.method1557(var3, 0, 0), Class154.method2148(Class164_Sub2.method2247((byte) 107, 0, var0)), var1.method1556(2 + var3)}, (byte) -89);
+                    var1 = RenderAnimationDefinition.method903(new RSString[]{var1.method1557(var3, 0, 0), Class154.method2148(Class164_Sub2.method2247((byte) 107, 0, var0)), var1.method1556(2 + var3)});
                 }
             }
         } catch (RuntimeException var7) {
@@ -2608,7 +2608,7 @@ public class Unsorted {
 
                 var6 = Runtime.getRuntime();
                 var3 = (int) ((var6.totalMemory() - var6.freeMemory()) / 1024L);
-                Class3_Sub30_Sub1.addChatMessage((RSString) null, 0, RenderAnimationDefinition.method903(new RSString[]{Class3_Sub13_Sub29.aClass94_3360, Class72.method1298((byte) 9, var3), TextCore.Memoryk}, (byte) -95), -1);
+                Class3_Sub30_Sub1.addChatMessage((RSString) null, 0, RenderAnimationDefinition.method903(new RSString[]{Class3_Sub13_Sub29.aClass94_3360, Class72.method1298((byte) 9, var3), TextCore.Memoryk}), -1);
             }
 
             int var4;
@@ -2621,7 +2621,7 @@ public class Unsorted {
 
                 var6 = Runtime.getRuntime();
                 var3 = (int) ((var6.totalMemory() + -var6.freeMemory()) / 1024L);
-                Class3_Sub30_Sub1.addChatMessage((RSString) null, 0, RenderAnimationDefinition.method903(new RSString[]{Class119.aClass94_1625, Class72.method1298((byte) 9, var3), TextCore.Memoryk}, (byte) -94), -1);
+                Class3_Sub30_Sub1.addChatMessage((RSString) null, 0, RenderAnimationDefinition.method903(new RSString[]{Class119.aClass94_1625, Class72.method1298((byte) 9, var3), TextCore.Memoryk}), -1);
                 Class3_Sub1.method90(1);
                 Class3_Sub13_Sub17.method246(8);
 
@@ -2630,11 +2630,11 @@ public class Unsorted {
                 }
 
                 var3 = (int) ((var6.totalMemory() + -var6.freeMemory()) / 1024L);
-                Class3_Sub30_Sub1.addChatMessage((RSString) null, 0, RenderAnimationDefinition.method903(new RSString[]{Class161.aClass94_2033, Class72.method1298((byte) 9, var3), TextCore.Memoryk}, (byte) -104), -1);
+                Class3_Sub30_Sub1.addChatMessage((RSString) null, 0, RenderAnimationDefinition.method903(new RSString[]{Class161.aClass94_2033, Class72.method1298((byte) 9, var3), TextCore.Memoryk}), -1);
             }
 
             if (command.equals(-113, Class139.aClass94_1830)) {
-                Class3_Sub30_Sub1.addChatMessage((RSString) null, 0, RenderAnimationDefinition.method903(new RSString[]{Class21.aClass94_442, Class72.method1298((byte) 9, Class118.method1727((byte) 123))}, (byte) -94), -1);
+                Class3_Sub30_Sub1.addChatMessage((RSString) null, 0, RenderAnimationDefinition.method903(new RSString[]{Class21.aClass94_442, Class72.method1298((byte) 9, Class118.method1727((byte) 123))}), -1);
             }
 
             if (HDToolKit.highDetail && command.equals(-113, Class3_Sub28_Sub16.COMMAND_GRAPHICS_CARD_MEMORY)) {
@@ -2731,7 +2731,7 @@ public class Unsorted {
 
             if (command.method1558(GameShell.aClass94_10)) {
                 Client.anInt3689 = command.method1556(12).trim(1).method1552((byte) -120);
-                Class3_Sub30_Sub1.addChatMessage((RSString) null, 0, RenderAnimationDefinition.method903(new RSString[]{Class166.aClass94_2075, Class72.method1298((byte) 9, Client.anInt3689)}, (byte) -75), -1);
+                Class3_Sub30_Sub1.addChatMessage((RSString) null, 0, RenderAnimationDefinition.method903(new RSString[]{Class166.aClass94_2075, Class72.method1298((byte) 9, Client.anInt3689)}), -1);
             }
 
             if (command.equals(104, Class108.COMMAND_QA_OP_TEST)) {
@@ -2753,8 +2753,8 @@ public class Unsorted {
             }
 
             Class3_Sub13_Sub1.outgoingBuffer.putOpcode(44);
-            Class3_Sub13_Sub1.outgoingBuffer.putByte((byte) -38, command.length(-83) + -1);
-            Class3_Sub13_Sub1.outgoingBuffer.putString(command.method1556(2));
+            Class3_Sub13_Sub1.outgoingBuffer.writeByte(command.length(-83) + -1);
+            Class3_Sub13_Sub1.outgoingBuffer.writeString(command.method1556(2));
 
         } catch (RuntimeException var5) {
             throw Class44.clientError(var5, "k.H(" + (command != null ? "{...}" : "null") + ',' + false + ')');
@@ -2823,15 +2823,15 @@ public class Unsorted {
                         RSString var5 = var0.aClass94_1273;
                         if (0 != var0.anInt1260) {
                             RSString var6 = Class158.anInt2014 != 1 ? TextCore.HasLevel : TextCore.HasRating;
-                            var5 = RenderAnimationDefinition.method903(new RSString[]{var5, Class72.combatLevelColor(var0.anInt1260, (byte) -122, Class102.player.COMBAT_LEVEL), Class72.LEFT_PARENTHESES, var6, Class72.method1298((byte) 9, var0.anInt1260), Class3_Sub9.RIGHT_PARENTHESES}, (byte) -73);
+                            var5 = RenderAnimationDefinition.method903(new RSString[]{var5, Class72.combatLevelColor(var0.anInt1260, (byte) -122, Class102.player.COMBAT_LEVEL), Class72.LEFT_PARENTHESES, var6, Class72.method1298((byte) 9, var0.anInt1260), Class3_Sub9.RIGHT_PARENTHESES});
                         }
 
                         if (Class164_Sub1.anInt3012 == 1) {
-                            Class3_Sub24_Sub4.method1177(Class99.anInt1403, (long) var3, (byte) -125, RenderAnimationDefinition.method903(new RSString[]{RenderAnimationDefinition.aClass94_378, ColorCore.TextColor, var5}, (byte) -125), var1, (short) 26, TextCore.HasUse, var4);
+                            Class3_Sub24_Sub4.method1177(Class99.anInt1403, (long) var3, (byte) -125, RenderAnimationDefinition.method903(new RSString[]{RenderAnimationDefinition.aClass94_378, ColorCore.TextColor, var5}), var1, (short) 26, TextCore.HasUse, var4);
                         } else if (GameObject.aBoolean1837) {
                             Class3_Sub28_Sub9 var12 = -1 == anInt1038 ? null : Class61.method1210(anInt1038);
                             if ((2 & Class164.anInt2051) != 0 && (var12 == null || var0.method1475(anInt1038, var12.anInt3614) != var12.anInt3614)) {
-                                Class3_Sub24_Sub4.method1177(anInt1887, (long) var3, (byte) -93, RenderAnimationDefinition.method903(new RSString[]{Class40.aClass94_676, ColorCore.TextColor, var5}, (byte) -65), var1, (short) 45, Class3_Sub28_Sub9.aClass94_3621, var4);
+                                Class3_Sub24_Sub4.method1177(anInt1887, (long) var3, (byte) -93, RenderAnimationDefinition.method903(new RSString[]{Class40.aClass94_676, ColorCore.TextColor, var5}), var1, (short) 45, Class3_Sub28_Sub9.aClass94_3621, var4);
                             }
                         } else {
                             RSString[] var11 = var0.options;
@@ -2873,7 +2873,7 @@ public class Unsorted {
                                             var8 = 2;
                                         }
 
-                                        Class3_Sub24_Sub4.method1177(var9, (long) var3, (byte) -103, RenderAnimationDefinition.method903(new RSString[]{ColorCore.NPCRightClickColor, var5}, (byte) -99), var1, var8, var11[var7], var4);
+                                        Class3_Sub24_Sub4.method1177(var9, (long) var3, (byte) -103, RenderAnimationDefinition.method903(new RSString[]{ColorCore.NPCRightClickColor, var5}), var1, var8, var11[var7], var4);
                                     }
                                 }
                             }
@@ -2912,12 +2912,12 @@ public class Unsorted {
                                             var13 += var14;
                                         }
 
-                                        Class3_Sub24_Sub4.method1177(var0.anInt1298, (long) var3, (byte) -128, RenderAnimationDefinition.method903(new RSString[]{ColorCore.NPCRightClickColor, var5}, (byte) -124), var1, var13, var11[var7], var4);
+                                        Class3_Sub24_Sub4.method1177(var0.anInt1298, (long) var3, (byte) -128, RenderAnimationDefinition.method903(new RSString[]{ColorCore.NPCRightClickColor, var5}), var1, var13, var11[var7], var4);
                                     }
                                 }
                             }
 
-                            Class3_Sub24_Sub4.method1177(Class131.anInt1719, (long) var3, (byte) -73, RenderAnimationDefinition.method903(new RSString[]{ColorCore.NPCRightClickColor, var5}, (byte) -69), var1, (short) 1007, TextCore.HasExamine, var4);
+                            Class3_Sub24_Sub4.method1177(Class131.anInt1719, (long) var3, (byte) -73, RenderAnimationDefinition.method903(new RSString[]{ColorCore.NPCRightClickColor, var5}), var1, (short) 1007, TextCore.HasExamine, var4);
                         }
 
                     }
@@ -3056,13 +3056,13 @@ public class Unsorted {
             }
 
             for (var15 = 0; var15 < 4; ++var15) {
-                byte var16 = var25.getByte();
+                byte var16 = var25.readSignedByte();
                 int var18;
                 if (var16 != 0) {
                     if (var16 == 1) {
                         for (var17 = 0; 64 > var17; var17 += 4) {
                             for (var18 = 0; var18 < 64; var18 += 4) {
-                                byte var19 = var25.getByte();
+                                byte var19 = var25.readSignedByte();
                                 if (var7 >= var15) {
                                     for (var20 = var17; var17 + 4 > var20; ++var20) {
                                         for (var21 = var18; var21 < 4 + var18; ++var21) {
@@ -3140,7 +3140,7 @@ public class Unsorted {
                         for (var17 = 0; var28 > var17; ++var17) {
                             Class43 var30 = new Class43(var25);
                             if (var30.anInt705 == 31) {
-                                Class57 var31 = Class81.method1401(var25.getShort());
+                                Class57 var31 = Class81.method1401(var25.readUnsignedShort());
                                 var30.method1060((byte) 123, var31.anInt896, var31.anInt908, var31.anInt899, var31.anInt907);
                             }
 

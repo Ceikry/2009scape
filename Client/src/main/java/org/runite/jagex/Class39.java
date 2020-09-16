@@ -25,10 +25,10 @@ final class Class39 {
 			int var10;
 			int var11;
 			if(Class3_Sub29.isDynamicSceneGraph) {
-				sceneX = GraphicDefinition.incomingBuffer.getLEShortA((byte)-109);
-				var3 = GraphicDefinition.incomingBuffer.getLEShortA((byte)-120);
-				plane = GraphicDefinition.incomingBuffer.getByteS();
-				var5 = GraphicDefinition.incomingBuffer.getLEShortA((byte)-91);
+				sceneX = GraphicDefinition.incomingBuffer.readUnsignedShortLE128();
+				var3 = GraphicDefinition.incomingBuffer.readUnsignedShortLE128();
+				plane = GraphicDefinition.incomingBuffer.readUnsigned128Byte();
+				var5 = GraphicDefinition.incomingBuffer.readUnsignedShortLE128();
 				GraphicDefinition.incomingBuffer.setBitAccess((byte)112);
 
 				int var18;
@@ -51,11 +51,11 @@ final class Class39 {
 
 				for(var7 = 0; var6 > var7; ++var7) {
 					for(var18 = 0; var18 < 4; ++var18) {
-						Class3_Sub9.regionXteaKeys[var7][var18] = GraphicDefinition.incomingBuffer.getIntB((byte)-124);
+						Class3_Sub9.regionXteaKeys[var7][var18] = GraphicDefinition.incomingBuffer.readIntV2();
 					}
 				}
 
-				var7 = GraphicDefinition.incomingBuffer.getShort();
+				var7 = GraphicDefinition.incomingBuffer.readUnsignedShort();
 				Class3_Sub28_Sub5.anIntArray3587 = new int[var6];
 				Class101.anIntArray1426 = new int[var6];
 				Client.anIntArray2200 = new int[var6];
@@ -90,10 +90,10 @@ final class Class39 {
 					Class3_Sub24_Sub3.anIntArray3494[var6] = var14;
 					int var16 = var14 & 255;
 					var15 = ('\uff6c' & var14) >> 8;
-				Client.anIntArray2200[var6] = Class3_Sub13_Sub6.aClass153_3077.getArchiveForName(RenderAnimationDefinition.method903(new RSString[]{Class3_Sub30_Sub1.aClass94_3807, Class72.method1298((byte)9, var15), Class3_Sub13_Sub14.aClass94_3161, Class72.method1298((byte)9, var16)}, (byte)-90));
-				Class101.anIntArray1426[var6] = Class3_Sub13_Sub6.aClass153_3077.getArchiveForName(RenderAnimationDefinition.method903(new RSString[]{Class161.aClass94_2029, Class72.method1298((byte)9, var15), Class3_Sub13_Sub14.aClass94_3161, Class72.method1298((byte)9, var16)}, (byte)-117));
-				Class3_Sub13_Sub15.anIntArray3181[var6] = Class3_Sub13_Sub6.aClass153_3077.getArchiveForName(RenderAnimationDefinition.method903(new RSString[]{Class95.aClass94_1333, Class72.method1298((byte)9, var15), Class3_Sub13_Sub14.aClass94_3161, Class72.method1298((byte)9, var16)}, (byte)-85));
-				Class3_Sub28_Sub5.anIntArray3587[var6] = Class3_Sub13_Sub6.aClass153_3077.getArchiveForName(RenderAnimationDefinition.method903(new RSString[]{TextCore.HasULLookUp, Class72.method1298((byte)9, var15), Class3_Sub13_Sub14.aClass94_3161, Class72.method1298((byte)9, var16)}, (byte)-93));
+				Client.anIntArray2200[var6] = Class3_Sub13_Sub6.aClass153_3077.getArchiveForName(RenderAnimationDefinition.method903(new RSString[]{Class3_Sub30_Sub1.aClass94_3807, Class72.method1298((byte)9, var15), Class3_Sub13_Sub14.aClass94_3161, Class72.method1298((byte)9, var16)}));
+				Class101.anIntArray1426[var6] = Class3_Sub13_Sub6.aClass153_3077.getArchiveForName(RenderAnimationDefinition.method903(new RSString[]{Class161.aClass94_2029, Class72.method1298((byte)9, var15), Class3_Sub13_Sub14.aClass94_3161, Class72.method1298((byte)9, var16)}));
+				Class3_Sub13_Sub15.anIntArray3181[var6] = Class3_Sub13_Sub6.aClass153_3077.getArchiveForName(RenderAnimationDefinition.method903(new RSString[]{Class95.aClass94_1333, Class72.method1298((byte)9, var15), Class3_Sub13_Sub14.aClass94_3161, Class72.method1298((byte)9, var16)}));
+				Class3_Sub28_Sub5.anIntArray3587[var6] = Class3_Sub13_Sub6.aClass153_3077.getArchiveForName(RenderAnimationDefinition.method903(new RSString[]{TextCore.HasULLookUp, Class72.method1298((byte)9, var15), Class3_Sub13_Sub14.aClass94_3161, Class72.method1298((byte)9, var16)}));
 				++var6;
 				}
 							}
@@ -104,20 +104,20 @@ final class Class39 {
 								// plane, regY, regX, sceneY, .....sceneX
 				Unsorted.method1301(plane, var7, var3, var5, false, sceneX);
 			} else {
-				sceneX = GraphicDefinition.incomingBuffer.getShortA(-128);
+				sceneX = GraphicDefinition.incomingBuffer.readUnsignedShort128();
 				var3 = (Unsorted.incomingPacketLength - GraphicDefinition.incomingBuffer.index) / 16;
 				Class3_Sub9.regionXteaKeys = new int[var3][4];
 
 				for(plane = 0; var3 > plane; ++plane) {
 					for(var5 = 0; var5 < 4; ++var5) {
-						Class3_Sub9.regionXteaKeys[plane][var5] = GraphicDefinition.incomingBuffer.getIntB((byte)123);
+						Class3_Sub9.regionXteaKeys[plane][var5] = GraphicDefinition.incomingBuffer.readIntV2();
 					}
 				}
 
-				plane = GraphicDefinition.incomingBuffer.getByteS();
-				var5 = GraphicDefinition.incomingBuffer.getShort();
-				var6 = GraphicDefinition.incomingBuffer.getShortA(107);
-				var7 = GraphicDefinition.incomingBuffer.getShortA(-124);
+				plane = GraphicDefinition.incomingBuffer.readUnsigned128Byte();
+				var5 = GraphicDefinition.incomingBuffer.readUnsignedShort();
+				var6 = GraphicDefinition.incomingBuffer.readUnsignedShort128();
+				var7 = GraphicDefinition.incomingBuffer.readUnsignedShort128();
 				Class3_Sub24_Sub3.anIntArray3494 = new int[var3];
 				Class164_Sub2.aByteArrayArray3027 = new byte[var3][];
 				Class3_Sub13_Sub26.aByteArrayArray3335 = (byte[][])null;
@@ -150,10 +150,10 @@ final class Class39 {
 							Class3_Sub28_Sub5.anIntArray3587[var3] = -1;
 						} else {
 							Class3_Sub24_Sub3.anIntArray3494[var3] = var11;
-							Client.anIntArray2200[var3] = Class3_Sub13_Sub6.aClass153_3077.getArchiveForName(RenderAnimationDefinition.method903(new RSString[]{Class3_Sub30_Sub1.aClass94_3807, Class72.method1298((byte)9, var9), Class3_Sub13_Sub14.aClass94_3161, Class72.method1298((byte)9, var10)}, (byte)-69));
-							Class101.anIntArray1426[var3] = Class3_Sub13_Sub6.aClass153_3077.getArchiveForName(RenderAnimationDefinition.method903(new RSString[]{Class161.aClass94_2029, Class72.method1298((byte)9, var9), Class3_Sub13_Sub14.aClass94_3161, Class72.method1298((byte)9, var10)}, (byte)-77));
-							Class3_Sub13_Sub15.anIntArray3181[var3] = Class3_Sub13_Sub6.aClass153_3077.getArchiveForName(RenderAnimationDefinition.method903(new RSString[]{Class95.aClass94_1333, Class72.method1298((byte)9, var9), Class3_Sub13_Sub14.aClass94_3161, Class72.method1298((byte)9, var10)}, (byte)-107));
-							Class3_Sub28_Sub5.anIntArray3587[var3] = Class3_Sub13_Sub6.aClass153_3077.getArchiveForName(RenderAnimationDefinition.method903(new RSString[]{TextCore.HasULLookUp, Class72.method1298((byte)9, var9), Class3_Sub13_Sub14.aClass94_3161, Class72.method1298((byte)9, var10)}, (byte)-91));
+							Client.anIntArray2200[var3] = Class3_Sub13_Sub6.aClass153_3077.getArchiveForName(RenderAnimationDefinition.method903(new RSString[]{Class3_Sub30_Sub1.aClass94_3807, Class72.method1298((byte)9, var9), Class3_Sub13_Sub14.aClass94_3161, Class72.method1298((byte)9, var10)}));
+							Class101.anIntArray1426[var3] = Class3_Sub13_Sub6.aClass153_3077.getArchiveForName(RenderAnimationDefinition.method903(new RSString[]{Class161.aClass94_2029, Class72.method1298((byte)9, var9), Class3_Sub13_Sub14.aClass94_3161, Class72.method1298((byte)9, var10)}));
+							Class3_Sub13_Sub15.anIntArray3181[var3] = Class3_Sub13_Sub6.aClass153_3077.getArchiveForName(RenderAnimationDefinition.method903(new RSString[]{Class95.aClass94_1333, Class72.method1298((byte)9, var9), Class3_Sub13_Sub14.aClass94_3161, Class72.method1298((byte)9, var10)}));
+							Class3_Sub28_Sub5.anIntArray3587[var3] = Class3_Sub13_Sub6.aClass153_3077.getArchiveForName(RenderAnimationDefinition.method903(new RSString[]{TextCore.HasULLookUp, Class72.method1298((byte)9, var9), Class3_Sub13_Sub14.aClass94_3161, Class72.method1298((byte)9, var10)}));
 						}
 
 						++var3;
@@ -273,7 +273,7 @@ final class Class39 {
 			int var6;
 			int var7;
 			if(Unsorted.incomingOpcode == 195) {
-				var1 = GraphicDefinition.incomingBuffer.getByteC();
+				var1 = GraphicDefinition.incomingBuffer.readUnsignedNegativeByte();
 				var3 = var1 & 3;
 				var2 = var1 >> 2;
 				var4 = Class75.anIntArray1107[var2];
@@ -285,11 +285,11 @@ final class Class39 {
 				}
 
 			} else if(Unsorted.incomingOpcode == 33) {
-				var1 = GraphicDefinition.incomingBuffer.getLEShort(-58);
+				var1 = GraphicDefinition.incomingBuffer.readUnsignedShortLE();
 				var2 = GraphicDefinition.incomingBuffer.readUnsignedByte();
 				var4 = (7 & var2) + Class107.currentChunkY;
 				var3 = ((120 & var2) >> 4) + Class65.currentChunkX;
-				var5 = GraphicDefinition.incomingBuffer.getShortA(-108);
+				var5 = GraphicDefinition.incomingBuffer.readUnsignedShort128();
 				if(var3 >= 0 && var4 >= 0 && 104 > var3 && var4 < 104) {
 					Class140_Sub7 var31 = new Class140_Sub7();
 					var31.anInt2930 = var5;
@@ -314,14 +314,14 @@ final class Class39 {
 					var1 = GraphicDefinition.incomingBuffer.readUnsignedByte();
 					var2 = 2 * Class65.currentChunkX + (15 & var1 >> 4);
 					var3 = (15 & var1) + 2 * Class107.currentChunkY;
-					var4 = var2 - -GraphicDefinition.incomingBuffer.getByte();
-					var5 = GraphicDefinition.incomingBuffer.getByte() + var3;
-					var6 = GraphicDefinition.incomingBuffer.getShort((byte)73);
-					var7 = GraphicDefinition.incomingBuffer.getShort();
+					var4 = var2 - -GraphicDefinition.incomingBuffer.readSignedByte();
+					var5 = GraphicDefinition.incomingBuffer.readSignedByte() + var3;
+					var6 = GraphicDefinition.incomingBuffer.readSignedShort();
+					var7 = GraphicDefinition.incomingBuffer.readUnsignedShort();
 					var8 = GraphicDefinition.incomingBuffer.readUnsignedByte() * 4;
 					var28 = GraphicDefinition.incomingBuffer.readUnsignedByte() * 4;
-					var10 = GraphicDefinition.incomingBuffer.getShort();
-					var11 = GraphicDefinition.incomingBuffer.getShort();
+					var10 = GraphicDefinition.incomingBuffer.readUnsignedShort();
+					var11 = GraphicDefinition.incomingBuffer.readUnsignedShort();
 					var35 = GraphicDefinition.incomingBuffer.readUnsignedByte();
 					if(var35 == 255) {
 						var35 = -1;
@@ -342,9 +342,9 @@ final class Class39 {
 					var1 = GraphicDefinition.incomingBuffer.readUnsignedByte();
 					var2 = Class65.currentChunkX + (var1 >> 4 & 7);
 					var3 = Class107.currentChunkY - -(var1 & 7);
-					var4 = GraphicDefinition.incomingBuffer.getShort();
+					var4 = GraphicDefinition.incomingBuffer.readUnsignedShort();
 					var5 = GraphicDefinition.incomingBuffer.readUnsignedByte();
-					var6 = GraphicDefinition.incomingBuffer.getShort();
+					var6 = GraphicDefinition.incomingBuffer.readUnsignedShort();
 					if(var2 >= 0 && var3 >= 0 && var2 < 104 && var3 < 104) {
 						var2 = var2 * 128 - -64;
 						var3 = var3 * 128 - -64;
@@ -353,27 +353,27 @@ final class Class39 {
 					}
 
 				} else if(Unsorted.incomingOpcode == 179) {
-					var1 = GraphicDefinition.incomingBuffer.getByteA((byte)-111);
+					var1 = GraphicDefinition.incomingBuffer.readUnsignedByte128();
 					var2 = var1 >> 2;
 					var3 = 3 & var1;
 					var4 = Class75.anIntArray1107[var2];
 					var5 = GraphicDefinition.incomingBuffer.readUnsignedByte();
 					var6 = Class65.currentChunkX - -((var5 & 125) >> 4);
 					var7 = (7 & var5) + Class107.currentChunkY;
-					var8 = GraphicDefinition.incomingBuffer.getShortA(117);
+					var8 = GraphicDefinition.incomingBuffer.readUnsignedShort128();
 					if(var6 >= 0 && var7 >= 0 && var6 < 104 && var7 < 104) {
 						Unsorted.method881(WorldListCountry.localPlane, var7, -91, var3, var6, -1, var8, var4, var2, 0);
 					}
 
 				} else if(Unsorted.incomingOpcode == 20) {
-					var1 = GraphicDefinition.incomingBuffer.getByteS();
+					var1 = GraphicDefinition.incomingBuffer.readUnsigned128Byte();
 					var2 = ((var1 & 125) >> 4) + Class65.currentChunkX;
 					var3 = Class107.currentChunkY + (7 & var1);
-					var4 = GraphicDefinition.incomingBuffer.getByteS();
+					var4 = GraphicDefinition.incomingBuffer.readUnsigned128Byte();
 					var5 = var4 >> 2;
 					var6 = 3 & var4;
 					var7 = Class75.anIntArray1107[var5];
-					var8 = GraphicDefinition.incomingBuffer.getLEShort(-104);
+					var8 = GraphicDefinition.incomingBuffer.readUnsignedShortLE();
 					if('\uffff' == var8) {
 						var8 = -1;
 					}
@@ -388,14 +388,14 @@ final class Class39 {
 						var4 = GraphicDefinition.incomingBuffer.readUnsignedByte();
 						var5 = (var4 >> 4 & 7) + Class65.currentChunkX;
 						var6 = (7 & var4) + Class107.currentChunkY;
-						byte var25 = GraphicDefinition.incomingBuffer.method789();
-						byte var30 = GraphicDefinition.incomingBuffer.method789();
-						byte var9 = GraphicDefinition.incomingBuffer.method749();
-						var10 = GraphicDefinition.incomingBuffer.getShortA(-106);
-						var11 = GraphicDefinition.incomingBuffer.getLEShort(-116);
-						byte var12 = GraphicDefinition.incomingBuffer.getByte();
-						var13 = GraphicDefinition.incomingBuffer.getShort();
-						var14 = GraphicDefinition.incomingBuffer.method788();
+						byte var25 = GraphicDefinition.incomingBuffer.readSignedByte128();
+						byte var30 = GraphicDefinition.incomingBuffer.readSignedByte128();
+						byte var9 = GraphicDefinition.incomingBuffer.readSigned128Byte();
+						var10 = GraphicDefinition.incomingBuffer.readUnsignedShort128();
+						var11 = GraphicDefinition.incomingBuffer.readUnsignedShortLE();
+						byte var12 = GraphicDefinition.incomingBuffer.readSignedByte();
+						var13 = GraphicDefinition.incomingBuffer.readUnsignedShort();
+						var14 = GraphicDefinition.incomingBuffer.readSignedShortLE128();
 						if(!HDToolKit.highDetail) {
 							Class3_Sub13_Sub23.method280(var12, var13, var14, var11, var6, var9, var3, var25, var5, var2, var30, var10);
 						}
@@ -405,9 +405,9 @@ final class Class39 {
 						var1 = GraphicDefinition.incomingBuffer.readUnsignedByte();
 						var3 = Class107.currentChunkY + (var1 & 7);
 						var2 = ((var1 & 119) >> 4) + Class65.currentChunkX;
-						var4 = GraphicDefinition.incomingBuffer.getShort();
-						var5 = GraphicDefinition.incomingBuffer.getShort();
-						var6 = GraphicDefinition.incomingBuffer.getShort();
+						var4 = GraphicDefinition.incomingBuffer.readUnsignedShort();
+						var5 = GraphicDefinition.incomingBuffer.readUnsignedShort();
+						var6 = GraphicDefinition.incomingBuffer.readUnsignedShort();
 						if(0 <= var2 && var3 >= 0 && var2 < 104 && var3 < 104) {
 							Class61 var29 = Class3_Sub13_Sub22.aClass61ArrayArrayArray3273[WorldListCountry.localPlane][var2][var3];
 							if(var29 != null) {
@@ -424,12 +424,12 @@ final class Class39 {
 						}
 
 					} else if(135 == Unsorted.incomingOpcode) {
-						var1 = GraphicDefinition.incomingBuffer.getLEShortA((byte)-113);
-						var2 = GraphicDefinition.incomingBuffer.getByteC();
+						var1 = GraphicDefinition.incomingBuffer.readUnsignedShortLE128();
+						var2 = GraphicDefinition.incomingBuffer.readUnsignedNegativeByte();
 						var4 = Class107.currentChunkY + (7 & var2);
 						var3 = (7 & var2 >> 4) + Class65.currentChunkX;
-						var5 = GraphicDefinition.incomingBuffer.getLEShort(-66);
-						var6 = GraphicDefinition.incomingBuffer.getLEShort(-96);
+						var5 = GraphicDefinition.incomingBuffer.readUnsignedShortLE();
+						var6 = GraphicDefinition.incomingBuffer.readUnsignedShortLE();
 						if(0 <= var3 && var4 >= 0 && var3 < 104 && var4 < 104 && Class3_Sub1.localIndex != var1) {
 							Class140_Sub7 var27 = new Class140_Sub7();
 							var27.anInt2930 = var5;
@@ -447,14 +447,14 @@ final class Class39 {
 							var1 = GraphicDefinition.incomingBuffer.readUnsignedByte();
 							var2 = Class65.currentChunkX - -(var1 >> 4 & 7);
 							var3 = (var1 & 7) + Class107.currentChunkY;
-							var4 = var2 + GraphicDefinition.incomingBuffer.getByte();
-							var5 = GraphicDefinition.incomingBuffer.getByte() + var3;
-							var6 = GraphicDefinition.incomingBuffer.getShort((byte)67);
-							var7 = GraphicDefinition.incomingBuffer.getShort();
+							var4 = var2 + GraphicDefinition.incomingBuffer.readSignedByte();
+							var5 = GraphicDefinition.incomingBuffer.readSignedByte() + var3;
+							var6 = GraphicDefinition.incomingBuffer.readSignedShort();
+							var7 = GraphicDefinition.incomingBuffer.readUnsignedShort();
 							var8 = 4 * GraphicDefinition.incomingBuffer.readUnsignedByte();
 							var28 = GraphicDefinition.incomingBuffer.readUnsignedByte() * 4;
-							var10 = GraphicDefinition.incomingBuffer.getShort();
-							var11 = GraphicDefinition.incomingBuffer.getShort();
+							var10 = GraphicDefinition.incomingBuffer.readUnsignedShort();
+							var11 = GraphicDefinition.incomingBuffer.readUnsignedShort();
 							var35 = GraphicDefinition.incomingBuffer.readUnsignedByte();
 							var13 = GraphicDefinition.incomingBuffer.readUnsignedByte();
 							if(255 == var35) {
@@ -475,15 +475,15 @@ final class Class39 {
 							var1 = GraphicDefinition.incomingBuffer.readUnsignedByte();
 							var3 = 2 * Class107.currentChunkY + (var1 & 15);
 							var2 = 2 * Class65.currentChunkX - -(var1 >> 4 & 15);
-							var4 = GraphicDefinition.incomingBuffer.getByte() + var2;
-							var5 = GraphicDefinition.incomingBuffer.getByte() + var3;
-							var6 = GraphicDefinition.incomingBuffer.getShort((byte) 93);
-							var7 = GraphicDefinition.incomingBuffer.getShort((byte) 12);
-							var8 = GraphicDefinition.incomingBuffer.getShort();
-							var28 = GraphicDefinition.incomingBuffer.getByte();
+							var4 = GraphicDefinition.incomingBuffer.readSignedByte() + var2;
+							var5 = GraphicDefinition.incomingBuffer.readSignedByte() + var3;
+							var6 = GraphicDefinition.incomingBuffer.readSignedShort();
+							var7 = GraphicDefinition.incomingBuffer.readSignedShort();
+							var8 = GraphicDefinition.incomingBuffer.readUnsignedShort();
+							var28 = GraphicDefinition.incomingBuffer.readSignedByte();
 							var10 = 4 * GraphicDefinition.incomingBuffer.readUnsignedByte();
-							var11 = GraphicDefinition.incomingBuffer.getShort();
-							var35 = GraphicDefinition.incomingBuffer.getShort();
+							var11 = GraphicDefinition.incomingBuffer.readUnsignedShort();
+							var35 = GraphicDefinition.incomingBuffer.readUnsignedShort();
 							var13 = GraphicDefinition.incomingBuffer.readUnsignedByte();
 							var14 = GraphicDefinition.incomingBuffer.readUnsignedByte();
 							if (255 == var13) {
@@ -541,7 +541,7 @@ final class Class39 {
 							var1 = GraphicDefinition.incomingBuffer.readUnsignedByte();
 							var2 = Class65.currentChunkX + (7 & var1 >> 4);
 							var3 = Class107.currentChunkY + (var1 & 7);
-							var4 = GraphicDefinition.incomingBuffer.getShort();
+							var4 = GraphicDefinition.incomingBuffer.readUnsignedShort();
 							if (var4 == 65535) {
 								var4 = -1;
 							}
@@ -563,10 +563,10 @@ final class Class39 {
 							}
 
 						} else if (Unsorted.incomingOpcode == 240) {
-							var1 = GraphicDefinition.incomingBuffer.getByteS();
+							var1 = GraphicDefinition.incomingBuffer.readUnsigned128Byte();
 							var3 = Class107.currentChunkY + (var1 & 7);
 							var2 = ((113 & var1) >> 4) + Class65.currentChunkX;
-							var4 = GraphicDefinition.incomingBuffer.getShort();
+							var4 = GraphicDefinition.incomingBuffer.readUnsignedShort();
 							if (var2 >= 0 && var3 >= 0 && 104 > var2 && 104 > var3) {
 								Class61 var24 = Class3_Sub13_Sub22.aClass61ArrayArrayArray3273[WorldListCountry.localPlane][var2][var3];
 								if (var24 != null) {

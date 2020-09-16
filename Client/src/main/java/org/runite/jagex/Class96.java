@@ -63,7 +63,7 @@ final class Class96 {
                               }
 
                               if(2 == (var15 & 2)) {
-                                 var2 = var1.getTriByte((byte)85);
+                                 var2 = var1.readMedium();
                                  if(null == Class29.anIntArrayArrayArray558[var11][var12]) {
                                     Class29.anIntArrayArrayArray558[var11][var12] = new int[4096];
                                  }
@@ -72,7 +72,7 @@ final class Class96 {
                               }
 
                               if(4 == (var15 & 4)) {
-                                 var2 = var1.getTriByte((byte)117);
+                                 var2 = var1.readMedium();
                                  if(null == Class44.anIntArrayArrayArray720[var11][var12]) {
                                     Class44.anIntArrayArrayArray720[var11][var12] = new int[4096];
                                  }

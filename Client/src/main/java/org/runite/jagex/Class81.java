@@ -37,7 +37,7 @@ final class Class81 {
             }
          }
 
-         var0.putBytes(var2, 24, 88);
+         var0.putBytes(var2, 24);
       } catch (RuntimeException var6) {
          throw Class44.clientError(var6, "la.G(" + (var0 != null?"{...}":"null") + ',' + var1 + ')');
       }
@@ -73,14 +73,14 @@ final class Class81 {
                int var5;
                for(var5 = 0; var5 < Class3_Sub28_Sub5.anInt3591; ++var5) {
                   if(Class114.ignores[var5] == var1) {
-                     Class3_Sub30_Sub1.addChatMessage(Class3_Sub28_Sub14.aClass94_3672, 0, RenderAnimationDefinition.method903(new RSString[]{var4, TextCore.HasIgnoreAlready}, (byte)-108), -1);
+                     Class3_Sub30_Sub1.addChatMessage(Class3_Sub28_Sub14.aClass94_3672, 0, RenderAnimationDefinition.method903(new RSString[]{var4, TextCore.HasIgnoreAlready}), -1);
                      return;
                   }
                }
 
                for(var5 = 0; Class8.anInt104 > var5; ++var5) {
                   if(var1 == Class50.aLongArray826[var5]) {
-                     Class3_Sub30_Sub1.addChatMessage(Class3_Sub28_Sub14.aClass94_3672, 0, RenderAnimationDefinition.method903(new RSString[]{TextCore.HasPleaseRemove, var4, TextCore.HasFriendsToIgnore}, (byte)-65), -1);
+                     Class3_Sub30_Sub1.addChatMessage(Class3_Sub28_Sub14.aClass94_3672, 0, RenderAnimationDefinition.method903(new RSString[]{TextCore.HasPleaseRemove, var4, TextCore.HasFriendsToIgnore}), -1);
                      return;
                   }
                }
@@ -92,7 +92,7 @@ final class Class81 {
                   Class3_Sub13_Sub27.aClass94Array3341[Class3_Sub28_Sub5.anInt3591++] = Unsorted.method1052(var1);
                   Class110.anInt1472 = Class3_Sub13_Sub17.anInt3213;
                   Class3_Sub13_Sub1.outgoingBuffer.putOpcode(34);
-                  Class3_Sub13_Sub1.outgoingBuffer.putLong(var1, -2037491440);
+                  Class3_Sub13_Sub1.outgoingBuffer.writeLong(var1);
                }
             } else {
                Class3_Sub30_Sub1.addChatMessage(Class3_Sub28_Sub14.aClass94_3672, 0, TextCore.HasIgnoreListFull, -1);
@@ -155,10 +155,10 @@ final class Class81 {
 
             for(int var6 = 0; var5.anInt1720 > var6; ++var6) {
                DataBuffer var7 = new DataBuffer(var2.getFile(var3, var4[var6]));
-               var5.aClass94Array1721[var6] = var7.getString();
-               var5.aByteArray1730[var6] = var7.getByte();
-               var5.aShortArray1727[var6] = (short)var7.getShort();
-               var5.aShortArray1718[var6] = (short)var7.getShort();
+               var5.aClass94Array1721[var6] = var7.readString();
+               var5.aByteArray1730[var6] = var7.readSignedByte();
+               var5.aShortArray1727[var6] = (short)var7.readUnsignedShort();
+               var5.aShortArray1718[var6] = (short)var7.readUnsignedShort();
                var5.anIntArray1725[var6] = var7.readInt();
             }
 

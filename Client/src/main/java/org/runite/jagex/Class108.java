@@ -27,7 +27,7 @@ final class Class108 {
    static RSString method1653(int var0) {
       try {
 
-         return RenderAnimationDefinition.method903(new RSString[]{Class72.method1298((byte)9, 255 & var0 >> 24), Class163_Sub2_Sub1.aClass94_4023, Class72.method1298((byte)9, (var0 & 16712751) >> 16), Class163_Sub2_Sub1.aClass94_4023, Class72.method1298((byte)9, 255 & var0 >> 8), Class163_Sub2_Sub1.aClass94_4023, Class72.method1298((byte)9, var0 & 255)}, (byte)-110);
+         return RenderAnimationDefinition.method903(new RSString[]{Class72.method1298((byte)9, 255 & var0 >> 24), Class163_Sub2_Sub1.aClass94_4023, Class72.method1298((byte)9, (var0 & 16712751) >> 16), Class163_Sub2_Sub1.aClass94_4023, Class72.method1298((byte)9, 255 & var0 >> 8), Class163_Sub2_Sub1.aClass94_4023, Class72.method1298((byte)9, var0 & 255)});
       } catch (RuntimeException var3) {
          throw Class44.clientError(var3, "oi.F(" + var0 + ',' + 0 + ')');
       }

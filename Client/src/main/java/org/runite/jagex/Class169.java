@@ -23,17 +23,17 @@ final class Class169 {
       for(int var5 = 0; var5 <= 8; ++var5) {
          for(var6 = 0; var6 <= 8; ++var6) {
             if(HDToolKit.aBoolean1790) {
-               var4.method801((float)var6 / 8.0F);
-               var4.method801((float)var5 / 8.0F);
-               var4.method801((float)(var6 * 128));
-               var4.method801((float)var1[var6 + var2][var5 + var3]);
-               var4.method801((float)(var5 * 128));
+               var4.writeFloat((float)var6 / 8.0F);
+               var4.writeFloat((float)var5 / 8.0F);
+               var4.writeFloat((float)(var6 * 128));
+               var4.writeFloat((float)var1[var6 + var2][var5 + var3]);
+               var4.writeFloat((float)(var5 * 128));
             } else {
-               var4.method762((float)var6 / 8.0F, (byte)104);
-               var4.method762((float)var5 / 8.0F, (byte)65);
-               var4.method762((float)(var6 * 128), (byte)106);
-               var4.method762((float)var1[var6 + var2][var5 + var3], (byte)79);
-               var4.method762((float)(var5 * 128), (byte)124);
+               var4.writeFloatLE((float)var6 / 8.0F);
+               var4.writeFloatLE((float)var5 / 8.0F);
+               var4.writeFloatLE((float)(var6 * 128));
+               var4.writeFloatLE((float)var1[var6 + var2][var5 + var3]);
+               var4.writeFloatLE((float)(var5 * 128));
             }
          }
       }
@@ -53,19 +53,19 @@ final class Class169 {
       for(var6 = 0; var6 < 8; ++var6) {
          for(int var7 = 0; var7 < 8; ++var7) {
             if(HDToolKit.aBoolean1790) {
-               var8.putInt(-125, var7 + (var6 + 1) * 9);
-               var8.putInt(-128, var7 + var6 * 9);
-               var8.putInt(-128, var7 + 1 + var6 * 9);
-               var8.putInt(-120, var7 + (var6 + 1) * 9);
-               var8.putInt(-127, var7 + 1 + var6 * 9);
-               var8.putInt(-122, var7 + 1 + (var6 + 1) * 9);
+               var8.writeInt(var7 + (var6 + 1) * 9);
+               var8.writeInt(var7 + var6 * 9);
+               var8.writeInt(var7 + 1 + var6 * 9);
+               var8.writeInt(var7 + (var6 + 1) * 9);
+               var8.writeInt(var7 + 1 + var6 * 9);
+               var8.writeInt(var7 + 1 + (var6 + 1) * 9);
             } else {
-               var8.method757(var7 + (var6 + 1) * 9, 109);
-               var8.method757(var7 + var6 * 9, 122);
-               var8.method757(var7 + 1 + var6 * 9, 67);
-               var8.method757(var7 + (var6 + 1) * 9, 116);
-               var8.method757(var7 + 1 + var6 * 9, 90);
-               var8.method757(var7 + 1 + (var6 + 1) * 9, 93);
+               var8.writeIntLE(var7 + (var6 + 1) * 9);
+               var8.writeIntLE(var7 + var6 * 9);
+               var8.writeIntLE(var7 + 1 + var6 * 9);
+               var8.writeIntLE(var7 + (var6 + 1) * 9);
+               var8.writeIntLE(var7 + 1 + var6 * 9);
+               var8.writeIntLE(var7 + 1 + (var6 + 1) * 9);
             }
          }
       }

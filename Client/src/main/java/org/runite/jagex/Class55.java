@@ -275,7 +275,7 @@ final class Class55 {
       try {
 
           if(var3 == 1) {
-            this.anInt883 = var4.getShort();
+            this.anInt883 = var4.readUnsignedShort();
          } else if (2 == var3) {
             this.anInt881 = var4.readUnsignedByte();
             this.anInt879 = var4.readUnsignedByte();

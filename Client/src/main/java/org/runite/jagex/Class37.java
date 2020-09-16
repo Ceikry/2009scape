@@ -91,31 +91,31 @@ final class Class37 {
       int var3;
       if(HDToolKit.aBoolean1790) {
          for(var3 = 0; var3 < this.anInt653; ++var3) {
-            var2.putByte((byte)-53, this.aByteArray654[var3]);
-            var2.putByte((byte)-7, this.aByteArray644[var3]);
-            var2.putByte((byte)-126, this.aByteArray650[var3]);
-            var2.putByte((byte)-13, 255);
-            var2.method801((float)this.anIntArray645[var3]);
-            var2.method801((float)this.anIntArray649[var3]);
-            var2.method801((float)this.anIntArray648[var3]);
+            var2.writeByte(this.aByteArray654[var3]);
+            var2.writeByte(this.aByteArray644[var3]);
+            var2.writeByte(this.aByteArray650[var3]);
+            var2.writeByte(255);
+            var2.writeFloat((float)this.anIntArray645[var3]);
+            var2.writeFloat((float)this.anIntArray649[var3]);
+            var2.writeFloat((float)this.anIntArray648[var3]);
          }
 
          for(var3 = 0; var3 < this.anInt655; ++var3) {
-            var1.putInt(-122, this.anIntArray643[var3]);
+            var1.writeInt(this.anIntArray643[var3]);
          }
       } else {
          for(var3 = 0; var3 < this.anInt653; ++var3) {
-            var2.putByte((byte)-105, this.aByteArray654[var3]);
-            var2.putByte((byte)-103, this.aByteArray644[var3]);
-            var2.putByte((byte)-28, this.aByteArray650[var3]);
-            var2.putByte((byte)-111, 255);
-            var2.method762((float)this.anIntArray645[var3], (byte)102);
-            var2.method762((float)this.anIntArray649[var3], (byte)89);
-            var2.method762((float)this.anIntArray648[var3], (byte)122);
+            var2.writeByte(this.aByteArray654[var3]);
+            var2.writeByte(this.aByteArray644[var3]);
+            var2.writeByte(this.aByteArray650[var3]);
+            var2.writeByte(255);
+            var2.writeFloatLE((float)this.anIntArray645[var3]);
+            var2.writeFloatLE((float)this.anIntArray649[var3]);
+            var2.writeFloatLE((float)this.anIntArray648[var3]);
          }
 
          for(var3 = 0; var3 < this.anInt655; ++var3) {
-            var1.method757(this.anIntArray643[var3], 55);
+            var1.writeIntLE(this.anIntArray643[var3]);
          }
       }
 

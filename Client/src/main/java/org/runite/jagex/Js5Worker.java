@@ -57,8 +57,8 @@ final class Js5Worker {
                     Js5ResourceRequest var21;
                     for (var21 = this.highPriorityRequests.getFront(); null != var21; var21 = this.highPriorityRequests.next()) {
                         this.aClass3_Sub30_1007.index = 0;
-                        this.aClass3_Sub30_1007.putByte((byte) -26, 1); //High priority JS5 request
-                        this.aClass3_Sub30_1007.putTriByte((int) var21.nodeKey);
+                        this.aClass3_Sub30_1007.writeByte(1); //High priority JS5 request
+                        this.aClass3_Sub30_1007.writeMedium((int) var21.nodeKey);
 
                         this.aClass89_1005.sendBytes(this.aClass3_Sub30_1007.buffer, 4);
                         this.aClass13_1000.offer(var21);
@@ -66,8 +66,8 @@ final class Js5Worker {
 
                     for (var21 = this.lowPriorityRequests.getFront(); var21 != null; var21 = this.lowPriorityRequests.next()) {
                         this.aClass3_Sub30_1007.index = 0;
-                        this.aClass3_Sub30_1007.putByte((byte) -22, 0); //Low priority JS5 request
-                        this.aClass3_Sub30_1007.putTriByte((int) var21.nodeKey);
+                        this.aClass3_Sub30_1007.writeByte(0); //Low priority JS5 request
+                        this.aClass3_Sub30_1007.writeMedium((int) var21.nodeKey);
                         this.aClass89_1005.sendBytes(this.aClass3_Sub30_1007.buffer, 4);
                         this.aClass13_1003.offer(var21);
                     }
@@ -138,7 +138,7 @@ final class Js5Worker {
                                 if (this.aJs5ResourceRequest_1012 == null) {
                                     this.aClass3_Sub30_1008.index = 0;
                                     var7 = this.aClass3_Sub30_1008.readUnsignedByte();
-                                    var8 = this.aClass3_Sub30_1008.getShort();
+                                    var8 = this.aClass3_Sub30_1008.readUnsignedShort();
                                     int var9 = this.aClass3_Sub30_1008.readUnsignedByte();
                                     int var10 = this.aClass3_Sub30_1008.readInt();
                                     int var11 = 127 & var9;
@@ -160,8 +160,8 @@ final class Js5Worker {
                                     int var16 = var11 != 0 ? 9 : 5;
                                     this.aJs5ResourceRequest_1012 = var15;
                                     this.aJs5ResourceRequest_1012.aClass3_Sub30_4069 = new DataBuffer(var10 - (-var16 - this.aJs5ResourceRequest_1012.aByte4064));
-                                    this.aJs5ResourceRequest_1012.aClass3_Sub30_4069.putByte((byte) -127, var11);
-                                    this.aJs5ResourceRequest_1012.aClass3_Sub30_4069.putInt(-125, var10);
+                                    this.aJs5ResourceRequest_1012.aClass3_Sub30_4069.writeByte(var11);
+                                    this.aJs5ResourceRequest_1012.aClass3_Sub30_4069.writeInt(var10);
                                     this.aJs5ResourceRequest_1012.anInt4067 = 8;
                                     this.aClass3_Sub30_1008.index = 0;
                                 } else {
@@ -205,8 +205,8 @@ final class Js5Worker {
                 try {
                     this.aClass3_Sub30_1007.index = 0;
 
-                    this.aClass3_Sub30_1007.putByte((byte) -48, 7);
-                    this.aClass3_Sub30_1007.putTriByte(0);
+                    this.aClass3_Sub30_1007.writeByte(7);
+                    this.aClass3_Sub30_1007.writeMedium(0);
                     this.aClass89_1005.sendBytes(this.aClass3_Sub30_1007.buffer, 4);
                 } catch (IOException var5) {
                     var5.printStackTrace();
@@ -236,8 +236,8 @@ final class Js5Worker {
             if (null != this.aClass89_1005) {
                 try {
                     this.aClass3_Sub30_1007.index = 0;
-                    this.aClass3_Sub30_1007.putByte((byte) -27, var1 ? 2 : 3);
-                    this.aClass3_Sub30_1007.putTriByte(0);
+                    this.aClass3_Sub30_1007.writeByte(var1 ? 2 : 3);
+                    this.aClass3_Sub30_1007.writeMedium(0);
                     this.aClass89_1005.sendBytes(this.aClass3_Sub30_1007.buffer, 4);
                 } catch (IOException var6) {
                     var6.printStackTrace();
@@ -288,9 +288,9 @@ final class Js5Worker {
                         if (this.aByte1009 != 0) {
                             try {
                                 this.aClass3_Sub30_1007.index = 0;
-                                this.aClass3_Sub30_1007.putByte((byte) -52, 4);
-                                this.aClass3_Sub30_1007.putByte((byte) -24, this.aByte1009);
-                                this.aClass3_Sub30_1007.putShort(0);
+                                this.aClass3_Sub30_1007.writeByte(4);
+                                this.aClass3_Sub30_1007.writeByte(this.aByte1009);
+                                this.aClass3_Sub30_1007.writeShort(0);
                                 this.aClass89_1005.sendBytes(this.aClass3_Sub30_1007.buffer, 4);
                             } catch (IOException var7) {
                                 var7.printStackTrace();
@@ -371,8 +371,8 @@ final class Js5Worker {
         if (this.aClass89_1005 != null) {
             try {
                 this.aClass3_Sub30_1007.index = 0;
-                this.aClass3_Sub30_1007.putByte((byte) -125, 6);
-                this.aClass3_Sub30_1007.putTriByte(3);
+                this.aClass3_Sub30_1007.writeByte(6);
+                this.aClass3_Sub30_1007.writeMedium(3);
                 this.aClass89_1005.sendBytes(this.aClass3_Sub30_1007.buffer, 4);
             } catch (IOException var5) {
                 var5.printStackTrace();

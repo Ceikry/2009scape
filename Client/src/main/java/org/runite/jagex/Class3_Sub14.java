@@ -124,7 +124,7 @@ final class Class3_Sub14 extends Linkable {
          } while(var6 >= 255);
 
          byte[] var7 = new byte[var5];
-         var2.method764(var5, var7);
+         var2.readBytes(var7, var5);
          this.aByteArrayArray2410[var4] = var7;
       }
 

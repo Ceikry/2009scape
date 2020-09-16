@@ -153,15 +153,15 @@ final class Class100 {
    private void method1604(int var2, DataBuffer var3, int var4) {
       try {
          if(var2 == 1) {
-            int anInt1404 = var3.getTriByte((byte) 93);
+            int anInt1404 = var3.readMedium();
             this.method1600(anInt1404);
          } else if (var2 == 2) {
-            this.anInt1412 = var3.getShort();
+            this.anInt1412 = var3.readUnsignedShort();
             if (this.anInt1412 == 65535) {
                this.anInt1412 = -1;
             }
          } else if (3 == var2) {
-            this.anInt1414 = var3.getShort();
+            this.anInt1414 = var3.readUnsignedShort();
          } else if (var2 == 4) {
             this.aBoolean1411 = false;
          }
@@ -174,8 +174,8 @@ final class Class100 {
    static void method1605(RSString var1, int var2) {
       try {
          Class3_Sub13_Sub1.outgoingBuffer.putOpcode(188);
-         Class3_Sub13_Sub1.outgoingBuffer.putByteA(var2);
-         Class3_Sub13_Sub1.outgoingBuffer.putLong(var1.toLong(), -2037491440);
+         Class3_Sub13_Sub1.outgoingBuffer.writeByte128(var2);
+         Class3_Sub13_Sub1.outgoingBuffer.writeLong(var1.toLong());
       } catch (RuntimeException var4) {
          throw Class44.clientError(var4, "ni.B(" + 255 + ',' + (var1 != null?"{...}":"null") + ',' + var2 + ')');
       }

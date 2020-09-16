@@ -60,7 +60,7 @@ final class Class78 {
    }
 
    final void method1377(int var1) {
-      int var2 = this.aClass3_Sub30_1113.method741((byte)119);
+      int var2 = this.aClass3_Sub30_1113.method741();
       this.anIntArray1114[var1] += var2;
    }
 
@@ -68,12 +68,12 @@ final class Class78 {
       int var4;
       if(var2 == 255) {
          int var7 = this.aClass3_Sub30_1113.readUnsignedByte();
-         var4 = this.aClass3_Sub30_1113.method741((byte)123);
+         var4 = this.aClass3_Sub30_1113.method741();
          if(var7 == 47) {
             this.aClass3_Sub30_1113.index += var4;
             return 1;
          } else if(var7 == 81) {
-            int var5 = this.aClass3_Sub30_1113.getTriByte((byte)87);
+            int var5 = this.aClass3_Sub30_1113.readMedium();
             var4 -= 3;
             int var6 = this.anIntArray1114[var1];
             this.aLong1119 += (long)var6 * (long)(this.anInt1121 - var5);
@@ -111,7 +111,7 @@ final class Class78 {
       }
 
       if(var5 == 240 || var5 == 247) {
-         int var3 = this.aClass3_Sub30_1113.method741((byte)126);
+         int var3 = this.aClass3_Sub30_1113.method741();
          if(var5 == 247 && var3 > 0) {
             int var4 = this.aClass3_Sub30_1113.buffer[this.aClass3_Sub30_1113.index] & 255;
             if(var4 >= 241 && var4 <= 243 || var4 == 246 || var4 == 248 || var4 >= 250 && var4 <= 252 || var4 == 254) {
@@ -131,8 +131,8 @@ final class Class78 {
    final void method1380(byte[] var1) {
       this.aClass3_Sub30_1113.buffer = var1;
       this.aClass3_Sub30_1113.index = 10;
-      int var2 = this.aClass3_Sub30_1113.getShort();
-      this.anInt1116 = this.aClass3_Sub30_1113.getShort();
+      int var2 = this.aClass3_Sub30_1113.readUnsignedShort();
+      this.anInt1116 = this.aClass3_Sub30_1113.readUnsignedShort();
       this.anInt1121 = 500000;
       this.anIntArray1118 = new int[var2];
 

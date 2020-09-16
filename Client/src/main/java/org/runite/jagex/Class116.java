@@ -269,8 +269,8 @@ final class Class116 {
 
       this.anInt1590 = var1.getSmart();
       this.anInt1604 = var1.getSmart();
-      this.anInt1586 = var1.getShort();
-      this.anInt1593 = var1.getShort();
+      this.anInt1586 = var1.readUnsignedShort();
+      this.anInt1593 = var1.readUnsignedShort();
       this.aClass103_1606 = new Class103();
       this.aClass34_1592 = new Class34();
       this.aClass103_1606.method1620(var1, this.aClass34_1592);

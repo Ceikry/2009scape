@@ -331,8 +331,8 @@ final class Class2 {
 	static void method78(int var0, int var2) {
 		try {
 			Class3_Sub13_Sub1.outgoingBuffer.putOpcode(132);
-			Class3_Sub13_Sub1.outgoingBuffer.putIntA(var2);
-			Class3_Sub13_Sub1.outgoingBuffer.putLEShort(var0);
+			Class3_Sub13_Sub1.outgoingBuffer.writeIntV1(var2);
+			Class3_Sub13_Sub1.outgoingBuffer.writeShortLE(var0);
 		} catch (RuntimeException var4) {
 			throw Class44.clientError(var4, "aa.E(" + var0 + ',' + false + ',' + var2 + ')');
 		}
@@ -341,9 +341,9 @@ final class Class2 {
 	private void method79(int var1, DataBuffer var2, int var3) {
 		try {
 			if(var1 == 1) {
-				this.anInt64 = var2.getShort();
+				this.anInt64 = var2.readUnsignedShort();
 			} else if(var1 == 2) {
-				this.anInt61 = var2.getTriByte((byte)96);
+				this.anInt61 = var2.readMedium();
 			} else if (var1 == 3) {
 				this.aBoolean69 = true;
 			} else if (var1 == 4) {

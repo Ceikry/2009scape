@@ -101,12 +101,12 @@ final class Class3_Sub28_Sub14 extends Node {
                   Class163_Sub1.method2210(true);
                   Class75_Sub4.method1355();
                } else if (Class140_Sub3.anInt2737 == 60) {
-                  if (Class3_Sub13_Sub17.aClass153_3210.method2135(RenderAnimationDefinition.method903(new RSString[]{Unsorted.aClass3_Sub28_Sub3_2600.aClass94_3561, TextCore.HasLabels}, (byte) -107), -106)) {
-                     if (!Class3_Sub13_Sub17.aClass153_3210.method2127(RenderAnimationDefinition.method903(new RSString[]{Unsorted.aClass3_Sub28_Sub3_2600.aClass94_3561, TextCore.HasLabels}, (byte) -71))) {
+                  if (Class3_Sub13_Sub17.aClass153_3210.method2135(RenderAnimationDefinition.method903(new RSString[]{Unsorted.aClass3_Sub28_Sub3_2600.aClass94_3561, TextCore.HasLabels}), -106)) {
+                     if (!Class3_Sub13_Sub17.aClass153_3210.method2127(RenderAnimationDefinition.method903(new RSString[]{Unsorted.aClass3_Sub28_Sub3_2600.aClass94_3561, TextCore.HasLabels}))) {
                         return;
                      }
 
-                     Class119.aClass131_1624 = Class81.method1403(64 + -120, RenderAnimationDefinition.method903(new RSString[]{Unsorted.aClass3_Sub28_Sub3_2600.aClass94_3561, TextCore.HasLabels}, (byte) -91), Class3_Sub13_Sub17.aClass153_3210);
+                     Class119.aClass131_1624 = Class81.method1403(64 + -120, RenderAnimationDefinition.method903(new RSString[]{Unsorted.aClass3_Sub28_Sub3_2600.aClass94_3561, TextCore.HasLabels}), Class3_Sub13_Sub17.aClass153_3210);
                   } else {
                      Class119.aClass131_1624 = new Class131(0);
                   }

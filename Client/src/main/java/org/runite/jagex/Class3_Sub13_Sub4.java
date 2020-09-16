@@ -232,12 +232,12 @@ final class Class3_Sub13_Sub4 extends Class3_Sub13 {
          } else if(var1 == 1) {
             this.anInt3058 = var2.readUnsignedByte();
          } else if(var1 == 2) {
-            this.anInt3062 = var2.getShort((byte)30);
+            this.anInt3062 = var2.readSignedShort();
             if(0 > this.anInt3062) {
                this.aShortArray3066 = new short[this.anInt3058];
 
                for(int var4 = 0; this.anInt3058 > var4; ++var4) {
-                  this.aShortArray3066[var4] = (short)var2.getShort((byte)19);
+                  this.aShortArray3066[var4] = (short)var2.readSignedShort();
                }
             }
          } else if(var1 == 3) {

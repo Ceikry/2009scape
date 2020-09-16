@@ -166,7 +166,7 @@ final class Class8 {
 
    static Class75_Sub1 method843(int var0, DataBuffer var1) {
       try {
-         return var0 != -5232?(Class75_Sub1)null:new Class75_Sub1(var1.getShort((byte)46), var1.getShort((byte)109), var1.getShort((byte)68), var1.getShort((byte)127), var1.getTriByte((byte)91), var1.readUnsignedByte());
+         return var0 != -5232?(Class75_Sub1)null:new Class75_Sub1(var1.readSignedShort(), var1.readSignedShort(), var1.readSignedShort(), var1.readSignedShort(), var1.readMedium(), var1.readUnsignedByte());
       } catch (RuntimeException var3) {
          throw Class44.clientError(var3, "al.D(" + var0 + ',' + (var1 != null?"{...}":"null") + ')');
       }

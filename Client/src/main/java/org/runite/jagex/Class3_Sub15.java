@@ -97,7 +97,7 @@ final class Class3_Sub15 extends Linkable {
          int objectId = -1;
 
          while(var6.buffer.length > 0) {
-            int var8 = var6.method773((byte)-126);
+            int var8 = var6.method773();
             if(0 == var8) {
 
                return;
@@ -164,7 +164,7 @@ final class Class3_Sub15 extends Linkable {
 
          int var5;
          for(var5 = 0; var3 > var5; ++var5) {
-            var4[var5] = var2.getByte();
+            var4[var5] = var2.readSignedByte();
          }
 
          ++var2.index;
@@ -180,7 +180,7 @@ final class Class3_Sub15 extends Linkable {
 
          int var8;
          for(var8 = 0; var6 > var8; ++var8) {
-            var7[var8] = var2.getByte();
+            var7[var8] = var2.readSignedByte();
          }
 
          ++var2.index;
@@ -194,7 +194,7 @@ final class Class3_Sub15 extends Linkable {
          byte[] var10 = new byte[var9];
 
          for(int var11 = 0; var9 > var11; ++var11) {
-            var10[var11] = var2.getByte();
+            var10[var11] = var2.readSignedByte();
          }
 
          ++var2.index;
@@ -255,7 +255,7 @@ final class Class3_Sub15 extends Linkable {
 
          int var19;
          for(var19 = 0; var19 < var17; ++var19) {
-            var18[var19] = var2.getByte();
+            var18[var19] = var2.readSignedByte();
          }
 
          ++var2.index;
@@ -288,7 +288,7 @@ final class Class3_Sub15 extends Linkable {
                   var20 = -1;
                }
 
-               var22 = var2.method741((byte)122);
+               var22 = var2.method741();
             }
 
             this.aShortArray2434[var23] = (short)(this.aShortArray2434[var23] + Unsorted.bitwiseAnd('\u8000', -1 + var22 << 14));
@@ -388,26 +388,26 @@ final class Class3_Sub15 extends Linkable {
             var28 = var38[var27];
             if(var28.aByteArray2064 != null) {
                for(var29 = 1; var29 < var28.aByteArray2064.length; var29 += 2) {
-                  var28.aByteArray2064[var29] = var2.getByte();
+                  var28.aByteArray2064[var29] = var2.readSignedByte();
                }
             }
 
             if(var28.aByteArray2076 != null) {
                for(var29 = 3; var29 < var28.aByteArray2076.length + -2; var29 += 2) {
-                  var28.aByteArray2076[var29] = var2.getByte();
+                  var28.aByteArray2076[var29] = var2.readSignedByte();
                }
             }
          }
 
          if(null != var40) {
             for(var27 = 1; var40.length > var27; var27 += 2) {
-               var40[var27] = var2.getByte();
+               var40[var27] = var2.readSignedByte();
             }
          }
 
          if(null != var39) {
             for(var27 = 1; var27 < var39.length; var27 += 2) {
-               var39[var27] = var2.getByte();
+               var39[var27] = var2.readSignedByte();
             }
          }
 

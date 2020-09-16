@@ -16,11 +16,11 @@ final class Class3_Sub13_Sub28 extends Class3_Sub13 {
    final void method157(int var1, DataBuffer var2, boolean var3) {
       try {
          if(0 == var1) {
-            this.anInt3350 = var2.getShort();
+            this.anInt3350 = var2.readUnsignedShort();
          } else if(1 == var1) {
-            this.anInt3347 = var2.getShort();
+            this.anInt3347 = var2.readUnsignedShort();
          } else if (var1 == 2) {
-             this.anInt3354 = var2.getShort();
+             this.anInt3354 = var2.readUnsignedShort();
          }
 
          if(!var3) {

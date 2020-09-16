@@ -159,7 +159,7 @@ class Class3_Sub13_Sub23 extends Class3_Sub13 {
    final void method157(int var1, DataBuffer var2, boolean var3) {
       try {
          if(var1 == 0) {
-            this.anInt3278 = var2.getShort();
+            this.anInt3278 = var2.readUnsignedShort();
          }
 
          if(!var3) {

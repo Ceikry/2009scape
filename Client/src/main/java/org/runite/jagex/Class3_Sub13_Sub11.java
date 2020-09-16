@@ -133,7 +133,7 @@ final class Class3_Sub13_Sub11 extends Class3_Sub13 {
          }
 
          if(var1 == 0) {
-            this.method218(var2.getTriByte((byte)82));
+            this.method218(var2.readMedium());
          }
 
       } catch (RuntimeException var5) {

@@ -240,19 +240,19 @@ final class Class43 {
          this.aBoolean690 = (this.anInt704 & 16) != 0;
          this.aBoolean711 = (this.anInt704 & 8) != 0;
          this.anInt704 &= 7;
-         this.anInt703 = var1.getShort();
-         this.anInt708 = var1.getShort();
-         this.anInt697 = var1.getShort();
+         this.anInt703 = var1.readUnsignedShort();
+         this.anInt708 = var1.readUnsignedShort();
+         this.anInt697 = var1.readUnsignedShort();
          this.anInt698 = var1.readUnsignedByte();
          this.method1061();
          this.aShortArray706 = new short[this.anInt698 * 2 + 1];
 
          int var2;
          for(var2 = 0; var2 < this.aShortArray706.length; ++var2) {
-            this.aShortArray706[var2] = (short)var1.getShort();
+            this.aShortArray706[var2] = (short)var1.readUnsignedShort();
          }
 
-         this.anInt713 = Class51.anIntArray834[var1.getShort()];
+         this.anInt713 = Class51.anIntArray834[var1.readUnsignedShort()];
          var2 = var1.readUnsignedByte();
          this.anInt714 = 1792 & var2 << 3;
          this.anInt705 = var2 & 31;

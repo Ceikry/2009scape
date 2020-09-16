@@ -154,15 +154,15 @@ final class Class125 implements Interface5 {
 
              for(int var9 = 0; var9 < 64; ++var9) {
                 if(HDToolKit.aBoolean1790) {
-                   var5.method801((float)var7[var9] / 4096.0F);
-                   var5.method801((float)var8[var9] / 4096.0F);
-                   var5.method801(1.0F);
-                   var5.method801(1.0F);
+                   var5.writeFloat((float)var7[var9] / 4096.0F);
+                   var5.writeFloat((float)var8[var9] / 4096.0F);
+                   var5.writeFloat(1.0F);
+                   var5.writeFloat(1.0F);
                 } else {
-                   var5.method762((float)var7[var9] / 4096.0F, (byte)109);
-                   var5.method762((float)var8[var9] / 4096.0F, (byte)66);
-                   var5.method762(1.0F, (byte)116);
-                   var5.method762(1.0F, (byte)66);
+                   var5.writeFloatLE((float)var7[var9] / 4096.0F);
+                   var5.writeFloatLE((float)var8[var9] / 4096.0F);
+                   var5.writeFloatLE(1.0F);
+                   var5.writeFloatLE(1.0F);
                 }
              }
           }

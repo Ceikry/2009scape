@@ -83,7 +83,7 @@ final class Class24 {
       	   if (buffer.index == buffer.buffer.length) {
     		   return true;
     	   }
-            int var8 = buffer.method773((byte)-121);
+            int var8 = buffer.method773();
             if(0 == var8) {
                return var5;
             }
@@ -218,7 +218,7 @@ final class Class24 {
                this.anIntArray474 = new int[var4];
 
                for(var5 = 0; var4 > var5; ++var5) {
-                  this.anIntArray474[var5] = var2.getShort();
+                  this.anIntArray474[var5] = var2.readUnsignedShort();
                }
             } else if(var3 == 3) {
                this.aBoolean476 = true;
@@ -228,8 +228,8 @@ final class Class24 {
                this.aShortArray464 = new short[var4];
 
                for(var5 = 0; var5 < var4; ++var5) {
-                  this.aShortArray464[var5] = (short)var2.getShort();
-                  this.aShortArray460[var5] = (short)var2.getShort();
+                  this.aShortArray464[var5] = (short)var2.readUnsignedShort();
+                  this.aShortArray460[var5] = (short)var2.readUnsignedShort();
                }
             } else if (var3 == 41) {
                var4 = var2.readUnsignedByte();
@@ -237,11 +237,11 @@ final class Class24 {
                this.aShortArray470 = new short[var4];
 
                for (var5 = 0; var5 < var4; ++var5) {
-                  this.aShortArray471[var5] = (short) var2.getShort();
-                  this.aShortArray470[var5] = (short) var2.getShort();
+                  this.aShortArray471[var5] = (short) var2.readUnsignedShort();
+                  this.aShortArray470[var5] = (short) var2.readUnsignedShort();
                }
             } else if (var3 >= 60 && var3 < 70) {
-               this.anIntArray475[-60 + var3] = var2.getShort();
+               this.anIntArray475[-60 + var3] = var2.readUnsignedShort();
             }
          }
 

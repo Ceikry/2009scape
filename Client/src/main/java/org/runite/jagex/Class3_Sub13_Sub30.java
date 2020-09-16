@@ -63,18 +63,18 @@ final class Class3_Sub13_Sub30 extends Class3_Sub13 {
 
                   RSString levelEquals = Class158.anInt2014 != 1?TextCore.HasLevel:TextCore.HasRating;
                   if(playerUsername.COMBAT_LEVEL < playerUsername.combatLevel) {
-                     var5 = RenderAnimationDefinition.method903(new RSString[]{playerUsername.getName(), var6 ? Class72.combatLevelColor(playerUsername.COMBAT_LEVEL, (byte)-73, Class102.player.COMBAT_LEVEL) : ColorCore.ContextColor , Class72.LEFT_PARENTHESES, levelEquals, Class72.method1298((byte)9, playerUsername.COMBAT_LEVEL), Class40.aClass94_673, Class72.method1298((byte)9, playerUsername.combatLevel + -playerUsername.COMBAT_LEVEL), Class3_Sub9.RIGHT_PARENTHESES}, (byte)-127);
+                     var5 = RenderAnimationDefinition.method903(new RSString[]{playerUsername.getName(), var6 ? Class72.combatLevelColor(playerUsername.COMBAT_LEVEL, (byte)-73, Class102.player.COMBAT_LEVEL) : ColorCore.ContextColor , Class72.LEFT_PARENTHESES, levelEquals, Class72.method1298((byte)9, playerUsername.COMBAT_LEVEL), Class40.aClass94_673, Class72.method1298((byte)9, playerUsername.combatLevel + -playerUsername.COMBAT_LEVEL), Class3_Sub9.RIGHT_PARENTHESES});
                   } else {
                 	 //here
-                     var5 = RenderAnimationDefinition.method903(new RSString[]{playerUsername.getName(), var6 ? Class72.combatLevelColor(playerUsername.COMBAT_LEVEL, (byte)-128, Class102.player.COMBAT_LEVEL) : getProperColor(playerUsername.COMBAT_LEVEL, Class102.player.COMBAT_LEVEL), Class72.LEFT_PARENTHESES, levelEquals, Class72.method1298((byte)9, playerUsername.COMBAT_LEVEL), Class3_Sub9.RIGHT_PARENTHESES}, (byte)-70);
+                     var5 = RenderAnimationDefinition.method903(new RSString[]{playerUsername.getName(), var6 ? Class72.combatLevelColor(playerUsername.COMBAT_LEVEL, (byte)-128, Class102.player.COMBAT_LEVEL) : getProperColor(playerUsername.COMBAT_LEVEL, Class102.player.COMBAT_LEVEL), Class72.LEFT_PARENTHESES, levelEquals, Class72.method1298((byte)9, playerUsername.COMBAT_LEVEL), Class3_Sub9.RIGHT_PARENTHESES});
                   }
                } else {
-                  var5 = RenderAnimationDefinition.method903(new RSString[]{playerUsername.getName(), Class72.LEFT_PARENTHESES, TextCore.HasSkill, Class72.method1298((byte)9, playerUsername.anInt3974), Class3_Sub9.RIGHT_PARENTHESES}, (byte)-119);
+                  var5 = RenderAnimationDefinition.method903(new RSString[]{playerUsername.getName(), Class72.LEFT_PARENTHESES, TextCore.HasSkill, Class72.method1298((byte)9, playerUsername.anInt3974), Class3_Sub9.RIGHT_PARENTHESES});
                }
 
                int var12;
                if(Class164_Sub1.anInt3012 == 1) {
-                  Class3_Sub24_Sub4.method1177(Class99.anInt1403, (long)var0, (byte)-80, RenderAnimationDefinition.method903(new RSString[]{RenderAnimationDefinition.aClass94_378, Class56.aClass94_892, var5}, (byte)-125), var4, (short)1, TextCore.HasUse, var2);
+                  Class3_Sub24_Sub4.method1177(Class99.anInt1403, (long)var0, (byte)-80, RenderAnimationDefinition.method903(new RSString[]{RenderAnimationDefinition.aClass94_378, Class56.aClass94_892, var5}), var4, (short)1, TextCore.HasUse, var2);
                } else if(!GameObject.aBoolean1837) {
                   for(var12 = 7; var12 >= 0; --var12) {
                      if(null != Class91.aClass94Array1299[var12]) {
@@ -97,11 +97,11 @@ final class Class3_Sub13_Sub30 extends Class3_Sub13 {
 
                         short var15 = Class7.aShortArray2167[var12];
                         var15 += var14;
-                        Class3_Sub24_Sub4.method1177(Class3_Sub13_Sub26.anIntArray3328[var12], (long)var0, (byte)-73, RenderAnimationDefinition.method903(new RSString[]{ColorCore.ContextColor , var5}, (byte)-78), var4, var15, Class91.aClass94Array1299[var12], var2);
+                        Class3_Sub24_Sub4.method1177(Class3_Sub13_Sub26.anIntArray3328[var12], (long)var0, (byte)-73, RenderAnimationDefinition.method903(new RSString[]{ColorCore.ContextColor , var5}), var4, var15, Class91.aClass94Array1299[var12], var2);
                      }
                   }
                } else if((8 & Class164.anInt2051) != 0) {
-                  Class3_Sub24_Sub4.method1177(Unsorted.anInt1887, (long)var0, (byte)-58, RenderAnimationDefinition.method903(new RSString[]{Class40.aClass94_676, Class56.aClass94_892, var5}, (byte)-116), var4, (short)15, Class3_Sub28_Sub9.aClass94_3621, var2);
+                  Class3_Sub24_Sub4.method1177(Unsorted.anInt1887, (long)var0, (byte)-58, RenderAnimationDefinition.method903(new RSString[]{Class40.aClass94_676, Class56.aClass94_892, var5}), var4, (short)15, Class3_Sub28_Sub9.aClass94_3621, var2);
                }
 
                if(var1 <= 0) {
@@ -110,7 +110,7 @@ final class Class3_Sub13_Sub30 extends Class3_Sub13 {
 
                for(var12 = 0; var12 < Class3_Sub13_Sub34.anInt3415; ++var12) {
                   if(Class3_Sub13_Sub7.aShortArray3095[var12] == 60) {
-                     Class163_Sub2_Sub1.aClass94Array4016[var12] = RenderAnimationDefinition.method903(new RSString[]{ColorCore.ContextColor , var5}, (byte)-75);
+                     Class163_Sub2_Sub1.aClass94Array4016[var12] = RenderAnimationDefinition.method903(new RSString[]{ColorCore.ContextColor , var5});
                      break;
                   }
                }
@@ -218,7 +218,7 @@ final class Class3_Sub13_Sub30 extends Class3_Sub13 {
          DataBuffer var11 = new DataBuffer(var2);
 
          while(true) {
-            int var13 = var11.method773((byte)-127);
+            int var13 = var11.method773();
             if(var13 == 0) {
                return;
             }

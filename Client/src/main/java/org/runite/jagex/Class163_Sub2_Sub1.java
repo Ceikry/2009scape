@@ -187,9 +187,9 @@ final class Class163_Sub2_Sub1 extends Class163_Sub2 {
             }
 
             var0.putOpcode(var1);
-            var0.putByte((byte)-86, 0);
+            var0.writeByte(0);
             var5 = var0.index;
-            var0.putInt(-127, var3.anInt2305);
+            var0.writeInt(var3.anInt2305);
 
             for(int var6 = 0; var6 < var3.anInt2296; ++var6) {
                if(var3.anIntArray2300[var6] == 0) {
@@ -200,17 +200,17 @@ final class Class163_Sub2_Sub1 extends Class163_Sub2 {
                      if(var7 == 0) {
                         var8 = (Field)var3.aClass64Array2303[var6].anObject974;
                         var9 = var8.getInt((Object)null);
-                        var0.putByte((byte)-102, 0);
-                        var0.putInt(-122, var9);
+                        var0.writeByte(0);
+                        var0.writeInt(var9);
                      } else if (var7 == 1) {
                         var8 = (Field) var3.aClass64Array2303[var6].anObject974;
                         var8.setInt((Object) null, var3.anIntArray2299[var6]);
-                        var0.putByte((byte) -98, 0);
+                        var0.writeByte(0);
                      } else if (2 == var7) {
                         var8 = (Field) var3.aClass64Array2303[var6].anObject974;
                         var9 = var8.getModifiers();
-                        var0.putByte((byte) -26, 0);
-                        var0.putInt(-124, var9);
+                        var0.writeByte(0);
+                        var0.writeInt(var9);
                      }
 
                      Method var26;
@@ -226,54 +226,54 @@ final class Class163_Sub2_Sub1 extends Class163_Sub2 {
 
                         Object var28 = var26.invoke((Object)null, var10);
                         if(var28 == null) {
-                           var0.putByte((byte)-51, 0);
+                           var0.writeByte(0);
                         } else if(var28 instanceof Number) {
-                           var0.putByte((byte)-94, 1);
-                           var0.putLong(((Number)var28).longValue(), -2037491440);
+                           var0.writeByte(1);
+                           var0.writeLong(((Number)var28).longValue());
                         } else if (var28 instanceof RSString) {
-                           var0.putByte((byte) -52, 2);
-                           var0.putString((RSString) var28);
+                           var0.writeByte(2);
+                           var0.writeString((RSString) var28);
                         } else {
-                           var0.putByte((byte) -94, 4);
+                           var0.writeByte(4);
                         }
                      } else if(var7 == 4) {
                         var26 = (Method)var3.aClass64Array2298[var6].anObject974;
                         var9 = var26.getModifiers();
-                        var0.putByte((byte)-27, 0);
-                        var0.putInt(-126, var9);
+                        var0.writeByte(0);
+                        var0.writeInt(var9);
                      }
                   } catch (ClassNotFoundException var13) {
-                     var0.putByte((byte)-102, -10);
+                     var0.writeByte(-10);
                   } catch (InvalidClassException var14) {
-                     var0.putByte((byte)-41, -11);
+                     var0.writeByte(-11);
                   } catch (StreamCorruptedException var15) {
-                     var0.putByte((byte)-76, -12);
+                     var0.writeByte(-12);
                   } catch (OptionalDataException var16) {
-                     var0.putByte((byte)-60, -13);
+                     var0.writeByte(-13);
                   } catch (IllegalAccessException var17) {
-                     var0.putByte((byte)-76, -14);
+                     var0.writeByte(-14);
                   } catch (IllegalArgumentException var18) {
-                     var0.putByte((byte)-98, -15);
+                     var0.writeByte(-15);
                   } catch (InvocationTargetException var19) {
-                     var0.putByte((byte)-112, -16);
+                     var0.writeByte(-16);
                   } catch (SecurityException var20) {
-                     var0.putByte((byte)-11, -17);
+                     var0.writeByte(-17);
                   } catch (IOException var21) {
-                     var0.putByte((byte)-27, -18);
+                     var0.writeByte(-18);
                   } catch (NullPointerException var22) {
-                     var0.putByte((byte)-37, -19);
+                     var0.writeByte(-19);
                   } catch (Exception var23) {
-                     var0.putByte((byte)-75, -20);
+                     var0.writeByte(-20);
                   } catch (Throwable var24) {
-                     var0.putByte((byte)-79, -21);
+                     var0.writeByte(-21);
                   }
                } else {
-                  var0.putByte((byte)-101, var3.anIntArray2300[var6]);
+                  var0.writeByte(var3.anIntArray2300[var6]);
                }
             }
 
-            var0.method793(var5);
-            var0.method769((byte)-127, var0.index - var5);
+            var0.writeCRC(var5);
+            var0.method769(var0.index - var5);
             var3.unlink();
          }
       } catch (RuntimeException var25) {

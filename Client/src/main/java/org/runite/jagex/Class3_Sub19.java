@@ -17,7 +17,7 @@ final class Class3_Sub19 extends Linkable {
    static Class75_Sub2 method384(DataBuffer var0) {
       try {
 
-         return new Class75_Sub2(var0.getShort((byte)38), var0.getShort((byte)51), var0.getShort((byte)66), var0.getShort((byte)68), var0.getTriByte((byte)86), var0.getTriByte((byte)86), var0.readUnsignedByte());
+         return new Class75_Sub2(var0.readSignedShort(), var0.readSignedShort(), var0.readSignedShort(), var0.readSignedShort(), var0.readMedium(), var0.readMedium(), var0.readUnsignedByte());
       } catch (RuntimeException var3) {
          throw Class44.clientError(var3, "kl.C(" + (var0 != null?"{...}":"null") + ',' + (byte) 80 + ')');
       }

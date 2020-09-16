@@ -938,22 +938,22 @@ final class Class168 {
     private void method2279(int var2, DataBuffer var3, int var4) {
         try {
             if (var2 == 1) {
-                this.anInt2103 = RSInterface.method869(116, var3.getTriByte((byte) 83));
+                this.anInt2103 = RSInterface.method869(116, var3.readMedium());
             } else if (var2 == 2) {
                 this.anInt2095 = var3.readUnsignedByte();
             } else if (3 == var2) {
-                this.anInt2095 = var3.getShort();
+                this.anInt2095 = var3.readUnsignedShort();
                 if (this.anInt2095 == '\uffff') {
                     this.anInt2095 = -1;
                 }
             } else if (5 == var2) {
                 this.aBoolean2102 = false;
             } else if (var2 == 7) {
-                this.anInt2098 = RSInterface.method869(116, var3.getTriByte((byte) 82));
+                this.anInt2098 = RSInterface.method869(116, var3.readMedium());
             } else if (var2 == 8) {
                 Class3_Sub13_Sub6.anInt3081 = var4;
             } else if (var2 == 9) {
-                this.anInt2090 = var3.getShort();
+                this.anInt2090 = var3.readUnsignedShort();
             } else if (var2 == 10) {
                 this.aBoolean2093 = false;
             } else if (var2 == 11) {
@@ -961,7 +961,7 @@ final class Class168 {
             } else if (12 == var2) {
                 this.aBoolean2092 = true;
             } else if (13 == var2) {
-                this.anInt2094 = var3.getTriByte((byte) 110);
+                this.anInt2094 = var3.readMedium();
             } else if (var2 == 14) {
                 this.anInt2101 = var3.readUnsignedByte();
             }

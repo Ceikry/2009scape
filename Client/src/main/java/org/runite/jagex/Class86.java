@@ -94,19 +94,19 @@ final class Class86 {
             if ((2 & var2) == 0) {
                 this.aFloat1187 = 1.1523438F;
             } else {
-                this.aFloat1187 = (float) var1.getShort() / 256.0F;
+                this.aFloat1187 = (float) var1.readUnsignedShort() / 256.0F;
             }
 
             if ((var2 & 4) == 0) {
                 this.aFloat1190 = 0.69921875F;
             } else {
-                this.aFloat1190 = (float) var1.getShort() / 256.0F;
+                this.aFloat1190 = (float) var1.readUnsignedShort() / 256.0F;
             }
 
             if ((var2 & 8) == 0) {
                 this.aFloat1189 = 1.2F;
             } else {
-                this.aFloat1189 = (float) var1.getShort() / 256.0F;
+                this.aFloat1189 = (float) var1.readUnsignedShort() / 256.0F;
             }
 
             if ((16 & var2) == 0) {
@@ -114,9 +114,9 @@ final class Class86 {
                 this.anInt1185 = -50;
                 this.anInt1181 = -60;
             } else {
-                this.anInt1185 = var1.getShort((byte) 53);
-                this.anInt1181 = var1.getShort((byte) 15);
-                this.anInt1178 = var1.getShort((byte) 50);
+                this.anInt1185 = var1.readSignedShort();
+                this.anInt1181 = var1.readSignedShort();
+                this.anInt1178 = var1.readSignedShort();
             }
 
             if ((32 & var2) == 0) {
@@ -128,7 +128,7 @@ final class Class86 {
             if ((64 & var2) == 0) {
                 this.anInt1184 = 0;
             } else {
-                this.anInt1184 = var1.getShort();
+                this.anInt1184 = var1.readUnsignedShort();
             }
 
         } catch (RuntimeException var3) {

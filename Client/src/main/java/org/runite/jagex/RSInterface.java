@@ -253,10 +253,10 @@ final class RSInterface {
             }
 
             if (null != Class163_Sub2.aClass94_2996) {
-                var2 = RenderAnimationDefinition.method903(new RSString[]{Class3_Sub28_Sub11.aClass94_3637, Class163_Sub2.aClass94_2996}, (byte) -64);
+                var2 = RenderAnimationDefinition.method903(new RSString[]{Class3_Sub28_Sub11.aClass94_3637, Class163_Sub2.aClass94_2996});
             }
 
-            return RenderAnimationDefinition.method903(new RSString[]{Class30.aClass94_577, var1, Class3_Sub28_Sub7.aClass94_3601, Class72.method1298((byte) 9, Class3_Sub20.language), Unsorted.aClass94_1932, Class72.method1298((byte) 9, Class3_Sub26.anInt2554), var2, Class140_Sub3.aClass94_2735}, (byte) -61);
+            return RenderAnimationDefinition.method903(new RSString[]{Class30.aClass94_577, var1, Class3_Sub28_Sub7.aClass94_3601, Class72.method1298((byte) 9, Class3_Sub20.language), Unsorted.aClass94_1932, Class72.method1298((byte) 9, Class3_Sub26.anInt2554), var2, Class140_Sub3.aClass94_2735});
         } catch (RuntimeException var3) {
             throw Class44.clientError(var3, "be.N(" + true + ')');
         }
@@ -283,24 +283,24 @@ final class RSInterface {
         this.usingScripts = false;
         this.type = buffer.readUnsignedByte();
         this.anInt318 = buffer.readUnsignedByte();
-        this.anInt189 = buffer.getShort();
-        this.defX = buffer.getShort((byte) 100);
-        this.defY = buffer.getShort((byte) 109);
-        this.defWidth = buffer.getShort();
-        this.defHeight = buffer.getShort();
+        this.anInt189 = buffer.readUnsignedShort();
+        this.defX = buffer.readSignedShort();
+        this.defY = buffer.readSignedShort();
+        this.defWidth = buffer.readUnsignedShort();
+        this.defHeight = buffer.readUnsignedShort();
         this.horizontalResize = 0;
         this.verticalResize = 0;
         this.horizontalPos = 0;
         this.verticalPos = 0;
         this.anInt223 = buffer.readUnsignedByte();
-        this.parentId = buffer.getShort();
+        this.parentId = buffer.readUnsignedShort();
         if (this.parentId == 65535) {
             this.parentId = -1;
         } else {
             this.parentId += -65536 & this.componentHash;
         }
 
-        this.anInt212 = buffer.getShort();
+        this.anInt212 = buffer.readUnsignedShort();
         if (this.anInt212 == 65535) {
             this.anInt212 = -1;
         }
@@ -313,7 +313,7 @@ final class RSInterface {
 
             for (var4 = 0; var4 < var3; ++var4) {
                 this.anIntArray275[var4] = buffer.readUnsignedByte();
-                this.anIntArray307[var4] = buffer.getShort();
+                this.anIntArray307[var4] = buffer.readUnsignedShort();
             }
         }
 
@@ -325,11 +325,11 @@ final class RSInterface {
             this.childDataBuffers = new int[var4][];
 
             for (var5 = 0; var5 < var4; ++var5) {
-                var6 = buffer.getShort();
+                var6 = buffer.readUnsignedShort();
                 this.childDataBuffers[var5] = new int[var6];
 
                 for (var7 = 0; var6 > var7; ++var7) {
-                    this.childDataBuffers[var5][var7] = buffer.getShort();
+                    this.childDataBuffers[var5][var7] = buffer.readUnsignedShort();
                     if (this.childDataBuffers[var5][var7] == 65535) {
                         this.childDataBuffers[var5][var7] = -1;
                     }
@@ -338,12 +338,12 @@ final class RSInterface {
         }
 
         if (this.type == 0) {
-            this.anInt252 = buffer.getShort();
+            this.anInt252 = buffer.readUnsignedShort();
             this.hidden = 1 == buffer.readUnsignedByte();
         }
 
         if (this.type == 1) {
-            buffer.getShort();
+            buffer.readUnsignedShort();
             buffer.readUnsignedByte();
         }
 
@@ -383,8 +383,8 @@ final class RSInterface {
             for (var10 = 0; 20 > var10; ++var10) {
                 int var11 = buffer.readUnsignedByte();
                 if (var11 == 1) {
-                    this.anIntArray272[var10] = buffer.getShort((byte) 110);
-                    this.anIntArray300[var10] = buffer.getShort((byte) 58);
+                    this.anIntArray272[var10] = buffer.readSignedShort();
+                    this.anIntArray300[var10] = buffer.readSignedShort();
                     this.anIntArray197[var10] = buffer.readInt();
                 } else {
                     this.anIntArray197[var10] = -1;
@@ -394,7 +394,7 @@ final class RSInterface {
             this.options = new RSString[5];
 
             for (var10 = 0; var10 < 5; ++var10) {
-                RSString var14 = buffer.getString();
+                RSString var14 = buffer.readString();
                 if (var14.length(-28) > 0) {
                     this.options[var10] = var14;
                     var5 |= 1 << 23 - -var10;
@@ -410,7 +410,7 @@ final class RSInterface {
             this.anInt194 = buffer.readUnsignedByte();
             this.anInt225 = buffer.readUnsignedByte();
             this.anInt205 = buffer.readUnsignedByte();
-            this.anInt270 = buffer.getShort();
+            this.anInt270 = buffer.readUnsignedShort();
             if (this.anInt270 == 65535) {
                 this.anInt270 = -1;
             }
@@ -419,8 +419,8 @@ final class RSInterface {
         }
 
         if (this.type == 4) {
-            this.text = buffer.getString();
-            this.aClass94_172 = buffer.getString();
+            this.text = buffer.readString();
+            this.aClass94_172 = buffer.readString();
         }
 
         if (this.type == 1 || this.type == 3 || 4 == this.type) {
@@ -440,30 +440,30 @@ final class RSInterface {
 
         if (6 == this.type) {
             this.modelType = 1;
-            this.itemId = buffer.getShort();
+            this.itemId = buffer.readUnsignedShort();
             this.secondModelType = 1;
             if (this.itemId == '\uffff') {
                 this.itemId = -1;
             }
 
-            this.secondModelId = buffer.getShort();
+            this.secondModelId = buffer.readUnsignedShort();
             if (this.secondModelId == '\uffff') {
                 this.secondModelId = -1;
             }
 
-            this.animationId = buffer.getShort();
+            this.animationId = buffer.readUnsignedShort();
             if (this.animationId == 65535) {
                 this.animationId = -1;
             }
 
-            this.secondAnimationId = buffer.getShort();
+            this.secondAnimationId = buffer.readUnsignedShort();
             if ('\uffff' == this.secondAnimationId) {
                 this.secondAnimationId = -1;
             }
 
-            this.anInt164 = buffer.getShort();
-            this.anInt182 = buffer.getShort();
-            this.anInt308 = buffer.getShort();
+            this.anInt164 = buffer.readUnsignedShort();
+            this.anInt182 = buffer.readUnsignedShort();
+            this.anInt308 = buffer.readUnsignedShort();
         }
 
         if (7 == this.type) {
@@ -472,15 +472,15 @@ final class RSInterface {
             this.itemIds = new int[this.defHeight * this.defWidth];
             this.itemAmounts = new int[this.defWidth * this.defHeight];
             this.anInt194 = buffer.readUnsignedByte();
-            this.anInt270 = buffer.getShort();
+            this.anInt270 = buffer.readUnsignedShort();
             if (this.anInt270 == 65535) {
                 this.anInt270 = -1;
             }
 
             this.aBoolean215 = buffer.readUnsignedByte() == 1;
             this.anInt218 = buffer.readInt();
-            this.anInt285 = buffer.getShort((byte) 31);
-            this.anInt290 = buffer.getShort((byte) 83);
+            this.anInt285 = buffer.readSignedShort();
+            this.anInt290 = buffer.readSignedShort();
             var6 = buffer.readUnsignedByte();
             if (var6 == 1) {
                 var5 |= 1073741824;
@@ -489,7 +489,7 @@ final class RSInterface {
             this.options = new RSString[5];
 
             for (var7 = 0; var7 < 5; ++var7) {
-                RSString var13 = buffer.getString();
+                RSString var13 = buffer.readString();
                 if (var13.length(-121) > 0) {
                     this.options[var7] = var13;
                     var5 |= 1 << 23 - -var7;
@@ -498,18 +498,18 @@ final class RSInterface {
         }
 
         if (8 == this.type) {
-            this.text = buffer.getString();
+            this.text = buffer.readString();
         }
 
         if (this.anInt318 == 2 || this.type == 2) {
-            this.aClass94_245 = buffer.getString();
-            this.aClass94_243 = buffer.getString();
-            var6 = 63 & buffer.getShort();
+            this.aClass94_245 = buffer.readString();
+            this.aClass94_243 = buffer.readString();
+            var6 = 63 & buffer.readUnsignedShort();
             var5 |= var6 << 11;
         }
 
         if (this.anInt318 == 1 || this.anInt318 == 4 || this.anInt318 == 5 || this.anInt318 == 6) {
-            this.aClass94_289 = buffer.getString();
+            this.aClass94_289 = buffer.readString();
             if (this.aClass94_289.length(-33) == 0) {
                 if (this.anInt318 == 1) {
                     this.aClass94_289 = TextCore.HasOK;
@@ -590,7 +590,7 @@ final class RSInterface {
                     if (0 == var6) {
                         var4[var5] = new Integer(var2.readInt());
                     } else if (var6 == 1) {
-                        var4[var5] = var2.getString();
+                        var4[var5] = var2.readString();
                     }
                 }
 
@@ -807,19 +807,19 @@ final class RSInterface {
         this.type = buffer.readUnsignedByte();
         if ((128 & this.type) != 0) {
             this.type &= 127;
-            buffer.getString();
+            buffer.readString();
         }
 
-        this.anInt189 = buffer.getShort();
-        this.defX = buffer.getShort((byte) 66);
-        this.defY = buffer.getShort((byte) 121);
-        this.defWidth = buffer.getShort();
-        this.defHeight = buffer.getShort();
-        this.horizontalResize = buffer.getByte();
-        this.verticalResize = buffer.getByte();
-        this.horizontalPos = buffer.getByte();
-        this.verticalPos = buffer.getByte();
-        this.parentId = buffer.getShort();
+        this.anInt189 = buffer.readUnsignedShort();
+        this.defX = buffer.readSignedShort();
+        this.defY = buffer.readSignedShort();
+        this.defWidth = buffer.readUnsignedShort();
+        this.defHeight = buffer.readUnsignedShort();
+        this.horizontalResize = buffer.readSignedByte();
+        this.verticalResize = buffer.readSignedByte();
+        this.horizontalPos = buffer.readSignedByte();
+        this.verticalPos = buffer.readSignedByte();
+        this.parentId = buffer.readUnsignedShort();
         if (this.parentId == 65535) {
             this.parentId = -1;
         } else {
@@ -828,15 +828,15 @@ final class RSInterface {
 
         this.hidden = buffer.readUnsignedByte() == 1;
         if (this.type == 0) {
-            this.anInt240 = buffer.getShort();
-            this.anInt252 = buffer.getShort();
+            this.anInt240 = buffer.readUnsignedShort();
+            this.anInt252 = buffer.readUnsignedShort();
             this.aBoolean219 = buffer.readUnsignedByte() == 1;
         }
 
         int var3;
         if (this.type == 5) {
             this.spriteArchiveId = buffer.readInt();
-            this.anInt301 = buffer.getShort();
+            this.anInt301 = buffer.readUnsignedShort();
             var3 = buffer.readUnsignedByte();
             this.aBoolean157 = (2 & var3) != 0;
             this.aBoolean186 = (1 & var3) != 0;
@@ -849,42 +849,42 @@ final class RSInterface {
 
         if (this.type == 6) {
             this.modelType = 1;
-            this.itemId = buffer.getShort();
+            this.itemId = buffer.readUnsignedShort();
             if (this.itemId == 65535) {
                 this.itemId = -1;
             }
 
-            this.anInt259 = buffer.getShort((byte) 122);
-            this.anInt230 = buffer.getShort((byte) 32);
-            this.anInt182 = buffer.getShort();
-            this.anInt308 = buffer.getShort();
-            this.anInt280 = buffer.getShort();
-            this.anInt164 = buffer.getShort();
-            this.animationId = buffer.getShort();
+            this.anInt259 = buffer.readSignedShort();
+            this.anInt230 = buffer.readSignedShort();
+            this.anInt182 = buffer.readUnsignedShort();
+            this.anInt308 = buffer.readUnsignedShort();
+            this.anInt280 = buffer.readUnsignedShort();
+            this.anInt164 = buffer.readUnsignedShort();
+            this.animationId = buffer.readUnsignedShort();
             if ('\uffff' == this.animationId) {
                 this.animationId = -1;
             }
 
             this.aBoolean181 = buffer.readUnsignedByte() == 1;
-            this.aShort293 = (short) buffer.getShort();
-            this.aShort169 = (short) buffer.getShort();
+            this.aShort293 = (short) buffer.readUnsignedShort();
+            this.aShort169 = (short) buffer.readUnsignedShort();
             this.aBoolean309 = 1 == buffer.readUnsignedByte();
             if (this.horizontalResize != 0) {
-                this.anInt184 = buffer.getShort();
+                this.anInt184 = buffer.readUnsignedShort();
             }
 
             if (this.verticalResize != 0) {
-                this.anInt312 = buffer.getShort();
+                this.anInt312 = buffer.readUnsignedShort();
             }
         }
 
         if (this.type == 4) {
-            this.anInt270 = buffer.getShort();
+            this.anInt270 = buffer.readUnsignedShort();
             if (this.anInt270 == 65535) {
                 this.anInt270 = -1;
             }
 
-            this.text = buffer.getString();
+            this.text = buffer.readString();
             this.anInt205 = buffer.readUnsignedByte();
             this.anInt194 = buffer.readUnsignedByte();
             this.anInt225 = buffer.readUnsignedByte();
@@ -904,7 +904,7 @@ final class RSInterface {
             this.aBoolean167 = 1 == buffer.readUnsignedByte();
         }
 
-        var3 = buffer.getTriByte((byte) 87);
+        var3 = buffer.readMedium();
         int var4 = buffer.readUnsignedByte();
         int var5;
         if (var4 != 0) {
@@ -921,12 +921,12 @@ final class RSInterface {
                     this.anIntArray299[var5] = var4;
                 }
 
-                this.aByteArray263[var5] = buffer.getByte();
-                this.aByteArray231[var5] = buffer.getByte();
+                this.aByteArray263[var5] = buffer.readSignedByte();
+                this.aByteArray231[var5] = buffer.readSignedByte();
             }
         }
 
-        this.aClass94_277 = buffer.getString();
+        this.aClass94_277 = buffer.readString();
         var5 = buffer.readUnsignedByte();
         int var6 = var5 & 15;
         int var8;
@@ -934,7 +934,7 @@ final class RSInterface {
             this.aClass94Array171 = new RSString[var6];
 
             for (var8 = 0; var6 > var8; ++var8) {
-                this.aClass94Array171[var8] = buffer.getString();
+                this.aClass94Array171[var8] = buffer.readString();
             }
         }
 
@@ -948,22 +948,22 @@ final class RSInterface {
                 this.anIntArray249[var9] = -1;
             }
 
-            this.anIntArray249[var8] = buffer.getShort();
+            this.anIntArray249[var8] = buffer.readUnsignedShort();
         }
 
         if (1 < var7) {
             var8 = buffer.readUnsignedByte();
-            this.anIntArray249[var8] = buffer.getShort();
+            this.anIntArray249[var8] = buffer.readUnsignedShort();
         }
 
         this.anInt214 = buffer.readUnsignedByte();
         this.anInt179 = buffer.readUnsignedByte();
         this.aBoolean200 = buffer.readUnsignedByte() == 1;
         var8 = -1;
-        this.aClass94_245 = buffer.getString();
+        this.aClass94_245 = buffer.readString();
         if (0 != (127 & var3 >> 11)) {
-            var8 = buffer.getShort();
-            this.anInt266 = buffer.getShort();
+            var8 = buffer.readUnsignedShort();
+            this.anInt266 = buffer.readUnsignedShort();
             if (var8 == 65535) {
                 var8 = -1;
             }
@@ -972,7 +972,7 @@ final class RSInterface {
                 this.anInt266 = -1;
             }
 
-            this.anInt238 = buffer.getShort();
+            this.anInt238 = buffer.readUnsignedShort();
             if (this.anInt238 == '\uffff') {
                 this.anInt238 = -1;
             }

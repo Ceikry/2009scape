@@ -131,7 +131,7 @@ final class Class3_Sub28_Sub4 extends Node {
       try {
 
          if(var2 == 1) {
-            this.aClass94Array3571 = var1.getString().method1567(60, (byte)118);
+            this.aClass94Array3571 = var1.readString().method1567(60, (byte)118);
          } else {
             int var4;
             int var5;
@@ -140,7 +140,7 @@ final class Class3_Sub28_Sub4 extends Node {
                this.anIntArray3567 = new int[var4];
 
                for(var5 = 0; var5 < var4; ++var5) {
-                  this.anIntArray3567[var5] = var1.getShort();
+                  this.anIntArray3567[var5] = var1.readUnsignedShort();
                }
             } else if (var2 == 3) {
                var4 = var1.readUnsignedByte();
@@ -148,12 +148,12 @@ final class Class3_Sub28_Sub4 extends Node {
                this.anIntArrayArray3570 = new int[var4][];
 
                for (var5 = 0; var4 > var5; ++var5) {
-                  int var6 = var1.getShort();
+                  int var6 = var1.readUnsignedShort();
                   this.anIntArray3566[var5] = var6;
                   this.anIntArrayArray3570[var5] = new int[Class155.anIntArray1976[var6]];
 
                   for (int var7 = 0; Class155.anIntArray1976[var6] > var7; ++var7) {
-                     this.anIntArrayArray3570[var5][var7] = var1.getShort();
+                     this.anIntArrayArray3570[var5][var7] = var1.readUnsignedShort();
                   }
                }
             } else if (var2 == 4) {

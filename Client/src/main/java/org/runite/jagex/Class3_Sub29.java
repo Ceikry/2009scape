@@ -177,14 +177,14 @@ final class Class3_Sub29 extends Linkable {
             try {
                RSString var2 = Class163.aClass94_2044.method1573((byte)125, Class38.aClass87_665.applet);
                RSString var3 = Unsorted.aClass94_1885.method1573((byte)126, Class38.aClass87_665.applet);
-               RSString var4 = RenderAnimationDefinition.method903(new RSString[]{var2, Class82.aClass94_1151, var1, Class166.aClass94_2074, var3}, (byte)-119);
+               RSString var4 = RenderAnimationDefinition.method903(new RSString[]{var2, Class82.aClass94_1151, var1, Class166.aClass94_2074, var3});
                if(0 == var1.length(-84)) {
-                  var4 = RenderAnimationDefinition.method903(new RSString[]{var4, TextCore.HasAgeExpire}, (byte)-60);
+                  var4 = RenderAnimationDefinition.method903(new RSString[]{var4, TextCore.HasAgeExpire});
                } else {
-                  var4 = RenderAnimationDefinition.method903(new RSString[]{var4, TextCore.HasExpires, Class15.method894(94608000000L + TimeUtils.time(), (byte)52), TextCore.HasMaxAge, Class3_Sub28_Sub12.method612(94608000L, (byte)102)}, (byte)-80);
+                  var4 = RenderAnimationDefinition.method903(new RSString[]{var4, TextCore.HasExpires, Class15.method894(94608000000L + TimeUtils.time(), (byte)52), TextCore.HasMaxAge, Class3_Sub28_Sub12.method612(94608000L, (byte)102)});
                }
 
-               RenderAnimationDefinition.method903(new RSString[]{Class129.aClass94_1694, var4, Unsorted.aClass94_1698}, (byte)-84).method1554(Class38.aClass87_665.applet);
+               RenderAnimationDefinition.method903(new RSString[]{Class129.aClass94_1694, var4, Unsorted.aClass94_1698}).method1554(Class38.aClass87_665.applet);
             } catch (Throwable var5) {
             }
 

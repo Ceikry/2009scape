@@ -430,8 +430,8 @@ final class Class3_Sub28_Sub20 extends Node {
          this.aBoolean3787 = var1.readUnsignedByte() == 1;
          this.aBoolean3781 = var1.readUnsignedByte() == 1;
          int var2 = 3 & var1.readUnsignedByte();
-         this.anInt3783 = var1.getByte();
-         this.anInt3799 = var1.getByte();
+         this.anInt3783 = var1.readSignedByte();
+         this.anInt3799 = var1.readSignedByte();
          int var3 = var1.readUnsignedByte();
          var1.readUnsignedByte();
          if(var2 == 1) {

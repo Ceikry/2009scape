@@ -37,13 +37,13 @@ final class Class3_Sub7 extends Linkable {
    static RSString itemStackColor(int var0, int var1) {
       try {
          if(100000 > var1) {
-            return RenderAnimationDefinition.method903(new RSString[]{ColorCore.DefaultStackColor, Class72.method1298((byte)9, var1), Class72.aClass94_1076}, (byte)-65);
+            return RenderAnimationDefinition.method903(new RSString[]{ColorCore.DefaultStackColor, Class72.method1298((byte)9, var1), Class72.aClass94_1076});
          } else {
             if(var0 != 1000) {
                itemStackColor(-54, 54);
             }
 
-            return var1 >= 10000000?RenderAnimationDefinition.method903(new RSString[]{ColorCore.MillionStackColor, Class72.method1298((byte)9, var1 / 1000000), TextCore.MillionM, Class72.aClass94_1076}, (byte)-85):RenderAnimationDefinition.method903(new RSString[]{ColorCore.ThousandStackColor, Class72.method1298((byte)9, var1 / 1000), TextCore.ThousandK, Class72.aClass94_1076}, (byte)-124);
+            return var1 >= 10000000?RenderAnimationDefinition.method903(new RSString[]{ColorCore.MillionStackColor, Class72.method1298((byte)9, var1 / 1000000), TextCore.MillionM, Class72.aClass94_1076}):RenderAnimationDefinition.method903(new RSString[]{ColorCore.ThousandStackColor, Class72.method1298((byte)9, var1 / 1000), TextCore.ThousandK, Class72.aClass94_1076});
          }
       } catch (RuntimeException var3) {
          throw Class44.clientError(var3, "eb.C(" + var0 + ',' + var1 + ')');

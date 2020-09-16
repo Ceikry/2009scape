@@ -62,8 +62,8 @@ final class Player extends Class140_Sub4 {
          this.anInt3958 = 3 & var3 >> 6;
          this.anInt2819 += (-var7 + this.getSize()) * 64;
          this.anInt2829 += 64 * (this.getSize() + -var7);
-         this.skullIcon = buffer.getByte();
-         this.headIcon = buffer.getByte();
+         this.skullIcon = buffer.readSignedByte();
+         this.headIcon = buffer.readSignedByte();
          this.teamId = 0;
 
          int var11;
@@ -78,7 +78,7 @@ final class Player extends Class140_Sub4 {
                var12 = buffer.readUnsignedByte();
                outfit = (var11 << 8) + var12;
                if(var10 == 0 && outfit == 65535) {
-                  npcId = buffer.getShort();
+                  npcId = buffer.readUnsignedShort();
                   this.teamId = buffer.readUnsignedByte();
                   break;
                }
@@ -112,12 +112,12 @@ final class Player extends Class140_Sub4 {
             colors[var11] = var12;
          }
 
-         this.renderAnimationId = buffer.getShort();
-         long var20 = buffer.getLong(-99);
+         this.renderAnimationId = buffer.readUnsignedShort();
+         long var20 = buffer.readLong();
          this.displayName = Objects.requireNonNull(Unsorted.method1052(var20)).method1545();
          this.COMBAT_LEVEL = buffer.readUnsignedByte();
          if(var6) {
-            this.anInt3974 = buffer.getShort();
+            this.anInt3974 = buffer.readUnsignedShort();
             this.combatLevel = this.COMBAT_LEVEL;
             this.anInt3970 = -1;
          } else {
@@ -138,10 +138,10 @@ final class Player extends Class140_Sub4 {
             int var16 = this.anInt3963;
             int var17 = this.anInt3973;
             var14 = this.anInt3952;
-            this.anInt3952 = buffer.getShort();
-            this.anInt3966 = buffer.getShort();
-            this.anInt3963 = buffer.getShort();
-            this.anInt3973 = buffer.getShort();
+            this.anInt3952 = buffer.readUnsignedShort();
+            this.anInt3966 = buffer.readUnsignedShort();
+            this.anInt3963 = buffer.readUnsignedShort();
+            this.anInt3973 = buffer.readUnsignedShort();
             if(this.anInt3969 != outfit || var14 != this.anInt3952 || var15 != this.anInt3966 || var16 != this.anInt3963 || var17 != this.anInt3973) {
                Unsorted.method518(this);
             }
@@ -363,11 +363,11 @@ final class Player extends Class140_Sub4 {
          RSString var2 = this.displayName;
 
          if(Class3_Sub30_Sub1.aClass94Array3802 != null) {
-            var2 = RenderAnimationDefinition.method903(new RSString[]{Class3_Sub30_Sub1.aClass94Array3802[this.anInt3958], var2}, (byte)-92);
+            var2 = RenderAnimationDefinition.method903(new RSString[]{Class3_Sub30_Sub1.aClass94Array3802[this.anInt3958], var2});
          }
 
          if(null != Unsorted.aClass94Array45) {
-            var2 = RenderAnimationDefinition.method903(new RSString[]{var2, Unsorted.aClass94Array45[this.anInt3958]}, (byte)-128);
+            var2 = RenderAnimationDefinition.method903(new RSString[]{var2, Unsorted.aClass94Array45[this.anInt3958]});
          }
 
          return var2;

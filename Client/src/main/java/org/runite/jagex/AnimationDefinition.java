@@ -320,24 +320,24 @@ final class AnimationDefinition {
 			int var4;
 			int var5;
 			if(var1 == 1) {
-				var4 = var3.getShort();
+				var4 = var3.readUnsignedShort();
 				this.duration = new int[var4];
 
 				for(var5 = 0; var4 > var5; ++var5) {
-					this.duration[var5] = var3.getShort();
+					this.duration[var5] = var3.readUnsignedShort();
 				}
 
 				this.frames = new int[var4];
 
 				for(var5 = 0; var4 > var5; ++var5) {
-					this.frames[var5] = var3.getShort();
+					this.frames[var5] = var3.readUnsignedShort();
 				}
 
 				for(var5 = 0; var4 > var5; ++var5) {
-					this.frames[var5] += var3.getShort() << 16;
+					this.frames[var5] += var3.readUnsignedShort() << 16;
 				}
 			} else if(var1 == 2) {
-				this.anInt1865 = var3.getShort();
+				this.anInt1865 = var3.readUnsignedShort();
 			} else if(var1 == 3) {
 				this.aBooleanArray1855 = new boolean[256];
 				var4 = var3.readUnsignedByte();
@@ -350,9 +350,9 @@ final class AnimationDefinition {
 			} else if (var1 == 5) {
 				this.anInt1857 = var3.readUnsignedByte();
 			} else if (6 == var1) {
-				this.anInt1854 = var3.getShort();
+				this.anInt1854 = var3.readUnsignedShort();
 			} else if (var1 == 7) {
-				this.anInt1849 = var3.getShort();
+				this.anInt1849 = var3.readUnsignedShort();
 			} else if (8 == var1) {
 				this.anInt1861 = var3.readUnsignedByte();
 			} else if (9 == var1) {
@@ -366,24 +366,24 @@ final class AnimationDefinition {
 				this.anIntArray1870 = new int[var4];
 
 				for (var5 = 0; var5 < var4; ++var5) {
-					this.anIntArray1870[var5] = var3.getShort();
+					this.anIntArray1870[var5] = var3.readUnsignedShort();
 				}
 
 				for (var5 = 0; var5 < var4; ++var5) {
-					this.anIntArray1870[var5] += var3.getShort() << 16;
+					this.anIntArray1870[var5] += var3.readUnsignedShort() << 16;
 				}
 			} else if (13 == var1) {
-				var4 = var3.getShort();
+				var4 = var3.readUnsignedShort();
 				this.anIntArrayArray1867 = new int[var4][];
 
 				for (var5 = 0; var5 < var4; ++var5) {
 					int var6 = var3.readUnsignedByte();
 					if (var6 > 0) {
 						this.anIntArrayArray1867[var5] = new int[var6];
-						this.anIntArrayArray1867[var5][0] = var3.getTriByte((byte) 102);
+						this.anIntArrayArray1867[var5][0] = var3.readMedium();
 
 						for (int var7 = 1; var7 < var6; ++var7) {
-							this.anIntArrayArray1867[var5][var7] = var3.getShort();
+							this.anIntArrayArray1867[var5][var7] = var3.readUnsignedShort();
 						}
 					}
 				}

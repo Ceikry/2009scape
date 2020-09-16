@@ -262,7 +262,7 @@ final class Class3_Sub13_Sub36 extends Class3_Sub13 {
          }
 
          if(0 == var1) {
-            this.anInt3434 = var2.getShort();
+            this.anInt3434 = var2.readUnsignedShort();
          }
 
       } catch (RuntimeException var5) {

@@ -1383,15 +1383,15 @@ final class Class140_Sub1_Sub1 extends Model {
       int var1;
       if(HDToolKit.aBoolean1790) {
          for(var1 = 0; var1 < this.anInt3852; ++var1) {
-            aClass3_Sub30_3818.putInt(-122, this.aShortArray3811[var1]);
-            aClass3_Sub30_3818.putInt(-126, this.aShortArray3830[var1]);
-            aClass3_Sub30_3818.putInt(-120, this.aShortArray3831[var1]);
+            aClass3_Sub30_3818.writeInt(this.aShortArray3811[var1]);
+            aClass3_Sub30_3818.writeInt(this.aShortArray3830[var1]);
+            aClass3_Sub30_3818.writeInt(this.aShortArray3831[var1]);
          }
       } else {
          for(var1 = 0; var1 < this.anInt3852; ++var1) {
-            aClass3_Sub30_3818.method757(this.aShortArray3811[var1], 98);
-            aClass3_Sub30_3818.method757(this.aShortArray3830[var1], 68);
-            aClass3_Sub30_3818.method757(this.aShortArray3831[var1], 77);
+            aClass3_Sub30_3818.writeIntLE(this.aShortArray3811[var1]);
+            aClass3_Sub30_3818.writeIntLE(this.aShortArray3830[var1]);
+            aClass3_Sub30_3818.writeIntLE(this.aShortArray3831[var1]);
          }
       }
 
@@ -1832,9 +1832,9 @@ final class Class140_Sub1_Sub1 extends Model {
                      }
 
                      aClass3_Sub30_3818.index = var14 * var6;
-                     aClass3_Sub30_3818.putInt(-123, var8);
-                     aClass3_Sub30_3818.putInt(-127, var9);
-                     aClass3_Sub30_3818.putInt(-123, var10);
+                     aClass3_Sub30_3818.writeInt(var8);
+                     aClass3_Sub30_3818.writeInt(var9);
+                     aClass3_Sub30_3818.writeInt(var10);
                   }
                }
             } else {
@@ -1852,9 +1852,9 @@ final class Class140_Sub1_Sub1 extends Model {
                      }
 
                      aClass3_Sub30_3818.index = var14 * var6;
-                     aClass3_Sub30_3818.method757(var8, 105);
-                     aClass3_Sub30_3818.method757(var9, 121);
-                     aClass3_Sub30_3818.method757(var10, 84);
+                     aClass3_Sub30_3818.writeIntLE(var8);
+                     aClass3_Sub30_3818.writeIntLE(var9);
+                     aClass3_Sub30_3818.writeIntLE(var10);
                   }
                }
             }
@@ -1865,11 +1865,11 @@ final class Class140_Sub1_Sub1 extends Model {
                for(var7 = 0; var7 < this.anInt3852; ++var7) {
                   var8 = method1905(this.aShortArray3808[var7], this.aShortArray3827[var7], this.aShort3849, this.aByteArray3816[var7]);
                   aClass3_Sub30_3818.index = this.aClass121_3814.anInt1639 + this.aShortArray3811[var7] * var6;
-                  aClass3_Sub30_3818.putInt(-123, var8);
+                  aClass3_Sub30_3818.writeInt(var8);
                   aClass3_Sub30_3818.index = this.aClass121_3814.anInt1639 + this.aShortArray3830[var7] * var6;
-                  aClass3_Sub30_3818.putInt(-121, var8);
+                  aClass3_Sub30_3818.writeInt(var8);
                   aClass3_Sub30_3818.index = this.aClass121_3814.anInt1639 + this.aShortArray3831[var7] * var6;
-                  aClass3_Sub30_3818.putInt(-127, var8);
+                  aClass3_Sub30_3818.writeInt(var8);
                }
             } else {
                var7 = (int)Class92.light0Position[0];
@@ -1947,11 +1947,11 @@ final class Class140_Sub1_Sub1 extends Model {
                   int var24 = method1905(this.aShortArray3808[var13], this.aShortArray3827[var13], var19, this.aByteArray3816[var13]);
                   int var25 = method1905(this.aShortArray3808[var13], this.aShortArray3827[var13], var22, this.aByteArray3816[var13]);
                   aClass3_Sub30_3818.index = this.aClass121_3814.anInt1639 + var33 * var6;
-                  aClass3_Sub30_3818.putInt(-121, var23);
+                  aClass3_Sub30_3818.writeInt(var23);
                   aClass3_Sub30_3818.index = this.aClass121_3814.anInt1639 + var17 * var6;
-                  aClass3_Sub30_3818.putInt(-120, var24);
+                  aClass3_Sub30_3818.writeInt(var24);
                   aClass3_Sub30_3818.index = this.aClass121_3814.anInt1639 + var20 * var6;
-                  aClass3_Sub30_3818.putInt(-124, var25);
+                  aClass3_Sub30_3818.writeInt(var25);
                }
 
                this.aShortArray3810 = null;
@@ -1970,14 +1970,14 @@ final class Class140_Sub1_Sub1 extends Model {
                for(var9 = 0; var9 < this.anInt3833; ++var9) {
                   var30 = this.aShortArray3841[var9];
                   if(var30 == 0) {
-                     aClass3_Sub30_3818.method801((float) Objects.requireNonNull(this.aShortArray3810)[var9] * var26);
-                     aClass3_Sub30_3818.method801((float)this.aShortArray3826[var9] * var26);
-                     aClass3_Sub30_3818.method801((float)this.aShortArray3837[var9] * var26);
+                     aClass3_Sub30_3818.writeFloat((float) Objects.requireNonNull(this.aShortArray3810)[var9] * var26);
+                     aClass3_Sub30_3818.writeFloat((float)this.aShortArray3826[var9] * var26);
+                     aClass3_Sub30_3818.writeFloat((float)this.aShortArray3837[var9] * var26);
                   } else {
                      var32 = var27 / (float)var30;
-                     aClass3_Sub30_3818.method801((float) Objects.requireNonNull(this.aShortArray3810)[var9] * var32);
-                     aClass3_Sub30_3818.method801((float)this.aShortArray3826[var9] * var32);
-                     aClass3_Sub30_3818.method801((float)this.aShortArray3837[var9] * var32);
+                     aClass3_Sub30_3818.writeFloat((float) Objects.requireNonNull(this.aShortArray3810)[var9] * var32);
+                     aClass3_Sub30_3818.writeFloat((float)this.aShortArray3826[var9] * var32);
+                     aClass3_Sub30_3818.writeFloat((float)this.aShortArray3837[var9] * var32);
                   }
 
                   aClass3_Sub30_3818.index += var6 - 12;
@@ -1986,14 +1986,14 @@ final class Class140_Sub1_Sub1 extends Model {
                for(var9 = 0; var9 < this.anInt3833; ++var9) {
                   var30 = this.aShortArray3841[var9];
                   if(var30 == 0) {
-                     aClass3_Sub30_3818.method762((float) Objects.requireNonNull(this.aShortArray3810)[var9] * var26, (byte)124);
-                     aClass3_Sub30_3818.method762((float)this.aShortArray3826[var9] * var26, (byte)64);
-                     aClass3_Sub30_3818.method762((float)this.aShortArray3837[var9] * var26, (byte)122);
+                     aClass3_Sub30_3818.writeFloatLE((float) Objects.requireNonNull(this.aShortArray3810)[var9] * var26);
+                     aClass3_Sub30_3818.writeFloatLE((float)this.aShortArray3826[var9] * var26);
+                     aClass3_Sub30_3818.writeFloatLE((float)this.aShortArray3837[var9] * var26);
                   } else {
                      var32 = var27 / (float)var30;
-                     aClass3_Sub30_3818.method762((float) Objects.requireNonNull(this.aShortArray3810)[var9] * var32, (byte)91);
-                     aClass3_Sub30_3818.method762((float)this.aShortArray3826[var9] * var32, (byte)86);
-                     aClass3_Sub30_3818.method762((float)this.aShortArray3837[var9] * var32, (byte)111);
+                     aClass3_Sub30_3818.writeFloatLE((float) Objects.requireNonNull(this.aShortArray3810)[var9] * var32);
+                     aClass3_Sub30_3818.writeFloatLE((float)this.aShortArray3826[var9] * var32);
+                     aClass3_Sub30_3818.writeFloatLE((float)this.aShortArray3837[var9] * var32);
                   }
 
                   aClass3_Sub30_3818.index += var6 - 12;
@@ -2005,14 +2005,14 @@ final class Class140_Sub1_Sub1 extends Model {
             aClass3_Sub30_3818.index = this.aClass121_3817.anInt1639;
             if(HDToolKit.aBoolean1790) {
                for(var7 = 0; var7 < this.anInt3833; ++var7) {
-                  aClass3_Sub30_3818.method801(this.aFloatArray3824[var7]);
-                  aClass3_Sub30_3818.method801(this.aFloatArray3847[var7]);
+                  aClass3_Sub30_3818.writeFloat(this.aFloatArray3824[var7]);
+                  aClass3_Sub30_3818.writeFloat(this.aFloatArray3847[var7]);
                   aClass3_Sub30_3818.index += var6 - 8;
                }
             } else {
                for(var7 = 0; var7 < this.anInt3833; ++var7) {
-                  aClass3_Sub30_3818.method762(this.aFloatArray3824[var7], (byte)90);
-                  aClass3_Sub30_3818.method762(this.aFloatArray3847[var7], (byte)76);
+                  aClass3_Sub30_3818.writeFloatLE(this.aFloatArray3824[var7]);
+                  aClass3_Sub30_3818.writeFloatLE(this.aFloatArray3847[var7]);
                   aClass3_Sub30_3818.index += var6 - 8;
                }
             }

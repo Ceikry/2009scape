@@ -83,15 +83,15 @@ final class Class3_Sub13_Sub1 extends Class3_Sub13 {
 
 	static void method229() {
 		DataBuffer buffer = outgoingBuffer;
-		buffer.putString(aClass2323);
+		buffer.writeString(aClass2323);
 		for (char c : aString2324.toCharArray()) {
 			if (c == '-') {
 				c = ':';
 			}
-			buffer.putByte((byte) -7, c);
+			buffer.writeByte(c);
 		}
-		buffer.putByte((byte) -66, 0);
-		buffer.putString(aClass2325);
+		buffer.writeByte(0);
+		buffer.writeString(aClass2325);
 	}
 
 	static void method169() {

@@ -134,18 +134,18 @@ final class Class131 {
             Class158.anInt2005 = -3;
             Class3_Sub13_Sub31.anInt3375 = 1;
             DataBuffer var4 = new DataBuffer(128);
-            var4.putByte((byte) -97, 10);
-            var4.putShort((int) (Math.random() * 99999.0D));
-            var4.putShort(530);
-            var4.putLong(Class3_Sub28_Sub14.username.toLong(), -2037491440);
-            var4.putInt(-123, (int) (Math.random() * 9.9999999E7D));
-            var4.putString(Class3_Sub28_Sub14.password);
-            var4.putInt(-128, (int) (Math.random() * 9.9999999E7D));
-            var4.encryptRSA(Class3_Sub13_Sub14.aBigInteger3162, Class3_Sub13_Sub37.aBigInteger3441);
+            var4.writeByte(10);
+            var4.writeShort((int) (Math.random() * 99999.0D));
+            var4.writeShort(530);
+            var4.writeLong(Class3_Sub28_Sub14.username.toLong());
+            var4.writeInt((int) (Math.random() * 9.9999999E7D));
+            var4.writeString(Class3_Sub28_Sub14.password);
+            var4.writeInt((int) (Math.random() * 9.9999999E7D));
+            var4.rsaEncrypt(Class3_Sub13_Sub14.aBigInteger3162, Class3_Sub13_Sub37.aBigInteger3441);
             Class3_Sub13_Sub1.outgoingBuffer.index = 0;
-            Class3_Sub13_Sub1.outgoingBuffer.putByte((byte) -29, 210);
-            Class3_Sub13_Sub1.outgoingBuffer.putByte((byte) -121, var4.index);
-            Class3_Sub13_Sub1.outgoingBuffer.putBytes(var4.buffer, var4.index, 125);
+            Class3_Sub13_Sub1.outgoingBuffer.writeByte(210);
+            Class3_Sub13_Sub1.outgoingBuffer.writeByte(var4.index);
+            Class3_Sub13_Sub1.outgoingBuffer.putBytes(var4.buffer, var4.index);
          } else {
             Class24.method951();
          }

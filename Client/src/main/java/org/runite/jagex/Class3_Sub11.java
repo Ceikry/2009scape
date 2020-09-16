@@ -110,30 +110,30 @@ final class Class3_Sub11 extends Linkable {
 
       for(int var2 = 0; var2 < this.anInt2343; ++var2) {
          if(HDToolKit.aBoolean1790) {
-            var1.method801((float)this.anIntArray2371[var2]);
-            var1.method801((float)this.anIntArray2358[var2]);
-            var1.method801((float)this.anIntArray2352[var2]);
-            var1.putInt(-123, this.anIntArray2348[var2]);
-            var1.method801(this.aFloatArray2369[var2]);
-            var1.method801(this.aFloatArray2365[var2]);
-            var1.method801(this.aFloatArray2354[var2]);
-            var1.method801((float)this.anIntArray2371[var2] / this.aFloat2373);
-            var1.method801((float)this.anIntArray2352[var2] / this.aFloat2373);
+            var1.writeFloat((float)this.anIntArray2371[var2]);
+            var1.writeFloat((float)this.anIntArray2358[var2]);
+            var1.writeFloat((float)this.anIntArray2352[var2]);
+            var1.writeInt(this.anIntArray2348[var2]);
+            var1.writeFloat(this.aFloatArray2369[var2]);
+            var1.writeFloat(this.aFloatArray2365[var2]);
+            var1.writeFloat(this.aFloatArray2354[var2]);
+            var1.writeFloat((float)this.anIntArray2371[var2] / this.aFloat2373);
+            var1.writeFloat((float)this.anIntArray2352[var2] / this.aFloat2373);
             if(this.aBoolean2347) {
-               var1.method801(this.aFloatArray2346[var2]);
+               var1.writeFloat(this.aFloatArray2346[var2]);
             }
          } else {
-            var1.method762((float)this.anIntArray2371[var2], (byte)94);
-            var1.method762((float)this.anIntArray2358[var2], (byte)121);
-            var1.method762((float)this.anIntArray2352[var2], (byte)101);
-            var1.putInt(-124, this.anIntArray2348[var2]);
-            var1.method762(this.aFloatArray2369[var2], (byte)121);
-            var1.method762(this.aFloatArray2365[var2], (byte)117);
-            var1.method762(this.aFloatArray2354[var2], (byte)77);
-            var1.method762((float)this.anIntArray2371[var2] / this.aFloat2373, (byte)97);
-            var1.method762((float)this.anIntArray2352[var2] / this.aFloat2373, (byte)101);
+            var1.writeFloatLE((float)this.anIntArray2371[var2]);
+            var1.writeFloatLE((float)this.anIntArray2358[var2]);
+            var1.writeFloatLE((float)this.anIntArray2352[var2]);
+            var1.writeInt(this.anIntArray2348[var2]);
+            var1.writeFloatLE(this.aFloatArray2369[var2]);
+            var1.writeFloatLE(this.aFloatArray2365[var2]);
+            var1.writeFloatLE(this.aFloatArray2354[var2]);
+            var1.writeFloatLE((float)this.anIntArray2371[var2] / this.aFloat2373);
+            var1.writeFloatLE((float)this.anIntArray2352[var2] / this.aFloat2373);
             if(this.aBoolean2347) {
-               var1.method762(this.aFloatArray2346[var2], (byte)126);
+               var1.writeFloatLE(this.aFloatArray2346[var2]);
             }
          }
       }
@@ -188,7 +188,7 @@ final class Class3_Sub11 extends Linkable {
                   var8 = this.anIntArrayArray2360[var4];
                   if(var8 != null) {
                      for(var9 = 0; var9 < var8.length; ++var9) {
-                        aClass3_Sub30_2362.putInt(-124, var8[var9]);
+                        aClass3_Sub30_2362.writeInt(var8[var9]);
                      }
                   }
 
@@ -198,9 +198,9 @@ final class Class3_Sub11 extends Linkable {
                }
 
                for(var12 = 1; var12 < var7.length - 1; ++var12) {
-                  var6.putInt(-128, var7[0]);
-                  var6.putInt(-123, var7[var12]);
-                  var6.putInt(-123, var7[var12 + 1]);
+                  var6.writeInt(var7[0]);
+                  var6.writeInt(var7[var12]);
+                  var6.writeInt(var7[var12 + 1]);
                }
             }
          }
@@ -213,7 +213,7 @@ final class Class3_Sub11 extends Linkable {
                   var8 = this.anIntArrayArray2360[var4];
                   if(var8 != null) {
                      for(var9 = 0; var9 < var8.length; ++var9) {
-                        aClass3_Sub30_2362.method757(var8[var9], 79);
+                        aClass3_Sub30_2362.writeIntLE(var8[var9]);
                      }
                   }
 
@@ -223,9 +223,9 @@ final class Class3_Sub11 extends Linkable {
                }
 
                for(var12 = 1; var12 < var7.length - 1; ++var12) {
-                  var6.method757(var7[0], 84);
-                  var6.method757(var7[var12], 103);
-                  var6.method757(var7[var12 + 1], 82);
+                  var6.writeIntLE(var7[0]);
+                  var6.writeIntLE(var7[var12]);
+                  var6.writeIntLE(var7[var12 + 1]);
                }
             }
          }

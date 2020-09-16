@@ -106,7 +106,7 @@ final class Class3_Sub23 extends Linkable {
              var10.method1533(var7);
           }
 
-          return RenderAnimationDefinition.method903(new RSString[]{var6, Objects.requireNonNull(var9).method1544(true), var10.method1544(true)}, (byte)-66);
+          return RenderAnimationDefinition.method903(new RSString[]{var6, Objects.requireNonNull(var9).method1544(true), var10.method1544(true)});
       } catch (RuntimeException var13) {
          throw Class44.clientError(var13, "oj.C(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ',' + 2 + ')');
       }

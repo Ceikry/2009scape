@@ -19,16 +19,16 @@ final class Class103 {
       if(var3 == 0) {
          this.anIntArray1437[0] = this.anIntArray1437[1] = 0;
       } else {
-         this.anIntArray1437[0] = var1.getShort();
-         this.anIntArray1437[1] = var1.getShort();
+         this.anIntArray1437[0] = var1.readUnsignedShort();
+         this.anIntArray1437[1] = var1.readUnsignedShort();
          int var4 = var1.readUnsignedByte();
 
          int var5;
          int var6;
          for(var5 = 0; var5 < 2; ++var5) {
             for(var6 = 0; var6 < this.anIntArray1434[var5]; ++var6) {
-               this.anIntArrayArrayArray1430[var5][0][var6] = var1.getShort();
-               this.anIntArrayArrayArray1432[var5][0][var6] = var1.getShort();
+               this.anIntArrayArrayArray1430[var5][0][var6] = var1.readUnsignedShort();
+               this.anIntArrayArrayArray1432[var5][0][var6] = var1.readUnsignedShort();
             }
          }
 
@@ -38,8 +38,8 @@ final class Class103 {
                   this.anIntArrayArrayArray1430[var5][1][var6] = this.anIntArrayArrayArray1430[var5][0][var6];
                   this.anIntArrayArrayArray1432[var5][1][var6] = this.anIntArrayArrayArray1432[var5][0][var6];
                } else {
-                  this.anIntArrayArrayArray1430[var5][1][var6] = var1.getShort();
-                  this.anIntArrayArrayArray1432[var5][1][var6] = var1.getShort();
+                  this.anIntArrayArrayArray1430[var5][1][var6] = var1.readUnsignedShort();
+                  this.anIntArrayArrayArray1432[var5][1][var6] = var1.readUnsignedShort();
                }
             }
          }

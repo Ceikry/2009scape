@@ -65,14 +65,14 @@ final class Class163_Sub3 extends Class163 {
                int var4;
                for(var4 = 0; Class8.anInt104 > var4; ++var4) {
                   if(var0 == Class50.aLongArray826[var4]) {
-                     Class3_Sub30_Sub1.addChatMessage(Class3_Sub28_Sub14.aClass94_3672, 0, RenderAnimationDefinition.method903(new RSString[]{var3, TextCore.HasFriendsAlready}, (byte)-93), -1);
+                     Class3_Sub30_Sub1.addChatMessage(Class3_Sub28_Sub14.aClass94_3672, 0, RenderAnimationDefinition.method903(new RSString[]{var3, TextCore.HasFriendsAlready}), -1);
                      return;
                   }
                }
 
                for(var4 = 0; var4 < Class3_Sub28_Sub5.anInt3591; ++var4) {
                   if(Class114.ignores[var4] == var0) {
-                     Class3_Sub30_Sub1.addChatMessage(Class3_Sub28_Sub14.aClass94_3672, 0, RenderAnimationDefinition.method903(new RSString[]{TextCore.HasPleaseRemove, var3, TextCore.HasIgnoreToFriends}, (byte)-66), -1);
+                     Class3_Sub30_Sub1.addChatMessage(Class3_Sub28_Sub14.aClass94_3672, 0, RenderAnimationDefinition.method903(new RSString[]{TextCore.HasPleaseRemove, var3, TextCore.HasIgnoreToFriends}), -1);
                      return;
                   }
                }
@@ -89,7 +89,7 @@ final class Class163_Sub3 extends Class163 {
                   ++Class8.anInt104;
                   Class110.anInt1472 = Class3_Sub13_Sub17.anInt3213;
                   Class3_Sub13_Sub1.outgoingBuffer.putOpcode(120);
-                  Class3_Sub13_Sub1.outgoingBuffer.putLong(var0, (byte) -91 ^ 2037491381);
+                  Class3_Sub13_Sub1.outgoingBuffer.writeLong(var0);
                }
             } else {
                Class3_Sub30_Sub1.addChatMessage(Class3_Sub28_Sub14.aClass94_3672, 0, TextCore.HasFriendsListFull, -1);

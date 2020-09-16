@@ -26,11 +26,11 @@ final class CS2Script extends Linkable {
       try {
     	//  System.out.println("CS2Script year=" + year + ", country=" + country + ", day=" + day + ", month=" + month + ", stage=" + stage + ", " + System.currentTimeMillis());
          Class3_Sub13_Sub1.outgoingBuffer.index = 0;
-         Class3_Sub13_Sub1.outgoingBuffer.putByte((byte)-119, 147);//Handshake opcode
-         Class3_Sub13_Sub1.outgoingBuffer.putByte((byte)-128, day);
-         Class3_Sub13_Sub1.outgoingBuffer.putByte((byte)-105, month);
-         Class3_Sub13_Sub1.outgoingBuffer.putShort(year);
-         Class3_Sub13_Sub1.outgoingBuffer.putShort(country);
+         Class3_Sub13_Sub1.outgoingBuffer.writeByte(147);//Handshake opcode
+         Class3_Sub13_Sub1.outgoingBuffer.writeByte(day);
+         Class3_Sub13_Sub1.outgoingBuffer.writeByte(month);
+         Class3_Sub13_Sub1.outgoingBuffer.writeShort(year);
+         Class3_Sub13_Sub1.outgoingBuffer.writeShort(country);
          Class132.anInt1734 = 0;
          GraphicDefinition.anInt548 = 0;
          Unsorted.registryStage = 1;

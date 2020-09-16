@@ -56,7 +56,7 @@ final class Class3_Sub28_Sub9 extends Node {
          } else if (var1 == 2) {
             this.anInt3614 = var2.readInt();
          } else if (var1 == 5) {
-            this.aClass94_3619 = var2.getString();
+            this.aClass94_3619 = var2.readString();
          }
 
       } catch (RuntimeException var5) {

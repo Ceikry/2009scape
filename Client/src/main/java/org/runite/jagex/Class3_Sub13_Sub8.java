@@ -104,14 +104,14 @@ final class Class3_Sub13_Sub8 extends Class3_Sub13 {
 		try {
 			//Client Resize.
 			Class3_Sub13_Sub1.outgoingBuffer.putOpcode(243);
-			Class3_Sub13_Sub1.outgoingBuffer.putByte((byte)-66, Class83.method1411(0));
-			Class3_Sub13_Sub1.outgoingBuffer.putShort(Class23.anInt454);
+			Class3_Sub13_Sub1.outgoingBuffer.writeByte(Class83.method1411(0));
+			Class3_Sub13_Sub1.outgoingBuffer.writeShort(Class23.anInt454);
 			if(var0 != -3) {
 				anInt3103 = -41;
 			}
 
-			Class3_Sub13_Sub1.outgoingBuffer.putShort(Class140_Sub7.anInt2934);
-			Class3_Sub13_Sub1.outgoingBuffer.putByte((byte)-31, Class3_Sub28_Sub14.anInt3671);
+			Class3_Sub13_Sub1.outgoingBuffer.writeShort(Class140_Sub7.anInt2934);
+			Class3_Sub13_Sub1.outgoingBuffer.writeByte(Class3_Sub28_Sub14.anInt3671);
 		} catch (RuntimeException var2) {
 			throw Class44.clientError(var2, "ej.C(" + var0 + ')');
 		}

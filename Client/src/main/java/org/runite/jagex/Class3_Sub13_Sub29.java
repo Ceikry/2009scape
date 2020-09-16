@@ -56,9 +56,9 @@ final class Class3_Sub13_Sub29 extends Class3_Sub13 {
                String var9;
                int var10;
                if (var7 == 0 || var7 == 1 || var7 == 2) {
-                  var8 = new String(var1.getString().method1568());
+                  var8 = new String(var1.readString().method1568());
                   var10 = 0;
-                  var9 = new String(var1.getString().method1568());
+                  var9 = new String(var1.readString().method1568());
                   if(var7 == 1) {
                      var10 = var1.readInt();
                   }
@@ -68,13 +68,13 @@ final class Class3_Sub13_Sub29 extends Class3_Sub13 {
                   var4.aClass64Array2303[var6] = var0.method1447(-41, var9, Class3_Sub13_Sub1.method170(var8));
                } else {
                   if(var7 == 3 || var7 == 4) {
-                     var8 = new String(var1.getString().method1568());
-                     var9 = new String(var1.getString().method1568());
+                     var8 = new String(var1.readString().method1568());
+                     var9 = new String(var1.readString().method1568());
                      var10 = var1.readUnsignedByte();
                      String[] var11 = new String[var10];
 
                      for(int var12 = 0; var10 > var12; ++var12) {
-                        var11[var12] = new String(var1.getString().method1568());
+                        var11[var12] = new String(var1.readString().method1568());
                      }
 
                      byte[][] var21 = new byte[var10][];
@@ -83,7 +83,7 @@ final class Class3_Sub13_Sub29 extends Class3_Sub13 {
                         for(int var13 = 0; var13 < var10; ++var13) {
                            var14 = var1.readInt();
                            var21[var13] = new byte[var14];
-                           var1.method764(var14, var21[var13]);
+                           var1.readBytes(var21[var13], var14);
                         }
                      }
 

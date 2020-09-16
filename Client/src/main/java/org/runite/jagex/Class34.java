@@ -47,8 +47,8 @@ final class Class34 {
       this.anIntArray602 = new int[this.anInt600];
 
       for(int var2 = 0; var2 < this.anInt600; ++var2) {
-         this.anIntArray604[var2] = var1.getShort();
-         this.anIntArray602[var2] = var1.getShort();
+         this.anIntArray604[var2] = var1.readUnsignedShort();
+         this.anIntArray602[var2] = var1.readUnsignedShort();
       }
 
    }

@@ -33,11 +33,11 @@ final class Class57 {
          if(1 == var1) {
             this.anInt896 = var2.readUnsignedByte();
          } else if (var1 == 2) {
-            this.anInt908 = var2.getShort();
+            this.anInt908 = var2.readUnsignedShort();
          } else if (var1 == 3) {
-            this.anInt899 = var2.getShort();
+            this.anInt899 = var2.readUnsignedShort();
          } else if (4 == var1) {
-            this.anInt907 = var2.getShort((byte) 46);
+            this.anInt907 = var2.readSignedShort();
          }
 
       } catch (RuntimeException var6) {

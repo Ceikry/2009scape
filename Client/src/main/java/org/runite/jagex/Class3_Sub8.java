@@ -429,7 +429,7 @@ final class Class3_Sub8 extends Linkable {
             Class83.aBoolean1158 = false;
          } else if(Unsorted.anInt120 != 0 && Class129.anInt1691 != -1 && Class79.method1391(var0 + 91)) {
             Class3_Sub13_Sub1.outgoingBuffer.putOpcode(137);
-            Class3_Sub13_Sub1.outgoingBuffer.putInt(-127, Class129.anInt1691);
+            Class3_Sub13_Sub1.outgoingBuffer.writeInt(Class129.anInt1691);
             Class129.anInt1691 = -1;
          }
 

@@ -483,7 +483,7 @@ final class Class102 implements Interface2 {
          }
 
          DataBuffer var6 = new DataBuffer(var2.getFile(0, 0));
-         int var7 = var6.getShort();
+         int var7 = var6.readUnsignedShort();
          this.aByteArray2143 = new byte[var7];
          this.aByteArray2129 = new byte[var7];
          this.aByteArray2126 = new byte[var7];
@@ -526,31 +526,31 @@ final class Class102 implements Interface2 {
 
          for(var8 = 0; var7 > var8; ++var8) {
             if(aBooleanArray2133[var8]) {
-               this.aByteArray2126[var8] = var6.getByte();
+               this.aByteArray2126[var8] = var6.readSignedByte();
             }
          }
 
          for(var8 = 0; var7 > var8; ++var8) {
             if(aBooleanArray2133[var8]) {
-               this.aByteArray2129[var8] = var6.getByte();
+               this.aByteArray2129[var8] = var6.readSignedByte();
             }
          }
 
          for(var8 = 0; var8 < var7; ++var8) {
             if(aBooleanArray2133[var8]) {
-               this.aByteArray2144[var8] = var6.getByte();
+               this.aByteArray2144[var8] = var6.readSignedByte();
             }
          }
 
          for(var8 = 0; var7 > var8; ++var8) {
             if(aBooleanArray2133[var8]) {
-               this.aByteArray2143[var8] = var6.getByte();
+               this.aByteArray2143[var8] = var6.readSignedByte();
             }
          }
 
          for(var8 = 0; var7 > var8; ++var8) {
             if(aBooleanArray2133[var8]) {
-               this.aShortArray2137[var8] = (short)var6.getShort();
+               this.aShortArray2137[var8] = (short)var6.readUnsignedShort();
             }
          }
 

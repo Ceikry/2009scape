@@ -130,8 +130,8 @@ final class Class121 {
                   wlUpdateStamp = Class3_Sub28_Sub7.updateStamp;
                }
 
-               Class3_Sub13_Sub1.outgoingBuffer.putByte((byte)-67, 255);
-               Class3_Sub13_Sub1.outgoingBuffer.putInt(29984 + -30105, wlUpdateStamp);
+               Class3_Sub13_Sub1.outgoingBuffer.writeByte(255);
+               Class3_Sub13_Sub1.outgoingBuffer.writeInt(wlUpdateStamp);
                Class3_Sub15.aClass89_2429.sendBytes(Class3_Sub13_Sub1.outgoingBuffer.buffer, Class3_Sub13_Sub1.outgoingBuffer.index);
                if(null != WorldListEntry.aClass155_2627) {
                   WorldListEntry.aClass155_2627.method2159(67);

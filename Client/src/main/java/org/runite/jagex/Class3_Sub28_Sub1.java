@@ -58,7 +58,7 @@ final class Class3_Sub28_Sub1 extends Node {
       try {
 
          if(var3 == 1) {
-            this.quickChatMenu = var1.getString();
+            this.quickChatMenu = var1.readString();
          } else {
             int var4;
             int var5;
@@ -68,8 +68,8 @@ final class Class3_Sub28_Sub1 extends Node {
                this.anIntArray3535 = new int[var4];
 
                for(var5 = 0; var5 < var4; ++var5) {
-                  this.anIntArray3534[var5] = var1.getShort();
-                  this.anIntArray3535[var5] = Class3_Sub13_Sub33.method322(var1.getByte());
+                  this.anIntArray3534[var5] = var1.readUnsignedShort();
+                  this.anIntArray3535[var5] = Class3_Sub13_Sub33.method322(var1.readSignedByte());
                }
             } else if (var3 == 3) {
                var4 = var1.readUnsignedByte();
@@ -77,8 +77,8 @@ final class Class3_Sub28_Sub1 extends Node {
                this.anIntArray3533 = new int[var4];
 
                for (var5 = 0; var5 < var4; ++var5) {
-                  this.anIntArray3540[var5] = var1.getShort();
-                  this.anIntArray3533[var5] = Class3_Sub13_Sub33.method322(var1.getByte());
+                  this.anIntArray3540[var5] = var1.readUnsignedShort();
+                  this.anIntArray3533[var5] = Class3_Sub13_Sub33.method322(var1.readSignedByte());
                }
             }
          }
@@ -124,9 +124,9 @@ final class Class3_Sub28_Sub1 extends Node {
       try {
          RSString var1;
          if(Class164_Sub1.anInt3012 == 1 && Class3_Sub13_Sub34.anInt3415 < 2) {
-            var1 = RenderAnimationDefinition.method903(new RSString[]{TextCore.HasUse, TextCore.Spacer, RenderAnimationDefinition.aClass94_378, Class131.aClass94_1724}, (byte)-105);
+            var1 = RenderAnimationDefinition.method903(new RSString[]{TextCore.HasUse, TextCore.Spacer, RenderAnimationDefinition.aClass94_378, Class131.aClass94_1724});
          } else if(GameObject.aBoolean1837 && 2 > Class3_Sub13_Sub34.anInt3415) {
-            var1 = RenderAnimationDefinition.method903(new RSString[]{Class3_Sub28_Sub9.aClass94_3621, TextCore.Spacer, Class40.aClass94_676, Class131.aClass94_1724}, (byte)-95);
+            var1 = RenderAnimationDefinition.method903(new RSString[]{Class3_Sub28_Sub9.aClass94_3621, TextCore.Spacer, Class40.aClass94_676, Class131.aClass94_1724});
          } else if(Class101.aBoolean1419 && ObjectDefinition.aBooleanArray1490[81] && Class3_Sub13_Sub34.anInt3415 > 2) {
             var1 = Unsorted.method802(Class3_Sub13_Sub34.anInt3415 + -2);
          } else {
@@ -136,7 +136,7 @@ final class Class3_Sub28_Sub1 extends Node {
          if(Class3_Sub13_Sub34.anInt3415 > 2) {
             var1 = RenderAnimationDefinition.method903(new RSString[] {
                     var1, Class1.aClass94_58, Class72.method1298((byte) 9, Class3_Sub13_Sub34.anInt3415 - 2), TextCore.HasMoreOptions
-            }, (byte)-62);
+            });
 //            System.out.println(var1.toString());
          }
 

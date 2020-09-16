@@ -182,7 +182,7 @@ final class Class3_Sub13_Sub16 extends Class3_Sub13 {
          } else if(var1 == 1) {
             this.anInt3197 = var2.readUnsignedByte();
          } else if(2 == var1) {
-            this.anInt3193 = var2.getShort();
+            this.anInt3193 = var2.readUnsignedShort();
          } else if (var1 == 3) {
              this.anInt3191 = var2.readUnsignedByte();
          } else if (var1 == 4) {

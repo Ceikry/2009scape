@@ -45,7 +45,7 @@ final class Class77 {
    static void method1368() {
       try {
          Class3_Sub13_Sub1.outgoingBuffer.putOpcode(104);
-         Class3_Sub13_Sub1.outgoingBuffer.putLong(0L, -2037491440);
+         Class3_Sub13_Sub1.outgoingBuffer.writeLong(0L);
       } catch (RuntimeException var2) {
          throw Class44.clientError(var2, "kh.D(" + -90 + ')');
       }

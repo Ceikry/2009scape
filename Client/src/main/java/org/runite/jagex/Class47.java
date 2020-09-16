@@ -396,7 +396,7 @@ final class Class47 {
 
                                     var20 = var11.width + var13;
                                     var21 = 15 + var14;
-                                    Class126.aClass3_Sub28_Sub17_1669.method688(RenderAnimationDefinition.method903(new RSString[]{Class3_Sub13_Sub16.aClass94_3196, Class72.method1298((byte) 9, AnimationDefinition.anInt1862)}, (byte) -69), var20, var21, 16776960, -1);
+                                    Class126.aClass3_Sub28_Sub17_1669.method688(RenderAnimationDefinition.method903(new RSString[]{Class3_Sub13_Sub16.aClass94_3196, Class72.method1298((byte) 9, AnimationDefinition.anInt1862)}), var20, var21, 16776960, -1);
                                     var21 += 15;
                                     Runtime var57 = Runtime.getRuntime();
                                     var23 = (int) ((var57.totalMemory() + -var57.freeMemory()) / 1024L);
@@ -405,7 +405,7 @@ final class Class47 {
                                         var24 = 16711680;
                                     }
 
-                                    Class126.aClass3_Sub28_Sub17_1669.method688(RenderAnimationDefinition.method903(new RSString[]{Unsorted.aClass94_4057, Class72.method1298((byte) 9, var23), TextCore.Memoryk}, (byte) -128), var20, var21, var24, -1);
+                                    Class126.aClass3_Sub28_Sub17_1669.method688(RenderAnimationDefinition.method903(new RSString[]{Unsorted.aClass94_4057, Class72.method1298((byte) 9, var23), TextCore.Memoryk}), var20, var21, var24, -1);
                                     var21 += 15;
                                     if (HDToolKit.highDetail) {
                                         var24 = 16776960;
@@ -414,7 +414,7 @@ final class Class47 {
                                             var24 = 16711680;
                                         }
 
-                                        Class126.aClass3_Sub28_Sub17_1669.method688(RenderAnimationDefinition.method903(new RSString[]{Class118.aClass94_1622, Class72.method1298((byte) 9, var25), TextCore.Memoryk}, (byte) -97), var20, var21, var24, -1);
+                                        Class126.aClass3_Sub28_Sub17_1669.method688(RenderAnimationDefinition.method903(new RSString[]{Class118.aClass94_1622, Class72.method1298((byte) 9, var25), TextCore.Memoryk}), var20, var21, var24, -1);
                                         var21 += 15;
                                     }
 
@@ -431,7 +431,7 @@ final class Class47 {
 
                                     var29 = 10000 * var26 / var25;
                                     var28 = var47 * 100 / var25;
-                                    RSString var55 = RenderAnimationDefinition.method903(new RSString[]{Class20.aClass94_436, Class3_Sub23.method407(0, true, 2, (long) var29), Class3_Sub21.aClass94_2498, Class72.method1298((byte) 9, var28), Class10.aClass94_148}, (byte) -113);
+                                    RSString var55 = RenderAnimationDefinition.method903(new RSString[]{Class20.aClass94_436, Class3_Sub23.method407(0, true, 2, (long) var29), Class3_Sub21.aClass94_2498, Class72.method1298((byte) 9, var28), Class10.aClass94_148});
                                     Class3_Sub13.aClass3_Sub28_Sub17_2379.method688(var55, var20, var21, var24, -1);
                                     Class3_Sub28_Sub14.aBooleanArray3674[var12] = true;
                                     Class163_Sub1_Sub1.aBooleanArray4008[var12] = true;
@@ -683,7 +683,7 @@ final class Class47 {
                                                     }
 
                                                     if ((var50.stackingType == 1 || var11.anInt271 != 1) && var11.anInt271 != -1) {
-                                                        var45 = RenderAnimationDefinition.method903(new RSString[]{ColorCore.ItemInterfaceColor, var45, Class3_Sub8.aClass94_2306, Class36.method1013((byte) -125, var11.anInt271)}, (byte) -89);
+                                                        var45 = RenderAnimationDefinition.method903(new RSString[]{ColorCore.ItemInterfaceColor, var45, Class3_Sub8.aClass94_2306, Class36.method1013((byte) -125, var11.anInt271)});
                                                     }
                                                 }
 
@@ -936,11 +936,11 @@ final class Class47 {
                                                                 if (1 != var42.stackingType && 1 == var11.itemIds[var21]) {
                                                                     var40 = RenderAnimationDefinition.method903(new RSString[]{
                                                                             ColorCore.ItemInterfaceColor, var42.name, Class3_Sub29.aClass94_2584
-                                                                    }, (byte) -67);
+                                                                    });
                                                                 } else {
                                                                     var40 = RenderAnimationDefinition.method903(new RSString[]{
                                                                             ColorCore.ItemInterfaceColor, var42.name, Class3_Sub8.aClass94_2306, Class36.method1013((byte) -100, var11.itemIds[var21])
-                                                                    }, (byte) -73);
+                                                                    });
                                                                 }
 
                                                                 var26 = var13 + var23 * (var11.anInt285 + 115);

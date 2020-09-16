@@ -25,18 +25,18 @@ public final class Class3_Sub28_Sub13 extends Node {
          } else if (var1 == 2) {
             this.anInt3658 = var2.readUnsignedByte();
          } else if (3 == var1) {
-            this.aClass94_3664 = var2.getString();
+            this.aClass94_3664 = var2.readString();
          } else if (var1 == 4) {
             this.anInt3667 = var2.readInt();
          } else if (5 == var1 || var1 == 6) {
-            int var4 = var2.getShort();
+            int var4 = var2.readUnsignedShort();
             this.aHashTable_3663 = new HashTable(Class95.method1585((byte) 94, var4));
 
             for (int var5 = 0; var5 < var4; ++var5) {
                int var6 = var2.readInt();
                Object var7;
                if (var1 == 5) {
-                  var7 = new Class3_Sub29(var2.getString());
+                  var7 = new Class3_Sub29(var2.readString());
                } else {
                   var7 = new Class3_Sub18(var2.readInt());
                }

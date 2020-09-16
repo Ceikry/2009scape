@@ -56,7 +56,7 @@ final class Class79 {
    private void method1389(DataBuffer var1, int var3) {
       try {
          if(1 == var3) {
-            this.anInt1128 = var1.getShort();
+            this.anInt1128 = var1.readUnsignedShort();
             this.anInt1123 = var1.readUnsignedByte();
             this.anInt1125 = var1.readUnsignedByte();
          }
@@ -149,8 +149,8 @@ final class Class79 {
                   }
 
                   if(var2 >= 1) {
-                     Class3_Sub13.anInt2378 = var0.getShort();
-                     Class3_Sub13_Sub5.anInt3071 = var0.getShort();
+                     Class3_Sub13.anInt2378 = var0.readUnsignedShort();
+                     Class3_Sub13_Sub5.anInt3071 = var0.readUnsignedShort();
                   }
 
                   if(var2 >= 3 && var2 < 6) {

@@ -45,14 +45,14 @@ public final class Class3_Sub13_Sub34 extends Class3_Sub13 {
                     for (int var12 = 0; 64 > var12; ++var12) {
                         for (int var13 = 0; var13 < 64; ++var13) {
                             if (!var3 || var12 >= (var4 * 8) && 8 + 8 * var4 > var12 && var13 >= var5 * 8 && 8 + var5 * 8 > var13) {
-                                var2 = var1.getByte();
+                                var2 = var1.readSignedByte();
                                 if (var2 != 0) {
                                     if (null == Class3_Sub13_Sub33.aByteArrayArrayArray3390[var10][var11]) {
                                         Class3_Sub13_Sub33.aByteArrayArrayArray3390[var10][var11] = new byte[4096];
                                     }
 
                                     Class3_Sub13_Sub33.aByteArrayArrayArray3390[var10][var11][(63 + -var13 << 6) + var12] = var2;
-                                    byte var14 = var1.getByte();
+                                    byte var14 = var1.readSignedByte();
                                     if (null == CS2Script.aByteArrayArrayArray2452[var10][var11]) {
                                         CS2Script.aByteArrayArrayArray2452[var10][var11] = new byte[4096];
                                     }
@@ -64,7 +64,7 @@ public final class Class3_Sub13_Sub34 extends Class3_Sub13 {
                     }
                 } else {
                     for (var10 = 0; (!var3 ? 4096 : 64) > var10; ++var10) {
-                        var2 = var1.getByte();
+                        var2 = var1.readSignedByte();
                         if (var2 != 0) {
                             ++var1.index;
                         }
@@ -215,15 +215,15 @@ public final class Class3_Sub13_Sub34 extends Class3_Sub13 {
         try {
             if (var3) {
                 if (var1 == 0) {
-                    this.anInt3404 = var2.getShort();
+                    this.anInt3404 = var2.readUnsignedShort();
                 } else if (1 == var1) {
-                    this.anInt3405 = var2.getShort();
+                    this.anInt3405 = var2.readUnsignedShort();
                 } else if (var1 == 2) {
-                    this.anInt3406 = var2.getShort();
+                    this.anInt3406 = var2.readUnsignedShort();
                 } else if (var1 == 3) {
-                    this.anInt3410 = var2.getShort();
+                    this.anInt3410 = var2.readUnsignedShort();
                 } else if (4 == var1) {
-                    int var4 = var2.getTriByte((byte) 107);
+                    int var4 = var2.readMedium();
                     this.anIntArray3403[2] = Unsorted.bitwiseAnd(var4, 255) >> 12;
                     this.anIntArray3403[1] = Unsorted.bitwiseAnd(var4 >> 4, 4080);
                     this.anIntArray3403[0] = Unsorted.bitwiseAnd(16711680, var4) << 4;

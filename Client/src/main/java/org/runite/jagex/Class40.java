@@ -24,8 +24,8 @@ final class Class40 {
       try {
     	 // System.out.println("Class 40 " + var0 + ", " + var2 + ", " + name.toString());
          Class3_Sub13_Sub1.outgoingBuffer.index = 0;
-         Class3_Sub13_Sub1.outgoingBuffer.putByte((byte)-33, 186);
-         Class3_Sub13_Sub1.outgoingBuffer.putString(name);
+         Class3_Sub13_Sub1.outgoingBuffer.writeByte(186);
+         Class3_Sub13_Sub1.outgoingBuffer.writeString(name);
         // Class3_Sub13_Sub1.outgoingBuffer.putLong(var0, var2 + -2037463204);
          Unsorted.registryStage = 1;
          Class132.anInt1734 = 0;
@@ -118,9 +118,9 @@ final class Class40 {
          }
 
          if(Class3_Sub13_Sub35.aClass131_3421 == null) {
-            if(null != Class3_Sub13_Sub21.aClass3_Sub28_Sub3_3264 && Class133.aClass153_1751.method2135(RenderAnimationDefinition.method903(new RSString[]{Class3_Sub13_Sub21.aClass3_Sub28_Sub3_3264.aClass94_3561, TextCore.HasPlayerLabels}, (byte)-77), -104)) {
-               if(Class133.aClass153_1751.method2127(RenderAnimationDefinition.method903(new RSString[]{Class3_Sub13_Sub21.aClass3_Sub28_Sub3_3264.aClass94_3561, TextCore.HasPlayerLabels}, (byte) -95))) {
-                  Class3_Sub13_Sub35.aClass131_3421 = Class81.method1403(-41, RenderAnimationDefinition.method903(new RSString[]{Class3_Sub13_Sub21.aClass3_Sub28_Sub3_3264.aClass94_3561, TextCore.HasPlayerLabels}, (byte)-92), Class133.aClass153_1751);
+            if(null != Class3_Sub13_Sub21.aClass3_Sub28_Sub3_3264 && Class133.aClass153_1751.method2135(RenderAnimationDefinition.method903(new RSString[]{Class3_Sub13_Sub21.aClass3_Sub28_Sub3_3264.aClass94_3561, TextCore.HasPlayerLabels}), -104)) {
+               if(Class133.aClass153_1751.method2127(RenderAnimationDefinition.method903(new RSString[]{Class3_Sub13_Sub21.aClass3_Sub28_Sub3_3264.aClass94_3561, TextCore.HasPlayerLabels}))) {
+                  Class3_Sub13_Sub35.aClass131_3421 = Class81.method1403(-41, RenderAnimationDefinition.method903(new RSString[]{Class3_Sub13_Sub21.aClass3_Sub28_Sub3_3264.aClass94_3561, TextCore.HasPlayerLabels}), Class133.aClass153_1751);
                } else {
                   var1 = false;
                   ++Class3_Sub13_Sub24.anInt3293;
@@ -166,7 +166,7 @@ final class Class40 {
 
              if(var1) {
                if(Class163_Sub2_Sub1.anInt4019 != 0) {
-                  Class3_Sub13.method164((byte)-24, true, RenderAnimationDefinition.method903(new RSString[]{TextCore.LoadingPleaseWait2, Class140_Sub2.aClass94_2707}, (byte)-127));
+                  Class3_Sub13.method164((byte)-24, true, RenderAnimationDefinition.method903(new RSString[]{TextCore.LoadingPleaseWait2, Class140_Sub2.aClass94_2707}));
                }
 
                Class58.method1194();
@@ -313,7 +313,7 @@ final class Class40 {
                Class3_Sub13_Sub34.aBoolean3416 = false;
                if(GameShell.frame != null && null != Class3_Sub15.aClass89_2429 && 25 == Class143.loadingStage) {
                   Class3_Sub13_Sub1.outgoingBuffer.putOpcode(20);
-                  Class3_Sub13_Sub1.outgoingBuffer.putInt(-126, 1057001181);
+                  Class3_Sub13_Sub1.outgoingBuffer.writeInt(1057001181);
                }
 
                if(!Class3_Sub29.isDynamicSceneGraph) {
@@ -325,8 +325,8 @@ final class Class40 {
                   for(int var8 = var4 - 1; var5 - -1 >= var8; ++var8) {
                      for(int var9 = -1 + var6; var7 - -1 >= var9; ++var9) {
                         if(var4 > var8 || var8 > var5 || var6 > var9 || var9 > var7) {
-                           Class3_Sub13_Sub6.aClass153_3077.method2124(-124, RenderAnimationDefinition.method903(new RSString[]{Class3_Sub30_Sub1.aClass94_3807, Class72.method1298((byte)9, var8), Class3_Sub13_Sub14.aClass94_3161, Class72.method1298((byte)9, var9)}, (byte)-76));
-                           Class3_Sub13_Sub6.aClass153_3077.method2124(-123, RenderAnimationDefinition.method903(new RSString[]{Class161.aClass94_2029, Class72.method1298((byte)9, var8), Class3_Sub13_Sub14.aClass94_3161, Class72.method1298((byte)9, var9)}, (byte)-121));
+                           Class3_Sub13_Sub6.aClass153_3077.method2124(-124, RenderAnimationDefinition.method903(new RSString[]{Class3_Sub30_Sub1.aClass94_3807, Class72.method1298((byte)9, var8), Class3_Sub13_Sub14.aClass94_3161, Class72.method1298((byte)9, var9)}));
+                           Class3_Sub13_Sub6.aClass153_3077.method2124(-123, RenderAnimationDefinition.method903(new RSString[]{Class161.aClass94_2029, Class72.method1298((byte)9, var8), Class3_Sub13_Sub14.aClass94_3161, Class72.method1298((byte)9, var9)}));
                         }
                      }
                   }

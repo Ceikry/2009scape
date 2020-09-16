@@ -36,10 +36,10 @@ final class Class36 {
             return (RSString)null;
          } else {
             for(int var3 = Objects.requireNonNull(var2).length(-123) + -3; var3 > 0; var3 -= 3) {
-               var2 = RenderAnimationDefinition.method903(new RSString[]{var2.method1557(var3, 0, 0), Class3_Sub13_Sub22.aClass94_3268, var2.method1556(var3)}, (byte)-62);
+               var2 = RenderAnimationDefinition.method903(new RSString[]{var2.method1557(var3, 0, 0), Class3_Sub13_Sub22.aClass94_3268, var2.method1556(var3)});
             }
 
-            return var2.length(-50) > 9?RenderAnimationDefinition.method903(new RSString[]{ColorCore.MillionStackColor, var2.method1557(-8 + var2.length(-50), 0, 0), TextCore.MillionM, Class72.LEFT_PARENTHESES, var2, Unsorted.aClass94_995}, (byte)-113):(6 < var2.length(-63)?RenderAnimationDefinition.method903(new RSString[]{ColorCore.ThousandStackColor, var2.method1557(-4 + var2.length(-65), 0, 0), TextCore.ThousandK, Class72.LEFT_PARENTHESES, var2, Unsorted.aClass94_995}, (byte)-112):RenderAnimationDefinition.method903(new RSString[]{ColorCore.DefaultStackColor, var2, Class3_Sub29.aClass94_2584}, (byte)-82));
+            return var2.length(-50) > 9?RenderAnimationDefinition.method903(new RSString[]{ColorCore.MillionStackColor, var2.method1557(-8 + var2.length(-50), 0, 0), TextCore.MillionM, Class72.LEFT_PARENTHESES, var2, Unsorted.aClass94_995}):(6 < var2.length(-63)?RenderAnimationDefinition.method903(new RSString[]{ColorCore.ThousandStackColor, var2.method1557(-4 + var2.length(-65), 0, 0), TextCore.ThousandK, Class72.LEFT_PARENTHESES, var2, Unsorted.aClass94_995}):RenderAnimationDefinition.method903(new RSString[]{ColorCore.DefaultStackColor, var2, Class3_Sub29.aClass94_2584}));
          }
       } catch (RuntimeException var4) {
          throw Class44.clientError(var4, "fi.D(" + var0 + ',' + var1 + ')');

@@ -96,8 +96,8 @@ final class Class135 {
          }
       }
 
-      this.anInt1769 = var1.getShort();
-      this.anInt1767 = var1.getShort();
+      this.anInt1769 = var1.readUnsignedShort();
+      this.anInt1767 = var1.readUnsignedShort();
    }
 
 }

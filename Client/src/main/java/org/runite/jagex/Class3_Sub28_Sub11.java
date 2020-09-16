@@ -58,10 +58,10 @@ final class Class3_Sub28_Sub11 extends Node {
 
                 for (var5 = 0; var4 > var5; ++var5) {
                     boolean var6 = 1 == var1.readUnsignedByte();
-                    int var7 = var1.getTriByte((byte) 95);
+                    int var7 = var1.readMedium();
                     Object var8;
                     if (var6) {
-                        var8 = new Class3_Sub29(var1.getString());
+                        var8 = new Class3_Sub29(var1.readString());
                     } else {
                         var8 = new Class3_Sub18(var1.readInt());
                     }

@@ -191,7 +191,7 @@ final class Class29 {
       try {
 
           if(var3 == 5) {
-            this.anInt556 = var1.getShort();
+            this.anInt556 = var1.readUnsignedShort();
          }
 
       } catch (RuntimeException var5) {

@@ -139,7 +139,7 @@ final class Class3_Sub22 extends Linkable {
       try {
          if((long) 0 != var0) {
             Class3_Sub13_Sub1.outgoingBuffer.putOpcode(104);
-            Class3_Sub13_Sub1.outgoingBuffer.putLong(var0, -2037491440);
+            Class3_Sub13_Sub1.outgoingBuffer.writeLong(var0);
          }
       } catch (RuntimeException var4) {
          throw Class44.clientError(var4, "mf.F(" + var0 + ',' + 0 + ')');
@@ -185,7 +185,7 @@ final class Class3_Sub22 extends Linkable {
 
    static Class75_Sub4 method404(DataBuffer var1) {
       try {
-         return new Class75_Sub4(var1.getShort((byte)93), var1.getShort((byte)55), var1.getShort((byte)81), var1.getShort((byte)95), var1.getTriByte((byte)124), var1.getTriByte((byte)120), var1.readUnsignedByte());
+         return new Class75_Sub4(var1.readSignedShort(), var1.readSignedShort(), var1.readSignedShort(), var1.readSignedShort(), var1.readMedium(), var1.readMedium(), var1.readUnsignedByte());
       } catch (RuntimeException var3) {
          throw Class44.clientError(var3, "mf.C(" + (byte) -110 + ',' + (var1 != null?"{...}":"null") + ')');
       }

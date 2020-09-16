@@ -332,21 +332,21 @@ final class Class3_Sub13_Sub25 extends Class3_Sub13 {
          if(var1 == 0) {
             this.anInt3312 = var2.readUnsignedByte();
          } else if (var1 == 1) {
-             this.anInt3300 = var2.getShort();
+             this.anInt3300 = var2.readUnsignedShort();
          } else if (2 == var1) {
-             this.anInt3308 = var2.getShort();
+             this.anInt3308 = var2.readUnsignedShort();
          } else if (var1 == 3) {
-             this.anInt3310 = var2.getShort();
+             this.anInt3310 = var2.readUnsignedShort();
          } else if (var1 == 4) {
-             this.anInt3301 = var2.getShort();
+             this.anInt3301 = var2.readUnsignedShort();
          } else if (var1 == 5) {
-             this.anInt3303 = var2.getShort();
+             this.anInt3303 = var2.readUnsignedShort();
          } else if (var1 == 6) {
              this.anInt3309 = var2.readUnsignedByte();
          } else if (var1 == 7) {
-             this.anInt3299 = var2.getShort();
+             this.anInt3299 = var2.readUnsignedShort();
          } else if (var1 == 8) {
-             this.anInt3316 = var2.getShort();
+             this.anInt3316 = var2.readUnsignedShort();
          }
 
       } catch (RuntimeException var5) {

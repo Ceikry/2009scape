@@ -35,7 +35,7 @@ final class Class104 implements Interface5 {
          } else if (1 != Signlink.anInt1214 && Signlink.anInt1214 != 2 && Class44.anInt718 != 2) {
             RSString var9 = GameShell.aClass94_8;
             if (Class44.anInt718 != 0) {
-               var9 = RenderAnimationDefinition.method903(new RSString[]{Class163_Sub1_Sub1.aClass94_4007, Class72.method1298((byte) 9, var2.worldId - -7000)}, (byte) -86);
+               var9 = RenderAnimationDefinition.method903(new RSString[]{Class163_Sub1_Sub1.aClass94_4007, Class72.method1298((byte) 9, var2.worldId - -7000)});
             }
 
             if (var1 > -2) {
@@ -43,9 +43,9 @@ final class Class104 implements Interface5 {
             } else {
                RSString var4 = GameShell.aClass94_8;
                if (Class163_Sub2.aClass94_2996 != null) {
-                  var4 = RenderAnimationDefinition.method903(new RSString[]{Class97.aClass94_1380, Class163_Sub2.aClass94_2996}, (byte) -100);
+                  var4 = RenderAnimationDefinition.method903(new RSString[]{Class97.aClass94_1380, Class163_Sub2.aClass94_2996});
                }
-               RSString var5 = RenderAnimationDefinition.method903(new RSString[]{RSString.of("http:)4)4"), var2.address, var9, Class3_Sub31.aClass94_2608, Class72.method1298((byte) 9, Class3_Sub20.language), aClass94_2175, Class72.method1298((byte) 9, Class3_Sub26.anInt2554), var4, Unsorted.aClass94_1133, !Class3_Sub28_Sub11.aBoolean3641 ? Class164_Sub1.aClass94_3013 : Class14.aClass94_339, Class38_Sub1.aClass94_2610, !Class163_Sub2_Sub1.aBoolean4018 ? Class164_Sub1.aClass94_3013 : Class14.aClass94_339, Class118.aClass94_1617, Class3_Sub28_Sub19.aBoolean3779 ? Class14.aClass94_339 : Class164_Sub1.aClass94_3013}, (byte) -110);
+               RSString var5 = RenderAnimationDefinition.method903(new RSString[]{RSString.of("http:)4)4"), var2.address, var9, Class3_Sub31.aClass94_2608, Class72.method1298((byte) 9, Class3_Sub20.language), aClass94_2175, Class72.method1298((byte) 9, Class3_Sub26.anInt2554), var4, Unsorted.aClass94_1133, !Class3_Sub28_Sub11.aBoolean3641 ? Class164_Sub1.aClass94_3013 : Class14.aClass94_339, Class38_Sub1.aClass94_2610, !Class163_Sub2_Sub1.aBoolean4018 ? Class164_Sub1.aClass94_3013 : Class14.aClass94_339, Class118.aClass94_1617, Class3_Sub28_Sub19.aBoolean3779 ? Class14.aClass94_339 : Class164_Sub1.aClass94_3013});
 
                try {
                   Objects.requireNonNull(Class126.aClient1671.getAppletContext()).showDocument(var5.toURL(), "_self");
@@ -122,11 +122,11 @@ final class Class104 implements Interface5 {
                    }
 
                    if(Class164_Sub1.anInt3012 == 1) {
-                      Class3_Sub24_Sub4.method1177(Class99.anInt1403, var26, (byte)-58, RenderAnimationDefinition.method903(new RSString[]{RenderAnimationDefinition.aClass94_378, ColorCore.PMColor, var16.name}, (byte)-75), var12, (short)14, TextCore.HasUse, var27);
+                      Class3_Sub24_Sub4.method1177(Class99.anInt1403, var26, (byte)-58, RenderAnimationDefinition.method903(new RSString[]{RenderAnimationDefinition.aClass94_378, ColorCore.PMColor, var16.name}), var12, (short)14, TextCore.HasUse, var27);
                    } else if(GameObject.aBoolean1837) {
                       Class3_Sub28_Sub9 var17 = -1 == Unsorted.anInt1038?null:Class61.method1210(Unsorted.anInt1038);
                       if(0 != (Class164.anInt2051 & 4) && (var17 == null || var17.anInt3614 != var16.method1691(var17.anInt3614, Unsorted.anInt1038, (byte) 98))) {
-                         Class3_Sub24_Sub4.method1177(Unsorted.anInt1887, var26, (byte)-77, RenderAnimationDefinition.method903(new RSString[]{Class40.aClass94_676, ColorCore.PMColor, var16.name}, (byte)-122), var12, (short)38, Class3_Sub28_Sub9.aClass94_3621, var27);
+                         Class3_Sub24_Sub4.method1177(Unsorted.anInt1887, var26, (byte)-77, RenderAnimationDefinition.method903(new RSString[]{Class40.aClass94_676, ColorCore.PMColor, var16.name}), var12, (short)38, Class3_Sub28_Sub9.aClass94_3621, var27);
                       }
                    } else {
                       RSString[] var29 = var16.options;
@@ -167,12 +167,12 @@ final class Class104 implements Interface5 {
                                   var19 = 1001;
                                }
 
-                               Class3_Sub24_Sub4.method1177(var20, var26, (byte)-91, RenderAnimationDefinition.method903(new RSString[]{ColorCore.ObjectNameColor, var16.name}, (byte)-95), var12, var19, var29[var18], var27);
+                               Class3_Sub24_Sub4.method1177(var20, var26, (byte)-91, RenderAnimationDefinition.method903(new RSString[]{ColorCore.ObjectNameColor, var16.name}), var12, var19, var29[var18], var27);
                             }
                          }
                       }
 
-                      Class3_Sub24_Sub4.method1177(Class131.anInt1719, (long)var16.objectId, (byte)-26, RenderAnimationDefinition.method903(new RSString[]{ColorCore.ObjectNameColor, var16.name}, (byte)-65), var12, (short)1004, TextCore.HasExamine, var27);
+                      Class3_Sub24_Sub4.method1177(Class131.anInt1719, (long)var16.objectId, (byte)-26, RenderAnimationDefinition.method903(new RSString[]{ColorCore.ObjectNameColor, var16.name}), var12, (short)1004, TextCore.HasExamine, var27);
                    }
                 }
 
@@ -245,11 +245,11 @@ final class Class104 implements Interface5 {
                          var18 = var32.aClass140_Sub7_3676.anInt2936;
                          ItemDefinition var40 = Class38.getItemDefinition(var18, (byte)71);
                          if(Class164_Sub1.anInt3012 == 1) {
-                            Class3_Sub24_Sub4.method1177(Class99.anInt1403, (long)var18, (byte)-75, RenderAnimationDefinition.method903(new RSString[]{RenderAnimationDefinition.aClass94_378, ColorCore.BankItemColor, var40.name}, (byte)-104), var12, (short)33, TextCore.HasUse, var27);
+                            Class3_Sub24_Sub4.method1177(Class99.anInt1403, (long)var18, (byte)-75, RenderAnimationDefinition.method903(new RSString[]{RenderAnimationDefinition.aClass94_378, ColorCore.BankItemColor, var40.name}), var12, (short)33, TextCore.HasUse, var27);
                          } else if(GameObject.aBoolean1837) {
                             Class3_Sub28_Sub9 var39 = Unsorted.anInt1038 == -1?null:Class61.method1210(Unsorted.anInt1038);
                             if((Class164.anInt2051 & 1) != 0 && (null == var39 || var39.anInt3614 != var40.method1115(var39.anInt3614, 100, Unsorted.anInt1038))) {
-                               Class3_Sub24_Sub4.method1177(Unsorted.anInt1887, (long)var18, (byte)-70, RenderAnimationDefinition.method903(new RSString[]{Class40.aClass94_676, ColorCore.BankItemColor, var40.name}, (byte)-80), var12, (short)39, Class3_Sub28_Sub9.aClass94_3621, var27);
+                               Class3_Sub24_Sub4.method1177(Unsorted.anInt1887, (long)var18, (byte)-70, RenderAnimationDefinition.method903(new RSString[]{Class40.aClass94_676, ColorCore.BankItemColor, var40.name}), var12, (short)39, Class3_Sub28_Sub9.aClass94_3621, var27);
                             }
                          } else {
                             RSString[] var34 = var40.groundOptions;
@@ -289,11 +289,11 @@ final class Class104 implements Interface5 {
                                      var35 = 24;
                                   }
 
-                                  Class3_Sub24_Sub4.method1177(var23, (long)var18, (byte)-43, RenderAnimationDefinition.method903(new RSString[]{ColorCore.GroundItemColor, var40.name}, (byte)-66), var12, var35, var34[var21], var27);
+                                  Class3_Sub24_Sub4.method1177(var23, (long)var18, (byte)-43, RenderAnimationDefinition.method903(new RSString[]{ColorCore.GroundItemColor, var40.name}), var12, var35, var34[var21], var27);
                                }
                             }
 
-                            Class3_Sub24_Sub4.method1177(Class131.anInt1719, (long)var18, (byte)-43, RenderAnimationDefinition.method903(new RSString[]{ColorCore.GroundItemColor, var40.name}, (byte)-70), var12, (short)1002, TextCore.HasExamine, var27);
+                            Class3_Sub24_Sub4.method1177(Class131.anInt1719, (long)var18, (byte)-43, RenderAnimationDefinition.method903(new RSString[]{ColorCore.GroundItemColor, var40.name}), var12, (short)1002, TextCore.HasExamine, var27);
                          }
                       }
                    }
