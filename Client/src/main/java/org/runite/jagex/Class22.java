@@ -1,5 +1,7 @@
 package org.runite.jagex;
 
+import org.rs09.client.rendering.opengl.enums.GLBeginMode;
+
 import java.nio.IntBuffer;
 import javax.media.opengl.GL;
 
@@ -18,21 +20,22 @@ public final class Class22 {
 
    public static void drawHorizontalLine(int x, int y, int width, int rgb) {
       HDToolKit.method1835();
-      float var4 = (float)x + 0.3F;
-      float var5 = var4 + (float)width;
-      float var6 = (float)HDToolKit.anInt1811 - ((float)y + 0.3F);
-      GL var7 = HDToolKit.gl;
-      var7.glBegin(1);
-      var7.glColor3ub((byte)(rgb >> 16), (byte)(rgb >> 8), (byte)rgb);
-      var7.glVertex2f(var4, var6);
-      var7.glVertex2f(var5, var6);
-      var7.glEnd();
+      float startX = (float)x + 0.3F;
+      float endX = startX + (float)width;
+      float yPos = (float)HDToolKit.height - ((float)y + 0.3F);
+
+      GL gl = HDToolKit.gl;
+      gl.glBegin(GLBeginMode.LINES);
+      gl.glColor3ub((byte)(rgb >> 16), (byte)(rgb >> 8), (byte)rgb);
+      gl.glVertex2f(startX, yPos);
+      gl.glVertex2f(endX, yPos);
+      gl.glEnd();
    }
 
    static void method924(int var0, int var1, int var2, int var3) {
       HDToolKit.method1835();
       float var4 = (float)var0 + 0.3F;
-      float var5 = (float)HDToolKit.anInt1811 - ((float)var1 + 0.3F);
+      float var5 = (float)HDToolKit.height - ((float)var1 + 0.3F);
       float var6 = var5 - (float)var2;
       javax.media.opengl.GL var7 = HDToolKit.gl;
       var7.glBegin(1);
@@ -45,8 +48,8 @@ public final class Class22 {
    public static void resetClipping() {
       anInt449 = 0;
       anInt448 = 0;
-      anInt450 = HDToolKit.anInt1820;
-      anInt451 = HDToolKit.anInt1811;
+      anInt450 = HDToolKit.width;
+      anInt451 = HDToolKit.height;
       javax.media.opengl.GL var0 = HDToolKit.gl;
       var0.glDisable(3089);
       method921();
@@ -55,7 +58,7 @@ public final class Class22 {
    static void method926(int[] var0, int var1, int var2, int var3, int var4) {
       HDToolKit.method1835();
       javax.media.opengl.GL var5 = HDToolKit.gl;
-      var5.glRasterPos2i(var1, HDToolKit.anInt1811 - var2);
+      var5.glRasterPos2i(var1, HDToolKit.height - var2);
       var5.glPixelZoom(1.0F, -1.0F);
       var5.glDisable(3042);
       var5.glDisable(3008);
@@ -69,7 +72,7 @@ public final class Class22 {
       HDToolKit.method1835();
       float var5 = (float)var0 + 0.3F;
       float var6 = var5 + (float)(var2 - 1);
-      float var7 = (float)HDToolKit.anInt1811 - ((float)var1 + 0.3F);
+      float var7 = (float)HDToolKit.height - ((float)var1 + 0.3F);
       float var8 = var7 - (float)(var3 - 1);
       javax.media.opengl.GL var9 = HDToolKit.gl;
       var9.glBegin(2);
@@ -85,7 +88,7 @@ public final class Class22 {
       HDToolKit.method1835();
       float var6 = (float)var0 + 0.3F;
       float var7 = var6 + (float)(var2 - 1);
-      float var8 = (float)HDToolKit.anInt1811 - ((float)var1 + 0.3F);
+      float var8 = (float)HDToolKit.height - ((float)var1 + 0.3F);
       float var9 = var8 - (float)(var3 - 1);
       javax.media.opengl.GL var10 = HDToolKit.gl;
       var10.glBegin(2);
@@ -133,30 +136,30 @@ public final class Class22 {
          var25.glColor3ub((byte)(var4 >> 16), (byte)(var4 >> 8), (byte)var4);
          var25.glBegin(6);
          if(var12 <= var11) {
-            var25.glVertex2f((float)var20, (float)(HDToolKit.anInt1811 - var24));
-            var25.glVertex2f((float)var19, (float)(HDToolKit.anInt1811 - var23));
-            var25.glVertex2f((float)var18, (float)(HDToolKit.anInt1811 - var22));
-            var25.glVertex2f((float)var17, (float)(HDToolKit.anInt1811 - var21));
+            var25.glVertex2f((float)var20, (float)(HDToolKit.height - var24));
+            var25.glVertex2f((float)var19, (float)(HDToolKit.height - var23));
+            var25.glVertex2f((float)var18, (float)(HDToolKit.height - var22));
+            var25.glVertex2f((float)var17, (float)(HDToolKit.height - var21));
          } else {
-            var25.glVertex2f((float)var17, (float)(HDToolKit.anInt1811 - var21));
-            var25.glVertex2f((float)var18, (float)(HDToolKit.anInt1811 - var22));
-            var25.glVertex2f((float)var19, (float)(HDToolKit.anInt1811 - var23));
-            var25.glVertex2f((float)var20, (float)(HDToolKit.anInt1811 - var24));
+            var25.glVertex2f((float)var17, (float)(HDToolKit.height - var21));
+            var25.glVertex2f((float)var18, (float)(HDToolKit.height - var22));
+            var25.glVertex2f((float)var19, (float)(HDToolKit.height - var23));
+            var25.glVertex2f((float)var20, (float)(HDToolKit.height - var24));
          }
 
          var25.glEnd();
       }
    }
 
-   public static void fillRectangle(int var0, int var1, int var2, int var3, int var4, int var5) {
+   public static void fillRectangle(int x, int y, int w, int h, int rgb, int alpha) {
       HDToolKit.method1835();
-      float var6 = (float)var0;
-      float var7 = var6 + (float)var2;
-      float var8 = (float)(HDToolKit.anInt1811 - var1);
-      float var9 = var8 - (float)var3;
+      float var6 = (float)x;
+      float var7 = var6 + (float)w;
+      float var8 = (float)(HDToolKit.height - y);
+      float var9 = var8 - (float)h;
       javax.media.opengl.GL var10 = HDToolKit.gl;
       var10.glBegin(6);
-      var10.glColor4ub((byte)(var4 >> 16), (byte)(var4 >> 8), (byte)var4, var5 > 255?-1:(byte)var5);
+      var10.glColor4ub((byte)(rgb >> 16), (byte)(rgb >> 8), (byte)rgb, alpha > 255?-1:(byte)alpha);
       var10.glVertex2f(var6, var8);
       var10.glVertex2f(var6, var9);
       var10.glVertex2f(var7, var9);
@@ -184,7 +187,7 @@ public final class Class22 {
       javax.media.opengl.GL var4 = HDToolKit.gl;
       var4.glEnable(3089);
       if(anInt449 <= anInt450 && anInt448 <= anInt451) {
-         var4.glScissor(anInt449, HDToolKit.anInt1811 - anInt451, anInt450 - anInt449, anInt451 - anInt448);
+         var4.glScissor(anInt449, HDToolKit.height - anInt451, anInt450 - anInt449, anInt451 - anInt448);
       } else {
          var4.glScissor(0, 0, 0, 0);
       }
@@ -200,8 +203,8 @@ public final class Class22 {
       HDToolKit.method1835();
       float var5 = (float)var0 + 0.3F;
       float var6 = (float)var2 + 0.3F;
-      float var7 = (float)HDToolKit.anInt1811 - ((float)var1 + 0.3F);
-      float var8 = (float)HDToolKit.anInt1811 - ((float)var3 + 0.3F);
+      float var7 = (float)HDToolKit.height - ((float)var1 + 0.3F);
+      float var8 = (float)HDToolKit.height - ((float)var3 + 0.3F);
       javax.media.opengl.GL var9 = HDToolKit.gl;
       var9.glBegin(2);
       var9.glColor3ub((byte)(var4 >> 16), (byte)(var4 >> 8), (byte)var4);
@@ -214,7 +217,7 @@ public final class Class22 {
       HDToolKit.method1835();
       float var5 = (float)var0;
       float var6 = var5 + (float)var2;
-      float var7 = (float)(HDToolKit.anInt1811 - var1);
+      float var7 = (float)(HDToolKit.height - var1);
       float var8 = var7 - (float)var3;
       javax.media.opengl.GL var9 = HDToolKit.gl;
       var9.glBegin(6);
@@ -235,12 +238,12 @@ public final class Class22 {
          top = 0;
       }
 
-      if(right > HDToolKit.anInt1820) {
-         right = HDToolKit.anInt1820;
+      if(right > HDToolKit.width) {
+         right = HDToolKit.width;
       }
 
-      if(bottom > HDToolKit.anInt1811) {
-         bottom = HDToolKit.anInt1811;
+      if(bottom > HDToolKit.height) {
+         bottom = HDToolKit.height;
       }
 
       anInt449 = left;
@@ -250,7 +253,7 @@ public final class Class22 {
       javax.media.opengl.GL var4 = HDToolKit.gl;
       var4.glEnable(3089);
       if(anInt449 <= anInt450 && anInt448 <= anInt451) {
-         var4.glScissor(anInt449, HDToolKit.anInt1811 - anInt451, anInt450 - anInt449, anInt451 - anInt448);
+         var4.glScissor(anInt449, HDToolKit.height - anInt451, anInt450 - anInt449, anInt451 - anInt448);
       } else {
          var4.glScissor(0, 0, 0, 0);
       }

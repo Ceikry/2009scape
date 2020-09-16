@@ -63,7 +63,7 @@ final class HDIndexedSprite extends AbstractIndexedSprite {
       HDToolKit.bindTexture2D(this.anInt2675);
       this.method1679();
       var4.glColor4f(1.0F, 1.0F, 1.0F, (float)var3 / 256.0F);
-      var4.glTranslatef((float)var1, (float)(HDToolKit.anInt1811 - var2), 0.0F);
+      var4.glTranslatef((float)var1, (float)(HDToolKit.height - var2), 0.0F);
       var4.glCallList(this.anInt2676);
       var4.glLoadIdentity();
    }
@@ -85,7 +85,7 @@ final class HDIndexedSprite extends AbstractIndexedSprite {
       javax.media.opengl.GL var3 = HDToolKit.gl;
       HDToolKit.bindTexture2D(this.anInt2675);
       this.method1679();
-      var3.glTranslatef((float)var1, (float)(HDToolKit.anInt1811 - var2), 0.0F);
+      var3.glTranslatef((float)var1, (float)(HDToolKit.height - var2), 0.0F);
       var3.glCallList(this.anInt2676);
       var3.glLoadIdentity();
    }

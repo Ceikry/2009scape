@@ -1,6 +1,5 @@
 package org.rs09.client.rendering
 
-import org.rs09.client.rendering.java.JavaToolkit
 import org.runite.jagex.*
 
 /**
@@ -21,19 +20,16 @@ object RenderingUtils {
     val height: Int
         get() = Class140_Sub7.anInt2934
 
-    /*
-                windowHeight = Class140_Sub7.anInt2934;
-            windowWidth = Class23.anInt454;
-     */
-
     fun fillRect(x: Int, y: Int, w: Int, h: Int, rgb: Int, alpha: Int) {
-        if (hd) Class22.fillRectangle(x, y, w, h, rgb, alpha)
-        else Class74.fillRectangle(x, y, w, h, rgb, alpha)
+        Toolkit.getActiveToolkit().fillRect(x, y, w, h, rgb, alpha)
+//        if (hd) Class22.fillRectangle(x, y, w, h, rgb, alpha)
+//        else Class74.fillRectangle(x, y, w, h, rgb, alpha)
     }
 
     fun drawHorizontalLine(x: Int, y: Int, w: Int, rgb: Int) {
-        if (hd) Class22.drawHorizontalLine(x, y, w, rgb)
-        else Toolkit.JAVA_TOOLKIT.drawHorizontalLine(x, y, w, rgb)
+        Toolkit.getActiveToolkit().drawHorizontalLine(x, y, w, rgb)
+//        if (hd) Class22.drawHorizontalLine(x, y, w, rgb)
+//        else Toolkit.JAVA_TOOLKIT.drawHorizontalLine(x, y, w, rgb)
     }
 
     fun drawText(str: String, x: Int, y: Int, rgb: Int) {

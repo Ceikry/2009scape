@@ -37,13 +37,13 @@ public final class Class3_Sub28_Sub17_Sub2 extends Class3_Sub28_Sub17 {
          var8 = HDToolKit.gl;
          HDToolKit.bindTexture2D(this.anInt4084);
          var8.glColor3ub((byte)(var6 >> 16), (byte)(var6 >> 8), (byte)var6);
-         var8.glTranslatef((float)var2, (float)(HDToolKit.anInt1811 - var3), 0.0F);
+         var8.glTranslatef((float)var2, (float)(HDToolKit.height - var3), 0.0F);
          var8.glCallList(this.anIntArray4085[var1]);
       } else {
          HDToolKit.method1824();
          var8 = HDToolKit.gl;
          var8.glColor3ub((byte)(var6 >> 16), (byte)(var6 >> 8), (byte)var6);
-         var8.glTranslatef((float)var2, (float)(HDToolKit.anInt1811 - var3), 0.0F);
+         var8.glTranslatef((float)var2, (float)(HDToolKit.height - var3), 0.0F);
          float var9 = (float)(var1 % 16) / 16.0F;
          float var10 = (float)(var1 / 16) / 16.0F;
          float var11 = var9 + (float)this.anIntArray3709[var1] / (float)this.anInt4087;
@@ -87,7 +87,7 @@ public final class Class3_Sub28_Sub17_Sub2 extends Class3_Sub28_Sub17 {
       javax.media.opengl.GL var9 = HDToolKit.gl;
       HDToolKit.bindTexture2D(this.anInt4084);
       var9.glColor4ub((byte)(var6 >> 16), (byte)(var6 >> 8), (byte)var6, var7 > 255?-1:(byte)var7);
-      var9.glTranslatef((float)var2, (float)(HDToolKit.anInt1811 - var3), 0.0F);
+      var9.glTranslatef((float)var2, (float)(HDToolKit.height - var3), 0.0F);
       var9.glCallList(this.anIntArray4085[var1]);
       var9.glLoadIdentity();
    }

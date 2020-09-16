@@ -22,8 +22,8 @@ public final class Class74 {
    }
 
    static void method1311(int var0, int var1, int var2, int var3, int var4) {
-      drawHorizontalLine(var0, var1, var2, var4);
-      drawHorizontalLine(var0, var1 + var3 - 1, var2, var4);
+      toolkit.drawHorizontalLine(var0, var1, var2, var4);
+      toolkit.drawHorizontalLine(var0, var1 + var3 - 1, var2, var4);
       method1318(var0, var1, var3, var4);
       method1318(var0 + var2 - 1, var1, var3, var4);
    }

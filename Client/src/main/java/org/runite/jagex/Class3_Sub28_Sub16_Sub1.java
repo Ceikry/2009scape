@@ -54,16 +54,16 @@ class Class3_Sub28_Sub16_Sub1 extends Class3_Sub28_Sub16 {
          float var10 = (float)this.anInt3696 / (float)this.anInt4079;
          var4.glMultiTexCoord2f('\u84c1', var7, var6);
          var4.glTexCoord2f(var9, 0.0F);
-         var4.glVertex2f((float)(var1 + this.anInt3707), (float)(HDToolKit.anInt1811 - var2));
+         var4.glVertex2f((float)(var1 + this.anInt3707), (float)(HDToolKit.height - var2));
          var4.glMultiTexCoord2f('\u84c1', var5, var6);
          var4.glTexCoord2f(0.0F, 0.0F);
-         var4.glVertex2f((float)var1, (float)(HDToolKit.anInt1811 - var2));
+         var4.glVertex2f((float)var1, (float)(HDToolKit.height - var2));
          var4.glMultiTexCoord2f('\u84c1', var5, var8);
          var4.glTexCoord2f(0.0F, var10);
-         var4.glVertex2f((float)var1, (float)(HDToolKit.anInt1811 - (var2 + this.anInt3696)));
+         var4.glVertex2f((float)var1, (float)(HDToolKit.height - (var2 + this.anInt3696)));
          var4.glMultiTexCoord2f('\u84c1', var7, var8);
          var4.glTexCoord2f(var9, var10);
-         var4.glVertex2f((float)(var1 + this.anInt3707), (float)(HDToolKit.anInt1811 - (var2 + this.anInt3696)));
+         var4.glVertex2f((float)(var1 + this.anInt3707), (float)(HDToolKit.height - (var2 + this.anInt3696)));
          var4.glEnd();
          var4.glTexEnvi(8960, '\u8571', 8448);
          var4.glTexEnvi(8960, '\u8580', 5890);
@@ -83,7 +83,7 @@ class Class3_Sub28_Sub16_Sub1 extends Class3_Sub28_Sub16 {
       var8 *= (float)var5;
       int var9 = var1 + this.anInt3701;
       int var10 = var9 + this.anInt3707 * var4;
-      int var11 = HDToolKit.anInt1811 - var2 - this.anInt3698;
+      int var11 = HDToolKit.height - var2 - this.anInt3698;
       int var12 = var11 - this.anInt3696 * var5;
       float var13 = (float)var3 / 256.0F;
       var6.glBegin(6);
@@ -136,16 +136,16 @@ class Class3_Sub28_Sub16_Sub1 extends Class3_Sub28_Sub16 {
          float var28 = (float)(65536 * this.anInt4079);
          var10.glMultiTexCoord2f('\u84c1', var25, 0.0F);
          var10.glTexCoord2f((float)var19 / var27, (float)var20 / var28);
-         var10.glVertex2f((float)(var1 + var3), (float)(HDToolKit.anInt1811 - var2));
+         var10.glVertex2f((float)(var1 + var3), (float)(HDToolKit.height - var2));
          var10.glMultiTexCoord2f('\u84c1', 0.0F, 0.0F);
          var10.glTexCoord2f((float)var17 / var27, (float)var18 / var28);
-         var10.glVertex2f((float)var1, (float)(HDToolKit.anInt1811 - var2));
+         var10.glVertex2f((float)var1, (float)(HDToolKit.height - var2));
          var10.glMultiTexCoord2f('\u84c1', 0.0F, var26);
          var10.glTexCoord2f((float)var21 / var27, (float)var22 / var28);
-         var10.glVertex2f((float)var1, (float)(HDToolKit.anInt1811 - (var2 + var4)));
+         var10.glVertex2f((float)var1, (float)(HDToolKit.height - (var2 + var4)));
          var10.glMultiTexCoord2f('\u84c1', var25, var26);
          var10.glTexCoord2f((float)var23 / var27, (float)var24 / var28);
-         var10.glVertex2f((float)(var1 + var3), (float)(HDToolKit.anInt1811 - (var2 + var4)));
+         var10.glVertex2f((float)(var1 + var3), (float)(HDToolKit.height - (var2 + var4)));
          var10.glEnd();
          var10.glTexEnvi(8960, '\u8571', 8448);
          var10.glTexEnvi(8960, '\u8580', 5890);
@@ -161,7 +161,7 @@ class Class3_Sub28_Sub16_Sub1 extends Class3_Sub28_Sub16 {
       javax.media.opengl.GL var3 = HDToolKit.gl;
       HDToolKit.bindTexture2D(this.anInt4077);
       this.method644(1);
-      var3.glTranslatef((float)var1, (float)(HDToolKit.anInt1811 - var2), 0.0F);
+      var3.glTranslatef((float)var1, (float)(HDToolKit.height - var2), 0.0F);
       float var4 = (float)this.anInt3707 / (float)this.anInt4075;
       float var5 = (float)this.anInt3696 / (float)this.anInt4079;
       var3.glBegin(6);
@@ -184,7 +184,7 @@ class Class3_Sub28_Sub16_Sub1 extends Class3_Sub28_Sub16 {
       javax.media.opengl.GL var3 = HDToolKit.gl;
       HDToolKit.bindTexture2D(this.anInt4077);
       this.method644(1);
-      var3.glTranslatef((float)var1, (float)(HDToolKit.anInt1811 - var2), 0.0F);
+      var3.glTranslatef((float)var1, (float)(HDToolKit.height - var2), 0.0F);
       var3.glCallList(this.anInt4076);
       var3.glLoadIdentity();
    }
@@ -196,7 +196,7 @@ class Class3_Sub28_Sub16_Sub1 extends Class3_Sub28_Sub16 {
       this.method644(2);
       var1 -= this.anInt3701 << 4;
       var2 -= this.anInt3698 << 4;
-      var7.glTranslatef((float)var3 / 16.0F, (float)HDToolKit.anInt1811 - (float)var4 / 16.0F, 0.0F);
+      var7.glTranslatef((float)var3 / 16.0F, (float)HDToolKit.height - (float)var4 / 16.0F, 0.0F);
       var7.glRotatef((float)(-var5) * 0.005493164F, 0.0F, 0.0F, 1.0F);
 
        var7.glTranslatef((float)(-var1) / 16.0F, (float)var2 / 16.0F, 0.0F);
@@ -241,7 +241,7 @@ class Class3_Sub28_Sub16_Sub1 extends Class3_Sub28_Sub16 {
          this.method644(2);
          float var14 = (float)var1;
          float var15 = var14 + (float)var3;
-         float var16 = (float)(HDToolKit.anInt1811 - var2);
+         float var16 = (float)(HDToolKit.height - var2);
          float var17 = var16 - (float)var4;
          float var18 = (float)this.anInt3707 / (float)this.anInt4075;
          float var19 = (float)this.anInt3696 / (float)this.anInt4079;
@@ -265,7 +265,7 @@ class Class3_Sub28_Sub16_Sub1 extends Class3_Sub28_Sub16 {
       javax.media.opengl.GL var3 = HDToolKit.gl;
       HDToolKit.bindTexture2D(this.anInt4077);
       this.method644(1);
-      var3.glTranslatef((float)var1, (float)(HDToolKit.anInt1811 - var2), 0.0F);
+      var3.glTranslatef((float)var1, (float)(HDToolKit.height - var2), 0.0F);
       var3.glCallList(this.anInt4076);
       var3.glLoadIdentity();
    }
@@ -292,7 +292,7 @@ class Class3_Sub28_Sub16_Sub1 extends Class3_Sub28_Sub16 {
       this.method644(1);
       var1 -= this.anInt3701 << 4;
       var2 -= this.anInt3698 << 4;
-      var7.glTranslatef((float)var3 / 16.0F, (float)HDToolKit.anInt1811 - (float)var4 / 16.0F, 0.0F);
+      var7.glTranslatef((float)var3 / 16.0F, (float)HDToolKit.height - (float)var4 / 16.0F, 0.0F);
       var7.glRotatef((float)var5 * 0.005493164F, 0.0F, 0.0F, 1.0F);
       if(var6 != 4096) {
          var7.glScalef((float)var6 / 4096.0F, (float)var6 / 4096.0F, 0.0F);
@@ -340,7 +340,7 @@ class Class3_Sub28_Sub16_Sub1 extends Class3_Sub28_Sub16 {
          this.method644(1);
          float var15 = (float)var1;
          float var16 = var15 + (float)var3;
-         float var17 = (float)(HDToolKit.anInt1811 - var2);
+         float var17 = (float)(HDToolKit.height - var2);
          float var18 = var17 - (float)var4;
          float var19 = (float)this.anInt3707 / (float)this.anInt4075;
          float var20 = (float)this.anInt3696 / (float)this.anInt4079;
@@ -370,7 +370,7 @@ class Class3_Sub28_Sub16_Sub1 extends Class3_Sub28_Sub16 {
       var7 *= (float)var4;
       int var8 = var1 + this.anInt3701;
       int var9 = var8 + this.anInt3707 * var3;
-      int var10 = HDToolKit.anInt1811 - var2 - this.anInt3698;
+      int var10 = HDToolKit.height - var2 - this.anInt3698;
       int var11 = var10 - this.anInt3696 * var4;
       var5.glBegin(6);
       var5.glTexCoord2f(var6, 0.0F);
@@ -431,7 +431,7 @@ class Class3_Sub28_Sub16_Sub1 extends Class3_Sub28_Sub16 {
       HDToolKit.bindTexture2D(this.anInt4077);
       this.method644(1);
       var4.glColor4f(1.0F, 1.0F, 1.0F, (float)var3 / 256.0F);
-      var4.glTranslatef((float)var1, (float)(HDToolKit.anInt1811 - var2), 0.0F);
+      var4.glTranslatef((float)var1, (float)(HDToolKit.height - var2), 0.0F);
       var4.glCallList(this.anInt4076);
       var4.glLoadIdentity();
    }
