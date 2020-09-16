@@ -18,9 +18,9 @@ class Class127 {
          if(0 != Class3_Sub13_Sub25.loginStage && 5 != Class3_Sub13_Sub25.loginStage) {
             try {
                if(++Class50.anInt820 > 2000) {
-                  if(Class3_Sub15.aClass89_2429 != null) {
-                     Class3_Sub15.aClass89_2429.close();
-                     Class3_Sub15.aClass89_2429 = null;
+                  if(Class3_Sub15.activeConnection != null) {
+                     Class3_Sub15.activeConnection.close();
+                     Class3_Sub15.activeConnection = null;
                   }
 
                   if(Class166.anInt2079 >= 1) {
@@ -53,14 +53,14 @@ class Class127 {
                      return;
                   }
 
-                  Class3_Sub15.aClass89_2429 = new Connection((Socket)Class3_Sub9.aClass64_2318.anObject974, Class38.aClass87_665);
+                  Class3_Sub15.activeConnection = new Connection((Socket)Class3_Sub9.aClass64_2318.anObject974, Class38.aClass87_665);
                   Class3_Sub9.aClass64_2318 = null;
                   long var1 = Class3_Sub13_Sub16.aLong3202 = Class3_Sub28_Sub14.username.toLong();
                   Class3_Sub13_Sub1.outgoingBuffer.index = 0;
                   Class3_Sub13_Sub1.outgoingBuffer.writeByte(14);
                   int nameHash = (int)(var1 >> 16 & 31L);
                   Class3_Sub13_Sub1.outgoingBuffer.writeByte(nameHash);
-                  Class3_Sub15.aClass89_2429.sendBytes(Class3_Sub13_Sub1.outgoingBuffer.buffer, 2);
+                  Class3_Sub15.activeConnection.sendBytes(Class3_Sub13_Sub1.outgoingBuffer.buffer, 2);
                   if(WorldListEntry.aClass155_2627 != null) {
                      WorldListEntry.aClass155_2627.method2159(106);
                   }
@@ -69,7 +69,7 @@ class Class127 {
                      Class3_Sub21.aClass155_2491.method2159(var0 + 88);
                   }
 
-                  int var4 = Class3_Sub15.aClass89_2429.readByte();
+                  int var4 = Class3_Sub15.activeConnection.readByte();
                   if(WorldListEntry.aClass155_2627 != null) {
                      WorldListEntry.aClass155_2627.method2159(68);
                   }
@@ -81,8 +81,8 @@ class Class127 {
                   if(var4 != 0) {
                      Class158.anInt2005 = var4;
                      Class3_Sub13_Sub25.loginStage = 0;
-                     Class3_Sub15.aClass89_2429.close();
-                     Class3_Sub15.aClass89_2429 = null;
+                     Class3_Sub15.activeConnection.close();
+                     Class3_Sub15.activeConnection = null;
                      return;
                   }
 
@@ -90,11 +90,11 @@ class Class127 {
                }
 
                if(Class3_Sub13_Sub25.loginStage == 3) {
-                  if(Class3_Sub15.aClass89_2429.availableBytes() < 8) {
+                  if(Class3_Sub15.activeConnection.availableBytes() < 8) {
                      return;
                   }
 
-                  Class3_Sub15.aClass89_2429.readBytes(GraphicDefinition.incomingBuffer.buffer, 0, 8);
+                  Class3_Sub15.activeConnection.readBytes(GraphicDefinition.incomingBuffer.buffer, 0, 8);
                   GraphicDefinition.incomingBuffer.index = 0;
                   Class3_Sub13_Sub27.isaacServerKey = GraphicDefinition.incomingBuffer.readLong();
                   int[] var9 = new int[4];
@@ -164,7 +164,7 @@ class Class127 {
                   Unsorted.aClass3_Sub30_Sub1_2942.writeInt(Class132.aClass153_1735.getReferenceTableCrc());
                   Unsorted.aClass3_Sub30_Sub1_2942.writeInt(Class132.libIndex.getReferenceTableCrc());
                   Unsorted.aClass3_Sub30_Sub1_2942.putBytes(Class3_Sub13_Sub1.outgoingBuffer.buffer, Class3_Sub13_Sub1.outgoingBuffer.index);
-                  Class3_Sub15.aClass89_2429.sendBytes(Unsorted.aClass3_Sub30_Sub1_2942.buffer, Unsorted.aClass3_Sub30_Sub1_2942.index);
+                  Class3_Sub15.activeConnection.sendBytes(Unsorted.aClass3_Sub30_Sub1_2942.buffer, Unsorted.aClass3_Sub30_Sub1_2942.index);
                   Class3_Sub13_Sub1.outgoingBuffer.method814(var9);
 
                   for(int var2 = 0; var2 < 4; ++var2) {
@@ -176,11 +176,11 @@ class Class127 {
                }
 
                if(Class3_Sub13_Sub25.loginStage == 4) {
-                  if(Class3_Sub15.aClass89_2429.availableBytes() < 1) {
+                  if(Class3_Sub15.activeConnection.availableBytes() < 1) {
                      return;
                   }
 
-                  int opcode = Class3_Sub15.aClass89_2429.readByte();
+                  int opcode = Class3_Sub15.activeConnection.readByte();
                   if(opcode == 21) {
                      Class3_Sub13_Sub25.loginStage = 7;
                   } else if (opcode == 29) {
@@ -198,15 +198,15 @@ class Class127 {
                               Class3_Sub13_Sub25.loginStage = 1;
                               ++Class166.anInt2079;
                               Class50.anInt820 = 0;
-                              Class3_Sub15.aClass89_2429.close();
-                              Class3_Sub15.aClass89_2429 = null;
+                              Class3_Sub15.activeConnection.close();
+                              Class3_Sub15.activeConnection = null;
                               return;
                            }
 
                            Class158.anInt2005 = opcode;
                            Class3_Sub13_Sub25.loginStage = 0;
-                           Class3_Sub15.aClass89_2429.close();
-                           Class3_Sub15.aClass89_2429 = null;
+                           Class3_Sub15.activeConnection.close();
+                           Class3_Sub15.activeConnection = null;
                            return;
                         }
 
@@ -222,18 +222,18 @@ class Class127 {
                if(6 == Class3_Sub13_Sub25.loginStage) {
                   Class3_Sub13_Sub1.outgoingBuffer.index = 0;
                   Class3_Sub13_Sub1.outgoingBuffer.putOpcode(17);
-                  Class3_Sub15.aClass89_2429.sendBytes(Class3_Sub13_Sub1.outgoingBuffer.buffer, Class3_Sub13_Sub1.outgoingBuffer.index);
+                  Class3_Sub15.activeConnection.sendBytes(Class3_Sub13_Sub1.outgoingBuffer.buffer, Class3_Sub13_Sub1.outgoingBuffer.index);
                   Class3_Sub13_Sub25.loginStage = 4;
                   return;
                }
 
                if(Class3_Sub13_Sub25.loginStage == 7) {
-                  if(Class3_Sub15.aClass89_2429.availableBytes() >= 1) {
-                     Class3_Sub13_Sub34.anInt3413 = 60 * (3 + Class3_Sub15.aClass89_2429.readByte());
+                  if(Class3_Sub15.activeConnection.availableBytes() >= 1) {
+                     Class3_Sub13_Sub34.anInt3413 = 60 * (3 + Class3_Sub15.activeConnection.readByte());
                      Class3_Sub13_Sub25.loginStage = 0;
                      Class158.anInt2005 = 21;
-                     Class3_Sub15.aClass89_2429.close();
-                     Class3_Sub15.aClass89_2429 = null;
+                     Class3_Sub15.activeConnection.close();
+                     Class3_Sub15.activeConnection = null;
                      return;
                   }
 
@@ -241,12 +241,12 @@ class Class127 {
                }
 
                if(Class3_Sub13_Sub25.loginStage == 10) {
-                  if(1 <= Class3_Sub15.aClass89_2429.availableBytes()) {
-                     Class3_Sub26.anInt2561 = Class3_Sub15.aClass89_2429.readByte();
+                  if(1 <= Class3_Sub15.activeConnection.availableBytes()) {
+                     Class3_Sub26.anInt2561 = Class3_Sub15.activeConnection.readByte();
                      Class3_Sub13_Sub25.loginStage = 0;
                      Class158.anInt2005 = 29;
-                     Class3_Sub15.aClass89_2429.close();
-                     Class3_Sub15.aClass89_2429 = null;
+                     Class3_Sub15.activeConnection.close();
+                     Class3_Sub15.activeConnection = null;
                      return;
                   }
 
@@ -254,11 +254,11 @@ class Class127 {
                }
 
                if(Class3_Sub13_Sub25.loginStage == 8) {
-                  if(Class3_Sub15.aClass89_2429.availableBytes() < 14) {
+                  if(Class3_Sub15.activeConnection.availableBytes() < 14) {
                      return;
                   }
 
-                  Class3_Sub15.aClass89_2429.readBytes(GraphicDefinition.incomingBuffer.buffer, 0, 14);
+                  Class3_Sub15.activeConnection.readBytes(GraphicDefinition.incomingBuffer.buffer, 0, 14);
                   GraphicDefinition.incomingBuffer.index = 0;
                   Class3_Sub13_Sub26.rights = GraphicDefinition.incomingBuffer.readUnsignedByte();
                   Class3_Sub28_Sub19.anInt3775 = GraphicDefinition.incomingBuffer.readUnsignedByte();
@@ -293,12 +293,12 @@ class Class127 {
                }
 
                if(Class3_Sub13_Sub25.loginStage == 9) {
-                  if(Unsorted.incomingPacketLength > Class3_Sub15.aClass89_2429.availableBytes()) {
+                  if(Unsorted.incomingPacketLength > Class3_Sub15.activeConnection.availableBytes()) {
                      return;
                   }
 
                   GraphicDefinition.incomingBuffer.index = 0;
-                  Class3_Sub15.aClass89_2429.readBytes(GraphicDefinition.incomingBuffer.buffer, 0, Unsorted.incomingPacketLength);
+                  Class3_Sub15.activeConnection.readBytes(GraphicDefinition.incomingBuffer.buffer, 0, Unsorted.incomingPacketLength);
                   Class158.anInt2005 = 2;
                   Class3_Sub13_Sub25.loginStage = 0;
                   AnimationDefinition.resetAll();
@@ -312,9 +312,9 @@ class Class127 {
                   aClass153_1680 = (CacheIndex)null;
                }
             } catch (IOException var7) {
-               if(null != Class3_Sub15.aClass89_2429) {
-                  Class3_Sub15.aClass89_2429.close();
-                  Class3_Sub15.aClass89_2429 = null;
+               if(null != Class3_Sub15.activeConnection) {
+                  Class3_Sub15.activeConnection.close();
+                  Class3_Sub15.activeConnection = null;
                }
 
                if(Class166.anInt2079 >= 1) {

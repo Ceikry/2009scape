@@ -1714,7 +1714,7 @@ public class Unsorted {
                         Class124.method1746(true, (byte) -107);
                     }
 
-                    if (null != Class3_Sub15.aClass89_2429 && (Class143.loadingStage == 30 || Class143.loadingStage == 25)) {
+                    if (null != Class3_Sub15.activeConnection && (Class143.loadingStage == 30 || Class143.loadingStage == 25)) {
                         Class3_Sub13_Sub8.method204(-3);
                     }
 
@@ -2658,7 +2658,7 @@ public class Unsorted {
 
             if (command.equals(-110, Class95.COMMAND_BREAK_CONNECTION)) {
                 Class38.aClass87_665.method1431(0);
-                Class3_Sub15.aClass89_2429.applyDummyStreams();
+                Class3_Sub15.activeConnection.applyDummyStreams();
                 Class58.aJs5Worker_917.method1248();
             }
 

@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.util.Objects;
 
-final class PacketParser {
+public final class PacketParser {
 
     static int anInt80 = 0;
     static byte[][][] aByteArrayArrayArray81;
@@ -68,53 +68,53 @@ final class PacketParser {
         }
     }
 
-    static boolean parseIncomingPackets() throws IOException {
-        try {
-            if (Class3_Sub15.aClass89_2429 == null) {
-                return false;
-            } else {
-                int var1 = Class3_Sub15.aClass89_2429.availableBytes();
-                if (var1 == 0) {
-                    return false;
-                } else {
-                    if (Unsorted.incomingOpcode == -1) {
-                        --var1;
-                        Class3_Sub15.aClass89_2429.readBytes(GraphicDefinition.incomingBuffer.buffer, 0, 1);
-                        GraphicDefinition.incomingBuffer.index = 0;
-                        Unsorted.incomingOpcode = GraphicDefinition.incomingBuffer.getOpcode();
-                        Unsorted.incomingPacketLength = Class75_Sub4.anIntArray2668[Unsorted.incomingOpcode];
-                    }
-
-                    if (Unsorted.incomingPacketLength == -1) {
-                        if (0 >= var1) {
-                            return false;
-                        }
-
-                        Class3_Sub15.aClass89_2429.readBytes(GraphicDefinition.incomingBuffer.buffer, 0, 1);
-                        --var1;
-                        Unsorted.incomingPacketLength = GraphicDefinition.incomingBuffer.buffer[0] & 255;
-                    }
-
-                    if (-2 == Unsorted.incomingPacketLength) {
-                        if (var1 <= 1) {
-                            return false;
-                        }
-
-                        var1 -= 2;
-                        Class3_Sub15.aClass89_2429.readBytes(GraphicDefinition.incomingBuffer.buffer, 0, 2);
-                        GraphicDefinition.incomingBuffer.index = 0;
-                        Unsorted.incomingPacketLength = GraphicDefinition.incomingBuffer.readUnsignedShort();
-                    }
-
-                    if (var1 < Unsorted.incomingPacketLength) {
-                        return false;
-                    } else {
-                        GraphicDefinition.incomingBuffer.index = 0;
-                        Class3_Sub15.aClass89_2429.readBytes(GraphicDefinition.incomingBuffer.buffer, 0, Unsorted.incomingPacketLength);
-                        Class24.anInt469 = Class7.anInt2166;
-                        Class7.anInt2166 = Class3_Sub29.anInt2582;
-                        Class3_Sub29.anInt2582 = Unsorted.incomingOpcode;
-                        Class3_Sub28_Sub16.anInt3699 = 0;
+    public static boolean parseIncomingPackets() throws IOException {
+//        try {
+//            if (Class3_Sub15.activeConnection == null) {
+//                return false;
+//            } else {
+//                int readableBytes = Class3_Sub15.activeConnection.availableBytes();
+//                if (readableBytes == 0) {
+//                    return false;
+//                } else {
+//                    if (Unsorted.incomingOpcode == -1) {
+//                        --readableBytes;
+//                        Class3_Sub15.activeConnection.readBytes(GraphicDefinition.incomingBuffer.buffer, 0, 1);
+//                        GraphicDefinition.incomingBuffer.index = 0;
+//                        Unsorted.incomingOpcode = GraphicDefinition.incomingBuffer.getOpcode();
+//                        Unsorted.incomingPacketLength = Class75_Sub4.anIntArray2668[Unsorted.incomingOpcode];
+//                    }
+//
+//                    if (Unsorted.incomingPacketLength == -1) {
+//                        if (0 >= readableBytes) {
+//                            return false;
+//                        }
+//
+//                        Class3_Sub15.activeConnection.readBytes(GraphicDefinition.incomingBuffer.buffer, 0, 1);
+//                        --readableBytes;
+//                        Unsorted.incomingPacketLength = GraphicDefinition.incomingBuffer.buffer[0] & 255;
+//                    }
+//
+//                    if (-2 == Unsorted.incomingPacketLength) {
+//                        if (readableBytes <= 1) {
+//                            return false;
+//                        }
+//
+//                        readableBytes -= 2;
+//                        Class3_Sub15.activeConnection.readBytes(GraphicDefinition.incomingBuffer.buffer, 0, 2);
+//                        GraphicDefinition.incomingBuffer.index = 0;
+//                        Unsorted.incomingPacketLength = GraphicDefinition.incomingBuffer.readUnsignedShort();
+//                    }
+//
+//                    if (readableBytes < Unsorted.incomingPacketLength) {
+//                        return false;
+//                    } else {
+//                        GraphicDefinition.incomingBuffer.index = 0;
+//                        Class3_Sub15.activeConnection.readBytes(GraphicDefinition.incomingBuffer.buffer, 0, Unsorted.incomingPacketLength);
+//                        Class24.anInt469 = Class7.anInt2166;
+//                        Class7.anInt2166 = Class3_Sub29.anInt2582;
+//                        Class3_Sub29.anInt2582 = Unsorted.incomingOpcode;
+//                        Class3_Sub28_Sub16.anInt3699 = 0;
                         int nodeModelId;
                         if (60 == Unsorted.incomingOpcode) {
                             nodeModelId = GraphicDefinition.incomingBuffer.readUnsignedShort128();
@@ -1760,12 +1760,12 @@ final class PacketParser {
                                 }
                             }
                         }
-                    }
-                }
-            }
-        } catch (RuntimeException var19) {
-            throw Class44.clientError(var19, "ac.C(" + (byte) -83 + ')');
-        }
+//                    }
+//                }
+//            }
+//        } catch (RuntimeException var19) {
+//            throw Class44.clientError(var19, "ac.C(" + (byte) -83 + ')');
+//        }
     }
 
     static void method829() {

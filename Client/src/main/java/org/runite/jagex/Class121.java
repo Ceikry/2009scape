@@ -123,7 +123,7 @@ final class Class121 {
                   return -1;
                }
 
-               Class3_Sub15.aClass89_2429 = new Connection((Socket)Class3_Sub9.aClass64_2318.anObject974, Class38.aClass87_665);
+               Class3_Sub15.activeConnection = new Connection((Socket)Class3_Sub9.aClass64_2318.anObject974, Class38.aClass87_665);
                Class3_Sub13_Sub1.outgoingBuffer.index = 0;
                Class3_Sub9.aClass64_2318 = null;
                wlUpdateStamp = 0;
@@ -133,7 +133,7 @@ final class Class121 {
 
                Class3_Sub13_Sub1.outgoingBuffer.writeByte(255);
                Class3_Sub13_Sub1.outgoingBuffer.writeInt(wlUpdateStamp);
-               Class3_Sub15.aClass89_2429.sendBytes(Class3_Sub13_Sub1.outgoingBuffer.buffer, Class3_Sub13_Sub1.outgoingBuffer.index);
+               Class3_Sub15.activeConnection.sendBytes(Class3_Sub13_Sub1.outgoingBuffer.buffer, Class3_Sub13_Sub1.outgoingBuffer.index);
                if(null != WorldListEntry.aClass155_2627) {
                   WorldListEntry.aClass155_2627.method2159(67);
                }
@@ -142,7 +142,7 @@ final class Class121 {
                   Class3_Sub21.aClass155_2491.method2159(101);
                }
 
-               var2 = Class3_Sub15.aClass89_2429.readByte();
+               var2 = Class3_Sub15.activeConnection.readByte();
                //System.out.println(var2); //Not sure what this was debugging
                if(WorldListEntry.aClass155_2627 != null) {
                   WorldListEntry.aClass155_2627.method2159(55);
@@ -160,20 +160,20 @@ final class Class121 {
             }
 
             if(Class43.anInt692 == 2) {
-               if(2 > Class3_Sub15.aClass89_2429.availableBytes()) {
+               if(2 > Class3_Sub15.activeConnection.availableBytes()) {
                   return -1;
                }
 
-               Unsorted.wlPacketSize = Class3_Sub15.aClass89_2429.readByte();
+               Unsorted.wlPacketSize = Class3_Sub15.activeConnection.readByte();
                Unsorted.wlPacketSize <<= 8;
-               Unsorted.wlPacketSize += Class3_Sub15.aClass89_2429.readByte();
+               Unsorted.wlPacketSize += Class3_Sub15.activeConnection.readByte();
                Class43.anInt692 = 3;
                Class3_Sub20.wlPacketIndex = 0;
                Class3_Sub13_Sub33.aByteArray3396 = new byte[Unsorted.wlPacketSize];
             }
 
             if(Class43.anInt692 == 3) {
-               wlUpdateStamp = Class3_Sub15.aClass89_2429.availableBytes();
+               wlUpdateStamp = Class3_Sub15.activeConnection.availableBytes();
                if(1 > wlUpdateStamp) {
                   return -1;
                }
@@ -182,7 +182,7 @@ final class Class121 {
                   wlUpdateStamp = Unsorted.wlPacketSize + -Class3_Sub20.wlPacketIndex;
                }
 
-               Class3_Sub15.aClass89_2429.readBytes(Class3_Sub13_Sub33.aByteArray3396, Class3_Sub20.wlPacketIndex, wlUpdateStamp);
+               Class3_Sub15.activeConnection.readBytes(Class3_Sub13_Sub33.aByteArray3396, Class3_Sub20.wlPacketIndex, wlUpdateStamp);
                Class3_Sub20.wlPacketIndex += wlUpdateStamp;
                if(Class3_Sub20.wlPacketIndex >= Unsorted.wlPacketSize) {
                   if(Class3_Sub13_Sub23.handleWorldListUpdate(Class3_Sub13_Sub33.aByteArray3396)) {
@@ -197,8 +197,8 @@ final class Class121 {
                         //System.out.println("world = " +var4.worldId);
                      }
 
-                     Class3_Sub15.aClass89_2429.close();
-                     Class3_Sub15.aClass89_2429 = null;
+                     Class3_Sub15.activeConnection.close();
+                     Class3_Sub15.activeConnection = null;
                      Unsorted.anInt1088 = 0;
                      Class43.anInt692 = 0;
                      Class3_Sub13_Sub33.aByteArray3396 = null;

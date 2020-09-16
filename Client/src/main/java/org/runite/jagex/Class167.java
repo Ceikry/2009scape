@@ -220,9 +220,9 @@ final class Class167 {
 
    static void method2269(byte var0) {
       try {
-         if(null != Class3_Sub15.aClass89_2429) {
-            Class3_Sub15.aClass89_2429.close();
-            Class3_Sub15.aClass89_2429 = null;
+         if(null != Class3_Sub15.activeConnection) {
+            Class3_Sub15.activeConnection.close();
+            Class3_Sub15.activeConnection = null;
          }
 
          Class3_Sub13_Sub30.method313((byte)110);

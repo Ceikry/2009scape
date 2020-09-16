@@ -1,5 +1,6 @@
 package org.runite.jagex;
 
+import org.rs09.client.net.game.PacketDecoder;
 import org.runite.GameLaunch;
 
 import java.io.IOException;
@@ -58,9 +59,9 @@ public final class Class3_Sub13_Sub3 extends Class3_Sub13 {
     static int method179(byte var0, int var1) {
         try {
             if (var0 == 92) {
-                if (null != Class3_Sub15.aClass89_2429) {
-                    Class3_Sub15.aClass89_2429.close();
-                    Class3_Sub15.aClass89_2429 = null;
+                if (null != Class3_Sub15.activeConnection) {
+                    Class3_Sub15.activeConnection.close();
+                    Class3_Sub15.activeConnection = null;
                 }
 
                 ++Unsorted.anInt1088;
@@ -123,7 +124,8 @@ public final class Class3_Sub13_Sub3 extends Class3_Sub13 {
 
     static boolean method181() {
         try {
-            return PacketParser.parseIncomingPackets();
+//            return PacketParser.parseIncomingPackets();
+            return PacketDecoder.INSTANCE.decodePacket();
         } catch (IOException var4) {
             Class3_Sub13_Sub24.method289();
             return true;

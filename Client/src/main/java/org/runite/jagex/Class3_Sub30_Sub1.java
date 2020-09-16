@@ -3,7 +3,7 @@ package org.runite.jagex;
 import java.util.Arrays;
 import java.util.Objects;
 
-final class Class3_Sub30_Sub1 extends DataBuffer {
+public final class Class3_Sub30_Sub1 extends DataBuffer {
 
 	static RSString[] aClass94Array3802;
     static int anInt872;
@@ -851,7 +851,7 @@ final class Class3_Sub30_Sub1 extends DataBuffer {
 		}
 	}
 
-	Class3_Sub30_Sub1() {
+	public Class3_Sub30_Sub1() {
 		super(5000);
 	}
 
@@ -1001,7 +1001,7 @@ final class Class3_Sub30_Sub1 extends DataBuffer {
 		this.buffer[this.index++] = (byte)(opcode + this.isaacCipher.nextOpcode(-9356));
 	}
 
-	final int getOpcode() {
+	public final int getOpcode() {
 		try {
 			return 255 & this.buffer[this.index++] - this.isaacCipher.nextOpcode(-9356);
 		} catch (RuntimeException var3) {

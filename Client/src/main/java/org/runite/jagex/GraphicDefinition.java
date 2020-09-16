@@ -1,11 +1,11 @@
 package org.runite.jagex;
 
-final class GraphicDefinition {
+public final class GraphicDefinition {
 
 	static int anInt529;
 	private int anInt530 = 128;
 	static int CAMERA_DIRECTION = 0;
-	static Class3_Sub30_Sub1 incomingBuffer = new Class3_Sub30_Sub1();
+	public static Class3_Sub30_Sub1 incomingBuffer = new Class3_Sub30_Sub1();
 	private short[] aShortArray533;
 	private short[] aShortArray534;
 	private short[] aShortArray535;

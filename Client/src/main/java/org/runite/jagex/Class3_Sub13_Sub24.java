@@ -70,8 +70,8 @@ final class Class3_Sub13_Sub24 extends Class3_Sub13 {
           if(Class159.anInt2023 > 0) {
             Class167.method2269((byte)46);
          } else {
-            Class163_Sub2_Sub1.aClass89_4012 = Class3_Sub15.aClass89_2429;
-            Class3_Sub15.aClass89_2429 = null;
+            Class163_Sub2_Sub1.aClass89_4012 = Class3_Sub15.activeConnection;
+            Class3_Sub15.activeConnection = null;
             Class117.method1719(40);
          }
       } catch (RuntimeException var2) {

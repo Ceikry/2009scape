@@ -3,7 +3,7 @@ package org.runite.jagex;
 import org.rs09.client.Linkable;
 import org.rs09.client.net.Connection;
 
-final class Class3_Sub15 extends Linkable {
+public final class Class3_Sub15 extends Linkable {
 
    static int anInt2421 = -1;
    byte[] aByteArray2422;
@@ -13,7 +13,7 @@ final class Class3_Sub15 extends Linkable {
    static int anInt2426;
    static boolean aBoolean2427 = false;
    static Class93 aClass93_2428 = new Class93(50);
-   static Connection aClass89_2429;
+   public static Connection activeConnection;
    byte[] aByteArray2430;
    Class3_Sub12_Sub1[] aClass3_Sub12_Sub1Array2431;
    static RSString COMMAND_TWEENING = RSString.of("::tween");

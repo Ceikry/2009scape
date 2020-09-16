@@ -2,12 +2,12 @@ package org.runite.jagex;
 
 import org.rs09.client.Node;
 
-abstract class Class3_Sub28_Sub16 extends Node {
+public abstract class Class3_Sub28_Sub16 extends Node {
 
    int anInt3696;
    int anInt3697;
    int anInt3698;
-   static int anInt3699 = 0;
+   public static int anInt3699 = 0;
    static RSString COMMAND_GRAPHICS_CARD_MEMORY = RSString.of("::cardmem");
    int anInt3701;
    static RSString aClass94_3703 = RSString.of(" )2> ");

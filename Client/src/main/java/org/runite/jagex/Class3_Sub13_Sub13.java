@@ -858,8 +858,8 @@ final class Class3_Sub13_Sub13 extends Class3_Sub13 {
                                        }
 
                                        try {
-                                          if(Class3_Sub15.aClass89_2429 != null && Class3_Sub13_Sub1.outgoingBuffer.index > 0) {
-                                             Class3_Sub15.aClass89_2429.sendBytes(Class3_Sub13_Sub1.outgoingBuffer.buffer, Class3_Sub13_Sub1.outgoingBuffer.index);
+                                          if(Class3_Sub15.activeConnection != null && Class3_Sub13_Sub1.outgoingBuffer.index > 0) {
+                                             Class3_Sub15.activeConnection.sendBytes(Class3_Sub13_Sub1.outgoingBuffer.buffer, Class3_Sub13_Sub1.outgoingBuffer.index);
                                              Class3_Sub13_Sub23_Sub1.anInt4032 = 0;
                                              Class3_Sub13_Sub1.outgoingBuffer.index = 0;
                                           }

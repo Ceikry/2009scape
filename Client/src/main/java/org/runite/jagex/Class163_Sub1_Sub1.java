@@ -48,9 +48,9 @@ final class Class163_Sub1_Sub1 extends Class163_Sub1 {
          if(Class3_Sub13_Sub31.anInt3375 != 0) {
             try {
                if(1500 < ++Class3_Sub2.anInt2246) {
-                  if(null != Class3_Sub15.aClass89_2429) {
-                     Class3_Sub15.aClass89_2429.close();
-                     Class3_Sub15.aClass89_2429 = null;
+                  if(null != Class3_Sub15.activeConnection) {
+                     Class3_Sub15.activeConnection.close();
+                     Class3_Sub15.activeConnection = null;
                   }
 
                   if(1 <= Class117.anInt1616) {
@@ -84,9 +84,9 @@ final class Class163_Sub1_Sub1 extends Class163_Sub1 {
                      return;
                   }
 
-                  Class3_Sub15.aClass89_2429 = new Connection((Socket)Class3_Sub9.aClass64_2318.anObject974, Class38.aClass87_665);
+                  Class3_Sub15.activeConnection = new Connection((Socket)Class3_Sub9.aClass64_2318.anObject974, Class38.aClass87_665);
                   Class3_Sub9.aClass64_2318 = null;
-                  Class3_Sub15.aClass89_2429.sendBytes(Class3_Sub13_Sub1.outgoingBuffer.buffer, Class3_Sub13_Sub1.outgoingBuffer.index);
+                  Class3_Sub15.activeConnection.sendBytes(Class3_Sub13_Sub1.outgoingBuffer.buffer, Class3_Sub13_Sub1.outgoingBuffer.index);
                   if(WorldListEntry.aClass155_2627 != null) {
                      WorldListEntry.aClass155_2627.method2159(83);
                   }
@@ -94,7 +94,7 @@ final class Class163_Sub1_Sub1 extends Class163_Sub1 {
                      Class3_Sub21.aClass155_2491.method2159(120);
                   }
 
-                  var1 = Class3_Sub15.aClass89_2429.readByte();
+                  var1 = Class3_Sub15.activeConnection.readByte();
                   if(WorldListEntry.aClass155_2627 != null) {
                      WorldListEntry.aClass155_2627.method2159(59);
                   }
@@ -106,8 +106,8 @@ final class Class163_Sub1_Sub1 extends Class163_Sub1 {
                   if(var1 != 101) {
                      Class158.anInt2005 = var1;
                      Class3_Sub13_Sub31.anInt3375 = 0;
-                     Class3_Sub15.aClass89_2429.close();
-                     Class3_Sub15.aClass89_2429 = null;
+                     Class3_Sub15.activeConnection.close();
+                     Class3_Sub15.activeConnection = null;
                      return;
                   }
 
@@ -115,30 +115,30 @@ final class Class163_Sub1_Sub1 extends Class163_Sub1 {
                }
 
                if(Class3_Sub13_Sub31.anInt3375 == 3) {
-                  if(Class3_Sub15.aClass89_2429.availableBytes() < 2) {
+                  if(Class3_Sub15.activeConnection.availableBytes() < 2) {
                      return;
                   }
 
-                  var1 = Class3_Sub15.aClass89_2429.readByte() << 8 | Class3_Sub15.aClass89_2429.readByte();
+                  var1 = Class3_Sub15.activeConnection.readByte() << 8 | Class3_Sub15.activeConnection.readByte();
                   Class104.method1627(var1, (byte)-16);
                   if(CS2Script.anInt2451 == -1) {
                      Class3_Sub13_Sub31.anInt3375 = 0;
                      Class158.anInt2005 = 6;
-                     Class3_Sub15.aClass89_2429.close();
-                     Class3_Sub15.aClass89_2429 = null;
+                     Class3_Sub15.activeConnection.close();
+                     Class3_Sub15.activeConnection = null;
                      return;
                   }
 
                   Class3_Sub13_Sub31.anInt3375 = 0;
-                  Class3_Sub15.aClass89_2429.close();
-                  Class3_Sub15.aClass89_2429 = null;
+                  Class3_Sub15.activeConnection.close();
+                  Class3_Sub15.activeConnection = null;
                   Class24.method951();
                   return;
                }
             } catch (IOException var2) {
-               if(null != Class3_Sub15.aClass89_2429) {
-                  Class3_Sub15.aClass89_2429.close();
-                  Class3_Sub15.aClass89_2429 = null;
+               if(null != Class3_Sub15.activeConnection) {
+                  Class3_Sub15.activeConnection.close();
+                  Class3_Sub15.activeConnection = null;
                }
 
                if(Class117.anInt1616 < 1) {

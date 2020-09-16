@@ -19,10 +19,10 @@ class Class163_Sub1 extends Class163 {
             ++Class3_Sub13_Sub23_Sub1.anInt4032;
             if(Class3_Sub13_Sub23_Sub1.anInt4032 >= 50 || var1) {
                Class3_Sub13_Sub23_Sub1.anInt4032 = 0;
-               if(!Class3_Sub28_Sub18.aBoolean3769 && Class3_Sub15.aClass89_2429 != null) {
+               if(!Class3_Sub28_Sub18.aBoolean3769 && Class3_Sub15.activeConnection != null) {
                   Class3_Sub13_Sub1.outgoingBuffer.putOpcode(93);
                    try {
-                     Class3_Sub15.aClass89_2429.sendBytes(Class3_Sub13_Sub1.outgoingBuffer.buffer, Class3_Sub13_Sub1.outgoingBuffer.index);
+                     Class3_Sub15.activeConnection.sendBytes(Class3_Sub13_Sub1.outgoingBuffer.buffer, Class3_Sub13_Sub1.outgoingBuffer.index);
                      Class3_Sub13_Sub1.outgoingBuffer.index = 0;
                   } catch (IOException var3) {
                      Class3_Sub28_Sub18.aBoolean3769 = true;

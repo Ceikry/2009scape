@@ -251,9 +251,9 @@ public final class Client extends GameShell {
             }
 
             Class106.aClass67_1443 = null;
-            if (Class3_Sub15.aClass89_2429 != null) {
-                Class3_Sub15.aClass89_2429.close();
-                Class3_Sub15.aClass89_2429 = null;
+            if (Class3_Sub15.activeConnection != null) {
+                Class3_Sub15.activeConnection.close();
+                Class3_Sub15.activeConnection = null;
             }
 
             Class163_Sub1_Sub1.method2215(Class3_Sub28_Sub12.canvas);

@@ -311,7 +311,7 @@ final class Class40 {
                Class3_Sub13_Sub31.method318();
                Class3_Sub13_Sub30.method313((byte)100);
                Class3_Sub13_Sub34.aBoolean3416 = false;
-               if(GameShell.frame != null && null != Class3_Sub15.aClass89_2429 && 25 == Class143.loadingStage) {
+               if(GameShell.frame != null && null != Class3_Sub15.activeConnection && 25 == Class143.loadingStage) {
                   Class3_Sub13_Sub1.outgoingBuffer.putOpcode(20);
                   Class3_Sub13_Sub1.outgoingBuffer.writeInt(1057001181);
                }
@@ -336,7 +336,7 @@ final class Class40 {
                   Class117.method1719(10);
                } else {
                   Class117.method1719(30);
-                  if(null != Class3_Sub15.aClass89_2429) {
+                  if(null != Class3_Sub15.activeConnection) {
                      Class3_Sub13_Sub1.outgoingBuffer.putOpcode(110);
                   }
                }

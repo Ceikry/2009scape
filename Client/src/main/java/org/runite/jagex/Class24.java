@@ -2,7 +2,7 @@ package org.runite.jagex;
 
 import java.util.Objects;
 
-final class Class24 {
+public final class Class24 {
 
    private short[] aShortArray460;
    private short[] aShortArray464;
@@ -10,7 +10,7 @@ final class Class24 {
    int anInt466 = -1;
    static int anInt467 = 0;
    static RSString aClass94_468 = RSString.of("(U");
-   static int anInt469 = 0;
+   public static int anInt469 = 0;
    private short[] aShortArray470;
    private short[] aShortArray471;
    static int anInt472 = 0;
