@@ -9,7 +9,7 @@ final class Class131 {
    RSString[] aClass94Array1721;
    
    static CacheIndex aClass153_1723;
-   static RSString aClass94_1724 = RSString.of(" )2>");
+   static RSString aClass94_1724 = RSString.parse(" )2>");
    int[] anIntArray1725;
    short[] aShortArray1727;
    static int[] anIntArray1729 = new int[]{12543016, 15504954, 15914854, 16773818};

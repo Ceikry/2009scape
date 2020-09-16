@@ -90,7 +90,7 @@ final class CacheIndex {
     final int method2116(RSString var2) {
         try {
             if (this.isReady()) {
-                var2 = var2.method1534();
+                var2 = var2.toLowercase();
                 int var3 = this.referenceTable.getALookupTable_949().get(var2.method1574());
                 return this.method2114(var3);
             } else {
@@ -125,7 +125,7 @@ final class CacheIndex {
     final int getArchiveForName(RSString name) {
         try {
             if (this.isReady()) {
-                name = name.method1534();
+                name = name.toLowercase();
                 int var3 = this.referenceTable.getALookupTable_949().get(name.method1574());
                 return this.isValidArchive(var3) ? var3 : -1;
             } else {
@@ -166,8 +166,8 @@ final class CacheIndex {
     final byte[] method2123(RSString var2, RSString var3) {
         try {
             if (this.isReady()) {
-                var3 = var3.method1534();
-                var2 = var2.method1534();
+                var3 = var3.toLowercase();
+                var2 = var2.toLowercase();
                 int var4 = this.referenceTable.getALookupTable_949().get(var3.method1574());
 
                 if (this.isValidArchive(var4)) {
@@ -187,7 +187,7 @@ final class CacheIndex {
     final void method2124(int var1, RSString var2) {
         try {
             if (this.isReady()) {
-                var2 = var2.method1534();
+                var2 = var2.toLowercase();
                 int var3 = this.referenceTable.getALookupTable_949().get(var2.method1574());
                 this.request(var3);
             }
@@ -199,8 +199,8 @@ final class CacheIndex {
     final boolean method2125(RSString var1, RSString var3) {
         try {
             if (this.isReady()) {
-                var3 = var3.method1534();
-                var1 = var1.method1534();
+                var3 = var3.toLowercase();
+                var1 = var1.toLowercase();
                 int var4 = this.referenceTable.getALookupTable_949().get(var3.method1574());
                 if (this.isValidArchive(var4)) {
                     int var5 = this.referenceTable.getALookupTableArray962()[var4].get(var1.method1574());
@@ -248,7 +248,7 @@ final class CacheIndex {
     final boolean method2127(RSString var2) {
         try {
             if (this.isReady()) {
-                var2 = var2.method1534();
+                var2 = var2.toLowercase();
                 int var3 = this.referenceTable.getALookupTable_949().get(var2.method1574());
                 return this.method2117(var3);
             } else {
@@ -454,7 +454,7 @@ final class CacheIndex {
             if (var2 >= -103) {
                 return false;
             } else if (this.isReady()) {
-                var1 = var1.method1534();
+                var1 = var1.toLowercase();
                 int var3 = this.referenceTable.getALookupTable_949().get(var1.method1574());
                 return var3 >= 0;
             } else {

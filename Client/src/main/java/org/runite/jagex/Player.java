@@ -13,7 +13,7 @@ final class Player extends Class140_Sub4 {
    private int anInt3958 = 0;
    static int[] anIntArray3959 = new int[2];
    int COMBAT_LEVEL = 0;
-   static RSString aClass94_3961 = RSString.of("Forced tweening / animation smoothing ENABLED(Q");
+   static RSString aClass94_3961 = RSString.parse("Forced tweening / animation smoothing ENABLED(Q");
    Class52 class52;
    int anInt3963 = -1;
    int combatLevel = 0;

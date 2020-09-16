@@ -24,7 +24,7 @@ final class Class33 {
          var5 = false;
       }
 
-      for(int var6 = 0; var6 < var1.length(-95); ++var6) {
+      for(int var6 = 0; var6 < var1.length(); ++var6) {
          int var7 = anIntArray599[var1.charAt(var6, (byte)65)];
          if(var5) {
             this.method1001(var7, var2 + 1, var3, 1, this.aByteArray594);
@@ -289,10 +289,10 @@ final class Class33 {
    private int method1005(RSString var1) {
       int var2 = 0;
 
-      for(int var3 = 0; var3 < var1.length(-97); ++var3) {
-         if(var1.charAt(var3, (byte)-41) == 64 && var3 + 4 < var1.length(-93) && var1.charAt(var3 + 4, (byte)66) == 64) {
+      for(int var3 = 0; var3 < var1.length(); ++var3) {
+         if(var1.charAt(var3, (byte)-41) == 64 && var3 + 4 < var1.length() && var1.charAt(var3 + 4, (byte)66) == 64) {
             var3 += 4;
-         } else if(var1.charAt(var3, (byte)101) == 126 && var3 + 4 < var1.length(-60) && var1.charAt(var3 + 4, (byte)-51) == 126) {
+         } else if(var1.charAt(var3, (byte)101) == 126 && var3 + 4 < var1.length() && var1.charAt(var3 + 4, (byte)-51) == 126) {
             var3 += 4;
          } else {
             var2 += this.aByteArray594[anIntArray599[var1.charAt(var3, (byte)-64)] + 7];

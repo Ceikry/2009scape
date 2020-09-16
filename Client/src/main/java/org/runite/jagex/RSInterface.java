@@ -56,7 +56,7 @@ final class RSInterface {
     Object[] anObjectArray206;
     int[] anIntArray207;
     int anInt208 = 0;
-    static RSString aClass94_209 = RSString.of("event_opbase");
+    static RSString aClass94_209 = RSString.parse("event_opbase");
     int anInt210 = 0;
     int[] anIntArray211;
     int anInt212;
@@ -249,7 +249,7 @@ final class RSInterface {
             RSString var1 = Class3_Sub28_Sub7_Sub1.aClass94_4052;
             RSString var2 = Class3_Sub28_Sub14.aClass94_3672;
             if (Class44.anInt718 != 0) {
-                var1 = RSString.of("www)2wtqa");
+                var1 = RSString.parse("www)2wtqa");
             }
 
             if (null != Class163_Sub2.aClass94_2996) {
@@ -395,7 +395,7 @@ final class RSInterface {
 
             for (var10 = 0; var10 < 5; ++var10) {
                 RSString var14 = buffer.readString();
-                if (var14.length(-28) > 0) {
+                if (var14.length() > 0) {
                     this.options[var10] = var14;
                     var5 |= 1 << 23 - -var10;
                 }
@@ -490,7 +490,7 @@ final class RSInterface {
 
             for (var7 = 0; var7 < 5; ++var7) {
                 RSString var13 = buffer.readString();
-                if (var13.length(-121) > 0) {
+                if (var13.length() > 0) {
                     this.options[var7] = var13;
                     var5 |= 1 << 23 - -var7;
                 }
@@ -510,7 +510,7 @@ final class RSInterface {
 
         if (this.anInt318 == 1 || this.anInt318 == 4 || this.anInt318 == 5 || this.anInt318 == 6) {
             this.aClass94_289 = buffer.readString();
-            if (this.aClass94_289.length(-33) == 0) {
+            if (this.aClass94_289.length() == 0) {
                 if (this.anInt318 == 1) {
                     this.aClass94_289 = TextCore.HasOK;
                 }

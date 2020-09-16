@@ -676,8 +676,8 @@ final class Class1 {
         }
 
         aBooleanArray54 = new boolean[8];
-        aClass94_53 = RSString.of(Configurations.LOGIN_THEME_SONG);
+        aClass94_53 = RSString.parse(Configurations.LOGIN_THEME_SONG);
         anInt57 = 0;
-        aClass94_58 = RSString.of("<col=ffffff> )4 ");
+        aClass94_58 = RSString.parse("<col=ffffff> )4 ");
     }
 }

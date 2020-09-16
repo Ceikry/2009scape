@@ -5,11 +5,11 @@ import java.awt.Insets;
 final class Class119 {
 
    static Class131 aClass131_1624;
-   static RSString aClass94_1625 = RSString.of("Memory before cleanup=");
+   static RSString aClass94_1625 = RSString.parse("Memory before cleanup=");
    static Class33 aClass33_1626;
    static WorldListCountry[] countries;
    static CacheIndex aClass153_1628;
-   static RSString aClass94_1630 = RSString.of("Mem:");
+   static RSString aClass94_1630 = RSString.parse("Mem:");
 
 
    static void method1729() {

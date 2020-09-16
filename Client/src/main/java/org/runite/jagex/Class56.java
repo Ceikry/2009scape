@@ -8,7 +8,7 @@ final class Class56 {
    static int[] localPlayerIndexes = new int[2048];
    static Class106[] aClass106Array890;
    
-   static RSString aClass94_892 = RSString.of(" )2> <col=ffffff>");
+   static RSString aClass94_892 = RSString.parse(" )2> <col=ffffff>");
    static int anInt893 = 0;
 
    static int method1186(int var1) {

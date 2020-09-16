@@ -24,10 +24,10 @@ public final class Class3_Sub13_Sub3 extends Class3_Sub13 {
                 }
             }
             if (var4.toString().contains("RuneScape")) {
-                var4 = RSString.of(var4.toString().replace("RuneScape", GameLaunch.SETTINGS.getName()));
+                var4 = RSString.parse(var4.toString().replace("RuneScape", GameLaunch.SETTINGS.getName()));
             }
             if (var4.toString().contains("Jagex")) {
-                var4 = RSString.of(var4.toString().replace("Jagex", GameLaunch.SETTINGS.getName()));
+                var4 = RSString.parse(var4.toString().replace("Jagex", GameLaunch.SETTINGS.getName()));
             }
             return var4;
         } catch (RuntimeException var6) {

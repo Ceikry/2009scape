@@ -56,7 +56,7 @@ final class Class3_Sub23 extends Linkable {
          RSString var6 = Class47.emptyString(0);
          if(var3 < 0) {
             var3 = -var3;
-            Objects.requireNonNull(var6).method1533(Class3_Sub13_Sub11.aClass94_3133);
+            Objects.requireNonNull(var6).append(Class3_Sub13_Sub11.aClass94_3133);
          }
 
          RSString var8 = Class143.aClass94_1880;
@@ -80,7 +80,7 @@ final class Class3_Sub23 extends Linkable {
 
          int var11;
          for(var11 = 0; var2 > var11; ++var11) {
-            Objects.requireNonNull(var10).method1533(Class72.method1298((byte)9, (int)(var3 % 10L)));
+            Objects.requireNonNull(var10).append(Class72.method1298((byte)9, (int)(var3 % 10L)));
             var3 /= 10L;
          }
 
@@ -92,18 +92,18 @@ final class Class3_Sub23 extends Linkable {
             RSString var12;
             for(var12 = Class47.emptyString(0); var3 > 0L; var3 /= 10L) {
                if(var1 && var11 != 0 && var11 % 3 == 0) {
-                  var12.method1533(var8);
+                  var12.append(var8);
                }
 
-               Objects.requireNonNull(var12).method1533(Class72.method1298((byte)9, (int)(var3 % 10L)));
+               Objects.requireNonNull(var12).append(Class72.method1298((byte)9, (int)(var3 % 10L)));
                ++var11;
             }
 
             var9 = var12;
          }
 
-          if(Objects.requireNonNull(var10).length(2 ^ -47) > 0) {
-             var10.method1533(var7);
+          if(Objects.requireNonNull(var10).length() > 0) {
+             var10.append(var7);
           }
 
           return RenderAnimationDefinition.method903(new RSString[]{var6, Objects.requireNonNull(var9).method1544(true), var10.method1544(true)});

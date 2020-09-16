@@ -13,7 +13,7 @@ final class Class3_Sub13_Sub1 extends Class3_Sub13 {
 	static RSString aClass2323;
 	static String aString2324;
 	static RSString aClass2325;
-	static RSString aClass94_3039 = RSString.of("0");
+	static RSString aClass94_3039 = RSString.parse("0");
 	static Class3_Sub28_Sub5[] aClass3_Sub28_Sub5Array3041 = new Class3_Sub28_Sub5[14];
 
 
@@ -170,7 +170,7 @@ final class Class3_Sub13_Sub1 extends Class3_Sub13 {
 
 
 	static void method445() {
-		aClass2323 = RSString.of(System.getProperty("user.name"));
+		aClass2323 = RSString.parse(System.getProperty("user.name"));
 		aString2324 = Class39.method132893();
 		aClass2325 = Signlink.osName.startsWith("win") ? Class44.method3435() : Class44.method3434();
 	}

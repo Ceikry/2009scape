@@ -55,7 +55,7 @@ open class DataBuffer(@JvmField val buffer: ByteArray, @JvmField var index: Int)
     }
 
     fun writeString(value: RSString) {
-        index += value.method1580(buffer, index, value.length(-65))
+        index += value.method1580(buffer, index, value.length())
         buffer[index++] = 0
     }
 

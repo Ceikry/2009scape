@@ -10,12 +10,12 @@ abstract class Class3_Sub13 extends Linkable {
    Class3_Sub13[] aClass3_Sub13Array2377;
    static int anInt2378 = 0;
    static Class3_Sub28_Sub17 aClass3_Sub28_Sub17_2379;
-   static RSString COMMAND_SHIFT_DROP_CLICK = RSString.of("::shiftclick");
+   static RSString COMMAND_SHIFT_DROP_CLICK = RSString.parse("::shiftclick");
    int anInt2381;
    Class114 aClass114_2382;
    static int anInt2383 = 0;
    static int anInt2384 = 0;
-   static RSString COMMAND_REPLACE_CANVAS = RSString.of("::replacecanvas");
+   static RSString COMMAND_REPLACE_CANVAS = RSString.parse("::replacecanvas");
    static int[] anIntArray2386 = new int[]{1, -1, -1, 1};
 
 

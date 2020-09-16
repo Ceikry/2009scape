@@ -2,13 +2,13 @@ package org.runite.jagex;
 
 final class Class161 {
 
-   static RSString aClass94_2025 = RSString.of(")2");
+   static RSString aClass94_2025 = RSString.parse(")2");
    static int[] anIntArray2026;
    static int anInt2027 = -1;
    static int anInt2028 = 0;
-   static RSString aClass94_2029 = RSString.of("l");
+   static RSString aClass94_2029 = RSString.parse("l");
    static DataBuffer aClass3_Sub30_2030 = new DataBuffer(new byte[5000]);
-   static RSString aClass94_2033 = RSString.of("Memory after cleanup=");
+   static RSString aClass94_2033 = RSString.parse("Memory after cleanup=");
    static Class33 aClass33_2034;
    static RSString aClass94_2035 = null;
 

@@ -9,9 +9,9 @@ final class Class30 {
 
    private long aLong563;
    private final byte[] aByteArray564;
-   static RSString COMMAND_TOGGLE_FPSOFF = RSString.of("::fpsoff");
+   static RSString COMMAND_TOGGLE_FPSOFF = RSString.parse("::fpsoff");
    private int anInt566 = 0;
-   static RSString cmdChalReq = RSString.of(":chalreq:");
+   static RSString cmdChalReq = RSString.parse(":chalreq:");
    private long aLong568;
    private long aLong569;
    private long aLong570;
@@ -21,7 +21,7 @@ final class Class30 {
    static int[] anIntArray574 = new int[14];
    private int anInt575;
    private long aLong576 = -1L;
-   static RSString aClass94_577 = RSString.of("http:)4)4");
+   static RSString aClass94_577 = RSString.parse("http:)4)4");
    static float aFloat578;
    static boolean loadedWorldList = false;
 

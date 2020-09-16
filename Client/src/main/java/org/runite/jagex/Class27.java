@@ -6,7 +6,7 @@ final class Class27 {
    static Class93 aClass93_511 = new Class93(30);
    static int[] anIntArray512 = new int[500];
    static int anInt515 = -1;
-   static RSString aClass94_516 = RSString.of("unzap");
+   static RSString aClass94_516 = RSString.parse("unzap");
    static int anInt517 = 0;
    static Class3_Sub28_Sub16_Sub2 aClass3_Sub28_Sub16_Sub2_518;
    static Class157 aClass157_524;

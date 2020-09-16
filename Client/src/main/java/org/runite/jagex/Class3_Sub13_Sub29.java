@@ -7,10 +7,10 @@ import java.util.Objects;
 final class Class3_Sub13_Sub29 extends Class3_Sub13 {
 
    static int anInt3356;
-   static RSString aClass94_3357 = RSString.of("");
+   static RSString aClass94_3357 = RSString.parse("");
    static boolean disableGEBoxes = false;
    static int[] anIntArray3359 = new int[5];
-   static RSString aClass94_3360 = RSString.of("mem=");
+   static RSString aClass94_3360 = RSString.parse("mem=");
    static CacheIndex aClass153_3361;
 
 

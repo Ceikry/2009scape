@@ -13,7 +13,7 @@ public final class Class12 {
    long aLong328;
    boolean aBoolean329 = false;
    int anInt330;
-   static RSString aClass94_331 = RSString.of("(U1");
+   static RSString aClass94_331 = RSString.parse("(U1");
 
 
    static void method870(int var0, byte var1, int var2, int var3, int var4, int var5) {

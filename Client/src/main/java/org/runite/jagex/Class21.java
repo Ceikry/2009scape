@@ -6,9 +6,9 @@ final class Class21 {
 
    static boolean aBoolean440 = false;
    static int[] maskUpdateIndexes = new int[2048];
-   static RSString aClass94_442 = RSString.of("Number of player models in cache:");
+   static RSString aClass94_442 = RSString.parse("Number of player models in cache:");
    static int anInt443;
-   static RSString aClass94_444 = RSString.of("<img=1>");
+   static RSString aClass94_444 = RSString.parse("<img=1>");
 
 
    static void method912() {
@@ -19,7 +19,7 @@ final class Class21 {
          Unsorted.incomingPacketLength = 0;
          Class65.anInt987 = 0;
          Class3_Sub13_Sub34.anInt3415 = 0;
-         Class3_Sub29.anInt2582 = -1;
+         LinkableRSString.anInt2582 = -1;
          Class161.anInt2028 = 0;
          Class38_Sub1.anInt2617 = 0;
          Class24.anInt469 = -1;

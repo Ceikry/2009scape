@@ -2,8 +2,8 @@ package org.runite.jagex;
 
 final class Class40 {
 
-   static RSString aClass94_672 = RSString.of("null");
-   static RSString aClass94_673 = RSString.of(")0");
+   static RSString aClass94_672 = RSString.parse("null");
+   static RSString aClass94_673 = RSString.parse(")0");
    static int[] anIntArray675 = new int[]{16, 32, 64, 128};
    static RSString aClass94_676 = null;
    static int anInt677 = 0;
@@ -141,7 +141,7 @@ final class Class40 {
                if(null != var3) {
                   var5 = -Class82.anInt1152 + (Class3_Sub24_Sub3.anIntArray3494[var2] & 255) * 64;
                   var4 = -Class131.anInt1716 + (Class3_Sub24_Sub3.anIntArray3494[var2] >> 8) * 64;
-                  if(Class3_Sub29.isDynamicSceneGraph) {
+                  if(LinkableRSString.isDynamicSceneGraph) {
                      var5 = 10;
                      var4 = 10;
                   }
@@ -154,7 +154,7 @@ final class Class40 {
                   if(null != var3) {
                      var4 = -Class131.anInt1716 + 64 * (Class3_Sub24_Sub3.anIntArray3494[var2] >> 8);
                      var5 = -Class82.anInt1152 + 64 * (Class3_Sub24_Sub3.anIntArray3494[var2] & 255);
-                     if(Class3_Sub29.isDynamicSceneGraph) {
+                     if(LinkableRSString.isDynamicSceneGraph) {
                         var5 = 10;
                         var4 = 10;
                      }
@@ -219,7 +219,7 @@ final class Class40 {
                System.gc();
                Class163_Sub1.method2210(true);
                Class117.method1720(false, 105);
-               if(!Class3_Sub29.isDynamicSceneGraph) {
+               if(!LinkableRSString.isDynamicSceneGraph) {
                   Class47.method1091(false, -93);
                   Class163_Sub1.method2210(true);
                   if(HDToolKit.highDetail) {
@@ -234,7 +234,7 @@ final class Class40 {
                   }
                }
 
-               if(Class3_Sub29.isDynamicSceneGraph) {
+               if(LinkableRSString.isDynamicSceneGraph) {
                   Class49.method1121(false, (byte)98);
                   Class163_Sub1.method2210(true);
                   if(HDToolKit.highDetail) {
@@ -272,13 +272,13 @@ final class Class40 {
                if(HDToolKit.highDetail && var11) {
                   Class167.method2264(true);
                   Class117.method1720(true, 105);
-                  if(!Class3_Sub29.isDynamicSceneGraph) {
+                  if(!LinkableRSString.isDynamicSceneGraph) {
                      Class47.method1091(true, -121);
                      Class163_Sub1.method2210(true);
                      Class3_Sub13_Sub6.method198(true);
                   }
 
-                  if(Class3_Sub29.isDynamicSceneGraph) {
+                  if(LinkableRSString.isDynamicSceneGraph) {
                      Class49.method1121(true, (byte)56);
                      Class163_Sub1.method2210(true);
                      Class163_Sub2_Sub1.method2223(true, (byte)-105);
@@ -316,7 +316,7 @@ final class Class40 {
                   Class3_Sub13_Sub1.outgoingBuffer.writeInt(1057001181);
                }
 
-               if(!Class3_Sub29.isDynamicSceneGraph) {
+               if(!LinkableRSString.isDynamicSceneGraph) {
                   int var7 = (Class3_Sub7.anInt2294 + 6) / 8;
                   int var6 = (Class3_Sub7.anInt2294 - 6) / 8;
                   var4 = (Class3_Sub28_Sub7.anInt3606 - 6) / 8;

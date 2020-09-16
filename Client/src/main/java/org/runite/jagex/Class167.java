@@ -239,7 +239,7 @@ final class Class167 {
          Class83.aBoolean1158 = false;
          Class129.anInt1691 = -1;
          Class164_Sub1.method2241((byte)-77, true);
-         Class3_Sub29.isDynamicSceneGraph = false;
+         LinkableRSString.isDynamicSceneGraph = false;
          Class82.anInt1152 = 0;
          Class3_Sub28_Sub7.anInt3606 = 0;
          Class3_Sub7.anInt2294 = 0;

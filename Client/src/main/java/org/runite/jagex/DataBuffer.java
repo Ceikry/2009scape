@@ -85,7 +85,7 @@ public class DataBuffer extends Linkable {
 
     // TODO Rename / refactor
     final void writeString(RSString var2) {
-        this.index += var2.method1580(this.buffer, this.index, var2.length(-65));
+        this.index += var2.method1580(this.buffer, this.index, var2.length());
         this.buffer[this.index++] = 0;
     }
 

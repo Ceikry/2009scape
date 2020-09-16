@@ -20,7 +20,7 @@ final class Class3_Sub9 extends Linkable {
    ObjectDefinition aClass111_2320;
    int anInt2321;
    int anInt2322 = 0;
-   static RSString aClass94_2323 = RSString.of("<img=0>");
+   static RSString aClass94_2323 = RSString.parse("<img=0>");
    NPC aClass140_Sub4_Sub2_2324;
    int anInt2325;
    int anInt2326;
@@ -28,11 +28,11 @@ final class Class3_Sub9 extends Linkable {
    int anInt2328;
    boolean aBoolean2329;
    static int anInt2330 = 0;
-   static RSString aClass94_2331 = RSString.of("");
+   static RSString aClass94_2331 = RSString.parse("");
    int anInt2332;
    int[] anIntArray2333;
    static int anInt2334;
-   static RSString RIGHT_PARENTHESES = RSString.of("(Y");
+   static RSString RIGHT_PARENTHESES = RSString.parse("(Y");
 
 
    static Class3_Sub28_Sub5 method133(int var0) {

@@ -13,13 +13,13 @@ final class Class166 {
    int anInt2071;
    static Class3_Sub28_Sub16[] aClass3_Sub28_Sub16Array2072;
    static int[] anIntArray2073 = new int[5];
-   static RSString aClass94_2074 = RSString.of("; version=1; path=)4; domain=");
-   static RSString aClass94_2075 = RSString.of("rect_debug=");
+   static RSString aClass94_2074 = RSString.parse("; version=1; path=)4; domain=");
+   static RSString aClass94_2075 = RSString.parse("rect_debug=");
    byte[] aByteArray2076;
    int anInt2077;
    int anInt2078;
    static int anInt2079 = 0;
-   static RSString aClass94_2080 = RSString.of("(U2");
+   static RSString aClass94_2080 = RSString.parse("(U2");
 
 
    static boolean method2256(int var0, int var1, int var2, int var3) {
@@ -48,7 +48,7 @@ final class Class166 {
 
          for(int var5 = 0; Class159.localPlayerCount > var5; ++var5) {
             Player var6 = Class3_Sub13_Sub22.players[Class56.localPlayerIndexes[var5]];
-            if(null != var6 && null != var6.displayName && var6.displayName.equals(-110, var3)) {
+            if(null != var6 && null != var6.displayName && var6.displayName.equalsStringIgnoreCase(var3)) {
                var4 = true;
                Class3_Sub28_Sub9.method582(Class102.player.anIntArray2755[0], 0, 1, false, 0, 2, var6.anIntArray2767[0], 1, 0, 2, var6.anIntArray2755[0], Class102.player.anIntArray2767[0]);
                if(1 == var0) {

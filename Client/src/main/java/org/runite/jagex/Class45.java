@@ -55,7 +55,7 @@ final class Class45 {
 							var13 = var14.anInt149;
 							message = var14.aClass3_Sub28_Sub4_151.method555(Class161.aClass3_Sub30_2030);
 						} else {
-							message = Class3_Sub28_Sub17.method686(Objects.requireNonNull(Class32.method992(Class161.aClass3_Sub30_2030).method1536(78)));
+							message = Class3_Sub28_Sub17.method686(Objects.requireNonNull(Class32.method992(Class161.aClass3_Sub30_2030).properlyCapitalize()));
 						}
 
 						var3.textSpoken = message.trim(1);
@@ -63,7 +63,7 @@ final class Class45 {
 						var3.textCycle = 150;
 						var3.textColor = var4 >> 8;
 						if (chatIcon == 2) {
-							Class3_Sub28_Sub12.sendGameMessage(var13, var8?17:1, message, (RSString)null, RenderAnimationDefinition.method903(new RSString[]{RSString.of("<img=" + (chatIcon-1) + ">"), var3.getName()}));
+							Class3_Sub28_Sub12.sendGameMessage(var13, var8?17:1, message, (RSString)null, RenderAnimationDefinition.method903(new RSString[]{RSString.parse("<img=" + (chatIcon-1) + ">"), var3.getName()}));
 						} else if (chatIcon == 1) {
 							Class3_Sub28_Sub12.sendGameMessage(var13, var8?17:1, message, (RSString)null, RenderAnimationDefinition.method903(new RSString[]{Class32.aClass94_592, var3.getName()}));
 						} else {

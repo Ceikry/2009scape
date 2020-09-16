@@ -113,7 +113,7 @@ final class Class100 {
 
    static int method1602(RSString var1) {
       try {
-         if(Class119.aClass131_1624 == null || var1.length(-107) == 0) {
+         if(Class119.aClass131_1624 == null || var1.length() == 0) {
             return -1;
          } else {
             for(int var2 = 0; var2 < Class119.aClass131_1624.anInt1720; ++var2) {

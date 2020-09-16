@@ -5,9 +5,9 @@ import java.util.Objects;
 final class Class14 {
 
    static boolean aBoolean337;
-   static RSString aClass94_339 = RSString.of("1");
+   static RSString aClass94_339 = RSString.parse("1");
    static int anInt340 = 127;
-   static RSString aClass94_341 = RSString.of(")3");
+   static RSString aClass94_341 = RSString.parse(")3");
 
 
    private static LDIndexedSprite[] method885(int var1, CacheIndex var2) {

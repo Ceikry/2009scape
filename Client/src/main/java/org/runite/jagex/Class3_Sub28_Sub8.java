@@ -50,7 +50,7 @@ final class Class3_Sub28_Sub8 extends Node {
 
    static int method576(RSString var0) {
       try {
-         if(Class119.aClass131_1624 == null || var0.length(-65) == 0) {
+         if(Class119.aClass131_1624 == null || var0.length() == 0) {
             return -1;
          } else {
             for (int var2 = 0; var2 < Class119.aClass131_1624.anInt1720; ++var2) {

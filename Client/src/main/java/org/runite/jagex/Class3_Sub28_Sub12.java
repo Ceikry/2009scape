@@ -7,9 +7,9 @@ public final class Class3_Sub28_Sub12 extends Node {
 
    int anInt3647 = 0;
    public static Canvas canvas;
-   static RSString aClass94_3651 = RSString.of("::mm");
+   static RSString aClass94_3651 = RSString.parse("::mm");
    static int anInt3652;
-   static RSString aClass94_3653 = RSString.of("Shift)2click disabled)3");
+   static RSString aClass94_3653 = RSString.parse("Shift)2click disabled)3");
    static short[][] aShortArrayArray3654 = new short[][]{{(short)6798, (short)107, (short)10283, (short)16, (short)4797, (short)7744, (short)5799, (short)4634, (short)-31839, (short)22433, (short)2983, (short)-11343, (short)8, (short)5281, (short)10438, (short)3650, (short)-27322, (short)-21845, (short)200, (short)571, (short)908, (short)21830, (short)28946, (short)-15701, (short)-14010}, {(short)8741, (short)12, (short)-1506, (short)-22374, (short)7735, (short)8404, (short)1701, (short)-27106, (short)24094, (short)10153, (short)-8915, (short)4783, (short)1341, (short)16578, (short)-30533, (short)25239, (short)8, (short)5281, (short)10438, (short)3650, (short)-27322, (short)-21845, (short)200, (short)571, (short)908, (short)21830, (short)28946, (short)-15701, (short)-14010}, {(short)25238, (short)8742, (short)12, (short)-1506, (short)-22374, (short)7735, (short)8404, (short)1701, (short)-27106, (short)24094, (short)10153, (short)-8915, (short)4783, (short)1341, (short)16578, (short)-30533, (short)8, (short)5281, (short)10438, (short)3650, (short)-27322, (short)-21845, (short)200, (short)571, (short)908, (short)21830, (short)28946, (short)-15701, (short)-14010}, {(short)4626, (short)11146, (short)6439, (short)12, (short)4758, (short)10270}, {(short)4550, (short)4537, (short)5681, (short)5673, (short)5790, (short)6806, (short)8076, (short)4574}};
    static int anInt3655 = -1;
 
@@ -71,7 +71,7 @@ public final class Class3_Sub28_Sub12 extends Node {
          for(int i = 99; i > 0; --i) {
             Class3_Sub13_Sub6.anIntArray3082[i] = Class3_Sub13_Sub6.anIntArray3082[i - 1];
             Class3_Sub13_Sub19.aClass94Array3226[i] = Class3_Sub13_Sub19.aClass94Array3226[i - 1];
-            Class3_Sub29.aClass94Array2580[i] = Class3_Sub29.aClass94Array2580[-1 + i];
+            LinkableRSString.aClass94Array2580[i] = LinkableRSString.aClass94Array2580[-1 + i];
             Class163_Sub3.aClass94Array3003[i] = Class163_Sub3.aClass94Array3003[i + -1];
             GameObject.anIntArray1835[i] = GameObject.anIntArray1835[i - 1];
          }
@@ -81,7 +81,7 @@ public final class Class3_Sub28_Sub12 extends Node {
          Class3_Sub13_Sub19.aClass94Array3226[0] = var5;
          Class24.anInt472 = Class3_Sub13_Sub17.anInt3213;
          GameObject.anIntArray1835[0] = var0;
-         Class3_Sub29.aClass94Array2580[0] = message;
+         LinkableRSString.aClass94Array2580[0] = message;
          Class163_Sub3.aClass94Array3003[0] = var3;
       } catch (RuntimeException var7) {
          throw Class44.clientError(var7, "md.D(" + var0 + ',' + type + ',' + (message != null?"{...}":"null") + ',' + (var3 != null?"{...}":"null") + ',' + (byte) 50 + ',' + (var5 != null?"{...}":"null") + ')');

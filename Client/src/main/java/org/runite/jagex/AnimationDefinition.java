@@ -414,7 +414,7 @@ final class AnimationDefinition {
 			Class159.anInt2023 = 0;
 			Class38_Sub1.anInt2617 = 0;
 			Class3_Sub13_Sub1.outgoingBuffer.index = 0;
-			Class3_Sub29.anInt2582 = -1;
+			LinkableRSString.anInt2582 = -1;
 			Class3_Sub28_Sub16.anInt3699 = 0;
 			GraphicDefinition.incomingBuffer.index = 0;
 
@@ -428,7 +428,7 @@ final class AnimationDefinition {
 			Class23.method940(119, 0);
 
 			for(var1 = 0; var1 < 100; ++var1) {
-				Class3_Sub29.aClass94Array2580[var1] = null;
+				LinkableRSString.aClass94Array2580[var1] = null;
 			}
 
 			Class164_Sub1.anInt3012 = 0;
@@ -445,7 +445,7 @@ final class AnimationDefinition {
 			Class65.anInt987 = 0;
 			Class3_Sub13_Sub8.anInt3102 = -60 + (int)(Math.random() * 120.0D);
 			Class3_Sub13_Sub9.anInt3114 = 0;
-			Class3_Sub29.anInt2589 = (int)(80.0D * Math.random()) - 40;
+			LinkableRSString.anInt2589 = (int)(80.0D * Math.random()) - 40;
 			Class163.localNPCCount = 0;
 
 			for(var1 = 0; 2048 > var1; ++var1) {

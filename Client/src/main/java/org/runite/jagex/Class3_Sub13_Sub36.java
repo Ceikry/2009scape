@@ -40,7 +40,7 @@ final class Class3_Sub13_Sub36 extends Class3_Sub13 {
          int var6;
          int var7;
          if(1 == Class133.anInt1753) {
-            var7 = 2047 & Class3_Sub29.anInt2589 + GraphicDefinition.CAMERA_DIRECTION;
+            var7 = 2047 & LinkableRSString.anInt2589 + GraphicDefinition.CAMERA_DIRECTION;
             var6 = Class3_Sub9.anInt2309;
             if(Class75_Sub4.anInt2670 / 256 > var6) {
                var6 = Class75_Sub4.anInt2670 / 256;

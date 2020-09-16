@@ -14,16 +14,63 @@ import java.util.Objects;
 
 public final class RSString implements Interface3 {
 
-    private boolean aBoolean2152 = true;
+    static HashTable<LinkableRSString> interned;
+    private boolean mutable = true;
     byte[] buffer;
     int length;
 
-    final URL toURL() throws MalformedURLException {
+    /**
+     * @return A RSString consisting of the actual bytes in the provided string.
+     */
+    public static RSString of(String string) {
+        byte[] bytes = string.getBytes(StandardCharsets.ISO_8859_1);
+
+        RSString rs = new RSString();
+        rs.buffer = bytes;
+        rs.length = 0;
+
+        for (int i = 0; i < bytes.length; ++i) {
+            if (bytes[i] != 0) {
+                bytes[rs.length++] = bytes[i];
+            }
+        }
+
+        return rs;
+    }
+
+    /**
+     * @return A RSString that is interned and parsed.
+     */
+    public static RSString parse(String string) {
+        byte[] bytes = Objects.requireNonNull(string).replace("RuneScape", GameLaunch.SETTINGS.getName()).getBytes();
+
+        int length = bytes.length;
+        RSString jagString = new RSString();
+        jagString.buffer = new byte[length];
+
+        int i = 0;
+        while (length > i) {
+            int ascii = bytes[i++] & 255;
+            if (ascii <= 45 && ascii >= 40) {
+                if (length <= i) {
+                    break;
+                }
+
+                int var7 = bytes[i++] & 0xff;
+                jagString.buffer[jagString.length++] = (byte) (-48 + var7 + 43 * (-40 + ascii));
+            } else if (ascii != 0) {
+                jagString.buffer[jagString.length++] = (byte) ascii;
+            }
+        }
+        jagString.method1576();
+        return jagString.intern();
+    }
+
+    public final URL toURL() throws MalformedURLException {
         return new URL(new String(this.buffer, 0, this.length));
     }
 
-    // TODO What kind of comparison is done in this method
-    final boolean equals(int var1, RSString other) {
+    public final boolean equalsStringIgnoreCase(RSString other) {
         if (other == null) {
             return false;
         } else if (this.length == other.length) {
@@ -51,7 +98,7 @@ public final class RSString implements Interface3 {
     }
 
     // TODO Refactor to support regular equals method
-    final boolean equalsString(RSString other) {
+    public final boolean equalsString(RSString other) {
         if (other == null) {
             return false;
         } else if (this == other) {
@@ -73,7 +120,7 @@ public final class RSString implements Interface3 {
         }
     }
 
-    final int parseInt(int radix) {
+    public final int parseInt(int radix) {
         if (radix < 1 || radix > 36) {
             radix = 10;
         }
@@ -132,154 +179,131 @@ public final class RSString implements Interface3 {
         }
     }
 
-    final void drawString(int x, int y, Graphics g) {
+    public final void drawString(Graphics g, int y, int x) {
         String string = new String(this.buffer, 0, this.length, StandardCharsets.ISO_8859_1);
         g.drawString(string, x, y);
     }
 
-    final void method1533(RSString var1) {
-        try {
-            if (this.aBoolean2152) {
-                if (var1.length + this.length > this.buffer.length) {
-                    int var3;
-                    for (var3 = 1; var3 < var1.length + this.length; var3 += var3) {
-                    }
-
-                    byte[] var4 = new byte[var3];
-                    ArrayUtils.arraycopy(this.buffer, 0, var4, 0, this.length);
-                    this.buffer = var4;
+    final void append(RSString var1) {
+        if (this.mutable) {
+            if (var1.length + this.length > this.buffer.length) {
+                int var3;
+                for (var3 = 1; var3 < var1.length + this.length; var3 += var3) {
                 }
 
-                ArrayUtils.arraycopy(var1.buffer, 0, this.buffer, this.length, var1.length);
-                this.length += var1.length;
-            } else {
-                throw new IllegalArgumentException();
+                byte[] var4 = new byte[var3];
+                ArrayUtils.arraycopy(this.buffer, 0, var4, 0, this.length);
+                this.buffer = var4;
             }
-        } catch (RuntimeException var5) {
-            throw Class44.clientError(var5, "na.E(" + (var1 != null ? "{...}" : "null") + ',' + true + ')');
+
+            ArrayUtils.arraycopy(var1.buffer, 0, this.buffer, this.length, var1.length);
+            this.length += var1.length;
+        } else {
+            throw new IllegalArgumentException();
         }
     }
 
-    final RSString method1534() {
-        try {
+    public final RSString toLowercase() {
+        RSString lower = new RSString();
+        lower.length = this.length;
+        lower.buffer = new byte[this.length];
 
-            RSString var2 = new RSString();
-            var2.length = this.length;
-            var2.buffer = new byte[this.length];
-
-            for (int var3 = 0; var3 < this.length; ++var3) {
-                byte var4 = this.buffer[var3];
-                if (65 <= var4 && var4 <= 90 || var4 >= -64 && var4 <= -34 && var4 != -41) {
-                    var4 = (byte) (var4 + 32);
-                }
-
-                var2.buffer[var3] = var4;
+        for (int i = 0; i < this.length; ++i) {
+            byte ch = this.buffer[i];
+            if (65 <= ch && ch <= 90 || ch >= -64 && ch <= -34 && ch != -41) {
+                ch = (byte) (ch + 32);
             }
 
-            return var2;
-        } catch (RuntimeException var5) {
-            throw Class44.clientError(var5, "na.VA(" + -98 + ')');
+            lower.buffer[i] = ch;
         }
+
+        return lower;
     }
 
-    final RSString method1536(int var1) {
-        try {
-            byte var3 = 2;
-            RSString var2 = new RSString();
-            var2.length = this.length;
-            if (var1 < 67) {
-                return (RSString) null;
-            } else {
-                var2.buffer = new byte[this.length];
+    /**
+     * Returns a copy of this string with proper capitalization. Generally, this returns an all-lower string. Characters
+     * are changed to uppercase based on the following rules:
+     * - The character is the first character in the string
+     * - The character is the first non-whitespace character after a '.', '!' or '?' character
+     *
+     * Characters may be either lowercase or uppercase if the previous character is a whitespace character.
+     *
+     * @return A copy of this string with capitalization based on the rules above.
+     */
+    public final RSString properlyCapitalize() {
+        byte state = 2;
+        RSString newString = new RSString();
+        newString.length = this.length;
+        newString.buffer = new byte[this.length];
 
-                for (int var4 = 0; var4 < this.length; ++var4) {
-                    byte var5 = this.buffer[var4];
-                    if ((var5 < 97 || 122 < var5) && (var5 < -32 || var5 > -2 || var5 == -9)) {
-                        if ((var5 < 65 || var5 > 90) && (var5 < -64 || var5 > -34 || var5 == -41)) {
-                            if (var5 != 46 && 33 != var5 && var5 != 63) {
-                                if (32 == var5) {
-                                    if (2 != var3) {
-                                        var3 = 1;
-                                    }
-                                } else {
-                                    var3 = 1;
-                                }
-                            } else {
-                                var3 = 2;
+        for (int i = 0; i < this.length; ++i) {
+            byte ch = this.buffer[i];
+            if ((ch < 97 || 122 < ch) && (ch < -32 || ch > -2 || ch == -9)) { // if not lowercase chars
+                if ((ch < 65 || ch > 90) && (ch < -64 || ch > -34 || ch == -41)) { // if not uppercase chars
+                    if (ch != 46 && 33 != ch && ch != 63) { // if not `.`, `!` or `?`
+                        if (32 == ch) { // if ' '
+                            if (state != 2) {
+                                state = 1;
                             }
-                        } else {
-                            if (0 == var3) {
-                                var5 = (byte) (var5 + 32);
-                            }
-
-                            var3 = 0;
+                        } else { // if not ' '
+                            state = 1;
                         }
-                    } else {
-                        if (2 == var3) {
-                            var5 = (byte) (var5 - 32);
-                        }
-
-                        var3 = 0;
+                    } else { // if `.`, `!` or `?`
+                        state = 2;
+                    }
+                } else { // if uppercase char
+                    if (0 == state) {
+                        ch = (byte) (ch + 32);
                     }
 
-                    var2.buffer[var4] = var5;
+                    state = 0;
                 }
-
-                return var2;
-            }
-        } catch (RuntimeException var6) {
-            throw Class44.clientError(var6, "na.DA(" + var1 + ')');
-        }
-    }
-
-    final long method1538(int var1) {
-        try {
-            long var2 = 0L;
-            for (int var4 = 0; var4 < this.length; ++var4) {
-                var2 = (long) (this.buffer[var4] & 255) + (var2 << 5) + -var2;
-            }
-
-            return var2;
-        } catch (RuntimeException var5) {
-            throw Class44.clientError(var5, "na.C(" + var1 + ')');
-        }
-    }
-
-    public final int length(int var1) {
-        try {
-            if (var1 >= -16) {
-                this.method1544(false);
-            }
-
-            return this.length;
-        } catch (RuntimeException var3) {
-            throw Class44.clientError(var3, "na.M(" + var1 + ')');
-        }
-    }
-
-    final RSString method1542(RSString var2, int var3, int var4) {
-        try {
-            if (!this.aBoolean2152) {
-                throw new IllegalArgumentException();
-            } else if (0 <= var3 && var3 <= var4 && var2.length >= var4) {
-                if (this.length + (var4 - var3) > this.buffer.length) {
-                    int var5;
-                    for (var5 = 1; var5 < this.length + var2.length; var5 += var5) {
-                    }
-
-                    byte[] var6 = new byte[var5];
-                    ArrayUtils.arraycopy(this.buffer, 0, var6, 0, this.length);
-                    this.buffer = var6;
-                }
-
-                ArrayUtils.arraycopy(var2.buffer, var3, this.buffer, this.length, -var3 + var4);
-                this.length += var4 + -var3;
-                return this;
             } else {
-                throw new IllegalArgumentException();
+                if (state == 2) {
+                    ch = (byte) (ch - 32);
+                }
+
+                state = 0;
             }
-        } catch (RuntimeException var7) {
-            throw Class44.clientError(var7, "na.O(" + 1 + ',' + (var2 != null ? "{...}" : "null") + ',' + var3 + ',' + var4 + ')');
+
+            newString.buffer[i] = ch;
+        }
+
+        return newString;
+    }
+
+    public final long hash() {
+        long hash = 0L;
+        for (int i = 0; i < this.length; ++i) {
+            hash = (long) (this.buffer[i] & 0xff) + (hash << 5) - hash;
+        }
+
+        return hash;
+    }
+
+    public final int length() {
+        return this.length;
+    }
+
+    public final RSString method1542(RSString var2, int var3, int var4) {
+        if (!this.mutable) {
+            throw new IllegalArgumentException();
+        } else if (0 <= var3 && var3 <= var4 && var2.length >= var4) {
+            if (this.length + (var4 - var3) > this.buffer.length) {
+                int var5;
+                for (var5 = 1; var5 < this.length + var2.length; var5 += var5) {
+                }
+
+                byte[] var6 = new byte[var5];
+                ArrayUtils.arraycopy(this.buffer, 0, var6, 0, this.length);
+                this.buffer = var6;
+            }
+
+            ArrayUtils.arraycopy(var2.buffer, var3, this.buffer, this.length, -var3 + var4);
+            this.length += var4 + -var3;
+            return this;
+        } else {
+            throw new IllegalArgumentException();
         }
     }
 
@@ -447,7 +471,7 @@ public final class RSString implements Interface3 {
 
     final void method1553(int var1) {
         try {
-            if (!this.aBoolean2152) {
+            if (!this.mutable) {
                 throw new IllegalArgumentException();
             } else if (var1 < 0) {
                 throw new IllegalArgumentException();
@@ -605,7 +629,7 @@ public final class RSString implements Interface3 {
                             Objects.requireNonNull(var10).appendCharacter(this.buffer[var6++] & 255);
                         }
 
-                        Objects.requireNonNull(var10).method1533(var1);
+                        Objects.requireNonNull(var10).append(var1);
                         var6 += var3.length;
                     }
                 }
@@ -889,38 +913,32 @@ public final class RSString implements Interface3 {
         }
     }
 
-    final RSString method1571() {
-        try {
-            long var2 = this.method1538((byte) 32 + 90);
-            Class<RSString> var4 = RSString.class;
-            synchronized (var4) {
-                Class3_Sub29 var5;
-                if (Class86.aHashTable_1194 == null) {
-                    Class86.aHashTable_1194 = new HashTable(4096);
-                } else {
-                    for (var5 = (Class3_Sub29) Class86.aHashTable_1194.get(var2); null != var5; var5 = (Class3_Sub29) Class86.aHashTable_1194.nextInBucket()) {
-                        if (this.equalsString(var5.aClass94_2586)) {
-                            return var5.aClass94_2586;
-                        }
+    public final RSString intern() {
+        final long hash = this.hash();
+        synchronized (RSString.class) {
+            LinkableRSString linkable;
+            if (interned == null) {
+                interned = new HashTable<>(4096);
+            } else {
+                for (linkable = interned.get(hash); null != linkable; linkable = interned.nextInBucket()) {
+                    if (this.equalsString(linkable.value)) {
+                        return linkable.value;
                     }
                 }
-
-                var5 = new Class3_Sub29();
-
-                var5.aClass94_2586 = this;
-                this.aBoolean2152 = false;
-                Class86.aHashTable_1194.put(var2, var5);
             }
 
-            return this;
-        } catch (RuntimeException item) {
-            throw Class44.clientError(item, "na.BB(" + (byte) 32 + ')');
+            linkable = new LinkableRSString();
+
+            linkable.value = this;
+            mutable = false;
+            interned.put(hash, linkable);
         }
+        return this;
     }
 
     final void appendCharacter(int character) {
         if (0 < character && character <= 255) {
-            if (this.aBoolean2152) {
+            if (this.mutable) {
                 if (this.length == this.buffer.length) {
                     // TODO Is this really just making a new buffer with the size + 1? Why do we have to loop for that?
                     int newBufferSize;
@@ -941,18 +959,10 @@ public final class RSString implements Interface3 {
         }
     }
 
-    final RSString method1573(byte var1, Applet var2) {
-        try {
-            if (var1 < 124) {
-                this.parseInt();
-            }
-
-            String var3 = new String(this.buffer, 0, this.length);
-            String var4 = var2.getParameter(var3);
-            return null == var4 ? null : Class3_Sub29.method732(var4);
-        } catch (RuntimeException var5) {
-            throw Class44.clientError(var5, "na.DB(" + var1 + ',' + (var2 != null ? "{...}" : "null") + ')');
-        }
+    final RSString getParamValue(Applet applet) {
+        String string = new String(this.buffer, 0, this.length);
+        String paramValue = applet.getParameter(string);
+        return null == paramValue ? null : of(paramValue);
     }
 
     final int method1574() {
@@ -982,7 +992,7 @@ public final class RSString implements Interface3 {
 
     final RSString method1576() {
         try {
-            if (this.aBoolean2152) {
+            if (this.mutable) {
 
                 if (this.buffer.length != this.length) {
                     byte[] var2 = new byte[this.length];
@@ -1052,30 +1062,6 @@ public final class RSString implements Interface3 {
         } catch (RuntimeException var7) {
             throw Class44.clientError(var7, "na.LA(" + true + ',' + (var2 != null ? "{...}" : "null") + ',' + var3 + ',' + 0 + ',' + var5 + ')');
         }
-    }
-
-    public static RSString of(String string) {
-        byte[] bytes = Objects.requireNonNull(string).replace("RuneScape", GameLaunch.SETTINGS.getName()).getBytes();
-        int length = bytes.length;
-        RSString jagString = new RSString();
-        jagString.buffer = new byte[length];
-
-        int i = 0;
-        while (length > i) {
-            int ascii = bytes[i++] & 255;
-            if (ascii <= 45 && ascii >= 40) {
-                if (length <= i) {
-                    break;
-                }
-
-                int var7 = bytes[i++] & 0xff;
-                jagString.buffer[jagString.length++] = (byte) (-48 + var7 + 43 * (-40 + ascii));
-            } else if (ascii != 0) {
-                jagString.buffer[jagString.length++] = (byte) ascii;
-            }
-        }
-        jagString.method1576();
-        return jagString.method1571();
     }
 
 }

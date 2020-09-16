@@ -2,14 +2,14 @@ package org.runite.jagex;
 
 final class Class95 {
 
-   static RSString aClass94_1333 = RSString.of("um");
+   static RSString aClass94_1333 = RSString.parse("um");
    static int anInt1336 = 0;
-   static RSString COMMAND_BREAK_CONNECTION = RSString.of("::breakcon");
+   static RSString COMMAND_BREAK_CONNECTION = RSString.parse("::breakcon");
    static int anInt1338;
    static Class3_Sub28_Sub16 aClass3_Sub28_Sub16_1339;
    static volatile int anInt1340 = -1;
-   static RSString aClass94_1341 = RSString.of("logo");
-   static RSString aClass94_1342 = RSString.of("details");
+   static RSString aClass94_1341 = RSString.parse("logo");
+   static RSString aClass94_1342 = RSString.parse("details");
    static int anInt1343;
    static int anInt1344;
 

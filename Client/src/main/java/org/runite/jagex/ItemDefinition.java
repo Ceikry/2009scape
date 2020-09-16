@@ -93,13 +93,13 @@ final class ItemDefinition {
 			 return false;
 		  } else {
 			 for(int var2 = 0; Class8.anInt104 > var2; ++var2) {
-				if(var0.equals(-121, Class70.aClass94Array1046[var2])) {
+				if(var0.equalsStringIgnoreCase(Class70.aClass94Array1046[var2])) {
 				   return true;
 				}
 			 }
 
 
-			 return var0.equals((byte) -82 + -46, Class102.player.displayName);
+			 return var0.equalsStringIgnoreCase(Class102.player.displayName);
 		  }
 	   } catch (RuntimeException var3) {
 		  throw Class44.clientError(var3, "hj.A(" + "{...}" + ',' + (byte) -82 + ')');
@@ -187,11 +187,11 @@ final class ItemDefinition {
 				return true;
 			} else {
 				boolean var5 = true;
-				if(!Class3_Sub29.aClass153_2581.method2129((byte)-75, 0, var3)) {
+				if(!LinkableRSString.aClass153_2581.method2129((byte)-75, 0, var3)) {
 					var5 = false;
 				}
 
-				if(var4 != -1 && !Class3_Sub29.aClass153_2581.method2129((byte)58, 0, var4)) {
+				if(var4 != -1 && !LinkableRSString.aClass153_2581.method2129((byte)58, 0, var4)) {
 					var5 = false;
 				}
 
@@ -910,7 +910,7 @@ final class ItemDefinition {
 													if (opcode == 3106) {
 														RSString class94_6 = stringsStack[--sStackCounter];
 														Class3_Sub13_Sub1.outgoingBuffer.putOpcode(65);
-														Class3_Sub13_Sub1.outgoingBuffer.writeByte(1 + class94_6.length(-84));
+														Class3_Sub13_Sub1.outgoingBuffer.writeByte(1 + class94_6.length());
 														Class3_Sub13_Sub1.outgoingBuffer.writeString(class94_6);
 														continue;
 													}
@@ -1368,7 +1368,7 @@ final class ItemDefinition {
 													}
 													if (opcode == 3624) {
 														int l15 = intsStack[--iStackCounter];
-														if (null != PacketParser.aClass3_Sub19Array3694 && l15 < Unsorted.clanSize && PacketParser.aClass3_Sub19Array3694[l15].aClass94_2476.equals(-118, Class102.player.displayName))
+														if (null != PacketParser.aClass3_Sub19Array3694 && l15 < Unsorted.clanSize && PacketParser.aClass3_Sub19Array3694[l15].aClass94_2476.equalsStringIgnoreCase(Class102.player.displayName))
 															intsStack[iStackCounter++] = 1;
 														else
 															intsStack[iStackCounter++] = 0;
@@ -1656,7 +1656,7 @@ final class ItemDefinition {
 																		RSString class94_46 = null;
 																		int i24 = intsStack[--iStackCounter];
 																		if (i24 < 100)
-																			class94_46 = Class3_Sub29.aClass94Array2580[i24];
+																			class94_46 = LinkableRSString.aClass94Array2580[i24];
 																		if (class94_46 == null)
 																			class94_46 = Class3_Sub9.aClass94_2331;
 																		stringsStack[sStackCounter++] = class94_46;
@@ -1665,7 +1665,7 @@ final class ItemDefinition {
 																	if (opcode == 5004) {
 																		int j24 = intsStack[--iStackCounter];
 																		int k55 = -1;
-																		if (j24 < 100 && null != Class3_Sub29.aClass94Array2580[j24])
+																		if (j24 < 100 && null != LinkableRSString.aClass94Array2580[j24])
 																			k55 = Class3_Sub13_Sub6.anIntArray3082[j24];
 																		intsStack[iStackCounter++] = k55;
 																		continue;
@@ -1676,117 +1676,117 @@ final class ItemDefinition {
 																	}
 																	if (opcode == 5008) {//Used for a lot of things involving :: || More prefixes can be added by using || and listing said added way, ie ;; can be used instead of ::
 																		RSString class94_18 = stringsStack[--sStackCounter];
-																		if (class94_18.startsWith(Unsorted.aClass94_132) || class94_18.startsWith(RSString.of(";;")))
+																		if (class94_18.startsWith(Unsorted.aClass94_132) || class94_18.startsWith(RSString.parse(";;")))
 																			Unsorted.ClientCommands(class94_18);
 																		else if (Class3_Sub13_Sub26.rights != 0 || (!Class3_Sub15.aBoolean2433 || Class121.aBoolean1641) && !Class3_Sub13_Sub14.aBoolean3166) {
-																			RSString class94_47 = class94_18.method1534();
+																			RSString class94_47 = class94_18.toLowercase();
 																			byte byte3 = 0;
 																			if (class94_47.startsWith(TextCore.TextColorYellow)) {
 																				byte3 = 0;
-																				class94_18 = class94_18.substring(TextCore.TextColorYellow.length(-54));
+																				class94_18 = class94_18.substring(TextCore.TextColorYellow.length());
 																			} else if (class94_47.startsWith(TextCore.TextColorRed)) {
-																				class94_18 = class94_18.substring(TextCore.TextColorRed.length(-102));
+																				class94_18 = class94_18.substring(TextCore.TextColorRed.length());
 																				byte3 = 1;
 																			} else if (class94_47.startsWith(TextCore.TextColorGreen)) {
-																				class94_18 = class94_18.substring(TextCore.TextColorGreen.length(-115));
+																				class94_18 = class94_18.substring(TextCore.TextColorGreen.length());
 																				byte3 = 2;
 																			} else if (class94_47.startsWith(TextCore.TextColorCyan)) {
 																				byte3 = 3;
-																				class94_18 = class94_18.substring(TextCore.TextColorCyan.length(-108));
+																				class94_18 = class94_18.substring(TextCore.TextColorCyan.length());
 																			} else if (class94_47.startsWith(TextCore.TextColorPurple)) {
-																				class94_18 = class94_18.substring(TextCore.TextColorPurple.length(-62));
+																				class94_18 = class94_18.substring(TextCore.TextColorPurple.length());
 																				byte3 = 4;
 																			} else if (class94_47.startsWith(TextCore.TextColorWhite)) {
-																				class94_18 = class94_18.substring(TextCore.TextColorWhite.length(-46));
+																				class94_18 = class94_18.substring(TextCore.TextColorWhite.length());
 																				byte3 = 5;
 																			} else if (class94_47.startsWith(TextCore.TextFlashOne)) {
 																				byte3 = 6;
-																				class94_18 = class94_18.substring(TextCore.TextFlashOne.length(-63));
+																				class94_18 = class94_18.substring(TextCore.TextFlashOne.length());
 																			} else if (class94_47.startsWith(TextCore.TextFlashTwo)) {
 																				byte3 = 7;
-																				class94_18 = class94_18.substring(TextCore.TextFlashTwo.length(-83));
+																				class94_18 = class94_18.substring(TextCore.TextFlashTwo.length());
 																			} else if (class94_47.startsWith(TextCore.TextFlashThree)) {
-																				class94_18 = class94_18.substring(TextCore.TextFlashThree.length(-92));
+																				class94_18 = class94_18.substring(TextCore.TextFlashThree.length());
 																				byte3 = 8;
 																			} else if (class94_47.startsWith(TextCore.TextGlowOne)) {
 																				byte3 = 9;
-																				class94_18 = class94_18.substring(TextCore.TextGlowOne.length(-34));
+																				class94_18 = class94_18.substring(TextCore.TextGlowOne.length());
 																			} else if (class94_47.startsWith(TextCore.TextGlowTwo)) {
 																				byte3 = 10;
-																				class94_18 = class94_18.substring(TextCore.TextGlowTwo.length(-126));
+																				class94_18 = class94_18.substring(TextCore.TextGlowTwo.length());
 																			} else if (class94_47.startsWith(TextCore.TextGlowThree)) {
-																				class94_18 = class94_18.substring(TextCore.TextGlowThree.length(-50));
+																				class94_18 = class94_18.substring(TextCore.TextGlowThree.length());
 																				byte3 = 11;
 																			} else if (0 != Class3_Sub20.language)
 																				if (class94_47.startsWith(TextCore.TextColorYellow)) {
 																					byte3 = 0;
-																					class94_18 = class94_18.substring(TextCore.TextColorYellow.length(-116));
+																					class94_18 = class94_18.substring(TextCore.TextColorYellow.length());
 																				} else if (class94_47.startsWith(TextCore.TextColorRed)) {
-																					class94_18 = class94_18.substring(TextCore.TextColorRed.length(-80));
+																					class94_18 = class94_18.substring(TextCore.TextColorRed.length());
 																					byte3 = 1;
 																				} else if (class94_47.startsWith(TextCore.TextColorGreen)) {
-																					class94_18 = class94_18.substring(TextCore.TextColorGreen.length(-90));
+																					class94_18 = class94_18.substring(TextCore.TextColorGreen.length());
 																					byte3 = 2;
 																				} else if (class94_47.startsWith(TextCore.TextColorCyan)) {
-																					class94_18 = class94_18.substring(TextCore.TextColorCyan.length(-34));
+																					class94_18 = class94_18.substring(TextCore.TextColorCyan.length());
 																					byte3 = 3;
 																				} else if (class94_47.startsWith(TextCore.TextColorPurple)) {
-																					class94_18 = class94_18.substring(TextCore.TextColorPurple.length(-52));
+																					class94_18 = class94_18.substring(TextCore.TextColorPurple.length());
 																					byte3 = 4;
 																				} else if (class94_47.startsWith(TextCore.TextColorWhite)) {
 																					byte3 = 5;
-																					class94_18 = class94_18.substring(TextCore.TextColorWhite.length(-90));
+																					class94_18 = class94_18.substring(TextCore.TextColorWhite.length());
 																				} else if (class94_47.startsWith(TextCore.TextFlashOne)) {
-																					class94_18 = class94_18.substring(TextCore.TextFlashOne.length(-100));
+																					class94_18 = class94_18.substring(TextCore.TextFlashOne.length());
 																					byte3 = 6;
 																				} else if (class94_47.startsWith(TextCore.TextFlashTwo)) {
 																					byte3 = 7;
-																					class94_18 = class94_18.substring(TextCore.TextFlashTwo.length(-30));
+																					class94_18 = class94_18.substring(TextCore.TextFlashTwo.length());
 																				} else if (class94_47.startsWith(TextCore.TextFlashThree)) {
 																					byte3 = 8;
-																					class94_18 = class94_18.substring(TextCore.TextFlashThree.length(-101));
+																					class94_18 = class94_18.substring(TextCore.TextFlashThree.length());
 																				} else if (class94_47.startsWith(TextCore.TextGlowOne)) {
 																					byte3 = 9;
-																					class94_18 = class94_18.substring(TextCore.TextGlowOne.length(-55));
+																					class94_18 = class94_18.substring(TextCore.TextGlowOne.length());
 																				} else if (class94_47.startsWith(TextCore.TextGlowTwo)) {
-																					class94_18 = class94_18.substring(TextCore.TextGlowTwo.length(-115));
+																					class94_18 = class94_18.substring(TextCore.TextGlowTwo.length());
 																					byte3 = 10;
 																				} else if (class94_47.startsWith(TextCore.TextGlowThree)) {
-																					class94_18 = class94_18.substring(TextCore.TextGlowThree.length(-84));
+																					class94_18 = class94_18.substring(TextCore.TextGlowThree.length());
 																					byte3 = 11;
 																				}
 																			byte byte4 = 0;
-																			class94_47 = class94_18.method1534();
+																			class94_47 = class94_18.toLowercase();
 																			if (class94_47.startsWith(TextCore.TextWave)) {
-																				class94_18 = class94_18.substring(TextCore.TextWave.length(-105));
+																				class94_18 = class94_18.substring(TextCore.TextWave.length());
 																				byte4 = 1;
 																			} else if (class94_47.startsWith(TextCore.TextWaveTwo)) {
 																				byte4 = 2;
-																				class94_18 = class94_18.substring(TextCore.TextWaveTwo.length(-117));
+																				class94_18 = class94_18.substring(TextCore.TextWaveTwo.length());
 																			} else if (class94_47.startsWith(TextCore.TextShake)) {
-																				class94_18 = class94_18.substring(TextCore.TextShake.length(-37));
+																				class94_18 = class94_18.substring(TextCore.TextShake.length());
 																				byte4 = 3;
 																			} else if (class94_47.startsWith(TextCore.HasScroll)) {
 																				byte4 = 4;
-																				class94_18 = class94_18.substring(TextCore.HasScroll.length(-37));
+																				class94_18 = class94_18.substring(TextCore.HasScroll.length());
 																			} else if (class94_47.startsWith(TextCore.TextSlide)) {
 																				byte4 = 5;
-																				class94_18 = class94_18.substring(TextCore.TextSlide.length(-17));
+																				class94_18 = class94_18.substring(TextCore.TextSlide.length());
 																			} else if (0 != Class3_Sub20.language)
 																				if (class94_47.startsWith(TextCore.TextWave)) {
-																					class94_18 = class94_18.substring(TextCore.TextWave.length(-74));
+																					class94_18 = class94_18.substring(TextCore.TextWave.length());
 																					byte4 = 1;
 																				} else if (class94_47.startsWith(TextCore.TextWaveTwo)) {
 																					byte4 = 2;
-																					class94_18 = class94_18.substring(TextCore.TextWaveTwo.length(-106));
+																					class94_18 = class94_18.substring(TextCore.TextWaveTwo.length());
 																				} else if (class94_47.startsWith(TextCore.TextShake)) {
 																					byte4 = 3;
-																					class94_18 = class94_18.substring(TextCore.TextShake.length(-45));
+																					class94_18 = class94_18.substring(TextCore.TextShake.length());
 																				} else if (class94_47.startsWith(TextCore.HasScroll)) {
 																					byte4 = 4;
-																					class94_18 = class94_18.substring(TextCore.HasScroll.length(-92));
+																					class94_18 = class94_18.substring(TextCore.HasScroll.length());
 																				} else if (class94_47.startsWith(TextCore.TextSlide)) {
-																					class94_18 = class94_18.substring(TextCore.TextSlide.length(-124));
+																					class94_18 = class94_18.substring(TextCore.TextSlide.length());
 																					byte4 = 5;
 																				}
 																			Class3_Sub13_Sub1.outgoingBuffer.putOpcode(237);
@@ -1899,12 +1899,12 @@ final class ItemDefinition {
 																	}
 																	if (opcode == 5055) {
 																		int k26 = intsStack[--iStackCounter];
-																		stringsStack[sStackCounter++] = Class3_Sub29.method733(k26).method554();
+																		stringsStack[sStackCounter++] = LinkableRSString.method733(k26).method554();
 																		continue;
 																	}
 																	if (opcode == 5056) {
 																		int l26 = intsStack[--iStackCounter];
-																		Class3_Sub28_Sub4 class3_sub28_sub4 = Class3_Sub29.method733(l26);
+																		Class3_Sub28_Sub4 class3_sub28_sub4 = LinkableRSString.method733(l26);
 																		if (null != class3_sub28_sub4.anIntArray3567)
 																			intsStack[iStackCounter++] = class3_sub28_sub4.anIntArray3567.length;
 																		else
@@ -1915,13 +1915,13 @@ final class ItemDefinition {
 																		iStackCounter -= 2;
 																		int k56 = intsStack[1 + iStackCounter];
 																		int i27 = intsStack[iStackCounter];
-																		intsStack[iStackCounter++] = Class3_Sub29.method733(i27).anIntArray3567[k56];
+																		intsStack[iStackCounter++] = LinkableRSString.method733(i27).anIntArray3567[k56];
 																		continue;
 																	}
 																	if (opcode == 5058) {
 																		Class70.aClass10_1056 = new Class10();
 																		Class70.aClass10_1056.anInt149 = intsStack[--iStackCounter];
-																		Class70.aClass10_1056.aClass3_Sub28_Sub4_151 = Class3_Sub29.method733(Class70.aClass10_1056.anInt149);
+																		Class70.aClass10_1056.aClass3_Sub28_Sub4_151 = LinkableRSString.method733(Class70.aClass10_1056.anInt149);
 																		Class70.aClass10_1056.anIntArray153 = new int[Class70.aClass10_1056.aClass3_Sub28_Sub4_151.method552()];
 																		continue;
 																	}
@@ -1992,14 +1992,14 @@ final class ItemDefinition {
 																	}
 																	if (opcode == 5066) {
 																		int l28 = intsStack[--iStackCounter];
-																		intsStack[iStackCounter++] = Class3_Sub29.method733(l28).method552();
+																		intsStack[iStackCounter++] = LinkableRSString.method733(l28).method552();
 																		continue;
 																	}
 																	if (opcode == 5067) {
 																		iStackCounter -= 2;
 																		int i58 = intsStack[iStackCounter + 1];
 																		int i29 = intsStack[iStackCounter];
-																		int i70 = Class3_Sub29.method733(i29).method550(49, i58);
+																		int i70 = LinkableRSString.method733(i29).method550(49, i58);
 																		intsStack[iStackCounter++] = i70;
 																		continue;
 																	}
@@ -2022,7 +2022,7 @@ final class ItemDefinition {
 																		int l29 = intsStack[iStackCounter];
 																		int j70 = intsStack[iStackCounter - -2];
 																		int l58 = intsStack[iStackCounter + 1];
-																		Class3_Sub28_Sub4 class3_sub28_sub4_1 = Class3_Sub29.method733(l29);
+																		Class3_Sub28_Sub4 class3_sub28_sub4_1 = LinkableRSString.method733(l29);
 																		if (0 != class3_sub28_sub4_1.method550(73, l58))
 																			throw new RuntimeException("bad command");
 																		intsStack[iStackCounter++] = class3_sub28_sub4_1.method549(j70, l58);
@@ -2188,7 +2188,7 @@ final class ItemDefinition {
 																		do {
 																			if (class3_sub28_sub3_5 == null)
 																				break;
-																			if (class3_sub28_sub3_5.aClass94_3561.equals(124, class94_53)) {
+																			if (class3_sub28_sub3_5.aClass94_3561.equalsStringIgnoreCase(class94_53)) {
 																				flag10 = true;
 																				break;
 																			}
@@ -2402,12 +2402,12 @@ final class ItemDefinition {
 																		sStackCounter -= 2;
 																		RSString class94_55 = stringsStack[1 + sStackCounter];
 																		RSString class94_26 = stringsStack[sStackCounter];
-																		if (class94_26.length(-127) > 0) {
+																		if (class94_26.length() > 0) {
 																			if (null == Class3_Sub30_Sub1.aClass94Array3802)
 																				Class3_Sub30_Sub1.aClass94Array3802 = new RSString[Class3_Sub13_Sub18.anIntArray3218[Class158.anInt2014]];
 																			Class3_Sub30_Sub1.aClass94Array3802[i72] = class94_26;
 																		}
-																		if (class94_55.length(-118) > 0) {
+																		if (class94_55.length() > 0) {
 																			if (Unsorted.aClass94Array45 == null)
 																				Unsorted.aClass94Array45 = new RSString[Class3_Sub13_Sub18.anIntArray3218[Class158.anInt2014]];
 																			Unsorted.aClass94Array45[i72] = class94_55;
@@ -2691,7 +2691,7 @@ final class ItemDefinition {
 																					GameObject.method1870();
 																					Class83.aBoolean1158 = false;
 																				} else {
-																					Class3_Sub29.method736(k35, 115);
+																					LinkableRSString.method736(k35, 115);
 																				}
 																				Unsorted.anInt120 = k35;
 																			}
@@ -3275,7 +3275,7 @@ final class ItemDefinition {
 												}
 												if (opcode == 4103) {
 													RSString class94_32 = stringsStack[--sStackCounter];
-													stringsStack[sStackCounter++] = class94_32.method1534();
+													stringsStack[sStackCounter++] = class94_32.toLowercase();
 													continue;
 												}
 												if (4104 == opcode) {
@@ -3372,7 +3372,7 @@ final class ItemDefinition {
 												if (opcode == 4117) {
 													RSString class94_39 = stringsStack[--sStackCounter];
 													if (class94_39 != null)
-														intsStack[iStackCounter++] = class94_39.length(-96);
+														intsStack[iStackCounter++] = class94_39.length();
 													else
 														intsStack[iStackCounter++] = 0;
 													continue;
@@ -3387,9 +3387,9 @@ final class ItemDefinition {
 												}
 												if (opcode == 4119) {
 													RSString class94_41 = stringsStack[--sStackCounter];
-													RSString class94_60 = Class47.emptyString(class94_41.length(-44));
+													RSString class94_60 = Class47.emptyString(class94_41.length());
 													boolean flag9 = false;
-													for (int l78 = 0; class94_41.length(-113) > l78; l78++) {
+													for (int l78 = 0; class94_41.length() > l78; l78++) {
 														int l80 = class94_41.charAt(l78, (byte) -40);
 														if (l80 == 60) {
 															flag9 = true;
@@ -3593,16 +3593,16 @@ final class ItemDefinition {
 								}
 								int[] ai3 = null;
 								RSString class94_62 = stringsStack[--sStackCounter];
-								if (class94_62.length(-127) > 0 && class94_62.charAt(class94_62.length(-92) + -1, (byte) -96) == 89) {
+								if (class94_62.length() > 0 && class94_62.charAt(class94_62.length() + -1, (byte) -96) == 89) {
 									int i79 = intsStack[--iStackCounter];
 									if (i79 > 0) {
 										ai3 = new int[i79];
 										while (i79-- > 0)
 											ai3[i79] = intsStack[--iStackCounter];
 									}
-									class94_62 = class94_62.substring(0, class94_62.length(-79) - 1, 0);
+									class94_62 = class94_62.substring(0, class94_62.length() - 1, 0);
 								}
-								Object[] aobj1 = new Object[class94_62.length(-48) - -1];
+								Object[] aobj1 = new Object[class94_62.length() - -1];
 								for (int i81 = -1 + aobj1.length; 1 <= i81; i81--)
 									if (115 != class94_62.charAt(i81 + -1, (byte) -43))
 										aobj1[i81] = new Integer(intsStack[--iStackCounter]);
@@ -3981,8 +3981,8 @@ final class ItemDefinition {
 				return var2;
 			} else {
 
-				Class3_Sub29 var4 = (Class3_Sub29)this.aHashTable_798.get((long)var3);
-				return null != var4?var4.aClass94_2586:var2;
+				LinkableRSString var4 = (LinkableRSString)this.aHashTable_798.get((long)var3);
+				return null != var4?var4.value :var2;
 			}
 		} catch (RuntimeException var5) {
 			throw Class44.clientError(var5, "h.S(" + 107 + ',' + (var2 != null?"{...}":"null") + ',' + var3 + ')');
@@ -4042,15 +4042,15 @@ final class ItemDefinition {
 				return true;
 			} else {
 				boolean var7 = true;
-				if(!Class3_Sub29.aClass153_2581.method2129((byte)-90, 0, var3)) {
+				if(!LinkableRSString.aClass153_2581.method2129((byte)-90, 0, var3)) {
 					var7 = false;
 				}
 
-				if(var4 != -1 && !Class3_Sub29.aClass153_2581.method2129((byte)-114, 0, var4)) {
+				if(var4 != -1 && !LinkableRSString.aClass153_2581.method2129((byte)-114, 0, var4)) {
 					var7 = false;
 				}
 
-				if(-1 != var5 && !Class3_Sub29.aClass153_2581.method2129((byte)83, 0, var5)) {
+				if(-1 != var5 && !LinkableRSString.aClass153_2581.method2129((byte)83, 0, var5)) {
 					var7 = false;
 				}
 
@@ -4131,7 +4131,7 @@ final class ItemDefinition {
 
 			Model var11 = (Model)Class143.aClass93_1874.get((long)this.itemId);
 			if(var11 == null) {
-				Model_Sub1 var12 = Model_Sub1.method2015(Class3_Sub29.aClass153_2581, this.anInt755);
+				Model_Sub1 var12 = Model_Sub1.method2015(LinkableRSString.aClass153_2581, this.anInt755);
 				if(null == var12) {
 					return null;
 				}
@@ -4238,7 +4238,7 @@ final class ItemDefinition {
 				this.anInt794 = buffer.readUnsignedShort();
 			} else if (opcode >= 30 && opcode < 35) {
 				this.groundOptions[-30 + opcode] = buffer.readString();
-				if (this.groundOptions[opcode + -30].equals(25, TextCore.HasHidden)) {
+				if (this.groundOptions[opcode + -30].equalsStringIgnoreCase(TextCore.HasHidden)) {
 					this.groundOptions[-30 + opcode] = null;
 				}
 			} else if (35 <= opcode && 40 > opcode) {
@@ -4349,7 +4349,7 @@ final class ItemDefinition {
 						int var8 = buffer.readMedium();
 						Object var9;
 						if (var7) {
-							var9 = new Class3_Sub29(buffer.readString());
+							var9 = new LinkableRSString(buffer.readString());
 						} else {
 							var9 = new Class3_Sub18(buffer.readInt());
 						}
@@ -4389,9 +4389,9 @@ final class ItemDefinition {
 			if(-1 == var3) {
 				return null;
 			} else {
-				Model_Sub1 var5 = Model_Sub1.method2015(Class3_Sub29.aClass153_2581, var3);
+				Model_Sub1 var5 = Model_Sub1.method2015(LinkableRSString.aClass153_2581, var3);
 				if(-1 != var4) {
-					Model_Sub1 var6 = Model_Sub1.method2015(Class3_Sub29.aClass153_2581, var4);
+					Model_Sub1 var6 = Model_Sub1.method2015(LinkableRSString.aClass153_2581, var4);
 					Model_Sub1[] var7 = new Model_Sub1[]{var5, var6};
 					var5 = new Model_Sub1(var7, 2);
 				}
@@ -4431,14 +4431,14 @@ final class ItemDefinition {
 			if(var3 == -1) {
 				return null;
 			} else {
-				Model_Sub1 var6 = Model_Sub1.method2015(Class3_Sub29.aClass153_2581, var3);
+				Model_Sub1 var6 = Model_Sub1.method2015(LinkableRSString.aClass153_2581, var3);
 				if(var4 != -1) {
-					Model_Sub1 var7 = Model_Sub1.method2015(Class3_Sub29.aClass153_2581, var4);
+					Model_Sub1 var7 = Model_Sub1.method2015(LinkableRSString.aClass153_2581, var4);
 					if(-1 == var5) {
 						Model_Sub1[] var8 = new Model_Sub1[]{var6, var7};
 						var6 = new Model_Sub1(var8, 2);
 					} else {
-						Model_Sub1 var12 = Model_Sub1.method2015(Class3_Sub29.aClass153_2581, var5);
+						Model_Sub1 var12 = Model_Sub1.method2015(LinkableRSString.aClass153_2581, var5);
 						Model_Sub1[] var9 = new Model_Sub1[]{var6, var7, var12};
 						var6 = new Model_Sub1(var9, 3);
 					}
@@ -4515,7 +4515,7 @@ final class ItemDefinition {
 
 	final Class140_Sub1_Sub2 method1120() {
 		try {
-			Model_Sub1 var2 = Model_Sub1.method2015(Class3_Sub29.aClass153_2581, this.anInt755);
+			Model_Sub1 var2 = Model_Sub1.method2015(LinkableRSString.aClass153_2581, this.anInt755);
 			if(var2 == null) {
 				return null;
 			} else {
@@ -4598,7 +4598,7 @@ final class ItemDefinition {
 			var0 += var3;
 			anIntArray781[var1] = var0 / 4;
 		}
-		aClass94_811 = RSString.of("green:");
+		aClass94_811 = RSString.parse("green:");
 	}
 
 	public int getShiftClickActionIndex() {

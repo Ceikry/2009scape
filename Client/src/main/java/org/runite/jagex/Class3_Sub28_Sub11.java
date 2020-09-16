@@ -9,7 +9,7 @@ import java.util.Objects;
 final class Class3_Sub28_Sub11 extends Node {
 
     private HashTable aHashTable_3636;
-    static RSString aClass94_3637 = RSString.of(")4p=");
+    static RSString aClass94_3637 = RSString.parse(")4p=");
     static boolean aBoolean3641 = false;
     static int anInt3642 = 0;
     static int anInt3644 = 0;
@@ -61,7 +61,7 @@ final class Class3_Sub28_Sub11 extends Node {
                     int var7 = var1.readMedium();
                     Object var8;
                     if (var6) {
-                        var8 = new Class3_Sub29(var1.readString());
+                        var8 = new LinkableRSString(var1.readString());
                     } else {
                         var8 = new Class3_Sub18(var1.readInt());
                     }
@@ -167,9 +167,9 @@ final class Class3_Sub28_Sub11 extends Node {
             if (this.aHashTable_3636 == null) {
                 return var1;
             } else {
-                Class3_Sub29 var4 = (Class3_Sub29) this.aHashTable_3636.get((long) var3);
+                LinkableRSString var4 = (LinkableRSString) this.aHashTable_3636.get((long) var3);
 
-                return null != var4 ? var4.aClass94_2586 : var1;
+                return null != var4 ? var4.value : var1;
             }
         } catch (RuntimeException var5) {
             throw Class44.clientError(var5, "lk.B(" + (var1 != null ? "{...}" : "null") + ',' + (byte) -44 + ',' + var3 + ')');

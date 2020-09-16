@@ -6,7 +6,7 @@ import java.awt.Component;
 class Class155 {
 
    static int[] anIntArray1969 = new int[100];
-   static RSString char_colon = RSString.of(":");
+   static RSString char_colon = RSString.parse(":");
    static int anInt1971;
    private long aLong1972 = TimeUtils.time();
    private Class3_Sub24 aClass3_Sub24_1973;
@@ -264,7 +264,7 @@ class Class155 {
          Class10 var2 = new Class10();
          var2.anInt149 = var1.readUnsignedShort();
 
-         var2.aClass3_Sub28_Sub4_151 = Class3_Sub29.method733(var2.anInt149);
+         var2.aClass3_Sub28_Sub4_151 = LinkableRSString.method733(var2.anInt149);
          return var2;
       } catch (RuntimeException var3) {
          throw Class44.clientError(var3, "vh.M(" + 1024 + ',' + (var1 != null?"{...}":"null") + ')');

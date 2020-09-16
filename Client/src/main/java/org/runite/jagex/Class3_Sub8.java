@@ -14,9 +14,9 @@ final class Class3_Sub8 extends Linkable {
    int[] anIntArray2301;
    byte[][][] aByteArrayArrayArray2302;
    Class64[] aClass64Array2303;
-   static RSString aClass94_2304 = RSString.of("details");
+   static RSString aClass94_2304 = RSString.parse("details");
    int anInt2305;
-   static RSString aClass94_2306 = RSString.of("<)4col> x");
+   static RSString aClass94_2306 = RSString.parse("<)4col> x");
 
 
    static void method124(int var0, int var1, int var2) {

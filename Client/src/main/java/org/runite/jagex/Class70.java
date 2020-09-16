@@ -8,7 +8,7 @@ final class Class70 {
    long aLong1048 = 0L;
    GameObject aClass140_1049;
    static double aDouble1050 = -1.0D;
-   static RSString aClass94_1051 = RSString.of("(Udns");
+   static RSString aClass94_1051 = RSString.parse("(Udns");
    GameObject aClass140_1052;
    static int anInt1053 = 0;
    int anInt1054;

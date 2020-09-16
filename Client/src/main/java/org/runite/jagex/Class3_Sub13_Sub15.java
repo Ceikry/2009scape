@@ -13,7 +13,7 @@ final class Class3_Sub13_Sub15 extends Class3_Sub13 {
    private int anInt3180;
    static int[] anIntArray3181;
    private int anInt3182;
-   static RSString COMMAND_HIGHRES_GRAPHICS_FULLSCREEN = RSString.of("::wm3");
+   static RSString COMMAND_HIGHRES_GRAPHICS_FULLSCREEN = RSString.parse("::wm3");
    static boolean aBoolean3184 = true;
    static int[] anIntArray3185 = new int[25];
    private int anInt3186;

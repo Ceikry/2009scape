@@ -35,11 +35,11 @@ final class Class36 {
          if(var0 >= -87) {
             return (RSString)null;
          } else {
-            for(int var3 = Objects.requireNonNull(var2).length(-123) + -3; var3 > 0; var3 -= 3) {
+            for(int var3 = Objects.requireNonNull(var2).length() + -3; var3 > 0; var3 -= 3) {
                var2 = RenderAnimationDefinition.method903(new RSString[]{var2.substring(0, var3, 0), Class3_Sub13_Sub22.aClass94_3268, var2.substring(var3)});
             }
 
-            return var2.length(-50) > 9?RenderAnimationDefinition.method903(new RSString[]{ColorCore.MillionStackColor, var2.substring(0, -8 + var2.length(-50), 0), TextCore.MillionM, Class72.LEFT_PARENTHESES, var2, Unsorted.aClass94_995}):(6 < var2.length(-63)?RenderAnimationDefinition.method903(new RSString[]{ColorCore.ThousandStackColor, var2.substring(0, -4 + var2.length(-65), 0), TextCore.ThousandK, Class72.LEFT_PARENTHESES, var2, Unsorted.aClass94_995}):RenderAnimationDefinition.method903(new RSString[]{ColorCore.DefaultStackColor, var2, Class3_Sub29.aClass94_2584}));
+            return var2.length() > 9?RenderAnimationDefinition.method903(new RSString[]{ColorCore.MillionStackColor, var2.substring(0, -8 + var2.length(), 0), TextCore.MillionM, Class72.LEFT_PARENTHESES, var2, Unsorted.aClass94_995}):(6 < var2.length()?RenderAnimationDefinition.method903(new RSString[]{ColorCore.ThousandStackColor, var2.substring(0, -4 + var2.length(), 0), TextCore.ThousandK, Class72.LEFT_PARENTHESES, var2, Unsorted.aClass94_995}):RenderAnimationDefinition.method903(new RSString[]{ColorCore.DefaultStackColor, var2, LinkableRSString.aClass94_2584}));
          }
       } catch (RuntimeException var4) {
          throw Class44.clientError(var4, "fi.D(" + var0 + ',' + var1 + ')');
@@ -63,7 +63,7 @@ final class Class36 {
                int var10;
                if(var5.anInt2098 < 0) {
                   if(var6 >= 0) {
-                     var7 = Class51.anIntArray834[Class3_Sub29.method729((byte)-74, Class51.anInterface2_838.method15(var6, '\uffff'), 96)];
+                     var7 = Class51.anIntArray834[LinkableRSString.method729((byte)-74, Class51.anInterface2_838.method15(var6, '\uffff'), 96)];
                   } else if(-1 == var5.anInt2103) {
                      var7 = -1;
                   } else {
@@ -76,7 +76,7 @@ final class Class36 {
                      }
 
                      var10 = var9 + (896 & var8) + ('\ufc00' & var8 + var2);
-                     var7 = Class51.anIntArray834[Class3_Sub29.method729((byte)-127, var10, 96)];
+                     var7 = Class51.anIntArray834[LinkableRSString.method729((byte)-127, var10, 96)];
                   }
                } else {
                   var8 = var5.anInt2098;
@@ -88,7 +88,7 @@ final class Class36 {
                   }
 
                   var10 = (896 & var8) + ('\ufc00' & var2 + var8) + var9;
-                  var7 = Class51.anIntArray834[Class3_Sub29.method729((byte)-63, var10, 96)];
+                  var7 = Class51.anIntArray834[LinkableRSString.method729((byte)-63, var10, 96)];
                }
 
                Class84.anIntArray1161[1 + var4] = var7;

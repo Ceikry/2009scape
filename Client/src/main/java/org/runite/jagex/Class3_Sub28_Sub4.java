@@ -13,8 +13,8 @@ final class Class3_Sub28_Sub4 extends Node {
    private int[][] anIntArrayArray3570;
    private RSString[] aClass94Array3571;
    static Class93 aClass93_3572 = new Class93(64);
-   static RSString aClass94_3574 = RSString.of("titlebg");
-   static RSString aClass94_3577 = RSString.of(": ");
+   static RSString aClass94_3574 = RSString.parse("titlebg");
+   static RSString aClass94_3577 = RSString.parse(": ");
    static Class83 aClass83_3579;
 
    final void method545(DataBuffer var1, int[] var2) {
@@ -172,11 +172,11 @@ final class Class3_Sub28_Sub4 extends Node {
          if(null == this.aClass94Array3571) {
             return Class3_Sub13_Sub29.aClass94_3357;
          } else {
-            Objects.requireNonNull(var2).method1533(this.aClass94Array3571[0]);
+            Objects.requireNonNull(var2).append(this.aClass94Array3571[0]);
 
             for(int var3 = 1; var3 < this.aClass94Array3571.length; ++var3) {
-               var2.method1533(GameShell.aClass94_9);
-               var2.method1533(this.aClass94Array3571[var3]);
+               var2.append(GameShell.aClass94_9);
+               var2.append(this.aClass94Array3571[var3]);
             }
 
             return var2.method1576();
@@ -192,12 +192,12 @@ final class Class3_Sub28_Sub4 extends Node {
          RSString var3 = Class47.emptyString(80);
          if(this.anIntArray3566 != null) {
             for(int var4 = 0; var4 < this.anIntArray3566.length; ++var4) {
-               Objects.requireNonNull(var3).method1533(this.aClass94Array3571[var4]);
-               var3.method1533(Class49.method1124(this.anIntArrayArray3570[var4], var2.method772(Class3_Sub1.anIntArray2209[this.anIntArray3566[var4]]), this.anIntArray3566[var4]));
+               Objects.requireNonNull(var3).append(this.aClass94Array3571[var4]);
+               var3.append(Class49.method1124(this.anIntArrayArray3570[var4], var2.method772(Class3_Sub1.anIntArray2209[this.anIntArray3566[var4]]), this.anIntArray3566[var4]));
             }
          }
 
-         Objects.requireNonNull(var3).method1533(this.aClass94Array3571[-1 + this.aClass94Array3571.length]);
+         Objects.requireNonNull(var3).append(this.aClass94Array3571[-1 + this.aClass94Array3571.length]);
          return var3.method1576();
       } catch (RuntimeException var5) {
          throw Class44.clientError(var5, "cb.B(" + 28021 + ',' + (var2 != null?"{...}":"null") + ')');

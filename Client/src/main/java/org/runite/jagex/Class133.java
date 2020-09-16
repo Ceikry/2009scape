@@ -5,7 +5,7 @@ final class Class133 {
    private byte aByte1742;
    static int[] anIntArray1743 = new int[25];
    static int anInt1744 = 0;
-   static RSString aClass94_1745 = RSString.of("settings");
+   static RSString aClass94_1745 = RSString.parse("settings");
    int anInt1746;
    int anInt1747;
    static int anInt1748;

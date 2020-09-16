@@ -17,17 +17,17 @@ final class Class3_Sub13_Sub19 extends Class3_Sub13 {
    private int anInt3229 = 1024;
    private int[] anIntArray3230;
    private int anInt3231 = 0;
-   private static RSString aClass94_3232 = RSString.of("pt");
+   private static RSString aClass94_3232 = RSString.parse("pt");
    private int anInt3233 = 8;
    private int anInt3234 = 1024;
    private int anInt3235;
    private int anInt3236 = 409;
-   private static RSString aClass94_3237 = RSString.of("en");
-   private static RSString aClass94_3239 = RSString.of("fr");
+   private static RSString aClass94_3237 = RSString.parse("en");
+   private static RSString aClass94_3239 = RSString.parse("fr");
    private int[][] anIntArrayArray3240;
    static short aShort3241 = 1;
    private int anInt3242 = 4;
-   private static RSString aClass94_3243 = RSString.of("de");
+   private static RSString aClass94_3243 = RSString.parse("de");
 static RSString[] aClass94Array3238 = new RSString[]{aClass94_3237, aClass94_3243, aClass94_3239, aClass94_3232};
    
 

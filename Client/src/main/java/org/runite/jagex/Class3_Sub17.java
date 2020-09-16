@@ -12,7 +12,7 @@ final class Class3_Sub17 extends Linkable {
 	int anInt2462;
 	boolean[] aBooleanArray2463;
 
-	private static RSString aClass94_2465 = RSString.of("");
+	private static RSString aClass94_2465 = RSString.parse("");
 	int[] anIntArray2466;
 	static RSString aClass94_2464 = aClass94_2465;
 

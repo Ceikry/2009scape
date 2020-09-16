@@ -6,7 +6,7 @@ import java.util.Date;
 final class Class15 implements Runnable {
 
    static short[][] aShortArrayArray344;
-    static RSString timeZone = RSString.of(" GMT");
+    static RSString timeZone = RSString.parse(" GMT");
     volatile boolean aBoolean345 = false;
    static boolean aBoolean346;
    static int[] localNPCIndexes = new int['\u8000'];

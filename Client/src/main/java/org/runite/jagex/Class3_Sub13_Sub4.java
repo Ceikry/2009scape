@@ -5,7 +5,7 @@ import java.lang.reflect.Method;
 final class Class3_Sub13_Sub4 extends Class3_Sub13 {
 
    static int worldListOffset;
-   static RSString aClass94_3055 = RSString.of("k");
+   static RSString aClass94_3055 = RSString.parse("k");
    int anInt3056 = 4;
    static byte[][] aByteArrayArray3057;
    int anInt3058 = 4;

@@ -183,7 +183,7 @@ final class Class3_Sub24_Sub4 extends Class3_Sub24 {
          if(var3.anInt318 == 2 && !GameObject.aBoolean1837) {
             var4 = Class53.method1174(var3, (byte)-31);
             if(null != var4) {
-               method1177(-1, 0L, (byte)-120, RenderAnimationDefinition.method903(new RSString[]{RSString.of("<col=00ff00>"), var3.aClass94_243}), -1, (short)32, var4, var3.componentHash);
+               method1177(-1, 0L, (byte)-120, RenderAnimationDefinition.method903(new RSString[]{RSString.parse("<col=00ff00>"), var3.aClass94_243}), -1, (short)32, var4, var3.componentHash);
             }
          }
 

@@ -6,7 +6,7 @@ import java.awt.*;
 final class Class58 {
 
    static int anInt909 = -1;
-   static RSString COMMAND_TOGGLE_FPSON = RSString.of("::fpson");
+   static RSString COMMAND_TOGGLE_FPSON = RSString.parse("::fpson");
    static int[][][] anIntArrayArrayArray911 = new int[2][][];
    static int[] anIntArray912 = new int[14];
    static boolean aBoolean913 = false;

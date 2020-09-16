@@ -4,7 +4,7 @@ final class Class143 {
 
    static Class93 aClass93_1874 = new Class93(50);
    static int loadingStage = 0;
-   static RSString aClass94_1880 = RSString.of(")1");
+   static RSString aClass94_1880 = RSString.parse(")1");
 
 
    static void method2062(int var0, int var1, int var3, int var4, int var5, int var6, int var7) {

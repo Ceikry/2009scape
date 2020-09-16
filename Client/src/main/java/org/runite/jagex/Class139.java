@@ -10,7 +10,7 @@ final class Class139 {
    static boolean aBoolean1827;
    static byte[][][] aByteArrayArrayArray1828;
    static int anInt1829 = 0;
-   static RSString aClass94_1830 = RSString.of("::pcachesize");
+   static RSString aClass94_1830 = RSString.parse("::pcachesize");
 
 
 }

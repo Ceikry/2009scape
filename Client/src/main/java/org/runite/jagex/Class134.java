@@ -4,7 +4,7 @@ final class Class134 {
 
     static Class61 aClass61_1758 = new Class61();
     static int anInt1759 = 0;
-    static RSString aClass94_1760 = RSString.of("");
+    static RSString aClass94_1760 = RSString.parse("");
     static int anInt1761 = -1;
     static int anInt1762 = 0;
     static int[][] anIntArrayArray1763 = new int[][]{{0, 128, 0, 0, 128, 0, 128, 128}, {0, 128, 0, 0, 128, 0}, {0, 0, 64, 128, 0, 128}, {128, 128, 64, 128, 128, 0}, {0, 0, 128, 0, 128, 128, 64, 128}, {0, 128, 0, 0, 128, 0, 64, 128}, {64, 128, 0, 128, 0, 0, 64, 0}, {0, 0, 64, 0, 0, 64}, {128, 0, 128, 128, 0, 128, 0, 64, 64, 0}, {0, 128, 0, 0, 32, 64, 64, 96, 128, 128}, {0, 0, 128, 0, 128, 128, 64, 96, 32, 64}, {0, 0, 128, 0, 96, 32, 32, 32}};

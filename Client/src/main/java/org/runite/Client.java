@@ -1,6 +1,7 @@
 package org.runite;
 
 import org.runite.jagex.GameShell;
+import org.runite.jagex.RSString;
 
 /**
  * Handles the launching of our Game Client.
@@ -31,6 +32,9 @@ public class Client {
 
 	 */
 	public static void main(String[]args) {
+		System.out.println(RSString.parse("HELLO WORLD").properlyCapitalize().toString());
+		System.out.println(RSString.parse("hello world").properlyCapitalize().toString());
+		System.out.println(RSString.parse("h.e.l.l.o.w.o.r!l!d?eee").properlyCapitalize().toString());
 		try {
 			PUBLIC_IP_ADDRESS = "localhost";
 		} catch (Exception e){

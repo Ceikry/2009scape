@@ -3,13 +3,13 @@ import java.util.Random;
 
 final class Class3_Sub13_Sub16 extends Class3_Sub13 {
 
-   static RSString aClass94_3190 = RSString.of("<img=1>");
+   static RSString aClass94_3190 = RSString.parse("<img=1>");
    private int anInt3191 = 2;
-   static RSString aClass94_3192 = RSString.of(" ");
+   static RSString aClass94_3192 = RSString.parse(" ");
    private int anInt3193 = 2048;
    private int anInt3194 = 1;
    private byte[] aByteArray3195 = new byte[512];
-   static RSString aClass94_3196 = RSString.of("Fps:");
+   static RSString aClass94_3196 = RSString.parse("Fps:");
    private int anInt3197 = 0;
    static int anInt3198 = 0;
    private short[] aShortArray3200 = new short[512];
@@ -51,7 +51,7 @@ final class Class3_Sub13_Sub16 extends Class3_Sub13 {
       try {
 
           for(int var2 = 0; Class3_Sub13_Sub19.aClass94Array3238.length > var2; ++var2) {
-            if(Class3_Sub13_Sub19.aClass94Array3238[var2].equals((byte) 13 + 40, var0)) {
+            if(Class3_Sub13_Sub19.aClass94Array3238[var2].equalsStringIgnoreCase(var0)) {
                return var2;
             }
          }

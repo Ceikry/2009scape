@@ -10,7 +10,7 @@ final class Class3_Sub13_Sub33 extends Class3_Sub13 {
    static byte[] aByteArray3396;
    
    static volatile int anInt3398 = 0;
-   static RSString aClass94_3399 = RSString.of("<br>(X");
+   static RSString aClass94_3399 = RSString.parse("<br>(X");
 
    final int[] method154(int var1, byte var2) {
       try {
@@ -113,7 +113,7 @@ final class Class3_Sub13_Sub33 extends Class3_Sub13 {
             aClass94_3399 = (RSString)null;
          }
 
-         return var1.length(-43) + 1;
+         return var1.length() + 1;
       } catch (RuntimeException var3) {
          throw Class44.clientError(var3, "si.O(" + var0 + ',' + (var1 != null?"{...}":"null") + ')');
       }

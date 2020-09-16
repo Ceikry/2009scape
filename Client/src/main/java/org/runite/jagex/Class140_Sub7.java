@@ -2,7 +2,7 @@ package org.runite.jagex;
 
 public final class Class140_Sub7 extends GameObject {
 
-   static RSString aClass94_2928 = RSString.of("null");
+   static RSString aClass94_2928 = RSString.parse("null");
    int anInt2930;
    static int[] anIntArray2931;
    private int anInt2932 = -32768;

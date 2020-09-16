@@ -3,7 +3,7 @@ package org.runite.jagex;
 abstract class GameObject {
 
    static AbstractIndexedSprite[] aClass109Array1831;
-   static RSString COMMAND_SET_PARTICLES = RSString.of("::setparticles");
+   static RSString COMMAND_SET_PARTICLES = RSString.parse("::setparticles");
    static int[] anIntArray1833 = new int[14];
    static RSInterface[][] aClass11ArrayArray1834;
    static int[] anIntArray1835 = new int[100];
@@ -83,7 +83,7 @@ abstract class GameObject {
    static void method1864(CacheIndex var2, Class3_Sub28_Sub17_Sub1 var3, CacheIndex var4) {
       try {
          Class139.aBoolean1827 = true;
-         Class3_Sub29.aClass153_2581 = var4;
+         LinkableRSString.aClass153_2581 = var4;
          Class97.aClass153_1370 = var2;
          int var5 = Class97.aClass153_1370.method2121() - 1;
          Class3_Sub13_Sub23.itemDefinitionSize = Class97.aClass153_1370.getFileAmount(var5, (byte)101) + var5 * 256;

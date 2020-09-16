@@ -99,7 +99,7 @@ final class Class3_Sub5 extends Linkable {
                      for(int var18 = 0; var18 < var17; ++var18) {
                         RSString var19 = Class158_Sub1.aClass94Array2977[var18];
                         if(-1 + var17 > var18) {
-                           var19.method1553(-4 + var19.length(-101));
+                           var19.method1553(-4 + var19.length());
                         }
 
                         var16.method1003(var19, var12, var13, var15);

@@ -10,7 +10,7 @@ final class Class3_Sub21 extends Linkable {
    int anInt2494;
    int anInt2495;
    int anInt2497;
-   static RSString aClass94_2498 = RSString.of("(U (X");
+   static RSString aClass94_2498 = RSString.parse("(U (X");
 
 
    final boolean method393(int var2, int var3) {

@@ -14,12 +14,11 @@ final class Class86 {
     int anInt1185;
     static Class41 aClass41_1186;
     float aFloat1187;
-    static RSString COMMAND_REBUILD = RSString.of("::rebuild");
+    static RSString COMMAND_REBUILD = RSString.parse("::rebuild");
     float aFloat1189;
     float aFloat1190;
     static int anInt1191;
     static Class3_Sub24_Sub4 aClass3_Sub24_Sub4_1193;
-    static HashTable aHashTable_1194;
     static int anInt1195;
 
     static void method1427(int var1) {

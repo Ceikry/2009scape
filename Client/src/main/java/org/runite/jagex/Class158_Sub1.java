@@ -426,11 +426,11 @@ final class Class158_Sub1 extends Class158 implements ImageProducer, ImageObserv
                                  }
 
                                  var31 = (var28 & 896) + (('\ufc00' & var28 + var4) - -var55);
-                                 var29 = Class51.anIntArray834[Class3_Sub29.method729((byte)-85, var31, 96)];
+                                 var29 = Class51.anIntArray834[LinkableRSString.method729((byte)-85, var31, 96)];
                               }
                            } else {
                               var28 = -1;
-                              var29 = Class51.anIntArray834[Class3_Sub29.method729((byte)-126, Class51.anInterface2_838.method15(var27, '\uffff'), 96)];
+                              var29 = Class51.anIntArray834[LinkableRSString.method729((byte)-126, Class51.anInterface2_838.method15(var27, '\uffff'), 96)];
                            }
 
                            if(var26.anInt2098 >= 0) {
@@ -445,10 +445,10 @@ final class Class158_Sub1 extends Class158 implements ImageProducer, ImageObserv
                               }
 
                               int var32 = (896 & var55) + (('\ufc00' & var55 + var4) - -var31);
-                              var29 = Class51.anIntArray834[Class3_Sub29.method729((byte)-101, var32, 96)];
+                              var29 = Class51.anIntArray834[LinkableRSString.method729((byte)-101, var32, 96)];
                            }
 
-                           Class104.method1629(var8, var10, var11, var24, var25, var27, var14, var15, var16, var44, Class47.method1100(var20, var18), Class47.method1100(var21, var18), Class47.method1100(var22, var18), Class47.method1100(var23, var18), Class3_Sub29.method729((byte)-72, var28, var20), Class3_Sub29.method729((byte)-107, var28, var21), Class3_Sub29.method729((byte)-82, var28, var22), Class3_Sub29.method729((byte)-93, var28, var23), var19, var29);
+                           Class104.method1629(var8, var10, var11, var24, var25, var27, var14, var15, var16, var44, Class47.method1100(var20, var18), Class47.method1100(var21, var18), Class47.method1100(var22, var18), Class47.method1100(var23, var18), LinkableRSString.method729((byte)-72, var28, var20), LinkableRSString.method729((byte)-107, var28, var21), LinkableRSString.method729((byte)-82, var28, var22), LinkableRSString.method729((byte)-93, var28, var23), var19, var29);
                            if(HDToolKit.highDetail && var8 > 0) {
                               Class141.method2037(var24, var25, var28 == -2 || !var26.aBoolean2093, -1 == var18 || !method629(-1 + var37).aBoolean1411, var10, var11, -Class44.anIntArrayArrayArray723[0][var10][var11] + var14, var15 - Class44.anIntArrayArrayArray723[0][1 + var10][var11], -Class44.anIntArrayArrayArray723[0][1 + var10][var11 + 1] + var16, -Class44.anIntArrayArrayArray723[0][var10][1 + var11] + var44);
                            }

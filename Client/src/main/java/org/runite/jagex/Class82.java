@@ -11,7 +11,7 @@ final class Class82 {
    private final Class3_Sub13 aClass3_Sub13_1148;
    private final int[] anIntArray1149;
    static int anInt1150 = -1;
-   static RSString aClass94_1151 = RSString.of("settings=");
+   static RSString aClass94_1151 = RSString.parse("settings=");
    static int anInt1152;
 
 

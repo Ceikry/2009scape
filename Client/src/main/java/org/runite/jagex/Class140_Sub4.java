@@ -14,7 +14,7 @@ abstract class Class140_Sub4 extends GameObject {
    int anInt2762 = 0;
    int renderAnimationId = -1;
    int anInt2764 = -1;
-   static RSString aClass94_2765 = RSString.of(" ");
+   static RSString aClass94_2765 = RSString.parse(" ");
    private int anInt2766 = 0;
    int[] anIntArray2767 = new int[10];
    int[] anIntArray2768 = new int[4];

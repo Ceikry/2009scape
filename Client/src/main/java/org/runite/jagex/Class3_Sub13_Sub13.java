@@ -8,7 +8,7 @@ final class Class3_Sub13_Sub13 extends Class3_Sub13 {
    private int anInt3147 = 4;
    static int anInt3148 = 0;
    private int anInt3149 = 4;
-   static RSString aClass94_3152 = RSString.of("::gc");
+   static RSString aClass94_3152 = RSString.parse("::gc");
    static int anInt3153;
    static CacheIndex aClass153_3154;
    static int anInt3155;
@@ -784,7 +784,7 @@ final class Class3_Sub13_Sub13 extends Class3_Sub13 {
                                           ClientErrorException.anInt2120 = 0;
                                           nodeModelID = (int)(8.0D * Math.random());
                                           if((nodeModelID & 4) == 4) {
-                                             Class3_Sub29.anInt2589 += Class128.anInt1682;
+                                             LinkableRSString.anInt2589 += Class128.anInt1682;
                                           }
 
                                           if((nodeModelID & 2) == 2) {
@@ -828,7 +828,7 @@ final class Class3_Sub13_Sub13 extends Class3_Sub13 {
                                           Class3_Sub2.anInt2217 = -2;
                                        }
 
-                                       if(-40 > Class3_Sub29.anInt2589) {
+                                       if(-40 > LinkableRSString.anInt2589) {
                                           Class128.anInt1682 = 1;
                                        }
 
@@ -836,7 +836,7 @@ final class Class3_Sub13_Sub13 extends Class3_Sub13 {
                                           Class146.anInt1901 = -2;
                                        }
 
-                                       if(Class3_Sub29.anInt2589 > 40) {
+                                       if(LinkableRSString.anInt2589 > 40) {
                                           Class128.anInt1682 = -1;
                                        }
 

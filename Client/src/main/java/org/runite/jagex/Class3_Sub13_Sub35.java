@@ -4,7 +4,7 @@ import java.util.Objects;
 
 final class Class3_Sub13_Sub35 extends Class3_Sub13 {
 
-   static RSString aClass94_3418 = RSString.of("(U5");
+   static RSString aClass94_3418 = RSString.parse("(U5");
    static int anInt3419 = 0;
    static Class131 aClass131_3421;
 

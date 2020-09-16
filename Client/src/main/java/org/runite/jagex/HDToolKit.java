@@ -45,7 +45,7 @@ public final class HDToolKit {
    private static boolean aBoolean1816 = true;
    static boolean aBoolean1817;
    static boolean aBoolean1818;
-   private static RSString aClass94_1819 = RSString.of("radeon");
+   private static RSString aClass94_1819 = RSString.parse("radeon");
    static int width;
    static boolean aBoolean1821;
 
@@ -347,14 +347,14 @@ public final class HDToolKit {
          aBoolean1821 = gl.isExtensionAvailable("GL_ARB_texture_cube_map");
          aBoolean1818 = gl.isExtensionAvailable("GL_ARB_vertex_program");
          aBoolean1802 = gl.isExtensionAvailable("GL_EXT_texture3D");
-         RSString var13 = method1820(aString1786).method1534();
+         RSString var13 = method1820(aString1786).toLowercase();
          if(var13.indexOf(aClass94_1819, 57) != -1) {
             int var6 = 0;
             RSString[] var7 = var13.method1565().method1567(32, (byte)-98);
 
             for(int var8 = 0; var8 < var7.length; ++var8) {
                RSString var9 = var7[var8];
-               if(var9.length(-125) >= 4 && var9.substring(0, 4, 0).isInteger()) {
+               if(var9.length() >= 4 && var9.substring(0, 4, 0).isInteger()) {
                   var6 = var9.substring(0, 4, 0).parseInt();
                   break;
                }

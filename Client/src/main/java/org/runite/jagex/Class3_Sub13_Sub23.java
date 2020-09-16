@@ -11,7 +11,7 @@ class Class3_Sub13_Sub23 extends Class3_Sub13 {
    static int anInt3285 = 128;
    static int itemDefinitionSize;
    static int[] anIntArray3288 = new int[]{4, 4, 1, 2, 6, 4, 2, 49, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
-   static RSString aClass94_3289 = RSString.of("::fps ");
+   static RSString aClass94_3289 = RSString.parse("::fps ");
 
    static int method275(int var0, int var1, int var2, int var3, int var4) {
       try {

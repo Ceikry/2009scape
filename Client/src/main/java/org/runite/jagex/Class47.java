@@ -18,7 +18,7 @@ final class Class47 {
     private final Queue aClass13_747 = new Queue();
     static CacheIndex quickChatMessages;
     private int anInt749;
-    static RSString aClass94_750 = RSString.of("null");
+    static RSString aClass94_750 = RSString.parse("null");
 
 
     static boolean method1088(boolean var0) {
@@ -665,7 +665,7 @@ final class Class47 {
                                                         var21 = var11.anInt222;
                                                     }
 
-                                                    if (var11.aClass94_172.length(-99) > 0) {
+                                                    if (var11.aClass94_172.length() > 0) {
                                                         var45 = var11.aClass94_172;
                                                     }
                                                 } else {
@@ -935,7 +935,7 @@ final class Class47 {
                                                                 RSString var40;
                                                                 if (1 != var42.stackingType && 1 == var11.itemIds[var21]) {
                                                                     var40 = RenderAnimationDefinition.method903(new RSString[]{
-                                                                            ColorCore.ItemInterfaceColor, var42.name, Class3_Sub29.aClass94_2584
+                                                                            ColorCore.ItemInterfaceColor, var42.name, LinkableRSString.aClass94_2584
                                                                     });
                                                                 } else {
                                                                     var40 = RenderAnimationDefinition.method903(new RSString[]{
@@ -967,7 +967,7 @@ final class Class47 {
                                                     var43 = Unsorted.method1303(var11, var43);
 
                                                     RSString var44;
-                                                    while (var43.length(-58) > 0) {
+                                                    while (var43.length() > 0) {
                                                         var25 = var43.indexOf(Unsorted.aClass94_2598, 62);
                                                         if (var25 == -1) {
                                                             var44 = var43;
@@ -1011,7 +1011,7 @@ final class Class47 {
                                                     var43 = var11.text;
                                                     var47 = 2 + (var26 - -var35.anInt3727);
 
-                                                    for (var43 = Unsorted.method1303(var11, var43); var43.length(-102) > 0; var47 += var35.anInt3727 + 1) {
+                                                    for (var43 = Unsorted.method1303(var11, var43); var43.length() > 0; var47 += var35.anInt3727 + 1) {
                                                         var28 = var43.indexOf(Unsorted.aClass94_2598, 86);
                                                         if (var28 == -1) {
                                                             var44 = var43;

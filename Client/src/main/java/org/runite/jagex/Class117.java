@@ -26,7 +26,7 @@ final class Class117 {
 
             if(var0 == 25 || var0 == 28) {
                Class162.anInt2038 = 0;
-               Class3_Sub29.anInt2579 = 1;
+               LinkableRSString.anInt2579 = 1;
                Class163_Sub2_Sub1.anInt4019 = 0;
                Class3_Sub5.anInt2275 = 1;
                Class3_Sub13_Sub24.anInt3293 = 0;

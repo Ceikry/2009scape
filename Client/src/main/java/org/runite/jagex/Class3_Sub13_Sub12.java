@@ -6,7 +6,7 @@ import java.util.zip.CRC32;
 final class Class3_Sub13_Sub12 extends Class3_Sub13 {
 
     static CRC32 CRC32 = new CRC32();
-    static RSString aClass94_3145 = RSString.of(")1 ");
+    static RSString aClass94_3145 = RSString.parse(")1 ");
 
 
     static void method223(int var1, int var2, int var3, int var4, int var5, int var6, int var7) {

@@ -16,7 +16,7 @@ public final class Class3_Sub15 extends Linkable {
    public static Connection activeConnection;
    byte[] aByteArray2430;
    Class3_Sub12_Sub1[] aClass3_Sub12_Sub1Array2431;
-   static RSString COMMAND_TWEENING = RSString.of("::tween");
+   static RSString COMMAND_TWEENING = RSString.parse("::tween");
    static boolean aBoolean2433 = false;
    short[] aShortArray2434;
    Class166[] aClass166Array2435;

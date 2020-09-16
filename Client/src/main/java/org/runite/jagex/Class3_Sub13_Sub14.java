@@ -6,7 +6,7 @@ final class Class3_Sub13_Sub14 extends Class3_Sub13 {
    static int anInt3158 = -8 + (int)(17.0D * Math.random());
    static CacheResourceWorker aCacheResourceWorker_3159;
    private int anInt3160 = 0;
-   static RSString aClass94_3161 = RSString.of("_");
+   static RSString aClass94_3161 = RSString.parse("_");
    static BigInteger aBigInteger3162 = new BigInteger("58778699976184461502525193738213253649000149147835990136706041084440742975821");
    private int anInt3163 = 20;
    private int anInt3164 = 1365;

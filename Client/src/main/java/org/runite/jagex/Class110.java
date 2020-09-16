@@ -8,7 +8,7 @@ final class Class110 {
    static Class61 aClass61_1471 = new Class61();
    static int anInt1472 = 0;
    static int anInt1473;
-   static RSString COMMAND_BREAK_JS5_SERVER_CONNECTION = RSString.of("::serverjs5drop");
+   static RSString COMMAND_BREAK_JS5_SERVER_CONNECTION = RSString.parse("::serverjs5drop");
    static float aFloat1475;
 
 

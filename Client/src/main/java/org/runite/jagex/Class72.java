@@ -6,11 +6,11 @@ final class Class72 {
    int anInt1068;
    GameObject aClass140_1069;
    static int anInt1071 = 0;
-   static RSString LEFT_PARENTHESES = RSString.of(" (X");
+   static RSString LEFT_PARENTHESES = RSString.parse(" (X");
    GameObject aClass140_1073;
    static boolean aBoolean1074 = false;
    int anInt1075;
-   static RSString aClass94_1076 = RSString.of("<)4col>");
+   static RSString aClass94_1076 = RSString.parse("<)4col>");
    int anInt1077;
    int anInt1078;
    long aLong1079;

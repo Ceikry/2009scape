@@ -3,7 +3,7 @@ package org.runite.jagex;
 final class Class32 {
 
    static int anInt590 = -1;
-   static RSString aClass94_592 = RSString.of("<img=0>");
+   static RSString aClass94_592 = RSString.parse("<img=0>");
 
 
    static RSString method992(DataBuffer var0) {

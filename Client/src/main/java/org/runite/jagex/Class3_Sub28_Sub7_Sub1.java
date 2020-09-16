@@ -10,10 +10,10 @@ final class Class3_Sub28_Sub7_Sub1 extends Class3_Sub28_Sub7 {
    static HashTable aHashTable_4046 = new HashTable(16);
    static MouseListeningClass aClass149_4047 = new MouseListeningClass();
    static CacheIndex aClass153_4048;
-   static RSString aClass94_4049 = RSString.of("");
+   static RSString aClass94_4049 = RSString.parse("");
    static int[] anIntArray4050 = new int[1000];
    static Class93 aClass93_4051 = new Class93(30);
-   static RSString aClass94_4052 = RSString.of("www");
+   static RSString aClass94_4052 = RSString.parse("www");
 
 
    static void method569(int var1) {

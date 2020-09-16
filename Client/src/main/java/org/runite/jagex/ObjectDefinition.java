@@ -421,7 +421,7 @@ final class ObjectDefinition {
             this.anInt1489 = buffer.readSignedByte() * 5;
          } else if (opcode >= 30 && opcode < 35) {
             this.options[opcode - 30] = buffer.readString();
-            if (this.options[-30 + opcode].equals(-112, TextCore.HasHidden)) {
+            if (this.options[-30 + opcode].equalsStringIgnoreCase(TextCore.HasHidden)) {
                this.options[-30 + opcode] = null;
             }
          } else if (opcode == 40) {
@@ -566,7 +566,7 @@ final class ObjectDefinition {
                int var7 = buffer.readMedium();
                Object var8;
                if (var10) {
-                  var8 = new Class3_Sub29(buffer.readString());
+                  var8 = new LinkableRSString(buffer.readString());
                } else {
                   var8 = new Class3_Sub18(buffer.readInt());
                }
@@ -968,8 +968,8 @@ final class ObjectDefinition {
          if(null == this.aHashTable_1501) {
             return var1;
          } else {
-            Class3_Sub29 var4 = (Class3_Sub29)this.aHashTable_1501.get((long)var3);
-            return var4 == null?var1:var4.aClass94_2586;
+            LinkableRSString var4 = (LinkableRSString)this.aHashTable_1501.get((long)var3);
+            return var4 == null?var1:var4.value;
          }
       } catch (RuntimeException var5) {
          throw Class44.clientError(var5, "pb.E(" + (var1 != null?"{...}":"null") + ',' + -23085 + ',' + var3 + ')');
@@ -977,7 +977,7 @@ final class ObjectDefinition {
    }
 
    public ObjectDefinition() {
-      this.name = RSString.of("null");
+      this.name = RSString.parse("null");
       this.aBoolean1503 = true;
       this.anInt1493 = -1;
       this.anInt1515 = 0;

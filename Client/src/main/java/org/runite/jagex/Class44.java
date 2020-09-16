@@ -160,7 +160,7 @@ public abstract class Class44 {
 		} catch (Exception ex) {
 			ex.printStackTrace();
 		}
-		return RSString.of(format.replace("\"", "").trim());
+		return RSString.parse(format.replace("\"", "").trim());
 	}
 
 
@@ -187,7 +187,7 @@ public abstract class Class44 {
 				aString1 += line;
 			}
 			input.close();
-			rsString = RSString.of(aString1);
+			rsString = RSString.parse(aString1);
 		}
 		catch(Exception e){
 			e.printStackTrace();

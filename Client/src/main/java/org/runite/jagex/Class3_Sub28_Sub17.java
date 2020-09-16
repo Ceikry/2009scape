@@ -7,31 +7,31 @@ import java.util.Random;
 
 public abstract class Class3_Sub28_Sub17 extends Node {
 
-    private static RSString aClass94_3711 = RSString.of("gt");
-    private static RSString aClass94_3712 = RSString.of("lt");
-    private static RSString aClass94_3713 = RSString.of("shad=");
-    private static RSString aClass94_3714 = RSString.of("shy");
-    private static RSString aClass94_3715 = RSString.of("trans=");
-    private static RSString aClass94_3716 = RSString.of("u=");
-    private static RSString aClass94_3717 = RSString.of("str=");
-    private static RSString aClass94_3718 = RSString.of("euro");
-    private static RSString aClass94_3720 = RSString.of(")4col");
-    private static RSString aClass94_3724 = RSString.of(")4shad");
-    private static RSString aClass94_3725 = RSString.of("col=");
-    private static RSString aClass94_3726 = RSString.of("<gt>");
-    private static RSString aClass94_3728 = RSString.of("u");
-    private static RSString aClass94_3729 = RSString.of("times");
-    private static RSString aClass94_3731 = RSString.of(")4trans");
-    private static RSString aClass94_3732 = RSString.of("nbsp");
-    private static RSString aClass94_3734 = RSString.of("<lt>");
-    private static RSString aClass94_3735 = RSString.of(")4u");
-    private static RSString aClass94_3737 = RSString.of("br");
-    private static RSString aClass94_3738 = RSString.of("shad");
-    private static RSString aClass94_3739 = RSString.of("img=");
-    private static RSString aClass94_3741 = RSString.of("copy");
-    private static RSString aClass94_3742 = RSString.of(")4str");
-    private static RSString aClass94_3743 = RSString.of("reg");
-    private static RSString aClass94_3744 = RSString.of("str");
+    private static RSString aClass94_3711 = RSString.parse("gt");
+    private static RSString aClass94_3712 = RSString.parse("lt");
+    private static RSString aClass94_3713 = RSString.parse("shad=");
+    private static RSString aClass94_3714 = RSString.parse("shy");
+    private static RSString aClass94_3715 = RSString.parse("trans=");
+    private static RSString aClass94_3716 = RSString.parse("u=");
+    private static RSString aClass94_3717 = RSString.parse("str=");
+    private static RSString aClass94_3718 = RSString.parse("euro");
+    private static RSString aClass94_3720 = RSString.parse(")4col");
+    private static RSString aClass94_3724 = RSString.parse(")4shad");
+    private static RSString aClass94_3725 = RSString.parse("col=");
+    private static RSString aClass94_3726 = RSString.parse("<gt>");
+    private static RSString aClass94_3728 = RSString.parse("u");
+    private static RSString aClass94_3729 = RSString.parse("times");
+    private static RSString aClass94_3731 = RSString.parse(")4trans");
+    private static RSString aClass94_3732 = RSString.parse("nbsp");
+    private static RSString aClass94_3734 = RSString.parse("<lt>");
+    private static RSString aClass94_3735 = RSString.parse(")4u");
+    private static RSString aClass94_3737 = RSString.parse("br");
+    private static RSString aClass94_3738 = RSString.parse("shad");
+    private static RSString aClass94_3739 = RSString.parse("img=");
+    private static RSString aClass94_3741 = RSString.parse("copy");
+    private static RSString aClass94_3742 = RSString.parse(")4str");
+    private static RSString aClass94_3743 = RSString.parse("reg");
+    private static RSString aClass94_3744 = RSString.parse("str");
     private static RSString aClass94_3745 = Class47.emptyString(100);
 
     private static int anInt3746 = -1;
@@ -67,7 +67,7 @@ public abstract class Class3_Sub28_Sub17 extends Node {
         var3 -= this.anInt3727;
         int var4 = -1;
         int var5 = 0;
-        int var6 = var1.length(-34);
+        int var6 = var1.length();
 
         for (int var7 = 0; var7 < var6; ++var7) {
             int var8 = var1.charAt(var7, (byte) 72);
@@ -208,7 +208,7 @@ public abstract class Class3_Sub28_Sub17 extends Node {
             int var2 = -1;
             int var3 = 0;
             int var4 = 0;
-            int var5 = var1.length(-105);
+            int var5 = var1.length();
 
             for (int var6 = 0; var6 < var5; ++var6) {
                 int var7 = var1.charAt(var6, (byte) -45);
@@ -270,7 +270,7 @@ public abstract class Class3_Sub28_Sub17 extends Node {
         } else {
             var6.setSeed((long) var7);
             this.method701(16777215, 0, 192 + (var6.nextInt() & 31));
-            int var8 = var1.length(-40);
+            int var8 = var1.length();
             int[] var9 = new int[var8];
             int var10 = 0;
 
@@ -327,7 +327,7 @@ public abstract class Class3_Sub28_Sub17 extends Node {
     }
 
     static RSString method686(RSString var0) {
-        int var1 = var0.length(-94);
+        int var1 = var0.length();
         int var2 = 0;
 
         int var4;
@@ -343,9 +343,9 @@ public abstract class Class3_Sub28_Sub17 extends Node {
         for (var4 = 0; var4 < var1; ++var4) {
             int var5 = var0.charAt(var4, (byte) -101);
             if (var5 == 60) {
-                Objects.requireNonNull(var6).method1533(aClass94_3734);
+                Objects.requireNonNull(var6).append(aClass94_3734);
             } else if (var5 == 62) {
-                Objects.requireNonNull(var6).method1533(aClass94_3726);
+                Objects.requireNonNull(var6).append(aClass94_3726);
             } else {
                 Objects.requireNonNull(var6).appendCharacter(var5);
             }
@@ -368,7 +368,7 @@ public abstract class Class3_Sub28_Sub17 extends Node {
     private void method690(RSString var1, int var2) {
         int var3 = 0;
         boolean var4 = false;
-        int var5 = var1.length(-78);
+        int var5 = var1.length();
 
         for (int var6 = 0; var6 < var5; ++var6) {
             int var7 = var1.charAt(var6, (byte) 75);
@@ -400,7 +400,7 @@ public abstract class Class3_Sub28_Sub17 extends Node {
             int var9 = -1;
             int var10 = 0;
             int var11 = 0;
-            int var12 = var1.length(-93);
+            int var12 = var1.length();
 
             for (int var13 = 0; var13 < var12; ++var13) {
                 int var14 = var1.charAt(var13, (byte) -30);
@@ -411,18 +411,18 @@ public abstract class Class3_Sub28_Sub17 extends Node {
                         RSString var15 = var1.substring(var9 + 1, var13, 0);
                         var9 = -1;
                         aClass94_3745.appendCharacter(60);
-                        aClass94_3745.method1533(var15);
+                        aClass94_3745.append(var15);
                         aClass94_3745.appendCharacter(62);
                         if (var15.equalsString(aClass94_3737)) {
                             if (var3[var11] == null) {
-                                var3[var11] = aClass94_3745.method1563(101).substring(var5, aClass94_3745.length(-91), 0);
+                                var3[var11] = aClass94_3745.method1563(101).substring(var5, aClass94_3745.length(), 0);
                             } else {
                                 var3[var11].method1553(0);
-                                var3[var11].method1542(aClass94_3745, var5, aClass94_3745.length(-72));
+                                var3[var11].method1542(aClass94_3745, var5, aClass94_3745.length());
                             }
 
                             ++var11;
-                            var5 = aClass94_3745.length(-26);
+                            var5 = aClass94_3745.length();
                             var4 = 0;
                             var6 = -1;
                             var10 = 0;
@@ -506,7 +506,7 @@ public abstract class Class3_Sub28_Sub17 extends Node {
                         }
 
                         if (var14 == 32) {
-                            var6 = aClass94_3745.length(-71);
+                            var6 = aClass94_3745.length();
                             var7 = var4;
                             var8 = 1;
                         }
@@ -527,7 +527,7 @@ public abstract class Class3_Sub28_Sub17 extends Node {
                         }
 
                         if (var14 == 45) {
-                            var6 = aClass94_3745.length(-104);
+                            var6 = aClass94_3745.length();
                             var7 = var4;
                             var8 = 0;
                         }
@@ -535,12 +535,12 @@ public abstract class Class3_Sub28_Sub17 extends Node {
                 }
             }
 
-            if (aClass94_3745.length(-78) > var5) {
+            if (aClass94_3745.length() > var5) {
                 if (var3[var11] == null) {
-                    var3[var11] = aClass94_3745.method1563(94).substring(var5, aClass94_3745.length(-89), 0);
+                    var3[var11] = aClass94_3745.method1563(94).substring(var5, aClass94_3745.length(), 0);
                 } else {
                     var3[var11].method1553(0);
-                    var3[var11] = var3[var11].method1542(aClass94_3745, var5, aClass94_3745.length(-64));
+                    var3[var11] = var3[var11].method1542(aClass94_3745, var5, aClass94_3745.length());
                 }
 
                 ++var11;
@@ -558,7 +558,7 @@ public abstract class Class3_Sub28_Sub17 extends Node {
                 var8 = 0.0D;
             }
 
-            int var10 = var1.length(-27);
+            int var10 = var1.length();
             int[] var11 = new int[var10];
 
             for (int var12 = 0; var12 < var10; ++var12) {
@@ -666,7 +666,7 @@ public abstract class Class3_Sub28_Sub17 extends Node {
     final void method695(RSString var1, int var2, int var3, int var4, int var6) {
         if (var1 != null) {
             this.method698(var4, 0);
-            int var7 = var1.length(-61);
+            int var7 = var1.length();
             int[] var8 = new int[var7];
             int[] var9 = new int[var7];
 
@@ -682,7 +682,7 @@ public abstract class Class3_Sub28_Sub17 extends Node {
     final void method696(RSString var1, int var2, int var3, int var4, int var6) {
         if (var1 != null) {
             this.method698(var4, 0);
-            int var7 = var1.length(-128);
+            int var7 = var1.length();
             int[] var8 = new int[var7];
 
             for (int var9 = 0; var9 < var7; ++var9) {
@@ -834,7 +834,7 @@ public abstract class Class3_Sub28_Sub17 extends Node {
 
         var10.setSeed(var11);
         this.method701(var6, var7, 192 + (var10.nextInt() & 31));
-        int var13 = var1.length(-114);
+        int var13 = var1.length();
         int[] var14 = new int[var13];
         int var15 = 0;
 
@@ -885,7 +885,7 @@ public abstract class Class3_Sub28_Sub17 extends Node {
         int var6 = -1;
         int var7 = 0;
         int var8 = 0;
-        int var9 = var1.length(-29);
+        int var9 = var1.length();
 
         for (int var10 = 0; var10 < var9; ++var10) {
             int var11 = var1.charAt(var10, (byte) 95);

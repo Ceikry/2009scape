@@ -35,8 +35,9 @@ object RenderingUtils {
 //        else Toolkit.JAVA_TOOLKIT.drawHorizontalLine(x, y, w, rgb)
     }
 
-    fun drawText(str: String, x: Int, y: Int, rgb: Int) {
-        Class126.aClass3_Sub28_Sub17_1669.method681(RSString.of(str), x, y, rgb, -1)
+    fun drawText(str: String, x: Int, y: Int, rgb: Int, parse: Boolean = false) {
+        if (parse) Class126.aClass3_Sub28_Sub17_1669.method681(RSString.parse(str), x, y, rgb, -1)
+        else Class126.aClass3_Sub28_Sub17_1669.method681(RSString.of(str), x, y, rgb, -1)
     }
 
     fun drawText(str: RSString, x: Int, y: Int, rgb: Int) {

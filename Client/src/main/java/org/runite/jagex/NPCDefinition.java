@@ -452,8 +452,8 @@ final class NPCDefinition {
          if(null == this.aHashTable_1272) {
             return var2;
          } else {
-            Class3_Sub29 var4 = (Class3_Sub29)this.aHashTable_1272.get((long)var1);
-            return (null == var4?var2:var4.aClass94_2586);
+            LinkableRSString var4 = (LinkableRSString)this.aHashTable_1272.get((long)var1);
+            return (null == var4?var2:var4.value);
          }
       } catch (RuntimeException var5) {
          throw Class44.clientError(var5, "me.I(" + var1 + ',' + (var2 != null?"{...}":"null") + ',' + true + ')');
@@ -499,12 +499,12 @@ final class NPCDefinition {
    static void method1480(boolean var0, RSString var1) {
       try {
          short[] var3 = new short[16];
-         var1 = var1.method1534();
+         var1 = var1.toLowercase();
          int var4 = 0;
 
          for(int var5 = 0; Class3_Sub13_Sub23.itemDefinitionSize > var5; ++var5) {
             ItemDefinition var6 = Class38.getItemDefinition(var5, (byte)93);
-            if((!var0 || var6.aBoolean807) && var6.anInt791 == -1 && -1 == var6.anInt762 && var6.anInt800 == 0 && var6.name.method1534().indexOf(var1, 116) != -1) {
+            if((!var0 || var6.aBoolean807) && var6.anInt791 == -1 && -1 == var6.anInt762 && var6.anInt800 == 0 && var6.name.toLowercase().indexOf(var1, 116) != -1) {
                if(var4 >= 250) {
                   Class99.aShortArray1398 = null;
                   Unsorted.anInt952 = -1;
@@ -627,7 +627,7 @@ final class NPCDefinition {
             this.size = buffer.readUnsignedByte();
          } else if (opcode >= 30 && opcode < 35) {
             this.options[-30 + opcode] = buffer.readString();
-            if (this.options[-30 + opcode].equals(-122, TextCore.HasHidden)) {
+            if (this.options[-30 + opcode].equalsStringIgnoreCase(TextCore.HasHidden)) {
                this.options[opcode - 30] = null;
             }
          } else if (opcode == 40) {
@@ -794,7 +794,7 @@ final class NPCDefinition {
                   int var10 = buffer.readMedium();
                   Object var8;
                   if (var11) {
-                     var8 = new Class3_Sub29(buffer.readString());
+                     var8 = new LinkableRSString(buffer.readString());
                   } else {
                      var8 = new Class3_Sub18(buffer.readInt());
                   }

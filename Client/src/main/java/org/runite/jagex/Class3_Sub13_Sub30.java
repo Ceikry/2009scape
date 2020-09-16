@@ -79,7 +79,7 @@ final class Class3_Sub13_Sub30 extends Class3_Sub13 {
                   for(var12 = 7; var12 >= 0; --var12) {
                      if(null != Class91.aClass94Array1299[var12]) {
                         short var14 = 0;
-                        if(Class158.anInt2014 == 0 && Class91.aClass94Array1299[var12].equals(-123, TextCore.HasAttack)) {
+                        if(Class158.anInt2014 == 0 && Class91.aClass94Array1299[var12].equalsStringIgnoreCase(TextCore.HasAttack)) {
                          //If other player level greater than my level, then right click to attack.
                            if(playerUsername.COMBAT_LEVEL > Class102.player.COMBAT_LEVEL && !Properties.get().isInstantAttack()) {
                               var14 = 2000;//Var for right click higher level players
@@ -142,7 +142,7 @@ final class Class3_Sub13_Sub30 extends Class3_Sub13 {
          Class3_Sub13_Sub29.method304();
          Class40.method1045();
          Class3_Sub13_Sub3.method183();
-         Class3_Sub29.method727();
+         LinkableRSString.method727();
          Class3_Sub21.method397((byte)-41);
          if(Class3_Sub13_Sub13.anInt3148 != 0) {
             for(int var1 = 0; var1 < Class3_Sub6.aByteArrayArray2287.length; ++var1) {

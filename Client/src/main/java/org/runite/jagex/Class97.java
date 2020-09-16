@@ -146,8 +146,8 @@ public final class Class97 {
          }
       }
 
-      aClass94_1374 = RSString.of("zap");
+      aClass94_1374 = RSString.parse("zap");
       anIntArrayArray1373 = new int[104][104];
-      aClass94_1380 = RSString.of(")4p=");
+      aClass94_1380 = RSString.parse(")4p=");
    }
 }

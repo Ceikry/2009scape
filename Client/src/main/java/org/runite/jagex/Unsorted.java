@@ -10,23 +10,23 @@ import java.nio.charset.StandardCharsets;
 import java.util.Objects;
 
 public class Unsorted {
-    public static final RSString TOGGLE_ATK = RSString.of("::toggleatk");
-    public static final RSString TOGGLE_FK = RSString.of("::togglefk");
+    public static final RSString TOGGLE_ATK = RSString.parse("::toggleatk");
+    public static final RSString TOGGLE_FK = RSString.parse("::togglefk");
     public static boolean aBoolean2146 = false;
     public static int incomingOpcode = 0;
     public static int anInt2148 = 0;
     public static boolean aBoolean2150;
     public static boolean aBoolean2154;
     public static int[] anIntArray2157 = new int[50];
-    static RSString aClass94_946 = RSString.of(")2");
+    static RSString aClass94_946 = RSString.parse(")2");
     static int anInt942;
     static int anInt944 = 0;
     static int anInt952;
     static int anInt963;
     public static int anInt144;
     public static int anInt136 = 0;
-    public static RSString aClass94_132 = RSString.of("::");
-    public static RSString aClass94_119 = RSString.of("runes");
+    public static RSString aClass94_132 = RSString.parse("::");
+    public static RSString aClass94_119 = RSString.parse("runes");
     public static int anInt120 = 255;
     public static byte[][][] aByteArrayArrayArray113 = new byte[4][104][104];
     static int anInt1037;
@@ -36,14 +36,14 @@ public class Unsorted {
     static int anInt3695;
     static int anInt1042;
     static CacheIndex aClass153_1043;
-    static RSString aClass94_995 = RSString.of("(Y<)4col>");
+    static RSString aClass94_995 = RSString.parse("(Y<)4col>");
     static Class3_Sub28_Sub16[] aClass3_Sub28_Sub16Array996;
     static int maskUpdateCount = 0;
     static int anInt998 = 0;
     static int anInt999 = -1;
     static int wlPacketSize = 0;
-    public static RSString aClass94_37 = RSString.of("0(U");
-    public static RSString aClass94_38 = RSString.of("tbrefresh");
+    public static RSString aClass94_37 = RSString.parse("0(U");
+    public static RSString aClass94_38 = RSString.parse("tbrefresh");
     public static int[] anIntArray39;
     public static int anInt40 = 0;
     public static Connection js5Connection;
@@ -57,10 +57,10 @@ public class Unsorted {
     public static Class33 aClass33_1238;
     public static Class61 aClass61_1242 = new Class61();
     public static int anInt1244 = -1;
-    public static RSString aClass94_1932 = RSString.of(")4a=");
+    public static RSString aClass94_1932 = RSString.parse(")4a=");
     public static RSInterface aClass11_1933;
     public static float[] aFloatArray1934 = new float[]{0.073F, 0.169F, 0.24F, 1.0F};
-    public static RSString COMMAND_BREAK_CLIENT_CONNECTION = RSString.of("::clientdrop");
+    public static RSString COMMAND_BREAK_CLIENT_CONNECTION = RSString.parse("::clientdrop");
     public static Class8 aClass8_1936;
     public static Class3_Sub30_Sub1 aClass3_Sub30_Sub1_2942 = new Class3_Sub30_Sub1();
     public static int[] anIntArray2952 = new int[128];
@@ -68,7 +68,7 @@ public class Unsorted {
     public static Class61 aClass61_78 = new Class61();
     public static int anInt72 = 0;
     public static boolean[] aBooleanArray73 = new boolean[200];
-    public static RSString aClass94_1698 = RSString.of("(R");
+    public static RSString aClass94_1698 = RSString.parse("(R");
     public static boolean[] aBooleanArray1703;
     public static int incomingPacketLength = 0;
     public static int anInt1705 = 0;
@@ -76,18 +76,18 @@ public class Unsorted {
     public static int anInt1711 = -2;
     public static boolean[] aBooleanArray1712 = new boolean[100];
     public static Class93 aClass93_1131 = new Class93(5);
-    public static RSString aClass94_1133 = RSString.of(")4j");
+    public static RSString aClass94_1133 = RSString.parse(")4j");
     public static Class93 aClass93_1135 = new Class93(4);
     public static Class3_Sub28_Sub16[] aClass3_Sub28_Sub16Array1136;
     public static int anInt1137 = 2;
     public static int[] anIntArray1138;
     public static int anInt3625 = 3;
     public static int anInt3631;
-    public static RSString aClass94_4057 = RSString.of("Mem:");
+    public static RSString aClass94_4057 = RSString.parse("Mem:");
     public static Class25[] aClass25Array4060;
     public static int anInt4062 = 0;
     public static boolean aBoolean4063 = false;
-    public static RSString aClass94_4066 = RSString.of("<br>");
+    public static RSString aClass94_4066 = RSString.parse("<br>");
     public static boolean aBoolean4068 = true;
     public static Class3_Sub2[][][] aClass3_Sub2ArrayArrayArray4070;
     public static int anInt4073;
@@ -105,7 +105,7 @@ public class Unsorted {
     static int anInt2577 = 0;
     public static int[] anIntArray2591;
     public static RSString[] aClass94Array2596 = null;
-    public static RSString aClass94_2598 = RSString.of("<br>");
+    public static RSString aClass94_2598 = RSString.parse("<br>");
     public static Class3_Sub28_Sub3 aClass3_Sub28_Sub3_2600;
     public static Class151_Sub1[] aClass151_Sub1Array2601 = new Class151_Sub1[29]; //TODO
     public static boolean aBoolean1080 = false;
@@ -119,7 +119,7 @@ public class Unsorted {
     public static boolean aBoolean1951 = false;
     public static int anInt1953;
     public static int anInt1881 = 0;
-    public static RSString aClass94_1885 = RSString.of("cookiehost");
+    public static RSString aClass94_1885 = RSString.parse("cookiehost");
     public static int anInt1887;
     static boolean aBoolean29 = false;
     static int anInt30;
@@ -459,7 +459,7 @@ public class Unsorted {
     static RSString method802(int var0) {
         try {
 
-            return Class163_Sub2_Sub1.aClass94Array4016[var0].length(-26) > 0 ? RenderAnimationDefinition.method903(new RSString[]{Class140_Sub7.aClass94Array2935[var0], TextCore.Spacer, Class163_Sub2_Sub1.aClass94Array4016[var0]}) : Class140_Sub7.aClass94Array2935[var0];
+            return Class163_Sub2_Sub1.aClass94Array4016[var0].length() > 0 ? RenderAnimationDefinition.method903(new RSString[]{Class140_Sub7.aClass94Array2935[var0], TextCore.Spacer, Class163_Sub2_Sub1.aClass94Array4016[var0]}) : Class140_Sub7.aClass94Array2935[var0];
         } catch (RuntimeException var3) {
             throw Class44.clientError(var3, "wa.RB(" + var0 + ',' + true + ')');
         }
@@ -2600,7 +2600,7 @@ public class Unsorted {
             int var2;
             int var3;
             Runtime var6;
-            if (command.equals(-128, Class3_Sub13_Sub13.aClass94_3152)) {
+            if (command.equalsStringIgnoreCase(Class3_Sub13_Sub13.aClass94_3152)) {
                 Class3_Sub13_Sub17.method246(8);
 
                 for (var2 = 0; var2 < 10; ++var2) {
@@ -2613,7 +2613,7 @@ public class Unsorted {
             }
 
             int var4;
-            if (command.equals(-120, Class3_Sub28_Sub12.aClass94_3651)) {
+            if (command.equalsStringIgnoreCase(Class3_Sub28_Sub12.aClass94_3651)) {
                 Class3_Sub13_Sub17.method246(8);
 
                 for (var2 = 0; var2 < 10; ++var2) {
@@ -2634,79 +2634,79 @@ public class Unsorted {
                 Class3_Sub30_Sub1.addChatMessage((RSString) null, 0, RenderAnimationDefinition.method903(new RSString[]{Class161.aClass94_2033, Class72.method1298((byte) 9, var3), TextCore.Memoryk}), -1);
             }
 
-            if (command.equals(-113, Class139.aClass94_1830)) {
+            if (command.equalsStringIgnoreCase(Class139.aClass94_1830)) {
                 Class3_Sub30_Sub1.addChatMessage((RSString) null, 0, RenderAnimationDefinition.method903(new RSString[]{Class21.aClass94_442, Class72.method1298((byte) 9, Class118.method1727((byte) 123))}), -1);
             }
 
-            if (HDToolKit.highDetail && command.equals(-113, Class3_Sub28_Sub16.COMMAND_GRAPHICS_CARD_MEMORY)) {
+            if (HDToolKit.highDetail && command.equalsStringIgnoreCase(Class3_Sub28_Sub16.COMMAND_GRAPHICS_CARD_MEMORY)) {
                 System.out.println("oncard_geometry:" + Class31.anInt585);
                 System.out.println("oncard_2d:" + Class31.memory2D);
                 System.out.println("oncard_texture:" + Class31.anInt580);
             }
 
-            if (command.equals(60, COMMAND_BREAK_CLIENT_CONNECTION)) {
+            if (command.equalsStringIgnoreCase(COMMAND_BREAK_CLIENT_CONNECTION)) {
                 Class3_Sub13_Sub24.method289();
             }
 
-            if (command.equals(-118, Class3_Sub31.COMMAND_BREAK_JS5_CLIENT_CONNECTION)) {
+            if (command.equalsStringIgnoreCase(Class3_Sub31.COMMAND_BREAK_JS5_CLIENT_CONNECTION)) {
                 Class58.aJs5Worker_917.method1254();
             }
 
-            if (command.equals(33, Class110.COMMAND_BREAK_JS5_SERVER_CONNECTION)) {
+            if (command.equalsStringIgnoreCase(Class110.COMMAND_BREAK_JS5_SERVER_CONNECTION)) {
                 Class58.aJs5Worker_917.method1244();
             }
 
-            if (command.equals(-110, Class95.COMMAND_BREAK_CONNECTION)) {
+            if (command.equalsStringIgnoreCase(Class95.COMMAND_BREAK_CONNECTION)) {
                 Class38.aClass87_665.method1431(0);
                 Class3_Sub15.activeConnection.applyDummyStreams();
                 Class58.aJs5Worker_917.method1248();
             }
 
-            if (command.equals(-115, Class3_Sub13.COMMAND_REPLACE_CANVAS)) {
+            if (command.equalsStringIgnoreCase(Class3_Sub13.COMMAND_REPLACE_CANVAS)) {
                 Class3_Sub28_Sub5.aBoolean3593 = true;
             }
 
-            if (command.equals(21, Class86.COMMAND_REBUILD)) {
+            if (command.equalsStringIgnoreCase(Class86.COMMAND_REBUILD)) {
                 Class117.method1719(25);
             }
 
-            if (command.equals(-120, Class58.COMMAND_TOGGLE_FPSON)) {
+            if (command.equalsStringIgnoreCase(Class58.COMMAND_TOGGLE_FPSON)) {
                 Class20.aBoolean438 = true;
             }
 
-            if (command.equals(-109, Class30.COMMAND_TOGGLE_FPSOFF)) {
+            if (command.equalsStringIgnoreCase(Class30.COMMAND_TOGGLE_FPSOFF)) {
                 Class20.aBoolean438 = false;
             }
-            if (command.equals(-120, TOGGLE_ATK)) {
+            if (command.equalsStringIgnoreCase(TOGGLE_ATK)) {
                 boolean on = !Properties.get().isInstantAttack();
                 Properties.get().setInstantAttack(on);
                 Properties.get().save();
-                Class3_Sub30_Sub1.addChatMessage((RSString) null, 0, RSString.of("Left click attack option mode toggled " + (on ? "on." : "off.")), -1);
+                Class3_Sub30_Sub1.addChatMessage((RSString) null, 0, RSString.parse("Left click attack option mode toggled " + (on ? "on." : "off.")), -1);
             }
-            if (command.equals(-120, TOGGLE_FK)) {
+            if (command.equalsStringIgnoreCase(TOGGLE_FK)) {
                 boolean on = !Properties.get().isModernHotkeys();
                 Properties.get().setModernHotkeys(on);
                 Properties.get().save();
-                Class3_Sub30_Sub1.addChatMessage((RSString) null, 0, RSString.of("Modern hotkeys mode toggled " + (on ? "on." : "off.")), -1);
+                Class3_Sub30_Sub1.addChatMessage((RSString) null, 0, RSString.parse("Modern hotkeys mode toggled " + (on ? "on." : "off.")), -1);
             }
 
-            if (command.equals(-120, Class52.COMMAND_LOWRES_GRAPHICS)) {
+            if (command.equalsStringIgnoreCase(Class52.COMMAND_LOWRES_GRAPHICS)) {
                 GameObject.graphicsSettings(false, 0, -1, -1);
             }
 
-            if (command.equals(-122, Class108.COMMAND_HIGHRES_GRAPHICS_WINDOW)) {
+            if (command.equalsStringIgnoreCase(Class108.COMMAND_HIGHRES_GRAPHICS_WINDOW)) {
                 GameObject.graphicsSettings(false, 1, -1, -1);
             }
 
-            if (command.equals(-106, Class121.COMMAND_HIGHRES_GRAPHICS_RESIZE)) {
+            if (command.equalsStringIgnoreCase(Class121.COMMAND_HIGHRES_GRAPHICS_RESIZE)) {
                 GameObject.graphicsSettings(false, 2, -1, -1);
             }
 
-            if (command.equals(-121, Class3_Sub13_Sub15.COMMAND_HIGHRES_GRAPHICS_FULLSCREEN)) {
+            if (command.equalsStringIgnoreCase(Class3_Sub13_Sub15.COMMAND_HIGHRES_GRAPHICS_FULLSCREEN)) {
                 GameObject.graphicsSettings(false, 3, 1024, 768);
             }
 
-            if (command.equals(69, Class3_Sub13_Sub10.COMMAND_NOCLIP)) {
+            if (command.equalsStringIgnoreCase(Class3_Sub13_Sub10.COMMAND_NOCLIP)) {
                 for (var2 = 0; var2 < 4; ++var2) {
                     for (var3 = 1; var3 < 103; ++var3) {
                         for (var4 = 1; var4 < 103; ++var4) {
@@ -2726,7 +2726,7 @@ public class Unsorted {
                 Class65.method1237(command.substring(6).parseInt());
             }
 
-            if (command.equals(34, Class163.COMMAND_ERROR_TEST)) {
+            if (command.equalsStringIgnoreCase(Class163.COMMAND_ERROR_TEST)) {
                 throw new RuntimeException();
             }
 
@@ -2735,11 +2735,11 @@ public class Unsorted {
                 Class3_Sub30_Sub1.addChatMessage((RSString) null, 0, RenderAnimationDefinition.method903(new RSString[]{Class166.aClass94_2075, Class72.method1298((byte) 9, Client.anInt3689)}), -1);
             }
 
-            if (command.equals(104, Class108.COMMAND_QA_OP_TEST)) {
+            if (command.equalsStringIgnoreCase(Class108.COMMAND_QA_OP_TEST)) {
                 aBoolean1040 = true;
             }
             /* Client tweening */
-            if (command.equals(104, Class3_Sub15.COMMAND_TWEENING)) {
+            if (command.equalsStringIgnoreCase(Class3_Sub15.COMMAND_TWEENING)) {
                 if (Class3_Sub26.aBoolean2558) {
                     Class3_Sub26.aBoolean2558 = false;
                     Class3_Sub30_Sub1.addChatMessage((RSString) null, 0, Class164.aClass94_2061, -1);
@@ -2749,12 +2749,12 @@ public class Unsorted {
                 }
             }
 
-            if (command.equals(47, Class3_Sub13.COMMAND_SHIFT_DROP_CLICK)) {
+            if (command.equalsStringIgnoreCase(Class3_Sub13.COMMAND_SHIFT_DROP_CLICK)) {
                 Class101.aBoolean1419 = !Class101.aBoolean1419;
             }
 
             Class3_Sub13_Sub1.outgoingBuffer.putOpcode(44);
-            Class3_Sub13_Sub1.outgoingBuffer.writeByte(command.length(-83) + -1);
+            Class3_Sub13_Sub1.outgoingBuffer.writeByte(command.length() + -1);
             Class3_Sub13_Sub1.outgoingBuffer.writeString(command.substring(2));
 
         } catch (RuntimeException var5) {
@@ -2843,7 +2843,7 @@ public class Unsorted {
                             int var7;
                             if (var11 != null) {
                                 for (var7 = 4; var7 >= 0; --var7) {
-                                    if (var11[var7] != null && (Class158.anInt2014 != 0 || !var11[var7].equals(-113, TextCore.HasAttack))) {
+                                    if (var11[var7] != null && (Class158.anInt2014 != 0 || !var11[var7].equalsStringIgnoreCase(TextCore.HasAttack))) {
                                         byte var8 = 0;
                                         if (var7 == 0) {
                                             var8 = 17;
@@ -2881,7 +2881,7 @@ public class Unsorted {
 
                             if (0 == Class158.anInt2014 && var11 != null) {
                                 for (var7 = 4; var7 >= 0; --var7) {
-                                    if (null != var11[var7] && var11[var7].equals(-112, TextCore.HasAttack)) {
+                                    if (null != var11[var7] && var11[var7].equalsStringIgnoreCase(TextCore.HasAttack)) {
                                         short var14 = 0;
                                         if (var0.anInt1260 > Class102.player.COMBAT_LEVEL && !Properties.get().isInstantAttack()) {
                                             var14 = 2000;

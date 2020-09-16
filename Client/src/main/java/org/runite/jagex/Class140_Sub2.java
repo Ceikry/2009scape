@@ -7,7 +7,7 @@ final class Class140_Sub2 extends GameObject {
    private Class127_Sub1 aClass127_Sub1_2704;
    static boolean aBoolean2705 = true;
    private int anInt2706 = 0;
-   static RSString aClass94_2707 = RSString.of("<br>(X100(U(Y");
+   static RSString aClass94_2707 = RSString.parse("<br>(X100(U(Y");
    private final int anInt2708;
    static int[] anIntArray2709 = new int[]{0, 1, 3, 7, 15, 31, 63, 127, 255, 511, 1023, 2047, 4095, 8191, 16383, 32767, '\uffff', 131071, 262143, 524287, 1048575, 2097151, 4194303, 8388607, 16777215, 33554431, 67108863, 134217727, 268435455, 536870911, 1073741823, Integer.MAX_VALUE, -1};
    int anInt2710;
