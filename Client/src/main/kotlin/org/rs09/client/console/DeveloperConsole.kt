@@ -43,11 +43,21 @@ object DeveloperConsole {
         tempBuffer = null
     }
 
-    fun handleKey(evt: KeyEvent) {
-        if (evt.keyChar == '`' || evt.keyChar == '\t' || evt.keyChar == '\n') return
+    fun onConsoleInput(str: String) {
+        println("TODO - Handle console command '$str'")
+    }
 
-        if (evt.keyChar == '\b' && str.isNotEmpty()) str = str.substring(0, str.length - 1)
-        else str += evt.keyChar
+    fun handleKey(evt: KeyEvent) {
+        if (evt.keyChar == '`' || evt.keyChar == '\t') return
+
+        when {
+            evt.keyChar == '\n' -> {
+                if (str.isNotBlank()) onConsoleInput(str.trim())
+                str = ""
+            }
+            evt.keyChar == '\b' && str.isNotEmpty() -> str = str.substring(0, str.length - 1)
+            else -> str += evt.keyChar
+        }
     }
 
 }
