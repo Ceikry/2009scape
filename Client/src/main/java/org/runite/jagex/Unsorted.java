@@ -3,6 +3,7 @@ package org.runite.jagex;
 import org.rs09.client.rendering.Toolkit;
 import org.rs09.client.util.ArrayUtils;
 import org.runite.Properties;
+import org.rs09.client.net.Connection;
 
 import java.awt.*;
 import java.nio.charset.StandardCharsets;
@@ -45,7 +46,7 @@ public class Unsorted {
     public static RSString aClass94_38 = RSString.of("tbrefresh");
     public static int[] anIntArray39;
     public static int anInt40 = 0;
-    public static IOHandler js5Connection;
+    public static Connection js5Connection;
     public static int anInt42 = 0;
     public static RSString[] aClass94Array45;
     public static short aShort46 = 256;
@@ -2657,7 +2658,7 @@ public class Unsorted {
 
             if (command.equals(-110, Class95.COMMAND_BREAK_CONNECTION)) {
                 Class38.aClass87_665.method1431(0);
-                Class3_Sub15.aClass89_2429.method1467();
+                Class3_Sub15.aClass89_2429.applyDummyStreams();
                 Class58.aJs5Worker_917.method1248();
             }
 

@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 
-abstract class Class44 {
+public abstract class Class44 {
 
 	static int anInt718 = 0;
 	static int anInt719 = 0;

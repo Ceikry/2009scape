@@ -245,7 +245,7 @@ public final class RSString implements Interface3 {
         }
     }
 
-    final int length(int var1) {
+    public final int length(int var1) {
         try {
             if (var1 >= -16) {
                 this.method1544(false);
@@ -1044,7 +1044,7 @@ public final class RSString implements Interface3 {
         }
     }
 
-    final int method1580(byte[] var2, int var3, int var5) {
+    public final int method1580(byte[] var2, int var3, int var5) {
         try {
             ArrayUtils.arraycopy(this.buffer, 0, var2, var3, var5);
 

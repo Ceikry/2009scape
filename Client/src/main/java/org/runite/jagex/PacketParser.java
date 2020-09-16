@@ -74,7 +74,7 @@ final class PacketParser {
                 return false;
             } else {
                 int var1 = Class3_Sub15.aClass89_2429.availableBytes();
-                if (0 == var1) {
+                if (var1 == 0) {
                     return false;
                 } else {
                     if (Unsorted.incomingOpcode == -1) {
@@ -1264,7 +1264,7 @@ final class PacketParser {
                                                                         nodeModelId = GraphicDefinition.incomingBuffer.readUnsignedShort128();
                                                                         var19 = GraphicDefinition.incomingBuffer.readIntLE();
                                                                         modelId = GraphicDefinition.incomingBuffer.readSignedShort();
-                                                                        counter = GraphicDefinition.incomingBuffer.getShortAs();
+                                                                        counter = GraphicDefinition.incomingBuffer.readSignedShort128();
                                                                         Class146.updateInterfacePacketCounter(nodeModelId);
                                                                         Class168.method2271(modelId, var19, counter);
 

@@ -1,5 +1,6 @@
 package org.runite.jagex;
 import org.runite.GameLaunch;
+import org.rs09.client.net.Connection;
 
 import java.io.IOException;
 import java.net.Socket;
@@ -52,7 +53,7 @@ class Class127 {
                      return;
                   }
 
-                  Class3_Sub15.aClass89_2429 = new IOHandler((Socket)Class3_Sub9.aClass64_2318.anObject974, Class38.aClass87_665);
+                  Class3_Sub15.aClass89_2429 = new Connection((Socket)Class3_Sub9.aClass64_2318.anObject974, Class38.aClass87_665);
                   Class3_Sub9.aClass64_2318 = null;
                   long var1 = Class3_Sub13_Sub16.aLong3202 = Class3_Sub28_Sub14.username.toLong();
                   Class3_Sub13_Sub1.outgoingBuffer.index = 0;

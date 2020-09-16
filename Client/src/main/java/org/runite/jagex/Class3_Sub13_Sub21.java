@@ -1,4 +1,6 @@
 package org.runite.jagex;
+import org.rs09.client.net.Connection;
+
 import java.io.IOException;
 import java.net.Socket;
 import java.util.Objects;
@@ -86,7 +88,7 @@ final class Class3_Sub13_Sub21 extends Class3_Sub13 {
                   if(1 != Class3_Sub9.aClass64_2318.anInt978) {
                      return;
                   }
-                  Class3_Sub15.aClass89_2429 = new IOHandler((Socket)Class3_Sub9.aClass64_2318.anObject974, Class38.aClass87_665);
+                  Class3_Sub15.aClass89_2429 = new Connection((Socket)Class3_Sub9.aClass64_2318.anObject974, Class38.aClass87_665);
                   Class3_Sub9.aClass64_2318 = null;
                   Class3_Sub15.aClass89_2429.sendBytes(Class3_Sub13_Sub1.outgoingBuffer.buffer, Class3_Sub13_Sub1.outgoingBuffer.index);
                    if(WorldListEntry.aClass155_2627 != null) {

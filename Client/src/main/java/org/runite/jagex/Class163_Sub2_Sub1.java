@@ -1,4 +1,6 @@
 package org.runite.jagex;
+import org.rs09.client.net.Connection;
+
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InvalidClassException;
@@ -11,7 +13,7 @@ import java.lang.reflect.Method;
 
 final class Class163_Sub2_Sub1 extends Class163_Sub2 {
 
-   static IOHandler aClass89_4012;
+   static Connection aClass89_4012;
    static volatile boolean aBoolean4013 = true;
    static int anInt4014;
    static Class93 aClass93_4015 = new Class93(64);

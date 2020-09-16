@@ -1,6 +1,7 @@
 package org.runite.jagex;
 
 import org.rs09.client.collections.Queue;
+import org.rs09.client.net.Connection;
 
 import java.io.IOException;
 
@@ -12,7 +13,7 @@ final class Js5Worker {
     private final Queue<Js5ResourceRequest> aClass13_1003 = new Queue<>();
 
     private long aLong1004;
-    private IOHandler aClass89_1005;
+    private Connection aClass89_1005;
     private int anInt1006;
     private byte aByte1009 = 0;
     volatile int anInt1010 = 0;
@@ -259,11 +260,11 @@ final class Js5Worker {
 
     final void method1248() {
         if (this.aClass89_1005 != null) {
-            this.aClass89_1005.method1467();
+            this.aClass89_1005.applyDummyStreams();
         }
     }
 
-    final void method1249(boolean var1, IOHandler stream) {
+    final void method1249(boolean var1, Connection stream) {
         if (null != this.aClass89_1005) {
             try {
                 this.aClass89_1005.close();

@@ -4,6 +4,7 @@ import org.rs09.client.console.DeveloperConsole;
 import org.runite.Configurations;
 import org.runite.GameLaunch;
 import org.rs09.client.collections.HashTable;
+import org.rs09.client.net.Connection;
 
 import java.awt.*;
 import java.io.IOException;
@@ -718,7 +719,7 @@ public final class Client extends GameShell {
                 }
 
                 if (2 == PacketParser.anInt80) {
-                    Unsorted.js5Connection = new IOHandler((Socket) Objects.requireNonNull(Class17.aClass64_413).anObject974, Class38.aClass87_665);
+                    Unsorted.js5Connection = new Connection((Socket) Objects.requireNonNull(Class17.aClass64_413).anObject974, Class38.aClass87_665);
                     DataBuffer var2 = new DataBuffer(9);
                     var2.writeByte(15); //JS5 handshake
                     var2.writeInt(Configurations.CLIENT_BUILD);

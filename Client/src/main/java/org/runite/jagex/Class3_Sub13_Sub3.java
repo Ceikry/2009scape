@@ -4,7 +4,7 @@ import org.runite.GameLaunch;
 
 import java.io.IOException;
 
-final class Class3_Sub13_Sub3 extends Class3_Sub13 {
+public final class Class3_Sub13_Sub3 extends Class3_Sub13 {
 
     private int anInt3047 = 4096;
     static KeyboardListener aClass148_3049 = new KeyboardListener();

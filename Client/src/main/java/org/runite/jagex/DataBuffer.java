@@ -10,6 +10,16 @@ import java.util.Objects;
 
 public class DataBuffer extends Linkable {
 
+    public DataBuffer(int capacity) {
+        this.buffer = ByteArrayPool.INSTANCE.getByteArray(capacity);
+        this.index = 0;
+    }
+
+    public DataBuffer(byte[] buffer) {
+        this.index = 0;
+        this.buffer = buffer;
+    }
+
     public byte[] buffer;
     public int index;
 
@@ -79,16 +89,16 @@ public class DataBuffer extends Linkable {
         this.buffer[this.index++] = 0;
     }
 
-    // TODO Rename / refactor
-    final int getShortAs() {
+    final int readSignedShort128() {
         this.index += 2;
-        int var2 = (this.buffer[-2 + this.index] << 8 & '\uff00') - -(-128 + this.buffer[this.index + -1] & 255);
+        int value = ((this.buffer[this.index - 2] & 0xff) << 8) +
+                (this.buffer[this.index - 1] - 128 & 0xff);
 
-        if (var2 > 32767) {
-            var2 -= 65536;
+        if (value > 32767) {
+            value -= 65536;
         }
 
-        return var2;
+        return value;
     }
 
     public final int readInt() {
@@ -167,11 +177,6 @@ public class DataBuffer extends Linkable {
         this.buffer[this.index++] = (byte) (value >> 24);
         this.buffer[this.index++] = (byte) value;
         this.buffer[this.index++] = (byte) (value >> 8);
-    }
-
-    public DataBuffer(int capacity) {
-        this.buffer = ByteArrayPool.INSTANCE.getByteArray(capacity);
-        this.index = 0;
     }
 
     final byte readSignedByte() {
@@ -379,11 +384,6 @@ public class DataBuffer extends Linkable {
     final void putShortA(int var1) {
         this.buffer[this.index++] = (byte) (var1 >> 8);
         this.buffer[this.index++] = (byte) (128 + var1);
-    }
-
-    public DataBuffer(byte[] buffer) {
-        this.index = 0;
-        this.buffer = buffer;
     }
 
     // TODO What is the difference between this and WriteIntLE?
