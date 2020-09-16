@@ -172,9 +172,9 @@ final class Class47 {
     static void method1095(int var0, int var1, int var2, RSInterface[] var3, int var4, int var5, int var6, int var7, byte var8, int var9) {
         try {
             if (HDToolKit.highDetail) {
-                Class22.method935(var0, var6, var4, var7);
+                Class22.setClipping(var0, var6, var4, var7);
             } else {
-                Class74.method1324(var0, var6, var4, var7);
+                Class74.setClipping(var0, var6, var4, var7);
                 Class51.method1134();
             }
 
@@ -284,9 +284,9 @@ final class Class47 {
                                     Class53.anInt865 = var13;
                                     Class3_Sub13_Sub36.method338(var11.height, var11.anInt189 == 1403, var13, var11.width, var14);
                                     if (HDToolKit.highDetail) {
-                                        Class22.method935(var0, var6, var4, var7);
+                                        Class22.setClipping(var0, var6, var4, var7);
                                     } else {
-                                        Class74.method1324(var0, var6, var4, var7);
+                                        Class74.setClipping(var0, var6, var4, var7);
                                     }
                                     continue;
                                 }
@@ -298,9 +298,9 @@ final class Class47 {
 
                                     Class3_Sub8.method125(var12, (byte) 59, var14, var13, var11);
                                     if (HDToolKit.highDetail) {
-                                        Class22.method935(var0, var6, var4, var7);
+                                        Class22.setClipping(var0, var6, var4, var7);
                                     } else {
-                                        Class74.method1324(var0, var6, var4, var7);
+                                        Class74.setClipping(var0, var6, var4, var7);
                                     }
 
                                     if (0 != Class161.anInt2028 && 3 != Class161.anInt2028 || Class38_Sub1.aBoolean2615 || var16 > NPCDefinition.anInt1297 || var17 > Class38_Sub1.anInt2612 || var18 <= NPCDefinition.anInt1297 || Class38_Sub1.anInt2612 >= var19) {
@@ -347,9 +347,9 @@ final class Class47 {
                                     if (var11.method855()) {
                                         Class91.method1493(var13, var14, var11, var12);
                                         if (HDToolKit.highDetail) {
-                                            Class22.method935(var0, var6, var4, var7);
+                                            Class22.setClipping(var0, var6, var4, var7);
                                         } else {
-                                            Class74.method1324(var0, var6, var4, var7);
+                                            Class74.setClipping(var0, var6, var4, var7);
                                         }
                                     }
                                     continue;
@@ -360,9 +360,9 @@ final class Class47 {
                                     Class3_Sub28_Sub14.aBooleanArray3674[var12] = true;
                                     Class163_Sub1_Sub1.aBooleanArray4008[var12] = true;
                                     if (HDToolKit.highDetail) {
-                                        Class22.method935(var0, var6, var4, var7);
+                                        Class22.setClipping(var0, var6, var4, var7);
                                     } else {
-                                        Class74.method1324(var0, var6, var4, var7);
+                                        Class74.setClipping(var0, var6, var4, var7);
                                     }
                                     continue;
                                 }
@@ -372,9 +372,9 @@ final class Class47 {
                                     Class3_Sub28_Sub14.aBooleanArray3674[var12] = true;
                                     Class163_Sub1_Sub1.aBooleanArray4008[var12] = true;
                                     if (HDToolKit.highDetail) {
-                                        Class22.method935(var0, var6, var4, var7);
+                                        Class22.setClipping(var0, var6, var4, var7);
                                     } else {
-                                        Class74.method1324(var0, var6, var4, var7);
+                                        Class74.setClipping(var0, var6, var4, var7);
                                     }
                                     continue;
                                 }
@@ -493,9 +493,9 @@ final class Class47 {
                                 }
 
                                 if (HDToolKit.highDetail) {
-                                    Class22.method935(var0, var6, var4, var7);
+                                    Class22.setClipping(var0, var6, var4, var7);
                                 } else {
-                                    Class74.method1324(var0, var6, var4, var7);
+                                    Class74.setClipping(var0, var6, var4, var7);
                                     Class51.method1134();
                                 }
                             }
@@ -762,7 +762,7 @@ final class Class47 {
                                                                 }
                                                             }
 
-                                                            Class22.method935(var0, var6, var4, var7);
+                                                            Class22.setClipping(var0, var6, var4, var7);
                                                         } else {
                                                             Class74.method1326(var13, var14, var13 - -var11.width, var14 - -var11.height);
 
@@ -780,7 +780,7 @@ final class Class47 {
                                                                 }
                                                             }
 
-                                                            Class74.method1324(var0, var6, var4, var7);
+                                                            Class74.setClipping(var0, var6, var4, var7);
                                                         }
                                                     } else {
                                                         var23 = var11.width * 4096 / var21;
@@ -883,9 +883,9 @@ final class Class47 {
                                                         HDToolKit.method1827(false);
                                                         Class3_Sub13_Sub33.method324(Unsorted.anInt3625);
                                                         if (Unsorted.aBoolean47) {
-                                                            Class22.method925();
+                                                            Class22.resetClipping();
                                                             HDToolKit.method1841();
-                                                            Class22.method935(var0, var6, var4, var7);
+                                                            Class22.setClipping(var0, var6, var4, var7);
                                                             Unsorted.aBoolean47 = false;
                                                         }
 

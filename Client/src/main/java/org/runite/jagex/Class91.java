@@ -809,7 +809,7 @@ final class Class91 {
    static void method1493(int var0, int var1, RSInterface var2, int var3) {
       try {
          if(HDToolKit.highDetail) {
-            Class22.method935(var0, var1, var2.width + var0, var2.height + var1);
+            Class22.setClipping(var0, var1, var2.width + var0, var2.height + var1);
          }
 
          if(Class161.anInt2028 >= 3) {

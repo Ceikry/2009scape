@@ -229,9 +229,9 @@ final class Class49 {
             }
 
             if(HDToolKit.highDetail) {
-               Class22.method925();
+               Class22.resetClipping();
             } else {
-               Class74.method1331();
+               Class74.resetClipping();
             }
 
             Class168.method2278(var0 + 122);

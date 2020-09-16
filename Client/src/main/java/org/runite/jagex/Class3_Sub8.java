@@ -37,9 +37,9 @@ final class Class3_Sub8 extends Linkable {
       try {
          Class58.method1194();
          if(HDToolKit.highDetail) {
-            Class22.method935(var3, var2, var3 + var4.width, var2 + var4.height);
+            Class22.setClipping(var3, var2, var3 + var4.width, var2 + var4.height);
          } else {
-            Class74.method1324(var3, var2, var3 - -var4.width, var2 + var4.height);
+            Class74.setClipping(var3, var2, var3 - -var4.width, var2 + var4.height);
          }
 
          if(2 != Class161.anInt2028 && 5 != Class161.anInt2028 && Class49.aClass3_Sub28_Sub16_812 != null) {

@@ -603,10 +603,10 @@ final class Class1 {
    static void method72(int var0, int var1, int var2, int var4) {
       try {
          if(HDToolKit.highDetail) {
-            Class22.method935(var0, var4, var2 + var0, var1 + var4);
+            Class22.setClipping(var0, var4, var2 + var0, var1 + var4);
             Class22.method934(var0, var4, var2, var1, 0);
          } else {
-            Class74.method1324(var0, var4, var2 + var0, var4 + var1);
+            Class74.setClipping(var0, var4, var2 + var0, var4 + var1);
             Class74.method1323(var0, var4, var2, var1, 0);
          }
 

@@ -87,7 +87,7 @@ public final class Class74 {
 
    }
 
-   static void method1316(int[] var0) {
+   public static void setClipping(int[] var0) {
       clipLeft = var0[0];
       clipTop = var0[1];
       clipRight = var0[2];
@@ -139,7 +139,7 @@ public final class Class74 {
       buffer = var0;
       anInt1092 = var1;
       anInt1094 = var2;
-      method1324(0, 0, var1, var2);
+      setClipping(0, 0, var1, var2);
    }
 
    static void method1320() {
@@ -261,27 +261,27 @@ public final class Class74 {
 
    }
 
-   static void method1324(int var0, int var1, int var2, int var3) {
-      if(var0 < 0) {
-         var0 = 0;
+   public static void setClipping(int left, int top, int right, int bottom) {
+      if(left < 0) {
+         left = 0;
       }
 
-      if(var1 < 0) {
-         var1 = 0;
+      if(top < 0) {
+         top = 0;
       }
 
-      if(var2 > anInt1092) {
-         var2 = anInt1092;
+      if(right > anInt1092) {
+         right = anInt1092;
       }
 
-      if(var3 > anInt1094) {
-         var3 = anInt1094;
+      if(bottom > anInt1094) {
+         bottom = anInt1094;
       }
 
-      clipLeft = var0;
-      clipTop = var1;
-      clipRight = var2;
-      clipBottom = var3;
+      clipLeft = left;
+      clipTop = top;
+      clipRight = right;
+      clipBottom = bottom;
       method1310();
    }
 
@@ -625,7 +625,7 @@ public final class Class74 {
       }
    }
 
-   static void method1331() {
+   public static void resetClipping() {
       clipLeft = 0;
       clipTop = 0;
       clipRight = anInt1092;

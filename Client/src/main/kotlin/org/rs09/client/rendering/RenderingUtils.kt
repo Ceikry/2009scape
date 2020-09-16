@@ -38,4 +38,18 @@ object RenderingUtils {
     fun drawText(str: String, x: Int, y: Int, rgb: Int) {
         Class126.aClass3_Sub28_Sub17_1669.method681(RSString.of(str), x, y, rgb, -1)
     }
+
+    fun drawText(str: RSString, x: Int, y: Int, rgb: Int) {
+        Class126.aClass3_Sub28_Sub17_1669.method681(str, x, y, rgb, -1)
+    }
+
+    fun setClipping(left: Int, top: Int, right: Int, bottom: Int) {
+        if (hd) Class22.setClipping(left, top, right, bottom)
+        else Class74.setClipping(left, top, right, bottom)
+    }
+
+    fun resetClipping() {
+        if (hd) Class22.resetClipping()
+        else Class74.resetClipping()
+    }
 }

@@ -119,7 +119,7 @@ final class Class65 {
                      var9 = var12 * var0 * 334 / (512 * var7);
                      var10 = (-var9 + var3) / 2;
                      if(var5) {
-                        Class22.method925();
+                        Class22.resetClipping();
                         Class22.method934(var4, var2, var0, var10, 0);
                         Class22.method934(var4, var2 + (var3 - var10), var0, var10, 0);
                      }
@@ -136,7 +136,7 @@ final class Class65 {
                   var9 = 512 * var3 * var7 / (334 * var12);
                   var10 = (var0 - var9) / 2;
                   if(var5) {
-                     Class22.method925();
+                     Class22.resetClipping();
                      Class22.method934(var4, var2, var10, var3, 0);
                      Class22.method934(var0 + (var4 - var10), var2, var10, var3, 0);
                   }

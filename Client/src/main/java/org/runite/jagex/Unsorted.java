@@ -444,7 +444,7 @@ public class Unsorted {
                 }
 
                 Class74.method1319(var11, var12, var13);
-                Class74.method1316(var14);
+                Class74.setClipping(var14);
                 Class51.method1134();
                 Class51.aBoolean843 = true;
                 return (Class3_Sub28_Sub16) (HDToolKit.highDetail && !var2 ? new Class3_Sub28_Sub16_Sub1(var15) : var15);
@@ -2262,9 +2262,9 @@ public class Unsorted {
             }
 
             if (HDToolKit.highDetail) {
-                Class22.method935(var0, var2, var0 + var4, var3 + var2);
+                Class22.setClipping(var0, var2, var0 + var4, var3 + var2);
             } else {
-                Class74.method1324(var0, var2, var0 + var4, var3 + var2);
+                Class74.setClipping(var0, var2, var0 + var4, var3 + var2);
             }
 
             int var6;

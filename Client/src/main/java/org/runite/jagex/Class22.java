@@ -42,7 +42,7 @@ public final class Class22 {
       var7.glEnd();
    }
 
-   static void method925() {
+   public static void resetClipping() {
       anInt449 = 0;
       anInt448 = 0;
       anInt450 = HDToolKit.anInt1820;
@@ -226,27 +226,27 @@ public final class Class22 {
       var9.glEnd();
    }
 
-   static void method935(int var0, int var1, int var2, int var3) {
-      if(var0 < 0) {
-         var0 = 0;
+   public static void setClipping(int left, int top, int right, int bottom) {
+      if(left < 0) {
+         left = 0;
       }
 
-      if(var1 < 0) {
-         var1 = 0;
+      if(top < 0) {
+         top = 0;
       }
 
-      if(var2 > HDToolKit.anInt1820) {
-         var2 = HDToolKit.anInt1820;
+      if(right > HDToolKit.anInt1820) {
+         right = HDToolKit.anInt1820;
       }
 
-      if(var3 > HDToolKit.anInt1811) {
-         var3 = HDToolKit.anInt1811;
+      if(bottom > HDToolKit.anInt1811) {
+         bottom = HDToolKit.anInt1811;
       }
 
-      anInt449 = var0;
-      anInt448 = var1;
-      anInt450 = var2;
-      anInt451 = var3;
+      anInt449 = left;
+      anInt448 = top;
+      anInt450 = right;
+      anInt451 = bottom;
       javax.media.opengl.GL var4 = HDToolKit.gl;
       var4.glEnable(3089);
       if(anInt449 <= anInt450 && anInt448 <= anInt451) {

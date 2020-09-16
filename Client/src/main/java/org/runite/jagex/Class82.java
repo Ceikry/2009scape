@@ -273,9 +273,9 @@ final class Class82 {
 
                      var25.method643(var12, var29);
                      if(HDToolKit.highDetail) {
-                        Class22.method935(var2, var0, var1 + var2, var0 - -var4);
+                        Class22.setClipping(var2, var0, var1 + var2, var0 - -var4);
                      } else {
-                        Class74.method1324(var2, var0, var1 + var2, var4 + var0);
+                        Class74.setClipping(var2, var0, var1 + var2, var4 + var0);
                      }
                   }
                }
@@ -431,9 +431,9 @@ final class Class82 {
 
                   Class168.aClass3_Sub28_Sub17_2096.method681(var33, var2 - (-Class32.anInt590 + -50) + -var15, var0 + Class3_Sub1.anInt2208, var32, 0);
                   if(HDToolKit.highDetail) {
-                     Class22.method935(var2, var0, var1 + var2, var4 + var0);
+                     Class22.setClipping(var2, var0, var1 + var2, var4 + var0);
                   } else {
-                     Class74.method1324(var2, var0, var2 - -var1, var0 + var4);
+                     Class74.setClipping(var2, var0, var2 - -var1, var0 + var4);
                   }
                }
 
@@ -454,9 +454,9 @@ final class Class82 {
 
                   Class168.aClass3_Sub28_Sub17_2096.method699(var33, Class32.anInt590 + var2, var16 + var0 + Class3_Sub1.anInt2208, var32, 0);
                   if(HDToolKit.highDetail) {
-                     Class22.method935(var2, var0, var2 - -var1, var0 + var4);
+                     Class22.setClipping(var2, var0, var2 - -var1, var0 + var4);
                   } else {
-                     Class74.method1324(var2, var0, var2 + var1, var0 + var4);
+                     Class74.setClipping(var2, var0, var2 + var1, var0 + var4);
                   }
                }
             } else {

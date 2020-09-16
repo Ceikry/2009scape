@@ -62,9 +62,9 @@ final class Class3_Sub17 extends Linkable {
 			}
 
 			if(HDToolKit.highDetail) {
-				Class22.method925();
+				Class22.resetClipping();
 			} else {
-				Class74.method1331();
+				Class74.resetClipping();
 			}
 
 			Class106.anInt1446 = 0;

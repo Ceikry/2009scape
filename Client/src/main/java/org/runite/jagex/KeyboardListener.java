@@ -71,7 +71,10 @@ final class KeyboardListener implements KeyListener, FocusListener {
                DeveloperConsole.INSTANCE.toggle();
                return;
          }
-         if (DeveloperConsole.INSTANCE.getOpen()) return;
+         if (DeveloperConsole.INSTANCE.getOpen()) {
+            DeveloperConsole.INSTANCE.handleKeyDown(var1);
+            return;
+         }
 
          if(null != Class3_Sub13_Sub3.aClass148_3049) {
             Class3_Sub13_Sub33.anInt3398 = 0;
@@ -159,7 +162,7 @@ final class KeyboardListener implements KeyListener, FocusListener {
 
    public final void keyTyped(KeyEvent var1) {
       if (DeveloperConsole.INSTANCE.getOpen()) {
-         DeveloperConsole.INSTANCE.handleKey(var1);
+         DeveloperConsole.INSTANCE.handleKeyPressed(var1);
          return;
       }
 
@@ -190,7 +193,9 @@ final class KeyboardListener implements KeyListener, FocusListener {
    }
 
    public final synchronized void keyReleased(KeyEvent var1) {
-      if (DeveloperConsole.INSTANCE.getOpen()) return;
+      if (DeveloperConsole.INSTANCE.getOpen()) {
+         return;
+      }
 
       switch (var1.getKeyCode())
       {
