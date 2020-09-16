@@ -34,8 +34,8 @@ object DeveloperConsole {
     fun draw() {
         if (!open) return
 
-        RenderingUtils.fillRect(0, 0, RenderingUtils.width, HEIGHT, BACKGROUND_COLOR, 128)
-        RenderingUtils.drawHorizontalLine(0, HEIGHT - 14 - 2, RenderingUtils.width, -1)
+        Toolkit.getActiveToolkit().fillRect(0, 0, RenderingUtils.width, HEIGHT, BACKGROUND_COLOR, 128)
+        Toolkit.getActiveToolkit().drawHorizontalLine(0, HEIGHT - 14 - 2, RenderingUtils.width, -1)
         RenderingUtils.drawText("530", RenderingUtils.width - 27, HEIGHT - 2, -1)
         RenderingUtils.drawText("> $str", 3, HEIGHT - 2, -1)
 

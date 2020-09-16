@@ -20,12 +20,15 @@ object RenderingUtils {
     val height: Int
         get() = Class140_Sub7.anInt2934
 
+    @JvmStatic
+    @Deprecated("Please use the Toolkit methods instead of this delegating method", ReplaceWith("Toolkit.getActiveToolkit().fillRect(x, y, w, h, rgb, alpha)"))
     fun fillRect(x: Int, y: Int, w: Int, h: Int, rgb: Int, alpha: Int) {
         Toolkit.getActiveToolkit().fillRect(x, y, w, h, rgb, alpha)
 //        if (hd) Class22.fillRectangle(x, y, w, h, rgb, alpha)
 //        else Class74.fillRectangle(x, y, w, h, rgb, alpha)
     }
 
+    @JvmStatic
     fun drawHorizontalLine(x: Int, y: Int, w: Int, rgb: Int) {
         Toolkit.getActiveToolkit().drawHorizontalLine(x, y, w, rgb)
 //        if (hd) Class22.drawHorizontalLine(x, y, w, rgb)

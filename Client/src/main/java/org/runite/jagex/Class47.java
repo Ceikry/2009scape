@@ -635,11 +635,7 @@ final class Class47 {
 
                                         if (var15 != 0) {
                                             if (var11.aBoolean226) {
-                                                if (HDToolKit.highDetail) {
-                                                    Class22.fillRectangle(var13, var14, var11.width, var11.height, var20, 256 - (var15 & 255));
-                                                } else {
-                                                    Class74.fillRectangle(var13, var14, var11.width, var11.height, var20, 256 + -(255 & var15));
-                                                }
+                                                Toolkit.getActiveToolkit().fillRect(var13, var14, var11.width, var11.height, var20, 256 - (var15 & 255));
                                             } else if (HDToolKit.highDetail) {
                                                 Class22.method928(var13, var14, var11.width, var11.height, var20, 256 + -(var15 & 255));
                                             } else {
