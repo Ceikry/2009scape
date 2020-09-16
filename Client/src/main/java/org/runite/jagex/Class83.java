@@ -1,6 +1,7 @@
 package org.runite.jagex;
 
 import org.rs09.client.collections.HashTable;
+import org.rs09.client.rendering.Toolkit;
 
 final class Class83 {
 
@@ -116,7 +117,7 @@ final class Class83 {
                               var35 = var42[var28] != null?var42[var28][var31]:0;
                               var36 = var35 & 252;
                               if(var36 != 0 && var16 > 1 && var27 > 1) {
-                                 Class168.method2272(Class74.buffer, var33, var14, var35 & 3, var32, var36 >> 2, var27, var16, var25, true);
+                                 Class168.method2272(Toolkit.JAVA_TOOLKIT.getBuffer(), var33, var14, var35 & 3, var32, var36 >> 2, var27, var16, var25, true);
                               } else {
                                  Class74.method1323(var14, var25, var16, var27, var33);
                               }
@@ -133,7 +134,7 @@ final class Class83 {
                                  Class74.method1323(var14, var25, var16, var27, var34);
                               }
 
-                              Class168.method2272(Class74.buffer, var34, var14, var35 & 3, 0, var36 >> 2, var27, var16, var25, var33 == 0);
+                              Class168.method2272(Toolkit.JAVA_TOOLKIT.getBuffer(), var34, var14, var35 & 3, 0, var36 >> 2, var27, var16, var25, var33 == 0);
                            }
                         }
 

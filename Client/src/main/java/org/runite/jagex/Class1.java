@@ -1,5 +1,6 @@
 package org.runite.jagex;
 
+import org.rs09.client.rendering.Toolkit;
 import org.runite.Configurations;
 import org.rs09.client.collections.HashTable;
 
@@ -613,7 +614,7 @@ final class Class1 {
          if(Class140_Sub3.anInt2737 >= 100) {
             if(null == Class36.aClass3_Sub28_Sub16_637 || var2 != Class36.aClass3_Sub28_Sub16_637.anInt3707 || Class36.aClass3_Sub28_Sub16_637.anInt3696 != var1) {
                Class3_Sub28_Sub16_Sub2 var5 = new Class3_Sub28_Sub16_Sub2(var2, var1);
-               Class74.method1319(var5.anIntArray4081, var2, var1);
+               Class74.setBuffer(var5.anIntArray4081, var2, var1);
                Unsorted.method523(var2, 0, Class23.anInt455, 0, 0, Class108.anInt1460, var1, 0);
                if(HDToolKit.highDetail) {
                   Class36.aClass3_Sub28_Sub16_637 = new Class3_Sub28_Sub16_Sub1(var5);
@@ -622,7 +623,7 @@ final class Class1 {
                }
 
                if(HDToolKit.highDetail) {
-                  Class74.buffer = null;
+                  Toolkit.JAVA_TOOLKIT.resetBuffer();
                } else {
                   Class164_Sub1.aClass158_3009.method2182();
                }

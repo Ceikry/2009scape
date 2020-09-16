@@ -1,7 +1,7 @@
 package org.rs09.client.console
 
 import org.rs09.client.rendering.RenderingUtils
-import org.runite.jagex.Class74
+import org.rs09.client.rendering.Toolkit
 import org.runite.jagex.RSString
 import org.runite.jagex.TimeUtils
 import java.awt.event.KeyEvent
@@ -66,8 +66,8 @@ object DeveloperConsole {
     fun preDraw() {
         if (RenderingUtils.hd) return
 
-        val copy = IntArray(Class74.buffer.size)
-        System.arraycopy(Class74.buffer, 0, copy, 0, copy.size)
+        val copy = IntArray(Toolkit.JAVA_TOOLKIT.buffer.size)
+        System.arraycopy(Toolkit.JAVA_TOOLKIT.buffer, 0, copy, 0, copy.size)
         tempBuffer = copy
     }
 
@@ -75,7 +75,7 @@ object DeveloperConsole {
         if (RenderingUtils.hd) return
 
         if (tempBuffer != null) {
-            System.arraycopy(tempBuffer!!, 0, Class74.buffer, 0, Class74.buffer.size)
+            System.arraycopy(tempBuffer!!, 0, Toolkit.JAVA_TOOLKIT.buffer, 0, Toolkit.JAVA_TOOLKIT.buffer.size)
         }
         tempBuffer = null
     }

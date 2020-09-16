@@ -1,6 +1,7 @@
 package org.runite.jagex;
 
 import org.rs09.client.Linkable;
+import org.rs09.client.rendering.Toolkit;
 
 final class Class3_Sub19 extends Linkable {
 
@@ -124,7 +125,7 @@ final class Class3_Sub19 extends Linkable {
             for(var7 = 1; 103 > var7; ++var7) {
                if(0 == (Unsorted.aByteArrayArrayArray113[var1][var7][var6 - -var3] & 24) && !Unsorted.method1529(var3, var7, var18, var6, var5, var1)) {
                   if(HDToolKit.highDetail) {
-                     Class74.buffer = null;
+                     Toolkit.JAVA_TOOLKIT.resetBuffer();
                   } else {
                      Class164_Sub1.aClass158_3009.method2182();
                   }
@@ -134,7 +135,7 @@ final class Class3_Sub19 extends Linkable {
 
                if(var1 < 3 && (Unsorted.aByteArrayArrayArray113[1 + var1][var7][var6 + var3] & 8) != 0 && !Unsorted.method1529(var3, var7, var18, var6, var5, 1 + var1)) {
                   if(HDToolKit.highDetail) {
-                     Class74.buffer = null;
+                     Toolkit.JAVA_TOOLKIT.resetBuffer();
                   } else {
                      Class164_Sub1.aClass158_3009.method2182();
                   }
@@ -160,7 +161,7 @@ final class Class3_Sub19 extends Linkable {
          }
 
          if(HDToolKit.highDetail) {
-            Class74.buffer = null;
+            Toolkit.JAVA_TOOLKIT.resetBuffer();
          } else {
             Class164_Sub1.aClass158_3009.method2182();
          }

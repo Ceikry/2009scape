@@ -1,5 +1,6 @@
 package org.rs09.client.rendering
 
+import org.rs09.client.rendering.java.JavaToolkit
 import org.runite.jagex.*
 
 /**
@@ -32,7 +33,7 @@ object RenderingUtils {
 
     fun drawHorizontalLine(x: Int, y: Int, w: Int, rgb: Int) {
         if (hd) Class22.drawHorizontalLine(x, y, w, rgb)
-        else Class74.drawHorizontalLine(x, y, w, rgb)
+        else Toolkit.JAVA_TOOLKIT.drawHorizontalLine(x, y, w, rgb)
     }
 
     fun drawText(str: String, x: Int, y: Int, rgb: Int) {

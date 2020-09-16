@@ -26,7 +26,7 @@ abstract class Class158 {
     }
 
     final void method2182() {
-        Class74.method1319(this.anIntArray2007, this.anInt2012, this.anInt2011);
+        Class74.setBuffer(this.anIntArray2007, this.anInt2012, this.anInt2011);
     }
 
     static void method2183(int parent, boolean notifyScripts, int parentWidth, int parentHeight, RSInterface[] ifaces) {

@@ -1,5 +1,7 @@
 package org.runite.jagex;
 
+import org.rs09.client.rendering.Toolkit;
+
 final class LDIndexedSprite extends AbstractIndexedSprite {
 
    private final int[] anIntArray2673;
@@ -67,35 +69,35 @@ final class LDIndexedSprite extends AbstractIndexedSprite {
          var4 = ((var7 << 16) - var9 + var13 - 1) / var13;
       }
 
-      var14 = var1 + var2 * Class74.anInt1092;
-      int var15 = Class74.anInt1092 - var3;
-      if(var2 + var4 > Class74.clipBottom) {
-         var4 -= var2 + var4 - Class74.clipBottom;
+      var14 = var1 + var2 * Toolkit.JAVA_TOOLKIT.width;
+      int var15 = Toolkit.JAVA_TOOLKIT.width - var3;
+      if(var2 + var4 > Toolkit.JAVA_TOOLKIT.clipBottom) {
+         var4 -= var2 + var4 - Toolkit.JAVA_TOOLKIT.clipBottom;
       }
 
       int var16;
-      if(var2 < Class74.clipTop) {
-         var16 = Class74.clipTop - var2;
+      if(var2 < Toolkit.JAVA_TOOLKIT.clipTop) {
+         var16 = Toolkit.JAVA_TOOLKIT.clipTop - var2;
          var4 -= var16;
-         var14 += var16 * Class74.anInt1092;
+         var14 += var16 * Toolkit.JAVA_TOOLKIT.width;
          var9 += var13 * var16;
       }
 
-      if(var1 + var3 > Class74.clipRight) {
-         var16 = var1 + var3 - Class74.clipRight;
+      if(var1 + var3 > Toolkit.JAVA_TOOLKIT.clipRight) {
+         var16 = var1 + var3 - Toolkit.JAVA_TOOLKIT.clipRight;
          var3 -= var16;
          var15 += var16;
       }
 
-      if(var1 < Class74.clipLeft) {
-         var16 = Class74.clipLeft - var1;
+      if(var1 < Toolkit.JAVA_TOOLKIT.clipLeft) {
+         var16 = Toolkit.JAVA_TOOLKIT.clipLeft - var1;
          var3 -= var16;
          var14 += var16;
          var8 += var12 * var16;
          var15 += var16;
       }
 
-      method1673(Class74.buffer, this.aByteArray2674, this.anIntArray2673, var8, var9, var14, var15, var3, var4, var12, var13, var6, var5);
+      method1673(Toolkit.JAVA_TOOLKIT.getBuffer(), this.aByteArray2674, this.anIntArray2673, var8, var9, var14, var15, var3, var4, var12, var13, var6, var5);
    }
 
    private static void method1670(int[] var0, byte[] var1, int[] var2, int var3, int var4, int var5, int var6, int var7, int var8, int var9, int var10, int var11) {
@@ -250,44 +252,44 @@ final class LDIndexedSprite extends AbstractIndexedSprite {
    final void method1666(int var1, int var2, int var3) {
       var1 += this.anInt1470;
       var2 += this.anInt1464;
-      int var4 = var1 + var2 * Class74.anInt1092;
+      int var4 = var1 + var2 * Toolkit.JAVA_TOOLKIT.width;
       int var5 = 0;
       int var6 = this.anInt1468;
       int var7 = this.anInt1461;
-      int var8 = Class74.anInt1092 - var7;
+      int var8 = Toolkit.JAVA_TOOLKIT.width - var7;
       int var9 = 0;
       int var10;
-      if(var2 < Class74.clipTop) {
-         var10 = Class74.clipTop - var2;
+      if(var2 < Toolkit.JAVA_TOOLKIT.clipTop) {
+         var10 = Toolkit.JAVA_TOOLKIT.clipTop - var2;
          var6 -= var10;
-         var2 = Class74.clipTop;
+         var2 = Toolkit.JAVA_TOOLKIT.clipTop;
          var5 += var10 * var7;
-         var4 += var10 * Class74.anInt1092;
+         var4 += var10 * Toolkit.JAVA_TOOLKIT.width;
       }
 
-      if(var2 + var6 > Class74.clipBottom) {
-         var6 -= var2 + var6 - Class74.clipBottom;
+      if(var2 + var6 > Toolkit.JAVA_TOOLKIT.clipBottom) {
+         var6 -= var2 + var6 - Toolkit.JAVA_TOOLKIT.clipBottom;
       }
 
-      if(var1 < Class74.clipLeft) {
-         var10 = Class74.clipLeft - var1;
+      if(var1 < Toolkit.JAVA_TOOLKIT.clipLeft) {
+         var10 = Toolkit.JAVA_TOOLKIT.clipLeft - var1;
          var7 -= var10;
-         var1 = Class74.clipLeft;
+         var1 = Toolkit.JAVA_TOOLKIT.clipLeft;
          var5 += var10;
          var4 += var10;
          var9 += var10;
          var8 += var10;
       }
 
-      if(var1 + var7 > Class74.clipRight) {
-         var10 = var1 + var7 - Class74.clipRight;
+      if(var1 + var7 > Toolkit.JAVA_TOOLKIT.clipRight) {
+         var10 = var1 + var7 - Toolkit.JAVA_TOOLKIT.clipRight;
          var7 -= var10;
          var9 += var10;
          var8 += var10;
       }
 
       if(var7 > 0 && var6 > 0) {
-         method1676(Class74.buffer, this.aByteArray2674, this.anIntArray2673, var5, var4, var7, var6, var8, var9, var3);
+         method1676(Toolkit.JAVA_TOOLKIT.getBuffer(), this.aByteArray2674, this.anIntArray2673, var5, var4, var7, var6, var8, var9, var3);
       }
    }
 
@@ -361,78 +363,78 @@ final class LDIndexedSprite extends AbstractIndexedSprite {
          var4 = ((var6 << 16) - var8 + var12 - 1) / var12;
       }
 
-      var13 = var1 + var2 * Class74.anInt1092;
-      int var14 = Class74.anInt1092 - var3;
-      if(var2 + var4 > Class74.clipBottom) {
-         var4 -= var2 + var4 - Class74.clipBottom;
+      var13 = var1 + var2 * Toolkit.JAVA_TOOLKIT.width;
+      int var14 = Toolkit.JAVA_TOOLKIT.width - var3;
+      if(var2 + var4 > Toolkit.JAVA_TOOLKIT.clipBottom) {
+         var4 -= var2 + var4 - Toolkit.JAVA_TOOLKIT.clipBottom;
       }
 
       int var15;
-      if(var2 < Class74.clipTop) {
-         var15 = Class74.clipTop - var2;
+      if(var2 < Toolkit.JAVA_TOOLKIT.clipTop) {
+         var15 = Toolkit.JAVA_TOOLKIT.clipTop - var2;
          var4 -= var15;
-         var13 += var15 * Class74.anInt1092;
+         var13 += var15 * Toolkit.JAVA_TOOLKIT.width;
          var8 += var12 * var15;
       }
 
-      if(var1 + var3 > Class74.clipRight) {
-         var15 = var1 + var3 - Class74.clipRight;
+      if(var1 + var3 > Toolkit.JAVA_TOOLKIT.clipRight) {
+         var15 = var1 + var3 - Toolkit.JAVA_TOOLKIT.clipRight;
          var3 -= var15;
          var14 += var15;
       }
 
-      if(var1 < Class74.clipLeft) {
-         var15 = Class74.clipLeft - var1;
+      if(var1 < Toolkit.JAVA_TOOLKIT.clipLeft) {
+         var15 = Toolkit.JAVA_TOOLKIT.clipLeft - var1;
          var3 -= var15;
          var13 += var15;
          var7 += var11 * var15;
          var14 += var15;
       }
 
-      method1670(Class74.buffer, this.aByteArray2674, this.anIntArray2673, var7, var8, var13, var14, var3, var4, var11, var12, var5);
+      method1670(Toolkit.JAVA_TOOLKIT.getBuffer(), this.aByteArray2674, this.anIntArray2673, var7, var8, var13, var14, var3, var4, var11, var12, var5);
    }
 
    final void method1667(int var1, int var2) {
       var1 += this.anInt1470;
       var2 += this.anInt1464;
-      int var3 = var1 + var2 * Class74.anInt1092;
+      int var3 = var1 + var2 * Toolkit.JAVA_TOOLKIT.width;
       int var4 = 0;
       int var5 = this.anInt1468;
       int var6 = this.anInt1461;
-      int var7 = Class74.anInt1092 - var6;
+      int var7 = Toolkit.JAVA_TOOLKIT.width - var6;
       int var8 = 0;
       int var9;
-      if(var2 < Class74.clipTop) {
-         var9 = Class74.clipTop - var2;
+      if(var2 < Toolkit.JAVA_TOOLKIT.clipTop) {
+         var9 = Toolkit.JAVA_TOOLKIT.clipTop - var2;
          var5 -= var9;
-         var2 = Class74.clipTop;
+         var2 = Toolkit.JAVA_TOOLKIT.clipTop;
          var4 += var9 * var6;
-         var3 += var9 * Class74.anInt1092;
+         var3 += var9 * Toolkit.JAVA_TOOLKIT.width;
       }
 
-      if(var2 + var5 > Class74.clipBottom) {
-         var5 -= var2 + var5 - Class74.clipBottom;
+      if(var2 + var5 > Toolkit.JAVA_TOOLKIT.clipBottom) {
+         var5 -= var2 + var5 - Toolkit.JAVA_TOOLKIT.clipBottom;
       }
 
-      if(var1 < Class74.clipLeft) {
-         var9 = Class74.clipLeft - var1;
+      if(var1 < Toolkit.JAVA_TOOLKIT.clipLeft) {
+         var9 = Toolkit.JAVA_TOOLKIT.clipLeft - var1;
          var6 -= var9;
-         var1 = Class74.clipLeft;
+         var1 = Toolkit.JAVA_TOOLKIT.clipLeft;
          var4 += var9;
          var3 += var9;
          var8 += var9;
          var7 += var9;
       }
 
-      if(var1 + var6 > Class74.clipRight) {
-         var9 = var1 + var6 - Class74.clipRight;
+      if(var1 + var6 > Toolkit.JAVA_TOOLKIT.clipRight) {
+         var9 = var1 + var6 - Toolkit.JAVA_TOOLKIT.clipRight;
          var6 -= var9;
          var8 += var9;
          var7 += var9;
       }
 
       if(var6 > 0 && var5 > 0) {
-         method1672(Class74.buffer, this.aByteArray2674, this.anIntArray2673, var4, var3, var6, var5, var7, var8);
+         method1672(Toolkit.JAVA_TOOLKIT.getBuffer(), this.aByteArray2674, this.anIntArray2673, var4, var3, var6, var5, var7, var8);
       }
    }
 

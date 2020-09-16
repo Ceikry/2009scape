@@ -1,5 +1,7 @@
 package org.runite.jagex;
 
+import org.rs09.client.rendering.Toolkit;
+
 public final class Class3_Sub28_Sub17_Sub1 extends Class3_Sub28_Sub17 {
 
    private byte[][] aByteArrayArray4082 = new byte[256][];
@@ -56,8 +58,8 @@ public final class Class3_Sub28_Sub17_Sub1 extends Class3_Sub28_Sub17 {
    }
 
    private static void method705(byte[] var1, int var2, int var3, int var4, int var5, int var6, int var7, int var8, int var9, int var10, int[] var11, int[] var12) {
-      int var13 = var2 - Class74.clipLeft;
-      int var14 = var3 - Class74.clipTop;
+      int var13 = var2 - Toolkit.JAVA_TOOLKIT.clipLeft;
+      int var14 = var3 - Toolkit.JAVA_TOOLKIT.clipTop;
 
       for(int var15 = var14; var15 < var14 + var5; ++var15) {
          int var16 = var11[var15];
@@ -97,7 +99,7 @@ public final class Class3_Sub28_Sub17_Sub1 extends Class3_Sub28_Sub17 {
             if(var1[var7++] == 0) {
                ++var8;
             } else {
-               Class74.buffer[var8++] = var6;
+               Toolkit.JAVA_TOOLKIT.getBuffer()[var8++] = var6;
             }
          }
 
@@ -128,42 +130,42 @@ public final class Class3_Sub28_Sub17_Sub1 extends Class3_Sub28_Sub17 {
    }
 
    final void method679(int var1, int var2, int var3, int var4, int var5, int var6, int var7) {
-      int var9 = var2 + var3 * Class74.anInt1092;
-      int var10 = Class74.anInt1092 - var4;
+      int var9 = var2 + var3 * Toolkit.JAVA_TOOLKIT.width;
+      int var10 = Toolkit.JAVA_TOOLKIT.width - var4;
       int var11 = 0;
       int var12 = 0;
       int var13;
-      if(var3 < Class74.clipTop) {
-         var13 = Class74.clipTop - var3;
+      if(var3 < Toolkit.JAVA_TOOLKIT.clipTop) {
+         var13 = Toolkit.JAVA_TOOLKIT.clipTop - var3;
          var5 -= var13;
-         var3 = Class74.clipTop;
+         var3 = Toolkit.JAVA_TOOLKIT.clipTop;
          var12 += var13 * var4;
-         var9 += var13 * Class74.anInt1092;
+         var9 += var13 * Toolkit.JAVA_TOOLKIT.width;
       }
 
-      if(var3 + var5 > Class74.clipBottom) {
-         var5 -= var3 + var5 - Class74.clipBottom;
+      if(var3 + var5 > Toolkit.JAVA_TOOLKIT.clipBottom) {
+         var5 -= var3 + var5 - Toolkit.JAVA_TOOLKIT.clipBottom;
       }
 
-      if(var2 < Class74.clipLeft) {
-         var13 = Class74.clipLeft - var2;
+      if(var2 < Toolkit.JAVA_TOOLKIT.clipLeft) {
+         var13 = Toolkit.JAVA_TOOLKIT.clipLeft - var2;
          var4 -= var13;
-         var2 = Class74.clipLeft;
+         var2 = Toolkit.JAVA_TOOLKIT.clipLeft;
          var12 += var13;
          var9 += var13;
          var11 += var13;
          var10 += var13;
       }
 
-      if(var2 + var4 > Class74.clipRight) {
-         var13 = var2 + var4 - Class74.clipRight;
+      if(var2 + var4 > Toolkit.JAVA_TOOLKIT.clipRight) {
+         var13 = var2 + var4 - Toolkit.JAVA_TOOLKIT.clipRight;
          var4 -= var13;
          var11 += var13;
          var10 += var13;
       }
 
       if(var4 > 0 && var5 > 0) {
-         method706(Class74.buffer, this.aByteArrayArray4082[var1], var6, var12, var9, var4, var5, var10, var11, var7);
+         method706(Toolkit.JAVA_TOOLKIT.getBuffer(), this.aByteArrayArray4082[var1], var6, var12, var9, var4, var5, var10, var11, var7);
       }
    }
 
@@ -173,35 +175,35 @@ public final class Class3_Sub28_Sub17_Sub1 extends Class3_Sub28_Sub17 {
    }
 
    final void method678(int var1, int var2, int var3, int var4, int var5, int var6) {
-      int var8 = var2 + var3 * Class74.anInt1092;
-      int var9 = Class74.anInt1092 - var4;
+      int var8 = var2 + var3 * Toolkit.JAVA_TOOLKIT.width;
+      int var9 = Toolkit.JAVA_TOOLKIT.width - var4;
       int var10 = 0;
       int var11 = 0;
       int var12;
-      if(var3 < Class74.clipTop) {
-         var12 = Class74.clipTop - var3;
+      if(var3 < Toolkit.JAVA_TOOLKIT.clipTop) {
+         var12 = Toolkit.JAVA_TOOLKIT.clipTop - var3;
          var5 -= var12;
-         var3 = Class74.clipTop;
+         var3 = Toolkit.JAVA_TOOLKIT.clipTop;
          var11 += var12 * var4;
-         var8 += var12 * Class74.anInt1092;
+         var8 += var12 * Toolkit.JAVA_TOOLKIT.width;
       }
 
-      if(var3 + var5 > Class74.clipBottom) {
-         var5 -= var3 + var5 - Class74.clipBottom;
+      if(var3 + var5 > Toolkit.JAVA_TOOLKIT.clipBottom) {
+         var5 -= var3 + var5 - Toolkit.JAVA_TOOLKIT.clipBottom;
       }
 
-      if(var2 < Class74.clipLeft) {
-         var12 = Class74.clipLeft - var2;
+      if(var2 < Toolkit.JAVA_TOOLKIT.clipLeft) {
+         var12 = Toolkit.JAVA_TOOLKIT.clipLeft - var2;
          var4 -= var12;
-         var2 = Class74.clipLeft;
+         var2 = Toolkit.JAVA_TOOLKIT.clipLeft;
          var11 += var12;
          var8 += var12;
          var10 += var12;
          var9 += var12;
       }
 
-      if(var2 + var4 > Class74.clipRight) {
-         var12 = var2 + var4 - Class74.clipRight;
+      if(var2 + var4 > Toolkit.JAVA_TOOLKIT.clipRight) {
+         var12 = var2 + var4 - Toolkit.JAVA_TOOLKIT.clipRight;
          var4 -= var12;
          var10 += var12;
          var9 += var12;
@@ -209,7 +211,7 @@ public final class Class3_Sub28_Sub17_Sub1 extends Class3_Sub28_Sub17 {
 
       if(var4 > 0 && var5 > 0) {
          if(Class74.anIntArray1097 == null) {
-            method704(Class74.buffer, this.aByteArrayArray4082[var1], var6, var11, var8, var4, var5, var9, var10);
+            method704(Toolkit.JAVA_TOOLKIT.getBuffer(), this.aByteArrayArray4082[var1], var6, var11, var8, var4, var5, var9, var10);
          } else {
             method705(this.aByteArrayArray4082[var1], var2, var3, var4, var5, var6, var11, var8, var9, var10, Class74.anIntArray1097, Class74.anIntArray1098);
          }

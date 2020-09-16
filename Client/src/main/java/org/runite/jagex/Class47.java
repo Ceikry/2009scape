@@ -4,6 +4,7 @@ import org.rs09.client.Linkable;
 import org.rs09.client.Node;
 import org.rs09.client.collections.HashTable;
 import org.rs09.client.collections.Queue;
+import org.rs09.client.rendering.Toolkit;
 
 import java.util.Objects;
 
@@ -572,8 +573,8 @@ final class Class47 {
                                                                     var31 = Class22.anInt451;
                                                                     var30 = Class22.anInt448;
                                                                 } else {
-                                                                    var30 = Class74.clipTop;
-                                                                    var31 = Class74.clipBottom;
+                                                                    var30 = Toolkit.JAVA_TOOLKIT.clipTop;
+                                                                    var31 = Toolkit.JAVA_TOOLKIT.clipBottom;
                                                                 }
 
                                                                 int var32;

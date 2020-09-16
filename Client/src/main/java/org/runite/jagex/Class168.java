@@ -1,5 +1,7 @@
 package org.runite.jagex;
 
+import org.rs09.client.rendering.Toolkit;
+
 final class Class168 {
 
     int anInt2090 = 128;
@@ -70,36 +72,36 @@ final class Class168 {
     static void method2272(int[] var0, int var1, int var2, int var3, int var4, int var5, int var6, int var7, int var8, boolean var9) {
         try {
             int var11 = var2;
-            if (var2 < Class74.clipRight) {
-                if (Class74.clipLeft > var2) {
-                    var11 = Class74.clipLeft;
+            if (var2 < Toolkit.JAVA_TOOLKIT.clipRight) {
+                if (Toolkit.JAVA_TOOLKIT.clipLeft > var2) {
+                    var11 = Toolkit.JAVA_TOOLKIT.clipLeft;
                 }
 
                 int var12 = var7 + var2;
-                if (Class74.clipLeft < var12) {
-                    if (Class74.clipRight < var12) {
-                        var12 = Class74.clipRight;
+                if (Toolkit.JAVA_TOOLKIT.clipLeft < var12) {
+                    if (Toolkit.JAVA_TOOLKIT.clipRight < var12) {
+                        var12 = Toolkit.JAVA_TOOLKIT.clipRight;
                     }
 
                     int var13 = var8;
-                    if (var8 < Class74.clipBottom) {
+                    if (var8 < Toolkit.JAVA_TOOLKIT.clipBottom) {
                         int var14 = var8 + var6;
-                        if (Class74.clipTop > var8) {
-                            var13 = Class74.clipTop;
+                        if (Toolkit.JAVA_TOOLKIT.clipTop > var8) {
+                            var13 = Toolkit.JAVA_TOOLKIT.clipTop;
                         }
 
-                        if (var14 > Class74.clipTop) {
-                            int var15 = var11 + Class74.anInt1092 * var13;
+                        if (var14 > Toolkit.JAVA_TOOLKIT.clipTop) {
+                            int var15 = var11 + Toolkit.JAVA_TOOLKIT.width * var13;
                             if (var5 == 9) {
                                 var3 = 3 & var3 - -1;
                                 var5 = 1;
                             }
 
-                            int var16 = -var12 + var11 + Class74.anInt1092;
+                            int var16 = -var12 + var11 + Toolkit.JAVA_TOOLKIT.width;
                             var13 -= var8;
                             int var20 = var6 + -var13;
-                            if (Class74.clipBottom < var14) {
-                                var14 = Class74.clipBottom;
+                            if (Toolkit.JAVA_TOOLKIT.clipBottom < var14) {
+                                var14 = Toolkit.JAVA_TOOLKIT.clipBottom;
                             }
 
                             if (var5 == 10) {

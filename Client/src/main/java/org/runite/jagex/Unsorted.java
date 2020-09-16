@@ -1,5 +1,6 @@
 package org.runite.jagex;
 
+import org.rs09.client.rendering.Toolkit;
 import org.rs09.client.util.ArrayUtils;
 import org.runite.Properties;
 
@@ -208,7 +209,7 @@ public class Unsorted {
                         var14 = var4;
                     }
 
-                    var15 = Class74.buffer;
+                    var15 = Toolkit.JAVA_TOOLKIT.getBuffer();
                     var16 = 4 * (-(var3 * 512) + '\uce00') + var1 * 4 + 24624;
                     if (var11 == 0 || var11 == 2) {
                         if (var10 == 0) {
@@ -291,7 +292,7 @@ public class Unsorted {
                     }
 
                     var16 = var1 * 4 + (24624 - -(2048 * (103 - var3)));
-                    var15 = Class74.buffer;
+                    var15 = Toolkit.JAVA_TOOLKIT.getBuffer();
                     if (var10 == 0 || var10 == 2) {
                         var15[1536 + var16] = var14;
                         var15[var16 - -1025] = var14;
@@ -398,13 +399,13 @@ public class Unsorted {
                     }
                 }
 
-                int[] var11 = Class74.buffer;
-                int var12 = Class74.anInt1092;
-                int var13 = Class74.anInt1094;
+                int[] var11 = Toolkit.JAVA_TOOLKIT.getBuffer();
+                int var12 = Toolkit.JAVA_TOOLKIT.width;
+                int var13 = Toolkit.JAVA_TOOLKIT.height;
                 int[] var14 = new int[4];
                 Class74.method1325(var14);
                 Class3_Sub28_Sub16_Sub2 var15 = new Class3_Sub28_Sub16_Sub2(36, 32);
-                Class74.method1319(var15.anIntArray4081, 36, 32);
+                Class74.setBuffer(var15.anIntArray4081, 36, 32);
                 Class51.method1134();
                 Class51.method1145(16, 16);
                 int var16 = item.anInt810;
@@ -424,7 +425,7 @@ public class Unsorted {
                         var15.method657(16777215);
                     }
 
-                    Class74.method1319(var15.anIntArray4081, 36, 32);
+                    Class74.setBuffer(var15.anIntArray4081, 36, 32);
                 }
 
                 if (var0 != 0) {
@@ -434,7 +435,7 @@ public class Unsorted {
                 if (item.anInt791 != -1) {
                     Objects.requireNonNull(var22).method643(0, 0);
                 } else if (-1 != item.anInt762) {
-                    Class74.method1319(Objects.requireNonNull(var22).anIntArray4081, 36, 32);
+                    Class74.setBuffer(Objects.requireNonNull(var22).anIntArray4081, 36, 32);
                     var15.method643(0, 0);
                     var15 = var22;
                 }
@@ -443,7 +444,7 @@ public class Unsorted {
                     Class3_Sub13_Sub37.aClass3_Sub28_Sub17_Sub1_3440.method681(Class3_Sub7.itemStackColor(1000, var6), 0, 9, 16776960, 1);
                 }
 
-                Class74.method1319(var11, var12, var13);
+                Class74.setBuffer(var11, var12, var13);
                 Class74.setClipping(var14);
                 Class51.method1134();
                 Class51.aBoolean843 = true;
@@ -2285,12 +2286,12 @@ public class Unsorted {
                         Class3_Sub13_Sub19.aClass3_Sub28_Sub16_Sub2_3221 = new Class3_Sub28_Sub16_Sub2(var4, var3);
                     }
 
-                    Class74.method1319(Class3_Sub13_Sub19.aClass3_Sub28_Sub16_Sub2_3221.anIntArray4081, var4, var3);
+                    Class74.setBuffer(Class3_Sub13_Sub19.aClass3_Sub28_Sub16_Sub2_3221.anIntArray4081, var4, var3);
                     method523(var4, 0, var7, var6, 0, var8, var3, var15);
                     Class23.method938(var4, 0, var7, var8, var3, 0, var15, var6);
                     Class3_Sub5.method111((byte) -54, 0, 0, var15, var4, var8, var6, var7, var3);
                     Class22.method926(Class3_Sub13_Sub19.aClass3_Sub28_Sub16_Sub2_3221.anIntArray4081, var0, var2, var4, var3);
-                    Class74.buffer = null;
+                    Toolkit.JAVA_TOOLKIT.resetBuffer();
                 } else {
                     method523(var4 + var0, var2, var7, var6, var0, var8, var2 - -var3, var15);
                     Class23.method938(var0 + var4, var0, var7, var8, var3 + var2, var2, var15, var6);
