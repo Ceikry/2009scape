@@ -35,6 +35,18 @@ object RenderingUtils {
 //        else Toolkit.JAVA_TOOLKIT.drawHorizontalLine(x, y, w, rgb)
     }
 
+    @JvmStatic
+    fun drawVerticalLine(x: Int, y: Int, h: Int, rgb: Int) {
+        if (hd) Class22.drawVerticalLine(x, y, h, rgb)
+        else Class74.drawVerticalLine(x, y, h, rgb)
+    }
+
+    @JvmStatic
+    fun drawRect(x: Int, y: Int, w: Int, h: Int, rgb: Int) {
+        if (hd) Class22.drawRect(x, y, w, h, rgb)
+        else Class74.drawRect(x, y, w, h, rgb)
+    }
+
     fun drawText(str: String, x: Int, y: Int, rgb: Int, parse: Boolean = false) {
         if (parse) Class126.aClass3_Sub28_Sub17_1669.method681(RSString.parse(str), x, y, rgb, -1)
         else Class126.aClass3_Sub28_Sub17_1669.method681(RSString.of(str), x, y, rgb, -1)

@@ -161,24 +161,24 @@ final class Class83 {
                               }
 
                               if(1 == var49) {
-                                 Class74.method1318(var14, var25, var27, var38);
+                                 Class74.drawVerticalLine(var14, var25, var27, var38);
                               } else if(2 == var49) {
                                  Class74.drawHorizontalLine(var14, var25, var16, var38);
                               } else if(3 == var49) {
-                                 Class74.method1318(var36, var25, var27, var38);
+                                 Class74.drawVerticalLine(var36, var25, var27, var38);
                               } else if (var49 == 4) {
                                  Class74.drawHorizontalLine(var14, var37, var16, var38);
                               } else if (var49 == 9) {
-                                 Class74.method1318(var14, var25, var27, 16777215);
+                                 Class74.drawVerticalLine(var14, var25, var27, 16777215);
                                  Class74.drawHorizontalLine(var14, var25, var16, var38);
                               } else if (var49 == 10) {
-                                 Class74.method1318(var36, var25, var27, 16777215);
+                                 Class74.drawVerticalLine(var36, var25, var27, 16777215);
                                  Class74.drawHorizontalLine(var14, var25, var16, var38);
                               } else if (var49 == 11) {
-                                 Class74.method1318(var36, var25, var27, 16777215);
+                                 Class74.drawVerticalLine(var36, var25, var27, 16777215);
                                  Class74.drawHorizontalLine(var14, var37, var16, var38);
                               } else if (var49 == 12) {
-                                 Class74.method1318(var14, var25, var27, 16777215);
+                                 Class74.drawVerticalLine(var14, var25, var27, 16777215);
                                  Class74.drawHorizontalLine(var14, var37, var16, var38);
                               } else if (var49 == 17) {
                                  Class74.drawHorizontalLine(var14, var25, 1, var38);

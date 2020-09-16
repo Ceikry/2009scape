@@ -32,14 +32,14 @@ public final class Class22 {
       gl.glEnd();
    }
 
-   static void method924(int var0, int var1, int var2, int var3) {
+   public static void drawVerticalLine(int x, int y, int w, int rgb) {
       HDToolKit.method1835();
-      float var4 = (float)var0 + 0.3F;
-      float var5 = (float)HDToolKit.height - ((float)var1 + 0.3F);
-      float var6 = var5 - (float)var2;
+      float var4 = (float)x + 0.3F;
+      float var5 = (float)HDToolKit.height - ((float)y + 0.3F);
+      float var6 = var5 - (float)w;
       javax.media.opengl.GL var7 = HDToolKit.gl;
       var7.glBegin(1);
-      var7.glColor3ub((byte)(var3 >> 16), (byte)(var3 >> 8), (byte)var3);
+      var7.glColor3ub((byte)(rgb >> 16), (byte)(rgb >> 8), (byte)rgb);
       var7.glVertex2f(var4, var5);
       var7.glVertex2f(var4, var6);
       var7.glEnd();
@@ -68,15 +68,15 @@ public final class Class22 {
       var5.glPixelZoom(1.0F, 1.0F);
    }
 
-   static void method927(int var0, int var1, int var2, int var3, int var4) {
+   public static void drawRect(int x, int y, int w, int h, int rgb) {
       HDToolKit.method1835();
-      float var5 = (float)var0 + 0.3F;
-      float var6 = var5 + (float)(var2 - 1);
-      float var7 = (float)HDToolKit.height - ((float)var1 + 0.3F);
-      float var8 = var7 - (float)(var3 - 1);
+      float var5 = (float)x + 0.3F;
+      float var6 = var5 + (float)(w - 1);
+      float var7 = (float)HDToolKit.height - ((float)y + 0.3F);
+      float var8 = var7 - (float)(h - 1);
       javax.media.opengl.GL var9 = HDToolKit.gl;
       var9.glBegin(2);
-      var9.glColor3ub((byte)(var4 >> 16), (byte)(var4 >> 8), (byte)var4);
+      var9.glColor3ub((byte)(rgb >> 16), (byte)(rgb >> 8), (byte)rgb);
       var9.glVertex2f(var5, var7);
       var9.glVertex2f(var5, var8);
       var9.glVertex2f(var6, var8);

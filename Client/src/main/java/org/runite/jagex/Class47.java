@@ -648,9 +648,9 @@ final class Class47 {
                                                 Class74.method1323(var13, var14, var11.width, var11.height, var20);
                                             }
                                         } else if (HDToolKit.highDetail) {
-                                            Class22.method927(var13, var14, var11.width, var11.height, var20);
+                                            Class22.drawRect(var13, var14, var11.width, var11.height, var20);
                                         } else {
-                                            Class74.method1311(var13, var14, var11.width, var11.height, var20);
+                                            Class74.drawRect(var13, var14, var11.width, var11.height, var20);
                                         }
                                     } else {
                                         Class3_Sub28_Sub17 var34;
@@ -1002,10 +1002,10 @@ final class Class47 {
 
                                                     if (HDToolKit.highDetail) {
                                                         Class22.method934(var25, var26, var20, var21, 16777120);
-                                                        Class22.method927(var25, var26, var20, var21, 0);
+                                                        Class22.drawRect(var25, var26, var20, var21, 0);
                                                     } else {
                                                         Class74.method1323(var25, var26, var20, var21, 16777120);
-                                                        Class74.method1311(var25, var26, var20, var21, 0);
+                                                        Class74.drawRect(var25, var26, var20, var21, 0);
                                                     }
 
                                                     var43 = var11.text;

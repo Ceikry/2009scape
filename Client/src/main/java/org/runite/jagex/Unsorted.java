@@ -2328,14 +2328,14 @@ public class Unsorted {
                 var7 = var3 / 2 + (var2 - 18) + -var5;
                 if (HDToolKit.highDetail) {
                     Class22.method934(var0, var2, var4, var3, 0);
-                    Class22.method927(var6 - 152, var7, 304, 34, 9179409);
-                    Class22.method927(var6 + -151, var7 + 1, 302, 32, 0);
+                    Class22.drawRect(var6 - 152, var7, 304, 34, 9179409);
+                    Class22.drawRect(var6 + -151, var7 + 1, 302, 32, 0);
                     Class22.method934(-150 + var6, var7 + 2, 3 * Class140_Sub3.anInt2737, 30, 9179409);
                     Class22.method934(-150 + var6 + Class140_Sub3.anInt2737 * 3, var7 - -2, 300 + -(3 * Class140_Sub3.anInt2737), 30, 0);
                 } else {
                     Class74.method1323(var0, var2, var4, var3, 0);
-                    Class74.method1311(var6 + -152, var7, 304, 34, 9179409);
-                    Class74.method1311(var6 + -151, 1 + var7, 302, 32, 0);
+                    Class74.drawRect(var6 + -152, var7, 304, 34, 9179409);
+                    Class74.drawRect(var6 + -151, 1 + var7, 302, 32, 0);
                     Class74.method1323(var6 + -150, var7 + 2, Class140_Sub3.anInt2737 * 3, 30, 9179409);
                     Class74.method1323(3 * Class140_Sub3.anInt2737 + -150 + var6, var7 - -2, -(Class140_Sub3.anInt2737 * 3) + 300, 30, 0);
                 }

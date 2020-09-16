@@ -21,11 +21,11 @@ public final class Class74 {
       anIntArray1098 = null;
    }
 
-   static void method1311(int var0, int var1, int var2, int var3, int var4) {
-      toolkit.drawHorizontalLine(var0, var1, var2, var4);
-      toolkit.drawHorizontalLine(var0, var1 + var3 - 1, var2, var4);
-      method1318(var0, var1, var3, var4);
-      method1318(var0 + var2 - 1, var1, var3, var4);
+   public static void drawRect(int x, int y, int w, int h, int rgb) {
+      toolkit.drawHorizontalLine(x, y, w, rgb);
+      toolkit.drawHorizontalLine(x, y + h - 1, w, rgb);
+      drawVerticalLine(x, y, h, rgb);
+      drawVerticalLine(x + w - 1, y, h, rgb);
    }
 
    public static void fillRectangle(int x, int y, int width, int height, int rgb, int opacity) {
@@ -117,21 +117,21 @@ public final class Class74 {
       }
    }
 
-   static void method1318(int var0, int var1, int var2, int var3) {
-      if(var0 >= Toolkit.JAVA_TOOLKIT.clipLeft && var0 < Toolkit.JAVA_TOOLKIT.clipRight) {
-         if(var1 < Toolkit.JAVA_TOOLKIT.clipTop) {
-            var2 -= Toolkit.JAVA_TOOLKIT.clipTop - var1;
-            var1 = Toolkit.JAVA_TOOLKIT.clipTop;
+   public static void drawVerticalLine(int x, int y, int h, int rgb) {
+      if(x >= Toolkit.JAVA_TOOLKIT.clipLeft && x < Toolkit.JAVA_TOOLKIT.clipRight) {
+         if(y < Toolkit.JAVA_TOOLKIT.clipTop) {
+            h -= Toolkit.JAVA_TOOLKIT.clipTop - y;
+            y = Toolkit.JAVA_TOOLKIT.clipTop;
          }
 
-         if(var1 + var2 > Toolkit.JAVA_TOOLKIT.clipBottom) {
-            var2 = Toolkit.JAVA_TOOLKIT.clipBottom - var1;
+         if(y + h > Toolkit.JAVA_TOOLKIT.clipBottom) {
+            h = Toolkit.JAVA_TOOLKIT.clipBottom - y;
          }
 
-         int var4 = var0 + var1 * Toolkit.JAVA_TOOLKIT.width;
+         int var4 = x + y * Toolkit.JAVA_TOOLKIT.width;
 
-         for(int var5 = 0; var5 < var2; ++var5) {
-            getBuffer()[var4 + var5 * Toolkit.JAVA_TOOLKIT.width] = var3;
+         for(int var5 = 0; var5 < h; ++var5) {
+            getBuffer()[var4 + var5 * Toolkit.JAVA_TOOLKIT.width] = rgb;
          }
 
       }
@@ -355,9 +355,9 @@ public final class Class74 {
 
       } else if(var2 == 0) {
          if(var3 >= 0) {
-            method1318(var0, var1, var3 + 1, var4);
+            drawVerticalLine(var0, var1, var3 + 1, var4);
          } else {
-            method1318(var0, var1 + var3, -var3 + 1, var4);
+            drawVerticalLine(var0, var1 + var3, -var3 + 1, var4);
          }
 
       } else {

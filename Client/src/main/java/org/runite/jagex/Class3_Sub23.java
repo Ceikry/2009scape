@@ -31,13 +31,13 @@ final class Class3_Sub23 extends Linkable {
          var2.method699(TextCore.RSLoadingPleaseWait, Class23.anInt454 / 2, Class140_Sub7.anInt2934 / 2 - 26, 16777215, -1);
          var3 = Class140_Sub7.anInt2934 / 2 + -18;
          if(HDToolKit.highDetail) {
-            Class22.method927(Class23.anInt454 / 2 - 152, var3, 304, 34, 9179409);
-            Class22.method927(-151 + Class23.anInt454 / 2, var3 - -1, 302, 32, 0);
+            Class22.drawRect(Class23.anInt454 / 2 - 152, var3, 304, 34, 9179409);
+            Class22.drawRect(-151 + Class23.anInt454 / 2, var3 - -1, 302, 32, 0);
             Class22.method934(Class23.anInt454 / 2 - 150, var3 + 2, Client.LoadingStageNumber * 3, 30, 9179409);
             Class22.method934(Class23.anInt454 / 2 + -150 - -(3 * Client.LoadingStageNumber), 2 + var3, 300 + -(3 * Client.LoadingStageNumber), 30, 0);
          } else {
-            Class74.method1311(Class23.anInt454 / 2 + -152, var3, 304, 34, 9179409);
-            Class74.method1311(-151 + Class23.anInt454 / 2, var3 + 1, 302, 32, 0);
+            Class74.drawRect(Class23.anInt454 / 2 + -152, var3, 304, 34, 9179409);
+            Class74.drawRect(-151 + Class23.anInt454 / 2, var3 + 1, 302, 32, 0);
             Class74.method1323(Class23.anInt454 / 2 + -150, var3 + 2, Client.LoadingStageNumber * 3, 30, 9179409);
             Class74.method1323(3 * Client.LoadingStageNumber + -150 + Class23.anInt454 / 2, 2 + var3, -(3 * Client.LoadingStageNumber) + 300, 30, 0);
          }

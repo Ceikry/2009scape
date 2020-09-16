@@ -642,9 +642,9 @@ final class Class1 {
 
                 Toolkit.getActiveToolkit().fillRect(var15, var6, var7, var8, var9, 128);
                 if (HDToolKit.highDetail) {
-                    Class22.method927(var15, var6, var7, var8, var9);
+                    Class22.drawRect(var15, var6, var7, var8, var9);
                 } else {
-                    Class74.method1311(var15, var6, var7, var8, var9);
+                    Class74.drawRect(var15, var6, var7, var8, var9);
                 }
 
                 if (Class3_Sub28_Sub16.anInt3704 > 0) {

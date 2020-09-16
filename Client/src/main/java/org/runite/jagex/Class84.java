@@ -79,11 +79,11 @@ final class Class84 {
          if(HDToolKit.highDetail) {
             Class22.method934(var1, var2, var3, var4, var5);
             Class22.method934(1 + var1, 1 + var2, var3 + -2, 16, 0);
-            Class22.method927(1 + var1, var2 + 18, var3 + -2, -19 + var4, 0);
+            Class22.drawRect(1 + var1, var2 + 18, var3 + -2, -19 + var4, 0);
          } else {
             Class74.method1323(var1, var2, var3, var4, var5);
             Class74.method1323(1 + var1, 1 + var2, var3 + -2, 16, 0);
-            Class74.method1311(1 + var1, var2 + 18, -2 + var3, -19 + var4, 0);
+            Class74.drawRect(1 + var1, var2 + 18, -2 + var3, -19 + var4, 0);
          }
 
          Class168.aClass3_Sub28_Sub17_2096.method681(TextCore.HasChooseOptions, var1 - -3, var2 + 14, var5, -1);

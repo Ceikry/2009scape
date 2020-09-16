@@ -201,7 +201,7 @@ public abstract class Class3_Sub28_Sub17 extends Node {
         }
     }
 
-    final int method682(RSString var1) {
+    public final int method682(RSString var1) {
         if (var1 == null) {
             return 0;
         } else {
