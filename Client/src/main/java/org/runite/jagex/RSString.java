@@ -102,7 +102,7 @@ public final class RSString implements Interface3 {
                 currentNumber -= 55;
             } else {
                 if (currentNumber < 'a' || currentNumber > 'z') {
-                    throw new NumberFormatException("invalid character in number with value: " + currentNumber + " ('" + ((char) currentNumber) + "')");
+                    throw new NumberFormatException("invalid character in number with value: " + currentNumber + " ('" + ((char) currentNumber) + "'). This string: " + toString());
                 }
 
                 currentNumber -= 87;

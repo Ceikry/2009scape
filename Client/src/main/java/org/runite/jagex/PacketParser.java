@@ -731,10 +731,10 @@ final class PacketParser {
                                                                     Unsorted.incomingOpcode == 20 ||
                                                                     195 == Unsorted.incomingOpcode ||
                                                                     179 == Unsorted.incomingOpcode) {
-                                                                        Class39.parseChunkPacket((byte) -99);
-                                                                        Unsorted.incomingOpcode = -1;
-                                                                        return true;
-                                                                    } else if (Unsorted.incomingOpcode == 149) {
+                                                                Class39.parseChunkPacket((byte) -99);
+                                                                Unsorted.incomingOpcode = -1;
+                                                                return true;
+                                                            } else if (Unsorted.incomingOpcode == 149) {
                                                                 nodeModelId = GraphicDefinition.incomingBuffer.readUnsignedShort();
                                                                 var19 = GraphicDefinition.incomingBuffer.readInt();
                                                                 Class146.updateInterfacePacketCounter(nodeModelId);
@@ -1384,9 +1384,10 @@ final class PacketParser {
                                                                             } else if (clanChatIcon == 1) {
                                                                                 Class3_Sub13_Sub11.method221(-1, var57, RenderAnimationDefinition.method903(new RSString[]{Class32.aClass94_592, Objects.requireNonNull(Unsorted.method1052(var2)).method1545()}), Objects.requireNonNull(Unsorted.method1052(nameAsLong)).method1545(), 9);
                                                                             } else {
-
-                                                                                Class3_Sub13_Sub11.method221(-1, var57, RenderAnimationDefinition.method903(new RSString[]{RSString.of("<img=" + (clanChatIcon - 1) + ">"), Objects.requireNonNull(Unsorted.method1052(var2)).method1545()}), Objects.requireNonNull(Unsorted.method1052(nameAsLong)).method1545(), 9);
-
+                                                                                if (clanChatIcon == 0)
+                                                                                    Class3_Sub13_Sub11.method221(-1, var57, Objects.requireNonNull(Unsorted.method1052(var2)).method1545(), Objects.requireNonNull(Unsorted.method1052(nameAsLong)).method1545(), 9);
+                                                                                else
+                                                                                    Class3_Sub13_Sub11.method221(-1, var57, RenderAnimationDefinition.method903(new RSString[]{RSString.of("<img=" + (clanChatIcon - 1) + ">"), Objects.requireNonNull(Unsorted.method1052(var2)).method1545()}), Objects.requireNonNull(Unsorted.method1052(nameAsLong)).method1545(), 9);
                                                                             }
                                                                         }
 

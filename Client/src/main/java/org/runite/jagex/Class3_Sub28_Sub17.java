@@ -108,8 +108,11 @@ public abstract class Class3_Sub28_Sub17 extends Node {
                                     var2 += var15.anInt1469;
                                     var5 = 0;
                                 } catch (Exception var13) {
-                                    // TODO Added by Tech to figure out the weird issue
-                                    var13.printStackTrace();
+                                    if (!var13.toString().contains("java.lang.ArrayIndexOutOfBoundsException")) {
+                                        // TODO Added by Tech to figure out the weird issue
+                                        System.out.println(var13.toString() + ", full string: '" + var9.toString() + "'");
+                                        var13.printStackTrace();
+                                    }
                                 }
                             } else {
                                 this.method685(var9);
