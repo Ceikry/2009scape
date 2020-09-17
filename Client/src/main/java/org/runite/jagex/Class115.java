@@ -9,7 +9,7 @@ final class Class115 {
       try {
 
           while(true) {
-            Class3_Sub5 var1 = (Class3_Sub5)Class3_Sub18.aClass61_2468.method1220();
+            Class3_Sub5 var1 = (Class3_Sub5) Unsorted.aClass61_2468.method1220();
             if(var1 == null) {
                return;
             }

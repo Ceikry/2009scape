@@ -3,6 +3,7 @@ package org.runite.jagex;
 import org.rs09.client.Linkable;
 import org.rs09.client.Node;
 import org.rs09.client.collections.HashTable;
+import org.rs09.client.LinkableInt;
 
 import java.util.Objects;
 
@@ -38,7 +39,7 @@ final class Class3_Sub28_Sub11 extends Node {
                 return var2;
             } else {
 
-                Class3_Sub18 var4 = (Class3_Sub18) this.aHashTable_3636.get((long) var1);
+                LinkableInt var4 = (LinkableInt) this.aHashTable_3636.get((long) var1);
                 return null == var4 ? var2 : var4.value;
             }
         } catch (RuntimeException var5) {
@@ -63,7 +64,7 @@ final class Class3_Sub28_Sub11 extends Node {
                     if (var6) {
                         var8 = new LinkableRSString(var1.readString());
                     } else {
-                        var8 = new Class3_Sub18(var1.readInt());
+                        var8 = new LinkableInt(var1.readInt());
                     }
 
                     this.aHashTable_3636.put((long) var7, (Linkable) var8);

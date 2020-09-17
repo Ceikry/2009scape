@@ -85,7 +85,7 @@ final class Class117 {
          }
 
          Class93.aByteArrayArrayArray1328 = new byte[var2][104][104];
-         Class3_Sub18.anIntArray2469 = new int[104];
+         Unsorted.anIntArray2469 = new int[104];
          Class38_Sub1.anIntArrayArrayArray2609 = new int[var2][105][var1];
          Class67.aByteArrayArrayArray1014 = new byte[var2][105][105];
          Class139.aByteArrayArrayArray1828 = new byte[var2][104][104];

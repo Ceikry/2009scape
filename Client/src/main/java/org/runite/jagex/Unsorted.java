@@ -132,6 +132,10 @@ public class Unsorted {
     public static int anInt3657;
     public static int anInt3660 = 0;
     public static boolean aBoolean3665 = true;
+    public static Class61 aClass61_2468 = new Class61();
+    public static int[] anIntArray2469;
+    public static int[] anIntArray2470 = new int[]{0, 0, 2, 0, 0, 2, 1, 1, 0};
+    public static int anInt2471;
 
     static void method2086() {
         try {
@@ -3210,6 +3214,22 @@ public class Unsorted {
           return Class140_Sub7.method2029((byte)-119, var2, var1)?(var0 <= 52?(LDIndexedSprite[])null: method1281()):null;
        } catch (RuntimeException var4) {
           throw Class44.clientError(var4, "ml.A(" + var0 + ',' + var1 + ',' + (var2 != null?"{...}":"null") + ')');
+       }
+    }
+
+    public static void method383(int var0, int var1) {
+       try {
+          if(var1 == Class23.anInt453 && var1 != 0) {
+             Interface5 var2 = Class2.anInterface5Array70[var1];
+             var2.method23(Class3_Sub13_Sub21.anInt3263);
+          }
+
+          if(var0 != -32584) {
+             method383(60, 23);
+          }
+
+       } catch (RuntimeException var3) {
+          throw Class44.clientError(var3, "ka.A(" + var0 + ',' + var1 + ')');
        }
     }
 }

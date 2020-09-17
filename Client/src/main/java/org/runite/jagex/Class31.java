@@ -1,5 +1,7 @@
 package org.runite.jagex;
 
+import org.rs09.client.LinkableInt;
+
 import javax.media.opengl.GL;
 
 final class Class31 {
@@ -18,7 +20,7 @@ final class Class31 {
 
    static synchronized void method985(int var0, int var1, int var2) {
       if(var2 == anInt582) {
-         Class3_Sub18 var3 = new Class3_Sub18(var1);
+         LinkableInt var3 = new LinkableInt(var1);
          var3.linkableKey = (long)var0;
          aClass61_587.method1215(var3);
       }
@@ -26,7 +28,7 @@ final class Class31 {
 
    static synchronized void method986(int var0, int var1) {
       if(var1 == anInt582) {
-         Class3_Sub18 var2 = new Class3_Sub18();
+         LinkableInt var2 = new LinkableInt();
          var2.linkableKey = (long)var0;
          aClass61_588.method1215(var2);
       }
@@ -45,7 +47,7 @@ final class Class31 {
 
    static synchronized void method989(int var0, int var1, int var2) {
       if(var2 == anInt582) {
-         Class3_Sub18 var3 = new Class3_Sub18(var1);
+         LinkableInt var3 = new LinkableInt(var1);
          var3.linkableKey = (long)var0;
          aClass61_581.method1215(var3);
       }
@@ -56,7 +58,7 @@ final class Class31 {
       int var1 = 0;
 
       while(true) {
-         Class3_Sub18 var2 = (Class3_Sub18)aClass61_581.method1220();
+         LinkableInt var2 = (LinkableInt)aClass61_581.method1220();
          if(var2 == null) {
             if(var1 > 0) {
                var0.glDeleteBuffersARB(var1, anIntArray589, 0);
@@ -64,17 +66,17 @@ final class Class31 {
             }
 
             while(true) {
-               var2 = (Class3_Sub18)aClass61_586.method1220();
+               var2 = (LinkableInt)aClass61_586.method1220();
                if(var2 == null) {
                   while(true) {
-                     var2 = (Class3_Sub18)aClass61_587.method1220();
+                     var2 = (LinkableInt)aClass61_587.method1220();
                      if(var2 == null) {
                         if(var1 > 0) {
                            var0.glDeleteTextures(var1, anIntArray589, 0);
                         }
 
                         while(true) {
-                           var2 = (Class3_Sub18)aClass61_588.method1220();
+                           var2 = (LinkableInt)aClass61_588.method1220();
                            if(var2 == null) {
                               if(anInt585 + memory2D + anInt580 > 100663296 && TimeUtils.time() > aLong583 + 60000L) {
                                  System.gc();
@@ -118,7 +120,7 @@ final class Class31 {
 
    static synchronized void method991(int var0, int var1, int var2) {
       if(var2 == anInt582) {
-         Class3_Sub18 var3 = new Class3_Sub18(var1);
+         LinkableInt var3 = new LinkableInt(var1);
          var3.linkableKey = (long)var0;
          aClass61_586.method1215(var3);
       }

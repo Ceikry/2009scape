@@ -1,6 +1,7 @@
 package org.runite.jagex;
 
 import org.rs09.client.collections.HashTable;
+import org.rs09.client.LinkableInt;
 
 import java.nio.ByteBuffer;
 import javax.media.opengl.GL;
@@ -29,7 +30,7 @@ final class Class37 {
       long var8 = 0L;
       if((var2 & 127) == 0 || (var4 & 127) == 0) {
          var8 = (long)(var2 + (var4 << 16));
-         Class3_Sub18 var10 = (Class3_Sub18)this.aHashTable_656.get(var8);
+         LinkableInt var10 = (LinkableInt)this.aHashTable_656.get(var8);
          if(var10 != null) {
             return var10.value;
          }
@@ -81,7 +82,7 @@ final class Class37 {
       this.anIntArray645[this.anInt653] = var2;
       this.anIntArray649[this.anInt653] = var3;
       this.anIntArray648[this.anInt653] = var4;
-      this.aHashTable_656.put(var8, new Class3_Sub18(this.anInt653));
+      this.aHashTable_656.put(var8, new LinkableInt(this.anInt653));
       return this.anInt653++;
    }
 

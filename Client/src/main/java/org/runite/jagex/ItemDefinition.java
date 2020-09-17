@@ -3,6 +3,7 @@ import org.rs09.client.Linkable;
 import org.rs09.client.collections.HashTable;
 import org.rs09.client.collections.Queue;
 import org.rs09.client.filestore.resources.configs.enums.EnumDefinition;
+import org.rs09.client.LinkableInt;
 
 import java.awt.Component;
 import java.nio.charset.StandardCharsets;
@@ -145,7 +146,7 @@ final class ItemDefinition {
 					while(var10-- > 0) {
 					   int var12 = var4.readInt();
 					   int var13 = var4.readInt();
-					   var11.put((long)var12, new Class3_Sub18(var13));
+					   var11.put((long)var12, new LinkableInt(var13));
 					}
 				 }
 			  }
@@ -505,9 +506,9 @@ final class ItemDefinition {
 					}
 					if (opcode == 51) {
 						HashTable hashTable = currentMethod.switchHashTable[instructionOperands[programCounter]];
-						Class3_Sub18 class3_sub18 = (Class3_Sub18) hashTable.get(intsStack[--iStackCounter]);
-						if (null != class3_sub18)
-							programCounter += class3_sub18.value;
+						LinkableInt linkableInt = (LinkableInt) hashTable.get(intsStack[--iStackCounter]);
+						if (null != linkableInt)
+							programCounter += linkableInt.value;
 						continue;
 					}
 				}
@@ -4352,7 +4353,7 @@ final class ItemDefinition {
 						if (var7) {
 							var9 = new LinkableRSString(buffer.readString());
 						} else {
-							var9 = new Class3_Sub18(buffer.readInt());
+							var9 = new LinkableInt(buffer.readInt());
 						}
 
 						this.aHashTable_798.put((long) var8, (Linkable) var9);
@@ -4370,7 +4371,7 @@ final class ItemDefinition {
 			if(this.aHashTable_798 == null) {
 				return var1;
 			} else {
-				Class3_Sub18 var5 = (Class3_Sub18)this.aHashTable_798.get((long)var3);
+				LinkableInt var5 = (LinkableInt)this.aHashTable_798.get((long)var3);
 				return null != var5?var5.value :var1;
 			}
 		} catch (RuntimeException var6) {

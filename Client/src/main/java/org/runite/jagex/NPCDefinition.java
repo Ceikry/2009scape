@@ -3,6 +3,7 @@ package org.runite.jagex;
 
 import org.rs09.client.Linkable;
 import org.rs09.client.collections.HashTable;
+import org.rs09.client.LinkableInt;
 
 import java.util.Objects;
 
@@ -138,7 +139,7 @@ final class NPCDefinition {
          if(null == this.aHashTable_1272) {
             return var3;
          } else {
-            Class3_Sub18 var4 = (Class3_Sub18)this.aHashTable_1272.get((long)var1);
+            LinkableInt var4 = (LinkableInt)this.aHashTable_1272.get((long)var1);
             return var4 != null?var4.value :var3;
          }
       } catch (RuntimeException var5) {
@@ -796,7 +797,7 @@ final class NPCDefinition {
                   if (var11) {
                      var8 = new LinkableRSString(buffer.readString());
                   } else {
-                     var8 = new Class3_Sub18(buffer.readInt());
+                     var8 = new LinkableInt(buffer.readInt());
                   }
 
                   this.aHashTable_1272.put((long) var10, (Linkable) var8);

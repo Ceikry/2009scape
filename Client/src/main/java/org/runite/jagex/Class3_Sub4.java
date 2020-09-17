@@ -80,7 +80,7 @@ final class Class3_Sub4 extends Linkable {
 				++var2;
 			}
 
-			if(var0.method2144(Class3_Sub18.anInt2471)) {
+			if(var0.method2144(Unsorted.anInt2471)) {
 				++var2;
 			}
 

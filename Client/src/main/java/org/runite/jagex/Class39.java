@@ -614,7 +614,7 @@ final class Class39 {
 			Class3_Sub28_Sub18.anInt3757 = var1.getArchiveForName(RSString.parse("name_icons"));
 			Class45.anInt735 = var1.getArchiveForName(RSString.parse("floorshadows"));
 			Class93.anInt1325 = var1.getArchiveForName(RSString.parse("compass"));
-			Class3_Sub18.anInt2471 = var1.getArchiveForName(RSString.parse("hint_mapedge"));
+			Unsorted.anInt2471 = var1.getArchiveForName(RSString.parse("hint_mapedge"));
 		} catch (RuntimeException var3) {
 			throw Class44.clientError(var3, "g.C(" + 208 + ',' + (var1 != null?"{...}":"null") + ')');
 		}

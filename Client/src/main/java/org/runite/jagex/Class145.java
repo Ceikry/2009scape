@@ -230,7 +230,7 @@ final class Class145 {
                      var2.anInt2227 = 0;
                   } else if (var26.anInt1055 == 16) {
                      var2.anInt2227 = 3;
-                     var2.anInt2229 = Class3_Sub18.anIntArray2470[var10];
+                     var2.anInt2229 = Unsorted.anIntArray2470[var10];
                      var2.anInt2232 = 3 - var2.anInt2229;
                   } else if (var26.anInt1055 == 32) {
                      var2.anInt2227 = 6;

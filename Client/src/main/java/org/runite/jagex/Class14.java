@@ -52,7 +52,7 @@ final class Class14 {
             Class57.aClass3_Sub28_Sub16_895 = var10;
          }
 
-         Class3_Sub28_Sub16_Sub2[] var3 = Class157.method2176(0, 32767, Class3_Sub18.anInt2471, var1);
+         Class3_Sub28_Sub16_Sub2[] var3 = Class157.method2176(0, 32767, Unsorted.anInt2471, var1);
 
          int var4;
          for(var4 = 0; Objects.requireNonNull(var3).length > var4; ++var4) {

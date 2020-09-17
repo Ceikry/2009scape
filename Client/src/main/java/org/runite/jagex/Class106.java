@@ -1,5 +1,7 @@
 package org.runite.jagex;
 
+import org.rs09.client.LinkableInt;
+
 final class Class106 {
 
    static boolean aBoolean1441 = true;
@@ -48,7 +50,7 @@ final class Class106 {
                if(var4.anIntArray2547[var6] >= 0 && Class3_Sub13_Sub23.itemDefinitionSize > var4.anIntArray2547[var6]) {
                   ItemDefinition var7 = Class38.getItemDefinition(var4.anIntArray2547[var6], (byte)79);
                   if(null != var7.aHashTable_798) {
-                     Class3_Sub18 var8 = (Class3_Sub18)var7.aHashTable_798.get((long)var3);
+                     LinkableInt var8 = (LinkableInt)var7.aHashTable_798.get((long)var3);
                      if(null != var8) {
                         if(var1) {
                            var5 += var4.anIntArray2551[var6] * var8.value;

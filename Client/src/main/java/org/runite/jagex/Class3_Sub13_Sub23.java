@@ -112,7 +112,7 @@ class Class3_Sub13_Sub23 extends Class3_Sub13 {
          var13.anInt2268 = var7;
          var13.anInt2272 = var0;
          var13.anInt2278 = var9;
-         Class3_Sub18.aClass61_2468.method1215(var13);
+         Unsorted.aClass61_2468.method1215(var13);
       } catch (RuntimeException var14) {
          throw Class44.clientError(var14, "nh.V(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ',' + var5 + ',' + var6 + ',' + var7 + ',' + var8 + ',' + var9 + ',' + -745213428 + ',' + var11 + ',' + var12 + ')');
       }

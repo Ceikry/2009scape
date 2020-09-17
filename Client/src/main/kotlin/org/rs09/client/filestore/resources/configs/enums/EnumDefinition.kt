@@ -1,6 +1,7 @@
 package org.rs09.client.filestore.resources.configs.enums
 
 import org.rs09.client.Linkable
+import org.rs09.client.LinkableInt
 import org.rs09.client.Node
 import org.rs09.client.collections.HashTable
 import org.runite.jagex.*
@@ -37,7 +38,7 @@ class EnumDefinition : Node() {
                         val key = buffer.readInt()
 
                         val value: Linkable = if (opcode == 5) LinkableRSString(buffer.readString())
-                        else Class3_Sub18(buffer.readInt())
+                        else LinkableInt(buffer.readInt())
 
                         values.put(key.toLong(), value)
                     }
@@ -58,7 +59,7 @@ class EnumDefinition : Node() {
     fun getInt(key: Int): Int {
         val values = this.values ?: return defaultInt
 
-        val value = values[key.toLong()] as Class3_Sub18?
+        val value = values[key.toLong()] as LinkableInt?
         return value?.value ?: defaultInt
     }
 
@@ -66,11 +67,11 @@ class EnumDefinition : Node() {
         val values = requireNotNull(this.values)
         val valueLookup = HashTable<Linkable>(values.capacity())
 
-        var linkable = values.first() as Class3_Sub18?
+        var linkable = values.first() as LinkableInt?
         while (linkable != null) {
-            val reversed = Class3_Sub18(linkable.linkableKey.toInt())
+            val reversed = LinkableInt(linkable.linkableKey.toInt())
             valueLookup.put(linkable.value.toLong(), reversed)
-            linkable = values.next() as Class3_Sub18?
+            linkable = values.next() as LinkableInt?
         }
 
         this.valueLookup = valueLookup

@@ -1,6 +1,7 @@
 package org.runite.jagex;
 import org.rs09.client.Linkable;
 import org.rs09.client.collections.HashTable;
+import org.rs09.client.LinkableInt;
 
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
@@ -77,7 +78,7 @@ final class Class3_Sub11 extends Linkable {
       long var9 = 0L;
       if((var1 & 127) == 0 || (var3 & 127) == 0) {
          var9 = (long)(var1 + (var3 << 16)) + ((long)var7 << 32);
-         Class3_Sub18 var11 = (Class3_Sub18)this.aHashTable_2353.get(var9);
+         LinkableInt var11 = (LinkableInt)this.aHashTable_2353.get(var9);
          if(var11 != null) {
             if(var2 < this.anIntArray2358[var11.value]) {
                this.anIntArray2358[var11.value] = var2;
@@ -99,7 +100,7 @@ final class Class3_Sub11 extends Linkable {
       this.aFloatArray2354[this.anInt2343] = var6;
       this.anIntArray2348[this.anInt2343] = var7;
       if(var9 != 0L) {
-         this.aHashTable_2353.put(var9, new Class3_Sub18(this.anInt2343));
+         this.aHashTable_2353.put(var9, new LinkableInt(this.anInt2343));
       }
 
       return this.anInt2343++;

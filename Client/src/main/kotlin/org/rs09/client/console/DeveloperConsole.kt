@@ -1,5 +1,6 @@
 package org.rs09.client.console
 
+import org.rs09.client.LinkableInt
 import org.rs09.client.rendering.RenderingUtils
 import org.rs09.client.rendering.Toolkit
 import org.runite.jagex.*
@@ -145,7 +146,7 @@ object DeveloperConsole {
             var lookup = Class3_Sub13_Sub36.method342(208)
 
             for (i in 0..17) {
-                val component = (lookup.values!![i.toLong()]!! as Class3_Sub18).value
+                val component = (lookup.values!![i.toLong()]!! as LinkableInt).value
 
                 val rsiface = Class7.getRSInterface(component)
                 if (rsiface == null) println("Error: couldnt find component for hash $component", true)
@@ -159,7 +160,7 @@ object DeveloperConsole {
             lookup = Class3_Sub13_Sub36.method342(209)
 
             for (i in 0..130) {
-                val component = (lookup.values!![i.toLong()]!! as Class3_Sub18).value
+                val component = (lookup.values!![i.toLong()]!! as LinkableInt).value
 
                 val rsiface = Class7.getRSInterface(component)
                 if (rsiface == null) println("Error: couldnt find component for hash $component", true)

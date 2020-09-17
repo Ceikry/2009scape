@@ -97,7 +97,7 @@ final class Class56 {
       try {
          MouseListeningClass.anIntArray1920 = null;
          Class38_Sub1.anIntArrayArrayArray2609 = (int[][][])null;
-         Class3_Sub18.anIntArray2469 = null;
+         Unsorted.anIntArray2469 = null;
          Class93.aByteArrayArrayArray1328 = (byte[][][])null;
          PacketParser.aByteArrayArrayArray81 = (byte[][][])null;
          Class67.aByteArrayArrayArray1014 = (byte[][][])null;

@@ -25,8 +25,8 @@ final class Class3_Sub21 extends Linkable {
    static void method394(int var0, int var1) {
       try {
          Class3_Sub13_Sub23.anInt3285 = var0;
-         Class3_Sub18.method383(-32584, 3);
-         Class3_Sub18.method383(-32584, 4);
+         Unsorted.method383(-32584, 3);
+         Unsorted.method383(-32584, 4);
          if(var1 <= 83) {
             method395((Class35)null, -43, -61, -51, 101, -106, -58, true);
          }
