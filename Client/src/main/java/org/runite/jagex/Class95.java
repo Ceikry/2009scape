@@ -1,6 +1,6 @@
 package org.runite.jagex;
 
-final class Class95 {
+public final class Class95 {
 
    static RSString aClass94_1333 = RSString.parse("um");
    static int anInt1336 = 0;
@@ -72,7 +72,7 @@ final class Class95 {
       }
    }
 
-   static int method1585(byte var0, int var1) {
+   public static int method1585(byte var0, int var1) {
       try {
          --var1;
          var1 |= var1 >>> 1;

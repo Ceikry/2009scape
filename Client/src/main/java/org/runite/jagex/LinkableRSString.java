@@ -10,7 +10,7 @@ public final class LinkableRSString extends Linkable {
     public static int anInt2582 = 0;
     static boolean isDynamicSceneGraph = false;
     static RSString aClass94_2584 = RSString.parse("<)4col>");
-    RSString value;
+    public RSString value;
     static int anInt2587;
     static GameShell anApplet_Sub1_2588 = null;
     static int anInt2589 = 0;
@@ -189,7 +189,7 @@ public final class LinkableRSString extends Linkable {
         }
     }
 
-    LinkableRSString(RSString var1) {
+    public LinkableRSString(RSString var1) {
         try {
             this.value = var1;
         } catch (RuntimeException var3) {

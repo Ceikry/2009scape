@@ -209,10 +209,10 @@ final class Class3_Sub13_Sub18 extends Class3_Sub13 {
       int var14 = var13 = var10 + 128;
       int var15;
       int var16 = var15 = var12 + 128;
-      int var17 = Class44.anIntArrayArrayArray723[var1][var6][var7] - Class3_Sub28_Sub13.anInt3657;
-      int var18 = Class44.anIntArrayArrayArray723[var1][var6 + 1][var7] - Class3_Sub28_Sub13.anInt3657;
-      int var19 = Class44.anIntArrayArrayArray723[var1][var6 + 1][var7 + 1] - Class3_Sub28_Sub13.anInt3657;
-      int var20 = Class44.anIntArrayArrayArray723[var1][var6][var7 + 1] - Class3_Sub28_Sub13.anInt3657;
+      int var17 = Class44.anIntArrayArrayArray723[var1][var6][var7] - Unsorted.anInt3657;
+      int var18 = Class44.anIntArrayArrayArray723[var1][var6 + 1][var7] - Unsorted.anInt3657;
+      int var19 = Class44.anIntArrayArrayArray723[var1][var6 + 1][var7 + 1] - Unsorted.anInt3657;
+      int var20 = Class44.anIntArrayArrayArray723[var1][var6][var7 + 1] - Unsorted.anInt3657;
       int var21 = var12 * var4 + var10 * var5 >> 16;
       var12 = var12 * var5 - var10 * var4 >> 16;
       var10 = var21;

@@ -73,9 +73,9 @@ final class Class3_Sub13_Sub8 extends Class3_Sub13 {
 	static void method203(int var0) {
 		try {
 			//int var1 = 15 / ((-11 - var0) / 63);
-			if(Class3_Sub28_Sub13.anInt3660 == 2) {
+			if(Unsorted.anInt3660 == 2) {
 				if(Class3_Sub13_Sub39.anInt3460 == NPCDefinition.anInt1297 && Class38_Sub1.anInt2612 == Class168.anInt2099) {
-					Class3_Sub28_Sub13.anInt3660 = 0;
+					Unsorted.anInt3660 = 0;
 					if(Class101.aBoolean1419 && ObjectDefinition.aBooleanArray1490[81] && Class3_Sub13_Sub34.anInt3415 > 2) {
 						Class3_Sub30_Sub1.method806(Class3_Sub13_Sub34.anInt3415 + -2);
 					} else {
@@ -83,7 +83,7 @@ final class Class3_Sub13_Sub8 extends Class3_Sub13 {
 					}
 				}
 			} else if(NPCDefinition.anInt1297 == Class163_Sub1.anInt2993 && Class38_Sub1.anInt2614 == Class38_Sub1.anInt2612) {
-				Class3_Sub28_Sub13.anInt3660 = 0;
+				Unsorted.anInt3660 = 0;
 				if(Class101.aBoolean1419 && ObjectDefinition.aBooleanArray1490[81] && Class3_Sub13_Sub34.anInt3415 > 2) {
 					Class3_Sub30_Sub1.method806(Class3_Sub13_Sub34.anInt3415 - 2);
 				} else {
@@ -91,7 +91,7 @@ final class Class3_Sub13_Sub8 extends Class3_Sub13 {
 				}
 			} else {
 				Class168.anInt2099 = Class38_Sub1.anInt2614;
-				Class3_Sub28_Sub13.anInt3660 = 2;
+				Unsorted.anInt3660 = 2;
 				Class3_Sub13_Sub39.anInt3460 = Class163_Sub1.anInt2993;
 			}
 

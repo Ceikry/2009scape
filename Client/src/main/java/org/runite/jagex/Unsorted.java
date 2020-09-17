@@ -129,6 +129,9 @@ public class Unsorted {
     public static Class93 aClass93_21 = new Class93(64);
     public static int registryStage = 0;
     public static int anInt25 = 1;
+    public static int anInt3657;
+    public static int anInt3660 = 0;
+    public static boolean aBoolean3665 = true;
 
     static void method2086() {
         try {
@@ -3200,5 +3203,13 @@ public class Unsorted {
         } catch (RuntimeException var2) {
             throw Class44.clientError(var2, "oe.B(" + 22683 + ')');
         }
+    }
+
+    public static LDIndexedSprite[] method619(byte var0, int var1, CacheIndex var2) {
+       try {
+          return Class140_Sub7.method2029((byte)-119, var2, var1)?(var0 <= 52?(LDIndexedSprite[])null: method1281()):null;
+       } catch (RuntimeException var4) {
+          throw Class44.clientError(var4, "ml.A(" + var0 + ',' + var1 + ',' + (var2 != null?"{...}":"null") + ')');
+       }
     }
 }

@@ -183,7 +183,7 @@ final class Class49 {
    static void method1127(int var0) {
       try {
          if(!Class38_Sub1.aBoolean2615) {
-            if(Class3_Sub28_Sub13.anInt3660 != 0) {
+            if(Unsorted.anInt3660 != 0) {
                NPCDefinition.anInt1297 = Class3_Sub13_Sub39.anInt3460;
                Class38_Sub1.anInt2612 = Class168.anInt2099;
             } else if(Class3_Sub28_Sub11.anInt3644 == 0) {

@@ -113,11 +113,11 @@ class Class163_Sub1 extends Class163 {
                         var1 = 2;
                      }
 
-                     if(var1 == 2 && Class3_Sub13_Sub34.anInt3415 > 0 || Class3_Sub28_Sub13.anInt3660 == 1) {
+                     if(var1 == 2 && Class3_Sub13_Sub34.anInt3415 > 0 || Unsorted.anInt3660 == 1) {
                         Class132.method1801((byte)-105);
                      }
 
-                     if(1 == var1 && Class3_Sub13_Sub34.anInt3415 > 0 || Class3_Sub28_Sub13.anInt3660 == 2) {
+                     if(1 == var1 && Class3_Sub13_Sub34.anInt3415 > 0 || Unsorted.anInt3660 == 2) {
                         Class3_Sub13_Sub8.method203(100);
                      }
                   }

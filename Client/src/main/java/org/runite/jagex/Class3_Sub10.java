@@ -2,11 +2,11 @@ package org.runite.jagex;
 
 import org.rs09.client.Linkable;
 
-final class Class3_Sub10 extends Linkable {
+public final class Class3_Sub10 extends Linkable {
 
    static int[] anIntArray2338 = new int[]{160, 192, 80, 96, 0, 144, 80, 48, 160};
    static byte[][][] aByteArrayArrayArray2339;
-   RSString aClass94_2341;
+   public RSString value;
 
 
    static void method138(RSString var0) {
@@ -70,9 +70,9 @@ final class Class3_Sub10 extends Linkable {
 
    public Class3_Sub10() {}
 
-   Class3_Sub10(RSString var1, int var2) {
+   public Class3_Sub10(RSString var1, int var2) {
       try {
-         this.aClass94_2341 = var1;
+         this.value = var1;
       } catch (RuntimeException var4) {
          throw Class44.clientError(var4, "hb.<init>(" + (var1 != null?"{...}":"null") + ',' + var2 + ')');
       }

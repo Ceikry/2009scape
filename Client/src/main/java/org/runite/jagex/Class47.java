@@ -18,7 +18,6 @@ final class Class47 {
     private final Queue aClass13_747 = new Queue();
     static CacheIndex quickChatMessages;
     private int anInt749;
-    static RSString aClass94_750 = RSString.parse("null");
 
 
     static boolean method1088(boolean var0) {

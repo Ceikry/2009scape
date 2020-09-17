@@ -1,5 +1,7 @@
 package org.runite.jagex;
 
+import org.rs09.client.filestore.resources.configs.enums.EnumDefinition;
+
 public final class Class7 implements Interface4 {
 
    static CacheIndex aClass153_2160;
@@ -40,13 +42,13 @@ public final class Class7 implements Interface4 {
    public final RSString method20(int var1, int[] var2, int var3, long var4) {
       try {
          if(var1 == 0) {
-            Class3_Sub28_Sub13 var6 = Class3_Sub13_Sub36.method342(var2[0]);
-            return var6.method616((int)var4, (byte)120);
+            EnumDefinition var6 = Class3_Sub13_Sub36.method342(var2[0]);
+            return var6.getString((int)var4);
          } else if (var1 == 1 || var1 == 10) {
             ItemDefinition var8 = Class38.getItemDefinition((int) var4, (byte) 82);
             return var8.name;
          } else {
-            return var1 != 6 && var1 != 7 && 11 != var1 ? (var3 != 4936 ? (RSString) null : null) : Class3_Sub13_Sub36.method342(var2[0]).method616((int) var4, (byte) -69);
+            return var1 != 6 && var1 != 7 && 11 != var1 ? (var3 != 4936 ? (RSString) null : null) : Class3_Sub13_Sub36.method342(var2[0]).getString((int) var4);
          }
       } catch (RuntimeException var7) {
          throw Class44.clientError(var7, "af.A(" + var1 + ',' + (var2 != null?"{...}":"null") + ',' + var3 + ',' + var4 + ')');

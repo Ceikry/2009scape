@@ -2,6 +2,7 @@ package org.runite.jagex;
 import org.rs09.client.Linkable;
 import org.rs09.client.collections.HashTable;
 import org.rs09.client.collections.Queue;
+import org.rs09.client.filestore.resources.configs.enums.EnumDefinition;
 
 import java.awt.Component;
 import java.nio.charset.StandardCharsets;
@@ -1159,8 +1160,8 @@ final class ItemDefinition {
 														iStackCounter -= 2;
 														int k12 = intsStack[iStackCounter];
 														int j49 = intsStack[1 + iStackCounter];
-														Class3_Sub28_Sub13 class3_sub28_sub13_1 = Class3_Sub13_Sub36.method342(k12);
-														stringsStack[sStackCounter++] = class3_sub28_sub13_1.method616(j49, (byte) 121);
+														EnumDefinition enumDefinition_1 = Class3_Sub13_Sub36.method342(k12);
+														stringsStack[sStackCounter++] = enumDefinition_1.getString(j49);
 														continue;
 													}
 													if (3408 == opcode) {
@@ -1169,13 +1170,13 @@ final class ItemDefinition {
 														int k49 = intsStack[1 + iStackCounter];
 														int l76 = intsStack[3 + iStackCounter];
 														int k68 = intsStack[iStackCounter - -2];
-														Class3_Sub28_Sub13 class3_sub28_sub13_4 = Class3_Sub13_Sub36.method342(k68);
-														if (class3_sub28_sub13_4.anInt3662 != l12 || k49 != class3_sub28_sub13_4.anInt3658)
+														EnumDefinition enumDefinition_4 = Class3_Sub13_Sub36.method342(k68);
+														if (enumDefinition_4.getKeyType() != l12 || k49 != enumDefinition_4.getValueType())
 															throw new RuntimeException("C3408-1");
 														if (k49 != 115)
-															intsStack[iStackCounter++] = class3_sub28_sub13_4.method620(l76);
+															intsStack[iStackCounter++] = enumDefinition_4.getInt(l76);
 														else
-															stringsStack[sStackCounter++] = class3_sub28_sub13_4.method616(l76, (byte) -25);
+															stringsStack[sStackCounter++] = enumDefinition_4.getString(l76);
 														continue;
 													}
 													if (opcode == 3409) {
@@ -1185,10 +1186,10 @@ final class ItemDefinition {
 														int i13 = intsStack[iStackCounter];
 														if (l49 == -1)
 															throw new RuntimeException("C3409-2");
-														Class3_Sub28_Sub13 class3_sub28_sub13_3 = Class3_Sub13_Sub36.method342(l49);
-														if (i13 != class3_sub28_sub13_3.anInt3658)
+														EnumDefinition class3_sub28_sub13_3 = Class3_Sub13_Sub36.method342(l49);
+														if (i13 != class3_sub28_sub13_3.getValueType())
 															throw new RuntimeException("C3409-1");
-														intsStack[iStackCounter++] = class3_sub28_sub13_3.method621(l68) ? 1 : 0;
+														intsStack[iStackCounter++] = class3_sub28_sub13_3.containsValue(l68) ? 1 : 0;
 														continue;
 													}
 													if (opcode == 3410) {
@@ -1196,17 +1197,17 @@ final class ItemDefinition {
 														RSString class94_45 = stringsStack[--sStackCounter];
 														if (j13 == -1)
 															throw new RuntimeException("C3410-2");
-														Class3_Sub28_Sub13 class3_sub28_sub13_2 = Class3_Sub13_Sub36.method342(j13);
-														if (class3_sub28_sub13_2.anInt3658 != 115)
+														EnumDefinition enumDefinition_2 = Class3_Sub13_Sub36.method342(j13);
+														if (enumDefinition_2.getValueType() != 115)
 															throw new RuntimeException("C3410-1");
-														intsStack[iStackCounter++] = class3_sub28_sub13_2.method617(class94_45) ? 1 : 0;
+														intsStack[iStackCounter++] = enumDefinition_2.containsValue(class94_45) ? 1 : 0;
 														continue;
 													}
 													if (opcode != 3411)
 														break;
 													int k13 = intsStack[--iStackCounter];
-													Class3_Sub28_Sub13 class3_sub28_sub13 = Class3_Sub13_Sub36.method342(k13);
-													intsStack[iStackCounter++] = class3_sub28_sub13.values.size();
+													EnumDefinition enumDefinition = Class3_Sub13_Sub36.method342(k13);
+													intsStack[iStackCounter++] = enumDefinition.getValues().size();
 													continue;
 												}
 												if (3700 > opcode) {

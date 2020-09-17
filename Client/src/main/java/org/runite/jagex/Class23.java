@@ -25,7 +25,7 @@ public final class Class23 {
          DataBuffer var1 = new DataBuffer(34);
          var1.writeByte(11);
          var1.writeByte(Unsorted.anInt3625);
-         var1.writeByte(!Class3_Sub28_Sub13.aBoolean3665?0:1);
+         var1.writeByte(!Unsorted.aBoolean3665?0:1);
          var1.writeByte(Class3_Sub28_Sub7.aBoolean3604?1:0);
          var1.writeByte(KeyboardListener.aBoolean1905?1:0);
          var1.writeByte(Class25.aBoolean488?1:0);

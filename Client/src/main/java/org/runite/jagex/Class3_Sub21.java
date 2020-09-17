@@ -46,7 +46,7 @@ final class Class3_Sub21 extends Linkable {
       int var13;
       for(var9 = 0; var9 < var8; ++var9) {
          var10 = var0.anIntArray627[var9] - Class129_Sub1.anInt2697;
-         var11 = var0.anIntArray615[var9] - Class3_Sub28_Sub13.anInt3657;
+         var11 = var0.anIntArray615[var9] - Unsorted.anInt3657;
          var12 = var0.anIntArray618[var9] - Class3_Sub13_Sub30.anInt3363;
          var13 = var12 * var3 + var10 * var4 >> 16;
          var12 = var12 * var4 - var10 * var3 >> 16;
