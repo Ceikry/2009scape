@@ -379,7 +379,7 @@ final class Class140_Sub1_Sub2 extends Model {
                               var34 = var21 / var13;
                            }
 
-                           if(Class3_Sub28_Sub11.anInt3642 >= var31 && Class3_Sub28_Sub11.anInt3642 <= var33 && RenderAnimationDefinition.anInt384 >= var32 && RenderAnimationDefinition.anInt384 <= var34) {
+                           if(Unsorted.anInt3642 >= var31 && Unsorted.anInt3642 <= var33 && RenderAnimationDefinition.anInt384 >= var32 && RenderAnimationDefinition.anInt384 <= var34) {
                               var31 = 999999;
                               var33 = -999999;
                               var32 = 999999;
@@ -428,7 +428,7 @@ final class Class140_Sub1_Sub2 extends Model {
                                  }
                               }
 
-                              if(Class3_Sub28_Sub11.anInt3642 >= var31 && Class3_Sub28_Sub11.anInt3642 <= var33 && RenderAnimationDefinition.anInt384 >= var32 && RenderAnimationDefinition.anInt384 <= var34) {
+                              if(Unsorted.anInt3642 >= var31 && Unsorted.anInt3642 <= var33 && RenderAnimationDefinition.anInt384 >= var32 && RenderAnimationDefinition.anInt384 <= var34) {
                                  if(this.aBoolean2699) {
                                     Class3_Sub13_Sub38.aLongArray3448[Class2.anInt59++] = var9;
                                  } else {
@@ -1230,7 +1230,7 @@ final class Class140_Sub1_Sub2 extends Model {
                      }
                   }
                } else {
-                  if(var2 && this.method1944(Class3_Sub28_Sub11.anInt3642 + Class51.anInt846, RenderAnimationDefinition.anInt384 + Class51.anInt835, anIntArray3932[var11], anIntArray3932[var12], anIntArray3932[var13], var14, var15, var16)) {
+                  if(var2 && this.method1944(Unsorted.anInt3642 + Class51.anInt846, RenderAnimationDefinition.anInt384 + Class51.anInt835, anIntArray3932[var11], anIntArray3932[var12], anIntArray3932[var13], var14, var15, var16)) {
                      Class3_Sub13_Sub38.aLongArray3448[Class2.anInt59++] = var3;
                      var2 = false;
                   }

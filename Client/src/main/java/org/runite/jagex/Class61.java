@@ -83,7 +83,7 @@ final class Class61 {
       try {
          Class3_Sub9 var5;
          for(var5 = (Class3_Sub9) Unsorted.aClass61_78.method1222(); var5 != null; var5 = (Class3_Sub9) Unsorted.aClass61_78.method1221()) {
-            Class3_Sub28_Sub11.method606(var1, var5, var3, var0, var2, 126);
+            Unsorted.method606(var1, var5, var3, var0, var2, 126);
          }
 
          byte var6;
@@ -120,7 +120,7 @@ final class Class61 {
             var5.anInt2321 = var5.aClass140_Sub4_Sub2_2324.anInt2819 + var5.aClass140_Sub4_Sub2_2324.getSize() * 64;
             var5.anInt2308 = var5.aClass140_Sub4_Sub2_2324.anInt2829;
             var5.anInt2307 = var5.aClass140_Sub4_Sub2_2324.anInt2829 + var5.aClass140_Sub4_Sub2_2324.getSize() * 64;
-            Class3_Sub28_Sub11.method606(var1, var5, var3, var0, var2, 1 ^ 113);
+            Unsorted.method606(var1, var5, var3, var0, var2, 1 ^ 113);
          }
 
          for(var5 = (Class3_Sub9)Class3_Sub28_Sub7_Sub1.aHashTable_4046.first(); var5 != null; var5 = (Class3_Sub9)Class3_Sub28_Sub7_Sub1.aHashTable_4046.next()) {
@@ -154,7 +154,7 @@ final class Class61 {
             var5.anInt2321 = var5.aClass140_Sub4_Sub1_2327.anInt2819 + 64 * var5.aClass140_Sub4_Sub1_2327.getSize();
             var5.anInt2308 = var5.aClass140_Sub4_Sub1_2327.anInt2829;
             var5.anInt2307 = var5.aClass140_Sub4_Sub1_2327.anInt2829 + var5.aClass140_Sub4_Sub1_2327.getSize() * 64;
-            Class3_Sub28_Sub11.method606(var1, var5, var3, var0, var2, 110);
+            Unsorted.method606(var1, var5, var3, var0, var2, 110);
          }
 
       } catch (RuntimeException var9) {

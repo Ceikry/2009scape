@@ -74,7 +74,7 @@ final class Class162 {
                var2.ProjectileClipped = false;
             }
 
-            Unsorted.aClass93_21.put((byte)-114, var2, (long)objectId);
+            Unsorted.aClass93_21.put(var2, (long)objectId);
          }
          return var2;
       } catch (RuntimeException var4) {

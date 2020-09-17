@@ -65,7 +65,7 @@ final class RenderAnimationDefinition {
                     def.parse(new DataBuffer(var3));
                 }
 
-                Class3_Sub31.aClass93_2604.put((byte) -109, def, (long) graphicId);
+                Class3_Sub31.aClass93_2604.put(def, (long) graphicId);
             }
             return def;
         } catch (RuntimeException var4) {

@@ -3,7 +3,7 @@ package org.runite.jagex;
 
 import org.rs09.client.collections.HashTable;
 
-final class AnimationDefinition {
+public final class AnimationDefinition {
 
 	int anInt1845 = 2;
 	boolean aBoolean1846 = false;
@@ -12,7 +12,7 @@ final class AnimationDefinition {
 	int anInt1849 = -1;
 	int anInt1850 = -1;
 	int[] frames;
-	static CacheIndex aClass153_1852;
+	public static CacheIndex aClass153_1852;
 	int anInt1854 = -1;
 	boolean[] aBooleanArray1855;
 	static AbstractIndexedSprite aClass109_1856;

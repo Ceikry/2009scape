@@ -57,7 +57,7 @@ final class Class86 {
                 byte[] var3 = Unsorted.aClass153_1948.getFile(var1, 0);
                 var2 = new Class3_Sub28_Sub17_Sub1(var3);
                 var2.method697(Class3_Sub13_Sub22.aClass109Array3270, (int[]) null);
-                Unsorted.aClass93_1135.put((byte) -96, var2, (long) var1);
+                Unsorted.aClass93_1135.put(var2, (long) var1);
             }
             return var2;
         } catch (RuntimeException var4) {

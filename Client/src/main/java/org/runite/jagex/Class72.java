@@ -1,5 +1,7 @@
 package org.runite.jagex;
 
+import org.rs09.client.filestore.resources.configs.structs.StructDefinition;
+
 final class Class72 {
 
    GameObject aClass140_1067;
@@ -16,15 +18,15 @@ final class Class72 {
    long aLong1079;
 
 
-   static Class3_Sub28_Sub11 method1292(byte var0, int var1) {
+   static StructDefinition method1292(byte var0, int var1) {
       try {
-         Class3_Sub28_Sub11 var2 = (Class3_Sub28_Sub11)Class3_Sub13_Sub34.aClass47_3407.getNodeByID((long)var1);
+         StructDefinition var2 = (StructDefinition)Class3_Sub13_Sub34.aClass47_3407.getNodeByID((long)var1);
          if(var2 == null) {
 
             byte[] var3 = Class12.aClass153_322.getFile(26, var1);
-            var2 = new Class3_Sub28_Sub11();
+            var2 = new StructDefinition();
             if(var3 != null) {
-               var2.method608(new DataBuffer(var3));
+               var2.decode(new DataBuffer(var3));
             }
 
             Class3_Sub13_Sub34.aClass47_3407.method1097(var2, (long)var1, (byte)59);

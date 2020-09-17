@@ -8,7 +8,7 @@ import org.rs09.client.util.CRC;
 
 import java.util.Objects;
 
-final class CacheIndex {
+public final class CacheIndex {
 
     private static boolean DEBUG_FILES = false;
     private static boolean ERRORED = false;

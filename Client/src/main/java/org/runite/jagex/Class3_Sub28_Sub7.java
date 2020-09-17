@@ -3,7 +3,7 @@ import org.rs09.client.Node;
 
 import java.io.IOException;
 
-abstract class Class3_Sub28_Sub7 extends Node {
+public abstract class Class3_Sub28_Sub7 extends Node {
 
    static RSString aClass94_3601 = RSString.parse(")3runescape)3com)4l=");
    static int anInt3602;
@@ -15,7 +15,7 @@ abstract class Class3_Sub28_Sub7 extends Node {
    static int updateStamp;
 
 
-   static Class3_Sub28_Sub16_Sub2 method562(CacheIndex var0, int var2) {
+   public static Class3_Sub28_Sub16_Sub2 method562(CacheIndex var0, int var2) {
       try {
     	//  System.out.println("Class 3_Sub28_Sub16_Sub2 " + var2);
          return Class75_Sub4.method1351(var0, 0, var2, -30901)? Class3_Sub28_Sub9.method578() :null;

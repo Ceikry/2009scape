@@ -53,7 +53,7 @@ final class CS2Script extends Linkable {
                   var2.method1387(new DataBuffer(var3));
                }
 
-               aClass93_2450.put((byte)-84, var2, (long)var0);
+               aClass93_2450.put(var2, (long)var0);
                return var2;
             }
          } else {

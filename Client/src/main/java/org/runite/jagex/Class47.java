@@ -22,7 +22,7 @@ final class Class47 {
 
     static boolean method1088(boolean var0) {
         try {
-            if (Class3_Sub28_Sub11.aBoolean3641) {
+            if (Unsorted.aBoolean3641) {
                 try {
                     Class8.aClass94_106.method1577(Class38.aClass87_665.applet);
                     return true;

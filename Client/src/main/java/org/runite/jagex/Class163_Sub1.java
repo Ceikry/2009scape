@@ -2,9 +2,9 @@ package org.runite.jagex;
 import java.io.IOException;
 import java.util.Objects;
 
-class Class163_Sub1 extends Class163 {
+public class Class163_Sub1 extends Class163 {
 
-   static Class93 aClass93_2984 = new Class93(2);
+   public static Class93 aClass93_2984 = new Class93(2);
    static long[] aLongArray2986 = new long[32];
    static byte[][] aByteArrayArray2987;
    static int anInt2989 = 0;
@@ -42,7 +42,7 @@ class Class163_Sub1 extends Class163 {
          if(var0 == -48) {
             if(null == Class67.aClass11_1017) {
                if(null == Class56.aClass11_886) {
-                  int var1 = Class3_Sub28_Sub11.anInt3644;
+                  int var1 = Unsorted.anInt3644;
                   int var3;
                   int var4;
                   if(Class38_Sub1.aBoolean2615) {

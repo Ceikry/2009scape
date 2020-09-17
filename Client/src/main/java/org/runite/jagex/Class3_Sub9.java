@@ -41,7 +41,7 @@ final class Class3_Sub9 extends Linkable {
          if(var2 == null) {
             var2 = Class47.method1089(Class131.aClass153_1723, Class7.aClass153_2160, var0);
             if(null != var2) {
-               Class159.aClass93_2016.put((byte)-75, var2, (long)var0);
+               Class159.aClass93_2016.put(var2, (long)var0);
             }
 
          }

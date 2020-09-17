@@ -159,7 +159,7 @@ final class Class3_Sub8 extends Linkable {
                   boolean var28 = false;
 
                   for(var16 = 0; var16 < Class8.anInt104; ++var16) {
-                     if(Class50.aLongArray826[var16] == var29 && 0 != Class55.anIntArray882[var16]) {
+                     if(Class50.aLongArray826[var16] == var29 && 0 != Unsorted.anIntArray882[var16]) {
                         var28 = true;
                         break;
                      }

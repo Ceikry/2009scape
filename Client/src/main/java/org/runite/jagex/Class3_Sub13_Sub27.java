@@ -261,7 +261,7 @@ final class Class3_Sub13_Sub27 extends Class3_Sub13 {
 
                   for(int var4 = var3; var4 < Class8.anInt104; ++var4) {
                      Class70.aClass94Array1046[var4] = Class70.aClass94Array1046[var4 - -1];
-                     Class55.anIntArray882[var4] = Class55.anIntArray882[var4 + 1];
+                     Unsorted.anIntArray882[var4] = Unsorted.anIntArray882[var4 + 1];
                      Unsorted.aClass94Array2566[var4] = Unsorted.aClass94Array2566[1 + var4];
                      Class50.aLongArray826[var4] = Class50.aLongArray826[1 + var4];
                      Class57.anIntArray904[var4] = Class57.anIntArray904[var4 - -1];

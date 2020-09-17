@@ -28,7 +28,7 @@ final class Class14 {
          NPC.aClass3_Sub28_Sub16Array3977 = Class140_Sub6.getSprites(RenderAnimationDefinition.anInt380, var1);
          Class166.aClass3_Sub28_Sub16Array2072 = Class140_Sub6.getSprites(Class3_Sub13_Sub29.anInt3356, var1);
          Class129_Sub1.aClass3_Sub28_Sub16Array2690 = Class140_Sub6.getSprites(Class129_Sub1.anInt2689, var1);
-         Class45.aClass3_Sub28_Sub16_736 = Class3_Sub28_Sub11.method602(0, Class3_Sub13_Sub4.anInt3061, (byte)-18, var1);
+         Class45.aClass3_Sub28_Sub16_736 = Unsorted.method602(0, Class3_Sub13_Sub4.anInt3061, (byte)-18, var1);
          Class139.aClass3_Sub28_Sub16Array1825 = Class3_Sub13_Sub23_Sub1.method286(Class75_Sub1.anInt2633, var1);
          Unsorted.aClass3_Sub28_Sub16Array1136 = Class3_Sub13_Sub23_Sub1.method286(Class40.anInt678, var1);
          GameObject.aClass109Array1831 = Class85.method1424(var1, Class3_Sub15.anInt2436);

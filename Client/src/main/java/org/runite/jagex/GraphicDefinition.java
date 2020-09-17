@@ -108,7 +108,7 @@ public final class GraphicDefinition {
                 }
 
                 var5 = var6.method2008(64 - -this.anInt538, this.anInt537 + 850, -30, -50, -30);
-                Class27.aClass93_511.put((byte)-96, var5, (long)this.graphicId);
+                Class27.aClass93_511.put(var5, (long)this.graphicId);
             }
 
             Model var9;

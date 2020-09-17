@@ -330,7 +330,7 @@ public final class Client extends GameShell {
             Class163_Sub2_Sub1.aBoolean4018 = var2 != null && var2.equals("1");
 
             String var3 = this.getParameter("js");
-            Class3_Sub28_Sub11.aBoolean3641 = null != var3 && var3.equals("1");
+            Unsorted.aBoolean3641 = null != var3 && var3.equals("1");
 
             String var4 = this.getParameter("game");
             if (var4 != null && var4.equals("1")) {
@@ -486,7 +486,7 @@ public final class Client extends GameShell {
                 }
 
                 var2.method2058();
-                Class82.aClass93_1146.put((byte) -103, var2, (long) var0);
+                Class82.aClass93_1146.put(var2, (long) var0);
             }
             return var2;
         } catch (RuntimeException var4) {
@@ -552,7 +552,7 @@ public final class Client extends GameShell {
                             }
                         }
 
-                        Class55.method1180((byte) -122, var4);
+                        Unsorted.method1180((byte) -122, var4);
                         Class17.method904(65536, var4);
                         RenderAnimationDefinition.method900(var4, (byte) 1 ^ -11974);
                         Class86.aClass91Array1182[WorldListCountry.localPlane].method1489(var4.anInt2819 >> 7, false, (byte) 85, var4.anInt2829 >> 7, var4.getSize(), var4.getSize());
@@ -802,7 +802,7 @@ public final class Client extends GameShell {
 
                 Unsorted.method87(-78, Class3_Sub20.language);
                 Class163_Sub2_Sub1.aBoolean4018 = false;
-                Class3_Sub28_Sub11.aBoolean3641 = false;
+                Unsorted.aBoolean3641 = false;
                 if (var0[3].equals("game0")) {
                     Class158.anInt2014 = 0;
                 } else if (var0[3].equals("game1")) {
@@ -896,7 +896,7 @@ public final class Client extends GameShell {
                         }
 
                         boolean var18 = false;
-                        if (Class3_Sub28_Sub11.anInt3644 == 1 && Class163_Sub1.anInt2993 >= var12 && Class38_Sub1.anInt2614 >= var13 && Class163_Sub1.anInt2993 < var14 && Class38_Sub1.anInt2614 < var15) {
+                        if (Unsorted.anInt3644 == 1 && Class163_Sub1.anInt2993 >= var12 && Class38_Sub1.anInt2614 >= var13 && Class163_Sub1.anInt2993 < var14 && Class38_Sub1.anInt2614 < var15) {
                             var18 = true;
                         }
 
@@ -1487,7 +1487,7 @@ public final class Client extends GameShell {
                             LoadingStageNumber = 35;
                         }
                     } else if (60 == Class96.anInt1354) {
-                        var2 = Class3_Sub28_Sub11.method599(Class140_Sub6.spritesCacheIndex);
+                        var2 = Unsorted.method599(Class140_Sub6.spritesCacheIndex);
                         var3 = 2;
                         if (var3 <= var2) {
                             Class3_Sub17.aClass94_2464 = TextCore.LoadedTitleScreen;

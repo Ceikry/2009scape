@@ -28,7 +28,7 @@ final class Class158_Sub1 extends Class158 implements ImageProducer, ImageObserv
                 var2.method1601(var1, new DataBuffer(var3));
              }
 
-             Class44.aClass93_725.put((byte)-104, var2, (long)var1);
+             Class44.aClass93_725.put(var2, (long)var1);
              return var2;
           } else {
              return var2;

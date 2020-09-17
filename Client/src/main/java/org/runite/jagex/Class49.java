@@ -186,7 +186,7 @@ final class Class49 {
             if(Unsorted.anInt3660 != 0) {
                NPCDefinition.anInt1297 = Class3_Sub13_Sub39.anInt3460;
                Class38_Sub1.anInt2612 = Class168.anInt2099;
-            } else if(Class3_Sub28_Sub11.anInt3644 == 0) {
+            } else if(Unsorted.anInt3644 == 0) {
                NPCDefinition.anInt1297 = Class126.anInt1676;
                Class38_Sub1.anInt2612 = Unsorted.anInt1709;
             } else {

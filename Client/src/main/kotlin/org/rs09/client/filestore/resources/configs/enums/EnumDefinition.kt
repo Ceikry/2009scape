@@ -45,6 +45,7 @@ class EnumDefinition : Node() {
 
                     this.values = values
                 }
+                else -> throw IllegalArgumentException("unknown EnumDefinition opcode $opcode")
             }
         }
     }

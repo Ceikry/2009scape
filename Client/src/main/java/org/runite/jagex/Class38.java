@@ -42,7 +42,7 @@ class Class38 {
                var2.groundOptions = Unsorted.aClass94Array2596;
             }
 
-            Class3_Sub28_Sub4.aClass93_3572.put((byte)-107, var2, (long)itemId);
+            Class3_Sub28_Sub4.aClass93_3572.put(var2, (long)itemId);
          }
          return var2;
       } catch (RuntimeException var4) {

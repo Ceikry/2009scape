@@ -83,7 +83,7 @@ final class Class3_Sub13_Sub12 extends Class3_Sub13 {
             windowWidth = var2.width;
         }
 
-        Class3_Sub28_Sub11.calculateInterfaceSize(iface, windowWidth, windowHeight, false);
+        Unsorted.calculateInterfaceSize(iface, windowWidth, windowHeight, false);
         Unsorted.calculateInterfacePosition(iface, windowWidth, windowHeight);
     }
 

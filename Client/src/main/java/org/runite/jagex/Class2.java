@@ -318,7 +318,7 @@ final class Class2 {
 						var3.method1674();
 					}
 
-					Class3_Sub13_Sub31.aClass93_3369.put((byte)-125, var3, (long)(var1 << 16 | this.anInt64));
+					Class3_Sub13_Sub31.aClass93_3369.put(var3, (long)(var1 << 16 | this.anInt64));
 				}
 
 			}

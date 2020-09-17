@@ -139,7 +139,7 @@ final class Class3_Sub28_Sub6 extends Node {
                var2.method74((byte)-115, new DataBuffer(var3), var0);
             }
 
-            Class3_Sub13_Sub34.aClass93_3412.put((byte)-86, var2, (long)var0);
+            Class3_Sub13_Sub34.aClass93_3412.put(var2, (long)var0);
          }
          return var2;
       } catch (RuntimeException var4) {

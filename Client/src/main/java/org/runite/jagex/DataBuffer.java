@@ -455,7 +455,7 @@ public class DataBuffer extends Linkable {
         this.writeInt(crc);
     }
 
-    final int readMedium() {
+    public final int readMedium() {
         this.index += 3;
         return (16711680 & this.buffer[this.index + -3] << 16) +
                 (('\uff00' & this.buffer[-2 + this.index] << 8) +

@@ -766,7 +766,7 @@ final class Class145 {
                   var2.method970(new DataBuffer(var3));
                }
 
-               Class136.aClass93_1772.put((byte)-108, var2, (long)var1);
+               Class136.aClass93_1772.put(var2, (long)var1);
                return var2;
             }
          } else {

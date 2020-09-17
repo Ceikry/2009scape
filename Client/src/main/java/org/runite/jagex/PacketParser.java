@@ -812,8 +812,8 @@ public final class PacketParser {
 
                                                     for (var33 = 0; var33 < Class8.anInt104; ++var33) {
                                                         if (var2 == Class50.aLongArray826[var33]) {
-                                                            if (Class55.anIntArray882[var33] != modelId) {
-                                                                Class55.anIntArray882[var33] = modelId;
+                                                            if (Unsorted.anIntArray882[var33] != modelId) {
+                                                                Unsorted.anIntArray882[var33] = modelId;
                                                                 if (0 < modelId) {
                                                                     Class3_Sub30_Sub1.addChatMessage(Class3_Sub28_Sub14.aClass94_3672, 5, RenderAnimationDefinition.method903(new RSString[]{var46, TextCore.HasLoggedIn}), -1);
                                                                 }
@@ -835,7 +835,7 @@ public final class PacketParser {
                                                     if (null != var46 && 200 > Class8.anInt104) {
                                                         Class50.aLongArray826[Class8.anInt104] = var2;
                                                         Class70.aClass94Array1046[Class8.anInt104] = var46;
-                                                        Class55.anIntArray882[Class8.anInt104] = modelId;
+                                                        Unsorted.anIntArray882[Class8.anInt104] = modelId;
                                                         Unsorted.aClass94Array2566[Class8.anInt104] = var41;
                                                         Class57.anIntArray904[Class8.anInt104] = counter;
                                                         Unsorted.aBooleanArray73[Class8.anInt104] = isIgnored;
@@ -850,11 +850,11 @@ public final class PacketParser {
                                                         var45 = true;
 
                                                         for (var11 = 0; var11 < clanChatIcon; ++var11) {
-                                                            if (CS2Script.anInt2451 != Class55.anIntArray882[var11] && Class55.anIntArray882[var11 - -1] == CS2Script.anInt2451 || Class55.anIntArray882[var11] == 0 && Class55.anIntArray882[var11 - -1] != 0) {
+                                                            if (CS2Script.anInt2451 != Unsorted.anIntArray882[var11] && Unsorted.anIntArray882[var11 - -1] == CS2Script.anInt2451 || Unsorted.anIntArray882[var11] == 0 && Unsorted.anIntArray882[var11 - -1] != 0) {
                                                                 var45 = false;
-                                                                var12 = Class55.anIntArray882[var11];
-                                                                Class55.anIntArray882[var11] = Class55.anIntArray882[var11 - -1];
-                                                                Class55.anIntArray882[1 + var11] = var12;
+                                                                var12 = Unsorted.anIntArray882[var11];
+                                                                Unsorted.anIntArray882[var11] = Unsorted.anIntArray882[var11 - -1];
+                                                                Unsorted.anIntArray882[1 + var11] = var12;
                                                                 var64 = Unsorted.aClass94Array2566[var11];
                                                                 Unsorted.aClass94Array2566[var11] = Unsorted.aClass94Array2566[var11 + 1];
                                                                 Unsorted.aClass94Array2566[var11 - -1] = var64;

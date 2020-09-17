@@ -117,7 +117,7 @@ public final class Class3_Sub13_Sub36 extends Class3_Sub13 {
             var12 = Class145.anInt1898;
             int var13 = Class1.anInt55;
             var11 = Class139.anInt1824;
-            Class3_Sub28_Sub11.anInt3642 = var11 + (var12 - var11) * (-var3 + NPCDefinition.anInt1297) / var4;
+            Unsorted.anInt3642 = var11 + (var12 - var11) * (-var3 + NPCDefinition.anInt1297) / var4;
             int var14 = Class86.anInt1195;
             RenderAnimationDefinition.anInt384 = (-var13 + var14) * (Class38_Sub1.anInt2612 - var5) / var1 + var13;
          } else {

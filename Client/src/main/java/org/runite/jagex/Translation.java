@@ -132,7 +132,7 @@ public class Translation {
             TextCore.HasOK = RSString.parse("Okay");
             TextCore.RSLoadingPleaseWait = RSString.parse("RuneScape wird geladen )2 bitte warten)3)3)3");
             if(var0) {
-                Class3_Sub28_Sub11.aBoolean3641 = false;
+                Unsorted.aBoolean3641 = false;
             }
             TextCore.TextColorPurple = RSString.parse("lila:");
             TextCore.CreatedWorld = RSString.parse("Spielwelt erstellt)3");

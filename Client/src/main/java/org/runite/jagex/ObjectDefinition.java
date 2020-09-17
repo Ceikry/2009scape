@@ -164,7 +164,7 @@ final class ObjectDefinition {
                      var4.method2002();
                   }
 
-                  Class99.aClass93_1401.put((byte)-91, var4, (long)var8);
+                  Class99.aClass93_1401.put(var4, (long)var8);
                }
 
                if(1 < var6) {
@@ -205,7 +205,7 @@ final class ObjectDefinition {
                   var4.method2002();
                }
 
-               Class99.aClass93_1401.put((byte)-122, var4, (long)var7);
+               Class99.aClass93_1401.put(var4, (long)var7);
             }
          }
 
@@ -649,7 +649,7 @@ final class ObjectDefinition {
                }
 
                var5 = new Class140_Sub1_Sub1(var17, var6, var7, var2);
-               Class99.aClass93_1401.put((byte)-75, var5, var16);
+               Class99.aClass93_1401.put(var5, var16);
             }
          } else {
             var8 = -1;
@@ -679,7 +679,7 @@ final class ObjectDefinition {
                }
 
                var5 = new Class140_Sub1_Sub1(var10, var6, var7, var2);
-               Class99.aClass93_1401.put((byte)-101, var5, (long)var9);
+               Class99.aClass93_1401.put(var5, (long)var9);
             }
          }
 
@@ -780,7 +780,7 @@ final class ObjectDefinition {
                   var16 = new Class136();
                   var16.aClass140_1777 = var14;
                   var16.aClass109_Sub1_1770 = var15;
-                  Class3_Sub28_Sub7_Sub1.aClass93_4051.put((byte)-93, var16, var12);
+                  Class3_Sub28_Sub7_Sub1.aClass93_4051.put(var16, var12);
                } else {
                   var14 = (Class140_Sub1_Sub1)var16.aClass140_1777;
                   var15 = var16.aClass109_Sub1_1770;
@@ -833,7 +833,7 @@ final class ObjectDefinition {
                      var22 = new Class140_Sub1_Sub2(var21, 64 - -this.anInt1494, 5 * this.anInt1489 + 768, -50, -10, -50);
                   }
 
-                  Class3_Sub28_Sub7_Sub1.aClass93_4051.put((byte)-89, var22, var12);
+                  Class3_Sub28_Sub7_Sub1.aClass93_4051.put(var22, var12);
                }
 
                if(var20) {
@@ -880,7 +880,7 @@ final class ObjectDefinition {
 
                var23.method1908();
                var23.method1920(false, false, false, false, false, true);
-               Class154.aClass93_1965.put((byte)-75, var23, var15);
+               Class154.aClass93_1965.put(var23, var15);
             }
 
             boolean var19 = false;
@@ -929,7 +929,7 @@ final class ObjectDefinition {
                }
 
                var17 = new Class140_Sub1_Sub2(var18, 64 + this.anInt1494, this.anInt1489 * 5 + 768, -50, -10, -50);
-               Class154.aClass93_1965.put((byte)-94, var17, var15);
+               Class154.aClass93_1965.put(var17, var15);
             }
 
             boolean var21 = false;

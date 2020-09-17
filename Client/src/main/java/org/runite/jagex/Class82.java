@@ -239,7 +239,7 @@ final class Class82 {
                      if(var31 == null) {
                         var31 = Class140_Sub6.getSprites(var28.definition.anInt1279, Class140_Sub6.spritesCacheIndex);
                         if(null != var31) {
-                           Class3_Sub13_Sub11.aClass93_3130.put((byte)-98, var31, (long)var28.definition.anInt1279);
+                           Class3_Sub13_Sub11.aClass93_3130.put(var31, (long)var28.definition.anInt1279);
                         }
                      }
 

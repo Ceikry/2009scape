@@ -82,7 +82,7 @@ final class Class163_Sub3 extends Class163 {
                } else {
                   Class70.aClass94Array1046[Class8.anInt104] = var3;
                   Class50.aLongArray826[Class8.anInt104] = var0;
-                  Class55.anIntArray882[Class8.anInt104] = 0;
+                  Unsorted.anIntArray882[Class8.anInt104] = 0;
                   Unsorted.aClass94Array2566[Class8.anInt104] = Class3_Sub28_Sub14.aClass94_3672;
                   Class57.anIntArray904[Class8.anInt104] = 0;
                   Unsorted.aBooleanArray73[Class8.anInt104] = false;

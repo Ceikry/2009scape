@@ -53,7 +53,7 @@ final class Class52 {
             }
 
             var11 = var14.method2008(64, 768, -50, -10, -50);
-            Unsorted.aClass93_1131.put((byte)-111, var11, var9);
+            Unsorted.aClass93_1131.put(var11, var9);
          }
 
          if(null != var5) {
@@ -354,7 +354,7 @@ final class Class52 {
                      ((Class140_Sub1_Sub1)var37).method1920(false, false, true, false, false, true);
                   }
 
-                  KeyboardListener.aClass93_1911.put((byte)-115, var37, var13);
+                  KeyboardListener.aClass93_1911.put(var37, var13);
                   this.aLong855 = var13;
                }
             }
@@ -872,7 +872,7 @@ final class Class52 {
                }
 
                var6 = var15.method2008(64, 768, -50, -10, -50);
-               Unsorted.aClass93_1131.put((byte)-102, var6, this.aLong860);
+               Unsorted.aClass93_1131.put(var6, this.aLong860);
             }
 
             if(var3 != null) {

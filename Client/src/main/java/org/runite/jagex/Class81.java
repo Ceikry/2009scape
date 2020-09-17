@@ -134,7 +134,7 @@ final class Class81 {
                var2.method1190(new DataBuffer(var3), var1);
             }
 
-            Class128.aClass93_1683.put((byte)-75, var2, (long)var1);
+            Class128.aClass93_1683.put(var2, (long)var1);
          }
          return var2;
       } catch (RuntimeException var4) {

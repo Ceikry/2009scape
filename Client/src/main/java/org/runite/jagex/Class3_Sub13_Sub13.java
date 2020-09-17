@@ -1,4 +1,6 @@
 package org.runite.jagex;
+import org.rs09.client.filestore.resources.configs.cursors.CursorDefinition;
+
 import java.awt.Point;
 import java.io.IOException;
 import java.util.Objects;
@@ -15,32 +17,32 @@ final class Class3_Sub13_Sub13 extends Class3_Sub13 {
    static int anInt3156 = -1;
 
 
-   static void method229(int var0) {
+   static void method229(int cursor) {
       try {
          if(!Class163_Sub3.aBoolean3004) {
-            var0 = -1;
+            cursor = -1;
          }
 
-          if(var0 != Class65.anInt991) {
-             if(var0 != -1) {
-                Class55 var2 = Class3_Sub13_Sub29.method311(var0);
-                Class3_Sub28_Sub16_Sub2 var3 = var2.method1179();
-                if(null == var3) {
-                   var0 = -1;
+          if(cursor != Class65.anInt991) {
+             if(cursor != -1) {
+                CursorDefinition cursorDef = Class3_Sub13_Sub29.method311(cursor);
+                Class3_Sub28_Sub16_Sub2 image = cursorDef.getImage();
+                if(image == null) {
+                   cursor = -1;
                 } else {
-                   Class38.aClass87_665.method1434(var3.method655(), 10000, var3.anInt3697, Class3_Sub28_Sub12.canvas, new Point(var2.anInt881, var2.anInt879), var3.anInt3706);
-                   Class65.anInt991 = var0;
+                   Class38.aClass87_665.method1434(image.method655(), 10000, image.anInt3697, Class3_Sub28_Sub12.canvas, new Point(cursorDef.getHotspotX(), cursorDef.getHotspotY()), image.anInt3706);
+                   Class65.anInt991 = cursor;
                 }
              }
 
-             if(var0 == -1 && Class65.anInt991 != -1) {
+             if(cursor == -1 && Class65.anInt991 != -1) {
                 Class38.aClass87_665.method1434((int[])null, 10000, -1, Class3_Sub28_Sub12.canvas, new Point(), -1);
                 Class65.anInt991 = -1;
              }
 
           }
       } catch (RuntimeException var4) {
-         throw Class44.clientError(var4, "gg.C(" + var0 + ',' + 20827 + ')');
+         throw Class44.clientError(var4, "gg.C(" + cursor + ',' + 20827 + ')');
       }
    }
 
@@ -84,7 +86,7 @@ final class Class3_Sub13_Sub13 extends Class3_Sub13 {
                var2.method952(new DataBuffer(var3));
             }
 
-            Class140_Sub4.aClass93_2792.put((byte)-89, var2, (long)var0);
+            Class140_Sub4.aClass93_2792.put(var2, (long)var0);
 
          }
          return var2;
@@ -233,7 +235,7 @@ final class Class3_Sub13_Sub13 extends Class3_Sub13 {
                int var9;
                synchronized(var14) {
                   if(Unsorted.aBoolean29) {
-                     if(Class3_Sub28_Sub11.anInt3644 != 0 || Class106.aClass67_1443.anInt1018 >= 40) {
+                     if(Unsorted.anInt3644 != 0 || Class106.aClass67_1443.anInt1018 >= 40) {
                         Class3_Sub13_Sub1.outgoingBuffer.putOpcode(123);
                         var3 = 0;
                         Class3_Sub13_Sub1.outgoingBuffer.writeByte(0);
@@ -323,7 +325,7 @@ final class Class3_Sub13_Sub13 extends Class3_Sub13 {
                   }
                }
 
-               if(Class3_Sub28_Sub11.anInt3644 != 0) {
+               if(Unsorted.anInt3644 != 0) {
                   long var15 = (-AbstractIndexedSprite.aLong1465 + Class75.aLong1102) / 50L;
                   var3 = Class38_Sub1.anInt2614;
                   if(var3 >= 0) {
@@ -350,7 +352,7 @@ final class Class3_Sub13_Sub13 extends Class3_Sub13 {
                   }
 
                   var6 = (int)var15;
-                  if(Class3_Sub28_Sub11.anInt3644 == 2) {
+                  if(Unsorted.anInt3644 == 2) {
                      var19 = 1;
                   }
 
@@ -615,7 +617,7 @@ final class Class3_Sub13_Sub13 extends Class3_Sub13 {
                               Class3_Sub13_Sub8.method203(56);
                            }
 
-                           Class3_Sub28_Sub11.anInt3644 = 0;
+                           Unsorted.anInt3644 = 0;
                            Class3_Sub9.anInt2330 = 10;
                            Class67.aClass11_1017 = null;
                         }

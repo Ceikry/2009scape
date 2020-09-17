@@ -135,7 +135,7 @@ final class Class140_Sub1_Sub1 extends Model {
                                  var31 = var24 / var18;
                               }
 
-                              if(Class3_Sub28_Sub11.anInt3642 >= var28 && Class3_Sub28_Sub11.anInt3642 <= var30 && RenderAnimationDefinition.anInt384 >= var29 && RenderAnimationDefinition.anInt384 <= var31) {
+                              if(Unsorted.anInt3642 >= var28 && Unsorted.anInt3642 <= var30 && RenderAnimationDefinition.anInt384 >= var29 && RenderAnimationDefinition.anInt384 <= var31) {
                                  var28 = 999999;
                                  var30 = -999999;
                                  var29 = 999999;
@@ -194,7 +194,7 @@ final class Class140_Sub1_Sub1 extends Model {
                                     }
                                  }
 
-                                 if(Class3_Sub28_Sub11.anInt3642 >= var28 && Class3_Sub28_Sub11.anInt3642 <= var30 && RenderAnimationDefinition.anInt384 >= var29 && RenderAnimationDefinition.anInt384 <= var31) {
+                                 if(Unsorted.anInt3642 >= var28 && Unsorted.anInt3642 <= var30 && RenderAnimationDefinition.anInt384 >= var29 && RenderAnimationDefinition.anInt384 <= var31) {
                                     if(this.aBoolean2699) {
                                        Class3_Sub13_Sub38.aLongArray3448[Class2.anInt59++] = var9;
                                     } else {
@@ -218,7 +218,7 @@ final class Class140_Sub1_Sub1 extends Model {
                                                 short var53 = this.aShortArray3811[var39];
                                                 short var52 = this.aShortArray3830[var39];
                                                 short var51 = this.aShortArray3831[var39];
-                                                if(this.method1927(Class3_Sub28_Sub11.anInt3642, RenderAnimationDefinition.anInt384, anIntArray3857[var53], anIntArray3857[var52], anIntArray3857[var51], anIntArray3861[var53], anIntArray3861[var52], anIntArray3861[var51])) {
+                                                if(this.method1927(Unsorted.anInt3642, RenderAnimationDefinition.anInt384, anIntArray3857[var53], anIntArray3857[var52], anIntArray3857[var51], anIntArray3861[var53], anIntArray3861[var52], anIntArray3861[var51])) {
                                                    Class3_Sub13_Sub38.aLongArray3448[Class2.anInt59++] = var9;
                                                    break label118;
                                                 }

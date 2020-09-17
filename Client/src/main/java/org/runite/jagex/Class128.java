@@ -78,7 +78,7 @@ final class Class128 {
             }
 
             var9 = var10.method2008(64, 768, -50, -10, -50);
-            Class61.aClass93_939.put((byte)-95, var9, (long)var3);
+            Class61.aClass93_939.put(var9, (long)var3);
          }
 
          int var17 = var5.method1884();

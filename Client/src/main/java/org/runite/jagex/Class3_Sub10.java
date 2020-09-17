@@ -51,7 +51,7 @@ public final class Class3_Sub10 extends Linkable {
             }
 
             def.method899();
-            Class154.aClass93_1955.put((byte)-96, def, (long)renderAnimationId);
+            Class154.aClass93_1955.put(def, (long)renderAnimationId);
          }
          return def;
       } catch (RuntimeException var4) {

@@ -1,6 +1,7 @@
 package org.runite.jagex;
 
 import org.rs09.client.util.ArrayUtils;
+import org.rs09.client.filestore.resources.configs.cursors.CursorDefinition;
 
 import java.util.Objects;
 
@@ -172,18 +173,18 @@ final class Class3_Sub13_Sub29 extends Class3_Sub13 {
       }
    }
 
-   static Class55 method311(int var0) {
+   static CursorDefinition method311(int var0) {
       try {
-         Class55 var2 = (Class55) Unsorted.aClass93_684.get((long)var0);
+         CursorDefinition var2 = (CursorDefinition) Unsorted.aClass93_684.get((long)var0);
          if(var2 == null) {
             byte[] var3 = Class3_Sub13_Sub19.aClass153_3227.getFile(33, var0);
 
-            var2 = new Class55();
+            var2 = new CursorDefinition();
             if(var3 != null) {
-               var2.method1182(new DataBuffer(var3), var0, (byte)85);
+               var2.decode(new DataBuffer(var3));
             }
 
-            Unsorted.aClass93_684.put((byte)-112, var2, (long)var0);
+            Unsorted.aClass93_684.put(var2, (long)var0);
          }
          return var2;
       } catch (RuntimeException var4) {

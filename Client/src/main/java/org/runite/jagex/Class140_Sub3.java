@@ -88,7 +88,7 @@ final class Class140_Sub3 extends GameObject {
             }
 
             var16 = var20.method2008(64, 768, -50, -10, -50);
-            Class158_Sub1.aClass93_2982.put((byte)-125, var16, var14);
+            Class158_Sub1.aClass93_2982.put(var16, var14);
          }
 
          int var32 = var7 * 64 + -1;

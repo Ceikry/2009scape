@@ -26,7 +26,7 @@ final class Class159 {
 
    static boolean method2194() {
       try {
-         if(Class3_Sub28_Sub11.aBoolean3641) {
+         if(Unsorted.aBoolean3641) {
             try {
                return !((Boolean)Class3_Sub13_Sub17.aClass94_3209.method1577(Class38.aClass87_665.applet)).booleanValue();
             } catch (Throwable var2) {

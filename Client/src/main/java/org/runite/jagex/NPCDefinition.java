@@ -279,7 +279,7 @@ final class NPCDefinition {
                   ((Class140_Sub1_Sub1)var11).method1920(false, false, false, false, false, true);
                }
 
-               CS2Script.aClass93_2442.put((byte)-90, var11, (long)this.npcId);
+               CS2Script.aClass93_2442.put(var11, (long)this.npcId);
             }
 
             var12 = false;
@@ -590,7 +590,7 @@ final class NPCDefinition {
                   }
 
                   var12 = Objects.requireNonNull(var15).method2008(64, 768, -50, -10, -50);
-                  Class154.aClass93_1964.put((byte)-119, var12, (long)this.npcId);
+                  Class154.aClass93_1964.put(var12, (long)this.npcId);
                }
 
                if(null != var1) {

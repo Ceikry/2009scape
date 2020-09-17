@@ -34,7 +34,7 @@ abstract class Class158 {
         for (; ifaces.length > var6; ++var6) {
             RSInterface inface = ifaces[var6];
             if (inface != null && inface.parentId == parent) {
-                Class3_Sub28_Sub11.calculateInterfaceSize(inface, parentWidth, parentHeight, notifyScripts);
+                Unsorted.calculateInterfaceSize(inface, parentWidth, parentHeight, notifyScripts);
                 Unsorted.calculateInterfacePosition(inface, parentWidth, parentHeight);
                 if (inface.anInt247 > inface.anInt240 - inface.width) {
                     inface.anInt247 = inface.anInt240 - inface.width;

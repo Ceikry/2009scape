@@ -2,7 +2,7 @@ package org.runite.jagex;
 
 import org.rs09.client.rendering.Toolkit;
 
-class Class3_Sub28_Sub16_Sub2 extends Class3_Sub28_Sub16 {
+public class Class3_Sub28_Sub16_Sub2 extends Class3_Sub28_Sub16 {
 
    int[] anIntArray4081;
 

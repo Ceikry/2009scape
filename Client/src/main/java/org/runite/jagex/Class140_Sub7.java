@@ -74,20 +74,20 @@ public final class Class140_Sub7 extends GameObject {
                      int var20;
                      if(var14 && var4[var16][var9][var12] != null) {
                         if(null != var4[var16][var9][var12].aClass70_2234) {
-                           var17 = Class55.method1184(var10, (byte)82);
+                           var17 = Unsorted.method1184(var10, (byte)82);
                            if(var17 == var4[var16][var9][var12].aClass70_2234.anInt1055 || var4[var16][var9][var12].aClass70_2234.anInt1059 == var17) {
                               continue;
                            }
 
                            if(0 != var11) {
-                              var18 = Class55.method1184(var11, (byte)-93);
+                              var18 = Unsorted.method1184(var11, (byte)-93);
                               if(var18 == var4[var16][var9][var12].aClass70_2234.anInt1055 || var4[var16][var9][var12].aClass70_2234.anInt1059 == var18) {
                                  continue;
                               }
                            }
 
                            if(var13 != 0) {
-                              var18 = Class55.method1184(var13, (byte)99);
+                              var18 = Unsorted.method1184(var13, (byte)99);
                               if(var18 == var4[var16][var9][var12].aClass70_2234.anInt1055 || var4[var16][var9][var12].aClass70_2234.anInt1059 == var18) {
                                  continue;
                               }

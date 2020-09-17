@@ -1234,7 +1234,7 @@ final class ItemDefinition {
 														if (Class96.anInt1357 != 2 || i14 >= Class8.anInt104)
 															intsStack[iStackCounter++] = 0;
 														else
-															intsStack[iStackCounter++] = Class55.anIntArray882[i14];
+															intsStack[iStackCounter++] = Unsorted.anIntArray882[i14];
 														continue;
 													}
 													if (opcode == 3603) {
@@ -3142,9 +3142,9 @@ final class ItemDefinition {
 															int i61 = intsStack[iStackCounter - -1];
 															Class3_Sub28_Sub9 class3_sub28_sub9_1 = Class61.method1210(i61);
 															if (!class3_sub28_sub9_1.method585())
-																intsStack[iStackCounter++] = Class72.method1292((byte) 94, i38).method600(i61, class3_sub28_sub9_1.anInt3614);
+																intsStack[iStackCounter++] = Class72.method1292((byte) 94, i38).getInt(i61, class3_sub28_sub9_1.anInt3614);
 															else
-																stringsStack[sStackCounter++] = Class72.method1292((byte) 31, i38).method604(class3_sub28_sub9_1.aClass94_3619, i61);
+																stringsStack[sStackCounter++] = Class72.method1292((byte) 31, i38).getString(i61, class3_sub28_sub9_1.aClass94_3619);
 															continue;
 														}
 														if (opcode != 4400)
@@ -4165,7 +4165,7 @@ final class ItemDefinition {
 					((Class140_Sub1_Sub1)var11).method1920(false, false, false, false, false, true);
 				}
 
-				Class143.aClass93_1874.put((byte)-123, var11, (long)this.itemId);
+				Class143.aClass93_1874.put(var11, (long)this.itemId);
 			}
 
 			if(var4 != null) {

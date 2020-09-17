@@ -461,7 +461,7 @@ final class Class3_Sub13_Sub37 extends Class3_Sub13 {
                var2.method2274(new DataBuffer(var4), var1);
             }
 
-            Class163_Sub2_Sub1.aClass93_4015.put((byte)-109, var2, (long)var1);
+            Class163_Sub2_Sub1.aClass93_4015.put(var2, (long)var1);
          }
           return var2;
       } catch (RuntimeException var5) {
