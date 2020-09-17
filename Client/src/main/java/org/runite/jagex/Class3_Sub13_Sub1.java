@@ -4,9 +4,9 @@ import org.runite.Configurations;
 
 
 
-final class Class3_Sub13_Sub1 extends Class3_Sub13 {
+public final class Class3_Sub13_Sub1 extends Class3_Sub13 {
 
-	static Class3_Sub30_Sub1 outgoingBuffer = new Class3_Sub30_Sub1();
+	public static Class3_Sub30_Sub1 outgoingBuffer = new Class3_Sub30_Sub1();
 	private int anInt3036 = 0;
 	private int anInt3037 = 1;
 	private int anInt3038 = 0;

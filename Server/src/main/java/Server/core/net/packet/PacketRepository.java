@@ -73,6 +73,8 @@ public final class PacketRepository {
 		OUTGOING_PACKETS.put(UpdateRandomFile.class, new UpdateRandomFile());				//
 		OUTGOING_PACKETS.put(InstancedLocationUpdate.class, new InstancedLocationUpdate());	//
 		OUTGOING_PACKETS.put(CSConfigPacket.class, new CSConfigPacket());					//
+		OUTGOING_PACKETS.put(ConsoleMessage.class, new ConsoleMessage());
+		OUTGOING_PACKETS.put(ConsoleAutocomplete.class, new ConsoleAutocomplete());
 		INCOMING_PACKETS.put(22, new ClientFocusPacket());
 		INCOMING_PACKETS.put(93, new PingPacketHandler());
 		INCOMING_PACKETS.put(44, new CommandPacket());
@@ -167,6 +169,11 @@ public final class PacketRepository {
 		// INCOMING_PACKETS.put(139, packet);
 		// INCOMING_PACKETS.put(251, packet);
 		// INCOMING_PACKETS.put(55, packet);
+
+		// Custom packets I guess
+		INCOMING_PACKETS.put(51, new ConsoleInputPacket());
+		INCOMING_PACKETS.put(52, new ConsoleAutocompleteRequestPacket());
+
 
 		//Packet 22 is sent on focus gain/loss
 		//packet 177 is sent when opening/closing interfaces

@@ -1,5 +1,6 @@
 package org.runite.jagex;
 
+import kotlin.text.Charsets;
 import org.rs09.client.Linkable;
 import org.rs09.client.util.ByteArrayPool;
 import org.rs09.client.util.CRC;
@@ -84,9 +85,16 @@ public class DataBuffer extends Linkable {
     }
 
     // TODO Rename / refactor
-    final void writeString(RSString var2) {
+    public final void writeString(RSString var2) {
         this.index += var2.method1580(this.buffer, this.index, var2.length());
         this.buffer[this.index++] = 0;
+    }
+
+    public final void writeString(String string) {
+        byte[] bytes = string.getBytes(Charsets.ISO_8859_1);
+        System.arraycopy(bytes, 0, buffer, index, bytes.length);
+        index += bytes.length;
+        buffer[index++] = 0;
     }
 
     final int readSignedShort128() {
@@ -252,6 +260,11 @@ public class DataBuffer extends Linkable {
         this.buffer[-1 + -value + this.index] = (byte) value;
     }
 
+    public final void finishVarshortPacket(int value) {
+        this.buffer[this.index + -value - 2] = (byte) (value >> 8);
+        this.buffer[this.index + -value - 1] = (byte) value;
+    }
+
     // TODO XTEA crypt?
     final void method770(int[] var1, int var4) {
         int var5 = this.index;
@@ -340,7 +353,7 @@ public class DataBuffer extends Linkable {
         this.buffer[this.index++] = (byte) (value >> 16);
     }
 
-    final RSString readString() {
+    public final RSString readString() {
         int startIndex = this.index;
 
         while (this.buffer[this.index++] != 0) ;
@@ -498,7 +511,7 @@ public class DataBuffer extends Linkable {
         return this.buffer[this.index++] & 255;
     }
 
-    final void writeShort(int value) {
+    public final void writeShort(int value) {
         this.buffer[this.index++] = (byte) (value >> 8);
         this.buffer[this.index++] = (byte) value;
     }

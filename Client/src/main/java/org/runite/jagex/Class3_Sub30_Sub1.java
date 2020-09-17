@@ -993,7 +993,7 @@ public final class Class3_Sub30_Sub1 extends DataBuffer {
 		}
 	}
 
-	final void putOpcode(int opcode) {
+	public final void putOpcode(int opcode) {
 		if (buffer == null || isaacCipher == null) {
 			System.err.println("Buffer or cipher was null in CLass2_Sub30_Sub1 " + Arrays.toString(buffer) + ", " + isaacCipher);
 			return;

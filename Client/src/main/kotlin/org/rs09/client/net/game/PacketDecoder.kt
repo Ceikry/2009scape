@@ -1,14 +1,30 @@
 package org.rs09.client.net.game
 
+import org.rs09.client.net.game.inbound.ConsoleAutocompletionPacketDecoder
+import org.rs09.client.net.game.inbound.ConsoleMessageDecoder
 import org.rs09.client.net.game.inbound.GamePacketDecoder
 import org.runite.jagex.*
 import java.io.IOException
 
 object PacketDecoder {
     val decoders = HashMap<Int, GamePacketDecoder>()
+    var OPCODE_OFFSET = 241
+
+    private fun registerCustomDecoder(size: Int, decoder: GamePacketDecoder): Int {
+        val opcode = OPCODE_OFFSET++
+
+        Class75_Sub4.incomingPacketSizes[opcode] = size
+        decoders[opcode] = decoder
+        return opcode
+    }
 
     init {
+        // VERY IMPORTANT - WHEN ADDING NEW PACKETS, ADD THEM AFTER THE OLD PACKETS
+        // OTHERWISE YOU >>WILL<< MESS UP OPCODES
 
+        registerCustomDecoder(-2, ConsoleMessageDecoder)
+        registerCustomDecoder(-2, ConsoleAutocompletionPacketDecoder)
+//        println("NOTE > Registered ConsoleAutocompletionPacket as opcode $completion")
     }
 
     @Throws(IOException::class)
