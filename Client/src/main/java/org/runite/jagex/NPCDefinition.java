@@ -139,7 +139,7 @@ final class NPCDefinition {
             return var3;
          } else {
             Class3_Sub18 var4 = (Class3_Sub18)this.aHashTable_1272.get((long)var1);
-            return var4 != null?var4.anInt2467:var3;
+            return var4 != null?var4.value :var3;
          }
       } catch (RuntimeException var5) {
          throw Class44.clientError(var5, "me.N(" + var1 + ',' + -26460 + ',' + var3 + ')');

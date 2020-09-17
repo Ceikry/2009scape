@@ -14,7 +14,7 @@ public final class Class7 implements Interface4 {
       System.out.println("Error: " + Class3_Sub28_Sub6.a("%0a", "\n", var1));
    }
 
-   static RSInterface getRSInterface(int interfaceHash) {
+   public static RSInterface getRSInterface(int interfaceHash) {
       try {
          int windowId = interfaceHash >> 16;
 

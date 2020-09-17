@@ -79,11 +79,11 @@ final class Class3_Sub11 extends Linkable {
          var9 = (long)(var1 + (var3 << 16)) + ((long)var7 << 32);
          Class3_Sub18 var11 = (Class3_Sub18)this.aHashTable_2353.get(var9);
          if(var11 != null) {
-            if(var2 < this.anIntArray2358[var11.anInt2467]) {
-               this.anIntArray2358[var11.anInt2467] = var2;
+            if(var2 < this.anIntArray2358[var11.value]) {
+               this.anIntArray2358[var11.value] = var2;
             }
 
-            return var11.anInt2467;
+            return var11.value;
          }
       }
 

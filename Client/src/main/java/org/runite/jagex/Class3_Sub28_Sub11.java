@@ -39,7 +39,7 @@ final class Class3_Sub28_Sub11 extends Node {
             } else {
 
                 Class3_Sub18 var4 = (Class3_Sub18) this.aHashTable_3636.get((long) var1);
-                return null == var4 ? var2 : var4.anInt2467;
+                return null == var4 ? var2 : var4.value;
             }
         } catch (RuntimeException var5) {
             throw Class44.clientError(var5, "lk.Q(" + var1 + ',' + var2 + ',' + (byte) -29 + ')');

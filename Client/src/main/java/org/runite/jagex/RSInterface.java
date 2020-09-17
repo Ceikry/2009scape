@@ -1,6 +1,6 @@
 package org.runite.jagex;
 
-final class RSInterface {
+public final class RSInterface {
 
     boolean hidden = false;
     Object[] anObjectArray156;
@@ -79,7 +79,7 @@ final class RSInterface {
     Object[] anObjectArray229;
     int anInt230 = 0;
     byte[] aByteArray231;
-    RSString text;
+    public RSString text;
     boolean usingScripts;
     int anInt234;
     Object[] anObjectArray235;

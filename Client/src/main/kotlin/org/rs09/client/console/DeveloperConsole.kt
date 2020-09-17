@@ -2,10 +2,7 @@ package org.rs09.client.console
 
 import org.rs09.client.rendering.RenderingUtils
 import org.rs09.client.rendering.Toolkit
-import org.runite.jagex.Class126
-import org.runite.jagex.Class3_Sub13_Sub1
-import org.runite.jagex.RSString
-import org.runite.jagex.TimeUtils
+import org.runite.jagex.*
 import java.awt.event.KeyEvent
 import java.util.*
 
@@ -142,6 +139,34 @@ object DeveloperConsole {
         if (str.toLowerCase() == "enableconsolepackets") {
             ENABLE_PACKETS = true
             println("<col=44ff44>Enabled console packets!</col>")
+        } else if (str.toLowerCase() == "quests") {
+            println("<col=5555ff>~~~~~ MINIQUESTS ~~~~~</col>")
+            System.out.println("~~~~~ MINIQUESTS ~~~~~")
+            var lookup = Class3_Sub13_Sub36.method342(208)
+
+            for (i in 0..17) {
+                val component = (lookup.values[i.toLong()]!! as Class3_Sub18).value
+
+                val rsiface = Class7.getRSInterface(component)
+                if (rsiface == null) println("Error: couldnt find component for hash $component", true)
+
+                println("$i: <col=5555ff>${rsiface.text}</col>", true)
+                System.out.println("name ${rsiface.text}, lookup id $i")
+            }
+
+            println("<col=5555ff>~~~~~ QUESTS ~~~~~</col>")
+            System.out.println("~~~~~ QUESTS ~~~~~")
+            lookup = Class3_Sub13_Sub36.method342(209)
+
+            for (i in 0..130) {
+                val component = (lookup.values[i.toLong()]!! as Class3_Sub18).value
+
+                val rsiface = Class7.getRSInterface(component)
+                if (rsiface == null) println("Error: couldnt find component for hash $component", true)
+
+                println("$i: <col=5555ff>${rsiface.text}</col>", true)
+                System.out.println("name ${rsiface.text}, lookup id $i")
+            }
         }
 
         println(str)
@@ -189,7 +214,7 @@ object DeveloperConsole {
                     val index = Class3_Sub13_Sub1.outgoingBuffer.index
                     Class3_Sub13_Sub1.outgoingBuffer.writeString(str)
                     Class3_Sub13_Sub1.outgoingBuffer.finishVarshortPacket(Class3_Sub13_Sub1.outgoingBuffer.index - index)
-                }  else if("enableconsolepackets".startsWith(str, true)) {
+                } else if ("enableconsolepackets".startsWith(str, true)) {
                     autocompletions = AutocompletionHints(str, listOf("enableconsolepackets"), 1)
                 }
             }

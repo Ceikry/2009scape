@@ -506,7 +506,7 @@ final class ItemDefinition {
 						HashTable hashTable = currentMethod.switchHashTable[instructionOperands[programCounter]];
 						Class3_Sub18 class3_sub18 = (Class3_Sub18) hashTable.get(intsStack[--iStackCounter]);
 						if (null != class3_sub18)
-							programCounter += class3_sub18.anInt2467;
+							programCounter += class3_sub18.value;
 						continue;
 					}
 				}
@@ -1206,7 +1206,7 @@ final class ItemDefinition {
 														break;
 													int k13 = intsStack[--iStackCounter];
 													Class3_Sub28_Sub13 class3_sub28_sub13 = Class3_Sub13_Sub36.method342(k13);
-													intsStack[iStackCounter++] = class3_sub28_sub13.aHashTable_3663.size();
+													intsStack[iStackCounter++] = class3_sub28_sub13.values.size();
 													continue;
 												}
 												if (3700 > opcode) {
@@ -4370,7 +4370,7 @@ final class ItemDefinition {
 				return var1;
 			} else {
 				Class3_Sub18 var5 = (Class3_Sub18)this.aHashTable_798.get((long)var3);
-				return null != var5?var5.anInt2467:var1;
+				return null != var5?var5.value :var1;
 			}
 		} catch (RuntimeException var6) {
 			throw Class44.clientError(var6, "h.I(" + var1 + ',' + var2 + ',' + var3 + ')');

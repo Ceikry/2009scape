@@ -51,9 +51,9 @@ final class Class106 {
                      Class3_Sub18 var8 = (Class3_Sub18)var7.aHashTable_798.get((long)var3);
                      if(null != var8) {
                         if(var1) {
-                           var5 += var4.anIntArray2551[var6] * var8.anInt2467;
+                           var5 += var4.anIntArray2551[var6] * var8.value;
                         } else {
-                           var5 += var8.anInt2467;
+                           var5 += var8.value;
                         }
                      }
                   }

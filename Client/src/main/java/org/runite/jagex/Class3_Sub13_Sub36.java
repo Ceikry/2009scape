@@ -1,6 +1,6 @@
 package org.runite.jagex;
 
-final class Class3_Sub13_Sub36 extends Class3_Sub13 {
+public final class Class3_Sub13_Sub36 extends Class3_Sub13 {
 
    static int anInt3422;
    static int anInt3423;
@@ -283,7 +283,7 @@ final class Class3_Sub13_Sub36 extends Class3_Sub13 {
       }
    }
 
-   static Class3_Sub28_Sub13 method342(int var0) {
+   public static Class3_Sub28_Sub13 method342(int var0) {
       try {
          Class3_Sub28_Sub13 var2 = (Class3_Sub28_Sub13)Class129_Sub1.aClass47_2686.getNodeByID((long)var0);
          if(var2 == null) {

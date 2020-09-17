@@ -31,7 +31,7 @@ final class Class37 {
          var8 = (long)(var2 + (var4 << 16));
          Class3_Sub18 var10 = (Class3_Sub18)this.aHashTable_656.get(var8);
          if(var10 != null) {
-            return var10.anInt2467;
+            return var10.value;
          }
       }
 

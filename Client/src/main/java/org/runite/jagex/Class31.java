@@ -90,7 +90,7 @@ final class Class31 {
                      }
 
                      anIntArray589[var1++] = (int)var2.linkableKey;
-                     anInt580 -= var2.anInt2467;
+                     anInt580 -= var2.value;
                      if(var1 == 1000) {
                         var0.glDeleteTextures(var1, anIntArray589, 0);
                         var1 = 0;
@@ -99,7 +99,7 @@ final class Class31 {
                }
 
                anIntArray589[var1++] = (int)var2.linkableKey;
-               memory2D -= var2.anInt2467;
+               memory2D -= var2.value;
                if(var1 == 1000) {
                   var0.glDeleteTextures(var1, anIntArray589, 0);
                   var1 = 0;
@@ -108,7 +108,7 @@ final class Class31 {
          }
 
          anIntArray589[var1++] = (int)var2.linkableKey;
-         anInt585 -= var2.anInt2467;
+         anInt585 -= var2.value;
          if(var1 == 1000) {
             var0.glDeleteBuffersARB(var1, anIntArray589, 0);
             var1 = 0;

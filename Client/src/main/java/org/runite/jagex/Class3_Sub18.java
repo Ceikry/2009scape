@@ -2,9 +2,9 @@ package org.runite.jagex;
 
 import org.rs09.client.Linkable;
 
-final class Class3_Sub18 extends Linkable {
+public final class Class3_Sub18 extends Linkable {
 
-   int anInt2467;
+   public int value;
    static Class61 aClass61_2468 = new Class61();
    static int[] anIntArray2469;
    static int[] anIntArray2470 = new int[]{0, 0, 2, 0, 0, 2, 1, 1, 0};
@@ -13,9 +13,9 @@ final class Class3_Sub18 extends Linkable {
 
    public Class3_Sub18() {}
 
-   Class3_Sub18(int var1) {
+   public Class3_Sub18(int var1) {
       try {
-         this.anInt2467 = var1;
+         this.value = var1;
       } catch (RuntimeException var3) {
          throw Class44.clientError(var3, "ka.<init>(" + var1 + ')');
       }

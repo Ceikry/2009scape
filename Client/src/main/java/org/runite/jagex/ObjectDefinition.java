@@ -327,7 +327,7 @@ final class ObjectDefinition {
             return var1;
          } else {
             Class3_Sub18 var4 = (Class3_Sub18)this.aHashTable_1501.get((long)var2);
-            return var4 != null?var4.anInt2467:var1;
+            return var4 != null?var4.value :var1;
          }
       } catch (RuntimeException var5) {
          throw Class44.clientError(var5, "pb.N(" + var1 + ',' + var2 + ',' + var3 + ')');
