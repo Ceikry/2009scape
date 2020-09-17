@@ -2,7 +2,7 @@ package org.runite.jagex;
 
 final class Class159 {
 
-   static Class93 aClass93_2016 = new Class93(100);
+   static ReferenceCache aReferenceCache_2016 = new ReferenceCache(100);
    static int[] anIntArray2017 = new int[]{1, 2, 4, 8};
    static RSString aClass94_2018 = RSString.parse("Cabbage");
    static CacheIndex aClass153_2019;
@@ -155,9 +155,9 @@ final class Class159 {
 
    static void method2196() {
       try {
-         Class3_Sub13_Sub34.aClass93_3412.method1523((byte)-107);
+         Class3_Sub13_Sub34.aReferenceCache_3412.clearSoftReferences();
 
-         Class3_Sub13_Sub31.aClass93_3369.method1523((byte)-110);
+         Class3_Sub13_Sub31.aReferenceCache_3369.clearSoftReferences();
       } catch (RuntimeException var2) {
          throw Class44.clientError(var2, "vl.D(" + 128 + ')');
       }

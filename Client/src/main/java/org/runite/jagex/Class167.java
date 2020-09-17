@@ -90,7 +90,7 @@ final class Class167 {
    static void method2264(boolean var0) {
       if(var0) {
          Class75_Sub2.aClass3_Sub2ArrayArrayArray2638 = Class166.aClass3_Sub2ArrayArrayArray2065;
-         Class44.anIntArrayArrayArray723 = Class3_Sub28_Sub7.anIntArrayArrayArray3605;
+         Class44.anIntArrayArrayArray723 = Unsorted.anIntArrayArrayArray3605;
          Class3_Sub23.aClass3_Sub11ArrayArray2542 = Class3_Sub13_Sub28.aClass3_Sub11ArrayArray3346;
       } else {
          Class75_Sub2.aClass3_Sub2ArrayArrayArray2638 = Unsorted.aClass3_Sub2ArrayArrayArray4070;
@@ -103,7 +103,7 @@ final class Class167 {
 
    static void method2265() {
       try {
-         CS2Script.aClass93_2442.method1524();
+         CS2Script.aReferenceCache_2442.clear();
       } catch (RuntimeException var2) {
          throw Class44.clientError(var2, "wj.B(" + 0 + ')');
       }
@@ -161,7 +161,7 @@ final class Class167 {
 
                if(49 >= var9) {
                   Class139.aByteArrayArrayArray1828[var8][var5][var4] = var3.readSignedByte();
-                  Class93.aByteArrayArrayArray1328[var8][var5][var4] = (byte)((-2 + var9) / 4);
+                  Unsorted.aByteArrayArrayArray1328[var8][var5][var4] = (byte)((-2 + var9) / 4);
                   PacketParser.aByteArrayArrayArray81[var8][var5][var4] = (byte) Unsorted.bitwiseAnd(-2 + var9 + var7, 3);
                } else if(var9 > 81) {
                   Class3_Sub13_Sub36.aByteArrayArrayArray3430[var8][var5][var4] = (byte)(-81 + var9);
@@ -241,7 +241,7 @@ final class Class167 {
          Class164_Sub1.method2241((byte)-77, true);
          LinkableRSString.isDynamicSceneGraph = false;
          Class82.anInt1152 = 0;
-         Class3_Sub28_Sub7.anInt3606 = 0;
+         Unsorted.anInt3606 = 0;
          Class3_Sub7.anInt2294 = 0;
          Class131.anInt1716 = 0;
 

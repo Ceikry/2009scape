@@ -16,7 +16,7 @@ final class Class163_Sub2_Sub1 extends Class163_Sub2 {
    static Connection aClass89_4012;
    static volatile boolean aBoolean4013 = true;
    static int anInt4014;
-   static Class93 aClass93_4015 = new Class93(64);
+   static ReferenceCache aReferenceCache_4015 = new ReferenceCache(64);
    static RSString[] aClass94Array4016 = new RSString[500];
    static long[] aLongArray4017 = new long[100];
    static boolean aBoolean4018 = false;
@@ -31,7 +31,7 @@ final class Class163_Sub2_Sub1 extends Class163_Sub2 {
 
    static void method2220() {
       try {
-          Class140_Sub4.aClass93_2792.method1524();
+          Class140_Sub4.aReferenceCache_2792.clear();
       } catch (RuntimeException var2) {
          throw Class44.clientError(var2, "t.H(" + 0 + ')');
       }
@@ -44,7 +44,7 @@ final class Class163_Sub2_Sub1 extends Class163_Sub2 {
          for(Class96[] var7 = ClientErrorException.aClass96Array2114; var8 < var7.length; ++var8) {
             Class96 var9 = var7[var8];
             if(null != var9 && var9.anInt1360 == 2) {
-               Class118.method1724(var0 >> 1, var5, (-Class82.anInt1152 + var9.anInt1347 << 7) - -var9.anInt1350, var9.anInt1353 * 2, var2 >> 1, var9.anInt1346 + (var9.anInt1356 + -Class131.anInt1716 << 7), (byte)-114, var4);
+               Unsorted.method1724(var0 >> 1, var5, (-Class82.anInt1152 + var9.anInt1347 << 7) - -var9.anInt1350, var9.anInt1353 * 2, var2 >> 1, var9.anInt1346 + (var9.anInt1356 + -Class131.anInt1716 << 7), (byte)-114, var4);
                if(-1 < Class32.anInt590 && Class44.anInt719 % 20 < 10) {
                   Class166.aClass3_Sub28_Sub16Array2072[var9.anInt1351].method643(-12 + var1 + Class32.anInt590, -28 + var6 - -Class3_Sub1.anInt2208);
                }
@@ -58,9 +58,9 @@ final class Class163_Sub2_Sub1 extends Class163_Sub2 {
 
    static void method2222() {
       try {
-         Class3_Sub28_Sub7_Sub1.aClass93_4043.method1523((byte)-117);
-         CS2Script.aClass93_2442.method1523((byte)-108);
-         Class154.aClass93_1964.method1523((byte)-117);
+         Unsorted.aReferenceCache_4043.clearSoftReferences();
+         CS2Script.aReferenceCache_2442.clearSoftReferences();
+         Class154.aReferenceCache_1964.clearSoftReferences();
 
       } catch (RuntimeException var2) {
          throw Class44.clientError(var2, "t.G(" + (byte) 127 + ')');

@@ -35,7 +35,7 @@ final class Class96 {
                int var7 = var1.readUnsignedByte();
                int var8 = var1.readUnsignedByte();
                int var9 = -Class3_Sub13_Sub21.anInt3256 + 64 * var7;
-               int var10 = -(var8 * 64) - (-Class2.anInt65 - -1) + Class108.anInt1460;
+               int var10 = -(var8 * 64) - (-Unsorted.anInt65 - -1) + Class108.anInt1460;
                int var11;
                int var12;
                if(var9 >= 0 && -63 + var10 >= 0 && Class23.anInt455 > var9 + 63 && var10 < Class108.anInt1460) {

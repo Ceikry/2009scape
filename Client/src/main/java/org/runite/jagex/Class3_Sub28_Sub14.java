@@ -29,8 +29,8 @@ final class Class3_Sub28_Sub14 extends Node {
 
             if(Class140_Sub3.anInt2737 == 10) {
                Class3_Sub13_Sub21.anInt3256 = Unsorted.aClass3_Sub28_Sub3_2600.anInt3555 >> 6 << 6;
-               Class2.anInt65 = Unsorted.aClass3_Sub28_Sub3_2600.anInt3562 >> 6 << 6;
-               Class108.anInt1460 = (Unsorted.aClass3_Sub28_Sub3_2600.anInt3549 >> 6 << 6) - Class2.anInt65 + 64;
+               Unsorted.anInt65 = Unsorted.aClass3_Sub28_Sub3_2600.anInt3562 >> 6 << 6;
+               Class108.anInt1460 = (Unsorted.aClass3_Sub28_Sub3_2600.anInt3549 >> 6 << 6) - Unsorted.anInt65 + 64;
                Class23.anInt455 = 64 + (Unsorted.aClass3_Sub28_Sub3_2600.anInt3559 >> 6 << 6) + -Class3_Sub13_Sub21.anInt3256;
                if(Unsorted.aClass3_Sub28_Sub3_2600.anInt3563 == 37) {
                   Class44.aFloat727 = 3.0F;
@@ -54,13 +54,13 @@ final class Class3_Sub28_Sub14 extends Node {
 
                int var1 = -Class3_Sub13_Sub21.anInt3256 + (Class102.player.anInt2819 >> 7) + Class131.anInt1716;
                var1 += -5 + (int)(Math.random() * 10.0D);
-               int var2 = -Class82.anInt1152 + -(Class102.player.anInt2829 >> 7) + Class2.anInt65 + -1 + Class108.anInt1460;
+               int var2 = -Class82.anInt1152 + -(Class102.player.anInt2829 >> 7) + Unsorted.anInt65 + -1 + Class108.anInt1460;
                var2 += -5 + (int)(Math.random() * 10.0D);
                if(var1 >= 0 && var1 < Class23.anInt455 && 0 <= var2 && Class108.anInt1460 > var2) {
                   Class3_Sub28_Sub1.anInt3536 = var1;
                   Class3_Sub4.anInt2251 = var2;
                } else {
-                  Class3_Sub4.anInt2251 = Class2.anInt65 - Unsorted.aClass3_Sub28_Sub3_2600.anInt3556 * 64 + Class108.anInt1460 + -1;
+                  Class3_Sub4.anInt2251 = Unsorted.anInt65 - Unsorted.aClass3_Sub28_Sub3_2600.anInt3556 * 64 + Class108.anInt1460 + -1;
                   Class3_Sub28_Sub1.anInt3536 = Unsorted.aClass3_Sub28_Sub3_2600.anInt3558 * 64 + -Class3_Sub13_Sub21.anInt3256;
                }
 

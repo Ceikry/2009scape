@@ -18,9 +18,9 @@ final class Class3_Sub26 extends Linkable {
 
    static void method512() {
       try {
-         Class3_Sub28_Sub7_Sub1.aClass93_4043.method1524();
-         CS2Script.aClass93_2442.method1524();
-         Class154.aClass93_1964.method1524();
+         Unsorted.aReferenceCache_4043.clear();
+         CS2Script.aReferenceCache_2442.clear();
+         Class154.aReferenceCache_1964.clear();
 
       } catch (RuntimeException var2) {
          throw Class44.clientError(var2, "qi.D(" + (byte) -108 + ')');

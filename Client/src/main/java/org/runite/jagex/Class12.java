@@ -6,7 +6,7 @@ public final class Class12 {
 
    static float aFloat319;
    GameObject object;
-   static CacheIndex aClass153_322;
+   public static CacheIndex aClass153_322;
    public static CacheIndex aClass153_323;
    int anInt324;
    int anInt326;

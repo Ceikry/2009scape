@@ -16,4 +16,17 @@ open class Node : Linkable() {
             previousNode = null
         }
     }
+
+    companion object {
+        @JvmStatic
+        fun splice(insert: Node, target: Node) {
+            if (target.previousNode != null) {
+                target.unlinkNode()
+            }
+            target.previousNode = insert
+            target.nextNode = insert.nextNode
+            target.previousNode!!.nextNode = target
+            target.nextNode!!.previousNode = target
+        }
+    }
 }

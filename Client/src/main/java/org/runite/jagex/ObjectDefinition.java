@@ -1,7 +1,7 @@
 package org.runite.jagex;
 
 import org.rs09.client.Linkable;
-import org.rs09.client.collections.HashTable;
+import org.rs09.client.data.HashTable;
 import org.rs09.client.LinkableInt;
 
 import java.util.Objects;
@@ -153,7 +153,7 @@ final class ObjectDefinition {
                   var8 += 65536;
                }
 
-               var4 = (Model_Sub1)Class99.aClass93_1401.get((long)var8);
+               var4 = (Model_Sub1)Class99.aReferenceCache_1401.get((long)var8);
                if(var4 == null) {
                   var4 = Model_Sub1.method2015(Unsorted.aClass153_1043, var8 & '\uffff');
                   if(var4 == null) {
@@ -164,7 +164,7 @@ final class ObjectDefinition {
                      var4.method2002();
                   }
 
-                  Class99.aClass93_1401.put(var4, (long)var8);
+                  Class99.aReferenceCache_1401.put(var4, (long)var8);
                }
 
                if(1 < var6) {
@@ -194,7 +194,7 @@ final class ObjectDefinition {
                var7 += 65536;
             }
 
-            var4 = (Model_Sub1)Class99.aClass93_1401.get((long)var7);
+            var4 = (Model_Sub1)Class99.aReferenceCache_1401.get((long)var7);
             if(null == var4) {
                var4 = Model_Sub1.method2015(Unsorted.aClass153_1043, var7 & '\uffff');
                if(null == var4) {
@@ -205,7 +205,7 @@ final class ObjectDefinition {
                   var4.method2002();
                }
 
-               Class99.aClass93_1401.put(var4, (long)var7);
+               Class99.aReferenceCache_1401.put(var4, (long)var7);
             }
          }
 
@@ -362,7 +362,7 @@ final class ObjectDefinition {
          if(1 == opcode) {
             var4 = buffer.readUnsignedByte();
             if(var4 > 0) {
-               if(this.models == null || Class47.aBoolean742) {
+               if(this.models == null || Unsorted.aBoolean742) {
                   this.configuration = new int[var4];
                   this.models = new int[var4];
 
@@ -379,7 +379,7 @@ final class ObjectDefinition {
          } else if(opcode == 5) {
             var4 = buffer.readUnsignedByte();
             if(var4 > 0) {
-               if(null == this.models || Class47.aBoolean742) {
+               if(null == this.models || Unsorted.aBoolean742) {
                   this.models = new int[var4];
                   this.configuration = null;
 
@@ -629,7 +629,7 @@ final class ObjectDefinition {
                var16 = ~var16;
             }
 
-            var5 = (Class140_Sub1_Sub1)Class99.aClass93_1401.get(var16);
+            var5 = (Class140_Sub1_Sub1)Class99.aReferenceCache_1401.get(var16);
             if(null == var5) {
                Model_Sub1 var17 = null;
 
@@ -649,7 +649,7 @@ final class ObjectDefinition {
                }
 
                var5 = new Class140_Sub1_Sub1(var17, var6, var7, var2);
-               Class99.aClass93_1401.put(var5, var16);
+               Class99.aReferenceCache_1401.put(var5, var16);
             }
          } else {
             var8 = -1;
@@ -671,7 +671,7 @@ final class ObjectDefinition {
                var9 += 65536;
             }
 
-            var5 = (Class140_Sub1_Sub1)Class99.aClass93_1401.get((long)var9);
+            var5 = (Class140_Sub1_Sub1)Class99.aReferenceCache_1401.get((long)var9);
             if(null == var5) {
                Model_Sub1 var10 = Model_Sub1.method2015(Unsorted.aClass153_1043, '\uffff' & var9);
                if(null == var10) {
@@ -679,7 +679,7 @@ final class ObjectDefinition {
                }
 
                var5 = new Class140_Sub1_Sub1(var10, var6, var7, var2);
-               Class99.aClass93_1401.put(var5, (long)var9);
+               Class99.aReferenceCache_1401.put(var5, (long)var9);
             }
          }
 
@@ -756,7 +756,7 @@ final class ObjectDefinition {
                   var12 = (long)(var1 + (this.objectId << 10) - -(var4 << 3));
                }
 
-               Class136 var16 = (Class136)Class3_Sub28_Sub7_Sub1.aClass93_4051.get(var12);
+               Class136 var16 = (Class136) Unsorted.aReferenceCache_4051.get(var12);
                Class140_Sub1_Sub1 var14;
                LDIndexedSprite var15;
                if(null == var16) {
@@ -780,7 +780,7 @@ final class ObjectDefinition {
                   var16 = new Class136();
                   var16.aClass140_1777 = var14;
                   var16.aClass109_Sub1_1770 = var15;
-                  Class3_Sub28_Sub7_Sub1.aClass93_4051.put(var16, var12);
+                  Unsorted.aReferenceCache_4051.put(var16, var12);
                } else {
                   var14 = (Class140_Sub1_Sub1)var16.aClass140_1777;
                   var15 = var16.aClass109_Sub1_1770;
@@ -811,7 +811,7 @@ final class ObjectDefinition {
                   var20 = false;
                }
 
-               Object var22 = (GameObject)Class3_Sub28_Sub7_Sub1.aClass93_4051.get(var12);
+               Object var22 = (GameObject) Unsorted.aReferenceCache_4051.get(var12);
                if(null == var22) {
                   Model_Sub1 var21 = this.method1686(var1, var4);
                   if(var21 == null) {
@@ -833,7 +833,7 @@ final class ObjectDefinition {
                      var22 = new Class140_Sub1_Sub2(var21, 64 - -this.anInt1494, 5 * this.anInt1489 + 768, -50, -10, -50);
                   }
 
-                  Class3_Sub28_Sub7_Sub1.aClass93_4051.put(var22, var12);
+                  Unsorted.aReferenceCache_4051.put(var22, var12);
                }
 
                if(var20) {
@@ -871,7 +871,7 @@ final class ObjectDefinition {
                var15 = (long)((var13 << 3) + ((this.objectId << 10) - -var6));
             }
 
-            Class140_Sub1_Sub1 var23 = (Class140_Sub1_Sub1)Class154.aClass93_1965.get(var15);
+            Class140_Sub1_Sub1 var23 = (Class140_Sub1_Sub1)Class154.aReferenceCache_1965.get(var15);
             if(var23 == null) {
                var23 = this.method1695(var6, true, var13);
                if(null == var23) {
@@ -880,7 +880,7 @@ final class ObjectDefinition {
 
                var23.method1908();
                var23.method1920(false, false, false, false, false, true);
-               Class154.aClass93_1965.put(var23, var15);
+               Class154.aReferenceCache_1965.put(var23, var15);
             }
 
             boolean var19 = false;
@@ -921,7 +921,7 @@ final class ObjectDefinition {
                var15 = (long)(var6 + (this.objectId << 10) + (var13 << 3));
             }
 
-            Class140_Sub1_Sub2 var17 = (Class140_Sub1_Sub2)Class154.aClass93_1965.get(var15);
+            Class140_Sub1_Sub2 var17 = (Class140_Sub1_Sub2)Class154.aReferenceCache_1965.get(var15);
             if(var17 == null) {
                Model_Sub1 var18 = this.method1686(var6, var13);
                if(var18 == null) {
@@ -929,7 +929,7 @@ final class ObjectDefinition {
                }
 
                var17 = new Class140_Sub1_Sub2(var18, 64 + this.anInt1494, this.anInt1489 * 5 + 768, -50, -10, -50);
-               Class154.aClass93_1965.put(var17, var15);
+               Class154.aReferenceCache_1965.put(var17, var15);
             }
 
             boolean var21 = false;

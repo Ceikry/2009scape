@@ -19,7 +19,7 @@ final class Class15 implements Runnable {
    static boolean method888(int var0, ObjectDefinition var1, int var3, int var4, int var5, int var6) {
       try {
          Class2 var7 = Class3_Sub28_Sub6.c(var1.anInt1516);
-         if(var7.anInt64 == -1) {
+         if(var7.sprite == -1) {
             return false;
          } else {
             if(var1.aBoolean1537) {
@@ -29,7 +29,7 @@ final class Class15 implements Runnable {
                var6 = 0;
             }
 
-            LDIndexedSprite var8 = var7.method77(var6, (byte)-111);
+            LDIndexedSprite var8 = var7.getSprite(var6);
             if(var8 == null) {
                return true;
             } else {
@@ -47,10 +47,10 @@ final class Class15 implements Runnable {
                   var11 = 4 * var9;
                }
 
-               if(var7.anInt61 == 0) {
+               if(var7.color == 0) {
                   var8.method1677(var0 * 4 + 48, 48 + 4 * (-var10 + -var5 + 104), var11, var12);
                } else {
-                  var8.method1669(48 + 4 * var0, 4 * (-var10 + -var5 + 104) + 48, var11, var12, var7.anInt61);
+                  var8.method1669(48 + 4 * var0, 4 * (-var10 + -var5 + 104) + 48, var11, var12, var7.color);
                }
 
                return false;
@@ -87,7 +87,7 @@ final class Class15 implements Runnable {
             int var8 = var1.readUnsignedByte();
             int var9 = var1.readUnsignedByte();
             int var10 = -Class3_Sub13_Sub21.anInt3256 + var8 * 64;
-            int var11 = -1 + Class108.anInt1460 - var9 * 64 + Class2.anInt65;
+            int var11 = -1 + Class108.anInt1460 - var9 * 64 + Unsorted.anInt65;
             if(var10 >= 0 && 0 <= -63 + var11 && Class23.anInt455 > var10 - -63 && var11 < Class108.anInt1460) {
                for(var12 = 0; var12 < 64; ++var12) {
                   byte[] var13 = var4[var10 - -var12];
@@ -191,7 +191,7 @@ final class Class15 implements Runnable {
                         }
 
                         int var25 = var24 + (896 & var23) + (var23 + var2 & '\ufc00');
-                        var22[Unsorted.bitwiseAnd(4032, var19 << 6) + Unsorted.bitwiseAnd(63, var12)] = Class51.anIntArray834[Class47.method1100(96, var25)];
+                        var22[Unsorted.bitwiseAnd(4032, var19 << 6) + Unsorted.bitwiseAnd(63, var12)] = Class51.anIntArray834[Unsorted.method1100(96, var25)];
                      }
                   }
                }

@@ -16,11 +16,11 @@ final class Class158_Sub1 extends Class158 implements ImageProducer, ImageObserv
    private ColorModel aColorModel2979;
    static Class3_Sub1 aClass3_Sub1_2980 = new Class3_Sub1(0, -1);
    static boolean aBoolean2981 = false;
-   static Class93 aClass93_2982 = new Class93(32);
+   static ReferenceCache aReferenceCache_2982 = new ReferenceCache(32);
 
     static Class100 method629(int var1) {
        try {
-          Class100 var2 = (Class100)Class44.aClass93_725.get((long)var1);
+          Class100 var2 = (Class100)Class44.aReferenceCache_725.get((long)var1);
           if(var2 == null) {
              byte[] var3 = Class3_Sub23.aClass153_2536.getFile(1, var1);
              var2 = new Class100();
@@ -28,7 +28,7 @@ final class Class158_Sub1 extends Class158 implements ImageProducer, ImageObserv
                 var2.method1601(var1, new DataBuffer(var3));
              }
 
-             Class44.aClass93_725.put(var2, (long)var1);
+             Class44.aReferenceCache_725.put(var2, (long)var1);
              return var2;
           } else {
              return var2;
@@ -54,7 +54,7 @@ final class Class158_Sub1 extends Class158 implements ImageProducer, ImageObserv
    public static void method2187(int var0) {
       try {
          aClass94Array2977 = null;
-         aClass93_2982 = null;
+         aReferenceCache_2982 = null;
          aClass3_Sub1_2980 = null;
          if(var0 != 27316) {
             aBoolean2981 = true;
@@ -317,7 +317,7 @@ final class Class158_Sub1 extends Class158 implements ImageProducer, ImageObserv
                         var16 = Class44.anIntArrayArrayArray723[var8][1 + var10][var11 + 1];
                         if(0 < var8) {
                            boolean var47 = true;
-                           if(var37 == 0 && Class93.aByteArrayArrayArray1328[var8][var10][var11] != 0) {
+                           if(var37 == 0 && Unsorted.aByteArrayArrayArray1328[var8][var10][var11] != 0) {
                               var47 = false;
                            }
 
@@ -345,7 +345,7 @@ final class Class158_Sub1 extends Class158 implements ImageProducer, ImageObserv
                            }
 
                            var21 = (896 & var18) + (var18 + var4 & '\ufc00') + var20;
-                           var19 = Class51.anIntArray834[Class47.method1100(96, var21)];
+                           var19 = Class51.anIntArray834[Unsorted.method1100(96, var21)];
                         }
 
                         var20 = var35[var10][var11];
@@ -353,7 +353,7 @@ final class Class158_Sub1 extends Class158 implements ImageProducer, ImageObserv
                         var21 = var35[1 + var10][var11];
                         var22 = var35[var10 - -1][var11 - -1];
                         if(var13 == 0) {
-                           Class104.method1629(var8, var10, var11, 0, 0, -1, var14, var15, var16, var44, Class47.method1100(var20, var18), Class47.method1100(var21, var18), Class47.method1100(var22, var18), Class47.method1100(var23, var18), 0, 0, 0, 0, var19, 0);
+                           Class104.method1629(var8, var10, var11, 0, 0, -1, var14, var15, var16, var44, Unsorted.method1100(var20, var18), Unsorted.method1100(var21, var18), Unsorted.method1100(var22, var18), Unsorted.method1100(var23, var18), 0, 0, 0, 0, var19, 0);
                            if(HDToolKit.highDetail && var8 > 0 && var18 != -1 && method629(-1 + var37).aBoolean1411) {
                               Class141.method2037(0, 0, true, false, var10, var11, var14 - Class44.anIntArrayArrayArray723[0][var10][var11], -Class44.anIntArrayArrayArray723[0][1 + var10][var11] + var15, var16 - Class44.anIntArrayArrayArray723[0][1 + var10][1 + var11], var44 - Class44.anIntArrayArrayArray723[0][var10][1 + var11]);
                            }
@@ -375,7 +375,7 @@ final class Class158_Sub1 extends Class158 implements ImageProducer, ImageObserv
                               }
                            }
                         } else {
-                           var24 = 1 + Class93.aByteArrayArrayArray1328[var8][var10][var11];
+                           var24 = 1 + Unsorted.aByteArrayArrayArray1328[var8][var10][var11];
                            byte var25 = PacketParser.aByteArrayArrayArray81[var8][var10][var11];
                            Class168 var26 = Class3_Sub13_Sub37.method350((byte)-105, var13 + -1);
                            int var27;
@@ -448,7 +448,7 @@ final class Class158_Sub1 extends Class158 implements ImageProducer, ImageObserv
                               var29 = Class51.anIntArray834[LinkableRSString.method729((byte)-101, var32, 96)];
                            }
 
-                           Class104.method1629(var8, var10, var11, var24, var25, var27, var14, var15, var16, var44, Class47.method1100(var20, var18), Class47.method1100(var21, var18), Class47.method1100(var22, var18), Class47.method1100(var23, var18), LinkableRSString.method729((byte)-72, var28, var20), LinkableRSString.method729((byte)-107, var28, var21), LinkableRSString.method729((byte)-82, var28, var22), LinkableRSString.method729((byte)-93, var28, var23), var19, var29);
+                           Class104.method1629(var8, var10, var11, var24, var25, var27, var14, var15, var16, var44, Unsorted.method1100(var20, var18), Unsorted.method1100(var21, var18), Unsorted.method1100(var22, var18), Unsorted.method1100(var23, var18), LinkableRSString.method729((byte)-72, var28, var20), LinkableRSString.method729((byte)-107, var28, var21), LinkableRSString.method729((byte)-82, var28, var22), LinkableRSString.method729((byte)-93, var28, var23), var19, var29);
                            if(HDToolKit.highDetail && var8 > 0) {
                               Class141.method2037(var24, var25, var28 == -2 || !var26.aBoolean2093, -1 == var18 || !method629(-1 + var37).aBoolean1411, var10, var11, -Class44.anIntArrayArrayArray723[0][var10][var11] + var14, var15 - Class44.anIntArrayArrayArray723[0][1 + var10][var11], -Class44.anIntArrayArrayArray723[0][1 + var10][var11 + 1] + var16, -Class44.anIntArrayArrayArray723[0][var10][1 + var11] + var44);
                            }
@@ -477,11 +477,11 @@ final class Class158_Sub1 extends Class158 implements ImageProducer, ImageObserv
 
                Class3_Sub11[] var50;
                if(var1) {
-                  var50 = Class3_Sub13_Sub27.method298(Unsorted.aByteArrayArrayArray113, Class93.aByteArrayArrayArray1328[var8], Class3_Sub13_Sub36.aByteArrayArrayArray3430[var8], var35, var40, Class3_Sub13_Sub9.anIntArrayArray3115, Class139.aByteArrayArrayArray1828[var8], PacketParser.aByteArrayArrayArray81[var8], var38, var8, var43, var34, Class44.anIntArrayArrayArray723[var8], Class58.anIntArrayArrayArray914[0]);
+                  var50 = Class3_Sub13_Sub27.method298(Unsorted.aByteArrayArrayArray113, Unsorted.aByteArrayArrayArray1328[var8], Class3_Sub13_Sub36.aByteArrayArrayArray3430[var8], var35, var40, Class3_Sub13_Sub9.anIntArrayArray3115, Class139.aByteArrayArrayArray1828[var8], PacketParser.aByteArrayArrayArray81[var8], var38, var8, var43, var34, Class44.anIntArrayArrayArray723[var8], Class58.anIntArrayArrayArray914[0]);
                   Class61.method1213(var8, var50);
                } else {
-                  var50 = Class3_Sub13_Sub27.method298(Unsorted.aByteArrayArrayArray113, Class93.aByteArrayArrayArray1328[var8], Class3_Sub13_Sub36.aByteArrayArrayArray3430[var8], var35, var40, (int[][])null, Class139.aByteArrayArrayArray1828[var8], PacketParser.aByteArrayArrayArray81[var8], var38, var8, var43, var34, Class44.anIntArrayArrayArray723[var8], (int[][])null);
-                  Class3_Sub11[] var46 = Class1.method70(var40, var38, Class44.anIntArrayArrayArray723[var8], var8, var43, PacketParser.aByteArrayArrayArray81[var8], var35, Class93.aByteArrayArrayArray1328[var8], Class3_Sub13_Sub36.aByteArrayArrayArray3430[var8], Class139.aByteArrayArrayArray1828[var8], Unsorted.aByteArrayArrayArray113);
+                  var50 = Class3_Sub13_Sub27.method298(Unsorted.aByteArrayArrayArray113, Unsorted.aByteArrayArrayArray1328[var8], Class3_Sub13_Sub36.aByteArrayArrayArray3430[var8], var35, var40, (int[][])null, Class139.aByteArrayArrayArray1828[var8], PacketParser.aByteArrayArrayArray81[var8], var38, var8, var43, var34, Class44.anIntArrayArrayArray723[var8], (int[][])null);
+                  Class3_Sub11[] var46 = Class1.method70(var40, var38, Class44.anIntArrayArrayArray723[var8], var8, var43, PacketParser.aByteArrayArrayArray81[var8], var35, Unsorted.aByteArrayArrayArray1328[var8], Class3_Sub13_Sub36.aByteArrayArrayArray3430[var8], Class139.aByteArrayArrayArray1828[var8], Unsorted.aByteArrayArrayArray113);
                   Class3_Sub11[] var49 = new Class3_Sub11[var50.length - -var46.length];
 
                   for(var44 = 0; var44 < var50.length; ++var44) {
@@ -493,13 +493,13 @@ final class Class158_Sub1 extends Class158 implements ImageProducer, ImageObserv
                   }
 
                   Class61.method1213(var8, var49);
-                  Class129.method1769(var43, Class3_Sub13_Sub36.aByteArrayArrayArray3430[var8], PacketParser.aByteArrayArrayArray81[var8], Class68.aClass43Array1021, var8, Class68.anInt1032, var40, Class93.aByteArrayArrayArray1328[var8], Class139.aByteArrayArrayArray1828[var8], Class44.anIntArrayArrayArray723[var8], var38);
+                  Class129.method1769(var43, Class3_Sub13_Sub36.aByteArrayArrayArray3430[var8], PacketParser.aByteArrayArrayArray81[var8], Class68.aClass43Array1021, var8, Class68.anInt1032, var40, Unsorted.aByteArrayArrayArray1328[var8], Class139.aByteArrayArrayArray1828[var8], Class44.anIntArrayArrayArray723[var8], var38);
                }
             }
 
             Class3_Sub13_Sub36.aByteArrayArrayArray3430[var8] = (byte[][])null;
             Class139.aByteArrayArrayArray1828[var8] = (byte[][])null;
-            Class93.aByteArrayArrayArray1328[var8] = (byte[][])null;
+            Unsorted.aByteArrayArrayArray1328[var8] = (byte[][])null;
             PacketParser.aByteArrayArrayArray81[var8] = (byte[][])null;
             Class67.aByteArrayArrayArray1014[var8] = (byte[][])null;
          }
@@ -937,7 +937,7 @@ final class Class158_Sub1 extends Class158 implements ImageProducer, ImageObserv
    static void method2192() {
       try {
 
-         Class154.aClass93_1955.method1523((byte)-110);
+         Class154.aReferenceCache_1955.clearSoftReferences();
       } catch (RuntimeException var2) {
          throw Class44.clientError(var2, "di.M(" + -68 + ')');
       }

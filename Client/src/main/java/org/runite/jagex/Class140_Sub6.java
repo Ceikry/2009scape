@@ -182,9 +182,9 @@ final class Class140_Sub6 extends GameObject {
 
    static void method2025() {
       try {
-          Class3_Sub28_Sub7_Sub1.aClass93_4043.method1522(-128, 5);
-          CS2Script.aClass93_2442.method1522(-126, 5);
-          Class154.aClass93_1964.method1522(-127, 5);
+          Unsorted.aReferenceCache_4043.sweep(5);
+          CS2Script.aReferenceCache_2442.sweep(5);
+          Class154.aReferenceCache_1964.sweep(5);
       } catch (RuntimeException var3) {
          throw Class44.clientError(var3, "ra.F(" + (byte) -62 + ',' + 5 + ')');
       }

@@ -433,12 +433,8 @@ public final class CacheIndex {
         return true;
     }
 
-    final byte[] getFile(int archive, int file) {
-        try {
-            return this.getFile(archive, file, (int[]) null);
-        } catch (RuntimeException var5) {
-            throw Class44.clientError(var5, "ve.M(" + archive + ',' + (byte) -122 + ',' + file + ')');
-        }
+    public final byte[] getFile(int archive, int file) {
+        return this.getFile(archive, file, null);
     }
 
     private void load(int archive) {

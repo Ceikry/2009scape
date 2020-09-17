@@ -3,7 +3,7 @@ package org.rs09.client.filestore.resources.configs.enums
 import org.rs09.client.Linkable
 import org.rs09.client.LinkableInt
 import org.rs09.client.Node
-import org.rs09.client.collections.HashTable
+import org.rs09.client.data.HashTable
 import org.runite.jagex.*
 
 class EnumDefinition : Node() {

@@ -37,11 +37,11 @@ final class Class3_Sub9 extends Linkable {
 
    static Class3_Sub28_Sub5 method133(int var0) {
       try {
-         Class3_Sub28_Sub5 var2 = (Class3_Sub28_Sub5)Class159.aClass93_2016.get((long)var0);
+         Class3_Sub28_Sub5 var2 = (Class3_Sub28_Sub5)Class159.aReferenceCache_2016.get((long)var0);
          if(var2 == null) {
-            var2 = Class47.method1089(Class131.aClass153_1723, Class7.aClass153_2160, var0);
+            var2 = Unsorted.method1089(Class131.aClass153_1723, Class7.aClass153_2160, var0);
             if(null != var2) {
-               Class159.aClass93_2016.put(var2, (long)var0);
+               Class159.aReferenceCache_2016.put(var2, (long)var0);
             }
 
          }
@@ -167,8 +167,8 @@ final class Class3_Sub9 extends Linkable {
             RIGHT_PARENTHESES = (RSString)null;
          }
 
-         Class82.aClass93_1146.method1522(-127, var0);
-         Class159.aClass93_2016.method1522(-126, var0);
+         Class82.aReferenceCache_1146.sweep(var0);
+         Class159.aReferenceCache_2016.sweep(var0);
       } catch (RuntimeException var3) {
          throw Class44.clientError(var3, "fl.E(" + var0 + ',' + var1 + ')');
       }

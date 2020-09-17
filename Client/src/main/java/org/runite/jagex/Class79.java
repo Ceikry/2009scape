@@ -109,7 +109,7 @@ final class Class79 {
                   }
 
                   Class25.method957(1 == var0.readUnsignedByte());
-                  Class3_Sub28_Sub7.aBoolean3604 = var0.readUnsignedByte() == 1;
+                  Unsorted.aBoolean3604 = var0.readUnsignedByte() == 1;
                   KeyboardListener.aBoolean1905 = 1 == var0.readUnsignedByte();
                   Class25.aBoolean488 = 1 == var0.readUnsignedByte();
                   RSInterface.aBoolean236 = var0.readUnsignedByte() == 1;

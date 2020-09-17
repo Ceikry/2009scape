@@ -94,8 +94,8 @@ final class Class3_Sub13_Sub6 extends Class3_Sub13 {
 
    static void method196(boolean var0) {
       try {
-         Unsorted.aClass93_684.method1523((byte)-117);
-         Class163_Sub1.aClass93_2984.method1523((byte)-111);
+         Unsorted.aReferenceCache_684.clearSoftReferences();
+         Class163_Sub1.aReferenceCache_2984.clearSoftReferences();
          if(var0) {
             anIntArray3083 = (int[])null;
          }

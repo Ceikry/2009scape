@@ -400,9 +400,9 @@ final class Class68 {
                   var9 = Class126.anInt1665 - 1;
                }
 
-               if(var8 < Class3_Sub28_Sub7.anInt3603) {
-                  var7 += Class3_Sub28_Sub7.anInt3603 - var8;
-                  var8 = Class3_Sub28_Sub7.anInt3603;
+               if(var8 < Unsorted.anInt3603) {
+                  var7 += Unsorted.anInt3603 - var8;
+                  var8 = Unsorted.anInt3603;
                }
 
                int var10 = var8;
@@ -415,8 +415,8 @@ final class Class68 {
                      var12 = Class163_Sub1_Sub1.anInt4006;
                   }
 
-                  if(var13 >= Class2.anInt67) {
-                     var13 = Class2.anInt67 - 1;
+                  if(var13 >= Unsorted.anInt67) {
+                     var13 = Unsorted.anInt67 - 1;
                   }
 
                   int var14 = var12;

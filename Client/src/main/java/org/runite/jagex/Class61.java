@@ -4,7 +4,7 @@ import org.rs09.client.Linkable;
 
 final class Class61 {
 
-   static Class93 aClass93_939 = new Class93(4);
+   static ReferenceCache aReferenceCache_939 = new ReferenceCache(4);
    Linkable aClass3_940 = new Linkable();
    private Linkable aClass3_941;
 
@@ -22,7 +22,7 @@ final class Class61 {
 
    static Class3_Sub28_Sub9 method1210(int var1) {
       try {
-         Class3_Sub28_Sub9 var2 = (Class3_Sub28_Sub9)Class163.aClass47_2041.getNodeByID((long)var1);
+         Class3_Sub28_Sub9 var2 = (Class3_Sub28_Sub9)Class163.aClass47_2041.get((long)var1);
 
          if(null == var2) {
             byte[] var3 = Class3_Sub13_Sub7.aClass153_3098.getFile(11, var1);
@@ -31,7 +31,7 @@ final class Class61 {
                var2.method583(new DataBuffer(var3));
             }
 
-            Class163.aClass47_2041.method1097(var2, (long)var1, (byte)98);
+            Class163.aClass47_2041.put((long)var1, var2);
          }
          return var2;
       } catch (RuntimeException var4) {
@@ -123,7 +123,7 @@ final class Class61 {
             Unsorted.method606(var1, var5, var3, var0, var2, 1 ^ 113);
          }
 
-         for(var5 = (Class3_Sub9)Class3_Sub28_Sub7_Sub1.aHashTable_4046.first(); var5 != null; var5 = (Class3_Sub9)Class3_Sub28_Sub7_Sub1.aHashTable_4046.next()) {
+         for(var5 = (Class3_Sub9) Unsorted.aHashTable_4046.first(); var5 != null; var5 = (Class3_Sub9) Unsorted.aHashTable_4046.next()) {
             var6 = 1;
             var7 = var5.aClass140_Sub4_Sub1_2327.method1965();
             if(var5.aClass140_Sub4_Sub1_2327.anInt2764 == var7.anInt368) {
@@ -195,7 +195,7 @@ final class Class61 {
 
    static RSString method1218(int var2) {
       try {
-         return Class118.method1723((byte)-128, true, var2);
+         return Unsorted.method1723((byte)-128, true, var2);
       } catch (RuntimeException var4) {
          throw Class44.clientError(var4, "ih.A(" + true + ',' + 127 + ',' + var2 + ')');
       }

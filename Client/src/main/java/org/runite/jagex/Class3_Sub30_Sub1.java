@@ -289,7 +289,7 @@ public final class Class3_Sub30_Sub1 extends DataBuffer {
 				}
 
 				if(41 == var4 && Class3_Sub13_Sub7.aClass11_3087 == null) {
-					Class2.method78(var2, var3);
+					Unsorted.method78(var2, var3);
 					Class3_Sub13_Sub7.aClass11_3087 = Class3_Sub28_Sub16.method638(var3, var2);
 					Class20.method909(Class3_Sub13_Sub7.aClass11_3087);
 				}
@@ -919,11 +919,7 @@ public final class Class3_Sub30_Sub1 extends DataBuffer {
 	}
 
 	static int method810(int var1) {
-		try {
 			return 255 & var1;
-		} catch (RuntimeException var3) {
-			throw Class44.clientError(var3, "i.D(" + (byte) 3 + ',' + var1 + ')');
-		}
 	}
 
 	final void method811(byte var1, int var2, byte[] var3, int var4) {
@@ -967,9 +963,9 @@ public final class Class3_Sub30_Sub1 extends DataBuffer {
 
 	static void method813() {
 		try {
-			Class3_Sub28_Sub4.aClass93_3572.method1523((byte)-127);
-			Class143.aClass93_1874.method1523((byte)-113);
-			Class67.aClass93_1013.method1523((byte)-108);
+			Class3_Sub28_Sub4.aReferenceCache_3572.clearSoftReferences();
+			Class143.aReferenceCache_1874.clearSoftReferences();
+			Class67.aReferenceCache_1013.clearSoftReferences();
 		} catch (RuntimeException var2) {
 			throw Class44.clientError(var2, "i.O(" + 1974 + ')');
 		}

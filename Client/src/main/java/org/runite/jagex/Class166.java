@@ -35,7 +35,7 @@ final class Class166 {
    static void method2257() {
       try {
 
-          Class163_Sub2_Sub1.aClass93_4015.method1524();
+          Class163_Sub2_Sub1.aReferenceCache_4015.clear();
       } catch (RuntimeException var2) {
          throw Class44.clientError(var2, "wh.F(" + 96 + ')');
       }
@@ -98,8 +98,8 @@ final class Class166 {
 
    static void method2260() {
       try {
-         Class3_Sub13_Sub34.aClass93_3412.method1522(-1045 + 919, 5);
-         Class3_Sub13_Sub31.aClass93_3369.method1522(-1045 ^ 1130, 5);
+         Class3_Sub13_Sub34.aReferenceCache_3412.sweep(5);
+         Class3_Sub13_Sub31.aReferenceCache_3369.sweep(5);
       } catch (RuntimeException var3) {
          throw Class44.clientError(var3, "wh.E(" + -1045 + ',' + 5 + ')');
       }

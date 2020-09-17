@@ -272,7 +272,7 @@ final class Class3_Sub28_Sub20 extends Node {
 
    static void method724() {
       try {
-         Class163_Sub2_Sub1.aClass93_4015.method1523((byte)-102);
+         Class163_Sub2_Sub1.aReferenceCache_4015.clearSoftReferences();
 
       } catch (RuntimeException var2) {
          throw Class44.clientError(var2, "uh.B(" + -109 + ')');

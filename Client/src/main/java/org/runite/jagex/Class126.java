@@ -1,6 +1,6 @@
 package org.runite.jagex;
 
-import org.rs09.client.collections.Queue;
+import org.rs09.client.data.Queue;
 
 public final class Class126 {
 

@@ -113,7 +113,7 @@ public final class Class3_Sub13_Sub36 extends Class3_Sub13 {
 
          if(!Class38_Sub1.aBoolean2615 && var3 <= NPCDefinition.anInt1297 && var4 + var3 > NPCDefinition.anInt1297 && var5 <= Class38_Sub1.anInt2612 && Class38_Sub1.anInt2612 < var1 + var5) {
             Class3_Sub13_Sub7.aBoolean3094 = true;
-            Class2.anInt59 = 0;
+            Unsorted.anInt59 = 0;
             var12 = Class145.anInt1898;
             int var13 = Class1.anInt55;
             var11 = Class139.anInt1824;
@@ -122,7 +122,7 @@ public final class Class3_Sub13_Sub36 extends Class3_Sub13 {
             RenderAnimationDefinition.anInt384 = (-var13 + var14) * (Class38_Sub1.anInt2612 - var5) / var1 + var13;
          } else {
             Class3_Sub13_Sub7.aBoolean3094 = false;
-            Class2.anInt59 = 0;
+            Unsorted.anInt59 = 0;
          }
 
          Class58.method1194();
@@ -282,25 +282,6 @@ public final class Class3_Sub13_Sub36 extends Class3_Sub13 {
          this.anIntArray3425 = null;
       } catch (RuntimeException var3) {
          throw Class44.clientError(var3, "ui.BA(" + var1 + ')');
-      }
-   }
-
-   public static EnumDefinition method342(int var0) {
-      try {
-         EnumDefinition var2 = (EnumDefinition)Class129_Sub1.aClass47_2686.getNodeByID((long)var0);
-         if(var2 == null) {
-            byte[] var3 = Class45.aClass153_731.getFile(Class53.method1170((byte)44, var0), Class3_Sub30_Sub1.method810(var0));
-            var2 = new EnumDefinition();
-
-            if(null != var3) {
-               var2.decode(new DataBuffer(var3));
-            }
-
-            Class129_Sub1.aClass47_2686.method1097(var2, (long)var0, (byte)-115);
-         }
-         return var2;
-      } catch (RuntimeException var4) {
-         throw Class44.clientError(var4, "ui.IA(" + var0 + ',' + true + ')');
       }
    }
 

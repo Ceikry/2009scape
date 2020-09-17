@@ -1,6 +1,7 @@
 package org.rs09.client.console
 
 import org.rs09.client.LinkableInt
+import org.rs09.client.filestore.resources.configs.enums.EnumDefinitionProvider
 import org.rs09.client.rendering.RenderingUtils
 import org.rs09.client.rendering.Toolkit
 import org.runite.jagex.*
@@ -143,7 +144,7 @@ object DeveloperConsole {
         } else if (str.toLowerCase() == "quests") {
             println("<col=5555ff>~~~~~ MINIQUESTS ~~~~~</col>")
             System.out.println("~~~~~ MINIQUESTS ~~~~~")
-            var lookup = Class3_Sub13_Sub36.method342(208)
+            var lookup = EnumDefinitionProvider.provide(208)
 
             for (i in 0..17) {
                 val component = (lookup.values!![i.toLong()]!! as LinkableInt).value
@@ -157,7 +158,7 @@ object DeveloperConsole {
 
             println("<col=5555ff>~~~~~ QUESTS ~~~~~</col>")
             System.out.println("~~~~~ QUESTS ~~~~~")
-            lookup = Class3_Sub13_Sub36.method342(209)
+            lookup = EnumDefinitionProvider.provide(209)
 
             for (i in 0..130) {
                 val component = (lookup.values!![i.toLong()]!! as LinkableInt).value

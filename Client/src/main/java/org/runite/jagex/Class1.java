@@ -2,7 +2,7 @@ package org.runite.jagex;
 
 import org.rs09.client.rendering.Toolkit;
 import org.runite.Configurations;
-import org.rs09.client.collections.HashTable;
+import org.rs09.client.data.HashTable;
 
 final class Class1 {
 
@@ -71,7 +71,7 @@ final class Class1 {
                         var18.anInt2342 += var20.length / 2;
                         ++var18.anInt2344;
                         if (var17.aBoolean2092 && var15 != 0) {
-                            var18.anInt2342 += Class3_Sub28_Sub7.anIntArray3607[var19];
+                            var18.anInt2342 += Unsorted.anIntArray3607[var19];
                         }
                     }
 

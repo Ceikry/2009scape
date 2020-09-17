@@ -1,7 +1,7 @@
 package org.runite.jagex;
 
 import org.rs09.client.Node;
-import org.rs09.client.collections.HashTable;
+import org.rs09.client.data.HashTable;
 
 final class AssembledMethod extends Node {
 

@@ -1,6 +1,6 @@
 package org.runite.jagex;
 
-import org.rs09.client.collections.HashTable;
+import org.rs09.client.data.HashTable;
 import org.rs09.client.rendering.Toolkit;
 
 final class Class83 {
@@ -255,10 +255,10 @@ final class Class83 {
                               if(var26 != 0) {
                                  var28 = ('\ud228' & var25) >> 14;
                                  Class2 var47 = Class3_Sub28_Sub6.c(-1 + var26);
-                                 LDIndexedSprite var48 = var47.method77(var28, (byte)-71);
+                                 LDIndexedSprite var48 = var47.getSprite(var28);
                                  if(var48 != null) {
-                                    var31 = var22 * var48.anInt1468 / 4;
-                                    var30 = var16 * var48.anInt1461 / 4;
+                                    var31 = var22 * var48.height / 4;
+                                    var30 = var16 * var48.width / 4;
                                     if(var47.aBoolean69) {
                                        var32 = var25 >> 16 & 15;
                                        var33 = (16103184 & var25) >> 20;
@@ -273,10 +273,10 @@ final class Class83 {
                                     }
 
                                     if(var30 != 0 && var31 != 0) {
-                                       if(var47.anInt61 == 0) {
+                                       if(var47.color == 0) {
                                           var48.method1677(var14, -var31 + var20 - -var22, var30, var31);
                                        } else {
-                                          var48.method1669(var14, var20 - (var31 - var22), var30, var31, var47.anInt61);
+                                          var48.method1669(var14, var20 - (var31 - var22), var30, var31, var47.color);
                                        }
                                     }
                                  }

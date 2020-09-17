@@ -11,7 +11,7 @@ final class Class49 {
    static boolean[][] aBooleanArrayArray814;
    static int anInt815 = 0;
    static int anInt817;
-   static Class47 aClass47_818 = new Class47(64);
+   static NodeCache aClass47_818 = new NodeCache(64);
    static int anInt819 = 0;
 
 
@@ -84,7 +84,7 @@ final class Class49 {
 
    static byte[] method1123(int var0, int var1) {
       try {
-         Class3_Sub28_Sub8 var2 = (Class3_Sub28_Sub8)Class25.aClass47_480.getNodeByID((long)var1);
+         Class3_Sub28_Sub8 var2 = (Class3_Sub28_Sub8)Class25.aClass47_480.get((long)var1);
          if(null == var2) {
             Random var4 = new Random((long)var1);
             byte[] var3 = new byte[512];
@@ -103,7 +103,7 @@ final class Class49 {
             }
 
             var2 = new Class3_Sub28_Sub8(var3);
-            Class25.aClass47_480.method1097(var2, (long)var1, (byte)52);
+            Class25.aClass47_480.put((long)var1, var2);
          }
 
          return var0 != 16711935?(byte[])null:var2.aByteArray3612;
@@ -121,7 +121,7 @@ final class Class49 {
             }
          }
 
-         return Class3_Sub28_Sub12.method612(var1, (byte)124);
+         return Class3_Sub28_Sub12.method612(var1);
       } catch (RuntimeException var6) {
          throw Class44.clientError(var6, "ha.H(" + (var0 != null?"{...}":"null") + ',' + var1 + ',' + var3 + ',' + false + ')');
       }
@@ -129,7 +129,7 @@ final class Class49 {
 
    static void method1125(String var0, Throwable var1, byte var2) {
       if(var2 <= 100) {
-         aClass47_818 = (Class47)null;
+         aClass47_818 = (NodeCache)null;
       }
 
       try {

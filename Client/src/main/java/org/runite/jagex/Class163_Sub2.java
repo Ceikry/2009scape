@@ -36,7 +36,7 @@ class Class163_Sub2 extends Class163 {
 
             int var6 = var0.readUnsignedByte();
             int var7 = var0.readUnsignedByte();
-            int var9 = -(var7 * 64) - (-Class2.anInt65 - Class108.anInt1460 + 1);
+            int var9 = -(var7 * 64) - (-Unsorted.anInt65 - Class108.anInt1460 + 1);
             int var8 = var6 * 64 + -Class3_Sub13_Sub21.anInt3256;
             byte var2;
             int var10;

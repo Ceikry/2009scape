@@ -10,7 +10,7 @@ final class Class162 {
 
    static void method2203(Player var0) {
       try {
-         Class3_Sub9 var2 = (Class3_Sub9)Class3_Sub28_Sub7_Sub1.aHashTable_4046.get(var0.displayName.toLong());
+         Class3_Sub9 var2 = (Class3_Sub9) Unsorted.aHashTable_4046.get(var0.displayName.toLong());
 
          if(null != var2) {
             if(var2.aClass3_Sub24_Sub1_2312 != null) {
@@ -55,7 +55,7 @@ final class Class162 {
       try {
           //36873, 24065, 22418
 
-         ObjectDefinition var2 = (ObjectDefinition) Unsorted.aClass93_21.get((long)objectId);
+         ObjectDefinition var2 = (ObjectDefinition) Unsorted.aReferenceCache_21.get((long)objectId);
          if(var2 == null) {
             byte[] var3 = Class85.aClass153_1171.getFile(Class3_Sub13_Sub36.method340(objectId), objectId & 255);
             var2 = new ObjectDefinition();
@@ -74,7 +74,7 @@ final class Class162 {
                var2.ProjectileClipped = false;
             }
 
-            Unsorted.aClass93_21.put(var2, (long)objectId);
+            Unsorted.aReferenceCache_21.put(var2, (long)objectId);
          }
          return var2;
       } catch (RuntimeException var4) {

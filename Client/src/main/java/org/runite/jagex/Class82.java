@@ -6,7 +6,7 @@ final class Class82 {
 
    private final int[] anIntArray1144;
    private final Class3_Sub13 aClass3_Sub13_1145;
-   static Class93 aClass93_1146 = new Class93(64);
+   static ReferenceCache aReferenceCache_1146 = new ReferenceCache(64);
    private final Class3_Sub13[] aClass3_Sub13Array1147;
    private final Class3_Sub13 aClass3_Sub13_1148;
    private final int[] anIntArray1149;
@@ -235,11 +235,11 @@ final class Class82 {
                   Class3_Sub28_Sub16 var25 = Unsorted.aClass3_Sub28_Sub16Array996[1];
                   if(var8 instanceof NPC) {
                      NPC var28 = (NPC)var8;
-                     Class3_Sub28_Sub16[] var31 = (Class3_Sub28_Sub16[])((Class3_Sub28_Sub16[])Class3_Sub13_Sub11.aClass93_3130.get((long)var28.definition.anInt1279));
+                     Class3_Sub28_Sub16[] var31 = (Class3_Sub28_Sub16[])((Class3_Sub28_Sub16[])Class3_Sub13_Sub11.aReferenceCache_3130.get((long)var28.definition.anInt1279));
                      if(var31 == null) {
                         var31 = Class140_Sub6.getSprites(var28.definition.anInt1279, Class140_Sub6.spritesCacheIndex);
                         if(null != var31) {
-                           Class3_Sub13_Sub11.aClass93_3130.put(var31, (long)var28.definition.anInt1279);
+                           Class3_Sub13_Sub11.aReferenceCache_3130.put(var31, (long)var28.definition.anInt1279);
                         }
                      }
 
@@ -471,7 +471,7 @@ final class Class82 {
 
    static int method1406() {
       try {
-         return Class3_Sub28_Sub7_Sub1.anInt4045;
+         return Unsorted.anInt4045;
       } catch (RuntimeException var2) {
          throw Class44.clientError(var2, "lc.E(" + (byte) -43 + ')');
       }
@@ -616,7 +616,7 @@ final class Class82 {
 
    public static void method1409(boolean var0) {
       try {
-         aClass93_1146 = null;
+         aReferenceCache_1146 = null;
          if(var0) {
             aClass94_1151 = (RSString)null;
          }

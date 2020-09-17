@@ -1,9 +1,11 @@
 package org.runite.jagex;
 import org.rs09.client.Linkable;
-import org.rs09.client.collections.HashTable;
-import org.rs09.client.collections.Queue;
+import org.rs09.client.data.HashTable;
+import org.rs09.client.data.Queue;
 import org.rs09.client.filestore.resources.configs.enums.EnumDefinition;
 import org.rs09.client.LinkableInt;
+import org.rs09.client.filestore.resources.configs.enums.EnumDefinitionProvider;
+import org.rs09.client.filestore.resources.configs.structs.StructDefinitionProvider;
 
 import java.awt.Component;
 import java.nio.charset.StandardCharsets;
@@ -111,7 +113,7 @@ final class ItemDefinition {
 	static AssembledMethod getMethodByID(int methodID) {
 	   try {
 	   	   // Load and return method from cache
-		   AssembledMethod var2 = (AssembledMethod)Class56.aClass47_885.getNodeByID((long)methodID);
+		   AssembledMethod var2 = (AssembledMethod)Class56.aClass47_885.get((long)methodID);
 		   if (var2 != null) {
 			  return var2;
 		   }
@@ -167,7 +169,7 @@ final class ItemDefinition {
 					var2.instructionOperands[var9] = var4.readUnsignedByte();
 				 }
 			  }
-			  Class56.aClass47_885.method1097(var2, (long)methodID, (byte)-87);
+			  Class56.aClass47_885.put((long)methodID, var2);
 			  return var2;
 		   }
 	   } catch (RuntimeException var14) {
@@ -662,7 +664,7 @@ final class ItemDefinition {
 								Class20.method909(class11_2);
 							}
 							if (-1 == class11_2.anInt191)
-								Class3_Sub28_Sub7_Sub1.method569(class11_2.componentHash);
+								Unsorted.method569(class11_2.componentHash);
 							continue;
 						}
 						if (opcode == 1004) {
@@ -990,7 +992,7 @@ final class ItemDefinition {
 													}
 													if (3304 == opcode) {
 														int l8 = intsStack[--iStackCounter];
-														intsStack[iStackCounter++] = Unsorted.method2069(l8, -127).anInt3647;
+														intsStack[iStackCounter++] = Unsorted.method2069(l8).size;
 														continue;
 													}
 													if (opcode == 3305) {
@@ -1031,7 +1033,7 @@ final class ItemDefinition {
 														continue;
 													}
 													if (opcode == 3312) {
-														intsStack[iStackCounter++] = Class2.isMember ? 1 : 0;
+														intsStack[iStackCounter++] = Unsorted.isMember ? 1 : 0;
 														continue;
 													}
 													if (3313 == opcode) {
@@ -1161,7 +1163,7 @@ final class ItemDefinition {
 														iStackCounter -= 2;
 														int k12 = intsStack[iStackCounter];
 														int j49 = intsStack[1 + iStackCounter];
-														EnumDefinition enumDefinition_1 = Class3_Sub13_Sub36.method342(k12);
+														EnumDefinition enumDefinition_1 = EnumDefinitionProvider.provide(k12);
 														stringsStack[sStackCounter++] = enumDefinition_1.getString(j49);
 														continue;
 													}
@@ -1171,7 +1173,7 @@ final class ItemDefinition {
 														int k49 = intsStack[1 + iStackCounter];
 														int l76 = intsStack[3 + iStackCounter];
 														int k68 = intsStack[iStackCounter - -2];
-														EnumDefinition enumDefinition_4 = Class3_Sub13_Sub36.method342(k68);
+														EnumDefinition enumDefinition_4 = EnumDefinitionProvider.provide(k68);
 														if (enumDefinition_4.getKeyType() != l12 || k49 != enumDefinition_4.getValueType())
 															throw new RuntimeException("C3408-1");
 														if (k49 != 115)
@@ -1187,7 +1189,7 @@ final class ItemDefinition {
 														int i13 = intsStack[iStackCounter];
 														if (l49 == -1)
 															throw new RuntimeException("C3409-2");
-														EnumDefinition class3_sub28_sub13_3 = Class3_Sub13_Sub36.method342(l49);
+														EnumDefinition class3_sub28_sub13_3 = EnumDefinitionProvider.provide(l49);
 														if (i13 != class3_sub28_sub13_3.getValueType())
 															throw new RuntimeException("C3409-1");
 														intsStack[iStackCounter++] = class3_sub28_sub13_3.containsValue(l68) ? 1 : 0;
@@ -1198,7 +1200,7 @@ final class ItemDefinition {
 														RSString class94_45 = stringsStack[--sStackCounter];
 														if (j13 == -1)
 															throw new RuntimeException("C3410-2");
-														EnumDefinition enumDefinition_2 = Class3_Sub13_Sub36.method342(j13);
+														EnumDefinition enumDefinition_2 = EnumDefinitionProvider.provide(j13);
 														if (enumDefinition_2.getValueType() != 115)
 															throw new RuntimeException("C3410-1");
 														intsStack[iStackCounter++] = enumDefinition_2.containsValue(class94_45) ? 1 : 0;
@@ -1207,7 +1209,7 @@ final class ItemDefinition {
 													if (opcode != 3411)
 														break;
 													int k13 = intsStack[--iStackCounter];
-													EnumDefinition enumDefinition = Class3_Sub13_Sub36.method342(k13);
+													EnumDefinition enumDefinition = EnumDefinitionProvider.provide(k13);
 													intsStack[iStackCounter++] = enumDefinition.getValues().size();
 													continue;
 												}
@@ -2121,7 +2123,7 @@ final class ItemDefinition {
 																	}
 																	if (5209 == opcode) {
 																		intsStack[iStackCounter++] = Class3_Sub13_Sub21.anInt3256 + Class3_Sub28_Sub1.anInt3536;
-																		intsStack[iStackCounter++] = Class2.anInt65 + -Class3_Sub4.anInt2251 + (-1 + Class108.anInt1460);
+																		intsStack[iStackCounter++] = Unsorted.anInt65 + -Class3_Sub4.anInt2251 + (-1 + Class108.anInt1460);
 																		continue;
 																	}
 																	if (opcode == 5210) {
@@ -2178,7 +2180,7 @@ final class ItemDefinition {
 																	}
 																	if (opcode == 5214) {
 																		int l30 = intsStack[--iStackCounter];
-																		Class3_Sub28_Sub7.method565(0x3fff & l30 >> 14, 0x3fff & l30);
+																		Unsorted.method565(0x3fff & l30 >> 14, 0x3fff & l30);
 																		continue;
 																	}
 																	if (opcode == 5215) {
@@ -2321,7 +2323,7 @@ final class ItemDefinition {
 																		Unsorted.method746((byte) -29);
 																		Class167.method2265();
 																		WorldListEntry.method1076();
-																		Class47.method1093(false);
+																		Unsorted.method1093(false);
 																		continue;
 																	}
 																	if (opcode == 5405) {
@@ -2511,7 +2513,7 @@ final class ItemDefinition {
 																			Class3_Sub13_Sub25.anInt3315 = GraphicDefinition.CAMERA_DIRECTION;
 																			Class139.anInt1823 = Class3_Sub9.anInt2309;
 																		}
-																		Class47.method1098((byte) -74);
+																		Unsorted.method1098((byte) -74);
 																		continue;
 																	}
 																	if (opcode == 5505) {
@@ -2562,7 +2564,7 @@ final class ItemDefinition {
 																			continue;
 																		}
 																		if (opcode == 6003) {
-																			Class3_Sub28_Sub7.aBoolean3604 = intsStack[--iStackCounter] == 1;
+																			Unsorted.aBoolean3604 = intsStack[--iStackCounter] == 1;
 																			Unsorted.method792();
 																			Class119.method1730(Class38.aClass87_665);
 																			Class140_Sub2.aBoolean2705 = false;
@@ -2758,7 +2760,7 @@ final class ItemDefinition {
 																			continue;
 																		}
 																		if (opcode == 6103) {
-																			intsStack[iStackCounter++] = Class3_Sub28_Sub7.aBoolean3604 ? 1 : 0;
+																			intsStack[iStackCounter++] = Unsorted.aBoolean3604 ? 1 : 0;
 																			continue;
 																		}
 																		if (opcode == 6105) {
@@ -2999,7 +3001,7 @@ final class ItemDefinition {
 																			continue;
 																		}
 																		if (6405 == opcode) {
-																			intsStack[iStackCounter++] = Class47.method1088(false) ? 1 : 0;
+																			intsStack[iStackCounter++] = Unsorted.method1088(false) ? 1 : 0;
 																			continue;
 																		}
 																		if (opcode != 6406)
@@ -3142,9 +3144,9 @@ final class ItemDefinition {
 															int i61 = intsStack[iStackCounter - -1];
 															Class3_Sub28_Sub9 class3_sub28_sub9_1 = Class61.method1210(i61);
 															if (!class3_sub28_sub9_1.method585())
-																intsStack[iStackCounter++] = Class72.method1292((byte) 94, i38).getInt(i61, class3_sub28_sub9_1.anInt3614);
+																intsStack[iStackCounter++] = StructDefinitionProvider.provide(i38).getInt(i61, class3_sub28_sub9_1.anInt3614);
 															else
-																stringsStack[sStackCounter++] = Class72.method1292((byte) 31, i38).getString(i61, class3_sub28_sub9_1.aClass94_3619);
+																stringsStack[sStackCounter++] = StructDefinitionProvider.provide(i38).getString(i61, class3_sub28_sub9_1.aClass94_3619);
 															continue;
 														}
 														if (opcode != 4400)
@@ -3288,7 +3290,7 @@ final class ItemDefinition {
 													int k80 = Class3_Sub28_Sub9.aCalendar3616.get(Calendar.MONTH);
 													int i82 = Class3_Sub28_Sub9.aCalendar3616.get(Calendar.YEAR);
 													stringsStack[sStackCounter++] = RenderAnimationDefinition.method903(new RSString[]{
-															Class72.method1298((byte) 9, k78), Class93.aClass94_1326, TextCore.MonthsOfTheYear[k80], Class93.aClass94_1326, Class72.method1298((byte) 9, i82)
+															Class72.method1298((byte) 9, k78), Unsorted.aClass94_1326, TextCore.MonthsOfTheYear[k80], Unsorted.aClass94_1326, Class72.method1298((byte) 9, i82)
 													});
 													continue;
 												}
@@ -3389,7 +3391,7 @@ final class ItemDefinition {
 												}
 												if (opcode == 4119) {
 													RSString class94_41 = stringsStack[--sStackCounter];
-													RSString class94_60 = Class47.emptyString(class94_41.length());
+													RSString class94_60 = Unsorted.emptyString(class94_41.length());
 													boolean flag9 = false;
 													for (int l78 = 0; class94_41.length() > l78; l78++) {
 														int l80 = class94_41.charAt(l78, (byte) -40);
@@ -3861,7 +3863,7 @@ final class ItemDefinition {
 							Class20.method909(class11_16);
 						}
 						if (class11_16.anInt191 == -1)
-							Class93.method1516(class11_16.componentHash, 91);
+							Unsorted.method1516(class11_16.componentHash, 91);
 						continue;
 					}
 					if (opcode == 1113) {
@@ -4131,7 +4133,7 @@ final class ItemDefinition {
 				}
 			}
 
-			Model var11 = (Model)Class143.aClass93_1874.get((long)this.itemId);
+			Model var11 = (Model)Class143.aReferenceCache_1874.get((long)this.itemId);
 			if(var11 == null) {
 				Model_Sub1 var12 = Model_Sub1.method2015(LinkableRSString.aClass153_2581, this.anInt755);
 				if(null == var12) {
@@ -4165,7 +4167,7 @@ final class ItemDefinition {
 					((Class140_Sub1_Sub1)var11).method1920(false, false, false, false, false, true);
 				}
 
-				Class143.aClass93_1874.put(var11, (long)this.itemId);
+				Class143.aReferenceCache_1874.put(var11, (long)this.itemId);
 			}
 
 			if(var4 != null) {
@@ -4503,13 +4505,13 @@ final class ItemDefinition {
 
 	static void method1119(Component var0, boolean var1) {
 		try {
-			var0.addMouseListener(Class3_Sub28_Sub7_Sub1.aClass149_4047);
+			var0.addMouseListener(Unsorted.aClass149_4047);
 			if(var1) {
 				aClass94_811 = (RSString)null;
 			}
 
-			var0.addMouseMotionListener(Class3_Sub28_Sub7_Sub1.aClass149_4047);
-			var0.addFocusListener(Class3_Sub28_Sub7_Sub1.aClass149_4047);
+			var0.addMouseMotionListener(Unsorted.aClass149_4047);
+			var0.addFocusListener(Unsorted.aClass149_4047);
 		} catch (RuntimeException var3) {
 			throw Class44.clientError(var3, "h.K(" + (var0 != null?"{...}":"null") + ',' + var1 + ')');
 		}

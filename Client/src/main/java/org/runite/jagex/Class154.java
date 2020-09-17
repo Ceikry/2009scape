@@ -2,11 +2,11 @@ package org.runite.jagex;
 
 final class Class154 {
 
-   static Class93 aClass93_1955 = new Class93(64);
+   static ReferenceCache aReferenceCache_1955 = new ReferenceCache(64);
    static int anInt1957;
    static int[] anIntArray1960 = new int[14];
-   static Class93 aClass93_1964 = new Class93(5);
-   static Class93 aClass93_1965 = new Class93(50);
+   static ReferenceCache aReferenceCache_1964 = new ReferenceCache(5);
+   static ReferenceCache aReferenceCache_1965 = new ReferenceCache(50);
    static int anInt1966 = -1;
    static CacheIndex aClass153_1967;
 

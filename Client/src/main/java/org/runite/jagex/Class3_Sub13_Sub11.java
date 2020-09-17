@@ -1,16 +1,16 @@
 package org.runite.jagex;
 
-import org.rs09.client.collections.HashTable;
+import org.rs09.client.data.HashTable;
 
 final class Class3_Sub13_Sub11 extends Class3_Sub13 {
 
    private int anInt3129;
-   static Class93 aClass93_3130 = new Class93(4);
+   static ReferenceCache aReferenceCache_3130 = new ReferenceCache(4);
    static int anInt3132;
    static RSString aClass94_3133 = RSString.parse(")2");
    private int anInt3134;
    private int anInt3135;
-   static Class47 aClass47_3137 = new Class47(64);
+   static NodeCache aClass47_3137 = new NodeCache(64);
    static int[] anIntArray3139 = new int[14];
    static RSString aClass94_3140 = RSString.parse("overlay2");
 
@@ -76,7 +76,7 @@ final class Class3_Sub13_Sub11 extends Class3_Sub13 {
             Class3_Sub7.method122(3000 + -2918);
             Class3_Sub28_Sub12.anInt3655 = Class3_Sub22.anInt2529;
             Class124.method1746(false, (byte)-36);
-            Class47.method1093(false);
+            Unsorted.method1093(false);
             Class3_Sub13_Sub12.method226(Class3_Sub28_Sub12.anInt3655, 3000 ^ 2960);
          }
 

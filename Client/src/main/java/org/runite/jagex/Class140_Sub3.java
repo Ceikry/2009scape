@@ -33,7 +33,7 @@ final class Class140_Sub3 extends GameObject {
    static Model method1957(int var0, boolean var1, AnimationDefinition var2, int var3, int var4, int var5, int var6, int var7, Model var8, int var9, int var10, int var11, int var12) {
       try {
          long var14 = ((long)var4 << 48) + (long)(var7 + (var0 << 16) - -(var12 << 24)) + ((long)var6 << 32);
-         Model var16 = (Model)Class158_Sub1.aClass93_2982.get(var14);
+         Model var16 = (Model)Class158_Sub1.aReferenceCache_2982.get(var14);
          int var21;
          int var23;
          int var25;
@@ -88,7 +88,7 @@ final class Class140_Sub3 extends GameObject {
             }
 
             var16 = var20.method2008(64, 768, -50, -10, -50);
-            Class158_Sub1.aClass93_2982.put(var16, var14);
+            Class158_Sub1.aReferenceCache_2982.put(var16, var14);
          }
 
          int var32 = var7 * 64 + -1;
@@ -162,7 +162,7 @@ final class Class140_Sub3 extends GameObject {
             Class140_Sub1_Sub1 var36 = (Class140_Sub1_Sub1)var16;
             if(var11 != Class121.method1736(WorldListCountry.localPlane, (byte) -49 ^ -50, var3 - -var35, var24 + var5) || var11 != Class121.method1736(WorldListCountry.localPlane, 1, var23 + var3, var5 - -var25)) {
                for(var28 = 0; var28 < var36.anInt3823; ++var28) {
-                  var36.anIntArray3845[var28] += -var11 + Class121.method1736(WorldListCountry.localPlane, Class93.bitwiseXOR((byte) -49, -50), var36.anIntArray3822[var28] - -var3, var5 + var36.anIntArray3848[var28]);
+                  var36.anIntArray3845[var28] += -var11 + Class121.method1736(WorldListCountry.localPlane, Unsorted.bitwiseXOR((byte) -49, -50), var36.anIntArray3822[var28] - -var3, var5 + var36.anIntArray3848[var28]);
                }
 
                var36.aClass6_3835.aBoolean98 = false;

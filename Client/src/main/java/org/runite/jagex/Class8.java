@@ -138,7 +138,7 @@ final class Class8 {
          GameObject.aClass11Array1836 = null;
          Class3_Sub13_Sub1.method171(-101, Class3_Sub28_Sub12.anInt3655, 0, Class23.anInt454, 0, -1, Class140_Sub7.anInt2934, 0, 0);
          if(GameObject.aClass11Array1836 != null) {
-            Class47.method1095(0, Unsorted.anInt1082, Class3_Sub28_Sub7.anInt3602, GameObject.aClass11Array1836, Class23.anInt454, -1412584499, 0, Class140_Sub7.anInt2934, (byte)73, PacketParser.aClass11_88.anInt292);
+            Unsorted.method1095(0, Unsorted.anInt1082, Unsorted.anInt3602, GameObject.aClass11Array1836, Class23.anInt454, -1412584499, 0, Class140_Sub7.anInt2934, (byte)73, PacketParser.aClass11_88.anInt292);
             GameObject.aClass11Array1836 = null;
          }
 

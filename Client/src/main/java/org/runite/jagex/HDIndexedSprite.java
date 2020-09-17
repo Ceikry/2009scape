@@ -15,14 +15,14 @@ final class HDIndexedSprite extends AbstractIndexedSprite {
 
 
    private void method1678(byte[] var1, int[] var2) {
-      this.anInt2681 = Class95.method1585((byte)62, this.anInt1461);
-      this.anInt2680 = Class95.method1585((byte)99, this.anInt1468);
+      this.anInt2681 = Class95.method1585((byte)62, this.width);
+      this.anInt2680 = Class95.method1585((byte)99, this.height);
       byte[] var3 = new byte[this.anInt2681 * this.anInt2680 * 4];
       int var4 = 0;
       int var5 = 0;
 
-      for(int var6 = 0; var6 < this.anInt1468; ++var6) {
-         for(int var7 = 0; var7 < this.anInt1461; ++var7) {
+      for(int var6 = 0; var6 < this.height; ++var6) {
+         for(int var7 = 0; var7 < this.width; ++var7) {
              // Hd Fix
         	if (var1[var5]  < 0) {
         		return;
@@ -38,7 +38,7 @@ final class HDIndexedSprite extends AbstractIndexedSprite {
                var3[var4++] = -1;
             }
          }
-         var4 += (this.anInt2681 - this.anInt1461) * 4;
+         var4 += (this.anInt2681 - this.width) * 4;
       }
       ByteBuffer byteBuffer = ByteBuffer.wrap(var3);
       GL gl = HDToolKit.gl;
@@ -106,8 +106,8 @@ final class HDIndexedSprite extends AbstractIndexedSprite {
    }
 
    private void method1680() {
-      float var1 = (float)this.anInt1461 / (float)this.anInt2681;
-      float var2 = (float)this.anInt1468 / (float)this.anInt2680;
+      float var1 = (float)this.width / (float)this.anInt2681;
+      float var2 = (float)this.height / (float)this.anInt2680;
       javax.media.opengl.GL var3 = HDToolKit.gl;
       if(this.anInt2676 == -1) {
          this.anInt2676 = var3.glGenLists(1);
@@ -117,13 +117,13 @@ final class HDIndexedSprite extends AbstractIndexedSprite {
       var3.glNewList(this.anInt2676, 4864);
       var3.glBegin(6);
       var3.glTexCoord2f(var1, 0.0F);
-      var3.glVertex2f((float)this.anInt1461, 0.0F);
+      var3.glVertex2f((float)this.width, 0.0F);
       var3.glTexCoord2f(0.0F, 0.0F);
       var3.glVertex2f(0.0F, 0.0F);
       var3.glTexCoord2f(0.0F, var2);
-      var3.glVertex2f(0.0F, (float)(-this.anInt1468));
+      var3.glVertex2f(0.0F, (float)(-this.height));
       var3.glTexCoord2f(var1, var2);
-      var3.glVertex2f((float)this.anInt1461, (float)(-this.anInt1468));
+      var3.glVertex2f((float)this.width, (float)(-this.height));
       var3.glEnd();
       var3.glEndList();
    }
@@ -133,8 +133,8 @@ final class HDIndexedSprite extends AbstractIndexedSprite {
       this.anInt1467 = var2;
       this.anInt1470 = var3;
       this.anInt1464 = var4;
-      this.anInt1461 = var5;
-      this.anInt1468 = var6;
+      this.width = var5;
+      this.height = var6;
       this.method1678(var7, var8);
       this.method1680();
    }

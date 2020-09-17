@@ -26,7 +26,7 @@ final class Class3_Sub8 extends Linkable {
          }
 
          if(Unsorted.loadInterface(var2)) {
-            Class2.method75(GameObject.aClass11ArrayArray1834[var2], var1);
+            Unsorted.method75(GameObject.aClass11ArrayArray1834[var2], var1);
          }
       } catch (RuntimeException var4) {
          throw Class44.clientError(var4, "ed.A(" + var0 + ',' + var1 + ',' + var2 + ')');
@@ -107,7 +107,7 @@ final class Class3_Sub8 extends Linkable {
 
             for(var9 = 0; MouseListeningClass.anInt1924 > var9; ++var9) {
                var10 = -(Class102.player.anInt2819 / 32) + 2 + 4 * Class84.anIntArray1163[var9];
-               var11 = -(Class102.player.anInt2829 / 32) + 2 + (Class3_Sub28_Sub7_Sub1.anIntArray4050[var9] * 4);
+               var11 = -(Class102.player.anInt2829 / 32) + 2 + (Unsorted.anIntArray4050[var9] * 4);
                ObjectDefinition var20 = Class162.getObjectDefinition(Class3_Sub19.anIntArray3693[var9]);
                if(null != var20.ChildrenIds) {
                   var20 = var20.method1685(var1 + -59);
@@ -303,7 +303,7 @@ final class Class3_Sub8 extends Linkable {
 
    static void method128() {
       try {
-         Class44.aClass93_725.method1524();
+         Class44.aReferenceCache_725.clear();
 
       } catch (RuntimeException var2) {
          throw Class44.clientError(var2, "ed.O(" + 2 + ')');

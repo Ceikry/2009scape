@@ -6,7 +6,7 @@ final class Class3_Sub31 extends Linkable {
 
    int anInt2602;
    int anInt2603;
-   static Class93 aClass93_2604 = new Class93(64);
+   static ReferenceCache aReferenceCache_2604 = new ReferenceCache(64);
    static RSString COMMAND_BREAK_JS5_CLIENT_CONNECTION = RSString.parse("::clientjs5drop");
    static int[] anIntArray2606;
    static int countryId;
@@ -15,9 +15,9 @@ final class Class3_Sub31 extends Linkable {
 
    static void method820(int var0, int var1) {
       try {
-         KeyboardListener.aClass93_1911.method1522(-127, var0);
+         KeyboardListener.aReferenceCache_1911.sweep(var0);
          if(var1 == 64) {
-            Unsorted.aClass93_1131.method1522(-126, var0);
+            Unsorted.aReferenceCache_1131.sweep(var0);
          }
       } catch (RuntimeException var3) {
          throw Class44.clientError(var3, "wk.C(" + var0 + ',' + var1 + ')');

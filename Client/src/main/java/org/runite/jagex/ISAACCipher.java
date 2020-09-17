@@ -206,8 +206,8 @@ final class ISAACCipher {
             int var3 = Class3_Sub28_Sub3.anInt3552;
             if (Class3_Sub13_Sub7.aClass3_Sub28_Sub16_3099 == null || null == Class108.aClass3_Sub28_Sub16_1457) {
                 if (Class140_Sub6.spritesCacheIndex.method2144(WorldListCountry.archiveID) && Class140_Sub6.spritesCacheIndex.method2144(Class99.anInt1400)) {
-                    Class3_Sub13_Sub7.aClass3_Sub28_Sub16_3099 = Class3_Sub28_Sub7.method562(Class140_Sub6.spritesCacheIndex, WorldListCountry.archiveID);
-                    Class108.aClass3_Sub28_Sub16_1457 = Class3_Sub28_Sub7.method562(Class140_Sub6.spritesCacheIndex, Class99.anInt1400);
+                    Class3_Sub13_Sub7.aClass3_Sub28_Sub16_3099 = Unsorted.method562(Class140_Sub6.spritesCacheIndex, WorldListCountry.archiveID);
+                    Class108.aClass3_Sub28_Sub16_1457 = Unsorted.method562(Class140_Sub6.spritesCacheIndex, Class99.anInt1400);
                     if (HDToolKit.highDetail) {
                         if (Class3_Sub13_Sub7.aClass3_Sub28_Sub16_3099 instanceof Class3_Sub28_Sub16_Sub2_Sub1) {
                             Class3_Sub13_Sub7.aClass3_Sub28_Sub16_3099 = new Class3_Sub28_Sub16_Sub1_Sub1((Class3_Sub28_Sub16_Sub2) Class3_Sub13_Sub7.aClass3_Sub28_Sub16_3099);
@@ -254,9 +254,9 @@ final class ISAACCipher {
             }
 
             if ((Class95.aClass3_Sub28_Sub16_1339 == null || Class50.aClass3_Sub28_Sub16_824 == null || null == Class3_Sub26.aClass3_Sub28_Sub16_2560) && Class140_Sub6.spritesCacheIndex.method2144(Class46.anInt739) && Class140_Sub6.spritesCacheIndex.method2144(Class79.anInt1126) && Class140_Sub6.spritesCacheIndex.method2144(Class140_Sub7.anInt2937)) {
-                Class95.aClass3_Sub28_Sub16_1339 = Class3_Sub28_Sub7.method562(Class140_Sub6.spritesCacheIndex, Class46.anInt739);
-                Class50.aClass3_Sub28_Sub16_824 = Class3_Sub28_Sub7.method562(Class140_Sub6.spritesCacheIndex, Class79.anInt1126);
-                Class3_Sub26.aClass3_Sub28_Sub16_2560 = Class3_Sub28_Sub7.method562(Class140_Sub6.spritesCacheIndex, Class140_Sub7.anInt2937);
+                Class95.aClass3_Sub28_Sub16_1339 = Unsorted.method562(Class140_Sub6.spritesCacheIndex, Class46.anInt739);
+                Class50.aClass3_Sub28_Sub16_824 = Unsorted.method562(Class140_Sub6.spritesCacheIndex, Class79.anInt1126);
+                Class3_Sub26.aClass3_Sub28_Sub16_2560 = Unsorted.method562(Class140_Sub6.spritesCacheIndex, Class140_Sub7.anInt2937);
                 if (HDToolKit.highDetail) {
                     if (Class95.aClass3_Sub28_Sub16_1339 instanceof Class3_Sub28_Sub16_Sub2_Sub1) {
                         Class95.aClass3_Sub28_Sub16_1339 = new Class3_Sub28_Sub16_Sub1_Sub1((Class3_Sub28_Sub16_Sub2) Class95.aClass3_Sub28_Sub16_1339);

@@ -1,6 +1,6 @@
 package org.runite.jagex;
 
-import org.rs09.client.collections.HashTable;
+import org.rs09.client.data.HashTable;
 
 import java.util.Objects;
 
@@ -29,7 +29,7 @@ final class Class3_Sub13_Sub17 extends Class3_Sub13 {
          Class133.method1803();
          Class38.method1025((byte)-93);
          Class40.method1044(-3782);
-         Class136.aClass93_1772.method1523((byte)-99);
+         Class136.aReferenceCache_1772.clearSoftReferences();
          Class158_Sub1.method2192();
          Class159.method2196();
          Class50.method1132(103);
@@ -42,8 +42,8 @@ final class Class3_Sub13_Sub17 extends Class3_Sub13 {
          Class3_Sub28_Sub6.h();
          Class107.method1650();
          MouseListeningClass.method2089();
-         Class3_Sub13_Sub11.aClass93_3130.method1523((byte)-103);
-         Unsorted.aClass93_1135.method1523((byte)-122);
+         Class3_Sub13_Sub11.aReferenceCache_3130.clearSoftReferences();
+         Unsorted.aReferenceCache_1135.clearSoftReferences();
       } catch (RuntimeException var2) {
          throw Class44.clientError(var2, "je.O(" + var0 + ')');
       }

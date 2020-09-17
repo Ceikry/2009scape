@@ -716,7 +716,7 @@ public final class PacketParser {
                                                     Class3_Sub13_Sub25.anInt3315 = GraphicDefinition.CAMERA_DIRECTION;
                                                 }
 
-                                                Class47.method1098((byte) -117);
+                                                Unsorted.method1098((byte) -117);
 
                                                 Unsorted.incomingOpcode = -1;
                                                 return true;
@@ -1379,7 +1379,7 @@ public final class PacketParser {
                                                         playerName = GraphicDefinition.incomingBuffer.readString();
                                                         modelId = GraphicDefinition.incomingBuffer.readUnsignedShort128();
                                                         Class146.updateInterfacePacketCounter(modelId);
-                                                        Class3_Sub28_Sub7.method566(playerName, nodeModelId);
+                                                        Unsorted.method566(playerName, nodeModelId);
 
                                                         Unsorted.incomingOpcode = -1;
                                                         return true;

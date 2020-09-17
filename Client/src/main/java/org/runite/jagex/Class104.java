@@ -17,10 +17,10 @@ final class Class104 implements Interface5 {
 
    static void method1626(byte var0) {
       try {
-         Class3_Sub28_Sub4.aClass93_3572.method1524();
-         Class143.aClass93_1874.method1524();
+         Class3_Sub28_Sub4.aReferenceCache_3572.clear();
+         Class143.aReferenceCache_1874.clear();
          if(var0 <= -124) {
-            Class67.aClass93_1013.method1524();
+            Class67.aReferenceCache_1013.clear();
          }
       } catch (RuntimeException var2) {
          throw Class44.clientError(var2, "ob.F(" + var0 + ')');
@@ -45,7 +45,7 @@ final class Class104 implements Interface5 {
                if (Class163_Sub2.aClass94_2996 != null) {
                   var4 = RenderAnimationDefinition.method903(new RSString[]{Class97.aClass94_1380, Class163_Sub2.aClass94_2996});
                }
-               RSString var5 = RenderAnimationDefinition.method903(new RSString[]{RSString.parse("http:)4)4"), var2.address, var9, Class3_Sub31.aClass94_2608, Class72.method1298((byte) 9, Class3_Sub20.language), aClass94_2175, Class72.method1298((byte) 9, Class3_Sub26.anInt2554), var4, Unsorted.aClass94_1133, !Unsorted.aBoolean3641 ? Class164_Sub1.aClass94_3013 : Class14.aClass94_339, Class38_Sub1.aClass94_2610, !Class163_Sub2_Sub1.aBoolean4018 ? Class164_Sub1.aClass94_3013 : Class14.aClass94_339, Class118.aClass94_1617, Class3_Sub28_Sub19.aBoolean3779 ? Class14.aClass94_339 : Class164_Sub1.aClass94_3013});
+               RSString var5 = RenderAnimationDefinition.method903(new RSString[]{RSString.parse("http:)4)4"), var2.address, var9, Class3_Sub31.aClass94_2608, Class72.method1298((byte) 9, Class3_Sub20.language), aClass94_2175, Class72.method1298((byte) 9, Class3_Sub26.anInt2554), var4, Unsorted.aClass94_1133, !Unsorted.aBoolean3641 ? Class164_Sub1.aClass94_3013 : Class14.aClass94_339, Class38_Sub1.aClass94_2610, !Class163_Sub2_Sub1.aBoolean4018 ? Class164_Sub1.aClass94_3013 : Class14.aClass94_339, Unsorted.aClass94_1617, Class3_Sub28_Sub19.aBoolean3779 ? Class14.aClass94_339 : Class164_Sub1.aClass94_3013});
 
                try {
                   Objects.requireNonNull(Class126.aClient1671.getAppletContext()).showDocument(var5.toURL(), "_self");
@@ -102,7 +102,7 @@ final class Class104 implements Interface5 {
 
           long var25 = -1L;
 
-          for(var9 = 0; Class2.anInt59 > var9; ++var9) {
+          for(var9 = 0; Unsorted.anInt59 > var9; ++var9) {
              long var26 = Class3_Sub13_Sub38.aLongArray3448[var9];
              var12 = (int)var26 & 127;
              int var14 = ((int)var26 & 2009320690) >> 29;

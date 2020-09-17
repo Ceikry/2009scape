@@ -200,18 +200,18 @@ public final class RSInterface {
                     return false;
                 } else {
                     var2.method1675();
-                    this.anIntArray207 = new int[var2.anInt1468];
-                    this.anIntArray291 = new int[var2.anInt1468];
+                    this.anIntArray207 = new int[var2.height];
+                    this.anIntArray291 = new int[var2.height];
                     int var3 = 0;
 
-                    while (var2.anInt1468 > var3) {
+                    while (var2.height > var3) {
                         int var4 = 0;
-                        int var5 = var2.anInt1461;
+                        int var5 = var2.width;
                         int var6 = 0;
 
                         while (true) {
-                            if (var2.anInt1461 > var6) {
-                                if (var2.aByteArray2674[var2.anInt1461 * var3 + var6] == 0) {
+                            if (var2.width > var6) {
+                                if (var2.raster[var2.width * var3 + var6] == 0) {
                                     ++var6;
                                     continue;
                                 }
@@ -219,8 +219,8 @@ public final class RSInterface {
                                 var4 = var6;
                             }
 
-                            for (var6 = var4; var2.anInt1461 > var6; ++var6) {
-                                if (0 == var2.aByteArray2674[var3 * var2.anInt1461 + var6]) {
+                            for (var6 = var4; var2.width > var6; ++var6) {
+                                if (0 == var2.raster[var3 * var2.width + var6]) {
                                     var5 = var6;
                                     break;
                                 }
@@ -246,7 +246,7 @@ public final class RSInterface {
     static RSString method856() {
         try {
 
-            RSString var1 = Class3_Sub28_Sub7_Sub1.aClass94_4052;
+            RSString var1 = Unsorted.aClass94_4052;
             RSString var2 = Class3_Sub28_Sub14.aClass94_3672;
             if (Class44.anInt718 != 0) {
                 var1 = RSString.parse("www)2wtqa");
@@ -256,7 +256,7 @@ public final class RSInterface {
                 var2 = RenderAnimationDefinition.method903(new RSString[]{Unsorted.aClass94_3637, Class163_Sub2.aClass94_2996});
             }
 
-            return RenderAnimationDefinition.method903(new RSString[]{Class30.aClass94_577, var1, Class3_Sub28_Sub7.aClass94_3601, Class72.method1298((byte) 9, Class3_Sub20.language), Unsorted.aClass94_1932, Class72.method1298((byte) 9, Class3_Sub26.anInt2554), var2, Class140_Sub3.aClass94_2735});
+            return RenderAnimationDefinition.method903(new RSString[]{Class30.aClass94_577, var1, Unsorted.aClass94_3601, Class72.method1298((byte) 9, Class3_Sub20.language), Unsorted.aClass94_1932, Class72.method1298((byte) 9, Class3_Sub26.anInt2554), var2, Class140_Sub3.aClass94_2735});
         } catch (RuntimeException var3) {
             throw Class44.clientError(var3, "be.N(" + true + ')');
         }
@@ -548,13 +548,13 @@ public final class RSInterface {
                 if (var3 == -1) {
                     return null;
                 } else {
-                    Class3_Sub28_Sub16 var4 = (Class3_Sub28_Sub16) Class114.aClass93_1569.get((long) var3);
+                    Class3_Sub28_Sub16 var4 = (Class3_Sub28_Sub16) Class114.aReferenceCache_1569.get((long) var3);
                     if (var4 == null) {
                         var4 = Unsorted.method602(0, var3, (byte) -18, Class12.aClass153_323);
                         if (null == var4) {
                             GameShell.aBoolean6 = true;
                         } else {
-                            Class114.aClass93_1569.put(var4, (long) var3);
+                            Class114.aReferenceCache_1569.put(var4, (long) var3);
                         }
 
                     }
@@ -652,7 +652,7 @@ public final class RSInterface {
             } else {
                 Model var10;
                 if (1 == var8) {
-                    var10 = (Model) Class3_Sub15.aClass93_2428.get((long) ((var8 << 16) - -var9));
+                    var10 = (Model) Class3_Sub15.aReferenceCache_2428.get((long) ((var8 << 16) - -var9));
                     if (var10 == null) {
                         Model_Sub1 var18 = Model_Sub1.method2015(Class119.aClass153_1628, var9);
                         if (var18 == null) {
@@ -661,7 +661,7 @@ public final class RSInterface {
                         }
 
                         var10 = var18.method2008(64, 768, -50, -10, -50);
-                        Class3_Sub15.aClass93_2428.put(var10, (long) (var9 + (var8 << 16)));
+                        Class3_Sub15.aReferenceCache_2428.put(var10, (long) (var9 + (var8 << 16)));
                     }
 
                     if (var2 != null) {
@@ -741,11 +741,11 @@ public final class RSInterface {
                 return null;
             } else {
                 long var4 = ((this.aBoolean178 ? 1L : 0L) << 38) + ((!this.aBoolean157 ? 0L : 1L) << 35) + (long) archiveId + ((long) this.anInt288 << 36) + ((this.aBoolean199 ? 1L : 0L) << 39) + ((long) this.anInt287 << 40);
-                Class3_Sub28_Sub16 var6 = (Class3_Sub28_Sub16) Class114.aClass93_1569.get(var4);
+                Class3_Sub28_Sub16 var6 = (Class3_Sub28_Sub16) Class114.aReferenceCache_1569.get(var4);
                 if (var6 == null) {
                     Class3_Sub28_Sub16_Sub2 var7;
                     if (this.aBoolean157) {
-                        var7 = Class3_Sub28_Sub7.method562(Class12.aClass153_323, archiveId);
+                        var7 = Unsorted.method562(Class12.aClass153_323, archiveId);
                     } else {
                         var7 = Class40.method1043(0, Class12.aClass153_323, archiveId);
                     }
@@ -789,7 +789,7 @@ public final class RSInterface {
                             var9 = var7;
                         }
 
-                        Class114.aClass93_1569.put(var9, var4);
+                        Class114.aReferenceCache_1569.put(var9, var4);
                         return (Class3_Sub28_Sub16) var9;
                     }
                 } else {
@@ -1012,14 +1012,14 @@ public final class RSInterface {
             if (this.anInt270 == -1) {
                 return null;
             } else {
-                Class3_Sub28_Sub17 var3 = (Class3_Sub28_Sub17) Class47.aClass93_743.get((long) this.anInt270);
+                Class3_Sub28_Sub17 var3 = (Class3_Sub28_Sub17) Unsorted.aReferenceCache_743.get((long) this.anInt270);
                 if (null == var3) {
                     var3 = Unsorted.method1300(this.anInt270, Class12.aClass153_323, Class97.aClass153_1378);
                     if (null == var3) {
                         GameShell.aBoolean6 = true;
                     } else {
                         var3.method697(var1, (int[]) null);
-                        Class47.aClass93_743.put(var3, (long) this.anInt270);
+                        Unsorted.aReferenceCache_743.put(var3, (long) this.anInt270);
                     }
 
                 }

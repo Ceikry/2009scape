@@ -2,7 +2,7 @@ package org.runite.jagex;
 
 import org.runite.GameLaunch;
 import org.rs09.client.util.ArrayUtils;
-import org.rs09.client.collections.HashTable;
+import org.rs09.client.data.HashTable;
 
 import java.applet.Applet;
 import java.awt.FontMetrics;
@@ -609,7 +609,7 @@ public final class RSString implements Interface3 {
                 int var7 = this.method1566(var3, var6);
                 if (0 > var7) {
                     var6 = 0;
-                    RSString var10 = Class47.emptyString(var4);
+                    RSString var10 = Unsorted.emptyString(var4);
 
                     while (true) {
                         int var8 = this.method1566(var3, var6);

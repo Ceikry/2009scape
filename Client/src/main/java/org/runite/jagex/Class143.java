@@ -2,7 +2,7 @@ package org.runite.jagex;
 
 final class Class143 {
 
-   static Class93 aClass93_1874 = new Class93(50);
+   static ReferenceCache aReferenceCache_1874 = new ReferenceCache(50);
    static int loadingStage = 0;
    static RSString aClass94_1880 = RSString.parse(")1");
 

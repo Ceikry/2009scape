@@ -2,7 +2,7 @@ package org.runite.jagex;
 
 
 import org.rs09.client.Linkable;
-import org.rs09.client.collections.HashTable;
+import org.rs09.client.data.HashTable;
 import org.rs09.client.LinkableInt;
 
 import java.util.Objects;
@@ -150,7 +150,7 @@ final class NPCDefinition {
    final Model method1476(Class145[] var1, int var2, byte var3, int var4, int var5, int var6, int var7, AnimationDefinition var8, int var9, AnimationDefinition var10) {
       try {
          if(this.childNPCs == null) {
-            Model var11 = (Model)CS2Script.aClass93_2442.get((long)this.npcId);
+            Model var11 = (Model)CS2Script.aReferenceCache_2442.get((long)this.npcId);
             boolean var12;
             int var17;
             int var16;
@@ -279,7 +279,7 @@ final class NPCDefinition {
                   ((Class140_Sub1_Sub1)var11).method1920(false, false, false, false, false, true);
                }
 
-               CS2Script.aClass93_2442.put(var11, (long)this.npcId);
+               CS2Script.aReferenceCache_2442.put(var11, (long)this.npcId);
             }
 
             var12 = false;
@@ -545,7 +545,7 @@ final class NPCDefinition {
             if(null == this.anIntArray1250) {
                return null;
             } else {
-               Model var12 = (Model)Class154.aClass93_1964.get((long)this.npcId);
+               Model var12 = (Model)Class154.aReferenceCache_1964.get((long)this.npcId);
                if(var12 == null) {
                   boolean var7 = false;
 
@@ -590,7 +590,7 @@ final class NPCDefinition {
                   }
 
                   var12 = Objects.requireNonNull(var15).method2008(64, 768, -50, -10, -50);
-                  Class154.aClass93_1964.put(var12, (long)this.npcId);
+                  Class154.aReferenceCache_1964.put(var12, (long)this.npcId);
                }
 
                if(null != var1) {

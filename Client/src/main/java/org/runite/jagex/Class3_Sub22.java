@@ -61,14 +61,14 @@ final class Class3_Sub22 extends Linkable {
          Class163_Sub1_Sub1.anInt4006 = 0;
       }
 
-      Class3_Sub28_Sub7.anInt3603 = Class3_Sub13_Sub27.anInt3340 - Class3_Sub13_Sub39.anInt3466;
-      if(Class3_Sub28_Sub7.anInt3603 < 0) {
-         Class3_Sub28_Sub7.anInt3603 = 0;
+      Unsorted.anInt3603 = Class3_Sub13_Sub27.anInt3340 - Class3_Sub13_Sub39.anInt3466;
+      if(Unsorted.anInt3603 < 0) {
+         Unsorted.anInt3603 = 0;
       }
 
-      Class2.anInt67 = Class97.anInt1375 + Class3_Sub13_Sub39.anInt3466;
-      if(Class2.anInt67 > Unsorted.anInt1234) {
-         Class2.anInt67 = Unsorted.anInt1234;
+      Unsorted.anInt67 = Class97.anInt1375 + Class3_Sub13_Sub39.anInt3466;
+      if(Unsorted.anInt67 > Unsorted.anInt1234) {
+         Unsorted.anInt67 = Unsorted.anInt1234;
       }
 
       Class126.anInt1665 = Class3_Sub13_Sub27.anInt3340 + Class3_Sub13_Sub39.anInt3466;
@@ -93,10 +93,10 @@ final class Class3_Sub22 extends Linkable {
             int var21 = Class3_Sub13_Sub27.anInt3340 - Class3_Sub13_Sub39.anInt3466 + var17;
             if(var20 >= 0 && var21 >= 0 && var20 < Unsorted.anInt1234 && var21 < Class3_Sub13_Sub15.anInt3179) {
                int var22;
-               if(Class3_Sub28_Sub7.anIntArrayArrayArray3605 == null) {
+               if(Unsorted.anIntArrayArrayArray3605 == null) {
                   var22 = Class58.anIntArrayArrayArray914[0][var20][var21] - Unsorted.anInt3657 + 128;
                } else {
-                  var22 = Class3_Sub28_Sub7.anIntArrayArrayArray3605[0][var20][var21] - Unsorted.anInt3657 + 128;
+                  var22 = Unsorted.anIntArrayArrayArray3605[0][var20][var21] - Unsorted.anInt3657 + 128;
                }
 
                int var23 = Class58.anIntArrayArrayArray914[3][var20][var21] - Unsorted.anInt3657 - 1000;

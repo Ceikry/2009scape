@@ -11,7 +11,7 @@ final class Class117 {
       try {
          if(Class143.loadingStage != var0) {
             if(Class143.loadingStage == 0) {
-               Class93.method1517();
+               Unsorted.method1517();
             }
 
             if(var0 == 40) {
@@ -84,7 +84,7 @@ final class Class117 {
             var2 = 4;
          }
 
-         Class93.aByteArrayArrayArray1328 = new byte[var2][104][104];
+         Unsorted.aByteArrayArrayArray1328 = new byte[var2][104][104];
          Unsorted.anIntArray2469 = new int[104];
          Class38_Sub1.anIntArrayArrayArray2609 = new int[var2][105][var1];
          Class67.aByteArrayArrayArray1014 = new byte[var2][105][105];

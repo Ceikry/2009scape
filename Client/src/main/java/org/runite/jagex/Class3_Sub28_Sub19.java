@@ -7,7 +7,7 @@ final class Class3_Sub28_Sub19 extends Node {
    static CacheIndex aClass153_3772;
    static int anInt3773;
    static int anInt3775 = 0;
-   static Class47 aClass47_3776 = new Class47(64);
+   static NodeCache aClass47_3776 = new NodeCache(64);
    static RSString aClass94_3777 = RSString.parse(" x ");
    Class140_Sub6 aClass140_Sub6_3778;
    static boolean aBoolean3779 = false;
@@ -29,7 +29,7 @@ final class Class3_Sub28_Sub19 extends Node {
 
    static void method716() {
       try {
-         Class136.aClass93_1772.method1524();
+         Class136.aReferenceCache_1772.clear();
 
       } catch (RuntimeException var2) {
          throw Class44.clientError(var2, "ud.A(" + 14073 + ')');

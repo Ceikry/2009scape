@@ -19,9 +19,9 @@ final class MouseListeningClass implements MouseListener, MouseMotionListener, F
 	  {
 	    try
 	    {
-	      if (Class3_Sub28_Sub7_Sub1.aClass149_4047 != null)
+	      if (Unsorted.aClass149_4047 != null)
 	      {
-	        Class3_Sub28_Sub7_Sub1.anInt4045 = 0;
+	        Unsorted.anInt4045 = 0;
 	        Class3_Sub21.anInt2493 = var1.getX();
 	        Class95.anInt1340 = var1.getY();
 	      }
@@ -75,7 +75,7 @@ final class MouseListeningClass implements MouseListener, MouseMotionListener, F
 	  {
 	    try
 	    {
-	      if (Class3_Sub28_Sub7_Sub1.aClass149_4047 != null) {
+	      if (Unsorted.aClass149_4047 != null) {
 	        GraphicDefinition.anInt549 = 0;
 	      }
 	    }
@@ -89,7 +89,7 @@ final class MouseListeningClass implements MouseListener, MouseMotionListener, F
 	  {
 	    try
 	    {
-	      Class158_Sub1.aClass93_2982.method1523((byte)-105);
+	      Class158_Sub1.aReferenceCache_2982.clearSoftReferences();
 		}
 	    catch (RuntimeException var2)
 	    {
@@ -113,9 +113,9 @@ final class MouseListeningClass implements MouseListener, MouseMotionListener, F
 	        Class3_Sub9.anInt2309 -= (accelY << 1);
 	        return;
 	      }
-	      if (Class3_Sub28_Sub7_Sub1.aClass149_4047 != null)
+	      if (Unsorted.aClass149_4047 != null)
 	      {
-	        Class3_Sub28_Sub7_Sub1.anInt4045 = 0;
+	        Unsorted.anInt4045 = 0;
 	        Class3_Sub21.anInt2493 = var1.getX();
 	        Class95.anInt1340 = var1.getY();
 	      }
@@ -130,9 +130,9 @@ final class MouseListeningClass implements MouseListener, MouseMotionListener, F
 	  {
 	    try
 	    {
-	      if (Class3_Sub28_Sub7_Sub1.aClass149_4047 != null)
+	      if (Unsorted.aClass149_4047 != null)
 	      {
-	        Class3_Sub28_Sub7_Sub1.anInt4045 = 0;
+	        Unsorted.anInt4045 = 0;
 	        GraphicDefinition.anInt549 = 0;
 		  }
 	      if (var1.isPopupTrigger()) {
@@ -165,12 +165,12 @@ final class MouseListeningClass implements MouseListener, MouseMotionListener, F
 	  {
 	    try
 	    {
-	      if (Class3_Sub28_Sub7_Sub1.aClass149_4047 != null)
+	      if (Unsorted.aClass149_4047 != null)
 	      {
-	       MouseListeningClass var1 = Class3_Sub28_Sub7_Sub1.aClass149_4047;
+	       MouseListeningClass var1 = Unsorted.aClass149_4047;
 	        synchronized (var1)
 	        {
-	          Class3_Sub28_Sub7_Sub1.aClass149_4047 = null;
+	          Unsorted.aClass149_4047 = null;
 	        }
 	      }
 		}
@@ -190,9 +190,9 @@ final class MouseListeningClass implements MouseListener, MouseMotionListener, F
 	        this.mouseWheelY = var1.getY();
 	        return;
 	      }
-	      if (Class3_Sub28_Sub7_Sub1.aClass149_4047 != null)
+	      if (Unsorted.aClass149_4047 != null)
 	      {
-	        Class3_Sub28_Sub7_Sub1.anInt4045 = 0;
+	        Unsorted.anInt4045 = 0;
 	        RenderAnimationDefinition.anInt362 = var1.getX();
 	        Class3_Sub13_Sub32.anInt3389 = var1.getY();
 	        Class140_Sub6.aLong2926 = TimeUtils.time();
@@ -221,9 +221,9 @@ final class MouseListeningClass implements MouseListener, MouseMotionListener, F
 	  {
 	    try
 	    {
-	      if (Class3_Sub28_Sub7_Sub1.aClass149_4047 != null)
+	      if (Unsorted.aClass149_4047 != null)
 	      {
-	        Class3_Sub28_Sub7_Sub1.anInt4045 = 0;
+	        Unsorted.anInt4045 = 0;
 	        Class3_Sub21.anInt2493 = -1;
 	        Class95.anInt1340 = -1;
 	      }
@@ -252,9 +252,9 @@ final class MouseListeningClass implements MouseListener, MouseMotionListener, F
 	  {
 	    try
 	    {
-	      if (Class3_Sub28_Sub7_Sub1.aClass149_4047 != null)
+	      if (Unsorted.aClass149_4047 != null)
 	      {
-	        Class3_Sub28_Sub7_Sub1.anInt4045 = 0;
+	        Unsorted.anInt4045 = 0;
 	        Class3_Sub21.anInt2493 = var1.getX();
 	        Class95.anInt1340 = var1.getY();
 	      }

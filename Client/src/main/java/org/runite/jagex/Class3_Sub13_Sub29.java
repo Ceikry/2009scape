@@ -31,8 +31,8 @@ final class Class3_Sub13_Sub29 extends Class3_Sub13 {
    static void method304() {
       try {
 
-         Class3_Sub13_Sub34.aClass93_3412.method1524();
-         Class3_Sub13_Sub31.aClass93_3369.method1524();
+         Class3_Sub13_Sub34.aReferenceCache_3412.clear();
+         Class3_Sub13_Sub31.aReferenceCache_3369.clear();
       } catch (RuntimeException var2) {
          throw Class44.clientError(var2, "qg.F(" + 6799 + ')');
       }
@@ -175,7 +175,7 @@ final class Class3_Sub13_Sub29 extends Class3_Sub13 {
 
    static CursorDefinition method311(int var0) {
       try {
-         CursorDefinition var2 = (CursorDefinition) Unsorted.aClass93_684.get((long)var0);
+         CursorDefinition var2 = (CursorDefinition) Unsorted.aReferenceCache_684.get((long)var0);
          if(var2 == null) {
             byte[] var3 = Class3_Sub13_Sub19.aClass153_3227.getFile(33, var0);
 
@@ -184,7 +184,7 @@ final class Class3_Sub13_Sub29 extends Class3_Sub13 {
                var2.decode(new DataBuffer(var3));
             }
 
-            Unsorted.aClass93_684.put(var2, (long)var0);
+            Unsorted.aReferenceCache_684.put(var2, (long)var0);
          }
          return var2;
       } catch (RuntimeException var4) {

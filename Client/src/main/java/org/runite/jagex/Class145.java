@@ -51,7 +51,7 @@ final class Class145 {
             int var11;
             int var12;
             if(HDToolKit.highDetail) {
-               if(Class3_Sub28_Sub7.anIntArrayArrayArray3605 == Class44.anIntArrayArrayArray723) {
+               if(Unsorted.anIntArrayArrayArray3605 == Class44.anIntArrayArrayArray723) {
                   var9 = Class3_Sub13_Sub9.anIntArrayArray3115[var3][var4];
                   var10 = var9 & 16777215;
                   if(var10 != Unsorted.anInt1244) {
@@ -101,14 +101,14 @@ final class Class145 {
                      }
                   }
 
-                  if(var3 >= Class97.anInt1375 && var3 < Class2.anInt67 - 1) {
+                  if(var3 >= Class97.anInt1375 && var3 < Unsorted.anInt67 - 1) {
                      var21 = var7[var3 + 1][var4];
                      if(var21 != null && var21.aBoolean2225 && (var21.aBoolean2222 || (var2.anInt2228 & 4) == 0)) {
                         continue;
                      }
                   }
 
-                  if(var4 <= Class3_Sub13_Sub27.anInt3340 && var4 > Class3_Sub28_Sub7.anInt3603) {
+                  if(var4 <= Class3_Sub13_Sub27.anInt3340 && var4 > Unsorted.anInt3603) {
                      var21 = var7[var3][var4 - 1];
                      if(var21 != null && var21.aBoolean2225 && (var21.aBoolean2222 || (var2.anInt2228 & 8) == 0)) {
                         continue;
@@ -586,14 +586,14 @@ final class Class145 {
                   }
                }
 
-               if(var3 >= Class97.anInt1375 && var3 < Class2.anInt67 - 1) {
+               if(var3 >= Class97.anInt1375 && var3 < Unsorted.anInt67 - 1) {
                   var21 = var7[var3 + 1][var4];
                   if(var21 != null && var21.aBoolean2225) {
                      continue;
                   }
                }
 
-               if(var4 <= Class3_Sub13_Sub27.anInt3340 && var4 > Class3_Sub28_Sub7.anInt3603) {
+               if(var4 <= Class3_Sub13_Sub27.anInt3340 && var4 > Unsorted.anInt3603) {
                   var21 = var7[var3][var4 - 1];
                   if(var21 != null && var21.aBoolean2225) {
                      continue;
@@ -755,7 +755,7 @@ final class Class145 {
 
    static Class29 method2076(int var0, int var1) {
       try {
-         Class29 var2 = (Class29)Class136.aClass93_1772.get((long)var1);
+         Class29 var2 = (Class29)Class136.aReferenceCache_1772.get((long)var1);
          if(var2 == null) {
             byte[] var3 = Class3_Sub13_Sub13.aClass153_3154.getFile(16, var1);
             if(var0 > -4) {
@@ -766,7 +766,7 @@ final class Class145 {
                   var2.method970(new DataBuffer(var3));
                }
 
-               Class136.aClass93_1772.put(var2, (long)var1);
+               Class136.aReferenceCache_1772.put(var2, (long)var1);
                return var2;
             }
          } else {
@@ -779,8 +779,8 @@ final class Class145 {
 
    static void method2077() {
       try {
-         Class3_Sub31.aClass93_2604.method1524();
-         Class27.aClass93_511.method1524();
+         Class3_Sub31.aReferenceCache_2604.clear();
+         Class27.aReferenceCache_511.clear();
       } catch (RuntimeException var2) {
          throw Class44.clientError(var2, "ub.B(" + true + ')');
       }

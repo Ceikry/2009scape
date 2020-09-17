@@ -8,7 +8,7 @@ final class Class137 {
    static int method1817() {
       try {
 
-          return !Unsorted.aBoolean1084?(!NPC.method1986((byte) 70 ^ 28)?1:(Class3_Sub28_Sub7.aBoolean3604?2:1)):0;
+          return !Unsorted.aBoolean1084?(!NPC.method1986((byte) 70 ^ 28)?1:(Unsorted.aBoolean3604?2:1)):0;
       } catch (RuntimeException var2) {
          throw Class44.clientError(var2, "tc.B(" + (byte) 70 + ')');
       }

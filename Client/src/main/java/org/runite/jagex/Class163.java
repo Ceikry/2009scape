@@ -4,7 +4,7 @@ import java.util.Objects;
 
 class Class163 {
 
-   static Class47 aClass47_2041 = new Class47(64);
+   static NodeCache aClass47_2041 = new NodeCache(64);
    static int[] anIntArray2043 = new int[]{8, 11, 4, 6, 9, 7, 10, 0};
    static RSString aClass94_2044 = RSString.parse("cookieprefix");
    static RSString COMMAND_ERROR_TEST = RSString.parse("::errortest");

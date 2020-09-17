@@ -8,10 +8,9 @@ public final class Class3_Sub13_Sub34 extends Class3_Sub13 {
     private int anInt3404 = 409;
     private int anInt3405 = 4096;
     private int anInt3406 = 4096;
-    static Class47 aClass47_3407 = new Class47(64);
     private int anInt3410 = 4096;
     static long aLong3411 = 0L;
-    static Class93 aClass93_3412 = new Class93(64);
+    static ReferenceCache aReferenceCache_3412 = new ReferenceCache(64);
     static int anInt3413 = 0;
     static int anInt3414;
     static int anInt3415 = 0;
@@ -35,7 +34,7 @@ public final class Class3_Sub13_Sub34 extends Class3_Sub13 {
                 int var6 = var1.readUnsignedByte();
                 int var7 = var1.readUnsignedByte();
                 int var8 = -Class3_Sub13_Sub21.anInt3256 + var6 * 64;
-                int var9 = Class108.anInt1460 + -1 - -Class2.anInt65 - 64 * var7;
+                int var9 = Class108.anInt1460 + -1 - -Unsorted.anInt65 - 64 * var7;
                 byte var2;
                 int var10;
                 if (var8 >= 0 && (var9 - 63) >= 0 && Class23.anInt455 > var8 + 63 && Class108.anInt1460 > var9) {

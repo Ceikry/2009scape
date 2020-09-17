@@ -430,7 +430,7 @@ final class Class140_Sub1_Sub2 extends Model {
 
                               if(Unsorted.anInt3642 >= var31 && Unsorted.anInt3642 <= var33 && RenderAnimationDefinition.anInt384 >= var32 && RenderAnimationDefinition.anInt384 <= var34) {
                                  if(this.aBoolean2699) {
-                                    Class3_Sub13_Sub38.aLongArray3448[Class2.anInt59++] = var9;
+                                    Class3_Sub13_Sub38.aLongArray3448[Unsorted.anInt59++] = var9;
                                  } else {
                                     var30 = true;
                                  }
@@ -1231,7 +1231,7 @@ final class Class140_Sub1_Sub2 extends Model {
                   }
                } else {
                   if(var2 && this.method1944(Unsorted.anInt3642 + Class51.anInt846, RenderAnimationDefinition.anInt384 + Class51.anInt835, anIntArray3932[var11], anIntArray3932[var12], anIntArray3932[var13], var14, var15, var16)) {
-                     Class3_Sub13_Sub38.aLongArray3448[Class2.anInt59++] = var3;
+                     Class3_Sub13_Sub38.aLongArray3448[Unsorted.anInt59++] = var3;
                      var2 = false;
                   }
 

@@ -32,7 +32,7 @@ public abstract class Class3_Sub28_Sub17 extends Node {
     private static RSString aClass94_3742 = RSString.parse(")4str");
     private static RSString aClass94_3743 = RSString.parse("reg");
     private static RSString aClass94_3744 = RSString.parse("str");
-    private static RSString aClass94_3745 = Class47.emptyString(100);
+    private static RSString aClass94_3745 = Unsorted.emptyString(100);
 
     private static int anInt3746 = -1;
     private static int anInt3747 = -1;
@@ -338,7 +338,7 @@ public abstract class Class3_Sub28_Sub17 extends Node {
             }
         }
 
-        RSString var6 = Class47.emptyString(var1 + var2);
+        RSString var6 = Unsorted.emptyString(var1 + var2);
 
         for (var4 = 0; var4 < var1; ++var4) {
             int var5 = var0.charAt(var4, (byte) -101);

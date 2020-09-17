@@ -453,7 +453,7 @@ final class Class3_Sub13_Sub37 extends Class3_Sub13 {
 
    static Class168 method350(byte var0, int var1) {
       try {
-         Class168 var2 = (Class168)Class163_Sub2_Sub1.aClass93_4015.get((long)var1);
+         Class168 var2 = (Class168)Class163_Sub2_Sub1.aReferenceCache_4015.get((long)var1);
          if(null == var2) {
             byte[] var4 = Class3_Sub28_Sub5.aClass153_3580.getFile(4, var1);
             var2 = new Class168();
@@ -461,7 +461,7 @@ final class Class3_Sub13_Sub37 extends Class3_Sub13 {
                var2.method2274(new DataBuffer(var4), var1);
             }
 
-            Class163_Sub2_Sub1.aClass93_4015.put(var2, (long)var1);
+            Class163_Sub2_Sub1.aReferenceCache_4015.put(var2, (long)var1);
          }
           return var2;
       } catch (RuntimeException var5) {

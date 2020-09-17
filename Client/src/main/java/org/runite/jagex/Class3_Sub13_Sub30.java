@@ -154,12 +154,12 @@ final class Class3_Sub13_Sub30 extends Class3_Sub13 {
 
          Class108.method1659();
          Class3_Sub10.method142();
-         Unsorted.aClass93_1135.method1524();
+         Unsorted.aReferenceCache_1135.clear();
          if(!HDToolKit.highDetail) {
             ((Class102)Class51.anInterface2_838).method1618();
          }
 
-         Class56.aClass47_885.method1101();
+         Class56.aClass47_885.clear();
          Class75_Sub3.aClass153_2660.method2137((byte)56);
          Class3_Sub28_Sub19.aClass153_3772.method2137((byte)56);
          Class140_Sub3.aClass153_2727.method2137((byte)56);
@@ -171,7 +171,7 @@ final class Class3_Sub13_Sub30 extends Class3_Sub13 {
          Class3_Sub13_Sub25.aClass153_3304.method2137((byte)56);
          Unsorted.aClass153_2573.method2137((byte)56);
          Class3_Sub1.interfaceScriptsIndex.method2137((byte)56);
-         Class3_Sub13_Sub11.aClass93_3130.method1524();
+         Class3_Sub13_Sub11.aReferenceCache_3130.clear();
       } catch (RuntimeException var2) {
          throw Class44.clientError(var2, "rj.E(" + var0 + ')');
       }

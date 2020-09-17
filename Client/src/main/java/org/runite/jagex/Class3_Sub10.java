@@ -21,10 +21,10 @@ public final class Class3_Sub10 extends Linkable {
    static void method139(int var0) {
       try {
          if(var0 >= 63) {
-            Unsorted.aClass93_21.method1524();
-            Class99.aClass93_1401.method1524();
-            Class3_Sub28_Sub7_Sub1.aClass93_4051.method1524();
-            Class154.aClass93_1965.method1524();
+            Unsorted.aReferenceCache_21.clear();
+            Class99.aReferenceCache_1401.clear();
+            Unsorted.aReferenceCache_4051.clear();
+            Class154.aReferenceCache_1965.clear();
          }
       } catch (RuntimeException var2) {
          throw Class44.clientError(var2, "hb.D(" + var0 + ')');
@@ -41,7 +41,7 @@ public final class Class3_Sub10 extends Linkable {
 
    static RenderAnimationDefinition getRenderAnimationDefinition(int renderAnimationId) {
       try {
-         RenderAnimationDefinition def = (RenderAnimationDefinition)Class154.aClass93_1955.get((long)renderAnimationId);
+         RenderAnimationDefinition def = (RenderAnimationDefinition)Class154.aReferenceCache_1955.get((long)renderAnimationId);
          if(def == null) {
             byte[] var3 = Class97.aClass153_1372.getFile(32, renderAnimationId);
 
@@ -51,7 +51,7 @@ public final class Class3_Sub10 extends Linkable {
             }
 
             def.method899();
-            Class154.aClass93_1955.put(def, (long)renderAnimationId);
+            Class154.aReferenceCache_1955.put(def, (long)renderAnimationId);
          }
          return def;
       } catch (RuntimeException var4) {
@@ -62,7 +62,7 @@ public final class Class3_Sub10 extends Linkable {
    static void method142() {
       try {
 
-         Class158_Sub1.aClass93_2982.method1524();
+         Class158_Sub1.aReferenceCache_2982.clear();
       } catch (RuntimeException var2) {
          throw Class44.clientError(var2, "hb.C(" + true + ')');
       }

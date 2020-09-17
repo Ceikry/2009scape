@@ -5,7 +5,7 @@ import org.rs09.client.rendering.Toolkit;
 final class LDIndexedSprite extends AbstractIndexedSprite {
 
    private final int[] anIntArray2673;
-   byte[] aByteArray2674;
+   byte[] raster;
 
 
    final void method1668(int var1, int var2, int var3) {
@@ -40,8 +40,8 @@ final class LDIndexedSprite extends AbstractIndexedSprite {
    }
 
    final void method1669(int var1, int var2, int var3, int var4, int var5) {
-      int var6 = this.anInt1461;
-      int var7 = this.anInt1468;
+      int var6 = this.width;
+      int var7 = this.height;
       int var8 = 0;
       int var9 = 0;
       int var10 = this.anInt1469;
@@ -97,7 +97,7 @@ final class LDIndexedSprite extends AbstractIndexedSprite {
          var15 += var16;
       }
 
-      method1673(Toolkit.JAVA_TOOLKIT.getBuffer(), this.aByteArray2674, this.anIntArray2673, var8, var9, var14, var15, var3, var4, var12, var13, var6, var5);
+      method1673(Toolkit.JAVA_TOOLKIT.getBuffer(), this.raster, this.anIntArray2673, var8, var9, var14, var15, var3, var4, var12, var13, var6, var5);
    }
 
    private static void method1670(int[] var0, byte[] var1, int[] var2, int var3, int var4, int var5, int var6, int var7, int var8, int var9, int var10, int var11) {
@@ -128,17 +128,17 @@ final class LDIndexedSprite extends AbstractIndexedSprite {
       int var1 = 0;
 
       int var2;
-      for(var2 = this.aByteArray2674.length - 7; var1 < var2; this.aByteArray2674[var1++] = 0) {
-         this.aByteArray2674[var1++] = 0;
-         this.aByteArray2674[var1++] = 0;
-         this.aByteArray2674[var1++] = 0;
-         this.aByteArray2674[var1++] = 0;
-         this.aByteArray2674[var1++] = 0;
-         this.aByteArray2674[var1++] = 0;
-         this.aByteArray2674[var1++] = 0;
+      for(var2 = this.raster.length - 7; var1 < var2; this.raster[var1++] = 0) {
+         this.raster[var1++] = 0;
+         this.raster[var1++] = 0;
+         this.raster[var1++] = 0;
+         this.raster[var1++] = 0;
+         this.raster[var1++] = 0;
+         this.raster[var1++] = 0;
+         this.raster[var1++] = 0;
       }
 
-      for(var2 += 7; var1 < var2; this.aByteArray2674[var1++] = 0) {
+      for(var2 += 7; var1 < var2; this.raster[var1++] = 0) {
       }
 
    }
@@ -226,24 +226,24 @@ final class LDIndexedSprite extends AbstractIndexedSprite {
 
    }
 
-   final void method1674() {
-      byte[] var1 = new byte[this.anInt1461 * this.anInt1468];
-      int var2 = 0;
+   public final void rotateClockwise() {
+      byte[] rotated = new byte[this.width * this.height];
+      int index = 0;
 
-      int var3;
-      for(var3 = 0; var3 < this.anInt1461; ++var3) {
-         for(int var4 = this.anInt1468 - 1; var4 >= 0; --var4) {
-            var1[var2++] = this.aByteArray2674[var3 + var4 * this.anInt1461];
+      for(int x = 0; x < this.width; ++x) {
+         for(int y = this.height - 1; y >= 0; --y) {
+            rotated[index++] = this.raster[x + y * this.width];
          }
       }
 
-      this.aByteArray2674 = var1;
+      int var3;
+      this.raster = rotated;
       var3 = this.anInt1464;
       this.anInt1464 = this.anInt1470;
-      this.anInt1470 = this.anInt1467 - this.anInt1468 - var3;
-      var3 = this.anInt1468;
-      this.anInt1468 = this.anInt1461;
-      this.anInt1461 = var3;
+      this.anInt1470 = this.anInt1467 - this.height - var3;
+      var3 = this.height;
+      this.height = this.width;
+      this.width = var3;
       var3 = this.anInt1467;
       this.anInt1467 = this.anInt1469;
       this.anInt1469 = var3;
@@ -254,8 +254,8 @@ final class LDIndexedSprite extends AbstractIndexedSprite {
       var2 += this.anInt1464;
       int var4 = var1 + var2 * Toolkit.JAVA_TOOLKIT.width;
       int var5 = 0;
-      int var6 = this.anInt1468;
-      int var7 = this.anInt1461;
+      int var6 = this.height;
+      int var7 = this.width;
       int var8 = Toolkit.JAVA_TOOLKIT.width - var7;
       int var9 = 0;
       int var10;
@@ -289,24 +289,24 @@ final class LDIndexedSprite extends AbstractIndexedSprite {
       }
 
       if(var7 > 0 && var6 > 0) {
-         method1676(Toolkit.JAVA_TOOLKIT.getBuffer(), this.aByteArray2674, this.anIntArray2673, var5, var4, var7, var6, var8, var9, var3);
+         method1676(Toolkit.JAVA_TOOLKIT.getBuffer(), this.raster, this.anIntArray2673, var5, var4, var7, var6, var8, var9, var3);
       }
    }
 
    final void method1675() {
-      if(this.anInt1461 != this.anInt1469 || this.anInt1468 != this.anInt1467) {
+      if(this.width != this.anInt1469 || this.height != this.anInt1467) {
          byte[] var1 = new byte[this.anInt1469 * this.anInt1467];
          int var2 = 0;
 
-         for(int var3 = 0; var3 < this.anInt1468; ++var3) {
-            for(int var4 = 0; var4 < this.anInt1461; ++var4) {
-               var1[var4 + this.anInt1470 + (var3 + this.anInt1464) * this.anInt1469] = this.aByteArray2674[var2++];
+         for(int var3 = 0; var3 < this.height; ++var3) {
+            for(int var4 = 0; var4 < this.width; ++var4) {
+               var1[var4 + this.anInt1470 + (var3 + this.anInt1464) * this.anInt1469] = this.raster[var2++];
             }
          }
 
-         this.aByteArray2674 = var1;
-         this.anInt1461 = this.anInt1469;
-         this.anInt1468 = this.anInt1467;
+         this.raster = var1;
+         this.width = this.anInt1469;
+         this.height = this.anInt1467;
          this.anInt1470 = 0;
          this.anInt1464 = 0;
       }
@@ -334,8 +334,8 @@ final class LDIndexedSprite extends AbstractIndexedSprite {
    }
 
    final void method1677(int var1, int var2, int var3, int var4) {
-      int var5 = this.anInt1461;
-      int var6 = this.anInt1468;
+      int var5 = this.width;
+      int var6 = this.height;
       int var7 = 0;
       int var8 = 0;
       int var9 = this.anInt1469;
@@ -391,7 +391,7 @@ final class LDIndexedSprite extends AbstractIndexedSprite {
          var14 += var15;
       }
 
-      method1670(Toolkit.JAVA_TOOLKIT.getBuffer(), this.aByteArray2674, this.anIntArray2673, var7, var8, var13, var14, var3, var4, var11, var12, var5);
+      method1670(Toolkit.JAVA_TOOLKIT.getBuffer(), this.raster, this.anIntArray2673, var7, var8, var13, var14, var3, var4, var11, var12, var5);
    }
 
    final void method1667(int var1, int var2) {
@@ -399,8 +399,8 @@ final class LDIndexedSprite extends AbstractIndexedSprite {
       var2 += this.anInt1464;
       int var3 = var1 + var2 * Toolkit.JAVA_TOOLKIT.width;
       int var4 = 0;
-      int var5 = this.anInt1468;
-      int var6 = this.anInt1461;
+      int var5 = this.height;
+      int var6 = this.width;
       int var7 = Toolkit.JAVA_TOOLKIT.width - var6;
       int var8 = 0;
       int var9;
@@ -434,7 +434,7 @@ final class LDIndexedSprite extends AbstractIndexedSprite {
       }
 
       if(var6 > 0 && var5 > 0) {
-         method1672(Toolkit.JAVA_TOOLKIT.getBuffer(), this.aByteArray2674, this.anIntArray2673, var4, var3, var6, var5, var7, var8);
+         method1672(Toolkit.JAVA_TOOLKIT.getBuffer(), this.raster, this.anIntArray2673, var4, var3, var6, var5, var7, var8);
       }
    }
 
@@ -443,17 +443,17 @@ final class LDIndexedSprite extends AbstractIndexedSprite {
       this.anInt1467 = var2;
       this.anInt1470 = var3;
       this.anInt1464 = var4;
-      this.anInt1461 = var5;
-      this.anInt1468 = var6;
-      this.aByteArray2674 = var7;
+      this.width = var5;
+      this.height = var6;
+      this.raster = var7;
       this.anIntArray2673 = var8;
    }
 
    LDIndexedSprite(int var1, int var2) {
-      this.anInt1469 = this.anInt1461 = var1;
-      this.anInt1467 = this.anInt1468 = var2;
+      this.anInt1469 = this.width = var1;
+      this.anInt1467 = this.height = var2;
       this.anInt1470 = this.anInt1464 = 0;
-      this.aByteArray2674 = new byte[var1 * var2];
+      this.raster = new byte[var1 * var2];
       this.anIntArray2673 = new int[0];
    }
 }

@@ -1,8 +1,11 @@
 package org.runite.jagex;
 
-final class Class118_Sub1 extends Class118 {
+import org.rs09.client.data.reference.ObjectReference;
+import org.rs09.client.data.reference.SoftObjectReference;
 
-   final Class3_Sub28_Sub7 method1725(Class3_Sub28_Sub7 var1) {
-      return new Class3_Sub28_Sub7_Sub2(var1.method567());
+public final class Class118_Sub1 extends Class118 {
+
+   public final <T> ObjectReference<T> method1725(ObjectReference<T> var1) {
+      return new SoftObjectReference<>(var1.getValue());
    }
 }

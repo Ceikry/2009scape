@@ -26,7 +26,7 @@ final class Class3_Sub5 extends Linkable {
             for(int var9 = 0; var9 < Class119.aClass131_1624.anInt1720; ++var9) {
                if(Class119.aClass131_1624.method1787(var9)) {
                   int var10 = -Class3_Sub13_Sub21.anInt3256 + Class119.aClass131_1624.aShortArray1727[var9];
-                  int var11 = Class2.anInt65 - (Class119.aClass131_1624.aShortArray1718[var9] - -1 - Class108.anInt1460);
+                  int var11 = Unsorted.anInt65 - (Class119.aClass131_1624.aShortArray1718[var9] - -1 - Class108.anInt1460);
                   int var12 = var1 + (-var1 + var4) * (var10 - var3) / (-var3 + var7);
                   int var14 = Class119.aClass131_1624.method1791(var9, 8);
                   int var13 = (var8 + -var2) * (var11 - var6) / (var5 + -var6) + var2;

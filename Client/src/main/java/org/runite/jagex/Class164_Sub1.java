@@ -209,7 +209,7 @@ class Class164_Sub1 extends Class164 {
                var3.unlink();
             }
 
-            for(var3 = (Class3_Sub9)Class3_Sub28_Sub7_Sub1.aHashTable_4046.first(); null != var3; var3 = (Class3_Sub9)Class3_Sub28_Sub7_Sub1.aHashTable_4046.next()) {
+            for(var3 = (Class3_Sub9) Unsorted.aHashTable_4046.first(); null != var3; var3 = (Class3_Sub9) Unsorted.aHashTable_4046.next()) {
                if(null != var3.aClass3_Sub24_Sub1_2312) {
                   Class3_Sub26.aClass3_Sub24_Sub2_2563.method461(var3.aClass3_Sub24_Sub1_2312);
                   var3.aClass3_Sub24_Sub1_2312 = null;

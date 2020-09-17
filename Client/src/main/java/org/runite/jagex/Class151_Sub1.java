@@ -3,7 +3,7 @@ package org.runite.jagex;
 import org.rs09.client.Linkable;
 import org.rs09.client.filestore.ReferenceTable;
 import org.rs09.client.filestore.ResourceProvider;
-import org.rs09.client.collections.HashTable;
+import org.rs09.client.data.HashTable;
 
 import java.util.Objects;
 

@@ -83,8 +83,8 @@ final class Class169 {
    }
 
    final void method2282(LDIndexedSprite var1, int var2, int var3) {
-      byte[] var4 = var1.aByteArray2674;
-      int var5 = var1.anInt1461;
+      byte[] var4 = var1.raster;
+      int var5 = var1.width;
       int var6 = var2 * 128 + 1 + (var3 * 128 + 1) * var5;
       int var7 = 0;
 

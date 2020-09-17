@@ -3,7 +3,7 @@ package org.runite.jagex;
 final class Class56 {
 
    static Class3_Sub26 aClass3_Sub26_884 = new Class3_Sub26(0, 0);
-   static Class47 aClass47_885 = new Class47(128);
+   static NodeCache aClass47_885 = new NodeCache(128);
    static RSInterface aClass11_886 = null;
    static int[] localPlayerIndexes = new int[2048];
    static Class106[] aClass106Array890;
@@ -98,7 +98,7 @@ final class Class56 {
          MouseListeningClass.anIntArray1920 = null;
          Class38_Sub1.anIntArrayArrayArray2609 = (int[][][])null;
          Unsorted.anIntArray2469 = null;
-         Class93.aByteArrayArrayArray1328 = (byte[][][])null;
+         Unsorted.aByteArrayArrayArray1328 = (byte[][][])null;
          PacketParser.aByteArrayArrayArray81 = (byte[][][])null;
          Class67.aByteArrayArrayArray1014 = (byte[][][])null;
          Class139.aByteArrayArrayArray1828 = (byte[][][])null;
@@ -112,7 +112,7 @@ final class Class56 {
    }
 
    static boolean method1189(int var0, int var1, int var2, int var3, int var4, int var5, int var6, int var7, GameObject var8, int var9, boolean var10, long var11) {
-      boolean var13 = Class44.anIntArrayArrayArray723 == Class3_Sub28_Sub7.anIntArrayArrayArray3605;
+      boolean var13 = Class44.anIntArrayArrayArray723 == Unsorted.anIntArrayArrayArray3605;
       int var14 = 0;
 
       int var16;

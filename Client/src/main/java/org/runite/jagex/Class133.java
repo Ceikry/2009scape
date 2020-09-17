@@ -21,8 +21,8 @@ final class Class133 {
 
    static void method1803() {
       try {
-         Class82.aClass93_1146.method1523((byte)-119);
-         Class159.aClass93_2016.method1523((byte)-103);
+         Class82.aReferenceCache_1146.clearSoftReferences();
+         Class159.aReferenceCache_2016.clearSoftReferences();
       } catch (RuntimeException var2) {
          throw Class44.clientError(var2, "sg.D(" + (byte) 22 + ')');
       }

@@ -3,7 +3,7 @@ package org.rs09.client.filestore.resources.configs.structs
 import org.rs09.client.Linkable
 import org.rs09.client.LinkableInt
 import org.rs09.client.Node
-import org.rs09.client.collections.HashTable
+import org.rs09.client.data.HashTable
 import org.runite.jagex.Class95
 import org.runite.jagex.DataBuffer
 import org.runite.jagex.LinkableRSString

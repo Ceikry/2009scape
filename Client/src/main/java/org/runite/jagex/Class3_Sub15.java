@@ -12,7 +12,7 @@ public final class Class3_Sub15 extends Linkable {
    byte[] aByteArray2425;
    static int anInt2426;
    static boolean aBoolean2427 = false;
-   static Class93 aClass93_2428 = new Class93(50);
+   static ReferenceCache aReferenceCache_2428 = new ReferenceCache(50);
    public static Connection activeConnection;
    byte[] aByteArray2430;
    Class3_Sub12_Sub1[] aClass3_Sub12_Sub1Array2431;
@@ -34,7 +34,7 @@ public final class Class3_Sub15 extends Linkable {
    static void method370() {
       try {
          //int var1 = -125 / ((0 - var0) / 59);
-         Class154.aClass93_1955.method1524();
+         Class154.aReferenceCache_1955.clear();
       } catch (RuntimeException var2) {
          throw Class44.clientError(var2, "jk.B(" + (byte) -73 + ')');
       }

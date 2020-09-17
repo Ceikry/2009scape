@@ -18,8 +18,8 @@ public final class LinkableRSString extends Linkable {
 
     static void method727() {
         try {
-            KeyboardListener.aClass93_1911.method1524();
-            Unsorted.aClass93_1131.method1524();
+            KeyboardListener.aReferenceCache_1911.clear();
+            Unsorted.aReferenceCache_1131.clear();
         } catch (RuntimeException var2) {
             throw Class44.clientError(var2, "sj.O(" + 91 + ')');
         }
@@ -99,7 +99,7 @@ public final class LinkableRSString extends Linkable {
             if (Class101.anInt1425 <= var0 && var4 <= Class3_Sub28_Sub18.anInt3765 && Class159.anInt2020 <= var5 && Class57.anInt902 >= var3) {
                 Class104.method1632(95, var3, var4, var5, var0, var1);
             } else {
-                Class93.method1525(var1, var4, var5, var0, var3);
+                Unsorted.method1525(var1, var4, var5, var0, var3);
             }
 
         } catch (RuntimeException var7) {
@@ -121,7 +121,7 @@ public final class LinkableRSString extends Linkable {
 
     static Class3_Sub28_Sub4 method733(int var1) {
         try {
-            Class3_Sub28_Sub4 var2 = (Class3_Sub28_Sub4) Class3_Sub28_Sub19.aClass47_3776.getNodeByID((long) var1);
+            Class3_Sub28_Sub4 var2 = (Class3_Sub28_Sub4) Class3_Sub28_Sub19.aClass47_3776.get((long) var1);
             if (null == var2) {
                 byte[] var3;
                 if (var1 < 32768) {
@@ -140,7 +140,7 @@ public final class LinkableRSString extends Linkable {
                     var2.method548();
                 }
 
-                Class3_Sub28_Sub19.aClass47_3776.method1097(var2, (long) var1, (byte) -117);
+                Class3_Sub28_Sub19.aClass47_3776.put((long) var1, var2);
             }
             return var2;
         } catch (RuntimeException var4) {
@@ -159,7 +159,7 @@ public final class LinkableRSString extends Linkable {
                     if (0 == var1.length()) {
                         var4 = RenderAnimationDefinition.method903(new RSString[]{var4, TextCore.HasAgeExpire});
                     } else {
-                        var4 = RenderAnimationDefinition.method903(new RSString[]{var4, TextCore.HasExpires, Class15.method894(94608000000L + TimeUtils.time(), (byte) 52), TextCore.HasMaxAge, Class3_Sub28_Sub12.method612(94608000L, (byte) 102)});
+                        var4 = RenderAnimationDefinition.method903(new RSString[]{var4, TextCore.HasExpires, Class15.method894(94608000000L + TimeUtils.time(), (byte) 52), TextCore.HasMaxAge, Class3_Sub28_Sub12.method612(94608000L)});
                     }
 
                     RenderAnimationDefinition.method903(new RSString[]{Class129.aClass94_1694, var4, Unsorted.aClass94_1698}).method1554(Class38.aClass87_665.applet);

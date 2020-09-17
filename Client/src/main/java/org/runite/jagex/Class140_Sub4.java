@@ -40,7 +40,7 @@ abstract class Class140_Sub4 extends GameObject {
    int anInt2789 = 0;
    int anInt2790;
    int anInt2791 = 0;
-   static Class93 aClass93_2792 = new Class93(64);
+   static ReferenceCache aReferenceCache_2792 = new ReferenceCache(64);
    int anInt2793 = -1;
    static int[] anIntArray2794 = new int[100];
    byte[] aByteArray2795 = new byte[10];

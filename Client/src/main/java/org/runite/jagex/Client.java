@@ -1,9 +1,11 @@
 package org.runite.jagex;
 
 import org.rs09.client.console.DeveloperConsole;
+import org.rs09.client.filestore.resources.configs.enums.EnumDefinitionProvider;
+import org.rs09.client.filestore.resources.configs.structs.StructDefinitionProvider;
 import org.runite.Configurations;
 import org.runite.GameLaunch;
-import org.rs09.client.collections.HashTable;
+import org.rs09.client.data.HashTable;
 import org.rs09.client.net.Connection;
 
 import java.awt.*;
@@ -379,7 +381,7 @@ public final class Client extends GameShell {
             }
 
             CS2Script.anInt2451 = ObjectDefinition.worldId;
-            Class3_Sub28_Sub7.method564(Class38.aClass87_665);
+            Unsorted.method564(Class38.aClass87_665);
             System.out.println("port = " + Class53.anInt867);
             System.out.println("Here: Config.MSIP = " + Configurations.MS_IP);
             if (Class44.anInt718 == 0) {
@@ -401,9 +403,9 @@ public final class Client extends GameShell {
                 Class101.aBoolean1419 = true;
                 Class92.defaultScreenColorRgb = 16777215;
                 Class92.defaulFogColorRgb = 0;
-                Class15.aShortArrayArray344 = Class118.aShortArrayArray1619;
+                Class15.aShortArrayArray344 = Unsorted.aShortArrayArray1619;
                 Class101.aShortArrayArray1429 = Class75_Sub1.aShortArrayArray2634;
-                Class3_Sub25.aShortArray2548 = Class2.aShortArray63;
+                Class3_Sub25.aShortArray2548 = Unsorted.aShortArray63;
                 Class91.aShortArray1311 = Class3_Sub2.aShortArray2219;
             } else {
                 Class15.aShortArrayArray344 = Class3_Sub28_Sub12.aShortArrayArray3654;
@@ -476,7 +478,7 @@ public final class Client extends GameShell {
     static AnimationDefinition getAnimationDefinition(int var0) {
         try {
 
-            AnimationDefinition var2 = (AnimationDefinition) Class82.aClass93_1146.get((long) var0);
+            AnimationDefinition var2 = (AnimationDefinition) Class82.aReferenceCache_1146.get((long) var0);
             if (var2 == null) {
                 byte[] var3 = AnimationDefinition.aClass153_1860.getFile(Class129.method1765(var0, -1732504441), Class67.method1262(117, var0));
                 var2 = new AnimationDefinition();
@@ -486,7 +488,7 @@ public final class Client extends GameShell {
                 }
 
                 var2.method2058();
-                Class82.aClass93_1146.put(var2, (long) var0);
+                Class82.aReferenceCache_1146.put(var2, (long) var0);
             }
             return var2;
         } catch (RuntimeException var4) {
@@ -982,7 +984,7 @@ public final class Client extends GameShell {
                                             var21 = Class3_Sub28_Sub1.anInt3536 + var19;
                                             int var32 = Class3_Sub4.anInt2251 + var29;
                                             int var23 = var21 + Class3_Sub13_Sub21.anInt3256;
-                                            int var24 = Class108.anInt1460 - 1 - var32 + Class2.anInt65;
+                                            int var24 = Class108.anInt1460 - 1 - var32 + Unsorted.anInt65;
                                             Class30.method979(var23, var24, 0);
                                             Class3_Sub13_Sub19.method264((byte) 126);
                                             continue;
@@ -1536,7 +1538,7 @@ public final class Client extends GameShell {
                             Class108.method1661(Class168.aClass153_2097, Class159.aClass153_2019);
                             ItemDefinition.method1103(Class159.aClass153_2019, Class101.aClass153_1428);
                             GameObject.method1864(Class100.aClass153_1410, Class157.aClass3_Sub28_Sub17_Sub1_2000, Class159.aClass153_2019);
-                            Class29.method969(Class164.aClass153_2052, 59);
+                            StructDefinitionProvider.setIndex(Class164.aClass153_2052);
                             Class3_Sub20.method392(Class3_Sub28_Sub19.aClass153_3772, Class3_Sub13_Sub36.aClass153_3429, Class75_Sub3.aClass153_2660);
                             Unsorted.method1053(Class164.aClass153_2052);
                             Class158.method2180(Class159.aClass153_2019, Class70.aClass153_1058);
@@ -1544,7 +1546,8 @@ public final class Client extends GameShell {
                             LinkableRSString.method731(Class164.aClass153_2052);
                             Unsorted.method89(Unsorted.aClass153_1948, Class140_Sub6.spritesCacheIndex, Class140_Sub3.aClass153_2727, Class159.aClass153_2019);
                             Class3_Sub13_Sub17.method250(Class164.aClass153_2052);
-                            Class46.method1086(NPC.aClass153_3993);
+//                            Class46.method1086(NPC.aClass153_3993);
+                            EnumDefinitionProvider.setIndex(NPC.aClass153_3993);
                             Class3_Sub13_Sub8.method205(Class3_Sub4.aClass153_2258, Class140_Sub7.aClass153_2939, new Class7());
                             Class65.method1236(Class3_Sub4.aClass153_2258, Class140_Sub7.aClass153_2939);
                             Class58.method1197(Class164.aClass153_2052);

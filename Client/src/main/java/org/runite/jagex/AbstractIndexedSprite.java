@@ -1,17 +1,17 @@
 package org.runite.jagex;
 
 import org.rs09.client.Linkable;
-import org.rs09.client.collections.Queue;
+import org.rs09.client.data.Queue;
 
 abstract class AbstractIndexedSprite {
 
-   int anInt1461;
+   int width;
    static int anInt1462;
    static int anInt1463 = -16 + (int)(Math.random() * 33.0D);
    int anInt1464;
    static long aLong1465 = 0L;
    int anInt1467;
-   int anInt1468;
+   int height;
    int anInt1469;
    int anInt1470;
 

@@ -72,7 +72,7 @@ final class Class3_Sub28_Sub3 extends Node {
    static void method539() {
       try {
 
-         Class136.aClass93_1772.method1522(-126, 5);
+         Class136.aReferenceCache_1772.sweep(5);
       } catch (RuntimeException var3) {
          throw Class44.clientError(var3, "bn.O(" + 0 + ',' + 5 + ')');
       }

@@ -35,7 +35,7 @@ final class Class108 {
 
    static void method1654(int var0) {
       try {
-         Class140_Sub4.aClass93_2792.method1523((byte)-108);
+         Class140_Sub4.aReferenceCache_2792.clearSoftReferences();
       } catch (RuntimeException var2) {
          throw Class44.clientError(var2, "oi.E(" + var0 + ')');
       }
@@ -55,7 +55,7 @@ final class Class108 {
             int var3 = var2 * 956 / 503;
             Objects.requireNonNull(Class40.aClass3_Sub28_Sub16_680).method639((Class23.anInt454 + -var3) / 2, 0, var3, var2);
             AnimationDefinition.aClass109_1856 = Class3_Sub28_Sub6.a(Class79.anInt1124, var0);
-            Objects.requireNonNull(AnimationDefinition.aClass109_1856).method1667(Class23.anInt454 / 2 + -(AnimationDefinition.aClass109_1856.anInt1461 / 2), 18);
+            Objects.requireNonNull(AnimationDefinition.aClass109_1856).method1667(Class23.anInt454 / 2 + -(AnimationDefinition.aClass109_1856.width / 2), 18);
             Class140_Sub2.aBoolean2713 = true;
             if(var1 > -50) {
                method1654(-27);
@@ -87,7 +87,7 @@ final class Class108 {
 
    static void method1659() {
       try {
-         Class61.aClass93_939.method1524();
+         Class61.aReferenceCache_939.clear();
       } catch (RuntimeException var2) {
          throw Class44.clientError(var2, "oi.G(" + 16712751 + ')');
       }

@@ -8,7 +8,7 @@ final class CS2Script extends Linkable {
    RSString aClass94_2439;
    static int anInt2440 = 0;
    int scrollbarScrollAmount;
-   static Class93 aClass93_2442 = new Class93(50);
+   static ReferenceCache aReferenceCache_2442 = new ReferenceCache(50);
    int anInt2443;
    int inputTextCode;
    int interfaceButtons;
@@ -16,7 +16,7 @@ final class CS2Script extends Linkable {
    int worldSelectCursorPositionX;
    Object[] arguments;
    RSInterface aClass11_2449;
-   static Class93 aClass93_2450 = new Class93(64);
+   static ReferenceCache aReferenceCache_2450 = new ReferenceCache(64);
    static int anInt2451 = -1;
    static byte[][][] aByteArrayArrayArray2452;
    static int anInt2453 = 127;
@@ -42,7 +42,7 @@ final class CS2Script extends Linkable {
 
    static Class79 method378(int var0, byte var1) {
       try {
-         Class79 var2 = (Class79)aClass93_2450.get((long)var0);
+         Class79 var2 = (Class79) aReferenceCache_2450.get((long)var0);
          if(var2 == null) {
             if(var1 < 126) {
                return (Class79)null;
@@ -53,7 +53,7 @@ final class CS2Script extends Linkable {
                   var2.method1387(new DataBuffer(var3));
                }
 
-               aClass93_2450.put(var2, (long)var0);
+               aReferenceCache_2450.put(var2, (long)var0);
                return var2;
             }
          } else {

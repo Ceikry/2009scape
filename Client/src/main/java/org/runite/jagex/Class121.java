@@ -128,7 +128,7 @@ final class Class121 {
                Class3_Sub9.aClass64_2318 = null;
                wlUpdateStamp = 0;
                if(Class30.loadedWorldList) {
-                  wlUpdateStamp = Class3_Sub28_Sub7.updateStamp;
+                  wlUpdateStamp = Unsorted.updateStamp;
                }
 
                Class3_Sub13_Sub1.outgoingBuffer.writeByte(255);

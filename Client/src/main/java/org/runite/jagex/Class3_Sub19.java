@@ -109,7 +109,7 @@ final class Class3_Sub19 extends Linkable {
 
                         anIntArray3693[MouseListeningClass.anInt1924] = var10.objectId;
                         Class84.anIntArray1163[MouseListeningClass.anInt1924] = var12;
-                        Class3_Sub28_Sub7_Sub1.anIntArray4050[MouseListeningClass.anInt1924] = var21 + -var3;
+                        Unsorted.anIntArray4050[MouseListeningClass.anInt1924] = var21 + -var3;
                         ++MouseListeningClass.anInt1924;
                      }
                   }

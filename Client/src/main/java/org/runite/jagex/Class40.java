@@ -51,7 +51,7 @@ final class Class40 {
             aClass94_672 = (RSString)null;
          }
 
-         CS2Script.aClass93_2450.method1523((byte)-109);
+         CS2Script.aReferenceCache_2450.clearSoftReferences();
       } catch (RuntimeException var2) {
          throw Class44.clientError(var2, "gd.E(" + var0 + ')');
       }
@@ -60,7 +60,7 @@ final class Class40 {
    static void method1045() {
       try {
 
-         Class128.aClass93_1683.method1524();
+         Class128.aReferenceCache_1683.clear();
       } catch (RuntimeException var2) {
          throw Class44.clientError(var2, "gd.B(" + -19761 + ')');
       }
@@ -220,7 +220,7 @@ final class Class40 {
                Class163_Sub1.method2210(true);
                Class117.method1720(false, 105);
                if(!LinkableRSString.isDynamicSceneGraph) {
-                  Class47.method1091(false, -93);
+                  Unsorted.method1091(false, -93);
                   Class163_Sub1.method2210(true);
                   if(HDToolKit.highDetail) {
                      var12 = Class102.player.anIntArray2767[0] >> 3;
@@ -273,7 +273,7 @@ final class Class40 {
                   Class167.method2264(true);
                   Class117.method1720(true, 105);
                   if(!LinkableRSString.isDynamicSceneGraph) {
-                     Class47.method1091(true, -121);
+                     Unsorted.method1091(true, -121);
                      Class163_Sub1.method2210(true);
                      Class3_Sub13_Sub6.method198(true);
                   }
@@ -319,8 +319,8 @@ final class Class40 {
                if(!LinkableRSString.isDynamicSceneGraph) {
                   int var7 = (Class3_Sub7.anInt2294 + 6) / 8;
                   int var6 = (Class3_Sub7.anInt2294 - 6) / 8;
-                  var4 = (Class3_Sub28_Sub7.anInt3606 - 6) / 8;
-                  var5 = (Class3_Sub28_Sub7.anInt3606 - -6) / 8;
+                  var4 = (Unsorted.anInt3606 - 6) / 8;
+                  var5 = (Unsorted.anInt3606 - -6) / 8;
 
                   for(int var8 = var4 - 1; var5 - -1 >= var8; ++var8) {
                      for(int var9 = -1 + var6; var7 - -1 >= var9; ++var9) {

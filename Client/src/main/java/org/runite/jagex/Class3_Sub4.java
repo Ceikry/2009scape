@@ -76,7 +76,7 @@ final class Class3_Sub4 extends Linkable {
 				++var2;
 			}
 
-			if(var0.method2144(Class93.anInt1325)) {
+			if(var0.method2144(Unsorted.anInt1325)) {
 				++var2;
 			}
 
@@ -103,14 +103,14 @@ final class Class3_Sub4 extends Linkable {
 		if(var4) {
 			Class166.aClass3_Sub2ArrayArrayArray2065 = new Class3_Sub2[1][Unsorted.anInt1234][Class3_Sub13_Sub15.anInt3179];
 			Class3_Sub13_Sub9.anIntArrayArray3115 = new int[Unsorted.anInt1234][Class3_Sub13_Sub15.anInt3179];
-			Class3_Sub28_Sub7.anIntArrayArrayArray3605 = new int[1][Unsorted.anInt1234 + 1][Class3_Sub13_Sub15.anInt3179 + 1];
+			Unsorted.anIntArrayArrayArray3605 = new int[1][Unsorted.anInt1234 + 1][Class3_Sub13_Sub15.anInt3179 + 1];
 			if(HDToolKit.highDetail) {
 				Class3_Sub13_Sub28.aClass3_Sub11ArrayArray3346 = new Class3_Sub11[1][];
 			}
 		} else {
 			Class166.aClass3_Sub2ArrayArrayArray2065 = (Class3_Sub2[][][])null;
 			Class3_Sub13_Sub9.anIntArrayArray3115 = (int[][])null;
-			Class3_Sub28_Sub7.anIntArrayArrayArray3605 = (int[][][])null;
+			Unsorted.anIntArrayArrayArray3605 = (int[][][])null;
 			Class3_Sub13_Sub28.aClass3_Sub11ArrayArray3346 = (Class3_Sub11[][])null;
 		}
 

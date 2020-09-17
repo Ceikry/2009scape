@@ -87,9 +87,9 @@ public final class GraphicDefinition {
 
 	final Model method966(int var1, int var3, int var4) {
 		try {
-			Model var5 = (Model)Class27.aClass93_511.get((long)this.graphicId);
+			Model var5 = (Model)Class27.aReferenceCache_511.get((long)this.graphicId);
             if(var5 == null) {
-                Model_Sub1 var6 = Model_Sub1.method2015(Class3_Sub28_Sub7_Sub1.aClass153_4048, this.anInt541);
+                Model_Sub1 var6 = Model_Sub1.method2015(Unsorted.aClass153_4048, this.anInt541);
                 if(null == var6) {
                     return null;
                 }
@@ -108,7 +108,7 @@ public final class GraphicDefinition {
                 }
 
                 var5 = var6.method2008(64 - -this.anInt538, this.anInt537 + 850, -30, -50, -30);
-                Class27.aClass93_511.put(var5, (long)this.graphicId);
+                Class27.aReferenceCache_511.put(var5, (long)this.graphicId);
             }
 
             Model var9;

@@ -2,8 +2,6 @@ package org.runite.jagex;
 
 import org.runite.Configurations;
 
-
-
 public final class Class3_Sub13_Sub1 extends Class3_Sub13 {
 
 	public static Class3_Sub30_Sub1 outgoingBuffer = new Class3_Sub30_Sub1();
@@ -136,7 +134,7 @@ public final class Class3_Sub13_Sub1 extends Class3_Sub13 {
 			}
 
 			if(Unsorted.loadInterface(var1)) {
-				Class47.method1095(var2, var8, var4, GameObject.aClass11ArrayArray1834[var1], var3, -1, var7, var6, (byte)119, var5);
+				Unsorted.method1095(var2, var8, var4, GameObject.aClass11ArrayArray1834[var1], var3, -1, var7, var6, (byte)119, var5);
 			} else if (var5 == -1) {
 				for (int var9 = 0; var9 < 100; ++var9) {
 					Class3_Sub28_Sub14.aBooleanArray3674[var9] = true;

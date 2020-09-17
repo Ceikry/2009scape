@@ -177,7 +177,7 @@ final class Class3_Sub13_Sub4 extends Class3_Sub13 {
             method188(38, 29);
          }
 
-         Class154.aClass93_1955.method1522(-125, var0);
+         Class154.aReferenceCache_1955.sweep(var0);
       } catch (RuntimeException var3) {
          throw Class44.clientError(var3, "bi.U(" + var0 + ',' + var1 + ')');
       }

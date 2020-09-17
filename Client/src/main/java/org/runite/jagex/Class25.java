@@ -4,7 +4,7 @@ final class Class25 {
 
    int anInt478;
    GameObject aClass140_479;
-   static Class47 aClass47_480 = new Class47(16);
+   static NodeCache aClass47_480 = new NodeCache(16);
    int anInt481;
    int anInt482;
    int anInt483;
@@ -25,9 +25,9 @@ final class Class25 {
 
    static void method953() {
       try {
-         Class114.aClass93_1569.method1522(-13508 ^ 13501, 50);
-         Class3_Sub15.aClass93_2428.method1522(-126, 50);
-         Class47.aClass93_743.method1522(-126, 50);
+         Class114.aReferenceCache_1569.sweep(50);
+         Class3_Sub15.aReferenceCache_2428.sweep(50);
+         Unsorted.aReferenceCache_743.sweep(50);
       } catch (RuntimeException var3) {
          throw Class44.clientError(var3, "ec.D(" + -13508 + ',' + 50 + ')');
       }
@@ -97,7 +97,7 @@ final class Class25 {
    static void method957(boolean var1) {
       try {
           Unsorted.aBoolean3665 = var1;
-          Class47.aBoolean742 = !NPC.method1986(42);
+          Unsorted.aBoolean742 = !NPC.method1986(42);
       } catch (RuntimeException var3) {
          throw Class44.clientError(var3, "ec.C(" + 96 + ',' + var1 + ')');
       }
@@ -125,7 +125,7 @@ final class Class25 {
 
    static void method959() {
       try {
-         CS2Script.aClass93_2450.method1524();
+         CS2Script.aReferenceCache_2450.clear();
 
       } catch (RuntimeException var2) {
          throw Class44.clientError(var2, "ec.B(" + 0 + ')');

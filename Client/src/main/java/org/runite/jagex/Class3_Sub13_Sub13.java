@@ -78,7 +78,7 @@ final class Class3_Sub13_Sub13 extends Class3_Sub13 {
 
    static Class24 method231(int var0) {
       try {
-         Class24 var2 = (Class24)Class140_Sub4.aClass93_2792.get((long)var0);
+         Class24 var2 = (Class24)Class140_Sub4.aReferenceCache_2792.get((long)var0);
          if(var2 == null) {
             byte[] var3 = Class127.aClass153_1680.getFile(3, var0);
             var2 = new Class24();
@@ -86,7 +86,7 @@ final class Class3_Sub13_Sub13 extends Class3_Sub13 {
                var2.method952(new DataBuffer(var3));
             }
 
-            Class140_Sub4.aClass93_2792.put(var2, (long)var0);
+            Class140_Sub4.aReferenceCache_2792.put(var2, (long)var0);
 
          }
          return var2;

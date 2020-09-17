@@ -12,7 +12,7 @@ final class Class3_Sub28_Sub4 extends Node {
    boolean aBoolean3568 = true;
    private int[][] anIntArrayArray3570;
    private RSString[] aClass94Array3571;
-   static Class93 aClass93_3572 = new Class93(64);
+   static ReferenceCache aReferenceCache_3572 = new ReferenceCache(64);
    static RSString aClass94_3574 = RSString.parse("titlebg");
    static RSString aClass94_3577 = RSString.parse(": ");
    static Class83 aClass83_3579;
@@ -92,7 +92,7 @@ final class Class3_Sub28_Sub4 extends Node {
 
          if(var2 == Class23.anInt453) {
             if(0 != var2 && var1 != Class3_Sub13_Sub21.anInt3263) {
-               Class2.anInterface5Array70[var2].method23(var1);
+               Unsorted.anInterface5Array70[var2].method23(var1);
                Class3_Sub13_Sub21.anInt3263 = var1;
             }
          } else {
@@ -101,11 +101,11 @@ final class Class3_Sub28_Sub4 extends Node {
             }
 
             if(Class23.anInt453 != 0) {
-               Class2.anInterface5Array70[Class23.anInt453].method21();
+               Unsorted.anInterface5Array70[Class23.anInt453].method21();
             }
 
             if(var2 != 0) {
-               Interface5 var3 = Class2.anInterface5Array70[var2];
+               Interface5 var3 = Unsorted.anInterface5Array70[var2];
                var3.method22();
                var3.method23(var1);
             }
@@ -168,7 +168,7 @@ final class Class3_Sub28_Sub4 extends Node {
 
    final RSString method554() {
       try {
-         RSString var2 = Class47.emptyString(80);
+         RSString var2 = Unsorted.emptyString(80);
          if(null == this.aClass94Array3571) {
             return Class3_Sub13_Sub29.aClass94_3357;
          } else {
@@ -189,7 +189,7 @@ final class Class3_Sub28_Sub4 extends Node {
    final RSString method555(DataBuffer var2) {
       try {
 
-         RSString var3 = Class47.emptyString(80);
+         RSString var3 = Unsorted.emptyString(80);
          if(this.anIntArray3566 != null) {
             for(int var4 = 0; var4 < this.anIntArray3566.length; ++var4) {
                Objects.requireNonNull(var3).append(this.aClass94Array3571[var4]);

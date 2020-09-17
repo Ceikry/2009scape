@@ -269,9 +269,9 @@ class Class127 {
                   Unsorted.aBoolean29 = GraphicDefinition.incomingBuffer.readUnsignedByte() == 1;
                   Class3_Sub1.localIndex = GraphicDefinition.incomingBuffer.readUnsignedShort();
                   Class3_Sub13_Sub29.disableGEBoxes = GraphicDefinition.incomingBuffer.readUnsignedByte() == 1;
-                  Class2.isMember = GraphicDefinition.incomingBuffer.readUnsignedByte() == 1;
-                  Class113.method1702(Class2.isMember);
-                  Class8.method845(Class2.isMember);
+                  Unsorted.isMember = GraphicDefinition.incomingBuffer.readUnsignedByte() == 1;
+                  Class113.method1702(Unsorted.isMember);
+                  Class8.method845(Unsorted.isMember);
                   if(!Class3_Sub28_Sub19.aBoolean3779) {
                      if((!Class3_Sub15.aBoolean2433 || Unsorted.aBoolean4063) && !Class3_Sub13_Sub29.disableGEBoxes) {
                         try {
@@ -302,7 +302,7 @@ class Class127 {
                   Class158.anInt2005 = 2;
                   Class3_Sub13_Sub25.loginStage = 0;
                   AnimationDefinition.resetAll();
-                  Class3_Sub28_Sub7.anInt3606 = -1;
+                  Unsorted.anInt3606 = -1;
                   Class39.updateSceneGraph(dynamic);
                   Unsorted.incomingOpcode = -1;
                   return;

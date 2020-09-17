@@ -111,13 +111,13 @@ final class Class3_Sub21 extends Linkable {
 
    static void method397(byte var0) {
       try {
-         Class114.aClass93_1569.method1524();
-         Class3_Sub15.aClass93_2428.method1524();
+         Class114.aReferenceCache_1569.clear();
+         Class3_Sub15.aReferenceCache_2428.clear();
          if(var0 != -41) {
             method394(14, 52);
          }
 
-         Class47.aClass93_743.method1524();
+         Unsorted.aReferenceCache_743.clear();
       } catch (RuntimeException var2) {
          throw Class44.clientError(var2, "lh.C(" + var0 + ')');
       }

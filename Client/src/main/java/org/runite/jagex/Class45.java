@@ -8,7 +8,6 @@ final class Class45 {
 
 	static int[] anIntArray729 = new int[4096];
 	static float aFloat730;
-	static CacheIndex aClass153_731;
 	static int anInt733 = 0;
 	static int anInt734 = 0;
 	static int anInt735;
@@ -215,20 +214,6 @@ final class Class45 {
 		}
 	}
 
-	public static void method1081(byte var0) {
-		try {
-			aClass3_Sub28_Sub16_736 = null;
-			anIntArray729 = null;
-			if(var0 <= 63) {
-				method1082((byte[])null, -60);
-			}
-
-			aClass153_731 = null;
-		} catch (RuntimeException var2) {
-			throw Class44.clientError(var2, "gk.E(" + var0 + ')');
-		}
-	}
-
 	static void method1082(byte[] var0, int var1) {
 		try {
 			DataBuffer var2 = new DataBuffer(var0);
@@ -249,10 +234,6 @@ final class Class45 {
 			int var4;
 			for(var4 = 0; Class95.anInt1338 > var4; ++var4) {
 				Class164.anIntArray2048[var4] = var2.readUnsignedShort();
-			}
-
-			if(var1 < 11) {
-				method1081((byte)-52);
 			}
 
 			for(var4 = 0; Class95.anInt1338 > var4; ++var4) {
@@ -332,22 +313,6 @@ final class Class45 {
 			Class3_Sub13_Sub9.anIntArray3107 = Unsorted.method62();
 		} catch (RuntimeException var2) {
 			throw Class44.clientError(var2, "gk.C(" + var0 + ')');
-		}
-	}
-
-	static void method1084(Node var0, Node var1) {
-		try {
-			if(var1.previousNode != null) {
-				var1.unlinkNode();
-			}
-
-			var1.previousNode = var0;
-			var1.nextNode = var0.nextNode;
-			var1.previousNode.nextNode = var1;
-
-			var1.nextNode.previousNode = var1;
-		} catch (RuntimeException var4) {
-			throw Class44.clientError(var4, "gk.D(" + (var0 != null?"{...}":"null") + ',' + (var1 != null?"{...}":"null") + ',' + (byte) 121 + ')');
 		}
 	}
 

@@ -8,11 +8,11 @@ class CursorDefinition {
     var imageId = 0
 
     fun getImage(): Class3_Sub28_Sub16_Sub2 {
-        var image = Class163_Sub1.aClass93_2984.get(imageId.toLong()) as? Class3_Sub28_Sub16_Sub2
+        var image = Class163_Sub1.aReferenceCache_2984.get(imageId.toLong()) as? Class3_Sub28_Sub16_Sub2
         if (image != null) return image
 
-        image = Class3_Sub28_Sub7.method562(AnimationDefinition.aClass153_1852, imageId)
-        if (image != null) Class163_Sub1.aClass93_2984.put(image, imageId.toLong())
+        image = Unsorted.method562(AnimationDefinition.aClass153_1852, imageId)
+        if (image != null) Class163_Sub1.aReferenceCache_2984.put(image, imageId.toLong())
         return image
     }
 

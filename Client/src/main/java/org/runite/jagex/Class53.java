@@ -10,12 +10,8 @@ final class Class53 {
    static int anInt867;
 
 
-   static int method1170(byte var0, int var1) {
-      try {
+   static int method1170(int var1) {
          return var1 >>> 8;
-      } catch (RuntimeException var3) {
-         throw Class44.clientError(var3, "hi.E(" + var0 + ',' + var1 + ')');
-      }
    }
 
    static void method1171(int var0, int var1, int var2, int var3, int var4, RSInterface var5) {
@@ -128,7 +124,7 @@ final class Class53 {
             GameLaunch.SETTINGS.setWorld(worldId);
             System.out.println(GameLaunch.SETTINGS.getWorld());
          }
-         Class3_Sub28_Sub7.updateStamp = buffer.readInt();
+         Unsorted.updateStamp = buffer.readInt();
          Class30.loadedWorldList = true;
       } catch (RuntimeException var6) {
          throw Class44.clientError(var6, "hi.B(" + (buffer != null?"{...}":"null") + ',' + -88 + ')');

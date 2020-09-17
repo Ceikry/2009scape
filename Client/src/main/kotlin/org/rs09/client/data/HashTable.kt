@@ -1,4 +1,4 @@
-package org.rs09.client.collections
+package org.rs09.client.data
 
 import org.rs09.client.Linkable
 import java.util.*

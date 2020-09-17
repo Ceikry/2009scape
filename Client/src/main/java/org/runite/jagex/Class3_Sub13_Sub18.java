@@ -31,7 +31,7 @@ final class Class3_Sub13_Sub18 extends Class3_Sub13 {
 
          int var7;
          for(var7 = 0; var6 > var7; ++var7) {
-            if(Class2.method73(Class3_Sub13_Sub7.aShortArray3095[var7])) {
+            if(Unsorted.method73(Class3_Sub13_Sub7.aShortArray3095[var7])) {
                Class3_Sub25.method509(var7);
             }
          }

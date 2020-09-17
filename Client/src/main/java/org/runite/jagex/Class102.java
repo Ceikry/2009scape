@@ -15,11 +15,11 @@ final class Class102 implements Interface2 {
    private final boolean[] aBooleanArray2135;
    static int anInt2136;
    private final short[] aShortArray2137;
-   private Class47 aClass47_2138;
+   private NodeCache aClass47_2138;
    private int anInt2139;
    static Class3_Sub28_Sub16_Sub2[] aClass3_Sub28_Sub16_Sub2Array2140;
    static Player player;
-   private Class47 aClass47_2142;
+   private NodeCache aClass47_2142;
    private final byte[] aByteArray2143;
    private final byte[] aByteArray2144;
 
@@ -27,7 +27,7 @@ final class Class102 implements Interface2 {
    final void method1610(int var2) {
       try {
 
-         for(Class3_Sub28_Sub20 var3 = (Class3_Sub28_Sub20)this.aClass47_2142.method1094(); null != var3; var3 = (Class3_Sub28_Sub20)this.aClass47_2142.method1099()) {
+         for(Class3_Sub28_Sub20 var3 = (Class3_Sub28_Sub20)this.aClass47_2142.first(); null != var3; var3 = (Class3_Sub28_Sub20)this.aClass47_2142.next()) {
             if(var3.aBoolean3797) {
                var3.method723(var2);
                var3.aBoolean3797 = false;
@@ -226,7 +226,7 @@ final class Class102 implements Interface2 {
    private Class3_Sub28_Sub20 method1613(int var1) {
       try {
 
-         Class3_Sub28_Sub20 var3 = (Class3_Sub28_Sub20)this.aClass47_2142.getNodeByID((long)var1);
+         Class3_Sub28_Sub20 var3 = (Class3_Sub28_Sub20)this.aClass47_2142.get((long)var1);
          if(null == var3) {
             byte[] var4 = this.aClass153_2127.getFile(var1, 0);
             if(null == var4) {
@@ -234,7 +234,7 @@ final class Class102 implements Interface2 {
             } else {
                DataBuffer var5 = new DataBuffer(var4);
                var3 = new Class3_Sub28_Sub20(var5);
-               this.aClass47_2142.method1097(var3, (long)var1, (byte)-118);
+               this.aClass47_2142.put((long)var1, var3);
                return var3;
             }
          } else {
@@ -299,10 +299,10 @@ final class Class102 implements Interface2 {
 
    private Class3_Sub28_Sub18 method1615(int var2) {
       try {
-         Class3_Sub28_Sub18 var4 = (Class3_Sub28_Sub18)this.aClass47_2138.getNodeByID((long)var2);
+         Class3_Sub28_Sub18 var4 = (Class3_Sub28_Sub18)this.aClass47_2138.get((long)var2);
          if(null == var4) {
             var4 = new Class3_Sub28_Sub18(this.aShortArray2137[var2] & '\uffff');
-            this.aClass47_2138.method1097(var4, (long)var2, (byte)69);
+            this.aClass47_2138.put((long)var2, var4);
          }
          return var4;
       } catch (RuntimeException var5) {
@@ -415,9 +415,9 @@ final class Class102 implements Interface2 {
 
    final void method1618() {
       try {
-         this.aClass47_2142.method1101();
+         this.aClass47_2142.clear();
          if(null != this.aClass47_2138) {
-            this.aClass47_2138.method1101();
+            this.aClass47_2138.clear();
          }
 
       } catch (RuntimeException var3) {
@@ -449,9 +449,9 @@ final class Class102 implements Interface2 {
       try {
 
          this.anInt2139 = var1;
-         this.aClass47_2142 = new Class47(this.anInt2139);
+         this.aClass47_2142 = new NodeCache(this.anInt2139);
          if(HDToolKit.highDetail) {
-            this.aClass47_2138 = new Class47(this.anInt2139);
+            this.aClass47_2138 = new NodeCache(this.anInt2139);
          } else {
             this.aClass47_2138 = null;
          }
@@ -475,9 +475,9 @@ final class Class102 implements Interface2 {
          this.aBoolean2134 = var5;
          this.anInt2139 = 20;
          this.aClass153_2127 = var1;
-         this.aClass47_2142 = new Class47(this.anInt2139);
+         this.aClass47_2142 = new NodeCache(this.anInt2139);
          if(HDToolKit.highDetail) {
-            this.aClass47_2138 = new Class47(this.anInt2139);
+            this.aClass47_2138 = new NodeCache(this.anInt2139);
          } else {
             this.aClass47_2138 = null;
          }

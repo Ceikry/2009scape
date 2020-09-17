@@ -1,5 +1,5 @@
 package org.runite.jagex;
-import org.rs09.client.collections.Queue;
+import org.rs09.client.data.Queue;
 
 import java.awt.event.ActionEvent;
 import java.io.IOException;
@@ -126,7 +126,7 @@ final class Class81 {
 
    static Class57 method1401(int var1) {
       try {
-         Class57 var2 = (Class57)Class128.aClass93_1683.get((long)var1);
+         Class57 var2 = (Class57)Class128.aReferenceCache_1683.get((long)var1);
          if(var2 == null) {
             byte[] var3 = Class46.aClass153_737.getFile(31, var1);
             var2 = new Class57();
@@ -134,7 +134,7 @@ final class Class81 {
                var2.method1190(new DataBuffer(var3), var1);
             }
 
-            Class128.aClass93_1683.put(var2, (long)var1);
+            Class128.aReferenceCache_1683.put(var2, (long)var1);
          }
          return var2;
       } catch (RuntimeException var4) {

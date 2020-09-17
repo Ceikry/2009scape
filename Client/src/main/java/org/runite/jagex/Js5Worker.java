@@ -1,6 +1,6 @@
 package org.runite.jagex;
 
-import org.rs09.client.collections.Queue;
+import org.rs09.client.data.Queue;
 import org.rs09.client.net.Connection;
 
 import java.io.IOException;
@@ -112,7 +112,7 @@ final class Js5Worker {
                     this.connection.readBytes(this.current.data.buffer, this.current.data.index, readBytes);
                     if (this.aByte1009 != 0) {
                         for (var8 = 0; var8 < readBytes; ++var8) {
-                            this.current.data.buffer[this.current.data.index - -var8] = (byte) Class93.bitwiseXOR(this.current.data.buffer[this.current.data.index + var8], this.aByte1009);
+                            this.current.data.buffer[this.current.data.index - -var8] = (byte) Unsorted.bitwiseXOR(this.current.data.buffer[this.current.data.index + var8], this.aByte1009);
                         }
                     }
 
@@ -134,7 +134,7 @@ final class Js5Worker {
                     this.connection.readBytes(this.incoming.buffer, this.incoming.index, var6);
                     if (0 != this.aByte1009) {
                         for (readBytes = 0; readBytes < var6; ++readBytes) {
-                            this.incoming.buffer[readBytes + this.incoming.index] = (byte) Class93.bitwiseXOR(this.incoming.buffer[readBytes + this.incoming.index], this.aByte1009);
+                            this.incoming.buffer[readBytes + this.incoming.index] = (byte) Unsorted.bitwiseXOR(this.incoming.buffer[readBytes + this.incoming.index], this.aByte1009);
                         }
                     }
 

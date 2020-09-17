@@ -5,7 +5,7 @@ import java.util.Objects;
 final class Class114 {
 
    private final int anInt1568;
-   static Class93 aClass93_1569 = new Class93(200);
+   static ReferenceCache aReferenceCache_1569 = new ReferenceCache(200);
    private int anInt1570 = 0;
    private Class3_Sub26[] aClass3_Sub26Array1571;
    static Class30 aClass30_1572;
@@ -55,12 +55,12 @@ final class Class114 {
       try {
          int var7 = (!var2?0:65536) + var1 + (var0 << 17) + (var4 << 19);
          long var8 = (long)var7 * 3849834839L + 3147483667L * (long)var3;
-         Class3_Sub28_Sub16 var10 = (Class3_Sub28_Sub16)Class67.aClass93_1013.get(var8);
+         Class3_Sub28_Sub16 var10 = (Class3_Sub28_Sub16)Class67.aReferenceCache_1013.get(var8);
          if(var10 == null) {
             Class51.aBoolean837 = false;
             var10 = Unsorted.method1570(var4, (byte)13, false, var1, var2, var0, var3, false);
             if(var10 != null && !Class51.aBoolean837) {
-               Class67.aClass93_1013.put(var10, var8);
+               Class67.aReferenceCache_1013.put(var10, var8);
             }
 
          }
@@ -138,9 +138,9 @@ final class Class114 {
 
    static void method1711(int var0, int var1) {
       try {
-         Class3_Sub28_Sub4.aClass93_3572.method1522(-127, var0);
-         Class143.aClass93_1874.method1522(var1 + -383, var0);
-         Class67.aClass93_1013.method1522(var1 ^ -132, var0);
+         Class3_Sub28_Sub4.aReferenceCache_3572.sweep(var0);
+         Class143.aReferenceCache_1874.sweep(var0);
+         Class67.aReferenceCache_1013.sweep(var0);
          if(var1 != 255) {
             method1711(20, 87);
          }

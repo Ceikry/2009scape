@@ -62,7 +62,7 @@ final class Class65 {
 
    static void method1236(CacheIndex var0, CacheIndex var1) {
       try {
-         Class47.quickChatMessages = var1;
+         Unsorted.quickChatMessages = var1;
          Unsorted.aClass153_332 = var0;
       } catch (RuntimeException var4) {
          throw Class44.clientError(var4, "ja.F(" + (var0 != null?"{...}":"null") + ',' + (var1 != null?"{...}":"null") + ',' + -117 + ')');

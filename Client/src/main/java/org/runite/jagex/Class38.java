@@ -12,7 +12,7 @@ class Class38 {
 
    static ItemDefinition getItemDefinition(int itemId, byte var1) {
       try {
-         ItemDefinition var2 = (ItemDefinition)Class3_Sub28_Sub4.aClass93_3572.get((long)itemId);
+         ItemDefinition var2 = (ItemDefinition)Class3_Sub28_Sub4.aReferenceCache_3572.get((long)itemId);
          if(var2 == null) {
             byte[] var3 = Class97.aClass153_1370.getFile(Class140_Sub2.method1951(itemId), 255 & itemId);
             if(var1 <= 68) {
@@ -42,7 +42,7 @@ class Class38 {
                var2.groundOptions = Unsorted.aClass94Array2596;
             }
 
-            Class3_Sub28_Sub4.aClass93_3572.put(var2, (long)itemId);
+            Class3_Sub28_Sub4.aReferenceCache_3572.put(var2, (long)itemId);
          }
          return var2;
       } catch (RuntimeException var4) {
@@ -52,12 +52,12 @@ class Class38 {
 
 	static void method1025(byte var0) {
       try {
-         Class3_Sub31.aClass93_2604.method1523((byte)-121);
+         Class3_Sub31.aReferenceCache_2604.clearSoftReferences();
          if(var0 > -51) {
             method1025((byte)86);
          }
 
-         Class27.aClass93_511.method1523((byte)-120);
+         Class27.aReferenceCache_511.clearSoftReferences();
       } catch (RuntimeException var2) {
          throw Class44.clientError(var2, "fk.I(" + var0 + ')');
       }
@@ -65,7 +65,7 @@ class Class38 {
 
    static void method1027(int var0, byte var1) {
       try {
-         Class44.aClass93_725.method1522(-128, var0);
+         Class44.aReferenceCache_725.sweep(var0);
       } catch (RuntimeException var3) {
          throw Class44.clientError(var3, "fk.J(" + var0 + ',' + var1 + ')');
       }

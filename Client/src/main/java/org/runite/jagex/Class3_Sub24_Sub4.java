@@ -1,6 +1,6 @@
 package org.runite.jagex;
 
-import org.rs09.client.collections.HashTable;
+import org.rs09.client.data.HashTable;
 
 import java.util.Objects;
 
@@ -131,11 +131,11 @@ final class Class3_Sub24_Sub4 extends Class3_Sub24 {
 
    static void method474() {
       try {
-         Unsorted.aClass93_21.method1522(-125, 5);
-         Class99.aClass93_1401.method1522(-126, 5);
+         Unsorted.aReferenceCache_21.sweep(5);
+         Class99.aReferenceCache_1401.sweep(5);
 
-         Class3_Sub28_Sub7_Sub1.aClass93_4051.method1522(2 ^ -127, 5);
-         Class154.aClass93_1965.method1522(-128, 5);
+         Unsorted.aReferenceCache_4051.sweep(5);
+         Class154.aReferenceCache_1965.sweep(5);
       } catch (RuntimeException var3) {
          throw Class44.clientError(var3, "va.S(" + 2 + ',' + 5 + ')');
       }

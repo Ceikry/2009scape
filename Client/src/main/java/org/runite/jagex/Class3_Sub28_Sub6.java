@@ -130,16 +130,16 @@ final class Class3_Sub28_Sub6 extends Node {
 
    static Class2 c(int var0) {
       try {
-         Class2 var2 = (Class2)Class3_Sub13_Sub34.aClass93_3412.get((long)var0);
+         Class2 var2 = (Class2)Class3_Sub13_Sub34.aReferenceCache_3412.get((long)var0);
          if(var2 == null) {
             byte[] var3 = Class107.aClass153_878.getFile(34, var0);
 
             var2 = new Class2();
             if(var3 != null) {
-               var2.method74((byte)-115, new DataBuffer(var3), var0);
+               var2.decode(new DataBuffer(var3));
             }
 
-            Class3_Sub13_Sub34.aClass93_3412.put(var2, (long)var0);
+            Class3_Sub13_Sub34.aReferenceCache_3412.put(var2, (long)var0);
          }
          return var2;
       } catch (RuntimeException var4) {
@@ -230,10 +230,10 @@ final class Class3_Sub28_Sub6 extends Node {
 
    static void h() {
       try {
-         Class114.aClass93_1569.method1523((byte)-109);
+         Class114.aReferenceCache_1569.clearSoftReferences();
 
-         Class3_Sub15.aClass93_2428.method1523((byte)-123);
-         Class47.aClass93_743.method1523((byte)-106);
+         Class3_Sub15.aReferenceCache_2428.clearSoftReferences();
+         Unsorted.aReferenceCache_743.clearSoftReferences();
       } catch (RuntimeException var2) {
          throw Class44.clientError(var2, "da.E(" + (byte) 3 + ')');
       }

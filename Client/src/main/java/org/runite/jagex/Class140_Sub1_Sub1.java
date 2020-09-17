@@ -196,7 +196,7 @@ final class Class140_Sub1_Sub1 extends Model {
 
                                  if(Unsorted.anInt3642 >= var28 && Unsorted.anInt3642 <= var30 && RenderAnimationDefinition.anInt384 >= var29 && RenderAnimationDefinition.anInt384 <= var31) {
                                     if(this.aBoolean2699) {
-                                       Class3_Sub13_Sub38.aLongArray3448[Class2.anInt59++] = var9;
+                                       Class3_Sub13_Sub38.aLongArray3448[Unsorted.anInt59++] = var9;
                                     } else {
                                        if(anIntArray3861.length < this.anInt3833) {
                                           anIntArray3861 = new int[this.anInt3833];
@@ -219,7 +219,7 @@ final class Class140_Sub1_Sub1 extends Model {
                                                 short var52 = this.aShortArray3830[var39];
                                                 short var51 = this.aShortArray3831[var39];
                                                 if(this.method1927(Unsorted.anInt3642, RenderAnimationDefinition.anInt384, anIntArray3857[var53], anIntArray3857[var52], anIntArray3857[var51], anIntArray3861[var53], anIntArray3861[var52], anIntArray3861[var51])) {
-                                                   Class3_Sub13_Sub38.aLongArray3448[Class2.anInt59++] = var9;
+                                                   Class3_Sub13_Sub38.aLongArray3448[Unsorted.anInt59++] = var9;
                                                    break label118;
                                                 }
 
@@ -3104,10 +3104,10 @@ final class Class140_Sub1_Sub1 extends Model {
          int var6 = var3 - var2 + 1;
          int var7 = var5 - var4 + 1;
          LDIndexedSprite var8;
-         if(var1 != null && var1.aByteArray2674.length >= var6 * var7) {
+         if(var1 != null && var1.raster.length >= var6 * var7) {
             var8 = var1;
-            var1.anInt1469 = var1.anInt1461 = var6;
-            var1.anInt1467 = var1.anInt1468 = var7;
+            var1.anInt1469 = var1.width = var6;
+            var1.anInt1467 = var1.height = var7;
             var1.method1671();
          } else {
             var8 = new LDIndexedSprite(var6, var7);
@@ -3159,7 +3159,7 @@ final class Class140_Sub1_Sub1 extends Model {
             int var17 = anIntArray3857[var19];
             int var18 = anIntArray3857[var21];
             if((var13 - var14) * (var17 - var18) - (var17 - var16) * (var15 - var14) > 0) {
-               Class51.method1147(var8.aByteArray2674, var16, var17, var18, var13, var14, var15, var6);
+               Class51.method1147(var8.raster, var16, var17, var18, var13, var14, var15, var6);
             }
          }
 

@@ -4,7 +4,7 @@ import java.util.Objects;
 
 public class Class163_Sub1 extends Class163 {
 
-   public static Class93 aClass93_2984 = new Class93(2);
+   public static ReferenceCache aReferenceCache_2984 = new ReferenceCache(2);
    static long[] aLongArray2986 = new long[32];
    static byte[][] aByteArrayArray2987;
    static int anInt2989 = 0;

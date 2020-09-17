@@ -32,7 +32,7 @@ final class Class3_Sub20 extends Linkable {
 	         Class49.aClass3_Sub28_Sub16_812 = null;
 	         Class58.anInt909 = -1;
 	         Class3_Sub13_Sub30.method313((byte)55);
-	         Class3_Sub28_Sub21.aClass47_3801.method1101();
+	         Class3_Sub28_Sub21.aClass47_3801.clear();
 	         Class100.aClass136_1413 = new Class136();
 	         ((Class102)Class51.anInterface2_838).method1618();
 	         Class68.anInt1032 = 0;

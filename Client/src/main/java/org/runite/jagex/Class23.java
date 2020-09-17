@@ -26,7 +26,7 @@ public final class Class23 {
          var1.writeByte(11);
          var1.writeByte(Unsorted.anInt3625);
          var1.writeByte(!Unsorted.aBoolean3665?0:1);
-         var1.writeByte(Class3_Sub28_Sub7.aBoolean3604?1:0);
+         var1.writeByte(Unsorted.aBoolean3604?1:0);
          var1.writeByte(KeyboardListener.aBoolean1905?1:0);
          var1.writeByte(Class25.aBoolean488?1:0);
          var1.writeByte(!RSInterface.aBoolean236?0:1);
@@ -61,9 +61,9 @@ public final class Class23 {
    static void method940(int var0, int var1) {
       try {
          if(var0 >= 101) {
-            MouseListeningClass var2 = Class3_Sub28_Sub7_Sub1.aClass149_4047;
+            MouseListeningClass var2 = Unsorted.aClass149_4047;
             synchronized(var2) {
-               Class3_Sub28_Sub7_Sub1.anInt4045 = var1;
+               Unsorted.anInt4045 = var1;
             }
          }
       } catch (RuntimeException var5) {

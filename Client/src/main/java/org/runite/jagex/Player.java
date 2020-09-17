@@ -168,7 +168,7 @@ final class Player extends Class140_Sub4 {
             AnimationDefinition var13 = this.anInt2771 != -1 && 0 == this.anInt2828?Client.getAnimationDefinition(this.anInt2771):null;
             AnimationDefinition var14 = this.anInt2764 != -1 && !this.aBoolean3968 && (this.method1965().anInt368 != this.anInt2764 || var13 == null)?Client.getAnimationDefinition(this.anInt2764):null;
             Model var15 = this.class52.method1165(this.aClass145Array2809, this.anInt2776, var14, var13, this.anInt2802, this.anInt2793, -120, this.anInt2760, this.anInt2832, this.anInt2813);
-            int var16 = Class118.method1727((byte)123);
+            int var16 = Unsorted.method1727((byte)123);
             if(HDToolKit.highDetail && Class3_Sub24_Sub3.anInt3492 < 96 && var16 > 50) {
                Class3_Sub1.method90(1);
             }

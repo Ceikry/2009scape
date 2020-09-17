@@ -4,7 +4,7 @@ import org.rs09.client.util.ArrayUtils;
 
 final class Class67 implements Runnable {
 
-   static Class93 aClass93_1013 = new Class93(100);
+   static ReferenceCache aReferenceCache_1013 = new ReferenceCache(100);
    static byte[][][] aByteArrayArrayArray1014;
    boolean aBoolean1015 = true;
    Object anObject1016 = new Object();

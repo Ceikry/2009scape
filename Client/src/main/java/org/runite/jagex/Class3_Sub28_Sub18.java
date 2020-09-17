@@ -59,7 +59,7 @@ final class Class3_Sub28_Sub18 extends Node {
 
    static void method710() {
       try {
-         Class44.aClass93_725.method1523((byte)-104);
+         Class44.aReferenceCache_725.clearSoftReferences();
       } catch (RuntimeException var2) {
          throw Class44.clientError(var2, "sd.C(" + (byte) 126 + ')');
       }

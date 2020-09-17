@@ -7,7 +7,7 @@ import java.util.Arrays;
 final class Class128 {
 
    static int anInt1682 = 1;
-   static Class93 aClass93_1683 = new Class93(64);
+   static ReferenceCache aReferenceCache_1683 = new ReferenceCache(64);
    static boolean aBoolean1685 = true;
    static RSString aClass94_1687 = RSString.parse("(Z");
 
@@ -70,7 +70,7 @@ final class Class128 {
 
    static Model method1763(int var1, int var2, int var3, int var4, Model var5, int var6) {
       try {
-         Model var9 = (Model)Class61.aClass93_939.get((long)var3);
+         Model var9 = (Model)Class61.aReferenceCache_939.get((long)var3);
          if(var9 == null) {
             Model_Sub1 var10 = Model_Sub1.method2015(Class159.aClass153_2019, var3);
             if(var10 == null) {
@@ -78,7 +78,7 @@ final class Class128 {
             }
 
             var9 = var10.method2008(64, 768, -50, -10, -50);
-            Class61.aClass93_939.put(var9, (long)var3);
+            Class61.aReferenceCache_939.put(var9, (long)var3);
          }
 
          int var17 = var5.method1884();

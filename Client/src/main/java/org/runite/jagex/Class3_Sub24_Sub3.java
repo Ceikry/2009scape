@@ -70,7 +70,7 @@ final class Class3_Sub24_Sub3 extends Class3_Sub24 {
    static void method465() {
       try {
 
-         Class140_Sub4.aClass93_2792.method1522(-128, 5);
+         Class140_Sub4.aReferenceCache_2792.sweep(5);
       } catch (RuntimeException var3) {
          throw Class44.clientError(var3, "te.O(" + 5 + ',' + true + ')');
       }
@@ -117,13 +117,13 @@ final class Class3_Sub24_Sub3 extends Class3_Sub24 {
    static void method468(int var0) {
       try {
          Class88.method1456();
-         Class2.anInterface5Array70 = new Interface5[7];
-         Class2.anInterface5Array70[1] = new Class160();
-         Class2.anInterface5Array70[2] = new Class125();
-         Class2.anInterface5Array70[3] = new Class165();
-         Class2.anInterface5Array70[4] = new Class112();
-         Class2.anInterface5Array70[5] = new Class104();
-         Class2.anInterface5Array70[var0] = new Class147();
+         Unsorted.anInterface5Array70 = new Interface5[7];
+         Unsorted.anInterface5Array70[1] = new Class160();
+         Unsorted.anInterface5Array70[2] = new Class125();
+         Unsorted.anInterface5Array70[3] = new Class165();
+         Unsorted.anInterface5Array70[4] = new Class112();
+         Unsorted.anInterface5Array70[5] = new Class104();
+         Unsorted.anInterface5Array70[var0] = new Class147();
       } catch (RuntimeException var2) {
          throw Class44.clientError(var2, "te.T(" + var0 + ')');
       }

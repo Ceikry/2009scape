@@ -1,6 +1,6 @@
 package org.runite.jagex;
 
-import org.rs09.client.collections.HashTable;
+import org.rs09.client.data.HashTable;
 
 final class Class124 {
 

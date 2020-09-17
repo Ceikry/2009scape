@@ -21,7 +21,7 @@ abstract class Class158 {
     abstract void method2179(Graphics var3);
 
     static void method2180(CacheIndex var0, CacheIndex var1) {
-        Class3_Sub28_Sub7_Sub1.aClass153_4048 = var0;
+        Unsorted.aClass153_4048 = var0;
         Class3_Sub13_Sub18.aClass153_3214 = var1;
     }
 

@@ -38,18 +38,6 @@ final class Class29 {
       }
    }
 
-   static void method969(CacheIndex var0, int var1) {
-      try {
-         Class12.aClass153_322 = var0;
-         if(var1 < 39) {
-            anInt561 = -82;
-         }
-
-      } catch (RuntimeException var3) {
-         throw Class44.clientError(var3, "eh.D(" + (var0 != null?"{...}":"null") + ',' + var1 + ')');
-      }
-   }
-
    final void method970(DataBuffer var2) {
       try {
          while(true) {

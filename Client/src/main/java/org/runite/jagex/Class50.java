@@ -76,7 +76,7 @@ final class Class50 {
 
 	static void method1132(int var0) {
 		try {
-			Class128.aClass93_1683.method1523((byte)-111);
+			Class128.aReferenceCache_1683.clearSoftReferences();
 			if(var0 != 103) {
 				method1132(14);
 			}

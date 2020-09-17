@@ -89,7 +89,7 @@ final class Class21 {
 
          int var7;
          for(var7 = 0; var6 > var7; ++var7) {
-            if(Class2.method73(Class3_Sub13_Sub7.aShortArray3095[var7])) {
+            if(Unsorted.method73(Class3_Sub13_Sub7.aShortArray3095[var7])) {
                Class3_Sub25.method509(var7);
             }
          }
@@ -130,7 +130,7 @@ final class Class21 {
       try {
          int var2 = Class3_Sub28_Sub8.method576(var0);
          if(-1 != var2) {
-            Class3_Sub28_Sub7.method565(Class119.aClass131_1624.aShortArray1727[var2], Class119.aClass131_1624.aShortArray1718[var2]);
+            Unsorted.method565(Class119.aClass131_1624.aShortArray1727[var2], Class119.aClass131_1624.aShortArray1718[var2]);
          }
       } catch (RuntimeException var3) {
          throw Class44.clientError(var3, "dh.A(" + (var0 != null?"{...}":"null") + ',' + -1 + ')');

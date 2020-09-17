@@ -4,7 +4,7 @@ final class Class136 {
 
    LDIndexedSprite aClass109_Sub1_1770;
    static int anInt1771;
-   static Class93 aClass93_1772 = new Class93(64);
+   static ReferenceCache aReferenceCache_1772 = new ReferenceCache(64);
    
    static byte[][][] aByteArrayArrayArray1774;
    GameObject aClass140_1777;

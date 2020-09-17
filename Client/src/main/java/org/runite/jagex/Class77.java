@@ -20,7 +20,7 @@ final class Class77 {
    static void method1366() {
       try {
 
-          Class158_Sub1.aClass93_2982.method1522(104 ^ -22, 5);
+          Class158_Sub1.aReferenceCache_2982.sweep(5);
       } catch (RuntimeException var3) {
          throw Class44.clientError(var3, "kh.C(" + 104 + ',' + 5 + ')');
       }

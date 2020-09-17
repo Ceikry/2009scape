@@ -89,7 +89,7 @@ final class Class70 {
             var8.anInt2307 = 128 * (var7.getSize() + var0);
             var8.anInt2332 = Class81.method1398(var7);
             var8.anInt2328 = 128 * var7.anInt3969;
-            Class3_Sub28_Sub7_Sub1.aHashTable_4046.put(var7.displayName.toLong(), var8);
+            Unsorted.aHashTable_4046.put(var7.displayName.toLong(), var8);
          }
 
       } catch (RuntimeException var11) {

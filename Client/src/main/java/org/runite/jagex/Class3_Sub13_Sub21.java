@@ -184,7 +184,7 @@ final class Class3_Sub13_Sub21 extends Class3_Sub13 {
             anInt3263 = 109;
          }
 
-         Class61.aClass93_939.method1522(-128, var1);
+         Class61.aReferenceCache_939.sweep(var1);
       } catch (RuntimeException var3) {
          throw Class44.clientError(var3, "mh.O(" + var0 + ',' + var1 + ')');
       }
