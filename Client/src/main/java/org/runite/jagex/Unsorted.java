@@ -5,6 +5,7 @@ import org.rs09.client.rendering.Toolkit;
 import org.rs09.client.util.ArrayUtils;
 import org.runite.Properties;
 import org.rs09.client.net.Connection;
+import org.rs09.client.data.ReferenceCache;
 
 import java.awt.*;
 import java.io.IOException;

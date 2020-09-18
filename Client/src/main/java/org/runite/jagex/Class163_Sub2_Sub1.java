@@ -1,5 +1,6 @@
 package org.runite.jagex;
 import org.rs09.client.net.Connection;
+import org.rs09.client.data.ReferenceCache;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;

@@ -1,5 +1,6 @@
 package org.runite.jagex;
 import org.rs09.client.console.DeveloperConsole;
+import org.rs09.client.data.ReferenceCache;
 
 import java.awt.event.FocusEvent;
 import java.awt.event.FocusListener;

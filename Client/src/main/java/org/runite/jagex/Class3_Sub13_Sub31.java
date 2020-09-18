@@ -1,5 +1,7 @@
 package org.runite.jagex;
 
+import org.rs09.client.data.ReferenceCache;
+
 final class Class3_Sub13_Sub31 extends Class3_Sub13 {
 
    static ReferenceCache aReferenceCache_3369 = new ReferenceCache(64);

@@ -1,4 +1,6 @@
 package org.runite.jagex;
+import org.rs09.client.data.ReferenceCache;
+
 import java.io.IOException;
 import java.util.Objects;
 

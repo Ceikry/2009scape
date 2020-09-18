@@ -1,6 +1,8 @@
 package org.runite.jagex;
 
 import org.rs09.client.data.HashTable;
+import org.rs09.client.data.ReferenceCache;
+import org.rs09.client.data.NodeCache;
 
 final class Class3_Sub13_Sub11 extends Class3_Sub13 {
 

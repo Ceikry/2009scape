@@ -1,5 +1,7 @@
 package org.runite.jagex;
 
+import org.rs09.client.data.NodeCache;
+
 final class Class56 {
 
    static Class3_Sub26 aClass3_Sub26_884 = new Class3_Sub26(0, 0);

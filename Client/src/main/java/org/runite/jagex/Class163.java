@@ -1,5 +1,7 @@
 package org.runite.jagex;
 
+import org.rs09.client.data.NodeCache;
+
 import java.util.Objects;
 
 class Class163 {

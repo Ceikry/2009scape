@@ -1,5 +1,7 @@
 package org.runite.jagex;
 
+import org.rs09.client.data.ReferenceCache;
+
 final class Class136 {
 
    LDIndexedSprite aClass109_Sub1_1770;

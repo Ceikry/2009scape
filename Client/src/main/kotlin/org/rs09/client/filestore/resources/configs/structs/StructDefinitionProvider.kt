@@ -2,7 +2,7 @@ package org.rs09.client.filestore.resources.configs.structs
 
 import org.runite.jagex.CacheIndex
 import org.runite.jagex.DataBuffer
-import org.runite.jagex.NodeCache
+import org.rs09.client.data.NodeCache
 
 object StructDefinitionProvider {
     private val cache = NodeCache<StructDefinition>(64)

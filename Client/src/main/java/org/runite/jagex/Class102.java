@@ -1,5 +1,7 @@
 package org.runite.jagex;
 
+import org.rs09.client.data.NodeCache;
+
 final class Class102 implements Interface2 {
 
    private final boolean[] aBooleanArray2122;

@@ -1,5 +1,7 @@
 package org.runite.jagex;
 
+import org.rs09.client.data.NodeCache;
+
 final class Class25 {
 
    int anInt478;

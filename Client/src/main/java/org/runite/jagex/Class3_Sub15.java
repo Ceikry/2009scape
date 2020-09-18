@@ -2,6 +2,7 @@ package org.runite.jagex;
 
 import org.rs09.client.Linkable;
 import org.rs09.client.net.Connection;
+import org.rs09.client.data.ReferenceCache;
 
 public final class Class3_Sub15 extends Linkable {
 

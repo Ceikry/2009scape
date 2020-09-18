@@ -1,5 +1,7 @@
 package org.runite.jagex;
 
+import org.rs09.client.data.ReferenceCache;
+
 import java.util.Objects;
 
 public final class Class3_Sub13_Sub34 extends Class3_Sub13 {

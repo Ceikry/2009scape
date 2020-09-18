@@ -1,6 +1,7 @@
 package org.runite.jagex;
 
 import org.rs09.client.util.ArrayUtils;
+import org.rs09.client.data.ReferenceCache;
 
 final class Class67 implements Runnable {
 

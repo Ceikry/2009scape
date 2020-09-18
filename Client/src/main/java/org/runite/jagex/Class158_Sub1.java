@@ -1,4 +1,6 @@
 package org.runite.jagex;
+import org.rs09.client.data.ReferenceCache;
+
 import java.awt.Component;
 import java.awt.Graphics;
 import java.awt.Image;

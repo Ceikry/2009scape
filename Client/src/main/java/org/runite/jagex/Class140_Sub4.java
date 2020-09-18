@@ -1,5 +1,7 @@
 package org.runite.jagex;
 
+import org.rs09.client.data.ReferenceCache;
+
 abstract class Class140_Sub4 extends GameObject {
 
    int textEffect = 0;

@@ -1,5 +1,6 @@
 package org.runite.jagex;
 import org.rs09.client.rendering.Toolkit;
+import org.rs09.client.data.NodeCache;
 
 import java.io.DataInputStream;
 import java.net.URL;
