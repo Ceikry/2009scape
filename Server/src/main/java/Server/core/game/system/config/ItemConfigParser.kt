@@ -179,6 +179,11 @@ class ItemConfigParser {
         const val ATTACK_AUDIO = "attack_audios"
 
         /**
+         * The equip sound key
+         */
+        const val EQUIP_AUDIO = "equip_audio"
+
+        /**
          * The point price.
          */
         const val POINT_PRICE = "point_price"
@@ -259,6 +264,7 @@ class ItemConfigParser {
                         "weight" -> configs.put(it.key.toString(),it.value.toString().toDouble())
 
                         //ints
+                        "equip_audio",
                         "point_price",
                         "tokkul_price",
                         "archery_ticket_price",

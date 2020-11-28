@@ -1,7 +1,6 @@
 package core.game.content.global.action;
 
 import core.game.container.impl.EquipmentContainer;
-import core.game.content.EquipSoundsKt;
 import core.game.content.ItemNames;
 import core.game.interaction.OptionHandler;
 import core.game.node.Node;
@@ -11,6 +10,7 @@ import core.game.node.entity.player.Player;
 import core.game.node.entity.player.link.audio.Audio;
 import core.game.node.entity.player.link.diary.DiaryType;
 import core.game.node.item.Item;
+import core.game.system.config.ItemConfigParser;
 import core.game.world.GameWorld;
 import core.game.world.map.Location;
 import core.game.world.map.zone.ZoneBorders;
@@ -82,7 +82,7 @@ public class EquipHandler extends OptionHandler {
 
 
 			player.getDialogueInterpreter().close();
-			player.getAudioManager().send(EquipSoundsKt.gibAudio(item.getId()), 1);
+			player.getAudioManager().send(item.getDefinition().getConfiguration(ItemConfigParser.EQUIP_AUDIO, 2244));
 			if(player.getProperties().getAutocastSpell() != null) {
 				player.getProperties().setAutocastSpell(null);
 				WeaponInterface wif = player.getExtension(WeaponInterface.class);

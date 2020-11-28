@@ -171,6 +171,7 @@ public final class CacheIndex {
             if (this.isReady()) {
                 name = name.toLowercase();
                 int var3 = this.referenceTable.getALookupTable_949().get(name.method1574());
+                System.out.println("Looking up: " + name + " At: " + var3);
                 return this.isValidArchive(var3) ? var3 : -1;
             } else {
                 return -1;
