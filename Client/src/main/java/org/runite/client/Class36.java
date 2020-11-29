@@ -110,7 +110,6 @@ final class Class36 {
     static Class129 method1012() {
         try {
             try {
-
                 return (Class129) Class.forName(GameConfig.PACKAGE_NAME + ".Class129_Sub2").newInstance();
             } catch (Throwable var2) {
                 return new Class129_Sub1();

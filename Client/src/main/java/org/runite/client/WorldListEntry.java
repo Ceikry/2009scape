@@ -19,19 +19,10 @@ final class WorldListEntry extends Class44 {
     static int archiveID;
     static int worldListArraySize;
     static boolean aBoolean2623 = true;
-    static int anInt2626 = 20;
     static Class155 aClass155_2627;
     RSString activity;
     int worldId;
     RSString address;
-
-    static void method1076() {
-        try {
-            Class154.aReferenceCache_1964.clear();
-        } catch (RuntimeException var2) {
-            throw ClientErrorException.clientError(var2, "ba.C(" + 88 + ')');
-        }
-    }
 
     static void parseWorldList(DataBuffer buffer) {
         try {

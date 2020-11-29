@@ -23,6 +23,7 @@ public class Signlink implements Runnable {
     public static Method setFocusCycleRoot;
     public static Method setTraversalKeysEnabled;
     static volatile long aLong1221 = 0L;
+    static Signlink aClass87_665;
     private static String homeDirectory;
     private final Thread thread;
     private final String gameName;
@@ -296,8 +297,6 @@ public class Signlink implements Runnable {
     }
 
     public final void run() {
-//      byte dat2status = Update.updateExists(1, "main_file_cache.dat2");
-
         while (true) {
             Class64 var1;
             synchronized (this) {

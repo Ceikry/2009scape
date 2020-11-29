@@ -28,7 +28,7 @@ final class Class3_Sub13_Sub13 extends Class3_Sub13 {
         super(1, false);
     }
 
-    static void sendComputerUsernameAndOS(int cursor) {
+    static void displayCustomCursorOnWindow(int cursor) {
         try {
             if (!Class163_Sub3.aBoolean3004) {
                 cursor = -1;
@@ -41,13 +41,13 @@ final class Class3_Sub13_Sub13 extends Class3_Sub13 {
                     if (image == null) {
                         cursor = -1;
                     } else {
-                        Class38.aClass87_665.method1434(image.method655(), 10000, image.anInt3697, GameShell.canvas, new Point(cursorDef.getHotspotX(), cursorDef.getHotspotY()), image.anInt3706);
+                        Signlink.aClass87_665.method1434(image.method655(), 10000, image.anInt3697, GameShell.canvas, new Point(cursorDef.getHotspotX(), cursorDef.getHotspotY()), image.anInt3706);
                         Class65.anInt991 = cursor;
                     }
                 }
 
                 if (cursor == -1 && Class65.anInt991 != -1) {
-                    Class38.aClass87_665.method1434(null, 10000, -1, GameShell.canvas, new Point(), -1);
+                    Signlink.aClass87_665.method1434(null, 10000, -1, GameShell.canvas, new Point(), -1);
                     Class65.anInt991 = -1;
                 }
 
@@ -314,7 +314,7 @@ final class Class3_Sub13_Sub13 extends Class3_Sub13 {
 
                     Class163_Sub1_Sub1.method2214();
                     if (Class143.loadingStage == 30) {
-                        MouseListeningClass.method2087();
+                        method2087();
                         Class115.method1713();
                         Class3_Sub8.method132((byte) -92);
                         ++AbstractSprite.anInt3699;
@@ -545,7 +545,7 @@ final class Class3_Sub13_Sub13 extends Class3_Sub13 {
                             Class107.aClass11_1453 = null;
                             RSInterface var21 = Class20.aClass11_439;
 
-                            for (Class20.aClass11_439 = null; Unsorted.method591(72) && 128 > Class3_Sub23.anInt2537; ++Class3_Sub23.anInt2537) {
+                            for (Class20.aClass11_439 = null; Unsorted.method591() && 128 > Class3_Sub23.anInt2537; ++Class3_Sub23.anInt2537) {
                                 Class133.inputTextCodeArray[Class3_Sub23.anInt2537] = Class3_Sub28_Sub9.anInt3624;
                                 Class120.anIntArray1638[Class3_Sub23.anInt2537] = Class3_Sub13_Sub27.anInt3342;
                             }
@@ -826,6 +826,36 @@ final class Class3_Sub13_Sub13 extends Class3_Sub13 {
             }
         } catch (RuntimeException var13) {
             throw ClientErrorException.clientError(var13, "gg.F(" + true + ')');
+        }
+    }
+
+    static void method2087() {
+        try {
+            Class3_Sub4 var1 = (Class3_Sub4) Class3_Sub13_Sub6.aClass61_3075.method1222();
+            for (; var1 != null; var1 = (Class3_Sub4) Class3_Sub13_Sub6.aClass61_3075.method1221()) {
+                if (var1.anInt2259 > 0) {
+                    var1.anInt2259 -= 1;
+                }
+                if (var1.anInt2259 != 0) {
+                    if (var1.anInt2261 > 0) {
+                        var1.anInt2261 -= 1;
+                    }
+                    if ((var1.anInt2261 == 0) && (1 <= var1.anInt2264) && (1 <= var1.anInt2248) && (102 >= var1.anInt2264) && (var1.anInt2248 <= 102) && ((var1.anInt2265 < 0) || (Unsorted.method590((byte) -34, var1.anInt2265, var1.anInt2262)))) {
+                        Unsorted.method1048(var1.anInt2265, var1.anInt2264, var1.anInt2250, var1.anInt2256, var1.anInt2248, -65, var1.anInt2262, var1.anInt2263);
+                        var1.anInt2261 = -1;
+                        if ((var1.anInt2265 == var1.anInt2254) && (var1.anInt2254 == -1)) {
+                            var1.unlink();
+                        } else if ((var1.anInt2254 == var1.anInt2265) && (var1.anInt2256 == var1.anInt2257) && (var1.anInt2262 == var1.anInt2253)) {
+                            var1.unlink();
+                        }
+                    }
+                } else if ((var1.anInt2254 < 0) || (Unsorted.method590((byte) -66, var1.anInt2254, var1.anInt2253))) {
+                    Unsorted.method1048(var1.anInt2254, var1.anInt2264, var1.anInt2250, var1.anInt2257, var1.anInt2248, -71, var1.anInt2253, var1.anInt2263);
+                    var1.unlink();
+                }
+            }
+        } catch (RuntimeException var3) {
+            throw ClientErrorException.clientError(var3, "ug.A(" + (byte) -82 + ')');
         }
     }
 

@@ -6,7 +6,6 @@ public final class GraphicDefinition {
     static int CAMERA_DIRECTION = 0;
     static int anInt546;
     static int anInt548 = 0;
-    static volatile int anInt549 = 0;
     boolean aBoolean536 = false;
     int graphicId;
     int anInt542 = -1;

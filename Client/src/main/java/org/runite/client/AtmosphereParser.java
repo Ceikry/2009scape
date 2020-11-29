@@ -7,7 +7,6 @@ final class AtmosphereParser {
     static HashTable aHashTable_3679 = new HashTable(16);
     static AtmosphereParser[][] aAtmosphereParserArrayArray1581 = new AtmosphereParser[13][13];
     static Class91[] aClass91Array1182 = new Class91[4];
-    static Class41 aClass41_1186;
     static int anInt1191;
     static int screenLowerY;
     int anInt1175;

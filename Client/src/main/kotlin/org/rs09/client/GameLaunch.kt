@@ -1,6 +1,7 @@
 package org.rs09.client
 
 import org.rs09.client.config.GameConfig
+import org.rs09.client.window.GLFWWindow
 import org.runite.client.GameShell
 
 object GameLaunch {
@@ -39,6 +40,7 @@ object GameLaunch {
         /**
          * Launches the client
          */
+//        GLFWWindow().run()
         GameShell.launchDesktop()
     }
 

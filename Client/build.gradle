@@ -8,16 +8,23 @@ dependencies {
     implementation 'com.github.Vatuu:discord-rpc:1.6.2'
     implementation 'com.googlecode.json-simple:json-simple:1.1.1'
 
-    implementation files('libs/lwjgl.jar')
-    implementation files('libs/lwjgl-glfw.jar')
-    implementation files('libs/lwjgl-opengl.jar')
+    implementation files('libs/core/lwjgl.jar')
+    implementation files('libs/core/lwjgl-glfw.jar')
+    implementation files('libs/core/lwjgl-opengl.jar')
 
-    runtimeOnly files('libs/lwjgl-natives-linux.jar')
-    runtimeOnly files('libs/lwjgl-opengl-natives-linux.jar')
-    runtimeOnly files('libs/lwjgl-glfw-natives-linux.jar')
+    /*
+     *  TODO: Add specific OS check to load the correct natives automatically
+     */
 
-//    implementation files('libs/gluegen-rt.jar')
-//    implementation files('libs/jogl-all.jar')
+    //Windows 64
+    runtimeOnly files('libs/natives/windows/64/lwjgl-natives-windows.jar')
+    runtimeOnly files('libs/natives/windows/64/lwjgl-opengl-natives-windows.jar')
+    runtimeOnly files('libs/natives/windows/64/lwjgl-glfw-natives-windows.jar')
+
+    //Linux 64
+//    runtimeOnly files('libs/natives/linux/64/lwjgl-natives-linux.jar')
+//    runtimeOnly files('libs/natives/linux/64/lwjgl-opengl-natives-linux.jar')
+//    runtimeOnly files('libs/natives/linux/64/lwjgl-glfw-natives-linux.jar')
 }
 
 jar {

@@ -33,7 +33,7 @@ final class WaterfallShader implements ShaderInterface {
             } else if (1 != Signlink.anInt1214 && Signlink.anInt1214 != 2 && Client.modeWhereValue != 2) {
                 RSString var9 = TextCore.aClass94_8;
                 if (Client.modeWhereValue != 0) {
-                    var9 = RSString.stringCombiner(new RSString[]{TextCore.aClass94_4007, RSString.stringAnimator(var2.worldId - -7000)});
+                    var9 = RSString.stringCombiner(new RSString[]{TextCore.aClass94_4007, RSString.stringAnimator(var2.worldId + 7000)});
                 }
 
                 if (var1 > -2) {

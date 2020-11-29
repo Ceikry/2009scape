@@ -8,6 +8,7 @@ final class Class8 {
     static int anInt101;
     static int anInt104 = 0;
     static CacheIndex aClass153_105;
+    static Class41 aClass41_1186;
     private final Js5Worker aJs5Worker_102;
     private final CacheResourceWorker aCacheResourceWorker_103;
     private DataBuffer aClass3_Sub30_99;
@@ -109,7 +110,7 @@ final class Class8 {
                 var5 = new Class41(var3, Class101.aClass30_1422, Class163_Sub2.aClass30Array2998[var3], 1000000);
             }
 
-            Unsorted.aClass151_Sub1Array2601[var3] = Unsorted.aClass8_1936.method839(var3, AtmosphereParser.aClass41_1186, var5);
+            Unsorted.aClass151_Sub1Array2601[var3] = Unsorted.aClass8_1936.method839(var3, aClass41_1186, var5);
             if (var1) {
                 Unsorted.aClass151_Sub1Array2601[var3].method2101();
             }

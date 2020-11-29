@@ -214,7 +214,7 @@ final class Class49 {
                     var1 = Class161.anInt2027;
                 }
 
-                Class3_Sub13_Sub13.sendComputerUsernameAndOS(var1);
+                Class3_Sub13_Sub13.displayCustomCursorOnWindow(var1);
                 if (CS2Script.anInt2440 == 1) {
                     CS2Script.anInt2440 = 2;
                 }

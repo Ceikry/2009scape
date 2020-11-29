@@ -1,11 +1,5 @@
 package org.runite.client;
 
-import org.lwjgl.glfw.GLFWErrorCallback;
-import org.lwjgl.glfw.GLFWKeyCallback;
-import org.lwjgl.glfw.GLFWVidMode;
-import org.lwjgl.opengl.GL;
-import org.lwjgl.system.MemoryStack;
-import org.lwjgl.system.MemoryUtil;
 import org.rs09.client.config.GameConfig;
 
 import javax.swing.*;
@@ -13,13 +7,7 @@ import java.applet.Applet;
 import java.awt.*;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.nio.IntBuffer;
 import java.util.Properties;
-
-import static org.lwjgl.glfw.GLFW.*;
-import static org.lwjgl.opengl.GL11.*;
-import static org.lwjgl.system.MemoryStack.stackPush;
-import static org.lwjgl.system.MemoryUtil.NULL;
 
 /**
  * The client loader used to initialize the game.
@@ -78,7 +66,7 @@ public class ClientLoader extends Applet {
     public static void providesignlink(Signlink var0) {
         try {
             System.out.println("Providing signlink...");
-            Class38.aClass87_665 = var0;
+            Signlink.aClass87_665 = var0;
             Class3_Sub13_Sub10.aClass87_3125 = var0;
             Class3_Sub13_Sub1.method445();
         } catch (RuntimeException var2) {

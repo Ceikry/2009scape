@@ -38,7 +38,7 @@ final class Class3_Sub13_Sub2 extends Class3_Sub13 {
 
     static void method175(int var0, int var1, int var2, int var4, int var5, int var6) {
         try {
-            MouseListeningClass.method2091(var5);
+            method2091(var5);
             int var8 = var5 - var1;
             int var7 = 0;
             if (var8 < 0) {
@@ -147,6 +147,16 @@ final class Class3_Sub13_Sub2 extends Class3_Sub13 {
             AtmosphereParser.aHashTable_3679 = new HashTable(16);
         } catch (RuntimeException var3) {
             throw ClientErrorException.clientError(var3, "aj.O(" + var0 + ')');
+        }
+    }
+
+    static void method2091(int var0) {
+        try {
+            if ((GameObject.anIntArray1838 == null) || (GameObject.anIntArray1838.length < var0)) {
+                GameObject.anIntArray1838 = new int[var0];
+            }
+        } catch (RuntimeException var3) {
+            throw ClientErrorException.clientError(var3, "ug.E(" + var0 + ',' + 4 + ')');
         }
     }
 

@@ -71,7 +71,7 @@ final class Class65 {
 
     static void method1237(int var0) {
         try {
-            WorldListEntry.anInt2626 = 1000 / var0;
+            GameShell.anInt2626 = 1000 / var0;
         } catch (RuntimeException var3) {
             throw ClientErrorException.clientError(var3, "ja.D(" + var0 + ',' + 1000 + ')');
         }

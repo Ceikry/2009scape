@@ -25,7 +25,7 @@ object PacketDecoder {
 
         registerCustomDecoder(-2, ConsoleMessageDecoder)
         registerCustomDecoder(-2, ConsoleAutocompletionPacketDecoder)
-//        decoders[195] = ClearGameObjectDecoder
+        decoders[195] = ClearGameObjectDecoder
 //        println("NOTE > Registered ConsoleAutocompletionPacket as opcode $completion")
     }
 

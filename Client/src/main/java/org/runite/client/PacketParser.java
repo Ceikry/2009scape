@@ -390,7 +390,7 @@ public final class PacketParser {
                                     }
                                 } else if (Network.incomingOpcode == 164) {
                                     nodeModelId = Network.incomingBuffer.readIntV1();
-                                    Class136.aClass64_1778 = Class38.aClass87_665.method1449((byte) -83 ^ -82, nodeModelId);
+                                    Class136.aClass64_1778 = Signlink.aClass87_665.method1449((byte) -83 ^ -82, nodeModelId);
                                     Network.incomingOpcode = -1;
                                     return true;
                                 } else if (Network.incomingOpcode == 225) {
@@ -1030,7 +1030,7 @@ public final class PacketParser {
                                                         Class140_Sub6.anInt2905 = anInt3213;
                                                         return true;
                                                     } else if (Network.incomingOpcode == 114) {
-                                                        Class3_Sub13_Sub29.method305(Class38.aClass87_665, Network.incomingBuffer, Network.incomingPacketLength);
+                                                        Class3_Sub13_Sub29.method305(Signlink.aClass87_665, Network.incomingBuffer, Network.incomingPacketLength);
                                                         Network.incomingOpcode = -1;
                                                         return true;
                                                     } else if (65 == Network.incomingOpcode) {
@@ -1086,7 +1086,7 @@ public final class PacketParser {
                                                         return true;
                                                     } else if (Network.incomingOpcode == 42) {
                                                         if (null != GameShell.aFrame3121) {
-                                                            GameObject.graphicsSettings(false, Unsorted.anInt2577, -1, -1);
+                                                            Client.graphicsSettings(false, Unsorted.anInt2577, -1, -1);
                                                         }
 
                                                         byte[] var22 = new byte[Network.incomingPacketLength];
@@ -1097,7 +1097,7 @@ public final class PacketParser {
                                                         } else {
                                                             Class3_Sub13_Sub24.aClass94_3295 = playerName;
                                                             Unsorted.aBoolean2154 = true;
-                                                            Class15.aClass64_351 = Class38.aClass87_665.method1452(new String(playerName.method1568(), StandardCharsets.ISO_8859_1), true);
+                                                            Class15.aClass64_351 = Signlink.aClass87_665.method1452(new String(playerName.method1568(), StandardCharsets.ISO_8859_1), true);
                                                         }
 
                                                         Network.incomingOpcode = -1;

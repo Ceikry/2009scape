@@ -14,7 +14,7 @@ final class Class119 {
             Container var1;
             if (null == GameShell.aFrame3121) {
                 if (GameShell.frame == null) {
-                    var1 = Class38.aClass87_665.applet;
+                    var1 = Signlink.aClass87_665.applet;
                 } else {
                     var1 = GameShell.frame;
                 }

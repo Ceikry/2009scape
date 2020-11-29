@@ -42,7 +42,6 @@ public class Unsorted {
     public static int anInt1244 = -1;
     public static RSInterface aClass11_1933;
     public static Class8 aClass8_1936;
-    public static Network aNetwork_2942 = new Network();
     public static int[] anIntArray2952 = new int[128];
     public static int anInt2958 = 0;
     public static Class61 aClass61_78 = new Class61();
@@ -115,7 +114,6 @@ public class Unsorted {
     public static int updateStamp;
     public static volatile int anInt4045 = 0;
     public static HashTable aHashTable_4046 = new HashTable(16);
-    public static MouseListeningClass aClass149_4047 = new MouseListeningClass();
     public static CacheIndex aClass153_4048;
     public static int[] anIntArray4050 = new int[1000];
     public static ReferenceCache aReferenceCache_4051 = new ReferenceCache(30);
@@ -561,10 +559,10 @@ public class Unsorted {
 
     static void method1225() {
         try {
-            MouseListeningClass var1 = aClass149_4047;
+            MouseListeningClass var1 = MouseListeningClass.mouseListener;
             synchronized (var1) {
 
-                Class3_Sub13_Sub5.anInt3069 = GraphicDefinition.anInt549;
+                Class3_Sub13_Sub5.anInt3069 = MouseListeningClass.anInt549;
                 Class126.anInt1676 = Class3_Sub21.anInt2493;
                 anInt1709 = MouseListeningClass.anInt1340;
                 anInt3644 = Class140_Sub3.anInt2743;
@@ -1175,7 +1173,7 @@ public class Unsorted {
         try {
 
             if (Class56.aClass106Array890 == null) {
-                Class106[] var1 = method596(Class38.aClass87_665);
+                Class106[] var1 = method596(Signlink.aClass87_665);
                 Class106[] var2 = new Class106[var1.length];
                 int var3 = 0;
 
@@ -1387,7 +1385,7 @@ public class Unsorted {
                     if (null != GameShell.aFrame3121) {
                         var5 = GameShell.aFrame3121;
                     } else if (GameShell.frame == null) {
-                        var5 = Class38.aClass87_665.applet;
+                        var5 = Signlink.aClass87_665.applet;
                     } else {
                         var5 = GameShell.frame;
                     }
@@ -1452,25 +1450,21 @@ public class Unsorted {
         }
     }
 
-    public static boolean method591(int var0) {
+    public static boolean method591() {
         try {
             KeyboardListener var1 = KeyboardListener.aClass148_3049;
             synchronized (var1) {
                 if (Class3_Sub28_Sub9.anInt3620 == Class134.anInt1762) {
                     return false;
                 } else {
-                    Class3_Sub28_Sub9.anInt3624 = Class129.anIntArray1693[Class3_Sub28_Sub9.anInt3620];
+                    Class3_Sub28_Sub9.anInt3624 = KeyboardListener.anIntArray1693[Class3_Sub28_Sub9.anInt3620];
                     Class3_Sub13_Sub27.anInt3342 = KeyboardListener.anIntArray1978[Class3_Sub28_Sub9.anInt3620];
                     Class3_Sub28_Sub9.anInt3620 = 1 + Class3_Sub28_Sub9.anInt3620 & 127;
-                    if (var0 < 58) {
-                        method591(68);
-                    }
-
                     return true;
                 }
             }
         } catch (RuntimeException var4) {
-            throw ClientErrorException.clientError(var4, "c.F(" + var0 + ')');
+            throw ClientErrorException.clientError(var4, "c.F(" + ')');
         }
     }
 
@@ -1567,26 +1561,26 @@ public class Unsorted {
             }
 
             if (null != GameShell.aFrame3121 && (3 != var1 || Class3_Sub13.anInt2378 != var5 || anInt3071 != var6)) {
-                method593(GameShell.aFrame3121, Class38.aClass87_665);
+                method593(GameShell.aFrame3121, Signlink.aClass87_665);
                 GameShell.aFrame3121 = null;
             }
 
             if (3 == var1 && null == GameShell.aFrame3121) {
-                GameShell.aFrame3121 = Class99.method1597(0, var6, var5, Class38.aClass87_665);
+                GameShell.aFrame3121 = Class99.method1597(0, var6, var5, Signlink.aClass87_665);
                 if (null != GameShell.aFrame3121) {
                     anInt3071 = var6;
                     Class3_Sub13.anInt2378 = var5;
-                    Class119.method1730(Class38.aClass87_665);
+                    Class119.method1730(Signlink.aClass87_665);
                 }
             }
 
             if (var1 == 3 && GameShell.aFrame3121 == null) {
                 method598(true, anInt2577, true, var3, var4, -1, -1);
             } else {
-                Object var7;
+                Container var7;
                 if (null == GameShell.aFrame3121) {
                     if (null == GameShell.frame) {
-                        var7 = Class38.aClass87_665.applet;
+                        var7 = Signlink.aClass87_665.applet;
                     } else {
                         var7 = GameShell.frame;
                     }
@@ -1594,8 +1588,8 @@ public class Unsorted {
                     var7 = GameShell.aFrame3121;
                 }
 
-                anInt2334 = ((Container) var7).getSize().width;
-                Class70.anInt1047 = ((Container) var7).getSize().height;
+                anInt2334 = var7.getSize().width;
+                Class70.anInt1047 = var7.getSize().height;
                 Insets var8;
                 if (GameShell.frame == var7) {
                     var8 = GameShell.frame.getInsets();
@@ -1673,7 +1667,7 @@ public class Unsorted {
                             Class164_Sub1.aClass158_3009 = null;
                         }
 
-                        Class64 var13 = Class38.aClass87_665.method1444(-43, Class126.aClient1671.getClass());
+                        Class64 var13 = Signlink.aClass87_665.method1444(-43, Class126.aClient1671.getClass());
 
                         while (var13.anInt978 == 0) {
                             TimeUtils.sleep(100L);
@@ -3753,7 +3747,7 @@ public class Unsorted {
         try {
             if (aBoolean3641) {
                 try {
-                    TextCore.aClass94_106.method1577(Class38.aClass87_665.applet);
+                    TextCore.aClass94_106.method1577(Signlink.aClass87_665.applet);
                     return true;
                 } catch (Throwable var2) {
                 }

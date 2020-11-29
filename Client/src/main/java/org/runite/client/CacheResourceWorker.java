@@ -12,7 +12,7 @@ final class CacheResourceWorker implements Runnable {
     private Thread thread;
 
     public CacheResourceWorker() {
-        Class64 var1 = Class38.aClass87_665.method1451(5, this);
+        Class64 var1 = Signlink.aClass87_665.method1451(5, this);
 
         while (Objects.requireNonNull(var1).anInt978 == 0) {
             TimeUtils.sleep(10L);

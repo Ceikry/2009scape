@@ -252,13 +252,13 @@ final class ItemDefinition {
 
     static void method1119(Component var0, boolean var1) {
         try {
-            var0.addMouseListener(Unsorted.aClass149_4047);
+            var0.addMouseListener(MouseListeningClass.mouseListener);
             if (var1) {
                 aClass94_811 = null;
             }
 
-            var0.addMouseMotionListener(Unsorted.aClass149_4047);
-            var0.addFocusListener(Unsorted.aClass149_4047);
+            var0.addMouseMotionListener(MouseListeningClass.mouseListener);
+            var0.addFocusListener(MouseListeningClass.mouseListener);
         } catch (RuntimeException var3) {
             throw ClientErrorException.clientError(var3, "h.K(" + (var0 != null ? "{...}" : "null") + ',' + var1 + ')');
         }

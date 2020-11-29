@@ -30,7 +30,7 @@ final class Class159 {
         try {
             if (Unsorted.aBoolean3641) {
                 try {
-                    return !(Boolean) TextCore.aClass94_3209.method1577(Class38.aClass87_665.applet);
+                    return !(Boolean) TextCore.aClass94_3209.method1577(Signlink.aClass87_665.applet);
                 } catch (Throwable var2) {
                 }
             }

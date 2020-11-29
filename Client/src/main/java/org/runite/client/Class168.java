@@ -714,7 +714,7 @@ final class Class168 {
         try {
 
             int var8 = -var5 + var3;
-            MouseListeningClass.method2091(var3);
+            Class3_Sub13_Sub2.method2091(var3);
             int var7 = 0;
             if (var8 < 0) {
                 var8 = 0;

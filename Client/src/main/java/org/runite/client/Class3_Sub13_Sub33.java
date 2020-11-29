@@ -76,8 +76,7 @@ final class Class3_Sub13_Sub33 extends Class3_Sub13 {
             Class3_Sub13_Sub13.method230(var2);
             Class58.method1196(Class3_Sub20.anInt2487, RenderAnimationDefinition.anInt396);
             if (this.aClass75Array3392 != null) {
-                for (int var5 = 0; this.aClass75Array3392.length > var5; ++var5) {
-                    Class75 var6 = this.aClass75Array3392[var5];
+                for (Class75 var6 : this.aClass75Array3392) {
                     int var7 = var6.anInt1101;
                     int var8 = var6.anInt1104;
                     if (var7 >= 0) {

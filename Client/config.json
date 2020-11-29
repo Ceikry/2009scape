@@ -1,6 +1,6 @@
 {
-  "ip_address": "192.168.1.180",
-  "ip_management" : "192.168.1.180",
+  "ip_address": "localhost",
+  "ip_management" : "localhost",
   "server_port": 43594,
   "wl_port": 5555,
   "world": 1,

@@ -15,7 +15,6 @@ final class Class3_Sub28_Sub5 extends Node {
     static int anInt3590 = -1;
     static int anInt3591 = 0;
     static int[] anIntArray3592 = new int[256];
-    static volatile boolean forceReplaceCanvasEnable = false;
     AnimationHeader[] animations;
 
 

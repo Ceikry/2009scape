@@ -101,14 +101,6 @@ final class Class167 {
         Class3_Sub17.anInt2456 = Class75_Sub2.aClass3_Sub2ArrayArrayArray2638.length;
     }
 
-    static void method2265() {
-        try {
-            CS2Script.aReferenceCache_2442.clear();
-        } catch (RuntimeException var2) {
-            throw ClientErrorException.clientError(var2, "wj.B(" + 0 + ')');
-        }
-    }
-
     static void method2266(int var0, int var1) {
         try {
             if (Unsorted.anInt120 != 0 && var1 != -1) {

@@ -20,7 +20,7 @@ final class Class99 {
             if (var2) {
                 if (HDToolKit.highDetail && Class3_Sub28_Sub6.aBoolean3594) {
                     try {
-                        Class42.method1056(Class38.aClass87_665.applet, new Object[]{var0.method1547(LinkableRSString.anApplet_Sub1_2588.getCodeBase()).toString()});
+                        Class42.method1056(Signlink.aClass87_665.applet, new Object[]{var0.method1547(GameShell.anApplet_Sub1_2588.getCodeBase()).toString()});
                         return;
                     } catch (Throwable var6) {
                     }
@@ -28,13 +28,13 @@ final class Class99 {
 
                 try {
                     System.out.println("Trying this applet");
-                    Objects.requireNonNull(LinkableRSString.anApplet_Sub1_2588.getAppletContext()).showDocument(var0.method1547(LinkableRSString.anApplet_Sub1_2588.getCodeBase()), "_blank");
+                    Objects.requireNonNull(GameShell.anApplet_Sub1_2588.getAppletContext()).showDocument(var0.method1547(GameShell.anApplet_Sub1_2588.getCodeBase()), "_blank");
                 } catch (Exception var4) {
                 }
             } else {
                 try {
                     System.out.println("Trying this applet 2 99");
-                    Objects.requireNonNull(LinkableRSString.anApplet_Sub1_2588.getAppletContext()).showDocument(var0.method1547(LinkableRSString.anApplet_Sub1_2588.getCodeBase()), "_top");
+                    Objects.requireNonNull(GameShell.anApplet_Sub1_2588.getAppletContext()).showDocument(var0.method1547(GameShell.anApplet_Sub1_2588.getCodeBase()), "_top");
                 } catch (Exception var5) {
                 }
             }

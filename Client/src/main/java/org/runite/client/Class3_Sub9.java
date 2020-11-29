@@ -55,7 +55,7 @@ final class Class3_Sub9 extends Linkable {
             int var14 = var9 - var11 * (var12 - 1);
             int var15 = var8 << 2;
             if (var3 > -110) {
-                method137(-83, (byte) -91);
+                method137(-83);
             }
 
             int var16 = var9 << 2;
@@ -101,16 +101,12 @@ final class Class3_Sub9 extends Linkable {
         }
     }
 
-    static void method137(int var0, byte var1) {
+    static void method137(int var0) {
         try {
-            if (var1 >= -111) {
-                TextCore.RIGHT_PARENTHESES = null;
-            }
-
             Class82.aReferenceCache_1146.sweep(var0);
             Class159.aReferenceCache_2016.sweep(var0);
         } catch (RuntimeException var3) {
-            throw ClientErrorException.clientError(var3, "fl.E(" + var0 + ',' + var1 + ')');
+            throw ClientErrorException.clientError(var3, "fl.E(" + ')');
         }
     }
 

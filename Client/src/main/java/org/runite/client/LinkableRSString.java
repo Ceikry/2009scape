@@ -11,7 +11,6 @@ public final class LinkableRSString extends Linkable {
     static CacheIndex aClass153_2581;
     static NodeCache aClass47_3776 = new NodeCache(64);
     static int anInt2587;
-    static GameShell anApplet_Sub1_2588 = null;
     static int anInt2589 = 0;
     public RSString value;
 
@@ -150,10 +149,10 @@ public final class LinkableRSString extends Linkable {
     static void method734(RSString var1) {
         try {
             Class163_Sub2.aClass94_2996 = var1;
-            if (null != Class38.aClass87_665.applet) {
+            if (null != Signlink.aClass87_665.applet) {
                 try {
-                    RSString var2 = TextCore.aClass94_2044.getParamValue(Class38.aClass87_665.applet);
-                    RSString var3 = TextCore.aClass94_1885.getParamValue(Class38.aClass87_665.applet);
+                    RSString var2 = TextCore.aClass94_2044.getParamValue(Signlink.aClass87_665.applet);
+                    RSString var3 = TextCore.aClass94_1885.getParamValue(Signlink.aClass87_665.applet);
                     RSString var4 = RSString.stringCombiner(new RSString[]{var2, TextCore.aClass94_1151, var1, TextCore.aClass94_2074, var3});
                     if (0 == var1.length()) {
                         var4 = RSString.stringCombiner(new RSString[]{var4, TextCore.HasAgeExpire});
@@ -161,7 +160,7 @@ public final class LinkableRSString extends Linkable {
                         var4 = RSString.stringCombiner(new RSString[]{var4, TextCore.HasExpires, Class15.method894(94608000000L + TimeUtils.time()), TextCore.HasMaxAge, Class3_Sub28_Sub12.method612(94608000L)});
                     }
 
-                    RSString.stringCombiner(new RSString[]{TextCore.aClass94_1694, var4, TextCore.aClass94_1698}).method1554(Class38.aClass87_665.applet);
+                    RSString.stringCombiner(new RSString[]{TextCore.aClass94_1694, var4, TextCore.aClass94_1698}).method1554(Signlink.aClass87_665.applet);
                 } catch (Throwable var5) {
                 }
 

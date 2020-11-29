@@ -23,6 +23,7 @@ final class KeyboardListener implements KeyListener, FocusListener {
     static int anInt2384 = 0;
     static int[] anIntArray1978 = new int[128];
     static KeyboardListener aClass148_3049 = new KeyboardListener();
+    static int[] anIntArray1693 = new int[128];
 
     static void adjustKeyCodeMap() {
         if (!Signlink.javaVendor.toLowerCase().contains("microsoft")) {
@@ -172,7 +173,7 @@ final class KeyboardListener implements KeyListener, FocusListener {
                 if (var2 >= 0) {
                     var3 = 127 & 1 + Class25.anInt491;
                     if (var3 != Class3_Sub28_Sub9.anInt3620) {
-                        Class129.anIntArray1693[Class25.anInt491] = var2;
+                        anIntArray1693[Class25.anInt491] = var2;
                         anIntArray1978[Class25.anInt491] = -1;
                         Class25.anInt491 = var3;
                     }
@@ -219,7 +220,7 @@ final class KeyboardListener implements KeyListener, FocusListener {
                 if (var2 >= 0) {
                     int var3 = 1 + Class25.anInt491 & 127;
                     if (var3 != Class3_Sub28_Sub9.anInt3620) {
-                        Class129.anIntArray1693[Class25.anInt491] = -1;
+                        anIntArray1693[Class25.anInt491] = -1;
                         anIntArray1978[Class25.anInt491] = var2;
                         Class25.anInt491 = var3;
                     }

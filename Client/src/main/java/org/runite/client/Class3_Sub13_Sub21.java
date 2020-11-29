@@ -1,6 +1,5 @@
 package org.runite.client;
 
-import org.rs09.client.config.GameConfig;
 import org.rs09.client.net.Connection;
 
 import java.io.IOException;
@@ -27,7 +26,7 @@ final class Class3_Sub13_Sub21 extends Class3_Sub13 {
         super(0, true);
     }
 
-    static void method267(byte var0) {
+    static void method267() {
         try {
             if (Unsorted.registryStage != 0) {
                 try {
@@ -55,7 +54,7 @@ final class Class3_Sub13_Sub21 extends Class3_Sub13 {
 
                     if (Unsorted.registryStage == 1) {
                         //Ip & Port
-                        Class3_Sub9.aClass64_2318 = Class38.aClass87_665.method1441((byte) 8, Class38_Sub1.accRegistryIp, Class140_Sub6.accRegistryPort);
+                        Class3_Sub9.aClass64_2318 = Signlink.aClass87_665.method1441((byte) 8, Class38_Sub1.accRegistryIp, Class140_Sub6.accRegistryPort);
                         Unsorted.registryStage = 2;
                     }
 
@@ -67,7 +66,7 @@ final class Class3_Sub13_Sub21 extends Class3_Sub13 {
                         if (1 != Class3_Sub9.aClass64_2318.anInt978) {
                             return;
                         }
-                        Network.activeConnection = new Connection((Socket) Class3_Sub9.aClass64_2318.anObject974, Class38.aClass87_665);
+                        Network.activeConnection = new Connection((Socket) Class3_Sub9.aClass64_2318.anObject974, Signlink.aClass87_665);
                         Class3_Sub9.aClass64_2318 = null;
                         Network.activeConnection.sendBytes(Network.outgoingBuffer.buffer, Network.outgoingBuffer.index);
                         if (WorldListEntry.aClass155_2627 != null) {
@@ -92,10 +91,6 @@ final class Class3_Sub13_Sub21 extends Class3_Sub13 {
                             return;
                         }
                         Unsorted.registryStage = 3;
-                    }
-
-                    if (var0 <= 26) {
-                        method269(-75, 44);
                     }
 
                     if (3 == Unsorted.registryStage) {
@@ -123,7 +118,6 @@ final class Class3_Sub13_Sub21 extends Class3_Sub13 {
                         Unsorted.registryStage = 0;
                         Network.activeConnection.close();
                         Network.activeConnection = null;
-                        return;
                     }
                 } catch (IOException var2) {
                     if (Network.activeConnection != null) {
@@ -149,19 +143,15 @@ final class Class3_Sub13_Sub21 extends Class3_Sub13 {
 
             }
         } catch (RuntimeException var3) {
-            throw ClientErrorException.clientError(var3, "mh.Q(" + var0 + ')');
+            throw ClientErrorException.clientError(var3, "mh.Q(" + (byte) 36 + ')');
         }
     }
 
-    static void method269(int var0, int var1) {
+    static void method269() {
         try {
-            if (var0 != -5) {
-                anInt3263 = 109;
-            }
-
-            Class61.aReferenceCache_939.sweep(var1);
+            Class61.aReferenceCache_939.sweep(5);
         } catch (RuntimeException var3) {
-            throw ClientErrorException.clientError(var3, "mh.O(" + var0 + ',' + var1 + ')');
+            throw ClientErrorException.clientError(var3, "mh.O(" + -5 + ',' + 5 + ')');
         }
     }
 

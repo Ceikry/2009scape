@@ -60,7 +60,7 @@ public final class Class23 {
     static void method940(int var0, int var1) {
         try {
             if (var0 >= 101) {
-                MouseListeningClass var2 = Unsorted.aClass149_4047;
+                MouseListeningClass var2 = MouseListeningClass.mouseListener;
                 synchronized (var2) {
                     Unsorted.anInt4045 = var1;
                 }

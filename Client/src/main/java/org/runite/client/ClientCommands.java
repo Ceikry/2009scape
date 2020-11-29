@@ -79,13 +79,13 @@ public class ClientCommands {
             }
 
             if (command.equalsStringIgnoreCase(TextCore.COMMAND_BREAK_CONNECTION)) {
-                Class38.aClass87_665.method1431();
+                Signlink.aClass87_665.method1431();
                 Network.activeConnection.applyDummyStreams();
                 Class58.aJs5Worker_917.applyDummyStreams();
             }
 
             if (command.equalsStringIgnoreCase(TextCore.COMMAND_REPLACE_CANVAS)) {
-                Class3_Sub28_Sub5.forceReplaceCanvasEnable = true;
+                Client.forceReplaceCanvasEnable = true;
             }
 
             if (command.equalsStringIgnoreCase(TextCore.COMMAND_REBUILD)) {
@@ -100,26 +100,20 @@ public class ClientCommands {
                 renderInfoOverlayEnabled = !renderInfoOverlayEnabled;
             }
 
-            if (command.equalsStringIgnoreCase(TextCore.TOGGLE_FK)) {
-                boolean on = !modernHotkeys;
-                modernHotkeys = true;
-                Network.addChatMessage(null, 0, RSString.parse("Modern hotkeys mode toggled " + (on ? "on." : "off.")), -1);
-            }
-
             if (command.equalsStringIgnoreCase(TextCore.COMMAND_LOWRES_GRAPHICS)) {
-                GameObject.graphicsSettings(false, 0, -1, -1);
+                Client.graphicsSettings(false, 0, -1, -1);
             }
 
             if (command.equalsStringIgnoreCase(TextCore.COMMAND_HIGHRES_GRAPHICS_WINDOW)) {
-                GameObject.graphicsSettings(false, 1, -1, -1);
+                Client.graphicsSettings(false, 1, -1, -1);
             }
 
             if (command.equalsStringIgnoreCase(TextCore.COMMAND_HIGHRES_GRAPHICS_RESIZE)) {
-                GameObject.graphicsSettings(false, 2, -1, -1);
+                Client.graphicsSettings(false, 2, -1, -1);
             }
 
             if (command.equalsStringIgnoreCase(TextCore.COMMAND_HIGHRES_GRAPHICS_FULLSCREEN)) {
-                GameObject.graphicsSettings(false, 3, 1024, GL_SRC_COLOR);
+                Client.graphicsSettings(false, 3, 1024, GL_SRC_COLOR);
             }
 
             if (command.equalsStringIgnoreCase(TextCore.COMMAND_NOCLIP)) {
@@ -134,7 +128,7 @@ public class ClientCommands {
 
             if (command.startsWith(TextCore.COMMAND_SET_PARTICLES)) {
                 Class127_Sub1.method1758(command.substring(15).parseInt());
-                Class119.method1730(Class38.aClass87_665);
+                Class119.method1730(Signlink.aClass87_665);
                 CS2Script.aBoolean2705 = false;
             }
 

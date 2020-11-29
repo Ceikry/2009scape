@@ -6,7 +6,6 @@ class Class38 {
     static boolean aBoolean661 = true;
     static int[][] anIntArrayArray663;
     static int[] anIntArray664 = new int[14];
-    static Signlink aClass87_665;
     static Class146 aClass146_668;
 
 

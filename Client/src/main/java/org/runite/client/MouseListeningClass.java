@@ -5,6 +5,7 @@ import java.awt.*;
 import java.awt.event.*;
 
 final class MouseListeningClass implements MouseListener, MouseMotionListener, FocusListener {
+    public static MouseListeningClass mouseListener = new MouseListeningClass();
     static volatile int anInt1340 = -1;
     static float[] aFloatArray1919 = new float[4];
     static int[] anIntArray1920;
@@ -13,45 +14,16 @@ final class MouseListeningClass implements MouseListener, MouseMotionListener, F
     static int anInt1924 = 0;
     static int anInt1925 = 0;
     static int anInt1926;
+    static volatile int anInt549 = 0;
     public int mouseWheelX;
     public int mouseWheelY;
 
-    static void method2087() {
-        try {
-            Class3_Sub4 var1 = (Class3_Sub4) Class3_Sub13_Sub6.aClass61_3075.method1222();
-            for (; var1 != null; var1 = (Class3_Sub4) Class3_Sub13_Sub6.aClass61_3075.method1221()) {
-                if (var1.anInt2259 > 0) {
-                    var1.anInt2259 -= 1;
-                }
-                if (var1.anInt2259 != 0) {
-                    if (var1.anInt2261 > 0) {
-                        var1.anInt2261 -= 1;
-                    }
-                    if ((var1.anInt2261 == 0) && (1 <= var1.anInt2264) && (1 <= var1.anInt2248) && (102 >= var1.anInt2264) && (var1.anInt2248 <= 102) && ((var1.anInt2265 < 0) || (Unsorted.method590((byte) -34, var1.anInt2265, var1.anInt2262)))) {
-                        Unsorted.method1048(var1.anInt2265, var1.anInt2264, var1.anInt2250, var1.anInt2256, var1.anInt2248, -65, var1.anInt2262, var1.anInt2263);
-                        var1.anInt2261 = -1;
-                        if ((var1.anInt2265 == var1.anInt2254) && (var1.anInt2254 == -1)) {
-                            var1.unlink();
-                        } else if ((var1.anInt2254 == var1.anInt2265) && (var1.anInt2256 == var1.anInt2257) && (var1.anInt2262 == var1.anInt2253)) {
-                            var1.unlink();
-                        }
-                    }
-                } else if ((var1.anInt2254 < 0) || (Unsorted.method590((byte) -66, var1.anInt2254, var1.anInt2253))) {
-                    Unsorted.method1048(var1.anInt2254, var1.anInt2264, var1.anInt2250, var1.anInt2257, var1.anInt2248, -71, var1.anInt2253, var1.anInt2263);
-                    var1.unlink();
-                }
-            }
-        } catch (RuntimeException var3) {
-            throw ClientErrorException.clientError(var3, "ug.A(" + (byte) -82 + ')');
-        }
-    }
-
     static void method2090() {
         try {
-            if (Unsorted.aClass149_4047 != null) {
-                MouseListeningClass var1 = Unsorted.aClass149_4047;
+            if (mouseListener != null) {
+                MouseListeningClass var1 = mouseListener;
                 synchronized (var1) {
-                    Unsorted.aClass149_4047 = null;
+                    mouseListener = null;
                 }
             }
         } catch (RuntimeException var4) {
@@ -59,31 +31,12 @@ final class MouseListeningClass implements MouseListener, MouseMotionListener, F
         }
     }
 
-    static void method2091(int var0) {
-        try {
-            if ((GameObject.anIntArray1838 == null) || (GameObject.anIntArray1838.length < var0)) {
-                GameObject.anIntArray1838 = new int[var0];
-            }
-        } catch (RuntimeException var3) {
-            throw ClientErrorException.clientError(var3, "ug.E(" + var0 + ',' + 4 + ')');
-        }
-    }
-
-    static void method2092(int var0) {
-        try {
-            Class3_Sub28_Sub6 var2 = Class3_Sub24_Sub3.method466(9, var0);
-            var2.a();
-        } catch (RuntimeException var3) {
-            throw ClientErrorException.clientError(var3, "ug.B(" + var0 + ',' + (byte) -47 + ')');
-        }
-    }
-
     public static void removeMouseListener(Component var1) {
         try {
-            var1.removeMouseListener(Unsorted.aClass149_4047);
-            var1.removeMouseMotionListener(Unsorted.aClass149_4047);
-            var1.removeFocusListener(Unsorted.aClass149_4047);
-            GraphicDefinition.anInt549 = 0;
+            var1.removeMouseListener(mouseListener);
+            var1.removeMouseMotionListener(mouseListener);
+            var1.removeFocusListener(mouseListener);
+            anInt549 = 0;
         } catch (RuntimeException var3) {
             throw ClientErrorException.clientError(var3, "sc.M(" + (var1 != null ? "{...}" : "null") + ')');
         }
@@ -91,7 +44,7 @@ final class MouseListeningClass implements MouseListener, MouseMotionListener, F
 
     public final synchronized void mouseMoved(MouseEvent var1) {
         try {
-            if (Unsorted.aClass149_4047 != null) {
+            if (mouseListener != null) {
                 Unsorted.anInt4045 = 0;
                 Class3_Sub21.anInt2493 = var1.getX();
                 anInt1340 = var1.getY();
@@ -103,8 +56,8 @@ final class MouseListeningClass implements MouseListener, MouseMotionListener, F
 
     public final synchronized void focusLost(FocusEvent var1) {
         try {
-            if (Unsorted.aClass149_4047 != null) {
-                GraphicDefinition.anInt549 = 0;
+            if (mouseListener != null) {
+                anInt549 = 0;
             }
         } catch (RuntimeException var3) {
             throw ClientErrorException.clientError(var3, "ug.focusLost(" + (var1 != null ? "{...}" : "null") + ')');
@@ -124,7 +77,7 @@ final class MouseListeningClass implements MouseListener, MouseMotionListener, F
                 Unsorted.anInt2309 -= (accelY << 1);
                 return;
             }
-            if (Unsorted.aClass149_4047 != null) {
+            if (mouseListener != null) {
                 Unsorted.anInt4045 = 0;
                 Class3_Sub21.anInt2493 = var1.getX();
                 anInt1340 = var1.getY();
@@ -136,9 +89,9 @@ final class MouseListeningClass implements MouseListener, MouseMotionListener, F
 
     public final synchronized void mouseReleased(MouseEvent var1) {
         try {
-            if (Unsorted.aClass149_4047 != null) {
+            if (mouseListener != null) {
                 Unsorted.anInt4045 = 0;
-                GraphicDefinition.anInt549 = 0;
+                anInt549 = 0;
             }
             if (var1.isPopupTrigger()) {
                 var1.consume();
@@ -168,7 +121,7 @@ final class MouseListeningClass implements MouseListener, MouseMotionListener, F
                 this.mouseWheelY = var1.getY();
                 return;
             }
-            if (Unsorted.aClass149_4047 != null) {
+            if (mouseListener != null) {
                 Unsorted.anInt4045 = 0;
                 RenderAnimationDefinition.anInt362 = var1.getX();
                 Class3_Sub13_Sub32.anInt3389 = var1.getY();
@@ -176,10 +129,10 @@ final class MouseListeningClass implements MouseListener, MouseMotionListener, F
                 if (var1.getButton() == MouseEvent.BUTTON3) // SwingUtilities.isRightMouseButton(var1)
                 {
                     Class140_Sub3.anInt2743 = 2;
-                    GraphicDefinition.anInt549 = 2;
+                    anInt549 = 2;
                 } else if (SwingUtilities.isLeftMouseButton(var1)) {
                     Class140_Sub3.anInt2743 = 1;
-                    GraphicDefinition.anInt549 = 1;
+                    anInt549 = 1;
                 }
             }
             if (var1.isPopupTrigger()) {
@@ -192,7 +145,7 @@ final class MouseListeningClass implements MouseListener, MouseMotionListener, F
 
     public final synchronized void mouseExited(MouseEvent var1) {
         try {
-            if (Unsorted.aClass149_4047 != null) {
+            if (mouseListener != null) {
                 Unsorted.anInt4045 = 0;
                 Class3_Sub21.anInt2493 = -1;
                 anInt1340 = -1;
@@ -204,7 +157,7 @@ final class MouseListeningClass implements MouseListener, MouseMotionListener, F
 
     public final synchronized void mouseEntered(MouseEvent var1) {
         try {
-            if (Unsorted.aClass149_4047 != null) {
+            if (mouseListener != null) {
                 Unsorted.anInt4045 = 0;
                 Class3_Sub21.anInt2493 = var1.getX();
                 anInt1340 = var1.getY();

@@ -1,5 +1,6 @@
 package org.runite.client;
 
+import org.lwjgl.glfw.GLFW;
 import org.rs09.client.config.GameConfig;
 
 import java.awt.*;
@@ -7,6 +8,7 @@ import java.nio.ByteOrder;
 import java.nio.IntBuffer;
 import java.nio.charset.StandardCharsets;
 
+import static org.lwjgl.glfw.GLFW.*;
 import static org.lwjgl.opengl.GL11.*;
 import static org.lwjgl.opengl.GL13.*;
 import static org.lwjgl.opengl.GL15.glGenBuffers;
@@ -49,6 +51,12 @@ public final class HDToolKit {
     private static boolean enableDepthTestState = true;
     private static int anInt1812;
     private static boolean enableFogState = true;
+
+
+    /*
+     *  GLFW
+     */
+    public static long window;
 
     private static RSString method1820(String var0) {
         byte[] var1;
@@ -118,7 +126,7 @@ public final class HDToolKit {
 
     static void bufferSwap() {
         try {
-//            glDrawable.swapBuffers(); TODO: Swap buffers?
+            glfwSwapBuffers(window);//TODO: This is where the window will be swapped over to GLFW
         } catch (Exception var1) {
         }
 
@@ -167,7 +175,7 @@ public final class HDToolKit {
         glTexEnvi(GL_TEXTURE_ENV, GL_COMBINE_RGB, GL_MODULATE);
         glTexEnvi(GL_TEXTURE_ENV, GL_COMBINE_ALPHA, GL_MODULATE);
         glActiveTexture(GL_TEXTURE0);
-//        gl.setSwapInterval(0); TODO: Swap Interval?
+        glfwSwapInterval(0);// TODO: Swap Interval. May have to move this into main
         glClearColor(0.0F, 0.0F, 0.0F, 0.0F);
         glShadeModel(GL_SMOOTH);
         glClearDepth(1.0D);
@@ -326,16 +334,12 @@ public final class HDToolKit {
             var0 |= 2;
         }
 
-//        if (!gl.isExtensionAvailable("GL_ARB_multitexture")) {
-//            var0 |= 8;
-//        }
-//
-//        if (!gl.isExtensionAvailable("GL_ARB_texture_env_combine")) {
-//            var0 |= 32;
-//        }
-        //TODO: implement extension checks, work around below
-        var0 |= 8;
-        var0 |= 32;
+        if (!glfwExtensionSupported("GL_ARB_multitexture")) {
+            var0 |= 8;
+        }
+        if (!glfwExtensionSupported("GL_ARB_texture_env_combine")) {
+            var0 |= 32;
+        }
 
         int[] var12 = new int[1];
         glGetIntegerv(GL_MAX_TEXTURE_UNITS, var12);//pos0
@@ -350,18 +354,14 @@ public final class HDToolKit {
 
         if (var0 == 0) {
             aBoolean1790 = ByteOrder.nativeOrder() == ByteOrder.BIG_ENDIAN;
-            //TODO: Find LWJGL equivalent
-//            supportVertexBufferObject = gl.isExtensionAvailable("GL_ARB_vertex_buffer_object");
-//            supportMultisample = gl.isExtensionAvailable("GL_ARB_multisample");
-//            supportTextureCubeMap = gl.isExtensionAvailable("GL_ARB_texture_cube_map");
-//            supportVertexProgram = gl.isExtensionAvailable("GL_ARB_vertex_program");
-//            allows3DTextureMapping = gl.isExtensionAvailable("GL_EXT_texture3D");
-            //TODO: implement extension checks, work around below
-            supportVertexBufferObject = true;
-            supportMultisample = true;
-            supportTextureCubeMap = true;
-            supportVertexProgram = true;
-            allows3DTextureMapping = true;
+
+            supportVertexBufferObject = glfwExtensionSupported("GL_ARB_vertex_buffer_object");
+            supportMultisample = glfwExtensionSupported("GL_ARB_multisample");
+            supportTextureCubeMap = glfwExtensionSupported("GL_ARB_texture_cube_map");
+            supportVertexProgram = glfwExtensionSupported("GL_ARB_vertex_program");
+            allows3DTextureMapping = glfwExtensionSupported("GL_EXT_texture3D");
+
+
             RSString var13 = method1820(renderer).toLowercase();
             if (var13.indexOf(aClass94_1819, 57) != -1) {
                 int version = 0;

@@ -43,7 +43,7 @@ final class Class3_Sub13_Sub11 extends Class3_Sub13 {
             }
 
             Class3_Sub28_Sub5.anInt3590 = -1;
-            Class3_Sub13_Sub13.sendComputerUsernameAndOS(Class161.anInt2027);
+            Class3_Sub13_Sub13.displayCustomCursorOnWindow(Class161.anInt2027);
             Player.player = new Player();
             Player.player.anInt2829 = 3000;
             Player.player.anInt2819 = 3000;

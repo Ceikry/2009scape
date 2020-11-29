@@ -42,7 +42,7 @@ class LoginHandler {
                         ++anInt2079;
                     }
                     if (loginStage == 1) {
-                        Class3_Sub9.aClass64_2318 = Class38.aClass87_665.method1441((byte) 8, Class38_Sub1.accRegistryIp, GameConfig.SERVER_PORT + GameConfig.WORLD);//Class140_Sub6.accRegistryPort);
+                        Class3_Sub9.aClass64_2318 = Signlink.aClass87_665.method1441((byte) 8, Class38_Sub1.accRegistryIp, GameConfig.SERVER_PORT + GameConfig.WORLD);//Class140_Sub6.accRegistryPort);
                         loginStage = 2;
                     }
 
@@ -55,7 +55,7 @@ class LoginHandler {
                             return;
                         }
 
-                        Network.activeConnection = new Connection((Socket) Class3_Sub9.aClass64_2318.anObject974, Class38.aClass87_665);
+                        Network.activeConnection = new Connection((Socket) Class3_Sub9.aClass64_2318.anObject974, Signlink.aClass87_665);
                         Class3_Sub9.aClass64_2318 = null;
                         long var1 = PacketParser.aLong3202 = Class131.username.toLong();
                         Network.outgoingBuffer.index = 0;
@@ -114,59 +114,59 @@ class LoginHandler {
                         Network.outgoingBuffer.writeString(Class131.password);
                         Class3_Sub13_Sub1.sendComputerUsernameAndOS();
                         Network.outgoingBuffer.rsaEncrypt(Class3_Sub13_Sub14.aBigInteger3162, Class3_Sub13_Sub37.aBigInteger3441);
-                        Unsorted.aNetwork_2942.index = 0;
+                        Network.loginBuffer.index = 0;
                         if (40 == Class143.loadingStage) {
-                            Unsorted.aNetwork_2942.writeByte(18);
+                            Network.loginBuffer.writeByte(18);
                         } else {
-                            Unsorted.aNetwork_2942.writeByte(16);
+                            Network.loginBuffer.writeByte(16);
                         }
 
-                        Unsorted.aNetwork_2942.writeShort(Network.outgoingBuffer.index + 163 - -Class3_Sub13_Sub33.method326((byte) 111, Class163_Sub2.aClass94_2996));
-                        Unsorted.aNetwork_2942.writeInt(GameConfig.CLIENT_BUILD);
-                        Unsorted.aNetwork_2942.writeByte(Class7.anInt2161);
-                        Unsorted.aNetwork_2942.writeByte(!Client.aBoolean3779 ? 0 : 1);
-                        Unsorted.aNetwork_2942.writeByte(1);
-                        Unsorted.aNetwork_2942.writeByte(Class83.method1411(0));
-                        Unsorted.aNetwork_2942.writeShort(GameShell.gameShellAWTWidth);
-                        Unsorted.aNetwork_2942.writeShort(GameShell.gameShellAWTHeight);
-                        Unsorted.aNetwork_2942.writeByte(Unsorted.anInt3671);
-                        Class81.putRandomDataFile(Unsorted.aNetwork_2942, true);
-                        Unsorted.aNetwork_2942.writeString(Class163_Sub2.aClass94_2996);
-                        Unsorted.aNetwork_2942.writeInt(Class3_Sub26.anInt2554);
-                        Unsorted.aNetwork_2942.writeInt(Class84.method1421());
+                        Network.loginBuffer.writeShort(Network.outgoingBuffer.index + 163 + Class3_Sub13_Sub33.method326((byte) 111, Class163_Sub2.aClass94_2996));
+                        Network.loginBuffer.writeInt(GameConfig.CLIENT_BUILD);
+                        Network.loginBuffer.writeByte(Class7.anInt2161);
+                        Network.loginBuffer.writeByte(!Client.aBoolean3779 ? 0 : 1);
+                        Network.loginBuffer.writeByte(1);
+                        Network.loginBuffer.writeByte(Class83.method1411(0));
+                        Network.loginBuffer.writeShort(GameShell.gameShellAWTWidth);
+                        Network.loginBuffer.writeShort(GameShell.gameShellAWTHeight);
+                        Network.loginBuffer.writeByte(Unsorted.anInt3671);
+                        Class81.putRandomDataFile(Network.loginBuffer, true);
+                        Network.loginBuffer.writeString(Class163_Sub2.aClass94_2996);
+                        Network.loginBuffer.writeInt(Class3_Sub26.anInt2554);
+                        Network.loginBuffer.writeInt(Class84.method1421());
                         CS2Script.aBoolean2705 = true;
-                        Unsorted.aNetwork_2942.writeShort(Class113.interfacePacketCounter);
-                        Unsorted.aNetwork_2942.writeInt(CacheIndex.skeletonsIndex.getReferenceTableCrc());
-                        Unsorted.aNetwork_2942.writeInt(CacheIndex.skinsIndex.getReferenceTableCrc());
-                        Unsorted.aNetwork_2942.writeInt(CacheIndex.configurationsIndex.getReferenceTableCrc());
-                        Unsorted.aNetwork_2942.writeInt(CacheIndex.interfacesIndex.getReferenceTableCrc());
-                        Unsorted.aNetwork_2942.writeInt(CacheIndex.soundFXIndex.getReferenceTableCrc());
-                        Unsorted.aNetwork_2942.writeInt(CacheIndex.landscapesIndex.getReferenceTableCrc());
-                        Unsorted.aNetwork_2942.writeInt(CacheIndex.musicIndex.getReferenceTableCrc());
-                        Unsorted.aNetwork_2942.writeInt(CacheIndex.modelsIndex.getReferenceTableCrc());
-                        Unsorted.aNetwork_2942.writeInt(CacheIndex.spritesIndex.getReferenceTableCrc());
-                        Unsorted.aNetwork_2942.writeInt(CacheIndex.texturesIndex.getReferenceTableCrc());
-                        Unsorted.aNetwork_2942.writeInt(CacheIndex.huffmanEncodingIndex.getReferenceTableCrc());
-                        Unsorted.aNetwork_2942.writeInt(CacheIndex.music2Index.getReferenceTableCrc());
-                        Unsorted.aNetwork_2942.writeInt(CacheIndex.interfaceScriptsIndex.getReferenceTableCrc());
-                        Unsorted.aNetwork_2942.writeInt(CacheIndex.fontsIndex.getReferenceTableCrc());
-                        Unsorted.aNetwork_2942.writeInt(CacheIndex.soundFX2Index.getReferenceTableCrc());
-                        Unsorted.aNetwork_2942.writeInt(CacheIndex.soundFX3Index.getReferenceTableCrc());
-                        Unsorted.aNetwork_2942.writeInt(CacheIndex.objectConfigIndex.getReferenceTableCrc());
-                        Unsorted.aNetwork_2942.writeInt(CacheIndex.clientscriptMaskIndex.getReferenceTableCrc());
-                        Unsorted.aNetwork_2942.writeInt(CacheIndex.npcConfigIndex.getReferenceTableCrc());
-                        Unsorted.aNetwork_2942.writeInt(CacheIndex.itemConfigIndex.getReferenceTableCrc());
-                        Unsorted.aNetwork_2942.writeInt(CacheIndex.animationIndex.getReferenceTableCrc());
-                        Unsorted.aNetwork_2942.writeInt(CacheIndex.graphicFXIndex.getReferenceTableCrc());
-                        Unsorted.aNetwork_2942.writeInt(CacheIndex.clientScriptConfigIndex.getReferenceTableCrc());
-                        Unsorted.aNetwork_2942.writeInt(CacheIndex.worldmapIndex.getReferenceTableCrc());
-                        Unsorted.aNetwork_2942.writeInt(CacheIndex.quickchatMessagesIndex.getReferenceTableCrc());
-                        Unsorted.aNetwork_2942.writeInt(CacheIndex.quickchatMenusIndex.getReferenceTableCrc());
-                        Unsorted.aNetwork_2942.writeInt(CacheIndex.materialsIndex.getReferenceTableCrc());
-                        Unsorted.aNetwork_2942.writeInt(CacheIndex.particlesConfigIndex.getReferenceTableCrc());
-                        Unsorted.aNetwork_2942.writeInt(CacheIndex.libIndex.getReferenceTableCrc());
-                        Unsorted.aNetwork_2942.putBytes(Network.outgoingBuffer.buffer, Network.outgoingBuffer.index);
-                        Network.activeConnection.sendBytes(Unsorted.aNetwork_2942.buffer, Unsorted.aNetwork_2942.index);
+                        Network.loginBuffer.writeShort(Class113.interfacePacketCounter);
+                        Network.loginBuffer.writeInt(CacheIndex.skeletonsIndex.getReferenceTableCrc());
+                        Network.loginBuffer.writeInt(CacheIndex.skinsIndex.getReferenceTableCrc());
+                        Network.loginBuffer.writeInt(CacheIndex.configurationsIndex.getReferenceTableCrc());
+                        Network.loginBuffer.writeInt(CacheIndex.interfacesIndex.getReferenceTableCrc());
+                        Network.loginBuffer.writeInt(CacheIndex.soundFXIndex.getReferenceTableCrc());
+                        Network.loginBuffer.writeInt(CacheIndex.landscapesIndex.getReferenceTableCrc());
+                        Network.loginBuffer.writeInt(CacheIndex.musicIndex.getReferenceTableCrc());
+                        Network.loginBuffer.writeInt(CacheIndex.modelsIndex.getReferenceTableCrc());
+                        Network.loginBuffer.writeInt(CacheIndex.spritesIndex.getReferenceTableCrc());
+                        Network.loginBuffer.writeInt(CacheIndex.texturesIndex.getReferenceTableCrc());
+                        Network.loginBuffer.writeInt(CacheIndex.huffmanEncodingIndex.getReferenceTableCrc());
+                        Network.loginBuffer.writeInt(CacheIndex.music2Index.getReferenceTableCrc());
+                        Network.loginBuffer.writeInt(CacheIndex.interfaceScriptsIndex.getReferenceTableCrc());
+                        Network.loginBuffer.writeInt(CacheIndex.fontsIndex.getReferenceTableCrc());
+                        Network.loginBuffer.writeInt(CacheIndex.soundFX2Index.getReferenceTableCrc());
+                        Network.loginBuffer.writeInt(CacheIndex.soundFX3Index.getReferenceTableCrc());
+                        Network.loginBuffer.writeInt(CacheIndex.objectConfigIndex.getReferenceTableCrc());
+                        Network.loginBuffer.writeInt(CacheIndex.clientscriptMaskIndex.getReferenceTableCrc());
+                        Network.loginBuffer.writeInt(CacheIndex.npcConfigIndex.getReferenceTableCrc());
+                        Network.loginBuffer.writeInt(CacheIndex.itemConfigIndex.getReferenceTableCrc());
+                        Network.loginBuffer.writeInt(CacheIndex.animationIndex.getReferenceTableCrc());
+                        Network.loginBuffer.writeInt(CacheIndex.graphicFXIndex.getReferenceTableCrc());
+                        Network.loginBuffer.writeInt(CacheIndex.clientScriptConfigIndex.getReferenceTableCrc());
+                        Network.loginBuffer.writeInt(CacheIndex.worldmapIndex.getReferenceTableCrc());
+                        Network.loginBuffer.writeInt(CacheIndex.quickchatMessagesIndex.getReferenceTableCrc());
+                        Network.loginBuffer.writeInt(CacheIndex.quickchatMenusIndex.getReferenceTableCrc());
+                        Network.loginBuffer.writeInt(CacheIndex.materialsIndex.getReferenceTableCrc());
+                        Network.loginBuffer.writeInt(CacheIndex.particlesConfigIndex.getReferenceTableCrc());
+                        Network.loginBuffer.writeInt(CacheIndex.libIndex.getReferenceTableCrc());
+                        Network.loginBuffer.putBytes(Network.outgoingBuffer.buffer, Network.outgoingBuffer.index);
+                        Network.activeConnection.sendBytes(Network.loginBuffer.buffer, Network.loginBuffer.index);
                         Network.outgoingBuffer.ISAACEncryption(var9);
 
                         for (int var2 = 0; var2 < 4; ++var2) {
@@ -277,12 +277,12 @@ class LoginHandler {
                         if (!Client.aBoolean3779) {
                             if ((!Class3_Sub15.aBoolean2433 || Unsorted.aBoolean4063) && !Class3_Sub13_Sub29.disableGEBoxes) {
                                 try {
-                                    TextCore.aClass94_516.method1577(Class38.aClass87_665.applet);
+                                    TextCore.aClass94_516.method1577(Signlink.aClass87_665.applet);
                                 } catch (Throwable var5) {
                                 }
                             } else {
                                 try {
-                                    Class97.aClass94_1374.method1577(Class38.aClass87_665.applet);
+                                    Class97.aClass94_1374.method1577(Signlink.aClass87_665.applet);
                                 } catch (Throwable var6) {
                                 }
                             }

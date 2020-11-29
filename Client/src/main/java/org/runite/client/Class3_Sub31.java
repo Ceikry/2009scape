@@ -11,14 +11,12 @@ final class Class3_Sub31 extends Linkable {
     int anInt2602;
     int anInt2603;
 
-    static void method820(int var0, int var1) {
+    static void method820() {
         try {
-            KeyboardListener.aReferenceCache_1911.sweep(var0);
-            if (var1 == 64) {
-                Unsorted.aReferenceCache_1131.sweep(var0);
-            }
+            KeyboardListener.aReferenceCache_1911.sweep(5);
+            Unsorted.aReferenceCache_1131.sweep(5);
         } catch (RuntimeException var3) {
-            throw ClientErrorException.clientError(var3, "wk.C(" + var0 + ',' + var1 + ')');
+            throw ClientErrorException.clientError(var3, "wk.C(" + 5 + ',' + 64 + ')');
         }
     }
 

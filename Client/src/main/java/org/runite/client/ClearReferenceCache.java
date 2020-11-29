@@ -176,4 +176,20 @@ public class ClearReferenceCache {
             throw ClientErrorException.clientError(var2, "rc.Q(" + true + ')');
         }
     }
+
+    static void method2265() {
+        try {
+            CS2Script.aReferenceCache_2442.clear();
+        } catch (RuntimeException var2) {
+            throw ClientErrorException.clientError(var2, "wj.B(" + 0 + ')');
+        }
+    }
+
+    static void method1076() {
+        try {
+            Class154.aReferenceCache_1964.clear();
+        } catch (RuntimeException var2) {
+            throw ClientErrorException.clientError(var2, "ba.C(" + 88 + ')');
+        }
+    }
 }

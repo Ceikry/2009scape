@@ -25,33 +25,6 @@ abstract class GameObject {
         }
     }
 
-    static void graphicsSettings(boolean var0, int var1, int var3, int var4) {
-        try {
-            Class53.aLong866 = 0L;
-            int var5 = Class83.method1411(0);
-            if (var1 == 3 || 3 == var5) {
-                var0 = true;
-            }
-
-            if (Signlink.osName.startsWith("mac") && var1 > 0) {
-                var0 = true;
-            }
-
-            boolean var6 = false;
-            if (var5 > 0 != var1 > 0) {
-                var6 = true;
-            }
-
-            if (var0 && var1 > 0) {
-                var6 = true;
-            }
-
-            Unsorted.method598(var0, var1, var6, var5, false, var3, var4);
-        } catch (RuntimeException var7) {
-            throw ClientErrorException.clientError(var7, "th.EC(" + var0 + ',' + var1 + ',' + -8914 + ',' + var3 + ',' + var4 + ')');
-        }
-    }
-
     static int method1863(int var0, int var1, int var3, int var4, int var5, int var6) {
         try {
             int var7;
