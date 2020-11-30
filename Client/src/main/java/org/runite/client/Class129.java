@@ -380,7 +380,7 @@ abstract class Class129 {
         }
     }
 
-    abstract int method1767(int var1, int var2, int var3);
+    abstract int method1767(int var2, int var3);
 
     abstract void method1770();
 

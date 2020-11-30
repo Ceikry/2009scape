@@ -149,7 +149,7 @@ final class Player extends Class140_Sub4 {
                         }
                         outfit = Class75_Sub4.anIntArray2664[equipId];
                         look[var10] = Class3_Sub13_Sub29.bitwiseOr(1073741824, outfit);
-                        var14 = Class38.getItemDefinition(outfit).teamId;
+                        var14 = ItemDefinition.getItemDefinition(outfit).teamId;
                         if (var14 != 0) {
                             this.teamId = var14;
                         }

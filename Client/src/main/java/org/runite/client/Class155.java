@@ -6,7 +6,6 @@ import java.awt.*;
 
 class Class155 {
 
-    static int[] anIntArray1969 = new int[100];
     private final Class3_Sub24[] aClass3_Sub24Array1980 = new Class3_Sub24[8];
     private final Class3_Sub24[] aClass3_Sub24Array1983 = new Class3_Sub24[8];
     int[] anIntArray1975;
@@ -22,50 +21,6 @@ class Class155 {
     private int anInt1986;
     private int anInt1987 = 0;
     private int anInt1988 = 0;
-
-    static Class10 method2156(DataBuffer var1) {
-        try {
-            Class10 var2 = new Class10();
-            var2.anInt149 = var1.readUnsignedShort();
-
-            var2.aClass3_Sub28_Sub4_151 = LinkableRSString.method733(var2.anInt149);
-            return var2;
-        } catch (RuntimeException var3) {
-            throw ClientErrorException.clientError(var3, "vh.M(" + 1024 + ',' + (var1 != null ? "{...}" : "null") + ')');
-        }
-    }
-
-    static void method2162(GameObject var0, int var1, int var2, int var3) {
-        Class3_Sub2 var4;
-        if (var2 < Unsorted.anInt1234) {
-            var4 = Class75_Sub2.aClass3_Sub2ArrayArrayArray2638[var1][var2 + 1][var3];
-            if (var4 != null && var4.aClass12_2230 != null && var4.aClass12_2230.object.method1865()) {
-                var0.method1866(var4.aClass12_2230.object, 128, 0, 0, true);
-            }
-        }
-
-        if (var3 < Unsorted.anInt1234) {
-            var4 = Class75_Sub2.aClass3_Sub2ArrayArrayArray2638[var1][var2][var3 + 1];
-            if (var4 != null && var4.aClass12_2230 != null && var4.aClass12_2230.object.method1865()) {
-                var0.method1866(var4.aClass12_2230.object, 0, 0, 128, true);
-            }
-        }
-
-        if (var2 < Unsorted.anInt1234 && var3 < Class3_Sub13_Sub15.anInt3179) {
-            var4 = Class75_Sub2.aClass3_Sub2ArrayArrayArray2638[var1][var2 + 1][var3 + 1];
-            if (var4 != null && var4.aClass12_2230 != null && var4.aClass12_2230.object.method1865()) {
-                var0.method1866(var4.aClass12_2230.object, 128, 0, 128, true);
-            }
-        }
-
-        if (var2 < Unsorted.anInt1234 && var3 > 0) {
-            var4 = Class75_Sub2.aClass3_Sub2ArrayArrayArray2638[var1][var2 + 1][var3 - 1];
-            if (var4 != null && var4.aClass12_2230 != null && var4.aClass12_2230.object.method1865()) {
-                var0.method1866(var4.aClass12_2230.object, 128, 0, -128, true);
-            }
-        }
-
-    }
 
     void method2149() {
     }
@@ -87,7 +42,7 @@ class Class155 {
         if (this.aClass3_Sub24_1973 != null && this.anInt1987 <= 0) {
             this.anInt1987 += Class21.anInt443 >> 4;
             Class97.method1591(this.aClass3_Sub24_1973);
-            this.method2155(this.aClass3_Sub24_1973, this.aClass3_Sub24_1973.method412(), (byte) -24);
+            this.method2155(this.aClass3_Sub24_1973, this.aClass3_Sub24_1973.method412());
             int var4 = 0;
             int var5 = 255;
 
@@ -132,7 +87,7 @@ class Class155 {
                                 Class3_Sub24 var14 = var11.method411();
                                 if (var14 != null) {
                                     for (int var15 = var11.anInt2543; var14 != null; var14 = var11.method414()) {
-                                        this.method2155(var14, var15 * var14.method412() >> 8, (byte) -24);
+                                        this.method2155(var14, var15 * var14.method412() >> 8);
                                     }
                                 }
 
@@ -280,12 +235,8 @@ class Class155 {
         }
     }
 
-    private void method2155(Class3_Sub24 var1, int var2, byte var3) {
+    private void method2155(Class3_Sub24 var1, int var2) {
         try {
-            if (var3 != -24) {
-                this.method2155(null, -105, (byte) 87);
-            }
-
             int var4 = var2 >> 5;
             Class3_Sub24 var5 = this.aClass3_Sub24Array1983[var4];
             if (null == var5) {
@@ -297,7 +248,7 @@ class Class155 {
             this.aClass3_Sub24Array1983[var4] = var1;
             var1.anInt2543 = var2;
         } catch (RuntimeException var6) {
-            throw ClientErrorException.clientError(var6, "vh.H(" + (var1 != null ? "{...}" : "null") + ',' + var2 + ',' + var3 + ')');
+            throw ClientErrorException.clientError(var6, "vh.H(" + (var1 != null ? "{...}" : "null") + ',' + var2 + ')');
         }
     }
 
@@ -356,27 +307,27 @@ class Class155 {
 
     final synchronized void method2163() {
         try {
-            if (null != Class38_Sub1.aClass15_2613) {
+            if (null != UpdateLoop.aUpdateLoop_2613) {
                 boolean var2 = true;
 
                 for (int var3 = 0; var3 < 2; ++var3) {
-                    if (this == Class38_Sub1.aClass15_2613.aClass155Array352[var3]) {
-                        Class38_Sub1.aClass15_2613.aClass155Array352[var3] = null;
+                    if (this == UpdateLoop.aUpdateLoop_2613.aClass155Array352[var3]) {
+                        UpdateLoop.aUpdateLoop_2613.aClass155Array352[var3] = null;
                     }
 
-                    if (null != Class38_Sub1.aClass15_2613.aClass155Array352[var3]) {
+                    if (null != UpdateLoop.aUpdateLoop_2613.aClass155Array352[var3]) {
                         var2 = false;
                     }
                 }
 
                 if (var2) {
-                    Class38_Sub1.aClass15_2613.aBoolean345 = true;
+                    UpdateLoop.aUpdateLoop_2613.aBoolean345 = true;
 
-                    while (Class38_Sub1.aClass15_2613.aBoolean353) {
+                    while (UpdateLoop.aUpdateLoop_2613.aBoolean353) {
                         TimeUtils.sleep(50L);
                     }
 
-                    Class38_Sub1.aClass15_2613 = null;
+                    UpdateLoop.aUpdateLoop_2613 = null;
                 }
             }
 

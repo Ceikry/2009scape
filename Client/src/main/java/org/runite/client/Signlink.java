@@ -14,30 +14,60 @@ import java.util.Vector;
 public class Signlink implements Runnable {
 
     private static final Hashtable<String, File> cachedFiles = new Hashtable<>(18);
+
+    /*
+     *  Java information
+     */
     public static String javaVersion;
-    public static String osName;
-    public static String osNameCS;
-    public static int anInt1214 = 1;
     public static String javaVendor;
+
+    /*
+     *  Operating system information
+     */
+    public static String osName;
     public static String osArchitecture;
-    public static Method setFocusCycleRoot;
-    public static Method setTraversalKeysEnabled;
-    static volatile long aLong1221 = 0L;
-    public static Signlink aClass87_665;
-    private static String homeDirectory;
-    private final Thread thread;
-    private final String gameName;
-    private final int anInt1215;
+    public static String osNameCS;
+
+    /*
+     *  Cache/Randomdat information
+     */
     public RandomAccessFileWrapper[] cacheIndicesFiles;
     public RandomAccessFileWrapper cacheDataFile;
-    public EventQueue systemEventQueue;
     public RandomAccessFileWrapper cacheChecksumFile;
     public RandomAccessFileWrapper randomDatFile;
+
+    /*
+     *  Applet + AWT
+     */
     public Applet applet;
+    private Display display;
+    public EventQueue systemEventQueue;
+    private Sensor sensor;
+    private final Thread thread;
+    //methods
+    public static Method setFocusCycleRoot;
+    public static Method setTraversalKeysEnabled;
+
+    /*
+     *  Directories
+     */
+    private static String homeDirectory;
+
+    /*
+     *  Misc strings
+     */
+    private final String gameName;
+
+    /*
+     *  Signlink
+     */
+    public static Signlink aClass87_665;
+
+    public static int anInt1214 = 1;
+    static volatile long aLong1221 = 0L;
+    private final int anInt1215;
     private boolean stopped;
     private Class64 aClass64_1203 = null;
-    private Sensor sensor;
-    private Display display;
     private Class64 aClass64_1213 = null;
     private Interface1 anInterface1_1217;
 

@@ -767,7 +767,7 @@ public final class RSInterface {
                     }
                 } else if (3 != var8) {
                     if (4 == var8) {
-                        ItemDefinition var16 = Class38.getItemDefinition(var9);
+                        ItemDefinition var16 = ItemDefinition.getItemDefinition(var9);
                         Model var17 = var16.method1110(var1, var5, var2, 10, var3);
                         if (var17 == null) {
                             aBoolean6 = true;

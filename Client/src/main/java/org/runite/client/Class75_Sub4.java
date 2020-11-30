@@ -26,7 +26,7 @@ public final class Class75_Sub4 extends Class75 {
         }
     }
 
-    static boolean method1351(CacheIndex var0, int var1, int archiveId, int var3) {
+    static boolean method1351(CacheIndex var0, int var1, int archiveId) {
         try {
             byte[] var4 = var0.getFile(archiveId, var1);
             if (var4 == null) {
@@ -36,7 +36,7 @@ public final class Class75_Sub4 extends Class75 {
                 return true;
             }
         } catch (RuntimeException var5) {
-            throw ClientErrorException.clientError(var5, "ta.N(" + (var0 != null ? "{...}" : "null") + ',' + var1 + ',' + archiveId + ',' + var3 + ')');
+            throw ClientErrorException.clientError(var5, "ta.N(" + (var0 != null ? "{...}" : "null") + ',' + var1 + ',' + archiveId + ',' + -30901 + ')');
         }
     }
 

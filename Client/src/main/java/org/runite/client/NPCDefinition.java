@@ -111,7 +111,7 @@ public final class NPCDefinition {
             int var4 = 0;
 
             for (int var5 = 0; Class3_Sub13_Sub23.itemDefinitionSize > var5; ++var5) {
-                ItemDefinition var6 = Class38.getItemDefinition(var5);
+                ItemDefinition var6 = ItemDefinition.getItemDefinition(var5);
                 if ((!var0 || var6.aBoolean807) && var6.anInt791 == -1 && -1 == var6.anInt762 && var6.anInt800 == 0 && var6.name.toLowercase().indexOf(var1, 116) != -1) {
                     if (var4 >= 250) {
                         Class99.aShortArray1398 = null;
@@ -137,7 +137,7 @@ public final class NPCDefinition {
             RSString[] var10 = new RSString[Unsorted.anInt952];
 
             for (int var11 = 0; Unsorted.anInt952 > var11; ++var11) {
-                var10[var11] = Class38.getItemDefinition(var3[var11]).name;
+                var10[var11] = ItemDefinition.getItemDefinition(var3[var11]).name;
             }
 
             Class3_Sub13_Sub29.method307(var10, Class99.aShortArray1398, 77);

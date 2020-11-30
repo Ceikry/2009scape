@@ -133,7 +133,7 @@ final class Class3_Sub13_Sub13 extends Class3_Sub13 {
                 }
 
                 if (Class143.loadingStage == 30) {
-                    Class163_Sub2_Sub1.method2226(Network.outgoingBuffer, 163, -116);
+                    Class163_Sub2_Sub1.method2226(Network.outgoingBuffer);
                     Object var14 = aClass67_1443.anObject1016;
                     int var2;
                     int var3;
@@ -274,7 +274,7 @@ final class Class3_Sub13_Sub13 extends Class3_Sub13 {
                         --anInt2212;
                     }
 
-                    if (Class15.aBoolean346) {
+                    if (UpdateLoop.aBoolean346) {
                         for (queuedVarpIndex = 0; Class3_Sub23.anInt2537 > queuedVarpIndex; ++queuedVarpIndex) {
                             var2 = Class133.inputTextCodeArray[queuedVarpIndex];
                             if (98 == var2 || var2 == 99 || var2 == 96 || var2 == 97) {
@@ -683,13 +683,13 @@ final class Class3_Sub13_Sub13 extends Class3_Sub13 {
                                                         Network.outgoingBuffer.putOpcode(245);
                                                     }
 
-                                                    if (Class15.aClass64_351 != null && Class15.aClass64_351.anInt978 == 1) {
-                                                        if (null != Class15.aClass64_351.anObject974) {
+                                                    if (UpdateLoop.aClass64_351 != null && UpdateLoop.aClass64_351.anInt978 == 1) {
+                                                        if (null != UpdateLoop.aClass64_351.anObject974) {
                                                             Class99.method1596(Class3_Sub13_Sub24.aClass94_3295, Unsorted.aBoolean2154);
                                                         }
 
                                                         Class3_Sub13_Sub24.aClass94_3295 = null;
-                                                        Class15.aClass64_351 = null;
+                                                        UpdateLoop.aClass64_351 = null;
                                                         Unsorted.aBoolean2154 = false;
                                                     }
 

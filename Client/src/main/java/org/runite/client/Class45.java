@@ -47,7 +47,7 @@ final class Class45 {
                         int var13 = -1;
                         RSString message;
                         if (var8) {
-                            Class10 var14 = Class155.method2156(aClass3_Sub30_2030);
+                            Class10 var14 = Class10.method2156(aClass3_Sub30_2030);
                             var4 &= 32767;
                             var13 = var14.anInt149;
                             message = var14.aClass3_Sub28_Sub4_151.method555(aClass3_Sub30_2030);

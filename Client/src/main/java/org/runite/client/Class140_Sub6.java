@@ -116,7 +116,7 @@ final class Class140_Sub6 extends GameObject {
     static AbstractSprite[] getSprites(int archiveId, CacheIndex var3) {
         try {
             // System.out.println(archiveId);
-            return !Class75_Sub4.method1351(var3, 0, archiveId, -30901) ? null : Class75_Sub3.method1347();
+            return !Class75_Sub4.method1351(var3, 0, archiveId) ? null : Class75_Sub3.method1347();
         } catch (RuntimeException var5) {
             throw ClientErrorException.clientError(var5, "ra.B(" + 0 + ',' + (byte) 11 + ',' + archiveId + ',' + (var3 != null ? "{...}" : "null") + ')');
         }

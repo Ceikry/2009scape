@@ -1,7 +1,5 @@
 package org.runite.client;
 
-import java.awt.event.KeyEvent;
-
 final class Class79 {
 
     static int anInt1124 = -1;
@@ -134,7 +132,7 @@ final class Class79 {
                         }
 
                         if (8 <= var2) {
-                            Class15.aBoolean346 = var0.readUnsignedByte() == 1;
+                            UpdateLoop.aBoolean346 = var0.readUnsignedByte() == 1;
                         }
 
                         if (9 <= var2) {

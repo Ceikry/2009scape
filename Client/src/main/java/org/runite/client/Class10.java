@@ -50,4 +50,15 @@ final class Class10 {
         }
     }
 
+    static Class10 method2156(DataBuffer var1) {
+        try {
+            Class10 var2 = new Class10();
+            var2.anInt149 = var1.readUnsignedShort();
+
+            var2.aClass3_Sub28_Sub4_151 = LinkableRSString.method733(var2.anInt149);
+            return var2;
+        } catch (RuntimeException var3) {
+            throw ClientErrorException.clientError(var3, "vh.M(" + 1024 + ',' + (var1 != null ? "{...}" : "null") + ')');
+        }
+    }
 }

@@ -549,7 +549,7 @@ final class Class52 {
                     for (int var18 = 0; var18 < 12; ++var18) {
                         var19 = var15[var18];
                         if ((var19 & 1073741824) != 0) {
-                            if (!Class38.getItemDefinition(1073741823 & var19).method1108(this.aBoolean864)) {
+                            if (!ItemDefinition.getItemDefinition(1073741823 & var19).method1108(this.aBoolean864)) {
                                 var17 = true;
                             }
                         } else if ((var19 < 0) && !Class3_Sub13_Sub13.method231(1073741823 & var19).method942()) {
@@ -582,7 +582,7 @@ final class Class52 {
                                     }
                                 }
                             } else {
-                                var21 = Class38.getItemDefinition(var20 & 1073741823).method1117(this.aBoolean864);
+                                var21 = ItemDefinition.getItemDefinition(var20 & 1073741823).method1117(this.aBoolean864);
                                 if (null != var21) {
                                     var39[var19] = var21;
                                 }
@@ -844,7 +844,7 @@ final class Class52 {
                             if (var9 < 0 && Class3_Sub13_Sub13.method231(var9 & 1073741823).method948()) {
                                 var7 = true;
                             }
-                        } else if (!Class38.getItemDefinition(1073741823 & var9).method1102(this.aBoolean864)) {
+                        } else if (!ItemDefinition.getItemDefinition(1073741823 & var9).method1102(this.aBoolean864)) {
                             var7 = true;
                         }
                     }
@@ -866,7 +866,7 @@ final class Class52 {
                                 var14[var9++] = var12;
                             }
                         } else {
-                            var12 = Class38.getItemDefinition(var11 & 1073741823).method1116(this.aBoolean864);
+                            var12 = ItemDefinition.getItemDefinition(var11 & 1073741823).method1116(this.aBoolean864);
                             if (var12 != null) {
                                 var14[var9++] = var12;
                             }

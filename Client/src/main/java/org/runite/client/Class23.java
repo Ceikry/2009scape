@@ -47,7 +47,7 @@ public final class Class23 {
             var1.writeInt(Unsorted.anInt2148);
             var1.writeByte(Unsorted.anInt2577);
             var1.writeByte(Unsorted.aBoolean2146 ? 1 : 0);
-            var1.writeByte(!Class15.aBoolean346 ? 0 : 1);
+            var1.writeByte(!UpdateLoop.aBoolean346 ? 0 : 1);
             var1.writeByte(Class3_Sub20.anInt2488);
             var1.writeByte(Unsorted.aBoolean1080 ? 1 : 0);
             var1.writeByte(Class163_Sub3.aBoolean3004 ? 1 : 0);

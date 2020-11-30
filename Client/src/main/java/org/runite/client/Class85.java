@@ -20,7 +20,7 @@ final class Class85 {
     static AbstractIndexedSprite[] method1424(CacheIndex var0, int var3) {
         try {
 
-            return Class75_Sub4.method1351(var0, 0, var3, -30901) ? Class3_Sub13_Sub36.method343() : null;
+            return Class75_Sub4.method1351(var0, 0, var3) ? Class3_Sub13_Sub36.method343() : null;
         } catch (RuntimeException var5) {
             throw ClientErrorException.clientError(var5, "lg.C(" + (var0 != null ? "{...}" : "null") + ',' + (byte) -12 + ',' + 0 + ',' + var3 + ')');
         }

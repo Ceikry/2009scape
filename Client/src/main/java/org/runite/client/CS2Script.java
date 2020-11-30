@@ -2390,7 +2390,7 @@ final class CS2Script extends Linkable {
                                                                         } else {
                                                                             Unsorted.aBoolean2154 = flag5;
                                                                             Class3_Sub13_Sub24.aClass94_3295 = class94_64;
-                                                                            Class15.aClass64_351 = Signlink.aClass87_665.method1452(new String(class94_64.method1568(), StandardCharsets.ISO_8859_1), true);
+                                                                            UpdateLoop.aClass64_351 = Signlink.aClass87_665.method1452(new String(class94_64.method1568(), StandardCharsets.ISO_8859_1), true);
                                                                         }
                                                                         continue;
                                                                     }
@@ -2984,13 +2984,13 @@ final class CS2Script extends Linkable {
                                                                             if (opcode >= 6700)
                                                                                 break;
                                                                             if (6600 == opcode) {
-                                                                                Class15.aBoolean346 = ItemDefinition.intsStack[--iStackCounter] == 1;
+                                                                                UpdateLoop.aBoolean346 = ItemDefinition.intsStack[--iStackCounter] == 1;
                                                                                 Class119.method1730(Signlink.aClass87_665);
                                                                                 continue;
                                                                             }
                                                                             if (opcode != 6601)
                                                                                 break;
-                                                                            ItemDefinition.intsStack[iStackCounter++] = Class15.aBoolean346 ? 1 : 0;
+                                                                            ItemDefinition.intsStack[iStackCounter++] = UpdateLoop.aBoolean346 ? 1 : 0;
                                                                             continue;
                                                                         }
                                                                         if (6405 == opcode) {
@@ -3158,14 +3158,14 @@ final class CS2Script extends Linkable {
                                                     }
                                                     if (opcode == 4200) {
                                                         int k38 = ItemDefinition.intsStack[--iStackCounter];
-                                                        ItemDefinition.stringsStack[sStackCounter++] = Class38.getItemDefinition(k38).name;
+                                                        ItemDefinition.stringsStack[sStackCounter++] = ItemDefinition.getItemDefinition(k38).name;
                                                         continue;
                                                     }
                                                     if (opcode == 4201) {
                                                         iStackCounter -= 2;
                                                         int l38 = ItemDefinition.intsStack[iStackCounter];
                                                         int k61 = ItemDefinition.intsStack[iStackCounter - -1];
-                                                        ItemDefinition class48_2 = Class38.getItemDefinition(l38);
+                                                        ItemDefinition class48_2 = ItemDefinition.getItemDefinition(l38);
                                                         if (k61 < 1 || k61 > 5 || class48_2.groundOptions[-1 + k61] == null)
                                                             ItemDefinition.stringsStack[sStackCounter++] = TextCore.aClass94_2331;
                                                         else
@@ -3176,7 +3176,7 @@ final class CS2Script extends Linkable {
                                                         iStackCounter -= 2;
                                                         int i39 = ItemDefinition.intsStack[iStackCounter];
                                                         int l61 = ItemDefinition.intsStack[iStackCounter + 1];
-                                                        ItemDefinition class48_3 = Class38.getItemDefinition(i39);
+                                                        ItemDefinition class48_3 = ItemDefinition.getItemDefinition(i39);
                                                         if (l61 >= 1 && l61 <= 5 && null != class48_3.inventoryOptions[l61 + -1]) {
                                                             ItemDefinition.stringsStack[sStackCounter++] = class48_3.inventoryOptions[-1 + l61];
                                                         } else {
@@ -3186,17 +3186,17 @@ final class CS2Script extends Linkable {
                                                     }
                                                     if (opcode == 4203) {
                                                         int j39 = ItemDefinition.intsStack[--iStackCounter];
-                                                        ItemDefinition.intsStack[iStackCounter++] = Class38.getItemDefinition(j39).value;
+                                                        ItemDefinition.intsStack[iStackCounter++] = ItemDefinition.getItemDefinition(j39).value;
                                                         continue;
                                                     }
                                                     if (opcode == 4204) {
                                                         int k39 = ItemDefinition.intsStack[--iStackCounter];
-                                                        ItemDefinition.intsStack[iStackCounter++] = Class38.getItemDefinition(k39).stackingType == 1 ? 1 : 0;
+                                                        ItemDefinition.intsStack[iStackCounter++] = ItemDefinition.getItemDefinition(k39).stackingType == 1 ? 1 : 0;
                                                         continue;
                                                     }
                                                     if (4205 == opcode) {
                                                         int l39 = ItemDefinition.intsStack[--iStackCounter];
-                                                        ItemDefinition class48 = Class38.getItemDefinition(l39);
+                                                        ItemDefinition class48 = ItemDefinition.getItemDefinition(l39);
                                                         if (-1 == class48.anInt791 && class48.anInt789 >= 0)
                                                             ItemDefinition.intsStack[iStackCounter++] = class48.anInt789;
                                                         else
@@ -3205,7 +3205,7 @@ final class CS2Script extends Linkable {
                                                     }
                                                     if (opcode == 4206) {
                                                         int i40 = ItemDefinition.intsStack[--iStackCounter];
-                                                        ItemDefinition class48_1 = Class38.getItemDefinition(i40);
+                                                        ItemDefinition class48_1 = ItemDefinition.getItemDefinition(i40);
                                                         if (0 <= class48_1.anInt791 && class48_1.anInt789 >= 0)
                                                             ItemDefinition.intsStack[iStackCounter++] = class48_1.anInt789;
                                                         else
@@ -3214,7 +3214,7 @@ final class CS2Script extends Linkable {
                                                     }
                                                     if (opcode == 4207) {
                                                         int j40 = ItemDefinition.intsStack[--iStackCounter];
-                                                        ItemDefinition.intsStack[iStackCounter++] = Class38.getItemDefinition(j40).membersItem ? 1 : 0;
+                                                        ItemDefinition.intsStack[iStackCounter++] = ItemDefinition.getItemDefinition(j40).membersItem ? 1 : 0;
                                                         continue;
                                                     }
                                                     if (opcode == 4208) {
@@ -3223,9 +3223,9 @@ final class CS2Script extends Linkable {
                                                         int i62 = ItemDefinition.intsStack[iStackCounter - -1];
                                                         Class3_Sub28_Sub9 class3_sub28_sub9_3 = Class61.method1210(i62);
                                                         if (class3_sub28_sub9_3.method585())
-                                                            ItemDefinition.stringsStack[sStackCounter++] = Class38.getItemDefinition(k40).method1105(class3_sub28_sub9_3.aClass94_3619, i62);
+                                                            ItemDefinition.stringsStack[sStackCounter++] = ItemDefinition.getItemDefinition(k40).method1105(class3_sub28_sub9_3.aClass94_3619, i62);
                                                         else
-                                                            ItemDefinition.intsStack[iStackCounter++] = Class38.getItemDefinition(k40).method1115(class3_sub28_sub9_3.anInt3614, -119, i62);
+                                                            ItemDefinition.intsStack[iStackCounter++] = ItemDefinition.getItemDefinition(k40).method1115(class3_sub28_sub9_3.anInt3614, -119, i62);
                                                         continue;
                                                     }
                                                     if (4210 == opcode) {
@@ -3705,7 +3705,7 @@ final class CS2Script extends Linkable {
                             } else {
                                 class11_15.anInt192 = k65;
                                 class11_15.anInt271 = j75;
-                                ItemDefinition class48_4 = Class38.getItemDefinition(k65);
+                                ItemDefinition class48_4 = ItemDefinition.getItemDefinition(k65);
                                 class11_15.anInt280 = class48_4.anInt768;
                                 class11_15.anInt258 = class48_4.anInt792;
                                 class11_15.anInt182 = class48_4.anInt786;
@@ -4001,7 +4001,7 @@ final class CS2Script extends Linkable {
 
                 for (int var6 = 0; var6 < var4.anIntArray2547.length; ++var6) {
                     if (var4.anIntArray2547[var6] >= 0 && Class3_Sub13_Sub23.itemDefinitionSize > var4.anIntArray2547[var6]) {
-                        ItemDefinition var7 = Class38.getItemDefinition(var4.anIntArray2547[var6]);
+                        ItemDefinition var7 = ItemDefinition.getItemDefinition(var4.anIntArray2547[var6]);
                         if (null != var7.aHashTable_798) {
                             LinkableInt var8 = (LinkableInt) var7.aHashTable_798.get(var3);
                             if (null != var8) {

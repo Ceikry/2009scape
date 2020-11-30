@@ -286,7 +286,7 @@ final class Class3_Sub13_Sub8 extends Class3_Sub13 {
                 if (var4 == 1006) {
                     var13 = Class7.getRSInterface(var3);
                     if (null != var13 && var13.itemIds[var2] >= 100000) {
-                        Network.addChatMessage(TextCore.aClass94_3672, 0, RSString.stringCombiner(new RSString[]{RSString.stringAnimator(var13.itemIds[var2]), TextCore.aClass94_3777, Class38.getItemDefinition(var5).name}), -1);
+                        Network.addChatMessage(TextCore.aClass94_3672, 0, RSString.stringCombiner(new RSString[]{RSString.stringAnimator(var13.itemIds[var2]), TextCore.aClass94_3777, ItemDefinition.getItemDefinition(var5).name}), -1);
                     } else {
                         Network.outgoingBuffer.putOpcode(92);
                         Network.outgoingBuffer.writeShort128LE(var5);
@@ -788,7 +788,7 @@ final class Class3_Sub13_Sub8 extends Class3_Sub13 {
                             Class164.anInt2050 = var5;
                             Class20.method909(var13);
                             RenderAnimationDefinition.aClass94_378 = RSString.stringCombiner(new RSString[]{
-                                    ColorCore.ContextColor2, Class38.getItemDefinition(var5).name, ColorCore.ContextColor
+                                    ColorCore.ContextColor2, ItemDefinition.getItemDefinition(var5).name, ColorCore.ContextColor
                             });
 
                         }

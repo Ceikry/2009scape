@@ -60,7 +60,7 @@ final class Class157 {
     static Class3_Sub28_Sub16_Sub2[] method2176(int var0, CacheIndex var1) {
         try {
             //System.out.println("Class 157 " + var2);
-            if (Class75_Sub4.method1351(var1, 0, var0, -30901)) {
+            if (Class75_Sub4.method1351(var1, 0, var0)) {
                 return Class10.method851();
             } else {
                 return null;

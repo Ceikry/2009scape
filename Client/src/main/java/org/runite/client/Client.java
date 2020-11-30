@@ -808,7 +808,7 @@ public final class Client extends GameShell {
 
                             for (var5 = 0; Class3_Sub28_Sub3.anInt3557 > var5; ++var5) {
                                 if (Class163_Sub1_Sub1.aBooleanArray4008[var5]) {
-                                    Class164_Sub1.aClass158_3009.drawGraphics(Class3_Sub28_Sub18.anIntArray3768[var5], Class155.anIntArray1969[var5], Class140_Sub4.anIntArray2794[var5], var11, Player.anIntArray3954[var5]);
+                                    Class164_Sub1.aClass158_3009.drawGraphics(Class3_Sub28_Sub18.anIntArray3768[var5], Class49.anIntArray1969[var5], Class140_Sub4.anIntArray2794[var5], var11, Player.anIntArray3954[var5]);
                                     Class163_Sub1_Sub1.aBooleanArray4008[var5] = false;
                                 }
                             }
@@ -1193,14 +1193,14 @@ public final class Client extends GameShell {
                                         PacketParser.method829();
                                     }
 
-                                    if (null != Class15.aClass64_351 && Class15.aClass64_351.anInt978 == 1) {
-                                        if (null != Class15.aClass64_351.anObject974) {
+                                    if (null != UpdateLoop.aClass64_351 && UpdateLoop.aClass64_351.anInt978 == 1) {
+                                        if (null != UpdateLoop.aClass64_351.anObject974) {
                                             Class99.method1596(Class3_Sub13_Sub24.aClass94_3295, Unsorted.aBoolean2154);
                                         }
 
                                         Unsorted.aBoolean2154 = false;
                                         Class3_Sub13_Sub24.aClass94_3295 = null;
-                                        Class15.aClass64_351 = null;
+                                        UpdateLoop.aClass64_351 = null;
                                     }
 
                                     if (Class44.anInt719 % 1500 == 0) {

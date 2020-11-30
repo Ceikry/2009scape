@@ -98,7 +98,7 @@ final class Class70 {
     static Class3_Sub28_Sub17_Sub1 method1287(int var0, CacheIndex var2, CacheIndex var3) {
         try {
             // System.out.println("Class 70 " + var0);
-            if (Class75_Sub4.method1351(var3, 0, var0, ~30900)) {
+            if (Class75_Sub4.method1351(var3, 0, var0)) {
 
                 return Class3_Sub13.method163(var2.getFile(var0, 0));
             } else {

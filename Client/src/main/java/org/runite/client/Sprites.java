@@ -30,7 +30,7 @@ final class Sprites {
     private static LDIndexedSprite[] method885(int var1, CacheIndex var2) {
         try {
             //  System.out.println("Class 14 " + var1);
-            return !Class75_Sub4.method1351(var2, 0, var1, -30901) ? null : Unsorted.method1281();
+            return !Class75_Sub4.method1351(var2, 0, var1) ? null : Unsorted.method1281();
         } catch (RuntimeException var5) {
             throw ClientErrorException.clientError(var5, "cg.C(" + true + ',' + var1 + ',' + (var2 != null ? "{...}" : "null") + ',' + 0 + ')');
         }

@@ -122,12 +122,8 @@ final class Class163_Sub2_Sub1 extends Class163_Sub2 {
         }
     }
 
-    static void method2226(Network var0, int var1, int var2) {
+    static void method2226(Network var0) {
         try {
-            if (var2 > -109) {
-                method2226(null, 67, 54);
-            }
-
             while (true) {
                 Class3_Sub8 var3 = (Class3_Sub8) Class3_Sub26.aClass61_2557.method1222();
                 if (var3 == null) {
@@ -163,7 +159,7 @@ final class Class163_Sub2_Sub1 extends Class163_Sub2 {
                     return;
                 }
 
-                var0.putOpcode(var1);
+                var0.putOpcode(163);
                 var0.writeByte(0);
                 var5 = var0.index;
                 var0.writeInt(var3.anInt2305);
@@ -254,7 +250,7 @@ final class Class163_Sub2_Sub1 extends Class163_Sub2 {
                 var3.unlink();
             }
         } catch (RuntimeException var25) {
-            throw ClientErrorException.clientError(var25, "t.I(" + (var0 != null ? "{...}" : "null") + ',' + var1 + ',' + var2 + ')');
+            throw ClientErrorException.clientError(var25, "t.I(" + (var0 != null ? "{...}" : "null") + ')');
         }
     }
 

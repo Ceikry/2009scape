@@ -42,7 +42,7 @@ final class Class128 {
 
                 WorldMap var6;
                 for (var6 = (WorldMap) var3.method1222(); null != var6; var6 = (WorldMap) var3.method1221()) {
-                    ItemDefinition var7 = Class38.getItemDefinition(var6.aClass140_Sub7_3676.anInt2936);
+                    ItemDefinition var7 = ItemDefinition.getItemDefinition(var6.aClass140_Sub7_3676.anInt2936);
                     int var8 = var7.value;
                     if (var7.stackingType == 1) {
                         var8 *= 1 + var6.aClass140_Sub7_3676.anInt2930;
@@ -161,7 +161,7 @@ final class Class128 {
 
                         Class12 var10 = var6.aClass12_2230;
                         if (var10 != null && var10.object.method1865()) {
-                            Class155.method2162(var10.object, var3, var4, var5);
+                            method2162(var10.object, var3, var4, var5);
                             var10.object = var10.object.method1861();
                         }
                     }
@@ -171,4 +171,35 @@ final class Class128 {
 
     }
 
+    static void method2162(GameObject var0, int var1, int var2, int var3) {
+        Class3_Sub2 var4;
+        if (var2 < Unsorted.anInt1234) {
+            var4 = Class75_Sub2.aClass3_Sub2ArrayArrayArray2638[var1][var2 + 1][var3];
+            if (var4 != null && var4.aClass12_2230 != null && var4.aClass12_2230.object.method1865()) {
+                var0.method1866(var4.aClass12_2230.object, 128, 0, 0, true);
+            }
+        }
+
+        if (var3 < Unsorted.anInt1234) {
+            var4 = Class75_Sub2.aClass3_Sub2ArrayArrayArray2638[var1][var2][var3 + 1];
+            if (var4 != null && var4.aClass12_2230 != null && var4.aClass12_2230.object.method1865()) {
+                var0.method1866(var4.aClass12_2230.object, 0, 0, 128, true);
+            }
+        }
+
+        if (var2 < Unsorted.anInt1234 && var3 < Class3_Sub13_Sub15.anInt3179) {
+            var4 = Class75_Sub2.aClass3_Sub2ArrayArrayArray2638[var1][var2 + 1][var3 + 1];
+            if (var4 != null && var4.aClass12_2230 != null && var4.aClass12_2230.object.method1865()) {
+                var0.method1866(var4.aClass12_2230.object, 128, 0, 128, true);
+            }
+        }
+
+        if (var2 < Unsorted.anInt1234 && var3 > 0) {
+            var4 = Class75_Sub2.aClass3_Sub2ArrayArrayArray2638[var1][var2 + 1][var3 - 1];
+            if (var4 != null && var4.aClass12_2230 != null && var4.aClass12_2230.object.method1865()) {
+                var0.method1866(var4.aClass12_2230.object, 128, 0, -128, true);
+            }
+        }
+
+    }
 }

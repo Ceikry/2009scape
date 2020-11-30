@@ -264,6 +264,42 @@ final class ItemDefinition {
         }
     }
 
+    static ItemDefinition getItemDefinition(int itemId) {
+        try {
+            ItemDefinition var2 = (ItemDefinition) Class3_Sub28_Sub4.aReferenceCache_3572.get(itemId);
+            if (var2 == null) {
+                byte[] var3 = Class97.aClass153_1370.getFile(Class140_Sub2.method1951(itemId), 255 & itemId);
+                var2 = new ItemDefinition();
+                var2.itemId = itemId;
+                if (var3 != null) {
+                    var2.parseDefinitions(new DataBuffer(var3));
+                }
+
+                var2.method1112();
+                if (var2.anInt791 != -1) {
+                    var2.method1118(getItemDefinition(var2.anInt789), getItemDefinition(var2.anInt791));
+                }
+
+                if (var2.anInt762 != -1) {
+                    var2.method1109(getItemDefinition(var2.anInt795), getItemDefinition(var2.anInt762));
+                }
+
+                if (!Class139.aBoolean1827 && var2.membersItem) {
+                    var2.name = TextCore.MembersObject;
+                    var2.teamId = 0;
+                    var2.inventoryOptions = ClientErrorException.aClass94Array2119;
+                    var2.aBoolean807 = false;
+                    var2.groundOptions = Unsorted.aClass94Array2596;
+                }
+
+                Class3_Sub28_Sub4.aReferenceCache_3572.put(var2, itemId);
+            }
+            return var2;
+        } catch (RuntimeException var4) {
+            throw ClientErrorException.clientError(var4, "fk.F(" + itemId + ')');
+        }
+    }
+
     final boolean method1102(boolean var1) {
         try {
             int var3 = this.anInt803;
@@ -318,7 +354,7 @@ final class ItemDefinition {
                 }
 
                 if (var4 != -1) {
-                    return Class38.getItemDefinition(var4);
+                    return getItemDefinition(var4);
                 }
             }
 
@@ -422,7 +458,7 @@ final class ItemDefinition {
                 }
 
                 if (var7 != -1) {
-                    return Class38.getItemDefinition(var7).method1110(var2, var3, var4, 1, var6);
+                    return getItemDefinition(var7).method1110(var2, var3, var4, 1, var6);
                 }
             }
 

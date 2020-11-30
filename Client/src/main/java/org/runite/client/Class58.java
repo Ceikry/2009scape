@@ -51,18 +51,18 @@ final class Class58 {
                     }
 
                     var9.method2150(var9.anInt1990);
-                    if (Class3_Sub24_Sub4.anInt3507 > 0 && null == Class38_Sub1.aClass15_2613) {
-                        Class38_Sub1.aClass15_2613 = new Class15();
-                        Class38_Sub1.aClass15_2613.aClass87_350 = var1;
-                        var1.method1451(Class3_Sub24_Sub4.anInt3507, Class38_Sub1.aClass15_2613);
+                    if (Class3_Sub24_Sub4.anInt3507 > 0 && null == UpdateLoop.aUpdateLoop_2613) {
+                        UpdateLoop.aUpdateLoop_2613 = new UpdateLoop();
+                        UpdateLoop.aUpdateLoop_2613.aClass87_350 = var1;
+                        var1.method1451(Class3_Sub24_Sub4.anInt3507, UpdateLoop.aUpdateLoop_2613);
                     }
 
-                    if (Class38_Sub1.aClass15_2613 != null) {
-                        if (null != Class38_Sub1.aClass15_2613.aClass155Array352[var3]) {
+                    if (UpdateLoop.aUpdateLoop_2613 != null) {
+                        if (null != UpdateLoop.aUpdateLoop_2613.aClass155Array352[var3]) {
                             throw new IllegalArgumentException();
                         }
 
-                        Class38_Sub1.aClass15_2613.aClass155Array352[var3] = var9;
+                        UpdateLoop.aUpdateLoop_2613.aClass155Array352[var3] = var9;
                     }
 
                     return var9;
@@ -75,18 +75,18 @@ final class Class58 {
                         var5.method2164(var2);
                         var5.anInt1990 = 16384;
                         var5.method2150(var5.anInt1990);
-                        if (Class3_Sub24_Sub4.anInt3507 > 0 && null == Class38_Sub1.aClass15_2613) {
-                            Class38_Sub1.aClass15_2613 = new Class15();
-                            Class38_Sub1.aClass15_2613.aClass87_350 = var1;
-                            var1.method1451(Class3_Sub24_Sub4.anInt3507, Class38_Sub1.aClass15_2613);
+                        if (Class3_Sub24_Sub4.anInt3507 > 0 && null == UpdateLoop.aUpdateLoop_2613) {
+                            UpdateLoop.aUpdateLoop_2613 = new UpdateLoop();
+                            UpdateLoop.aUpdateLoop_2613.aClass87_350 = var1;
+                            var1.method1451(Class3_Sub24_Sub4.anInt3507, UpdateLoop.aUpdateLoop_2613);
                         }
 
-                        if (Class38_Sub1.aClass15_2613 != null) {
-                            if (Class38_Sub1.aClass15_2613.aClass155Array352[var3] != null) {
+                        if (UpdateLoop.aUpdateLoop_2613 != null) {
+                            if (UpdateLoop.aUpdateLoop_2613.aClass155Array352[var3] != null) {
                                 throw new IllegalArgumentException();
                             }
 
-                            Class38_Sub1.aClass15_2613.aClass155Array352[var3] = var5;
+                            UpdateLoop.aUpdateLoop_2613.aClass155Array352[var3] = var5;
                         }
 
                         return var5;

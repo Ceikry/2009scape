@@ -13,6 +13,7 @@ final class Class49 {
     static int anInt817;
     static NodeCache aClass47_818 = new NodeCache(64);
     static int anInt819 = 0;
+    static int[] anIntArray1969 = new int[100];
 
 
     static void method1121(boolean var0, byte var1) {
@@ -225,10 +226,10 @@ final class Class49 {
                     for (int var2 = 0; Class3_Sub28_Sub3.anInt3557 > var2; ++var2) {
                         if (!Unsorted.aBooleanArray1712[var2]) {
                             if (Class163_Sub1_Sub1.aBooleanArray4008[var2]) {
-                                Toolkit.getActiveToolkit().fillRect(Class155.anIntArray1969[var2], Player.anIntArray3954[var2], Class3_Sub28_Sub18.anIntArray3768[var2], Class140_Sub4.anIntArray2794[var2], 16711680, 128);
+                                Toolkit.getActiveToolkit().fillRect(anIntArray1969[var2], Player.anIntArray3954[var2], Class3_Sub28_Sub18.anIntArray3768[var2], Class140_Sub4.anIntArray2794[var2], 16711680, 128);
                             }
                         } else {
-                            Toolkit.getActiveToolkit().fillRect(Class155.anIntArray1969[var2], Player.anIntArray3954[var2], Class3_Sub28_Sub18.anIntArray3768[var2], Class140_Sub4.anIntArray2794[var2], 16711935, 128);
+                            Toolkit.getActiveToolkit().fillRect(anIntArray1969[var2], Player.anIntArray3954[var2], Class3_Sub28_Sub18.anIntArray3768[var2], Class140_Sub4.anIntArray2794[var2], 16711935, 128);
                         }
                     }
                 }

@@ -345,8 +345,6 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
         }
     }
 
-
-
     private void method36() {
         try {
             long var2 = TimeUtils.time();
@@ -458,7 +456,7 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
                 Class3_Sub25.aClass129_2552 = Class36.method1012();
 
                 while (aLong2313 == 0 || aLong2313 > TimeUtils.time()) {
-                    Class133.anInt1754 = Class3_Sub25.aClass129_2552.method1767(-1, anInt1737, anInt2626);
+                    Class133.anInt1754 = Class3_Sub25.aClass129_2552.method1767(anInt1737, anInt2626);
 
                     for (var7 = 0; var7 < Class133.anInt1754; ++var7) {
                         this.method36();

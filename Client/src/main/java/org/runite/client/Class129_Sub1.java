@@ -41,12 +41,8 @@ final class Class129_Sub1 extends Class129 {
         }
     }
 
-    final int method1767(int var1, int var2, int var3) {
+    final int method1767(int var2, int var3) {
         try {
-            if (var1 != -1) {
-                this.method1767(-14, 83, 10);
-            }
-
             int var5 = this.anInt2691;
             int var4 = this.anInt2688;
             this.anInt2688 = 300;
@@ -96,7 +92,7 @@ final class Class129_Sub1 extends Class129 {
             this.anInt2692 &= 255;
             return var6;
         } catch (RuntimeException var7) {
-            throw ClientErrorException.clientError(var7, "lj.B(" + var1 + ',' + var2 + ',' + var3 + ')');
+            throw ClientErrorException.clientError(var7, "lj.B(" + var2 + ',' + var3 + ')');
         }
     }
 

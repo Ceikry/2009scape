@@ -123,7 +123,7 @@ final class Class3_Sub24_Sub4 extends Class3_Sub24 {
                             Class3_Sub13_Sub13.anInt2701 = var15;
                             if (var3.itemAmounts[var15] > 0) {
                                 Class3_Sub1 var9 = Client.method44(var3);
-                                ItemDefinition var10 = Class38.getItemDefinition(var3.itemAmounts[var15] + -1);
+                                ItemDefinition var10 = ItemDefinition.getItemDefinition(var3.itemAmounts[var15] + -1);
                                 if (1 == Class164_Sub1.anInt3012 && var9.method99()) {
                                     if (var3.componentHash != Class3_Sub28_Sub18.anInt3764 || var15 != Network.anInt1473) {
                                         method1177(-1, var10.itemId, (byte) -91, RSString.stringCombiner(new RSString[]{RenderAnimationDefinition.aClass94_378, ColorCore.BankItemColor, var10.name}), var15, (short) 40, TextCore.HasUse, var3.componentHash);
