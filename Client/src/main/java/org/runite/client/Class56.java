@@ -101,7 +101,7 @@ final class Class56 {
             Unsorted.anIntArray2469 = null;
             Unsorted.aByteArrayArrayArray1328 = null;
             PacketParser.aByteArrayArrayArray81 = null;
-            Class67.aByteArrayArrayArray1014 = null;
+            Class110.aByteArrayArrayArray1014 = null;
             Class158_Sub1.aByteArrayArrayArray1828 = null;
             Class3_Sub13_Sub36.aByteArrayArrayArray3430 = null;
             Unsorted.anIntArray1138 = null;

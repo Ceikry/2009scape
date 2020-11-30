@@ -23,14 +23,14 @@ final class Class3_Sub28_Sub1 extends Node {
 
     static RSString method531() {
         RSString var1;
-        if (Class164_Sub1.anInt3012 == 1 && Unsorted.menuOptionCount < 2) {
+        if (Class164_Sub1.anInt3012 == 1 && ContextMenu.menuOptionCount < 2) {
             var1 = RSString.stringCombiner(new RSString[]{TextCore.HasUse, TextCore.Spacer, RenderAnimationDefinition.aClass94_378, TextCore.aClass94_1724});
-        } else if (GameObject.aBoolean1837 && 2 > Unsorted.menuOptionCount) {
+        } else if (GameObject.aBoolean1837 && 2 > ContextMenu.menuOptionCount) {
             var1 = RSString.stringCombiner(new RSString[]{Class3_Sub28_Sub9.aClass94_3621, TextCore.Spacer, TextCore.aClass94_676, TextCore.aClass94_1724});
 
-        } else if (ClientCommands.shiftClickEnabled && ObjectDefinition.aBooleanArray1490[81] && Unsorted.menuOptionCount > 2 && !ObjectDefinition.aBooleanArray1490[82]) {
-            for (counter = 2; counter < Unsorted.menuOptionCount; counter++) {
-                RSString option = (Unsorted.method802(Unsorted.menuOptionCount - counter));
+        } else if (ClientCommands.shiftClickEnabled && ObjectDefinition.aBooleanArray1490[81] && ContextMenu.menuOptionCount > 2 && !ObjectDefinition.aBooleanArray1490[82]) {
+            for (counter = 2; counter < ContextMenu.menuOptionCount; counter++) {
+                RSString option = (Unsorted.method802(ContextMenu.menuOptionCount - counter));
                 if (option.toString().contains("Drop") || option.toString().contains("Release")) {
                     ClientCommands.canDrop = true;
                     dropAction = counter;
@@ -40,16 +40,16 @@ final class Class3_Sub28_Sub1 extends Node {
                 }
             }
             if (ClientCommands.canDrop) {
-                var1 = Unsorted.method802(Unsorted.menuOptionCount - dropAction);
+                var1 = Unsorted.method802(ContextMenu.menuOptionCount - dropAction);
             } else {
-                var1 = Unsorted.method802(Unsorted.menuOptionCount - 1);
+                var1 = Unsorted.method802(ContextMenu.menuOptionCount - 1);
             }
         } else {
-            var1 = Unsorted.method802(Unsorted.menuOptionCount - 1);
+            var1 = Unsorted.method802(ContextMenu.menuOptionCount - 1);
         }
 
-        if (Unsorted.menuOptionCount > 2) {
-            var1 = RSString.stringCombiner(new RSString[]{var1, Class1.aClass94_58, RSString.stringAnimator(Unsorted.menuOptionCount - 2), TextCore.HasMoreOptions});
+        if (ContextMenu.menuOptionCount > 2) {
+            var1 = RSString.stringCombiner(new RSString[]{var1, Class1.aClass94_58, RSString.stringAnimator(ContextMenu.menuOptionCount - 2), TextCore.HasMoreOptions});
         }
         return var1;
     }

@@ -55,9 +55,9 @@ final class Class3_Sub13_Sub14 extends Class3_Sub13 {
 
             if (Network.incomingPacketLength == Network.incomingBuffer.index) {
                 for (var1 = 0; var1 < Class163.localNPCCount; ++var1) {
-                    if (null == NPC.npcs[Class15.localNPCIndexes[var1]]) {
+                    if (null == NPC.npcs[NPC.localNPCIndexes[var1]]) {
 //            	   System.err.println("gnp2 pos:" + var1 + " size:" + Class163.anInt2046);
-                        System.err.println("Local NPC was null - index: " + Class15.localNPCIndexes[var1] + ", list index: " + var1 + ", list size: " + Class163.localNPCCount);
+                        System.err.println("Local NPC was null - index: " + NPC.localNPCIndexes[var1] + ", list index: " + var1 + ", list size: " + Class163.localNPCCount);
                     }
                 }
 

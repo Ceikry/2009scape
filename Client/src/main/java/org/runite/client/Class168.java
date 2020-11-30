@@ -883,30 +883,30 @@ final class Class168 {
             while (!var1) {
                 var1 = true;
 
-                for (int var2 = 0; -1 + Unsorted.menuOptionCount > var2; ++var2) {
-                    if (Class3_Sub13_Sub7.aShortArray3095[var2] < 1000 && Class3_Sub13_Sub7.aShortArray3095[1 + var2] > 1000) {
-                        RSString var3 = Class163_Sub2_Sub1.aClass94Array4016[var2];
+                for (int var2 = 0; -1 + ContextMenu.menuOptionCount > var2; ++var2) {
+                    if (ContextMenu.aShortArray3095[var2] < 1000 && ContextMenu.aShortArray3095[1 + var2] > 1000) {
+                        RSString var3 = ContextMenu.aClass94Array4016[var2];
                         var1 = false;
-                        Class163_Sub2_Sub1.aClass94Array4016[var2] = Class163_Sub2_Sub1.aClass94Array4016[1 + var2];
-                        Class163_Sub2_Sub1.aClass94Array4016[1 + var2] = var3;
-                        RSString var4 = Class140_Sub7.aClass94Array2935[var2];
-                        Class140_Sub7.aClass94Array2935[var2] = Class140_Sub7.aClass94Array2935[var2 + 1];
-                        Class140_Sub7.aClass94Array2935[var2 - -1] = var4;
-                        int var5 = Class117.anIntArray1613[var2];
-                        Class117.anIntArray1613[var2] = Class117.anIntArray1613[1 + var2];
-                        Class117.anIntArray1613[var2 + 1] = var5;
-                        var5 = Class27.anIntArray512[var2];
-                        Class27.anIntArray512[var2] = Class27.anIntArray512[var2 + 1];
-                        Class27.anIntArray512[1 + var2] = var5;
-                        var5 = Class114.anIntArray1578[var2];
-                        Class114.anIntArray1578[var2] = Class114.anIntArray1578[1 + var2];
-                        Class114.anIntArray1578[var2 - -1] = var5;
-                        short var6 = Class3_Sub13_Sub7.aShortArray3095[var2];
-                        Class3_Sub13_Sub7.aShortArray3095[var2] = Class3_Sub13_Sub7.aShortArray3095[1 + var2];
-                        Class3_Sub13_Sub7.aShortArray3095[var2 + 1] = var6;
-                        long var7 = Class3_Sub13_Sub22.aLongArray3271[var2];
-                        Class3_Sub13_Sub22.aLongArray3271[var2] = Class3_Sub13_Sub22.aLongArray3271[var2 + 1];
-                        Class3_Sub13_Sub22.aLongArray3271[var2 - -1] = var7;
+                        ContextMenu.aClass94Array4016[var2] = ContextMenu.aClass94Array4016[1 + var2];
+                        ContextMenu.aClass94Array4016[1 + var2] = var3;
+                        RSString var4 = ContextMenu.aClass94Array2935[var2];
+                        ContextMenu.aClass94Array2935[var2] = ContextMenu.aClass94Array2935[var2 + 1];
+                        ContextMenu.aClass94Array2935[var2 - -1] = var4;
+                        int var5 = ContextMenu.anIntArray1613[var2];
+                        ContextMenu.anIntArray1613[var2] = ContextMenu.anIntArray1613[1 + var2];
+                        ContextMenu.anIntArray1613[var2 + 1] = var5;
+                        var5 = ContextMenu.anIntArray512[var2];
+                        ContextMenu.anIntArray512[var2] = ContextMenu.anIntArray512[var2 + 1];
+                        ContextMenu.anIntArray512[1 + var2] = var5;
+                        var5 = ContextMenu.anIntArray1578[var2];
+                        ContextMenu.anIntArray1578[var2] = ContextMenu.anIntArray1578[1 + var2];
+                        ContextMenu.anIntArray1578[var2 - -1] = var5;
+                        short var6 = ContextMenu.aShortArray3095[var2];
+                        ContextMenu.aShortArray3095[var2] = ContextMenu.aShortArray3095[1 + var2];
+                        ContextMenu.aShortArray3095[var2 + 1] = var6;
+                        long var7 = ContextMenu.aLongArray3271[var2];
+                        ContextMenu.aLongArray3271[var2] = ContextMenu.aLongArray3271[var2 + 1];
+                        ContextMenu.aLongArray3271[var2 - -1] = var7;
                     }
                 }
             }

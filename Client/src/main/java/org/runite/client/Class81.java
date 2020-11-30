@@ -104,27 +104,6 @@ final class Class81 {
         }
     }
 
-    static void method1400(Signlink var0, Object var1, int var2) {
-        try {
-            if (var2 >= -29) {
-                anIntArrayArrayArray1142 = null;
-            }
-
-            if (null != var0.systemEventQueue) {
-                for (int var3 = 0; var3 < 50 && null != var0.systemEventQueue.peekEvent(); ++var3) {
-                    TimeUtils.sleep(1L);
-                }
-
-                if (var1 != null) {
-                    var0.systemEventQueue.postEvent(new ActionEvent(var1, 1001, "dummy"));
-                }
-
-            }
-        } catch (RuntimeException var4) {
-            throw ClientErrorException.clientError(var4, "la.E(" + (var0 != null ? "{...}" : "null") + ',' + (var1 != null ? "{...}" : "null") + ',' + var2 + ')');
-        }
-    }
-
     static Class57 method1401(int var1) {
         try {
             Class57 var2 = (Class57) Class128.aReferenceCache_1683.get(var1);

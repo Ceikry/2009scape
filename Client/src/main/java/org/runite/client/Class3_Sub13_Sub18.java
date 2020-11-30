@@ -32,30 +32,30 @@ final class Class3_Sub13_Sub18 extends Class3_Sub13 {
                 Class20.method909(var5);
             }
 
-            int var6 = Unsorted.menuOptionCount;
+            int var6 = ContextMenu.menuOptionCount;
 
             int var7;
             for (var7 = 0; var6 > var7; ++var7) {
-                if (Unsorted.method73(Class3_Sub13_Sub7.aShortArray3095[var7])) {
-                    Class3_Sub25.method509(var7);
+                if (Unsorted.method73(ContextMenu.aShortArray3095[var7])) {
+                    ContextMenu.method509(var7);
                 }
             }
 
-            if (Unsorted.menuOptionCount == 1) {
+            if (ContextMenu.menuOptionCount == 1) {
                 Class38_Sub1.aBoolean2615 = false;
                 Class75.method1340(AbstractIndexedSprite.anInt1462, Class3_Sub28_Sub3.anInt3552, Class3_Sub13_Sub33.anInt3395, Class3_Sub28_Sub1.anInt3537);
             } else {
                 Class75.method1340(AbstractIndexedSprite.anInt1462, Class3_Sub28_Sub3.anInt3552, Class3_Sub13_Sub33.anInt3395, Class3_Sub28_Sub1.anInt3537);
                 var7 = Class168.aClass3_Sub28_Sub17_2096.method682(RSString.parse(GameConfig.RCM_TITLE));
 
-                for (int var8 = 0; Unsorted.menuOptionCount > var8; ++var8) {
+                for (int var8 = 0; ContextMenu.menuOptionCount > var8; ++var8) {
                     int var9 = Class168.aClass3_Sub28_Sub17_2096.method682(Unsorted.method802(var8));
                     if (var7 < var9) {
                         var7 = var9;
                     }
                 }
 
-                Class3_Sub28_Sub1.anInt3537 = Unsorted.menuOptionCount * 15 + (Unsorted.aBoolean1951 ? 26 : 22);
+                Class3_Sub28_Sub1.anInt3537 = ContextMenu.menuOptionCount * 15 + (Unsorted.aBoolean1951 ? 26 : 22);
                 Class3_Sub28_Sub3.anInt3552 = var7 + 8;
             }
 

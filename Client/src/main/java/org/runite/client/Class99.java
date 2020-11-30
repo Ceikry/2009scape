@@ -11,14 +11,10 @@ final class Class99 {
     static int anInt1403 = -1;
 
 
-    static void method1596(RSString var0, byte var1, boolean var2) {
+    static void method1596(RSString var0, boolean var2) {
         try {
-            if (var1 < 124) {
-                ObjectDefinition.aReferenceCache_1401 = null;
-            }
-
             if (var2) {
-                if (HDToolKit.highDetail && Class3_Sub28_Sub6.aBoolean3594) {
+                if (HDToolKit.highDetail && GameShell.userUsingWinJS) {
                     try {
                         Class42.method1056(Signlink.aClass87_665.applet, new Object[]{var0.method1547(GameShell.anApplet_Sub1_2588.getCodeBase()).toString()});
                         return;
@@ -40,7 +36,7 @@ final class Class99 {
             }
 
         } catch (RuntimeException var7) {
-            throw ClientErrorException.clientError(var7, "nf.C(" + (var0 != null ? "{...}" : "null") + ',' + var1 + ',' + var2 + ')');
+            throw ClientErrorException.clientError(var7, "nf.C(" + (var0 != null ? "{...}" : "null") + ',' + var2 + ')');
         }
     }
 
@@ -52,9 +48,9 @@ final class Class99 {
 
                     boolean var7 = false;
 
-                    for (int var8 = 0; var6.length > var8; ++var8) {
-                        if (var4 == var6[var8].anInt1447 && var3 == var6[var8].anInt1449 && (!var7 || var6[var8].anInt1450 > var2)) {
-                            var2 = var6[var8].anInt1450;
+                    for (Class106 class106 : var6) {
+                        if (var4 == class106.anInt1447 && var3 == class106.anInt1449 && (!var7 || class106.anInt1450 > var2)) {
+                            var2 = class106.anInt1450;
                             var7 = true;
                         }
                     }

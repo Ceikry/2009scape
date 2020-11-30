@@ -41,7 +41,7 @@ final class Class3_Sub9 extends Linkable {
         }
     }
 
-    static void method135(int var0, int var1, int var2, int var3, int var4, int var5) {
+    static void method135(int var0, int var1, int var2, int var4, int var5) {
         try {
             Class3_Sub13_Sub23_Sub1.method282(Class38.anIntArrayArray663[var0], var1 - var2, -76, var2 + var1, var5);
             int var6 = 0;
@@ -54,9 +54,6 @@ final class Class3_Sub9 extends Linkable {
             int var13 = var10 + (1 + -var12) * var8;
             int var14 = var9 - var11 * (var12 - 1);
             int var15 = var8 << 2;
-            if (var3 > -110) {
-                method137(-83);
-            }
 
             int var16 = var9 << 2;
             int var17 = var10 * (3 + (var6 << 1));
@@ -97,16 +94,7 @@ final class Class3_Sub9 extends Linkable {
             }
 
         } catch (RuntimeException var25) {
-            throw ClientErrorException.clientError(var25, "fl.C(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ',' + var5 + ')');
-        }
-    }
-
-    static void method137(int var0) {
-        try {
-            Class82.aReferenceCache_1146.sweep(var0);
-            Class159.aReferenceCache_2016.sweep(var0);
-        } catch (RuntimeException var3) {
-            throw ClientErrorException.clientError(var3, "fl.E(" + ')');
+            throw ClientErrorException.clientError(var25, "fl.C(" + var0 + ',' + var1 + ',' + var2 + ',' + -111 + ',' + var4 + ',' + var5 + ')');
         }
     }
 

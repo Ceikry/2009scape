@@ -43,11 +43,11 @@ final class WaterfallShader implements ShaderInterface {
                     if (Class163_Sub2.aClass94_2996 != null) {
                         var4 = RSString.stringCombiner(new RSString[]{Class97.aClass94_1380, Class163_Sub2.aClass94_2996});
                     }
-                    RSString var5 = RSString.stringCombiner(new RSString[]{RSString.parse("http:)4)4"), var2.address, var9, TextCore.aClass94_2608, RSString.stringAnimator(Class3_Sub20.language), aClass94_2175, RSString.stringAnimator(Class3_Sub26.anInt2554), var4, TextCore.aClass94_1133, !Unsorted.aBoolean3641 ? TextCore.aClass94_3013 : TextCore.aClass94_339, TextCore.aClass94_2610, !Class163_Sub2_Sub1.aBoolean4018 ? TextCore.aClass94_3013 : TextCore.aClass94_339, TextCore.aClass94_1617, Client.aBoolean3779 ? TextCore.aClass94_339 : TextCore.aClass94_3013});
+                    RSString var5 = RSString.stringCombiner(new RSString[]{RSString.parse("http:)4)4"), var2.address, var9, TextCore.aClass94_2608, RSString.stringAnimator(Class3_Sub20.language), aClass94_2175, RSString.stringAnimator(Class3_Sub26.anInt2554), var4, TextCore.aClass94_1133, !Unsorted.javascriptEnabled ? TextCore.aClass94_3013 : TextCore.aClass94_339, TextCore.aClass94_2610, !Class163_Sub2_Sub1.aBoolean4018 ? TextCore.aClass94_3013 : TextCore.aClass94_339, TextCore.aClass94_1617, Client.userIsMembers ? TextCore.aClass94_339 : TextCore.aClass94_3013});
 
                     try {
                         System.out.println("Trying to get this applet 6.");
-                        Objects.requireNonNull(Class126.aClient1671.getAppletContext()).showDocument(var5.toURL(), "_self");
+                        Objects.requireNonNull(Client.aClient1671.getAppletContext()).showDocument(var5.toURL(), "_self");
                     } catch (Exception var7) {
                         return false;
                     }

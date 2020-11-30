@@ -56,32 +56,20 @@ final class Class3_Sub24_Sub4 extends Class3_Sub24 {
             }
 
             if (!Class38_Sub1.aBoolean2615) {
-                if (Unsorted.menuOptionCount < 500) {
-                    Class140_Sub7.aClass94Array2935[Unsorted.menuOptionCount] = var7;
-                    Class163_Sub2_Sub1.aClass94Array4016[Unsorted.menuOptionCount] = var4;
-                    Class114.anIntArray1578[Unsorted.menuOptionCount] = var0 == -1 ? Class3_Sub28_Sub5.anInt3590 : var0;
-                    Class3_Sub13_Sub7.aShortArray3095[Unsorted.menuOptionCount] = var6;
-                    Class3_Sub13_Sub22.aLongArray3271[Unsorted.menuOptionCount] = var1;
-                    Class117.anIntArray1613[Unsorted.menuOptionCount] = var5;
-                    Class27.anIntArray512[Unsorted.menuOptionCount] = var8;
-                    ++Unsorted.menuOptionCount;
+                if (ContextMenu.menuOptionCount < 500) {
+                    ContextMenu.aClass94Array2935[ContextMenu.menuOptionCount] = var7;
+                    ContextMenu.aClass94Array4016[ContextMenu.menuOptionCount] = var4;
+                    ContextMenu.anIntArray1578[ContextMenu.menuOptionCount] = var0 == -1 ? Class3_Sub28_Sub5.anInt3590 : var0;
+                    ContextMenu.aShortArray3095[ContextMenu.menuOptionCount] = var6;
+                    ContextMenu.aLongArray3271[ContextMenu.menuOptionCount] = var1;
+                    ContextMenu.anIntArray1613[ContextMenu.menuOptionCount] = var5;
+                    ContextMenu.anIntArray512[ContextMenu.menuOptionCount] = var8;
+                    ++ContextMenu.menuOptionCount;
                 }
 
             }
         } catch (RuntimeException var10) {
             throw ClientErrorException.clientError(var10, "hj.C(" + var0 + ',' + var1 + ',' + var3 + ',' + (var4 != null ? "{...}" : "null") + ',' + var5 + ',' + var6 + ',' + (var7 != null ? "{...}" : "null") + ',' + var8 + ')');
-        }
-    }
-
-    static void method474() {
-        try {
-            Unsorted.aReferenceCache_21.sweep(5);
-            ObjectDefinition.aReferenceCache_1401.sweep(5);
-
-            Unsorted.aReferenceCache_4051.sweep(5);
-            ObjectDefinition.aReferenceCache_1965.sweep(5);
-        } catch (RuntimeException var3) {
-            throw ClientErrorException.clientError(var3, "va.S(" + 2 + ',' + 5 + ')');
         }
     }
 
@@ -455,7 +443,7 @@ final class Class3_Sub24_Sub4 extends Class3_Sub24 {
                 if (var2 < 0 || var4.anInt2514 == var2) {
                     if (null != var4.aClass3_Sub24_Sub1_2507) {
                         var4.aClass3_Sub24_Sub1_2507.method417(Class21.anInt443 / 100);
-                        if (var4.aClass3_Sub24_Sub1_2507.method445()) {
+                        if (var4.aClass3_Sub24_Sub1_2507.generateComputerUserInformation()) {
                             this.aClass3_Sub24_Sub3_3527.aClass3_Sub24_Sub2_3495.method457(var4.aClass3_Sub24_Sub1_2507);
                         }
 
@@ -917,7 +905,7 @@ final class Class3_Sub24_Sub4 extends Class3_Sub24 {
                         var3.aClass3_Sub24_Sub1_2507.method413(var5, var2, var1);
                     }
 
-                    if (var3.aClass3_Sub24_Sub1_2507.method445()) {
+                    if (var3.aClass3_Sub24_Sub1_2507.generateComputerUserInformation()) {
                         this.aClass3_Sub24_Sub3_3527.aClass3_Sub24_Sub2_3495.method457(var3.aClass3_Sub24_Sub1_2507);
                     }
 

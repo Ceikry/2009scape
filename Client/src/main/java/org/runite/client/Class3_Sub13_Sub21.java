@@ -147,14 +147,6 @@ final class Class3_Sub13_Sub21 extends Class3_Sub13 {
         }
     }
 
-    static void method269() {
-        try {
-            Class61.aReferenceCache_939.sweep(5);
-        } catch (RuntimeException var3) {
-            throw ClientErrorException.clientError(var3, "mh.O(" + -5 + ',' + 5 + ')');
-        }
-    }
-
     static void method272(byte var0) {
         try {
             if (var0 != -124) {
@@ -194,7 +186,7 @@ final class Class3_Sub13_Sub21 extends Class3_Sub13 {
                         if (NPC.npcs[var6] == null && (var13.aByte1267 & 1) > 0 && Class140_Sub3.anInt2745 == var8 && var11 >= 0 && 104 > var13.size + var11 && var12 >= 0 && 104 > var12 - -var13.size) {
                             NPC.npcs[var6] = new NPC();
                             NPC npc = NPC.npcs[var6];
-                            Class15.localNPCIndexes[Class163.localNPCCount++] = var6;
+                            NPC.localNPCIndexes[Class163.localNPCCount++] = var6;
                             npc.anInt2838 = Class44.anInt719;
                             npc.setDefinitions(var13);
                             npc.setSize(npc.definition.size, 2);

@@ -30,7 +30,7 @@ final class Class108 {
         }
     }
 
-//   static void method1654(int var0) { //Separated into method1656 + clearClientCacheMemory
+//   static void method1654(int var0) { //Separated into method1656 + clearSoftReference
 //      try {
 //         Class140_Sub4.aReferenceCache_2792.clearSoftReferences();
 //      } catch (RuntimeException var2) {

@@ -91,7 +91,7 @@ public final class Class3_Sub13_Sub1 extends Class3_Sub13 {
         }
     }
 
-    static void method445() {
+    public static void generateComputerUserInformation() {
         aClass2323 = RSString.parse(System.getProperty("user.name"));
         aString2324 = Class39.method132893();
         aClass2325 = Signlink.osName.startsWith("win") ? Class44.method3435() : Class44.method3434();

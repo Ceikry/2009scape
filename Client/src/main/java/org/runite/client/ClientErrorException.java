@@ -3,7 +3,7 @@ package org.runite.client;
 import java.io.DataInputStream;
 import java.net.URL;
 
-final class ClientErrorException extends RuntimeException {
+public final class ClientErrorException extends RuntimeException {
 
     static int[] anIntArray2113 = new int[]{2, 2, 4, 0, 1, 8, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0};
     static Class96[] aClass96Array2114 = new Class96[4];
@@ -40,7 +40,7 @@ final class ClientErrorException extends RuntimeException {
         }
     }
 
-    static ClientErrorException clientError(Throwable var0, String var1) {
+    public static ClientErrorException clientError(Throwable var0, String var1) {
         var0.printStackTrace();
         //var0.printStackTrace(); Uncomment to be spammed when clan chat is used cuz clanchat breaks the text script.
         ClientErrorException var2;

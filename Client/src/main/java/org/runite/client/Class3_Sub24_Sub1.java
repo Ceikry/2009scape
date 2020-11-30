@@ -1382,7 +1382,7 @@ final class Class3_Sub24_Sub1 extends Class3_Sub24 {
         return this.anInt3474 < 0 || this.anInt3474 >= ((Class3_Sub12_Sub1) this.aClass3_Sub12_2544).aByteArray3030.length << 8;
     }
 
-    final boolean method445() {
+    final boolean generateComputerUserInformation() {
         return this.anInt3480 != 0;
     }
 

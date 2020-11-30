@@ -24,18 +24,18 @@ final class Class3_Sub13_Sub8 extends Class3_Sub13 {
             if (Unsorted.anInt3660 == 2) {
                 if (Class3_Sub13_Sub39.anInt3460 == NPCDefinition.anInt1297 && Class38_Sub1.anInt2612 == Class168.anInt2099) {
                     Unsorted.anInt3660 = 0;
-                    if (ClientCommands.shiftClickEnabled && ObjectDefinition.aBooleanArray1490[81] && Unsorted.menuOptionCount > 2) {
-                        method806(Unsorted.menuOptionCount + -2);
+                    if (ClientCommands.shiftClickEnabled && ObjectDefinition.aBooleanArray1490[81] && ContextMenu.menuOptionCount > 2) {
+                        method806(ContextMenu.menuOptionCount + -2);
                     } else {
-                        method806(Unsorted.menuOptionCount + -1);
+                        method806(ContextMenu.menuOptionCount + -1);
                     }
                 }
             } else if (NPCDefinition.anInt1297 == Class163_Sub1.anInt2993 && Class38_Sub1.anInt2614 == Class38_Sub1.anInt2612) {
                 Unsorted.anInt3660 = 0;
-                if (ClientCommands.shiftClickEnabled && ObjectDefinition.aBooleanArray1490[81] && Unsorted.menuOptionCount > 2) {
-                    method806(Unsorted.menuOptionCount - 2);
+                if (ClientCommands.shiftClickEnabled && ObjectDefinition.aBooleanArray1490[81] && ContextMenu.menuOptionCount > 2) {
+                    method806(ContextMenu.menuOptionCount - 2);
                 } else {
-                    method806(Unsorted.menuOptionCount - 1);
+                    method806(ContextMenu.menuOptionCount - 1);
                 }
             } else {
                 Class168.anInt2099 = Class38_Sub1.anInt2614;
@@ -45,23 +45,6 @@ final class Class3_Sub13_Sub8 extends Class3_Sub13 {
 
         } catch (RuntimeException var2) {
             throw ClientErrorException.clientError(var2, "ej.B(" + var0 + ')');
-        }
-    }
-
-    static void method204(int var0) {
-        try {
-            //Client Resize.
-            Network.outgoingBuffer.putOpcode(243);
-            Network.outgoingBuffer.writeByte(Class83.method1411(0));
-            Network.outgoingBuffer.writeShort(GameShell.gameShellAWTWidth);
-            if (var0 != -3) {
-                anInt3103 = -41;
-            }
-
-            Network.outgoingBuffer.writeShort(GameShell.gameShellAWTHeight);
-            Network.outgoingBuffer.writeByte(Unsorted.anInt3671);
-        } catch (RuntimeException var2) {
-            throw ClientErrorException.clientError(var2, "ej.C(" + var0 + ')');
         }
     }
 
@@ -139,15 +122,15 @@ final class Class3_Sub13_Sub8 extends Class3_Sub13 {
     static void method806(int var1) {
         try {
             if (var1 >= 0) {
-                int var2 = Class117.anIntArray1613[var1];
-                int var3 = Class27.anIntArray512[var1];
-                int var4 = Class3_Sub13_Sub7.aShortArray3095[var1];
+                int var2 = ContextMenu.anIntArray1613[var1];
+                int var3 = ContextMenu.anIntArray512[var1];
+                int var4 = ContextMenu.aShortArray3095[var1];
                 if (var4 >= 2000) {
                     var4 -= 2000;
                 }
 
-                long var6 = Class3_Sub13_Sub22.aLongArray3271[var1];
-                int var5 = (int) Class3_Sub13_Sub22.aLongArray3271[var1];
+                long var6 = ContextMenu.aLongArray3271[var1];
+                int var5 = (int) ContextMenu.aLongArray3271[var1];
                 Player var8;
                 if (31 == var4) {
                     var8 = Class3_Sub13_Sub22.players[var5];
@@ -451,7 +434,7 @@ final class Class3_Sub13_Sub8 extends Class3_Sub13 {
                 }
 
                 if (var4 == 9 || 1003 == var4) {
-                    Unsorted.method66(Class163_Sub2_Sub1.aClass94Array4016[var1], var2, var5, (byte) -19, var3);
+                    Unsorted.method66(ContextMenu.aClass94Array4016[var1], var2, var5, (byte) -19, var3);
                 }
 
                 if (var4 == 5) {

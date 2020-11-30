@@ -8,6 +8,10 @@ final class Class42 {
         return null;
     }
 
+    /*
+     *  Javascript + ad information
+     */
+
     static void method1056(Applet var0, Object[] var2) {
         /*JSObject.getWindow(var0).call("openjs", var2);*/
     }

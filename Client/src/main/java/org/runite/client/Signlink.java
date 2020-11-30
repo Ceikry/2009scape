@@ -23,7 +23,7 @@ public class Signlink implements Runnable {
     public static Method setFocusCycleRoot;
     public static Method setTraversalKeysEnabled;
     static volatile long aLong1221 = 0L;
-    static Signlink aClass87_665;
+    public static Signlink aClass87_665;
     private static String homeDirectory;
     private final Thread thread;
     private final String gameName;
@@ -42,11 +42,12 @@ public class Signlink implements Runnable {
     private Interface1 anInterface1_1217;
 
 
+    //public Signlink(Applet applet, int var2, String gameName, int cacheIndexes) throws Exception {
     public Signlink(Applet applet, int var2, String gameName, int cacheIndexes) throws Exception {
         javaVersion = "1.1";
         this.gameName = gameName;
         this.anInt1215 = var2;
-        this.applet = applet;
+//        this.applet = applet;
         javaVendor = "Unknown";
 
         try {
@@ -86,23 +87,23 @@ public class Signlink implements Runnable {
         } catch (Throwable var12) {
         }
 
-        try {
-            if (applet == null) {
-                setTraversalKeysEnabled = Class.forName("java.awt.Component").getDeclaredMethod("setFocusTraversalKeysEnabled", Boolean.TYPE);
-            } else {
-                setTraversalKeysEnabled = applet.getClass().getMethod("setFocusTraversalKeysEnabled", Boolean.TYPE);
-            }
-        } catch (Exception var11) {
-        }
-
-        try {
-            if (applet == null) {
-                setFocusCycleRoot = Class.forName("java.awt.Container").getDeclaredMethod("setFocusCycleRoot", Boolean.TYPE);
-            } else {
-                setFocusCycleRoot = applet.getClass().getMethod("setFocusCycleRoot", Boolean.TYPE);
-            }
-        } catch (Exception var10) {
-        }
+//        try {
+//            if (applet == null) {
+//                setTraversalKeysEnabled = Class.forName("java.awt.Component").getDeclaredMethod("setFocusTraversalKeysEnabled", Boolean.TYPE);
+//            } else {
+//                setTraversalKeysEnabled = applet.getClass().getMethod("setFocusTraversalKeysEnabled", Boolean.TYPE);
+//            }
+//        } catch (Exception var11) {
+//        }
+//
+//        try {
+//            if (applet == null) {
+//                setFocusCycleRoot = Class.forName("java.awt.Container").getDeclaredMethod("setFocusCycleRoot", Boolean.TYPE);
+//            } else {
+//                setFocusCycleRoot = applet.getClass().getMethod("setFocusCycleRoot", Boolean.TYPE);
+//            }
+//        } catch (Exception var10) {
+//        }
 
         this.randomDatFile = new RandomAccessFileWrapper(method1448(null, this.anInt1215, "random.dat"), "rw", 25L);
         this.cacheDataFile = new RandomAccessFileWrapper(method1448(this.gameName, this.anInt1215, "main_file_cache.dat2"), "rw", 104857600L);
@@ -174,11 +175,6 @@ public class Signlink implements Runnable {
                 for (String folder : folders) {
                     for (String basePath : basePaths) {
                         String fullPath = basePath + folder + "/" + (gameName != null ? gameName + "/" : "") + filename;
-                        String libraryPath = basePath + folder + "/" + (gameName != null ? gameName + "/" : "");
-                        System.setProperty("java.library.path", libraryPath);
-                        Field fieldSysPath = ClassLoader.class.getDeclaredField("sys_paths");
-                        fieldSysPath.setAccessible(true);
-                        fieldSysPath.set(null, null);
                         RandomAccessFile raf = null;
                         try {
                             File file = new File(fullPath);

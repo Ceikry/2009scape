@@ -5,7 +5,6 @@ import org.rs09.client.util.ArrayUtils;
 final class Class3_Sub13_Sub7 extends Class3_Sub13 {
 
     static RSInterface aClass11_3087 = null;
-    static short[] aShortArray3095 = new short[500];
     static CacheIndex aClass153_3098;
     private int anInt3085 = 10;
     private int anInt3086 = 0;

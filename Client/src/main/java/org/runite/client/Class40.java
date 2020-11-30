@@ -202,7 +202,7 @@ final class Class40 {
                     Class163_Sub1.method2210(true);
                     Class117.method1720(false, 105);
                     if (!isDynamicSceneGraph) {
-                        Unsorted.method1091(false, -93);
+                        Unsorted.method1091(false);
                         Class163_Sub1.method2210(true);
                         if (HDToolKit.highDetail) {
                             var12 = Player.player.anIntArray2767[0] >> 3;
@@ -255,7 +255,7 @@ final class Class40 {
                         Class167.method2264(true);
                         Class117.method1720(true, 105);
                         if (!isDynamicSceneGraph) {
-                            Unsorted.method1091(true, -121);
+                            Unsorted.method1091(true);
                             Class163_Sub1.method2210(true);
                             Class3_Sub13_Sub6.method198(true);
                         }

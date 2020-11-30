@@ -192,4 +192,45 @@ public class ClearReferenceCache {
             throw ClientErrorException.clientError(var2, "ba.C(" + 88 + ')');
         }
     }
+
+    static void clearSoftReference() {
+        try {
+            Class163_Sub2_Sub1.aReferenceCache_4015.clearSoftReferences();
+            Class44.aReferenceCache_725.clearSoftReferences();
+            Class140_Sub4.aReferenceCache_2792.clearSoftReferences();
+            Unsorted.aReferenceCache_21.clearSoftReferences();
+            ObjectDefinition.aReferenceCache_1401.clearSoftReferences();
+            Unsorted.aReferenceCache_4051.clearSoftReferences();
+            ObjectDefinition.aReferenceCache_1965.clearSoftReferences();
+            NPCDefinition.aReferenceCache_4043.clearSoftReferences();
+            CS2Script.aReferenceCache_2442.clearSoftReferences();
+            Class154.aReferenceCache_1964.clearSoftReferences();
+            Class3_Sub28_Sub4.aReferenceCache_3572.clearSoftReferences();
+            Class143.aReferenceCache_1874.clearSoftReferences();
+            Class67.aReferenceCache_1013.clearSoftReferences();
+            Class82.aReferenceCache_1146.clearSoftReferences();
+            Class159.aReferenceCache_2016.clearSoftReferences();
+            Class3_Sub31.aReferenceCache_2604.clearSoftReferences();
+            Class27.aReferenceCache_511.clearSoftReferences();
+            CS2Script.aReferenceCache_2450.clearSoftReferences();
+            Class136.aReferenceCache_1772.clearSoftReferences();
+            RenderAnimationDefinition.aReferenceCache_1955.clearSoftReferences();
+            Class3_Sub13_Sub34.aReferenceCache_3412.clearSoftReferences();
+            Class3_Sub13_Sub31.aReferenceCache_3369.clearSoftReferences();
+            Class128.aReferenceCache_1683.clearSoftReferences();
+            Unsorted.aReferenceCache_684.clearSoftReferences();
+            Class163_Sub1.aReferenceCache_2984.clearSoftReferences();
+            KeyboardListener.aReferenceCache_1911.clearSoftReferences();
+            Unsorted.aReferenceCache_1131.clearSoftReferences();
+            Class114.aReferenceCache_1569.clearSoftReferences();
+            Class3_Sub15.aReferenceCache_2428.clearSoftReferences();
+            Unsorted.aReferenceCache_743.clearSoftReferences();
+            Class61.aReferenceCache_939.clearSoftReferences();
+            Class158_Sub1.aReferenceCache_2982.clearSoftReferences();
+            Class3_Sub13_Sub11.aReferenceCache_3130.clearSoftReferences();
+            Unsorted.aReferenceCache_1135.clearSoftReferences();
+        } catch (RuntimeException var2) {
+            throw ClientErrorException.clientError(var2, "je.O(" + ')');
+        }
+    }
 }

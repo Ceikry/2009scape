@@ -139,18 +139,15 @@ final class Class3_Sub13_Sub23_Sub1 extends Class3_Sub13_Sub23 {
     static AbstractSprite[] method286(int var2, CacheIndex var3) {
         try {
             //System.out.println("Class3_Sub13_Sub_23_Sub1 " + var2);
-            return !Class75_Sub4.method1351(var3, 0, var2, -30901) ? null : method891(~4);
+            return !Class75_Sub4.method1351(var3, 0, var2, -30901) ? null : method891();
         } catch (RuntimeException var5) {
             throw ClientErrorException.clientError(var5, "kd.F(" + -1 + ',' + 0 + ',' + var2 + ',' + (var3 != null ? "{...}" : "null") + ')');
         }
     }
 
-    static AbstractSprite[] method891(int var0) {
+    static AbstractSprite[] method891() {
         try {
             AbstractSprite[] var1 = new AbstractSprite[Class95.anInt1338];
-            if (var0 != -5) {
-                Class15.method894(113L);
-            }
 
             for (int var2 = 0; var2 < Class95.anInt1338; ++var2) {
                 int var3 = Class140_Sub7.anIntArray2931[var2] * Unsorted.anIntArray3076[var2];
@@ -171,7 +168,7 @@ final class Class3_Sub13_Sub23_Sub1 extends Class3_Sub13_Sub23 {
             Class39.method1035((byte) 116);
             return var1;
         } catch (RuntimeException var7) {
-            throw ClientErrorException.clientError(var7, "cj.C(" + var0 + ')');
+            throw ClientErrorException.clientError(var7, "cj.C(" + ')');
         }
     }
 

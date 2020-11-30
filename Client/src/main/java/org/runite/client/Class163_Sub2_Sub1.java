@@ -13,7 +13,6 @@ final class Class163_Sub2_Sub1 extends Class163_Sub2 {
     static Connection aClass89_4012;
     static int anInt4014;
     static ReferenceCache aReferenceCache_4015 = new ReferenceCache(64);
-    static RSString[] aClass94Array4016 = new RSString[500];
     static long[] aLongArray4017 = new long[100];
     static boolean aBoolean4018 = false;
     static int anInt4019 = 0;

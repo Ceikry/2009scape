@@ -45,23 +45,6 @@ class Class38 {
         }
     }
 
-//	static void method1025() {
-//      try {
-//         Class3_Sub31.aReferenceCache_2604.clearSoftReferences();
-//         Class27.aReferenceCache_511.clearSoftReferences();
-//      } catch (RuntimeException var2) {
-//         throw ClientErrorException.clientError(var2, "fk.I(" + ')');
-//      }
-//   }
-
-    static void method1027(int var0, byte var1) {
-        try {
-            Class44.aReferenceCache_725.sweep(var0);
-        } catch (RuntimeException var3) {
-            throw ClientErrorException.clientError(var3, "fk.J(" + var0 + ',' + var1 + ')');
-        }
-    }
-
     static void method1028() {
         try {
             for (int var1 = -1; Class159.localPlayerCount > var1; ++var1) {

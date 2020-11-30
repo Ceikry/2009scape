@@ -218,7 +218,7 @@ public final class Class3_Sub13_Sub34 extends Class3_Sub13 {
     static void method330(int var0, int var1, int var2, int var3, int var4, int var5) {
         try {
             if (var1 > -83) {
-                Unsorted.menuOptionCount = 115;
+                ContextMenu.menuOptionCount = 115;
             }
 
             int var6 = -var3 + var5;

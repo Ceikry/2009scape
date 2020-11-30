@@ -131,7 +131,7 @@ final class Class3_Sub8 extends Linkable {
                 }
 
                 for (var9 = 0; var9 < Class163.localNPCCount; ++var9) {
-                    NPC var21 = NPC.npcs[Class15.localNPCIndexes[var9]];
+                    NPC var21 = NPC.npcs[NPC.localNPCIndexes[var9]];
                     if (var21 != null && var21.hasDefinitions()) {
                         NPCDefinition var22 = var21.definition;
                         if (null != var22 && null != var22.childNPCs) {

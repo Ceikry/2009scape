@@ -11,15 +11,6 @@ final class Class3_Sub31 extends Linkable {
     int anInt2602;
     int anInt2603;
 
-    static void method820() {
-        try {
-            KeyboardListener.aReferenceCache_1911.sweep(5);
-            Unsorted.aReferenceCache_1131.sweep(5);
-        } catch (RuntimeException var3) {
-            throw ClientErrorException.clientError(var3, "wk.C(" + 5 + ',' + 64 + ')');
-        }
-    }
-
     static RSString[] optionsArrayStringConstructor(RSString[] var1) {
         try {
             RSString[] var2 = new RSString[5];

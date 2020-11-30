@@ -475,8 +475,8 @@ final class Class3_Sub13_Sub13 extends Class3_Sub13 {
                             }
 
                             RSInterface var17;
-                            if (Class67.aClass11_1017 != null) {
-                                Class20.method909(Class67.aClass11_1017);
+                            if (Class163_Sub1.aClass11_1017 != null) {
+                                Class20.method909(Class163_Sub1.aClass11_1017);
                                 if (Class126.anInt1676 > 5 + Class129_Sub1.anInt2693 || Class126.anInt1676 < -5 + Class129_Sub1.anInt2693 || Unsorted.anInt1709 > Unsorted.anInt40 + 5 || -5 + Unsorted.anInt40 > Unsorted.anInt1709) {
                                     Class72.aBoolean1074 = true;
                                 }
@@ -484,8 +484,8 @@ final class Class3_Sub13_Sub13 extends Class3_Sub13 {
                                 ++Class40.anInt677;
                                 if (0 == Class3_Sub13_Sub5.anInt3069) {
                                     if (Class72.aBoolean1074 && 5 <= Class40.anInt677) {
-                                        if (Class67.aClass11_1017 == Class99.aClass11_1402 && PacketParser.anInt86 != anInt2701) {
-                                            var17 = Class67.aClass11_1017;
+                                        if (Class163_Sub1.aClass11_1017 == Class99.aClass11_1402 && PacketParser.anInt86 != anInt2701) {
+                                            var17 = Class163_Sub1.aClass11_1017;
                                             byte var18 = 0;
                                             if (1 == Unsorted.anInt15 && 206 == var17.anInt189) {
                                                 var18 = 1;
@@ -521,19 +521,19 @@ final class Class3_Sub13_Sub13 extends Class3_Sub13 {
 
                                             Network.outgoingBuffer.putOpcode(231);
                                             Network.outgoingBuffer.writeShort(PacketParser.anInt86);
-                                            Network.outgoingBuffer.writeIntLE2(Class67.aClass11_1017.componentHash);
+                                            Network.outgoingBuffer.writeIntLE2(Class163_Sub1.aClass11_1017.componentHash);
                                             Network.outgoingBuffer.putShortA(anInt2701);
                                             Network.outgoingBuffer.write128Byte(var18);
                                         }
-                                    } else if ((Unsorted.anInt998 == 1 || Class3_Sub13_Sub39.method353(-1 + Unsorted.menuOptionCount, 0)) && Unsorted.menuOptionCount > 2) {
+                                    } else if ((Unsorted.anInt998 == 1 || Class3_Sub13_Sub39.method353(-1 + ContextMenu.menuOptionCount, 0)) && ContextMenu.menuOptionCount > 2) {
                                         Class132.method1801();
-                                    } else if (Unsorted.menuOptionCount > 0) {
+                                    } else if (ContextMenu.menuOptionCount > 0) {
                                         Class3_Sub13_Sub8.method203(56);
                                     }
 
                                     Unsorted.anInt3644 = 0;
                                     Network.anInt2330 = 10;
-                                    Class67.aClass11_1017 = null;
+                                    Class163_Sub1.aClass11_1017 = null;
                                 }
                             }
 
@@ -589,7 +589,7 @@ final class Class3_Sub13_Sub13 extends Class3_Sub13 {
 
                                                     if (Class3_Sub13_Sub26.rights > 0 && ObjectDefinition.aBooleanArray1490[82] && ObjectDefinition.aBooleanArray1490[81]) {
                                                         if (-1 != Class27.anInt515) {
-                                                            Class30.method979(Class131.anInt1716 + Class27.anInt515, Class82.anInt1152 - -Unsorted.anInt999, WorldListCountry.localPlane);
+                                                            Class30.method979(Class131.anInt1716 + Class27.anInt515, Class82.anInt1152 + Unsorted.anInt999, WorldListCountry.localPlane);
                                                         }
 
                                                         ObjectDefinition.anInt1521 = 0;
@@ -685,7 +685,7 @@ final class Class3_Sub13_Sub13 extends Class3_Sub13 {
 
                                                     if (Class15.aClass64_351 != null && Class15.aClass64_351.anInt978 == 1) {
                                                         if (null != Class15.aClass64_351.anObject974) {
-                                                            Class99.method1596(Class3_Sub13_Sub24.aClass94_3295, (byte) 126, Unsorted.aBoolean2154);
+                                                            Class99.method1596(Class3_Sub13_Sub24.aClass94_3295, Unsorted.aBoolean2154);
                                                         }
 
                                                         Class3_Sub13_Sub24.aClass94_3295 = null;

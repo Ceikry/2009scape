@@ -2,10 +2,10 @@ package org.runite.client;
 
 import java.util.Objects;
 
-final class Class3_Sub13_Sub10 extends Class3_Sub13 {
+public final class Class3_Sub13_Sub10 extends Class3_Sub13 {
 
     static boolean[][] aBooleanArrayArray3118 = new boolean[][]{new boolean[0], {true, false, true}, {true, false, false, true}, {false, false, true, true}, {true, true, false}, {false, true, true}, {true, false, false, true}, {false, false, false, true, true}, {false, true, true}, {true, false, true, true, true}, {false, true, true, true, true}, {false, true, true, true, true, false}};
-    static Signlink aClass87_3125;
+    public static Signlink aClass87_3125;
     private int anInt3126 = 2048;
     private int anInt3127 = 3072;
     private int anInt3128 = 1024;

@@ -24,7 +24,7 @@ final class Class3_Sub13_Sub39 extends Class3_Sub13 {
             if (var1 > var0) {
                 return false;
             } else {
-                int var2 = Class3_Sub13_Sub7.aShortArray3095[var0];
+                int var2 = ContextMenu.aShortArray3095[var0];
                 if (var2 >= 2000) {
                     var2 -= 2000;
                 }

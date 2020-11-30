@@ -6,7 +6,6 @@ final class Class27 {
 
     static int[] anIntArray510 = new int[]{768, 1024, 1280, 512, 1536, 256, 0, 1792};
     static ReferenceCache aReferenceCache_511 = new ReferenceCache(30);
-    static int[] anIntArray512 = new int[500];
     static int anInt515 = -1;
     static int anInt517 = 0;
     static Class3_Sub28_Sub16_Sub2 aClass3_Sub28_Sub16_Sub2_518;

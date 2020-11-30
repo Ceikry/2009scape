@@ -163,7 +163,7 @@ final class Player extends Class140_Sub4 {
 
             for (var11 = 0; var11 < 5; ++var11) {
                 var12 = buffer.readUnsignedByte();
-                if (var12 < 0 || var12 >= Class15.aShortArrayArray344[var11].length) {
+                if (var12 < 0 || var12 >= Class52.aShortArrayArray344[var11].length) {
                     var12 = 0;
                 }
 

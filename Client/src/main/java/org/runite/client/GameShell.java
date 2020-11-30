@@ -4,10 +4,7 @@ import javax.swing.*;
 import java.applet.Applet;
 import java.applet.AppletContext;
 import java.awt.*;
-import java.awt.event.FocusEvent;
-import java.awt.event.FocusListener;
-import java.awt.event.WindowEvent;
-import java.awt.event.WindowListener;
+import java.awt.event.*;
 import java.lang.reflect.Method;
 import java.net.URL;
 import java.util.Objects;
@@ -24,6 +21,11 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
      */
     public static int gameShellAWTHeight;
     public static int gameShellAWTWidth;
+
+    /*
+     *  GameShell Applet
+     */
+    static GameShell anApplet_Sub1_2588 = null;
 
     /*
      *  AWT Frame (s)
@@ -50,7 +52,6 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
     static long aLong2313 = 0L;
     static volatile long aLong1847 = 0L;
 
-
     static volatile boolean hasWindowFocus = true;
 
     static int anInt4033;
@@ -60,8 +61,9 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
     static boolean aBoolean11 = false;
     static volatile boolean aBoolean3116 = true;
     static boolean aBoolean554 = false;
-    static GameShell anApplet_Sub1_2588 = null;
+
     static int anInt2626 = 20;
+    static boolean userUsingWinJS;
     private boolean displayErrorPopupMessage = false;
 
     /*
@@ -69,11 +71,11 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
      */
     public static void launchDesktop() {
         System.out.println("Trying to launch Desktop");
-        ClientLoader.create().launch();
+        //ClientLoader.create().launch();//TODO: Implement GLFW window most likely here
     }
 
     /*
-     * AWT window Events
+     * AWT window events
      */
     public final void focusGained(FocusEvent var1) {
         try {
@@ -84,6 +86,9 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
         }
     }
 
+    /*
+     *  AWT focus lost
+     */
     public final void focusLost(FocusEvent var1) {
         try {
             hasWindowFocus = false;
@@ -92,6 +97,9 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
         }
     }
 
+    /*
+     *  AWT start
+     */
     public final void start() {
         try {
             if (anApplet_Sub1_2588 == this && !aBoolean554) {
@@ -143,6 +151,33 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
     }
 
     public final void windowClosed(WindowEvent var1) {
+    }
+
+    public final void stop() {
+        try {
+            if (anApplet_Sub1_2588 == this && !aBoolean554) {
+                aLong2313 = 4000L + TimeUtils.time();
+            }
+        } catch (RuntimeException var2) {
+            throw ClientErrorException.clientError(var2, "rc.stop()");
+        }
+    }
+
+    static void awtSystemEventQueue(Signlink var0, Object var1) {
+        try {
+            if (null != var0.systemEventQueue) {
+                for (int var3 = 0; var3 < 50 && null != var0.systemEventQueue.peekEvent(); ++var3) {
+                    TimeUtils.sleep(1L);
+                }
+
+                if (var1 != null) {
+                    var0.systemEventQueue.postEvent(new ActionEvent(var1, 1001, "dummy"));
+                }
+
+            }
+        } catch (RuntimeException var4) {
+            throw ClientErrorException.clientError(var4, "la.E(" + (var0 != null ? "{...}" : "null") + ',' + (var1 != null ? "{...}" : "null") +  ')');
+        }
     }
 
     static void checkMaxMemory() {
@@ -398,7 +433,7 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
                             break;
                         }
 
-                        var9 = var9 * 10 - (-var3 - -48);
+                        var9 = var9 * 10 - (-var3 + 48);
                     }
 
                     if (var9 >= 5) {
@@ -430,7 +465,7 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
                     }
 
                     this.method37();
-                    Class81.method1400(Signlink.aClass87_665, canvas, -80);
+                    awtSystemEventQueue(Signlink.aClass87_665, canvas);
                 }
             } catch (Exception var5) {
                 ClientErrorException.method1125(null, var5);
@@ -446,23 +481,18 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
 
     public final String getParameter(String var1) {
         try {
-            return frame == null ? (Signlink.aClass87_665 != null && this != Signlink.aClass87_665.applet ? Signlink.aClass87_665.applet.getParameter(var1) : super.getParameter(var1)) : null;
+            //Checks to see if the frame is null TODO: Check to see if GLFW is null here instead
+            return frame == null ?
+                    (Signlink.aClass87_665 != null && this != Signlink.aClass87_665.applet ?
+                            Signlink.aClass87_665.applet.getParameter(var1) : super.getParameter(var1)) : null;
+
+
         } catch (RuntimeException var3) {
             throw ClientErrorException.clientError(var3, "rc.getParameter(" + (var1 != null ? "{...}" : "null") + ')');
         }
     }
 
     abstract void method39();
-
-    public final void stop() {
-        try {
-            if (anApplet_Sub1_2588 == this && !aBoolean554) {
-                aLong2313 = 4000L + TimeUtils.time();
-            }
-        } catch (RuntimeException var2) {
-            throw ClientErrorException.clientError(var2, "rc.stop()");
-        }
-    }
 
     public abstract void init();
 
@@ -493,7 +523,7 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
                 }
 
                 Class17.aThread409 = (Thread) var10.anObject974;
-                ClientLoader.create().launch();
+                //ClientLoader.create().launch(); TODO: Either attach GLFW window here or keep it in kt undecided
             } catch (Exception var11) {
                 ClientErrorException.method1125(null, var11);
             }
@@ -526,7 +556,7 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
                 gameShellAWTHeight = 503;
                 Class70.anInt1047 = 503;
                 String var6 = this.getParameter("openwinjs");
-                Class3_Sub28_Sub6.aBoolean3594 = var6 != null && var6.equals("1");
+                userUsingWinJS = var6 != null && var6.equals("1");
 
                 if (null == Signlink.aClass87_665) {
                     Class3_Sub13_Sub10.aClass87_3125 = Signlink.aClass87_665 = new Signlink(this, var3, null, 0);

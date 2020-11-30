@@ -102,16 +102,6 @@ final class Class140_Sub6 extends GameObject {
         }
     }
 
-    static void method2025() {
-        try {
-            NPCDefinition.aReferenceCache_4043.sweep(5);
-            CS2Script.aReferenceCache_2442.sweep(5);
-            Class154.aReferenceCache_1964.sweep(5);
-        } catch (RuntimeException var3) {
-            throw ClientErrorException.clientError(var3, "ra.F(" + (byte) -62 + ',' + 5 + ')');
-        }
-    }
-
     static void method2026(int interfaceHash, int amount, int itemId) {
         try {
             Class3_Sub28_Sub6 var4 = Class3_Sub24_Sub3.method466(9, interfaceHash);
@@ -126,7 +116,7 @@ final class Class140_Sub6 extends GameObject {
     static AbstractSprite[] getSprites(int archiveId, CacheIndex var3) {
         try {
             // System.out.println(archiveId);
-            return !Class75_Sub4.method1351(var3, 0, archiveId, -30901) ? null : Class75_Sub3.method1347(-26802);
+            return !Class75_Sub4.method1351(var3, 0, archiveId, -30901) ? null : Class75_Sub3.method1347();
         } catch (RuntimeException var5) {
             throw ClientErrorException.clientError(var5, "ra.B(" + 0 + ',' + (byte) 11 + ',' + archiveId + ',' + (var3 != null ? "{...}" : "null") + ')');
         }

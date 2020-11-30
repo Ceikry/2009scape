@@ -6,8 +6,6 @@ import org.rs09.client.util.ArrayUtils;
 final class Class67 implements Runnable {
 
     static ReferenceCache aReferenceCache_1013 = new ReferenceCache(100);
-    static byte[][][] aByteArrayArrayArray1014;
-    static RSInterface aClass11_1017;
     boolean aBoolean1015 = true;
     Object anObject1016 = new Object();
     int anInt1018 = 0;

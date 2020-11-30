@@ -22,7 +22,7 @@ public final class Class12 {
             for (var6 = var2; var4 + var2 >= var6; ++var6) {
                 for (var7 = var3; var5 + var3 >= var7; ++var7) {
                     if (var7 >= 0 && 104 > var7 && var6 >= 0 && 104 > var6) {
-                        Class67.aByteArrayArrayArray1014[var0][var7][var6] = 127;
+                        Class110.aByteArrayArrayArray1014[var0][var7][var6] = 127;
                     }
                 }
             }

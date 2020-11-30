@@ -9,6 +9,7 @@ final class WorldMap extends Node {
     static int anInt2737 = 0;
     static CacheIndex aClass153_3210;
     static Class3_Sub28_Sub16_Sub2 aClass3_Sub28_Sub16_Sub2_3221;
+    static int anInt4034 = -8 + (int) (17.0D * Math.random());
     Class140_Sub7 aClass140_Sub7_3676;
 
 
@@ -314,7 +315,7 @@ final class WorldMap extends Node {
     static void method889(DataBuffer var1) {
         try {
             int var3 = Class158.anInt2010 >> 1;
-            int var2 = Class15.anInt4034 >> 2 << 10;
+            int var2 = anInt4034 >> 2 << 10;
             byte[][] var4 = new byte[Class23.anInt455][Class108.anInt1460];
 
             int var6;

@@ -23,7 +23,7 @@ final class Class83 {
         }
     }
 
-    static void method1410(int var0, int var1, int var2, int var3, int var4, int var5, int var6, int var7, int var8, int var9, int var10) {
+    static void method1410(int var0, int var1, int var2, int var3, int var4, int var5, int var6, int var7, int var8, int var9) {
         try {
             int var11 = var4 - var6;
             int var12 = -var3 + var2;
@@ -33,10 +33,6 @@ final class Class83 {
 
             if (Class108.anInt1460 > var2) {
                 ++var12;
-            }
-
-            if (var10 != -12541) {
-                method1411(-14);
             }
 
             int var13;
@@ -318,27 +314,7 @@ final class Class83 {
             }
 
         } catch (RuntimeException var40) {
-            throw ClientErrorException.clientError(var40, "le.C(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ',' + var5 + ',' + var6 + ',' + var7 + ',' + var8 + ',' + var9 + ',' + var10 + ')');
-        }
-    }
-
-    static int method1411(int var0) {
-        try {
-            if (GameShell.aFrame3121 == null) {
-                if (HDToolKit.highDetail && Class3_Sub15.aBoolean2427) {
-                    return 2;
-                } else {
-                    if (var0 != 0) {
-                        aBoolean1158 = false;
-                    }
-
-                    return HDToolKit.highDetail ? 1 : 0;
-                }
-            } else {
-                return 3;
-            }
-        } catch (RuntimeException var2) {
-            throw ClientErrorException.clientError(var2, "le.D(" + var0 + ')');
+            throw ClientErrorException.clientError(var40, "le.C(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ',' + var5 + ',' + var6 + ',' + var7 + ',' + var8 + ',' + var9 + ',' + -12541 + ')');
         }
     }
 

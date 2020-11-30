@@ -14,6 +14,7 @@ final class NPC extends Class140_Sub4 {
     static int anInt3995;
     static int[] anIntArray3997 = new int[]{19, 55, 38, 155, 255, 110, 137, 205, 76};
     static int anInt4001;
+    static int[] localNPCIndexes = new int['\u8000'];
     NPCDefinition definition;
 
     static int method1984(int var0, int var1, int var2) {

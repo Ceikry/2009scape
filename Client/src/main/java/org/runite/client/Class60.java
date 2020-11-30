@@ -10,7 +10,7 @@ final class Class60 {
     static void method1207() {
         try {
             for (int var1 = 0; Class163.localNPCCount > var1; ++var1) {
-                int var2 = Class15.localNPCIndexes[var1];
+                int var2 = NPC.localNPCIndexes[var1];
                 NPC var3 = NPC.npcs[var2];
                 if (null != var3) {
                     Unsorted.method68(var3.definition.size, var3);

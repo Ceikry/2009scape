@@ -17,7 +17,7 @@ final class Class21 {
             Class38_Sub1.aBoolean2615 = false;
             Network.incomingPacketLength = 0;
             Class65.anInt987 = 0;
-            Unsorted.menuOptionCount = 0;
+            ContextMenu.menuOptionCount = 0;
             LinkableRSString.anInt2582 = -1;
             Class161.anInt2028 = 0;
             Class38_Sub1.anInt2617 = 0;
@@ -47,7 +47,7 @@ final class Class21 {
                 Unsorted.aBooleanArray3674[var1] = true;
             }
 
-            Class3_Sub13_Sub8.method204(-3);
+            PacketParser.clientWindowInformationPacket();
         } catch (RuntimeException var2) {
             throw ClientErrorException.clientError(var2, "dh.F(" + false + ')');
         }
@@ -84,23 +84,23 @@ final class Class21 {
                 Class3_Sub13_Sub7.aClass11_3087 = null;
             }
 
-            int var6 = Unsorted.menuOptionCount;
+            int var6 = ContextMenu.menuOptionCount;
 
             int var7;
             for (var7 = 0; var6 > var7; ++var7) {
-                if (Unsorted.method73(Class3_Sub13_Sub7.aShortArray3095[var7])) {
-                    Class3_Sub25.method509(var7);
+                if (Unsorted.method73(ContextMenu.aShortArray3095[var7])) {
+                    ContextMenu.method509(var7);
                 }
             }
 
-            if (1 == Unsorted.menuOptionCount) {
+            if (1 == ContextMenu.menuOptionCount) {
                 Class38_Sub1.aBoolean2615 = false;
                 Class75.method1340(AbstractIndexedSprite.anInt1462, Class3_Sub28_Sub3.anInt3552, Class3_Sub13_Sub33.anInt3395, Class3_Sub28_Sub1.anInt3537);
             } else {
                 Class75.method1340(AbstractIndexedSprite.anInt1462, Class3_Sub28_Sub3.anInt3552, Class3_Sub13_Sub33.anInt3395, Class3_Sub28_Sub1.anInt3537);
                 var7 = Class168.aClass3_Sub28_Sub17_2096.method682(RSString.parse(GameConfig.RCM_TITLE));
 
-                for (int var8 = 0; Unsorted.menuOptionCount > var8; ++var8) {
+                for (int var8 = 0; ContextMenu.menuOptionCount > var8; ++var8) {
                     int var9 = Class168.aClass3_Sub28_Sub17_2096.method682(Unsorted.method802(var8));
                     if (var7 < var9) {
                         var7 = var9;
@@ -108,7 +108,7 @@ final class Class21 {
                 }
 
                 Class3_Sub28_Sub3.anInt3552 = 8 + var7;
-                Class3_Sub28_Sub1.anInt3537 = 15 * Unsorted.menuOptionCount + (!Unsorted.aBoolean1951 ? 22 : 26);
+                Class3_Sub28_Sub1.anInt3537 = 15 * ContextMenu.menuOptionCount + (!Unsorted.aBoolean1951 ? 22 : 26);
             }
 
             if (var5 != null) {

@@ -1086,14 +1086,14 @@ public final class PacketParser {
                                                         return true;
                                                     } else if (Network.incomingOpcode == 42) {
                                                         if (null != GameShell.aFrame3121) {
-                                                            Client.graphicsSettings(false, Unsorted.anInt2577, -1, -1);
+                                                            Display.graphicsSettings(false, Unsorted.anInt2577, -1, -1);
                                                         }
 
                                                         byte[] var22 = new byte[Network.incomingPacketLength];
                                                         Network.incomingBuffer.method811((byte) 30, 0, var22, Network.incomingPacketLength);
                                                         playerName = Class3_Sub13_Sub3.method178(var22, Network.incomingPacketLength, 0);
                                                         if (null == GameShell.frame && (3 == Signlink.anInt1214 || !Signlink.osName.startsWith("win") || Class106.hasInternetExplorer6)) {
-                                                            Class99.method1596(playerName, (byte) 127, true);
+                                                            Class99.method1596(playerName, true);
                                                         } else {
                                                             Class3_Sub13_Sub24.aClass94_3295 = playerName;
                                                             Unsorted.aBoolean2154 = true;
@@ -1790,9 +1790,9 @@ public final class PacketParser {
                         } else if (Client.method42(Class56.aClass11_886) != null) {
                             System.out.println("Shouldn't be sending packet, enabled to fix banking tabs though.");
                         }
-                    } else if ((Unsorted.anInt998 == 1 || Class3_Sub13_Sub39.method353(-1 + Unsorted.menuOptionCount, ~-1)) && Unsorted.menuOptionCount > 2) {
+                    } else if ((Unsorted.anInt998 == 1 || Class3_Sub13_Sub39.method353(-1 + ContextMenu.menuOptionCount, ~-1)) && ContextMenu.menuOptionCount > 2) {
                         Class132.method1801();
-                    } else if (Unsorted.menuOptionCount > 0) {
+                    } else if (ContextMenu.menuOptionCount > 0) {
                         Class3_Sub13_Sub8.method203(96);
                     }
 
@@ -1826,6 +1826,19 @@ public final class PacketParser {
             Network.outgoingBuffer.writeLong(var1.toLong());
         } catch (RuntimeException var4) {
             throw ClientErrorException.clientError(var4, "ni.B(" + 255 + ',' + (var1 != null ? "{...}" : "null") + ',' + var2 + ')');
+        }
+    }
+
+    static void clientWindowInformationPacket() {
+        try {
+            //Client Resize.
+            Network.outgoingBuffer.putOpcode(243);
+            Network.outgoingBuffer.writeByte(Display.gameRenderWindowType());
+            Network.outgoingBuffer.writeShort(GameShell.gameShellAWTWidth);
+            Network.outgoingBuffer.writeShort(GameShell.gameShellAWTHeight);
+            Network.outgoingBuffer.writeByte(Unsorted.anInt3671);
+        } catch (RuntimeException var2) {
+            throw ClientErrorException.clientError(var2, "ej.C(" + -3 + ')');
         }
     }
 }

@@ -23,7 +23,7 @@ public class ClientCommands {
             int var3;
             Runtime runtime;
             if (command.equalsStringIgnoreCase(TextCore.COMMAND_GARBAGE_COLLECTOR)) {
-                clearClientCacheMemory();
+                ClearReferenceCache.clearSoftReference();
 
                 for (var2 = 0; var2 < 10; ++var2) {
                     System.gc();
@@ -36,7 +36,7 @@ public class ClientCommands {
 
             int var4;
             if (command.equalsStringIgnoreCase(TextCore.COMMAND_MEMORY_MANAGEMENT)) {
-                clearClientCacheMemory();
+                ClearReferenceCache.clearSoftReference();
 
                 for (var2 = 0; var2 < 10; ++var2) {
                     System.gc();
@@ -46,7 +46,7 @@ public class ClientCommands {
                 var3 = (int) ((runtime.totalMemory() + -runtime.freeMemory()) / 1024L);
                 Network.addChatMessage(null, 0, RSString.stringCombiner(new RSString[]{TextCore.memoryBeforeCleanup, RSString.stringAnimator(var3), TextCore.Memoryk}), -1);
                 Class3_Sub1.method90(1);
-                clearClientCacheMemory();
+                ClearReferenceCache.clearSoftReference();
 
                 for (var4 = 0; var4 < 10; ++var4) {
                     System.gc();
@@ -101,19 +101,19 @@ public class ClientCommands {
             }
 
             if (command.equalsStringIgnoreCase(TextCore.COMMAND_LOWRES_GRAPHICS)) {
-                Client.graphicsSettings(false, 0, -1, -1);
+                Display.graphicsSettings(false, 0, -1, -1);
             }
 
             if (command.equalsStringIgnoreCase(TextCore.COMMAND_HIGHRES_GRAPHICS_WINDOW)) {
-                Client.graphicsSettings(false, 1, -1, -1);
+                Display.graphicsSettings(false, 1, -1, -1);
             }
 
             if (command.equalsStringIgnoreCase(TextCore.COMMAND_HIGHRES_GRAPHICS_RESIZE)) {
-                Client.graphicsSettings(false, 2, -1, -1);
+                Display.graphicsSettings(false, 2, -1, -1);
             }
 
             if (command.equalsStringIgnoreCase(TextCore.COMMAND_HIGHRES_GRAPHICS_FULLSCREEN)) {
-                Client.graphicsSettings(false, 3, 1024, GL_SRC_COLOR);
+                Display.graphicsSettings(false, 3, 1024, GL_SRC_COLOR);
             }
 
             if (command.equalsStringIgnoreCase(TextCore.COMMAND_NOCLIP)) {
@@ -171,44 +171,4 @@ public class ClientCommands {
         }
     }
 
-    static void clearClientCacheMemory() {
-        try {
-            Class163_Sub2_Sub1.aReferenceCache_4015.clearSoftReferences();//Class3_Sub28_Sub20.method724();
-            Class44.aReferenceCache_725.clearSoftReferences();//Class3_Sub28_Sub18.method710();
-            Class140_Sub4.aReferenceCache_2792.clearSoftReferences();
-            Unsorted.aReferenceCache_21.clearSoftReferences();//Unsorted.method55();
-            ObjectDefinition.aReferenceCache_1401.clearSoftReferences();//Unsorted.method55();
-            Unsorted.aReferenceCache_4051.clearSoftReferences();//Unsorted.method55();
-            ObjectDefinition.aReferenceCache_1965.clearSoftReferences();//Unsorted.method55();
-            NPCDefinition.aReferenceCache_4043.clearSoftReferences();//Class163_Sub2_Sub1.method2222();
-            CS2Script.aReferenceCache_2442.clearSoftReferences();//Class163_Sub2_Sub1.method2222();
-            Class154.aReferenceCache_1964.clearSoftReferences();//Class163_Sub2_Sub1.method2222();
-            Class3_Sub28_Sub4.aReferenceCache_3572.clearSoftReferences();//Originally Class3_Sub30_Sub1.method813();
-            Class143.aReferenceCache_1874.clearSoftReferences();//Originally Class3_Sub30_Sub1.method813();
-            Class67.aReferenceCache_1013.clearSoftReferences();//Originally Class3_Sub30_Sub1.method813();
-            Class82.aReferenceCache_1146.clearSoftReferences();//Originally Class133.method1803();
-            Class159.aReferenceCache_2016.clearSoftReferences();//Originally Class133.method1803();
-            Class3_Sub31.aReferenceCache_2604.clearSoftReferences();//Class38.method1025();
-            Class27.aReferenceCache_511.clearSoftReferences();//Class38.method1025();
-            CS2Script.aReferenceCache_2450.clearSoftReferences();//Class40.method1044();
-            Class136.aReferenceCache_1772.clearSoftReferences();
-            RenderAnimationDefinition.aReferenceCache_1955.clearSoftReferences();//Originally: Class158_Sub1.method2192();
-            Class3_Sub13_Sub34.aReferenceCache_3412.clearSoftReferences();//Originally: Class159.method2196();
-            Class3_Sub13_Sub31.aReferenceCache_3369.clearSoftReferences();//Originally: Class159.method2196();
-            Class128.aReferenceCache_1683.clearSoftReferences();
-            Unsorted.aReferenceCache_684.clearSoftReferences();
-            Class163_Sub1.aReferenceCache_2984.clearSoftReferences();
-            KeyboardListener.aReferenceCache_1911.clearSoftReferences();//Class115.method1714();
-            Unsorted.aReferenceCache_1131.clearSoftReferences();//Class115.method1714();
-            Class114.aReferenceCache_1569.clearSoftReferences();//Class3_Sub28_Sub6.h();
-            Class3_Sub15.aReferenceCache_2428.clearSoftReferences();//Class3_Sub28_Sub6.h();
-            Unsorted.aReferenceCache_743.clearSoftReferences();//Class3_Sub28_Sub6.h();
-            Class61.aReferenceCache_939.clearSoftReferences();//Class107.method1650();
-            Class158_Sub1.aReferenceCache_2982.clearSoftReferences();//MouseListeningClass.method2089();
-            Class3_Sub13_Sub11.aReferenceCache_3130.clearSoftReferences();
-            Unsorted.aReferenceCache_1135.clearSoftReferences();
-        } catch (RuntimeException var2) {
-            throw ClientErrorException.clientError(var2, "je.O(" + ')');
-        }
-    }
 }

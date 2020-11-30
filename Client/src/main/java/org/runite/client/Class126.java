@@ -7,7 +7,6 @@ public final class Class126 {
     public static Class3_Sub28_Sub17 aClass3_Sub28_Sub17_1669;
     static int anInt1665;
     static Queue aClass13_1666 = new Queue();
-    static Client aClient1671;
     static int anInt1676 = 0;
     int anInt1663;
     int anInt1664;

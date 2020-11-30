@@ -3,7 +3,6 @@ package org.runite.client;
 final class Class117 {
 
     static WorldListEntry[] worldList;
-    static int[] anIntArray1613 = new int[500];
 
 
     static void method1719(int var0) {
@@ -86,7 +85,7 @@ final class Class117 {
             Unsorted.aByteArrayArrayArray1328 = new byte[var2][104][104];
             Unsorted.anIntArray2469 = new int[104];
             Class38_Sub1.anIntArrayArrayArray2609 = new int[var2][105][var1];
-            Class67.aByteArrayArrayArray1014 = new byte[var2][105][105];
+            Class110.aByteArrayArrayArray1014 = new byte[var2][105][105];
             Class158_Sub1.aByteArrayArrayArray1828 = new byte[var2][104][104];
             Class3_Sub31.anIntArray2606 = new int[104];
             PacketParser.aByteArrayArrayArray81 = new byte[var2][104][104];

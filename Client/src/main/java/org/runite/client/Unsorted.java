@@ -92,7 +92,7 @@ public class Unsorted {
     public static Class61 aClass61_2468 = new Class61();
     public static int[] anIntArray2469;
     public static int[] anIntArray2470 = new int[]{0, 0, 2, 0, 0, 2, 1, 1, 0};
-    public static boolean aBoolean3641 = false;
+    public static boolean javascriptEnabled = false;
     public static int anInt3642 = 0;
     public static int anInt3644 = 0;
     public static int anInt59 = 0;
@@ -161,7 +161,6 @@ public class Unsorted {
     static int anInt1165 = -1;
     static byte[][][] aByteArrayArrayArray1774;
     static int[][] anIntArrayArray2039 = new int[][]{{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15}, {12, 8, 4, 0, 13, 9, 5, 1, 14, 10, 6, 2, 15, 11, 7, 3}, {15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0}, {3, 7, 11, 15, 2, 6, 10, 14, 1, 5, 9, 13, 0, 4, 8, 12}};
-    static int menuOptionCount = 0;
 
 
     static void method2086() {
@@ -493,7 +492,7 @@ public class Unsorted {
     static RSString method802(int var0) {
         try {
 
-            return Class163_Sub2_Sub1.aClass94Array4016[var0].length() > 0 ? RSString.stringCombiner(new RSString[]{Class140_Sub7.aClass94Array2935[var0], TextCore.Spacer, Class163_Sub2_Sub1.aClass94Array4016[var0]}) : Class140_Sub7.aClass94Array2935[var0];
+            return ContextMenu.aClass94Array4016[var0].length() > 0 ? RSString.stringCombiner(new RSString[]{ContextMenu.aClass94Array2935[var0], TextCore.Spacer, ContextMenu.aClass94Array4016[var0]}) : ContextMenu.aClass94Array2935[var0];
         } catch (RuntimeException var3) {
             throw ClientErrorException.clientError(var3, "wa.RB(" + var0 + ',' + true + ')');
         }
@@ -1500,27 +1499,6 @@ public class Unsorted {
         }
     }
 
-    public static void method594(int var0, int var1) {
-        try {
-            if (var0 < 83) {
-                method592((byte) 122);
-            }
-
-            Class128.aReferenceCache_1683.sweep(var1);
-        } catch (RuntimeException var3) {
-            throw ClientErrorException.clientError(var3, "c.Q(" + var0 + ',' + var1 + ')');
-        }
-    }
-
-    public static void method595() {
-        try {
-            aReferenceCache_684.sweep(5);
-            Class163_Sub1.aReferenceCache_2984.sweep(5);
-        } catch (RuntimeException var3) {
-            throw ClientErrorException.clientError(var3, "c.O(" + 5 + ',' + 109 + ')');
-        }
-    }
-
     public static Class106[] method596(Signlink var1) {
         try {
             if (var1.method1432(false)) {
@@ -1616,7 +1594,7 @@ public class Unsorted {
                         Class38.aClass146_668.method2082(GameShell.canvas);
                     }
 
-                    Class126.aClient1671.method30();
+                    Client.aClient1671.method30();
                     Class3_Sub13_Sub4.method193((byte) 97, GameShell.canvas);
                     ItemDefinition.method1119(GameShell.canvas, var4);
                     if (Class38.aClass146_668 != null) {
@@ -1667,7 +1645,7 @@ public class Unsorted {
                             Class164_Sub1.aClass158_3009 = null;
                         }
 
-                        Class64 var13 = Signlink.aClass87_665.method1444(-43, Class126.aClient1671.getClass());
+                        Class64 var13 = Signlink.aClass87_665.method1444(-43, Client.aClient1671.getClass());
 
                         while (var13.anInt978 == 0) {
                             TimeUtils.sleep(100L);
@@ -1735,7 +1713,7 @@ public class Unsorted {
                     }
 
                     if (null != Network.activeConnection && (Class143.loadingStage == 30 || Class143.loadingStage == 25)) {
-                        Class3_Sub13_Sub8.method204(-3);
+                        PacketParser.clientWindowInformationPacket();
                     }
 
                     for (int var12 = 0; var12 < 100; ++var12) {
@@ -1980,7 +1958,7 @@ public class Unsorted {
             int var11 = (-var5 + var0 << 16) / var9;
             int var10 = -var4 + var6;
             int var12 = (var7 + -var1 << 16) / var10;
-            Class83.method1410(var1, 0, var6, var4, var3, var5, var8, var12, var11, 0, -12541);
+            Class83.method1410(var1, 0, var6, var4, var3, var5, var8, var12, var11, 0);
         } catch (RuntimeException var13) {
             throw ClientErrorException.clientError(var13, "rg.SA(" + var0 + ',' + var1 + ',' + 0 + ',' + var3 + ',' + var4 + ',' + var5 + ',' + var6 + ',' + var7 + ',' + var8 + ')');
         }
@@ -2249,15 +2227,6 @@ public class Unsorted {
         }
     }
 
-    public static void method795() {
-        try {
-
-            CS2Script.aReferenceCache_2450.sweep(5);
-        } catch (RuntimeException var3) {
-            throw ClientErrorException.clientError(var3, "wa.OC(" + (byte) 14 + ',' + 5 + ')');
-        }
-    }
-
     public static Class3_Sub28_Sub17 method1300(int var1, CacheIndex var3, CacheIndex var4) {
         System.out.println("Class 73 " + var1);
         return !Class75_Sub4.method1351(var3, 0, var1, -30901) ? null : method880(var4.getFile(var1, 0));
@@ -2305,7 +2274,7 @@ public class Unsorted {
                                     var12.anIntArray2755[var13] -= var10;
                                 }
 
-                                Class15.localNPCIndexes[Class163.localNPCCount++] = var11;
+                                NPC.localNPCIndexes[Class163.localNPCCount++] = var11;
                             } else {
                                 NPC.npcs[var11].setDefinitions(null);
                                 NPC.npcs[var11] = null;
@@ -2558,7 +2527,7 @@ public class Unsorted {
     // @Splinter
     public static void drawNpcRightClickOptions(NPCDefinition var0, int var1, int var2, int var3, int var4) {
         try {
-            if (menuOptionCount < 400) {
+            if (ContextMenu.menuOptionCount < 400) {
                 if (var0.childNPCs != null) {
                     var0 = var0.method1471((byte) 66);
                 }
@@ -3743,24 +3712,20 @@ public class Unsorted {
         }
     }
 
-    public static boolean method1088(boolean var0) {
-        try {
-            if (aBoolean3641) {
-                try {
-                    TextCore.aClass94_106.method1577(Signlink.aClass87_665.applet);
-                    return true;
-                } catch (Throwable var2) {
-                }
-            }
-
-            if (var0) {
-                aReferenceCache_743 = null;
-            }
-
-            return false;
-        } catch (RuntimeException var3) {
-            throw ClientErrorException.clientError(var3, "gn.K(" + var0 + ')');
-        }
+    public static boolean displayVideoAdvertisementToUser() {
+//        try {
+//            if (javascriptEnabled) {
+//                try {
+//                    TextCore.aClass94_106.method1577(Signlink.aClass87_665.applet);
+//                    return true;
+//                } catch (Throwable var2) {
+//                }
+//            }
+//            return false;
+//        } catch (RuntimeException var3) {
+//            throw ClientErrorException.clientError(var3, "gn.K(" + ')');
+//        }
+        return false;
     }
 
     public static Class3_Sub28_Sub5 method1089(CacheIndex cacheIndex0, CacheIndex var2, int frameId) {
@@ -3805,7 +3770,7 @@ public class Unsorted {
         return str;
     }
 
-    public static void method1091(boolean var0, int var1) {
+    public static void method1091(boolean var0) {
         try {
             byte var2;
             byte[][] var3;
@@ -3834,9 +3799,6 @@ public class Unsorted {
             }
 
             var5 = 0;
-            if (var1 > -66) {
-                method1088(true);
-            }
 
             for (; var5 < var4; ++var5) {
                 var6 = -Class131.anInt1716 + 64 * (Class3_Sub24_Sub3.anIntArray3494[var5] >> 8);
@@ -3852,7 +3814,7 @@ public class Unsorted {
             }
 
         } catch (RuntimeException var10) {
-            throw ClientErrorException.clientError(var10, "gn.I(" + var0 + ',' + var1 + ')');
+            throw ClientErrorException.clientError(var10, "gn.I(" + var0 + ')');
         }
     }
 
@@ -4187,11 +4149,11 @@ public class Unsorted {
 
                             if (!Class38_Sub1.aBoolean2615) {
                                 if (var11.type == 0 && var11.aBoolean219 && NPCDefinition.anInt1297 >= var16 && var17 <= Class38_Sub1.anInt2612 && NPCDefinition.anInt1297 < var18 && Class38_Sub1.anInt2612 < var19 && !ClientCommands.commandQaOpEnabled) {
-                                    menuOptionCount = 1;
-                                    Class114.anIntArray1578[0] = Class3_Sub28_Sub5.anInt3590;
-                                    Class140_Sub7.aClass94Array2935[0] = TextCore.HasCancel;
-                                    Class163_Sub2_Sub1.aClass94Array4016[0] = TextCore.aClass94_3672;
-                                    Class3_Sub13_Sub7.aShortArray3095[0] = 1005;
+                                    ContextMenu.menuOptionCount = 1;
+                                    ContextMenu.anIntArray1578[0] = Class3_Sub28_Sub5.anInt3590;
+                                    ContextMenu.aClass94Array2935[0] = TextCore.HasCancel;
+                                    ContextMenu.aClass94Array4016[0] = TextCore.aClass94_3672;
+                                    ContextMenu.aShortArray3095[0] = 1005;
                                 }
 
                                 if (var16 <= NPCDefinition.anInt1297 && Class38_Sub1.anInt2612 >= var17 && var18 > NPCDefinition.anInt1297 && Class38_Sub1.anInt2612 < var19) {
@@ -4222,11 +4184,11 @@ public class Unsorted {
                                 Class3_Sub31 var36 = Class3_Sub13_Sub17.aHashTable_3208.get(var11.componentHash);
                                 if (var36 != null) {
                                     if (var36.anInt2603 == 0 && !Class38_Sub1.aBoolean2615 && NPCDefinition.anInt1297 >= var16 && Class38_Sub1.anInt2612 >= var17 && NPCDefinition.anInt1297 < var18 && Class38_Sub1.anInt2612 < var19 && !ClientCommands.commandQaOpEnabled) {
-                                        Class140_Sub7.aClass94Array2935[0] = TextCore.HasCancel;
-                                        menuOptionCount = 1;
-                                        Class114.anIntArray1578[0] = Class3_Sub28_Sub5.anInt3590;
-                                        Class3_Sub13_Sub7.aShortArray3095[0] = 1005;
-                                        Class163_Sub2_Sub1.aClass94Array4016[0] = TextCore.aClass94_3672;
+                                        ContextMenu.aClass94Array2935[0] = TextCore.HasCancel;
+                                        ContextMenu.menuOptionCount = 1;
+                                        ContextMenu.anIntArray1578[0] = Class3_Sub28_Sub5.anInt3590;
+                                        ContextMenu.aShortArray3095[0] = 1005;
+                                        ContextMenu.aClass94Array4016[0] = TextCore.aClass94_3672;
                                     }
 
                                     Class3_Sub13_Sub1.method171(-101, var36.anInt2602, var16, var18, var13, var12, var19, var17, var14);
@@ -4273,7 +4235,7 @@ public class Unsorted {
                                                     }
                                                 } else {
                                                     var47 = var11.itemAmounts[var20] + -1;
-                                                    if (var0 < 32 + var23 && var4 > var23 && var24 - -32 > var6 && var7 > var24 || var11 == Class67.aClass11_1017 && var20 == PacketParser.anInt86) {
+                                                    if (var0 < 32 + var23 && var4 > var23 && var24 - -32 > var6 && var7 > var24 || var11 == Class163_Sub1.aClass11_1017 && var20 == PacketParser.anInt86) {
                                                         AbstractSprite var54;
                                                         if (Class164_Sub1.anInt3012 == 1 && Network.anInt1473 == var20 && Class3_Sub28_Sub18.anInt3764 == var11.componentHash) {
                                                             var54 = Class114.method1707(2, var47, var11.aBoolean227, var11.itemIds[var20], 0);
@@ -4287,7 +4249,7 @@ public class Unsorted {
 
                                                         if (null == var54) {
                                                             Class20.method909(var11);
-                                                        } else if (Class67.aClass11_1017 == var11 && var20 == PacketParser.anInt86) {
+                                                        } else if (Class163_Sub1.aClass11_1017 == var11 && var20 == PacketParser.anInt86) {
                                                             var25 = Class126.anInt1676 - Class129_Sub1.anInt2693;
                                                             var26 = -anInt40 + anInt1709;
                                                             if (var26 < 5 && var26 > -5) {

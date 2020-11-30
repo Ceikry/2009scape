@@ -235,7 +235,7 @@ class Class155 {
                         } else {
                             if (this.anInt1981 == 0 && this.anInt1988 == 0) {
                                 this.method2160();
-                                this.aLong1982 = var2 - -2000L;
+                                this.aLong1982 = var2 + 2000L;
                                 return;
                             }
 

@@ -1,7 +1,5 @@
 package org.runite.client;
 
-import org.runite.client.packets.incoming.ClearObjectPacket;
-
 import java.net.InetAddress;
 import java.net.NetworkInterface;
 import java.net.SocketException;

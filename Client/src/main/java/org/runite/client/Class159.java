@@ -26,19 +26,23 @@ final class Class159 {
         }
     }
 
-    static boolean method2194() {
-        try {
-            if (Unsorted.aBoolean3641) {
-                try {
-                    return !(Boolean) TextCore.aClass94_3209.method1577(Signlink.aClass87_665.applet);
-                } catch (Throwable var2) {
-                }
-            }
-
-            return true;
-        } catch (RuntimeException var3) {
-            throw ClientErrorException.clientError(var3, "vl.B(" + 255 + ')');
-        }
+    /*
+     *  CS Opcode 6406 Display advertisement to user
+     */
+    static boolean displayAdvertisementToUser() {
+//        try {
+//            if (Unsorted.javascriptEnabled) {
+//                try {
+//                    return !(Boolean) TextCore.aClass94_3209.method1577(Signlink.aClass87_665.applet);
+//                } catch (Throwable var2) {
+//                }
+//            }
+//
+//            return true;
+//        } catch (RuntimeException var3) {
+//            throw ClientErrorException.clientError(var3, "vl.B(" + 255 + ')');
+//        }
+        return true;
     }
 
     static void method2195(int var0) {
@@ -154,15 +158,4 @@ final class Class159 {
             throw ClientErrorException.clientError(var11, "vl.E(" + var0 + ',' + 0 + ')');
         }
     }
-
-//   static void method2196() {
-//      try {
-//         Class3_Sub13_Sub34.aReferenceCache_3412.clearSoftReferences();
-//
-//         Class3_Sub13_Sub31.aReferenceCache_3369.clearSoftReferences();
-//      } catch (RuntimeException var2) {
-//         throw ClientErrorException.clientError(var2, "vl.D(" + 128 + ')');
-//      }
-//   }
-
 }

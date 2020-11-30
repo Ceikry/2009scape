@@ -313,11 +313,11 @@ public final class Class3_Sub13_Sub36 extends Class3_Sub13 {
                             var18 = -((-1 + var31.definition.size) * 64) + var31.anInt2829;
 
                             for (var37 = 0; var37 < Class163.localNPCCount; ++var37) {
-                                var36 = NPC.npcs[Class15.localNPCIndexes[var37]];
+                                var36 = NPC.npcs[NPC.localNPCIndexes[var37]];
                                 var21 = -(var36.definition.size * 64) - -64 + var36.anInt2819;
                                 var22 = var36.anInt2829 + -(var36.definition.size * 64) - -64;
                                 if (var31 != var36 && var33 <= var21 && var31.definition.size - (-var33 + var21 >> 7) >= var36.definition.size && var18 <= var22 && var36.definition.size <= -(-var18 + var22 >> 7) + var31.definition.size) {
-                                    Unsorted.drawNpcRightClickOptions(var36.definition, var12, -126, Class15.localNPCIndexes[var37], var27);
+                                    Unsorted.drawNpcRightClickOptions(var36.definition, var12, -126, NPC.localNPCIndexes[var37], var27);
                                 }
                             }
 
@@ -341,11 +341,11 @@ public final class Class3_Sub13_Sub36 extends Class3_Sub13 {
                             var18 = var30.anInt2829 + 64 + -(var30.getSize() * 64);
 
                             for (var37 = 0; var37 < Class163.localNPCCount; ++var37) {
-                                var36 = NPC.npcs[Class15.localNPCIndexes[var37]];
+                                var36 = NPC.npcs[NPC.localNPCIndexes[var37]];
                                 var21 = var36.anInt2819 + -(var36.definition.size * 64) - -64;
                                 var22 = var36.anInt2829 - 64 * var36.definition.size - -64;
                                 if (var21 >= var33 && var36.definition.size <= -(var21 - var33 >> 7) + var30.getSize() && var18 <= var22 && -(-var18 + var22 >> 7) + var30.getSize() >= var36.definition.size) {
-                                    Unsorted.drawNpcRightClickOptions(var36.definition, var12, -121, Class15.localNPCIndexes[var37], var27);
+                                    Unsorted.drawNpcRightClickOptions(var36.definition, var12, -121, NPC.localNPCIndexes[var37], var27);
                                 }
                             }
 

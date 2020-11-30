@@ -31,7 +31,7 @@ final class Class119 {
                 Unsorted.anInt2334 -= var2.right + var2.left;
             }
 
-            if (Class83.method1411(0) >= 2) {
+            if (Display.gameRenderWindowType() >= 2) {
                 GameShell.gameShellAWTWidth = Unsorted.anInt2334;
                 Class84.anInt1164 = 0;
                 Class106.anInt1442 = 0;

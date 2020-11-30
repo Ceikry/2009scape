@@ -153,7 +153,7 @@ final class Class158_Sub1 extends Class158 implements ImageProducer, ImageObserv
             int var37;
             int var44;
             for (var8 = 0; var3 > var8; ++var8) {
-                byte[][] var9 = Class67.aByteArrayArrayArray1014[var8];
+                byte[][] var9 = Class110.aByteArrayArrayArray1014[var8];
                 int var21;
                 int var23;
                 int var22;
@@ -480,7 +480,7 @@ final class Class158_Sub1 extends Class158 implements ImageProducer, ImageObserv
                 aByteArrayArrayArray1828[var8] = null;
                 Unsorted.aByteArrayArrayArray1328[var8] = null;
                 PacketParser.aByteArrayArrayArray81[var8] = null;
-                Class67.aByteArrayArrayArray1014[var8] = null;
+                Class110.aByteArrayArrayArray1014[var8] = null;
             }
 
             if (var2 <= 26) {

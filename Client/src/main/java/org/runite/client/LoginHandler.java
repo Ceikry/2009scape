@@ -124,9 +124,9 @@ class LoginHandler {
                         Network.loginBuffer.writeShort(Network.outgoingBuffer.index + 163 + Class3_Sub13_Sub33.method326((byte) 111, Class163_Sub2.aClass94_2996));
                         Network.loginBuffer.writeInt(GameConfig.CLIENT_BUILD);
                         Network.loginBuffer.writeByte(Class7.anInt2161);
-                        Network.loginBuffer.writeByte(!Client.aBoolean3779 ? 0 : 1);
+                        Network.loginBuffer.writeByte(!Client.userIsMembers ? 0 : 1);
                         Network.loginBuffer.writeByte(1);
-                        Network.loginBuffer.writeByte(Class83.method1411(0));
+                        Network.loginBuffer.writeByte(Display.gameRenderWindowType());
                         Network.loginBuffer.writeShort(GameShell.gameShellAWTWidth);
                         Network.loginBuffer.writeShort(GameShell.gameShellAWTHeight);
                         Network.loginBuffer.writeByte(Unsorted.anInt3671);
@@ -274,7 +274,7 @@ class LoginHandler {
                         Unsorted.isMember = Network.incomingBuffer.readUnsignedByte() == 1;
                         Class113.method1702(Unsorted.isMember);
                         Class8.method845(Unsorted.isMember);
-                        if (!Client.aBoolean3779) {
+                        if (!Client.userIsMembers) {
                             if ((!Class3_Sub15.aBoolean2433 || Unsorted.aBoolean4063) && !Class3_Sub13_Sub29.disableGEBoxes) {
                                 try {
                                     TextCore.aClass94_516.method1577(Signlink.aClass87_665.applet);

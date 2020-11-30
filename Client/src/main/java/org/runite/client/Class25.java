@@ -23,16 +23,6 @@ final class Class25 {
     int anInt496;
     long aLong498 = 0L;
 
-    static void method953() {
-        try {
-            Class114.aReferenceCache_1569.sweep(50);
-            Class3_Sub15.aReferenceCache_2428.sweep(50);
-            Unsorted.aReferenceCache_743.sweep(50);
-        } catch (RuntimeException var3) {
-            throw ClientErrorException.clientError(var3, "ec.D(" + -13508 + ',' + 50 + ')');
-        }
-    }
-
     static void method955(int[][] var0, boolean var1, int var2, Class3_Sub11 var3, int[] var4, int var5, int var6, int var7, boolean var8, float[][] var9, boolean var10, int var11, float[][] var12, int var13, int var14, int var15, boolean var16, int[][] var17, float[][] var18, byte var19, int var20, boolean[] var21) {
         try {
             int var22 = (var2 << 8) + (var1 ? 255 : 0);

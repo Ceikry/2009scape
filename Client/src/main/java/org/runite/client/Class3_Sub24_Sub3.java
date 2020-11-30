@@ -20,15 +20,6 @@ final class Class3_Sub24_Sub3 extends Class3_Sub24 {
         }
     }
 
-    static void method465() {
-        try {
-
-            Class140_Sub4.aReferenceCache_2792.sweep(5);
-        } catch (RuntimeException var3) {
-            throw ClientErrorException.clientError(var3, "te.O(" + 5 + ',' + true + ')');
-        }
-    }
-
     static Class3_Sub28_Sub6 method466(int var1, int var2) {
         try {
             Class3_Sub28_Sub6 var3 = (Class3_Sub28_Sub6) Client.aHashTable_2194.get((long) var2 | (long) var1 << 32);
@@ -235,7 +226,7 @@ final class Class3_Sub24_Sub3 extends Class3_Sub24 {
                     var3 += var8;
                     var11.method417(var9);
                     var11.method413(var1, var3, var5 + -var3);
-                    if (var11.method445()) {
+                    if (var11.generateComputerUserInformation()) {
                         this.aClass3_Sub24_Sub2_3495.method457(var11);
                     }
                 }

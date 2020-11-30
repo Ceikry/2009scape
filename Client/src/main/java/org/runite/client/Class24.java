@@ -90,7 +90,7 @@ public final class Class24 {
             int var2;
             if (var1 < Class163.localNPCCount) {
                 for (var2 = var1; var2 < Class163.localNPCCount; ++var2) {
-                    Class3_Sub7.anIntArray2292[Class139.anInt1829++] = Class15.localNPCIndexes[var2];
+                    Class3_Sub7.anIntArray2292[Class139.anInt1829++] = NPC.localNPCIndexes[var2];
                 }
             }
 
@@ -100,23 +100,23 @@ public final class Class24 {
                 Class163.localNPCCount = 0;
 
                 for (var2 = 0; var1 > var2; ++var2) {
-                    int var3 = Class15.localNPCIndexes[var2];
+                    int var3 = NPC.localNPCIndexes[var2];
                     NPC var4 = NPC.npcs[var3];
                     int var5 = Network.incomingBuffer.getBits(1);
                     if (0 == var5) {
-                        Class15.localNPCIndexes[Class163.localNPCCount++] = var3;
+                        NPC.localNPCIndexes[Class163.localNPCCount++] = var3;
                         var4.anInt2838 = Class44.anInt719;
                     } else {
                         int var6 = Network.incomingBuffer.getBits(2);
                         if (var6 == 0) {
-                            Class15.localNPCIndexes[Class163.localNPCCount++] = var3;
+                            NPC.localNPCIndexes[Class163.localNPCCount++] = var3;
                             var4.anInt2838 = Class44.anInt719;
                             Class21.maskUpdateIndexes[Unsorted.maskUpdateCount++] = var3;
                         } else {
                             int var7;
                             int var8;
                             if (1 == var6) {
-                                Class15.localNPCIndexes[Class163.localNPCCount++] = var3;
+                                NPC.localNPCIndexes[Class163.localNPCCount++] = var3;
                                 var4.anInt2838 = Class44.anInt719;
                                 var7 = Network.incomingBuffer.getBits(3);
                                 var4.walkStep(1, (byte) 32, var7);
@@ -125,7 +125,7 @@ public final class Class24 {
                                     Class21.maskUpdateIndexes[Unsorted.maskUpdateCount++] = var3;
                                 }
                             } else if (var6 == 2) {
-                                Class15.localNPCIndexes[Class163.localNPCCount++] = var3;
+                                NPC.localNPCIndexes[Class163.localNPCCount++] = var3;
                                 var4.anInt2838 = Class44.anInt719;
                                 if (Network.incomingBuffer.getBits(1) == 1) {
                                     var7 = Network.incomingBuffer.getBits(3);
@@ -192,7 +192,7 @@ public final class Class24 {
 
     static void method950(RSInterface var0, int var1, int var2, int var3) {
         try {
-            if (2 <= Unsorted.menuOptionCount || Class164_Sub1.anInt3012 != 0 || GameObject.aBoolean1837) {
+            if (2 <= ContextMenu.menuOptionCount || Class164_Sub1.anInt3012 != 0 || GameObject.aBoolean1837) {
                 RSString var4 = Class3_Sub28_Sub1.method531();
                 if (var0 == null) {
                     int var5 = Class168.aClass3_Sub28_Sub17_2096.method683(var4, 4 + var3, var2 - -15, aRandom3088, Class38_Sub1.anInt2618);

@@ -44,11 +44,12 @@ public final class Client extends GameShell {
     static Class61 aClass61_1471 = new Class61();
     static Class30 aClass30_1572;
     static int[] anIntArray3780 = new int[32];
-    static boolean aBoolean3779 = false;
+    static boolean userIsMembers = false;
     static int anInt3773;
     static int modeWhereValue = 0;
     static volatile boolean forceReplaceCanvasEnable = false;
     static long aLong866 = 0L;
+    static Client aClient1671;
 
     static void method631(CacheIndex var1) {
         try {
@@ -125,7 +126,7 @@ public final class Client extends GameShell {
                         ClientErrorException.wrongParamaterValuesSet("modewhat");
                         break;
                 }
-                aBoolean3779 = false;
+                userIsMembers = false;
 
                 try {
                     byte[] var2 = params[2].getBytes(StandardCharsets.ISO_8859_1);
@@ -147,7 +148,7 @@ public final class Client extends GameShell {
 
                 Unsorted.method87(-78, Class3_Sub20.language);
                 Class163_Sub2_Sub1.aBoolean4018 = false;
-                Unsorted.aBoolean3641 = false;
+                Unsorted.javascriptEnabled = false;
                 if (params[3].equals("game0")) {
                     Class158.anInt2014 = 0;
                 } else if (params[3].equals("game1")) {
@@ -161,7 +162,7 @@ public final class Client extends GameShell {
                 Class3_Sub26.anInt2554 = 0;
                 Class163_Sub2.aClass94_2996 = TextCore.aClass94_3672;
                 Client var6 = new Client();
-                Class126.aClient1671 = var6;
+                aClient1671 = var6;
                 var6.launch();
                 GameShell.frame.setLocation(40, 40);
             } catch (Exception var4) {
@@ -295,7 +296,7 @@ public final class Client extends GameShell {
                                 aClass61_1471.method1215(var30);
                             }
 
-                            if (Class56.aClass11_886 != null || Class67.aClass11_1017 != null || Class38_Sub1.aBoolean2615 || inter.anInt189 != 1400 && Class3_Sub19.anInt2475 > 0) {
+                            if (Class56.aClass11_886 != null || Class163_Sub1.aClass11_1017 != null || Class38_Sub1.aBoolean2615 || inter.anInt189 != 1400 && Class3_Sub19.anInt2475 > 0) {
                                 var18 = false;
                                 var25 = false;
                                 var26 = false;
@@ -648,7 +649,7 @@ public final class Client extends GameShell {
                         }
                     }
 
-                    if (!inter.usingScripts && Class56.aClass11_886 == null && Class67.aClass11_1017 == null && !Class38_Sub1.aBoolean2615) {
+                    if (!inter.usingScripts && Class56.aClass11_886 == null && Class163_Sub1.aClass11_1017 == null && !Class38_Sub1.aBoolean2615) {
                         if ((inter.anInt212 >= 0 || inter.anInt228 != 0) && Class126.anInt1676 >= var12 && Unsorted.anInt1709 >= var13 && Class126.anInt1676 < var14 && Unsorted.anInt1709 < var15) {
                             if (inter.anInt212 >= 0) {
                                 Class107.aClass11_1453 = interfaces[inter.anInt212];
@@ -697,33 +698,6 @@ public final class Client extends GameShell {
         return var0.hidden;
     }
 
-    static void graphicsSettings(boolean var0, int var1, int var3, int var4) {
-        try {
-            aLong866 = 0L;
-            int var5 = Class83.method1411(0);
-            if (var1 == 3 || 3 == var5) {
-                var0 = true;
-            }
-
-            if (Signlink.osName.startsWith("mac") && var1 > 0) {
-                var0 = true;
-            }
-
-            boolean var6 = false;
-            if (var5 > 0 != var1 > 0) {
-                var6 = true;
-            }
-
-            if (var0 && var1 > 0) {
-                var6 = true;
-            }
-
-            Unsorted.method598(var0, var1, var6, var5, false, var3, var4);
-        } catch (RuntimeException var7) {
-            throw ClientErrorException.clientError(var7, "th.EC(" + var0 + ',' + var1 + ',' + -8914 + ',' + var3 + ',' + var4 + ')');
-        }
-    }
-
     final void method38() {
         try {
             if (Class143.loadingStage != 1000) {
@@ -733,7 +707,7 @@ public final class Client extends GameShell {
                 }
 
                 if ((Class143.loadingStage == 30 || Class143.loadingStage == 10) && (forceReplaceCanvasEnable || aLong866 != 0 && aLong866 < TimeUtils.time())) {
-                    graphicsSettings(forceReplaceCanvasEnable, Class83.method1411(0), Class3_Sub13.anInt2378, Unsorted.anInt3071);
+                    Display.graphicsSettings(forceReplaceCanvasEnable, Display.gameRenderWindowType(), Class3_Sub13.anInt2378, Unsorted.anInt3071);
                 }
 
                 int var4;
@@ -762,12 +736,12 @@ public final class Client extends GameShell {
                             Class119.method1729();
                         }
 
-                        aLong866 = TimeUtils.time() - -500L;
+                        aLong866 = TimeUtils.time() + 500L;
                     }
                 }
 
                 if (GameShell.aFrame3121 != null && !Class3_Sub13_Sub6.aBoolean3078 && (30 == Class143.loadingStage || 10 == Class143.loadingStage)) {
-                    graphicsSettings(false, Unsorted.anInt2577, -1, -1);
+                    Display.graphicsSettings(false, Unsorted.anInt2577, -1, -1);
                 }
 
                 boolean var10 = false;
@@ -966,7 +940,7 @@ public final class Client extends GameShell {
 
             String var1 = this.getParameter("advertsuppressed");
             System.out.println("Advert suppress...");
-            aBoolean3779 = var1 != null && var1.equals("1");
+            userIsMembers = var1 != null && var1.equals("1");
 
             try {
                 Class3_Sub20.language = Integer.parseInt(Objects.requireNonNull(this.getParameter("lang")));
@@ -982,7 +956,7 @@ public final class Client extends GameShell {
 
             String var3 = this.getParameter("js");
             System.out.println("enable js...");
-            Unsorted.aBoolean3641 = null != var3 && var3.equals("1");
+            Unsorted.javascriptEnabled = null != var3 && var3.equals("1");
 
             String var4 = this.getParameter("game");
             System.out.println("game mode...");
@@ -1015,7 +989,7 @@ public final class Client extends GameShell {
             String var6 = this.getParameter("haveie6");
             Class106.hasInternetExplorer6 = null != var6 && var6.equals("1");
 
-            Class126.aClient1671 = this;
+            aClient1671 = this;
             this.method41(32 + Class3_Sub13_Sub13.anInt3148);
         } catch (RuntimeException var11) {
             throw ClientErrorException.clientError(var11, "client.init()");
@@ -1057,12 +1031,12 @@ public final class Client extends GameShell {
                 ClientCommands.shiftClickEnabled = true;
                 Class92.defaultScreenColorRgb = 16777215;
                 Class92.defaultRegionAmbientRGB = 0;
-                Class15.aShortArrayArray344 = Unsorted.aShortArrayArray1619;
+                Class52.aShortArrayArray344 = Unsorted.aShortArrayArray1619;
                 Class101.aShortArrayArray1429 = aShortArrayArray2634;
                 Class3_Sub25.aShortArray2548 = Unsorted.aShortArray63;
                 Class91.aShortArray1311 = aShortArray2219;
             } else {
-                Class15.aShortArrayArray344 = Class3_Sub28_Sub12.aShortArrayArray3654;
+                Class52.aShortArrayArray344 = Class3_Sub28_Sub12.aShortArrayArray3654;
                 Class91.aShortArray1311 = aShortArray3349;
                 Class101.aShortArrayArray1429 = Class20.aShortArrayArray435;
                 Class3_Sub25.aShortArray2548 = Class164_Sub1.aShortArray3011;
@@ -1221,7 +1195,7 @@ public final class Client extends GameShell {
 
                                     if (null != Class15.aClass64_351 && Class15.aClass64_351.anInt978 == 1) {
                                         if (null != Class15.aClass64_351.anObject974) {
-                                            Class99.method1596(Class3_Sub13_Sub24.aClass94_3295, (byte) 126, Unsorted.aBoolean2154);
+                                            Class99.method1596(Class3_Sub13_Sub24.aClass94_3295, Unsorted.aBoolean2154);
                                         }
 
                                         Unsorted.aBoolean2154 = false;
@@ -1684,7 +1658,7 @@ public final class Client extends GameShell {
 
                                 Unsorted.aBoolean2146 = true;
                                 Class119.method1730(Signlink.aClass87_665);
-                                graphicsSettings(false, Unsorted.anInt2577, -1, -1);
+                                Display.graphicsSettings(false, Unsorted.anInt2577, -1, -1);
                                 LoadingStageNumber = 100;
                                 anInt1354 = 160;
                                 Class3_Sub17.aClass94_2464 = TextCore.Started3DLibrary;

@@ -73,7 +73,7 @@ public final class SequenceDefinition {
                 ClientErrorException.aClass96Array2114[var1] = null;
             }
 
-            Unsorted.menuOptionCount = 0;
+            ContextMenu.menuOptionCount = 0;
             Class38_Sub1.aBoolean2615 = false;
             Class23.method940(119, 0);
 
@@ -153,7 +153,7 @@ public final class SequenceDefinition {
             Class3_Sub7.method122(-113);
             Class3_Sub13_Sub7.aClass11_3087 = null;
             Class38_Sub1.aBoolean2615 = false;
-            Unsorted.menuOptionCount = 0;
+            ContextMenu.menuOptionCount = 0;
             Unsorted.aClass52_1112.method1161(new int[]{0, 0, 0, 0, 0}, -1, false, null, -1);
 
             for (var1 = 0; 8 > var1; ++var1) {
@@ -194,7 +194,7 @@ public final class SequenceDefinition {
             Class3_Sub13_Sub38.aShortArray3455 = Class3_Sub13_Sub9.aShortArray3110 = Class136.aShortArray1779 = Class3_Sub13_Sub38.aShortArray3453 = new short[256];
             Class3_Sub13.method165();
             Unsorted.aBoolean1951 = false;
-            Class3_Sub13_Sub8.method204(-3);
+            PacketParser.clientWindowInformationPacket();
         } catch (RuntimeException var6) {
             throw ClientErrorException.clientError(var6, "tk.A(" + true + ')');
         }

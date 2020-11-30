@@ -4,7 +4,6 @@ public final class Class140_Sub7 extends GameObject {
 
     static int[] anIntArray2931;
     static int[] anIntArray2933 = new int[]{2, 0, 0, 2, 0, 0, 0, 4, 4};
-    static RSString[] aClass94Array2935 = new RSString[500];
     static int anInt2938;
     int anInt2930;
     int anInt2936;

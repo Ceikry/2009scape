@@ -6,7 +6,6 @@ public final class Class3_Sub13_Sub22 extends Class3_Sub13 {
 
     public static AbstractIndexedSprite[] aClass109Array3270;
     static Player[] players = new Player[2048];
-    static long[] aLongArray3271 = new long[500];
     static boolean[] aBooleanArray3272;
     static Class61[][][] aClass61ArrayArrayArray3273 = new Class61[4][104][104];
     static boolean aBoolean3275 = true;

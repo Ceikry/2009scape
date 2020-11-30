@@ -38,18 +38,6 @@ final class Class3_Sub13_Sub4 extends Class3_Sub13 {
         }
     }
 
-    static void method188(int var0, int var1) {
-        try {
-            if (var1 != 0) {
-                method188(38, 29);
-            }
-
-            RenderAnimationDefinition.aReferenceCache_1955.sweep(var0);
-        } catch (RuntimeException var3) {
-            throw ClientErrorException.clientError(var3, "bi.U(" + var0 + ',' + var1 + ')');
-        }
-    }
-
     static void method189() {
         try {
             int var2;
@@ -73,7 +61,7 @@ final class Class3_Sub13_Sub4 extends Class3_Sub13 {
             }
 
             for (var1 = 0; var1 < Class163.localNPCCount; ++var1) {
-                var2 = Class15.localNPCIndexes[var1];
+                var2 = NPC.localNPCIndexes[var1];
                 NPC var6 = NPC.npcs[var2];
                 if (null != var6 && var6.textCycle > 0) {
                     --var6.textCycle;

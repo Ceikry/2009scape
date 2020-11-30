@@ -2231,13 +2231,13 @@ final class CS2Script extends Linkable {
                                                                         iStackCounter -= 2;
                                                                         int i59 = ItemDefinition.intsStack[1 + iStackCounter];
                                                                         int l31 = ItemDefinition.intsStack[iStackCounter];
-                                                                        Client.graphicsSettings(false, 3, l31, i59);
+                                                                        Display.graphicsSettings(false, 3, l31, i59);
                                                                         ItemDefinition.intsStack[iStackCounter++] = null != GameShell.aFrame3121 ? 1 : 0;
                                                                         continue;
                                                                     }
                                                                     if (opcode == 5301) {
                                                                         if (null != GameShell.aFrame3121)
-                                                                            Client.graphicsSettings(false, Unsorted.anInt2577, -1, -1);
+                                                                            Display.graphicsSettings(false, Unsorted.anInt2577, -1, -1);
                                                                         continue;
                                                                     }
                                                                     if (5302 == opcode) {
@@ -2272,14 +2272,14 @@ final class CS2Script extends Linkable {
                                                                         continue;
                                                                     }
                                                                     if (opcode == 5306) {
-                                                                        ItemDefinition.intsStack[iStackCounter++] = Class83.method1411(0);
+                                                                        ItemDefinition.intsStack[iStackCounter++] = Display.gameRenderWindowType();
                                                                         continue;
                                                                     }
                                                                     if (opcode == 5307) {
                                                                         int k32 = ItemDefinition.intsStack[--iStackCounter];
                                                                         if (k32 < 0 || k32 > 2)
                                                                             k32 = 0;
-                                                                        Client.graphicsSettings(false, k32, -1, -1);
+                                                                        Display.graphicsSettings(false, k32, -1, -1);
                                                                         continue;
                                                                     }
                                                                     if (5308 == opcode) {
@@ -2352,7 +2352,7 @@ final class CS2Script extends Linkable {
                                                                     }
                                                                     if (opcode == 5411) {
                                                                         if (GameShell.aFrame3121 != null)
-                                                                            Client.graphicsSettings(false, Unsorted.anInt2577, -1, -1);
+                                                                            Display.graphicsSettings(false, Unsorted.anInt2577, -1, -1);
                                                                         if (null == GameShell.frame)
                                                                             System.exit(0);
                                                                             //Class99.method1596(RSInterface.method856(), (byte) 126, false);
@@ -2379,14 +2379,14 @@ final class CS2Script extends Linkable {
                                                                     }
                                                                     if (opcode == 5421) {
                                                                         if (null != GameShell.aFrame3121)
-                                                                            Client.graphicsSettings(false, Unsorted.anInt2577, -1, -1);
+                                                                            Display.graphicsSettings(false, Unsorted.anInt2577, -1, -1);
                                                                         boolean flag5 = 1 == ItemDefinition.intsStack[--iStackCounter];
                                                                         RSString class94_25 = ItemDefinition.stringsStack[--sStackCounter];
                                                                         RSString class94_64 = RSString.stringCombiner(new RSString[]{
                                                                                 RSInterface.method856(), class94_25
                                                                         });
                                                                         if (null == GameShell.frame && (!flag5 || Signlink.anInt1214 == 3 || !Signlink.osName.startsWith("win") || Class106.hasInternetExplorer6)) {
-                                                                            Class99.method1596(class94_64, (byte) 127, flag5);
+                                                                            Class99.method1596(class94_64, flag5);
                                                                         } else {
                                                                             Unsorted.aBoolean2154 = flag5;
                                                                             Class3_Sub13_Sub24.aClass94_3295 = class94_64;
@@ -2994,12 +2994,14 @@ final class CS2Script extends Linkable {
                                                                             continue;
                                                                         }
                                                                         if (6405 == opcode) {
-                                                                            ItemDefinition.intsStack[iStackCounter++] = Unsorted.method1088(false) ? 1 : 0;
+                                                                            //Shows a video ad if the user is nonmembers on the applet
+                                                                            ItemDefinition.intsStack[iStackCounter++] = Unsorted.displayVideoAdvertisementToUser() ? 1 : 0;
                                                                             continue;
                                                                         }
                                                                         if (opcode != 6406)
                                                                             break;
-                                                                        ItemDefinition.intsStack[iStackCounter++] = Class159.method2194() ? 1 : 0;
+                                                                        //Shows a video ad if the user is nonmembers on the applet
+                                                                        ItemDefinition.intsStack[iStackCounter++] = Class159.displayAdvertisementToUser() ? 1 : 0;
                                                                         continue;
                                                                     }
                                                                     if (opcode == 6200) {

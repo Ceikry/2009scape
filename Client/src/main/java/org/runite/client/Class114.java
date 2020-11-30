@@ -8,7 +8,6 @@ final class Class114 {
 
     static ReferenceCache aReferenceCache_1569 = new ReferenceCache(200);
     static long[] ignores = new long[100];
-    static int[] anIntArray1578 = new int[500];
     private final int anInt1568;
     private final int anInt1579;
     boolean aBoolean1580 = false;
@@ -74,20 +73,6 @@ final class Class114 {
             var3.anInt3598 = var0;
         } catch (RuntimeException var4) {
             throw ClientErrorException.clientError(var4, "pf.E(" + var0 + ',' + var1 + ',' + -2553 + ')');
-        }
-    }
-
-    static void method1711(int var0, int var1) {
-        try {
-            Class3_Sub28_Sub4.aReferenceCache_3572.sweep(var0);
-            Class143.aReferenceCache_1874.sweep(var0);
-            Class67.aReferenceCache_1013.sweep(var0);
-            if (var1 != 255) {
-                method1711(20, 87);
-            }
-
-        } catch (RuntimeException var3) {
-            throw ClientErrorException.clientError(var3, "pf.D(" + var0 + ',' + var1 + ')');
         }
     }
 

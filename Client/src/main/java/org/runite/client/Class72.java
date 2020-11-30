@@ -18,9 +18,9 @@ final class Class72 {
 
     static void method1293() {
         try {
-            if (!Client.aBoolean3779 && Client.modeWhereValue != 2) {
+            if (!Client.userIsMembers && Client.modeWhereValue != 2) {
                 try {
-                    TextCore.aClass94_38.method1577(Class126.aClient1671);
+                    TextCore.aClass94_38.method1577(Client.aClient1671);
                 } catch (Throwable var2) {
                 }
 

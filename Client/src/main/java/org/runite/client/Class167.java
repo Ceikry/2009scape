@@ -19,7 +19,7 @@ final class Class167 {
                         }
 
                         NPC var3 = NPC.npcs[var1];
-                        Class15.localNPCIndexes[Class163.localNPCCount++] = var1;
+                        NPC.localNPCIndexes[Class163.localNPCCount++] = var1;
                         var3.anInt2838 = Class44.anInt719;
                         if (null != var3.definition && var3.definition.method1474()) {
                             Class3_Sub28_Sub8.method574(var3);

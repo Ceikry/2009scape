@@ -433,7 +433,6 @@ public final class RSString implements Interface3 {
 
     final URL method1547(URL var1) throws MalformedURLException {
         try {
-
             return new URL(var1, new String(this.buffer, 0, this.length));
         } catch (RuntimeException var4) {
             throw ClientErrorException.clientError(var4, "na.EB(" + (var1 != null ? "{...}" : "null") + ',' + true + ')');
@@ -520,13 +519,16 @@ public final class RSString implements Interface3 {
         return new String(buffer);
     }
 
+    /*
+     *  Java Applet
+     */
     final void method1554(Applet var2) throws Throwable {
-        try {
-            String var3 = new String(this.buffer, 0, this.length);
-            Class42.method1057(var2, var3);
-        } catch (RuntimeException var4) {
-            throw ClientErrorException.clientError(var4, "na.AA(" + true + ',' + (var2 != null ? "{...}" : "null") + ')');
-        }
+//        try {
+//            String var3 = new String(this.buffer, 0, this.length);
+//            Class42.method1057(var2, var3);
+//        } catch (RuntimeException var4) {
+//            throw ClientErrorException.clientError(var4, "na.AA(" + true + ',' + (var2 != null ? "{...}" : "null") + ')');
+//        }
     }
 
     final int method1555(int var1, int var2) {

@@ -28,8 +28,7 @@ final class Class155_Sub2 extends Class155 {
         Info[] var2 = AudioSystem.getMixerInfo();
         if (null != var2) {
 
-            for (int var4 = 0; var2.length > var4; ++var4) {
-                Info var5 = var2[var4];
+            for (Info var5 : var2) {
                 if (null != var5) {
                     String var6 = var5.getName();
                     if (null != var6 && var6.toLowerCase().contains("soundmax")) {

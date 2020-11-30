@@ -7,6 +7,7 @@ final class Class110 {
 
     static int anInt1472 = 0;
     static int[] anIntArray2386 = new int[]{1, -1, -1, 1};
+    static byte[][][] aByteArrayArrayArray1014;
 
 
     static void method1681(int var0) {
@@ -137,8 +138,8 @@ final class Class110 {
 
                                 for (int var30 = 0; var30 <= var12; ++var30) {
                                     for (int var31 = 0; var13 >= var31; ++var31) {
-                                        if (var29 > Class67.aByteArrayArrayArray1014[var2][var7 + var30][var31 + var9]) {
-                                            Class67.aByteArrayArrayArray1014[var2][var7 - -var30][var9 - -var31] = (byte) var29;
+                                        if (var29 > aByteArrayArrayArray1014[var2][var7 + var30][var31 + var9]) {
+                                            aByteArrayArrayArray1014[var2][var7 - -var30][var9 - -var31] = (byte) var29;
                                         }
                                     }
                                 }
@@ -186,8 +187,8 @@ final class Class110 {
                         if (var1) {
                             if (var10 == 0) {
                                 if (def.aBoolean1525) {
-                                    Class67.aByteArrayArrayArray1014[var2][var7][var9] = 50;
-                                    Class67.aByteArrayArrayArray1014[var2][var7][1 + var9] = 50;
+                                    aByteArrayArrayArray1014[var2][var7][var9] = 50;
+                                    aByteArrayArrayArray1014[var2][var7][1 + var9] = 50;
                                 }
 
                                 if (def.aBoolean1542) {
@@ -195,8 +196,8 @@ final class Class110 {
                                 }
                             } else if (1 == var10) {
                                 if (def.aBoolean1525) {
-                                    Class67.aByteArrayArrayArray1014[var2][var7][var9 - -1] = 50;
-                                    Class67.aByteArrayArrayArray1014[var2][var7 - -1][var9 + 1] = 50;
+                                    aByteArrayArrayArray1014[var2][var7][var9 - -1] = 50;
+                                    aByteArrayArrayArray1014[var2][var7 - -1][var9 + 1] = 50;
                                 }
 
                                 if (def.aBoolean1542) {
@@ -204,8 +205,8 @@ final class Class110 {
                                 }
                             } else if (var10 == 2) {
                                 if (def.aBoolean1525) {
-                                    Class67.aByteArrayArrayArray1014[var2][var7 + 1][var9] = 50;
-                                    Class67.aByteArrayArrayArray1014[var2][1 + var7][1 + var9] = 50;
+                                    aByteArrayArrayArray1014[var2][var7 + 1][var9] = 50;
+                                    aByteArrayArrayArray1014[var2][1 + var7][1 + var9] = 50;
                                 }
 
                                 if (def.aBoolean1542) {
@@ -213,8 +214,8 @@ final class Class110 {
                                 }
                             } else if (var10 == 3) {
                                 if (def.aBoolean1525) {
-                                    Class67.aByteArrayArrayArray1014[var2][var7][var9] = 50;
-                                    Class67.aByteArrayArrayArray1014[var2][1 + var7][var9] = 50;
+                                    aByteArrayArrayArray1014[var2][var7][var9] = 50;
+                                    aByteArrayArrayArray1014[var2][1 + var7][var9] = 50;
                                 }
 
                                 if (def.aBoolean1542) {
@@ -246,13 +247,13 @@ final class Class110 {
                         Class154.method2146(var2, var7, var9, var19, (GameObject) object, null, Class40.anIntArray675[var10], 0, var24);
                         if (def.aBoolean1525 && var1) {
                             if (0 == var10) {
-                                Class67.aByteArrayArrayArray1014[var2][var7][var9 + 1] = 50;
+                                aByteArrayArrayArray1014[var2][var7][var9 + 1] = 50;
                             } else if (var10 == 1) {
-                                Class67.aByteArrayArrayArray1014[var2][var7 - -1][1 + var9] = 50;
+                                aByteArrayArrayArray1014[var2][var7 - -1][1 + var9] = 50;
                             } else if (var10 == 2) {
-                                Class67.aByteArrayArrayArray1014[var2][1 + var7][var9] = 50;
+                                aByteArrayArrayArray1014[var2][1 + var7][var9] = 50;
                             } else if (3 == var10) {
-                                Class67.aByteArrayArrayArray1014[var2][var7][var9] = 50;
+                                aByteArrayArrayArray1014[var2][var7][var9] = 50;
                             }
                         }
 
@@ -324,13 +325,13 @@ final class Class110 {
                             Class154.method2146(var2, var7, var9, var19, (GameObject) object, null, Class40.anIntArray675[var10], 0, var24);
                             if (def.aBoolean1525 && var1) {
                                 if (0 == var10) {
-                                    Class67.aByteArrayArrayArray1014[var2][var7][var9 + 1] = 50;
+                                    aByteArrayArrayArray1014[var2][var7][var9 + 1] = 50;
                                 } else if (var10 == 1) {
-                                    Class67.aByteArrayArrayArray1014[var2][1 + var7][var9 + 1] = 50;
+                                    aByteArrayArrayArray1014[var2][1 + var7][var9 + 1] = 50;
                                 } else if (var10 == 2) {
-                                    Class67.aByteArrayArrayArray1014[var2][1 + var7][var9] = 50;
+                                    aByteArrayArrayArray1014[var2][1 + var7][var9] = 50;
                                 } else if (var10 == 3) {
-                                    Class67.aByteArrayArrayArray1014[var2][var7][var9] = 50;
+                                    aByteArrayArrayArray1014[var2][var7][var9] = 50;
                                 }
                             }
 

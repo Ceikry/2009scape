@@ -82,13 +82,4 @@ final class Class166 {
         }
     }
 
-    static void method2260() {
-        try {
-            Class3_Sub13_Sub34.aReferenceCache_3412.sweep(5);
-            Class3_Sub13_Sub31.aReferenceCache_3369.sweep(5);
-        } catch (RuntimeException var3) {
-            throw ClientErrorException.clientError(var3, "wh.E(" + -1045 + ',' + 5 + ')');
-        }
-    }
-
 }

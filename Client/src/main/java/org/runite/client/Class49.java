@@ -3,8 +3,6 @@ package org.runite.client;
 import org.rs09.client.data.NodeCache;
 import org.rs09.client.rendering.Toolkit;
 
-import java.io.DataInputStream;
-import java.net.URL;
 import java.util.Random;
 
 final class Class49 {
@@ -152,11 +150,11 @@ final class Class49 {
                     Class38_Sub1.anInt2612 = Class38_Sub1.anInt2614;
                 }
 
-                Unsorted.menuOptionCount = 1;
-                Class140_Sub7.aClass94Array2935[0] = TextCore.HasCancel;
-                Class163_Sub2_Sub1.aClass94Array4016[0] = TextCore.aClass94_3672;
-                Class3_Sub13_Sub7.aShortArray3095[0] = 1005;
-                Class114.anIntArray1578[0] = Class3_Sub28_Sub5.anInt3590;
+                ContextMenu.menuOptionCount = 1;
+                ContextMenu.aClass94Array2935[0] = TextCore.HasCancel;
+                ContextMenu.aClass94Array4016[0] = TextCore.aClass94_3672;
+                ContextMenu.aShortArray3095[0] = 1005;
+                ContextMenu.anIntArray1578[0] = Class3_Sub28_Sub5.anInt3590;
             }
 
             if (Class3_Sub28_Sub12.anInt3655 != -1) {

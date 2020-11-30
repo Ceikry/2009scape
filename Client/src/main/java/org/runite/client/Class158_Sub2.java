@@ -6,6 +6,7 @@ import java.util.Hashtable;
 
 public final class Class158_Sub2 extends Class158 {
 
+    //TODO: Draw login screen image
     private Component aComponent2983;
 
 

@@ -30,33 +30,25 @@ final class Class75_Sub3 extends Class75 {
         }
     }
 
-    static void method1366() {
-        try {
-            Class158_Sub1.aReferenceCache_2982.sweep(5);
-        } catch (RuntimeException var3) {
-            throw ClientErrorException.clientError(var3, "kh.C(" + 104 + ',' + 5 + ')');
-        }
-    }
-
     static void method1346() {
         try {
-            Class3_Sub13_Sub2.method174();
-            Class38.method1027(5, (byte) 69);
-            Class3_Sub24_Sub3.method465();
-            Class3_Sub24_Sub4.method474();
-            Class140_Sub6.method2025();
-            Class114.method1711(5, 26211 + -25956);
-            Class3_Sub9.method137(5);
-            Unsorted.method795();
-            Class3_Sub28_Sub3.method539();
-            Class3_Sub13_Sub4.method188(5, 0);
-            Class166.method2260();
-            Unsorted.method594(26211 + -26090, 5);
-            Unsorted.method595();
-            Class3_Sub31.method820();
-            Class25.method953();
-            Class3_Sub13_Sub21.method269();
-            method1366();
+            SweepReferenceCache.method174();
+            SweepReferenceCache.method1027();
+            SweepReferenceCache.method465();
+            SweepReferenceCache.method474();
+            SweepReferenceCache.method2025();
+            SweepReferenceCache.method1711();
+            SweepReferenceCache.method137();
+            SweepReferenceCache.method795();
+            SweepReferenceCache.method539();
+            SweepReferenceCache.method188();
+            SweepReferenceCache.method2260();
+            SweepReferenceCache.method594();
+            SweepReferenceCache.method595();
+            SweepReferenceCache.method820();
+            SweepReferenceCache.method953();
+            SweepReferenceCache.method269();
+            SweepReferenceCache.method1366();
             Class3_Sub13_Sub11.aReferenceCache_3130.sweep(5);
             Unsorted.aReferenceCache_1135.sweep(5);
         } catch (RuntimeException var2) {
@@ -64,49 +56,45 @@ final class Class75_Sub3 extends Class75 {
         }
     }
 
-    static AbstractSprite[] method1347(int var0) {
+    static AbstractSprite[] method1347() {
         try {
-            if (var0 == -26802) {
-                AbstractSprite[] var1 = new AbstractSprite[Class95.anInt1338];
+            AbstractSprite[] var1 = new AbstractSprite[Class95.anInt1338];
 
-                for (int var2 = 0; Class95.anInt1338 > var2; ++var2) {
-                    byte[] var4 = Class163_Sub1.aByteArrayArray2987[var2];
-                    int var3 = Unsorted.anIntArray3076[var2] * Class140_Sub7.anIntArray2931[var2];
-                    if (Class3_Sub13_Sub22.aBooleanArray3272[var2]) {
-                        int[] var6 = new int[var3];
-                        byte[] var5 = Class163_Sub3.aByteArrayArray3005[var2];
+            for (int var2 = 0; Class95.anInt1338 > var2; ++var2) {
+                byte[] var4 = Class163_Sub1.aByteArrayArray2987[var2];
+                int var3 = Unsorted.anIntArray3076[var2] * Class140_Sub7.anIntArray2931[var2];
+                if (Class3_Sub13_Sub22.aBooleanArray3272[var2]) {
+                    int[] var6 = new int[var3];
+                    byte[] var5 = Class163_Sub3.aByteArrayArray3005[var2];
 
-                        for (int var7 = 0; var3 > var7; ++var7) {
-                            var6[var7] = Class3_Sub13_Sub29.bitwiseOr(Class3_Sub13_Sub38.spritePalette[Unsorted.bitwiseAnd(var4[var7], 255)], Unsorted.bitwiseAnd(-16777216, var5[var7] << 24));
-                        }
+                    for (int var7 = 0; var3 > var7; ++var7) {
+                        var6[var7] = Class3_Sub13_Sub29.bitwiseOr(Class3_Sub13_Sub38.spritePalette[Unsorted.bitwiseAnd(var4[var7], 255)], Unsorted.bitwiseAnd(-16777216, var5[var7] << 24));
+                    }
 
-                        if (HDToolKit.highDetail) {
-                            var1[var2] = new Class3_Sub28_Sub16_Sub1_Sub1(Class3_Sub15.anInt2426, Class133.anInt1748, Class164.anIntArray2048[var2], Unsorted.anIntArray2591[var2], Class140_Sub7.anIntArray2931[var2], Unsorted.anIntArray3076[var2], var6);
-                        } else {
-                            var1[var2] = new Class3_Sub28_Sub16_Sub2_Sub1(Class3_Sub15.anInt2426, Class133.anInt1748, Class164.anIntArray2048[var2], Unsorted.anIntArray2591[var2], Class140_Sub7.anIntArray2931[var2], Unsorted.anIntArray3076[var2], var6);
-                        }
+                    if (HDToolKit.highDetail) {
+                        var1[var2] = new Class3_Sub28_Sub16_Sub1_Sub1(Class3_Sub15.anInt2426, Class133.anInt1748, Class164.anIntArray2048[var2], Unsorted.anIntArray2591[var2], Class140_Sub7.anIntArray2931[var2], Unsorted.anIntArray3076[var2], var6);
                     } else {
-                        int[] var9 = new int[var3];
+                        var1[var2] = new Class3_Sub28_Sub16_Sub2_Sub1(Class3_Sub15.anInt2426, Class133.anInt1748, Class164.anIntArray2048[var2], Unsorted.anIntArray2591[var2], Class140_Sub7.anIntArray2931[var2], Unsorted.anIntArray3076[var2], var6);
+                    }
+                } else {
+                    int[] var9 = new int[var3];
 
-                        for (int var10 = 0; var3 > var10; ++var10) {
-                            var9[var10] = Class3_Sub13_Sub38.spritePalette[Unsorted.bitwiseAnd(var4[var10], 255)];
-                        }
+                    for (int var10 = 0; var3 > var10; ++var10) {
+                        var9[var10] = Class3_Sub13_Sub38.spritePalette[Unsorted.bitwiseAnd(var4[var10], 255)];
+                    }
 
-                        if (HDToolKit.highDetail) {
-                            var1[var2] = new HDSprite(Class3_Sub15.anInt2426, Class133.anInt1748, Class164.anIntArray2048[var2], Unsorted.anIntArray2591[var2], Class140_Sub7.anIntArray2931[var2], Unsorted.anIntArray3076[var2], var9);
-                        } else {
-                            var1[var2] = new Class3_Sub28_Sub16_Sub2(Class3_Sub15.anInt2426, Class133.anInt1748, Class164.anIntArray2048[var2], Unsorted.anIntArray2591[var2], Class140_Sub7.anIntArray2931[var2], Unsorted.anIntArray3076[var2], var9);
-                        }
+                    if (HDToolKit.highDetail) {
+                        var1[var2] = new HDSprite(Class3_Sub15.anInt2426, Class133.anInt1748, Class164.anIntArray2048[var2], Unsorted.anIntArray2591[var2], Class140_Sub7.anIntArray2931[var2], Unsorted.anIntArray3076[var2], var9);
+                    } else {
+                        var1[var2] = new Class3_Sub28_Sub16_Sub2(Class3_Sub15.anInt2426, Class133.anInt1748, Class164.anIntArray2048[var2], Unsorted.anIntArray2591[var2], Class140_Sub7.anIntArray2931[var2], Unsorted.anIntArray3076[var2], var9);
                     }
                 }
-
-                Class39.method1035((byte) 106);
-                return var1;
-            } else {
-                return null;
             }
+
+            Class39.method1035((byte) 106);
+            return var1;
         } catch (RuntimeException var8) {
-            throw ClientErrorException.clientError(var8, "re.B(" + var0 + ')');
+            throw ClientErrorException.clientError(var8, "re.B(" + -26802 + ')');
         }
     }
 

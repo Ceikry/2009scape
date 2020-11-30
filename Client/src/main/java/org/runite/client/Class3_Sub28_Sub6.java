@@ -5,7 +5,6 @@ import org.rs09.client.config.GameConfig;
 
 final class Class3_Sub28_Sub6 extends Node {
 
-    static boolean aBoolean3594;
     static boolean aBoolean3668 = false;
     static int anInt2293 = -1;
     static float aFloat1169;
@@ -184,7 +183,7 @@ final class Class3_Sub28_Sub6 extends Node {
 
     final void a() {
         try {
-            this.nodeKey = TimeUtils.time() - -500L | Long.MIN_VALUE & this.nodeKey;
+            this.nodeKey = TimeUtils.time() + 500L | Long.MIN_VALUE & this.nodeKey;
             Class81.aClass13_1139.offer(this);
         } catch (RuntimeException var3) {
             throw ClientErrorException.clientError(var3, "da.U(" + true + ')');
