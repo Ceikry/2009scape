@@ -37,6 +37,7 @@ public final class ThessaliaDialogue extends DialoguePlugin {
 
 	@Override
 	public boolean open(Object... args) {
+		npc = (NPC) args[0];
 
 		//The trade argument is handled elsewhere
 		if (args.length == 3) { //Right-Click 'Change-Clothes' Option
@@ -58,7 +59,7 @@ public final class ThessaliaDialogue extends DialoguePlugin {
 		}
 
 		//Default Talk
-		npc = (NPC) args[0];
+
 		interpreter.sendDialogues(npc, FacialExpression.ASKING, "Would you like to buy any fine clothes?");
 		stage = 0;
 		return true;

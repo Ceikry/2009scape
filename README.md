@@ -2,7 +2,7 @@
 
 <br />
 <p align="center">
-  <a href="https://github.com/2009scape/2009Scape">
+  <a href="https://github.com/woahscam/2009Scape">
     <img src="https://i.imgur.com/RsfVfkB.png" alt="Logo" width="300" height="67">
   </a>
   <h3 align="center">An open source MMORPG emulation server</h3>
@@ -14,8 +14,7 @@
     <a href="https://github.com/2009scape/2009Scape/releases/latest/download/2009Scape.jar">Community Hosted Server</a>
     ·
     <a href="https://discord.gg/43YPGND">Discord Invite</a>
-    ·
-    <a href="https://github.com/2009scape/2009Scape/issues">Report Bug</a>
+    ·    <a href="https://github.com/2009scape/2009Scape/issues">Report Bug</a>
     ·
     <a href="https://github.com/2009scape/2009Scape/projects">Bug Board</a>
   </p>
@@ -24,6 +23,7 @@
 
 
 ## Table of Contents
+
 * [Live Server Information](#live-server-information)
 * [About the Project](#about-the-project)
 * [Contributing](#contributing)
@@ -100,9 +100,11 @@ First follow the [Github-Setup](#github-setup). After you have forked over your 
 <details>
 <summary> </summary>
 
-1. Install <a href="https://adoptopenjdk.net/?variant=openjdk8&jvmVariant=hotspot">OpenJDK version 1.8</a>
-    * Choose latest release
-    * Download and install like anything else
+1. Install <a href="https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html">JDK version 1.8</a>
+    * Scroll down until you see Windows x86 and Windows x64
+    * If you are running a 64bit verison of Windows (standard), select Windows x64
+    * Accept the terms and conditions, after reading them of course, and login to oracle
+    * Download and install like any normal application
     
 2. Install <a href="https://www.jetbrains.com/idea/">Intellij IDEA</a>
     * Click "Download" on the main page
@@ -188,8 +190,6 @@ First follow the [Github-Setup](#github-setup). After you have forked over your 
 
 ### Project Setup
 
-<h4>Note: If you still have issues during the Project setup stage post your issue to discord under the section #help-me-pls! A fellow member of the community may be able to help!</h4>
-
 1. Open Xampp
     * On Windows make sure you run Xampp as administrator
     * On the left hand side make sure you tick the two "Service" boxes for Apache and MySQL
@@ -210,8 +210,7 @@ First follow the [Github-Setup](#github-setup). After you have forked over your 
     * Click on "Github", and you will be asked to login
     * Change your directory to wherever you want the project to load, or keep it default
     * On the right hand side you should see your Github Repository for 2009Scape
-    * Select it and hit "Clone"'
-    * After it clones, located the build.gradle file at the very top level of the project. Right click it and click "import gradle project"
+    * Select it and hit "Clone"
     * The project should instantly start building on import. Give it some time because it is going through and compiling alot of files
     * In Intellij go to File -> Project Structure -> Project and verify your Project SDK is set to JDK "1.8"
     * Setup through Intellij should now be finished!
@@ -249,8 +248,7 @@ We use the AGPL 3.0 license, which can be found <a href="https://www.gnu.org/lic
 
 ### Contact
 
-<h4>Reminder: Developer support for setting up your own server ended October 5th, 2020. Do not ping/dm developers about setting up your server. If you can not figure out how to build the project feel free to ask inside of #help-me-pls and another community member may be able to help you out.</h4>
-Questions or concerns that are project specific? Join our <a href="https://discord.gg/43YPGND">Discord</a> and either message me directly, @ woahscam#8535 on Discord, or ask in the #help-me-pls section for community help. 
+<h4>Reminder: Developer support for setting up your own server ended October 5th, 2020. Do not ping/dm developers about setting up your server.</h4>
 
 
 
