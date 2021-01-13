@@ -270,7 +270,7 @@ final class MouseListeningClass implements MouseListener, MouseMotionListener, F
 	  {
 	    try
 	    {
-	      InterfaceWidget var2 = Class3_Sub24_Sub3.getWidget(9, var0);
+	      InterfaceWidget var2 = InterfaceWidget.getWidget(9, var0);
 	      var2.a();
 	    }
 	    catch (RuntimeException var3)

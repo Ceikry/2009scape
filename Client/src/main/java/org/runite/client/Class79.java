@@ -12,7 +12,7 @@ final class Class79 {
 
    static void method1385(int var0, int var1) {
       try {
-         InterfaceWidget var3 = Class3_Sub24_Sub3.getWidget(6, var1);
+         InterfaceWidget var3 = InterfaceWidget.getWidget(6, var1);
          var3.flagUpdate();
          var3.anInt3598 = var0;
       } catch (RuntimeException var4) {

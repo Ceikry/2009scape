@@ -47,7 +47,7 @@ final class Class67 implements Runnable {
 
    static void method1259(int var0) {
       try {
-         InterfaceWidget var2 = Class3_Sub24_Sub3.getWidget(12, var0);
+         InterfaceWidget var2 = InterfaceWidget.getWidget(12, var0);
          var2.a();
       } catch (RuntimeException var3) {
          throw ClientErrorException.clientError(var3, "jd.A(" + var0 + ',' + (byte) 109 + ')');

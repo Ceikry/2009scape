@@ -66,7 +66,7 @@ final class Class3_Sub13_Sub18 extends Class3_Sub13 {
 
    static void method255(int var0, int var1, int var2) {
       try {
-         InterfaceWidget var3 = Class3_Sub24_Sub3.getWidget(var2, var0);
+         InterfaceWidget var3 = InterfaceWidget.getWidget(var2, var0);
          var3.flagUpdate();
          var3.anInt3598 = var1;
       } catch (RuntimeException var4) {

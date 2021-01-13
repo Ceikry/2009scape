@@ -199,7 +199,7 @@ final class Class140_Sub6 extends GameObject {
 
    static void method2026(int interfaceHash, int amount, int itemId) {
       try {
-          InterfaceWidget var4 = Class3_Sub24_Sub3.getWidget(9, interfaceHash);
+          InterfaceWidget var4 = InterfaceWidget.getWidget(9, interfaceHash);
           var4.flagUpdate();
           var4.anInt3598 = itemId;
           var4.anInt3597 = amount;

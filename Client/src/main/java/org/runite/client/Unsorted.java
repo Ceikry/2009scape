@@ -2545,7 +2545,7 @@ public class Unsorted {
 
     public static void method2143(byte var0, int var1, int var2, int var3, int var4) {
         try {
-            InterfaceWidget var5 = Class3_Sub24_Sub3.getWidget(8, var2);
+            InterfaceWidget var5 = InterfaceWidget.getWidget(8, var2);
             var5.flagUpdate();
             var5.anInt3596 = var1;
             if (var0 >= -120) {
@@ -2729,7 +2729,7 @@ public class Unsorted {
     }
 
     static void method56(int var0) {
-        InterfaceWidget var2 = Class3_Sub24_Sub3.getWidget(6, var0);
+        InterfaceWidget var2 = InterfaceWidget.getWidget(6, var0);
         var2.a();
     }
 
@@ -4950,7 +4950,7 @@ public class Unsorted {
 
     public static void method1516(int var0, int var1) {
         try {
-            InterfaceWidget var2 = Class3_Sub24_Sub3.getWidget(3, var0);
+            InterfaceWidget var2 = InterfaceWidget.getWidget(3, var0);
             var2.a();
             if (var1 < 87) {
                 TextCore.aClass94_1326 = (RSString) null;
@@ -5127,7 +5127,7 @@ public class Unsorted {
 
     public static void method566(RSString var0, int var2) {
        try {
-          InterfaceWidget var3 = Class3_Sub24_Sub3.getWidget(3, var2);
+          InterfaceWidget var3 = InterfaceWidget.getWidget(3, var2);
           var3.flagUpdate();
           var3.text = var0;
        } catch (RuntimeException var4) {
@@ -5137,7 +5137,7 @@ public class Unsorted {
 
     public static void method569(int var1) {
        try {
-          InterfaceWidget var2 = Class3_Sub24_Sub3.getWidget(7, var1);
+          InterfaceWidget var2 = InterfaceWidget.getWidget(7, var1);
           var2.a();
        } catch (RuntimeException var3) {
           throw ClientErrorException.clientError(var3, "he.C(" + -82 + ',' + var1 + ')');

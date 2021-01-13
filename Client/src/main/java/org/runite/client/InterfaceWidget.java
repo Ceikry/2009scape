@@ -15,6 +15,31 @@ final class InterfaceWidget extends Node {
    RSString text;
    static int anInt3600;
 
+    static InterfaceWidget getWidget(int var1, int var2) {
+       try {
+          InterfaceWidget var3 = (InterfaceWidget)Client.aHashTable_2194.get((long)var2 | (long)var1 << 32);
+          if(null == var3) {
+             var3 = new InterfaceWidget(var1, var2);
+             Client.aHashTable_2194.put(var3.linkableKey, var3);
+          }
+
+          return var3;
+       } catch (RuntimeException var4) {
+          throw ClientErrorException.clientError(var4, "te.F(" + 4 + ',' + var1 + ',' + var2 + ')');
+       }
+    }
+
+   static void setWidgetText(RSString text, int var2) {
+      try {
+         InterfaceWidget var3 = getWidget(2, var2);
+
+         var3.flagUpdate();
+         var3.text = text;
+      } catch (RuntimeException var4) {
+         throw ClientErrorException.clientError(var4, "pi.B(" + (text != null?"{...}":"null") + ',' + (byte) 40 + ',' + var2 + ')');
+      }
+   }
+
 
    final void a() {
       try {

@@ -41,7 +41,7 @@ final class Class3_Sub13_Sub19 extends Class3_Sub13 {
    static void method260(int var1, int var2) {
       try {
 
-         InterfaceWidget var3 = Class3_Sub24_Sub3.getWidget(7, var1);
+         InterfaceWidget var3 = InterfaceWidget.getWidget(7, var1);
          var3.flagUpdate();
          var3.anInt3598 = var2;
       } catch (RuntimeException var4) {
@@ -242,7 +242,7 @@ final class Class3_Sub13_Sub19 extends Class3_Sub13 {
 
    static void method265(int var1) {
       try {
-         InterfaceWidget var2 = Class3_Sub24_Sub3.getWidget(8, var1);
+         InterfaceWidget var2 = InterfaceWidget.getWidget(8, var1);
          var2.a();
 
       } catch (RuntimeException var3) {

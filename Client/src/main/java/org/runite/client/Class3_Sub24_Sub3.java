@@ -84,20 +84,6 @@ final class Class3_Sub24_Sub3 extends Class3_Sub24 {
       }
    }
 
-   static InterfaceWidget getWidget(int var1, int var2) {
-      try {
-         InterfaceWidget var3 = (InterfaceWidget)Client.aHashTable_2194.get((long)var2 | (long)var1 << 32);
-         if(null == var3) {
-            var3 = new InterfaceWidget(var1, var2);
-            Client.aHashTable_2194.put(var3.linkableKey, var3);
-         }
-
-         return var3;
-      } catch (RuntimeException var4) {
-         throw ClientErrorException.clientError(var4, "te.F(" + 4 + ',' + var1 + ',' + var2 + ')');
-      }
-   }
-
    static boolean method467(RSString var0) {
       try {
           if (var0 != null) {

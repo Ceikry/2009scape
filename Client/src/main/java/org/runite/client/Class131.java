@@ -107,7 +107,7 @@ final class Class131 {
 
    static void method1790(int var0, int var1) {
       try {
-         InterfaceWidget var3 = Class3_Sub24_Sub3.getWidget(5, var0);
+         InterfaceWidget var3 = InterfaceWidget.getWidget(5, var0);
          var3.flagUpdate();
          var3.anInt3598 = var1;
       } catch (RuntimeException var4) {

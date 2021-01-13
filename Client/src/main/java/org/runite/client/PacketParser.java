@@ -41,7 +41,7 @@ public final class PacketParser {
 
     static void method825(int var1) {
         try {
-            InterfaceWidget var3 = Class3_Sub24_Sub3.getWidget(1, var1);
+            InterfaceWidget var3 = InterfaceWidget.getWidget(1, var1);
             var3.a();
         } catch (RuntimeException var4) {
             throw ClientErrorException.clientError(var4, "ac.D(" + (byte) 92 + ',' + var1 + ')');
@@ -240,7 +240,7 @@ public final class PacketParser {
                         var19 = GraphicDefinition.incomingBuffer.readUnsignedShort128();
                         var58 = GraphicDefinition.incomingBuffer.readString();
                         Class146.updateInterfacePacketCounter(var19);
-                        Class3_Sub13_Sub27.method295(var58, nodeModelId);
+                        InterfaceWidget.setWidgetText(var58, nodeModelId);
 
 
                         Unsorted.incomingOpcode = -1;
@@ -402,7 +402,7 @@ public final class PacketParser {
                                     playerName = GraphicDefinition.incomingBuffer.readString();
                                     modelId = GraphicDefinition.incomingBuffer.readUnsignedShortLE128();
                                     Class146.updateInterfacePacketCounter(nodeModelId);
-                                    Class3_Sub13_Sub27.method295(playerName, modelId);
+                                    InterfaceWidget.setWidgetText(playerName, modelId);
 
                                     Unsorted.incomingOpcode = -1;
                                     return true;
@@ -1809,7 +1809,7 @@ public final class PacketParser {
 
     static void method256(int var0, int var1, int var2, int var4) {
        try {
-          InterfaceWidget var5 = Class3_Sub24_Sub3.getWidget(4, var2);
+          InterfaceWidget var5 = InterfaceWidget.getWidget(4, var2);
           var5.flagUpdate();
           var5.anInt3597 = var4;
           var5.anInt3596 = var0;

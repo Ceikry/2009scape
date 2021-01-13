@@ -174,7 +174,7 @@ final class Class49 {
 
    static void method1126(int var1) {
       try {
-         InterfaceWidget var2 = Class3_Sub24_Sub3.getWidget(2, var1);
+         InterfaceWidget var2 = InterfaceWidget.getWidget(2, var1);
          var2.a();
       } catch (RuntimeException var4) {
          throw ClientErrorException.clientError(var4, "ha.I(" + -94 + ',' + var1 + ')');

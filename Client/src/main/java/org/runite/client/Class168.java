@@ -58,7 +58,7 @@ final class Class168 {
     static void method2271(int var0, int var1, int var3) {
         try {
 
-            InterfaceWidget var4 = Class3_Sub24_Sub3.getWidget(11, var1);
+            InterfaceWidget var4 = InterfaceWidget.getWidget(11, var1);
             var4.flagUpdate();
             var4.anInt3597 = var3;
             var4.anInt3598 = var0;
@@ -972,7 +972,7 @@ final class Class168 {
     static void method2280(int var1) {
         try {
 
-            InterfaceWidget var2 = Class3_Sub24_Sub3.getWidget(11, var1);
+            InterfaceWidget var2 = InterfaceWidget.getWidget(11, var1);
             var2.a();
         } catch (RuntimeException var3) {
             throw ClientErrorException.clientError(var3, "wl.B(" + 2714 + ',' + var1 + ')');

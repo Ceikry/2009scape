@@ -66,7 +66,7 @@ final class Class108 {
 
    static void method1657(int var0) {
       try {
-         InterfaceWidget var2 = Class3_Sub24_Sub3.getWidget(5, var0);
+         InterfaceWidget var2 = InterfaceWidget.getWidget(5, var0);
          var2.a();
 
       } catch (RuntimeException var3) {
