@@ -3,6 +3,7 @@ package core.game.world
 import core.ServerConstants
 import core.cache.Cache
 import core.cache.ServerStore
+import core.cache.def.impl.ItemDefinition
 import core.cache.def.impl.ObjectDefinition
 import core.game.node.entity.npc.drop.RareDropTable
 import core.game.node.entity.player.Player

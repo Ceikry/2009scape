@@ -2,7 +2,7 @@
 
 <br />
 <p align="center">
-  <a href="https://github.com/woahscam/2009Scape">
+  <a href="https://2009scape.org/">
     <img src="https://i.imgur.com/RsfVfkB.png" alt="Logo" width="300" height="67">
   </a>
   <h3 align="center">An open source MMORPG emulation server</h3>
@@ -16,7 +16,7 @@
     <a href="https://discord.gg/43YPGND">Discord Invite</a>
     ·    <a href="https://github.com/2009scape/2009Scape/issues">Report Bug</a>
     ·
-    <a href="https://github.com/2009scape/2009Scape/projects">Bug Board</a>
+    <a href="https://2009scape.org/">Community Website</a>
   </p>
 <h3>ATTENTION: Starting October 5th, 2020 the development team will no longer be providing support for setting up your own server. Do not ping or private message Developers asking how to build the project. This in-depth guide will be continually updated if the building process changes. We are focusing all of our efforts on the development of features and bugfixes for the live server.</h3>
 </p>

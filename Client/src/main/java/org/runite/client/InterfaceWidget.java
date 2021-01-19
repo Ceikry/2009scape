@@ -3,7 +3,7 @@ package org.runite.client;
 import org.rs09.client.Node;
 import org.rs09.client.config.GameConfig;
 
-final class Class3_Sub28_Sub6 extends Node {
+final class InterfaceWidget extends Node {
 
    static boolean aBoolean3594;
    static boolean aBoolean3668 = false;
@@ -12,8 +12,33 @@ final class Class3_Sub28_Sub6 extends Node {
     int anInt3596;
    int anInt3597;
    int anInt3598;
-   RSString aClass94_3599;
+   RSString text;
    static int anInt3600;
+
+    static InterfaceWidget getWidget(int var1, int var2) {
+       try {
+          InterfaceWidget var3 = (InterfaceWidget)Client.aHashTable_2194.get((long)var2 | (long)var1 << 32);
+          if(null == var3) {
+             var3 = new InterfaceWidget(var1, var2);
+             Client.aHashTable_2194.put(var3.linkableKey, var3);
+          }
+
+          return var3;
+       } catch (RuntimeException var4) {
+          throw ClientErrorException.clientError(var4, "te.F(" + 4 + ',' + var1 + ',' + var2 + ')');
+       }
+    }
+
+   static void setWidgetText(RSString text, int var2) {
+      try {
+         InterfaceWidget var3 = getWidget(2, var2);
+
+         var3.flagUpdate();
+         var3.text = text;
+      } catch (RuntimeException var4) {
+         throw ClientErrorException.clientError(var4, "pi.B(" + (text != null?"{...}":"null") + ',' + (byte) 40 + ',' + var2 + ')');
+      }
+   }
 
 
    final void a() {
@@ -208,7 +233,7 @@ final class Class3_Sub28_Sub6 extends Node {
       }
    }
 
-   final void g() {
+   final void flagUpdate() {
       try {
          this.nodeKey |= Long.MIN_VALUE;
          if(this.b() == 0) {
@@ -220,7 +245,7 @@ final class Class3_Sub28_Sub6 extends Node {
       }
    }
 
-   Class3_Sub28_Sub6(int var1, int var2) {
+   InterfaceWidget(int var1, int var2) {
       try {
          this.linkableKey = (long)var1 << 32 | (long)var2;
       } catch (RuntimeException var4) {
