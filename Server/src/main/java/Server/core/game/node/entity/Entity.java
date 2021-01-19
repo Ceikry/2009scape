@@ -531,7 +531,6 @@ public abstract class Entity extends Node {
 
 	/**
 	 * Starts the death for an npc.
-	 * @param entity the entity.
 	 * @param killer the killer.
 	 */
 	public void startDeath(Entity killer) {
@@ -714,6 +713,22 @@ public abstract class Entity extends Node {
 	 */
 	public <T> T getAttribute(String key) {
 		return attributes.getAttribute(key);
+	}
+
+	/**
+	 * Increments an attribute
+	 * @param key The attribute name.
+	 */
+	public void incrementAttribute(String key) {
+		incrementAttribute(key, 1);
+	}
+
+	/**
+	 * Increments an attribute
+	 * @param key The attribute name.
+	 */
+	public void incrementAttribute(String key, int amount) {
+		attributes.setAttribute(key, attributes.getAttribute(key, 0) + amount);
 	}
 
 	/**

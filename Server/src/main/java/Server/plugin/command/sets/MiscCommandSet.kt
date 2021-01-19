@@ -1,9 +1,13 @@
 package plugin.command.sets
 
+import core.ServerConstants
 import core.cache.def.impl.ItemDefinition
+import core.cache.def.impl.ObjectDefinition
+import core.cache.def.impl.VarbitDefinition
 import core.game.component.Component
 import core.game.node.entity.player.info.Rights
 import core.game.node.entity.player.link.RunScript
+import core.game.node.item.Item
 import core.game.system.SystemLogger
 import core.game.system.communication.CommunicationInfo
 import core.game.world.GameWorld
@@ -12,6 +16,7 @@ import core.game.world.map.build.DynamicRegion
 import core.game.world.repository.Repository
 import core.plugin.InitializablePlugin
 import core.tools.StringUtils
+import plugin.activity.fishingtrawler.TrawlerLoot
 import plugin.command.Command
 import plugin.command.CommandMapping
 import plugin.command.CommandSet
@@ -271,6 +276,45 @@ class MiscCommandSet : CommandSet(Command.Privilege.ADMIN){
 
             log.clear()
             player.setAttribute("loc-log",log)
+        }
+
+        define("rolltrawlerloot"){player,args ->
+            val rolls = if(args.size < 2){
+                100
+            } else {
+                args[1].toString().toInt()
+            }
+            player.bank.add(*TrawlerLoot.getLoot(rolls,false).toTypedArray())
+        }
+
+        define("fillbank"){player,_ ->
+            for(i in 0 until ServerConstants.BANK_SIZE){
+                player.bank.add(Item(i))
+            }
+        }
+
+        define("emptybank"){player,_ ->
+            player.bank.clear()
+            player.bank.update()
+        }
+
+        define("setconfig"){player,args ->
+            if(args.size < 3){
+                reject(player,"Syntax: ::setconfig configID value")
+                return@define
+            }
+            val configID = args[1].toString().toInt()
+            val configValue = args[2].toString().toInt()
+            player.configManager.forceSet(configID,configValue,false)
+        }
+
+        define("getobjectvarp"){player,args ->
+            if(args.size < 2){
+                reject(player,"Syntax: ::getobjectvarp objectid")
+                return@define
+            }
+            val objectID = args[1].toInt()
+            player.sendMessage("${VarbitDefinition.forObjectID(ObjectDefinition.forId(objectID).varbitID).configId}")
         }
 
     }

@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Objects;
 
 import core.ServerConstants;
+import core.game.VarpManager;
 import core.game.component.Component;
 import core.game.container.Container;
 import core.game.container.impl.BankContainer;
@@ -134,6 +135,8 @@ public class Player extends Entity {
 	public EquipmentDegrader degrader = new EquipmentDegrader();
 
 	public PouchManager pouchManager = new PouchManager(this);
+
+	public VarpManager varpManager = new VarpManager(this);
 
 	/**
 	 * The inventory.
@@ -606,7 +609,7 @@ public class Player extends Entity {
 			return;
 		}
 		getPacketDispatch().sendMessage("Oh dear, you are dead!");
-		getStatisticsManager().getDEATHS().incrementAmount();
+		incrementAttribute("/save:"+STATS_BASE+":"+STATS_DEATHS);
 
 		//If player was a Hardcore Ironman, announce that they died
 		if (this.getIronmanManager().getMode().equals(IronmanMode.HARDCORE)){ //if this was checkRestriction, ultimate irons would be moved to HARDCORE_DEAD as well
@@ -619,8 +622,6 @@ public class Player extends Entity {
 
 		packetDispatch.sendTempMusic(90);
 		if (!getZoneMonitor().handleDeath(killer) && (!getProperties().isSafeZone() && getZoneMonitor().getType() != ZoneType.SAFE.getId()) && getDetails().getRights() != Rights.ADMINISTRATOR) {
-			int deaths = getAttribute(STATS_BASE+":"+STATS_DEATHS,0);
-			setAttribute("/save:"+STATS_BASE+":"+STATS_DEATHS,++deaths);
 			GroundItemManager.create(new Item(526), getLocation(), k);
 			final Container[] c = DeathTask.getContainers(this);
 			boolean gravestone = graveManager.generateable() && getIronmanManager().getMode() != IronmanMode.ULTIMATE;

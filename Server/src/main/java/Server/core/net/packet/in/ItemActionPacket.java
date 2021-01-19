@@ -5,9 +5,12 @@ import core.game.interaction.NodeUsageEvent;
 import core.game.interaction.UseWithHandler;
 import core.game.node.entity.npc.NPC;
 import core.game.node.entity.player.Player;
+import core.game.node.item.GroundItem;
+import core.game.node.item.GroundItemManager;
 import core.game.node.item.Item;
 import core.game.node.object.GameObject;
 import core.game.system.SystemLogger;
+import core.game.world.map.Location;
 import core.game.world.map.RegionManager;
 import core.game.world.repository.Repository;
 import core.net.packet.IncomingPacket;
@@ -15,7 +18,11 @@ import core.net.packet.IoBuffer;
 import core.net.packet.PacketRepository;
 import core.net.packet.context.PlayerContext;
 import core.net.packet.out.ClearMinimapFlag;
+import core.tools.Items;
+import plugin.command.rottenpotato.RottenPotatoUseWithHandler;
 import plugin.quest.PluginInteractionManager;
+
+import java.nio.ByteBuffer;
 
 /**
  * The incoming item reward packet.
@@ -52,6 +59,10 @@ public class ItemActionPacket implements IncomingPacket {
 			if (item == null || item.getId() != itemId) {
 				return;
 			}
+			if(itemId == Items.ROTTEN_POTATO_5733){
+				RottenPotatoUseWithHandler.handle(npc,player);
+				return;
+			}
 			event = new NodeUsageEvent(player, interfaceId, item, npc);
 			if(PluginInteractionManager.handle(player,event)){
 				return;
@@ -71,6 +82,10 @@ public class ItemActionPacket implements IncomingPacket {
 			Player target = Repository.getPlayers().get(playerIndex);
 			item = player.getInventory().get(slotId);
 			if (target == null || item == null || item.getId() != itemId) {
+				return;
+			}
+			if(itemId == Items.ROTTEN_POTATO_5733){
+				RottenPotatoUseWithHandler.handle(target,player);
 				return;
 			}
 			event = new NodeUsageEvent(player, interfaceId, item, target);
@@ -98,6 +113,14 @@ public class ItemActionPacket implements IncomingPacket {
 			used = player.getInventory().get(usedSlot);
 			Item with = player.getInventory().get(usedWithSlot);
 			if (used == null || with == null || used.getId() != usedItemId || with.getId() != usedWithItemId) {
+				return;
+			}
+			if(used.getId() == Items.ROTTEN_POTATO_5733){
+				RottenPotatoUseWithHandler.handle(with,player);
+				return;
+			}
+			if(with.getId() == Items.ROTTEN_POTATO_5733){
+				RottenPotatoUseWithHandler.handle(used,player);
 				return;
 			}
 			if (usedItemId < usedWithItemId) {
@@ -140,6 +163,10 @@ public class ItemActionPacket implements IncomingPacket {
 			if (used == null || used.getId() != id) {
 				return;
 			}
+			if(used.getId() == Items.ROTTEN_POTATO_5733){
+				RottenPotatoUseWithHandler.handle(object,player);
+				return;
+			}
 			event = new NodeUsageEvent(player, 0, used, object);
 			if(PluginInteractionManager.handle(player,event)){
 				return;
@@ -152,7 +179,8 @@ public class ItemActionPacket implements IncomingPacket {
 				UseWithHandler.run(event);
 			} catch (Exception e){
 				e.printStackTrace();
-			}			return;
+			}
+			return;
 		default:
 			SystemLogger.error("Error in Item Action Packet! Unhandled opcode = " + buffer.opcode());
 			return;

@@ -11,6 +11,9 @@ import core.game.world.repository.Repository;
 import core.plugin.InitializablePlugin;
 import core.plugin.Plugin;
 
+import static core.game.node.entity.player.info.stats.StatAttributeKeysKt.STATS_BASE;
+import static core.game.node.entity.player.info.stats.StatAttributeKeysKt.STATS_ALKHARID_GATE;
+
 @InitializablePlugin
 public class TollGateOptionPlugin extends OptionHandler {
 
@@ -25,7 +28,7 @@ public class TollGateOptionPlugin extends OptionHandler {
 					player.getInventory().remove(new Item(995, 10));
 					player.getPacketDispatch().sendMessage("You quickly pay the 10 gold toll and go through the gates.");
 					DoorActionHandler.handleAutowalkDoor(player, (GameObject) node);
-					player.getStatisticsManager().getAL_KHARID_GATE_PASSES().incrementAmount();
+					player.incrementAttribute("/save:" + STATS_BASE + ":" + STATS_ALKHARID_GATE, 10);
 					return true;
 				} else {
 					player.getPacketDispatch().sendMessage("You need 10 gold to pass through the gates.");

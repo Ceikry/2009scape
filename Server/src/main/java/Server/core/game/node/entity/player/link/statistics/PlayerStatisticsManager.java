@@ -19,6 +19,9 @@ import core.tools.StringUtils;
  * @author jamix77
  *
  */
+
+// DEPRECATED - Use StatAttributeKeys.kt instead
+@Deprecated
 public class PlayerStatisticsManager implements SavingModule {
 	
 	/**

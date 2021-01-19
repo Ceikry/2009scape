@@ -2,6 +2,7 @@ package plugin.skill;
 
 import core.game.content.global.SkillcapePerks;
 import core.game.world.GameWorld;
+import core.tools.Items;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import plugin.CorePluginTypes.XPGainPlugins;
@@ -229,6 +230,16 @@ public final class Skills {
 			if(gloves != null && player.getEquipment().containsItem(gloves)){
 				experienceAdd += experienceAdd * player.getBrawlingGlovesManager().getExperienceBonus();
 				player.getBrawlingGlovesManager().updateCharges(gloves.getId(),1);
+			}
+		}
+		//Check for Flame Gloves and Ring of Fire
+		if(player.getEquipment().containsItem(new Item(Items.FLAME_GLOVES_13660)) || player.getEquipment().containsItem(new Item(Items.RING_OF_FIRE_13659))){
+			if(slot == Skills.FIREMAKING){
+				int count = 0;
+				if(player.getEquipment().containsItem(new Item(Items.FLAME_GLOVES_13660))) count += 1;
+				if(player.getEquipment().containsItem(new Item(Items.RING_OF_FIRE_13659))) count += 1;
+				if(count == 2) experienceAdd += (0.05 * experienceAdd);
+				else experienceAdd += (0.02 * experienceAdd);
 			}
 		}
 		this.experience[slot] += experienceAdd;
@@ -593,7 +604,8 @@ public final class Skills {
 		}
 		dynamicLevels[slot] = level;
 		if (restoration[slot] != null) {
-			restoration[slot].restart();
+			restoration[slot].restartHpSummPray(false);
+			restoration[slot].restartStat(false);
 		}
 		if (entity instanceof Player) {
 			PacketRepository.send(SkillLevel.class, new SkillContext((Player) entity, slot));
@@ -801,7 +813,8 @@ public final class Skills {
 			dynamicLevels[skill] = maximum;
 		}
 		if (restoration[skill] != null) {
-			restoration[skill].restart();
+			restoration[skill].restartHpSummPray(false);
+			restoration[skill].restartStat(false);
 		}
 		if (entity instanceof Player) {
 			PacketRepository.send(SkillLevel.class, new SkillContext((Player) entity, skill));

@@ -34,6 +34,9 @@ import plugin.ttrail.UriNPC;
 import java.util.ArrayList;
 import java.util.List;
 
+import static core.game.node.entity.player.info.stats.StatAttributeKeysKt.STATS_BASE;
+import static core.game.node.entity.player.info.stats.StatAttributeKeysKt.STATS_DEATHS;
+
 /**
  * Handles the wilderness zone.
  * @author Emperor
@@ -101,7 +104,7 @@ public final class WildernessZone extends MapZone {
 				player.getSettings().updateRunEnergy(player.getSettings().getRunEnergy() - 100);
 				Player owner = killer instanceof Player ? (Player) killer : player;
 				player.getPacketDispatch().sendMessage("Oh dear, you are dead!");
-				player.getStatisticsManager().getDEATHS().incrementAmount();
+				player.incrementAttribute("/save:"+STATS_BASE+":"+STATS_DEATHS);
 
 				//If player was a Hardcore Ironman, announce that they died
 				if (player.getIronmanManager().getMode().equals(IronmanMode.HARDCORE)){ //if this was checkRestriction, ultimate irons would be moved to HARDCORE_DEAD as well
