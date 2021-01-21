@@ -59,11 +59,6 @@ public class EmoteManager implements SavingModule {
 	 * Refreshes the emote tab.
 	 */
 	public void refresh() {
-		int value = 0;
-		if (isUnlocked(Emotes.GOBLIN_BOW) && isUnlocked(Emotes.GOBLIN_SALUTE)) {
-			value = 7; // goblin quest emotes
-		}
-		player.getConfigManager().set(465, value);
 		int value1 = 0;
 		if (isUnlocked(Emotes.IDEA)) {
 			value1 += 4;

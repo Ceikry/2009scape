@@ -128,8 +128,9 @@ public final class AnimationDefinition {
 								else if (opcode == 12) {
 									int i = buffer.get() & 0xFF;
 									anIntArray2151 = new int[i];
-									for (int i_19_ = 0; ((i_19_ ^ 0xffffffff) > (i ^ 0xffffffff)); i_19_++)
+									for (int i_19_ = 0; ((i_19_ ^ 0xffffffff) > (i ^ 0xffffffff)); i_19_++) {
 										anIntArray2151[i_19_] = buffer.getShort() & 0xFFFF;
+									}
 									for (int i_20_ = 0; i > i_20_; i_20_++)
 										anIntArray2151[i_20_] = ((buffer.getShort() & 0xFFFF << 16) + anIntArray2151[i_20_]);
 								} else if (opcode == 13) {

@@ -60,7 +60,6 @@ public final class LoginValidationPlugin implements Plugin<Player> {
 			ActivityManager.start(player, "falconry", true);
 		}
 		player.getConfigManager().set(678, 5);// RFD
-		player.getConfigManager().set(465, (1 << 19) + (9 << 0));//Lumbridge basement shortcut
 		if (player.getSavedData().getQuestData().getDragonSlayerAttribute("repaired")) {
 			player.getConfigManager().set(177, 1967876);
 		}

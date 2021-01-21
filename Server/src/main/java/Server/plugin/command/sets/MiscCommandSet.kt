@@ -5,6 +5,7 @@ import core.cache.def.impl.ItemDefinition
 import core.cache.def.impl.ObjectDefinition
 import core.cache.def.impl.VarbitDefinition
 import core.game.component.Component
+import core.game.node.`object`.GameObject
 import core.game.node.entity.player.info.Rights
 import core.game.node.entity.player.link.RunScript
 import core.game.node.item.Item
@@ -44,9 +45,11 @@ class MiscCommandSet : CommandSet(Command.Privilege.ADMIN){
         define("loc",Command.Privilege.STANDARD){player,_->
             val l = player.location
             val r = player.viewport.region
+            var obj: GameObject? = null
             player.packetDispatch.sendMessage("Absolute: " + l + ", regional: [" + l.localX + ", " + l.localY + "], chunk: [" + l.chunkOffsetX + ", " + l.chunkOffsetY + "], flag: [" + RegionManager.isTeleportPermitted(l) + ", " + RegionManager.getClippingFlag(l) + ", " + RegionManager.isLandscape(l) + "].")
             player.packetDispatch.sendMessage("Region: [id=" + l.regionId + ", active=" + r.isActive + ", instanced=" + (r is DynamicRegion) + "], obj=" + RegionManager.getObject(l) + ".")
-            player.packetDispatch.sendMessage("Object: " + RegionManager.getObject(l) + ".")
+            player.packetDispatch.sendMessage("Object: " + RegionManager.getObject(l).also{obj = it} + ".")
+            player.packetDispatch.sendMessage("Object Varp: " + obj?.definition?.configFile?.configId + " offset: " + obj?.definition?.configFile?.bitShift + " size: " + (obj?.definition?.configFile?.bitShift?.minus(obj?.definition?.configFile?.bitShift!!)))
             SystemLogger.log("Viewport: " + l.getSceneX(player.playerFlags.lastSceneGraph) + "," + l.getSceneY(player.playerFlags.lastSceneGraph))
             val loc = "Location.create(" + l.x + ", " + l.y + ", " + l.z + ")"
             SystemLogger.log(loc + "; " + player.playerFlags.lastSceneGraph + ", " + l.localX + ", " + l.localY)

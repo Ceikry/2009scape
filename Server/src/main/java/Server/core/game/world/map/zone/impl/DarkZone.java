@@ -77,6 +77,7 @@ public final class DarkZone extends MapZone {
 		register(new ZoneBorders(1728, 5120, 1791, 5247));
 		registerRegion(12693);
 		registerRegion(12949);
+		register(new ZoneBorders(3306,9661,3222,9600));
 	}
 
 	@Override

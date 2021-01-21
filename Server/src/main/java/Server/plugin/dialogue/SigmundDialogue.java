@@ -3,6 +3,7 @@ package plugin.dialogue;
 import core.game.node.entity.npc.NPC;
 import core.plugin.InitializablePlugin;
 import core.game.node.entity.player.Player;
+import core.tools.RandomFunction;
 
 /**
  * Handles the SigmundDialogue dialogue.
@@ -10,6 +11,8 @@ import core.game.node.entity.player.Player;
  */
 @InitializablePlugin
 public class SigmundDialogue extends DialoguePlugin {
+
+	int[] TLTNPCS = {278,0,519,2244,3777};
 
 	public SigmundDialogue() {
 
@@ -60,6 +63,11 @@ public class SigmundDialogue extends DialoguePlugin {
 			end();
 			break;
 		case 10:
+			if(player.getQuestRepository().isComplete("Goblin Diplomacy") && player.getQuestRepository().isComplete("Rune Mysteries")){
+				npc("There was recently some damage to the castle cellar.","Part of the wall has collapsed.");
+				stage = 30;
+				break;
+			}
 			interpreter.sendDialogues(npc, FacialExpression.HALF_GUILTY, "I hear the Duke has a task for an adventurer.", "Otherwise, if you want to make yourself useful, there", "are always evil monsters to slay.");
 			stage = 11;
 			break;
@@ -69,6 +77,23 @@ public class SigmundDialogue extends DialoguePlugin {
 			break;
 		case 12:
 			end();
+			break;
+		case 30:
+			npc("The Duke insists that it was an earthquake, but I think","some kind of monsters are to blame.");
+			stage++;
+			break;
+		case 31:
+			npc("You should ask other people around the town if they","saw anything.");
+			stage++;
+			player.getQuestRepository().getQuest("Lost Tribe").start(player);
+			player.setAttribute("/save:tlt-witness", TLTNPCS[0]);
+			break;
+		case 32:
+			end();
+			break;
+		case 34:
+			player("No...");
+			stage = 32;
 			break;
 		}
 		return true;
@@ -84,6 +109,10 @@ public class SigmundDialogue extends DialoguePlugin {
 	public boolean open(Object... args) {
 		npc = (NPC) args[0];
 		interpreter.sendDialogues(npc, FacialExpression.HALF_GUILTY, "Can I help you?");
+		if(player.getQuestRepository().getQuest("Lost Tribe").getStage(player) > 0 && player.getQuestRepository().getQuest("Lost Tribe").getStage(player) < 100){
+			npc("Have you found out what it was?");
+			stage = 34;
+		}
 		stage = 0;
 		return true;
 	}

@@ -101,12 +101,12 @@ public enum Emotes {
             super.play(player);
         }
     },
-    GOBLIN_BOW(24, null, "This emote can be unlocked during the Lost Tribe quest."),
-    GOBLIN_SALUTE(25, null, "This emote can be unlocked during the Lost Tribe quest."),
-    GLASS_BOX(26, null, "This emote can be unlocked during the Mime random event."),
-    CLIMB_ROPE(27, null, "This emote can be unlocked during the Mime random event."),
-    LEAN(28, null, "This emote can be unlocked during the Mime random event."),
-    GLASS_WALL(29, null, "This emote can be unlocked during the Mime random event."),
+    GOBLIN_BOW(24, Animation.create(2127), "This emote can be unlocked during the Lost Tribe quest."),
+    GOBLIN_SALUTE(25, Animation.create(2128), "This emote can be unlocked during the Lost Tribe quest."),
+    GLASS_BOX(26, Animation.create(1131), "This emote can be unlocked during the Mime random event."),
+    CLIMB_ROPE(27, Animation.create(1130), "This emote can be unlocked during the Mime random event."),
+    LEAN(28, Animation.create(1129), "This emote can be unlocked during the Mime random event."),
+    GLASS_WALL(29, Animation.create(1128), "This emote can be unlocked during the Mime random event."),
     IDEA(33, Animation.create(4276), Graphics.create(712), "You can't use this emote yet. <br>Visit the Stronghold of Security to unlock it."),
     STOMP(31, Animation.create(4278), "You can't use this emote yet. <br>Visit the Stronghold of Security to unlock it."),
     FLAP(32, Animation.create(4280), "You can't use this emote yet. <br>Visit the Strongshold of Security to unlock it.") {

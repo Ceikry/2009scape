@@ -1,5 +1,6 @@
 package plugin.quest.free.shieldofarrav;
 
+import core.tools.Items;
 import plugin.dialogue.DialoguePlugin;
 import plugin.dialogue.FacialExpression;
 import core.game.node.entity.npc.NPC;
@@ -68,7 +69,11 @@ public class ReldoDialogue extends DialoguePlugin {
             stage = 3;
             return true;
         }
-        options("Hello stranger.", "I have a question about my Achievement Diary.");
+        if(player.getQuestRepository().getQuest("Lost Tribe").getStage(player) == 40 && player.getInventory().contains(Items.BROOCH_5008,1)){
+            options("Hello stranger.","I have a question about my Achievement Diary.","Ask about the brooch.");
+        } else {
+            options("Hello stranger.", "I have a question about my Achievement Diary.");
+        }
         stage = -1;
         return true;
     }
@@ -209,6 +214,10 @@ public class ReldoDialogue extends DialoguePlugin {
                 	player("I have a question about my Achievement Diary.");
                 	stage = 900;
                 	break;
+                case 3:
+                    player("What can you tell me about this brooch?");
+                    stage = 2000;
+                    break;
             }
             return true;
         }
@@ -216,6 +225,39 @@ public class ReldoDialogue extends DialoguePlugin {
         	sendDiaryDialogue();
         	return true;
 		}
+        //Lost Tribe
+        if(stage >= 2000){
+            switch(stage){
+                case 2000:
+                    npc("I've never seen that symbol before. Where did you find","it?");
+                    stage++;
+                    break;
+                case 2001:
+                    player("In a cave beneath Lumbridge.");
+                    stage++;
+                    break;
+                case 2002:
+                    npc("Very odd. Have you any idea how it got there?");
+                    stage++;
+                    break;
+                case 2003:
+                    player("A goblin might have dropped it.");
+                    stage++;
+                    break;
+                case 2004:
+                    npc("I've never heard of a goblin carrying a brooch like this.","But just a minute...");
+                    stage++;
+                    break;
+                case 2005:
+                    npc("The other day I filed a book about ancient goblin tribes.","It's somewhere on the west end of the library, I think.","Maybe that will be of some use.");
+                    player.getQuestRepository().getQuest("Lost Tribe").setStage(player,41);
+                    stage++;
+                    break;
+                case 2006:
+
+            }
+            return true;
+        }
         if (knightSword.getStage(player) == 10) {
             switch (stage) {
                 default:
