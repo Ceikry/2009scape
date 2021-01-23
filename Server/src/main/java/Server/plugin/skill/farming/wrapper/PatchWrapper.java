@@ -12,6 +12,7 @@ import java.nio.ByteBuffer;
 /**
  * A representation of a farming patch.
  * @author 'Vexia
+ * @author Ceikry
  */
 public final class PatchWrapper implements SavingModule {
 
@@ -19,6 +20,7 @@ public final class PatchWrapper implements SavingModule {
 	 * Represents the patch cycle handler.
 	 */
 	private final PatchCycle cycle;
+
 
 	/**
 	 * Represents the patch interactor handler.
@@ -45,6 +47,8 @@ public final class PatchWrapper implements SavingModule {
 	 */
 	private final int wrapperId;
 
+	public VarbitDefinition def;
+
 	/**
 	 * Constructs a new {@code PatchWrapper} {@code Object}.
 	 * @param wrapperId the wrapper id.
@@ -52,12 +56,14 @@ public final class PatchWrapper implements SavingModule {
 	public PatchWrapper(final Player player, final int wrapperId) {
 		this.player = player;
 		this.wrapperId = wrapperId;
+		def = VarbitDefinition.forObjectID(ObjectDefinition.forId(wrapperId).getVarbitID());
 		this.patch = FarmingPatch.forObject(wrapperId);
 		this.cycle = new PatchCycle(this);
 		this.interactor = new PatchInteractor(this);
 	}
 
 	@Override
+	@Deprecated
 	public void save(ByteBuffer buffer) {
 		buffer.putInt(wrapperId);
 		cycle.save(buffer.put((byte) 1));
@@ -69,6 +75,7 @@ public final class PatchWrapper implements SavingModule {
 	}
 
 	@Override
+	@Deprecated
 	public void parse(ByteBuffer buffer) {
 		int opcode;
 		while ((opcode = buffer.get() & 0xFF) != 0) {
@@ -131,8 +138,9 @@ public final class PatchWrapper implements SavingModule {
 	 * @param value the value.
 	 */
 	public void addConfigValue(final int value) {
-		player.varpManager.get(getConfigId()).setVarbit(getBitShift(),value);
-		player.getConfigManager().set(getConfigId(), (player.getConfigManager().get(getConfigId()) - getConfigValue()) + (value << getBitShift()), true);
+		player.varpManager.setVarbit(def,value);
+		player.varpManager.flagSave(def.getConfigId());
+		//player.getConfigManager().set(getConfigId(), (player.getConfigManager().get(getConfigId()) - getConfigValue()) + (value << getBitShift()), true);
 	}
 
 	/**
@@ -140,7 +148,7 @@ public final class PatchWrapper implements SavingModule {
 	 * @return the value set.
 	 */
 	public int getConfigValue() {
-		return getState() << getBitShift();
+		return getState() << def.getBitShift();
 	}
 
 	/**
@@ -148,27 +156,10 @@ public final class PatchWrapper implements SavingModule {
 	 * @return {@code True} if so.
 	 */
 	public int getState() {
-		VarbitDefinition def = VarbitDefinition.forObjectID(ObjectDefinition.forId(wrapperId).getVarbitID());
 		if (def == null) {
 			return 0;
 		}
 		return def.getValue(player);
-	}
-
-	/**
-	 * Gets the config id.
-	 * @return the id.
-	 */
-	public int getConfigId() {
-		return VarbitDefinition.forObjectID(ObjectDefinition.forId(wrapperId).getVarbitID()).getConfigId();
-	}
-
-	/**
-	 * Gets the bitshift for the wrapper.
-	 * @return the bitshift.
-	 */
-	public int getBitShift() {
-		return VarbitDefinition.forObjectID(ObjectDefinition.forId(wrapperId).getVarbitID()).getBitShift();
 	}
 
 	/**

@@ -14,6 +14,7 @@ import java.nio.ByteBuffer;
  * Manages a player's configurations.
  * @author Emperor
  */
+@Deprecated
 public final class ConfigurationManager implements SavingModule {
 
 	/**
@@ -96,11 +97,13 @@ public final class ConfigurationManager implements SavingModule {
 
 	/**
 	 * Sets a configuration.
-	 * @param config The configuration.
+	 * @param id The configuration id.
 	 * @param value The value.
 	 */
+	@Deprecated
 	public void set(int id, boolean value) {
-		set(id, value ? 1 : 0);
+
+		player.varpManager.get(id).setVarbit(0, value ? 1 : 0).send(player);
 	}
 
 	/**
@@ -108,8 +111,9 @@ public final class ConfigurationManager implements SavingModule {
 	 * @param config The configuration.
 	 * @param value The value.
 	 */
+	@Deprecated
 	public void set(Configuration config, int value) {
-		set(config, value, false);
+		player.varpManager.get(config.id).setVarbit(0,value).send(player);
 	}
 
 	/**
@@ -137,12 +141,14 @@ public final class ConfigurationManager implements SavingModule {
 	 * @param value the value.
 	 * @param delay the delay.
 	 */
+	@Deprecated
 	public void set(final int id, final int value, int delay) {
 		set(id, value);
+		player.varpManager.get(id).setVarbit(0,value).send(player);
 		GameWorld.getPulser().submit(new Pulse(delay, player) {
 			@Override
 			public boolean pulse() {
-				set(id, 0);
+				player.varpManager.get(id).setVarbit(0,0).send(player);
 				return true;
 			}
 		});
@@ -153,12 +159,11 @@ public final class ConfigurationManager implements SavingModule {
 	 * @param id The configuration id.
 	 * @param value The value.
 	 */
+	@Deprecated
 	public void set(int id, int value, boolean saved) {
-		if (configurations[id] != value) {
-			PacketRepository.send(Config.class, new ConfigContext(player, id, configurations[id] = value));
-		}
+		player.varpManager.get(id).setVarbit(0,value).send(player);
 		if (saved) {
-			savedConfigurations[id] = value;
+			player.varpManager.flagSave(id);
 		}
 	}
 
@@ -179,7 +184,11 @@ public final class ConfigurationManager implements SavingModule {
 	 * @param id The config id.
 	 * @return The value.
 	 */
+	@Deprecated
 	public int get(int id) {
+		if(player.varpManager.get(id).getValue() != 0){
+			return player.varpManager.get(id).getValue();
+		}
 		return configurations[id];
 	}
 

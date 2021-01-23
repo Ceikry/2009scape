@@ -1,5 +1,6 @@
 package core.game
 
+import core.cache.def.impl.VarbitDefinition
 import core.game.node.entity.player.Player
 import org.json.simple.JSONArray
 import org.json.simple.JSONObject
@@ -23,6 +24,11 @@ class VarpManager(val player: Player) {
     fun set(index: Int, value: Int){
         get(index).varbits.clear()
         get(index).varbits.add(Varbit(value,0))
+        get(index).send(player)
+    }
+
+    fun setVarbit(def: VarbitDefinition, value: Int){
+        get(def.configId).setVarbit(def.bitShift,value).send(player)
     }
 
     fun flagSave(index: Int){
