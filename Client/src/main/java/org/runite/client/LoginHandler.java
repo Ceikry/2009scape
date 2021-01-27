@@ -112,7 +112,7 @@ class LoginHandler {
                   Class3_Sub13_Sub1.outgoingBuffer.writeLong(Class131.username.toLong());
                   Class3_Sub13_Sub1.outgoingBuffer.writeString(Class131.password);
                   Class3_Sub13_Sub1.method229();
-                  Class3_Sub13_Sub1.outgoingBuffer.rsaEncrypt(Class3_Sub13_Sub14.aBigInteger3162, Class3_Sub13_Sub37.aBigInteger3441);
+                  Class3_Sub13_Sub1.outgoingBuffer.rsaEncrypt(Class3_Sub13_Sub14.MODULUS, Class3_Sub13_Sub37.EXPONENT);
                   Unsorted.aClass3_Sub30_Sub1_2942.index = 0;
                   if(40 == Class143.loadingStage) {
                      Unsorted.aClass3_Sub30_Sub1_2942.writeByte(18);

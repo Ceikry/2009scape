@@ -1,6 +1,7 @@
 package plugin.quest.members.thelosttribe
 
 import core.cache.def.impl.ItemDefinition
+import core.cache.def.impl.NPCDefinition
 import core.cache.def.impl.ObjectDefinition
 import core.game.component.Component
 import core.game.interaction.OptionHandler
@@ -18,6 +19,9 @@ class LostTribeOptionHandler : OptionHandler(){
         ItemDefinition.forId(5008).handlers["option:look-at"] = this
         ItemDefinition.forId(5009).handlers["option:read"] = this
         ObjectDefinition.forId(6916).handlers["option:search"] = this
+        ObjectDefinition.forId(6911).handlers["option:search"] = this
+        NPCDefinition.forId(2084).handlers["option:follow"] = this
+        NPCDefinition.forId(2085).handlers["option:follow"] = this
         return this
     }
 
@@ -34,6 +38,22 @@ class LostTribeOptionHandler : OptionHandler(){
                 } else {
                     return false
                 }
+            }
+            6911 -> {
+                if(!player.inventory.containsItem(Item(Items.SILVERWARE_5011)) && player.questRepository.getQuest("Lost Tribe").getStage(player) == 48){
+                    player.dialogueInterpreter.sendItemMessage(Items.SILVERWARE_5011,"You find the missing silverware!")
+                    player.inventory.add(Item(Items.SILVERWARE_5011))
+                    player.questRepository.getQuest("Lost Tribe").setStage(player,49)
+                } else {
+                    player.sendMessage("You find nothing.")
+                }
+            }
+        }
+
+        if(option.equals("follow")){
+            when(node.id){
+                2084 -> GoblinFollower.sendToLumbridge(player)
+                2085 -> GoblinFollower.sendToMines(player)
             }
         }
         return true

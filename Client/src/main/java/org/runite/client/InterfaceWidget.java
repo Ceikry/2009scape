@@ -219,7 +219,7 @@ final class InterfaceWidget extends Node {
          var8.writeShort(var7);
          var8.writeShort(var2);
          var8.writeInt((int)(9.9999999E7D * Math.random()));
-         var8.rsaEncrypt(Class3_Sub13_Sub14.aBigInteger3162, Class3_Sub13_Sub37.aBigInteger3441);
+         var8.rsaEncrypt(Class3_Sub13_Sub14.MODULUS, Class3_Sub13_Sub37.EXPONENT);
          Class3_Sub13_Sub1.outgoingBuffer.index = 0;
          Class3_Sub13_Sub1.outgoingBuffer.writeByte(36);
          Class3_Sub13_Sub1.outgoingBuffer.writeByte(var8.index);

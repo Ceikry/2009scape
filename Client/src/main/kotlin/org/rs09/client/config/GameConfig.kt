@@ -3,6 +3,7 @@ package org.rs09.client.config
 import org.json.simple.JSONObject
 import org.json.simple.parser.JSONParser
 import java.io.FileReader
+import java.math.BigInteger
 import java.util.*
 
 /**
@@ -263,6 +264,12 @@ class GameConfig {
 
         @JvmField
         var ISAAC = false
+
+        @JvmField
+        var EXPONENT = BigInteger("7162900525229798032761816791230527296329313291232324290237849263501208207972894053929065636522363163621000728841182238772712427862772219676577293600221789")
+
+        @JvmField
+        var MODULUS = BigInteger("58778699976184461502525193738213253649000149147835990136706041084440742975821")
 
         @JvmField
         var SERVER_NAME = "2009scape"

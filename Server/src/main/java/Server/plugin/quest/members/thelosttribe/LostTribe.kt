@@ -47,18 +47,52 @@ class LostTribe : Quest("Lost Tribe",84,83,1) {
                 line(player,"to teach me more about the !!Dorgeshuun??. Perhaps the",line++,stage >= 44)
                 line(player,"!!generals in Goblin Village?? can help.",line++,stage >= 44)
             }
+            if(stage >= 44){
+                line(player,"I should return to !!Duke Horacio?? with my findings.",line++,stage >= 45)
+            }
+            if(stage >= 45){
+                line(player,"I should try to make contact with the !!Dorgeshuun??.",line++,stage >= 46)
+            }
+            if(stage >= 46){
+                line(player,"I need to return to !!Duke Horacio?? and ask him to stop",line++,stage >= 47)
+                line(player,"the war!",line++,stage >= 47)
+            }
+            if(stage >= 47){
+                line(player,"Duke Horacio said the goblins stole some !!silverware??.",line++,stage >= 49)
+                line(player,"I need to find it if I want to stop the war.",line++,stage >= 49)
+            }
+            if(stage >= 48){
+                line(player,"I found !!H.A.M. robes?? in !!Sigmund??'s chest. Perhaps",line++,stage >= 49)
+                line(player,"I should check the !!H.A.M. hideout?? behind the castle",line++,stage >= 49)
+                line(player,"for the missing !!silverware??.",line++,stage >= 49)
+            }
+            if(stage >= 49){
+                line(player,"I found the !!silverware?? in the !!H.A.M. hideout??.",line++,stage >= 50)
+                line(player,"I should go inform !!Duke Horacio?? immediately!",line++,stage >= 50)
+            }
+            if(stage >= 50){
+                line(player,"!!The Duke?? gave me a !!peace treaty?? to take to",line++,stage >= 51)
+                line(player,"the cave goblins. I should do so at once!",line++,stage >= 51)
+            }
         }
 
     }
 
     override fun getConfig(player: Player?, stage: Int): IntArray {
         player ?: return intArrayOf(465,0)
-        if(stage >= 30 && player.getAttribute("tlt-hole-cleared",false)){
-            return intArrayOf(465,4)
+        if(stage in 50..99){
+            return intArrayOf(465,9)
         }
-        if(stage >= 60 && player.getAttribute("tlt-goblin-emotes",false)){
+        if(stage in 46..49){
+            return intArrayOf(465,8)
+        }
+        if(stage in 44..45){
             return intArrayOf(465,7)
         }
+        if(stage in 30..43 && player.getAttribute("tlt-hole-cleared",false)){
+            return intArrayOf(465,4)
+        }
+        if(stage >= 100) return intArrayOf(465,11)
         if(stage > 0) return intArrayOf(465,1)
         return intArrayOf(465,0)
     }

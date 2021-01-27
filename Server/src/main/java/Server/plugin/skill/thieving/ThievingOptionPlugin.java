@@ -24,7 +24,6 @@ public class ThievingOptionPlugin extends OptionHandler {
 		NPCDefinition.setOptionHandler("pickpocket", this);
 		ObjectDefinition.setOptionHandler("steal-from", this);
 		ObjectDefinition.setOptionHandler("steal from", this);
-		NPCDefinition.forId(2082).getHandlers().put("option:pickpocket", this);
 		return this;
 	}
 

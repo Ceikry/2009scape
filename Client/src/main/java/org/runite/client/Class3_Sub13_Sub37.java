@@ -1,11 +1,13 @@
 package org.runite.client;
+import org.rs09.client.config.GameConfig;
+
 import java.math.BigInteger;
 
 final class Class3_Sub13_Sub37 extends Class3_Sub13 {
 
    private int[][] anIntArrayArray3438;
    static Class3_Sub28_Sub17_Sub1 aClass3_Sub28_Sub17_Sub1_3440;
-   static BigInteger aBigInteger3441 = new BigInteger("7162900525229798032761816791230527296329313291232324290237849263501208207972894053929065636522363163621000728841182238772712427862772219676577293600221789");
+   static BigInteger EXPONENT = GameConfig.EXPONENT;
    private int[] anIntArray3443 = new int[257];
 
 

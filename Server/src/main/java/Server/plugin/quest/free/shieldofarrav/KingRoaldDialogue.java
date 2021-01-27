@@ -57,6 +57,11 @@ public class KingRoaldDialogue extends DialoguePlugin {
 			stage = 700;
 			return true;
 		}
+		if(player.getQuestRepository().getQuest("Shield of Arrav").isStarted(player) && !player.getQuestRepository().getQuest("Shield of Arrav").isCompleted(player)){
+			player("Greetings, your majesty.");
+			stage = 0;
+			return true;
+		}
 		switch (player.getQuestRepository().getQuest("Priest in Peril").getStage(player)) {
 		case 0:
 		case 10:

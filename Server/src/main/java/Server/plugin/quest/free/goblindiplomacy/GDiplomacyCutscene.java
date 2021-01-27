@@ -1,5 +1,6 @@
 package plugin.quest.free.goblindiplomacy;
 
+import core.game.component.Component;
 import plugin.activity.ActivityManager;
 import plugin.activity.ActivityPlugin;
 import plugin.activity.CutscenePlugin;
@@ -167,6 +168,11 @@ public final class GDiplomacyCutscene extends CutscenePlugin {
 		}
 
 		@Override
+		public Component npc(String... messages) {
+			return npc(FacialExpression.OLD_NORMAL,messages);
+		}
+
+		@Override
 		public boolean open(Object... args) {
 			npc = (NPC) args[0];
 			type = GrubFoot.forConfig(player);
@@ -205,7 +211,7 @@ public final class GDiplomacyCutscene extends CutscenePlugin {
 						stage++;
 						break;
 					case 5001:
-						sendNormalDialogue(other, FacialExpression.THINKING,"In time of much war there many tribes. Big High War","God send Dorgesh-tribe to fight beardy short-people in mountains.");
+						sendNormalDialogue(other, FacialExpression.OLD_NORMAL,"In time of much war there many tribes. Big High War","God send Dorgesh-tribe to fight beardy short-people","in mountains.");
 						stage++;
 						break;
 					case 5002:
@@ -213,7 +219,7 @@ public final class GDiplomacyCutscene extends CutscenePlugin {
 						stage++;
 						break;
 					case 5003:
-						sendNormalDialogue(other,FacialExpression.THINKING,"It was beardy short-people, that how legend go.");
+						sendNormalDialogue(other,FacialExpression.OLD_NORMAL,"It was beardy short-people, that how legend go.");
 						stage++;
 						break;
 					case 5004:
@@ -241,7 +247,7 @@ public final class GDiplomacyCutscene extends CutscenePlugin {
 						stage++;
 						break;
 					case 5011:
-						sendNormalDialogue(other,FacialExpression.ANGRY,"No, beardy-short-people. That how legend always go,","stupid.");
+						sendNormalDialogue(other,FacialExpression.OLD_NORMAL,"No, beardy-short-people. That how legend always go,","stupid.");
 						stage++;
 						break;
 					case 5012:
@@ -253,11 +259,11 @@ public final class GDiplomacyCutscene extends CutscenePlugin {
 						stage++;
 						break;
 					case 5021:
-						sendNormalDialogue(other,FacialExpression.THINKING,"Yeah even goblins know that.");
+						sendNormalDialogue(other,FacialExpression.OLD_NORMAL,"Yeah even goblins know that.");
 						stage = 5004;
 						break;
 					case 5030:
-						sendNormalDialogue(other,FacialExpression.THINKING,"well, they say, 'We not want to fight,' so god punish","them.");
+						sendNormalDialogue(other,FacialExpression.OLD_NORMAL,"Well, they say, 'We not want to fight,' so god punish","them.");
 						stage++;
 						break;
 					case 5031:
@@ -265,7 +271,7 @@ public final class GDiplomacyCutscene extends CutscenePlugin {
 						stage++;
 						break;
 					case 5032:
-						sendNormalDialogue(other,FacialExpression.THINKING,"What happen then?");
+						sendNormalDialogue(other,FacialExpression.OLD_NORMAL,"What happen then?");
 						stage++;
 						break;
 					case 5033:
@@ -273,7 +279,7 @@ public final class GDiplomacyCutscene extends CutscenePlugin {
 						stage++;
 						break;
 					case 5034:
-						sendNormalDialogue(other,FacialExpression.LAUGH,"Ha ha! If they lost battle they all be dead!");
+						sendNormalDialogue(other,FacialExpression.OLD_NORMAL,"Ha ha! If they lost battle they all be dead!");
 						stage++;
 						break;
 					case 5035:
@@ -309,11 +315,11 @@ public final class GDiplomacyCutscene extends CutscenePlugin {
 						stage++;
 						break;
 					case 5043:
-						sendNormalDialogue(other,FacialExpression.OLD_NORMAL,"But then he close cave so they not get out! You not want to stay in cave all the time.");
+						sendNormalDialogue(other,FacialExpression.OLD_NORMAL,"But then he close cave so they not get out!","You not want to stay in cave all the time.");
 						stage++;
 						break;
 					case 5044:
-						npc("Well I found a brooch underground, and I looked up","the symbol and it was the symbol of the Dorgeshuun.");
+						player("Well I found a brooch underground, and I looked up","the symbol and it was the symbol of the Dorgeshuun.");
 						stage++;
 						break;
 					case 5045:
@@ -353,7 +359,28 @@ public final class GDiplomacyCutscene extends CutscenePlugin {
 						stage++;
 						break;
 					case 5054:
-
+						interpreter.sendDialogue("The generals show you the goblin bow and","goblin salute emotes.");
+						player.setAttribute("/save:tlt-goblin-emotes",true);
+						player.varpManager.get(465).setVarbit(0,7).send(player);
+						player.getQuestRepository().getQuest("Lost Tribe").setStage(player,44);
+						stage++;
+						break;
+					case 5055:
+						player("Thanks.");
+						stage++;
+						break;
+					case 5056:
+						npc("Bye then.");
+						stage++;
+						break;
+					case 5057:
+						sendNormalDialogue(other,FacialExpression.OLD_NORMAL,"Bye.");
+						stage++;
+						break;
+					case 5058:
+						player("Bye.");
+						stage++;
+						break;
 				}
 				return true;
 			}

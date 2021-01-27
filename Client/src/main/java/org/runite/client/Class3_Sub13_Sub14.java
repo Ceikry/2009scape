@@ -1,11 +1,13 @@
 package org.runite.client;
+import org.rs09.client.config.GameConfig;
+
 import java.math.BigInteger;
 
 final class Class3_Sub13_Sub14 extends Class3_Sub13 {
 
    static CacheResourceWorker aCacheResourceWorker_3159;
    private int anInt3160 = 0;
-   static BigInteger aBigInteger3162 = new BigInteger("58778699976184461502525193738213253649000149147835990136706041084440742975821");
+   static BigInteger MODULUS = GameConfig.MODULUS;
    private int anInt3163 = 20;
    private int anInt3164 = 1365;
    private int anInt3165 = 0;

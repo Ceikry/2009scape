@@ -4,6 +4,7 @@ import core.game.container.impl.EquipmentContainer;
 import core.game.node.entity.player.info.Rights;
 import core.game.world.map.Direction;
 import core.game.world.map.Location;
+import core.game.world.map.RegionManager;
 import core.tools.Items;
 import plugin.quest.tutorials.tutorialisland.TutorialSession;
 import plugin.quest.tutorials.tutorialisland.TutorialStage;
@@ -101,7 +102,20 @@ public enum Emotes {
             super.play(player);
         }
     },
-    GOBLIN_BOW(24, Animation.create(2127), "This emote can be unlocked during the Lost Tribe quest."),
+    GOBLIN_BOW(24, Animation.create(2127), "This emote can be unlocked during the Lost Tribe quest.") {
+        @Override
+        public void play(Player player) {
+            if(player.getLocation().getRegionId() == 13206 && !player.getAttribute("mistag-greeted", false)) {
+                RegionManager.getLocalNpcs(player).forEach(npc -> {
+                    if (npc.getId() == 2084 && npc.getLocation().withinDistance(player.getLocation(), 3) && player.getQuestRepository().getQuest("Lost Tribe").getStage(player) == 45) {
+                        player.getDialogueInterpreter().open(2084,"greeting");
+                        player.setAttribute("/save:mistag-greeted",true);
+                    }
+                });
+            }
+            super.play(player);
+        }
+    },
     GOBLIN_SALUTE(25, Animation.create(2128), "This emote can be unlocked during the Lost Tribe quest."),
     GLASS_BOX(26, Animation.create(1131), "This emote can be unlocked during the Mime random event."),
     CLIMB_ROPE(27, Animation.create(1130), "This emote can be unlocked during the Mime random event."),
