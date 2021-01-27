@@ -70,7 +70,7 @@ class LanternCrafting : UseWithHandler(36,38,4525,4542,1607){
 
     private fun craftBullseyeLantern(player: Player,event: NodeUsageEvent): Boolean{
         return when(event.usedWith.id){
-            4525 -> {
+            4542 -> {
                 removeEventItems(player,event)
                 player.inventory.add( Item(4546) )
                 player.sendMessage("You fashion the lens onto the lantern.")
