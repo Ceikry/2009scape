@@ -250,7 +250,7 @@ public class ReldoDialogue extends DialoguePlugin {
                     break;
                 case 2005:
                     npc("The other day I filed a book about ancient goblin tribes.","It's somewhere on the west end of the library, I think.","Maybe that will be of some use.");
-                    player.getQuestRepository().getQuest("Lost Tribe").setStage(player,41);
+                    player.getQuestRepository().getQuest("Lost Tribe").setStage(player,42);
                     stage++;
                     break;
                 case 2006:

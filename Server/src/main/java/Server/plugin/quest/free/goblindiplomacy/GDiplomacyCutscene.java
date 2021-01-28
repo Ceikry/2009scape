@@ -384,6 +384,9 @@ public final class GDiplomacyCutscene extends CutscenePlugin {
 						player("Bye.");
 						stage++;
 						break;
+					case 5059:
+						end();
+						break;
 				}
 				return true;
 			}

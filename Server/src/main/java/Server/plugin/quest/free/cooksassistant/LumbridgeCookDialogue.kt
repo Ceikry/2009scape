@@ -29,6 +29,11 @@ class LumbridgeCookDialogue (player: Player? = null) : DialoguePlugin(player){
 
     override fun open(vararg args: Any?): Boolean {
         npc = args[0] as NPC
+        if(player?.questRepository?.getQuest("Lost Tribe")?.getStage(player) == 10){
+            player("Did you see what happened in the cellar?")
+            stage = 0
+            return true
+        }
         if (player?.questRepository?.getQuest("Cook's Assistant")!!.getStage(player) <= 0) { //If the player has ot started cook's assistant
             npc(FacialExpression.SAD, "What am I to do?")
             stage = 0
