@@ -1,5 +1,6 @@
 package plugin.quest.members.thelosttribe
 
+import core.game.node.entity.npc.NPC
 import core.game.node.entity.player.Player
 import core.plugin.InitializablePlugin
 import plugin.dialogue.DialoguePlugin
@@ -11,6 +12,7 @@ class KazgarDialogue(player: Player? = null) : DialoguePlugin(player) {
     }
 
     override fun open(vararg args: Any?): Boolean {
+        npc = (args[0] as NPC).getShownNPC(player)
         options("Who are you?","Can you show me to the mine?")
         stage = 0
         return true
