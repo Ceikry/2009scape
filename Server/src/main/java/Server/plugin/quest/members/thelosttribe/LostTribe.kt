@@ -10,6 +10,10 @@ import core.tools.Items
 import plugin.skill.Skills
 
 @InitializablePlugin
+/**
+ * Represents the lost tribe quest and quest journal
+ * @author Ceikry
+ */
 class LostTribe : Quest("Lost Tribe",84,83,1) {
     override fun newInstance(`object`: Any?): Quest {
         return this

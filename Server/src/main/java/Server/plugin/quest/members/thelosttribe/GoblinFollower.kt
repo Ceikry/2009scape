@@ -6,6 +6,10 @@ import core.game.system.task.Pulse
 import core.game.world.GameWorld
 import core.game.world.map.Location
 
+/**
+ * Small object for the goblin follow options
+ * @author Ceikry
+ */
 object GoblinFollower {
     fun sendToMines(player: Player){
         travel(player,Location.create(3319, 9616, 0))

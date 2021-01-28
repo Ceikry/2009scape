@@ -45,9 +45,7 @@ public class BoneOfferPlugin extends UseWithHandler {
 
 	@Override
 	public Plugin<Object> newInstance(Object arg) throws Throwable {
-		addHandler(15270, OBJECT_TYPE, this); 
-		addHandler(8063, OBJECT_TYPE, this); 
-		addHandler(13185, OBJECT_TYPE, this); 
+		addHandler(13185, OBJECT_TYPE, this);
 		addHandler(13188, OBJECT_TYPE, this); 
 		addHandler(13191, OBJECT_TYPE, this); 
 		addHandler(13194, OBJECT_TYPE, this); 

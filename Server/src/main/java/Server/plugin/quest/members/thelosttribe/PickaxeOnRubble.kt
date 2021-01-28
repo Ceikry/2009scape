@@ -10,6 +10,10 @@ import plugin.skill.Skills
 import plugin.skill.gather.SkillingTool
 
 @InitializablePlugin
+/**
+ * Handles the usage of a pickaxe on the rubble for lost tribe
+ * @author Ceikry
+ */
 class PickaxeOnRubble : UseWithHandler(1265,1267,1269,1271,1273,1275){
     override fun newInstance(arg: Any?): Plugin<Any> {
         addHandler(6898, OBJECT_TYPE,this)

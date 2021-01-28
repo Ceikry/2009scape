@@ -26,6 +26,10 @@ private const val SIGMUND = 2090
 private const val URTAG = 5858
 private const val BOW_ANIM = 6000
 @InitializablePlugin
+/**
+ * Final cutscene for the lost tribe
+ * @author Ceikry
+ */
 class LostTribeCutscene(val pl: Player? = null) : CutscenePlugin("Lost Tribe Cutscene",true) {
     var camera: PlayerCamera = PlayerCamera(null)
 

@@ -11,6 +11,10 @@ import core.plugin.Plugin
 import core.tools.Items
 
 @InitializablePlugin
+/**
+ * Handles sigmund's chest
+ * @author Ceikry
+ */
 class SigmundChestHandler : OptionHandler() {
     override fun newInstance(arg: Any?): Plugin<Any> {
         ObjectDefinition.forId(6910).handlers["option:open"] = this

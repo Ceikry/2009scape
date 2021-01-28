@@ -6,6 +6,10 @@ import core.game.world.map.Location
 import core.plugin.InitializablePlugin
 
 @InitializablePlugin
+/**
+ * Handles the cave goblin miner npc
+ * @author Ceikry
+ */
 class CaveGoblinMinerNPC(id: Int = 0, location: Location? = null) : AbstractNPC(id,location) {
     var mining = false
     var originallyMiner = false

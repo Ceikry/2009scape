@@ -7,6 +7,10 @@ import core.plugin.InitializablePlugin
 import core.tools.Items
 
 @InitializablePlugin
+/**
+ * Handles Boriss' dialogue
+ * @author Ceikry
+ */
 class BrotherBordissDialogue(player: Player? = null) : DialoguePlugin(player) {
     override fun newInstance(player: Player?): DialoguePlugin {
         return BrotherBordissDialogue(player)

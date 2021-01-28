@@ -12,6 +12,10 @@ import core.plugin.InitializablePlugin
 import core.plugin.Plugin
 
 @InitializablePlugin
+/**
+ * Handles looking at the rocks in the tunnels leading up to the dorg mines
+ * @author Ceikry
+ */
 class CaveRockHandler : OptionHandler() {
     override fun newInstance(arg: Any?): Plugin<Any> {
         for(i in 6921..6924){

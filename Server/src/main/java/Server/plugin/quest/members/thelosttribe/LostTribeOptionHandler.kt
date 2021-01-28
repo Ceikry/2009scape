@@ -15,6 +15,10 @@ import plugin.dialogue.FacialExpression
 
 private val BOOK = Item(Items.GOBLIN_SYMBOL_BOOK_5009)
 @InitializablePlugin
+/**
+ * Handles misc. lost tribe interactions
+ * @author Ceikry
+ */
 class LostTribeOptionHandler : OptionHandler(){
     override fun newInstance(arg: Any?): Plugin<Any> {
         ItemDefinition.forId(5008).handlers["option:look-at"] = this

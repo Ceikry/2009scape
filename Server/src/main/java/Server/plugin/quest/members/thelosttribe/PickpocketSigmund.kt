@@ -14,6 +14,10 @@ import core.tools.Items
 import plugin.dialogue.FacialExpression
 
 @InitializablePlugin
+/**
+ * handles pickpocketing sigmund during the lost tribe quest
+ * @author Ceikry
+ */
 class PickpocketSigmund : OptionHandler(){
     override fun newInstance(arg: Any?): Plugin<Any> {
         NPCDefinition.forId(2082).handlers["option:pickpocket"] = this

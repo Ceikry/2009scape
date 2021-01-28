@@ -13,6 +13,10 @@ import plugin.skill.Skills
 const val HOLY_ELIXER = 13754
 const val SPIRIT_SHIELD = 13734
 @InitializablePlugin
+/**
+ * Blesses shields
+ * @author Ceikry
+ */
 class ShieldBlessingPlugin : UseWithHandler(HOLY_ELIXER, SPIRIT_SHIELD) {
     override fun newInstance(arg: Any?): Plugin<Any> {
         for(i in arrayOf(13185, 13188, 13191, 13194, 13197)){

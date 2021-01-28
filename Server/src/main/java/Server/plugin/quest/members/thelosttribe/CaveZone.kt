@@ -17,6 +17,10 @@ import core.plugin.Plugin
 import core.tools.RandomFunction
 
 @InitializablePlugin
+/**
+ * Handles the movement traps and such for the caves in front of the dorg mines
+ * @author Ceikry
+ */
 class CaveZone : MapZone("TLT Cave Zone", true), Plugin<Unit> {
     val triggers = ArrayList<Location>()
 

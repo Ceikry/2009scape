@@ -9,6 +9,10 @@ import core.plugin.Plugin
 import plugin.dialogue.FacialExpression
 
 @InitializablePlugin
+/**
+ * Handles the HOTGR interface
+ * @author Ceikry
+ */
 class HistoryOfTheGoblinRace : ComponentPlugin() {
     override fun newInstance(arg: Any?): Plugin<Any> {
         ComponentDefinition.put(183,this)
