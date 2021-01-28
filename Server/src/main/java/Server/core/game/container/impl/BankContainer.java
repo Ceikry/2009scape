@@ -361,8 +361,6 @@ public final class BankContainer extends Container {
 	 * Sends the bank space values on the interface.
 	 */
 	public void sendBankSpace() {
-		SystemLogger.log("Sending " + (capacity() - freeSlots()));
-		SystemLogger.log("Sending " + capacity());
 		player.getPacketDispatch().sendString(Integer.toString(capacity() - freeSlots()), 762, 97);
 		player.getPacketDispatch().sendString(Integer.toString(capacity()), 762, 98);
 	}
