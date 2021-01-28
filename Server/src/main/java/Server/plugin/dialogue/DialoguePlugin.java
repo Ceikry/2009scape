@@ -192,7 +192,7 @@ public abstract class DialoguePlugin implements Plugin<Player> {
 	 * @return the component.
 	 */
 	public Component npc(int id, final String... messages) {
-		return interpreter.sendDialogues(id, FacialExpression.HALF_GUILTY, messages);
+		return interpreter.sendDialogues(id, FacialExpression.FRIENDLY, messages);
 	}
 
 	public Component sendDialogue(String... messages) {
