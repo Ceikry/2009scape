@@ -29,7 +29,10 @@ class MajorUpdateWorker {
             }
 
             //remove all null or finished pulses from the list
-            GameWorld.Pulser.TASKS.removeAll(rmlist)
+            rmlist.forEach {
+                if(GameWorld.Pulser.TASKS.contains(it)) GameWorld.Pulser.TASKS.remove(it)
+            }
+            rmlist.clear()
             //perform our update sequence where we write masks, etc
             sequence.start()
             sequence.run()
