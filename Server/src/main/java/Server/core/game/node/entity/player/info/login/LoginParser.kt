@@ -100,7 +100,15 @@ class LoginParser(
             reconnect(player, type)
             return
         }
-        PlayerParser.parse(player)
+        if(!PlayerParser.parse(player)){
+            Repository.players.remove(player)
+            Repository.LOGGED_IN_PLAYERS.remove(player.username)
+            Repository.lobbyPlayers.remove(player)
+            Repository.playerNames.remove(player.name)
+            MSPacketRepository.sendPlayerRemoval(player.name)
+            flag(Response.ERROR_LOADING_PROFILE)
+            return
+        }
         //Repository.getPlayerNames().put(player.getName(), player);
         GameWorld.Pulser.submit(object : Pulse(1) {
             override fun pulse(): Boolean {

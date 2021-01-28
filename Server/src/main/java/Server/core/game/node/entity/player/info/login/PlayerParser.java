@@ -24,16 +24,21 @@ public final class PlayerParser {
 	 * Parses or creates the player's save file depending on whether or not it exists.
 	 * @param player The player.
 	 */
-	public static void parse(Player player) {
+	public static boolean parse(Player player) {
 		File JSON = new File(ServerConstants.PLAYER_SAVE_PATH + player.getName() + ".json");
 		File BIN = new File(ServerConstants.PLAYER_SAVE_PATH + player.getName() + ".save"); //for backwards compatibility.
 
-		if(JSON.exists()) { //parse the new JSON type.
-			new PlayerSaveParser(player).parse();
-		} else if (BIN.exists()){ //parse the old BINARY type.
-			parseBinary(BIN,player);
-		} else { //Create new save
-			makeFromTemplate(player);
+		try {
+			if (JSON.exists()) { //parse the new JSON type.
+				new PlayerSaveParser(player).parse();
+			} else if (BIN.exists()) { //parse the old BINARY type.
+				parseBinary(BIN, player);
+			} else { //Create new save
+				makeFromTemplate(player);
+			}
+			return true;
+		} catch (Exception e){
+			return false;
 		}
 	}
 
