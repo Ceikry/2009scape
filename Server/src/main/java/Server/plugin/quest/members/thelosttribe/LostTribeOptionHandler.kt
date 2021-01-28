@@ -11,6 +11,7 @@ import core.game.node.item.Item
 import core.plugin.InitializablePlugin
 import core.plugin.Plugin
 import core.tools.Items
+import plugin.dialogue.FacialExpression
 
 private val BOOK = Item(Items.GOBLIN_SYMBOL_BOOK_5009)
 @InitializablePlugin
@@ -22,6 +23,7 @@ class LostTribeOptionHandler : OptionHandler(){
         ObjectDefinition.forId(6911).handlers["option:search"] = this
         NPCDefinition.forId(2084).handlers["option:follow"] = this
         NPCDefinition.forId(2086).handlers["option:follow"] = this
+        ObjectDefinition.forId(32952).handlers["option:open"] = this
         return this
     }
 
@@ -47,6 +49,9 @@ class LostTribeOptionHandler : OptionHandler(){
                 } else {
                     player.sendMessage("You find nothing.")
                 }
+            }
+            32952 -> {
+                player.dialogueInterpreter.sendDialogues(player,FacialExpression.THINKING,"I don't think I have permission to go in there.")
             }
         }
 
