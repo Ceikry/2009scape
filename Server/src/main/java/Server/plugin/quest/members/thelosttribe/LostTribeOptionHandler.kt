@@ -24,6 +24,7 @@ class LostTribeOptionHandler : OptionHandler(){
         NPCDefinition.forId(2084).handlers["option:follow"] = this
         NPCDefinition.forId(2086).handlers["option:follow"] = this
         ObjectDefinition.forId(32952).handlers["option:open"] = this
+        ObjectDefinition.forId(32953).handlers["option:open"] = this
         return this
     }
 
@@ -50,7 +51,7 @@ class LostTribeOptionHandler : OptionHandler(){
                     player.sendMessage("You find nothing.")
                 }
             }
-            32952 -> {
+            32952,32953 -> {
                 player.dialogueInterpreter.sendDialogues(player,FacialExpression.THINKING,"I don't think I have permission to go in there.")
             }
         }
