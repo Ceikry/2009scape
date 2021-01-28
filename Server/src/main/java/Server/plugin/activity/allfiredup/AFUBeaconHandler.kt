@@ -82,8 +82,8 @@ class AFUBeaconHandler : OptionHandler(){
             }
 
             AFUBeacon.GOBLIN_VILLAGE -> {
-                if(!player.questRepository.isComplete("Goblin Diplomacy")){
-                    player.dialogueInterpreter.sendDialogues(NPC(beacon.keeper).getShownNPC(player),FacialExpression.THINKING,"We no trust you outsider. You no light our beacon.","(Complete Goblin Diplomacy to use this beacon.)")
+                if(!player.questRepository.isComplete("Lost Tribe")){
+                    player.dialogueInterpreter.sendDialogues(NPC(beacon.keeper).getShownNPC(player),FacialExpression.THINKING,"We no trust you outsider. You no light our beacon.","(Complete Lost Tribe to use this beacon.)")
                     return
                 }
             }
