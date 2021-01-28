@@ -93,7 +93,7 @@ public enum SkillingTool {
 	/**
 	 * Represents the Inferno Adze (mining)
 	 */
-	INFERNO_ADZE2(13661, 41, 0.85D, new Animation(10222));
+	INFERNO_ADZE2(13661, 61, 1.0D, new Animation(10222));
 
 	/**
 	 * The tool id.
