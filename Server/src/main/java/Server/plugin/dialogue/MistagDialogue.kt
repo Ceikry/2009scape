@@ -8,6 +8,7 @@ import core.game.world.GameWorld
 import core.game.world.map.Location
 import core.plugin.InitializablePlugin
 import core.tools.Items
+import plugin.activity.ActivityManager
 import plugin.quest.members.thelosttribe.GoblinFollower
 
 @InitializablePlugin
@@ -78,7 +79,10 @@ class MistagDialogue (player: Player? = null) : DialoguePlugin(player){
             151 -> npc("A peace treaty? Then you will not invade?").also { stage++ }
             152 -> player("No. As long as you stick to the terms of this treaty","there will be no conflict. The Duke of Lumbridge wants","to meet your ruler to sign it.").also { stage++ }
             153 -> npc("I will summon Ur-tag, our headman, at once.").also { stage++ }
-
+            154 -> {
+                end()
+                ActivityManager.start(player,"Lost Tribe Cutscene",false)
+            }
 
             1000 -> end()
 

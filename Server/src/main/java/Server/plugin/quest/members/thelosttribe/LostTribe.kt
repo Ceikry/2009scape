@@ -2,7 +2,11 @@ package plugin.quest.members.thelosttribe
 
 import core.game.node.entity.player.Player
 import core.game.node.entity.player.link.quest.Quest
+import core.game.node.item.GroundItem
+import core.game.node.item.GroundItemManager
+import core.game.node.item.Item
 import core.plugin.InitializablePlugin
+import core.tools.Items
 import plugin.skill.Skills
 
 @InitializablePlugin
@@ -74,8 +78,28 @@ class LostTribe : Quest("Lost Tribe",84,83,1) {
                 line(player,"!!The Duke?? gave me a !!peace treaty?? to take to",line++,stage >= 51)
                 line(player,"the cave goblins. I should do so at once!",line++,stage >= 51)
             }
+            if(stage >= 100){
+                line(player,"!!QUEST COMPLETE!??",line++)
+            }
         }
 
+    }
+
+    override fun finish(player: Player?) {
+        super.finish(player)
+        player ?: return
+        var ln = 10
+        player.packetDispatch.sendItemZoomOnInterface(Items.BROOCH_5008,230,277,5)
+        drawReward(player,"1 Quest Point",ln++)
+        drawReward(player,"3000 Mining XP",ln++)
+        drawReward(player,"A Ring of Life",ln++)
+        drawReward(player,"Freedom of the",ln++)
+        drawReward(player,"Dorgeshuun mines.",ln++)
+        player.skills.addExperience(Skills.MINING,3000.0)
+        if(!player.inventory.add(Item(Items.RING_OF_LIFE_2570))){
+            GroundItemManager.create(Item(Items.RING_OF_LIFE_2570),player)
+        }
+        player.varpManager.get(465).setVarbit(0,11).send(player)
     }
 
     override fun getConfig(player: Player?, stage: Int): IntArray {

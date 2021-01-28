@@ -1,6 +1,7 @@
 package plugin.quest.free.goblindiplomacy;
 
 import core.game.component.Component;
+import core.game.node.entity.player.link.emote.Emotes;
 import plugin.activity.ActivityManager;
 import plugin.activity.ActivityPlugin;
 import plugin.activity.CutscenePlugin;
@@ -361,6 +362,8 @@ public final class GDiplomacyCutscene extends CutscenePlugin {
 					case 5054:
 						interpreter.sendDialogue("The generals show you the goblin bow and","goblin salute emotes.");
 						player.setAttribute("/save:tlt-goblin-emotes",true);
+						player.getEmoteManager().unlock(Emotes.GOBLIN_BOW);
+						player.getEmoteManager().unlock(Emotes.GOBLIN_SALUTE);
 						player.varpManager.get(465).setVarbit(0,7).send(player);
 						player.getQuestRepository().getQuest("Lost Tribe").setStage(player,44);
 						stage++;

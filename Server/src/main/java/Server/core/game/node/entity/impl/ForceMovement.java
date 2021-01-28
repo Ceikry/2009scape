@@ -108,6 +108,10 @@ public class ForceMovement extends Pulse {
 		this(e, start, end, WALK_ANIMATION, animation, direction(start, end), WALKING_SPEED, speed);
 	}
 
+	public ForceMovement(Entity e, Location destination, int startSpeed, int animSpeed){
+		this(e,e.getLocation(),destination,WALK_ANIMATION,WALK_ANIMATION,direction(e.getLocation(),destination),startSpeed,animSpeed);
+	}
+
 	/**
 	 * Constructs a new {@code ForceMovement} {@code Object}.
 	 * @param e the entity.
@@ -239,6 +243,10 @@ public class ForceMovement extends Pulse {
 		fm.start();
 		GameWorld.getPulser().submit(fm);
 		return fm;
+	}
+
+	public static ForceMovement run(Entity e, Location destination, int commenceSpeed, int pathSpeed){
+		return run(e,e.getLocation(),destination,WALK_ANIMATION,WALK_ANIMATION,direction(e.getLocation(),destination),commenceSpeed,pathSpeed);
 	}
 
 	/**

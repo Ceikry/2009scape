@@ -168,7 +168,6 @@ public class ActionButtonPacket implements IncomingPacket {
 					DialogueAction action = actions.get(0);
 					action.handle(player, buttonId);
 					actions.remove(action);
-					actions.clear();
 				}
 				break;
 			}

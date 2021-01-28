@@ -31,6 +31,7 @@ public final class WalkPacket implements IncomingPacket {
 		player.getProperties().setSpell(null);
 		player.getInterfaceManager().close();
 		player.getInterfaceManager().closeChatbox();
+		player.getDialogueInterpreter().getActions().clear();
 		boolean running = buffer.getA() == 1;
 		int x = buffer.getShort();
 		int y = buffer.getShortA();

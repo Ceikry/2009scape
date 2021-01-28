@@ -20,8 +20,12 @@ import core.game.world.map.RegionManager
 import core.game.world.repository.Repository
 import core.game.world.update.flag.context.Animation
 import core.game.world.update.flag.context.Graphics
+import core.net.packet.PacketRepository
+import core.net.packet.context.CameraContext
+import core.net.packet.out.CameraViewPacket
 import core.plugin.InitializablePlugin
 import core.plugin.Plugin
+import plugin.activity.ActivityManager
 import plugin.quest.tutorials.tutorialisland.CharacterDesign
 import java.awt.Toolkit
 import java.awt.datatransfer.StringSelection
@@ -421,6 +425,9 @@ class VisualCommand : CommandPlugin() {
                 o?.ironmanManager?.mode = IronmanMode.NONE
                 player!!.sendMessage("done...")
                 o?.sendMessage("<col=FF0000>You are no longer an ironman. Log out to see the ironman icon disappear.</col>")
+            }
+            "testcut" -> {
+                ActivityManager.start(player,"Lost Tribe Cutscene",true)
             }
             "tryinfinity" -> {
                 GameWorld.Pulser.submit(object : Pulse(1, player) {

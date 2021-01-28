@@ -21,7 +21,7 @@ class LostTribeOptionHandler : OptionHandler(){
         ObjectDefinition.forId(6916).handlers["option:search"] = this
         ObjectDefinition.forId(6911).handlers["option:search"] = this
         NPCDefinition.forId(2084).handlers["option:follow"] = this
-        NPCDefinition.forId(2085).handlers["option:follow"] = this
+        NPCDefinition.forId(2086).handlers["option:follow"] = this
         return this
     }
 

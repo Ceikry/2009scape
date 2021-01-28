@@ -3,6 +3,7 @@ package plugin.dialogue;
 import core.cache.def.impl.ItemDefinition;
 import core.cache.def.impl.NPCDefinition;
 import core.game.component.Component;
+import core.game.system.SystemLogger;
 import core.game.system.config.ItemConfigParser;
 import plugin.quest.tutorials.tutorialisland.TutorialSession;
 import core.game.node.entity.Entity;
@@ -601,8 +602,8 @@ public final class DialogueInterpreter {
      * @param action the reward.
      */
     public void addAction(DialogueAction action) {
-        actions.clear();
         actions.add(action);
+        SystemLogger.log("Adding action");
     }
 
     /**

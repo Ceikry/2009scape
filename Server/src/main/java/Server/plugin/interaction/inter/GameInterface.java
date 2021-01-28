@@ -193,6 +193,10 @@ public final class GameInterface extends ComponentPlugin {
 			player.getPacketDispatch().sendMessage("It wouldn't be very wise opening the world map during combat.");
 			return;
 		}
+		if(player.getLocks().isInteractionLocked() || player.getLocks().isMovementLocked()){
+			player.getPacketDispatch().sendMessage("You can't do this right now.");
+			return;
+		}
 		player.getInterfaceManager().openWindowsPane(new Component(755));
 		int posHash = (player.getLocation().getZ() << 28) | (player.getLocation().getX() << 14) | player.getLocation().getY();
 		player.getPacketDispatch().sendScriptConfigs(622, posHash, "", 0);
