@@ -331,15 +331,5 @@ class MiscCommandSet : CommandSet(Command.Privilege.ADMIN){
             val objectID = args[1].toInt()
             player.sendMessage("${VarbitDefinition.forObjectID(ObjectDefinition.forId(objectID).varbitID).configId}")
         }
-
-        define("testbot"){player,args ->
-            GeneralBotCreator(DraynorWillows(),player,true)
-        }
-
-        define("stopbot"){player,args ->
-            val pulse: GeneralBotCreator.BotScriptPulse? = player.getAttribute("botting:script",null)
-            pulse?.stop()
-        }
-
     }
 }

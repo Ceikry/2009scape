@@ -14,6 +14,7 @@ import plugin.skill.Skills
 import plugin.stringtools.colorize
 
 @PlayerCompatible
+@ScriptName("Draynor Willows")
 @ScriptDescription("Start in Draynor with an axe equipped or in inventory.")
 @ScriptIdentifier("draynor_trees")
 class DraynorWillows : Script(){
