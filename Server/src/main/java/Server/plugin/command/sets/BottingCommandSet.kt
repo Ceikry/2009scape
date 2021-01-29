@@ -14,6 +14,11 @@ import plugin.stringtools.colorize
 class BottingCommandSet : CommandSet(Command.Privilege.STANDARD) {
     override fun defineCommands() {
         define("scripts"){player, _ ->
+            if(!player.getAttribute("botting:warning_shown",false)){
+                player.dialogueInterpreter.sendDialogue(colorize("%RWARNING: Running a bot script will permanently remove you"),colorize("%Rfrom the highscores."))
+                player.dialogueInterpreter.addAction { player, buttonId -> player.setAttribute("/save:botting:warning_shown",true) }
+                return@define
+            }
             for (i in 0..310) {
                 player.packetDispatch.sendString("", 275, i)
             }
@@ -28,6 +33,11 @@ class BottingCommandSet : CommandSet(Command.Privilege.STANDARD) {
             player.interfaceManager.open(Component(275))
         }
         define("script"){player,args ->
+            if(!player.getAttribute("botting:warning_shown",false)){
+                player.dialogueInterpreter.sendDialogue(colorize("%RWARNING: Running a bot script will permanently remove you from the highscores."))
+                player.dialogueInterpreter.addAction { player, buttonId -> player.setAttribute("/save:botting:warning_shown",true) }
+                return@define
+            }
             if(args.size < 2){
                 reject(player,"Usage: ::script identifier")
                 return@define
