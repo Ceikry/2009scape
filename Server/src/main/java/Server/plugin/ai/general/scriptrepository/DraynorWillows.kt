@@ -29,7 +29,7 @@ class DraynorWillows : Script(){
         when(state){
             State.INIT -> {
                 if(true){
-                    bot.interfaceManager.open(Component(195))
+                    bot.interfaceManager.openOverlay(Component(195))
                     bot.packetDispatch.sendString("Woodcutting",195,7)
                     bot.packetDispatch.sendString(colorize("%BLogs Chopped:"),195,8)
                     bot.packetDispatch.sendString(colorize("%B0"),195,9)

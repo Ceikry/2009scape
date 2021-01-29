@@ -131,7 +131,7 @@ public final class DukeHoracioDialogue extends DialoguePlugin {
         final Quest quest = player.getQuestRepository().getQuest("Rune Mysteries");
         switch (stage) {
             case 0:
-                if (player.getQuestRepository().getQuest("Dragon Slayer").getStage(player) == 100 && !player.getInventory().containsItem(DragonSlayer.SHIELD)) {
+                if (player.getQuestRepository().getQuest("Dragon Slayer").getStage(player) == 100 && !player.getInventory().containsItem(DragonSlayer.SHIELD) && !player.getBank().containsItem(DragonSlayer.SHIELD)) {
                     interpreter.sendOptions("Select an Option", "I seek a shield that will protect me from dragonbreath.", "Have you any quests for me?", "Where can I find money?");
                     stage = -5;
                     return true;

@@ -38,11 +38,16 @@ class BottingCommandSet : CommandSet(Command.Privilege.STANDARD) {
                 reject(player,"Invalid script identifier")
                 return@define
             }
+            player.interfaceManager.close()
             GeneralBotCreator(script.clazz.newInstance() as Script,player,true)
+            player.sendMessage(colorize("%RStarting script..."))
+            player.sendMessage(colorize("%RTo stop the script, do ::stopscript or log out."))
+
         }
         define("stopscript"){player,args ->
             val pulse: GeneralBotCreator.BotScriptPulse? = player.getAttribute("botting:script",null)
             pulse?.stop()
+            player.interfaceManager.closeOverlay()
         }
     }
 }
