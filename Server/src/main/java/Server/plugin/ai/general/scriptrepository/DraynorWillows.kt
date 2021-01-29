@@ -1,34 +1,54 @@
 package plugin.ai.general.scriptrepository
 
+import core.game.component.Component
 import core.game.interaction.DestinationFlag
 import core.game.interaction.MovementPulse
 import core.game.node.item.Item
+import core.game.world.GameWorld
 import core.game.world.map.zone.ZoneBorders
 import core.tools.Items
 import core.tools.RandomFunction
+import plugin.ai.AIPlayer
 import plugin.ai.skillingbot.SkillingBotAssembler
 import plugin.skill.Skills
+import plugin.stringtools.colorize
 
+@PlayerCompatible
+@ScriptDescription("Start in Draynor with an axe equipped or in inventory.")
+@ScriptIdentifier("draynor_trees")
 class DraynorWillows : Script(){
     val willowZone = ZoneBorders(3084, 3225,3091, 3239)
 
 
     val bankZone = ZoneBorders(3092, 3240,3094, 3246)
-    var state = State.CHOPPING
-
+    var state = State.INIT
+    var logCount = 0
 
     override fun tick() {
         when(state){
+            State.INIT -> {
+                if(true){
+                    bot.interfaceManager.open(Component(195))
+                    bot.packetDispatch.sendString("Woodcutting",195,7)
+                    bot.packetDispatch.sendString(colorize("%BLogs Chopped:"),195,8)
+                    bot.packetDispatch.sendString(colorize("%B0"),195,9)
+                    bot.packetDispatch.sendInterfaceConfig(195,5,true)
+                }
+                state = State.CHOPPING
+            }
+
             State.CHOPPING -> {
-                if(!willowZone.insideBorder(bot))
+                if (!willowZone.insideBorder(bot))
                     scriptAPI.walkTo(willowZone.randomLoc)
-                else{
-                    val willowtree = scriptAPI.getNearestNode("willow",true)
-                    if(willowtree != null)
-                        willowtree.interaction.handle(bot,willowtree.interaction[0])
-                    if(bot.inventory.getAmount(Item(Items.WILLOW_LOGS_1519)) > 22)
+                else {
+                    val willowtree = scriptAPI.getNearestNode("willow", true)
+                    if (willowtree != null)
+                        willowtree.interaction.handle(bot, willowtree.interaction[0])
+                    if (bot.inventory.getAmount(Item(Items.WILLOW_LOGS_1519)) > 22)
                         state = State.BANKING
                 }
+
+                bot.packetDispatch.sendString(colorize("%B${logCount + bot.inventory.getAmount(Items.WILLOW_LOGS_1519)}"), 195, 9)
             }
 
             State.BANKING -> {
@@ -40,7 +60,9 @@ class DraynorWillows : Script(){
                         bot.pulseManager.run(object : MovementPulse(bot,bank, DestinationFlag.OBJECT){
                             override fun pulse(): Boolean {
                                 val logs = bot.inventory.getAmount(Item(Items.WILLOW_LOGS_1519))
+                                logCount += logs
                                 bot.inventory.remove(Item(Items.WILLOW_LOGS_1519,logs))
+                                bot.bank.add(Item(Items.WILLOW_LOGS_1519,logs))
                                 state = State.CHOPPING
                                 return true
                             }
@@ -61,12 +83,12 @@ class DraynorWillows : Script(){
 
     override fun newInstance(): Script {
         val script = DraynorWillows()
-        script.bot = SkillingBotAssembler().produce(SkillingBotAssembler.Wealth.values().random(),bot.startLocation)
         return script
     }
 
     enum class State {
         CHOPPING,
-        BANKING
+        BANKING,
+        INIT
     }
 }

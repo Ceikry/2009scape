@@ -850,7 +850,9 @@ class Adventurer(val style: CombatStyle): Script() {
                 }
                 val bank: GameObject? = scriptAPI.getNearestNode("Bank booth", true) as GameObject?
                 if (badedge.insideBorder(bot) || bot.location == badedge2 || bot.location == badedge3 || bot.location == badedge4) {
-                    bot.randomWalk(5, 5)
+                    if(bot is AIPlayer) {
+                        (bot as AIPlayer).randomWalk(5, 5)
+                    }
                 }
                 if (bank == null) state = State.EXPLORE
                 class BankingPulse : MovementPulse(bot, bank, DestinationFlag.OBJECT) {
@@ -928,14 +930,6 @@ class Adventurer(val style: CombatStyle): Script() {
         FIND_GE
     }
 
-    class RespawnPulse(val script: Script) : Pulse(20) {
-        override fun pulse(): Boolean {
-            AIPlayer.deregister(script.bot.uid)
-            script.bot.clear()
-            script.newInstance().init()
-            return true
-        }
-    }
 
     override fun newInstance(): Script {
         val script = Adventurer(style)

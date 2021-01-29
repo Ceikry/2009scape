@@ -27,6 +27,7 @@ import core.worker.MajorUpdateWorker
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import plugin.CorePluginTypes.StartupPlugin
+import plugin.ai.general.scriptrepository.PlayerScripts
 import plugin.ge.GrandExchangeDatabase
 import java.nio.ByteBuffer
 import java.util.*
@@ -159,6 +160,7 @@ object GameWorld {
         }
         ObjectDefinition.getDefinitions().values.forEach(Consumer { obj: ObjectDefinition -> obj.examine })
         System.gc()
+        PlayerScripts.init()
         log("185")
         log("188")
     }

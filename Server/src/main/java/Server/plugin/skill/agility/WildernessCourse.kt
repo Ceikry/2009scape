@@ -174,6 +174,7 @@ class WildernessCourse
      * @param object the object.
      */
     private fun handleSteppingStones(player: Player, `object`: GameObject) {
+        player.locks.lockInteractions(12)
         val fail = AgilityHandler.hasFailed(player, 1, 0.3)
         player.addExtension(LogoutTask::class.java, LocationLogoutTask(12, player.location))
         GameWorld.Pulser.submit(object : Pulse(2, player) {

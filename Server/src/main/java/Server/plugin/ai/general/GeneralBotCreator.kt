@@ -1,5 +1,6 @@
 package plugin.ai.general
 
+import core.game.node.entity.player.Player
 import core.game.system.SystemLogger
 import core.game.system.task.Pulse
 import core.game.world.GameWorld
@@ -23,10 +24,18 @@ class GeneralBotCreator {
         GameWorld.Pulser.submit(BotScriptPulse(botScript).also { AIRepository.PulseRepository.add(it) })
     }
 
-    inner class BotScriptPulse(public val botScript: Script) : Pulse(1){
+    constructor(botScript: Script, player: Player, isPlayer: Boolean){
+        botScript.bot = player
+        val pulse = BotScriptPulse(botScript,isPlayer)
+        GameWorld.Pulser.submit(pulse)
+        player.setAttribute("/save:not_on_highscores",true)
+        player.setAttribute("botting:script",pulse)
+    }
+
+    inner class BotScriptPulse(public val botScript: Script, val isPlayer: Boolean = false) : Pulse(1){
         var ticks = 0
         init {
-            botScript.init()
+            botScript.init(isPlayer)
         }
         var randomDelay = 0
 

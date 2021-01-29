@@ -102,7 +102,7 @@ public final class AgilityHandler {
 		if (anim != null) {
 			player.animate(anim);
 		}
-		GameWorld.getPulser().submit(new Pulse(delay, player) {
+		GameWorld.getPulser().submit(new Pulse(anim.getDefinition().getDurationTicks(), player) {
 			@Override
 			public boolean pulse() {
 				player.getProperties().setTeleportLocation(dest);

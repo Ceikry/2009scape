@@ -241,15 +241,6 @@ class GreenDragonKiller(val style: CombatStyle, area: ZoneBorders? = null) : Scr
         }
     }
 
-    class RespawnPulse(val script: Script) : Pulse(20) {
-        override fun pulse(): Boolean {
-            AIPlayer.deregister(script.bot.uid)
-            script.bot.clear()
-            script.newInstance().init()
-            return true
-        }
-    }
-
     override fun newInstance(): Script {
         val script = GreenDragonKiller(style)
         val tier = CombatBotAssembler.Tier.HIGH

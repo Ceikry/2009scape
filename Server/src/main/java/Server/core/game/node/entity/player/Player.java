@@ -14,8 +14,10 @@ import core.game.container.impl.EquipmentContainer;
 import core.game.container.impl.InventoryListener;
 import core.game.node.entity.combat.equipment.EquipmentDegrader;
 import core.game.system.task.Pulse;
+import core.game.world.map.path.Pathfinder;
 import core.game.world.update.flag.context.Animation;
 import core.game.world.update.flag.context.Graphics;
+import core.tools.RandomFunction;
 import core.tools.TickUtilsKt;
 import plugin.ame.AntiMacroHandler;
 import plugin.dialogue.DialogueInterpreter;
@@ -123,6 +125,8 @@ public class Player extends Entity {
 	private PlayerDetails details;
 
 	public boolean inWardrobe = false;
+
+	public Location startLocation = null;
 
 	private Graphics wardrobe_hold_graphics = new Graphics(1182,0,0);
 
@@ -745,6 +749,10 @@ public class Player extends Entity {
 			}
 		}
 		degrader.checkArmourDegrades(this);
+	}
+
+	public void randomWalk(int radiusX, int radiusY) {
+		Pathfinder.find(this, this.getLocation().transform(RandomFunction.random(radiusX, (radiusX * -1)), RandomFunction.random(radiusY, (radiusY * -1)), 0), false, Pathfinder.SMART).walk(this);
 	}
 
 	/**

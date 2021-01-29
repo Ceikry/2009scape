@@ -1,5 +1,6 @@
 package plugin.ai.general.scriptrepository;
 
+import core.game.node.entity.player.Player;
 import plugin.ai.AIPlayer;
 import plugin.ai.general.ScriptAPI;
 import core.game.node.item.Item;
@@ -16,27 +17,26 @@ public abstract class Script {
     public Map<Integer, Integer> skills = new HashMap<>();
 
 
-    public AIPlayer bot;
+    public Player bot;
 
     public boolean running = true;
 
-    public void init()
+    public void init(boolean isPlayer)
     {
         //bot.init();
         scriptAPI = new ScriptAPI(bot);
 
-        for (Item i : equipment)
-        {
-            bot.getEquipment().add(i, true, false);
-        }
-        bot.getInventory().clear();
-        for (Item i : inventory)
-        {
-            bot.getInventory().add(i);
-        }
-        for (Map.Entry<Integer, Integer> skill : skills.entrySet())
-        {
-            setLevel(skill.getKey(), skill.getValue());
+        if(!isPlayer) {
+            for (Item i : equipment) {
+                bot.getEquipment().add(i, true, false);
+            }
+            bot.getInventory().clear();
+            for (Item i : inventory) {
+                bot.getInventory().add(i);
+            }
+            for (Map.Entry<Integer, Integer> skill : skills.entrySet()) {
+                setLevel(skill.getKey(), skill.getValue());
+            }
         }
     }
 
