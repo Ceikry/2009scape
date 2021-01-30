@@ -7,6 +7,7 @@ import core.game.world.map.Location
 import core.tools.Items
 import core.tools.RandomFunction
 import plugin.ai.AIPlayer
+import plugin.ai.general.ScriptAPI
 import plugin.ge.OfferManager
 import plugin.skill.Skills
 import kotlin.random.Random
@@ -36,6 +37,10 @@ if (offer.itemId == 383 && offer.amount >= 1000) {
  * Training Wheel Manufacturer @Ceikry
  * Very slight ge modifications by @Angle
  */
+@PlayerCompatible
+@ScriptName("Guild Sharks")
+@ScriptDescription("Start in the fishing guild with a harpoon","in your inventory.")
+@ScriptIdentifier("guild_sharks")
 class SharkCatcher : Script() {
     //val shark = Items.RAW_SHARK
     val pause = (1000..3000)
@@ -51,8 +56,10 @@ class SharkCatcher : Script() {
         SET_6(listOf(Item(10721), Item(8283), Item(10412), Item(10414), Item(88), Item(3765)));
 
     }
-    private var state = State.FIND_SPOT
+    private var state = State.INIT
     private var tick = 0
+    var fishCounter = 0
+    var overlay: ScriptAPI.BottingOverlay?= null
 
     override fun tick() {
         val fishguild = Location.create(2596, 3410, 0)
@@ -63,14 +70,19 @@ class SharkCatcher : Script() {
         }
         when(state){
 
+            State.INIT -> {
+                overlay = scriptAPI.getOverlay()
+                overlay!!.init()
+                overlay!!.setTitle("Fishing")
+                overlay!!.setTaskLabel("Sharks Caught:")
+                overlay!!.setAmount(0)
+                state = State.FIND_SPOT
+            }
 
             State.BANKING -> {
+                fishCounter += bot.inventory.getAmount(Items.RAW_SHARK_383)
                 scriptAPI.bankItem(Items.RAW_SHARK_383)
-                state = if(bot.bank.getAmount(Items.RAW_SHARK_383) > 1000){
-                    State.TELEPORT_GE//.also {println("There are: $total_amount sharks in the GE.") }
-                } else {
-                    State.FIND_SPOT
-                }
+                state = State.FIND_SPOT
             }
 
             State.STOP -> {
@@ -97,18 +109,23 @@ class SharkCatcher : Script() {
                         myCounter = 0
                         state = State.FIND_SPOT
                     }
-                }
+            }
 
             State.FISHING -> {
                 if (Random.nextBoolean()) {
                     tick = 0
                     val spot = scriptAPI.getNearestNode(334, false)
                     spot!!.interaction.handle(bot, spot.interaction[2])
-                    state = State.FIND_BANK
+                    if(bot.inventory.isFull){
+                        state = State.FIND_BANK
+                    } else {
+                        state = State.IDLE
+                    }
                 }
                 else{
                     state = State.IDLE
                 }
+                overlay!!.setAmount(fishCounter + bot.inventory.getAmount(Items.RAW_SHARK_383))
             }
 
             State.FIND_SPOT -> {
@@ -193,7 +210,8 @@ class SharkCatcher : Script() {
         SELL_GE,
         TELE_FISH,
         IDLE,
-        STOP
+        STOP,
+        INIT
     }
     override fun newInstance(): Script {
         val script = SharkCatcher()

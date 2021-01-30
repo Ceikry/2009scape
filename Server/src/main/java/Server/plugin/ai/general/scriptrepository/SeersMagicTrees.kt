@@ -7,32 +7,52 @@ import core.game.node.item.Item
 import core.game.system.task.Pulse
 import core.game.world.map.Location
 import core.game.world.map.path.Pathfinder
+import core.game.world.map.zone.ZoneBorders
 import core.tools.RandomFunction
 import plugin.ai.AIPlayer
+import plugin.ai.general.ScriptAPI
 import plugin.ai.skillingbot.SkillingBotAssembler
 import plugin.skill.Skills
+import kotlin.math.log
 
+@PlayerCompatible
+@ScriptName("Seers Magics")
+@ScriptDescription("Start in Seers Bank with an axe equipped or in your inventory.")
+@ScriptIdentifier("seers_magics")
 class SeersMagicTrees : Script(){
-    var state = State.CHOPPING
+    var state = State.INIT
     var stage = 0
+    val bankZone  = ZoneBorders(2722,3490,2727,3493)
+    val magicsZone = ZoneBorders(2700, 3396,2704, 3399)
+    var overlay: ScriptAPI.BottingOverlay? = null
+    var logCounter = 0
 
     override fun tick() {
         when(state){
+
+            State.INIT -> {
+                overlay = scriptAPI.getOverlay()
+                overlay!!.init()
+                overlay!!.setTitle("Woodcutting")
+                overlay!!.setTaskLabel("Logs cut:")
+                overlay!!.setAmount(0)
+                state = State.RETURN_TO_TREES
+            }
+
             State.CHOPPING -> {
                 val tree = scriptAPI.getNearestNode(1306,true)
                 tree?.interaction?.handle(bot,tree.interaction[0])
-                if(bot.inventory.getAmount(1513) > 25){
+                if(bot.inventory.isFull){
                     state = State.FIND_BANK
                 }
+                overlay!!.setAmount(logCounter + bot.inventory.getAmount(Items.MAGIC_LOGS_1513))
             }
 
             State.FIND_BANK -> {
-                if(stage == 0)
-                    Pathfinder.find(bot, Location.create(2719, 3431, 0)).walk(bot).also { stage++ }
-                when(bot.location){
-                    Location.create(2719, 3431, 0) -> Pathfinder.find(bot,Location.create(2720, 3460, 0)).walk(bot)
-                    Location.create(2720, 3460, 0) -> Pathfinder.find(bot,Location.create(2726, 3491, 0)).walk(bot)
-                    Location.create(2726, 3491, 0) -> state = State.BANKING.also { stage = 0 }
+                if(!bankZone.insideBorder(bot)){
+                    scriptAPI.walkTo(bankZone.randomLoc)
+                } else {
+                    state = State.BANKING
                 }
             }
 
@@ -42,11 +62,8 @@ class SeersMagicTrees : Script(){
                     bot.pulseManager.run(object: MovementPulse(bot,bank, DestinationFlag.OBJECT){
                         override fun pulse(): Boolean {
                             bot.faceLocation(bank.location)
+                            logCounter += bot.inventory.getAmount(Items.MAGIC_LOGS_1513)
                             scriptAPI.bankItem(Items.MAGIC_LOGS_1513)
-                            if(bot.bank.getAmount(Items.MAGIC_LOGS_1513) > 50){
-                                state = State.TELE_GE
-                                return true
-                            }
                             state = State.RETURN_TO_TREES
                             return true
                         }
@@ -54,15 +71,10 @@ class SeersMagicTrees : Script(){
             }
 
             State.RETURN_TO_TREES -> {
-                if(bot.location == Location.create(2756, 3478, 0))
-                    Pathfinder.find(bot,Location.create(2725, 3485, 0)).walk(bot).also { stage++ }
-                if(stage == 0)
-                    Pathfinder.find(bot, Location.create(2725, 3485, 0)).walk(bot).also { stage++ }
-                when(bot.location){
-                    Location.create(2725, 3485, 0) -> Pathfinder.find(bot,Location.create(2726, 3477, 0)).walk(bot)
-                    Location.create(2726, 3477, 0) -> Pathfinder.find(bot,Location.create(2719, 3431, 0)).walk(bot)
-                    Location.create(2719, 3431, 0) -> Pathfinder.find(bot,Location.create(2701, 3396, 0)).walk(bot)
-                    Location.create(2701, 3396, 0) -> state = State.CHOPPING.also { stage = 0 }
+                if(!magicsZone.insideBorder(bot)){
+                    scriptAPI.walkTo(magicsZone.randomLoc)
+                } else {
+                    state = State.CHOPPING
                 }
             }
 
@@ -95,7 +107,8 @@ class SeersMagicTrees : Script(){
         RETURN_TO_TREES,
         TELE_GE,
         SELL_GE,
-        TELE_SEERS
+        TELE_SEERS,
+        INIT
     }
 
     override fun newInstance(): Script {

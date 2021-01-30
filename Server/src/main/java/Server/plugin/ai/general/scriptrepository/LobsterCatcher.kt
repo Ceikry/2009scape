@@ -12,10 +12,15 @@ import core.game.world.update.flag.context.Graphics
 import core.tools.Items
 import core.tools.RandomFunction
 import plugin.ai.AIPlayer
+import plugin.ai.general.ScriptAPI
 
 import plugin.skill.Skills
 import kotlin.random.Random
 
+@PlayerCompatible
+@ScriptName("Catherby Lobs")
+@ScriptDescription("Start in Catherby bank with a lobster pot in your inventory.")
+@ScriptIdentifier("cath_lobs")
 class LobsterCatcher : Script() {
     private val ANIMATION = Animation(714)
     val offers = HashMap<Int, Int>()
@@ -37,32 +42,42 @@ class LobsterCatcher : Script() {
 
     private var bots = 0
     private var lobstopper = false
+    var overlay: ScriptAPI.BottingOverlay?= null
+    var fishCounter = 0
 
-    private var state = State.FIND_SPOT
+    private var state = State.INIT
     private var tick = 0
     override fun tick() {
         when(state){
 
+            State.INIT -> {
+                overlay = scriptAPI.getOverlay()
+                overlay!!.init()
+                overlay!!.setTitle("Fishing")
+                overlay!!.setTaskLabel("Lobs Caught:")
+                overlay!!.setAmount(0)
+                state = State.FIND_SPOT
+            }
+
 
             State.BANKING -> {
+                fishCounter += bot.inventory.getAmount(Items.RAW_LOBSTER_377)
                 scriptAPI.bankItem(Items.RAW_LOBSTER_377)
-                state = if(bot.bank.getAmount(Items.RAW_LOBSTER_377) > 100){
-                    State.TELEPORT_GE
-                } else {
-                    State.IDLE
-                }
+                state = State.IDLE
             }
 
 
             State.FISHING -> {
-                if (Random.nextBoolean()){
-                    val spot = scriptAPI.getNearestNode(333, false)
-                    spot!!.interaction.handle(bot, spot.interaction[0])
-                    state = State.FIND_BANK
-                } else {
+                val spot = scriptAPI.getNearestNode(333, false)
+                if(spot == null){
                     state = State.IDLE
+                } else {
+                    spot!!.interaction.handle(bot, spot.interaction[0])
                 }
-
+                if(bot.inventory.isFull){
+                    state = State.FIND_BANK
+                }
+                overlay!!.setAmount(fishCounter + bot.inventory.getAmount(Items.RAW_LOBSTER_377))
             }
 
             State.IDLE -> {
@@ -161,7 +176,8 @@ class LobsterCatcher : Script() {
         TELEPORT_GE,
         SELL_GE,
         TELE_CATH,
-        IDLE
+        IDLE,
+        INIT
     }
 
     override fun newInstance(): Script {

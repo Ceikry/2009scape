@@ -43,9 +43,8 @@ class DraynorWillows : Script(){
                     scriptAPI.walkTo(willowZone.randomLoc)
                 else {
                     val willowtree = scriptAPI.getNearestNode("willow", true)
-                    if (willowtree != null)
-                        willowtree.interaction.handle(bot, willowtree.interaction[0])
-                    if (bot.inventory.getAmount(Item(Items.WILLOW_LOGS_1519)) > 22)
+                    willowtree?.interaction?.handle(bot, willowtree.interaction[0])
+                    if (bot.inventory.isFull)
                         state = State.BANKING
                 }
 
