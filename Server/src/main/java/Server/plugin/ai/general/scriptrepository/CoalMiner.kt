@@ -9,20 +9,37 @@ import core.game.system.task.Pulse
 import core.game.world.map.zone.ZoneBorders
 import core.tools.Items
 import plugin.ai.AIPlayer
+import plugin.ai.general.ScriptAPI
 import plugin.ai.skillingbot.SkillingBotAssembler
 import plugin.skill.Skills
 
+@PlayerCompatible
+@ScriptName("Falador Coal Miner")
+@ScriptDescription("Start in Falador East Bank with a pick equipped","or in your inventory.")
+@ScriptIdentifier("fally_coal")
 class CoalMiner() : Script() {
-    var state = State.TO_BANK
+    var state = State.INIT
     var ladderSwitch = false
 
     val bottomLadder = ZoneBorders(3016,9736,3024,9742)
     val topLadder = ZoneBorders(3016,3336,3022,3342)
     val mine = ZoneBorders(3027,9733,3054,9743)
     val bank = ZoneBorders(3009,3355,3018,3358)
+    var overlay: ScriptAPI.BottingOverlay? = null
+    var coalAmount = 0
 
     override fun tick() {
         when(state){
+
+            State.INIT -> {
+                overlay = scriptAPI.getOverlay()
+                ladderSwitch = true
+                overlay!!.init()
+                overlay!!.setTitle("Mining")
+                overlay!!.setTaskLabel("Coal Mined:")
+                overlay!!.setAmount(0)
+                state = State.TO_MINE
+            }
 
             State.MINING -> {
                 if(bot.inventory.freeSlots() == 0){
@@ -34,6 +51,7 @@ class CoalMiner() : Script() {
                     val rock = scriptAPI.getNearestNode("rocks",true)
                     rock?.interaction?.handle(bot,rock.interaction[0])
                 }
+                overlay!!.setAmount(bot.inventory.getAmount(Items.COAL_453) + coalAmount)
             }
 
             State.TO_BANK -> {
@@ -60,12 +78,9 @@ class CoalMiner() : Script() {
             }
 
             State.BANKING -> {
+                coalAmount += bot.inventory.getAmount(Items.COAL_453)
                 scriptAPI.bankItem(Items.COAL_453)
-                if(bot.bank.getAmount(Items.COAL_453) > 10){
-                    state = State.TO_GE
-                } else {
-                    state = State.TO_MINE
-                }
+                state = State.TO_MINE
             }
 
             State.TO_MINE -> {
@@ -128,7 +143,8 @@ class CoalMiner() : Script() {
         BANKING,
         TO_GE,
         SELLING,
-        GO_BACK
+        GO_BACK,
+        INIT
     }
 
     init {

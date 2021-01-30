@@ -1,3 +1,3 @@
 package plugin.ai.general.scriptrepository
 
-annotation class ScriptDescription(val value: String)
+annotation class ScriptDescription(vararg val value: String)

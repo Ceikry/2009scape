@@ -26,7 +26,9 @@ class BottingCommandSet : CommandSet(Command.Privilege.STANDARD) {
             player.packetDispatch.sendString("Bot Scripts",275,2)
             for(script in PlayerScripts.identifierMap.values) {
                 player.packetDispatch.sendString("<bold>${script.name}</bold>", 275, lineid++)
-                player.packetDispatch.sendString(script.description,275,lineid++)
+                script.description.forEach { line ->
+                    player.packetDispatch.sendString(line,275,lineid++)
+                }
                 player.packetDispatch.sendString("<img=3> ::script ${script.identifier}",275,lineid++)
                 player.packetDispatch.sendString("<str>                                 </str>",275,lineid++)
             }
