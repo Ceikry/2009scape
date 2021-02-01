@@ -36,6 +36,8 @@ public class IoSession {
 	 */
 	private final SelectionKey key;
 
+	public int isaacInputOpcode = 0;
+
 	/**
 	 * The executor service.
 	 */

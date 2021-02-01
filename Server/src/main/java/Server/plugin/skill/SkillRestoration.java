@@ -42,7 +42,10 @@ public final class SkillRestoration {
 		if(hpSummPrayTick < GameWorld.getTicks()){
 			if(skillId == Skills.HITPOINTS || skillId == Skills.SUMMONING || skillId == Skills.PRAYER){
 				if(skillId == Skills.HITPOINTS){
-					skills.heal(skills.getLifepoints() < max ? 1 : -1);
+					if(skills.getLifepoints() >= max){
+						return;
+					}
+					skills.heal(1);
 				} else {
 					int current = skills.getLevel(skillId);
 					skills.updateLevel(skillId,current < max ? 1 : -1,max);
@@ -51,7 +54,7 @@ public final class SkillRestoration {
 			}
 		}
 		if(statTick < GameWorld.getTicks()) {
-			if (skillId != Skills.HITPOINTS && skillId != Skills.SUMMONING && skillId == Skills.PRAYER) {
+			if (skillId != Skills.HITPOINTS && skillId != Skills.SUMMONING && skillId != Skills.PRAYER) {
 				int current = skills.getLevel(skillId);
 				skills.updateLevel(skillId,current < max ? 1 : -1,max);
 				restartStat(entity.asPlayer().getPrayer().getActive().contains(PrayerType.RAPID_RESTORE));

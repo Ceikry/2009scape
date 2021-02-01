@@ -22,7 +22,7 @@ public class Config implements OutgoingPacket<ConfigContext> {
 			buffer.putShortA(context.getId());
 			buffer.putC(context.getValue());
 		}
-		if(!context.getPlayer().isArtificial()) {
+		buffer.cypherOpcode(context.getPlayer().getSession().getIsaacPair().getOutput());if(!context.getPlayer().isArtificial()) {
 			context.getPlayer().getDetails().getSession().write(buffer);
 		}
 	}

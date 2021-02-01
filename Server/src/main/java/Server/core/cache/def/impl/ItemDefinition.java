@@ -706,6 +706,9 @@ public class ItemDefinition extends Definition<Item> {
 		if (getName().equals("Boots of lightness")) {
 			return true;
 		}
+		if(getName().toLowerCase().contains("arrow") || getName().toLowerCase().contains("bolt")){
+			return false;
+		}
 		for (String name : allowedNames) {
 			if (getName().toLowerCase().contains(name)) {
 				return true;

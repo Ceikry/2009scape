@@ -13,6 +13,6 @@ public class Logout implements OutgoingPacket<PlayerContext> {
 	@Override
 	public void send(PlayerContext context) {
 		IoBuffer buffer = new IoBuffer(86);
-		context.getPlayer().getDetails().getSession().write(buffer);
+		buffer.cypherOpcode(context.getPlayer().getSession().getIsaacPair().getOutput());context.getPlayer().getDetails().getSession().write(buffer);
 	}
 }

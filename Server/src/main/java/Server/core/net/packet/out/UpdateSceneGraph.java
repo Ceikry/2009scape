@@ -17,6 +17,7 @@ public final class UpdateSceneGraph implements OutgoingPacket<SceneGraphContext>
 	public void send(SceneGraphContext context) {
 		IoBuffer buffer = new IoBuffer(162, PacketHeader.SHORT);
 		Player player = context.getPlayer();
+		buffer.cypherOpcode(player.getSession().getIsaacPair().getOutput());
 		player.getPlayerFlags().setLastSceneGraph(player.getLocation());
 		buffer.putShortA(player.getLocation().getSceneX());
 		for (int regionX = (player.getLocation().getRegionX() - 6) / 8; regionX <= ((player.getLocation().getRegionX() + 6) / 8); regionX++) {

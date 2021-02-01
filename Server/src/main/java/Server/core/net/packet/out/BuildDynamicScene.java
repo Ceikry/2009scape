@@ -71,7 +71,7 @@ public final class BuildDynamicScene implements OutgoingPacket<DynamicSceneConte
 			buffer.putIntB(keys[0]).putIntB(keys[1]).putIntB(keys[2]).putIntB(keys[3]);
 		}
 		buffer.putShort(player.getLocation().getRegionY());
-		context.getPlayer().getSession().write(buffer);
+		buffer.cypherOpcode(context.getPlayer().getSession().getIsaacPair().getOutput());context.getPlayer().getSession().write(buffer);
 		player.getPlayerFlags().setLastSceneGraph(player.getLocation());
 	}
 

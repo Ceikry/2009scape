@@ -21,7 +21,7 @@ public class AudioPacket implements OutgoingPacket<DefaultContext> {
 		buffer.putShort(audio.getId());
 		buffer.put((byte) audio.getVolume());
 		buffer.putShort(audio.getDelay());
-		context.getPlayer().getSession().write(buffer);
+		buffer.cypherOpcode(context.getPlayer().getSession().getIsaacPair().getOutput());context.getPlayer().getSession().write(buffer);
 	}
 
 }

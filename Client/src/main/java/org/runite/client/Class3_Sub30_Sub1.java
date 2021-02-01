@@ -1017,6 +1017,7 @@ public final class Class3_Sub30_Sub1 extends DataBuffer {
 			return;
 		}
 		this.buffer[this.index++] = (byte)(opcode + this.isaacCipher.nextOpcode());
+		System.out.println("Current Cipher Key: " + this.buffer[this.index - 1]);
 	}
 
 	public final int getOpcode() {

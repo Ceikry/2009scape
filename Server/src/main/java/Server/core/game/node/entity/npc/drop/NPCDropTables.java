@@ -5,6 +5,7 @@ import core.game.node.item.*;
 import core.game.system.config.ItemConfigParser;
 import plugin.ai.AIPlayer;
 import plugin.ai.AIRepository;
+import plugin.ai.general.GeneralBotCreator;
 import plugin.drops.DropPlugins;
 import plugin.ge.GrandExchangeDatabase;
 import core.game.content.global.Bones;
@@ -156,6 +157,12 @@ public final class NPCDropTables {
 			GroundItem groundItem = GroundItemManager.create(item, l, getLooter(player, npc, item));
 			if(player instanceof AIPlayer) {
 				AIRepository.addItem(groundItem);
+			}
+			GeneralBotCreator.BotScriptPulse pulse = player.getAttribute("botting:script",null);
+			if(pulse != null && pulse.isRunning()){
+				List<GroundItem> items = player.getAttribute("botting:drops",new ArrayList<GroundItem>());
+				items.add(groundItem);
+				player.setAttribute("botting:drops",items);
 			}
 		}
 	}

@@ -100209,6 +100209,7 @@
       "weight": "1.8",
       "ge_buy_limit": "100",
       "archery_ticket_price": "0",
+      "attack_anims": "390,390,381,390",
       "durability": null
     },
     {

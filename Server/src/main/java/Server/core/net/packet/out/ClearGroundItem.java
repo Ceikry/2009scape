@@ -30,6 +30,6 @@ public final class ClearGroundItem implements OutgoingPacket<BuildItemContext> {
 		Player player = context.getPlayer();
 		Item item = context.getItem();
 		IoBuffer buffer = write(UpdateAreaPosition.getBuffer(player, item.getLocation().getChunkBase()), item);
-		player.getSession().write(buffer);
+		buffer.cypherOpcode(context.getPlayer().getSession().getIsaacPair().getOutput());player.getSession().write(buffer);
 	}
 }

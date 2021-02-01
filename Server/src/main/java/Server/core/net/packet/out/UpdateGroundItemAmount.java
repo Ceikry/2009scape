@@ -29,6 +29,6 @@ public final class UpdateGroundItemAmount implements OutgoingPacket<BuildItemCon
 		Player player = context.getPlayer();
 		Item item = context.getItem();
 		IoBuffer buffer = write(UpdateAreaPosition.getBuffer(player, item.getLocation().getChunkBase()), item, context.getOldAmount());
-		player.getDetails().getSession().write(buffer);
+		buffer.cypherOpcode(context.getPlayer().getSession().getIsaacPair().getOutput());player.getDetails().getSession().write(buffer);
 	}
 }

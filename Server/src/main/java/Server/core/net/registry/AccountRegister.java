@@ -78,6 +78,7 @@ public class AccountRegister extends SQLEntryHandler<RegistryDetails> {
 					response(session,RegistryResponse.INVALID_USERNAME);
 					break;
 				}
+				System.out.println(username);
 				TaskExecutor.executeSQL(new Runnable() {
 					@Override
 					public void run() {
@@ -94,9 +95,14 @@ public class AccountRegister extends SQLEntryHandler<RegistryDetails> {
 				});
 				break;
 			case 36://Register details
-				buffer.get();
+				buffer.get(); //Useless size being written that is already written in the RSA block
 				buffer = LoginReadEvent.getRSABlock(buffer);
-				buffer.getShort();
+				if(buffer.get() != 10){ //RSA header (aka did this decrypt properly)
+					response(session, RegistryResponse.CANNOT_CREATE);
+					break;
+				}
+				buffer.getShort(); // random data
+				System.out.println("Read 2 " + buffer.getShort());
 				int revision = buffer.getShort();//revision?
 				if (revision != Constants.REVISION) {
 					response(session, RegistryResponse.CANNOT_CREATE);

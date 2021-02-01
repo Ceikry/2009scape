@@ -12,12 +12,12 @@ public final class RepositionChild implements OutgoingPacket<ChildPositionContex
 
 	@Override
 	public void send(ChildPositionContext context) {
-		context.getPlayer().getSession().write(
-				new IoBuffer(119)
+		IoBuffer buffer = new IoBuffer(119)
 				.putShortA(context.getPlayer().getInterfaceManager().getPacketCount(1))
 				.putLEInt(context.getInterfaceId() << 16 | context.getChildId())
 				.putShort(context.getPosition().x)
-				.putShortA(context.getPosition().y));
+				.putShortA(context.getPosition().y);
+		buffer.cypherOpcode(context.getPlayer().getSession().getIsaacPair().getOutput());context.getPlayer().getSession().write(buffer);
 	}
 
 }

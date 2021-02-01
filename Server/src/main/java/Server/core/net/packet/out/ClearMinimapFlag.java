@@ -12,7 +12,8 @@ public final class ClearMinimapFlag implements OutgoingPacket<PlayerContext> {
 
 	@Override
 	public void send(PlayerContext context) {
-		context.getPlayer().getDetails().getSession().write(new IoBuffer(153));
+		IoBuffer buffer = new IoBuffer(153);
+		buffer.cypherOpcode(context.getPlayer().getSession().getIsaacPair().getOutput());context.getPlayer().getDetails().getSession().write(buffer);
 	}
 
 }

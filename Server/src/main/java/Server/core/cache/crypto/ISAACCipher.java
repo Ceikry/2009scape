@@ -81,7 +81,7 @@ public class ISAACCipher {
 			isaac();
 			count = SIZE - 1;
 		}
-		return results[count];
+		return 0;//results[count];
 	}
 
 	/**

@@ -7,6 +7,8 @@ import core.net.packet.OutgoingPacket;
 import core.net.packet.PacketHeader;
 import core.net.packet.context.AreaPositionContext;
 
+import java.nio.ByteBuffer;
+
 /**
  * Handles the update area position packet.
  * @author Emperor
@@ -39,7 +41,8 @@ public final class UpdateAreaPosition implements OutgoingPacket<AreaPositionCont
 
 	@Override
 	public void send(AreaPositionContext context) {
-		context.getPlayer().getSession().write(getBuffer(context.getPlayer(), context.getLocation()));
+		IoBuffer buffer = getBuffer(context.getPlayer(),context.getLocation());
+		buffer.cypherOpcode(context.getPlayer().getSession().getIsaacPair().getOutput());context.getPlayer().getSession().write(buffer);
 	}
 
 }

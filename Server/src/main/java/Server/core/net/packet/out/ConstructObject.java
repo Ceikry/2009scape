@@ -29,7 +29,7 @@ public final class ConstructObject implements OutgoingPacket<BuildObjectContext>
 		Player player = context.getPlayer();
 		GameObject o = context.getGameObject();
 		IoBuffer buffer = write(UpdateAreaPosition.getBuffer(player, o.getLocation().getChunkBase()), o);
-		player.getSession().write(buffer);
+		buffer.cypherOpcode(context.getPlayer().getSession().getIsaacPair().getOutput());player.getSession().write(buffer);
 
 	}
 

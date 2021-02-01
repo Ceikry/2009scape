@@ -49,6 +49,6 @@ public class RunScriptPacket implements OutgoingPacket<RunScriptContext> {
 		}
 
 		buffer.putInt(context.getId());
-		context.getPlayer().getDetails().getSession().write(buffer);
+		buffer.cypherOpcode(context.getPlayer().getSession().getIsaacPair().getOutput());context.getPlayer().getDetails().getSession().write(buffer);
 	}
 }

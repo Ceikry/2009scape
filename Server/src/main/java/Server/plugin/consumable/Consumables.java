@@ -321,7 +321,7 @@ public enum Consumables {
 	GUTH_REST(new Potion(new int[] {4417, 4419, 4421, 4423}, new MultiEffect(new RemoveStateEffect(EntityState.POISONED.ordinal()), new EnergyEffect(5), new HealingEffect(5)))),
 	MAGIC_ESS(new Potion(new int[] {11491, 11489}, new SkillEffect(Skills.MAGIC,3,0))),
 	SANFEW(new Potion(new int[] {10925, 10927, 10929, 10931}, new MultiEffect(new RestoreEffect(8,0.25), new PrayerEffect(8,0.25), new RemoveStateEffect(EntityState.POISONED.ordinal()), new RemoveStateEffect(EntityState.DISEASED.ordinal())))),
-	SUPER_ENERGY(new Potion(new int[] {3016, 3018, 3020, 3022}, new EnergyEffect(-1))),
+	SUPER_ENERGY(new Potion(new int[] {3016, 3018, 3020, 3022}, new EnergyEffect(20))),
 
 	/** Barbarian Mixes */
 	PRAYERMIX(new BarbarianMix(new int[] {11467, 11465}, new MultiEffect(new PrayerEffect(7, 0.25), new HealingEffect(6)))),

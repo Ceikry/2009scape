@@ -1,5 +1,6 @@
 package core.net.packet;
 
+import core.cache.crypto.ISAACCipher;
 import core.cache.misc.buffer.ByteBufferUtils;
 
 import java.nio.ByteBuffer;
@@ -23,7 +24,7 @@ public class IoBuffer {
 	/**
 	 * The opcode.
 	 */
-	private final int opcode;
+	private int opcode;
 
 	/**
 	 * The packet header.
@@ -571,6 +572,10 @@ public class IoBuffer {
 			is[i] = (byte) (buf.get() - 128);
 		}
 		return this;
+	}
+
+	public void cypherOpcode(ISAACCipher cipher){
+		this.opcode += (byte)cipher.getNextValue();
 	}
 
 	/**

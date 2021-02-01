@@ -1,5 +1,6 @@
 package core.net.event
 
+import core.ServerConstants
 import core.cache.Cache
 import core.cache.crypto.ISAACCipher
 import core.cache.crypto.ISAACPair
@@ -11,6 +12,7 @@ import core.game.node.entity.player.info.login.LoginParser
 import core.game.node.entity.player.info.login.LoginType
 import core.game.node.entity.player.info.login.Response
 import core.game.node.entity.player.info.portal.PlayerSQLManager
+import core.game.system.SystemLogger
 import core.game.system.task.TaskExecutor
 import core.game.world.repository.Repository
 import core.net.Constants
@@ -21,8 +23,6 @@ import core.tools.StringUtils
 import java.lang.Runnable
 import java.math.BigInteger
 import java.nio.ByteBuffer
-import java.sql.SQLException
-import kotlin.experimental.and
 
 /**
  * Handles login reading events.
@@ -37,11 +37,15 @@ class LoginReadEvent
 (session: IoSession?, buffer: ByteBuffer?) : IoReadEvent(session, buffer) {
     override fun read(session: IoSession, buffer: ByteBuffer) {
         val opcode: Int = buffer.get().toInt()
+        println(buffer.remaining())
+        println(opcode)
         if (buffer.short.toInt() != buffer.remaining()) {
             session.write(Response.BAD_SESSION_ID)
             return
         }
-        if (buffer.int != Constants.REVISION) { // || buffer.getInt() != Constants.CLIENT_BUILD) {
+        val build = buffer.int
+        println(build)
+        if (build != Constants.REVISION) { // || buffer.getInt() != Constants.CLIENT_BUILD) {
             session.write(Response.UPDATED)
             return
         }
@@ -74,10 +78,10 @@ class LoginReadEvent
             val displayMode = buffer.get().toInt() // Display mode
             val data = ByteArray(24) // random.dat data.
             buffer[data]
-            ByteBufferUtils.getString(buffer)
+            SystemLogger.log(ByteBufferUtils.getString(buffer))
             buffer.int // Affiliate id
             buffer.int // Hash containing a bunch of settings
-            buffer.short //Current interface packet counter.
+            val curpackets = buffer.short //Current interface packet counter.
             for (i in Cache.getIndexes().indices) {
                 val crc = if (Cache.getIndexes()[i] == null) 0 else Cache.getIndexes()[i].information.informationContainer.crc
                 if (crc != buffer.int && crc != 0) {
@@ -86,8 +90,16 @@ class LoginReadEvent
                 }
             }
             buffer = getRSABlock(buffer)
+            buffer.rewind()
+            if(buffer.get().toInt() != 10){
+                session.write(Response.COULD_NOT_LOGIN)
+                return
+            }
             val isaacSeed = getISAACSeed(buffer)
             val inCipher = ISAACCipher(isaacSeed)
+            for(i in 0..curpackets){
+                inCipher.nextValue
+            }
             for (i in 0..3) {
                 isaacSeed[i] += 50
             }
@@ -105,8 +117,9 @@ class LoginReadEvent
                         return@Runnable
                     }
                     login(PlayerDetails(username, password), session, b, opcode)
-                } catch (e: SQLException) {
+                } catch (e: Exception) {
                     e.printStackTrace()
+                    session.write(Response.COULD_NOT_LOGIN)
                 }
             })
         }
@@ -154,12 +167,11 @@ class LoginReadEvent
          */
         @JvmStatic
         fun getRSABlock(buffer: ByteBuffer): ByteBuffer {
-            val rsaData = ByteArray(buffer.get().toInt())
-            buffer[rsaData]
-            val block = ByteBuffer.wrap(rsaData)
-            val num = block.get().toInt()
-            require(num == 10) { "Invalid RSA header $num!" }
-            return block
+            val numBytes = 256 + buffer.get()
+            val encryptedByteArray = ByteArray(numBytes)
+            buffer.get(encryptedByteArray)
+            val encryptedBytes = BigInteger(encryptedByteArray)
+            return ByteBuffer.wrap(encryptedBytes.modPow(ServerConstants.EXPONENT,ServerConstants.MODULUS).toByteArray())
         }
     }
 }

@@ -147,14 +147,22 @@ class ScriptAPI(private val bot: Player) {
     private fun getNearestGroundItem(id: Int): GroundItem? {
         var distance = 11.0
         var closest: GroundItem? = null
-        if(AIRepository.getItems(bot) == null) return null
-        for(item in AIRepository.getItems(bot)!!.filter { it.distance(bot.location) < 10 }){
-            if(item.id == id){
-                //distance = item.distance(bot.location)
-                closest = item
+        if(AIRepository.getItems(bot) != null) {
+            for (item in AIRepository.getItems(bot)!!.filter { it.distance(bot.location) < 10 }) {
+                if (item.id == id) {
+                    //distance = item.distance(bot.location)
+                    closest = item
+                }
+            }
+            if (!GroundItemManager.getItems().contains(closest)) AIRepository.getItems(bot)?.remove(closest).also { return null }
+        } else {
+            val items: ArrayList<GroundItem>? = bot.getAttribute("botting:drops",null)
+            if(items != null){
+                for(item in items.filter { it.distance(bot.location) < 10 }){
+                    if(item.id == id) return item.also { items.remove(item); bot.setAttribute("botting:drops",items) }
+                }
             }
         }
-        if(!GroundItemManager.getItems().contains(closest)) AIRepository.getItems(bot)?.remove(closest).also {return null}
         return closest
     }
 

@@ -14,6 +14,6 @@ public class RunEnergy implements OutgoingPacket<PlayerContext> {
 	public void send(PlayerContext context) {
 		IoBuffer buffer = new IoBuffer(234);
 		buffer.put((byte) context.getPlayer().getSettings().getRunEnergy());
-		context.getPlayer().getDetails().getSession().write(buffer);
+		buffer.cypherOpcode(context.getPlayer().getSession().getIsaacPair().getOutput());context.getPlayer().getDetails().getSession().write(buffer);
 	}
 }

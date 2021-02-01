@@ -204,7 +204,7 @@ final class InterfaceWidget extends Node {
    static void a(int var0, int var2, int var3, RSString var4, long var5, int var7, RSString name) {
       try {
     	  System.out.println("Class3_Sub28_Sub6 " + var0 + ", " + 10603 + ", " + var2 + ", " + var3 + ", " + var4 + ", " + var5 + ", " + var7);
-         DataBuffer var8 = new DataBuffer(128);
+         DataBuffer var8 = new DataBuffer(129);
          var8.writeByte(10);
          var8.writeShort((int)(Math.random() * 99999.0D));
          var8.writeShort(GameConfig.CLIENT_BUILD);
@@ -219,7 +219,7 @@ final class InterfaceWidget extends Node {
          var8.writeShort(var7);
          var8.writeShort(var2);
          var8.writeInt((int)(9.9999999E7D * Math.random()));
-         var8.rsaEncrypt(Class3_Sub13_Sub14.MODULUS, Class3_Sub13_Sub37.EXPONENT);
+         var8.rsaEncrypt(Class3_Sub13_Sub37.EXPONENT,Class3_Sub13_Sub14.MODULUS);
          Class3_Sub13_Sub1.outgoingBuffer.index = 0;
          Class3_Sub13_Sub1.outgoingBuffer.writeByte(36);
          Class3_Sub13_Sub1.outgoingBuffer.writeByte(var8.index);

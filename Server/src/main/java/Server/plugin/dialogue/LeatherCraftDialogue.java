@@ -2,6 +2,7 @@ package plugin.dialogue;
 
 import core.cache.def.impl.ItemDefinition;
 import core.game.component.Component;
+import core.game.system.SystemLogger;
 import plugin.skill.crafting.armour.DragonCraftPulse;
 import plugin.skill.crafting.armour.HardCraftPulse;
 import plugin.skill.crafting.armour.LeatherCrafting;
@@ -98,16 +99,17 @@ public final class LeatherCraftDialogue extends DialoguePlugin {
 	public boolean handle(int interfaceId, int buttonId) {
 		player.getInterfaceManager().closeChatbox();
 		int amt = 0;
+		SystemLogger.log("" + buttonId);
 		switch (type) {
 		case "hard":
 			switch (buttonId) {
 			case 6:
 				amt = 1;
 				break;
-			case 5:
+			case 4:
 				amt = 5;
 				break;
-			case 4:
+			case 3:
 				player.setAttribute("runscript", new RunScript() {
 					@Override
 					public boolean handle() {
@@ -118,7 +120,7 @@ public final class LeatherCraftDialogue extends DialoguePlugin {
 				});
 				player.getDialogueInterpreter().sendInput(false, "Enter the amount");
 				return true;
-			case 3:
+			case 2:
 				amt = player.getInventory().getAmount(new Item(LeatherCrafting.HARD_LEATHER));
 				break;
 			}

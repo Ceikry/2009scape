@@ -16,6 +16,6 @@ public class InterfaceConfig implements OutgoingPacket<InterfaceConfigContext> {
 		buffer.putC(context.isHidden() ? 1 : 0);
 		buffer.putShort(context.getPlayer().getInterfaceManager().getPacketCount(1));
 		buffer.putLEInt(context.getInterfaceId() << 16 | context.getChildId());
-		context.getPlayer().getSession().write(buffer);
+		buffer.cypherOpcode(context.getPlayer().getSession().getIsaacPair().getOutput());context.getPlayer().getSession().write(buffer);
 	}
 }

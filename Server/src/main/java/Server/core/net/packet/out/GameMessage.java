@@ -15,6 +15,6 @@ public class GameMessage implements OutgoingPacket<GameMessageContext> {
 	public void send(GameMessageContext context) {
 		IoBuffer buffer = new IoBuffer(70, PacketHeader.BYTE);
 		buffer.putString(context.getMessage());
-		context.getPlayer().getSession().write(buffer);
+		buffer.cypherOpcode(context.getPlayer().getSession().getIsaacPair().getOutput());context.getPlayer().getSession().write(buffer);
 	}
 }
