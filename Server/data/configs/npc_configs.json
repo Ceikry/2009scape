@@ -37946,6 +37946,7 @@
   {
     "id": "4353",
     "name": "Cave horror",
+    "aggressive":"true",
     "examine": "A horrible, emaciated ape like creature with beady red eyes.",
     "lifepoints": "55",
     "attack_level": "80",
@@ -37970,6 +37971,7 @@
   {
     "id": "4354",
     "name": "Cave horror",
+    "aggressive":"true",
     "examine": "A horrible, emaciated ape like creature with beady red eyes.",
     "lifepoints": "55",
     "attack_level": "80",
@@ -37994,6 +37996,7 @@
   {
     "id": "4355",
     "name": "Cave horror",
+    "aggressive":"true",
     "examine": "A horrible, emaciated ape like creature with beady red eyes.",
     "lifepoints": "55",
     "attack_level": "80",
@@ -38018,6 +38021,7 @@
   {
     "id": "4356",
     "name": "Cave horror",
+    "aggressive":"true",
     "examine": "A horrible, emaciated ape like creature with beady red eyes.",
     "lifepoints": "55",
     "attack_level": "80",
@@ -38042,6 +38046,7 @@
   {
     "id": "4357",
     "name": "Cave horror",
+    "aggressive":"true",
     "examine": "A horrible, emaciated ape like creature with beady red eyes.",
     "lifepoints": "55",
     "attack_level": "80",
