@@ -495,10 +495,6 @@ public class DataBuffer extends Linkable {
         byte[] var8 = var7.toByteArray();
         this.index = 0;
         this.writeByte(var8.length);
-        System.out.println("Var8 length " + var8.length);
-        System.out.println("Var6 length " + var6.toByteArray().length);
-        System.out.println("Var 6: " + var6);
-        System.out.println("Var 7(RSA): " + var7);
         this.putBytes(var8, var8.length);
     }
 

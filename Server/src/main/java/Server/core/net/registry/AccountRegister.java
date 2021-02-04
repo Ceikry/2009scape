@@ -102,7 +102,6 @@ public class AccountRegister extends SQLEntryHandler<RegistryDetails> {
 					break;
 				}
 				buffer.getShort(); // random data
-				System.out.println("Read 2 " + buffer.getShort());
 				int revision = buffer.getShort();//revision?
 				if (revision != Constants.REVISION) {
 					response(session, RegistryResponse.CANNOT_CREATE);
