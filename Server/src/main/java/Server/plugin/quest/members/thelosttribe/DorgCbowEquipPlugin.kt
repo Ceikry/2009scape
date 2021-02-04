@@ -20,6 +20,7 @@ class DorgCbowEquipPlugin : Plugin<Item>{
 
     override fun fireEvent(identifier: String?, vararg args: Any?): Any {
         val player = args[0] as Player
+        if(identifier == "unequip") return true
         if(!player.questRepository.isComplete("Lost Tribe")){
             player.dialogueInterpreter.sendDialogue("You must complete Lost Tribe to use this.")
             return false

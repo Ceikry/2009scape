@@ -78,12 +78,6 @@ public class EquipHandler extends OptionHandler {
 				player.getBrawlingGlovesManager().registerGlove(item.getId());
 			}
 
-			if(item.getId() == Items.SNOWBALL_11951){
-				player.getInteraction().set(new Option("Pelt",0).setHandler(new PeltOptionPlugin()));
-			} else {
-				Interaction.sendOption(player,0,"null");
-			}
-
 			if (item.getId() == Items.BLACK_CHAINBODY_1107
 					&& player.getAttribute("diary:falador:black-chain-bought", false)
 					&& new ZoneBorders(2969, 3310, 2975, 3314, 0).insideBorder(player)) {
