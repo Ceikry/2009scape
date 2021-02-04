@@ -88,8 +88,6 @@ class PlayerSaver (val player: Player){
         } catch (e: IOException) {
             e.printStackTrace()
         }
-
-        player.gameAttributes.dump(player.name + ".xml")
     }
 
     fun saveVarps(root: JSONObject){

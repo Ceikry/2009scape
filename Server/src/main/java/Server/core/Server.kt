@@ -5,13 +5,18 @@ import core.game.system.SystemShutdownHook
 import core.game.system.config.ServerConfigParser
 import core.game.system.mysql.SQLManager
 import core.game.world.GameWorld
+import core.game.world.repository.Repository
 import core.gui.ConsoleFrame
 import core.net.NioReactor
 import core.net.amsc.WorldCommunicator
 import core.tools.TimeStamp
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 import plugin.ge.GEAutoStock
 import java.io.File
 import java.net.BindException
+import java.util.*
+import kotlin.system.exitProcess
 
 /**
  * The main class, for those that are unable to read the class' name.
@@ -57,7 +62,7 @@ object Server {
         //		backup = new AutoBackup();
         GameWorld.prompt(true)
         SQLManager.init()
-        Runtime.getRuntime().addShutdownHook(Thread(SystemShutdownHook()))
+        Runtime.getRuntime().addShutdownHook(ServerConstants.SHUTDOWN_HOOK)
         SystemLogger.log("Starting NIO reactor...")
         try {
             NioReactor.configure(43594 + GameWorld.settings?.worldId!!).start()
@@ -79,6 +84,16 @@ object Server {
         GEAutoStock.autostock()
         // TODO Run the eco kick starter 1 time for the live server then comment it out
 //		ResourceManager.kickStartEconomy();
+        val scanner = Scanner(System.`in`)
+        GlobalScope.launch {
+            while(scanner.hasNextLine()){
+                val command = scanner.nextLine()
+                when(command){
+                    "stop" -> SystemShutdownHook().run()
+                    "players" -> System.out.println("Players online: " + Repository.players.size)
+                }
+            }
+        }
     }
 
     fun autoReconnect() {

@@ -24,6 +24,7 @@ import java.io.File
 import java.io.FileReader
 import java.io.FileWriter
 import java.io.IOException
+import java.lang.Exception
 import java.lang.Integer.min
 import java.util.HashMap
 import java.util.concurrent.locks.ReentrantLock
@@ -76,12 +77,12 @@ class OfferManager : Pulse(), CallBack {
         /**
          * The database path.
          */
-        private val DB_PATH = "data" + File.separator + "eco" + File.separator + "offer_dispatch.json"
+        private val DB_PATH = ServerConstants.GRAND_EXCHANGE_DATA_PATH + "offer_dispatch.json"
 
         /**
          * Bot DB path
          */
-        private val BOT_DB_PATH = "data" + File.separator + "eco" + File.separator + "bot_offers.json"
+        private val BOT_DB_PATH = ServerConstants.GRAND_EXCHANGE_DATA_PATH + "bot_offers.json"
 
         /**
          * The offset of the offer UIDs.
@@ -116,56 +117,58 @@ class OfferManager : Pulse(), CallBack {
         fun init() {
             GE_OFFER_LOCK.lock()
             val file = File(DB_PATH)
-            if (!file.exists()) {
-                return
-            }
-            val parser = JSONParser()
-            val reader: FileReader? = FileReader(DB_PATH)
-            val saveFile = parser.parse(reader) as JSONObject
 
-            offsetUID = saveFile["offsetUID"].toString().toLong()
+            if(file.exists() && file.length() != 0L) {
+                val parser = JSONParser()
+                val reader: FileReader? = FileReader(DB_PATH)
+                val saveFile = parser.parse(reader) as JSONObject
 
-            if(saveFile.containsKey("offers")) {
-                val offers = saveFile["offers"] as JSONArray
-                for(offer in offers){
-                    val o = offer as JSONObject
-                    // Copy all the bot offers from the file
-                    if (o["playerUID"].toString().toInt() == 0) {
-                        addBotOffer(o["itemId"].toString().toInt(), o["amount"].toString().toInt() - o["completedAmount"].toString().toInt())
-                    }
-                    val no = GrandExchangeOffer()
-                    no.itemID = o["itemId"].toString().toInt()
-                    no.sell = o["sale"] as Boolean
-                    no.offeredValue = o["offeredValue"].toString().toInt()
-                    no.amount = o["amount"].toString().toInt()
-                    no.timeStamp = o["timeStamp"].toString().toLong()
-                    no.uid = o["uid"].toString().toLong()
-                    no.completedAmount = o["completedAmount"].toString().toInt()
-                    no.playerUID = o["playerUID"].toString().toInt()
-                    no.offerState = OfferState.values()[o["offerState"].toString().toInt()]
-                    no.totalCoinExchange = o["totalCoinExchange"].toString().toInt()
-                    val withdrawData = o["withdrawItems"] as JSONArray
-                    for((index, data) in withdrawData.withIndex()){
-                        val item = data as JSONObject
-                        val it = Item(item["id"].toString().toInt(), item["amount"].toString().toInt())
-                        no.withdraw[index] = it
-                    }
-                    addEntry(no)
-                }
-            }
+                offsetUID = saveFile["offsetUID"].toString().toLong()
 
-            try {
-                val botReader: FileReader? = FileReader(BOT_DB_PATH)
-                val botSave = parser.parse(botReader) as JSONObject
-                if (botSave.containsKey("offers")) {
-                    val offers = botSave["offers"] as JSONArray
+                if (saveFile.containsKey("offers")) {
+                    val offers = saveFile["offers"] as JSONArray
                     for (offer in offers) {
                         val o = offer as JSONObject
-                        addBotOffer(o["item"].toString().toInt(), o["qty"].toString().toInt())
+                        // Copy all the bot offers from the file
+                        if (o["playerUID"].toString().toInt() == 0) {
+                            addBotOffer(o["itemId"].toString().toInt(), o["amount"].toString().toInt() - o["completedAmount"].toString().toInt())
+                        }
+                        val no = GrandExchangeOffer()
+                        no.itemID = o["itemId"].toString().toInt()
+                        no.sell = o["sale"] as Boolean
+                        no.offeredValue = o["offeredValue"].toString().toInt()
+                        no.amount = o["amount"].toString().toInt()
+                        no.timeStamp = o["timeStamp"].toString().toLong()
+                        no.uid = o["uid"].toString().toLong()
+                        no.completedAmount = o["completedAmount"].toString().toInt()
+                        no.playerUID = o["playerUID"].toString().toInt()
+                        no.offerState = OfferState.values()[o["offerState"].toString().toInt()]
+                        no.totalCoinExchange = o["totalCoinExchange"].toString().toInt()
+                        val withdrawData = o["withdrawItems"] as JSONArray
+                        for ((index, data) in withdrawData.withIndex()) {
+                            val item = data as JSONObject
+                            val it = Item(item["id"].toString().toInt(), item["amount"].toString().toInt())
+                            no.withdraw[index] = it
+                        }
+                        addEntry(no)
                     }
                 }
-            } catch (e: IOException) {
-                log("Unable to load bot offers. Perhaps it doesn't exist?")
+            }
+
+            if(File(BOT_DB_PATH).exists()) {
+                try {
+                    val botReader: FileReader? = FileReader(BOT_DB_PATH)
+                    val botSave = JSONParser().parse(botReader) as JSONObject
+                    if (botSave.containsKey("offers")) {
+                        val offers = botSave["offers"] as JSONArray
+                        for (offer in offers) {
+                            val o = offer as JSONObject
+                            addBotOffer(o["item"].toString().toInt(), o["qty"].toString().toInt())
+                        }
+                    }
+                } catch (e: IOException) {
+                    log("Unable to load bot offers. Perhaps it doesn't exist?")
+                }
             }
             GE_OFFER_LOCK.unlock()
         }
@@ -280,6 +283,10 @@ class OfferManager : Pulse(), CallBack {
             val root = JSONObject()
             val offers = JSONArray()
 
+            if(OFFER_MAPPING.isEmpty() && BOT_OFFERS.isEmpty()){
+                return
+            }
+
             for(entry in OFFER_MAPPING){
                 val offer = entry.value
                 if (offer.offerState == OfferState.REMOVED || entry.value.playerUID == PlayerDetails.getDetails("2009scape").uid) {
@@ -336,12 +343,14 @@ class OfferManager : Pulse(), CallBack {
                 FileWriter(DB_PATH).use { file ->
                     file.write(prettyPrintedJson)
                     file.flush()
+                    file.close()
                 }
                 FileWriter(BOT_DB_PATH).use { file ->
                     file.write(botJson)
                     file.flush()
+                    file.close()
                 }
-            } catch (e: IOException) {
+            } catch (e: Exception) {
                 e.printStackTrace()
             }
             GE_OFFER_LOCK.unlock()
