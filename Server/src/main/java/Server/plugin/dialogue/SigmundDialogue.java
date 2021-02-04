@@ -63,7 +63,12 @@ public class SigmundDialogue extends DialoguePlugin {
 			end();
 			break;
 		case 10:
-			if(player.getQuestRepository().isComplete("Goblin Diplomacy") && player.getQuestRepository().isComplete("Rune Mysteries")){
+			if(player.getQuestRepository().hasStarted("Lost Tribe") && !player.getQuestRepository().isComplete("Lost Tribe")){
+				npc("No, not right now.");
+				stage = 12;
+				break;
+			}
+			if(player.getQuestRepository().isComplete("Goblin Diplomacy") && player.getQuestRepository().isComplete("Rune Mysteries") && !player.getQuestRepository().hasStarted("Lost Tribe")){
 				npc("There was recently some damage to the castle cellar.","Part of the wall has collapsed.");
 				stage = 30;
 				break;

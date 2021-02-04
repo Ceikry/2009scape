@@ -23,8 +23,9 @@ class HistoryOfTheGoblinRace : ComponentPlugin() {
         player ?: return
         super.open(player, component)
         player.packetDispatch.sendInterfaceConfig(183,17,true)
+        val qstage = player.questRepository.getQuest("Lost Tribe").getStage(player)
         component?.setCloseEvent { player, c ->
-            if(player.questRepository.getQuest("Lost Tribe").getStage(player) == 42) {
+            if(qstage == 42 || qstage == 41 ) {
                 player.dialogueInterpreter.sendDialogues(player, FacialExpression.THINKING, "Hey... The symbol of the 'Dorgeshuun' tribe looks just", "like the symbol on the brooch I found.")
                 player.questRepository.getQuest("Lost Tribe").setStage(player, 43)
             }
