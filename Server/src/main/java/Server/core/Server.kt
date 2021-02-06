@@ -1,17 +1,22 @@
 package core
 
-import core.game.system.SystemLogger
-import core.game.system.SystemShutdownHook
+import core.game.system.*
 import core.game.system.config.ServerConfigParser
 import core.game.system.mysql.SQLManager
 import core.game.world.GameWorld
+import core.game.world.repository.Repository
 import core.gui.ConsoleFrame
 import core.net.NioReactor
 import core.net.amsc.WorldCommunicator
 import core.tools.TimeStamp
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
+import plugin.ai.AIRepository
 import plugin.ge.GEAutoStock
 import java.io.File
 import java.net.BindException
+import java.util.*
+import kotlin.system.exitProcess
 
 /**
  * The main class, for those that are unable to read the class' name.
@@ -54,10 +59,9 @@ object Server {
         }
         startTime = System.currentTimeMillis()
         val t = TimeStamp()
-        //		backup = new AutoBackup();
         GameWorld.prompt(true)
         SQLManager.init()
-        Runtime.getRuntime().addShutdownHook(Thread(SystemShutdownHook()))
+        Runtime.getRuntime().addShutdownHook(ServerConstants.SHUTDOWN_HOOK)
         SystemLogger.log("Starting NIO reactor...")
         try {
             NioReactor.configure(43594 + GameWorld.settings?.worldId!!).start()
@@ -65,20 +69,33 @@ object Server {
             println("Port " + (43594 + GameWorld.settings?.worldId!!) + " is already in use!")
             throw e
         }
-        /*val timer = java.util.Timer()
-        val task = object : TimerTask() {
-            override fun run() {
-                autoReconnect()
-            }
-        }
-        timer.schedule(task, 0, 1000 * 60 * 5)*/
         WorldCommunicator.connect()
         SystemLogger.log(GameWorld.settings?.name + " flags " + GameWorld.settings?.toString())
         SystemLogger.log(GameWorld.settings?.name + " started in " + t.duration(false, "") + " milliseconds.")
 
         GEAutoStock.autostock()
-        // TODO Run the eco kick starter 1 time for the live server then comment it out
-//		ResourceManager.kickStartEconomy();
+        val scanner = Scanner(System.`in`)
+        GlobalScope.launch {
+            while(scanner.hasNextLine()){
+                val command = scanner.nextLine()
+                when(command){
+                    "stop" -> SystemManager.flag(SystemState.TERMINATED)
+                    "players" -> System.out.println("Players online: " + (Repository.LOGGED_IN_PLAYERS.size))
+                    "update" -> SystemManager.flag(SystemState.UPDATING)
+                    "help","commands" -> printCommands()
+                    "restartworker" -> SystemManager.flag(SystemState.ACTIVE)
+
+                }
+            }
+        }
+    }
+
+    fun printCommands(){
+        println("stop - stop the server (saves all accounts and such)")
+        println("players - show online player count")
+        println("update - initiate an update with a countdown visible to players")
+        println("help, commands - show this")
+        println("restartworker - Reboots the major update worker in case of a travesty.")
     }
 
     fun autoReconnect() {

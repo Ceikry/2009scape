@@ -1,3 +1,4 @@
+/*
 package plugin.interaction.item.withitem;
 
 import core.tools.Items;
@@ -16,16 +17,20 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.stream.Stream;
 
+*/
 /**
  * Handles the dyeing of a cape.
  * @author afaroutdude
- */
+ *//*
+
 @InitializablePlugin
 public final class CapeDyeingPlugin extends UseWithHandler {
 
-	/**
+	*/
+/**
 	 * Constructs a new {@code CapeDyeingPlugin} {@code Object}.
-	 */
+	 *//*
+
 	public CapeDyeingPlugin() {
 		super(Cape.getIds());
 	}
@@ -60,10 +65,12 @@ public final class CapeDyeingPlugin extends UseWithHandler {
 		return true;
 	}
 
-	/**
+	*/
+/**
 	 * A cape to dye.
 	 * @author Vexia
-	 */
+	 *//*
+
 	public enum Cape {
 		BLACK(Dyes.BLACK, new Item(1019)),
 		RED(Dyes.RED, new Item(1007)),
@@ -74,45 +81,57 @@ public final class CapeDyeingPlugin extends UseWithHandler {
 		ORANGE(Dyes.ORANGE, new Item(1031)),
 		PINK(Dyes.PINK, new Item(6959));
 
-		/**
+		*/
+/**
 		 * The dye for the cape.
-		 */
+		 *//*
+
 		private final Dyes dye;
 
-		/**
+		*/
+/**
 		 * The cape item.
-		 */
+		 *//*
+
 		private final Item cape;
 
-		/**
+		*/
+/**
 		 * Constructs a new {@code Cape} {@code Object}.
 		 * @param dye the dye.
 		 * @param cape the cape.
-		 */
+		 *//*
+
 		Cape(Dyes dye, Item cape) {
 			this.dye = dye;
 			this.cape = cape;
 		}
 
-		/**
+		*/
+/**
 		 * Gets the dye.
 		 * @return The dye.
-		 */
+		 *//*
+
 		public Dyes getDye() {
 			return dye;
 		}
 
-		/**
+		*/
+/**
 		 * Gets the cape.
 		 * @return The cape.
-		 */
+		 *//*
+
 		public Item getCape() {
 			return cape;
 		}
 
-		/**
+		*/
+/**
 		 * @return an int array of all cape IDs
-		 */
+		 *//*
+
 		static public int[] getIds() {
 			return Stream.of(Cape.values())
 					.map(Cape::getCape)
@@ -120,10 +139,12 @@ public final class CapeDyeingPlugin extends UseWithHandler {
 					.mapToInt(Integer::intValue).toArray();
 		}
 
-		/**
+		*/
+/**
 		 * @param potentiallyCape
 		 * @return true if passed item is a cape that we can handle
-		 */
+		 *//*
+
 		static public boolean isCape(Item potentiallyCape){
 			for (Cape c : Cape.values()) {
 				if (c.getCape().getId() == potentiallyCape.getId()) {
@@ -141,3 +162,4 @@ public final class CapeDyeingPlugin extends UseWithHandler {
 		}
 	}
 }
+*/

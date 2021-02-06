@@ -1,5 +1,6 @@
 package core.game.system;
 
+import core.Server;
 import core.ServerConstants;
 import plugin.ge.GrandExchangeDatabase;
 import core.game.node.entity.player.Player;
@@ -31,7 +32,6 @@ public final class SystemTermination {
 	 * Terminates the system safely.
 	 */
 	public void terminate() {
-
 		SystemLogger.log("[SystemTerminator] Initializing termination sequence - do not shutdown!");
 		try {
 			for(Player player : Repository.getPlayers()){
@@ -41,11 +41,12 @@ public final class SystemTermination {
 				}
 			}
 			save(ServerConstants.DATA_PATH);
-			System.exit(0);
 		} catch (Throwable e) {
 			e.printStackTrace();
 		}
 		SystemLogger.log("[SystemTerminator] Server successfully terminated!");
+		Runtime.getRuntime().removeShutdownHook(ServerConstants.SHUTDOWN_HOOK);
+		System.exit(0);
 	}
 
 	/**
@@ -56,7 +57,7 @@ public final class SystemTermination {
 		File file = new File(directory);
 		SystemLogger.log("[SystemTerminator] Saving data [dir=" + file.getAbsolutePath() + "]...");
 		if (!file.isDirectory()) {
-			file.mkdir();
+			file.mkdirs();
 		}
 		GrandExchangeDatabase.save();
 		OfferManager.save();

@@ -55,6 +55,7 @@ public final class SystemManager {
 		switch (state) {
 		case ACTIVE:
 		case PRIVATE:
+			GameWorld.getMajorUpdateWorker().setStarted(false);
 			GameWorld.getMajorUpdateWorker().start();
 			break;
 		case UPDATING:

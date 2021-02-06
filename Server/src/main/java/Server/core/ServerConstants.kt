@@ -1,5 +1,6 @@
 package core
 
+import core.game.system.SystemShutdownHook
 import core.game.system.mysql.SQLManager
 import core.game.world.map.Location
 import core.tools.mysql.Database
@@ -14,6 +15,9 @@ import java.math.BigInteger
  */
 class ServerConstants {
 	companion object {
+		@JvmField
+		var SHUTDOWN_HOOK: Thread = Thread(SystemShutdownHook())
+
         @JvmField
 		var DATA_PATH: String? = null
 

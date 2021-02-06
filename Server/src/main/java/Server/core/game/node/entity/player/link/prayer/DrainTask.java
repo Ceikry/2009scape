@@ -77,7 +77,7 @@ public final class DrainTask extends NodeTask {
 		double amountDrain = 0;
 		for (PrayerType type : prayer.getActive()) {
 			double drain = type.getDrain();
-			double bonus = 0.035 * prayer.getPlayer().getProperties().getBonuses()[12];
+			double bonus = (1/30f) * prayer.getPlayer().getProperties().getBonuses()[12];
 			drain = drain * (1 + bonus);
 			drain = 0.6 / drain;
 			amountDrain += drain;

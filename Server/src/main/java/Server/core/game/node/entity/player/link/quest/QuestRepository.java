@@ -134,6 +134,9 @@ public final class QuestRepository implements SavingModule {
             }
         } else {
             for(Quest quest : QUESTS.values()){
+                if(quest.getIndex() == 81 && quest.isCompleted(player)){
+                    player.varpManager.get(534).setVarbit(15,2).setVarbit(18,2).setVarbit(21,2).setVarbit(24,2).setVarbit(12,2).send(player);
+                }
                 config = quest.getConfig(player,getStage(quest));
                 player.varpManager.get(config[0]).setVarbit(0,config[1]).send(player);
             }
