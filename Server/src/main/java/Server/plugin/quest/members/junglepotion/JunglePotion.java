@@ -79,10 +79,18 @@ public final class JunglePotion extends Quest {
 		player.getPacketDispatch().sendItemZoomOnInterface(Herbs.VOLENCIA_MOSS.getProduct().getId(), 235, 277, 3 + 2);
 		player.getSkills().addExperience(Skills.HERBLORE, 775);
 		player.getQuestRepository().syncronizeTab(player);
-		player.getConfigManager().set(534, Integer.MAX_VALUE, true); // when they have trading sticks their portion of the config is LSB only
-		// todo in liveserver need to set this config value for all players who have already finished jungle potion
+		player.varpManager.get(534).setVarbit(15,2).setVarbit(18,2).setVarbit(21,2).setVarbit(24,2).setVarbit(12,2).send(player);
+		player.varpManager.flagSave(534);
 	}
-	
+
+	@Override
+	public int[] getConfig(Player player, int stage) {
+		if(stage == 0) return new int []{175,0};
+		if(stage == 100) return new int [] {175,15};
+		if(stage > 0) return new int [] {175,1};
+		return new int [] {175,15};
+	}
+
 	/**
 	 * An objective during the quest.
 	 * @author Vexia
