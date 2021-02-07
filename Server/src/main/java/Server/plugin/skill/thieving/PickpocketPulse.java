@@ -176,9 +176,6 @@ public final class PickpocketPulse extends SkillPulse<NPC> {
         double level = player.getSkills().getLevel(Skills.THIEVING);
         double req = type.getLevel();
         double successChance = Math.ceil((level * 50 - req * 15) / req / 3 * 4);
-        if (SkillcapePerks.hasSkillcapePerk(player, SkillcapePerks.THIEVEING)) {
-            successChance += 10;
-        }
         int roll = RandomFunction.random(99);
         if (RandomFunction.random(12) < 2) {
             return false;

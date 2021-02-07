@@ -32,6 +32,7 @@ public enum SkillcapePerks {
 	WOODCUTTING(9807, 9808),
 	FARMING(9810, 9811),	
 	HUNTING(9948, 9949),
+	SUMMONING(12169,12170),
 	MAX_CAPE(14831, 14833, 14835, 14839, 14840)	
 	;
 	
@@ -56,26 +57,5 @@ public enum SkillcapePerks {
 	 */
 	public int[] getSkillcapeIds() {
 		return skillcapeIds;
-	}
-
-	/**
-	 * Checks if a player has a skillcape perk.
-	 * @param player the player.
-	 * @param skillcapePerks the skillcapePerks
-	 * @return true if so.
-	 */
-	public static boolean hasSkillcapePerk(Player player, SkillcapePerks skillcapePerks) {
-		SkillcapePerks perk = skillcapePerks;
-		for (int i : perk.getSkillcapeIds()) {
-			if (player.getEquipment().containsAtLeastOneItem(i)) {
-				return true;
-			}
-		}		
-		for (int j : MAX_CAPE.getSkillcapeIds()) {
-			if (player.getEquipment().containsAtLeastOneItem(j)) {
-				return true;
-			}
-		}
-		return false;
 	}
 }

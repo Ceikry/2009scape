@@ -208,9 +208,6 @@ public final class GatheringSkillPulse extends SkillPulse<GameObject> {
 			// Calculate if the player should receive a bonus birds nest
 			if (isWoodcutting) {
 				int chance = 282;
-				if (SkillcapePerks.hasSkillcapePerk(player, SkillcapePerks.WOODCUTTING)) {
-					chance /= 1.88;
-				}
 				if (RandomFunction.random(chance) == 0) {
 					BirdNest.drop(player);
 				}

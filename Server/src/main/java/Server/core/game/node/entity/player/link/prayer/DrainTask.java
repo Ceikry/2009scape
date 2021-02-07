@@ -6,6 +6,8 @@ import core.game.node.entity.player.link.diary.DiaryType;
 import core.game.system.task.NodeTask;
 import core.game.world.map.Location;
 import core.game.world.map.zone.ZoneBorders;
+import core.tools.RandomFunction;
+import plugin.skillcapeperks.SkillcapePerks;
 
 /**
  * Represents an event used to drain prayer points.
@@ -81,6 +83,9 @@ public final class DrainTask extends NodeTask {
 			drain = drain * (1 + bonus);
 			drain = 0.6 / drain;
 			amountDrain += drain;
+		}
+		if(SkillcapePerks.isActive(SkillcapePerks.DIVINE_FAVOR,prayer.getPlayer()) && RandomFunction.random(100) <= 10){
+			amountDrain = 0;
 		}
 		return amountDrain;
 	}

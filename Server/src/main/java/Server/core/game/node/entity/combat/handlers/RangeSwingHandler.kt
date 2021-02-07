@@ -402,8 +402,8 @@ open class RangeSwingHandler
             if (e is Player) {
                 val cape = e.equipment[EquipmentContainer.SLOT_CAPE]
                 val weapon = e.equipment[EquipmentContainer.SLOT_WEAPON]
-                if (cape != null && (cape.id == 10498 || cape.id == 10499 || SkillcapePerks.hasSkillcapePerk(e, SkillcapePerks.RANGING)) && weapon != null && weapon.id != 10034 && weapon.id != 10033) {
-                    val rate = if (cape.id == 10498 || SkillcapePerks.hasSkillcapePerk(e, SkillcapePerks.RANGING)) 70 else 80
+                if (cape != null && (cape.id == 10498 || cape.id == 10499) && weapon != null && weapon.id != 10034 && weapon.id != 10033) {
+                    val rate = 80
                     if (RandomFunction.random(100) < rate) {
                         val torso = e.equipment[EquipmentContainer.SLOT_CHEST]
                         val modelId = torso?.definition?.maleWornModelId1 ?: -1

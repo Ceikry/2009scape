@@ -5,7 +5,6 @@ import core.game.container.impl.EquipmentContainer;
 import core.tools.Items;
 import plugin.dialogue.FacialExpression;
 import core.game.content.global.BirdNest;
-import core.game.content.global.SkillcapePerks;
 import core.game.content.global.SkillingPets;
 import plugin.quest.tutorials.tutorialisland.TutorialSession;
 import plugin.quest.tutorials.tutorialisland.TutorialStage;
@@ -24,6 +23,7 @@ import core.game.system.task.Pulse;
 import core.game.world.map.Location;
 import core.game.world.update.flag.context.Animation;
 import core.tools.RandomFunction;
+import plugin.skillcapeperks.SkillcapePerks;
 
 import java.util.concurrent.TimeUnit;
 
@@ -168,11 +168,14 @@ public class WoodcuttingSkillPulse extends Pulse {
 
             //calculate bonus bird nest for mining
             int chance = 282;
-            if (SkillcapePerks.hasSkillcapePerk(player, SkillcapePerks.WOODCUTTING)) {
-                chance /= 1.88;
-            }
             if (RandomFunction.random(chance) == chance / 2) {
-                BirdNest.drop(player);
+                if(SkillcapePerks.isActive(SkillcapePerks.NEST_HUNTER,player)){
+                    if(!player.getInventory().add(BirdNest.getRandomNest(false).getNest())){
+                        BirdNest.drop(player);
+                    }
+                } else {
+                    BirdNest.drop(player);
+                }
             }
 
             applyAchievementTask(reward); // apply achievements

@@ -205,9 +205,6 @@ public class FarmingNode {
 		double difference = (max - min) / 2.;
 		difference *= 1 + (cycle.getPlayer().getSkills().getLevel(Skills.FARMING) * 0.01);
 		int mod = 0;
-		if (SkillcapePerks.hasSkillcapePerk(cycle.getPlayer(), SkillcapePerks.FARMING)) {
-			mod += RandomFunction.random(1, 2);
-		}
 		//Magic secateurs
 		if(cycle.getPlayer().getEquipment().get(3) != null && cycle.getPlayer().getEquipment().get(3).getId() == 7409){
 			mod += RandomFunction.random(2, 4);

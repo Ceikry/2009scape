@@ -14,6 +14,7 @@ import core.game.world.GameWorld;
 import core.game.world.map.zone.MapZone;
 import core.game.world.map.zone.RegionZone;
 import core.game.world.map.zone.ZoneBorders;
+import plugin.skillcapeperks.SkillcapePerks;
 
 /**
  * Handles a dark area.
@@ -118,6 +119,9 @@ public final class DarkZone extends MapZone {
 		if (e instanceof Player) {
 			final Player player = (Player) e;
 			LightSource source = LightSource.getActiveLightSource(player);
+			if(SkillcapePerks.isActive(SkillcapePerks.CONSTANT_GLOW,player)){
+				return true;
+			}
 			if (source == null) {
 				player.getInterfaceManager().openOverlay(DARKNESS_OVERLAY);
 			} else if (source.getInterfaceId() > 0) {
@@ -141,6 +145,11 @@ public final class DarkZone extends MapZone {
 	 */
 	public void updateOverlay(Player player) {
 		LightSource source = LightSource.getActiveLightSource(player);
+		if(SkillcapePerks.isActive(SkillcapePerks.CONSTANT_GLOW,player)){
+			if(player.getInterfaceManager().getOverlay().getId() == DARKNESS_OVERLAY.getId())
+				player.getInterfaceManager().closeOverlay();
+			return;
+		}
 		int overlay = -1;
 		if (player.getInterfaceManager().getOverlay() != null) {
 			overlay = player.getInterfaceManager().getOverlay().getId();
@@ -168,13 +177,14 @@ public final class DarkZone extends MapZone {
 	 * Checks if the player is in a dark area and will update accordingly.
 	 * @param p The player.
 	 */
-	public static void checkDarkArea(Player p) {
+	public static boolean checkDarkArea(Player p) {
 		for (RegionZone r : p.getZoneMonitor().getZones()) {
 			if (r.getZone() instanceof DarkZone) {
 				DarkZone zone = (DarkZone) r.getZone();
 				zone.updateOverlay(p);
-				break;
+				return true;
 			}
 		}
+		return false;
 	}
 }

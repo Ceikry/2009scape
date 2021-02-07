@@ -14,14 +14,11 @@ import core.game.container.impl.EquipmentContainer
 import core.tools.Items
 import core.game.world.map.path.Pathfinder
 import core.game.node.entity.player.link.diary.DiaryType
-import core.game.content.global.SkillcapePerks
-import core.game.content.global.action.EquipHandler
 import core.game.node.Node
 import core.game.node.`object`.GameObject
 import core.game.node.`object`.ObjectBuilder
 import core.game.node.entity.impl.Animator
 import core.game.world.GameWorld
-import plugin.skill.gather.SkillingResource
 import core.game.node.item.ChanceItem
 import core.game.node.entity.npc.drop.DropFrequency
 import core.game.node.entity.player.Player
@@ -31,6 +28,7 @@ import core.game.node.item.GroundItemManager
 import core.game.node.item.Item
 import core.game.world.map.Location
 import core.tools.StringUtils
+import plugin.skillcapeperks.SkillcapePerks
 import plugin.stringtools.colorize
 
 /**
@@ -262,9 +260,6 @@ class MiningSkillPulse(private val player: Player, private val node: Node) : Pul
                     player.sendMessage("The Varrock armour allows you to mine an additional ore.")
                 }
             }
-        } else if (!isMiningEssence && SkillcapePerks.hasSkillcapePerk(player, SkillcapePerks.MINING) && RandomFunction.getRandom(100) <= 10) {
-            amount += 1
-            player.sendNotificationMessage("Your " + player.equipment[EquipmentContainer.SLOT_CAPE].name + " allows you to obtain two ores from this rock!")
         }
 
         //check for bonus ore from shooting star buff
@@ -350,7 +345,11 @@ class MiningSkillPulse(private val player: Player, private val node: Node) : Pul
         val skill = Skills.MINING
         val level = 1 + player.skills.getLevel(skill) + player.familiarManager.getBoost(skill)
         val hostRatio = Math.random() * (100.0 * resource!!.getRate())
-        val clientRatio = Math.random() * ((level - resource!!.getLevel()) * (1.0 + SkillingTool.getPickaxe(player).ratio))
+        var toolRatio = SkillingTool.getPickaxe(player).ratio
+        if(SkillcapePerks.isActive(SkillcapePerks.PRECISION_MINER,player)){
+            toolRatio += 0.075
+        }
+        val clientRatio = Math.random() * ((level - resource!!.getLevel()) * (1.0 + toolRatio))
         return hostRatio < clientRatio
     }
 

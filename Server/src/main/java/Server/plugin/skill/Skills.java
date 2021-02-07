@@ -173,11 +173,6 @@ public final class Skills {
 		}
 		for (int i = 0; i < restoration.length; i++) {
 			if (restoration[i] != null) {
-				if (restoration[i] == restoration[FISHING]) {
-					if (SkillcapePerks.hasSkillcapePerk(entity.asPlayer(), SkillcapePerks.FISHING)) {
-						continue;
-					}
-				}
 				restoration[i].restore(entity);
 			}
 		}

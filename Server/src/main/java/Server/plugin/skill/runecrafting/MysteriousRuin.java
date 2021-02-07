@@ -71,14 +71,13 @@ public enum MysteriousRuin {
 	 * @param player the player.
 	 */
 	public void enter(Player player) {
-		boolean perk = SkillcapePerks.hasSkillcapePerk(player, SkillcapePerks.RUNECRAFTING);
-		if (player.getEquipment().get(EquipmentContainer.SLOT_HAT) == null && !perk) {
+		if (player.getEquipment().get(EquipmentContainer.SLOT_HAT) == null) {
 			return;
 		}
-		if (getTiara() == null && !perk) {
+		if (getTiara() == null) {
 			return;
 		}
-		if (getTiara().getTiara().getId() != player.getEquipment().get(EquipmentContainer.SLOT_HAT).getId() && !perk) {
+		if (getTiara().getTiara().getId() != player.getEquipment().get(EquipmentContainer.SLOT_HAT).getId()) {
 			return;
 		}
 		player.getProperties().setTeleportLocation(getEnd());

@@ -2,9 +2,11 @@ package plugin.dialogue;
 
 import core.game.container.Container;
 import core.game.container.impl.BankContainer;
+import core.game.container.impl.EquipmentContainer;
 import core.game.node.entity.player.Player;
 import core.plugin.InitializablePlugin;
 import core.game.node.item.Item;
+import core.plugin.Plugin;
 
 import java.util.Arrays;
 import java.util.Objects;
@@ -99,10 +101,18 @@ public final class DumpContainer extends DialoguePlugin {
 			if(!bank.canAdd(item)){
 				player.getPacketDispatch().sendMessage("A magical force prevents you from banking your " + item.getName() + ".");
 			} else {
+				if(inventory instanceof EquipmentContainer){
+					Object pluginobj = item.getDefinition().getHandlers().get("equipment");
+					if(pluginobj != null && pluginobj instanceof Plugin){
+						Plugin<Item> plugin = (Plugin<Item>) pluginobj;
+						plugin.fireEvent("unequip",player,item);
+					}
+				}
 				inventory.remove(item);
 				bank.add(item.getDefinition().isUnnoted() ? item : new Item(item.getNoteChange(), item.getAmount()));
 			}
 		});
+		inventory.update();
 		bank.update();
 	}
 }

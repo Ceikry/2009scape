@@ -196,15 +196,11 @@ public final class ImpactHandler {
 		impactQueue.add(impact);
 		if (entity instanceof Player && !dead) {
 			final Player p = entity.asPlayer();
-			if (p.getZoneMonitor().getType() != ZoneType.SAFE.getId() && p.getSkullManager().getLevel() <= 30 && (p.getEquipment().contains(2570, 1) || SkillcapePerks.hasSkillcapePerk(p, SkillcapePerks.DEFENCE))) {
+			if (p.getZoneMonitor().getType() != ZoneType.SAFE.getId() && p.getSkullManager().getLevel() <= 30 && (p.getEquipment().contains(2570, 1))) {
 				int percentage = (int) (entity.getSkills().getStaticLevel(Skills.HITPOINTS) * 0.10);
 				if (p.getSkills().getLifepoints() <= percentage) {
-					if (!SkillcapePerks.hasSkillcapePerk(p, SkillcapePerks.DEFENCE)) {
-						p.getEquipment().remove(new Item(2570));
-						p.sendMessage("Your ring of life saves you and in the process is destroyed.");
-					} else {
-						p.sendMessage("The power of your " + p.getEquipment().get(EquipmentContainer.SLOT_CAPE).getName() + " saves you.");
-					}
+					p.getEquipment().remove(new Item(2570));
+					p.sendMessage("Your ring of life saves you and in the process is destroyed.");
 					p.teleport(ServerConstants.HOME_LOCATION);
 				}
 			}

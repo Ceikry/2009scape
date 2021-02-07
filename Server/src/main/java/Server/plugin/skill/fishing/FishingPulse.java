@@ -17,9 +17,11 @@ import core.game.world.map.Location;
 import core.game.world.map.path.Pathfinder;
 import core.game.world.update.flag.context.Animation;
 import core.tools.RandomFunction;
+import plugin.skillcapeperks.SkillcapePerks;
 
 import static core.game.node.entity.player.info.stats.StatAttributeKeysKt.STATS_BASE;
 import static core.game.node.entity.player.info.stats.StatAttributeKeysKt.STATS_FISH;
+import static plugin.stringtools.StringToolsKt.colorize;
 
 /**
  * Handles a fishing pulse.
@@ -139,7 +141,7 @@ public final class FishingPulse extends SkillPulse<NPC> {
             forager.handlePassiveAction();
         }
         if (success()) {
-            if (player.getInventory().hasSpaceFor(fish.getItem()) && option.getBait() != null ? player.getInventory().remove(option.getBait()) : true) {
+            if ((player.getInventory().hasSpaceFor(fish.getItem()) && option.getBait() != null) ? player.getInventory().remove(option.getBait()) : true) {
 
                 if (player.getSkillTasks().hasTask()) {
                     updateSkillTask();
@@ -148,6 +150,10 @@ public final class FishingPulse extends SkillPulse<NPC> {
 
                 SkillingPets.checkPetDrop(player, SkillingPets.HERON);
                 final Item item = fish.getItem();
+                if(SkillcapePerks.isActive(SkillcapePerks.GREAT_AIM,player) && RandomFunction.random(100) <= 5){
+                    player.getInventory().add(item);
+                    player.sendMessage(colorize("%RYour expert aim catches you a second fish."));
+                }
                 player.getInventory().add(item);
                 int fishCaught = player.getAttribute(STATS_BASE + ":" + STATS_FISH,0);
                 player.setAttribute("/save:" + STATS_BASE + ":" + STATS_FISH,++fishCaught);

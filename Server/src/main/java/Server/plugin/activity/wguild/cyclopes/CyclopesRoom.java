@@ -63,7 +63,7 @@ public final class CyclopesRoom extends MapZone implements Plugin<Object> {
 				int current = p.getAttribute("cyclops_ticks", 0) + 5;
 				if (current % 100 == 0) {
 					Item tokens = new Item(8851, 10);
-					if (!p.getInventory().containsItem(tokens) && !SkillcapePerks.hasSkillcapePerk(p, SkillcapePerks.ATTACK)) {
+					if (!p.getInventory().containsItem(tokens)) {
 						if (!p.getLocks().isMovementLocked()) {
 							p.getPulseManager().clear();
 							Pathfinder.find(p.getLocation(), Location.create(2847, 3541, 2)).walk(p);
@@ -80,12 +80,8 @@ public final class CyclopesRoom extends MapZone implements Plugin<Object> {
 						}
 						continue;
 					}
-					if (SkillcapePerks.hasSkillcapePerk(p, SkillcapePerks.ATTACK)) {
-						p.sendMessage("You have not lost any tokens since you are wearing a " + p.getEquipment().get(EquipmentContainer.SLOT_CAPE).getName());
-					} else {
-						p.getInventory().remove(tokens);
-						p.getPacketDispatch().sendMessage("10 of your tokens crumble away.");
-					}
+					p.getInventory().remove(tokens);
+					p.getPacketDispatch().sendMessage("10 of your tokens crumble away.");
 				}
 				p.setAttribute("cyclops_ticks", current);
 			}
@@ -149,7 +145,7 @@ public final class CyclopesRoom extends MapZone implements Plugin<Object> {
 			public boolean handle(Player player, Node node, String option) {
 				if (player.getLocation().getX() <= 2846) {
 					Item tokens = new Item(8851, 100);
-					if (!player.getInventory().containsItem(tokens) && !SkillcapePerks.hasSkillcapePerk(player, SkillcapePerks.ATTACK)) {
+					if (!player.getInventory().containsItem(tokens)) {
 						player.getDialogueInterpreter().sendItemMessage(tokens, "You don't have enough Warrior Guild Tokens to enter", "the cyclopes enclosure yet, collect at least 100 then", "come back.");
 						return true;
 					}

@@ -142,10 +142,9 @@ public class SmeltingPulse extends SkillPulse<Item> {
             }
             player.getInventory().add(new Item(bar.getProduct().getId(), amt));
             double xp = bar.getExperience() * amt;
-            // Goldsmith gauntlets and/or smithing cape
+            // Goldsmith gauntlets
             if (((player.getEquipment().get(EquipmentContainer.SLOT_HANDS) != null
-                    && player.getEquipment().get(EquipmentContainer.SLOT_HANDS).getId() == Items.GOLDSMITH_GAUNTLETS_776)
-                    || SkillcapePerks.hasSkillcapePerk(player, SkillcapePerks.SMITHING))
+                    && player.getEquipment().get(EquipmentContainer.SLOT_HANDS).getId() == Items.GOLDSMITH_GAUNTLETS_776))
                     && bar.getProduct().getId() == 2357) {
                 xp = 56.2 * amt;
             }

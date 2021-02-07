@@ -122,9 +122,6 @@ public class StandardCookingPulse extends Pulse {
         if (hasGauntlets && (food == Items.RAW_SWORDFISH_371 || food == Items.RAW_LOBSTER_377 || food == Items.RAW_SHARK_383)) {
             burn_stop -= 6;
         }
-        if (SkillcapePerks.hasSkillcapePerk(player, SkillcapePerks.COOKING)) {
-            return false;
-        }
         if (player.getSkills().getLevel(Skills.COOKING) > burn_stop) {
             return false;
         }
@@ -187,7 +184,7 @@ public class StandardCookingPulse extends Pulse {
 
                 if (productItem.getId() == Items.SHARK_385
                         && playerRegion == 11317
-                        && player.getEquipment().get(EquipmentContainer.SLOT_HANDS).getId() == Items.COOKING_GAUNTLETS_775
+                        && player.getEquipment().get(EquipmentContainer.SLOT_HANDS) != null && player.getEquipment().get(EquipmentContainer.SLOT_HANDS).getId() == Items.COOKING_GAUNTLETS_775
                         && !player.getAchievementDiaryManager().hasCompletedTask(DiaryType.SEERS_VILLAGE, 2, 8)) {
                     player.setAttribute("/save:diary:seers:cooked-shark", 1 + player.getAttribute("diary:seers:cooked-shark", 0));
                     if (player.getAttribute("diary:seers:cooked-shark", 0) >= 5) {

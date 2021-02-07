@@ -11,6 +11,7 @@ import core.game.node.entity.player.link.diary.DiaryType;
 import core.game.node.item.Item;
 import core.game.world.update.flag.context.Animation;
 import core.tools.StringUtils;
+import plugin.skillcapeperks.SkillcapePerks;
 
 /**
  * Represents the pulse used to smith a bar.
@@ -60,7 +61,7 @@ public class SmithingPulse extends SkillPulse<Item> {
             player.getDialogueInterpreter().sendDialogue("You don't have enough " + ItemDefinition.forId(bar.getBarType().getBarType()).getName().toLowerCase() + "s to make a " + bar.getSmithingType().name().replace("TYPE_", "").replace("_", " ").toLowerCase() + ".");
             return false;
         }
-        if (!player.getInventory().contains(2347, 1)) {
+        if (!player.getInventory().contains(2347, 1) && !SkillcapePerks.isActive(SkillcapePerks.BAREFISTED_SMITHING,player)) {
             player.getDialogueInterpreter().sendDialogue("You need a hammer to work the metal with.");
             return false;
         }
@@ -76,6 +77,10 @@ public class SmithingPulse extends SkillPulse<Item> {
 
     @Override
     public void animate() {
+        if(SkillcapePerks.isActive(SkillcapePerks.BAREFISTED_SMITHING,player)){
+            player.animate(new Animation(2068)); //Torag's Hammer animation lol
+            return;
+        }
         player.animate(ANIMATION);
     }
 
