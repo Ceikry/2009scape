@@ -6,10 +6,8 @@ import core.game.node.entity.combat.DeathTask;
 import core.game.node.entity.player.link.IronmanMode;
 import core.game.node.item.GroundItem;
 import core.game.system.config.NPCConfigParser;
-import core.game.world.map.zone.ZoneType;
-import core.tools.Items;
-import plugin.ame.AntiMacroNPC;
-import plugin.skill.summoning.familiar.Familiar;
+import core.game.content.ame.AntiMacroNPC;
+import core.game.node.entity.skill.summoning.familiar.Familiar;
 import core.game.interaction.Option;
 import core.game.node.Node;
 import core.game.node.entity.Entity;
@@ -28,8 +26,8 @@ import core.game.world.map.zone.RegionZone;
 import core.game.world.map.zone.ZoneBorders;
 import core.game.world.repository.Repository;
 import core.tools.RandomFunction;
-import plugin.interaction.item.brawling_gloves.BrawlingGloves;
-import plugin.ttrail.UriNPC;
+import core.game.interaction.item.brawling_gloves.BrawlingGloves;
+import core.game.content.ttrail.UriNPC;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -135,7 +133,7 @@ public final class WildernessZone extends MapZone {
 								ground = new GroundItem(item.getDropItem(), player.getLocation(), owner);
 							}
 							items.add(ground);
-							ground.setDropper(owner); //Checking for ironman mode in any circumstance for death items is inaccurate to how it works in both runescapes.
+							ground.setDropper(owner); //Checking for ironman mode in any circumstance for death items is inaccurate to how it works in both 2009scapes.
 							GroundItemManager.create(ground);
 						}
 					}

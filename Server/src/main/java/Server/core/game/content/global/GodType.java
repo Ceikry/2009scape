@@ -1,6 +1,6 @@
 package core.game.content.global;
 
-import plugin.dialogue.DialogueAction;
+import core.game.content.dialogue.DialogueAction;
 import core.game.node.entity.player.Player;
 import core.game.node.item.GroundItem;
 import core.game.node.item.GroundItemManager;

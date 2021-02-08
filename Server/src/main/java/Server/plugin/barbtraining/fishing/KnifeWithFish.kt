@@ -2,11 +2,11 @@ package plugin.barbtraining.fishing
 
 import core.game.interaction.NodeUsageEvent
 import core.game.interaction.UseWithHandler
-import core.plugin.InitializablePlugin
+import core.plugin.Initializable
 import core.plugin.Plugin
 import core.tools.Items
 
-@InitializablePlugin
+@Initializable
 /**
  * Handles using a knife with barbarian fishing fish
  * @author Ceikry

@@ -1,7 +1,6 @@
 package core.game.system.command
 
 import core.game.node.entity.player.Player
-import plugin.command.CommandMapping
 
 /**
  * Represents a managing system used to dispatch incoming commands.

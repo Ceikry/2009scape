@@ -1,6 +1,6 @@
 package plugin.ai.resource;
 
-import plugin.skill.gather.SkillingResource;
+import core.game.node.entity.skill.gather.SkillingResource;
 import core.game.node.entity.player.Player;
 import plugin.ai.AIPlayer;
 import core.game.system.task.Pulse;

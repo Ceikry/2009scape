@@ -19,11 +19,10 @@ import core.game.world.map.RegionManager
 import core.game.world.map.zone.ZoneBorders
 import core.game.world.map.zone.impl.WildernessZone
 import core.tools.Items
-import plugin.ai.AIPlayer
 import plugin.ai.AIRepository
 import plugin.ai.pvmbots.CombatBotAssembler
-import plugin.ge.OfferState
-import plugin.skill.Skills
+import core.game.ge.OfferState
+import core.game.node.entity.skill.Skills
 import kotlin.random.Random
 
 /**

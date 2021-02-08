@@ -10,7 +10,7 @@ import core.net.packet.context.WindowsPaneContext;
 import core.net.packet.out.CloseInterface;
 import core.net.packet.out.Interface;
 import core.net.packet.out.WindowsPane;
-import plugin.quest.tutorials.tutorialisland.TutorialSession;
+import core.game.content.quest.tutorials.tutorialisland.TutorialSession;
 
 import static core.tools.Interfaces.*;
 

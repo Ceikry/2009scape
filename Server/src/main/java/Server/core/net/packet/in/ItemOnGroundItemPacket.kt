@@ -8,7 +8,7 @@ import core.game.world.map.Location
 import core.net.packet.IncomingPacket
 import core.net.packet.IoBuffer
 import core.tools.Items
-import plugin.skill.firemaking.FireMakingPulse
+import core.game.node.entity.skill.firemaking.FireMakingPulse
 
 /**
  * Handles the Item -> Ground Item packet

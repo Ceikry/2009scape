@@ -2,7 +2,7 @@ package plugin.ai.general.scriptrepository
 
 import core.game.world.map.zone.ZoneBorders
 import plugin.ai.skillingbot.SkillingBotAssembler
-import plugin.skill.Skills
+import core.game.node.entity.skill.Skills
 
 class FarmerThiever : Script() {
     val pickpocketZone = ZoneBorders(3074,3245,3086,3255)

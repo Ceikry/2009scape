@@ -13577,7 +13577,7 @@ object Items {
     const val BOWL_OF_HONEY_13573 = 13573
     const val BOWL_OF_MILK_AND_HONEY_13574 = 13574
     const val BOWL_OF_MILK_HONEY_AND_GUAM_13575 = 13575
-    const val MAP_OF_RUNESCAPE_13576 = 13576
+    const val MAP_OF_2009scape_13576 = 13576
     const val PAPYRUS_13577 = 13577
     const val CHARCOAL_13578 = 13578
     const val SPADE_13579 = 13579

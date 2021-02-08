@@ -1,8 +1,8 @@
 package core.game.node.item;
 
 import core.cache.def.impl.ItemDefinition;
-import plugin.ge.GrandExchangeDatabase;
-import plugin.ge.GrandExchangeEntry;
+import core.game.ge.GrandExchangeDatabase;
+import core.game.ge.GrandExchangeEntry;
 import core.game.interaction.DestinationFlag;
 import core.game.interaction.Interaction;
 import core.game.interaction.OptionHandler;

@@ -1,7 +1,6 @@
 package plugin.ai.general.scriptrepository;
 
 import core.game.node.entity.player.Player;
-import plugin.ai.AIPlayer;
 import plugin.ai.general.ScriptAPI;
 import core.game.node.item.Item;
 

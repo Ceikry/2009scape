@@ -9,7 +9,7 @@ import core.game.world.GameWorld;
 import core.game.world.repository.Repository;
 import core.game.world.update.UpdateSequence;
 import core.gui.tab.StatisticsTab;
-import plugin.CorePluginTypes.Managers;
+import core.plugin.CorePluginTypes.Managers;
 
 */
 /**

@@ -3,21 +3,18 @@ package core.game.container.impl;
 import core.game.container.Container;
 import core.game.container.ContainerEvent;
 import core.game.container.ContainerListener;
-import core.tools.Items;
 import core.game.node.entity.combat.equipment.WeaponInterface;
 import core.game.node.entity.player.Player;
-import core.game.node.entity.player.link.diary.DiaryType;
 import core.game.node.item.Item;
 import core.game.system.config.ItemConfigParser;
-import core.game.world.map.Location;
 import core.game.world.update.flag.player.AppearanceFlag;
 import core.net.packet.PacketRepository;
 import core.net.packet.context.ContainerContext;
 import core.net.packet.out.ContainerPacket;
 import core.net.packet.out.WeightUpdate;
 import core.plugin.Plugin;
-import plugin.skill.Skills;
-import plugin.skillcapeperks.SkillcapePerks;
+import core.game.node.entity.skill.Skills;
+import core.game.node.entity.skill.skillcapeperks.SkillcapePerks;
 
 /**
  * Represents the equipment container.

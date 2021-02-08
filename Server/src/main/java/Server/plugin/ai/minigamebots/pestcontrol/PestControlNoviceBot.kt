@@ -1,12 +1,10 @@
 package plugin.ai.minigamebots.pestcontrol
 
-import core.game.node.entity.player.link.prayer.PrayerType
-import core.game.system.SystemLogger
 import core.game.world.map.Location
 import core.tools.RandomFunction
-import plugin.activity.pestcontrol.PestControlActivityPlugin
-import plugin.activity.pestcontrol.PestControlHelper
-import plugin.activity.pestcontrol.PestControlHelper.BoatInfo
+import core.game.content.activity.pestcontrol.PestControlActivityPlugin
+import core.game.content.activity.pestcontrol.PestControlHelper
+import core.game.content.activity.pestcontrol.PestControlHelper.BoatInfo
 import plugin.ai.pvmbots.CombatBotAssembler
 import plugin.ai.pvmbots.PvMBots
 import java.util.*

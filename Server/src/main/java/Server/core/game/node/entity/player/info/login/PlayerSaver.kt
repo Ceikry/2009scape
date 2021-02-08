@@ -9,10 +9,10 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 import org.json.simple.JSONArray
 import org.json.simple.JSONObject
-import plugin.interaction.item.brawling_gloves.BrawlingGloves
-import plugin.skill.Skills
-import plugin.skill.summoning.familiar.BurdenBeast
-import plugin.skill.summoning.pet.Pet
+import core.game.interaction.item.brawling_gloves.BrawlingGloves
+import core.game.node.entity.skill.Skills
+import core.game.node.entity.skill.summoning.familiar.BurdenBeast
+import core.game.node.entity.skill.summoning.pet.Pet
 import java.io.FileWriter
 import java.io.IOException
 import java.lang.Math.ceil

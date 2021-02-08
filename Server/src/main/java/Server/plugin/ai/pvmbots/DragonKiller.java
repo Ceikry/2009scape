@@ -1,6 +1,6 @@
 package plugin.ai.pvmbots;
 
-import plugin.skill.Skills;
+import core.game.node.entity.skill.Skills;
 import plugin.ai.AIPlayer;
 import core.game.node.entity.player.link.prayer.*;
 import core.game.world.map.Location;

@@ -12,7 +12,7 @@ import core.game.world.update.flag.player.ChatFlag
 import core.net.amsc.MSPacketRepository
 import core.net.amsc.WorldCommunicator
 import core.net.packet.`in`.QCPacketType
-import plugin.skill.Skills
+import core.game.node.entity.skill.Skills
 import java.nio.ByteBuffer
 
 

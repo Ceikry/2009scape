@@ -1,6 +1,5 @@
 package core.game.node.entity.combat.equipment;
 
-import core.game.container.impl.EquipmentContainer;
 import core.game.node.entity.Entity;
 import core.game.node.entity.player.Player;
 import core.game.node.item.Item;

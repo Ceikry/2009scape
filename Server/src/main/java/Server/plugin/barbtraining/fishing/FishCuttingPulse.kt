@@ -5,7 +5,7 @@ import core.game.node.item.Item
 import core.game.system.task.Pulse
 import core.game.world.update.flag.context.Animation
 import core.tools.Items
-import plugin.skill.Skills
+import core.game.node.entity.skill.Skills
 
 /**
  * Pulse used for cutting fish into fish offcuts

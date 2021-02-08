@@ -2,7 +2,7 @@ package core.game.node.entity.player.link.request.assist;
 
 import core.game.component.CloseEvent;
 import core.game.component.Component;
-import plugin.skill.Skills;
+import core.game.node.entity.skill.Skills;
 import core.game.node.entity.player.Player;
 import core.game.node.entity.player.link.request.RequestModule;
 import core.game.system.task.Pulse;

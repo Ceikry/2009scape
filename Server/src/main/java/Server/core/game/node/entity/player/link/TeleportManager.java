@@ -1,7 +1,7 @@
 package core.game.node.entity.player.link;
 
 import core.ServerConstants;
-import plugin.quest.tutorials.tutorialisland.TutorialSession;
+import core.game.content.quest.tutorials.tutorialisland.TutorialSession;
 import core.game.node.entity.Entity;
 import core.game.node.entity.impl.Animator.Priority;
 import core.game.node.entity.player.Player;

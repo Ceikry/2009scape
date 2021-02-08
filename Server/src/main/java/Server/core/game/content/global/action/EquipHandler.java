@@ -1,9 +1,6 @@
 package core.game.content.global.action;
 
 import core.game.container.impl.EquipmentContainer;
-import core.game.interaction.Interaction;
-import core.game.interaction.Option;
-import core.net.packet.out.InteractionOption;
 import core.tools.Items;
 import core.game.interaction.OptionHandler;
 import core.game.node.Node;
@@ -15,10 +12,8 @@ import core.game.node.entity.player.link.diary.DiaryType;
 import core.game.node.item.Item;
 import core.game.system.config.ItemConfigParser;
 import core.game.world.GameWorld;
-import core.game.world.map.Location;
 import core.game.world.map.zone.ZoneBorders;
 import core.plugin.Plugin;
-import plugin.interaction.player.PeltOptionPlugin;
 
 /**
  * Represents the equipment equipping handler plugin.

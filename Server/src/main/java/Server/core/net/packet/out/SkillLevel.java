@@ -1,6 +1,6 @@
 package core.net.packet.out;
 
-import plugin.skill.Skills;
+import core.game.node.entity.skill.Skills;
 import core.net.packet.IoBuffer;
 import core.net.packet.OutgoingPacket;
 import core.net.packet.context.SkillContext;

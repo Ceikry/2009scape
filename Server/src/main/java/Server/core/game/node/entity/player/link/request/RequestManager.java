@@ -1,6 +1,6 @@
 package core.game.node.entity.player.link.request;
 
-import plugin.quest.tutorials.tutorialisland.TutorialSession;
+import core.game.content.quest.tutorials.tutorialisland.TutorialSession;
 import core.game.node.entity.player.Player;
 import core.game.world.GameWorld;
 

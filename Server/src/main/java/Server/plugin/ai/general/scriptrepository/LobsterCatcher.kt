@@ -14,7 +14,7 @@ import core.tools.RandomFunction
 import plugin.ai.AIPlayer
 import plugin.ai.general.ScriptAPI
 
-import plugin.skill.Skills
+import core.game.node.entity.skill.Skills
 import kotlin.random.Random
 
 @PlayerCompatible

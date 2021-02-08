@@ -6,11 +6,11 @@ import core.game.world.map.Location;
 import core.game.world.map.zone.MapZone;
 import core.game.world.map.zone.ZoneBorders;
 import core.game.world.map.zone.ZoneBuilder;
-import core.plugin.InitializablePlugin;
+import core.plugin.Initializable;
 import core.plugin.Plugin;
 import core.tools.Vector3d;
 
-@InitializablePlugin
+@Initializable
 public class MysteriousStatueZone extends MapZone implements Plugin<Object> {
     private final static Vector3d origin = new Vector3d(2740.5, 3490.5, 0);
     private final static Vector3d n = new Vector3d(0, 0, 1);

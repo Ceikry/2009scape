@@ -10,14 +10,14 @@ import core.plugin.Plugin;
 import core.plugin.PluginManifest;
 import core.tools.Items;
 import core.tools.RandomFunction;
-import core.plugin.InitializablePlugin;
+import core.plugin.Initializable;
 import core.tools.StringUtils;
 
 /**
  * Handles the mystery box item.
  * @author Ceikry
  */
-@InitializablePlugin
+@Initializable
 @PluginManifest(name="MysteryBox")
 public final class MysteryBoxPlugin extends OptionHandler {
 

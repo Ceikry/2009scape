@@ -1,7 +1,6 @@
 package core.game.world.update.flag.player;
 
 import core.game.node.entity.player.info.Rights;
-import core.game.system.SystemLogger;
 import core.game.world.update.flag.UpdateFlag;
 import core.game.world.update.flag.context.ChatMessage;
 import core.net.packet.IoBuffer;

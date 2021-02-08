@@ -14,8 +14,8 @@ import core.game.world.GameWorld
 import core.game.world.map.RegionManager
 import core.game.world.update.flag.context.Animation
 import plugin.ai.AIRepository.Companion.getItems
-import plugin.dialogue.FacialExpression
-import plugin.skill.runecrafting.RunePouch
+import core.game.content.dialogue.FacialExpression
+import core.game.node.entity.skill.runecrafting.RunePouch
 
 /**
  * A class used to handle the picking up of ground items.

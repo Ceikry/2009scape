@@ -15,7 +15,7 @@ import core.game.system.task.Pulse
 import core.game.world.GameWorld
 import core.game.world.update.flag.context.Animation
 import core.tools.RandomFunction
-import plugin.skill.Skills
+import core.game.node.entity.skill.Skills
 
 /**
  * The combat-handling pulse implementation.

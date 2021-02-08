@@ -1,7 +1,7 @@
 package core.game.node.entity.combat.equipment;
 
 import core.game.container.impl.EquipmentContainer;
-import plugin.skill.Skills;
+import core.game.node.entity.skill.Skills;
 import core.game.node.entity.Entity;
 import core.game.node.entity.npc.NPC;
 import core.game.node.entity.player.Player;

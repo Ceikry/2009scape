@@ -7,7 +7,7 @@ import core.game.world.update.UpdateSequence
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
-import plugin.CorePluginTypes.Managers
+import core.plugin.CorePluginTypes.Managers
 
 /**
  * Handles the running of pulses and writing of masks, etc

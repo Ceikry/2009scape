@@ -7,9 +7,9 @@ import core.game.world.map.Location
 import core.tools.Items
 import core.tools.RandomFunction
 import plugin.ai.skillingbot.SkillingBotAssembler
-import plugin.skill.Skills
-import plugin.skill.smithing.Bars
-import plugin.skill.smithing.SmithingPulse
+import core.game.node.entity.skill.Skills
+import core.game.node.entity.skill.smithing.Bars
+import core.game.node.entity.skill.smithing.SmithingPulse
 
 class VarrockSmither : Script() {
     var state = State.SMITHING

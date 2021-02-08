@@ -3,8 +3,8 @@ package plugin.ai.skillingbot;
 import java.util.ArrayList;
 
 import core.game.container.impl.EquipmentContainer;
-import plugin.quest.tutorials.tutorialisland.CharacterDesign;
-import plugin.skill.Skills;
+import core.game.content.quest.tutorials.tutorialisland.CharacterDesign;
+import core.game.node.entity.skill.Skills;
 import plugin.ai.AIPlayer;
 import core.game.node.entity.player.link.appearance.Gender;
 import core.game.node.item.Item;

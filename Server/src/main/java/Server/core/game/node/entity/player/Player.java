@@ -19,17 +19,17 @@ import core.game.world.update.flag.context.Animation;
 import core.game.world.update.flag.context.Graphics;
 import core.tools.RandomFunction;
 import core.tools.TickUtilsKt;
-import plugin.ame.AntiMacroHandler;
-import plugin.dialogue.DialogueInterpreter;
-import plugin.ge.PlayerGrandExchange;
-import plugin.skill.runecrafting.PouchManager;
-import plugin.ttrail.TreasureTrailManager;
-import plugin.skill.Skills;
-import plugin.skill.construction.HouseManager;
-import plugin.skill.farming.FarmingManager;
-import plugin.skill.hunter.HunterManager;
-import plugin.skill.slayer.SlayerManager;
-import plugin.skill.summoning.familiar.FamiliarManager;
+import core.game.content.ame.AntiMacroHandler;
+import core.game.content.dialogue.DialogueInterpreter;
+import core.game.ge.PlayerGrandExchange;
+import core.game.node.entity.skill.runecrafting.PouchManager;
+import core.game.content.ttrail.TreasureTrailManager;
+import core.game.node.entity.skill.Skills;
+import core.game.node.entity.skill.construction.HouseManager;
+import core.game.node.entity.skill.farming.FarmingManager;
+import core.game.node.entity.skill.hunter.HunterManager;
+import core.game.node.entity.skill.slayer.SlayerManager;
+import core.game.node.entity.skill.summoning.familiar.FamiliarManager;
 import core.game.interaction.Interaction;
 import core.game.node.entity.Entity;
 import core.game.node.entity.combat.BattleState;
@@ -45,7 +45,7 @@ import core.game.node.entity.player.info.Rights;
 import core.game.node.entity.player.info.UIDInfo;
 import core.game.node.entity.player.info.login.LoginConfiguration;
 import core.game.node.entity.player.link.BankPinManager;
-import plugin.quest.miniquest.barcrawl.BarcrawlManager;
+import core.game.content.quest.miniquest.barcrawl.BarcrawlManager;
 import core.game.node.entity.player.link.ConfigurationManager;
 import core.game.node.entity.player.link.GlobalData;
 import core.game.node.entity.player.link.HintIconManager;
@@ -105,12 +105,12 @@ import core.net.packet.out.UpdateSceneGraph;
 import core.plugin.Plugin;
 import core.tools.StringUtils;
 
-import plugin.activity.pyramidplunder.PlunderObjectManager;
-import plugin.interaction.item.brawling_gloves.BrawlingGlovesManager;
+import core.game.content.activity.pyramidplunder.PlunderObjectManager;
+import core.game.interaction.item.brawling_gloves.BrawlingGlovesManager;
 
 import static core.game.node.entity.player.info.stats.StatAttributeKeysKt.STATS_BASE;
 import static core.game.node.entity.player.info.stats.StatAttributeKeysKt.STATS_DEATHS;
-import static plugin.stringtools.StringToolsKt.colorize;
+import static core.tools.stringtools.StringToolsKt.colorize;
 
 /**
  * Represents a player entity.
@@ -642,7 +642,7 @@ public class Player extends Entity {
 						ground = new GroundItem(item.getDropItem(), getLocation(), k);
 					}
 					items.add(ground);
-					ground.setDropper(this); //Checking for ironman mode in any circumstance for death items is inaccurate to how it works in both runescapes.
+					ground.setDropper(this); //Checking for ironman mode in any circumstance for death items is inaccurate to how it works in both 2009scapes.
 					GroundItemManager.create(ground);
 				}
 			}

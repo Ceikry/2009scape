@@ -2,7 +2,6 @@ package core.game.node.entity.combat.handlers
 
 import core.game.container.Container
 import core.game.container.impl.EquipmentContainer
-import core.game.content.global.SkillcapePerks
 import core.game.node.entity.Entity
 import core.game.node.entity.combat.BattleState
 import core.game.node.entity.combat.CombatStyle
@@ -23,9 +22,9 @@ import core.game.world.map.Location
 import core.game.world.map.RegionManager
 import core.game.world.update.flag.context.Graphics
 import core.tools.RandomFunction
-import plugin.skill.Skills
-import plugin.quest.tutorials.tutorialisland.TutorialSession
-import plugin.quest.tutorials.tutorialisland.TutorialStage
+import core.game.node.entity.skill.Skills
+import core.game.content.quest.tutorials.tutorialisland.TutorialSession
+import core.game.content.quest.tutorials.tutorialisland.TutorialStage
 import java.util.*
 import kotlin.math.ceil
 import kotlin.math.floor
@@ -252,7 +251,7 @@ open class RangeSwingHandler
             prayer += entity.prayer.getSkillBonus(Skills.RANGE)
         }
         var additional = 1.0 // Slayer helmet/salve/...
-        if(entity is Player && plugin.skillcapeperks.SkillcapePerks.isActive(plugin.skillcapeperks.SkillcapePerks.ACCURATE_MARKSMAN,entity.asPlayer())){
+        if(entity is Player && core.game.node.entity.skill.skillcapeperks.SkillcapePerks.isActive(core.game.node.entity.skill.skillcapeperks.SkillcapePerks.ACCURATE_MARKSMAN,entity.asPlayer())){
             additional += 0.5
         }
         var styleBonus = 0

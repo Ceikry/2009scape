@@ -7,7 +7,7 @@ import core.game.node.entity.combat.CombatSwingHandler
 import core.game.node.entity.combat.InteractionType
 import core.game.world.update.flag.context.Animation
 import core.game.world.update.flag.context.Graphics
-import plugin.skill.Skills
+import core.game.node.entity.skill.Skills
 
 /**
  * Handles a combat swing using a salamander.

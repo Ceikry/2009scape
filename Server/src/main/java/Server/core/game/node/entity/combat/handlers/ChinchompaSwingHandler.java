@@ -1,6 +1,6 @@
 package core.game.node.entity.combat.handlers;
 
-import plugin.skill.Skills;
+import core.game.node.entity.skill.Skills;
 import core.game.node.entity.Entity;
 import core.game.node.entity.combat.BattleState;
 import core.game.node.entity.combat.CombatStyle;

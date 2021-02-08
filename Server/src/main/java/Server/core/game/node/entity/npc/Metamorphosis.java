@@ -1,9 +1,9 @@
 package core.game.node.entity.npc;
 
 import core.cache.def.impl.NPCDefinition;
-import plugin.dialogue.DialoguePlugin;
-import plugin.skill.summoning.familiar.Familiar;
-import plugin.skill.summoning.pet.Pets;
+import core.game.content.dialogue.DialoguePlugin;
+import core.game.node.entity.skill.summoning.familiar.Familiar;
+import core.game.node.entity.skill.summoning.pet.Pets;
 import core.game.interaction.OptionHandler;
 import core.game.node.Node;
 import core.game.node.entity.player.Player;

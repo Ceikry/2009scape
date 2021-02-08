@@ -1,8 +1,8 @@
 package core.game.node.entity.player.link.prayer;
 
-import plugin.skill.SkillBonus;
-import plugin.skill.SkillRestoration;
-import plugin.skill.Skills;
+import core.game.node.entity.skill.SkillBonus;
+import core.game.node.entity.skill.SkillRestoration;
+import core.game.node.entity.skill.Skills;
 import core.game.node.entity.player.Player;
 import core.game.node.entity.player.link.audio.Audio;
 import core.tools.StringUtils;

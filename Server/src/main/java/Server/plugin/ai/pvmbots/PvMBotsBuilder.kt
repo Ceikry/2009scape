@@ -11,7 +11,7 @@ import core.tools.RandomFunction
 import plugin.ai.AIPlayer
 import plugin.ai.minigamebots.pestcontrol.PestControlTestBot
 import plugin.ai.minigamebots.pestcontrol.PestControlTestBot2
-import plugin.skill.Skills
+import core.game.node.entity.skill.Skills
 import java.util.*
 import java.util.concurrent.Executors
 

@@ -1,7 +1,7 @@
 package plugin.drops.mystery_box;
 
 import core.game.node.item.Item;
-import core.plugin.InitializablePlugin;
+import core.plugin.Initializable;
 import core.plugin.Plugin;
 import core.plugin.PluginManifest;
 import core.tools.Items;
@@ -12,7 +12,7 @@ import plugin.drops.DropPlugins;
 import java.util.ArrayList;
 import java.util.List;
 
-@InitializablePlugin
+@Initializable
 @PluginManifest(name="MysteryBox")
 public class MysteryBoxDropper extends DropPlugin {
 

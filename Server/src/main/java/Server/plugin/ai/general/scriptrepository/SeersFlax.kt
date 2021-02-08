@@ -8,9 +8,9 @@ import core.game.world.map.Location
 import core.game.world.map.path.Pathfinder
 import core.tools.Items
 import plugin.ai.skillingbot.SkillingBotAssembler
-import plugin.skill.Skills
-import plugin.skill.crafting.spinning.SpinningItem
-import plugin.skill.crafting.spinning.SpinningPulse
+import core.game.node.entity.skill.Skills
+import core.game.node.entity.skill.crafting.spinning.SpinningItem
+import core.game.node.entity.skill.crafting.spinning.SpinningPulse
 
 class SeersFlax : Script(){
     var state = State.PICKING

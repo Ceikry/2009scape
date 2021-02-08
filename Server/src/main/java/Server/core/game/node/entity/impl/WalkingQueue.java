@@ -1,14 +1,13 @@
 package core.game.node.entity.impl;
 
-import core.tools.RandomFunction;
-import plugin.skill.Skills;
+import core.game.node.entity.skill.Skills;
 import core.game.node.entity.Entity;
 import core.game.node.entity.player.Player;
 import core.game.world.map.Direction;
 import core.game.world.map.Location;
 import core.game.world.map.Point;
 import core.game.world.map.RegionManager;
-import plugin.skillcapeperks.SkillcapePerks;
+import core.game.node.entity.skill.skillcapeperks.SkillcapePerks;
 
 import java.util.Deque;
 import java.util.LinkedList;

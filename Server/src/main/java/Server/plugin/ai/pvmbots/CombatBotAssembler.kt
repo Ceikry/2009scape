@@ -1,12 +1,11 @@
 package plugin.ai.pvmbots
 
 import core.game.node.item.Item
-import core.game.system.SystemLogger
 import core.game.world.map.Location
 import core.tools.Items
 import core.tools.RandomFunction
 import plugin.ai.AIPlayer
-import plugin.skill.Skills
+import core.game.node.entity.skill.Skills
 import java.util.*
 import kotlin.collections.ArrayList
 

@@ -3,7 +3,7 @@ package plugin.ai.wilderness;
 import java.util.ArrayList;
 
 import core.game.container.impl.EquipmentContainer;
-import plugin.skill.Skills;
+import core.game.node.entity.skill.Skills;
 import core.game.node.entity.combat.CombatSpell;
 import plugin.ai.AIPlayer;
 import plugin.ai.pvmbots.DragonKiller;

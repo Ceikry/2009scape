@@ -1,6 +1,6 @@
 package core.game.system.script.build;
 
-import plugin.dialogue.DialogueInterpreter;
+import core.game.content.dialogue.DialogueInterpreter;
 import core.game.system.script.ScriptBuilder;
 import core.game.system.script.ScriptCompiler;
 import core.game.system.script.ScriptContext;

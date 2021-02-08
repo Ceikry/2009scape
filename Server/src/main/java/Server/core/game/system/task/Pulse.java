@@ -1,7 +1,6 @@
 package core.game.system.task;
 
 import core.game.node.Node;
-import core.game.world.GameWorld;
 
 /**
  * Represents a pulse object (a task executed once every 600ms on the

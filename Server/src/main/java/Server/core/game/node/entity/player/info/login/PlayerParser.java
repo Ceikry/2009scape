@@ -1,6 +1,5 @@
 package core.game.node.entity.player.info.login;
 
-import core.Server;
 import core.ServerConstants;
 import core.game.node.entity.combat.CombatSpell;
 import core.game.node.entity.player.Player;

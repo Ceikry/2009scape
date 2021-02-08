@@ -1,7 +1,7 @@
 package core.game.node.entity;
 
 import core.game.content.holiday.HolidayEvent;
-import plugin.skill.Skills;
+import core.game.node.entity.skill.Skills;
 import core.game.interaction.DestinationFlag;
 import core.game.node.Node;
 import core.game.node.entity.combat.*;

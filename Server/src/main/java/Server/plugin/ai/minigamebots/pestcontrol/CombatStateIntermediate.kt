@@ -4,16 +4,13 @@ import core.game.interaction.MovementPulse
 import core.game.node.Node
 import core.game.node.entity.npc.NPC
 import core.game.world.GameWorld
-import core.game.world.map.Direction
 import core.game.world.map.Location
 import core.game.world.map.RegionManager
 import core.game.world.map.path.Pathfinder
 import core.tools.RandomFunction
-import plugin.activity.pestcontrol.PestControlHelper
-import plugin.activity.pestcontrol.PestControlHelper.getMyPestControlSession2
+import core.game.content.activity.pestcontrol.PestControlHelper.getMyPestControlSession2
 import java.util.*
-import plugin.activity.pestcontrol.PestControlHelper.GATE_ENTRIES
-import plugin.activity.pestcontrol.PestControlHelper.Portals_AttackableI
+import core.game.content.activity.pestcontrol.PestControlHelper.GATE_ENTRIES
 import java.util.concurrent.Executors
 
 class CombatStateIntermediate(val bot: PestControlTestBot2) {

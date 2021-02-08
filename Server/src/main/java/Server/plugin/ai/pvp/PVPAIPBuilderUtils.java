@@ -1,7 +1,7 @@
 package plugin.ai.pvp;
 
 import core.game.container.impl.EquipmentContainer;
-import plugin.skill.Skills;
+import core.game.node.entity.skill.Skills;
 import core.game.node.entity.combat.CombatSpell;
 import plugin.ai.AIPlayer;
 import core.game.node.entity.player.link.SpellBookManager;

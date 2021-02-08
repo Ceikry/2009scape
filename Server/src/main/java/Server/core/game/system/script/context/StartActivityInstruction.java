@@ -1,6 +1,6 @@
 package core.game.system.script.context;
 
-import plugin.activity.ActivityManager;
+import core.game.content.activity.ActivityManager;
 import core.game.node.entity.player.Player;
 import core.game.system.script.ScriptContext;
 

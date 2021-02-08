@@ -1,6 +1,6 @@
 package plugin.ai;
 
-import plugin.dialogue.DialoguePlugin;
+import core.game.content.dialogue.DialoguePlugin;
 import core.game.node.entity.player.Player;
 import core.game.node.entity.player.info.Rights;
 

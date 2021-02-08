@@ -1,6 +1,6 @@
 package core.game.world.map.zone;
 
-import plugin.skill.summoning.familiar.Familiar;
+import core.game.node.entity.skill.summoning.familiar.Familiar;
 import core.game.interaction.Option;
 import core.game.node.Node;
 import core.game.node.entity.Entity;

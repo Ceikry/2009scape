@@ -3,8 +3,8 @@ package core.game.interaction;
 import core.game.node.item.GroundItem;
 import core.game.node.item.GroundItemManager;
 import core.game.world.map.Location;
-import plugin.interaction.city.falador.WineOfZamorakInteraction;
-import plugin.interaction.city.portsarim.AhabBeerInteraction;
+import core.game.interaction.city.falador.WineOfZamorakInteraction;
+import core.game.interaction.city.portsarim.AhabBeerInteraction;
 
 /**
  * Handles interactions for special ground items

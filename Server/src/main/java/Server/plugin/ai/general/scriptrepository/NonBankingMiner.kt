@@ -3,7 +3,7 @@ package plugin.ai.general.scriptrepository
 import core.game.node.item.Item
 import core.tools.Items
 import plugin.ai.skillingbot.SkillingBotAssembler
-import plugin.skill.Skills
+import core.game.node.entity.skill.Skills
 
 class NonBankingMiner : Script() {
     override fun tick() {

@@ -1,7 +1,7 @@
 package core.game.system.communication;
 
 import core.game.component.Component;
-import plugin.activity.ActivityPlugin;
+import core.game.content.activity.ActivityPlugin;
 import core.game.node.entity.player.Player;
 import core.game.node.entity.player.info.PlayerDetails;
 import core.game.node.entity.player.info.Rights;

@@ -11,7 +11,6 @@ import core.net.amsc.WorldCommunicator;
 import core.net.packet.IncomingPacket;
 import core.net.packet.IoBuffer;
 import core.tools.StringUtils;
-import plugin.ai.AIPlayer;
 
 /**
  * Represents the incoming chat packet.

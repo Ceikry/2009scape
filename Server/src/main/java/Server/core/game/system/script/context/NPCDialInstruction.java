@@ -1,6 +1,6 @@
 package core.game.system.script.context;
 
-import plugin.dialogue.FacialExpression;
+import core.game.content.dialogue.FacialExpression;
 import core.game.node.entity.npc.NPC;
 import core.game.node.entity.player.Player;
 import core.game.system.script.ParamCall;

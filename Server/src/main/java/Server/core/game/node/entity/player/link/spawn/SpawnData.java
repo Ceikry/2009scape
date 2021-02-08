@@ -1,7 +1,7 @@
 package core.game.node.entity.player.link.spawn;
 
 import core.game.component.Component;
-import plugin.skill.Skills;
+import core.game.node.entity.skill.Skills;
 import core.game.node.entity.player.Player;
 import core.game.node.entity.player.info.login.SavingModule;
 import core.game.node.entity.player.link.SavedData;

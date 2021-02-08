@@ -1,6 +1,5 @@
 package core.game.world.map;
 
-import core.game.component.Component;
 import core.game.node.Node;
 import core.game.node.entity.npc.NPC;
 import core.game.node.entity.player.Player;

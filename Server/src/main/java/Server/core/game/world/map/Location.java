@@ -7,7 +7,6 @@ import core.game.world.map.path.Pathfinder;
 import core.tools.RandomFunction;
 
 import java.nio.ByteBuffer;
-import java.util.Arrays;
 
 /**
  * Represents a location on the world map.

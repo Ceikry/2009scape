@@ -9,7 +9,7 @@ import core.game.world.update.flag.context.Animation
 import org.json.simple.JSONArray
 import org.json.simple.JSONObject
 import org.json.simple.parser.JSONParser
-import plugin.ttrail.ClueLevel
+import core.game.content.ttrail.ClueLevel
 import java.io.FileReader
 
 class NPCConfigParser {

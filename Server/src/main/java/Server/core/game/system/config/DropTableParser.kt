@@ -2,9 +2,6 @@ package core.game.system.config
 
 import core.ServerConstants
 import core.cache.def.impl.NPCDefinition
-import core.game.node.entity.npc.drop.DropFrequency
-import core.game.node.entity.npc.drop.NPCDropTables
-import core.game.node.item.ChanceItem
 import core.game.node.item.WeightedChanceItem
 import core.game.system.SystemLogger
 import org.json.simple.JSONArray

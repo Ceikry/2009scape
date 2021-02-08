@@ -1,8 +1,8 @@
 package core.net.packet.in;
 
 import core.ServerConstants;
-import plugin.skill.magic.MagicSpell;
-import plugin.skill.summoning.familiar.FamiliarSpecial;
+import core.game.node.entity.skill.magic.MagicSpell;
+import core.game.node.entity.skill.summoning.familiar.FamiliarSpecial;
 import core.game.interaction.MovementPulse;
 import core.game.node.entity.combat.CombatSwingHandler;
 import core.game.node.entity.npc.NPC;

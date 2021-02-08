@@ -10,7 +10,6 @@ import core.game.world.GameWorld;
 import core.game.world.map.RegionManager;
 import core.game.world.repository.Repository;
 import core.gui.ConsoleTab;
-import core.plugin.PluginManager;
 
 import javax.swing.*;
 import javax.swing.border.TitledBorder;

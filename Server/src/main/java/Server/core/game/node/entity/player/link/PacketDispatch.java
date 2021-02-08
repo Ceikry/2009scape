@@ -1,7 +1,7 @@
 package core.game.node.entity.player.link;
 
 import core.game.Varp;
-import plugin.quest.tutorials.tutorialisland.TutorialSession;
+import core.game.content.quest.tutorials.tutorialisland.TutorialSession;
 import core.game.node.entity.player.Player;
 import core.game.node.object.GameObject;
 import core.game.system.task.Pulse;

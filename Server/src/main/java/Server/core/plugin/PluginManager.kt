@@ -6,10 +6,10 @@ import core.game.node.entity.player.link.quest.QuestRepository
 import core.game.system.SystemLogger
 import io.github.classgraph.ClassGraph
 import io.github.classgraph.ClassInfo
-import plugin.activity.ActivityManager
-import plugin.activity.ActivityPlugin
-import plugin.command.Command
-import plugin.dialogue.DialoguePlugin
+import core.game.content.activity.ActivityManager
+import core.game.content.activity.ActivityPlugin
+import core.game.system.command.Command
+import core.game.content.dialogue.DialoguePlugin
 import java.lang.Exception
 import java.util.*
 import java.util.function.Consumer
@@ -55,7 +55,7 @@ object PluginManager {
 
     fun load() {
         var result = ClassGraph().enableClassInfo().enableAnnotationInfo().scan()
-        result.getClassesWithAnnotation("core.plugin.InitializablePlugin").forEach(Consumer { p: ClassInfo ->
+        result.getClassesWithAnnotation("core.plugin.Initializable").forEach(Consumer { p: ClassInfo ->
             try {
                 definePlugin(p.loadClass().newInstance() as Plugin<JvmType.Object>)
             } catch (e: InstantiationException) {
@@ -64,7 +64,7 @@ object PluginManager {
                 e.printStackTrace()
             }
         })
-        result.getSubclasses("plugin.command.Command").forEach {
+        result.getSubclasses("core.game.system.command.Command").forEach {
             System.out.println("E")
             try {
                 definePlugin(it.loadClass().newInstance() as Plugin<Command>).also { System.out.println("Initializing $it") }

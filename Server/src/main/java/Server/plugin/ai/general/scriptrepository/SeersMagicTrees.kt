@@ -4,16 +4,12 @@ import core.tools.Items
 import core.game.interaction.DestinationFlag
 import core.game.interaction.MovementPulse
 import core.game.node.item.Item
-import core.game.system.task.Pulse
 import core.game.world.map.Location
-import core.game.world.map.path.Pathfinder
 import core.game.world.map.zone.ZoneBorders
 import core.tools.RandomFunction
-import plugin.ai.AIPlayer
 import plugin.ai.general.ScriptAPI
 import plugin.ai.skillingbot.SkillingBotAssembler
-import plugin.skill.Skills
-import kotlin.math.log
+import core.game.node.entity.skill.Skills
 
 @PlayerCompatible
 @ScriptName("Seers Magics")

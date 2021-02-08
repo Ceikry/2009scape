@@ -4,7 +4,7 @@ import core.game.world.map.Location;
 
 import java.util.ArrayList;
 
-import plugin.skill.Skills;
+import core.game.node.entity.skill.Skills;
 import core.game.interaction.Option;
 import core.game.node.Node;
 import plugin.ai.AIPlayer;

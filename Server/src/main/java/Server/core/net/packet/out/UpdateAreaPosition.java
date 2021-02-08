@@ -7,8 +7,6 @@ import core.net.packet.OutgoingPacket;
 import core.net.packet.PacketHeader;
 import core.net.packet.context.AreaPositionContext;
 
-import java.nio.ByteBuffer;
-
 /**
  * Handles the update area position packet.
  * @author Emperor

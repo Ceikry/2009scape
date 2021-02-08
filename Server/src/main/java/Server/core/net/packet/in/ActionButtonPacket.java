@@ -3,7 +3,7 @@ package core.net.packet.in;
 import core.game.component.Component;
 import core.game.component.ComponentPlugin;
 import core.game.container.Container;
-import plugin.dialogue.DialogueAction;
+import core.game.content.dialogue.DialogueAction;
 import core.game.interaction.Option;
 import core.game.node.entity.player.Player;
 import core.game.node.entity.player.info.login.LoginConfiguration;

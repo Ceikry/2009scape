@@ -8,8 +8,8 @@ import core.tools.Items
 import core.tools.RandomFunction
 import plugin.ai.AIPlayer
 import plugin.ai.general.ScriptAPI
-import plugin.ge.OfferManager
-import plugin.skill.Skills
+import core.game.ge.OfferManager
+import core.game.node.entity.skill.Skills
 import kotlin.random.Random
 
 /*

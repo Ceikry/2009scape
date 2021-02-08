@@ -1,7 +1,7 @@
 package core.game.content.global;
 
 import core.game.container.Container;
-import plugin.dialogue.FacialExpression;
+import core.game.content.dialogue.FacialExpression;
 import core.game.node.entity.player.Player;
 import core.game.node.item.Item;
 

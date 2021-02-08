@@ -25,9 +25,9 @@ import core.net.packet.in.InteractionPacket;
 import core.plugin.Plugin;
 import core.tools.RandomFunction;
 import core.tools.StringUtils;
-import plugin.dialogue.DialoguePlugin;
-import plugin.skill.Skills;
-import plugin.quest.tutorials.tutorialisland.CharacterDesign;
+import core.game.content.dialogue.DialoguePlugin;
+import core.game.node.entity.skill.Skills;
+import core.game.content.quest.tutorials.tutorialisland.CharacterDesign;
 
 import java.io.File;
 import java.io.FileNotFoundException;

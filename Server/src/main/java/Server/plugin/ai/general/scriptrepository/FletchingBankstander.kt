@@ -3,9 +3,9 @@ package plugin.ai.general.scriptrepository
 import core.game.node.item.Item
 import core.tools.Items
 import plugin.ai.skillingbot.SkillingBotAssembler
-import plugin.skill.Skills
-import plugin.skill.fletching.Fletching
-import plugin.skill.fletching.FletchingPulse
+import core.game.node.entity.skill.Skills
+import core.game.node.entity.skill.fletching.Fletching
+import core.game.node.entity.skill.fletching.FletchingPulse
 
 class FletchingBankstander : Script(){
     var state = State.FLETCHING

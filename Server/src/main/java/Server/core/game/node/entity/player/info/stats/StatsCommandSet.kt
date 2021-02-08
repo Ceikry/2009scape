@@ -4,11 +4,11 @@ import core.game.component.Component
 import core.game.content.global.BossKillCounter
 import core.game.node.entity.player.Player
 import core.game.world.repository.Repository
-import core.plugin.InitializablePlugin
-import plugin.command.Command
-import plugin.command.CommandSet
+import core.plugin.Initializable
+import core.game.system.command.Command
+import core.game.system.command.sets.CommandSet
 
-@InitializablePlugin
+@Initializable
 class StatsCommandSet : CommandSet(Command.Privilege.STANDARD) {
     override fun defineCommands() {
         define("stats"){player,args ->

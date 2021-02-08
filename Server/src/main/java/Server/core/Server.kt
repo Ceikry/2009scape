@@ -11,12 +11,10 @@ import core.net.amsc.WorldCommunicator
 import core.tools.TimeStamp
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
-import plugin.ai.AIRepository
-import plugin.ge.GEAutoStock
+import core.game.ge.GEAutoStock
 import java.io.File
 import java.net.BindException
 import java.util.*
-import kotlin.system.exitProcess
 
 /**
  * The main class, for those that are unable to read the class' name.

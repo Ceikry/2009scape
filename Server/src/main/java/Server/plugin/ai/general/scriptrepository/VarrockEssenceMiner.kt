@@ -5,11 +5,10 @@ import core.game.interaction.MovementPulse
 import core.game.node.item.Item
 import core.game.system.SystemLogger
 import core.game.world.map.Location
-import core.game.world.map.path.Pathfinder
 import core.game.world.map.zone.ZoneBorders
 import core.tools.Items
 import plugin.ai.skillingbot.SkillingBotAssembler
-import plugin.skill.Skills
+import core.game.node.entity.skill.Skills
 
 class VarrockEssenceMiner : Script(){
 

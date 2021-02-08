@@ -6,9 +6,9 @@ import core.game.node.item.Item
 import core.game.world.update.flag.context.Animation
 import core.tools.Items
 import core.tools.RandomFunction
-import plugin.skill.SkillPulse
-import plugin.skill.Skills
-import plugin.stringtools.colorize
+import core.game.node.entity.skill.SkillPulse
+import core.game.node.entity.skill.Skills
+import core.tools.stringtools.colorize
 
 /**
  * Pulse used for barbarian fishing

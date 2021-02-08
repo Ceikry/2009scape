@@ -15,12 +15,11 @@ import core.game.world.map.zone.ZoneBorders
 import core.game.world.repository.Repository.sendNews
 import core.game.world.update.flag.context.Animation
 import core.game.world.update.flag.context.Graphics
-import core.tools.Items
 import core.tools.RandomFunction
 import plugin.ai.AIPlayer
 import plugin.ai.AIRepository
 import plugin.ai.pvmbots.CombatBotAssembler
-import plugin.skill.Skills
+import core.game.node.entity.skill.Skills
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 import kotlin.random.Random

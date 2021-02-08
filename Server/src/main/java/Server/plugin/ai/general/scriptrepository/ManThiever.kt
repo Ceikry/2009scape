@@ -1,7 +1,6 @@
 package plugin.ai.general.scriptrepository
 
 import core.game.node.item.Item
-import core.game.world.map.Location
 import plugin.ai.skillingbot.SkillingBotAssembler
 import java.util.*
 

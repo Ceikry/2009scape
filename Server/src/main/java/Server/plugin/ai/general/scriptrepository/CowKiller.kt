@@ -2,17 +2,12 @@ package plugin.ai.general.scriptrepository
 
 import core.game.interaction.DestinationFlag
 import core.game.interaction.MovementPulse
-import core.game.node.item.Item
 import core.game.system.SystemLogger
 import core.game.system.task.Pulse
 import core.game.world.map.Location
-import core.game.world.map.path.Pathfinder
-import core.game.world.map.zone.Zone
 import core.game.world.map.zone.ZoneBorders
 import core.tools.Items
-import plugin.ai.AIPlayer
 import plugin.ai.pvmbots.CombatBotAssembler
-import java.net.Proxy
 
 class CowKiller : Script() {
     var state = State.KILLING

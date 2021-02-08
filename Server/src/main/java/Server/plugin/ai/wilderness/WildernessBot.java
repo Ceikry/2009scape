@@ -4,11 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 import core.game.container.impl.EquipmentContainer;
-import plugin.consumable.Consumable;
-import plugin.consumable.Consumables;
-import plugin.consumable.Food;
-import plugin.consumable.effects.HealingEffect;
-import plugin.skill.Skills;
+import core.game.content.consumable.Consumable;
+import core.game.content.consumable.Consumables;
+import core.game.content.consumable.Food;
+import core.game.content.consumable.effects.HealingEffect;
+import core.game.node.entity.skill.Skills;
 import core.game.interaction.Option;
 import core.game.node.entity.Entity;
 import core.game.node.entity.player.Player;

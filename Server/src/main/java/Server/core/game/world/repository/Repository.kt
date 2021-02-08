@@ -7,8 +7,6 @@ import java.util.concurrent.CopyOnWriteArrayList
 import java.util.HashMap
 import kotlin.jvm.JvmOverloads
 import core.game.world.map.RegionManager
-import core.game.node.entity.player.info.PlayerDetails
-import core.game.node.entity.player.info.login.PlayerParser
 import core.game.world.map.Location
 import java.util.ArrayList
 

@@ -1,6 +1,6 @@
 package plugin.ai;
 
-import plugin.skill.Skills;
+import core.game.node.entity.skill.Skills;
 import core.game.node.entity.player.Player;
 import core.game.node.entity.player.link.appearance.Gender;
 import core.game.node.item.Item;

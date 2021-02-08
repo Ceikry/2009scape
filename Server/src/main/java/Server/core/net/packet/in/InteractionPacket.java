@@ -22,8 +22,7 @@ import core.net.packet.IoBuffer;
 import core.net.packet.PacketRepository;
 import core.net.packet.context.PlayerContext;
 import core.net.packet.out.ClearMinimapFlag;
-import plugin.interaction.player.PeltOptionPlugin;
-import plugin.quest.PluginInteractionManager;
+import core.game.content.quest.PluginInteractionManager;
 
 import java.util.List;
 

@@ -6,10 +6,10 @@ import core.game.interaction.OptionHandler
 import core.game.node.Node
 import core.game.node.entity.player.Player
 import core.game.node.item.Item
-import core.plugin.InitializablePlugin
+import core.plugin.Initializable
 import core.plugin.Plugin
 
-@InitializablePlugin
+@Initializable
 /**
  * Option handlers for barbarian fishing.
  * @author Ceikry

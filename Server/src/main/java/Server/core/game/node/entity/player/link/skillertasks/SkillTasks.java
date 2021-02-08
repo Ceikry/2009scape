@@ -1,6 +1,6 @@
 package core.game.node.entity.player.link.skillertasks;
 
-import plugin.skill.Skills;
+import core.game.node.entity.skill.Skills;
 
 public enum SkillTasks {
 

@@ -1,7 +1,5 @@
 package core.game.content.global;
 
-import core.game.node.entity.player.Player;
-
 /**
  * Handles the skillcape perks.
  * @author Empathy

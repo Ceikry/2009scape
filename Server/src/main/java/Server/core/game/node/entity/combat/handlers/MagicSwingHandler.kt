@@ -13,9 +13,9 @@ import core.game.node.entity.combat.equipment.WeaponInterface
 import core.game.node.entity.npc.NPC
 import core.game.node.entity.player.Player
 import core.tools.RandomFunction
-import plugin.skill.Skills
-import plugin.quest.tutorials.tutorialisland.TutorialSession
-import plugin.quest.tutorials.tutorialisland.TutorialStage
+import core.game.node.entity.skill.Skills
+import core.game.content.quest.tutorials.tutorialisland.TutorialSession
+import core.game.content.quest.tutorials.tutorialisland.TutorialStage
 import kotlin.math.floor
 
 /**

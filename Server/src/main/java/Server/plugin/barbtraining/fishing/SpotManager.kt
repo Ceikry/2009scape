@@ -2,15 +2,15 @@ package plugin.barbtraining.fishing
 
 import core.game.node.entity.npc.NPC
 import core.game.world.map.Location
-import core.plugin.InitializablePlugin
+import core.plugin.Initializable
 import core.plugin.Plugin
 import core.tools.RandomFunction
-import plugin.CorePluginTypes.ManagerPlugin
-import plugin.CorePluginTypes.Managers
+import core.plugin.CorePluginTypes.ManagerPlugin
+import core.plugin.CorePluginTypes.Managers
 import plugin.barbtraining.fishing.SpotManager.Companion.locations
 import plugin.barbtraining.fishing.SpotManager.Companion.usedLocations
 
-@InitializablePlugin
+@Initializable
 /**
  * Manages fishing spot spawning and relocation
  * @author Ceikry

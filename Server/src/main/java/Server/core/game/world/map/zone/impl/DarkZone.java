@@ -14,7 +14,7 @@ import core.game.world.GameWorld;
 import core.game.world.map.zone.MapZone;
 import core.game.world.map.zone.RegionZone;
 import core.game.world.map.zone.ZoneBorders;
-import plugin.skillcapeperks.SkillcapePerks;
+import core.game.node.entity.skill.skillcapeperks.SkillcapePerks;
 
 /**
  * Handles a dark area.

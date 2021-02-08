@@ -7,11 +7,11 @@ import core.game.world.map.Direction
 import core.game.world.map.Location
 import core.tools.RandomFunction
 import plugin.ai.AIPlayer
-import plugin.consumable.Consumable
-import plugin.consumable.Consumables
-import plugin.consumable.Food
-import plugin.consumable.effects.HealingEffect
-import plugin.skill.Skills
+import core.game.content.consumable.Consumable
+import core.game.content.consumable.Consumables
+import core.game.content.consumable.Food
+import core.game.content.consumable.effects.HealingEffect
+import core.game.node.entity.skill.Skills
 import java.util.*
 
 class CombatBot(location: Location) : AIPlayer(location) {

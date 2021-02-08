@@ -2,19 +2,16 @@ package plugin.ai.minigamebots.pestcontrol
 
 import core.game.interaction.MovementPulse
 import core.game.node.Node
-import core.game.node.entity.combat.CombatStyle
 import core.game.node.entity.npc.NPC
 import core.game.world.GameWorld
 import core.game.world.map.Location
 import core.game.world.map.RegionManager
 import core.game.world.map.path.Pathfinder
 import core.tools.RandomFunction
-import plugin.activity.pestcontrol.PestControlHelper
-import plugin.activity.pestcontrol.PestControlHelper.GATE_ENTRIES
-import plugin.activity.pestcontrol.PestControlHelper.getMyPestControlSession1
+import core.game.content.activity.pestcontrol.PestControlHelper.GATE_ENTRIES
+import core.game.content.activity.pestcontrol.PestControlHelper.getMyPestControlSession1
 import java.util.*
 import java.util.concurrent.Executors
-import plugin.activity.pestcontrol.PestControlSession
 
 
 class CombatState(val bot: PestControlTestBot) {

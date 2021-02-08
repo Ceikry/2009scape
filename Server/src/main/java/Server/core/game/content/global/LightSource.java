@@ -2,7 +2,6 @@ package core.game.content.global;
 
 import core.game.node.entity.player.Player;
 import core.game.node.item.Item;
-import core.tools.Items;
 
 import static core.tools.Interfaces.*;
 import static core.tools.Items.*;

@@ -1,7 +1,6 @@
 package plugin.ai.general
 
 import core.game.node.entity.player.Player
-import core.game.system.SystemLogger
 import core.game.system.task.Pulse
 import core.game.world.GameWorld
 import core.game.world.map.Location

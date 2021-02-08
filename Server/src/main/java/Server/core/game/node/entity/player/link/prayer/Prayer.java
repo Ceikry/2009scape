@@ -1,7 +1,7 @@
 package core.game.node.entity.player.link.prayer;
 
-import plugin.skill.SkillBonus;
-import plugin.skill.Skills;
+import core.game.node.entity.skill.SkillBonus;
+import core.game.node.entity.skill.Skills;
 import core.game.node.entity.Entity;
 import core.game.node.entity.combat.CombatStyle;
 import core.game.node.entity.combat.ImpactHandler.HitsplatType;

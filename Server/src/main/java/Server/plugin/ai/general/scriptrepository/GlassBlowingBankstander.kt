@@ -3,9 +3,9 @@ package plugin.ai.general.scriptrepository
 import core.game.node.item.Item
 import core.tools.Items
 import plugin.ai.skillingbot.SkillingBotAssembler
-import plugin.interaction.inter.GlassInterface
-import plugin.skill.Skills
-import plugin.skill.crafting.GlassProduct
+import core.game.interaction.inter.GlassInterface
+import core.game.node.entity.skill.Skills
+import core.game.node.entity.skill.crafting.GlassProduct
 
 class GlassBlowingBankstander : Script(){
     var state = State.BLOWING

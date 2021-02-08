@@ -2,11 +2,11 @@ package core.game.world.callback
 
 import core.game.system.SystemLogger.error
 import core.game.world.map.zone.ZoneBuilder
-import plugin.skill.farming.FarmingPulse
-import plugin.skill.hunter.ImpetuousImpulses
+import core.game.node.entity.skill.farming.FarmingPulse
+import core.game.node.entity.skill.hunter.ImpetuousImpulses
 import core.game.world.GameWorld
-import plugin.ge.OfferManager
-import plugin.skill.farming.pot.SeedlingPulse
+import core.game.ge.OfferManager
+import core.game.node.entity.skill.farming.pot.SeedlingPulse
 import java.util.ArrayList
 
 /**

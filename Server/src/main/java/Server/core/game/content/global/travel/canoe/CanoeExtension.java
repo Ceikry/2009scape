@@ -1,8 +1,8 @@
 package core.game.content.global.travel.canoe;
 
 import core.game.component.Component;
-import plugin.skill.Skills;
-import plugin.skill.gather.SkillingTool;
+import core.game.node.entity.skill.Skills;
+import core.game.node.entity.skill.gather.SkillingTool;
 import core.game.node.entity.impl.Animator.Priority;
 import core.game.node.entity.player.Player;
 import core.game.node.entity.player.link.diary.DiaryType;

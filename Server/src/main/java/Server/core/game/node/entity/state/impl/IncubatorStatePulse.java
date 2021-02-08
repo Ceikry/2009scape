@@ -1,6 +1,6 @@
 package core.game.node.entity.state.impl;
 
-import plugin.skill.summoning.pet.IncubatorEgg;
+import core.game.node.entity.skill.summoning.pet.IncubatorEgg;
 import core.game.node.entity.Entity;
 import core.game.node.entity.player.Player;
 import core.game.node.entity.state.StatePulse;
