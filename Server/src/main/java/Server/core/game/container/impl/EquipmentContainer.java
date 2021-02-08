@@ -16,6 +16,8 @@ import core.net.packet.context.ContainerContext;
 import core.net.packet.out.ContainerPacket;
 import core.net.packet.out.WeightUpdate;
 import core.plugin.Plugin;
+import plugin.skill.Skills;
+import plugin.skillcapeperks.SkillcapePerks;
 
 /**
  * Represents the equipment container.
@@ -239,7 +241,18 @@ public final class EquipmentContainer extends Container {
 				}
 			}
 		}
+		Item weapon = player.getEquipment().get(SLOT_WEAPON);
+		if(weapon != null && weapon.getDefinition().getRequirement(Skills.STRENGTH) > 0 && SkillcapePerks.isActive(SkillcapePerks.FINE_ATTUNEMENT,player)){
+			int[] bonus = weapon.getDefinition().getConfiguration(ItemConfigParser.BONUS, new int[15]);
+			bonuses[11] += Math.ceil(bonus[11] * 0.20);
+		}
 		Item shield = player.getEquipment().get(SLOT_SHIELD);
+		if(shield != null && SkillcapePerks.isActive(SkillcapePerks.GRAND_BULLWARK,player)){
+			bonuses[5] += Math.ceil(bonuses[5] * 0.20);
+			bonuses[6] += Math.ceil(bonuses[6] * 0.20);
+			bonuses[7] += Math.ceil(bonuses[7] * 0.20);
+			bonuses[9] += Math.ceil(bonuses[9] * 0.20);
+		}
 		if (shield != null && shield.getId() == 11283) {
 			int increase = shield.getCharge() / 20;
 			bonuses[5] += increase;

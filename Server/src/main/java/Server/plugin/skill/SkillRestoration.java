@@ -1,8 +1,10 @@
 package plugin.skill;
 
 import core.game.node.entity.Entity;
+import core.game.node.entity.player.Player;
 import core.game.node.entity.player.link.prayer.PrayerType;
 import core.game.world.GameWorld;
+import plugin.skillcapeperks.SkillcapePerks;
 
 /**
  * Handles the skill restoration data.
@@ -39,6 +41,9 @@ public final class SkillRestoration {
 	public void restore(Entity entity) {
 		Skills skills = entity.getSkills();
 		int max = skills.getStaticLevel(skillId);
+		if(skillId == Skills.HITPOINTS && entity instanceof Player && SkillcapePerks.isActive(SkillcapePerks.DAMAGE_SPONG,entity.asPlayer())){
+			max = 110;
+		}
 		if(hpSummPrayTick < GameWorld.getTicks()){
 			if(skillId == Skills.HITPOINTS || skillId == Skills.SUMMONING || skillId == Skills.PRAYER){
 				if(skillId == Skills.HITPOINTS){

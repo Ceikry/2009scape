@@ -251,7 +251,10 @@ open class RangeSwingHandler
         if (entity is Player) {
             prayer += entity.prayer.getSkillBonus(Skills.RANGE)
         }
-        val additional = 1.0 // Slayer helmet/salve/...
+        var additional = 1.0 // Slayer helmet/salve/...
+        if(entity is Player && plugin.skillcapeperks.SkillcapePerks.isActive(plugin.skillcapeperks.SkillcapePerks.ACCURATE_MARKSMAN,entity.asPlayer())){
+            additional += 0.5
+        }
         var styleBonus = 0
         if (entity.properties.attackStyle.style == WeaponInterface.STYLE_RANGE_ACCURATE) {
             styleBonus = 3

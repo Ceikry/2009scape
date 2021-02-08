@@ -37,7 +37,7 @@ class ShopParser{
             val stock = parseStock(e["stock"].toString()).toTypedArray()
             val npcs = if(e["npcs"].toString().isNotBlank()) e["npcs"].toString().split(",").map { it.toInt() }.toIntArray() else intArrayOf()
             val currency = e["currency"].toString().toInt()
-            val highAlch = e["high_alch"].toString().toBoolean()
+            val highAlch = e["high_alch"].toString() == "1"
             if(general && stock.isEmpty()){
                 shop = Shop(title,true,currency,highAlch)
             } else {

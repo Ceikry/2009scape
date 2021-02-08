@@ -26,6 +26,7 @@ public final class DrainTask extends NodeTask {
 	public boolean exec(Node node, Node... n) {
 		Player player = node.asPlayer();
 		if (player.getPrayer().getActive().isEmpty()) {
+			getPulse().stop();
 			return true;
 		}
 		player.getSkills().decrementPrayerPoints(getDrain(player.getPrayer()));

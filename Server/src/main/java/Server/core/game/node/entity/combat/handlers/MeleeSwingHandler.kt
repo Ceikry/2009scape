@@ -18,6 +18,7 @@ import core.tools.RandomFunction
 import plugin.skill.Skills
 import plugin.quest.tutorials.tutorialisland.TutorialSession
 import plugin.quest.tutorials.tutorialisland.TutorialStage
+import plugin.skillcapeperks.SkillcapePerks
 import kotlin.math.floor
 
 /**
@@ -142,7 +143,10 @@ open class MeleeSwingHandler
             weaponBonus = (baseLevel - weaponRequirement) * .3
         }
         val style = entity.properties.attackStyle
-        val level = entity.skills.getLevel(Skills.ATTACK)
+        var level = entity.skills.getLevel(Skills.ATTACK)
+        if(entity is Player && SkillcapePerks.isActive(SkillcapePerks.PRECISION_STRIKES,entity.asPlayer())){
+            level += 6
+        }
         var prayer = 1.0
         if (entity is Player) {
             prayer += entity.prayer.getSkillBonus(Skills.ATTACK)

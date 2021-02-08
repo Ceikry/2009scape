@@ -1,6 +1,7 @@
 package plugin.skillcapeperks
 
 import core.game.node.entity.player.Player
+import core.game.node.entity.player.link.SpellBookManager
 import core.game.node.entity.player.link.TeleportManager
 import core.game.world.map.zone.impl.DarkZone
 import core.plugin.InitializablePlugin
@@ -14,12 +15,28 @@ enum class SkillcapePerks(val attribute: String, val effect: ((Player) -> Unit)?
     PRECISION_MINER("cape_perks:precision-miner"),
     GREAT_AIM("cape_perks:great-aim"),
     NEST_HUNTER("cape_perks:nest-hunter"),
+    PRECISION_STRIKES("cape_perks:precision-strikes"),
+    FINE_ATTUNEMENT("cape_perks:fine-attunement"),
+    GRAND_BULLWARK("cape_perks:grand-bullwark"),
+    ACCURATE_MARKSMAN("cape_perks:accurate-marksman"),
+    DAMAGE_SPONG("cape_perks:damage-sponge"),
+    MARATHON_RUNNER("cape_perks:marathon-runner"),
+    LIBRARIAN_MAGUS("cape_perks:librarian-magus",{player ->
+       val time = player.getAttribute("cape_perks:librarian-magus-timer",0L)
+        if(player.getAttribute("cape_perks:librarian-magus-charges",2) > 0 || System.currentTimeMillis() > time){
+            if(System.currentTimeMillis() > time) player.setAttribute("/save:cape_perks:librarian-magus-charges",3)
+            player.dialogueInterpreter.open(509871234)
+            if(System.currentTimeMillis() > time)
+                player.setAttribute("/save:cape_perks:librarian-magus-timer",System.currentTimeMillis() + java.util.concurrent.TimeUnit.DAYS.toMillis(1))
+        }
+    }),
     ABYSS_WARPING("cape_perks:abyss_warp",{ player ->
         val time = player.getAttribute("cape_perks:abyssal_warp_timer",0L)
         if(player.getAttribute("cape_perks:abyssal_warp",3) > 0 || System.currentTimeMillis() > time){
             if(System.currentTimeMillis() > time) player.setAttribute("/save:cape_perks:abyssal_warp",3)
             player.dialogueInterpreter.open(509871233)
-            player.setAttribute("/save:cape_perks:abyssal_warp_timer",System.currentTimeMillis() + java.util.concurrent.TimeUnit.DAYS.toMillis(1))
+            if(System.currentTimeMillis() > time)
+                player.setAttribute("/save:cape_perks:abyssal_warp_timer",System.currentTimeMillis() + java.util.concurrent.TimeUnit.DAYS.toMillis(1))
         } else {
             player.dialogueInterpreter.sendDialogue("Your cape is still on cooldown.","Ready in " + java.util.concurrent.TimeUnit.MILLISECONDS.toMinutes(time - System.currentTimeMillis()) + " minutes.")
         }
@@ -109,6 +126,64 @@ enum class SkillcapePerks(val attribute: String, val effect: ((Player) -> Unit)?
         player.removeAttribute(attribute)
         if(this == CONSTANT_GLOW)
             DarkZone.checkDarkArea(player)
+    }
+
+    @InitializablePlugin
+    class MagicCapeDialogue(player: Player? = null): DialoguePlugin(player){
+        override fun newInstance(player: Player?): DialoguePlugin {
+            return MagicCapeDialogue(player)
+        }
+
+        override fun open(vararg args: Any?): Boolean {
+            when(player.spellBookManager.spellBook){
+                SpellBookManager.SpellBook.ANCIENT.interfaceId -> options("Modern","Lunar")
+                SpellBookManager.SpellBook.MODERN.interfaceId -> options("Ancient","Lunar")
+                SpellBookManager.SpellBook.LUNAR.interfaceId -> options ("Modern","Ancient")
+            }
+            return true
+        }
+
+        override fun handle(interfaceId: Int, buttonId: Int): Boolean {
+            val spellbook = when(player.spellBookManager.spellBook){
+                SpellBookManager.SpellBook.ANCIENT.interfaceId -> {
+                    when(buttonId){
+                        1 -> SpellBookManager.SpellBook.MODERN
+                        2 -> SpellBookManager.SpellBook.LUNAR
+                        else -> null
+                    }
+                }
+
+                SpellBookManager.SpellBook.MODERN.interfaceId -> {
+                    when(buttonId){
+                        1 -> SpellBookManager.SpellBook.ANCIENT
+                        2 -> SpellBookManager.SpellBook.LUNAR
+                        else -> null
+                    }
+                }
+
+                SpellBookManager.SpellBook.LUNAR.interfaceId -> {
+                    when(buttonId){
+                        1 -> SpellBookManager.SpellBook.MODERN
+                        2 -> SpellBookManager.SpellBook.ANCIENT
+                        else -> null
+                    }
+                }
+
+                else -> null
+            }
+
+            if(spellbook != null){
+                player.spellBookManager.setSpellBook(spellbook)
+                player.incrementAttribute("/save:cape_perks:librarian-magus-charges",-1)
+            }
+            end()
+            return true
+        }
+
+        override fun getIds(): IntArray {
+            return intArrayOf(509871234)
+        }
+
     }
 
     @InitializablePlugin

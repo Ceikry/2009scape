@@ -1,6 +1,5 @@
 package plugin.skill;
 
-import core.game.content.global.SkillcapePerks;
 import core.game.world.GameWorld;
 import core.tools.Items;
 import org.json.simple.JSONArray;
@@ -20,6 +19,7 @@ import core.net.packet.PacketRepository;
 import core.net.packet.context.SkillContext;
 import core.net.packet.out.SkillLevel;
 import plugin.interaction.item.brawling_gloves.BrawlingGloves;
+import plugin.skillcapeperks.SkillcapePerks;
 
 import java.nio.ByteBuffer;
 
@@ -671,6 +671,11 @@ public final class Skills {
 	 * @return The maximum amount.
 	 */
 	public int getMaximumLifepoints() {
+		if(this.entity instanceof Player && SkillcapePerks.isActive(SkillcapePerks.DAMAGE_SPONG,this.getEntity().asPlayer())){
+			lifepointsIncrease = 11;
+		} else {
+			lifepointsIncrease = 0;
+		}
 		return staticLevels[HITPOINTS] + lifepointsIncrease;
 	}
 
