@@ -8,6 +8,7 @@ import core.game.world.map.zone.impl.DarkZone
 import core.plugin.Initializable
 import core.game.content.dialogue.DialoguePlugin
 import core.game.node.entity.skill.runecrafting.Altar
+import core.game.world.GameWorld
 
 enum class SkillcapePerks(val attribute: String, val effect: ((Player) -> Unit)? = null) {
     BAREFISTED_SMITHING("cape_perks:barefisted-smithing"),
@@ -112,6 +113,9 @@ enum class SkillcapePerks(val attribute: String, val effect: ((Player) -> Unit)?
     }
 
     fun activate(player: Player){
+        if(GameWorld.settings?.skillcape_perks != true){
+            return
+        }
         if(!isActive(this,player)){
             player.setAttribute("/save:$attribute",true)
         }
@@ -120,6 +124,10 @@ enum class SkillcapePerks(val attribute: String, val effect: ((Player) -> Unit)?
     }
 
     fun operate(player: Player){
+        if(GameWorld.settings?.skillcape_perks != true){
+            player.sendMessage("This item can not be operated.")
+            return
+        }
         effect?.invoke(player)
     }
 

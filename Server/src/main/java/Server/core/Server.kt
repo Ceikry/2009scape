@@ -12,14 +12,17 @@ import core.tools.TimeStamp
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import core.game.ge.GEAutoStock
+import kotlinx.coroutines.delay
 import java.io.File
 import java.net.BindException
 import java.util.*
+import kotlin.system.exitProcess
 
 /**
  * The main class, for those that are unable to read the class' name.
  * @author Emperor
  * @author Vexia
+ * @author Ceikry
  */
 object Server {
     /**
@@ -27,6 +30,10 @@ object Server {
      */
 	@JvmField
 	var startTime: Long = 0
+
+    var lastHeartbeat = System.currentTimeMillis()
+
+    var running = false
 
     /**
      * The NIO reactor.
@@ -73,6 +80,7 @@ object Server {
 
         GEAutoStock.autostock()
         val scanner = Scanner(System.`in`)
+        running = true
         GlobalScope.launch {
             while(scanner.hasNextLine()){
                 val command = scanner.nextLine()
@@ -86,6 +94,21 @@ object Server {
                 }
             }
         }
+        GlobalScope.launch {
+            delay(20000)
+            while(running){
+                if(System.currentTimeMillis() - lastHeartbeat > 1800){
+                    running = false
+                    exitProcess(0)
+                }
+                delay(625)
+            }
+        }
+    }
+
+    @JvmStatic
+    fun heartbeat() {
+        lastHeartbeat = System.currentTimeMillis()
     }
 
     fun printCommands(){

@@ -9,7 +9,9 @@ import core.game.interaction.UseWithHandler;
 import core.game.node.Node;
 import core.game.node.entity.player.Player;
 import core.game.node.entity.state.EntityState;
-import core.game.node.entity.state.impl.IncubatorStatePulse;
+import core.game.node.entity.state.newsys.StateRepository;
+import core.game.node.entity.state.newsys.states.IncubatorState;
+import core.game.node.item.GroundItemManager;
 import core.plugin.Plugin;
 import core.plugin.PluginManager;
 import core.plugin.Initializable;
@@ -46,15 +48,21 @@ public class IncubatorPlugin extends OptionHandler {
 			}
 			if (egg != null) {
 				String name = egg.getProduct().getName().toLowerCase();
-				player.getFamiliarManager().setConfig(-(1 << 4));
+				player.varpManager.get(1160).setVarbit(4,0).send(player);
 				player.sendMessage("You take your " + name + " out of the incubator.");
-				player.getInventory().add(egg.getProduct());
+				if(!player.getInventory().add(egg.getProduct())){
+					GroundItemManager.create(egg.getProduct(),player);
+				}
 				player.removeAttribute("inc");
 			}
 			return true;
 		case "inspect":
-			if (player.getStateManager().hasState(EntityState.INCUBATION) || inc != -1) {
-				IncubatorStatePulse p = (IncubatorStatePulse) player.getStateManager().get(EntityState.INCUBATION);
+			if (player.states.get("incubator") != null || inc != -1) {
+				IncubatorState p = (IncubatorState) player.states.get("incubator");
+				if(p.getPulse() == null){
+					player.varpManager.get(1160).setVarbit(4,0).send(player);
+					return true;
+				}
 				String name = p == null ? IncubatorEgg.values()[inc].getProduct().getName().toLowerCase() : p.getEgg().getProduct().getName().toLowerCase();
 				player.sendMessage("There is " + (StringUtils.isPlusN(name) ? "an" : "a") + " " + name + " incubating in there.");
 			}
@@ -91,15 +99,20 @@ public class IncubatorPlugin extends OptionHandler {
 			if (egg == null) {
 				return false;
 			}
-			if (player.getStateManager().hasState(EntityState.INCUBATION)) {
+			if (player.states.get("incubator") != null && player.states.get("incubator").getPulse() != null) {
 				player.sendMessage("You already have an egg in there.");
-				return false;
+				return true;
 			}
 			if (player.getSkills().getStaticLevel(Skills.SUMMONING) < egg.getLevel()) {
 				player.getDialogueInterpreter().sendDialogue("You need a Summoning level of at least " + egg.getLevel() + " in order to do this.");
 				return true;
 			}
-			player.getStateManager().register(EntityState.INCUBATION, true, egg);
+			if(player.getInventory().remove(egg.getEgg())) {
+				IncubatorState state = (IncubatorState) StateRepository.forKey("incubator", player);
+				state.setEgg(egg);
+				state.setTicksLeft(egg.getInucbationTime() * 100);
+				state.init();
+			}
 			return true;
 		}
 

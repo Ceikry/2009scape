@@ -44,7 +44,6 @@ class ChickenKiller : Script(){
                     if(lootFeathers) {
                         state = State.IDLE
                         timer = 4
-                        SystemLogger.log("Going to idle state")
                     }
                     chickenCounter++
                     overlay!!.setAmount(chickenCounter)

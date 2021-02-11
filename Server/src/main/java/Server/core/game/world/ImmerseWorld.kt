@@ -19,7 +19,6 @@ object ImmerseWorld {
             immerseLumbridgeDraynor()
             immerseVarrock()
             immerseWilderness()
-            immerseFalador()
             immerseFishingGuild()
             immerseAdventurer()
            // immerseSlayer()

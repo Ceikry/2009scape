@@ -24,6 +24,7 @@ import core.worker.MajorUpdateWorker
 import core.plugin.CorePluginTypes.StartupPlugin
 import plugin.ai.general.scriptrepository.PlayerScripts
 import core.game.ge.GrandExchangeDatabase
+import core.game.node.entity.state.newsys.StateRepository
 import java.util.*
 import java.util.function.Consumer
 
@@ -155,6 +156,7 @@ object GameWorld {
         ObjectDefinition.getDefinitions().values.forEach(Consumer { obj: ObjectDefinition -> obj.examine })
         System.gc()
         PlayerScripts.init()
+        StateRepository.init()
         log("185")
         log("188")
     }

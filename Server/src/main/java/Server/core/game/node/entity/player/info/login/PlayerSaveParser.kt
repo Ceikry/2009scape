@@ -19,6 +19,7 @@ import org.json.simple.JSONObject
 import org.json.simple.parser.JSONParser
 import core.game.content.ame.AntiMacroHandler
 import core.game.interaction.item.brawling_gloves.BrawlingGloves
+import core.game.node.entity.state.newsys.StateRepository
 import java.io.FileReader
 import java.util.*
 
@@ -52,6 +53,7 @@ class PlayerSaveParser(val player: Player) {
                 parseAppearance()
                 parseGrave()
                 parseVarps()
+                parseStates()
             }
             launch {
                 parseSpellbook()
@@ -196,10 +198,11 @@ class PlayerSaveParser(val player: Player) {
             val states: JSONArray = saveFile!!["states"] as JSONArray
             for (state in states) {
                 val s = state as JSONObject
-                val stateId = (s.get("stateId") as String).toInt()
-                val active = s.get("isActive") as Boolean
-                if (active)
-                    player.stateManager.register(EntityState.values()[stateId], true)
+                val stateId = s["stateKey"].toString()
+                val stateClass = StateRepository.forKey(stateId,player)
+                stateClass?.parse(s)
+                stateClass?.init()
+                player.states.put(stateId,stateClass)
             }
         }
     }

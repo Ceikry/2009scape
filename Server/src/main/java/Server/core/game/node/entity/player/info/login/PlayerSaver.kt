@@ -301,15 +301,14 @@ class PlayerSaver (val player: Player){
     }
 
     fun saveStateManager(root: JSONObject){
-        if(player.stateManager.isSaveRequired){
-            val states = JSONArray()
-            player.stateManager.states.map {
-                val state = JSONObject()
-                state.put("stateId",it.key.ordinal.toString())
-                state.put("isActive",it.value.isRunning.toString())
-            }
-            root.put("states",states)
+        val states = JSONArray()
+        player.states.forEach{key,clazz ->
+            val stateObj = JSONObject()
+            stateObj.put("stateKey",key)
+            clazz.save(stateObj)
+            states.add(stateObj)
         }
+        root.put("states",states)
     }
 
     fun saveBarCrawl(root: JSONObject){
@@ -630,7 +629,6 @@ class PlayerSaver (val player: Player){
     fun saveGrandExchangeData(root: JSONObject){
         val grandExchange = JSONObject()
         if(player.playerGrandExchange.hasActiveOffer()){
-            SystemLogger.log("Active offer found...")
             val offers = JSONArray()
             player.playerGrandExchange.offers.map {
                 if(it != null){

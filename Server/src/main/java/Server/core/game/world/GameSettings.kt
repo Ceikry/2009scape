@@ -75,6 +75,7 @@ class GameSettings
         var enable_bots: Boolean,
         var autostock_ge: Boolean,
         var allow_token_purchase: Boolean,
+        var skillcape_perks: Boolean,
 
         /**"Lobby" interface
          * The message of the week models to display
@@ -122,10 +123,33 @@ class GameSettings
             val enable_default_clan = data["enable_default_clan"] as Boolean
             val enable_bots = data["enable_bots"] as Boolean
             val autostock_ge = data["autostock_ge"] as Boolean
+            val skillcape_perks = if(data.containsKey("skillcape_perks")) data["skillcape_perks"] as Boolean else false
             val allow_token_purchase = data["allow_token_purchase"] as Boolean
             val message_of_the_week_identifier = data["message_of_the_week_identifier"].toString().toInt()
             val message_of_the_week_text = data["message_of_the_week_text"].toString()
-            return GameSettings(name,debug,dev,startGui,worldId,countryId,activity,true,pvpWorld,false,false,msip,default_xp_rate,allow_slayer_reroll,enable_default_clan,enable_bots,autostock_ge,allow_token_purchase,message_of_the_week_identifier,message_of_the_week_text)
+            return GameSettings(
+                    name,
+                    debug,
+                    dev,
+                    startGui,
+                    worldId,
+                    countryId,
+                    activity,
+                    true,
+                    pvpWorld,
+                    false,
+                    false,
+                    msip,
+                    default_xp_rate,
+                    allow_slayer_reroll,
+                    enable_default_clan,
+                    enable_bots,
+                    autostock_ge,
+                    allow_token_purchase,
+                    skillcape_perks,
+                    message_of_the_week_identifier,
+                    message_of_the_week_text
+            )
         }
 
         /**

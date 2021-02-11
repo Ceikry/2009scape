@@ -49,11 +49,6 @@ public enum EntityState {
 	FIRE_RESISTANT(new FireResistantPulse(null, 0, 0, false)),
 
 	/**
-	 * The entity is incubating an egg.
-	 */
-	INCUBATION(new IncubatorStatePulse()),
-
-	/**
 	 * The entity is under teleblock.
 	 */
 	TELEBLOCK(new TeleblockStatePulse(null, 0, 0)),

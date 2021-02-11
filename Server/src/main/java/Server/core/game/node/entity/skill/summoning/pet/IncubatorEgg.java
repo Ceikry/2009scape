@@ -7,7 +7,17 @@ import core.game.node.item.Item;
  * @author Vexia
  */
 public enum IncubatorEgg {
-	PENGUIN(new Item(12483), 30, 30, new Item(12481)), RAVEN(new Item(11964), 50, 30, new Item(12484)), SARADOMIN_OWL(new Item(5077), 70, 60, new Item(12503)), ZAMORAK_HAWK(new Item(5076), 70, 60, new Item(12506)), GUTHIX_RAPTOR(new Item(5078), 70, 60, new Item(12509)), VULTURE(new Item(11965), 85, 60, new Item(12498)), CHAMELEON(new Item(12494), 90, 60, new Item(12492)), RED_DRAGON(new Item(12477), 99, 60, new Item(12469)), BLACK_DRAGON(new Item(12480), 99, 60, new Item(12475)), BLUE_DRAGON(new Item(12478), 99, 60, new Item(12471)), GREEN_DRAGON(new Item(12479), 99, 60, new Item(12473));
+	PENGUIN(new Item(12483), 30, 30, new Item(12481)),
+	RAVEN(new Item(11964), 50, 30, new Item(12484)),
+	SARADOMIN_OWL(new Item(5077), 70, 60, new Item(12503)),
+	ZAMORAK_HAWK(new Item(5076), 70, 60, new Item(12506)),
+	GUTHIX_RAPTOR(new Item(5078), 70, 60, new Item(12509)),
+	VULTURE(new Item(11965), 85, 60, new Item(12498)),
+	CHAMELEON(new Item(12494), 90, 60, new Item(12492)),
+	RED_DRAGON(new Item(12477), 99, 60, new Item(12469)),
+	BLACK_DRAGON(new Item(12480), 99, 60, new Item(12475)),
+	BLUE_DRAGON(new Item(12478), 99, 60, new Item(12471)),
+	GREEN_DRAGON(new Item(12479), 99, 60, new Item(12473));
 
 	/**
 	 * The egg item.

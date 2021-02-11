@@ -1,5 +1,6 @@
 package core.worker
 
+import core.Server
 import core.game.system.task.Pulse
 import core.game.world.GameWorld
 import core.game.world.repository.Repository
@@ -43,6 +44,7 @@ class MajorUpdateWorker {
             Repository.disconnectionQueue.update()
             //tick all manager plugins
             Managers.tick()
+            Server.heartbeat()
         }
     }
 }

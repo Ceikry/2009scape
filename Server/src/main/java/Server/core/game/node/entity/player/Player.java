@@ -1,9 +1,6 @@
 package core.game.node.entity.player;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 
 import core.ServerConstants;
 import core.game.VarpManager;
@@ -13,6 +10,7 @@ import core.game.container.impl.BankContainer;
 import core.game.container.impl.EquipmentContainer;
 import core.game.container.impl.InventoryListener;
 import core.game.node.entity.combat.equipment.EquipmentDegrader;
+import core.game.node.entity.state.newsys.State;
 import core.game.system.task.Pulse;
 import core.game.world.map.path.Pathfinder;
 import core.game.world.update.flag.context.Animation;
@@ -139,6 +137,8 @@ public class Player extends Entity {
 	public PouchManager pouchManager = new PouchManager(this);
 
 	public VarpManager varpManager = new VarpManager(this);
+
+	public HashMap<String,State> states = new HashMap<>();
 
 	/**
 	 * The inventory.
