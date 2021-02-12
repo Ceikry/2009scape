@@ -303,10 +303,12 @@ class PlayerSaver (val player: Player){
     fun saveStateManager(root: JSONObject){
         val states = JSONArray()
         player.states.forEach{key,clazz ->
-            val stateObj = JSONObject()
-            stateObj.put("stateKey",key)
-            clazz.save(stateObj)
-            states.add(stateObj)
+            if(clazz.pulse != null) {
+                val stateObj = JSONObject()
+                stateObj.put("stateKey", key)
+                clazz.save(stateObj)
+                states.add(stateObj)
+            }
         }
         root.put("states",states)
     }

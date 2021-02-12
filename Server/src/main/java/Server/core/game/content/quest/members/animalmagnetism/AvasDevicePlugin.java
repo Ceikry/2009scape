@@ -5,6 +5,9 @@ import core.game.interaction.OptionHandler;
 import core.game.node.Node;
 import core.game.node.entity.player.Player;
 import core.game.node.entity.state.EntityState;
+import core.game.node.entity.state.newsys.State;
+import core.game.node.entity.state.newsys.StateRepository;
+import core.game.node.entity.state.newsys.states.AvaDeviceState;
 import core.game.node.item.Item;
 import core.plugin.Plugin;
 import core.plugin.PluginManager;
@@ -29,17 +32,23 @@ public final class AvasDevicePlugin implements Plugin<Object> {
 		final Item item = (Item) args[1];
 		switch (identifier) {
 		case "equip":
-			player.getStateManager().register(EntityState.AVA_DEVICE, true, item);
+			AvaDeviceState state = (AvaDeviceState) StateRepository.forKey("avadevice",player);
+			state.setDevice(item.getId());
+			state.init();
 			break;
 		case "unequip":
 			if (args.length == 3) {
 				Item second = (Item) args[2];
 				if (second.getId() == 10498 || second.getId() == 10499) {
-					player.getStateManager().register(EntityState.AVA_DEVICE, true, second);
+					State oldState = player.states.get("avadevice");
+					if(oldState != null && oldState.getPulse() != null) oldState.getPulse().stop();
+					AvaDeviceState newState = (AvaDeviceState) StateRepository.forKey("avadevice",player);
+					newState.setDevice(second.getId());
+					newState.init();
 					break;
 				}
 			}
-			player.getStateManager().remove(EntityState.AVA_DEVICE);
+			if(player.states.get("avadevice") != null && player.states.get("avadevice").getPulse() != null) player.states.get("avadevice").getPulse().stop();
 			break;
 		}
 		return true;

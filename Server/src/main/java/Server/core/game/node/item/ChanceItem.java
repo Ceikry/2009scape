@@ -59,6 +59,10 @@ public final class ChanceItem extends Item {
 		this(id, minimumAmount, minimumAmount, 1000, chanceRate);
 	}
 
+	public ChanceItem(int id, int minimumAmount, int chanceRate) {
+		this(id,minimumAmount,minimumAmount,1000,(double) chanceRate);
+	}
+
 	/**
 	 * Constructs a new {@code ChanceItem} {@code Object}.
 	 * @param id The item id.

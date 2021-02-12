@@ -59,7 +59,7 @@ class OfferManager : Pulse(), CallBack {
         }
 
         if (dumpDatabase && (GameWorld.ticks % SAVE_EVERY == 0)) {
-            save()
+            //save()
             dumpDatabase = false
         }
 

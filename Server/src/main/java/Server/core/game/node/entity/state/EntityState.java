@@ -38,10 +38,6 @@ public enum EntityState {
 	 */
 	CHARGED(new ChargedStatePulse(null, 0)),
 
-	/**
-	 * The entity is under the ava device effect.
-	 */
-	AVA_DEVICE(new AvaDevicePulse(null, 0)),
 
 	/**
 	 * The entity is under fire resistant.
