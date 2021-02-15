@@ -120,7 +120,6 @@ public final class FieldPickingPlugin extends OptionHandler {
 		int charge = object.getCharge();
 		player.getAudioManager().send(2581);
 		player.getPacketDispatch().sendMessage("You pick some flax.");
-		player.getStatisticsManager().getFLAX_PICKED().incrementAmount();
 
 		// Seers achievement diary
 		if (player.getViewport().getRegion().getId() == 10805

@@ -134,7 +134,7 @@ public final class HansDialoguePlugin extends DialoguePlugin {
 					options("Change xp rate", "Nevermind.");
 					stage++;
 				} else {
-					npc("You can only change your rate once, sorry.");
+					npc("Have a great day!");
 					stage = 131;
 				}
 				break;

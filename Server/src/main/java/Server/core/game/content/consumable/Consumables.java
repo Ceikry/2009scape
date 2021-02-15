@@ -306,7 +306,7 @@ public enum Consumables {
 	ANTIPOISON_(new Potion(new int[] {5943, 5945, 5947, 5949}, new MultiEffect(new SetAttributeEffect("poison:immunity", 863), new RemoveStateEffect(EntityState.POISONED.ordinal())))),
 	ANTIPOISON__(new Potion(new int[] {5952, 5954, 5956, 5958}, new MultiEffect(new SetAttributeEffect("poison:immunity", 2000), new RemoveStateEffect(EntityState.POISONED.ordinal())))),
 	SUPER_ANTIP(new Potion(new int[] {2448, 181, 183, 185}, new MultiEffect(new SetAttributeEffect("poison:immunity", 1000), new RemoveStateEffect(EntityState.POISONED.ordinal())))),
-	RELICYM(new Potion(new int[] {4842, 4844, 4846, 4848}, new MultiEffect(new SetAttributeEffect("disease:immunity", 300), new RemoveStateEffect(EntityState.DISEASED.ordinal())))),
+	RELICYM(new Potion(new int[] {4842, 4844, 4846, 4848}, new MultiEffect(new SetAttributeEffect("disease:immunity", 300), new RemoveStateEffect("disease")))),
 	AGILITY(new Potion(new int[] {3032, 3034, 3036, 3038}, new SkillEffect(Skills.AGILITY, 3, 0))),
 	HUNTER(new Potion(new int[] {9998, 10000, 10002, 10004}, new SkillEffect(Skills.HUNTER, 3, 0))),
 	RESTORE(new Potion(new int[] {2430, 127, 129, 131}, new RestoreEffect(10, 0.3))),
@@ -321,7 +321,7 @@ public enum Consumables {
 	ANTIFIRE(new Potion(new int[] {2452, 2454, 2456, 2458}, new SetAttributeEffect("fire:immune", 600, true))),
 	GUTH_REST(new Potion(new int[] {4417, 4419, 4421, 4423}, new MultiEffect(new RemoveStateEffect(EntityState.POISONED.ordinal()), new EnergyEffect(5), new HealingEffect(5)))),
 	MAGIC_ESS(new Potion(new int[] {11491, 11489}, new SkillEffect(Skills.MAGIC,3,0))),
-	SANFEW(new Potion(new int[] {10925, 10927, 10929, 10931}, new MultiEffect(new RestoreEffect(8,0.25), new PrayerEffect(8,0.25), new RemoveStateEffect(EntityState.POISONED.ordinal()), new RemoveStateEffect(EntityState.DISEASED.ordinal())))),
+	SANFEW(new Potion(new int[] {10925, 10927, 10929, 10931}, new MultiEffect(new RestoreEffect(8,0.25), new PrayerEffect(8,0.25), new RemoveStateEffect(EntityState.POISONED.ordinal()), new RemoveStateEffect("disease")))),
 	SUPER_ENERGY(new Potion(new int[] {3016, 3018, 3020, 3022}, new EnergyEffect(20))),
 
 	/** Barbarian Mixes */
@@ -329,7 +329,7 @@ public enum Consumables {
 	ZAMMY_MIX(new BarbarianMix(new int[] {11523, 11521}, new MultiEffect(new SkillEffect(Skills.HITPOINTS, 0, -0.10), new SkillEffect(Skills.ATTACK, 0, 0.15), new SkillEffect(Skills.STRENGTH, 0, 0.25), new SkillEffect(Skills.DEFENCE, 0, -0.1), new RandomPrayerEffect(0, 10)))),
 	ATT_MIX(new BarbarianMix(new int[] {11431, 11429}, new MultiEffect(new SkillEffect(Skills.ATTACK, 3, 0.1), new HealingEffect(3)))),
 	ANTIP_MIX(new BarbarianMix(new int[] {11435, 11433}, new MultiEffect(new RemoveStateEffect(EntityState.POISONED.ordinal()), new SetAttributeEffect("poison:immunity", 143), new HealingEffect(3)))),
-	RELIC_MIX(new BarbarianMix(new int[] {11439, 11437}, new MultiEffect(new RemoveStateEffect(EntityState.DISEASED.ordinal()), new SetAttributeEffect("disease:immunity", 300), new HealingEffect(3)))),
+	RELIC_MIX(new BarbarianMix(new int[] {11439, 11437}, new MultiEffect(new RemoveStateEffect("disease"), new SetAttributeEffect("disease:immunity", 300), new HealingEffect(3)))),
 	STR_MIX(new BarbarianMix(new int[] {11443, 11441}, new MultiEffect(new SkillEffect(Skills.STRENGTH, 3, 0.1), new HealingEffect(3)))),
 	RESTO_MIX(new BarbarianMix(new int[] {11449, 11451}, new MultiEffect(new RestoreEffect(10, 0.3), new HealingEffect(3)))),
 	ENERGY_MIX(new BarbarianMix(new int[] {11453, 11455}, new MultiEffect(new EnergyEffect(10), new HealingEffect(6)))),

@@ -99,7 +99,7 @@ public class IncubatorPlugin extends OptionHandler {
 			if (egg == null) {
 				return false;
 			}
-			if (player.states.get("incubator") != null && player.states.get("incubator").getPulse() != null) {
+			if (player.hasActiveState("incubator")) {
 				player.sendMessage("You already have an egg in there.");
 				return true;
 			}
@@ -108,7 +108,7 @@ public class IncubatorPlugin extends OptionHandler {
 				return true;
 			}
 			if(player.getInventory().remove(egg.getEgg())) {
-				IncubatorState state = (IncubatorState) StateRepository.forKey("incubator", player);
+				IncubatorState state = (IncubatorState) player.registerState("incubator");
 				state.setEgg(egg);
 				state.setTicksLeft(egg.getInucbationTime() * 100);
 				state.init();

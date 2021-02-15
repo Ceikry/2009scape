@@ -238,6 +238,13 @@ public final class Location extends Node {
 		return deltaX <= dist && deltaX >= -dist && deltaY <= dist && deltaY >= -dist;
 	}
 
+	public boolean withinDistanceProper(Location other, int dist){
+		int a = (other.x - x);
+		int b = (other.y - y);
+		double product = Math.sqrt((a*a) + (b*b));
+		return product <= dist;
+	}
+
 	/**
 	 * Returns the distance between you and the other.
 	 * @param other The other location.

@@ -263,7 +263,7 @@ class MiningSkillPulse(private val player: Player, private val node: Node) : Pul
         }
 
         //check for bonus ore from shooting star buff
-        if (player.getAttribute("SS Mining Bonus", GameWorld.ticks) > GameWorld.ticks) {
+        if (player.hasActiveState("shooting-star")) {
             if (RandomFunction.getRandom(5) == 3) {
                 player.packetDispatch.sendMessage("...you manage to mine a second ore thanks to the Star Sprite.")
                 amount += 1

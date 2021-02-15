@@ -45,7 +45,7 @@ public final class ChargeSpell extends MagicSpell {
 		}
 		p.getLocks().lock("charge_cast", 100);
 		visualize(entity, target);
-		p.getStateManager().set(EntityState.CHARGED);
+		p.registerState("godcharge").init();
 		p.getPacketDispatch().sendMessage("You feel charged with magic power.");
 		return true;
 	}

@@ -2,9 +2,7 @@ package core.game.content.global.worldevents.shootingstar
 
 import core.game.node.entity.npc.NPC
 import core.game.node.entity.player.Player
-import core.game.node.entity.state.impl.DoubleOrePulse
 import core.game.node.item.Item
-import core.game.world.GameWorld
 import core.game.content.dialogue.DialoguePlugin
 import java.util.concurrent.TimeUnit
 
@@ -179,12 +177,8 @@ class StarSpriteDialogue(player: Player? = null) : DialoguePlugin(player) {
                     player.getInventory().add(Item(GOLD_ORE, goldOre), player)
                     player.getInventory().add(Item(COINS, coins), player)
                     npc("I have rewarded you by making it so you can mine", "extra ore for the next 15 minutes. Also, have $cosmicRunes", "cosmic runes, $astralRunes astral runes, $goldOre gold ore and $coins", "coins.")
-                    player.setAttribute("SS Mining Bonus", System.currentTimeMillis() + TimeUnit.MINUTES.toMillis(15))
                     player.getSavedData().getGlobalData().setStarSpriteDelay(System.currentTimeMillis() + TimeUnit.DAYS.toMillis(1))
-                    val endTick = GameWorld.ticks + 1500
-                    player.setAttribute("SS Mining Bonus", endTick)
-                    val orePulse = DoubleOrePulse(player, endTick, GameWorld.ticks)
-                    orePulse.run()
+                    player.registerState("shooting-star").init()
                 }
                 stage = 52
             }

@@ -423,12 +423,6 @@ abstract class CombatSwingHandler(var type: CombatStyle?) {
                     player.skills.decrementPrayerPoints(drain)
                 }
             }
-            if (player.stateManager.hasState(EntityState.STAFF_OF_THE_DEAD)) {
-                if (attacker.properties.combatPulse.style == CombatStyle.MELEE) {
-                    player.graphics(Graphics(1592))
-                    hit /= 2
-                }
-            }
         }
         if (attacker is Player) {
             val player = attacker.asPlayer()

@@ -86,7 +86,6 @@ public abstract class ClueScrollPlugin extends MapZone implements Plugin<Object>
 		}
 		nextStage(player, clue);
 		if (casket) {
-			player.getStatisticsManager().getCLUES_COMPLETED().incrementAmount();
 			player.getInventory().replace(level.getCasket(), clue.getSlot());
 		} else {
 			player.getInventory().remove(clue);
@@ -135,6 +134,8 @@ public abstract class ClueScrollPlugin extends MapZone implements Plugin<Object>
 	 * @param clue the plugin.
 	 */
 	public void register(ClueScrollPlugin clue) {
+		if(clue.getClueId() == 2681)
+			return;
 		if (CLUE_SCROLLS.containsKey(clue.getClueId())) {
 			System.err.println("Error! Plugin already registered with clue id - " + clue.getClueId() + ", trying to register " + clue.getClass().getCanonicalName() + " the real plugin using the id is " + CLUE_SCROLLS.get(clue.getClueId()).getClass().getCanonicalName() + "!");
 			return;

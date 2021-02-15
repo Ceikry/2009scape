@@ -137,7 +137,6 @@ public class WoodcuttingSkillPulse extends Pulse {
             Projectile.create(player, null, 1776, 35, 30, 20, 25).transform(player, new Location(player.getLocation().getX() + 2, player.getLocation().getY()), true, 25, 25).send();
             player.getSkills().addExperience(Skills.WOODCUTTING, resource.getExperience());
             player.getSkills().addExperience(Skills.FIREMAKING, resource.getExperience());
-            player.getStatisticsManager().getLOGS_OBTAINED().incrementAmount();
             return false;
         }
 
@@ -159,7 +158,6 @@ public class WoodcuttingSkillPulse extends Pulse {
                 player.getPacketDispatch().sendMessage("You cut a branch from the Dramen tree.");
             } else {
                 player.getPacketDispatch().sendMessage("You get some " + ItemDefinition.forId(reward).getName().toLowerCase() + ".");
-                player.getStatisticsManager().getLOGS_OBTAINED().incrementAmount();
             }
             //give the reward
             player.getInventory().add(new Item(reward, rewardAmount));

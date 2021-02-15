@@ -14,11 +14,6 @@ public enum EntityState {
 	POISONED(new PoisonStatePulse(null)),
 
 	/**
-	 * The entity is diseased.
-	 */
-	DISEASED(new DiseaseStatePulse(null)),
-
-	/**
 	 * The entity is stunned.
 	 */
 	STUNNED(new StunStatePulse(null, 0)),
@@ -34,30 +29,9 @@ public enum EntityState {
 	SKULLED(new SkullStatePulse(null, 0)),
 
 	/**
-	 * The entity is charged (god spells).
-	 */
-	CHARGED(new ChargedStatePulse(null, 0)),
-
-
-	/**
-	 * The entity is under fire resistant.
-	 */
-	FIRE_RESISTANT(new FireResistantPulse(null, 0, 0, false)),
-
-	/**
 	 * The entity is under teleblock.
 	 */
 	TELEBLOCK(new TeleblockStatePulse(null, 0, 0)),
-
-	/**
-	 * The entity is under Double XP.
-	 */
-	DOUBLE_EXPERIENCE(new DoubleExperiencePulse(null, 0, 0)),
-	
-	/**
-	 * The entity has the staff of the dead special effect.
-	 */
-	STAFF_OF_THE_DEAD(new StaffOfTheDeadPulse(null, 0, 0)),
 	
 	/**
 	 * The entity has decreased weapon speeds.

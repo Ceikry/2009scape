@@ -76,6 +76,8 @@ class GameSettings
         var autostock_ge: Boolean,
         var allow_token_purchase: Boolean,
         var skillcape_perks: Boolean,
+        var increased_door_time: Boolean,
+        var enabled_botting : Boolean,
 
         /**"Lobby" interface
          * The message of the week models to display
@@ -124,6 +126,8 @@ class GameSettings
             val enable_bots = data["enable_bots"] as Boolean
             val autostock_ge = data["autostock_ge"] as Boolean
             val skillcape_perks = if(data.containsKey("skillcape_perks")) data["skillcape_perks"] as Boolean else false
+            val increased_door_time = if(data.containsKey("increased_door_time")) data["increased_door_time"] as Boolean else false
+            val enable_botting = if(data.containsKey("botting_enabled")) data["botting_enabled"] as Boolean else false
             val allow_token_purchase = data["allow_token_purchase"] as Boolean
             val message_of_the_week_identifier = data["message_of_the_week_identifier"].toString().toInt()
             val message_of_the_week_text = data["message_of_the_week_text"].toString()
@@ -147,6 +151,8 @@ class GameSettings
                     autostock_ge,
                     allow_token_purchase,
                     skillcape_perks,
+                    increased_door_time,
+                    enable_botting,
                     message_of_the_week_identifier,
                     message_of_the_week_text
             )

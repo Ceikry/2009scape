@@ -76,7 +76,7 @@ public final class SkullManager {
 			return;
 		}
 		skullCauses.add(o);
-		player.getStateManager().set(EntityState.SKULLED);
+		player.registerState("skull").init();
 	}
 
 	/**

@@ -137,7 +137,6 @@ class PlayerSaveParser(val player: Player) {
                 val s = stat as JSONObject
                 val index = (s.get("index") as String).toInt()
                 val value = (s.get("value") as String).toInt()
-                player.statisticsManager.statistics.get(index).statisticalAmount = value
             }
         }
     }

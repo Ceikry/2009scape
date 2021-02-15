@@ -164,9 +164,6 @@ public final class PlayerParser {
 					case 46:
 						player.getSkills().parseExpRate(buffer);
 						break;
-					case 47:
-						player.getStatisticsManager().parse(buffer);
-						break;
 					case 48:
 						player.getBrawlingGlovesManager().parse(buffer);
 						break;

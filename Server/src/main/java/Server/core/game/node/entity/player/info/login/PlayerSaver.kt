@@ -144,12 +144,6 @@ class PlayerSaver (val player: Player){
     fun saveStatManager(root: JSONObject){
         val statistics = JSONArray()
         var index = 0
-        player.statisticsManager.statistics.map {
-           val statistic = JSONObject()
-            statistic.put("index",index.toString())
-            statistic.put("value",it.statisticalAmount.toString())
-            statistics.add(statistic)
-        }
         root.put("statistics",statistics)
     }
 

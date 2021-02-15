@@ -43,4 +43,9 @@ class Varp(val index: Int) {
     fun send(player: Player){
         player.packetDispatch.sendVarp(this)
     }
+
+    fun clear(): Varp{
+        varbits.clear()
+        return this
+    }
 }

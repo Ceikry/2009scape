@@ -151,7 +151,8 @@ public enum SpellType {
 	GOD_STRIKE(1.2) {
 		@Override
 		public int getImpactAmount(Entity e, Entity victim, int base) {
-			if (e.getStateManager().hasState(EntityState.CHARGED)) {
+			if(!(e instanceof Player)) return 20;
+			if (e.asPlayer().hasActiveState("godcharge")) {
 				Item cape = ((Player) e).getEquipment().getNew(EquipmentContainer.SLOT_CAPE);
 				if (cape.getId() == 2412 || cape.getId() == 2413 || cape.getId() == 2414) {
 					return 30;

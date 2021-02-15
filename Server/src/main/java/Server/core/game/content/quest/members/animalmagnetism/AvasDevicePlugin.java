@@ -32,7 +32,7 @@ public final class AvasDevicePlugin implements Plugin<Object> {
 		final Item item = (Item) args[1];
 		switch (identifier) {
 		case "equip":
-			AvaDeviceState state = (AvaDeviceState) StateRepository.forKey("avadevice",player);
+			AvaDeviceState state = (AvaDeviceState) player.registerState("avadevice");
 			state.setDevice(item.getId());
 			state.init();
 			break;
@@ -40,15 +40,14 @@ public final class AvasDevicePlugin implements Plugin<Object> {
 			if (args.length == 3) {
 				Item second = (Item) args[2];
 				if (second.getId() == 10498 || second.getId() == 10499) {
-					State oldState = player.states.get("avadevice");
-					if(oldState != null && oldState.getPulse() != null) oldState.getPulse().stop();
-					AvaDeviceState newState = (AvaDeviceState) StateRepository.forKey("avadevice",player);
+					player.clearState("avadevice");
+					AvaDeviceState newState = (AvaDeviceState) player.registerState("avadevice");
 					newState.setDevice(second.getId());
 					newState.init();
 					break;
 				}
 			}
-			if(player.states.get("avadevice") != null && player.states.get("avadevice").getPulse() != null) player.states.get("avadevice").getPulse().stop();
+			if(player.hasActiveState("avadevice")) player.states.get("avadevice").getPulse().stop();
 			break;
 		}
 		return true;

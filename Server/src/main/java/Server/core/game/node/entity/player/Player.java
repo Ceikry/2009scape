@@ -11,6 +11,7 @@ import core.game.container.impl.EquipmentContainer;
 import core.game.container.impl.InventoryListener;
 import core.game.node.entity.combat.equipment.EquipmentDegrader;
 import core.game.node.entity.state.newsys.State;
+import core.game.node.entity.state.newsys.StateRepository;
 import core.game.system.task.Pulse;
 import core.game.world.map.path.Pathfinder;
 import core.game.world.update.flag.context.Animation;
@@ -67,7 +68,6 @@ import core.game.node.entity.player.link.prayer.PrayerType;
 import core.game.node.entity.player.link.quest.QuestRepository;
 import core.game.node.entity.player.link.request.RequestManager;
 import core.game.node.entity.player.link.skillertasks.SkillerTasks;
-import core.game.node.entity.player.link.statistics.PlayerStatisticsManager;
 import core.game.node.item.GroundItem;
 import core.game.node.item.GroundItemManager;
 import core.game.node.item.Item;
@@ -325,10 +325,6 @@ public class Player extends Entity {
 	 */
 	private final IronmanManager ironmanManager = new IronmanManager(this);
 
-	/**
-	 * The statistics manager.
-	 */
-	private final PlayerStatisticsManager statisticsManager = new PlayerStatisticsManager(this);
 
 	/**
 	 * Brawling Gloves manager
@@ -1369,11 +1365,28 @@ public class Player extends Entity {
 		this.archeryTotal = archeryTotal;
 	}
 
-	public PlayerStatisticsManager getStatisticsManager() {
-		return statisticsManager;
-	}
-
 	public BrawlingGlovesManager getBrawlingGlovesManager() { return brawlingGlovesManager;}
 
 	public PlayerGrandExchange getPlayerGrandExchange() { return playerGrandExchange; }
+
+	public boolean hasActiveState(String key){
+		State state = states.get(key);
+		if(state != null && state.getPulse() != null){
+			return true;
+		}
+		return false;
+	}
+
+	public State registerState(String key){
+		State state = StateRepository.forKey(key,this);
+		if(state != null) return state;
+		return null;
+	}
+
+	public void clearState(String key){
+		State state = states.get(key);
+		if(state == null) return;
+		state.getPulse().stop();
+		states.remove(key);
+	}
 }
