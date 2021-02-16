@@ -110,6 +110,15 @@ class GameConfig {
         @JvmField
         var LOGIN_THEME = "scape main"
 
+        @JvmField
+        var xpDropsEnabled = true
+
+        @JvmField
+        var xpDropMode = 0
+
+        @JvmField
+        var xpTrackMode = 0
+
         /**
          * Json config Parser
          */

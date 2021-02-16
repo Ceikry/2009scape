@@ -243,7 +243,7 @@ final class WorldMap extends Node {
                 Class49.anInt817 = (int) ((float) (var4 * 2) / Class44.aFloat727);
 
                 if (HDToolKit.highDetail) {
-                    if (aClass3_Sub28_Sub16_Sub2_3221 == null || var4 != aClass3_Sub28_Sub16_Sub2_3221.anInt3707 || var3 != aClass3_Sub28_Sub16_Sub2_3221.anInt3696) {
+                    if (aClass3_Sub28_Sub16_Sub2_3221 == null || var4 != aClass3_Sub28_Sub16_Sub2_3221.width || var3 != aClass3_Sub28_Sub16_Sub2_3221.height) {
                         aClass3_Sub28_Sub16_Sub2_3221 = null;
                         aClass3_Sub28_Sub16_Sub2_3221 = new Class3_Sub28_Sub16_Sub2(var4, var3);
                     }

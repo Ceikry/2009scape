@@ -233,7 +233,7 @@ final class Class3_Sub8 extends Linkable {
          } else if(HDToolKit.highDetail) {
             AbstractSprite var5 = var4.method866(false);
             if(null != var5) {
-               var5.method643(var3, var2);
+               var5.drawAt(var3, var2);
             }
          } else {
             Class74.method1332(var3, var2, var4.anIntArray207, var4.anIntArray291);

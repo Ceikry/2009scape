@@ -1,5 +1,8 @@
 package org.runite.client;
 
+import org.rs09.CustomVars;
+import org.rs09.client.config.GameConfig;
+
 import java.util.Objects;
 
 class Class3_Sub13_Sub23 extends Class3_Sub13 {
@@ -65,8 +68,8 @@ class Class3_Sub13_Sub23 extends Class3_Sub13 {
             } else {
                Class3_Sub28_Sub16_Sub2 var3 = Class82.anInt1668 < 0 ? Unsorted.method1537(WaterfallShader.aClass153_2172, this.anInt3278):Class40.method1043(this.anInt3278, WaterfallShader.aClass153_2172, Class82.anInt1668);
                Objects.requireNonNull(var3).method665();
-               this.anInt3283 = var3.anInt3696;
-               this.anInt3280 = var3.anInt3707;
+               this.anInt3283 = var3.height;
+               this.anInt3280 = var3.width;
                this.anIntArray3284 = var3.anIntArray4081;
                return true;
             }
@@ -167,8 +170,10 @@ class Class3_Sub13_Sub23 extends Class3_Sub13 {
    static void method281(int var1, int var2) {
       try {
          Class57.varpArray[var2] = var1;
+         if(CustomVars.parse(var2,var1)){
+            return;
+         }
          Class3_Sub7 var3 = (Class3_Sub7) AtmosphereParser.aHashTable_3679.get((long)var2);
-         System.out.println("var2 " + var2 + " var3 " + Class57.varpArray[var2]);
          if(null == var3) {
             var3 = new Class3_Sub7(4611686018427387905L);
             AtmosphereParser.aHashTable_3679.put((long)var2, var3);

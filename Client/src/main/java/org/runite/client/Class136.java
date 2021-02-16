@@ -59,7 +59,7 @@ final class Class136 {
                                     var30.anInt2532 = var14.MapIcon;
                                     aClass61_1424.method1215(var30);
                                  } else {
-                                    GameObject.aClass3_Sub28_Sub16_Sub2Array1839[var14.MapIcon].method643(var18 + -7, -7 + var24);
+                                    GameObject.aClass3_Sub28_Sub16_Sub2Array1839[var14.MapIcon].drawAt(var18 + -7, -7 + var24);
                                  }
                               }
                            }
@@ -75,7 +75,7 @@ final class Class136 {
             Class74.method1330(var32.anInt2531, var32.anInt2539, 13, var13);
             Class74.method1330(var32.anInt2531, var32.anInt2539, 11, var13);
             Class74.method1330(var32.anInt2531, var32.anInt2539, 9, var13);
-            GameObject.aClass3_Sub28_Sub16_Sub2Array1839[var32.anInt2532].method643(-7 + var32.anInt2531, -7 + var32.anInt2539);
+            GameObject.aClass3_Sub28_Sub16_Sub2Array1839[var32.anInt2532].drawAt(-7 + var32.anInt2531, -7 + var32.anInt2539);
          }
 
          aClass61_1424.method1211(-76);

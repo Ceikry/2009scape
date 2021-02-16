@@ -71,7 +71,7 @@ abstract class Class129 {
          }
 
           if(HDToolKit.highDetail) {
-             Class22.method926(Class84.aClass3_Sub28_Sub16_Sub2_1381.anIntArray4081, var0, var2, Class84.aClass3_Sub28_Sub16_Sub2_1381.anInt3707, Class84.aClass3_Sub28_Sub16_Sub2_1381.anInt3696);
+             Class22.method926(Class84.aClass3_Sub28_Sub16_Sub2_1381.anIntArray4081, var0, var2, Class84.aClass3_Sub28_Sub16_Sub2_1381.width, Class84.aClass3_Sub28_Sub16_Sub2_1381.height);
           } else {
              Class84.aClass3_Sub28_Sub16_Sub2_1381.method635(var0, var2);
           }

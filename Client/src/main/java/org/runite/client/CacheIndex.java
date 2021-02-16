@@ -23,7 +23,7 @@ public final class CacheIndex {
     static CacheIndex landscapesIndex;
     static CacheIndex musicIndex;
     static CacheIndex modelsIndex;
-    static CacheIndex spritesIndex;
+    public static CacheIndex spritesIndex;
     static CacheIndex texturesIndex;
     static CacheIndex huffmanEncodingIndex;
     static CacheIndex music2Index;
@@ -629,7 +629,7 @@ public final class CacheIndex {
         }
     }
 
-    final boolean retrieveSpriteFile(int archiveId) {
+    public final boolean retrieveSpriteFile(int archiveId) {
         try {
             if (!this.isReady()) {
                 return false;

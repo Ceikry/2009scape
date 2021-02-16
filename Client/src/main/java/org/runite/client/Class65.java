@@ -48,11 +48,11 @@ final class Class65 {
    static void method1235(int var0, int var1, int var2, int var3) {
       try {
          if(Class36.anInt638 == 1) {
-            aAbstractSpriteArray1825[Unsorted.anInt2958 / 100].method643(-8 + Class70.anInt1053, -8 + Unsorted.anInt4062);
+            aAbstractSpriteArray1825[Unsorted.anInt2958 / 100].drawAt(-8 + Class70.anInt1053, -8 + Unsorted.anInt4062);
          }
 
           if(Class36.anInt638 == 2) {
-            aAbstractSpriteArray1825[4 + Unsorted.anInt2958 / 100].method643(Class70.anInt1053 + -8, -8 + Unsorted.anInt4062);
+            aAbstractSpriteArray1825[4 + Unsorted.anInt2958 / 100].drawAt(Class70.anInt1053 + -8, -8 + Unsorted.anInt4062);
          }
 
          Class3_Sub13_Sub37.method347();

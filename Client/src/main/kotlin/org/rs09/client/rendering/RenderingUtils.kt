@@ -54,6 +54,11 @@ object RenderingUtils {
         else Class126.aClass3_Sub28_Sub17_1669.method681(RSString.of(str), x, y, rgb, -1)
     }
 
+    fun drawText(str: String, x: Int, y: Int, rgb: Int, shadow: Int, parse: Boolean = false){
+        if (parse) Class126.aClass3_Sub28_Sub17_1669.method681(RSString.parse(str), x, y, rgb, shadow)
+        else Class126.aClass3_Sub28_Sub17_1669.method681(RSString.of(str), x, y, rgb, shadow)
+    }
+
     fun drawText(str: RSString, x: Int, y: Int, rgb: Int) {
         Class126.aClass3_Sub28_Sub17_1669.method681(str, x, y, rgb, -1)
     }

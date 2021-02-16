@@ -1,5 +1,8 @@
 package org.runite.client;
 
+import kotlin.Pair;
+import org.rs09.XPGainDraw;
+
 import java.nio.charset.StandardCharsets;
 import java.util.Objects;
 
@@ -659,6 +662,9 @@ public final class PacketParser {
                                                 nodeModelId = GraphicDefinition.incomingBuffer.readUnsignedByte128();//Level
                                                 var19 = GraphicDefinition.incomingBuffer.readIntV1();//Skillxp
                                                 modelId = GraphicDefinition.incomingBuffer.readUnsignedByte();//Skill ID
+                                                int gain = var19 - XPGainDraw.getLastXp()[modelId];
+                                                XPGainDraw.addGain(gain,modelId);
+                                                XPGainDraw.getLastXp()[modelId] = var19;
                                                 Class133.anIntArray1743[modelId] = var19;//XP for Skill ID
                                                 Class3_Sub13_Sub15.anIntArray3185[modelId] = nodeModelId;//Level for Skill ID
                                                 Class3_Sub20.anIntArray2480[modelId] = 1;
@@ -1441,6 +1447,7 @@ public final class PacketParser {
                                                             Unsorted.incomingOpcode = -1;
                                                             return true;
                                                         } else if (Unsorted.incomingOpcode == 86) {
+                                                            XPGainDraw.reset();
                                                             Class167.method2269((byte) 46);
                                                             Unsorted.incomingOpcode = -1;
                                                             return false;

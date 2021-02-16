@@ -39,6 +39,7 @@ class AvaDeviceState(player: Player? = null) : State(player) {
     override fun createPulse() {
         player ?: return
         if(device == 0 && !hasDevice(player)) return
+        if(player.savedData.globalData.isAvasDisabled) return
 
         pulse = object : Pulse(TICKS){
             override fun pulse(): Boolean {

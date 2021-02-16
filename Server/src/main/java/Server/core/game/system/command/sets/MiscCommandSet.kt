@@ -24,6 +24,7 @@ import plugin.creditshop.CreditShop
 import core.game.ge.OfferManager
 import core.game.ge.OfferState
 import core.game.node.entity.skill.Skills
+import core.tools.stringtools.colorize
 import java.awt.Toolkit
 import java.awt.datatransfer.StringSelection
 
@@ -341,6 +342,68 @@ class MiscCommandSet : CommandSet(Command.Privilege.ADMIN){
             }
             val objectID = args[1].toInt()
             player.sendMessage("${VarbitDefinition.forObjectID(ObjectDefinition.forId(objectID).varbitID).configId}")
+        }
+
+        define("togglexp",Command.Privilege.STANDARD){ player, args ->
+            val enabled = player.varpManager.get(2501).getVarbit(0)?.value == 1
+            player.varpManager.get(2501).setVarbit(0,if(enabled) 0 else 1).send(player)
+            player.sendMessage("XP drops are now " + colorize("%R" + if(!enabled) "ON." else "OFF."))
+            player.varpManager.flagSave(2501)
+        }
+
+        define("xpconfig",Command.Privilege.STANDARD){player,args ->
+            if(args.size < 3){
+                reject(player,"Usage: ::xpconfig track|mode type")
+                reject(player,"Track types: total|recent")
+                reject(player, "Mode types: instant|increment")
+                reject(player,"Defaults: track - total, mode - increment")
+                return@define
+            }
+
+            when(args[1]){
+                "track" -> when(args[2]){
+                    "total" -> {
+                        player.varpManager.get(2501).setVarbit(2,0).send(player)
+                        player.sendMessage("You are now tracking " + colorize("%RTOTAL") + " experience.")
+                    }
+                    "recent" -> {
+                        player.varpManager.get(2501).setVarbit(2,1).send(player)
+                        player.sendMessage("You are now tracking the " + colorize("%RMOST RECENT") + " skill's experience.")
+                    }
+                    else -> {
+                        reject(player,"Usage: ::xpconfig track|mode type")
+                        reject(player,"Track types: total|recent")
+                        reject(player, "Mode types: instant|increment")
+                        reject(player,"Defaults: track - total, mode - increment")
+                    }
+                }
+
+                "mode" -> {
+                    when(args[2]){
+                        "instant" -> {
+                            player.varpManager.get(2501).setVarbit(1,1).send(player)
+                            player.sendMessage("Your xp tracker now updates " + colorize("%RINSTANTLY") + ".")
+                        }
+                        "increment" -> {
+                            player.varpManager.get(2501).setVarbit(1,0).send(player)
+                            player.sendMessage("Your xp tracker now updates " + colorize("%RINCREMENTALLY") + ".")
+                        }
+                        else -> {
+                            reject(player,"Usage: ::xpconfig track|mode type")
+                            reject(player,"Track types: total|recent")
+                            reject(player, "Mode types: instant|increment")
+                            reject(player,"Defaults: track - total, mode - increment")
+                        }
+                    }
+                }
+                else -> {
+                    reject(player,"Usage: ::xpconfig track|mode type")
+                    reject(player,"Track types: total|recent")
+                    reject(player, "Mode types: instant|increment")
+                    reject(player,"Defaults: track - total, mode - increment")
+                }
+            }
+            player.varpManager.flagSave(2501)
         }
     }
 }

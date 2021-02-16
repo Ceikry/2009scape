@@ -2,7 +2,7 @@ package org.runite.client;
 
 import org.rs09.client.rendering.Toolkit;
 
-final class Class3_Sub28_Sub16_Sub2_Sub1 extends Class3_Sub28_Sub16_Sub2 {
+public final class Class3_Sub28_Sub16_Sub2_Sub1 extends Class3_Sub28_Sub16_Sub2 {
 
    final void method660(int var1, int var2, double var7) {
       try {
@@ -22,7 +22,7 @@ final class Class3_Sub28_Sub16_Sub2_Sub1 extends Class3_Sub28_Sub16_Sub2 {
             int var19 = var15;
 
             for(var1 = -20; var1 < 0; ++var1) {
-               int var20 = this.anIntArray4081[(var18 >> 16) + (var19 >> 16) * this.anInt3707];
+               int var20 = this.anIntArray4081[(var18 >> 16) + (var19 >> 16) * this.width];
                int var21 = Toolkit.JAVA_TOOLKIT.getBuffer()[var17];
                int var22 = var20 >>> 24;
                int var23 = 256 - var22;
@@ -40,13 +40,13 @@ final class Class3_Sub28_Sub16_Sub2_Sub1 extends Class3_Sub28_Sub16_Sub2 {
 
    }
 
-   final void method643(int var1, int var2) {
+   public final void drawAt(int var1, int var2) {
       var1 += this.anInt3701;
       var2 += this.anInt3698;
       int var3 = var1 + var2 * Toolkit.JAVA_TOOLKIT.width;
       int var4 = 0;
-      int var5 = this.anInt3696;
-      int var6 = this.anInt3707;
+      int var5 = this.height;
+      int var6 = this.width;
       int var7 = Toolkit.JAVA_TOOLKIT.width - var6;
       int var8 = 0;
       int var9;
@@ -89,8 +89,8 @@ final class Class3_Sub28_Sub16_Sub2_Sub1 extends Class3_Sub28_Sub16_Sub2 {
       var2 += this.anInt3698;
       int var3 = var1 + var2 * Toolkit.JAVA_TOOLKIT.width;
       int var4 = 0;
-      int var5 = this.anInt3696;
-      int var6 = this.anInt3707;
+      int var5 = this.height;
+      int var6 = this.width;
       int var7 = Toolkit.JAVA_TOOLKIT.width - var6;
       int var8 = 0;
       int var9;
@@ -159,12 +159,12 @@ final class Class3_Sub28_Sub16_Sub2_Sub1 extends Class3_Sub28_Sub16_Sub2 {
          int var10 = (int)Math.floor(Math.cos(var7) * (double)var6 + 0.5D);
          int var11 = -var1 * var10 + -var2 * var9;
          int var12 = -(-var1) * var9 + -var2 * var10;
-         int var13 = ((this.anInt3707 << 4) - var1) * var10 + -var2 * var9;
-         int var14 = -((this.anInt3707 << 4) - var1) * var9 + -var2 * var10;
-         int var15 = -var1 * var10 + ((this.anInt3696 << 4) - var2) * var9;
-         int var16 = -(-var1) * var9 + ((this.anInt3696 << 4) - var2) * var10;
-         int var17 = ((this.anInt3707 << 4) - var1) * var10 + ((this.anInt3696 << 4) - var2) * var9;
-         int var18 = -((this.anInt3707 << 4) - var1) * var9 + ((this.anInt3696 << 4) - var2) * var10;
+         int var13 = ((this.width << 4) - var1) * var10 + -var2 * var9;
+         int var14 = -((this.width << 4) - var1) * var9 + -var2 * var10;
+         int var15 = -var1 * var10 + ((this.height << 4) - var2) * var9;
+         int var16 = -(-var1) * var9 + ((this.height << 4) - var2) * var10;
+         int var17 = ((this.width << 4) - var1) * var10 + ((this.height << 4) - var2) * var9;
+         int var18 = -((this.width << 4) - var1) * var9 + ((this.height << 4) - var2) * var10;
          int var19;
          int var20;
          if(var11 < var13) {
@@ -274,9 +274,9 @@ final class Class3_Sub28_Sub16_Sub2_Sub1 extends Class3_Sub28_Sub16_Sub2 {
                         var35 = var30;
                         var36 = var31;
                         var37 = var20;
-                        if(var30 >= 0 && var31 >= 0 && var30 - (this.anInt3707 << 12) < 0 && var31 - (this.anInt3696 << 12) < 0) {
+                        if(var30 >= 0 && var31 >= 0 && var30 - (this.width << 12) < 0 && var31 - (this.height << 12) < 0) {
                            while(var37 < 0) {
-                              var38 = this.anIntArray4081[(var36 >> 12) * this.anInt3707 + (var35 >> 12)];
+                              var38 = this.anIntArray4081[(var36 >> 12) * this.width + (var35 >> 12)];
                               var39 = Toolkit.JAVA_TOOLKIT.getBuffer()[var34];
                               var40 = var38 >>> 24;
                               var41 = 256 - var40;
@@ -293,8 +293,8 @@ final class Class3_Sub28_Sub16_Sub2_Sub1 extends Class3_Sub28_Sub16_Sub2 {
                         var35 = var30;
                         var36 = var31 + (var28 * var26 >> 4);
                         var37 = var20;
-                        if(var30 >= 0 && var30 - (this.anInt3707 << 12) < 0) {
-                           if((var32 = var36 - (this.anInt3696 << 12)) >= 0) {
+                        if(var30 >= 0 && var30 - (this.width << 12) < 0) {
+                           if((var32 = var36 - (this.height << 12)) >= 0) {
                               var32 = (var26 - var32) / var26;
                               var37 = var20 + var32;
                               var36 += var26 * var32;
@@ -306,7 +306,7 @@ final class Class3_Sub28_Sub16_Sub2_Sub1 extends Class3_Sub28_Sub16_Sub2 {
                            }
 
                            while(var37 < 0) {
-                              var38 = this.anIntArray4081[(var36 >> 12) * this.anInt3707 + (var35 >> 12)];
+                              var38 = this.anIntArray4081[(var36 >> 12) * this.width + (var35 >> 12)];
                               var39 = Toolkit.JAVA_TOOLKIT.getBuffer()[var34];
                               var40 = var38 >>> 24;
                               var41 = 256 - var40;
@@ -325,7 +325,7 @@ final class Class3_Sub28_Sub16_Sub2_Sub1 extends Class3_Sub28_Sub16_Sub2 {
                         var35 = var30;
                         var36 = var31 + (var28 * var26 >> 4);
                         var37 = var20;
-                        if(var30 >= 0 && var30 - (this.anInt3707 << 12) < 0) {
+                        if(var30 >= 0 && var30 - (this.width << 12) < 0) {
                            if(var36 < 0) {
                               var32 = (var26 - 1 - var36) / var26;
                               var37 = var20 + var32;
@@ -333,12 +333,12 @@ final class Class3_Sub28_Sub16_Sub2_Sub1 extends Class3_Sub28_Sub16_Sub2 {
                               var34 = var23 + var32;
                            }
 
-                           if((var32 = (1 + var36 - (this.anInt3696 << 12) - var26) / var26) > var37) {
+                           if((var32 = (1 + var36 - (this.height << 12) - var26) / var26) > var37) {
                               var37 = var32;
                            }
 
                            while(var37 < 0) {
-                              var38 = this.anIntArray4081[(var36 >> 12) * this.anInt3707 + (var35 >> 12)];
+                              var38 = this.anIntArray4081[(var36 >> 12) * this.width + (var35 >> 12)];
                               var39 = Toolkit.JAVA_TOOLKIT.getBuffer()[var34];
                               var40 = var38 >>> 24;
                               var41 = 256 - var40;
@@ -359,8 +359,8 @@ final class Class3_Sub28_Sub16_Sub2_Sub1 extends Class3_Sub28_Sub16_Sub2 {
                         var35 = var30 + (var28 * var27 >> 4);
                         var36 = var31;
                         var37 = var20;
-                        if(var31 >= 0 && var31 - (this.anInt3696 << 12) < 0) {
-                           if((var32 = var35 - (this.anInt3707 << 12)) >= 0) {
+                        if(var31 >= 0 && var31 - (this.height << 12) < 0) {
+                           if((var32 = var35 - (this.width << 12)) >= 0) {
                               var32 = (var27 - var32) / var27;
                               var37 = var20 + var32;
                               var35 += var27 * var32;
@@ -372,7 +372,7 @@ final class Class3_Sub28_Sub16_Sub2_Sub1 extends Class3_Sub28_Sub16_Sub2 {
                            }
 
                            while(var37 < 0) {
-                              var38 = this.anIntArray4081[(var36 >> 12) * this.anInt3707 + (var35 >> 12)];
+                              var38 = this.anIntArray4081[(var36 >> 12) * this.width + (var35 >> 12)];
                               var39 = Toolkit.JAVA_TOOLKIT.getBuffer()[var34];
                               var40 = var38 >>> 24;
                               var41 = 256 - var40;
@@ -391,7 +391,7 @@ final class Class3_Sub28_Sub16_Sub2_Sub1 extends Class3_Sub28_Sub16_Sub2 {
                         var35 = var30 + (var28 * var27 >> 4);
                         var36 = var31 + (var28 * var26 >> 4);
                         var37 = var20;
-                        if((var32 = var35 - (this.anInt3707 << 12)) >= 0) {
+                        if((var32 = var35 - (this.width << 12)) >= 0) {
                            var32 = (var27 - var32) / var27;
                            var37 = var20 + var32;
                            var35 += var27 * var32;
@@ -403,7 +403,7 @@ final class Class3_Sub28_Sub16_Sub2_Sub1 extends Class3_Sub28_Sub16_Sub2 {
                            var37 = var32;
                         }
 
-                        if((var32 = var36 - (this.anInt3696 << 12)) >= 0) {
+                        if((var32 = var36 - (this.height << 12)) >= 0) {
                            var32 = (var26 - var32) / var26;
                            var37 += var32;
                            var35 += var27 * var32;
@@ -416,7 +416,7 @@ final class Class3_Sub28_Sub16_Sub2_Sub1 extends Class3_Sub28_Sub16_Sub2 {
                         }
 
                         while(var37 < 0) {
-                           var38 = this.anIntArray4081[(var36 >> 12) * this.anInt3707 + (var35 >> 12)];
+                           var38 = this.anIntArray4081[(var36 >> 12) * this.width + (var35 >> 12)];
                            var39 = Toolkit.JAVA_TOOLKIT.getBuffer()[var34];
                            var40 = var38 >>> 24;
                            var41 = 256 - var40;
@@ -436,7 +436,7 @@ final class Class3_Sub28_Sub16_Sub2_Sub1 extends Class3_Sub28_Sub16_Sub2 {
                         var35 = var30 + (var28 * var27 >> 4);
                         var36 = var31 + (var28 * var26 >> 4);
                         var37 = var20;
-                        if((var32 = var35 - (this.anInt3707 << 12)) >= 0) {
+                        if((var32 = var35 - (this.width << 12)) >= 0) {
                            var32 = (var27 - var32) / var27;
                            var37 = var20 + var32;
                            var35 += var27 * var32;
@@ -456,12 +456,12 @@ final class Class3_Sub28_Sub16_Sub2_Sub1 extends Class3_Sub28_Sub16_Sub2 {
                            var34 += var32;
                         }
 
-                        if((var32 = (1 + var36 - (this.anInt3696 << 12) - var26) / var26) > var37) {
+                        if((var32 = (1 + var36 - (this.height << 12) - var26) / var26) > var37) {
                            var37 = var32;
                         }
 
                         while(var37 < 0) {
-                           var38 = this.anIntArray4081[(var36 >> 12) * this.anInt3707 + (var35 >> 12)];
+                           var38 = this.anIntArray4081[(var36 >> 12) * this.width + (var35 >> 12)];
                            var39 = Toolkit.JAVA_TOOLKIT.getBuffer()[var34];
                            var40 = var38 >>> 24;
                            var41 = 256 - var40;
@@ -482,7 +482,7 @@ final class Class3_Sub28_Sub16_Sub2_Sub1 extends Class3_Sub28_Sub16_Sub2 {
                      var35 = var30 + (var28 * var27 >> 4);
                      var36 = var31;
                      var37 = var20;
-                     if(var31 >= 0 && var31 - (this.anInt3696 << 12) < 0) {
+                     if(var31 >= 0 && var31 - (this.height << 12) < 0) {
                         if(var35 < 0) {
                            var32 = (var27 - 1 - var35) / var27;
                            var37 = var20 + var32;
@@ -490,12 +490,12 @@ final class Class3_Sub28_Sub16_Sub2_Sub1 extends Class3_Sub28_Sub16_Sub2 {
                            var34 = var23 + var32;
                         }
 
-                        if((var32 = (1 + var35 - (this.anInt3707 << 12) - var27) / var27) > var37) {
+                        if((var32 = (1 + var35 - (this.width << 12) - var27) / var27) > var37) {
                            var37 = var32;
                         }
 
                         while(var37 < 0) {
-                           var38 = this.anIntArray4081[(var36 >> 12) * this.anInt3707 + (var35 >> 12)];
+                           var38 = this.anIntArray4081[(var36 >> 12) * this.width + (var35 >> 12)];
                            var39 = Toolkit.JAVA_TOOLKIT.getBuffer()[var34];
                            var40 = var38 >>> 24;
                            var41 = 256 - var40;
@@ -522,11 +522,11 @@ final class Class3_Sub28_Sub16_Sub2_Sub1 extends Class3_Sub28_Sub16_Sub2 {
                         var34 = var23 + var32;
                      }
 
-                     if((var32 = (1 + var35 - (this.anInt3707 << 12) - var27) / var27) > var37) {
+                     if((var32 = (1 + var35 - (this.width << 12) - var27) / var27) > var37) {
                         var37 = var32;
                      }
 
-                     if((var32 = var36 - (this.anInt3696 << 12)) >= 0) {
+                     if((var32 = var36 - (this.height << 12)) >= 0) {
                         var32 = (var26 - var32) / var26;
                         var37 += var32;
                         var35 += var27 * var32;
@@ -539,7 +539,7 @@ final class Class3_Sub28_Sub16_Sub2_Sub1 extends Class3_Sub28_Sub16_Sub2 {
                      }
 
                      while(var37 < 0) {
-                        var38 = this.anIntArray4081[(var36 >> 12) * this.anInt3707 + (var35 >> 12)];
+                        var38 = this.anIntArray4081[(var36 >> 12) * this.width + (var35 >> 12)];
                         var39 = Toolkit.JAVA_TOOLKIT.getBuffer()[var34];
                         var40 = var38 >>> 24;
                         var41 = 256 - var40;
@@ -567,7 +567,7 @@ final class Class3_Sub28_Sub16_Sub2_Sub1 extends Class3_Sub28_Sub16_Sub2 {
                         var34 = var23 + var32;
                      }
 
-                     if((var32 = (1 + var35 - (this.anInt3707 << 12) - var27) / var27) > var37) {
+                     if((var32 = (1 + var35 - (this.width << 12) - var27) / var27) > var37) {
                         var37 = var32;
                      }
 
@@ -579,12 +579,12 @@ final class Class3_Sub28_Sub16_Sub2_Sub1 extends Class3_Sub28_Sub16_Sub2 {
                         var34 += var32;
                      }
 
-                     if((var32 = (1 + var36 - (this.anInt3696 << 12) - var26) / var26) > var37) {
+                     if((var32 = (1 + var36 - (this.height << 12) - var26) / var26) > var37) {
                         var37 = var32;
                      }
 
                      while(var37 < 0) {
-                        var38 = this.anIntArray4081[(var36 >> 12) * this.anInt3707 + (var35 >> 12)];
+                        var38 = this.anIntArray4081[(var36 >> 12) * this.width + (var35 >> 12)];
                         var39 = Toolkit.JAVA_TOOLKIT.getBuffer()[var34];
                         var40 = var38 >>> 24;
                         var41 = 256 - var40;
@@ -624,7 +624,7 @@ final class Class3_Sub28_Sub16_Sub2_Sub1 extends Class3_Sub28_Sub16_Sub2 {
             int var21 = var16 - var13 * var18;
 
             for(var1 = -var10[var2]; var1 < 0; ++var1) {
-               int var22 = this.anIntArray4081[(var20 >> 16) + (var21 >> 16) * this.anInt3707];
+               int var22 = this.anIntArray4081[(var20 >> 16) + (var21 >> 16) * this.width];
                int var23 = Toolkit.JAVA_TOOLKIT.getBuffer()[var19];
                int var24 = var22 >>> 24;
                int var25 = 256 - var24;
@@ -661,7 +661,7 @@ final class Class3_Sub28_Sub16_Sub2_Sub1 extends Class3_Sub28_Sub16_Sub2 {
             int var21 = var16 - var13 * var18;
 
             for(var1 = -var10[var2]; var1 < 0; ++var1) {
-               int var22 = this.anIntArray4081[(var20 >> 16) + (var21 >> 16) * this.anInt3707];
+               int var22 = this.anIntArray4081[(var20 >> 16) + (var21 >> 16) * this.width];
                int var23 = Toolkit.JAVA_TOOLKIT.getBuffer()[var19];
                int var24 = var22 >>> 24;
                int var25 = 256 - var24;
@@ -681,8 +681,8 @@ final class Class3_Sub28_Sub16_Sub2_Sub1 extends Class3_Sub28_Sub16_Sub2 {
 
    final void method642(int var1, int var2, int var3, int var4, int var5) {
       if(var3 > 0 && var4 > 0) {
-         int var6 = this.anInt3707;
-         int var7 = this.anInt3696;
+         int var6 = this.width;
+         int var7 = this.height;
          int var8 = 0;
          int var9 = 0;
          int var10 = this.anInt3697;
@@ -770,8 +770,8 @@ final class Class3_Sub28_Sub16_Sub2_Sub1 extends Class3_Sub28_Sub16_Sub2 {
 
    final void method639(int var1, int var2, int var3, int var4) {
       if(var3 > 0 && var4 > 0) {
-         int var5 = this.anInt3707;
-         int var6 = this.anInt3696;
+         int var5 = this.width;
+         int var6 = this.height;
          int var7 = 0;
          int var8 = 0;
          int var9 = this.anInt3697;
@@ -832,12 +832,12 @@ final class Class3_Sub28_Sub16_Sub2_Sub1 extends Class3_Sub28_Sub16_Sub2 {
    }
 
    final void method641(int var1, int var2) {
-      var1 += this.anInt3697 - this.anInt3707 - this.anInt3701;
+      var1 += this.anInt3697 - this.width - this.anInt3701;
       var2 += this.anInt3698;
       int var3 = var1 + var2 * Toolkit.JAVA_TOOLKIT.width;
-      int var4 = this.anInt3707 - 1;
-      int var5 = this.anInt3696;
-      int var6 = this.anInt3707;
+      int var4 = this.width - 1;
+      int var5 = this.height;
+      int var6 = this.width;
       int var7 = Toolkit.JAVA_TOOLKIT.width - var6;
       int var8 = var6 + var6;
       int var9;
@@ -880,8 +880,8 @@ final class Class3_Sub28_Sub16_Sub2_Sub1 extends Class3_Sub28_Sub16_Sub2 {
       var2 += this.anInt3698;
       int var4 = var1 + var2 * Toolkit.JAVA_TOOLKIT.width;
       int var5 = 0;
-      int var6 = this.anInt3696;
-      int var7 = this.anInt3707;
+      int var6 = this.height;
+      int var7 = this.width;
       int var8 = Toolkit.JAVA_TOOLKIT.width - var7;
       int var9 = 0;
       int var10;

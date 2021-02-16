@@ -1,5 +1,6 @@
 package org.runite.client;
 
+import org.rs09.XPGainDraw;
 import org.rs09.client.config.GameConfig;
 import org.rs09.client.data.HashTable;
 import org.rs09.client.rendering.Toolkit;
@@ -471,10 +472,10 @@ public class Unsorted {
                 }
 
                 if (item.anInt791 != -1) {
-                    Objects.requireNonNull(var22).method643(0, 0);
+                    Objects.requireNonNull(var22).drawAt(0, 0);
                 } else if (-1 != item.anInt762) {
                     Class74.setBuffer(Objects.requireNonNull(var22).anIntArray4081, 36, 32);
-                    var15.method643(0, 0);
+                    var15.drawAt(0, 0);
                     var15 = var22;
                 }
 
@@ -4209,6 +4210,7 @@ public class Unsorted {
                                         }
                                         continue;
                                     }
+                                    XPGainDraw.drawGains();
                                     continue;
                                 }
 
@@ -4303,7 +4305,7 @@ public class Unsorted {
                                                                 Class20.method909(var11);
                                                             }
                                                         } else {
-                                                            var58.method643(var23, var24);
+                                                            var58.drawAt(var23, var24);
                                                         }
                                                     }
                                                 } else {
@@ -4385,7 +4387,7 @@ public class Unsorted {
                                                         } else if (var11 == aClass11_1933 && var20 == KeyboardListener.anInt1918) {
                                                             var54.method637(var23, var24, 128);
                                                         } else {
-                                                            var54.method643(var23, var24);
+                                                            var54.drawAt(var23, var24);
                                                         }
                                                     }
                                                 }
@@ -4526,8 +4528,8 @@ public class Unsorted {
                                                         var24 = (var11.height - 1 - -var22) / var22;
                                                         if (HDToolKit.highDetail) {
                                                             Class22.method931(var13, var14, var11.width + var13, var11.height + var14);
-                                                            var39 = Class140_Sub6.method2021((byte) -94, var37.anInt3707);
-                                                            var46 = Class140_Sub6.method2021((byte) -113, var37.anInt3696);
+                                                            var39 = Class140_Sub6.method2021((byte) -94, var37.width);
+                                                            var46 = Class140_Sub6.method2021((byte) -113, var37.height);
                                                             HDSprite var27 = (HDSprite) var37;
                                                             if (var39 && var46) {
                                                                 if (var15 == 0) {
@@ -4555,7 +4557,7 @@ public class Unsorted {
                                                                 for (var28 = 0; var23 > var28; ++var28) {
                                                                     for (var29 = 0; var29 < var24; ++var29) {
                                                                         if (var15 == 0) {
-                                                                            var37.method643(var13 - -(var21 * var28), var22 * var29 + var14);
+                                                                            var37.drawAt(var13 - -(var21 * var28), var22 * var29 + var14);
                                                                         } else {
                                                                             var37.method637(var28 * var21 + var13, var22 * var29 + var14, -(255 & var15) + 256);
                                                                         }
@@ -4571,12 +4573,12 @@ public class Unsorted {
                                                                 for (var26 = 0; var24 > var26; ++var26) {
                                                                     if (var11.anInt301 == 0) {
                                                                         if (0 == var15) {
-                                                                            var37.method643(var25 * var21 + var13, var22 * var26 + var14);
+                                                                            var37.drawAt(var25 * var21 + var13, var22 * var26 + var14);
                                                                         } else {
                                                                             var37.method637(var25 * var21 + var13, var14 + var26 * var22, 256 - (255 & var15));
                                                                         }
                                                                     } else {
-                                                                        var37.method640(var14 - -(var22 * var26) + var22 / 2, var11.anInt301, 4096, var25 * var21 + var13 + var21 / 2);
+                                                                        var37.drawScaledOrRotated(var14 - -(var22 * var26) + var22 / 2, var11.anInt301, 4096, var25 * var21 + var13 + var21 / 2);
                                                                     }
                                                                 }
                                                             }
@@ -4589,19 +4591,19 @@ public class Unsorted {
                                                             if (0 != var15) {
                                                                 var37.method642(var13, var14, var11.width, var11.height, -(255 & var15) + 256);
                                                             } else if (var11.width == var21 && var11.height == var22) {
-                                                                var37.method643(var13, var14);
+                                                                var37.drawAt(var13, var14);
                                                             } else {
                                                                 var37.method639(var13, var14, var11.width, var11.height);
                                                             }
                                                         } else {
-                                                            var37.method640(var14 + var11.height / 2, var11.anInt301, var23, var13 + var11.width / 2);
+                                                            var37.drawScaledOrRotated(var14 + var11.height / 2, var11.anInt301, var23, var13 + var11.width / 2);
                                                         }
                                                     }
                                                 }
                                             } else {
                                                 var37 = var11.method866(Class3_Sub28_Sub12.method609(var11, 69));
                                                 if (null != var37) {
-                                                    var37.method643(var13, var14);
+                                                    var37.drawAt(var13, var14);
                                                 } else if (GameShell.aBoolean6) {
                                                     Class20.method909(var11);
                                                 }

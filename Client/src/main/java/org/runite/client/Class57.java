@@ -4,7 +4,7 @@ final class Class57 {
 
    static AbstractSprite aAbstractSprite_895;
    int anInt896 = 0;
-   static int[] varpArray = new int[2500];
+   static int[] varpArray = new int[3500];
    int anInt899 = 2048;
    static int anInt902 = 100;
    static int[] anIntArray904 = new int[200];

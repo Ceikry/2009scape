@@ -101,14 +101,14 @@ final class WorldListEntry extends Class44 {
             int var5;
             int var6;
             if (aAbstractSprite_3099 != null && aAbstractSprite_1457 != null) {
-                var5 = var3 / aAbstractSprite_3099.anInt3707;
+                var5 = var3 / aAbstractSprite_3099.width;
 
                 for (var6 = 0; var6 < var5; ++var6) {
-                    aAbstractSprite_3099.method643(var6 * aAbstractSprite_3099.anInt3707 + var1, var2);
+                    aAbstractSprite_3099.drawAt(var6 * aAbstractSprite_3099.width + var1, var2);
                 }
 
-                aAbstractSprite_1457.method643(var1, var2);
-                aAbstractSprite_1457.method641(-aAbstractSprite_1457.anInt3707 + (var1 - -var3), var2);
+                aAbstractSprite_1457.drawAt(var1, var2);
+                aAbstractSprite_1457.method641(-aAbstractSprite_1457.width + (var1 - -var3), var2);
             }
 
             Class168.aClass3_Sub28_Sub17_2096.method681(RSString.parse(GameConfig.RCM_TITLE), var1 - -3, 14 + var2, anInt3351, -1);
@@ -152,21 +152,21 @@ final class WorldListEntry extends Class44 {
 
             int var9;
             if (aAbstractSprite_1339 != null && null != Class50.aAbstractSprite_824 && null != Class3_Sub26.aAbstractSprite_2560) {
-                var7 = var3 / aAbstractSprite_1339.anInt3707;
+                var7 = var3 / aAbstractSprite_1339.width;
 
                 for (var8 = 0; var7 > var8; ++var8) {
-                    aAbstractSprite_1339.method643(var1 + aAbstractSprite_1339.anInt3707 * var8, var4 + var2 + -aAbstractSprite_1339.anInt3696);
+                    aAbstractSprite_1339.drawAt(var1 + aAbstractSprite_1339.width * var8, var4 + var2 + -aAbstractSprite_1339.height);
                 }
 
-                var8 = (-20 + var4) / Class50.aAbstractSprite_824.anInt3696;
+                var8 = (-20 + var4) / Class50.aAbstractSprite_824.height;
 
                 for (var9 = 0; var9 < var8; ++var9) {
-                    Class50.aAbstractSprite_824.method643(var1, var2 + 20 + var9 * Class50.aAbstractSprite_824.anInt3696);
-                    Class50.aAbstractSprite_824.method641(var1 - (-var3 - -Class50.aAbstractSprite_824.anInt3707), var2 + 20 + var9 * Class50.aAbstractSprite_824.anInt3696);
+                    Class50.aAbstractSprite_824.drawAt(var1, var2 + 20 + var9 * Class50.aAbstractSprite_824.height);
+                    Class50.aAbstractSprite_824.method641(var1 - (-var3 - -Class50.aAbstractSprite_824.width), var2 + 20 + var9 * Class50.aAbstractSprite_824.height);
                 }
 
-                Class3_Sub26.aAbstractSprite_2560.method643(var1, var4 + (var2 - Class3_Sub26.aAbstractSprite_2560.anInt3696));
-                Class3_Sub26.aAbstractSprite_2560.method641(var1 + var3 - Class3_Sub26.aAbstractSprite_2560.anInt3707, var2 - -var4 + -Class3_Sub26.aAbstractSprite_2560.anInt3696);
+                Class3_Sub26.aAbstractSprite_2560.drawAt(var1, var4 + (var2 - Class3_Sub26.aAbstractSprite_2560.height));
+                Class3_Sub26.aAbstractSprite_2560.method641(var1 + var3 - Class3_Sub26.aAbstractSprite_2560.width, var2 - -var4 + -Class3_Sub26.aAbstractSprite_2560.height);
             }
 
             for (var7 = 0; var7 < Unsorted.menuOptionCount; ++var7) {

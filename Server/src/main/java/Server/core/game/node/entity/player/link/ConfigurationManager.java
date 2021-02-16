@@ -20,7 +20,7 @@ public final class ConfigurationManager implements SavingModule {
 	/**
 	 * The amount of configurations.
 	 */
-	public static final int SIZE = 2000;
+	public static final int SIZE = 3500;
 
 	/**
 	 * The player.

@@ -34,6 +34,7 @@ public final class PlayerParser {
 				parseBinary(BIN, player);
 			} else { //Create new save
 				makeFromTemplate(player);
+				new PlayerSaveParser(player).parse();
 			}
 			return true;
 		} catch (Exception e){

@@ -165,12 +165,12 @@ final class Class82 {
                      Class107.method1647(var4 >> 1, var3, var8, var5, var8.method1975(var6 ^ -28716) - -15, var1 >> 1);
                      if(-1 < Class32.anInt590) {
                         if(var10.skullIcon != -1) {
-                           Class3_Sub13_Sub31.aAbstractSpriteArray3373[var10.skullIcon].method643(-12 + Class32.anInt590 + var2, -var19 + var0 + anInt2208);
+                           Class3_Sub13_Sub31.aAbstractSpriteArray3373[var10.skullIcon].drawAt(-12 + Class32.anInt590 + var2, -var19 + var0 + anInt2208);
                            var19 += 25;
                         }
 
                         if(var10.headIcon != -1) {
-                           NPC.aAbstractSpriteArray3977[var10.headIcon].method643(-12 + var2 + Class32.anInt590, var0 - (-anInt2208 + var19));
+                           NPC.aAbstractSpriteArray3977[var10.headIcon].drawAt(-12 + var2 + Class32.anInt590, var0 - (-anInt2208 + var19));
                            var19 += 25;
                         }
                      }
@@ -184,7 +184,7 @@ final class Class82 {
                         if(null != var13 && var13.anInt1360 == 10 && Class56.localPlayerIndexes[var7] == var13.anInt1359) {
                            Class107.method1647(var4 >> 1, var3, var8, var5, var8.method1975(var6 ^ -28716) - -15, var1 >> 1);
                            if(Class32.anInt590 > -1) {
-                              Class166.aAbstractSpriteArray2072[var13.anInt1351].method643(var2 - (-Class32.anInt590 + 12), var0 + (anInt2208 - var19));
+                              Class166.aAbstractSpriteArray2072[var13.anInt1351].drawAt(var2 - (-Class32.anInt590 + 12), var0 + (anInt2208 - var19));
                            }
                         }
                      }
@@ -204,7 +204,7 @@ final class Class82 {
 
                      Class107.method1647(var4 >> 1, var3, var8, var5, var22, var1 >> 1);
                      if(Class32.anInt590 > -1) {
-                        NPC.aAbstractSpriteArray3977[var9.anInt1269].method643(var2 - -Class32.anInt590 - 12, -30 + var0 - -anInt2208);
+                        NPC.aAbstractSpriteArray3977[var9.anInt1269].drawAt(var2 - -Class32.anInt590 - 12, -30 + var0 - -anInt2208);
                      }
                   }
 
@@ -221,7 +221,7 @@ final class Class82 {
 
                         Class107.method1647(var4 >> 1, var3, var8, var5, var29, var1 >> 1);
                         if(Class32.anInt590 > -1) {
-                           Class166.aAbstractSpriteArray2072[var24.anInt1351].method643(-12 + var2 + Class32.anInt590, -28 + anInt2208 + var0);
+                           Class166.aAbstractSpriteArray2072[var24.anInt1351].drawAt(-12 + var2 + Class32.anInt590, -28 + anInt2208 + var0);
                         }
                      }
                   }
@@ -270,20 +270,20 @@ final class Class82 {
                      var21 = var8.method1975(27855);
                   }
 
-                  Class107.method1647(var4 >> 1, var3, var8, var5, var23.anInt3696 + 10 + var21, var1 >> 1);
+                  Class107.method1647(var4 >> 1, var3, var8, var5, var23.height + 10 + var21, var1 >> 1);
                   if(-1 < Class32.anInt590) {
-                     var12 = -(var23.anInt3707 >> 1) + Class32.anInt590 + var2;
+                     var12 = -(var23.width >> 1) + Class32.anInt590 + var2;
                      var29 = anInt2208 + var0 + -3;
-                     var23.method643(var12, var29);
-                     var32 = var23.anInt3707 * var8.anInt2775 / 255;
-                     var15 = var23.anInt3696;
+                     var23.drawAt(var12, var29);
+                     var32 = var23.width * var8.anInt2775 / 255;
+                     var15 = var23.height;
                      if(HDToolKit.highDetail) {
                         Class22.method931(var12, var29, var12 + var32, var29 + var15);
                      } else {
                         Class74.method1326(var12, var29, var12 + var32, var15 + var29);
                      }
 
-                     var25.method643(var12, var29);
+                     var25.drawAt(var12, var29);
                      if(HDToolKit.highDetail) {
                         Class22.setClipping(var2, var0, var1 + var2, var0 - -var4);
                      } else {
@@ -322,7 +322,7 @@ final class Class82 {
                            Class32.anInt590 += 15;
                         }
 
-                        Class75_Sub3.aAbstractSpriteArray2656[var8.anIntArray2815[var19]].method643(-12 + var2 + Class32.anInt590, var0 + anInt2208 - 12);
+                        Class75_Sub3.aAbstractSpriteArray2656[var8.anIntArray2815[var19]].drawAt(-12 + var2 + Class32.anInt590, var0 + anInt2208 - 12);
                         Class3_Sub13.aClass3_Sub28_Sub17_2379.method699(RSString.stringAnimator(var8.anIntArray2836[var19]), -1 + Class32.anInt590 + var2, 3 + anInt2208 + var0, 16777215, 0);
                      }
                   }

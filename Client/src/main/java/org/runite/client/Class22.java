@@ -187,7 +187,7 @@ public final class Class22 {
    }
 
    static void method936(HDSprite var0) {
-      if(var0.anInt3696 == anInt451 - anInt448) {
+      if(var0.height == anInt451 - anInt448) {
          aHDSprite_447 = var0;
       } else {
          throw new IllegalArgumentException();

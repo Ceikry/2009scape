@@ -606,7 +606,7 @@ final class Class1 {
             }
 
             if (WorldMap.anInt2737 >= 100) {
-                if (null == Class36.aAbstractSprite_637 || var2 != Class36.aAbstractSprite_637.anInt3707 || Class36.aAbstractSprite_637.anInt3696 != var1) {
+                if (null == Class36.aAbstractSprite_637 || var2 != Class36.aAbstractSprite_637.width || Class36.aAbstractSprite_637.height != var1) {
                     Class3_Sub28_Sub16_Sub2 var5 = new Class3_Sub28_Sub16_Sub2(var2, var1);
                     Class74.setBuffer(var5.anIntArray4081, var2, var1);
                     Unsorted.method523(var2, 0, Class23.anInt455, 0, 0, Class108.anInt1460, var1, 0);

@@ -11,7 +11,7 @@ import org.json.simple.JSONObject
  * @author Ceikry
  */
 class VarpManager(val player: Player) {
-    val varps = Array(2000) { Varp(it) }
+    val varps = Array(3500) { Varp(it) }
 
     fun get(index: Int): Varp{
         return varps[index]

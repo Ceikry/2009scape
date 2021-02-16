@@ -6,12 +6,17 @@ import plugin.ai.general.GeneralBotCreator
 import plugin.ai.general.scriptrepository.PlayerScripts
 import plugin.ai.general.scriptrepository.Script
 import core.game.system.command.Command
+import core.game.world.GameWorld
 import core.tools.stringtools.colorize
 
 @Initializable
 class BottingCommandSet : CommandSet(Command.Privilege.STANDARD) {
     override fun defineCommands() {
         define("scripts"){player, _ ->
+            if(GameWorld.settings?.enabled_botting != true){
+                player.sendChat("I just tried to do something silly!")
+                return@define
+            }
             if(!player.getAttribute("botting:warning_shown",false)){
                 player.dialogueInterpreter.sendDialogue(colorize("%RWARNING: Running a bot script will permanently remove you"),colorize("%Rfrom the highscores."))
                 player.dialogueInterpreter.addAction { player, buttonId -> player.setAttribute("/save:botting:warning_shown",true) }
@@ -33,6 +38,10 @@ class BottingCommandSet : CommandSet(Command.Privilege.STANDARD) {
             player.interfaceManager.open(Component(275))
         }
         define("script"){player,args ->
+            if(GameWorld.settings?.enabled_botting != true){
+                player.sendChat("I just tried to do something very silly!")
+                return@define
+            }
             if(!player.getAttribute("botting:warning_shown",false)){
                 player.dialogueInterpreter.sendDialogue(colorize("%RWARNING: Running a bot script will permanently remove you from the highscores."))
                 player.dialogueInterpreter.addAction { player, buttonId -> player.setAttribute("/save:botting:warning_shown",true) }
