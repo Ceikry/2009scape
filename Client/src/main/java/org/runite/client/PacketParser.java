@@ -1,5 +1,6 @@
 package org.runite.client;
 
+import org.rs09.SlayerTracker;
 import org.rs09.XPGainDraw;
 
 import java.nio.charset.StandardCharsets;
@@ -1447,6 +1448,7 @@ public final class PacketParser {
                                                             return true;
                                                         } else if (Unsorted.incomingOpcode == 86) {
                                                             XPGainDraw.reset();
+                                                            SlayerTracker.reset();
                                                             Class167.method2269((byte) 46);
                                                             Unsorted.incomingOpcode = -1;
                                                             return false;

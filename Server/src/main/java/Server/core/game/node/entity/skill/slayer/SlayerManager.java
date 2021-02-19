@@ -253,6 +253,8 @@ public final class SlayerManager implements SavingModule {
 		} else if (master == Master.VANNAKA) {
 			player.getAchievementDiaryManager().finishTask(player, DiaryType.VARROCK, 1, 14);
 		}
+		getPlayer().varpManager.get(2502).setVarbit(1,task.ordinal());
+		getPlayer().varpManager.get(2502).setVarbit(8,getAmount()).send(player);
 	}
 
 	/**
@@ -397,6 +399,9 @@ public final class SlayerManager implements SavingModule {
 	 */
 	public void decrementAmount(int amount) {
 		this.amount -= amount;
+		if(player.varpManager.get(2502).getVarbit(1) == null) player.varpManager.get(2502).setVarbit(1,task.ordinal());
+		player.varpManager.get(2502).setVarbit(8,getAmount());
+		player.varpManager.get(2502).send(player);
 	}
 
 	/**

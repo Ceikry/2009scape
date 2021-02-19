@@ -93,6 +93,8 @@ public final class EnchantedGemDialogue extends DialoguePlugin {
 				break;
 			}
 			interpreter.sendDialogues(player.getSlayer().getMaster().getNpc(), FacialExpression.HALF_GUILTY, "You're currently assigned to kill "  + (player.getSlayer().getTask() == Tasks.JAD ? " TzTok-Jad!" : NPCDefinition.forId((player.getSlayer().getTask().getNpcs()[0])).getName().toLowerCase() + "'s;"), "only " + player.getSlayer().getAmount() + " more to go.");
+			player.varpManager.get(2502).setVarbit(1,player.getSlayer().getTask().ordinal());
+			player.varpManager.get(2502).setVarbit(8,player.getSlayer().getAmount()).send(player);
 			stage = 11;
 			break;
 		case 11:

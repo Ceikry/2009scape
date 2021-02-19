@@ -405,5 +405,12 @@ class MiscCommandSet : CommandSet(Command.Privilege.ADMIN){
             }
             player.varpManager.flagSave(2501)
         }
+
+        define("toggleslayer",Command.Privilege.STANDARD){player,_ ->
+            val enabled = player.varpManager.get(2502).getVarbit(0)?.value == 0
+            player.varpManager.get(2502).setVarbit(0,if(enabled) 1 else 0).send(player)
+            player.varpManager.flagSave(2502)
+            player.sendMessage("Slayer task tracker is now " + (if(!enabled) colorize("%RON") else colorize("%ROFF")) + ".")
+        }
     }
 }

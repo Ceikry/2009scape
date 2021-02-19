@@ -174,7 +174,7 @@ class WildernessCourse
      * @param object the object.
      */
     private fun handleSteppingStones(player: Player, `object`: GameObject) {
-        player.locks.lockInteractions(12)
+        player.locks.lock()
         val fail = AgilityHandler.hasFailed(player, 1, 0.3)
         player.addExtension(LogoutTask::class.java, LocationLogoutTask(12, player.location))
         GameWorld.Pulser.submit(object : Pulse(2, player) {
@@ -185,7 +185,10 @@ class WildernessCourse
                     return true
                 }
                 AgilityHandler.forceWalk(player, if (counter == 5) 2 else -1, player.location, player.location.transform(-1, 0, 0), Animation.create(741), 10, if (counter == 5) 20.0 else 0.toDouble(), if (counter != 0) null else "You carefully start crossing the stepping stones...")
-                return ++counter == 6
+                if(++counter == 6){
+                    player.unlock()
+                }
+                return counter == 6
             }
 
             override fun stop() {

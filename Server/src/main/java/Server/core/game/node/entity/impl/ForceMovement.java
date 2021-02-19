@@ -235,6 +235,7 @@ public class ForceMovement extends Pulse {
 		}
 		ForceMovement fm = new ForceMovement(e, start, destination, startAnim, animation, direction, commenceSpeed, pathSpeed);
 		fm.start();
+		e.lock();
 		GameWorld.getPulser().submit(fm);
 		return fm;
 	}
@@ -257,6 +258,7 @@ public class ForceMovement extends Pulse {
 		this.pathSpeed = pathSpeed == 0 ? path : speed;
 		this.commenceSpeed = commence;
 		start();
+		e.lock();
 		GameWorld.getPulser().submit(this);
 	}
 
@@ -304,7 +306,6 @@ public class ForceMovement extends Pulse {
 		}
 		int ticks = 1 + commenceSpeed + pathSpeed;
 		entity.getImpactHandler().setDisabledTicks(ticks);
-		entity.lock(ticks);
 		entity.getUpdateMasks().register(new ForceMovementFlag(this));
 		entity.getWalkingQueue().updateRegion(destination, false);
 		super.start();
@@ -329,6 +330,7 @@ public class ForceMovement extends Pulse {
 		if (endAnimation != null) {
 			entity.animate(endAnimation);
 		}
+		entity.unlock();
 	}
 
 	/**

@@ -1,5 +1,6 @@
 package org.runite.client;
 
+import org.rs09.SlayerTracker;
 import org.rs09.XPGainDraw;
 import org.rs09.client.config.GameConfig;
 import org.rs09.client.data.HashTable;
@@ -4211,6 +4212,7 @@ public class Unsorted {
                                         continue;
                                     }
                                     XPGainDraw.drawGains();
+                                    SlayerTracker.draw();
                                     continue;
                                 }
 

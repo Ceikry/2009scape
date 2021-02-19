@@ -16,6 +16,12 @@ object CustomVars {
                 GameConfig.xpTrackMode = (varValue shr 2) and 1
                 true
             }
+            2502 -> {
+                GameConfig.slayerCountEnabled = (varValue and 1) == 0
+                GameConfig.slayerTaskID = (varValue shr 1) and 127
+                GameConfig.setSlayerAmount((varValue shr 8) and 511)
+                true
+            }
             else -> false
         }
     }

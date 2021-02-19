@@ -82,12 +82,14 @@ class GnomeStrongholdCourse
                     return true
                 }
                 USED_PIPES[index] = GameWorld.ticks + 10
-                player.lock(12)
 
+                player.lock()
                 //Animations and force walking
                 //X variable is determined by both index and x variables before
                 AgilityHandler.forceWalk(player, -1, Location.create(x, 3430, 0), Location.create(x, 3433, 0), Animation.create(10580), 10, 0.0, null)
+                player.lock()
                 AgilityHandler.forceWalk(player, -1, Location.create(x, 3433, 0), Location.create(x, 3435, 0), Animation.create(844), 10, 0.0, null, 5)
+                player.lock()
                 AgilityHandler.forceWalk(player, 6, Location.create(x, 3435, 0), Location.create(x, 3437, 0), Animation.create(10579), 20, 7.5, null, 8)
                 player.addExtension(LogoutTask::class.java, LocationLogoutTask(12, Location.create(x, 3430, 0)))
                 return true

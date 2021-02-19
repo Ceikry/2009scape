@@ -2,6 +2,7 @@ package org.rs09.client.config
 
 import org.json.simple.JSONObject
 import org.json.simple.parser.JSONParser
+import org.rs09.SlayerTracker
 import java.io.FileReader
 import java.math.BigInteger
 import java.util.*
@@ -118,6 +119,21 @@ class GameConfig {
 
         @JvmField
         var xpTrackMode = 0
+
+        @JvmField
+        var slayerCountEnabled = true
+
+        @JvmField
+        var slayerTaskID = 0
+
+        @JvmField
+        var slayerTaskAmount = 0
+
+        @JvmStatic
+        fun setSlayerAmount(amount : Int){
+            slayerTaskAmount = amount
+            SlayerTracker.lastUpdate = System.currentTimeMillis()
+        }
 
         /**
          * Json config Parser
