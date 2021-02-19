@@ -60,9 +60,6 @@ public class SlayerPlugin extends OptionHandler {
 		case 23157:
 			player.teleport(new Location(2729, 3733, 0));
 			break;
-		case 5008:
-			//player.teleport(Location.create(2808, 10002, 0));
-			break;
 		case 15767:
 			player.teleport(new Location(3748, 9373, 0));
 			break;

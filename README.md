@@ -1,4 +1,4 @@
-[![AGPL-3.0 License][license-shield]][license-url]
+[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 
 <br />
 <p align="center">
@@ -244,7 +244,7 @@ First follow the [Github-Setup](#github-setup). After you have forked over your 
 
 ### License
 
-We use the AGPL 3.0 license, which can be found <a href="https://www.gnu.org/licenses/agpl-3.0.en.html">here.</a> Please read and understand the license. Failure to follow the guidelines outlined in the license will result in legal action. If you know or hear of anyone breaking this license, please send a report, with proof, to Red Bracket#8151, ceikry#2724, or woahscam#8535 on discord or email woahscam@hotmail.com. **We WILL NOT change the license to fit your needs.**
+We use the CC BY-NC-SA 4.0 license, which can be found <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">here.</a> Please read and understand the license. Failure to follow the guidelines outlined in the license will result in legal action. If you know or hear of anyone breaking this license, please send a report, with proof, to Red Bracket#8151, ceikry#2724, or woahscam#8535 on discord or email woahscam@hotmail.com. **We WILL NOT change the license to fit your needs.**
 
 ### Contact
 
@@ -252,5 +252,5 @@ We use the AGPL 3.0 license, which can be found <a href="https://www.gnu.org/lic
 
 
 
-[license-shield]: https://img.shields.io/badge/license-AGPL--3.0-informational
-[license-url]: https://www.gnu.org/licenses/agpl-3.0.en.html
+[license-shield]: https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg
+[license-url]: https://creativecommons.org/licenses/by-nc-sa/4.0/
