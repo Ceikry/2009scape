@@ -40,7 +40,7 @@ final class Class166 {
 
    static void method2258(int var0, RSString var2) {
       try {
-         RSString var3 = var2.method1579().method1545();
+         RSString var3 = var2.method1579().longToRSString();
          boolean var4 = false;
 
          for(int var5 = 0; Class159.localPlayerCount > var5; ++var5) {

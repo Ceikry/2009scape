@@ -211,6 +211,9 @@ public class TextCore {
     static RSString COMMAND_SET_PARTICLES = RSString.parse("::setparticles");
     static RSString COMMAND_RECT_DEBUG = RSString.parse("::rect_debug");
     static RSString COMMAND_RENDER_INFO = RSString.parse("::renderinfo");
+    static RSString COMMAND_DISCORD = RSString.parse("::discord");
+    static RSString COMMAND_HIGHSCORES = RSString.parse("::highscores");
+    static RSString COMMAND_HISCORES = RSString.parse("::hiscores");
 
     /**
      * Used as text for client commands

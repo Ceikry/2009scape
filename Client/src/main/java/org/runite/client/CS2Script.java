@@ -1284,7 +1284,7 @@ final class CS2Script extends Linkable {
                                                    }
                                                    if (opcode == 3611) {
                                                       if (RSInterface.aClass94_251 != null)
-                                                            ItemDefinition.stringsStack[sStackCounter++] = RSInterface.aClass94_251.method1545();
+                                                            ItemDefinition.stringsStack[sStackCounter++] = RSInterface.aClass94_251.longToRSString();
                                                       else
                                                             ItemDefinition.stringsStack[sStackCounter++] = TextCore.aClass94_2331;
                                                       continue;
@@ -1301,7 +1301,7 @@ final class CS2Script extends Linkable {
                                                       if (RSInterface.aClass94_251 == null || l14 >= Unsorted.clanSize)
                                                             ItemDefinition.stringsStack[sStackCounter++] = TextCore.aClass94_2331;
                                                       else
-                                                            ItemDefinition.stringsStack[sStackCounter++] = PacketParser.aClass3_Sub19Array3694[l14].aClass94_2476.method1545();
+                                                            ItemDefinition.stringsStack[sStackCounter++] = PacketParser.aClass3_Sub19Array3694[l14].aClass94_2476.longToRSString();
                                                       continue;
                                                    }
                                                    if (opcode == 3614) {
@@ -1354,7 +1354,7 @@ final class CS2Script extends Linkable {
                                                       if (anInt1357 == 0 || Class3_Sub28_Sub5.anInt3591 <= k15)
                                                             ItemDefinition.stringsStack[sStackCounter++] = TextCore.aClass94_2331;
                                                       else
-                                                            ItemDefinition.stringsStack[sStackCounter++] = Unsorted.method1052(Class114.ignores[k15]).method1545();
+                                                            ItemDefinition.stringsStack[sStackCounter++] = Unsorted.method1052(Class114.ignores[k15]).longToRSString();
                                                       continue;
                                                    }
                                                    if (3623 == opcode) {
@@ -1376,7 +1376,7 @@ final class CS2Script extends Linkable {
                                                       if (Class161.aClass94_2035 == null)
                                                             ItemDefinition.stringsStack[sStackCounter++] = TextCore.aClass94_2331;
                                                       else
-                                                            ItemDefinition.stringsStack[sStackCounter++] = Class161.aClass94_2035.method1545();
+                                                            ItemDefinition.stringsStack[sStackCounter++] = Class161.aClass94_2035.longToRSString();
                                                       continue;
                                                    }
                                                    if (3626 == opcode) {
@@ -3122,7 +3122,7 @@ final class CS2Script extends Linkable {
                                                                }
                                                                if (opcode == 5610) {
                                                                   for (int l37 = 0; l37 < 5; l37++)
-                                                                        ItemDefinition.stringsStack[sStackCounter++] = Class3_Sub13_Sub33.aClass94Array3391.length <= l37 ? TextCore.aClass94_2331 : Class3_Sub13_Sub33.aClass94Array3391[l37].method1545();
+                                                                        ItemDefinition.stringsStack[sStackCounter++] = Class3_Sub13_Sub33.aClass94Array3391.length <= l37 ? TextCore.aClass94_2331 : Class3_Sub13_Sub33.aClass94Array3391[l37].longToRSString();
 
                                                                   Class3_Sub13_Sub33.aClass94Array3391 = null;
                                                                   continue;

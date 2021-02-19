@@ -10,15 +10,16 @@ import core.tools.Items
 import plugin.ai.skillingbot.SkillingBotAssembler
 import core.game.node.entity.skill.Skills
 
+@PlayerCompatible
+@ScriptDescription("Start in varrock bank with rune mysteries complete and a pickaxe equipped/in inventory")
+@ScriptName("Varrock Essence Miner")
+@ScriptIdentifier("essence_miner")
 class VarrockEssenceMiner : Script(){
 
     var state = State.TO_ESSENCE
     val auburyZone = ZoneBorders(3252, 3398, 3254, 3402)
     val bankZone = ZoneBorders(3251, 3420,3254, 3422)
     override fun tick() {
-        if(!bot.questRepository.isComplete("Rune Mysteries")) {
-            bot.questRepository.getQuest("Rune Mysteries").finish(bot)
-        }
 
         when(state){
             State.TO_ESSENCE -> {
@@ -50,7 +51,7 @@ class VarrockEssenceMiner : Script(){
             State.MINING -> {
                 val essence = scriptAPI.getNearestNode(2491,true)
                 essence?.interaction?.handle(bot,essence.interaction[0])
-                if(bot.inventory.getAmount(Items.PURE_ESSENCE_7936) > 25)
+                if(bot.inventory.isFull)
                     state = State.TO_BANK
             }
 
@@ -69,16 +70,13 @@ class VarrockEssenceMiner : Script(){
 
             State.BANKING -> {
                 val bank = scriptAPI.getNearestNode("bank booth",true)
+                val item =
+                if(bot.inventory.getAmount(Items.RUNE_ESSENCE_1436) > 0) Items.RUNE_ESSENCE_1436 else Items.PURE_ESSENCE_7936
                 if(bank != null){
                     bot.pulseManager.run(object : MovementPulse(bot,bank, DestinationFlag.OBJECT){
                         override fun pulse(): Boolean {
                             bot.faceLocation(bank.location)
-                            scriptAPI.bankItem(Items.PURE_ESSENCE_7936)
-                            if(bot.bank.getAmount(Items.PURE_ESSENCE_7936) > 500){
-                                SystemLogger.log("Should tele")
-                                state = State.TELE_GE
-                                return true
-                            }
+                            scriptAPI.bankItem(item)
                             state = State.TO_ESSENCE
                             return true
                         }
@@ -109,11 +107,6 @@ class VarrockEssenceMiner : Script(){
         BANKING,
         TELE_GE,
         SELL_GE
-    }
-
-    init {
-        inventory.add(Item(Items.MITHRIL_PICKAXE_1273))
-        skills[Skills.MINING] = 45
     }
 
     override fun newInstance(): Script {

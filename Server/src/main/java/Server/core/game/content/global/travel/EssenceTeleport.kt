@@ -65,12 +65,7 @@ object EssenceTeleport {
                             }
                         }
                         player.savedData.globalData.essenceTeleporter = npc.id
-                        val loc: Location =
-                        if (player.isArtificial) {
-                            Location.create(2922, 4820, 0)
-                        } else {
-                            location
-                        }
+                        val loc: Location =Location.create(2922, 4820, 0)
                         player.properties.teleportLocation = loc
 
                         if (npc.id == 553) {

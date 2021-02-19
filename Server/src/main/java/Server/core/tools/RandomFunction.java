@@ -232,7 +232,7 @@ public class RandomFunction {
 		int rand = random(sumOfWeights);
 		Collections.shuffle(table);
 		for(WeightedChanceItem item : table){
-			if(rand < item.weight)
+			if(rand <= item.weight)
 				return item.getItem();
 			rand -= item.weight;
 		}

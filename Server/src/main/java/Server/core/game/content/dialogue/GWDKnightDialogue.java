@@ -90,8 +90,7 @@ public final class GWDKnightDialogue extends DialoguePlugin {
 		case 3:
 			if (player.getInventory().add(SCROLL)) {
 				interpreter.sendItemMessage(11734, "The knight hands you a scroll.");
-				int value = player.getConfigManager().get(1048) | (1 << 4);
-				player.getConfigManager().set(1048, value, true);
+				player.varpManager.get(1048).setVarbit(4,1).send(player);
 				stage = 5;
 			} else {
 				stage = 4;

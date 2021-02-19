@@ -1,6 +1,5 @@
 package org.runite.client;
 
-import kotlin.Pair;
 import org.rs09.XPGainDraw;
 
 import java.nio.charset.StandardCharsets;
@@ -320,11 +319,11 @@ public final class PacketParser {
                                     MouseListeningClass.anInt1921 = (1 + MouseListeningClass.anInt1921) % 100;
                                     RSString var61 = LinkableRSString.method733(var11).method555(GraphicDefinition.incomingBuffer);
                                     if (clanChatIcon == 2 || 3 == clanChatIcon) {
-                                        Class3_Sub28_Sub12.sendGameMessage(var11, 20, var61, Objects.requireNonNull(Unsorted.method1052(nameAsLong)).method1545(), RSString.stringCombiner(new RSString[]{TextCore.aClass94_444, Objects.requireNonNull(Unsorted.method1052(var2)).method1545()}));
+                                        Class3_Sub28_Sub12.sendGameMessage(var11, 20, var61, Objects.requireNonNull(Unsorted.method1052(nameAsLong)).longToRSString(), RSString.stringCombiner(new RSString[]{TextCore.aClass94_444, Objects.requireNonNull(Unsorted.method1052(var2)).longToRSString()}));
                                     } else if (clanChatIcon == 1) {
-                                        Class3_Sub28_Sub12.sendGameMessage(var11, 20, var61, Objects.requireNonNull(Unsorted.method1052(nameAsLong)).method1545(), RSString.stringCombiner(new RSString[]{TextCore.aClass94_592, Objects.requireNonNull(Unsorted.method1052(var2)).method1545()}));
+                                        Class3_Sub28_Sub12.sendGameMessage(var11, 20, var61, Objects.requireNonNull(Unsorted.method1052(nameAsLong)).longToRSString(), RSString.stringCombiner(new RSString[]{TextCore.aClass94_592, Objects.requireNonNull(Unsorted.method1052(var2)).longToRSString()}));
                                     } else {
-                                        Class3_Sub28_Sub12.sendGameMessage(var11, 20, var61, Objects.requireNonNull(Unsorted.method1052(nameAsLong)).method1545(), Objects.requireNonNull(Unsorted.method1052(var2)).method1545());
+                                        Class3_Sub28_Sub12.sendGameMessage(var11, 20, var61, Objects.requireNonNull(Unsorted.method1052(nameAsLong)).longToRSString(), Objects.requireNonNull(Unsorted.method1052(var2)).longToRSString());
                                     }
                                 }
 
@@ -485,7 +484,7 @@ public final class PacketParser {
                                         var2 = GraphicDefinition.incomingBuffer.readLong();
                                         modelId = GraphicDefinition.incomingBuffer.readUnsignedShort();
                                         var56 = LinkableRSString.method733(modelId).method555(GraphicDefinition.incomingBuffer);
-                                        Class3_Sub28_Sub12.sendGameMessage(modelId, 19, var56, null, Objects.requireNonNull(Unsorted.method1052(var2)).method1545());
+                                        Class3_Sub28_Sub12.sendGameMessage(modelId, 19, var56, null, Objects.requireNonNull(Unsorted.method1052(var2)).longToRSString());
                                         Unsorted.incomingOpcode = -1;
                                         return true;
                                     } else if (Unsorted.incomingOpcode == 169) { //UNUSED BY SERVER
@@ -818,7 +817,7 @@ public final class PacketParser {
                                                         var41 = GraphicDefinition.incomingBuffer.readString();
                                                     }
 
-                                                    RSString var46 = Objects.requireNonNull(Unsorted.method1052(var2)).method1545();
+                                                    RSString var46 = Objects.requireNonNull(Unsorted.method1052(var2)).longToRSString();
 
                                                     for (var33 = 0; var33 < Class8.anInt104; ++var33) {
                                                         if (var2 == Class50.aLongArray826[var33]) {
@@ -960,11 +959,11 @@ public final class PacketParser {
                                                         MouseListeningClass.anInt1921 = (1 + MouseListeningClass.anInt1921) % 100;
                                                         var64 = LinkableRSString.method733(var33).method555(GraphicDefinition.incomingBuffer);
                                                         if (chatIcon == 2) {
-                                                            Class3_Sub28_Sub12.sendGameMessage(var33, 18, var64, null, RSString.stringCombiner(new RSString[]{TextCore.aClass94_444, Objects.requireNonNull(Unsorted.method1052(var2)).method1545()}));
+                                                            Class3_Sub28_Sub12.sendGameMessage(var33, 18, var64, null, RSString.stringCombiner(new RSString[]{TextCore.aClass94_444, Objects.requireNonNull(Unsorted.method1052(var2)).longToRSString()}));
                                                         } else if (1 == chatIcon) {
-                                                            Class3_Sub28_Sub12.sendGameMessage(var33, 18, var64, null, RSString.stringCombiner(new RSString[]{TextCore.aClass94_592, Objects.requireNonNull(Unsorted.method1052(var2)).method1545()}));
+                                                            Class3_Sub28_Sub12.sendGameMessage(var33, 18, var64, null, RSString.stringCombiner(new RSString[]{TextCore.aClass94_592, Objects.requireNonNull(Unsorted.method1052(var2)).longToRSString()}));
                                                         } else {
-                                                            Class3_Sub28_Sub12.sendGameMessage(var33, 18, var64, null, Objects.requireNonNull(Unsorted.method1052(var2)).method1545());
+                                                            Class3_Sub28_Sub12.sendGameMessage(var33, 18, var64, null, Objects.requireNonNull(Unsorted.method1052(var2)).longToRSString());
                                                         }
                                                     }
 
@@ -1087,7 +1086,7 @@ public final class PacketParser {
                                                     } else if (Unsorted.incomingOpcode == 71) {
                                                         var2 = GraphicDefinition.incomingBuffer.readLong();
                                                         var58 = Class3_Sub28_Sub17.method686(Objects.requireNonNull(Class32.method992(GraphicDefinition.incomingBuffer).properlyCapitalize()));
-                                                        Class3_Sub30_Sub1.addChatMessage(Objects.requireNonNull(Unsorted.method1052(var2)).method1545(), 6, var58, (byte) -83 ^ 82);
+                                                        Class3_Sub30_Sub1.addChatMessage(Objects.requireNonNull(Unsorted.method1052(var2)).longToRSString(), 6, var58, (byte) -83 ^ 82);
                                                         Unsorted.incomingOpcode = -1;
                                                         return true;
                                                     } else if (Unsorted.incomingOpcode == 42) {
@@ -1291,11 +1290,11 @@ public final class PacketParser {
                                                             MouseListeningClass.anInt1921 = (MouseListeningClass.anInt1921 - -1) % 100;
                                                             RSString var52 = Class3_Sub28_Sub17.method686(Objects.requireNonNull(Class32.method992(GraphicDefinition.incomingBuffer).properlyCapitalize()));
                                                             if (chatIcon == 2 || chatIcon == 3) {
-                                                                Class3_Sub30_Sub1.addChatMessage(RSString.stringCombiner(new RSString[]{TextCore.aClass94_444, Objects.requireNonNull(Unsorted.method1052(var2)).method1545()}), 7, var52, -1);
+                                                                Class3_Sub30_Sub1.addChatMessage(RSString.stringCombiner(new RSString[]{TextCore.aClass94_444, Objects.requireNonNull(Unsorted.method1052(var2)).longToRSString()}), 7, var52, -1);
                                                             } else if (chatIcon == 1) {
-                                                                Class3_Sub30_Sub1.addChatMessage(RSString.stringCombiner(new RSString[]{RSString.parse("<img=" + (chatIcon - 1) + ">"), Objects.requireNonNull(Unsorted.method1052(var2)).method1545()}), 7, var52, -1);
+                                                                Class3_Sub30_Sub1.addChatMessage(RSString.stringCombiner(new RSString[]{RSString.parse("<img=" + (chatIcon - 1) + ">"), Objects.requireNonNull(Unsorted.method1052(var2)).longToRSString()}), 7, var52, -1);
                                                             } else {
-                                                                Class3_Sub30_Sub1.addChatMessage(RSString.stringCombiner(new RSString[]{RSString.parse("<img=" + (chatIcon - 1) + ">"), Objects.requireNonNull(Unsorted.method1052(var2)).method1545()}), 7, var52, -1);
+                                                                Class3_Sub30_Sub1.addChatMessage(RSString.stringCombiner(new RSString[]{RSString.parse("<img=" + (chatIcon - 1) + ">"), Objects.requireNonNull(Unsorted.method1052(var2)).longToRSString()}), 7, var52, -1);
                                                             }
                                                         }
 
@@ -1343,14 +1342,14 @@ public final class PacketParser {
                                                             MouseListeningClass.anInt1921 = (MouseListeningClass.anInt1921 + 1) % 100;
                                                             var57 = Class3_Sub28_Sub17.method686(Objects.requireNonNull(Class32.method992(GraphicDefinition.incomingBuffer).properlyCapitalize()));
                                                             if (clanChatIcon == 2 || clanChatIcon == 3) {
-                                                                Class3_Sub13_Sub11.method221(-1, var57, RSString.stringCombiner(new RSString[]{TextCore.aClass94_444, Objects.requireNonNull(Unsorted.method1052(var2)).method1545()}), Objects.requireNonNull(Unsorted.method1052(nameAsLong)).method1545(), 9);
+                                                                Class3_Sub13_Sub11.method221(-1, var57, RSString.stringCombiner(new RSString[]{TextCore.aClass94_444, Objects.requireNonNull(Unsorted.method1052(var2)).longToRSString()}), Objects.requireNonNull(Unsorted.method1052(nameAsLong)).longToRSString(), 9);
                                                             } else if (clanChatIcon == 1) {
-                                                                Class3_Sub13_Sub11.method221(-1, var57, RSString.stringCombiner(new RSString[]{TextCore.aClass94_592, Objects.requireNonNull(Unsorted.method1052(var2)).method1545()}), Objects.requireNonNull(Unsorted.method1052(nameAsLong)).method1545(), 9);
+                                                                Class3_Sub13_Sub11.method221(-1, var57, RSString.stringCombiner(new RSString[]{TextCore.aClass94_592, Objects.requireNonNull(Unsorted.method1052(var2)).longToRSString()}), Objects.requireNonNull(Unsorted.method1052(nameAsLong)).longToRSString(), 9);
                                                             } else {
                                                                 if (clanChatIcon == 0)
-                                                                    Class3_Sub13_Sub11.method221(-1, var57, Objects.requireNonNull(Unsorted.method1052(var2)).method1545(), Objects.requireNonNull(Unsorted.method1052(nameAsLong)).method1545(), 9);
+                                                                    Class3_Sub13_Sub11.method221(-1, var57, Objects.requireNonNull(Unsorted.method1052(var2)).longToRSString(), Objects.requireNonNull(Unsorted.method1052(nameAsLong)).longToRSString(), 9);
                                                                 else
-                                                                    Class3_Sub13_Sub11.method221(-1, var57, RSString.stringCombiner(new RSString[]{RSString.parse("<img=" + (clanChatIcon - 1) + ">"), Objects.requireNonNull(Unsorted.method1052(var2)).method1545()}), Objects.requireNonNull(Unsorted.method1052(nameAsLong)).method1545(), 9);
+                                                                    Class3_Sub13_Sub11.method221(-1, var57, RSString.stringCombiner(new RSString[]{RSString.parse("<img=" + (clanChatIcon - 1) + ">"), Objects.requireNonNull(Unsorted.method1052(var2)).longToRSString()}), Objects.requireNonNull(Unsorted.method1052(nameAsLong)).longToRSString(), 9);
                                                             }
                                                         }
 

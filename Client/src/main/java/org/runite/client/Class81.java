@@ -68,7 +68,7 @@ final class Class81 {
       try {
          if(var1 != 0L) {
             if(Class3_Sub28_Sub5.anInt3591 < 100) {
-               RSString var4 = Objects.requireNonNull(Unsorted.method1052(var1)).method1545();
+               RSString var4 = Objects.requireNonNull(Unsorted.method1052(var1)).longToRSString();
 
                int var5;
                for(var5 = 0; var5 < Class3_Sub28_Sub5.anInt3591; ++var5) {

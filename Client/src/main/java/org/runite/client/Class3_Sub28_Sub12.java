@@ -70,8 +70,28 @@ public final class Class3_Sub28_Sub12 extends Node {
         aClass94Array3226[0] = var5;
         Class24.anInt472 = PacketParser.anInt3213;
         anIntArray1835[0] = var0;
+        RSString primaryMsg = RSString.parse("null");
+        RSString secondaryMsg = RSString.parse("null");
+        int cutOff = 81 - (var3 != null ? var3.length : 0) - (var5 != null ? var5.length : 0);
+        if(message.length > cutOff && type != 0){
+            String[] tokens = message.toString().split(" ");
+            if(tokens.length > 1) {
+                int counter = 0;
+                for (String tok : tokens) {
+                    if (counter + tok.length() > cutOff) {
+                        break;
+                    }
+                    counter += tok.length() + 1;
+                }
+                primaryMsg = message.substring(0, counter, 0);
+                secondaryMsg = message.substring(counter, message.length, 0);
+                message = primaryMsg;
+            }
+        }
         LinkableRSString.aClass94Array2580[0] = message;
         Class163_Sub3.aClass94Array3003[0] = var3;
+        if(!secondaryMsg.equalsString(RSString.parse("null")))
+            sendGameMessage(var0,type,secondaryMsg,var3,var5);
     }
 
     static RSString method612(long var0) {

@@ -29,7 +29,6 @@ public class SlayerPlugin extends OptionHandler {
 		ObjectDefinition.forId(8785).getHandlers().put("option:climb-up", this);
 		ObjectDefinition.forId(23158).getHandlers().put("option:exit", this);
 		ObjectDefinition.forId(23157).getHandlers().put("option:exit", this);
-		ObjectDefinition.forId(5008).getHandlers().put("option:enter", this);
 		ObjectDefinition.forId(15767).getHandlers().put("option:enter", this);
 		ObjectDefinition.forId(15811).getHandlers().put("option:exit", this);
 		ObjectDefinition.forId(15812).getHandlers().put("option:exit", this);

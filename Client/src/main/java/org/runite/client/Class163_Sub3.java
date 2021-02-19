@@ -60,7 +60,7 @@ final class Class163_Sub3 extends Class163 {
       try {
          if(var0 != 0) {
             if((100 > Class8.anInt104 || Class3_Sub13_Sub29.disableGEBoxes) && Class8.anInt104 < 200) {
-               RSString var3 = Objects.requireNonNull(Unsorted.method1052(var0)).method1545();
+               RSString var3 = Objects.requireNonNull(Unsorted.method1052(var0)).longToRSString();
 
                int var4;
                for(var4 = 0; Class8.anInt104 > var4; ++var4) {

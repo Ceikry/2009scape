@@ -170,7 +170,7 @@ final class Player extends Class140_Sub4 {
 
          this.renderAnimationId = buffer.readUnsignedShort();
          long var20 = buffer.readLong();
-         this.displayName = Objects.requireNonNull(Unsorted.method1052(var20)).method1545();
+         this.displayName = Objects.requireNonNull(Unsorted.method1052(var20)).longToRSString();
          this.COMBAT_LEVEL = buffer.readUnsignedByte();
          if(var6) {
             this.anInt3974 = buffer.readUnsignedShort();

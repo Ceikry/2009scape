@@ -1,6 +1,9 @@
 package org.runite.client;
 
 
+import java.awt.*;
+import java.net.URI;
+
 public class ClientCommands {
 
     static boolean commandQaOpEnabled = false;
@@ -93,6 +96,28 @@ public class ClientCommands {
 
             if (command.equalsStringIgnoreCase(TextCore.COMMAND_TOGGLE_FPSON)) {
                 fpsOverlayEnabled = !fpsOverlayEnabled;
+            }
+
+            if (command.equalsStringIgnoreCase(TextCore.COMMAND_DISCORD)) {
+                if (Desktop.isDesktopSupported() && Desktop.getDesktop().isSupported(Desktop.Action.BROWSE)) {
+                    try {
+                        Desktop.getDesktop().browse(new URI("https://discord.gg/UVtqkDhxVD"));
+                    } catch(Exception e ){
+                        e.printStackTrace();
+                    }
+                }
+            }
+
+            if(command.equalsStringIgnoreCase(TextCore.COMMAND_HISCORES) || command.equalsStringIgnoreCase(TextCore.COMMAND_HIGHSCORES)){
+                int world = ObjectDefinition.worldId;
+                String link = world == 1 ? "https://2009scape.org/services/m%3dhiscore/hiscores.html" : "https://2009scape.org/services/m=hiscore/hiscores.html?world=2";
+                if (Desktop.isDesktopSupported() && Desktop.getDesktop().isSupported(Desktop.Action.BROWSE)) {
+                    try {
+                        Desktop.getDesktop().browse(new URI(link));
+                    } catch(Exception e ){
+                        e.printStackTrace();
+                    }
+                }
             }
 
             if (command.equalsStringIgnoreCase(TextCore.COMMAND_RENDER_INFO)) {

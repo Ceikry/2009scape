@@ -725,10 +725,10 @@ public class ItemDefinition extends Definition<Item> {
 	public int getRequirement(int skillId) {
 		Map<Integer, Integer> requirements = getConfiguration(ItemConfigParser.REQUIREMENTS);
 		if (requirements == null) {
-			return 1;
+			return 0;
 		}
 		Integer level = requirements.get(skillId);
-		return level == null ? 1 : level;
+		return level == null ? 0 : level;
 	}
 	
 	/**

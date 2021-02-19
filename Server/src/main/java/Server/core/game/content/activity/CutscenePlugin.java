@@ -238,6 +238,7 @@ public abstract class CutscenePlugin extends ActivityPlugin {
 				if (player.getSession().isActive()) {
 					player.getInterfaceManager().close();
 				}
+				player.getProperties().setSafeZone(false);
 				return true;
 			}
 			return false;

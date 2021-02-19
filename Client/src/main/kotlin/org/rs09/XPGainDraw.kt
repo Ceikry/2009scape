@@ -4,6 +4,7 @@ import org.rs09.client.config.GameConfig
 import org.rs09.client.rendering.RenderingUtils
 import org.rs09.client.rendering.Toolkit
 import org.runite.client.*
+import kotlin.math.ceil
 
 /**
  * Handles tracking and drawing of xp drops
@@ -19,14 +20,16 @@ object XPGainDraw {
 
     var posX = RenderingUtils.width / 2
     var posY = RenderingUtils.height / 4
-    var line = RenderingUtils.height / 5
     var skillSprite: AbstractSprite? = null
     var lastSkillId = 0
 
     var gainsAddedThisLoop = 0
     var totalXP = 0
     var lastUpdate = 0L
-    var clearHeight = RenderingUtils.height / 10
+    var lastGain = 0L
+
+    const val line = 110
+    const val clearHeight = 60
 
     @JvmStatic
     fun addGain(xpGain: Int,skillId: Int){
@@ -41,9 +44,16 @@ object XPGainDraw {
             }
             return
         }
-        thisLoopGains.add(XPGain(skillId,xpGain,line + (gainsAddedThisLoop * 25)))
+        var drawAt = line
+        if(thisLoopGains.isNotEmpty()) {
+            if (thisLoopGains[thisLoopGains.size - 1].currentPos + 25 > line) {
+                drawAt = thisLoopGains[thisLoopGains.size - 1].currentPos + 25
+            }
+        }
+        thisLoopGains.add(XPGain(skillId,xpGain,drawAt))
         gainsAddedThisLoop++
-        lastUpdate = System.currentTimeMillis()
+        if(System.currentTimeMillis() - lastUpdate > 10000) lastUpdate = System.currentTimeMillis()
+        lastGain = System.currentTimeMillis()
     }
 
     @JvmStatic
@@ -51,25 +61,21 @@ object XPGainDraw {
         if(!GameConfig.xpDropsEnabled){
             return
         }
-        if(System.currentTimeMillis() - lastUpdate > 10000) return
+        if(System.currentTimeMillis() - lastGain > 10000) return
         posX = RenderingUtils.width / 2
         posY = RenderingUtils.height / 4
-        line = RenderingUtils.height / 5
-        clearHeight = RenderingUtils.height / 10
         if(posX == 382) { //Client is in fixed mode
             posX += 60
-            clearHeight += 9
-        } else {
-            clearHeight -= 10
         }
         drawTotal()
         if(GameConfig.xpTrackMode == 1) {
             skillSprite?.drawAt(posX - 65, 10)
             RenderingUtils.drawText(addCommas(lastXp[lastSkillId].toString()), posX - 40, 28, -1, 2, false)
         }
+        val timeDelta = getTimeDelta()
         val removeList = ArrayList<XPGain>()
         for(gain in thisLoopGains) {
-            gain.currentPos -= 1
+            gain.currentPos -= ceil(timeDelta / 20.0).toInt()
             if(gain.currentPos <= clearHeight){
                 if(GameConfig.xpDropMode == 0) {
                     totalXP += gain.xpGain
@@ -86,6 +92,7 @@ object XPGainDraw {
                 lastSkillId = gain.skillId
            }
         }
+        lastUpdate = System.currentTimeMillis()
         thisLoopGains.removeAll(removeList)
         gainsAddedThisLoop = 0
     }
@@ -120,8 +127,8 @@ object XPGainDraw {
     fun getSpriteArchive(skillId: Int): Int{
         return when(skillId) {
             0 -> 197
-            1 -> 198
-            2 -> 199
+            1 -> 199
+            2 -> 198
             3 -> 203
             4 -> 200
             5 -> 201
@@ -187,5 +194,9 @@ object XPGainDraw {
         thisLoopGains.clear()
         lastSkillId = 0
         skillSprite = null
+    }
+
+    fun getTimeDelta(): Long{
+        return System.currentTimeMillis() - lastUpdate
     }
 }

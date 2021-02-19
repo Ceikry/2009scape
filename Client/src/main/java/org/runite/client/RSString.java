@@ -347,7 +347,7 @@ public final class RSString implements Interface3 {
         }
     }
 
-    final RSString method1545() {
+    final RSString longToRSString() {
         try {
             RSString var2 = new RSString();
             var2.length = this.length;
