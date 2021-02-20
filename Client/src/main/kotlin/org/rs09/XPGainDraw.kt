@@ -87,14 +87,15 @@ object XPGainDraw {
             val sprite = getSprite(getSpriteArchive(gain.skillId))
             sprite?.drawAt((posX) - 25, gain.currentPos - 20)
             RenderingUtils.drawText("${gain.xpGain}",posX, gain.currentPos,-1,2,false)
-            if(GameConfig.xpTrackMode == 1){
-                skillSprite = sprite
-                lastSkillId = gain.skillId
-           }
+            skillSprite = sprite
+            lastSkillId = gain.skillId
         }
         lastUpdate = System.currentTimeMillis()
         thisLoopGains.removeAll(removeList)
         gainsAddedThisLoop = 0
+        if(Discord.checkInitializable()) {
+            Discord.updatePresence("In-Game", "Training", "skill_$lastSkillId")
+        }
     }
 
     fun drawTotal() {
