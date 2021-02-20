@@ -1,6 +1,7 @@
 package org.runite.client;
 
 
+import org.rs09.Discord;
 import org.rs09.client.config.GameConfig;
 import org.rs09.client.console.DeveloperConsole;
 import org.rs09.client.filestore.resources.configs.enums.EnumDefinitionProvider;
@@ -144,8 +145,10 @@ public final class Client extends GameShell {
                     }
                 }
                 if (Class143.loadingStage == 0) {
-                    // Discord
-                    Discord.InitalizeDiscord();
+                    if(Discord.checkInitializable()){
+                        Discord.initialize();
+                        Discord.updatePresence("At the login screen","","");
+                    }
                     Class3_Sub28_Sub1.updateLoadingBar((Color) null, var10, Class3_Sub17.aClass94_2464, LoadingStageNumber);
                 } else if (5 == Class143.loadingStage) {
                     Class3_Sub23.method406((byte) 117, false, Class168.aClass3_Sub28_Sub17_2096);
@@ -224,11 +227,11 @@ public final class Client extends GameShell {
                 }
 
                 DeveloperConsole.INSTANCE.postDraw();
-
 //				if (DeveloperConsole.INSTANCE.getOpen()) {
 //				    DeveloperConsole.INSTANCE.draw();
 ////					System.out.println("Draw developer console");
 //				}
+
             }
         } catch (RuntimeException var9) {
             throw ClientErrorException.clientError(var9, "client.K(" + 40 + ')');
