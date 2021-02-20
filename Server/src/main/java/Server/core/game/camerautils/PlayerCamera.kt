@@ -9,12 +9,6 @@ import core.net.packet.out.CameraViewPacket
 class PlayerCamera(val player: Player?) {
     var ctx: CameraContext? = null
 
-    init {
-        if(player == null){
-            SystemLogger.log("Init with null player")
-        }
-    }
-
     fun setPosition(x: Int, y: Int, height: Int){
         player ?: return
         ctx = CameraContext(player,CameraContext.CameraType.SET,x,y,height,0,0)

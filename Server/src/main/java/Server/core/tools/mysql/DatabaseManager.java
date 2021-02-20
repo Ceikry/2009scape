@@ -28,13 +28,13 @@ public class DatabaseManager {
 				Connection connection = DriverManager.getConnection("jdbc:mysql://" + db.host() + "/" + db.name() + "?useTimezone=true&serverTimezone=UTC", db.username(), db.password());
 				connections.put(db.name(), connection);
 
-				SystemLogger.log("Successfully connected with '" + db.name() + "'.");
+				SystemLogger.logInfo("Successfully connected with '" + db.name() + "'.");
 
 				this.connected = true;
 
 
 		} catch (SQLException e) {
-			System.out.println("Couldn't connect to the database.");
+			SystemLogger.logErr("Couldn't connect to the database.");
 			e.printStackTrace();
 			ServerConstants.MYSQL = false;
 		}

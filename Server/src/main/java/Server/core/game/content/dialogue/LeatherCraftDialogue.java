@@ -99,7 +99,6 @@ public final class LeatherCraftDialogue extends DialoguePlugin {
 	public boolean handle(int interfaceId, int buttonId) {
 		player.getInterfaceManager().closeChatbox();
 		int amt = 0;
-		SystemLogger.log("" + buttonId);
 		switch (type) {
 		case "hard":
 			switch (buttonId) {

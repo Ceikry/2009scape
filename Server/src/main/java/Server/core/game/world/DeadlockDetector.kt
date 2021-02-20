@@ -1,5 +1,6 @@
 package core.game.world
 
+import core.game.system.SystemLogger
 import java.lang.management.ManagementFactory
 import java.lang.management.ThreadMXBean
 
@@ -17,9 +18,9 @@ class DeadlockDetector : Runnable {
                 if (threadInfo != null) {
                     for (thread in Thread.getAllStackTraces().keys) {
                         if (thread.id == threadInfo.threadId) {
-                            System.err.println(threadInfo.toString().trim())
+                            SystemLogger.logErr(threadInfo.toString().trim())
                             for (ste in thread.stackTrace) {
-                                System.err.println("\t" + ste.toString().trim { it <= ' ' })
+                                SystemLogger.logErr("\t" + ste.toString().trim { it <= ' ' })
                             }
                         }
                     }

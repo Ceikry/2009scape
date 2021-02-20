@@ -484,7 +484,7 @@ public final class NPCDefinition extends Definition<NPC> {
 			}
 			break;
 		default:
-			//System.err.println("Unhandled NPC definition opcode: " + opcode);
+			//SystemLogger.logErr("Unhandled NPC definition opcode: " + opcode);
 		}
 	}
 

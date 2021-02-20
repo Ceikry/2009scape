@@ -68,7 +68,7 @@ class SpawnCommandSet : CommandSet(Command.Privilege.ADMIN){
             }
             val `object` = if (args.size > 3) GameObject(CommandPlugin.toInteger(args[1]!!), player!!.location, CommandPlugin.toInteger(args[2]!!), CommandPlugin.toInteger(args[3]!!)) else if (args.size == 3) GameObject(CommandPlugin.toInteger(args[1]!!), player!!.location, CommandPlugin.toInteger(args[2]!!)) else GameObject(CommandPlugin.toInteger(args[1]!!), player!!.location)
             ObjectBuilder.add(`object`)
-            SystemLogger.log("object = $`object`")
+            SystemLogger.logInfo("object = $`object`")
         }
     }
 }

@@ -11,7 +11,6 @@ import core.game.node.entity.player.Player
 import core.game.node.entity.player.info.login.SavingModule
 import core.game.node.entity.player.link.audio.Audio
 import core.game.node.item.Item
-import core.game.system.SystemLogger.log
 import core.game.system.monitor.PlayerMonitor
 import core.net.packet.PacketRepository
 import core.net.packet.context.ConfigContext
@@ -241,9 +240,9 @@ class PlayerGrandExchange(private val player: Player) : SavingModule {
                 val offer = offersJSON[i] as JSONObject
                 val index = offer["offerIndex"].toString().toInt()
                 if (index > offers.size - 1) {
-                    log("Grand Exchange: INVALID OFFER INDEX FOR " + player.name + " INDEX: " + index + ", SKIPPING!")
-                    log("IF YOU SEE THIS MESSAGE, THE GRAND EXCHANGE NEEDS TO BE FIXED.")
-                    println("Check your logs, AVENGING ANGLE might have fucked up HARD and now " + player.name + "'s trade with index " + index + "is gone :(")
+                    SystemLogger.logAlert("Grand Exchange: INVALID OFFER INDEX FOR " + player.name + " INDEX: " + index + ", SKIPPING!")
+                    SystemLogger.logAlert("IF YOU SEE THIS MESSAGE, THE GRAND EXCHANGE NEEDS TO BE FIXED.")
+                    SystemLogger.logAlert("Check your logs, AVENGING ANGLE might have fucked up HARD and now " + player.name + "'s trade with index " + index + "is gone :(")
                     continue
                 }
                 OfferManager.setIndex(offer["offerUID"].toString().toInt().toLong(), index)
@@ -452,7 +451,6 @@ class PlayerGrandExchange(private val player: Player) : SavingModule {
             if (dispatch(player, temporaryOffer!!)) {
                 offers[openedIndex] = temporaryOffer
                 updateOffer(temporaryOffer!!)
-                SystemLogger.log("Has active offer? " + hasActiveOffer())
             }
         } else {
             val total: Int = temporaryOffer!!.amount * temporaryOffer!!.offeredValue
@@ -475,7 +473,6 @@ class PlayerGrandExchange(private val player: Player) : SavingModule {
         toMainInterface()
         player.audioManager.send(Audio(4043, 1, 1))
         temporaryOffer = null
-        log("Active offer? " + hasActiveOffer())
     }
 
     /**

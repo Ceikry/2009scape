@@ -129,6 +129,9 @@ class GameConfig {
         @JvmField
         var slayerTaskAmount = 0
 
+        @JvmField
+        var VERBOSE_LOGGING = false
+
         @JvmStatic
         fun setSlayerAmount(amount : Int){
             slayerTaskAmount = amount

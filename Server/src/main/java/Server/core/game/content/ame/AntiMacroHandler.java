@@ -127,7 +127,7 @@ public final class AntiMacroHandler implements SavingModule {
 			int highestIndex = 0;
 			int highestAmount = 0;
 			if(spawnEvent){
-				SystemLogger.log("Anti-Macro: Trying to get event for " + player.getUsername());
+				SystemLogger.logInfo("Anti-Macro: Trying to get event for " + player.getUsername());
 				for(int i = 0; i < monitors.length; i++){
 					try {
 						if (monitors[i].getExperienceAmount() > highestAmount) {
@@ -156,7 +156,7 @@ public final class AntiMacroHandler implements SavingModule {
 			event.start(player, true);
 		}
 		if(!player.isArtificial() && !isDisabled) {
-			System.out.println("Anti-Macro: Initialized anti-macro handler for " + player.getUsername());
+			SystemLogger.logInfo("Anti-Macro: Initialized anti-macro handler for " + player.getUsername());
 		}
 	}
 

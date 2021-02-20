@@ -5,6 +5,7 @@ import core.game.content.dialogue.DialoguePlugin;
 import core.game.content.dialogue.FacialExpression;
 import core.game.node.entity.npc.NPC;
 import core.game.node.entity.player.Player;
+import core.game.system.SystemLogger;
 import core.game.system.task.Pulse;
 import core.game.world.GameWorld;
 
@@ -127,7 +128,7 @@ public class GuardDialoguePlugin extends DialoguePlugin {
 			stage = -1;
 			break;
 		default:
-			System.err.println("Unhandled dialogue stage=" + stage);
+			SystemLogger.logErr("Unhandled dialogue stage=" + stage);
 		}
 		return false;
 	}

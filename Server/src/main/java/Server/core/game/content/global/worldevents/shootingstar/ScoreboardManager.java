@@ -15,7 +15,6 @@ public class ScoreboardManager {
             entries.remove(0);
         }
         entries.add(new ScoreboardEntry(player.getUsername(), GameWorld.getTicks()));
-        SystemLogger.log("Added scoreboard entry for " + player.getUsername() + " at time " + GameWorld.getTicks());
     }
 
     public static List<ScoreboardEntry> getEntries(){

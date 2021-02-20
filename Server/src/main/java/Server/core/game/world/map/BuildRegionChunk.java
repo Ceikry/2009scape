@@ -6,6 +6,7 @@ import core.game.node.item.GroundItem;
 import core.game.node.item.Item;
 import core.game.node.object.Constructed;
 import core.game.node.object.GameObject;
+import core.game.system.SystemLogger;
 import core.game.world.map.build.LandscapeParser;
 import core.net.packet.IoBuffer;
 import core.net.packet.out.ClearObject;
@@ -76,7 +77,7 @@ public class BuildRegionChunk extends RegionChunk {
 	@Override
 	public void rotate(Direction direction) {
 		if (rotation != 0) {
-			System.err.println("Region chunk was already rotated!");
+			SystemLogger.logErr("Region chunk was already rotated!");
 			return;
 		}
 		GameObject[][][] copy = new GameObject[ARRAY_SIZE][SIZE][SIZE];
@@ -229,7 +230,7 @@ public class BuildRegionChunk extends RegionChunk {
 				System.err.print(", ");
 			}
 		}
-		System.err.println("]!");
+		SystemLogger.logErr("]!");
 		throw new IllegalStateException("Insufficient array length for storing all objects! ");
 	}
 

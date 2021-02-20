@@ -5,6 +5,7 @@ import java.text.DecimalFormat;
 import java.util.HashMap;
 import java.util.Map;
 
+import core.game.system.SystemLogger;
 import core.game.system.config.ItemConfigParser;
 import core.plugin.Plugin;
 import core.tools.StringUtils;
@@ -296,7 +297,7 @@ public class ItemDefinition extends Definition<Item> {
 			}
 			ItemDefinition def = ItemDefinition.parseDefinition(itemId, ByteBuffer.wrap(data));
 			if (def == null) {
-				System.err.println("Could not load item definitions for id " + itemId + " - no definitions found!");
+				SystemLogger.logErr("Could not load item definitions for id " + itemId + " - no definitions found!");
 				return ;
 			}
 			if(itemId == 14958)
@@ -1499,7 +1500,7 @@ public class ItemDefinition extends Definition<Item> {
 		ItemDefinition def = forId(nodeId);
 		if (def == null) {
 			if (nodeId == 22937)
-				System.err.println("[ItemDefinition] No definition for item id " + nodeId + "!");
+				SystemLogger.logErr("[ItemDefinition] No definition for item id " + nodeId + "!");
 			return null;
 		}
 		OptionHandler handler = def.getConfiguration("option:" + name);

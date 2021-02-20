@@ -31,7 +31,7 @@ class DoorConfigLoader {
             DOORS[door.id] = door
             count++
         }
-        SystemLogger.log("[Config Parser]: Parsed $count door configs.")
+        SystemLogger.logInfo("Parsed $count door configs.")
     }
 
 

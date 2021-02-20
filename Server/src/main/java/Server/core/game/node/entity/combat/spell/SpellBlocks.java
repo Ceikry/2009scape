@@ -24,10 +24,8 @@ public class SpellBlocks {
     public static boolean isBlocked(int spellId,Node node){
         AtomicBoolean blocked = new AtomicBoolean(false);
         if(blocks.get(spellId) == null){
-            SystemLogger.log("Not in hashmap");
             return false;
         }
-        SystemLogger.log("Checking...");
         blocks.get(spellId).forEach(n -> {
             if(node.getName().equals(n.getName())){
                 blocked.set(true);

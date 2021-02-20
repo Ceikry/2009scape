@@ -4,6 +4,7 @@ import core.cache.Cache;
 import core.game.node.entity.npc.NPC;
 import core.game.node.entity.player.Player;
 import core.game.node.entity.player.link.music.MusicZone;
+import core.game.system.SystemLogger;
 import core.game.system.config.XteaParser;
 import core.game.system.task.Pulse;
 import core.game.world.GameWorld;
@@ -304,13 +305,13 @@ public class Region {
 	 */
 	private static void unload(Region r) {
 		if (r.isViewed()) {
-			System.err.println("Players viewing region!");
+			SystemLogger.logErr("Players viewing region!");
 			r.flagActive();
 			return;
 		}
 		for (RegionPlane p : r.planes) {
 			if (!p.getPlayers().isEmpty()) {
-				System.err.println("Players still in region!");
+				SystemLogger.logErr("Players still in region!");
 				r.flagActive();
 				return;
 			}
@@ -352,7 +353,7 @@ public class Region {
 	public int decrementViewAmount() {
 		synchronized (this) {
 			if (viewAmount < 1) {
-				//System.err.println("View amount is " + (viewAmount - 1));
+				//SystemLogger.logErr("View amount is " + (viewAmount - 1));
 				viewAmount++;
 			}
 			return --viewAmount;

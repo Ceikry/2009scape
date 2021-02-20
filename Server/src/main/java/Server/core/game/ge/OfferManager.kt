@@ -8,7 +8,7 @@ import core.game.node.entity.player.Player
 import core.game.node.entity.player.info.PlayerDetails
 import core.game.node.entity.player.link.audio.Audio
 import core.game.node.item.Item
-import core.game.system.SystemLogger.log
+import core.game.system.SystemLogger
 import core.game.system.task.Pulse
 import core.game.world.GameWorld
 import core.game.world.callback.CallBack
@@ -166,7 +166,7 @@ class OfferManager : Pulse(), CallBack {
                         }
                     }
                 } catch (e: IOException) {
-                    log("Unable to load bot offers. Perhaps it doesn't exist?")
+                    SystemLogger.logWarn("Unable to load bot offers. Perhaps it doesn't exist?")
                 }
             }
             GE_OFFER_LOCK.unlock()
@@ -203,7 +203,7 @@ class OfferManager : Pulse(), CallBack {
 
         fun addBotOffer(itemID: Int, qty: Int): Boolean {
             if (GrandExchangeDatabase.getDatabase()[itemID] == null) {
-                log("Bot attempted to sell invalid item $itemID")
+                SystemLogger.logWarn("Bot attempted to sell invalid item $itemID")
                 return false
             }
 
@@ -391,6 +391,7 @@ class OfferManager : Pulse(), CallBack {
             if (offer.sell) {
                 Repository.sendNews(player.username + " just offered " + offer.amount + " " + ItemDefinition.forId(offer.itemID).name.toLowerCase() + " on the GE.")
             }
+            SystemLogger.logTrade("[GE] ${player.username} ${if (offer.sell) "listed for sale" else "listed buy offer for"} ${offer.amount} ${ItemDefinition.forId(offer.itemID).name.toLowerCase()}")
             dumpDatabase = true
             return true
         }
@@ -404,7 +405,6 @@ class OfferManager : Pulse(), CallBack {
             if (!offer.isActive) {
                 return
             }
-            println("Doing update on offer UID: " + offer.uid)
             GE_OFFER_LOCK.lock()
             for (o in OFFERS_BY_ITEMID[offer.itemID]!!) {
                 if (o.sell != offer.sell && o.isActive) {

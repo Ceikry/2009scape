@@ -3,6 +3,7 @@ package core.game.interaction;
 import core.cache.def.impl.ObjectDefinition;
 import core.game.node.Node;
 import core.game.node.entity.player.Player;
+import core.game.system.SystemLogger;
 import core.game.world.map.Location;
 import core.plugin.Plugin;
 
@@ -70,7 +71,7 @@ public abstract class OptionHandler implements Plugin<Object> {
 		final ObjectDefinition definition = ObjectDefinition.forId(wrapper);
 		final List<Integer> list = new ArrayList<>();
 		if (definition.getChildrenIds() == null) {
-			System.err.println("Null child wrapper in option handler wrapperId=" + wrapper);
+			SystemLogger.logErr("Null child wrapper in option handler wrapperId=" + wrapper);
 			return new int[] { wrapper };
 		}
 		for (int child : definition.getChildrenIds()) {

@@ -18,6 +18,7 @@ import core.game.world.update.flag.context.Graphics
 import core.tools.RandomFunction
 import core.game.node.entity.skill.Skills
 import core.game.node.entity.skill.summoning.familiar.Familiar
+import core.game.system.SystemLogger
 import java.util.*
 import kotlin.math.floor
 
@@ -463,7 +464,7 @@ abstract class CombatSwingHandler(var type: CombatStyle?) {
             specialHandlers = HashMap()
         }
         if (specialHandlers!!.containsKey(itemId)) {
-            System.err.println("Already contained special attack handler for item " + itemId + " - [old=" + specialHandlers!![itemId]!!::class.java.simpleName + ", new=" + handler.javaClass.simpleName + "].")
+            SystemLogger.logErr("Already contained special attack handler for item " + itemId + " - [old=" + specialHandlers!![itemId]!!::class.java.simpleName + ", new=" + handler.javaClass.simpleName + "].")
             return false
         }
         return specialHandlers!!.put(itemId, handler) == null

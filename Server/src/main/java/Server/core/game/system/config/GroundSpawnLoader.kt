@@ -34,7 +34,7 @@ class GroundSpawnLoader {
                 count++
             }
         }
-        SystemLogger.log("[Config Parser]: Initialized $count ground items.")
+        SystemLogger.logInfo("Initialized $count ground items.")
     }
     class GroundSpawn
     /**

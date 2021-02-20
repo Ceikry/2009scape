@@ -103,7 +103,6 @@ public class SavedData implements SavingModule {
 				spawnData.parse(buffer);
 				break;
 			default:
-				SystemLogger.error("Unhandled saved data opcode - " + opcode + ", player=" + player.getUsername());
 				break;
 			}
 		}

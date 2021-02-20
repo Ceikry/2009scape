@@ -2,6 +2,7 @@ package core.game.node.entity.player.link.quest;
 
 import core.game.node.entity.player.Player;
 import core.game.node.entity.player.info.login.SavingModule;
+import core.game.system.SystemLogger;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
@@ -243,7 +244,7 @@ public final class QuestRepository implements SavingModule {
     public boolean isComplete(String name) {
         Quest quest = getQuest(name);
         if (quest == null) {
-            System.err.println("Error can't check if quest is complete for " + name);
+            SystemLogger.logErr("Error can't check if quest is complete for " + name);
             return false;
         }
         return quest.getStage(player) >= 100;
@@ -258,7 +259,7 @@ public final class QuestRepository implements SavingModule {
     public boolean hasStarted(String name) {
         Quest quest = getQuest(name);
         if (quest == null) {
-            System.err.println("Error can't check if quest is complete for " + name);
+            SystemLogger.logErr("Error can't check if quest is complete for " + name);
             return false;
         }
         return quest.getStage(player) > 0;

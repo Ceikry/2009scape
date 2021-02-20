@@ -8,6 +8,6 @@ import core.net.packet.IoBuffer;
 public class DummyPacket implements IncomingPacket {
     @Override
     public void decode(Player player, int opcode, IoBuffer buffer) {
-        SystemLogger.log("Received opcode " + opcode + " packet.");
+        SystemLogger.logInfo("Received opcode " + opcode + " packet.");
     }
 }

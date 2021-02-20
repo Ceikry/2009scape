@@ -39,7 +39,6 @@ class LostTribeCutscene(val pl: Player? = null) : CutscenePlugin("Lost Tribe Cut
         region = DynamicRegion.create(12850)
         setRegionBase()
         registerRegion(region.id)
-        SystemLogger.log("CONFIGURING CUTSCENE INSTANCE ASDASDASD")
     }
 
     override fun getStartLocation(): Location {

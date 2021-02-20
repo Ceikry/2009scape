@@ -5,6 +5,7 @@ import core.game.node.entity.npc.NPC;
 import core.game.node.entity.player.Player;
 import core.game.node.item.Item;
 import core.game.node.object.GameObject;
+import core.game.system.SystemLogger;
 import core.game.world.map.Location;
 import core.game.world.update.flag.context.Animation;
 
@@ -98,7 +99,7 @@ public enum Traps {
 			return;
 		}
 		if (player.getHunterManager().getWrapper(object) == null) {
-			System.err.println("NO WRAPPER (HUNTER DISMANTLE)");
+			SystemLogger.logErr("NO WRAPPER (HUNTER DISMANTLE)");
 			return;
 		}
 		player.faceLocation(object.getLocation());

@@ -50,7 +50,7 @@ class ShopParser{
             }
             count++
         }
-        SystemLogger.log("[Config Parser]: Parsed $count shops.")
+        SystemLogger.logInfo("Parsed $count shops.")
     }
 
     fun parseStock(stock: String): ArrayList<Item>{

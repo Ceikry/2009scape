@@ -233,13 +233,9 @@ class ThessaliaInterface : ComponentPlugin(){
 
     fun updateColor(player: Player, button: Int, male: Boolean, type: colorType){
         val subtractor = if(male) maleColorButtonRange.first else femaleColorButtonRange.first
-        SystemLogger.log("Male? " + male)
-        SystemLogger.log("Button: " + button)
-        SystemLogger.log("Index: " + (button - subtractor))
-        SystemLogger.log("ColorType: " + type.toString())
         when(type){
             colorType.ARMS -> player.appearance.torso.changeColor(torsoColors[button - subtractor])
-            colorType.LEGS -> player.appearance.legs.changeColor(legColors[button - subtractor].also { SystemLogger.log("$it") })
+            colorType.LEGS -> player.appearance.legs.changeColor(legColors[button - subtractor])
             colorType.TORSO -> player.appearance.torso.changeColor(torsoColors[button - subtractor])
         }
         player.appearance.sync()

@@ -280,7 +280,6 @@ public final class RegionPlane {
 		Location l = item.getLocation();
 		RegionChunk c = getRegionChunk(l.getLocalX() / RegionChunk.SIZE, l.getLocalY() / RegionChunk.SIZE);
 		if (!c.getItems().remove(item)) {
-			SystemLogger.log("oh fuck");
 			return;
 		}
 		if (item.isPrivate()) {

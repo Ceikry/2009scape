@@ -31,7 +31,7 @@ public final class WorldMapInterface extends ComponentPlugin {
 				player.updateSceneGraph(true);
 				return true;
 			default:
-				//System.err.println("World map: buttonid: " + button + ", opcode: " + opcode + ", slot: " + slot);
+				//SystemLogger.logErr("World map: buttonid: " + button + ", opcode: " + opcode + ", slot: " + slot);
 				return true;
 		}
 	}

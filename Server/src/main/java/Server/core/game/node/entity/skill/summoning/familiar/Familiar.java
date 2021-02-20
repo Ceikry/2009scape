@@ -16,6 +16,7 @@ import core.game.node.entity.impl.Projectile;
 import core.game.node.entity.npc.NPC;
 import core.game.node.entity.player.Player;
 import core.game.node.item.Item;
+import core.game.system.SystemLogger;
 import core.game.system.task.Pulse;
 import core.game.world.GameWorld;
 import core.game.world.map.Location;
@@ -547,7 +548,7 @@ public abstract class Familiar extends NPC implements Plugin<Object> {
 			face(owner);
 		}
 		if (!isRenderable() && owner.isActive()) {
-			// System.err.println("Familiar in inactive region!");
+			// SystemLogger.logErr("Familiar in inactive region!");
 			getWalkingQueue().update();
 			getUpdateMasks().prepare(this);
 		}
@@ -596,7 +597,7 @@ public abstract class Familiar extends NPC implements Plugin<Object> {
 	public Plugin<Object> newInstance(Object arg) throws Throwable {
 		for (int id : getIds()) {
 			if (FamiliarManager.getFamiliars().containsKey(id)) {
-				System.err.println("Familiar " + id + " was already registered!");
+				SystemLogger.logErr("Familiar " + id + " was already registered!");
 				return null;
 			}
 			FamiliarManager.getFamiliars().put(id, this);

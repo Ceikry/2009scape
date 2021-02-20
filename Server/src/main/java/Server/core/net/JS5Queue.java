@@ -58,7 +58,7 @@ public final class JS5Queue {
 		}
 		int key = container << 16 | archive;
 		if (queue.containsKey(key)) {
-			// System.err.println("Queue already contained request " + container
+			// SystemLogger.logErr("Queue already contained request " + container
 			// + "," + archive + " > " + (container << 16 | archive) + ".");
 		}
 		queue.put(key, highPriority);

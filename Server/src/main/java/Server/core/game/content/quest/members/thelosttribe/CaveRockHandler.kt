@@ -48,8 +48,6 @@ class CaveRockHandler : OptionHandler() {
         var diffX = 0
         var diffY = 0
 
-        SystemLogger.log(node.direction.name)
-
         if(node.direction == Direction.SOUTH)
             diffX = -1
         if(node.direction == Direction.NORTH)

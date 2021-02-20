@@ -2,6 +2,7 @@ package core.game.node.entity.skill.gather;
 
 import core.ServerConstants;
 import core.game.node.entity.skill.Skills;
+import core.game.system.SystemLogger;
 import core.game.world.repository.Repository;
 import core.game.world.update.flag.context.Animation;
 
@@ -644,7 +645,7 @@ public enum SkillingResource {
 	static {
 		for (SkillingResource resource : SkillingResource.values()) {
 			if (RESOURCES.containsKey(resource.id)) {
-				System.err.println("Already contained resource " + resource.getId() + " - " + resource.name());
+				SystemLogger.logErr("Already contained resource " + resource.getId() + " - " + resource.name());
 			}
 			RESOURCES.put(resource.id, resource);
 		}

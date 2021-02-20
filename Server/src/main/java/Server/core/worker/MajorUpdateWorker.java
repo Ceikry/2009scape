@@ -107,7 +107,7 @@ public final class MajorUpdateWorker implements Runnable {
 		if (duration > 0) {
 			Thread.sleep(duration);
 		} else {
-			System.err.println("Updating cycle duration took " + -duration + "ms too long!");
+			SystemLogger.logErr("Updating cycle duration took " + -duration + "ms too long!");
 		}
 	}
 

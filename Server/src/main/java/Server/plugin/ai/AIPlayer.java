@@ -348,7 +348,6 @@ public class AIPlayer extends Player {
     }
 
     public void handleIncomingChat(MessageContext ctx){
-        SystemLogger.log("Chat message received");
     }
 
 
@@ -566,7 +565,7 @@ public class AIPlayer extends Player {
             Repository.getPlayers().remove(player);
             return;
         }
-        //System.err.println("Could not deregister AIP#" + uid + ": UID not added to the mapping!");
+        //SystemLogger.logErr("Could not deregister AIP#" + uid + ": UID not added to the mapping!");
     }
 
     @Override

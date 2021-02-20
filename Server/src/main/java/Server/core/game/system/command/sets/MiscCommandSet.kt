@@ -27,6 +27,7 @@ import core.game.node.entity.skill.Skills
 import core.tools.stringtools.colorize
 import java.awt.Toolkit
 import java.awt.datatransfer.StringSelection
+import java.util.*
 
 @Initializable
 class MiscCommandSet : CommandSet(Command.Privilege.ADMIN){
@@ -50,9 +51,9 @@ class MiscCommandSet : CommandSet(Command.Privilege.ADMIN){
             player.packetDispatch.sendMessage("Region: [id=" + l.regionId + ", active=" + r.isActive + ", instanced=" + (r is DynamicRegion) + "], obj=" + RegionManager.getObject(l) + ".")
             player.packetDispatch.sendMessage("Object: " + RegionManager.getObject(l).also{obj = it} + ".")
             player.packetDispatch.sendMessage("Object Varp: " + obj?.definition?.configFile?.configId + " offset: " + obj?.definition?.configFile?.bitShift + " size: " + (obj?.definition?.configFile?.bitShift?.minus(obj?.definition?.configFile?.bitShift!!)))
-            SystemLogger.log("Viewport: " + l.getSceneX(player.playerFlags.lastSceneGraph) + "," + l.getSceneY(player.playerFlags.lastSceneGraph))
+            SystemLogger.logInfo("Viewport: " + l.getSceneX(player.playerFlags.lastSceneGraph) + "," + l.getSceneY(player.playerFlags.lastSceneGraph))
             val loc = "Location.create(" + l.x + ", " + l.y + ", " + l.z + ")"
-            SystemLogger.log(loc + "; " + player.playerFlags.lastSceneGraph + ", " + l.localX + ", " + l.localY)
+            SystemLogger.logInfo(loc + "; " + player.playerFlags.lastSceneGraph + ", " + l.localX + ", " + l.localY)
             val stringSelection = StringSelection(loc)
             val clpbrd = Toolkit.getDefaultToolkit().systemClipboard
             clpbrd.setContents(stringSelection, null)

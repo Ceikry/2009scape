@@ -1,6 +1,7 @@
 package core.cache.def.impl;
 
 import core.cache.Cache;
+import core.game.system.SystemLogger;
 import core.game.world.GameWorld;
 
 import java.lang.reflect.Array;
@@ -72,7 +73,7 @@ public class RenderAnimationDefinition {
 		if (data != null) {
 			defs.parse(ByteBuffer.wrap(data));
 		} else {
-			System.err.println("No definitions found for render animation " + animId + ", size=" + Cache.getIndexes()[2].getFilesSize(32) + "!");
+			SystemLogger.logErr("No definitions found for render animation " + animId + ", size=" + Cache.getIndexes()[2].getFilesSize(32) + "!");
 		}
 		return defs;
 	}

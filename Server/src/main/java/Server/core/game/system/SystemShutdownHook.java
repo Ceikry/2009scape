@@ -11,7 +11,7 @@ public final class SystemShutdownHook implements Runnable {
 		if (SystemManager.isTerminated()) {
 			return;
 		}
-		SystemLogger.log("[SystemShutdownHook] Terminating...");
+		SystemLogger.logInfo("[SystemShutdownHook] Terminating...");
 		SystemManager.getTerminator().terminate();
 	}
 }

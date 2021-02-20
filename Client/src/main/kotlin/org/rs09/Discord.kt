@@ -12,13 +12,14 @@ import net.arikia.dev.drpc.DiscordRichPresence
 object Discord {
     const val APP_ID = "812421731238019073";
     var presence = DiscordRichPresence()
+    var initialized = false
 
     @JvmStatic
     fun checkInitializable() : Boolean{
         val OS = System.getProperty("os.name")
         if(OS.toLowerCase().startsWith("windows") || OS.toLowerCase().contains("nux")){
             val arch = System.getProperty("os.arch")
-            return arch != "aarch64"
+            return arch != "aarch64" && !initialized
         }
         return false
     }
@@ -26,13 +27,14 @@ object Discord {
     @JvmStatic
     fun initialize() {
         val handlers = DiscordEventHandlers.Builder().setReadyEventHandler { user ->
-            System.out.println("Discord Initialized, welcome " + user.username + user.discriminator + "!")
+            SystemLogger.logDiscord("Discord RPC Initialized, registered to " + user.username + "#" + user.discriminator)
         }.setErroredEventHandler { errorCode, message ->
-            System.out.println("Discord error encountered: [$errorCode] $message")
+            SystemLogger.logDiscord("Discord error encountered: [$errorCode] $message")
             DiscordRPC.discordShutdown()
         }.build()
 
         DiscordRPC.discordInitialize(APP_ID,handlers,true)
+        initialized = true
     }
 
     @JvmStatic
@@ -47,6 +49,6 @@ object Discord {
         newPresence.largeImageText = "2009Scape, a free MMO."
         DiscordRPC.discordUpdatePresence(newPresence)
         presence = newPresence
-        DiscordRPC.discordRunCallbacks()
+        SystemLogger.logDiscord("Updating presence ($stateMessage,$details,$imageKey)")
     }
 }

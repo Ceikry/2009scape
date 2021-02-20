@@ -12,6 +12,7 @@ import java.util.regex.Pattern;
 import core.ServerConstants;
 import core.cache.misc.buffer.ByteBufferUtils;
 import core.game.node.entity.player.info.portal.PlayerSQLManager;
+import core.game.system.SystemLogger;
 import core.game.system.SystemManager;
 import core.game.system.mysql.SQLEntryHandler;
 import core.game.system.mysql.SQLManager;
@@ -150,7 +151,7 @@ public class AccountRegister extends SQLEntryHandler<RegistryDetails> {
 				});
 				break;
 			default:
-				System.err.println("Unhandled account registry opcode = " + opcode);
+				SystemLogger.logErr("Unhandled account registry opcode = " + opcode);
 				break;
 		}
 	}
