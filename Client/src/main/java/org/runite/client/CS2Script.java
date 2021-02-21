@@ -231,11 +231,6 @@ final class CS2Script extends Linkable {
       try {
             Object[] aobj = script.arguments;
             int j = ((Integer) aobj[0]).intValue();
-            if(j == 81) {
-                for(int i = 0; i < aobj.length; i++){
-                    System.out.println(aobj[i].toString());
-                }
-            }
             AssembledMethod currentMethod = ItemDefinition.getMethodByID(j);
             if (null == currentMethod)
                return;

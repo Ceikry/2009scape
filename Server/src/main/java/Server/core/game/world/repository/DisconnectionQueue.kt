@@ -2,12 +2,13 @@ package core.game.world.repository
 
 import core.game.node.entity.player.Player
 import core.game.node.entity.player.info.login.PlayerParser
-import core.game.system.SystemLogger.log
+import core.game.system.SystemLogger
 import core.game.system.mysql.SQLEntryHandler
 import core.game.system.mysql.impl.HighscoreSQLHandler
 import core.game.system.mysql.impl.PlayerLogSQLHandler
 import core.game.system.task.TaskExecutor
 import core.game.world.GameWorld
+import java.util.*
 import java.util.concurrent.ConcurrentHashMap
 
 /**
@@ -53,10 +54,7 @@ class DisconnectionQueue {
         Repository.lobbyPlayers.remove(player)
         Repository.players.remove(player)
         Repository.LOGGED_IN_PLAYERS.remove(player.details.username)
-        log("Player cleared. Removed ${player.details.username}")
-        log("Remaining Queue:")
-        for(un in Repository.LOGGED_IN_PLAYERS)
-            log(un)
+        SystemLogger.logInfo("Player cleared. Removed ${player.details.username}")
         try {
             player.communication.clan.leave(player, false)
         } catch (e: Exception) {

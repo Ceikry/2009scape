@@ -16,7 +16,13 @@ compileKotlin {
     }
 }
 
+repositories {
+    maven { url "https://dl.bintray.com/jetbrains/markdown" }
+}
+
 dependencies {
+    implementation("com.github.ajalt.mordant:mordant:2.0.0-alpha2")
+    implementation "org.jetbrains:markdown-jvm:0.2.0.pre-55"
     implementation 'com.google.guava:guava:29.0-jre'
     implementation 'mysql:mysql-connector-java:8.0.21'
     implementation 'com.googlecode.json-simple:json-simple:1.1.1'

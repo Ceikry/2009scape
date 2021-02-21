@@ -62,7 +62,6 @@ class BarrowsEquipmentRegister : Plugin<Any>{
         EquipmentDegrader.registerSet(VERAC_FLAIL)
         EquipmentDegrader.registerSet(VERAC_BRASS)
         EquipmentDegrader.registerSet(VERAC_SKIRT)
-        SystemLogger.log("Registered barrows sets.")
         return this
     }
 

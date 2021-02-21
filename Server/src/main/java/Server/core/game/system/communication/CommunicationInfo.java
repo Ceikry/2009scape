@@ -137,9 +137,6 @@ public final class CommunicationInfo {
 					if (tokens.length == 0) {
 						continue;
 					}
-					for(int i = 0; i < tokens.length; i++) {
-						SystemLogger.log(tokens[i].toString());
-					}
 					contact = new Contact(tokens[0]);
 					contact.setRank(ClanRank.values()[Integer.valueOf(tokens[1])]);
 					this.contacts.put(tokens[0], contact);
@@ -430,7 +427,7 @@ public final class CommunicationInfo {
 		CommunicationInfo info = player.getDetails().getCommunication();
 		Contact c = info.contacts.get(contact);
 		if (c == null) {
-			System.err.println("Could not find contact " + contact + " to update clan rank!");
+			SystemLogger.logErr("Could not find contact " + contact + " to update clan rank!");
 			return;
 		}
 		c.setRank(clanRank);

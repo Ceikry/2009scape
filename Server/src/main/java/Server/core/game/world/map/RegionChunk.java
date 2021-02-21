@@ -4,6 +4,7 @@ import core.game.node.entity.player.Player;
 import core.game.node.item.GroundItem;
 import core.game.node.item.Item;
 import core.game.node.object.GameObject;
+import core.game.system.SystemLogger;
 import core.game.world.map.build.DynamicRegion;
 import core.game.world.map.build.LandscapeParser;
 import core.game.world.update.flag.UpdateFlag;
@@ -181,7 +182,7 @@ public class RegionChunk {
 	 */
 	public void rotate(Direction direction) {
 		if (rotation != 0) {
-			System.err.println("Region chunk was already rotated!");
+			SystemLogger.logErr("Region chunk was already rotated!");
 			return;
 		}
 		GameObject[][] copy = new GameObject[SIZE][SIZE];

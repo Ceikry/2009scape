@@ -6,6 +6,7 @@ import core.game.node.entity.npc.NPC;
 import core.game.node.entity.player.Player;
 import core.game.node.item.Item;
 import core.game.node.object.GameObject;
+import core.game.system.SystemLogger;
 import core.game.system.task.Pulse;
 import core.game.world.map.Location;
 import core.game.world.update.flag.player.FaceLocationFlag;
@@ -197,7 +198,7 @@ public abstract class UseWithHandler implements Plugin<Object> {
         final ObjectDefinition definition = ObjectDefinition.forId(wrapper);
         final List<Integer> list = new ArrayList<>();
         if (definition.getChildrenIds() == null) {
-            System.err.println("Null child wrapper in option handler wrapperId=" + wrapper);
+            SystemLogger.logErr("Null child wrapper in option handler wrapperId=" + wrapper);
             return new int[]{wrapper};
         }
         for (int child : definition.getChildrenIds()) {

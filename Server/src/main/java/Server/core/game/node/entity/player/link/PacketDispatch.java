@@ -4,6 +4,7 @@ import core.game.Varp;
 import core.game.content.quest.tutorials.tutorialisland.TutorialSession;
 import core.game.node.entity.player.Player;
 import core.game.node.object.GameObject;
+import core.game.system.SystemLogger;
 import core.game.system.task.Pulse;
 import core.game.world.GameWorld;
 import core.game.world.map.Location;
@@ -60,7 +61,7 @@ public final class PacketDispatch {
 			return;
 		}
 		if (message.length() > 255) {
-			System.err.println("Message length out of bounds (" + message + ")!");
+			SystemLogger.logErr("Message length out of bounds (" + message + ")!");
 			message = message.substring(0, 255);
 		}
 		PacketRepository.send(GameMessage.class, new GameMessageContext(player, message));

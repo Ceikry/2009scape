@@ -101,7 +101,6 @@ public final class CameraContext implements Context {
 		this.height = height;
 		this.speed = speed;
 		this.zoomSpeed = zoomSpeed;
-		SystemLogger.log("Camera packet sent");
 	}
 
 	/**

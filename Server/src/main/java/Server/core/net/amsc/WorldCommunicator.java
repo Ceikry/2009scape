@@ -93,7 +93,7 @@ public final class WorldCommunicator {
 	 */
 	public static void connect() {
 		try {
-			SystemLogger.log("Attempting to connect to management server...");
+			SystemLogger.logInfo("Attempting to connect to management server...");
 			setState(ManagementServerState.CONNECTING);
 			/*if (isLocallyHosted()) {
 				SystemLogger.log("Management server is hosted on local machine!");
@@ -103,6 +103,7 @@ public final class WorldCommunicator {
 			//}
 			reactor.start();
 		} catch (Throwable e) {
+			SystemLogger.logErr("Unable to connect to management server");
 			e.printStackTrace();
 			terminate();
 		}
@@ -212,7 +213,7 @@ public final class WorldCommunicator {
 		if (WorldCommunicator.state != state) {
 			WorldCommunicator.state = state;
 			state.set();
-			SystemLogger.log("Management server status: " + state + ".");
+			SystemLogger.logInfo("Management server status: " + state + ".");
 		}
 	}
 

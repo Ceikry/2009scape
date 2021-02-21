@@ -293,6 +293,6 @@ class ItemConfigParser {
             }
             count++
         }
-        SystemLogger.log("[Config Parser]: Parsed $count item configs.")
+        SystemLogger.logInfo("Parsed $count item configs.")
     }
 }

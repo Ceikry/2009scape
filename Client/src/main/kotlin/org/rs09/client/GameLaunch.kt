@@ -1,5 +1,6 @@
 package org.rs09.client
 
+import org.rs09.SystemLogger
 import org.rs09.client.config.GameConfig
 import org.runite.client.GameShell
 
@@ -21,7 +22,7 @@ object GameLaunch {
             }
         }
         try {
-            System.out.println("Trying to parse config at " + GameConfig.configLocation)
+            SystemLogger.logInfo("Trying to parse config at " + GameConfig.configLocation)
             GameConfig.parse(GameConfig.configLocation)
             GameConfig.implementHoliday()
             GameConfig.extendRenderDistance()
@@ -34,7 +35,7 @@ object GameLaunch {
             GameConfig.implementHoliday()
             GameConfig.RENDER_DISTANCE_INCREASE = true
             GameConfig.extendRenderDistance()
-            e.printStackTrace()
+            SystemLogger.logWarn("Config file ${GameConfig.configLocation} not found, using defaults.")
         }
         /**
          * Launches the client

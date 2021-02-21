@@ -304,7 +304,7 @@ public final class HouseManager implements SavingModule {
 	 */
 	public Location getEnterLocation() {
 		if (region == null) {
-			System.err.println("House wasn't constructed yet!");
+			SystemLogger.logErr("House wasn't constructed yet!");
 			return null;
 		}
 		for (int x = 0; x < 8; x++) {
@@ -489,9 +489,7 @@ public final class HouseManager implements SavingModule {
 				break;
 			}
 		}
-		SystemLogger.log("Trying chunkx: " + chunkX + " chunky: " + chunkY);
 		for (Hotspot h : room.getHotspots()) {
-			SystemLogger.log("Hotspot Name: Hotspot chunkx 2: " + h.getChunkX2() + " hotspot chunky 2: " + h.getChunkY2() );
 			if ((h.getChunkX() == chunkX || h.getChunkX2() == chunkX) && (h.getChunkY() == chunkY || h.getChunkY2() == chunkY) && h.getHotspot().getObjectId(style) == object.getId()) {
 				return h;
 			}

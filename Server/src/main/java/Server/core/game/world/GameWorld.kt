@@ -6,7 +6,6 @@ import core.cache.ServerStore
 import core.cache.def.impl.ObjectDefinition
 import core.game.node.entity.npc.drop.RareDropTable
 import core.game.node.entity.player.Player
-import core.game.system.SystemLogger.log
 import core.game.system.SystemManager
 import core.game.system.SystemState
 import core.game.system.config.ConfigParser
@@ -25,6 +24,8 @@ import core.plugin.CorePluginTypes.StartupPlugin
 import plugin.ai.general.scriptrepository.PlayerScripts
 import core.game.ge.GrandExchangeDatabase
 import core.game.node.entity.state.newsys.StateRepository
+import core.game.system.SystemLogger
+import core.game.system.SystemLogger.logInfo
 import java.util.*
 import java.util.function.Consumer
 
@@ -129,27 +130,24 @@ object GameWorld {
      */
     @Throws(Throwable::class)
     fun prompt(run: Boolean, directory: String?){
-        log("Prompting ${settings?.name} Game World...")
+        SystemLogger.logInfo("Prompting ${settings?.name} Game World...")
         Cache.init(ServerConstants.CACHE_PATH)
         ServerStore.init(ServerConstants.STORE_PATH)
         databaseManager = DatabaseManager(ServerConstants.DATABASE)
         databaseManager!!.connect()
         GrandExchangeDatabase.init()
-        ScriptManager.load()
         configParser.prePlugin()
         PluginManager.init()
         configParser.postPlugin()
         RareDropTable.init()
-        log("Initialized Rare Drop Table from " + ServerConstants.RDT_DATA_PATH)
+        logInfo("Initialized Rare Drop Table from " + ServerConstants.RDT_DATA_PATH)
         if (settings!!.enable_bots) {
             ImmerseWorld.init()
         }
-        log("Made it to 173")
         CallbackHub.call()
         STARTUP_PLUGINS.forEach(Consumer { plugin: StartupPlugin? ->
             plugin?.run()
         })
-        log("Made it to 180")
         if (run) {
             SystemManager.flag(if (settings?.isDevMode == true) SystemState.PRIVATE else SystemState.ACTIVE)
         }
@@ -157,8 +155,7 @@ object GameWorld {
         System.gc()
         PlayerScripts.init()
         StateRepository.init()
-        log("185")
-        log("188")
+        SystemLogger.initTradeLogger()
     }
 
     /**

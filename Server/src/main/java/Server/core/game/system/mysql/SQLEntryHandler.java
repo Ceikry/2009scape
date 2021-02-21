@@ -1,5 +1,7 @@
 package core.game.system.mysql;
 
+import core.game.system.SystemLogger;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -66,7 +68,7 @@ public abstract class SQLEntryHandler<T> {
 		}
 		entry.connection = entry.getConnection();
 		if (entry.connection == null) {
-			System.err.println("Could not read SQL data: connection is null!");
+			SystemLogger.logErr("Could not read SQL data: connection is null!");
 			return false;
 		}
 		boolean success = false;
@@ -100,7 +102,7 @@ public abstract class SQLEntryHandler<T> {
 	 */
 	public static void write(SQLEntryHandler<?> entry, Connection connection, boolean commit) {
 		if (connection == null) {
-			System.err.println("Could not write SQL data: connection is null!");
+			SystemLogger.logErr("Could not write SQL data: connection is null!");
 			return;
 		}
 		entry.connection = connection;

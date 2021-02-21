@@ -2298,7 +2298,7 @@ public class Unsorted {
     }
 
     public static Class3_Sub28_Sub17 method1300(int var1, CacheIndex var3, CacheIndex var4) {
-        System.out.println("Class 73 " + var1);
+        //System.out.println("Class 73 " + var1);
         return !Class75_Sub4.method1351(var3, 0, var1) ? null : method880(var4.getFile(var1, 0));
     }
 

@@ -91,7 +91,6 @@ class SeersFlax : Script(){
                             bot.faceLocation(bank.location)
                             scriptAPI.bankItem(Items.BOW_STRING_1777)
                             if(bot.bank.getAmount(Items.BOW_STRING_1777) > 500){
-                                SystemLogger.log("Should tele")
                                 state = State.TELE_GE
                                 return true
                             }

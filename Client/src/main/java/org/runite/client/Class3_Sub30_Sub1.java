@@ -1,5 +1,7 @@
 package org.runite.client;
 
+import org.rs09.SystemLogger;
+
 import java.util.Arrays;
 import java.util.Objects;
 
@@ -1013,11 +1015,10 @@ public final class Class3_Sub30_Sub1 extends DataBuffer {
 
 	public final void putOpcode(int opcode) {
 		if (buffer == null || isaacCipher == null) {
-			System.err.println("Buffer or cipher was null in CLass2_Sub30_Sub1 " + Arrays.toString(buffer) + ", " + isaacCipher);
+			SystemLogger.logInfo("Buffer/cipher null. ISAAC likely disabled or not implemented.");
 			return;
 		}
 		this.buffer[this.index++] = (byte)(opcode + this.isaacCipher.nextOpcode());
-		System.out.println("Current Cipher Key: " + this.buffer[this.index - 1]);
 	}
 
 	public final int getOpcode() {

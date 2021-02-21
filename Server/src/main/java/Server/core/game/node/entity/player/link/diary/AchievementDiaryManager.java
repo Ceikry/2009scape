@@ -57,7 +57,6 @@ public class AchievementDiaryManager implements SavingModule {
 			JSONObject diary = (JSONObject) data.get(i);
 			String name = (String) diary.keySet().toArray()[0];
 			name = name.replace("_","' ");
-			SystemLogger.log(name);
 			for (int ii = 0; ii < diarys.length; ii++) {
 				if (diarys[ii].getType().getName().equalsIgnoreCase(name)) {
 					diarys[ii].parse((JSONObject) diary.get(name.replace("' ","_")));

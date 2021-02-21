@@ -24,7 +24,6 @@ public class GateInteractionHandler extends PluginInteraction {
 
     @Override
     public boolean handle(Player player, Node node) {
-        SystemLogger.log("Trying to handle... " + node.getId());
             switch(node.getId()){
                 case 167:
                 case 166:

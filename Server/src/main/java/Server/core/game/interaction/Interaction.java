@@ -83,7 +83,7 @@ public class Interaction {
 			}
 		} catch (Exception e){
 			e.printStackTrace();
-			SystemLogger.error(this.getClass().getName() + e.getMessage());
+			SystemLogger.logErr(this.getClass().getName() + e.getMessage());
 		}
 	}
 
@@ -113,7 +113,7 @@ public class Interaction {
 					}
 				} catch (Exception e){
 					e.printStackTrace();
-					SystemLogger.error(this.getClass().getName() + e.getMessage());
+					SystemLogger.logErr(this.getClass().getName() + e.getMessage());
 				}
 				return true;
 			}
@@ -144,7 +144,7 @@ public class Interaction {
 						player.getPacketDispatch().sendMessage("Nothing interesting happens.");
 					} catch (Exception e){
 						e.printStackTrace();
-						SystemLogger.error(this.getClass().getName() + e.getMessage());
+						SystemLogger.logErr(this.getClass().getName() + e.getMessage());
 					}
 					return true;
 				}
@@ -182,7 +182,7 @@ public class Interaction {
 					}
 				} catch (Exception e){
 					e.printStackTrace();
-					SystemLogger.error(this.getClass().getName() + e.getMessage());
+					SystemLogger.logErr(this.getClass().getName() + e.getMessage());
 				}
 				return true;
 			}

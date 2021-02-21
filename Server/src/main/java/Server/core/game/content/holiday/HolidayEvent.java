@@ -119,7 +119,7 @@ public abstract class HolidayEvent extends MapZone implements Plugin<Object> {
 		if (isActive()) {
 			setCurrent(this);
 			ZoneBuilder.configure(this);
-			SystemLogger.log("Holiday event active [type=" + type + "]!");
+			SystemLogger.logInfo("Holiday event active [type=" + type + "]!");
 		}
 		EVENTS.add(this);
 		return this;

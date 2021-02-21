@@ -20,16 +20,12 @@ class AFUSession(val player: Player) {
     private var isActive = false
 
     fun init() {
-        SystemLogger.log("Initializing")
         isActive = true
         GameWorld.Pulser.submit(object: Pulse(){
             override fun pulse(): Boolean {
                 player.setAttribute("afu-pulse",this)
                 beaconTimers.forEach {timer ->
                     timer.ticks--
-                    if(timer.ticks > 0) {
-                        SystemLogger.log("Tick " + timer.ticks)
-                    }
                     if(timer.ticks == 300) timer.beacon.diminish(player).also {
                         if(beaconWatched[timer.beacon.ordinal]){
                             beaconWatched[timer.beacon.ordinal] = false

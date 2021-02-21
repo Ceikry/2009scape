@@ -37,6 +37,6 @@ class XteaParser {
             REGION_XTEA[id] = intArrayOf(keys[0],keys[1],keys[2],keys[3])
             count++
         }
-        SystemLogger.log("[Config Parser]: Parsed $count region keys.")
+        SystemLogger.logInfo("Parsed $count region keys.")
     }
 }

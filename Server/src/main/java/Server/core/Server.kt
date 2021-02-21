@@ -50,16 +50,17 @@ object Server {
     @JvmStatic
     fun main(args: Array<String>) {
         if (args.isNotEmpty()) {
+            SystemLogger.logInfo("Using config file: ${args[0]}")
             ServerConfigParser(args[0])
         } else {
-            println("Using config file worldprops/default.json")
+            SystemLogger.logInfo("Using config file: ${"worldprops" + File.separator + "default.json"}")
             ServerConfigParser("worldprops" + File.separator + "default.json")
         }
         if (GameWorld.settings?.isGui == true) {
             try {
                 ConsoleFrame.getInstance().init()
             } catch (e: Exception) {
-                println("X11 server missing - launching server with no GUI!")
+                SystemLogger.logWarn("X11 server missing - launching server with no GUI!")
             }
         }
         startTime = System.currentTimeMillis()
@@ -67,16 +68,16 @@ object Server {
         GameWorld.prompt(true)
         SQLManager.init()
         Runtime.getRuntime().addShutdownHook(ServerConstants.SHUTDOWN_HOOK)
-        SystemLogger.log("Starting NIO reactor...")
+        SystemLogger.logInfo("Starting networking...")
         try {
             NioReactor.configure(43594 + GameWorld.settings?.worldId!!).start()
         } catch (e: BindException) {
-            println("Port " + (43594 + GameWorld.settings?.worldId!!) + " is already in use!")
+            SystemLogger.logErr("Port " + (43594 + GameWorld.settings?.worldId!!) + " is already in use!")
             throw e
         }
         WorldCommunicator.connect()
-        SystemLogger.log(GameWorld.settings?.name + " flags " + GameWorld.settings?.toString())
-        SystemLogger.log(GameWorld.settings?.name + " started in " + t.duration(false, "") + " milliseconds.")
+        SystemLogger.logInfo(GameWorld.settings?.name + " flags " + GameWorld.settings?.toString())
+        SystemLogger.logInfo(GameWorld.settings?.name + " started in " + t.duration(false, "") + " milliseconds.")
 
         GEAutoStock.autostock()
         val scanner = Scanner(System.`in`)

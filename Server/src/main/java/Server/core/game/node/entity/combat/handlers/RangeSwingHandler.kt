@@ -25,6 +25,7 @@ import core.tools.RandomFunction
 import core.game.node.entity.skill.Skills
 import core.game.content.quest.tutorials.tutorialisland.TutorialSession
 import core.game.content.quest.tutorials.tutorialisland.TutorialStage
+import core.game.system.SystemLogger
 import java.util.*
 import kotlin.math.ceil
 import kotlin.math.floor
@@ -107,7 +108,7 @@ open class RangeSwingHandler
         if (entity is Player) {
             val rw = RangeWeapon.get(entity.equipment.getNew(3).id)
             if (rw == null) {
-                System.err.println("Unhandled range weapon used - [item id=" + entity.equipment.getNew(3).id + "].")
+                SystemLogger.logErr("Unhandled range weapon used - [item id=" + entity.equipment.getNew(3).id + "].")
                 return
             }
             w = Weapon(entity.equipment[3], rw.ammunitionSlot, entity.equipment.getNew(rw.ammunitionSlot))

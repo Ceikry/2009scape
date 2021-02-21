@@ -23,8 +23,6 @@ class GutanothChestOptionHandler : OptionHandler(){
     override fun handle(player: Player?, node: Node?, option: String?): Boolean {
         player ?: return false
         val delay = player.getAttribute("gutanoth-chest-delay", 0L)
-        SystemLogger.log(System.currentTimeMillis().toString())
-        SystemLogger.log(delay.toString())
         GameWorld.Pulser.submit(ChestPulse(player,System.currentTimeMillis() > delay, node as GameObject))
         return true
     }

@@ -29,10 +29,8 @@ class ItemOnBankBooth : UseWithHandler(0) {
             } else {
                 var amount = item.amount
                 if (amount > player.inventory.freeSlots()) {
-                    SystemLogger.log("Adjusting amount of item.")
                     amount = player.inventory.freeSlots()
                 }
-                SystemLogger.log("Removing $amount of item.")
                 player.inventory.remove(Item(item.id, amount))
                 player.inventory.add(Item(item.noteChange, amount))
             }

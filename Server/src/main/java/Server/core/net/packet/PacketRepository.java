@@ -1,5 +1,6 @@
 package core.net.packet;
 
+import core.game.system.SystemLogger;
 import core.net.packet.in.*;
 import core.net.packet.out.*;
 import core.net.packet.out.GrandExchangePacket;
@@ -183,7 +184,7 @@ public final class PacketRepository {
 	public static void send(Class<? extends OutgoingPacket> clazz, Context context) {
 		OutgoingPacket p = OUTGOING_PACKETS.get(clazz);
 		if (p == null) {
-			System.err.println("Invalid outgoing packet [handler=" + clazz + ", context=" + context + "].");
+			SystemLogger.logErr("Invalid outgoing packet [handler=" + clazz + ", context=" + context + "].");
 			return;
 		}
 		if(!context.getPlayer().isArtificial())

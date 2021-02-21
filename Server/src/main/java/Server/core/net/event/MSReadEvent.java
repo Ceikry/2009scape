@@ -1,5 +1,6 @@
 package core.net.event;
 
+import core.game.system.SystemLogger;
 import core.net.IoReadEvent;
 import core.net.IoSession;
 import core.net.amsc.MSPacketRepository;
@@ -90,7 +91,7 @@ public final class MSReadEvent extends IoReadEvent {
 			}
 			return buffer.getShort() & 0xFFFF;
 		}
-		System.err.println("Invalid packet [opcode=" + opcode + ", last=" + last + ", queued=" + usedQueuedBuffer + "]!");
+		SystemLogger.logErr("Invalid packet [opcode=" + opcode + ", last=" + last + ", queued=" + usedQueuedBuffer + "]!");
 		return -1;
 	}
 

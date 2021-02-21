@@ -36,7 +36,7 @@ class PlayerSaveParser(val player: Player) {
 
     init {
         reader
-                ?: SystemLogger.log("Couldn't find save file for ${player.name}, or save is corrupted.").also { read = false }
+                ?: SystemLogger.logWarn("Couldn't find save file for ${player.name}, or save is corrupted.").also { read = false }
         if (read) {
             saveFile = parser.parse(reader) as JSONObject
         }
@@ -112,7 +112,7 @@ class PlayerSaveParser(val player: Player) {
                     "long" -> attr["value"].toString().toLong()
                     "bool" -> attr["value"] as Boolean
                     "byte" -> Base64.getDecoder().decode(attr["value"].toString())[0]
-                    else -> null.also { SystemLogger.log("Invalid data type for key: $key") }
+                    else -> null.also { SystemLogger.logWarn("Invalid data type for key: $key in PlayerSaveParser.kt Line 115") }
                 })
             }
         } else {

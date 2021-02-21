@@ -5,6 +5,7 @@ import core.game.node.entity.combat.equipment.WeaponInterface;
 import core.game.node.entity.player.Player;
 import core.game.node.entity.player.link.HintIconManager;
 import core.game.node.object.GameObject;
+import core.game.system.SystemLogger;
 import core.game.system.task.Pulse;
 import core.game.world.GameWorld;
 import core.game.world.map.Location;
@@ -991,7 +992,7 @@ public enum TutorialStage {
 
 		final TutorialStage tutorial_stage = forStage(stage);
 		if (tutorial_stage == null) {
-			System.err.println("Unhandled tutorial stage " + stage + ".");
+			SystemLogger.logErr("Unhandled tutorial stage " + stage + ".");
 			return;
 		}
 		player.setAttribute("tut-island", true);

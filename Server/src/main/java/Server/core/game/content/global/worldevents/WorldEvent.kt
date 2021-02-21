@@ -3,6 +3,7 @@ package core.game.content.global.worldevents
 import core.game.system.SystemLogger
 import core.plugin.Plugin
 import core.plugin.PluginManager
+import java.util.*
 
 /**
  * The class other world events should extend off of.
@@ -39,7 +40,7 @@ open class WorldEvent(var name: String) {
      * Used to log world event messages in a standard and organized way.
      */
     fun log(message: String){
-        SystemLogger.log("[World Events($name)] $message")
+        SystemLogger.logInfo("[World Events($name)] $message")
     }
 
     /**
