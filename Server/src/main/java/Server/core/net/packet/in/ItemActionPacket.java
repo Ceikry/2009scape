@@ -181,7 +181,7 @@ public class ItemActionPacket implements IncomingPacket {
 			}
 			return;
 		default:
-			SystemLogger.error("Error in Item Action Packet! Unhandled opcode = " + buffer.opcode());
+			SystemLogger.logErr("Error in Item Action Packet! Unhandled opcode = " + buffer.opcode());
 			return;
 		}
 	}

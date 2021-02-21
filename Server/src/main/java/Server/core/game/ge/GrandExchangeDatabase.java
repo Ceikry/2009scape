@@ -102,7 +102,7 @@ public final class GrandExchangeDatabase {
 	}
 
 	public static void initNewDB(){
-		SystemLogger.log("Initializing new Grand Exchange DB! This may take a moment...");
+		SystemLogger.logWarn("Initializing new Grand Exchange DB! This may take a moment...");
 		ItemDefinition.getDefinitions().values().forEach(def -> {
 			if(def.getId() != 2572){
 				GrandExchangeEntry e = new GrandExchangeEntry(def.getId());

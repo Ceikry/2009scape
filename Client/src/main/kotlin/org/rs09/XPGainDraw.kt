@@ -93,7 +93,7 @@ object XPGainDraw {
         lastUpdate = System.currentTimeMillis()
         thisLoopGains.removeAll(removeList)
         gainsAddedThisLoop = 0
-        if(Discord.checkInitializable()) {
+        if(Discord.initialized) {
             Discord.updatePresence("In-Game", "Training", "skill_$lastSkillId")
         }
     }

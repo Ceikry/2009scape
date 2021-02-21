@@ -31,8 +31,6 @@ class CapeDyer : UseWithHandler(*CAPES.copyOfRange(0,CAPES.size - 2).toIntArray(
         var cape: Item
         var dye: Item
 
-        SystemLogger.log("Attempting dye")
-
         if(CAPES.contains(used) && DYES.contains(with)){
             cape = event.used.asItem()
             dye = event.used.asItem()

@@ -70,7 +70,6 @@ class FairyRingInterface : ComponentPlugin(){
         val ring1index = player.getAttribute("fr:ring1",0)
         var toSet = player.getAttribute("fr:sortorder",true)
         toSet = !toSet
-        SystemLogger.log("$toSet")
         player.setAttribute("fr:sortorder",toSet)
         if(toSet) {
             player.configManager.forceSet(816, ring1index, false)

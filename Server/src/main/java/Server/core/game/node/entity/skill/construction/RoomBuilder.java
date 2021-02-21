@@ -6,6 +6,7 @@ import core.game.node.entity.player.Player;
 import core.game.node.item.Item;
 import core.game.node.object.GameObject;
 import core.game.node.object.ObjectBuilder;
+import core.game.system.SystemLogger;
 import core.game.world.map.BuildRegionChunk;
 import core.game.world.map.Direction;
 import core.game.world.map.Location;
@@ -173,7 +174,7 @@ public final class RoomBuilder {
 	 * @param room The room to build.
 	 */
 	public static void buildRoom(Player player, Room room, int z, int x, int y) {
-		System.err.println("Building direction = " + room.getRotation().name());
+		SystemLogger.logErr("Building direction = " + room.getRotation().name());
 		if(room.getRotation() != Direction.NORTH){
 			room.setRotation(Direction.NORTH);
 			player.getDialogueInterpreter().sendDialogue("Room rotation is currently disabled.");

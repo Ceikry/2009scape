@@ -140,7 +140,6 @@ class GenericSlayerBot : Script() {
                             item ?: continue
                             if(item.checkIgnored()) continue
                             bot.bank.add(item)
-                            SystemLogger.log("Banked ${item.name}")
                         }
                         bot.inventory.clear()
                         for(item in inventory)

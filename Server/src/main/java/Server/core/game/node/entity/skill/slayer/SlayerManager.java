@@ -1,6 +1,7 @@
 package core.game.node.entity.skill.slayer;
 
 import core.cache.def.impl.NPCDefinition;
+import core.game.system.SystemLogger;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import core.game.node.entity.skill.Skills;
@@ -117,7 +118,7 @@ public final class SlayerManager implements SavingModule {
 			case 2:
 				int taskId = buffer.getInt();
 				if (taskId > Tasks.values().length -1) {
-					System.err.println("Invalid task i for " + player.getUsername() + " taskId = " + taskId);
+					SystemLogger.logErr("Invalid task i for " + player.getUsername() + " taskId = " + taskId);
 					break;
 				}
 				task = Tasks.values()[taskId];
@@ -153,7 +154,7 @@ public final class SlayerManager implements SavingModule {
 				}
 				break;
 			default:
-				System.err.println("Error parsing Slayer Manager opcode = " + opcode);
+				SystemLogger.logErr("Error parsing Slayer Manager opcode = " + opcode);
 				break;
 			}
 		}

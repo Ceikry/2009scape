@@ -255,12 +255,12 @@ class NPCConfigParser {
                         "poisonous",
                         "poison_immune",
                         "water_npc"-> configs.put(it.key.toString(), it.value.toString().toBoolean())
-                        else -> SystemLogger.log("!!!! unhandled key for npc config: ${it.key.toString()} !!!!")
+                        else -> SystemLogger.logWarn("Unhandled key for npc config: ${it.key.toString()}")
                     }
                 }
             }
             count++
         }
-        SystemLogger.log("[Config Parser]: Parsed $count NPC configurations")
+        SystemLogger.logInfo("Parsed $count NPC configurations")
     }
 }

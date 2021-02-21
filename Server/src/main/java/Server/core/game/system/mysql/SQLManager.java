@@ -72,7 +72,7 @@ public final class SQLManager {
 		try {
 			return DriverManager.getConnection("jdbc:mysql://" +   DATABASE_URL, ServerConstants.DATABASE_USER, ServerConstants.DATABASE_PASS);
 		} catch (SQLException e) {
-			SystemLogger.error(SQLManager.class, "Error: Mysql error message=" + e.getMessage() + ".");
+			SystemLogger.logErr("Mysql error message=" + e.getMessage() + ".");
 		}
 		return null;
 	}

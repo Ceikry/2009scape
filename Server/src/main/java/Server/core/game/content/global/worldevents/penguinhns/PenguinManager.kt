@@ -3,6 +3,7 @@ package core.game.content.global.worldevents.penguinhns
 import core.game.node.entity.npc.NPC
 import core.game.system.SystemLogger
 import core.game.world.map.Location
+import java.util.*
 
 class PenguinManager{
     companion object {
@@ -26,6 +27,6 @@ class PenguinManager{
     }
 
     fun log(message: String){
-        SystemLogger.log("[Penguins] $message")
+        SystemLogger.logInfo("[Penguins] $message")
     }
 }

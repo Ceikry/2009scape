@@ -7,6 +7,7 @@ import core.game.node.entity.skill.Skills;
 import core.game.node.item.Item;
 import core.game.node.object.GameObject;
 import core.game.node.object.ObjectBuilder;
+import core.game.system.SystemLogger;
 import core.game.system.task.Pulse;
 import core.game.world.map.BuildRegionChunk;
 import core.game.world.map.Direction;
@@ -270,7 +271,6 @@ public final class BuildingUtils {
 							for (GameObject o : objects) {
 								if (o != null && o.getType() == object.getType()) {
 									ObjectBuilder.replace(o, o.transform(h.getHotspot().getDecorations()[decIndex].getObjectId(style)));
-									System.err.println("Found stairs!");
 									if (plane == 1) {
 										if (r.getProperties() == RoomProperties.SKILL_HALL) {
 											r.updateProperties(player, RoomProperties.SKILL_HALL_2);
@@ -286,7 +286,7 @@ public final class BuildingUtils {
 								}
 							}
 						} else {
-							System.err.println("Couldn't find stairs! " + plane);
+							SystemLogger.logErr("Couldn't find stairs! " + plane);
 						}
 					}
 				}
@@ -406,7 +406,7 @@ public final class BuildingUtils {
 								}
 							}
 						} else {
-							System.err.println("Couldn't find stairs! " + plane);
+							SystemLogger.logErr("Couldn't find stairs! " + plane);
 						}
 					}
 				}
@@ -629,8 +629,8 @@ public final class BuildingUtils {
 		Direction[] directions = new Direction[4];
 		boolean[] exit = Arrays.copyOf(exits, exits.length); //(0=east, 1=south, 2=west, 3=north)
 		int[] info = getExitRequirements(player, z, roomX, roomY);//(0=west, 1=north, 2=east, 3=south)
-		//		System.err.println("Available exits - [east=" + exit[0] + ", south=" + exit[1] + ", west=" + exit[2] + ", north=" + exit[3] + "]!");
-		//		System.err.println("Required exits - [east=" + info[0] + ", south=" + info[1] + ", west=" + info[2] + ", north=" + info[3] + "]!");
+		//		SystemLogger.logErr("Available exits - [east=" + exit[0] + ", south=" + exit[1] + ", west=" + exit[2] + ", north=" + exit[3] + "]!");
+		//		SystemLogger.logErr("Required exits - [east=" + info[0] + ", south=" + info[1] + ", west=" + info[2] + ", north=" + info[3] + "]!");
 		for (int i = 0; i < 4; i++) {
 			boolean success = true;
 			for (int j = 0; j < 4; j++) {

@@ -1,6 +1,7 @@
 package core.game.system.script;
 
 import core.ServerConstants;
+import core.game.system.SystemLogger;
 import plugin.ai.AIPBuilder;
 import plugin.ai.AIPlayer;
 import core.game.system.script.exc.InvalidGOTOException;
@@ -343,7 +344,7 @@ public final class ScriptCompiler {
 			line = rawScript.poll();
 		}
 		if (script.getPreviousEntry() != null) {
-			System.err.println("Error parsing " + type + " at line " + lineId + ": " + script.getName() + "!");
+			SystemLogger.logErr("Error parsing " + type + " at line " + lineId + ": " + script.getName() + "!");
 		}
 		return script.getCurrent();
 	}

@@ -37,14 +37,11 @@ class LoginReadEvent
 (session: IoSession?, buffer: ByteBuffer?) : IoReadEvent(session, buffer) {
     override fun read(session: IoSession, buffer: ByteBuffer) {
         val opcode: Int = buffer.get().toInt()
-        println(buffer.remaining())
-        println(opcode)
         if (buffer.short.toInt() != buffer.remaining()) {
             session.write(Response.BAD_SESSION_ID)
             return
         }
         val build = buffer.int
-        println(build)
         if (build != Constants.REVISION) { // || buffer.getInt() != Constants.CLIENT_BUILD) {
             session.write(Response.UPDATED)
             return
@@ -53,7 +50,7 @@ class LoginReadEvent
             12 -> println("User details event detected")
             16, 18 -> decodeWorld(opcode, session, buffer)
             else -> {
-                System.err.println("[Login] Unhandled login type [opcode=$opcode]!")
+                SystemLogger.logErr("[Login] Unhandled login type [opcode=$opcode]!")
                 session.disconnect()
             }
         }
@@ -71,14 +68,13 @@ class LoginReadEvent
             val d = buffer.get() // Memory?
             val e = buffer.get() // no advertisement = 1
             val f = buffer.get() // 1
-            println("d: $d e: $e f:$f")
             val windowMode = buffer.get().toInt() // Screen size mode
             val screenWidth = buffer.short.toInt() // Screen size Width
             val screenHeight = buffer.short.toInt() // Screen size Height
             val displayMode = buffer.get().toInt() // Display mode
             val data = ByteArray(24) // random.dat data.
             buffer[data]
-            SystemLogger.log(ByteBufferUtils.getString(buffer))
+            ByteBufferUtils.getString(buffer)
             buffer.int // Affiliate id
             buffer.int // Hash containing a bunch of settings
             val curpackets = buffer.short //Current interface packet counter.

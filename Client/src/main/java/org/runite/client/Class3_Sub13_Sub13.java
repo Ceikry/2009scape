@@ -1,4 +1,5 @@
 package org.runite.client;
+import org.rs09.SystemLogger;
 import org.rs09.client.filestore.resources.configs.cursors.CursorDefinition;
 
 import java.awt.Point;
@@ -442,7 +443,6 @@ final class Class3_Sub13_Sub13 extends Class3_Sub13 {
 
                      for(queuedVarpIndex = Class3_Sub5.method115(true); queuedVarpIndex != -1; queuedVarpIndex = Class3_Sub5.method115(false)) {
                         Class46.method1087(40, queuedVarpIndex);
-                        System.out.println("Var 1: " + queuedVarpIndex);
                         Class44.anIntArray726[Unsorted.bitwiseAnd(Class36.anInt641++, 31)] = queuedVarpIndex;
                      }
 

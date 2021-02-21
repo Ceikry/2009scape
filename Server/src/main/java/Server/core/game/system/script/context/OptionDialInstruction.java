@@ -1,6 +1,7 @@
 package core.game.system.script.context;
 
 import core.game.node.entity.player.Player;
+import core.game.system.SystemLogger;
 import core.game.system.script.ParamCall;
 import core.game.system.script.ScriptCompiler;
 import core.game.system.script.ScriptContext;
@@ -111,12 +112,12 @@ public final class OptionDialInstruction extends ScriptContext {
 		}
 		int option = (Integer) args[2] - 1;
 		if (option > optionHandlers.length -1) {
-			System.err.println("Error! Option out of bounds for option handlers.");
+			SystemLogger.logErr("Error! Option out of bounds for option handlers.");
 			return null;
 		}
 		ScriptContext context = optionHandlers[option];
 		if (context == null) {
-			System.err.println("No option handler found!");
+			SystemLogger.logErr("No option handler found!");
 			((Player) args[0]).getDialogueInterpreter().close();
 			return null;
 		}

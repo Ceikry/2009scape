@@ -116,7 +116,6 @@ public final class DoorActionHandler {
                     open(object, second, object.getId(), second == null ? -1 : second.getId(), false, 2, false);
                     entity.getWalkingQueue().reset();
                     entity.getWalkingQueue().addPath(endLocation.getX(), endLocation.getY());
-                    SystemLogger.log("Walking to " + endLocation.getX() + "," + endLocation.getY());
                     opened = true;
                     return false;
                 }

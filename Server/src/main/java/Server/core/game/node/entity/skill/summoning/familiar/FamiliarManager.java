@@ -3,6 +3,7 @@ package core.game.node.entity.skill.summoning.familiar;
 import core.cache.def.impl.ItemDefinition;
 import core.game.component.Component;
 import core.game.container.Container;
+import core.game.system.SystemLogger;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import core.game.node.entity.skill.Skills;
@@ -152,7 +153,7 @@ public final class FamiliarManager implements SavingModule {
 				break;
 			case 2:
 				if (familiar == null || !familiar.isBurdenBeast()) {
-					System.err.println("Error parsing BoB container!");
+					SystemLogger.logErr("Error parsing BoB container!");
 					new Container(30).parse(buffer);
 					continue;
 				}

@@ -5,6 +5,7 @@ import core.cache.def.impl.ItemDefinition;
 import core.game.component.Component;
 import core.game.component.ComponentDefinition;
 import core.game.component.ComponentPlugin;
+import core.game.system.SystemLogger;
 import core.plugin.Initializable;
 import core.game.node.entity.skill.Skills;
 import core.game.node.entity.player.Player;
@@ -37,12 +38,12 @@ public final class ConstructionInterface extends ComponentPlugin {
 						Hotspot hotspot = player.getAttribute("con:hotspot");
 						GameObject object = player.getAttribute("con:hsobject");
 						if (hotspot == null || object == null) {
-							System.err.println("Failed building decoration " + hotspot + " : " + object);
+							SystemLogger.logErr("Failed building decoration " + hotspot + " : " + object);
 							break;
 						}
 						slot = ((slot % 2 != 0) ? 4 : 0) + (slot >> 1);
 						if (slot >= hotspot.getHotspot().getDecorations().length) {
-							System.err.println("Failed building decoration " + slot + "/" + hotspot.getHotspot().getDecorations().length);
+							SystemLogger.logErr("Failed building decoration " + slot + "/" + hotspot.getHotspot().getDecorations().length);
 							break;
 						}
 						boolean debug = player.isStaff();
@@ -103,7 +104,7 @@ public final class ConstructionInterface extends ComponentPlugin {
 				break;
 			case 402:
 				int index = button - 160;
-				System.err.println("BuildRoom Interface Index: " + index);
+				SystemLogger.logErr("BuildRoom Interface Index: " + index);
 				if (index > -1 && index < RoomProperties.values().length) {
 					player.getDialogueInterpreter().open("con:room", RoomProperties.values()[index]);
 					return true;

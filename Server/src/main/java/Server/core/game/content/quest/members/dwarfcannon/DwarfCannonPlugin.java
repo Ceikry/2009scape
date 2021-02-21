@@ -16,6 +16,7 @@ import core.game.node.entity.npc.NPC;
 import core.game.node.entity.player.Player;
 import core.game.node.entity.player.link.quest.Quest;
 import core.game.node.item.Item;
+import core.game.system.SystemLogger;
 import core.game.system.task.Pulse;
 import core.game.world.GameWorld;
 import core.game.world.map.Location;
@@ -288,7 +289,7 @@ public class DwarfCannonPlugin extends OptionHandler {
 			}
 			Part part = Part.forId(button);
 			if (part == null) {
-				System.err.println("Unhandled part id - " + button + "!");
+				SystemLogger.logErr("Unhandled part id - " + button + "!");
 				return true;
 			}
 			if (this.tool.getPart() != part) {

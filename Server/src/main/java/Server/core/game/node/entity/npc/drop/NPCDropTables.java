@@ -121,7 +121,6 @@ public final class NPCDropTables {
 		}
 		if (item.getId() == RareDropTable.SLOT_ITEM_ID){
 			item = RareDropTable.retrieve();
-			SystemLogger.log("Rare Drop Table Roll: "  + item.getName());
 		}
 		if (item.getId() == 995 && player.getBank().hasSpaceFor(item) && ( player.getGlobalData().isEnableCoinMachine() )) {
 			item = new Item(995, (int) (item.getAmount() + (item.getAmount() * 0.25)));

@@ -5,6 +5,7 @@ import core.game.node.entity.Entity;
 import core.game.node.entity.npc.NPC;
 import core.game.node.entity.player.Player;
 import core.game.node.object.GameObject;
+import core.game.system.SystemLogger;
 import core.game.world.map.zone.ZoneBorders;
 import core.tools.RandomFunction;
 
@@ -40,7 +41,13 @@ public final class RegionManager {
 	 * Pulses the active regions.
 	 */
 	public static void pulse() {
-		Object[] rCacheArray = REGION_CACHE.values().toArray();
+		Object[] rCacheArray = new Object[0];
+		try {
+			rCacheArray = REGION_CACHE.values().toArray();
+		} catch (ConcurrentModificationException e){
+			SystemLogger.logErr("Region Cache tried to process too early -- restarting...");
+			System.exit(0);
+		}
 		int rCacheLength = rCacheArray.length;
 		for (int i = 0; i < rCacheLength; i++) {
 			Region r = (Region) rCacheArray[i];

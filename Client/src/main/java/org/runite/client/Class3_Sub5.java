@@ -1,5 +1,6 @@
 package org.runite.client;
 
+import org.rs09.SystemLogger;
 import org.rs09.client.Linkable;
 
 final class Class3_Sub5 extends Linkable {
@@ -184,7 +185,7 @@ final class Class3_Sub5 extends Linkable {
                if((4611686018427387904L & var4.aLong2295) != 0) {
                   int var5 = (int)var4.linkableKey;
                   ItemDefinition.ram[var5] = Class57.varpArray[var5];
-                  System.out.println("Getting value of " + var5);
+                  SystemLogger.logVerbose("Reading value " + Class57.varpArray[var5] + " from varp " + var5);
                   var4.unlink();
                   return var5;
                }

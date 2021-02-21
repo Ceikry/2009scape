@@ -1,5 +1,7 @@
 package org.runite.client;
 
+import net.arikia.dev.drpc.DiscordRPC;
+import org.rs09.SystemLogger;
 import org.rs09.client.config.GameConfig;
 import org.rs09.client.rendering.Toolkit;
 
@@ -61,7 +63,7 @@ final class WorldListEntry extends Class44 {
             var5.address = buffer.getGJString2(79);
             GameConfig.WORLD = worldId;
 //            GameLaunch.SETTINGS.setWorld(worldId);
-            System.out.println("Registering to world: " + GameConfig.WORLD);
+             SystemLogger.logInfo("Registering to world: " + GameConfig.WORLD);
          }
          Unsorted.updateStamp = buffer.readInt();
          Class30.loadedWorldList = true;

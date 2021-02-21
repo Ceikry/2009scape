@@ -31,7 +31,7 @@ public final class SystemTermination {
 	 * Terminates the system safely.
 	 */
 	public void terminate() {
-		SystemLogger.log("[SystemTerminator] Initializing termination sequence - do not shutdown!");
+		SystemLogger.logInfo("[SystemTerminator] Initializing termination sequence - do not shutdown!");
 		try {
 			for(Player player : Repository.getPlayers()){
 				DMCHandler dmc = player.getAttribute("dmc",null);
@@ -43,7 +43,7 @@ public final class SystemTermination {
 		} catch (Throwable e) {
 			e.printStackTrace();
 		}
-		SystemLogger.log("[SystemTerminator] Server successfully terminated!");
+		SystemLogger.logInfo("[SystemTerminator] Server successfully terminated!");
 		Runtime.getRuntime().removeShutdownHook(ServerConstants.SHUTDOWN_HOOK);
 		System.exit(0);
 	}
@@ -54,13 +54,14 @@ public final class SystemTermination {
 	 */
 	public void save(String directory) {
 		File file = new File(directory);
-		SystemLogger.log("[SystemTerminator] Saving data [dir=" + file.getAbsolutePath() + "]...");
+		SystemLogger.logInfo("[SystemTerminator] Saving data [dir=" + file.getAbsolutePath() + "]...");
 		if (!file.isDirectory()) {
 			file.mkdirs();
 		}
 		GrandExchangeDatabase.save();
 		OfferManager.save();
-		SystemLogger.log("[SystemTerminator] Saved Grand Exchange databases!");
+		SystemLogger.flushLogs();
+		SystemLogger.logInfo("[SystemTerminator] Saved Grand Exchange databases!");
 		Repository.getDisconnectionQueue().clear();
 		for (Iterator<Player> it = Repository.getPlayers().iterator(); it.hasNext();) {
 			try {
@@ -83,6 +84,6 @@ public final class SystemTermination {
 			}
 		}
 //		ServerStore.dump(directory + "store/");
-		SystemLogger.log("[SystemTerminator] Saved player accounts!");
+		SystemLogger.logInfo("[SystemTerminator] Saved player accounts!");
 	}
 }

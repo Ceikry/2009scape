@@ -55,7 +55,7 @@ class RangedConfigLoader {
             Ammunition.getAmmunition().putIfAbsent(Integer.parseInt(e["itemId"].toString()),ammo)
             count++
         }
-        SystemLogger.log("[Config Parser]: Parsed $count ammo configs...")
+        SystemLogger.logWarn("Parsed $count ammo configs...")
 
         count = 0
         reader = FileReader(ServerConstants.CONFIG_PATH + "ranged_weapon_configs.json")
@@ -75,6 +75,6 @@ class RangedConfigLoader {
             RangeWeapon.getRangeWeapons().putIfAbsent(weapon.itemId,weapon)
             count++
         }
-        SystemLogger.log("[Config Parser]: Parsed $count ranged weapon configs...")
+        SystemLogger.logInfo("Parsed $count ranged weapon configs...")
     }
 }

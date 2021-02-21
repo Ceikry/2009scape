@@ -67,7 +67,7 @@ class ExperienceInterface() : ComponentPlugin() {
                 40 -> Skills.FLETCHING
                 51 -> Skills.CONSTRUCTION
                 52 -> Skills.SUMMONING
-                else -> Skills.SLAYER.also { SystemLogger.log("EXP_INTERFACE: Invalid SKILL CHOICE BUTTON: $button") }
+                else -> Skills.SLAYER.also { SystemLogger.logWarn("EXP_INTERFACE: Invalid SKILL CHOICE BUTTON: $button") }
             }
             player.setAttribute("exp_interface:skill",skill)
         }

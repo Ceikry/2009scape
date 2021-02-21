@@ -14,6 +14,7 @@ import core.game.world.map.Location
 import core.game.world.update.flag.context.Animation
 import core.tools.Items
 import core.tools.RandomFunction
+import java.util.*
 
 /**
  * Main class for hunter tracking. All the other subclasses just define values that the methods in this class use.
@@ -46,10 +47,10 @@ abstract class HunterTracking : OptionHandler(){
      * @author Ceikry
      */
     fun generateTrail(startobj: GameObject, player: Player) {
-        val trail = player.getAttribute(attribute,ArrayList<TrailDefinition>())
+        val trail = player.getAttribute(attribute, ArrayList<TrailDefinition>())
         val initialTrail = getInitialTrail(startobj)
         if(initialTrail == null) {
-            SystemLogger.log("UNHANDLED STARTING OBJECT FOR HUNTER TRACKING $startobj")
+            SystemLogger.logWarn("UNHANDLED STARTING OBJECT FOR HUNTER TRACKING $startobj")
             return
         }
         trail.add(initialTrail)
@@ -87,7 +88,6 @@ abstract class HunterTracking : OptionHandler(){
     fun getLinkingTrail(player: Player): TrailDefinition? {
         val trail = player.getAttribute(attribute,ArrayList<TrailDefinition>())
         val previousTrail = trail.get(trail.lastIndex)
-        SystemLogger.log("$previousTrail")
         if(previousTrail.type == TrailType.TUNNEL){
             val possibleTrails = ArrayList<TrailDefinition>()
             for(trail in linkingTrails){
@@ -134,10 +134,6 @@ abstract class HunterTracking : OptionHandler(){
                 }
             }
         }
-        if(this is CommonKebbitEast)
-            for(trail in linkingTrails){
-                SystemLogger.log("$trail")
-            }
     }
 
     /**

@@ -1,5 +1,6 @@
 package core.net.amsc;
 
+import core.game.system.SystemLogger;
 import core.net.IoEventHandler;
 import core.net.IoSession;
 
@@ -37,7 +38,7 @@ public final class MSEventHandler extends IoEventHandler {
 		} catch (Throwable t) {
 			t.printStackTrace();
 		}
-		System.err.println("Failed connecting to Management Server!");
+		SystemLogger.logErr("Failed connecting to Management Server!");
 		WorldCommunicator.terminate();
 	}
 

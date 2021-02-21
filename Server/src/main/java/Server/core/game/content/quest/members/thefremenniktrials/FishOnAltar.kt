@@ -24,8 +24,6 @@ class FishOnAltar : PluginInteraction(383, 389, 395){
     override fun handle(player: Player?, event: NodeUsageEvent?): Boolean {
         fishUsed = event?.used!!.id
         val with = event.usedWith
-        SystemLogger.log("Trying to handle with this")
-        SystemLogger.log("${with is GameObject}")
         if(with is GameObject && with.id == 4141){
             if(player?.questRepository?.getStage("Fremennik Trials")!! >= 10){
                 GameWorld.submit(moveToPulse(player,with,fishUsed))

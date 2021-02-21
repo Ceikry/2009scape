@@ -148,13 +148,16 @@ class ScriptAPI(private val bot: Player) {
         var distance = 11.0
         var closest: GroundItem? = null
         if(AIRepository.getItems(bot) != null) {
-            for (item in AIRepository.getItems(bot)!!.filter { it.distance(bot.location) < 10 }) {
+            for (item in AIRepository.getItems(bot)!!.filter {it: GroundItem -> it.distance(bot.location) < 10 }) {
                 if (item.id == id) {
                     //distance = item.distance(bot.location)
                     closest = item
                 }
             }
-            if (!GroundItemManager.getItems().contains(closest)) AIRepository.getItems(bot)?.remove(closest).also { return null }
+            if (!GroundItemManager.getItems().contains(closest)){
+                AIRepository.getItems(bot)?.remove(closest)
+                return null
+            }
         } else {
             val items: ArrayList<GroundItem>? = bot.getAttribute("botting:drops",null)
             if(items != null){
@@ -383,13 +386,11 @@ class ScriptAPI(private val bot: Player) {
                 }
                 val canSell = OfferManager.addBotOffer(actualId, itemAmt)
                 if (canSell && saleIsBigNews(actualId, itemAmt)) {
-                    SystemLogger.log("Offered $itemAmt")
+                    SystemLogger.logAI("Offered $itemAmt of $actualId on the GE.")
                     Repository.sendNews("2009Scape just offered " + itemAmt + " " + ItemDefinition.forId(actualId).name.toLowerCase() + " on the GE.")
                 }
                 bot.bank.remove(Item(id, itemAmt))
                 bot.bank.refresh()
-                SystemLogger.log("Banked fish: " + bot.bank.getAmount(Items.RAW_SWORDFISH_371))
-                SystemLogger.log("Banked fish: " + bot.bank.getAmount(Items.RAW_LOBSTER_377))
                 return true
             }
         }

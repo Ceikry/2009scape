@@ -6,6 +6,7 @@ import core.cache.misc.buffer.ByteBufferUtils;
 import core.game.interaction.OptionHandler;
 import core.game.node.entity.player.Player;
 import core.game.node.object.GameObject;
+import core.game.system.SystemLogger;
 import core.game.world.GameWorld;
 
 import java.nio.ByteBuffer;
@@ -572,12 +573,12 @@ public class ObjectDefinition extends Definition<GameObject> {
 			byte[] data = Cache.getIndexes()[16].getFileData(getContainerId(objectId), objectId & 0xff);
 			if (data == null) {
 				ObjectDefinition.getDefinitions().put(objectId, new ObjectDefinition());
-				//System.err.println("Could not load object definitions for id " + objectId + " - no data!");
+				//SystemLogger.logErr("Could not load object definitions for id " + objectId + " - no data!");
 				continue;
 			}
 			ObjectDefinition def = ObjectDefinition.parseDefinition(objectId, ByteBuffer.wrap(data));
 			if (def == null) {
-			//	System.err.println("Could not load object definitions for id " + objectId + " - no definitions found!");
+			//	SystemLogger.logErr("Could not load object definitions for id " + objectId + " - no definitions found!");
 				return;
 			}
 			ObjectDefinition.getDefinitions().put(objectId, def);
@@ -611,14 +612,14 @@ public class ObjectDefinition extends Definition<GameObject> {
 	public static ObjectDefinition parseDefinition(int objectId, ByteBuffer buffer) {
 		ObjectDefinition def = new ObjectDefinition();
 		def.id = objectId;
-//		System.err.println("----------------------------------------------------\n\n\n");
+//		SystemLogger.logErr("----------------------------------------------------\n\n\n");
 		while (true) {
 			if (!buffer.hasRemaining()) {
-				System.err.println("[ObjectDefinition] Buffer empty for " + objectId);
+				SystemLogger.logErr("[ObjectDefinition] Buffer empty for " + objectId);
 				break;
 			}
 			int opcode = buffer.get() & 0xFF;
-			//System.err.println("Parsing object " + objectId + " op " + opcode);
+			//SystemLogger.logErr("Parsing object " + objectId + " op " + opcode);
 			if (opcode == 1 || opcode == 5) {
 				int length = buffer.get() & 0xff;
 				if (def.modelIds == null) {
@@ -800,7 +801,7 @@ public class ObjectDefinition extends Definition<GameObject> {
 				}
 			} else {
 				if (opcode != 0) {
-					System.err.println("Unhandled object definition opcode: " + opcode);
+					SystemLogger.logErr("Unhandled object definition opcode: " + opcode);
 				}
 				break;
 			}

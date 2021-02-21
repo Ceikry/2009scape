@@ -35,6 +35,6 @@ class NPCSpawner {
                 count++
             }
         }
-        SystemLogger.log("[Config Parser]: Spawned $count NPCs")
+        SystemLogger.logInfo("Spawned $count NPCs")
     }
 }

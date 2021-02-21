@@ -288,7 +288,7 @@ public final class MSPacketRepository {
 				break;
 			case 15:
 				SystemManager.getSystemConfig().parse();
-				SystemLogger.log("System configurations reloaded.");
+				SystemLogger.logInfo("System configurations reloaded.");
 				break;
 			default:
 				System.out.println("Handling incoming packet [opcode=" + opcode + ", size=" + b.limit() + "].");
@@ -436,7 +436,7 @@ public final class MSPacketRepository {
 				ClanRank rank = ClanRank.values()[type - 2];
 				contact = player.getCommunication().getContacts().get(contactName);
 				if (contact == null) {
-					// System.err.println("Invalid contact specified [name=" +
+					// SystemLogger.logErr("Invalid contact specified [name=" +
 					// contact + "]!");
 					break;
 				}

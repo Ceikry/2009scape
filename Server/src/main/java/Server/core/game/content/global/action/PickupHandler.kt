@@ -8,7 +8,6 @@ import core.game.node.entity.player.link.diary.DiaryType
 import core.game.node.item.GroundItem
 import core.game.node.item.GroundItemManager
 import core.game.node.item.Item
-import core.game.system.SystemLogger.log
 import core.game.system.config.GroundSpawnLoader.GroundSpawn
 import core.game.world.GameWorld
 import core.game.world.map.RegionManager
@@ -16,6 +15,7 @@ import core.game.world.update.flag.context.Animation
 import plugin.ai.AIRepository.Companion.getItems
 import core.game.content.dialogue.FacialExpression
 import core.game.node.entity.skill.runecrafting.RunePouch
+import core.game.system.SystemLogger
 
 /**
  * A class used to handle the picking up of ground items.
@@ -39,7 +39,7 @@ object PickupHandler {
             return true
         }
         if (player.getAttribute("droppedItem:" + item.id, 0) > GameWorld.ticks) { //Splinter
-            log("$player, tried to do the drop & quick pick-up Ground Item dupe.")
+            SystemLogger.logAlert("$player tried to do the drop & quick pick-up Ground Item dupe.")
             return true
         }
         if (item !is GroundSpawn && item.isRemainPrivate && !item.droppedBy(player)) {

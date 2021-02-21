@@ -76,7 +76,6 @@ object BogrogPouchSwapper {
     }
 
     private fun getValue(itemID: Int): Int{
-        SystemLogger.log("$itemID")
         var item = SummoningPouch.get(itemID)
         if(item == null) item = SummoningPouch.get(Item(itemID).noteChange)
         if(item == null) item = SummoningPouch.get(SummoningScroll.forItemId(itemID)?.pouch ?: -1)

@@ -31,7 +31,7 @@ class DropTableParser {
                 def.defaultTable.addAll(defaultTable)
             }
         }
-        SystemLogger.log("[Config Parser]: Parsed $count drop tables.")
+        SystemLogger.logInfo("Parsed $count drop tables.")
     }
 
     private fun parseTable(data: JSONArray): List<WeightedChanceItem> {

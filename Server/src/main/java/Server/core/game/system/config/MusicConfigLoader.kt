@@ -59,6 +59,6 @@ class MusicConfigLoader {
             }
             count++
         }
-        SystemLogger.log("[Config Parser]: Parsed $count music configs.")
+        SystemLogger.logInfo("Parsed $count music configs.")
     }
 }

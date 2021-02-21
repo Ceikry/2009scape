@@ -112,7 +112,7 @@ class PlayerSaver (val player: Player){
                     is Short -> "short"
                     is String -> "str"
                     is Byte -> "byte"
-                    else -> "null".also { SystemLogger.log("Invalid attribute type for key: $key") }
+                    else -> "null".also { SystemLogger.logWarn("Invalid attribute type for key: $key in PlayerSaver.kt Line 115") }
                 }
                 attr.put("type",type)
                 attr.put("key",key)

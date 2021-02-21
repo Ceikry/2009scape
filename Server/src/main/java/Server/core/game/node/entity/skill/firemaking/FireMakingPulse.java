@@ -70,7 +70,6 @@ public final class FireMakingPulse extends SkillPulse<Item> {
 	@Override
 	public boolean checkRequirements() {
 		if (fire == null) {
-			System.err.println("bad fire? " + node.getId());
 			return false;
 		}
 		if (RegionManager.getObject(player.getLocation()) != null || player.getZoneMonitor().isInZone("bank")) {

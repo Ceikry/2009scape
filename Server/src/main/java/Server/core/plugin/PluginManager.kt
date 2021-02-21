@@ -46,9 +46,9 @@ object PluginManager {
             load()
             loadedPlugins!!.clear()
             loadedPlugins = null
-            SystemLogger.log("Initialized $amountLoaded plugins...")
+            SystemLogger.logInfo("Initialized $amountLoaded plugins...")
         } catch (t: Throwable) {
-            SystemLogger.log("Error initializing Plugins -> " + t.localizedMessage + " for file -> " + lastLoaded)
+            SystemLogger.logErr("Error initializing Plugins -> " + t.localizedMessage + " for file -> " + lastLoaded)
             t.printStackTrace()
         }
     }
@@ -111,7 +111,7 @@ object PluginManager {
                         plugin.newInstance(null)
                         QuestRepository.register(plugin as Quest)
                     }
-                    else -> println("Manifest: " + manifest.type)
+                    else -> SystemLogger.logWarn("Unknown Manifest: " + manifest.type)
                 }
             }
             amountLoaded++

@@ -264,7 +264,6 @@ public final class PCObjectHandler extends OptionHandler {
 			case 14236:
 				return (object.getRotation() + 2) % 4;
 		}
-		System.err.println("Object id: " + id);
 		return 0;
 	}
 

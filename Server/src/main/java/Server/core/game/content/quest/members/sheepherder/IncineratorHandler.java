@@ -27,9 +27,7 @@ public class IncineratorHandler extends PluginInteraction {
     @Override
     public boolean handle(Player player, NodeUsageEvent event) {
         Node n = event.getUsedWith();
-        SystemLogger.log("Handling bones...");
         if(n instanceof GameObject){
-            SystemLogger.log("n instance of game object");
             GameObject obj = (GameObject) n;
             if (n.getId() == 165) {
                 player.getPulseManager().run(new MovementPulse(player, DestinationFlag.OBJECT.getDestination(player,obj)) {

@@ -108,7 +108,7 @@ class GreenDragonKiller(val style: CombatStyle, area: ZoneBorders? = null) : Scr
                     }
                     return
                 }
-                items.forEach { scriptAPI.takeNearestGroundItem(it.id)}
+                items.forEach {it: Item -> scriptAPI.takeNearestGroundItem(it.id)}
             }
 
             State.TO_BANK -> {
@@ -142,13 +142,12 @@ class GreenDragonKiller(val style: CombatStyle, area: ZoneBorders? = null) : Scr
                             if(item.name.toLowerCase().contains("lobster") || item.name.toLowerCase().contains("swordfish") || item.name.toLowerCase().contains("shark")) continue
                             if(item.id == 995) continue
                             bot.bank.add(item)
-                            SystemLogger.log("Banked ${item.name}")
                         }
                         bot.inventory.clear()
                         state = if(bot.bank.getAmount(food) < 10)
-                            State.TO_GE.also { println("Going to GE to sell.") }
+                            State.TO_GE
                          else
-                            State.TO_DRAGONS.also { println("Going to dragons") }
+                            State.TO_DRAGONS
                         for(item in inventory)
                             bot.inventory.add(item)
                         scriptAPI.withdraw(food,10)
@@ -197,9 +196,7 @@ class GreenDragonKiller(val style: CombatStyle, area: ZoneBorders? = null) : Scr
                     }
                     if (edgevilleLine.insideBorder(bot)) {
                         val ditch = scriptAPI.getNearestNode("Wilderness Ditch", true)
-                        SystemLogger.log("trying to cross ditch")
                         ditch ?: return
-                        SystemLogger.log("Ditch non-null location: ${ditch.location.x},${ditch.location.y}")
                         ditch.interaction.handle(bot, ditch.interaction[0]).also { return }
                     }
                     if (bot.location.y > 3520 && !myBorders!!.insideBorder(bot))

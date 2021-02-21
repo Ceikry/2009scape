@@ -56,7 +56,7 @@ public final class RareDropTable {
 	 */
 	public static void init(){
 		if(!new File(ServerConstants.RDT_DATA_PATH).exists()){
-			SystemLogger.log("Can't locate RDT file at " + ServerConstants.RDT_DATA_PATH);
+			SystemLogger.logErr("Can't locate RDT file at " + ServerConstants.RDT_DATA_PATH);
 			return;
 		}
 		parse(ServerConstants.RDT_DATA_PATH);

@@ -1,10 +1,11 @@
 package core.game.system
 
+import com.github.ajalt.mordant.rendering.TextColors
+import com.github.ajalt.mordant.terminal.Terminal
 import core.ServerConstants
+import core.game.node.entity.player.Player
 import core.game.world.GameWorld
-import java.io.BufferedWriter
-import java.io.File
-import java.io.IOException
+import java.io.*
 import java.nio.charset.StandardCharsets
 import java.nio.file.Files
 import java.nio.file.Paths
@@ -14,122 +15,68 @@ import java.text.SimpleDateFormat
 import java.util.*
 
 /**
- * Printing log messages class.
- * @author Apache Ah64
+ * Handles server log printing
+ * @author Ceikry
+ * Thanks to the awesome library made by AJ Alt
  */
 object SystemLogger {
-    /**
-     * The date format string.
-     */
-    private val dateFormat: DateFormat = SimpleDateFormat("yyyy-MM-dd HH:mm:ss")
-    private val fileNameFormat: DateFormat = SimpleDateFormat("yyy-MM-dd")
-    private var logWriter : BufferedWriter? = null
+    val t = Terminal()
+    val formatter = SimpleDateFormat("HH:mm:ss")
+    var tradeLog: Writer? = null
+    var tradeLogWriter: BufferedWriter? = null
 
-    init {
-        if(ServerConstants.WRITE_LOGS){
-            val logDir = Paths.get(ServerConstants.LOGS_PATH ?: ".")
-            if(Files.notExists(logDir)) {
-                Files.createDirectory(logDir)
-            }
-            val filePath = Paths.get(logDir.toString() + File.separator + fileNameFormat.format(Date()) + ".txt")
-            System.out.println("Using path " + filePath)
-            logWriter = Files.newBufferedWriter(filePath, StandardCharsets.UTF_8, StandardOpenOption.APPEND, StandardOpenOption.CREATE)
-        }
-    }
-
-    private fun writeLog(message: String){
-        try {
-            logWriter?.write(message)
-            logWriter?.flush()
-        } catch (e: IOException){
-            e.printStackTrace()
-        }
-    }
-
-    /**
-     * Print a log message.
-     * @param message
-     */
     @JvmStatic
-    fun log(message: String?) {
-        dateFormat.timeZone = TimeZone.getDefault()
-        if (message == null) {
-            return
+    fun initTradeLogger(){
+        if(!File(ServerConstants.LOGS_PATH + "trade" + File.separator + "test").exists()){
+            File(ServerConstants.LOGS_PATH + "trade" + File.separator + "test").mkdirs()
         }
-        val msg = "[" + dateFormat.format(Date()) + "][" + GameWorld.settings?.name + "]: " + message
-        writeLog(msg + "\n")
-        println(msg)
+        tradeLog = FileWriter(ServerConstants.LOGS_PATH + "trade" + File.separator + SimpleDateFormat("dd-MM-yyyy").format(System.currentTimeMillis()) + ".log")
+        tradeLogWriter = BufferedWriter(tradeLog!!)
     }
 
-    /**
-     * Print a log message with class name.
-     * @param thread
-     * @param message
-     */
-    fun log(thread: Class<*>?, message: String?) {
-        if (message == null) {
-            return
-        }
-        val msg = "[" + dateFormat.format(Date()) + "][" + Class::class.java.simpleName + "]: " + message
-        writeLog(msg + "\n")
-        println(msg)
+    @JvmStatic()
+    fun flushLogs() {
+        tradeLogWriter?.flush()
+        tradeLogWriter?.close()
     }
 
-    /**
-     * Print a log message with class name.
-     * @param thread
-     * @param message
-     */
-    fun log(className: String, message: String?) {
-        if (message == null) {
-            return
-        }
-        val msg = "[" + dateFormat.format(Date()) + "][" + className + "]: " + message
-        writeLog(msg + "\n")
-        println(msg)
+    fun getTime(): String{
+        return "[" + formatter.format(Date(System.currentTimeMillis())) +"]"
     }
 
-    /**
-     * Print a error message.
-     * @param message
-     */
     @JvmStatic
-    fun error(message: String?) {
-        if (message == null) {
-            return
+    fun logInfo(vararg messages: String){
+        for(m in messages){
+            if(m.isNotBlank()) t.println("${getTime()}: [INFO] $m")
         }
-        val msg = "[" + dateFormat.format(Date()) + "][" + GameWorld.settings?.name + "]: " + message
-        System.err.println(msg)
-        writeLog(msg + "\n")
     }
 
-    /**
-     * Print a error message with class name.
-     * @param thread
-     * @param message
-     */
     @JvmStatic
-    fun error(thread: Class<*>?, message: String?) {
-        if (message == null) {
-            return
-        }
-        val msg = "[" + dateFormat.format(Date()) + "][" + Class::class.java.simpleName + "]: " + message
-        writeLog(msg + "\n")
-        System.err.println(msg)
+    fun logErr(message: String){
+        if(message.isNotBlank()) t.println("${getTime()}: ${TextColors.brightRed("[ ERR] $message")}")
     }
 
-    /**
-     * Print a error message with class name.
-     * @param thread
-     * @param message
-     */
     @JvmStatic
-    fun error(className: String, message: String?) {
-        if (message == null) {
-            return
+    fun logWarn(message: String){
+        if(message.isNotBlank()) t.println("${getTime()}: ${TextColors.yellow("[WARN] $message")}")
+    }
+
+    @JvmStatic
+    fun logAlert(message: String){
+        if(message.isNotBlank()) t.println("${getTime()}: ${TextColors.brightYellow("[ALRT] $message")}")
+    }
+
+    @JvmStatic
+    fun logAI(message: String){
+        if(message.isNotBlank()) t.println("${getTime()}: ${TextColors.gray("[AIPL] $message")}")
+    }
+
+    @JvmStatic
+    fun logTrade(message: String){
+        if(message.isNotBlank()){
+            if(tradeLogWriter == null) logWarn("Trade Logger is null!")
+            tradeLogWriter?.write("${getTime()}: $message")
+            tradeLogWriter?.newLine()
         }
-        val msg ="[" + dateFormat.format(Date()) + "][" + className + "]: " + message
-        writeLog(msg + "\n")
-        System.err.println(msg)
     }
 }

@@ -1,12 +1,12 @@
 package core.game.world.callback
 
-import core.game.system.SystemLogger.error
 import core.game.world.map.zone.ZoneBuilder
 import core.game.node.entity.skill.farming.FarmingPulse
 import core.game.node.entity.skill.hunter.ImpetuousImpulses
 import core.game.world.GameWorld
 import core.game.ge.OfferManager
 import core.game.node.entity.skill.farming.pot.SeedlingPulse
+import core.game.system.SystemLogger
 import java.util.ArrayList
 
 /**
@@ -24,7 +24,7 @@ object CallbackHub {
         GameWorld.Pulser.submit(SeedlingPulse())
         for (call in calls) {
             if (!call.call()) {
-                error("A callback was stopped, callback=" + call.javaClass.simpleName + ".")
+                SystemLogger.logErr("A callback was stopped, callback=" + call.javaClass.simpleName + ".")
                 return false
             }
         }

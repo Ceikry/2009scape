@@ -1,6 +1,7 @@
 package core.game.content.global.action;
 
 import core.game.node.entity.player.Player;
+import core.game.system.SystemLogger;
 import core.game.system.task.Pulse;
 import core.game.world.GameWorld;
 import core.game.world.map.Location;
@@ -55,7 +56,7 @@ public final class DigSpadeHandler {
 	 */
 	public static boolean register(Location location, DigAction action) {
 		if (ACTIONS.containsKey(location)) {
-			System.err.println("Already contained dig reward for location " + location + ".");
+			SystemLogger.logErr("Already contained dig reward for location " + location + ".");
 			return false;
 		}
 		ACTIONS.put(location, action);

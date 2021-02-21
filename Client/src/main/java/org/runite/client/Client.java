@@ -1,7 +1,9 @@
 package org.runite.client;
 
 
+import net.arikia.dev.drpc.DiscordRPC;
 import org.rs09.Discord;
+import org.rs09.SystemLogger;
 import org.rs09.client.config.GameConfig;
 import org.rs09.client.console.DeveloperConsole;
 import org.rs09.client.filestore.resources.configs.enums.EnumDefinitionProvider;
@@ -231,7 +233,7 @@ public final class Client extends GameShell {
 //				    DeveloperConsole.INSTANCE.draw();
 ////					System.out.println("Draw developer console");
 //				}
-
+                DiscordRPC.discordRunCallbacks();
             }
         } catch (RuntimeException var9) {
             throw ClientErrorException.clientError(var9, "client.K(" + 40 + ')');
@@ -403,8 +405,8 @@ public final class Client extends GameShell {
 
             CS2Script.anInt2451 = ObjectDefinition.worldId;
             Unsorted.method564(Class38.aClass87_665);
-            System.out.println("port = " + Class53.anInt867);
-            System.out.println("Here: Config.MSIP = " + GameConfig.IP_MANAGEMENT);
+            SystemLogger.logInfo("port: " + Class53.anInt867);
+            SystemLogger.logInfo("MSIP: " + GameConfig.IP_MANAGEMENT);
             if (Class44.anInt718 == 0) {
                 ClientErrorException.worldListHost = Objects.requireNonNull(this.getCodeBase()).getHost();
                 Class53.anInt867 = GameConfig.SERVER_PORT + ObjectDefinition.worldId; //443 is secure port
@@ -1175,7 +1177,6 @@ public final class Client extends GameShell {
                                     label493:
                                     for (var19 = inter.anInt213; var19 < Class36.anInt641; ++var19) {
                                         var29 = Class44.anIntArray726[var19 & 31];
-                                        System.out.println("Var29 " + var29);
 
                                         for (var21 = 0; var21 < inter.anIntArray286.length; ++var21) {
                                             if (inter.anIntArray286[var21] == var29) {

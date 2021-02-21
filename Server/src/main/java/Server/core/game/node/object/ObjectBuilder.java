@@ -2,6 +2,7 @@ package core.game.node.object;
 
 import core.game.node.item.GroundItem;
 import core.game.node.item.GroundItemManager;
+import core.game.system.SystemLogger;
 import core.game.system.task.Pulse;
 import core.game.world.GameWorld;
 import core.game.world.map.Location;
@@ -43,7 +44,7 @@ public final class ObjectBuilder {
 		GameObject current = LandscapeParser.removeGameObject(remove);
 		if (current == null) {
 			if (GameWorld.getSettings().isDevMode()) {
-				System.err.println("Object could not be replaced - object to remove is invalid.");
+				SystemLogger.logErr("Object could not be replaced - object to remove is invalid.");
 			}
 			return false;
 		}
@@ -118,7 +119,7 @@ public final class ObjectBuilder {
 		GameObject current = LandscapeParser.removeGameObject(remove);
 		if (current == null) {
 			if (GameWorld.getSettings().isDevMode()) {
-				System.err.println("Object could not be replaced - object to remove is invalid.");
+				SystemLogger.logErr("Object could not be replaced - object to remove is invalid.");
 			}
 			return false;
 		}

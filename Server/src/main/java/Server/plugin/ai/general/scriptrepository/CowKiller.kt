@@ -104,7 +104,6 @@ class CowKiller : Script() {
                         Location.create(3252, 3267, 0) -> {
                             val closedGate = scriptAPI.getNearestNode(15516, true)
                             if (closedGate != null && closedGate.location.withinDistance(bot.location, 2)) {
-                                SystemLogger.log("Opening closed gate.")
                                 closedGate.interaction.handle(bot, closedGate.interaction[0])
                             } else {
                                 scriptAPI.walkTo(cowZone.randomLoc)

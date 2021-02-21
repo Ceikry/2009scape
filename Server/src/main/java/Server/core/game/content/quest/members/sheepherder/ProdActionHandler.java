@@ -22,10 +22,8 @@ public class ProdActionHandler extends PluginInteraction {
 
     @Override
     public boolean handle(Player player, NPC npc, Option option) {
-        SystemLogger.log("trying to handle prod option");
             HerderSheepNPC n = (HerderSheepNPC) npc;
             if(option.getName().toLowerCase().equals("prod")){
-                SystemLogger.log("Prodding sheep..");
                 player.getPulseManager().run(new MovementPulse(player,getDestination(player,n)) {
                     @Override
                     public boolean pulse() {
@@ -35,7 +33,6 @@ public class ProdActionHandler extends PluginInteraction {
                 }, "movement");
                 return true;
             }
-        SystemLogger.log("Not an instance of HerderSheepNPC.");
         return false;
     }
 

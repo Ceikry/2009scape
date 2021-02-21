@@ -169,7 +169,7 @@ public final class PlayerParser {
 						player.getBrawlingGlovesManager().parse(buffer);
 						break;
 					default:
-						System.err.println("[Player parsing] Unhandled opcode: " + opcode + " for " + player.getName() + " - [log=" + Arrays.toString(opcodeLog) + "].");
+						SystemLogger.logErr("[Player parsing] Unhandled opcode: " + opcode + " for " + player.getName() + " - [log=" + Arrays.toString(opcodeLog) + "].");
 						break;
 				}
 				System.arraycopy(opcodeLog, 0, opcodeLog, 1, opcodeLog.length - 2 + 1);
@@ -213,7 +213,7 @@ public final class PlayerParser {
 				assert os != null;
 				os.close();
 			} catch (Exception f){
-				SystemLogger.log("Unable to close file copiers.");
+				SystemLogger.logWarn("Unable to close file copiers in PlayerParser.java line 216.");
 			}
 		}
 	}
