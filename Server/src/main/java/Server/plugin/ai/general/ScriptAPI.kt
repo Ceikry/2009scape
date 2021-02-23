@@ -73,6 +73,41 @@ class ScriptAPI(private val bot: Player) {
     }
 
     /**
+     * Gets the nearest node with a name contained in the list of acceptable names
+     * @param acceptedNames the list of accepted npc/object names
+     * @return the nearest node with a matching name or null
+     * @author Ceikry
+     */
+
+    fun getNearestNodeFromList(acceptedNames: List<String>, isObject: Boolean): Node? {
+        if (isObject) {
+            var entity: Node? = null
+            var minDistance = Double.MAX_VALUE
+            for (objects in RegionManager.forId(bot.location.regionId).planes[bot.location.z].objects) {
+                for(e in objects) {
+                    val name = e?.name
+                    if (e != null && acceptedNames.contains(name) && distance(bot, e) < minDistance && !Pathfinder.find(bot, e).isMoveNear && e.isActive) {
+                        entity = e
+                        minDistance = distance(bot, e)
+                    }
+                }
+            }
+            return if(entity == null) null else entity as GameObject
+        } else {
+            var entity: Node? = null
+            var minDistance = Double.MAX_VALUE
+            for (e in RegionManager.forId(bot.location.regionId).planes[bot.location.z].entities) {
+                val name = e?.name
+                if (e != null && acceptedNames.contains(name) && distance(bot, e) < minDistance && !Pathfinder.find(bot, e).isMoveNear) {
+                    entity = e
+                    minDistance = distance(bot, e)
+                }
+            }
+            return entity
+        }
+    }
+
+    /**
      * Gets the nearest node with matching id.
      * @param id the id to look for
      * @param object whether or not the node we are looking for is an object.
@@ -634,6 +669,8 @@ class ScriptAPI(private val bot: Player) {
             Items.RAW_SWORDFISH_371 -> 390
             Items.SHARK_385 -> 720
             Items.RAW_SHARK_383 -> 710
+            Items.TEAK_LOGS_6333 -> 350
+            Items.MAHOGANY_LOGS_6332 -> 847
             else -> null
         }
     }
