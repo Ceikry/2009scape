@@ -810,7 +810,7 @@ class Adventurer(val style: CombatStyle): Script() {
                         "Teak","Mahogany")
                 val resource = scriptAPI.getNearestNodeFromList(resources,true)
                 try {
-                    node?.interaction?.handle(bot, node.interaction[0])
+                    resource?.interaction?.handle(bot, resource.interaction[0])
                 } catch (e: Exception){}
             }
         }
