@@ -5,7 +5,8 @@ import java.util.Objects;
 final class Player extends Class140_Sub4 {
 
    static int[] anIntArray3951 = new int[4];
-   int anInt3952 = -1;
+    static int rights = 0;
+    int anInt3952 = -1;
    static byte aByte3953;
    static int[] anIntArray3954 = new int[100];
    int headIcon = -1;
@@ -89,7 +90,7 @@ final class Player extends Class140_Sub4 {
 
             return super.getSize();
          } else {
-            return Unsorted.method522(this.class52.pnpcId).size;
+            return NPCDefinition.getNPCDefinition(this.class52.pnpcId).size;
          }
       } catch (RuntimeException var3) {
          throw ClientErrorException.clientError(var3, "e.H(" + (byte) 114 + ')');
@@ -147,7 +148,7 @@ final class Player extends Class140_Sub4 {
             	   }
                   outfit = Class75_Sub4.anIntArray2664[equipId];
                   look[var10] = Class3_Sub13_Sub29.bitwiseOr(1073741824, outfit);
-                  var14 = Class38.getItemDefinition(outfit).teamId;
+                  var14 = ItemDefinition.getItemDefinition(outfit).teamId;
                   if(var14 != 0) {
                      this.teamId = var14;
                   }
@@ -244,7 +245,7 @@ final class Player extends Class140_Sub4 {
             if(var15 != null) {
                this.anInt2820 = var15.method1871();
                Model var23;
-               if(Class140_Sub6.aBoolean2910 && (-1 == this.class52.pnpcId || Unsorted.method522(this.class52.pnpcId).aBoolean1249)) {
+               if(Class140_Sub6.aBoolean2910 && (-1 == this.class52.pnpcId || NPCDefinition.getNPCDefinition(this.class52.pnpcId).aBoolean1249)) {
                   var23 = Class140_Sub3.method1957(160, this.aBoolean2810, var14 == null?var13:var14, this.anInt2819, 0, this.anInt2829, 0, 1, var15, var1, null != var14?this.anInt2813:this.anInt2832, this.anInt2831, 240);
                   if(HDToolKit.highDetail) {
                      float var18 = HDToolKit.method1852();

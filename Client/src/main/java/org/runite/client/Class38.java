@@ -10,43 +10,7 @@ class Class38 {
    static Class146 aClass146_668;
 
 
-   static ItemDefinition getItemDefinition(int itemId) {
-      try {
-         ItemDefinition var2 = (ItemDefinition)Class3_Sub28_Sub4.aReferenceCache_3572.get((long)itemId);
-         if(var2 == null) {
-            byte[] var3 = Class97.aClass153_1370.getFile(Class140_Sub2.method1951(itemId), 255 & itemId);
-            var2 = new ItemDefinition();
-            var2.itemId = itemId;
-            if(var3 != null) {
-               var2.parseDefinitions(new DataBuffer(var3));
-            }
-
-            var2.method1112();
-            if(var2.anInt791 != -1) {
-               var2.method1118(getItemDefinition(var2.anInt789), getItemDefinition(var2.anInt791));
-            }
-
-            if(var2.anInt762 != -1) {
-               var2.method1109(getItemDefinition(var2.anInt795), getItemDefinition(var2.anInt762));
-            }
-
-            if(!Class139.aBoolean1827 && var2.membersItem) {
-               var2.name = TextCore.MembersObject;
-               var2.teamId = 0;
-               var2.inventoryOptions = ClientErrorException.aClass94Array2119;
-               var2.aBoolean807 = false;
-               var2.groundOptions = Unsorted.aClass94Array2596;
-            }
-
-            Class3_Sub28_Sub4.aReferenceCache_3572.put(var2, (long)itemId);
-         }
-         return var2;
-      } catch (RuntimeException var4) {
-         throw ClientErrorException.clientError(var4, "fk.F(" + itemId + ')');
-      }
-   }
-
-//	static void method1025() {
+   //	static void method1025() {
 //      try {
 //         Class3_Sub31.aReferenceCache_2604.clearSoftReferences();
 //         Class27.aReferenceCache_511.clearSoftReferences();

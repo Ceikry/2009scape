@@ -3,7 +3,6 @@ package org.runite.client;
 final class Class3_Sub13_Sub26 extends Class3_Sub13 {
 
 	static int anInt3332 = 50;
-	static int rights = 0;
 	static int[] anIntArray3321 = new int[]{76, 8, 137, 4, 0, 1, 38, 2, 19};
 	private int anInt3322 = 4096;
 	static int anInt3323 = 50;

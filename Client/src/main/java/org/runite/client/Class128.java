@@ -26,7 +26,7 @@ final class Class128 {
 
             WorldMap var6;
             for (var6 = (WorldMap) var3.method1222(); null != var6; var6 = (WorldMap) var3.method1221()) {
-               ItemDefinition var7 = Class38.getItemDefinition(var6.aClass140_Sub7_3676.anInt2936);
+               ItemDefinition var7 = ItemDefinition.getItemDefinition(var6.aClass140_Sub7_3676.anInt2936);
                int var8 = var7.value;
                if (var7.stackingType == 1) {
                   var8 *= 1 + var6.aClass140_Sub7_3676.anInt2930;

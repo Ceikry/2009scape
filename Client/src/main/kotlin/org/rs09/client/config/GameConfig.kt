@@ -109,6 +109,9 @@ class GameConfig {
         var WORLD = 1
 
         @JvmField
+        var WORLD_OVERRIDE = -1
+
+        @JvmField
         var LOGIN_THEME = "scape main"
 
         @JvmField

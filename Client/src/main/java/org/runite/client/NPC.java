@@ -121,7 +121,7 @@ final class NPC extends Class140_Sub4 {
                    Class3_Sub28_Sub8.method574(npc);
                 }
 
-                npc.setDefinitions(Unsorted.method522(GraphicDefinition.incomingBuffer.readUnsignedShortLE()));
+                npc.setDefinitions(NPCDefinition.getNPCDefinition(GraphicDefinition.incomingBuffer.readUnsignedShortLE()));
                 npc.setSize(npc.definition.size, 2);
                 npc.renderAnimationId = npc.definition.renderAnimationId;
                 if(npc.definition.method1474()) {

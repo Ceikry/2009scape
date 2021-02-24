@@ -1,5 +1,4 @@
 package org.runite.client;
-import org.rs09.SystemLogger;
 import org.rs09.client.filestore.resources.configs.cursors.CursorDefinition;
 
 import java.awt.Point;
@@ -684,7 +683,7 @@ final class Class3_Sub13_Sub13 extends Class3_Sub13 {
                                           PacketParser.method829();
                                        }
 
-                                       if(Class3_Sub13_Sub26.rights > 0 && ObjectDefinition.aBooleanArray1490[82] && ObjectDefinition.aBooleanArray1490[81] && 0 != Class29.anInt561) {
+                                       if(Player.rights > 0 && ObjectDefinition.aBooleanArray1490[82] && ObjectDefinition.aBooleanArray1490[81] && 0 != Class29.anInt561) {
                                           var5 = WorldListCountry.localPlane - Class29.anInt561;
                                           if(0 > var5) {
                                              var5 = 0;
@@ -695,7 +694,7 @@ final class Class3_Sub13_Sub13 extends Class3_Sub13 {
                                           Class30.method979(Class102.player.anIntArray2767[0] + Class131.anInt1716, Class102.player.anIntArray2755[0] + Class82.anInt1152, var5);
                                        }
 
-                                       if(Class3_Sub13_Sub26.rights > 0 && ObjectDefinition.aBooleanArray1490[82] && ObjectDefinition.aBooleanArray1490[81]) {
+                                       if(Player.rights > 0 && ObjectDefinition.aBooleanArray1490[82] && ObjectDefinition.aBooleanArray1490[81]) {
                                           if(-1 != Class27.anInt515) {
                                              Class30.method979(Class131.anInt1716 + Class27.anInt515, Class82.anInt1152 - -Unsorted.anInt999, WorldListCountry.localPlane);
                                           }

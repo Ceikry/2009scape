@@ -1615,7 +1615,7 @@ public final class PacketParser {
                                                             ItemDefinition var43;
                                                             if (Objects.requireNonNull(var34).usingScripts) {
                                                                 Class140_Sub6.method2026(var19, nodeModelId, modelId);
-                                                                var43 = Class38.getItemDefinition(modelId);
+                                                                var43 = ItemDefinition.getItemDefinition(modelId);
                                                                 Unsorted.method2143((byte) -128, var43.anInt810, var19, var43.anInt799, var43.anInt786);
                                                                 Class84.method1420(var19, var43.anInt768, var43.anInt754, var43.anInt792, (byte) -85);
                                                             } else {
@@ -1625,7 +1625,7 @@ public final class PacketParser {
                                                                     return true;
                                                                 }
 
-                                                                var43 = Class38.getItemDefinition(modelId);
+                                                                var43 = ItemDefinition.getItemDefinition(modelId);
                                                                 var34.anInt182 = var43.anInt786;
                                                                 var34.anInt164 = 100 * var43.anInt810 / nodeModelId;
                                                                 var34.modelType = 4;

@@ -295,7 +295,7 @@ final class Class3_Sub13_Sub21 extends Class3_Sub13 {
                   int var11 = var9 + 64 * (Class3_Sub24_Sub3.anIntArray3494[var2] >> 8) - Class131.anInt1716;
                   int var10 = var7 & 63;
                   int var12 = var10 + -Class82.anInt1152 + 64 * (255 & Class3_Sub24_Sub3.anIntArray3494[var2]);
-                  NPCDefinition var13 = Unsorted.method522(var16.readUnsignedShort());
+                  NPCDefinition var13 = NPCDefinition.getNPCDefinition(var16.readUnsignedShort());
                   if(NPC.npcs[var6] == null && (var13.aByte1267 & 1) > 0 && Class140_Sub3.anInt2745 == var8 && var11 >= 0 && 104 > var13.size + var11 && var12 >= 0 && 104 > var12 - -var13.size) {
                      NPC.npcs[var6] = new NPC();
                      NPC npc = NPC.npcs[var6];

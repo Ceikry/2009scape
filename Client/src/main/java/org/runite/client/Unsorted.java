@@ -405,7 +405,7 @@ public class Unsorted {
 
     static AbstractSprite method1570(int var0, byte var1, boolean var2, int var3, boolean var4, int var5, int var6, boolean var7) {
         try {
-            ItemDefinition item = Class38.getItemDefinition(var3);
+            ItemDefinition item = ItemDefinition.getItemDefinition(var3);
             if (var6 > 1 && item.anIntArray804 != null) {
                 int var9 = -1;
 
@@ -416,7 +416,7 @@ public class Unsorted {
                 }
 
                 if (var9 != -1) {
-                    item = Class38.getItemDefinition(var9);
+                    item = ItemDefinition.getItemDefinition(var9);
                 }
             }
 
@@ -1991,25 +1991,6 @@ public class Unsorted {
             return aClass3_Sub28_Sub3_2600;
         } catch (RuntimeException var2) {
             throw ClientErrorException.clientError(var2, "rg.OA(" + var0 + ')');
-        }
-    }
-
-    static NPCDefinition method522(int var0) {
-        try {
-            NPCDefinition def = (NPCDefinition) aReferenceCache_4043.get((long) var0);
-            if (null == def) {
-                byte[] var3 = Class29.aClass153_557.getFile(Class38_Sub1.method1031(var0), method54(var0));
-                def = new NPCDefinition();
-
-                def.npcId = var0;
-                if (null != var3) {
-                    def.method1478(new DataBuffer(var3));
-                }
-                aReferenceCache_4043.put(def, (long) var0);
-            }
-            return def;
-        } catch (RuntimeException var4) {
-            throw ClientErrorException.clientError(var4, "rg.PA(" + var0 + ',' + 27112 + ')');
         }
     }
 
@@ -4485,7 +4466,7 @@ public class Unsorted {
                                                 }
 
                                                 if (var11.usingScripts && var11.anInt192 != -1) {
-                                                    ItemDefinition var50 = Class38.getItemDefinition(var11.anInt192);
+                                                    ItemDefinition var50 = ItemDefinition.getItemDefinition(var11.anInt192);
                                                     var45 = var50.name;
                                                     if (var45 == null) {
                                                         var45 = TextCore.HasNull;
@@ -4623,7 +4604,7 @@ public class Unsorted {
 
                                                 var23 = 0;
                                                 if (var11.anInt192 != -1) {
-                                                    var42 = Class38.getItemDefinition(var11.anInt192);
+                                                    var42 = ItemDefinition.getItemDefinition(var11.anInt192);
                                                     var42 = var42.method1106(var11.anInt271);
                                                     SequenceDefinition var52 = var21 == -1 ? null : SequenceDefinition.getAnimationDefinition(var21);
                                                     var38 = var42.method1110(var11.anInt260, var11.anInt267, var52, 1, var11.anInt283);
@@ -4739,7 +4720,7 @@ public class Unsorted {
                                                     for (var22 = 0; var22 < var11.defHeight; ++var22) {
                                                         for (var23 = 0; var23 < var11.defWidth; ++var23) {
                                                             if (0 < var11.itemAmounts[var21]) {
-                                                                var42 = Class38.getItemDefinition(var11.itemAmounts[var21] + -1);
+                                                                var42 = ItemDefinition.getItemDefinition(var11.itemAmounts[var21] + -1);
                                                                 RSString var40;
                                                                 if (1 != var42.stackingType && 1 == var11.itemIds[var21]) {
                                                                     var40 = RSString.stringCombiner(new RSString[]{
