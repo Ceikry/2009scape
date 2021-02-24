@@ -1,6 +1,7 @@
 package org.runite.client;
 
 
+import org.rs09.SystemLogger;
 import org.rs09.client.Linkable;
 import org.rs09.client.config.GameConfig;
 import org.rs09.client.data.HashTable;
@@ -68,6 +69,26 @@ public final class NPCDefinition {
    static int anInt1297;
    int anInt1298;
 
+   static NPCDefinition getNPCDefinition(int npcID) {
+       try {
+           NPCDefinition def = (NPCDefinition) Unsorted.aReferenceCache_4043.get((long) npcID);
+           if (null == def) {
+               byte[] var3 = Class29.aClass153_557.getFile(Class38_Sub1.method1031(npcID), Unsorted.method54(npcID));
+               def = new NPCDefinition();
+
+               def.npcId = npcID;
+               if (null != var3) {
+                   def.method1478(new DataBuffer(var3));
+               }
+               Unsorted.aReferenceCache_4043.put(def, (long) npcID);
+           }
+           return def;
+       } catch (RuntimeException var4) {
+          SystemLogger.logErr("Unable to parse NPC definition for ID " + npcID + " trace: " + var4);
+       }
+       return null;
+   }
+
    final NPCDefinition method1471(byte var1) {
       try {
          int var2 = -1;
@@ -81,10 +102,10 @@ public final class NPCDefinition {
 
          int var3;
          if(0 <= var2 && -1 + this.childNPCs.length > var2 && this.childNPCs[var2] != -1) {
-             return Unsorted.method522(this.childNPCs[var2]);
+             return getNPCDefinition(this.childNPCs[var2]);
          } else {
             var3 = this.childNPCs[-1 + this.childNPCs.length];
-            return var3 == -1 ?null: Unsorted.method522(var3);
+            return var3 == -1 ?null: getNPCDefinition(var3);
          }
       } catch (RuntimeException var4) {
          throw ClientErrorException.clientError(var4, "me.G(" + var1 + ')');
@@ -125,7 +146,7 @@ public final class NPCDefinition {
          } else {
             for(int var2 = 0; var2 < this.childNPCs.length; ++var2) {
                if(this.childNPCs[var2] != -1) {
-                  NPCDefinition var3 = Unsorted.method522(this.childNPCs[var2]);
+                  NPCDefinition var3 = getNPCDefinition(this.childNPCs[var2]);
                   if(var3.anInt1262 != -1 || var3.anInt1293 != -1 || var3.anInt1276 != -1) {
                      return true;
                   }
@@ -509,7 +530,7 @@ public final class NPCDefinition {
          int var4 = 0;
 
          for(int var5 = 0; Class3_Sub13_Sub23.itemDefinitionSize > var5; ++var5) {
-            ItemDefinition var6 = Class38.getItemDefinition(var5);
+            ItemDefinition var6 = ItemDefinition.getItemDefinition(var5);
             if((!var0 || var6.aBoolean807) && var6.anInt791 == -1 && -1 == var6.anInt762 && var6.anInt800 == 0 && var6.name.toLowercase().indexOf(var1, 116) != -1) {
                if(var4 >= 250) {
                   Class99.aShortArray1398 = null;
@@ -535,7 +556,7 @@ public final class NPCDefinition {
          RSString[] var10 = new RSString[Unsorted.anInt952];
 
          for(int var11 = 0; Unsorted.anInt952 > var11; ++var11) {
-            var10[var11] = Class38.getItemDefinition(var3[var11]).name;
+            var10[var11] = ItemDefinition.getItemDefinition(var3[var11]).name;
          }
 
          Class3_Sub13_Sub29.method307(var10, Class99.aShortArray1398, 77);

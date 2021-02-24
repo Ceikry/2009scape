@@ -363,7 +363,7 @@ public final class Class3_Sub13_Sub36 extends Class3_Sub13 {
                    if(null != var28) {
                       for(WorldMap var32 = (WorldMap)var28.method1212(); null != var32; var32 = (WorldMap)var28.method1219(41)) {
                          var18 = var32.aClass140_Sub7_3676.anInt2936;
-                         ItemDefinition var40 = Class38.getItemDefinition(var18);
+                         ItemDefinition var40 = ItemDefinition.getItemDefinition(var18);
                          if(Class164_Sub1.anInt3012 == 1) {
                             Class3_Sub24_Sub4.method1177(Class99.anInt1403, (long)var18, (byte)-75, RSString.stringCombiner(new RSString[]{RenderAnimationDefinition.aClass94_378, ColorCore.BankItemColor, var40.name}), var12, (short)33, TextCore.HasUse, var27);
                          } else if(GameObject.aBoolean1837) {

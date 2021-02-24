@@ -163,7 +163,7 @@ final class Class52 {
    final int method1163() {
       try {
 
-         return this.pnpcId != -1?305419896 + Unsorted.method522(this.pnpcId).npcId:(this.lookInfo[8] << 10) + ((this.anIntArray862[0] << 25) - -(this.anIntArray862[4] << 20)) - (-(this.lookInfo[0] << 15) - ((this.lookInfo[11] << 5) + this.lookInfo[1]));
+         return this.pnpcId != -1?305419896 + NPCDefinition.getNPCDefinition(this.pnpcId).npcId:(this.lookInfo[8] << 10) + ((this.anIntArray862[0] << 25) - -(this.anIntArray862[4] << 20)) - (-(this.lookInfo[0] << 15) - ((this.lookInfo[11] << 5) + this.lookInfo[1]));
       } catch (RuntimeException var3) {
          throw ClientErrorException.clientError(var3, "hh.E(" + -24861 + ')');
       }
@@ -233,7 +233,7 @@ final class Class52 {
                for(int var18 = 0; var18 < 12; ++var18) {
                   var19 = var15[var18];
                   if((var19 & 1073741824) != 0) {
-                     if(!Class38.getItemDefinition(1073741823 & var19).method1108(this.aBoolean864)) {
+                     if(!ItemDefinition.getItemDefinition(1073741823 & var19).method1108(this.aBoolean864)) {
                         var17 = true;
                      }
                   } else if((var19 < 0) && !Class3_Sub13_Sub13.method231(1073741823 & var19).method942()) {
@@ -266,7 +266,7 @@ final class Class52 {
                            }
                         }
                      } else {
-                        var21 = Class38.getItemDefinition(var20 & 1073741823).method1117(this.aBoolean864);
+                        var21 = ItemDefinition.getItemDefinition(var20 & 1073741823).method1117(this.aBoolean864);
                         if(null != var21) {
                            var39[var19] = var21;
                         }
@@ -506,7 +506,7 @@ final class Class52 {
                return var51;
             }
          } else {
-            return Unsorted.method522(this.pnpcId).method1476(var1, var6, (byte)-128, var11, var2, var8, var10, var3, var5, var4);
+            return NPCDefinition.getNPCDefinition(this.pnpcId).method1476(var1, var6, (byte)-128, var11, var2, var8, var10, var3, var5, var4);
          }
       } catch (RuntimeException var36) {
          throw ClientErrorException.clientError(var36, "hh.D(" + (var1 != null?"{...}":"null") + ',' + var2 + ',' + (var3 != null?"{...}":"null") + ',' + (var4 != null?"{...}":"null") + ',' + var5 + ',' + var6 + ',' + var7 + ',' + var8 + ',' + true + ',' + var10 + ',' + var11 + ')');
@@ -830,7 +830,7 @@ final class Class52 {
                      if(var9 < 0 && Class3_Sub13_Sub13.method231(var9 & 1073741823).method948()) {
                         var7 = true;
                      }
-                  } else if(!Class38.getItemDefinition(1073741823 & var9).method1102(this.aBoolean864)) {
+                  } else if(!ItemDefinition.getItemDefinition(1073741823 & var9).method1102(this.aBoolean864)) {
                      var7 = true;
                   }
                }
@@ -852,7 +852,7 @@ final class Class52 {
                         var14[var9++] = var12;
                      }
                   } else {
-                     var12 = Class38.getItemDefinition(var11 & 1073741823).method1116(this.aBoolean864);
+                     var12 = ItemDefinition.getItemDefinition(var11 & 1073741823).method1116(this.aBoolean864);
                      if(var12 != null) {
                         var14[var9++] = var12;
                      }
@@ -881,7 +881,7 @@ final class Class52 {
 
             return var6;
          } else {
-            return Unsorted.method522(this.pnpcId).getChatModel(var3, var1, var5, -109, var4);
+            return NPCDefinition.getNPCDefinition(this.pnpcId).getChatModel(var3, var1, var5, -109, var4);
          }
       } catch (RuntimeException var13) {
          throw ClientErrorException.clientError(var13, "hh.F(" + var1 + ',' + (byte) 127 + ',' + (var3 != null?"{...}":"null") + ',' + var4 + ',' + var5 + ')');

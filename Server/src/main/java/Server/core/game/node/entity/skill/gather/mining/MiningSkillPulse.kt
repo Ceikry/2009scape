@@ -212,6 +212,9 @@ class MiningSkillPulse(private val player: Player, private val node: Node) : Pul
     }
 
     private fun destroyPickaxe(player: Player, pickaxe: SkillingTool) {
+        if(pickaxe.name.contains("adze")){
+            return
+        }
         val radius = 2
         val l = player.location.transform(RandomFunction.random(-radius, radius), RandomFunction.random(-radius, radius), 0)
         val p = Pathfinder.find(player.location, l).points.last
