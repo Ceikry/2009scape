@@ -715,6 +715,7 @@ class Adventurer(val style: CombatStyle): Script() {
     val treegnome = Location.create(2437, 3441, 0)
     val teak1 = Location.create(2334, 3048, 0)
     val teakfarm = Location.create(2825, 3085, 0)
+    val keldagrimout = Location.create(2724,3692,0)
 
     var PoiList = listOf(karamja,alkharid,feldiphills,isafdar,
             eaglespeek,canafis,treegnome,teak1,teakfarm)
@@ -768,7 +769,7 @@ class Adventurer(val style: CombatStyle): Script() {
                 alkharid,feldiphills,feldiphills,
                 isafdar,eaglespeek,eaglespeek,
                 canafis,treegnome,treegnome,
-                teak1,teakfarm).random()
+                teak1,teakfarm,keldagrimout).random()
     }
 
         //TODO: Optimise and adjust how bots handle picking up ground items further.
@@ -913,7 +914,8 @@ class Adventurer(val style: CombatStyle): Script() {
                     else if (poiloc == treegnome) 50
                     else if (poiloc == isafdar) 40
                     else if (poiloc == eaglespeek) 40
-                    else if (poiloc == teak1) 30 else 60
+                    else if (poiloc == teak1) 30
+                    else if (poiloc == keldagrimout) 40 else 60
                     scriptAPI.randomWalkTo(poiloc,roamDistancePoi)
                     return
                 }
