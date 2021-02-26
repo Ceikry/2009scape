@@ -3,7 +3,6 @@ import javax.swing.*;
 
 import org.rs09.client.config.GameConfig;
 
-
 import java.applet.Applet;
 import java.awt.*;
 import java.net.MalformedURLException;
@@ -52,6 +51,8 @@ public class ClientLoader extends Applet {
 	 * The client loader.
 	 */
 	public static ClientLoader loader;
+
+	public static ModPanel modPanel;
 		
 	/**
 	 * Creates the client loader instance.
@@ -63,19 +64,26 @@ public class ClientLoader extends Applet {
 		return loader;
 	}
 
+	public static void setModPanelVisible(boolean visible){
+		modPanel.setVisible(visible);
+	}
+
 	/**
 	 * Launches the client.
 	 */
 	public void launch() {
 		try {
+			modPanel = new ModPanel();
 			ClientLoader.world = "" + GameConfig.SERVER_NAME;
 			//System.out.println(GameLaunch.SETTINGS.getWorld());
 			this.frame = new JFrame(GameConfig.SERVER_NAME);
 			this.frame.setLayout(new BorderLayout());
+			this.frame.setSize(300,500);
 			this.frame.setBackground(Color.BLACK);
 			this.frame.setResizable(true);
 			this.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 			this.jp.setLayout(new BorderLayout());
+			this.jp.add(modPanel, BorderLayout.NORTH);
 			this.jp.add(this);
 			this.jp.setBackground(Color.black);
 			this.jp.setPreferredSize(new Dimension(765, 503));
@@ -84,7 +92,7 @@ public class ClientLoader extends Applet {
 			this.frame.pack();
 			this.frame.setVisible(true);
 			this.frame.setLocationRelativeTo(null);
-			props.put("worldid", "" + GameConfig.WORLD);
+			props.put("worldid", "" + (GameConfig.WORLD_OVERRIDE == -1 ? GameConfig.WORLD : GameConfig.WORLD_OVERRIDE));
 			props.put("members", "1");
 			props.put("modewhat", "1");
 			props.put("modewhere", "0");

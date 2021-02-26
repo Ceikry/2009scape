@@ -1,5 +1,7 @@
 package org.runite.client;
 
+import org.rs09.SystemLogger;
+
 import java.applet.Applet;
 import java.awt.*;
 import java.io.*;
@@ -236,8 +238,9 @@ public class Signlink implements Runnable {
                             var7 = Class.forName("java.lang.Runtime").getDeclaredMethod("load0", var17);
                             var7.setAccessible(true);
 
-                            System.out.println("Signlink - os Name: " + osName);
-                            System.out.println("Signlink - os Arch: " + osArchitecture);
+                            SystemLogger.logInfo("Signlink - os Name: " + osName);
+                            SystemLogger.logInfo("Signlink - os Arch: " + osArchitecture);
+                            if(osArchitecture.equals("aarch64")) SystemLogger.logWarn("Going into HD will fail - current libs do not support ARM.");
                             if (osName.startsWith("linux") || isSunOS) {
                                 createLibs(isSunOS ? (is64Bit ? 7 : 6) : (is64Bit ? 5 : 4));
                                 var7.invoke(runtime, var1.anObject977, method1448(this.gameName, this.anInt1215, "libgluegen-rt.so").toString());

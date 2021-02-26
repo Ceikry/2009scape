@@ -330,7 +330,8 @@ public final class Client extends GameShell {
 
     public final void init() {
         try {
-            GameConfig.WORLD = ObjectDefinition.worldId;
+            GameConfig.WORLD = GameConfig.WORLD_OVERRIDE == -1 ? ObjectDefinition.worldId : GameConfig.WORLD_OVERRIDE;
+            ObjectDefinition.worldId = GameConfig.WORLD_OVERRIDE == -1 ? 1 : GameConfig.WORLD_OVERRIDE;
             Class44.anInt718 = Integer.parseInt(Objects.requireNonNull(this.getParameter("modewhere")));
             if (0 > Class44.anInt718 || 1 < Class44.anInt718) {
                 Class44.anInt718 = 0;
@@ -979,7 +980,7 @@ public final class Client extends GameShell {
                                 if (inter.anInt189 == 1400) {
                                     Class3_Sub28_Sub3.aClass11_3551 = inter;
                                     if (var18) {
-                                        if (ObjectDefinition.aBooleanArray1490[82] && Class3_Sub13_Sub26.rights > 0) {
+                                        if (ObjectDefinition.aBooleanArray1490[82] && Player.rights > 0) {
                                             var19 = (int) ((double) (Class163_Sub1.anInt2993 - var10 - inter.width / 2) * 2.0D / (double) Class44.aFloat727);
                                             var29 = (int) ((double) (Class38_Sub1.anInt2614 - var11 - inter.height / 2) * 2.0D / (double) Class44.aFloat727);
                                             var21 = Class3_Sub28_Sub1.anInt3536 + var19;

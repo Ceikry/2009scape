@@ -19,6 +19,7 @@ import core.net.packet.out.ContainerPacket
 import org.json.simple.JSONArray
 import org.json.simple.JSONObject
 import org.json.simple.parser.JSONParser
+import plugin.ai.AIPlayer
 import java.io.File
 import java.io.FileReader
 import java.io.FileWriter
@@ -391,7 +392,9 @@ class OfferManager : Pulse(), CallBack {
             if (offer.sell) {
                 Repository.sendNews(player.username + " just offered " + offer.amount + " " + ItemDefinition.forId(offer.itemID).name.toLowerCase() + " on the GE.")
             }
-            SystemLogger.logTrade("[GE] ${player.username} ${if (offer.sell) "listed for sale" else "listed buy offer for"} ${offer.amount} ${ItemDefinition.forId(offer.itemID).name.toLowerCase()}")
+            if(player !is AIPlayer) {
+                SystemLogger.logTrade("[GE] ${player.username} ${if (offer.sell) "listed for sale" else "listed buy offer for"} ${offer.amount} ${ItemDefinition.forId(offer.itemID).name.toLowerCase()}")
+            }
             dumpDatabase = true
             return true
         }

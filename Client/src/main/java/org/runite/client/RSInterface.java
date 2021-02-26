@@ -669,7 +669,7 @@ public final class RSInterface {
 
                     return var10;
                 } else if (var8 == 2) {
-                    var10 = Unsorted.method522(var9).getChatModel(var2, var5, var1, 27, var3);
+                    var10 = NPCDefinition.getNPCDefinition(var9).getChatModel(var2, var5, var1, 27, var3);
                     if (null == var10) {
                         GameShell.aBoolean6 = true;
                         return null;
@@ -678,7 +678,7 @@ public final class RSInterface {
                     }
                 } else if (3 != var8) {
                     if (4 == var8) {
-                        ItemDefinition var16 = Class38.getItemDefinition(var9);
+                        ItemDefinition var16 = ItemDefinition.getItemDefinition(var9);
                         Model var17 = var16.method1110(var1, var5, var2, 10, var3);
                         if (var17 == null) {
                             GameShell.aBoolean6 = true;
@@ -687,7 +687,7 @@ public final class RSInterface {
                             return var17;
                         }
                     } else if (var8 == 6) {
-                        var10 = Unsorted.method522(var9).method1476((Class145[]) null, 0, (byte) -120, 0, var1, var5, var3, (SequenceDefinition) null, 0, var2);
+                        var10 = NPCDefinition.getNPCDefinition(var9).method1476((Class145[]) null, 0, (byte) -120, 0, var1, var5, var3, (SequenceDefinition) null, 0, var2);
                         if (null == var10) {
                             GameShell.aBoolean6 = true;
                             return null;

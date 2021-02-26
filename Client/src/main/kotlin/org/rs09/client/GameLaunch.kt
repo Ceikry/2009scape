@@ -17,7 +17,7 @@ object GameLaunch {
             val cmd = args[i].split("=").toTypedArray()
             when (cmd[0]) {
                 "ip" -> GameConfig.IP_ADDRESS = cmd[1]
-                "world" -> GameConfig.WORLD = cmd[1].toInt()
+                "world" -> GameConfig.WORLD_OVERRIDE = cmd[1].toInt()
                 else -> GameConfig.configLocation = cmd[0]
             }
         }

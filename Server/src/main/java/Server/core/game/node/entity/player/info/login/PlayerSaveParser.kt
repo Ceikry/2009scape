@@ -246,6 +246,7 @@ class PlayerSaveParser(val player: Player) {
         for (config in configs) {
             val c = config as JSONObject
             val index = (c.get("index") as String).toInt()
+            if(index == 1048) continue
             val value = (c.get("value") as String).toInt()
             player.configManager.savedConfigurations[index] = value
         }

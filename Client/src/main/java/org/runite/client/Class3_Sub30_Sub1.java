@@ -2,7 +2,6 @@ package org.runite.client;
 
 import org.rs09.SystemLogger;
 
-import java.util.Arrays;
 import java.util.Objects;
 
 public final class Class3_Sub30_Sub1 extends DataBuffer {
@@ -200,7 +199,7 @@ public final class Class3_Sub30_Sub1 extends DataBuffer {
 				if(var4 == 1006) {
 					var13 = Class7.getRSInterface(var3);
 					if(null != var13 && var13.itemIds[var2] >= 100000) {
-						addChatMessage(TextCore.aClass94_3672, 0, RSString.stringCombiner(new RSString[]{RSString.stringAnimator(var13.itemIds[var2]), TextCore.aClass94_3777, Class38.getItemDefinition(var5).name}), -1);
+						addChatMessage(TextCore.aClass94_3672, 0, RSString.stringCombiner(new RSString[]{RSString.stringAnimator(var13.itemIds[var2]), TextCore.aClass94_3777, ItemDefinition.getItemDefinition(var5).name}), -1);
 					} else {
 						Class3_Sub13_Sub1.outgoingBuffer.putOpcode(92);
 						Class3_Sub13_Sub1.outgoingBuffer.writeShort128LE(var5);
@@ -215,7 +214,7 @@ public final class Class3_Sub30_Sub1 extends DataBuffer {
 					if(var5 == 0) {
 						Unsorted.method589(WorldListCountry.localPlane, var2, var3);
 					} else if (var5 == 1) {
-						if (0 < Class3_Sub13_Sub26.rights && ObjectDefinition.aBooleanArray1490[82] && ObjectDefinition.aBooleanArray1490[81]) {
+						if (0 < Player.rights && ObjectDefinition.aBooleanArray1490[82] && ObjectDefinition.aBooleanArray1490[81]) {
 							Class30.method979(Class131.anInt1716 + var2, Class82.anInt1152 + var3, WorldListCountry.localPlane);
 						} else if (Class3_Sub28_Sub9.method582(Class102.player.anIntArray2755[0], 0, 0, true, 0, 2, var2, 0, 0, 1, var3, Class102.player.anIntArray2767[0])) {
 							Class3_Sub13_Sub1.outgoingBuffer.writeByte(Class1.anInt56);
@@ -702,7 +701,7 @@ public final class Class3_Sub30_Sub1 extends DataBuffer {
 							Class164.anInt2050 = var5;
 							Class20.method909(var13);
 							RenderAnimationDefinition.aClass94_378 = RSString.stringCombiner(new RSString[]{
-									ColorCore.ContextColor2, Class38.getItemDefinition(var5).name, ColorCore.ContextColor
+									ColorCore.ContextColor2, ItemDefinition.getItemDefinition(var5).name, ColorCore.ContextColor
 							});
 
 						}
@@ -778,7 +777,7 @@ public final class Class3_Sub30_Sub1 extends DataBuffer {
 							if(var5 == 0) {
 								ObjectDefinition.anInt1521 = 1;
 								Unsorted.method589(WorldListCountry.localPlane, var2, var3);
-							} else if (Class3_Sub13_Sub26.rights > 0 && ObjectDefinition.aBooleanArray1490[82] && ObjectDefinition.aBooleanArray1490[81]) {
+							} else if (Player.rights > 0 && ObjectDefinition.aBooleanArray1490[82] && ObjectDefinition.aBooleanArray1490[81]) {
 								Class30.method979(var2 + Class131.anInt1716, Class82.anInt1152 - -var3, WorldListCountry.localPlane);
 							} else {
 								Class3_Sub13_Sub1.outgoingBuffer.putOpcode(179);

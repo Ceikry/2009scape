@@ -37,7 +37,7 @@ final class Class167 {
                   }
 
                   int var7 = GraphicDefinition.incomingBuffer.getBits(5);
-                  var3.setDefinitions(Unsorted.method522(GraphicDefinition.incomingBuffer.getBits(14)));
+                  var3.setDefinitions(NPCDefinition.getNPCDefinition(GraphicDefinition.incomingBuffer.getBits(14)));
                   if(15 < var7) {
                      var7 -= 32;
                   }
